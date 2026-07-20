@@ -122,12 +122,12 @@ The six-phase waterfall is mirrored in six versioned documents, each seeded verb
 
 | Phase | File | Seeded from |
 |---|---|---|
-| 1. Specification | [`docs/konnectome_1_specification_v10.txt`](docs/konnectome_1_specification_v10.txt) | Appendix 1 |
-| 2. Pseudocode | [`docs/konnectome_2_pseudocode_v10.txt`](docs/konnectome_2_pseudocode_v10.txt) | Appendix 2 |
-| 3. Architecture | [`docs/konnectome_3_architecture_v10.txt`](docs/konnectome_3_architecture_v10.txt) | Appendix 3 |
-| 4. Refinement | [`docs/konnectome_4_refinement_v10.txt`](docs/konnectome_4_refinement_v10.txt) | Appendix 4 |
-| 5. Completion | [`docs/konnectome_5_completion_v10.txt`](docs/konnectome_5_completion_v10.txt) | Appendix 5 |
-| 6. Demonstration | [`docs/konnectome_6_demonstration_v10.txt`](docs/konnectome_6_demonstration_v10.txt) | Appendix 6 |
+| 1. Specification | [`docs/konnectome_1_specification_v11.txt`](docs/konnectome_1_specification_v11.txt) | Appendix 1 |
+| 2. Pseudocode | [`docs/konnectome_2_pseudocode_v11.txt`](docs/konnectome_2_pseudocode_v11.txt) | Appendix 2 |
+| 3. Architecture | [`docs/konnectome_3_architecture_v11.txt`](docs/konnectome_3_architecture_v11.txt) | Appendix 3 |
+| 4. Refinement | [`docs/konnectome_4_refinement_v11.txt`](docs/konnectome_4_refinement_v11.txt) | Appendix 4 |
+| 5. Completion | [`docs/konnectome_5_completion_v11.txt`](docs/konnectome_5_completion_v11.txt) | Appendix 5 |
+| 6. Demonstration | [`docs/konnectome_6_demonstration_v11.txt`](docs/konnectome_6_demonstration_v11.txt) | Appendix 6 |
 
 ## The build ladder
 
@@ -161,10 +161,11 @@ konnectome/
     override_controller/       Slice 7: the override controller (Component 7), the safety property.
     perturbation_interface/    Slice 7: the perturbation interface (Component 10), for experiments.
     cognitive_cycle/           Slice 8: one integrated tick wiring all ten components together.
+    thought_combination/       Slice 10: combining thoughts as Causal Relation Objects (chains, trees).
   docs/
     konnectome_1..6_*_vN.txt   The SPARCD Fileset (seeded from the appendices; versioned per slice).
     konnectome_ledger_v1.txt   The running scoreboard of findings (Fourth Commandment).
-    konnectome_tutorial_v7.txt A complete beginner tutorial (Fifteenth Commandment), versioned.
+    konnectome_tutorial_v8.txt A complete beginner tutorial (Fifteenth Commandment), versioned.
     PrologAI_CHANGE_ORDER_v1.txt        Additive PrologAI-language gaps (Third Commandment).
     Causalontology_4_0_0_CHANGE_ORDER_v2.txt   Data-structure gaps for the frozen ontology.
     NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt  The source book.
@@ -175,7 +176,7 @@ konnectome/
 
 ## Status
 
-The build has begun and is climbing the ladder. Nine slices have landed on `main` (eleven packs, 62 tests, all green):
+The build has begun and is climbing the ladder. Ten slices have landed on `main` (twelve packs, 69 tests, all green):
 
 - **Slice 1 - the heartbeat** (`tick_engine`): the Scheduler and Tick Engine (Component 2), with the two-pass synchronous update. 7 of 7 tests.
 - **Slice 2 - archetypes and the first thought** (`archetype`, `observer`): the six dynamical archetype rules (Appendix 2, Section A2.3) and the observer recording each tick as a Causalontology `token_occurrence` (Component 9) via the reused `causal_core`. 7 of 7 and 6 of 6 tests; the 119 conformance vectors stay green.
@@ -186,6 +187,7 @@ The build has begun and is climbing the ladder. Nine slices have landed on `main
 - **Slice 7 - completing the architecture** (`override_controller`, `perturbation_interface`): the override controller (Component 7 - vital drives seize control, the inviolable safety property) and the perturbation interface (Component 10 - lesion, cut, shift for experiments). 4 of 4 and 4 of 4 tests. **All ten architecture components now stand.**
 - **Slice 8 - one running tick** (`cognitive_cycle`): all ten components wired into a single end-to-end tick (Section A3.3 order) - the whole mind runs as one loop that wants, acts under its safety override, learns, and records each tick as a Causalontology thought, reproducibly. 4 of 4 tests. **konnectome now runs.**
 - **Slice 9 - hardening the loop** (`connection_graph`, `drive_system`, `cognitive_cycle`): the construct gain is now set by the bus, the drives propose the actions, and the body responds to what is done - a **closed sensorimotor loop** where acting to reduce a need moves the body toward its set-point, and that improvement becomes the next reward. 62 tests.
+- **Slice 10 - thought combination** (`thought_combination`): konnectome combines thoughts by minting **Causal Relation Objects** via the reused `causal_core` - atomic thoughts as occurrents, combinations as content-addressed CROs, chained into **chains and trees of thought**. 7 of 7 tests; the 119 conformance vectors stay green.
 
 Next: climbing the developmental ladder of Appendix 6 - senses wired in, holding an object in mind, then language and reasoning. This README, and every badge on it, is kept honest as the build climbs.
 
