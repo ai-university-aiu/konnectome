@@ -1,0 +1,242 @@
+THE CONNECTOME MASTER PLAN
+
+A staged program to discover what PrologAI still needs in order to build any brain region, interface, neurotransmitter, or hormone
+
+D. R. Dison, Founder, Artificial Intelligence University (AIU)
+
+Version 2. Planning document. No code is written by this document.
+
+WHAT CHANGED FROM VERSION 1: the spike (prologai-loops) has answered, and its verdict rewrites the sequence. The premise HOLDS - PrologAI can close reentrant loops under the strict layer rule - so the program proceeds. But the spike also found that the plan's keystone is missing: PrologAI has no construct that expresses the strict layer rule at all. Therefore the next wave is no longer connectome-proto-agi. It is PrologAI itself. Version 1 assumed a rule that is only a convention; version 2 builds the rule first. The loop-closure question is also answered, with a nuance version 1 did not anticipate: the honest end state is a hybrid, not a winner.
+
+
+PART ONE: THE PURPOSE, STATED HONESTLY
+
+This program is not an attempt to build an Artificial General Intelligence (AGI).
+
+It is an instrument for discovering requirements.
+
+The question it exists to answer is this: what functions, faculties, primitives, and packs does PrologAI still lack in order to be a complete programming language for building the functionality of any brain region, any interface, any neurotransmitter, and any hormone described in Nature's Cognitive Architecture?
+
+Everything below follows from that one purpose.
+
+Because the purpose is requirements discovery, a repository that fails to build but yields precise, well-argued requirements is a SUCCESS.
+
+A repository that builds beautifully and teaches us nothing about PrologAI's gaps is a FAILURE, however pretty it is.
+
+THE FIRST SPIKE HAS NOW VINDICATED THIS DESIGN. It passed - and its most valuable output was not the passing code. It was nine requirements, one of which (L4) revealed that this very plan rested on an assumption that was false. That is the program working exactly as intended, on its first probe, for a few days of effort.
+
+
+PART TWO: THE REAL DELIVERABLE - THE LEDGER IS NOW LIVE
+
+The product of this program is not code. It is the PrologAI Requirements Ledger.
+
+The Ledger now EXISTS. Its first instalment is LEDGER.md in the prologai-loops repository, carrying nine entries from the spike.
+
+Each entry records one finding: the construct that forced it; what PrologAI could not express, or expressed only awkwardly; the evidence, with a file and line pointer; and the proposed remedy, stated as the minimum that would close the gap.
+
+The load-bearing entries from the first instalment are these:
+
+• L4 - THE KEYSTONE. PrologAI has NO construct that expresses the strict layer rule at all. The rule is honored by convention, not enforced by the language. Every architecture in this plan postulates that rule. Nothing may depend on it until it exists.
+
+• L5. Under the mailbox mechanism, the reentrant upward reference reappears as an ordinary address inside the lowest actor, and nothing flags that a layer-one actor is addressing a layer-three one. This is precisely the silent erosion the strict rule exists to prevent.
+
+• L1. The Lattice needs a lightweight write. The intended write door drags in the vector backend, so the spike had to bypass it.
+
+• L2. Lattice transactions are not isolating. The spike had to supply its own mutual-exclusion lock.
+
+• L3. The Lattice has no reactive await. The spike had to busy-poll.
+
+Every repository in this family adds to this Ledger. When it is complete enough, it ships to PrologAI as a change order. A repository's worth is measured in good Ledger entries, not in how far the code got.
+
+
+PART THREE: THE SPIKE'S VERDICT, AND WHAT IT DECIDED
+
+Repository: prologai-loops. Answered 2026-07-17. Status: FROZEN, permanent, public, not maintained, and nothing may depend on it.
+
+THE QUESTION: can PrologAI close a reentrant loop under its own strict layer rule, and if so, by which mechanism?
+
+THE VERDICT: PASS - BOTH ARMS. The cortex-to-striatum-to-thalamus-to-cortex loop closed for one hundred laps under both mechanisms, with zero upward static edges, clean termination, and no unbounded growth.
+
+THE MECHANISM, STATED PLAINLY: the strict layer rule is a LOAD-TIME property; loop closure is a RUNTIME property; the two never touch. No actor imports another actor. The biological upward edge is absent from the static graph and exists only at runtime - as a runtime address under mailbox, or as a shared environmental fact under stigmergy.
+
+WHAT IT DECIDED FOR THE PROGRAM:
+
+• The premise holds. The connectome repositories may proceed. Five repositories were NOT built on sand, and that is what the spike was bought to determine.
+
+• The mailbox-versus-stigmergy question is answered (Part Six). There is still no connectome-mailbox repository and no connectome-stigmergy repository; that decision, made on design grounds in version 1, is now evidence-backed.
+
+• The plan's keystone is missing (L4), and the sequence must change (Part Five).
+
+
+PART FOUR: THE SIX REPOSITORIES
+
+1. prologai-loops
+
+The spike. DONE. Answered 2026-07-17: PASS, both arms. Frozen and tagged; nothing depends on it. It remains public because it is the evidence for the decisions in this document.
+
+2. connectome-proto-agi
+
+The vertical slice, and the first real instrument. A minimal end-to-end slice of Nature's Cognitive Architecture, written in PrologAI: one reentrant loop, a small handful of regions, one neurotransmitter, one hormone - enough to force contact with every kind of construct the architecture defines.
+
+Its deliverable is the next substantial body of Ledger entries, not a working mind.
+
+It uses the closure discipline of Part Six. It does not re-litigate the mechanism question.
+
+BLOCKED until L4 exists. See Part Five.
+
+3, 4, and 5. connectome-atomic, connectome-loops, connectome-strata
+
+The genuine experiment on decomposition granularity - how big should a code-pack be? Three arms, one variable:
+
+◦ connectome-atomic: one pack per named construct (roughly 140 packs). The control, and the original stance.
+
+◦ connectome-loops: one pack per reentrant loop or circuit (roughly 20 packs); regions become internal modules.
+
+◦ connectome-strata: one pack per stratum (15 packs), mapping one-to-one onto the Causalontology stratum kind. Now that strata are first-class in the data layer, testing whether they are also the right CODE boundary is the most interesting arm of the three.
+
+Built only after a slice exists that is worth replicating three ways.
+
+6. connectome-arbiter
+
+The safety layer. Its own repository, not an arm of an A/B test.
+
+It isolates the basal-ganglia selector and enforces the invariant that the selected output is a member of the input set, plus the override hierarchy.
+
+It gets its own repository because it must not fail, not because it has a competitor.
+
+
+PART FIVE: SEQUENCING - REVISED BY THE VERDICT
+
+The spike did not just pass. It inserted a wave that version 1 did not know was needed.
+
+WAVE 0 - COMPLETE. prologai-loops. Answered, frozen. The premise holds.
+
+WAVE 1 - NEW, AND BLOCKING. PROLOGAI FOUNDATION WORK. This is a change order to PrologAI itself, not a connectome repository. It is the first delivery of the Ledger back to its target, and it is the whole reason this program exists.
+
+In order:
+
+• L4 FIRST, BEFORE ANYTHING ELSE - a construct that expresses the strict layer rule, so the language can enforce what the architecture postulates. Every repository below depends on a rule that PrologAI currently cannot see. Building them first would mean building on a convention and calling it a law. The spike's own words: add the layer construct before anything depends on the rule it postulates.
+
+• THEN L1, L2, and L3 - the Lattice work that makes stigmergy affordable: a lightweight write, real transaction isolation, and a reactive await. Until L3 exists, stigmergy at scale means every actor polling, which undermines "survives 140 constructs" on performance even as it wins on coupling.
+
+• L5 is addressed by adopting stigmergy (Part Six), and is closed by L4 if the layer construct can flag an upward reference. Note that connection when writing the change order.
+
+WAVE 2 - connectome-proto-agi. Unblocked once L4 exists. Written in PrologAI, using the closure discipline of Part Six, producing Ledger entries.
+
+WAVE 3 - the granularity experiment: connectome-atomic, connectome-loops, connectome-strata.
+
+WAVE 4 - connectome-arbiter.
+
+The tree is pruned by results, never by enthusiasm. Each wave must justify the next. One repository at a time.
+
+
+PART SIX: THE LOOP-CLOSURE DECISION - STIGMERGY, CONDITIONALLY, AND HONESTLY
+
+ADOPT STIGMERGY for loop closure across the connectome family. The argument, taken from the spike's measurements rather than taste:
+
+• COUPLING, AND SURVIVING 140 CONSTRUCTS. Stigmergy holds actor-to-actor references at ZERO no matter how many actors join. Mailbox couples every actor to its successor's address, and that coupling grows with the number of edges. For a 140-construct anatomy, zero-actor-to-actor-reference is the property that survives.
+
+• THE SPIRIT OF THE LAYER RULE. Stigmergy removes the upward reference entirely - the relay writes a number and names no one. Mailbox keeps the upward reference alive as a hard-coded address in the lowest actor, which nothing flags (L5). Under a strict reading - no upward KNOWLEDGE, not merely no upward EDGE - stigmergy is the stronger fit.
+
+WHAT STIGMERGY COSTS, STATED PLAINLY, BECAUSE IT IS REAL:
+
+• Mailbox is easier to READ. Its trace prints the reentrant hop as a visible edge; you follow the loop by reading it. Stigmergy prints every hop as coming from "the environment", so the return edge is implicit and reentry had to be PROVEN from hop ordering rather than read off. This project's deepest commitment is that "why?" always has a readable answer, and stigmergy trades some of that away. Mitigate it deliberately in every connectome repository: narrate the loop, do not assume the trace shows it.
+
+• Mailbox fits PrologAI TODAY; stigmergy fights the current Lattice (L1, L2, L3). This is a gap, not a design flaw - and closing it is Wave 1.
+
+THE HONEST END STATE IS A HYBRID, NOT A WINNER. The spike's own recommendation, and this plan adopts it: stigmergy for STATE (the decoupled substrate), plus a Lattice-write-triggers-notification bridge for REACTIVITY. That bridge IS Ledger entry L3. So the correct reading is not "stigmergy beat mailbox" - it is "implement L3 as the bridge between the two arms rather than choosing one wholesale."
+
+Therefore connectome-proto-agi uses stigmergy for state, and adopts the notification bridge as soon as L3 lands. Do not implement pure polling stigmergy at scale and call it the answer.
+
+
+PART SEVEN: THE LANGUAGE DECISION - PrologAI, NOT PYTHON, NOW VINDICATED
+
+connectome-proto-agi is written in PrologAI. This was never a preference; it is forced by the purpose - and the spike has now proven the point rather than argued it.
+
+Python would cheerfully do anything asked of it. Its abundance hides exactly the gaps we are hunting.
+
+L4 - the discovery that PrologAI cannot express its own keystone rule - could not have been found in Python, because Python would have had no layer rule to be unable to express. The finding exists only because the experiment ran into a wall, and only PrologAI has the walls we care about.
+
+Keep every instrument in this program in PrologAI, for that reason.
+
+
+PART EIGHT: THE GROUNDING RULE - CAUSALONTOLOGY 2.0.0
+
+Unchanged by the verdict, and restated for completeness.
+
+Every repository in this family grounds its STRUCTURE in the Causalontology 2.0.0 schema. None grounds its DYNAMICS there.
+
+GROUNDED (structure):
+
+• The fifteen layers of abstraction map to strata.
+
+• Same-happening-at-two-levels maps to bridges.
+
+• The roughly forty interfaces map to ports and conduits, with the Perfect Wire Test deciding pipe from computer.
+
+• Faculties, dispositions, functions, and roles map to realizables.
+
+• The seven layer-skipping channels use the skips flag.
+
+• Particular episodes and clinical cases map to the token tier, which remains local by default.
+
+• Every claim carries its provenance as a signed assertion.
+
+NOT GROUNDED (dynamics - keep native):
+
+• The tick loop, the differential equations, the neurotransmitter and hormone kinetics, the three-factor plasticity rule, and anything in the DYNAMICS, DRIVES, PLASTICITY, or MODULATION blocks.
+
+The rule, once: Causalontology models causation, levels, interfaces, and history. It does not model behavior. Do not force a rate constant into a causal_relation_object.
+
+WHY GROUND AT ALL: it holds the data layer constant across the arms, which is what makes the granularity A/B valid - the experiment varies code architecture, so the vocabulary must not vary with it. It is already built, proven, and gated at 107 conformance vectors in PrologAI's own causal_core packs under Continuous Integration (CI). And its kinds fit the anatomy, because the anatomy is the forcing function that produced them.
+
+THE SPIKE WAS EXEMPT, correctly, and the exemption is now spent. From connectome-proto-agi onward, the grounding rule applies.
+
+
+PART NINE: HOW A REPOSITORY IS CREATED - THE TWO-FILE PATTERN
+
+Each repository is created with exactly two files, and the split is deliberate.
+
+• The SMALL_FILE: a single-line repository-creation command, run by the owner in the owner's own console, under the owner's own credentials. Repository creation is an account-level action in the organization's namespace, and the implementation server may not hold permission to perform it.
+
+• The BIG_FILE: the change order, pointed at the repository that now exists. It states what to build, the gate, the report, and the standing automation default (Auto-Push-All if green).
+
+For a NEW repository there is no prior state to protect, so the first scaffold commit may go straight to main; the gate is that the harness runs and reports honestly. Branch discipline, rollback tags, and the green gate resume for every change after the scaffold.
+
+NOTE FOR WAVE 1: the PrologAI foundation work is NOT a new repository. It is a change order against an existing, benchmark-critical repository, so the full discipline applies - branch, rollback tag, hard regression gate on ARC-AGI-1 (400/400) and ARC-AGI-2 (120/120), and the 107-vector conformance harness must still pass. The layer construct must not disturb the solving core.
+
+
+PART TEN: WHAT IS RETIRED
+
+The directory named connectome_mvp - README.txt, causalontology.py, acceptance.py, conformance.py - is retired.
+
+It is not a Nature's Cognitive Architecture prototype and never was. Its own first line says so: a reference Minimum Viable Product (MVP) for the Causalontology 2.0.0 DATA LAYER, built to prove the change order was implementable before the production implementation existed.
+
+It proved five things - the skip asymmetry, bridged reachability, the realizable collision repair, pipe versus computer, and the token tier - all claims about the data layer, not about cognition. It contains no regions, no loops, no neurotransmitters, no tick.
+
+It has been superseded: the production implementation now exists and passes all 107 vectors in both the Python reference and PrologAI, gated in CI.
+
+It did its job. Archive it as history. It is not the seed of connectome-proto-agi.
+
+
+PART ELEVEN: NAMING
+
+The family prefix is connectome- for every implementation of the architecture.
+
+prologai-loops sits outside that family deliberately: it is a probe of PrologAI, not an implementation of the connectome. Its name says what it is. The Wave 1 foundation work is likewise PrologAI work, not a connectome repository.
+
+One consideration recorded for the future: connectome- is neuroscience-flavored. If this framework is ever forced by something that is not a brain, the name will feel narrow. An acceptable trade today, written down so the choice is remembered as a choice.
+
+
+PART TWELVE: THE SUCCESS CRITERIA
+
+The program succeeds when the PrologAI Requirements Ledger is complete enough to be shipped to PrologAI as change orders, with each entry traced to the construct that forced it and the evidence that proves it.
+
+The first delivery is already due: L4, then L1, L2, and L3. Wave 1 is the Ledger doing its job.
+
+The program fails if it produces six architectures and no requirements.
+
+Every repository in this family carries this sentence at the top of its README: the deliverable is the finding, not the code.
+
+
+END OF DOCUMENT

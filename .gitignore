@@ -1,0 +1,18 @@
+# SWI-Prolog compiled and saved-state artifacts
+*.qlf
+*.qly
+*.sav
+
+# Editor and backup cruft
+*~
+*.swp
+*.swo
+*.bak
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db
+
+# Local scratch and temporary build output
+/tmp/
+*.log

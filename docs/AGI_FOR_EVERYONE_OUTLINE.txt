@@ -1,0 +1,275 @@
+Book Title:
+
+AGI FOR EVERYONE: A DEEP DIVE INTO AGI IN 2026
+
+PART 01: Neural-Symbolic and Hybrid Methods for AGI:
+
+TOPICS:
+
+Neural-symbolic integration architectures and knowledge representation:
+
+Differentiable reasoning and learned symbolic structures:
+
+Logic, probabilistic inference, and deep learning hybrids:
+
+Concept learning, abstraction, and compositional generalization:
+
+Causal reasoning and counterfactual modeling in hybrid systems:
+
+Memory-augmented networks and external knowledge stores:
+
+Neuro-symbolic program synthesis and inductive logic programming:
+
+Hybrid architectures for language grounding and perception:
+
+Transferability and few-shot generalization across domains:
+
+Scalable knowledge graphs and structured world models:
+
+Interpretability and explainability in hybrid systems:
+
+Neural-symbolic approaches to planning and goal-directed behavior:
+
+Integration with large language models and foundation models:
+
+Benchmarks and evaluations for compositional and relational reasoning:
+
+WHAT WE ARE LOOKING FORWARD TO:
+
+Advancing the theoretical foundations of neural-symbolic integration:
+
+Proposing novel hybrid architectures with demonstrated reasoning capabilities:
+
+Addressing generalization, transferability, or sample efficiency beyond purely neural systems:
+
+Exploring the relationship between symbolic structure and emergent learning:
+
+Benchmarking hybrid systems on tasks requiring abstraction or relational reasoning:
+
+Connecting neural-symbolic methods to alignment, interpretability, or robustness:
+
+VISION: This section aims to explain research working toward AGI that is:
+
+Capable of structured reasoning, not just pattern recognition:
+
+Generalizable across novel domains rather than narrowly fitted:
+
+Interpretable through its symbolic components, not only post hoc:
+
+Grounded in explicit knowledge and causal structure:
+
+Able to integrate the statistical power of neural learning with the compositionality of symbolic thought:
+
+PART 02: Predictive Coding for Neural Learning and Inference:
+
+TOPICS;
+
+Predictive coding as a unifying theory of cortical computation:
+
+Free energy minimization and variational inference in neural systems:
+
+Hierarchical generative models of perception, cognition, and action:
+
+Hebbian and local learning rules derived from predictive coding principles:
+
+Comparison with backpropagation: biological plausibility and algorithmic equivalence:
+
+Attention, precision weighting, and top-down modulation:
+
+Predictive coding models of memory, imagination, and mental simulation:
+
+Temporal prediction, sequence learning, and anticipatory behavior:
+
+Applications to computer vision, language, and multimodal learning:
+
+Neuromorphic and hardware implementations of predictive coding:
+
+Connections to active inference, Bayesian brain, and Karl Friston's frameworks:
+
+Predictive coding for continual and lifelong learning:
+
+Anomaly detection, surprise, and novelty-driven exploration:
+
+Predictive coding in multi-layer and deep network architectures:
+
+WHAT WE ARE LOOKING FORWARD TO:
+
+Formalizing or extending predictive coding as a learning or inference algorithm:
+
+Demonstrating empirical results in systems implementing predictive coding principles:
+
+Establishing theoretical connections between predictive coding and other learning paradigms:
+
+Proposing biologically plausible alternatives to standard gradient-based training:
+
+Applying predictive coding to practical domains such as vision, language, or control:
+
+Addressing scalability, efficiency, or hardware realization of predictive coding systems:
+
+VISION: This section aims to explain research working toward learning and inference systems that are:
+
+Grounded in principled probabilistic and neuroscientific theory:
+
+Capable of local, biologically plausible learning rather than purely global optimization:
+
+Hierarchically structured to model the world at multiple levels of abstraction:
+
+Naturally uncertainty-aware through their generative model foundations:
+
+Pointing toward a unified account of perception, action, and cognition in artificial systems:
+
+PART 03: Practical Proto-AGI Systems:
+
+TOPICS:
+
+Agentic architectures for open-ended, multi-step task completion:
+
+Memory systems: episodic, semantic, and working memory for agents:
+
+Tool use, API integration, and real-world environment interaction:
+
+Multi-agent coordination, communication, and emergent collaboration:
+
+Self-improvement, meta-learning, and recursive capability development:
+
+Long-horizon planning and goal decomposition:
+
+Evaluation frameworks and benchmarks for general-purpose agents:
+
+Safety, alignment, and oversight mechanisms in deployed agentic systems:
+
+Retrieval-augmented generation and knowledge management at scale:
+
+Human-agent teaming and mixed-initiative systems:
+
+Resource-aware and efficient inference for real-world deployment:
+
+Continual learning and adaptation in non-stationary environments:
+
+Cognitive architectures integrating perception, memory, reasoning, and action:
+
+Case studies and lessons from deployed proto-AGI applications:
+
+WHAT WE ARE LOOKING FORWARD TO:
+
+Demonstrating working systems with meaningful general-purpose capability:
+
+Proposing new architectures or components for scalable agentic behavior:
+
+Addressing open problems in evaluation and benchmarking of general agents:
+
+Tackling real-world deployment challenges: safety, efficiency, reliability, or alignment:
+
+Presenting rigorous empirical results from multi-domain or open-ended task settings:
+
+Contributing frameworks, tools, or infrastructure that advance the broader community's ability to build and study proto-AGI systems:
+
+VISION: This section aims to explain research working toward proto-AGI systems that are:
+
+Capable of open-ended, multi-step problem solving across domains:
+
+Grounded in real-world interaction rather than narrow benchmarks:
+
+Designed with safety and alignment as first-class concerns:
+
+Able to learn, adapt, and improve continuously in deployment:
+
+Practically deployable with responsible oversight and evaluation:
+
+PART 04: Active Inference for General Intelligence
+
+TOPICS:
+
+Active Inference and the foundations of AGI:
+
+General intelligence as adaptive inference and control:
+
+Human–AI complementarity and collaborative decision-making:
+
+Social cognition, theory of mind, and intersubjective modeling:
+
+Shared representations and co-adaptive intelligence:
+
+Multi-agent Active Inference and collective behavior:
+
+Embodied cognition and enactive approaches to AI:
+
+Robotics and autonomous systems based on Active Inference:
+
+Hierarchical generative models and temporally deep planning:
+
+Precision weighting, exploration, and uncertainty-sensitive control:
+
+Hybrid Active Inference + LLM or Active Inference + foundation model architectures:
+
+Communication, interpretability, and inspectable generative models:
+
+Active Inference for AI safety and alignment:
+
+Scripts, norms, institutions, and socially structured intelligence:
+
+Benchmarks, simulations, and real-world demonstrations:
+
+WHAT WE ARE LOOKING FORWARD TO:
+
+Advancing the formal foundations of Active Inference for AGI:
+
+Proposing new architectures or algorithmic frameworks:
+
+Demonstrating empirically grounded systems or simulations:
+
+Clarifying how Active Inference interfaces with current AI paradigms:
+
+Showing how adaptive, embodied, or social intelligence can be formally modeled:
+
+Addressing alignment, interpretability, or robust cooperation in intelligent systems:
+
+VISION: This section aims to explain research working toward a form of AGI that is:
+
+Adaptive rather than brittle:
+
+Embodied rather than purely abstract:
+
+Socially responsive rather than isolated:
+
+Uncertainty-aware rather than overconfident:
+
+Aligned through structured interaction and modeling, not only post hoc control:
+
+OTHER TOPICS:
+
+AGI Architectures:
+
+Philosophy of AI:
+
+Broader Implications of AGI:
+
+Natural Language Understanding:
+
+Evolutionary Computation:
+
+Benchmark and Evaluation:
+
+Motivation, Emotion, and Affect:
+
+Neural-Symbolic AI:
+
+Autonomy and Creativity:
+
+Reinforcement Learning:
+
+AI and Neurobiology:
+
+Knowledge Representation:
+
+Reasoning, Inference, and Planning:
+
+Robotic and Virtual Agent:
+
+Cognitive Modeling:
+
+Multi-Agent Interaction and Collaborative Intelligence:
+
+Perception and Perceptual Modeling:
+
+Theoretical Foundations of General Intelligence:
