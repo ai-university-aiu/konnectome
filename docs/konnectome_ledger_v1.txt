@@ -1,0 +1,146 @@
+KONNECTOME LEDGER - THE RUNNING SCOREBOARD OF THE BUILD  (v1)
+
+This is the single, canonical, navigable record of every wall the konnectome build
+hits, exactly as PrologAI_Requirements_Ledger_v1.txt was for the language. Every wall
+becomes an entry here FIRST; from here it is routed to exactly one destination: the
+causalontology change order, the PrologAI change order, or a konnectome construct.
+A wall shown to be UNNECESSARY is recorded as honestly as a wall that needed building:
+honest non-closure is a real result, not a failure. Findings are DISCOVERED by
+building, never guessed from the armchair (Second, Third, and Fourth Commandments).
+
+Author: D. R. Dison / ai-university-aiu.
+
+Acronyms are spelled out in full on first use, with the acronym in parentheses, and the
+bare acronym thereafter. External proper names are kept verbatim (SWI-Prolog, Ed25519,
+Git, GitHub, Abstraction and Reasoning Corpus). A causal_relation_object is a
+Causalontology structure record, spelled in full per the Twelfth Commandment. konnectome
+is a "Whole-Word System": no abbreviation series, no single-letter series - Loop-1 not
+L1, Native-1 not N1, Proto-1 not P1.
+
+
+================================================================================
+SECTION ONE - WHAT THIS IS AND HOW TO READ IT
+================================================================================
+
+PART ONE - THE LEDGER'S ROLE
+
+konnectome is a Proto-Artificial-General-Intelligence (Proto-AGI) prototype written in
+PrologAI, storing its thoughts as Causalontology 3.0.0 records, and built from the
+appendices of Nature's Cognitive Architecture. The build method is enforce-then-build,
+inherited from the PrologAI program: a wall the build hits becomes an entry here; a
+load-bearing entry is routed to exactly one place; the next slice rests on the result
+rather than re-inventing it. This ledger is the product's honest scoreboard.
+
+PART TWO - STATUS MEANINGS
+
+ - OPEN: recorded, not yet resolved. The build hit a wall; no destination decided yet.
+ - ROUTED: the finding passed its gate and was written to one destination - the
+   causalontology change order (Second Commandment), the PrologAI change order (Third
+   Commandment), or a named konnectome construct (Fourth Commandment).
+ - CLOSED: the destination delivered - a Causalontology change-order entry, a PrologAI
+   change-order entry, or a konnectome module - and the build now rests on it. Every
+   CLOSED entry names what closed it.
+ - UNNECESSARY: the wall was shown, by building, not to need a change at all. Recorded
+   as honestly as a wall that needed building.
+
+PART THREE - THE THREE ROUTING DESTINATIONS (route each finding to EXACTLY ONE)
+
+ - DATA-STRUCTURE gap (must be SHARED across agents or repositories as a signed,
+   evidence-graded, content-addressed record, not merely computed inside one konnectome
+   runtime) -> docs/Causalontology_4_0_0_CHANGE_ORDER_v2.txt. Gated by the Thirteenth
+   Commandment: must keep the 119-vector conformance suite green.
+ - LANGUAGE gap (a real, load-bearing PrologAI-language wall) ->
+   docs/PrologAI_CHANGE_ORDER_v1.txt. Additive only, gated by the Thirteenth
+   Commandment: must not regress ARC-AGI-1 (400 of 400) or ARC-AGI-2 (120 of 120)
+   through Mentova.
+ - konnectome-SOLVABLE gap (expressible inside konnectome's own code) -> a named
+   konnectome pack or module, recorded in the coverage list of Section Four.
+
+
+================================================================================
+SECTION TWO - BUILD PROVENANCE (so the build is reproducible)
+================================================================================
+
+Build opened: 2026-07-19.
+
+konnectome is building against these cousin commits (Step 4 requirement):
+
+ - causalontology : local git head 98ebb33 (frozen standard, Causalontology 3.0.0).
+ - PrologAI       : local git head 0fed5d1, tag prologai-wave10-complete (the finished
+                    language; Wave 10 closed, benchmarks green).
+ - Mentova        : local git head fb7d48f (flagship Synthetic Mind; home of the ARC
+                    solving core; loaded read-only by the regression harness).
+
+Target repository: https://github.com/ai-university-aiu/konnectome (public; empty at
+start of this build; scaffolded on branch feature/initial-scaffold via pull request).
+
+
+================================================================================
+SECTION THREE - THE SPARCD FILESET PROVENANCE
+================================================================================
+
+The six SPARCD Fileset files were seeded verbatim from the appendices of
+docs/NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt (Nature's Cognitive Architecture,
+version 20), per the Seventh Commandment. Source line ranges, for audit:
+
+ - konnectome_1_specification_v1.txt   <- Appendix 1, Specification   (lines 9388-9595)
+ - konnectome_2_pseudocode_v1.txt      <- Appendix 2, Pseudocode      (lines 9596-9928)
+ - konnectome_3_architecture_v1.txt    <- Appendix 3, Architecture    (lines 9929-10114)
+ - konnectome_4_refinement_v1.txt      <- Appendix 4, Refinement      (lines 10115-10268)
+ - konnectome_5_completion_v1.txt      <- Appendix 5, Completion       (lines 10269-10412)
+ - konnectome_6_demonstration_v1.txt   <- Appendix 6, Demonstration   (lines 10413-10915)
+
+Appendix 6 was sliced through its closing marker "END OF NATURE'S COGNITIVE
+ARCHITECTURE, VERSION 20"; the manuscript's document-level CHANGE LOG that follows it is
+versioning metadata, not appendix content, and was deliberately not carried into the
+Demonstration file.
+
+
+================================================================================
+SECTION FOUR - THE EIGHTH COMMANDMENT AUDIT: CONSTRUCT COVERAGE LIST
+================================================================================
+
+This is the re-runnable audit. It names, for each construct in Nature's Cognitive
+Architecture, the konnectome module that realizes it, so a missing construct is visible
+at a glance. It must cover every named construct AND every previously-unnamed construct
+(PUC) - the archetypes, the drives, the neuromodulators, the learning rule, the
+components (observer, scheduler/tick engine, connection graph), the regions, and the
+interfaces (each with its SUBSCRIBE/PUBLISH signature).
+
+STATUS AT BUILD START: not yet populated. The full construct inventory is generated as
+the FIRST action of Step 6 (build-out), by reading the science chapters and appendices
+of the manuscript, before any module is written; each construct's realizing module is
+then filled in here as it is built. Seeded below are the constructs already named in the
+appendices, so the list's shape is visible; all are marked "no module yet" because no
+konnectome code exists at the checkpoint.
+
+ CONSTRUCT (from manuscript)                        | REALIZING MODULE      | STATUS
+ ---------------------------------------------------+-----------------------+-------------
+ Archetype rule: relay                              | (to be built)         | no module yet
+ Archetype rule: integrator                         | (to be built)         | no module yet
+ Archetype rule: oscillator                         | (to be built)         | no module yet
+ Archetype rule: attractor                          | (to be built)         | no module yet
+ Archetype rule: gate                               | (to be built)         | no module yet
+ Archetype rule: comparator                         | (to be built)         | no module yet
+ Molecule kind: field (neuromodulatory bus)         | (to be built)         | no module yet
+ Component: observer                                | (to be built)         | no module yet
+ Component: scheduler / tick engine                 | (to be built)         | no module yet
+ Component: connection graph (the connectome)       | (to be built)         | no module yet
+ Two-pass synchronous update (compute, then commit) | (to be built)         | no module yet
+ Drive loop (set-point drives)                      | (to be built)         | no module yet
+ Learning rule (three-factor plasticity)            | (to be built)         | no module yet
+ Modulators: glia, tripartite synapse               | (to be built)         | no module yet
+
+ (This seed is partial. The complete inventory, including all previously-unnamed
+ constructs and their SUBSCRIBE/PUBLISH interfaces, is produced at Step 6 start.)
+
+
+================================================================================
+SECTION FIVE - FINDINGS
+================================================================================
+
+STATUS AT BUILD START: 0 findings. No walls hit yet, because no build slice has run yet.
+The first finding will be recorded here when the first Step 6 slice hits a wall. Walls
+are discovered by building, never guessed from the armchair.
+
+ Total findings: 0 | OPEN: 0 | ROUTED: 0 | CLOSED: 0 | UNNECESSARY: 0.

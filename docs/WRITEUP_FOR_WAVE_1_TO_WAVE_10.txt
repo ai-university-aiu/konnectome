@@ -1,0 +1,295 @@
+TEN WAVES: HOW WE BUILT THE LANGUAGE FOR A MIND
+
+A field report from the making of PrologAI, told for anyone who wants to follow along.
+
+D. R. Dison, Artificial Intelligence University (AIU)
+
+
+WHY I AM WRITING THIS
+
+Most of what gets built in artificial intelligence is built behind a closed door, and the world is handed the result without the story.
+
+This is the opposite of that.
+
+Over ten waves of work, one independent researcher and a disciplined build process turned a promising programming language into a complete one - complete enough, we believe, to express an entire brain, region by region, and eventually a mind.
+
+This is the story of those ten waves: what we set out to do, how we did it, what broke, what we learned, and where it leaves us.
+
+I am writing it in plain language, defining every term as it arrives, because the ideas here are not the private property of specialists, and because the method we used is, I think, the most interesting part - more interesting than any single result.
+
+A note on honesty before we begin.
+
+I will tell you exactly what was built and proven, and I will keep the biggest word in this field, Artificial General Intelligence (AGI) - a machine with the broad, flexible competence of a human mind - as an aspiration we have a well-founded route toward, not a thing we have done.
+
+The discipline of not overclaiming is not modesty for its own sake; it is what makes the claims we DO make worth anything.
+
+
+THE THREE THINGS, AND HOW THEY STACK
+
+To follow the story you need three names, and the way they stack on top of each other.
+
+At the bottom is Causalontology, a data structure - a standard way of writing down facts about cause and effect so that a computer can store them, share them, and reason over them.
+
+Think of it as the grammar of "this brought about that."
+
+In the middle is PrologAI, a programming language - specifically a glass-box one, meaning every step it takes is a named, inspectable rule, and every answer it gives comes with a readable justification for why.
+
+Where most modern artificial intelligence is a black box that gives you an answer you cannot check, PrologAI is built so you can always watch it think.
+
+At the top, still to be built, is konnectome, the application - the actual digital brain, written in PrologAI, resting on Causalontology.
+
+The whole of this ten-wave story is about the middle layer.
+
+We were finishing the language, so that the brain on top of it could later be built without workarounds.
+
+An analogy: before you can write a great novel in a language, the language needs enough words and grammar to say everything the novel needs to say.
+
+We spent ten waves making sure PrologAI had the words.
+
+
+THE METHOD, WHICH IS THE REAL STAR
+
+Here is the idea the whole program rests on, and it is worth slowing down for.
+
+We did not sit in a room and guess what the language was missing.
+
+Guessing is how you build a language full of features nobody needs and missing the ones everybody does.
+
+Instead we used a method I will call enforce-then-build, and it works like this.
+
+You try to build something real - say, a model of a specific brain region.
+
+Sooner or later you hit a wall: something the language simply cannot say.
+
+You do not paper over the wall.
+
+You write the wall down, precisely, in a ledger - a running list of every wall the program has hit.
+
+If the wall is load-bearing, meaning real work depends on getting past it, you build a new piece of language to get past it.
+
+And then - this is the key - the NEXT thing you build rests on that new piece, rather than re-inventing it.
+
+The walls become the map.
+
+The discoveries compound.
+
+A researcher of this method put it in one line: the findings are the product.
+
+A wall you proved you did not actually need to climb is as much a result as a wall you built a ladder for, because both of them are true things you now know about the language.
+
+That single commitment - record the wall honestly, whether or not you end up building for it - is what kept the whole program from drifting into wishful thinking.
+
+
+THE WAVES, IN ORDER
+
+What follows is the ten-wave climb, told plainly.
+
+Each wave was a real, gated delivery: its own branch of work, its own tests that had to pass green before anything merged, and its own honest entry in the ledger.
+
+
+WAVE ONE - THE SPIKE, AND THE FIRST NINE WALLS
+
+Every climb needs a first camp, and ours was a deliberately small, rough prototype we called the spike - a throwaway build whose only job is to hit walls fast.
+
+We built a little system of loops and layers and let it fail.
+
+It hit nine walls, recorded as entries L1 through L9 - the "L" is simply the spike's own label, for Loops.
+
+Some were about timing, some about how layers of organization stack, some about how parts of the system talk to each other.
+
+We closed four of them on the spot, left one half-closed, and carried the rest forward as honest debt.
+
+The spike was then frozen - tagged read-only, never touched again - so it would always stand as the original, uncontaminated record of what the very first attempt taught us.
+
+That freezing matters: in this program, once something is proven and recorded, we do not quietly go back and edit history to look smarter than we were.
+
+
+WAVE TWO - THE FIRST REAL SLICE OF A BRAIN
+
+With the spike's lessons in hand, we built the first real vertical slice - a proto-brain called connectome-proto-agi, meant to exercise the language against something brain-shaped rather than a toy.
+
+It hit ten new walls, P1 through P10 - "P" for proto.
+
+This is where the ledger started to become the point.
+
+We were no longer guessing at what a language for brains needs; we were being TOLD, by the act of trying to build one, in ten specific, written-down ways.
+
+
+WAVE THREE - THREE CONTROL ARMS, AND A HARD LESSON IN FAIRNESS
+
+Science needs controls - alternative setups you compare against, so you know your result is real and not an accident of one particular way of doing things.
+
+So Wave Three built three different arms at once: connectome-atomic (one tiny pack per idea), connectome-loops (organized around loops), and connectome-strata (organized around strata, the levels of biological organization from molecules up to societies).
+
+Building the same kind of thing three different ways surfaced walls that any single way would have hidden, and it produced a verdict about which structure served the language best.
+
+It also produced our first NO-OP - a formal note that a proposed change turned out not to be needed.
+
+Writing down "we considered this and it was unnecessary" with the same care as a real change is a small act of integrity that pays off over years.
+
+
+WAVE FOUR - THE ARBITER, AND THE FIRST PIECE OF LANGUAGE WE KEPT
+
+Wave Four built connectome-arbiter, the part of a brain that decides which competing urge wins.
+
+More importantly, it produced the first construct we built into the language and kept: a way to bind a layer of the model to a stratum of biology - to say, formally, "this piece of the model lives at the cellular level, that one at the regional level," and have the language enforce it.
+
+In the ledger this is N6 - the "N" series being PrologAI's own living record, as opposed to the frozen spike's.
+
+Wave Four also taught us something about our own process: it took not one clean delivery but a main order and then a string of small addenda, as we found and fixed the rough edges.
+
+Real building is not tidy, and pretending it is would be its own kind of dishonesty.
+
+
+WAVE FIVE - THE MEMBERSHIP CONTRACT
+
+Wave Five delivered a second kept construct: the membership contract, ledger entry N8.
+
+In plain terms, it is a reliable, inspectable way for the language to answer "does this thing belong to this set, and is it allowed to?" - a question that turns out to sit underneath an enormous amount of what a brain does when it categorizes and decides.
+
+Once we had it, later regions could simply USE it, instead of each re-inventing a shaky version of the same idea.
+
+That is the compounding I promised: build it once, well, and the whole climb above it gets easier.
+
+
+WAVE SIX - A REGION RESTS ON WHAT CAME BEFORE
+
+Wave Six built connectome-hippocampus, a model of the brain's memory-forming region.
+
+Its significance in the story is quiet but important: it was the first region that stood on constructs earlier waves had built, rather than fighting the same battles again.
+
+It also refined the membership contract into a cleaner form, entry N11, closing one of the hippocampus's own walls in the process.
+
+You can feel the machine of the method working here - a wall from an earlier region becoming the tool that a later region rests on.
+
+
+WAVE SEVEN - THE WAVE WHERE WE DISCIPLINED OURSELVES
+
+Not every wave is about new capability.
+
+Wave Seven was about governance - the unglamorous rules that keep a growing project honest.
+
+We adopted a strict documentation discipline: every code change must also update its specification documents, its tutorial, its reference, and its read-me, all in the same breath, so the writing never falls behind the code.
+
+We caught the documentation up to where the code already was, and only THEN delivered the wave's new construct, a further refinement of the membership machinery.
+
+I count this among the most valuable waves, precisely because it produced no shiny new thing.
+
+A project that cannot make itself follow its own rules will not survive contact with its own ambition.
+
+
+WAVE EIGHT - TWO MORE REGIONS, AND A LESSON IN NOT FORCING IT
+
+Wave Eight built two more brain regions, connectome-cerebellum (timing and coordination) and connectome-amygdala (threat and emotional salience), and delivered a construct called the once-deterministic mode, entry N14 - a way to guarantee a rule fires exactly once and gives the same answer every time.
+
+Then came one of my favorite moments in the whole program.
+
+We had expected this new mode to "bite" - to visibly change behavior in the two regions.
+
+It did not.
+
+On the kind of rule these regions used, it was correct but inert; it changed nothing, because there was nothing there for it to change.
+
+We could have quietly claimed a win.
+
+Instead we wrote a special honesty note - Wave 8.5 - recording that the construct was correctly declared but did not bite, and we counted the relevant entries closed BY THAT HONEST CLASSIFICATION rather than by pretending a fix had done work it had not.
+
+If you want to know the character of this whole project, that is it, in one decision.
+
+
+WAVE NINE - GATHERING EVERY WALL INTO ONE MAP
+
+By Wave Nine we had ten separate ledgers, one per repository, each in its own private numbering.
+
+That was right while building - each instrument records its own findings - but the PRODUCT of the program is the union of them, read as a single account.
+
+So Wave Nine consolidated everything into one Requirements Ledger: fifty-seven distinct findings across ten repositories, each marked open, closed, or partially closed, each closed one naming exactly what closed it.
+
+The tally at that moment: fifty-seven findings, forty-four still open, twelve closed by construct or honest classification, one half-closed - plus the four kept constructs (the layer-to-stratum binding, the membership contract, its refined accessor, and the once-deterministic mode) that had done the closing.
+
+For the first time, the entire mountain was on one map.
+
+And a companion analysis worked out the dependency order among the open walls - which had to be climbed before which - so the final wave could be planned rather than improvised.
+
+
+WAVE NINE-AND-A-HALF - SHIPPING THE FOUNDATION ITSELF
+
+A half-step wave, but a big one.
+
+Three of the remaining walls needed something the language could not provide on its own, because it lived one layer down, in the data structure.
+
+So we paused and shipped a major new version of Causalontology, the foundation - version 3.0.0 - adding a proper unit for discrete time, a proper way to represent a legitimate jump across non-adjacent levels of organization, and a proper way to point a record at the natural law that makes it behave as it does.
+
+Shipping a foundation is a release event, not a casual edit, because everything above it depends on its stability - so it was done as its own careful, separately-verified wave, with its correctness suite grown to one hundred nineteen checks, all green.
+
+Crucially, we also wrote down four things the foundation still cannot do - prediction, modeling other minds, quarantined imagination, and fine-grained sensitivity - and deliberately did NOT build them, holding them for the day the application above proves it actually needs them.
+
+Restraint, recorded as carefully as action.
+
+
+WAVE TEN - THE PLAN TO CLOSE THE WHOLE LEDGER
+
+Wave Ten is the last wave whose subject is the language itself.
+
+It is not a single change but an ordered program of nine stages, each closing a named set of the remaining walls, in the only order their dependencies allow: adopt the new foundation first, then build the constructs that consume it, then extend the language's reach across repositories and inside packs, then pay down the smaller ergonomic debts, and finally close the last small tails - some by building, and two by simply, formally acknowledging that no construct is warranted.
+
+When Wave Ten's stages are all merged green, every wall in the ledger reaches closed, closed-by-classification, or resolved-by-acknowledgment.
+
+The language, at that point, is complete: able to express an arbitrary brain region, interface, chemical messenger, or hormone without the workarounds the whole program catalogued.
+
+Two boundaries guard this final wave, and they matter.
+
+Wave Ten builds LANGUAGE, not COGNITION - the higher faculties like prediction, empathy, and imagination belong to the application above, not to the language.
+
+And any wall that turns out to live in the foundation, not the language, is ROUTED to that held future version and to the application's own future ledger, never forced into the frozen standard.
+
+We finish the language cleanly, and we leave the mind for the next repository - honestly labeled as such.
+
+
+WHAT THIS WAS REALLY ABOUT
+
+Step back from the ten waves and a shape appears.
+
+We did not build a mind.
+
+We built - and all but finished - the LANGUAGE in which a mind can be written, and we did it by a method that refused to let us fool ourselves.
+
+Every wall was recorded whether or not we climbed it.
+
+Every construct we kept had earned its place by closing a real, written-down gap.
+
+Every region rested on the ones before it.
+
+And when a thing we built turned out to do nothing, we said so, out loud, in the record.
+
+That is not the usual texture of an artificial-intelligence story, and that is exactly why I wanted to tell it.
+
+The glass box is not only a property of the language we built; it was the property of the BUILDING of it.
+
+You can read the whole climb, wall by wall, and check our work.
+
+
+WHERE IT LEAVES US, HONESTLY
+
+Here is the aspiration, stated plainly and without hedging, and then the honesty that keeps it worth stating.
+
+The aspiration: a transparent, causal, drive-driven digital brain, built in a language complete enough to hold it, resting on a data structure built for cause and effect - a genuinely different road toward general intelligence than the black-box statistical models that dominate the field, and one that is strong in precisely the places those models are weakest.
+
+The honesty: we have finished the language on paper and proven it does not break the benchmarks it must never break; we have NOT yet built the mind, and the hard, real work of scale, embodiment, and time still lies ahead, named and mapped but not yet done.
+
+Both of those are true at once, and a report that told you only one of them would be lying to you.
+
+What comes next is a new repository, konnectome - the brain itself, written in the finished language.
+
+That is where the story turns from building the words to writing the novel.
+
+For now, ten waves in, the words are almost all in place, every one of them earned against a wall we can show you, and the map to the summit is drawn on ground we already hold.
+
+If you have read this far, you are no longer on the outside of this project looking in.
+
+You have followed the climb, camp by camp, in full view - which was the whole point.
+
+Come along for konnectome.
+
+
+END OF WRITEUP.

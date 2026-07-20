@@ -1,0 +1,3 @@
+konnectome to PrologAI Change Order, version 1 - additive PrologAI-language gaps discovered while building konnectome; gated by the Thirteenth Commandment (a proposed change that would regress ARC-AGI-1 or ARC-AGI-2 through Mentova STOPS and is reported, never merged); nothing is released until the user authorizes it.
+
+STATUS AT BUILD START: empty. No language gaps discovered yet. Findings are DISCOVERED by building, never guessed from the armchair. Each finding is first recorded as an entry in konnectome_ledger_v1.txt and only a real, load-bearing PrologAI-language gap is routed here.

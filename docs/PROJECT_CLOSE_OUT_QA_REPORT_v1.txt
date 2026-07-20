@@ -1,0 +1,140 @@
+PROJECT CLOSE-OUT QUALITY ASSURANCE REPORT  (v1)
+
+Prepared by the Planning Server for D. R. Dison / ai-university-aiu.
+
+This is the final Quality-Assurance (QA) pass for the whole program: Wave 10 in particular, Waves 1 through 10 as a set, and all project documents. It records what was checked, what passed, what was fixed during this pass, and what the Implementation Server must run to close the project out. It writes no code. It is the closing scoreboard the program has kept from the first wave.
+
+
+PART ZERO: WHAT WAS CLOSED OUT
+
+The program's ten waves turned from DISCOVERING what PrologAI lacks (Waves 0 through 9) to a staged plan to IMPLEMENT the whole Requirements Ledger (Wave 10). Wave 10 is the last wave whose subject is PrologAI itself. When its nine stages are merged green, PrologAI (the language) rests on Causalontology 3.0.0 (the data structure), and the two together are the foundation for the next repository, konnectome (the application). This report certifies the PLANNING side of that boundary is clean and hands the Implementation Server the exact final-regression instruction.
+
+
+PART ONE: SCOPE OF THE QA
+
+Three questions were asked of the whole corpus.
+
+One. Is Wave 10 correct, internally consistent, and faithful to the standard it now rests on.
+
+Two. Do Waves 1 through 10 agree with each other - counts, versions, naming, layer and work-package numbering, and cross-references.
+
+Three. Do all documents obey the house rules - the Archive Rule, the formatting conventions, and honest version markers.
+
+
+PART TWO: WAVE-BY-WAVE INVENTORY (the spine that was checked)
+
+The wave orders and their companion build files, all present in the project folder:
+
+ • Wave 1 - WAVE_1_CHANGE_ORDER_to_PrologAI, plus WAVE_1_5_CHANGE_ORDER_cleanup, plus SMALL_FILE_1 and BIG_FILE_1 (prologai-loops, the frozen spike).
+
+ • Wave 2 - the proto-agi vertical slice - SMALL_FILE_2 and BIG_FILE_2 (and BIG_FILE_2 v2), plus WAVE_2.5_v1.
+
+ • Wave 3 - the three control arms - WAVE_3_DESIGN_v1, WAVE_3_VERDICT, WAVE_3b.5_CHANGE_ORDER, NO_OP_COVER_NOTE_Wave_3_Verdict, and SMALL/BIG files 3a (atomic), 3b (loops), 3c (strata), plus BIG_FILE_3a.5.
+
+ • Wave 4 - the arbiter, and the bind-layer-to-stratum construct - WAVE_4_CHANGE_ORDER_to_PrologAI_bind-layer-to-stratum, WAVE_4_PART_ONE.5_CHANGE_ORDER, SMALL_FILE_4 (and v2), BIG_FILE_4 (and 4.5, 4.6), and HOW_TO_confirm_arbiter_gates.
+
+ • Wave 5 - the membership contract - WAVE_5_CHANGE_ORDER_to_PrologAI_membership-contract and HOW_TO_witness_wave5_gates.
+
+ • Wave 6 - the hippocampus region - SMALL_FILE_6, BIG_FILE_6, and HOW_TO_witness_wave6_gates. (Wave 6 shipped as region-build files, not a separate order document; this is the established pattern for a region wave, and is not a gap.)
+
+ • Wave 7 - accessor-form membership plus documentation governance - WAVE_7_ORDER (the monolithic order), WAVE_7_PART_ONE_doc-governance_and_catchup, WAVE_7_PART_TWO_accessor-membership-contract, and DOC_CHANGE_ORDER_CATCH_UP.
+
+ • Wave 8 - the once/deterministic contract mode, the cerebellum, and the amygdala - WAVE_8_PART_ONE_N12_once-deterministic-contract, SMALL/BIG files 8b (cerebellum) and 8c (amygdala), and WAVE_8.5_QA_CHANGE_ORDER (the once-mode honesty hedge).
+
+ • Wave 9 - the consolidated Requirements Ledger - WAVE_9_ORDER_consolidated-requirements-ledger, producing PrologAI_Requirements_Ledger_v1 and FORWARD_AGENDA_PARALLELIZATION_ANALYSIS.
+
+ • Wave 9.5 - the data-structure release - Causalontology_3_0_0_CHANGE_ORDER (paused Wave 10 to ship the standard), with CAUSALONTOLOGY_3_0_0_REVIEW_AND_4_0_0_ASSESSMENT and the held Causalontology_4_0_0_CHANGE_ORDER_v1.
+
+ • Wave 10 - the staged implementation of the whole Ledger - WAVE_10_STAGED_IMPLEMENTATION_CHANGE_ORDER_v2 (version 1 archived this pass).
+
+The wave sequence is complete and continuous. No wave is missing; the half-step waves (1.5, 2.5, 3b.5, 4.1.5, 8.5, 9.5) are the program's honest record of mid-wave corrections and are correctly present.
+
+
+PART THREE: WAVE 10 QA (the specific check)
+
+Wave 10 version 2 was read in full and is CORRECT on every point that matters:
+
+ • It correctly records that Causalontology 3.0.0 SHIPPED, and that Stage 1 is therefore reduced from "amend the schema" to "ADOPT Causalontology 3.0.0 into PrologAI" - read-only on the standard.
+
+ • Its counts are current everywhere: the conformance suite is one hundred and nineteen vectors (V01 through V119), and the object model is eighteen kinds. Its two references to "one hundred and seven" and "seventeen kinds" are correct historical narration - they describe the 2.0.0 baseline PrologAI is migrating FROM, not a stale claim about the present.
+
+ • Its two boundaries are sound: Wave 10 builds LANGUAGE, not cognition (prediction, theory of mind, imagination quarantine, and the Jacobian workspace are konnectome's concerns, explicitly not built here); and ontology-level findings are ROUTED to the held Causalontology 4.0.0 and the future konnectome_ledger, never patched into the frozen standard.
+
+ • Its nine stages are in a dependency-correct serial order: Stage 1 adoption is the spine; Stages 3, 4, 5 consume the tick unit, the cross-stratal seam, and the realized_by field that Stage 1 makes available; the layer-pack stages (4 then 6) are correctly ordered so they do not collide; the Lattice stages (3 then 5 then 8) are correctly ordered on the shared substrate.
+
+ • Its end state is honest: every open and partially-closed gap reaches CLOSED, closed-by-classification, or RESOLVED-AS-ACKNOWLEDGED (the two design observations, STRATA-1 and STRATA-4, which have no construct remedy).
+
+ • It correctly names the two STANDING DEFERRALS to run once at the conclusion of all stages: the full four-hundred-task regression and the documentation-QA sweep. This close-out is the moment those deferrals come due.
+
+Wave 10 QA verdict: PASS. No change required to the order.
+
+
+PART FOUR: CROSS-WAVE CONSISTENCY QA
+
+ • COUNTS. The current counts (one hundred and nineteen conformance vectors, eighteen kinds) are consistent across every governing document that speaks of the present state: the Wave 10 v2 order, the 3.0.0 review, and the held 4.0.0 order. Documents that describe the pre-3.0.0 world (the parallelization analysis, the 3.0.0 change order's own baseline description) correctly say "2.0.0 ... one hundred and seven vectors," which is accurate for the state they describe. No stale-count defect was found.
+
+ • NAMING CONVENTION. The whole-word, pack-qualified naming rule (no terse prefixes; pack names are whole words) is stated consistently and the change orders that touch packs carry it as a definition-of-done item.
+
+ • LAYER AND WORK-PACKAGE NUMBERING. The single global counter shared by PrologAI packs and Mentova ARC waves is referenced consistently; new packs take the next free numbers.
+
+ • CROSS-REFERENCES. The Wave 10 order correctly cites its governing documents (the Requirements Ledger, the parallelization analysis, the 3.0.0 change order, the CLAUDE.md rules). The 3.0.0 change order correctly hands off to Wave 10's Stage 1. The held 4.0.0 order correctly names the four candidates the review identified. The chain is intact.
+
+Cross-wave QA verdict: PASS.
+
+
+PART FIVE: ALL-DOCS QA, AND WHAT THIS PASS FIXED
+
+ • ARCHIVE RULE. The sweep found superseded versions of evolving documents stranded in the project root, against the rule that only the latest version of a series may live outside archive/. THIS PASS FIXED IT: the following were moved into archive/ in this close-out - the older Causalontology 2.0.0 change orders (v2, v3, and a literal duplicate "v2 (2)"), Missing_Link Manuscript v4, Missing_Link Outline v3, Standalone_Design v16, Connectome_Master_Plan v1, The_Fifteen_Layers v1, the PHASE_ONE through PHASE_FOUR older change-order versions, and the superseded WAVE_10 version 1. After the sweep, no multi-version series remains stranded in the root; each series keeps only its latest.
+
+ • FORMATTING. The governing change orders and the primary manuscripts are clean of em-dashes (the house rule is space-dash-space). Five incidental support files still contain em-dashes - a component map, a build log, two prompt scratch files, and a pre-submission checklist - none of which is a governing order or a primary manuscript; they are noted, not blocking.
+
+ • VERSION MARKERS. The Nature's Cognitive Architecture manuscript's stale internal end-marker ("VERSION 12") was corrected to VERSION 20 when its Demonstration appendix was rebuilt; only version 20 now lives in the root, with versions 1 through 19 in archive/.
+
+All-docs QA verdict: PASS, with the archive sweep applied this pass and the five incidental em-dash files recorded as a minor, non-blocking note.
+
+
+PART SIX: THE FULL REGRESSION TEST TO RUN AT CLOSE-OUT
+
+This is the Planning Server's instruction for the Implementation Server. It is drafted as a formal dispatch change order in the companion file CLOSE_OUT_FULL_REGRESSION_CHANGE_ORDER_v1.txt. In summary, the Implementation Server runs, once, and reports the exit code of each:
+
+ • The Causalontology conformance suite - bin/run_causalontology_conformance.sh - expected exit 0 at one hundred and nineteen of one hundred and nineteen.
+
+ • The full ARC-AGI-1 benchmark - expected 400 of 400, empty fail list.
+
+ • The full ARC-AGI-2 benchmark - expected 120 of 120.
+
+ • The per-pack regression across all packs - expected every in-pack PLUnit suite green.
+
+ • The pack-naming gate - bin/check_pack_naming.sh - expected zero violations across all packs (all five checks: predicate prefix, minority straggler, pack name, SWI-standard-library shadow, test presence).
+
+ • Any remaining bin/*.sh gate the repositories define (the layer/membership checkers), expected exit 0.
+
+The documentation-QA sweep is run in the same close-out: confirm every touched SPARC volume, the Tutorial (single-file and multi-file), the Pack Reference, and the README are complete and current, and that the Pseudocode reads as valid English Readable Code.
+
+
+PART SEVEN: THE PLANNING SERVER'S LAST CHANGES
+
+Made this pass, and requiring no further action:
+
+ • The archive sweep described in Part Five.
+
+Recommended, and carried in the dispatch change order for the Implementation Server to execute:
+
+ • Run the full regression and the documentation-QA sweep as the two standing deferrals now come due.
+
+ • On green, tag the close-out commit and record in LEDGER.md that Wave 10 is complete and the PrologAI Requirements Ledger is closed.
+
+Recommended, and NOT for this project (the boundary is respected):
+
+ • Stand up konnectome as a new repository, built in PrologAI on Causalontology 3.0.0, as the Systems-Programming-Analysis-Refinement-Completion (SPARC) coded expression of Nature's Cognitive Architecture version 20, with its own konnectome_ledger. That Ledger, not this program, is what will decide whether the held Causalontology 4.0.0 is needed.
+
+
+PART EIGHT: CLOSING VERDICT
+
+The planning corpus is consistent, the Wave 10 order is correct and faithful to the shipped standard, the archive rule is now satisfied in the root, and the boundary between finishing the language (this program) and building the mind (konnectome, next) is clean and explicit.
+
+The program is ready to be closed out the moment the Implementation Server returns the regression and documentation-QA results green.
+
+The language is finished on paper. Run the gates, tag the commit, and close the book on PrologAI's forward agenda.
+
+END OF REPORT.

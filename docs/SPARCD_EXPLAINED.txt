@@ -1,0 +1,735 @@
+SPARCD EXPLAINED: THE COMPLETE REPORT
+
+Specification, Pseudocode, Architecture, Refinement, Completion, Demonstration
+
+This report is an EXPANSION of the original SPARC report. It adds a sixth phase, Demonstration, giving the acronym SPARCD. Everything true of the five-phase SPARC methodology remains true here, unchanged; the sixth phase is added at the end, where it belongs, and it answers the one question a finished system always faces: "So, what can it do?"
+
+A deep and wide research report covering the SPARC methodology, and its sixth-phase expansion SPARCD, to the last detail, written for the novice, newcomer, learner, and layperson.
+
+Compiled July 2026 from public web sources, including the official repositories, package registries, documentation wikis, interviews with the creator, and community discussions.
+
+Every technical term is defined the first time it appears, and examples are given wherever an idea might be hard to picture.
+
+A note on how to read this report: SPARC exists at two levels, and this report covers both.
+
+First, SPARC is a general methodology, meaning a repeatable way of working that any person or team can follow by hand, with any Artificial Intelligence (AI) assistant, or with no AI at all.
+
+Second, SPARC is built directly into specific software tools, such as Claude-Flow and its successor Ruflo, where it is automated and connected to teams of AI agents.
+
+Wherever the report describes a command you can type or a tool you can install, that is the tool-based level; the ideas around it belong to the timeless methodology level.
+
+
+
+PART ONE: WHAT SPARC IS, IN ONE BREATH
+
+SPARC is a step-by-step method for building software.
+
+The name is an acronym, meaning a word formed from the first letters of other words.
+
+SPARC stands for Specification, Pseudocode, Architecture, Refinement, and Completion.
+
+Those are the five phases, in order, that a project moves through: first you write down exactly what you want, then you sketch the logic in plain language, then you design the structure, then you improve it through testing, and finally you finish, document, and ship it.
+
+This expanded report adds a SIXTH phase, Demonstration, giving the acronym SPARCD: after you finish and ship the system, you SHOW what it can do. Demonstration is described in full as Phase 6 in Part Four; the original five phases are unchanged.
+
+SPARC was designed from the start to be executed not just by human developers, but by Artificial Intelligence (AI) coding agents - computer programs powered by Large Language Models (LLMs), which are AI systems trained on enormous amounts of text and code, that can plan and write software with limited human supervision.
+
+In practical terms, SPARC is the discipline that turns a vague idea like "build me a chat app" into a chain of small, well-defined, checkable tasks that AI agents can carry out reliably.
+
+Here is the core problem SPARC was invented to solve.
+
+When a person gives an AI a vague instruction such as "build me a login system," the AI must guess at hundreds of unstated details, and because it is guessing, it often produces code that is incomplete, insecure, or simply wrong, without any warning.
+
+Programmers call this "failing silently", meaning the software looks finished but hides serious problems.
+
+SPARC attacks this problem by refusing to let anyone, human or AI, skip the thinking.
+
+For example:
+
+Imagine building a house.
+
+You would not hand a pile of bricks to builders and say "make a house."
+
+You would first write down what the house needs (Specification), sketch the flow of the rooms (Pseudocode), draw the blueprints and choose the materials (Architecture), review and improve the plans as building proceeds (Refinement), and finally finish, inspect, and hand over the keys (Completion).
+
+SPARC applies exactly this common-sense order to software.
+
+
+
+PART TWO: WHO CREATED IT AND WHERE IT LIVES
+
+SPARC was created by Reuven Cohen, who goes by the handle rUv, and whose GitHub account is ruvnet.
+
+GitHub is a website that hosts source code so anyone can read, copy, and contribute to it.
+
+Reuven Cohen is the founder of the Agentics Foundation, an organization focused on "agentic engineering", and he is also the creator of Claude-Flow, a popular multi-agent orchestration platform, and of SPARC 2.0.
+
+The word "agentic" describes AI systems that can act on their own: interpreting goals, breaking them into subtasks, using tools, and correcting themselves based on feedback.
+
+The main homes of SPARC on the internet are:
+
+• The original framework repository at github.com/ruvnet/sparc, which contains the methodology documents, a Command Line Interface (CLI) tool, and a web User Interface (UI).
+
+• The prompt that started it all, published as a GitHub gist by ruvnet, describing SPARC as a framework where an AI acts as a "Reflective Architect and Editor" guiding a project through the five phases.
+
+• The scaffolding tool create-sparc on npm, the package registry for the JavaScript world, launched with the command npx create-sparc init.
+
+• The successor framework SPARC 2.0 at github.com/agenticsorg/sparc2.
+
+• The claude-sparc.sh automated development script for the Claude Code CLI, published as a GitHub gist.
+
+• The Claude-Flow platform at github.com/ruvnet/claude-flow, where SPARC is built in as the core development methodology with the command npx claude-flow init with the sparc option.
+
+
+
+PART THREE: A BRIEF HISTORY AND TIMELINE
+
+The story of SPARC tracks the story of AI coding itself.
+
+Late 2024: Reuven Cohen publishes the SPARC framework and the ruvnet/sparc repository.
+
+The original workflow was document-driven: a project kept five markdown files named specification.md, pseudocode.md, architecture.md, refinement.md, and completion.md, and the AI filled and refined them phase by phase.
+
+The original tooling recommendations were the research tool Perplexity for gathering information, and AIDER.chat, an AI pair-programming tool, for integrating different AI models.
+
+Early 2025: SPARC is integrated with Roo Code, an AI coding extension for Visual Studio Code, through the create-sparc npm package and the "Boomerang task" concept, described in Part Seven below.
+
+The recommended reasoning models of that era included Claude 3.7 Sonnet, OpenAI o3, GPT-4o, and DeepSeek.
+
+Spring 2025: The claude-sparc.sh script brings full SPARC automation to Anthropic's Claude Code CLI, and SPARC 2.0 launches as an agentic code analysis and generation framework.
+
+A pivotal economic moment: in an interview, Cohen explained that early agentic swarms - multiple coordinated AI agents attacking one problem - worked in prototypes but were financially brutal, with minimal 36-hour runs costing around 4,000 United States dollars per day, and ten concurrent agents costing roughly 7,500 dollars per hour, often making humans cheaper.
+
+Then, in April 2025, Anthropic introduced flat-rate subscription plans for Claude Code, removing the hard token ceiling.
+
+Cohen and collaborators reimagined SPARC as the protocol that orchestrates recursion in agentic workflows, and suddenly hours-long, high-parallelism agent runs became feasible for a flat monthly fee.
+
+Mid 2025 onward: SPARC becomes the built-in methodology of Claude-Flow, with seventeen specialized agent modes, and spreads through the community as Claude Code "skills", meaning reusable instruction packages, with derivative frameworks appearing, such as SPARC-SAPPO.
+
+February 2026: The Claude-Flow project is renamed to "Ruflo", reportedly for trademark reasons, with the version 3.5 stable release.
+
+The name "Ruflo" blends "Ru", for the Rust programming language and for the creator rUv, with "flo", for flow; the newer version was rewritten in Rust, a language prized for speed and safety.
+
+The command that users type remains "claude-flow", and SPARC remains the core methodology inside the renamed tool.
+
+By 2026, the project had become one of the most widely adopted open-source multi-agent platforms in the world, gathering tens of thousands of "stars" on GitHub, where a "star" is a bookmark that users give to projects they admire.
+
+
+
+PART FOUR: THE FIVE PHASES IN DETAIL
+
+Phase 1: SPECIFICATION.
+
+Purpose: define the problem completely before touching any code.
+
+Activities:
+
+• Define functional requirements, meaning what the software must do, and non-functional requirements, meaning qualities it must have, such as speed, security, and scalability.
+
+• Analyze user scenarios and write user stories, meaning short plain-language descriptions of what a user wants to accomplish and why.
+
+• Create user personas, meaning fictional profiles of typical users, and use cases.
+
+• Establish User Interface and User Experience (UI/UX) guidelines.
+
+• Document objectives, constraints, acceptance criteria, technical boundaries, and performance targets, such as Service Level Agreements (SLAs), which are promised levels of speed and reliability.
+
+Deliverable: a specification document, traditionally specification.md.
+
+For example:
+
+For a banking app, the specification would state "the user can transfer money between accounts" (functional), "a transfer completes in under two seconds" (non-functional), and "no secret credentials may ever appear in the code" (constraint).
+
+For a second example, drawn from the official documentation, a specification for a user authentication system might list these functional requirements: users can register with email and password, users can also sign in through outside providers such as Google or GitHub, email verification is required, and passwords must meet strength rules.
+
+"Authentication" means confirming that users are who they claim to be.
+
+The same specification might list these security requirements: passwords are protected using a slow, salted hashing method called bcrypt, the login endpoint limits how many attempts can be made, accounts lock after repeated failures, and the system defends against a web attack known as Cross-Site Request Forgery (CSRF).
+
+"Hashing" means scrambling a password into a fixed jumble that cannot be reversed, and "salting" adds random data so that identical passwords do not scramble to identical results.
+
+It might then list test scenarios such as: a valid registration succeeds, a duplicate email is rejected, an invalid password format is caught, and an expired login token is refreshed correctly.
+
+Notice that in both examples, not one line of real program code has been written yet; that restraint is the entire point of the phase.
+
+Phase 2: PSEUDOCODE.
+
+Purpose: sketch the logic of the solution in plain, language-agnostic form before committing to any programming language.
+
+Pseudocode is an informal, human-readable outline of an algorithm - a step-by-step procedure - written in structured plain language rather than real code.
+
+Activities:
+
+• Create high-level logic flows for each feature.
+
+• Organize the logic into modular components, where "modular" means built from small, self-contained, swappable pieces.
+
+• Include plans for how tests will verify each piece.
+
+• Provide detailed inline comments and descriptions.
+
+Deliverable: pseudocode.md, serving as the roadmap for implementation.
+
+For example:
+
+For a login feature, the pseudocode might read: receive the username and password, look up the stored password hash, compare the hashes, if they match create a session, otherwise return an error, and never log the raw password.
+
+Phase 3: ARCHITECTURE.
+
+Purpose: design the skeleton of the system so it will be robust and extensible.
+
+Activities:
+
+• Identify the major components and the interfaces between them, where an "interface" is the defined boundary through which one component talks to another.
+
+• Select the technology stack, meaning the chosen set of languages, frameworks, and services.
+
+• Create system diagrams, often using Mermaid, a text-based diagramming notation.
+
+• Define data models, database schemas, and integration points.
+
+• Plan deployment infrastructure, meaning where and how the software will run.
+
+Deliverable: architecture.md, with diagrams and technology explanations.
+
+Phase 4: REFINEMENT.
+
+Purpose: improve the design and the code through iteration, meaning repeated cycles of testing and revision.
+
+Activities:
+
+• Apply Test-Driven Development (TDD), the practice of writing an automated test that fails first, then writing just enough code to make it pass, then cleaning up - a cycle known as Red-Green-Refactor.
+
+• SPARC specifically favors the London School of TDD, a style that tests each unit in isolation by using "mocks", meaning stand-in fake versions of a unit's collaborators, and that emphasizes testing behavior and interactions.
+
+• Optimize algorithms and improve code quality, security, and error handling.
+
+• Incorporate feedback from stakeholders, meaning everyone with an interest in the project.
+
+• Review and revise both the architecture and the implementation.
+
+Deliverable: refinement.md documenting the iterative improvements, plus the growing, tested codebase itself.
+
+Phase 5: COMPLETION.
+
+Purpose: finish properly - test everything, document everything, deploy, and monitor.
+
+Activities:
+
+• Comprehensive testing at every level: unit tests (single pieces), integration tests (pieces working together), and system-level tests (the whole product).
+
+• Detailed documentation for both users and developers.
+
+• Deployment preparation, rollout, and monitoring setup, meaning the dashboards and alerts that watch the live system.
+
+• Final review, security audits, and stakeholder sign-off.
+
+Deliverable: completion.md with deployment plans and user documentation, and a live, monitored system.
+
+Phase 6: DEMONSTRATION.
+
+Purpose: show what the finished system can actually DO, so that anyone can see its ability and answer the plain question everyone eventually asks, "So, what can it do?"
+
+This sixth phase is not part of the original five-phase SPARC methodology. It is added here, giving the acronym SPARCD, because a system that is merely finished is not the same as a system that has been SHOWN to work, and the showing is often what convinces a funder, a collaborator, a user, or a sceptic that the thing is real.
+
+The first five phases produce a system that is specified, sketched, designed, refined, and completed. That is an enormous achievement, but it is a quiet one. A completed system sits there, correct and documented, and says nothing about itself to a person who has not read its code. Demonstration is the phase that makes the system SPEAK for itself, by showing it in action on a task whose result a viewer can judge without expertise.
+
+Activities:
+
+• Choose the demonstration that best answers "what can it do?" for this particular system, because the right demonstration is different for every system.
+
+• Build a Minimum Viable Product (MVP), meaning the smallest version of the system that still delivers real, visible value, stripped of every feature not needed to show the core ability. An MVP is not a toy; it is the shortest honest path to a working demonstration.
+
+• Or build a Proof of Concept (POC), meaning a small, focused build whose only job is to prove that a specific, doubted capability is actually achievable, before investing in the full system.
+
+• Or run the system against a recognized, hard, public benchmark, so that its performance can be compared to a standard the audience already respects.
+
+• Present the demonstration so that its result is legible to the intended audience without requiring them to read the specification, the code, or the tests.
+
+Deliverable: a demonstration, often called simply a demo, that a viewer can watch or run and from which they can conclude, for themselves, what the system can do; and, in SPARCD, a demonstration.md that records what was demonstrated and what it proves.
+
+For example:
+
+A weather application might demonstrate itself by correctly forecasting tomorrow's rain in a city the viewer knows, which needs no explanation to be convincing.
+
+A database system might demonstrate itself by answering a complex query over a million records in under a second, in front of the viewer.
+
+And a cognitive architecture might demonstrate itself by solving a benchmark designed to be hard for machines. The Mentova system did exactly this, achieving the significant and bold demonstrated accomplishment of completing the Abstract Reasoning Corpus for Artificial General Intelligence, Versions One and Two - written ARC-AGI-1 and ARC-AGI-2 - a public benchmark of abstract visual reasoning that most Artificial Intelligence systems fail. Its success on both versions answered "what can it do?" in a way no description could: it did the thing the benchmark was built to be hard at, in front of everyone, and the score is a number others can check.
+
+The three most common shapes a demonstration takes are worth naming, because a builder choosing among them is choosing how to answer the question:
+
+• The Minimum Viable Product shows the SMALLEST COMPLETE thing the system can do end to end - the core value, and nothing else.
+
+• The Proof of Concept shows that a SPECIFIC HARD CAPABILITY is real - the one thing people doubted, proven.
+
+• The Benchmark Result shows the system's ability MEASURED against a respected external standard - a number others can trust, as Mentova's ARC-AGI-1 and ARC-AGI-2 results are.
+
+A good demonstration is HONEST: it shows what the system genuinely does, not a rehearsed illusion. And it is REPRODUCIBLE: a sceptic can run it again and get the same result. A demonstration that cannot be reproduced is a magic trick, not a demonstration, and the discipline of Demonstration is to make the showing as trustworthy as the building.
+
+The Reflection habit of SPARC (Part Five) applies here too: in the demonstration.md, the author records WHY this demonstration was chosen, what it does and does not prove, and what a viewer should and should not conclude from it - because the honest limits of a demonstration are part of what it demonstrates. A demonstration of a chat app that answers one scripted question proves less than it appears to; a demonstration that survives questions the author did not choose proves more.
+
+An end-to-end example, applied to building an Application Programming Interface (API), which is a defined way for programs to request services from each other:
+
+• Specification: define the API endpoints, request and response formats, authentication requirements, and rate limits.
+
+• Pseudocode: outline the route handlers, the data validation logic, and the error handling.
+
+• Architecture: design the database schema, the service layers, and the deployment plan.
+
+• Refinement: optimize the database queries, tighten security, and add logging, all driven by tests.
+
+• Completion: implement the full test suite, write the API documentation, deploy with monitoring, and audit security.
+
+• Demonstration: show the finished Application Programming Interface answering real requests live - a small client that calls it and displays the result - so an observer can see, without reading the code, that it works and what it does.
+
+
+
+PART FIVE: THE REFLECTION HABIT THAT RUNS THROUGH EVERY PHASE
+
+Woven through all five phases is a habit that the original SPARC prompt calls "Reflection".
+
+In that original prompt, the AI is told to act as a "Reflective Architect and Editor".
+
+This means that at each step, the person or the AI pauses to justify the decisions made, to consider the alternatives that were rejected, and to discuss potential challenges along with ways to handle them.
+
+In the original SPARC template, every step's written document includes a Reflection subsection, in which the author records why choices were made and what "trade-offs" were accepted.
+
+A "trade-off" is a choice in which gaining one benefit means giving up another, such as trading a little speed for a lot of added safety.
+
+For example:
+
+In the Specification document, reflection might justify why each requirement was included, and consider challenges before they become problems.
+
+In the Architecture document, reflection might explain why one design was chosen over a plausible alternative.
+
+This habit turns SPARC from a mechanical checklist into a thoughtful process, and it leaves behind a valuable written record of the reasoning behind a project, not merely the result.
+
+
+
+PART SIX: THE GUIDING PRINCIPLES AND QUALITY RULES
+
+Across every SPARC implementation, a consistent set of principles appears.
+
+The five advertised benefits of the framework are:
+
+• Structured approach: a clear, step-by-step path from concept to deployment.
+
+• Flexibility: adaptable to projects of any size and type.
+
+• Enhanced collaboration: defined roles and heavy documentation keep teams, and teams of AI agents, aligned.
+
+• Quality assurance: thorough testing and refinement are built into the process, not bolted on.
+
+• Documentation focus: every phase produces a written artifact.
+
+The hard quality rules enforced by the SPARC agent instructions are famously specific:
+
+• Every file must be 500 lines or fewer.
+
+• Every function should be 50 lines or fewer.
+
+• No hardcoded secrets: no passwords, keys, or environment variables may ever be written directly into the code - "environment variables" are configuration values supplied to a program from outside it.
+
+• Comprehensive input validation, meaning the program must check all incoming data before trusting it.
+
+• Modular, extensible design with clean interface boundaries.
+
+• Self-documenting code with strategic comments.
+
+• Test coverage targets, with the TDD London School approach.
+
+• Structured commit messages - a "commit" is a saved snapshot of code changes in version control - using prefixes such as feat for features, test for tests, fix for bug fixes, docs for documentation, arch for architecture changes, quality for refactoring, and deploy for deployment changes.
+
+The original framework also describes "symbolic reasoning integration", meaning the use of explicit, rule-like analysis for pattern recognition in code, adaptive optimization, information integration, and better architectural decision making.
+
+
+
+PART SEVEN: WHY PSEUDOCODE IS THE HEART OF SPARC
+
+The P in SPARC gives the methodology its special relationship with AI.
+
+An LLM writing code directly from a vague request must guess at intent, and guesses compound into bugs.
+
+By forcing an explicit pseudocode phase, SPARC makes the AI, or the human, state the logic in plain language first, where mistakes are cheap to spot and fix.
+
+The pseudocode then becomes the contract that the real code must honor, and the tests verify that honor.
+
+This is the same insight found in comment-driven development and in controlled natural language systems: precise plain language is the best bridge between human intent and machine execution.
+
+
+
+PART EIGHT: SPARC MEETS ROO CODE, CREATE-SPARC AND BOOMERANG TASKS
+
+Roo Code is an AI-powered coding extension for Visual Studio Code, a widely used free code editor.
+
+The create-sparc npm package scaffolds a project for SPARC, meaning it generates the starting folder structure, with one command: npx create-sparc init.
+
+That command creates a .roo directory and a .roomodes file, which configure a set of specialized AI assistant modes inside Roo Code.
+
+The key innovation is the Boomerang task concept.
+
+A Boomerang task works like this: an orchestrator agent breaks a large objective into small subtasks, throws each subtask to a specialized agent, and each subtask, like a boomerang, comes back to the orchestrator with its result, ready for the next throw.
+
+The specialized modes installed by create-sparc include:
+
+• SPARC Orchestrator: breaks large objectives into delegated subtasks aligned to the methodology.
+
+• Specification Writer: captures the full project context and writes the specification.
+
+• Architect: designs the system and draws the diagrams.
+
+• Auto-Coder: writes clean, modular implementation code.
+
+• Tester (TDD): writes failing tests first, then drives the code to green.
+
+• Debugger: hunts down runtime bugs and integration failures.
+
+• Security Reviewer: audits for secrets, unsafe boundaries, and oversized files.
+
+• Documentation Writer: produces the markdown documentation.
+
+• System Integrator: merges all the outputs into one working system.
+
+• Deployment Monitor: sets up metrics, logs, and uptime checks after release.
+
+• Optimizer: refactors, meaning restructures without changing behavior, for performance and modularity.
+
+• DevOps: handles infrastructure, containers, and Continuous Integration and Continuous Deployment (CI/CD) pipelines, which are automated systems that test and release code.
+
+• Ask: a question-answering helper for guidance.
+
+• SPARC Tutorial: teaches the methodology itself.
+
+• Supabase Admin: manages the Supabase database and authentication service.
+
+• MCP Integration: connects external services through the Model Context Protocol (MCP), a standardized bridge that lets AI assistants interact with databases, APIs, and cloud resources such as Supabase, OpenAI, GitHub, Amazon Web Services (AWS), and Firebase.
+
+Each mode can even be assigned a different LLM through configuration profiles, so an expensive reasoning model can do the architecture while a cheaper, faster model does routine coding.
+
+
+
+PART NINE: THE CLAUDE-SPARC AUTOMATED DEVELOPMENT SYSTEM
+
+The claude-sparc.sh script is a complete agentic workflow for the Claude Code CLI.
+
+Its distinguishing features:
+
+• An automated research phase before the five SPARC phases even begin, using parallel web research to study the domain, the technology options, implementation patterns, and competitors.
+
+• Full execution of all five SPARC phases with TDD London School testing.
+
+• Parallel orchestration through a BatchTool, which launches independent specialist tasks concurrently and gathers the results - the Boomerang pattern again, at the command line.
+
+• Automated linting, meaning automatic style and error checking, plus testing and security validation.
+
+• A structured commit after each phase, controlled by a commit-frequency setting.
+
+• Options for dry runs, quiet mode, JavaScript Object Notation (JSON) output, and custom MCP configurations.
+
+A typical three-wave orchestration:
+
+• Wave one, in parallel: the architect designs, the specification writer specifies, the security reviewer audits, and the TDD agent builds the test framework.
+
+• Wave two, in parallel: the coder implements against the specs, the integrator merges the components, and the documentation writer documents.
+
+• Wave three, in parallel: the debugger resolves integration issues, DevOps deploys to staging, and the monitor sets up post-deployment observation.
+
+
+
+PART TEN: SPARC INSIDE CLAUDE-FLOW, THE SEVENTEEN MODES
+
+Claude-Flow is Reuven Cohen's flagship orchestration platform for Claude Code, describing itself as a swarm coordination layer for AI agents.
+
+One command initializes everything: npx claude-flow init with the sparc flag, which creates a local wrapper script, a .claude configuration directory, a CLAUDE.md project instruction file, and the pre-configured SPARC modes.
+
+The mode list, as reported by the tool itself:
+
+• architect, the system designer.
+
+• code, the auto-coder.
+
+• tdd, the test-driven tester.
+
+• debug, the debugger.
+
+• security-review, the security auditor.
+
+• docs-writer, the documentation writer.
+
+• integration, the system integrator.
+
+• post-deployment-monitoring-mode, the deployment monitor.
+
+• refinement-optimization-mode, the optimizer.
+
+• ask, the guidance helper.
+
+• devops, the infrastructure operator.
+
+• tutorial, the SPARC teacher.
+
+• supabase-admin, the database administrator.
+
+• spec-pseudocode, the specification and pseudocode writer - one mode handles both because the two phases are so closely linked.
+
+• mcp, the external service integrator.
+
+• sparc, the orchestrator that runs the whole methodology.
+
+• swarm, multi-agent coordination for complex tasks, rounding out the advertised seventeen.
+
+The main commands:
+
+• sparc modes lists the modes.
+
+• sparc run followed by a mode name and a task description executes one mode.
+
+• sparc tdd runs the full test-driven implementation workflow.
+
+• sparc batch runs several modes at once.
+
+• sparc pipeline runs the full phase sequence on a task.
+
+Claude-Flow integrates SPARC with a persistent memory system, so specifications stored in one phase can be recalled by agents in later phases, using memory namespaces such as sparc/auth-service.
+
+It also supports hooks, meaning lifecycle events that fire automatically between phases, and claims parallel execution speed gains of 2.8 to 4.4 times over sequential work, with up to ten concurrent agents in early versions and more later.
+
+A worked Claude-Flow SPARC sequence for adding notifications to a chat application:
+
+• Run specification on "add real-time notifications to chat application".
+
+• Run pseudocode on "design WebSocket message routing algorithm" - WebSocket is a technology for continuous two-way communication between a browser and a server.
+
+• Run architecture on "design scalable WebSocket architecture with Redis" - Redis is a fast in-memory data store.
+
+• Run tdd on "implement WebSocket notification service".
+
+• Run completion on "prepare notification service for deployment".
+
+
+
+PART ELEVEN: SPARC 2.0
+
+SPARC 2.0, hosted by the Agentics organization, reframes SPARC from a methodology into an intelligent coding agent framework.
+
+Its notable capabilities:
+
+• Secure execution environments for running generated code safely.
+
+• A unified diff system that records precisely what changed between code versions, rather than storing whole files, acting like a perfect memory of the code's evolution and enabling easy rollbacks.
+
+• Deep integration with Git, the standard version control system, and GitHub.
+
+• A vector store, meaning a specialized database that converts code and text into numerical patterns capturing meaning, so the system can find conceptually similar code, not just identical words.
+
+• Model Context Protocol (MCP) capabilities built in.
+
+• Specialized agents that analyze patterns, suggest improvements, implement changes, and validate solutions collaboratively.
+
+• A memory bank that persists knowledge across sessions.
+
+
+
+PART TWELVE: THE PHILOSOPHY, AGENTIC ENGINEERING VERSUS VIBE CODING
+
+"Vibe coding" is a 2025-era term for conversational, feel-driven AI coding: you chat with the AI, accept what looks right, and iterate by intuition.
+
+Vibe coding is celebrated for ideation, meaning rapid idea exploration, but criticized for producing unverified, unmaintainable results at scale.
+
+SPARC is the flagship of the opposing school, which Cohen calls "agentic engineering": designing for autonomy with verification, prioritizing architectures and processes that are repeatable and outcome-driven, rather than just prompting for inspiration.
+
+Independent academic work echoes the distinction: research papers contrast the prompt-and-accept dynamic of vibe coding with agentic coding, in which agents plan, act, use tools, and self-evaluate, and conclude that conversation is good for discovering intent, while structured artifacts - specifications, tests, documentation - are required for trustworthy implementation.
+
+SPARC's five phases are exactly such structured artifacts, which is why one early adopter, reviewing the AIGI (Artificial Intelligence Guided Implementation, also expanded as AI-driven code generation) variant of SPARC, described the experience as methodical, painfully so at times, brutally self-critical, quantifying its own code quality, building and executing its own test frameworks, and rinsing and repeating until confident.
+
+
+
+PART THIRTEEN: CRITICISMS, LIMITATIONS, AND KNOWN ROUGH EDGES
+
+An honest report includes the warts, and the public record shows several.
+
+• Mode naming inconsistencies: a documented Claude-Flow issue showed the slash command describing one set of seventeen modes while the command line tool recognized a different, shorter list, confusing users.
+
+• Configuration confusion: documentation sometimes pointed to Roo Code configuration files even when the user was running Claude Code, whose SPARC configuration lives elsewhere.
+
+• Orchestration fragility: community members noted that if an orchestrator agent is granted editing rights, it may try to do the work itself instead of delegating, so the role permissions must be configured with care.
+
+• Ceremony and cost: the methodology's thoroughness consumes time and tokens - a token is the unit of text that AI models process and bill by - which can be overkill for small scripts and quick experiments.
+
+• Historical cost barriers: before flat-rate plans, serious SPARC swarms cost thousands of dollars per day, and even now, heavy parallel usage consumes subscription capacity quickly.
+
+• Verification still matters: academic surveys of agentic engineering caution that agentic coding is neither a toy nor a universal multiplier, and that its value depends on verification gates and human oversight - which is, to be fair, precisely what SPARC's Refinement and Completion phases exist to provide.
+
+
+
+PART FOURTEEN: DO NOT CONFUSE IT WITH THESE OTHER SPARCS
+
+The acronym SPARC has several unrelated famous meanings, and a newcomer should not mix them up.
+
+• SPARC the processor: Scalable Processor ARChitecture, a family of computer chips introduced by Sun Microsystems in 1987 - completely unrelated hardware.
+
+• SPARC in research funding: a program of the United States National Institutes of Health (NIH) called Stimulating Peripheral Activity to Relieve Conditions - unrelated.
+
+• SPARC assembly language courses at universities - these teach the Sun processor, not the methodology.
+
+This report concerns only the software development methodology: Specification, Pseudocode, Architecture, Refinement, Completion.
+
+
+
+PART FIFTEEN: HOW A COMPLETE BEGINNER WOULD USE SPARC TODAY
+
+You do not need any of the tooling to benefit from SPARC.
+
+The manual, tool-free version:
+
+1. Create five empty text documents named specification, pseudocode, architecture, refinement, and completion.
+
+2. Fill the specification with what you want, for whom, and how you will know it works.
+
+3. Write the logic of every feature in plain structured English in the pseudocode document.
+
+4. Sketch the components, technologies, and diagrams in the architecture document.
+
+5. Build in small tested steps, recording each improvement in the refinement document.
+
+6. Finish with full tests, documentation, and a deployment note in the completion document.
+
+The tooled version, on a computer with Node.js installed - Node.js is the runtime that lets JavaScript programs run outside a browser:
+
+1. For a Roo Code workflow, run npx create-sparc init inside your project folder.
+
+2. For a Claude Code workflow, run npx claude-flow init with the sparc option, then use sparc run with a mode name, or sparc tdd with a feature description.
+
+3. Let the orchestrator throw Boomerang subtasks to the specialist modes, and review each returned result.
+
+4. Keep the quality rules sacred: small files, small functions, no secrets in code, tests first.
+
+
+
+PART SIXTEEN: KEY TAKEAWAYS
+
+• SPARC is a five-phase software development methodology: Specification, Pseudocode, Architecture, Refinement, Completion. This report's expansion, SPARCD, adds a sixth phase, Demonstration, in which the finished system is SHOWN doing what it can do - the answer to "so, what can it do?", as the Mentova system answered by completing the Abstract Reasoning Corpus for Artificial General Intelligence, Versions 1 and 2 (ARC-AGI-1 and ARC-AGI-2).
+
+• It was created by Reuven Cohen (rUv), founder of the Agentics Foundation, first published in late 2024, and evolved rapidly through 2025 into the backbone of AI agent orchestration tools.
+
+• Its essence is planning-first, test-driven, documentation-heavy development, made precise enough that AI agents can execute it autonomously and verifiably.
+
+• Its ecosystem spans the original sparc repository, the create-sparc scaffolder for Roo Code with Boomerang tasks, the claude-sparc.sh automation script, SPARC 2.0's agent framework, and the seventeen SPARC modes inside Claude-Flow, which was renamed Ruflo in early 2026 while keeping SPARC as its core methodology.
+
+• Its signature quality rules: files of 500 lines or fewer, functions of 50 lines or fewer, no hardcoded secrets, London School Test-Driven Development, and a written artifact for every phase.
+
+• It stands as the disciplined "agentic engineering" answer to freewheeling "vibe coding": conversation discovers intent, but structure delivers software.
+
+
+
+PART SEVENTEEN: GLOSSARY OF EVERY TECHNICAL TERM USED IN THIS REPORT
+
+• Agent: an AI program that can plan, act, use tools, and adjust based on feedback.
+
+• Agentic engineering: the discipline of building repeatable, verifiable systems of AI agents.
+
+• AIGI: Artificial Intelligence Guided Implementation, an AI-driven code generation project style in the SPARC ecosystem.
+
+• API: Application Programming Interface, a defined way for programs to request services from each other.
+
+• Architecture: the high-level structure of a software system.
+
+• BatchTool: a mechanism for launching several agent tasks in parallel and collecting the results.
+
+• Boomerang task: a subtask delegated by an orchestrator to a specialist agent, whose result returns to the orchestrator.
+
+• CI/CD: Continuous Integration and Continuous Deployment, automated pipelines that test and release code.
+
+• CLI: Command Line Interface, a program operated by typed commands.
+
+• Commit: a saved snapshot of code changes in version control.
+
+• CSRF: Cross-Site Request Forgery, a web attack that tricks a logged-in user's browser into making an unwanted request, which secure software must defend against.
+
+• Demonstration: the sixth phase of SPARCD, in which the finished system is shown doing what it can do, answering "so, what can it do?" - as a demo, a Minimum Viable Product, a Proof of Concept, or a benchmark result.
+
+• Demo: short for demonstration; a run or showing of a system that lets a viewer see its ability for themselves.
+
+• Diff: a record of exactly what changed between two versions of a file.
+
+• Environment variable: a configuration value supplied to a program from outside its code.
+
+• Endpoint: one specific address within an API that accepts requests.
+
+• Git and GitHub: the standard version control system, and the website that hosts Git repositories.
+
+• Hook: an automatic action triggered by a lifecycle event.
+
+• JSON: JavaScript Object Notation, a text format for structured data.
+
+• Linting: automated checking of code for style problems and likely errors.
+
+• LLM: Large Language Model, an AI system trained on vast text and code.
+
+• London School TDD: a test-driven style that isolates units with mocks and tests behavior and interactions.
+
+• MCP: Model Context Protocol, a standardized bridge letting AI assistants use external services.
+
+• Mock: a stand-in fake version of a component, used in testing.
+
+• Minimum Viable Product (MVP): the smallest version of a system that still delivers real, visible value, used to demonstrate the core ability with nothing extra.
+
+• Modular: built from small, self-contained, swappable pieces.
+
+• Node.js and npm and npx: the JavaScript runtime, its package registry, and its package runner.
+
+• Orchestrator: the coordinating agent that decomposes objectives and delegates subtasks.
+
+• Proof of Concept (POC): a small, focused build whose only job is to prove that a specific, doubted capability is achievable, before building the full system.
+
+• Pseudocode: an informal, human-readable, language-agnostic outline of an algorithm.
+
+• Refactor: restructure code without changing its behavior.
+
+• Roo Code: an AI coding extension for Visual Studio Code.
+
+• Ruflo: the 2026 renamed version of Claude-Flow, rewritten in the Rust language, with SPARC still at its core.
+
+• Scaffolding: automatically generating the starting structure of a project.
+
+• SLA: Service Level Agreement, a promised level of speed and reliability.
+
+• Swarm: multiple coordinated AI agents working one problem together.
+
+• TDD: Test-Driven Development, writing a failing test first, then the code to pass it, then cleaning up.
+
+• Token: the unit of text that AI models process and bill by.
+
+• User story: a short plain-language statement of what a user wants and why.
+
+• Vector store: a database that stores meaning-based numerical representations of text and code.
+
+• Vibe coding: conversational, intuition-driven AI coding without formal structure.
+
+• WebSocket: a technology for continuous two-way communication between a browser and a server.
+
+
+
+PART EIGHTEEN: SOURCES CONSULTED
+
+• The ruvnet/sparc repository and its DeepWiki documentation, covering the framework principles, the five phases, the CLI, the UI, and symbolic reasoning integration.
+
+• The original SPARC framework gist by ruvnet, describing the Reflective Architect and Editor prompt and the five markdown documents.
+
+• The create-sparc npm package documentation and the ruvnet/rUv-dev repository, covering Roo Code integration, Boomerang tasks, the specialized modes, and MCP.
+
+• The claude-sparc.sh gist, covering the automated Claude Code workflow, London School TDD, quality standards, and commit conventions.
+
+• The agenticsorg/sparc2 repository, covering SPARC 2.0's agent framework, diff tracking, and vector store.
+
+• The claude-flow npm package, the ruvnet/claude-flow repository, its SPARC Methodology wiki pages, and its issue tracker, covering the seventeen modes, the commands, memory integration, and the documented mode-naming discrepancy.
+
+• The AI Native Dev podcast interview with Reuven Cohen, covering the Agentics Foundation, swarm economics, the April 2025 cost-curve flip, and the agentic engineering philosophy.
+
+• Community skill registries and independent commentary, including early-adopter reviews and derivative frameworks such as SPARC-SAPPO.
+
+• Academic preprints contrasting vibe coding with agentic coding and analyzing verification-gated agentic development.
+
+
+
+END OF SPARC_Explained.txt

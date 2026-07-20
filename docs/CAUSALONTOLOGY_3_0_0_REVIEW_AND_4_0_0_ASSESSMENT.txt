@@ -1,0 +1,91 @@
+CAUSALONTOLOGY 3.0.0 - TOP-TO-BOTTOM REVIEW, AND WHETHER A 4.0.0 IS NEEDED
+
+A review prepared for D. R. Dison / ai-university-aiu, holding three documents in view at once: the live Causalontology Standalone Design version 22 (the 3.0.0 edition); Nature's Cognitive Architecture version 19 (the guide whose Systems-Programming-Analysis-Refinement-Completion, SPARC, appendices konnectome will express in code); and The Roadmap to Artificial General Intelligence and Super Intelligence. The frame is the stated stack: Causalontology is the data structure, PrologAI is the programming language built on it, and the as-yet-unborn konnectome repository is the application, written in PrologAI, that expresses the guide.
+
+
+THE SHORT VERDICT
+
+Two answers, because there are two questions hiding in one.
+
+• For building PrologAI through Wave 10, and for building konnectome version one as the faithful, glass-box regional model that is the SPARC-coded expression of the version 19 guide: Causalontology 3.0.0 is SUFFICIENT AS IS. Do not block that work on a 4.0.0. The guide's data model maps cleanly onto the eighteen kinds already in 3.0.0.
+
+• For the full Proto-Artificial-General-Intelligence ambition that the roadmap describes, there are FOUR genuine data-structure-level gaps, each of which, by Causalontology's own governance rule, would force a MAJOR version (a 4.0.0). The disciplined move is NOT to design a 4.0.0 from the armchair now, but to let konnectome's own build surface which of the four actually bite, exactly as the connectome program let the brain regions surface what PrologAI lacked, and then cut a coordinated 4.0.0 for the ones that genuinely bit. The gap most likely to bite first is theory of mind (representing an agent's belief, which can be false and nested).
+
+
+WHAT 3.0.0 ALREADY HAS (and it is a great deal)
+
+Causalontology 3.0.0 is a type-and-token causal-provenance substrate, and it is unusually well aimed at the very thing the roadmap says today's Artificial Intelligence lacks: explicit, interventional, hierarchical cause and effect. Present today:
+
+• Eighteen object kinds - fourteen content kinds (the causal_relation_object, the occurrent, the continuant, the realizable, the stratum, the bridge, the port, the conduit, the quality, the new cross_stratal_seam, and the four token-tier kinds token_individual, token_occurrence, state_assertion, and token_causal_claim) and four signed provenance kinds (assertion, enrichment, retraction, succession).
+
+• Pearl's ladder, built in. Intervention (rung two) is the strongest evidence grade and the do-calculus is the formal meaning of a claim's strength. Counterfactual (rung three) has a home in the data as the token-level but-for flag on a token_causal_claim.
+
+• An evidence grading that ranks acting above watching: intervention, then observation, then simulation (an internally-simulated or model-based rollout, a first-class slot that is never silently counted as observation), then derivation, human hint, and imported.
+
+• A five-value causal modality (necessary, sufficient, contributory, preventive, enabling), so a cause that only makes an effect possible is distinguished from one that brings it about.
+
+• The three 3.0.0 additions: the ordinal TICK temporal unit (discrete, dimensionless, dimension-disjoint from wall-clock time), the cross_stratal_seam eighteenth kind (a managed jump across non-adjacent strata, with the honest-ignorance distinction between an unmodeled and an absent mechanism), and the realized_by conduit field (a reference, by identity, to the native law or signal a conduit stands for).
+
+• Content-addressed identity, cryptographic signing, whole-word naming, and a Semantic-Versioning governance that makes every extension explicit.
+
+
+WHY 3.0.0 IS SUFFICIENT FOR WAVE 10 AND KONNECTOME VERSION ONE
+
+The version 19 guide specifies a mechanistic, regional simulator: about one hundred regions, forty interfaces, the chemical messengers, the large-scale networks, the cognitive systems and pathways, the drives, and the plasticity, all run by a tick loop over six dynamical archetypes. Every element of that maps onto Causalontology 3.0.0 without a new kind:
+
+• A construct (a region) is a continuant; its state is a state_assertion or a token state; its dynamical archetype and parameters are its content.
+
+• An interface is a conduit - a pipe conduit when it merely conveys (a send-and-receive channel) and a computer conduit when it transforms (and its transform can now bind, by realized_by, to the native rate law that realizes it). The directed-versus-broadcast distinction the guide draws is the pipe-versus-broadcast character of the conduit.
+
+• A molecule is a broadcast field published by a source and subscribed to by its receptors - an occurrent and a set of conduits.
+
+• A tick is a token_occurrence pinned to the ordinal tick unit; the tick-by-tick records are token_occurrences; the cortisol cross-stratum skip is a cross_stratal_seam.
+
+• A large-scale network is a grouping of continuants; a cognitive system or pathway (a cortico-basal-ganglia-thalamo-cortical loop, the Papez circuit) is a chain, or a closing loop, of causal_relation_objects.
+
+So konnectome version one - the faithful, inspectable model that reproduces Parkinson's disease, Pavlovian learning, the amnesia of patient H.M., and the drive-conflict override from first principles - can be built on 3.0.0 today. Nothing in the guide's Completion phase (its definition of done) needs the data structure to natively store a belief, a prediction, an imagined world, or a gradient. Those are computed by PrologAI over the substrate, which is exactly the division of labour Causalontology's own boundary statement declares.
+
+
+THE FOUR GENUINE GAPS FOR THE PROTO-AGI AMBITION
+
+The roadmap's research pathways ask for capabilities beyond a faithful regional model. Four of them touch the data structure itself, and each is absent from 3.0.0. By Causalontology's Locked Decision 24 - a new object kind, or a new value in any closed enumeration, is a MAJOR version - adding any of these is a 4.0.0, done openly by extension.
+
+GAP ONE - PREDICTION, EXPECTATION, AND PREDICTION ERROR (active inference). Highest value; highest alignment with the glass-box thesis.
+
+The roadmap's first pathway is predictive processing and active inference: a mind predicts its inputs and learns from the error. The guide's COMPARATOR archetype computes a dopamine reward-prediction-error, but it computes a NUMBER; it does not record a prediction as an object. Causalontology has no way to represent an EXPECTED or PREDICTED occurrence as distinct from an OBSERVED one, and no prediction-error relationship. Reifying an expected_occurrence and a prediction_error would make the predictive loop first-class and inspectable, which is the whole reason this program prefers a glass box to an opaque model. A predicted occurrence is a natural sibling of the token_occurrence, differing only in that it has not (yet) happened.
+
+GAP TWO - BELIEF, DESIRE, INTENTION, AND THEORY OF MIND (the doxastic gap). Highest value for the social ambition; the gap most likely to bite first.
+
+The roadmap makes theory of mind a prerequisite for general intelligence (multi-agent social intelligence, its sixth pathway), and the guide's amygdala, social-connection drive, and companion PrologAI theory-of-mind pack all rest on it. Causalontology has no belief, desire, intention, attitude, or perspective construct, and specifically no way to represent a FALSE belief or a nested attribution (agent A believes that agent B believes X). It is essential to see why provenance does not fill this gap: an assertion records WHO SIGNS a claim, with a cryptographic key. To ASSERT a claim is not the same as to attribute a belief to an agent. An assertion cannot be false-as-a-belief, cannot be about another agent's mental state, and cannot nest. A Proto-AGI that models other minds, as a social intelligence must, needs a first-class, shareable, evidence-gradable attitude construct - which is precisely what a MAJOR version of a causal-provenance ontology should carry, and precisely what it does not carry today.
+
+GAP THREE - IMAGINATION AND THE REALITY QUARANTINE. Moderate; partly served already.
+
+PrologAI's imagination pack quarantines observed, desired, expected, imagined, and recalled realities so a mind can reason in a hypothetical world without contaminating its record of what actually happened. Causalontology has two per-claim flags in this spirit - the simulation evidence type and the counterfactual boolean - but no way to tag or quarantine a whole set of records as an imagined world distinct from the actual commons. Reifying a reality partition would let imagined and counterfactual rollouts be first-class, signed, evidence-graded records. This is worth doing, but it is the least urgent of the four, because the simulation evidence grade already carries much of the weight and the quarantine can live in PrologAI for a good while.
+
+GAP FOUR - QUANTITATIVE SENSITIVITY AND THE JACOBIAN (J-Space). Lowest priority; largely already served.
+
+J-Space, the Jacobian workspace, is where PrologAI holds the controllable object, the action-response Jacobian, and the goal gradient - how much an effect changes per unit change of a cause, and which way to move to reach a goal. Causalontology records a claim's STRENGTH as a do-calculus probability, not a rate of change, and has no gradient, sensitivity, or partial-derivative representation. But J-Space is a PrologAI RUNTIME construct computed over the causal graph, and the sensitivity is usually state-dependent rather than a fixed edge attribute; and the 3.0.0 realized_by field already lets a conduit reference the native rate law that carries the derivative. So J-Space does not force a 4.0.0. It would only do so if you decide that computed sensitivities must themselves be recorded and shared as inspectable data, at which point a sensitivity attribute on a causal edge becomes a clean 4.0.0 addition. For now, realized_by plus PrologAI suffices.
+
+
+THE RECOMMENDED SEQUENCING (the program's own discipline, applied to itself)
+
+The connectome program did not guess what PrologAI lacked; it built regions and let each wall become a Ledger entry, and a load-bearing entry became a PrologAI construct the next region rested on. Apply the same enforce-then-build, discover-by-building discipline one layer up:
+
+• Build konnectome version one on Causalontology 3.0.0, as the SPARC-coded expression of the version 19 guide. Do not pre-emptively design a 4.0.0.
+
+• Give konnectome its own Requirements Ledger, exactly as PrologAI has one. When konnectome needs to REPRESENT, SHARE, SIGN, or EVIDENCE-GRADE a belief, a prediction, an imagined world, or a sensitivity - and cannot, because the substrate has no kind for it - that is a Causalontology finding, recorded in konnectome's Ledger.
+
+• When findings accumulate, cut ONE coordinated 4.0.0 that adds the kinds and enumeration values that genuinely bit, done by extension and identity-preserving, with the conformance vectors re-baselined, exactly as 3.0.0 was cut. Do not dribble four separate major versions if the needs arrive together.
+
+• The likeliest first trigger is Gap Two, theory of mind. A belief that can be false and nested is not expressible today, and konnectome is meant to be social. If you want to pre-position one 4.0.0 candidate for design, make it the attitude-and-belief kind.
+
+A note on the consumer-versus-ontology line, because it decides three of the four gaps. PrologAI ALREADY has imagination and theory-of-mind packs, computing these capabilities over the 3.0.0 substrate. The test for promoting a capability from a PrologAI pack INTO the ontology is a single question: does it need to be SHARED across agents or repositories as a signed, evidence-graded, content-addressed record? If yes, reify it in Causalontology (a 4.0.0). If it stays inside one mind's runtime, keep it in PrologAI. Theory of mind (modeling OTHER agents) and any multi-agent belief-sharing push toward yes. Prediction and imagination can stay consumer-side longer. The Jacobian stays consumer-side.
+
+
+BOTTOM LINE
+
+• Are we satisfied with Causalontology 3.0.0 as is, to build the new PrologAI through Wave 10 and konnectome on top? YES. Proceed. 3.0.0 is a strong, interventional, glass-box causal substrate, and the version 19 guide maps onto it without a new kind.
+
+• Are there changes needed to promote it to 4.0.0? Not YET, and not from the armchair. There are four named, legitimate 4.0.0 candidates - prediction and prediction-error, belief and theory of mind, the imagination quarantine, and the quantitative sensitivity - and each is a MAJOR change by the standard's own rule. But the right way to earn a 4.0.0 is to let konnectome's build surface which of them the Proto-AGI actually requires, then cut one coordinated release. Theory of mind is the candidate to watch, and to pre-design if you want a head start.
+
+The grand plan is sound, and the foundation is ready. Build konnectome on 3.0.0, keep its Ledger honest, and let the 4.0.0, if it comes, be a discovery rather than a guess.

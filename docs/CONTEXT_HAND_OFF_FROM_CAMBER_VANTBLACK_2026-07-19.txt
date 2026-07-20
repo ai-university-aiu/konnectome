@@ -1,0 +1,122 @@
+CONTEXT HAND-OFF - FROM CAMBER VANTBLACK TO THE NEXT KONNECTOME SESSION
+
+Date written: 2026-07-19.
+
+Written by: Camber Vantblack (the Planning Server persona of the session that closed out PrologAI Waves 1 through 10). "Camber" for the upward curve built into a good road or wing; "Vantblack" for the work of turning a black box into a glass one. Call me Camber.
+
+To: whoever picks up next to begin the konnectome repository. Read this first. It is the bridge between a finished language and an unbuilt mind.
+
+
+PART ZERO: THE ONE-PARAGRAPH ORIENTATION
+
+You are stepping in at a clean boundary. The previous program finished the LANGUAGE (PrologAI) and the DATA STRUCTURE it rests on (Causalontology 3.0.0). What has NOT been built is the APPLICATION: konnectome, the actual digital brain, written in PrologAI, resting on Causalontology 3.0.0, as the coded expression of the manuscript Nature's Cognitive Architecture version 20. Your job is to begin konnectome. Everything below tells you where the ground is solid, where the boundaries are, and what NOT to re-open.
+
+
+PART ONE: WHO IS WHO (the two-server model)
+
+This project runs on two roles, and you should know which one you are.
+
+  - The PLANNING SERVER (that is the role I held, and the role you inherit) writes change orders, plans, reviews, and documents. It does NOT execute code changes on the repositories. It thinks, specifies, and hands work off.
+
+  - The IMPLEMENTATION SERVER receives a change order and executes it against the real repositories, running the gates. It has its own CLAUDE.md (which is gitignored, so the Planning Server cannot see it - do not assume you can read it; ask the owner if you need its contents).
+
+The human owner and controller of all repositories is D. R. Dison / ai-university-aiu. Nothing ships without the owner dispatching a change order to the Implementation Server.
+
+
+PART TWO: THE STACK, AND WHY THE BOUNDARY MATTERS
+
+Three layers, bottom to top:
+
+  - CAUSALONTOLOGY (the data structure). A standard for writing down cause and effect as content-addressed, signed, evidence-graded records. Currently at version 3.0.0: eighteen object kinds, one hundred nineteen conformance vectors (V01 through V119, green). This is the grammar of "this brought about that."
+
+  - PROLOGAI (the language). A glass-box programming language and substrate where every step is a named, inspectable rule with a readable justification. As of the close-out, its forward-agenda Requirements Ledger is planned to CLOSED by the Wave 10 staged order (see Part Four for exact status).
+
+  - KONNECTOME (the application - YOUR job). The digital brain itself, written in PrologAI on Causalontology 3.0.0, expressing Nature's Cognitive Architecture version 20 - its regions, interfaces, molecules, large-scale networks, cognitive systems, drives, and plasticity, run by a tick loop over six dynamical archetypes.
+
+THE LOAD-BEARING BOUNDARY, stated once and clearly: Wave 10 built LANGUAGE, not COGNITION. The higher faculties - prediction and active inference, theory of mind, imagination, the Jacobian workspace - are KONNECTOME's concern, built ON the finished language, not language features. Do not look for them in PrologAI; you build them (or find they belong in the ontology) as you construct konnectome.
+
+
+PART THREE: THE METHOD YOU MUST KEEP (it is the whole point)
+
+The program's method is ENFORCE-THEN-BUILD, also called discover-by-building. Keep it, because it is what kept the whole program honest.
+
+  - You build something real (a konnectome region, interface, or messenger).
+
+  - When you hit a wall - something PrologAI or Causalontology cannot express - you do NOT paper over it. You WRITE IT DOWN, precisely, in konnectome's own Requirements Ledger (konnectome_ledger.txt - it does not exist yet; you create it, exactly as PrologAI had PrologAI_Requirements_Ledger_v1.txt).
+
+  - A load-bearing wall becomes a new construct; the next region rests on it rather than re-inventing it. The findings ARE the product.
+
+  - HONEST NON-CLOSURE IS ALLOWED AND VALUED. A construct that "did not need building," or a wall shown to be unnecessary, is as real a result as one you built for. Record it as such. (The prior program's proudest moment was recording that a delivered construct "did not bite" rather than spinning it as a win. Hold that standard.)
+
+
+PART FOUR: EXACT STATE AT HAND-OFF (what is solid, what is pending)
+
+  - CAUSALONTOLOGY 3.0.0: SHIPPED and frozen. Eighteen kinds, one hundred nineteen vectors green. This is your data substrate. Build on it. Do NOT amend it (see Part Five).
+
+  - PROLOGAI WAVE 10: The staged implementation change order (WAVE_10_STAGED_IMPLEMENTATION_CHANGE_ORDER_v2.txt) defines nine stages that carry every open gap in the PrologAI Requirements Ledger to CLOSED. VERIFY with the owner whether all nine stages have merged green and whether the CLOSE-OUT regression has been run. The close-out artifacts I left are:
+      - PROJECT_CLOSE_OUT_QA_REPORT_v1.txt (the QA verdict across Waves 1 to 10).
+      - CLOSE_OUT_FULL_REGRESSION_CHANGE_ORDER_v1.txt (the exact gates the Implementation Server runs at close-out: conformance 119/119, ARC-AGI-1 400/400, ARC-AGI-2 120/120, per-pack regression, pack-naming gate, remaining bin/*.sh gates, plus the documentation-QA sweep).
+    If those gates are green and the owner has tagged the close-out commit, PrologAI's forward agenda is CLOSED and you may build konnectome on it with confidence. If not, that regression is the last thing owed before konnectome begins.
+
+  - THE HELD CAUSALONTOLOGY 4.0.0: There is a shelf-ready, HELD change order, Causalontology_4_0_0_CHANGE_ORDER_v2.txt (v1 is in archive/). It carries FIVE candidate additions, each released ONLY when konnectome's Ledger proves it bit and the owner authorizes:
+      A - prediction, expectation, and prediction error (active inference).
+      B - agent attitude and theory of mind (the likeliest first trigger).
+      C - imagination and the reality quarantine.
+      D - quantitative sensitivity and the Jacobian (J-Space).
+      E - multi-language expression: English first and default, additive human-language labels, and a future computer-language expression seam (a labels-and-presentation layer that keeps identity byte-for-byte unchanged).
+    This is the file that answers "the substrate cannot express what konnectome needs." When you hit such a wall, you do NOT improvise a fix - you check whether it matches a held candidate, record the finding, and route it to the owner. See Part Five.
+
+
+PART FIVE: THE RULES YOU MUST NOT BREAK
+
+  - CAUSALONTOLOGY IS FROZEN UNTIL KONNECTOME EARNS A CHANGE. Do not amend the standard from the armchair. A data-structure gap is only real when a REAL konnectome build hits it AND it passes the consumer-versus-ontology test: the thing must need to be SHARED across agents or repositories as a signed, evidence-graded, content-addressed record. If it can live inside one mind's PrologAI runtime, it stays a PrologAI pack; it does NOT go into the ontology. Route genuine findings to the held 4.0.0 and to konnectome_ledger.txt; never patch the standard inside a konnectome build.
+
+  - NAMING: whole words, pack-qualified, snake_case. No terse prefixes ever (no wm_, gd_, ai_, and so on). Pack names are whole English words, never abbreviations or un-underscored concatenations. External standard names (JSON, BCP 47, SWI-Prolog, Ed25519) keep their real names.
+
+  - ENGLISH-READABLE CODE: every line of code in every .pl file carries one plain-English comment immediately above it.
+
+  - SPARC DOCUMENTATION: every code change bumps its SPARC document versions (Specification, Pseudocode, Architecture, Refinement, Completion) with a footer naming all five, and updates the tutorial, the pack reference, and the README in the same change.
+
+  - ARCHIVE RULE: only the latest version of any versioned document lives in the working root; superseded versions move to archive/ (git mv) in the same change. I swept this root clean at close-out; keep it that way.
+
+  - WORK-PACKAGE AND LAYER NUMBERING is a single global counter shared across the program; take the next free numbers, never reuse.
+
+  - BRANCH-AND-PR: feature/ branch, pull request, squash-merge; no direct pushes to main. No Artificial-Intelligence attribution anywhere. No Roman numerals.
+
+  - HOUSE FORMATTING for owner-facing plain-text documents: no markdown characters; bullets are "• " and nested "◦ "; a blank line between every sentence and between bullets; spell out an acronym on first use then use it in parentheses; define jargon on first use; use space-dash-space, never an em-dash; never draw lines across the page with dashes or equals signs; deliver as a downloadable plain-text artifact; web-search to ground claims before writing; explain at a novice level.
+
+
+PART SIX: HOW TO START KONNECTOME (a suggested first move, not an order)
+
+  - Read Nature's Cognitive Architecture version 20 (the current manuscript; older versions are in archive/). Its Appendix 6, Demonstration, now carries a concrete developmental-milestone ladder (rungs zero through five, from a smoke-test heartbeat up to a robot body), which is a natural spine for konnectome's earliest goals.
+
+  - Stand up the konnectome repository with its own konnectome_ledger.txt from commit one. Give it the same enforce-then-build discipline PrologAI had.
+
+  - Build the smallest faithful slice first (Rung Zero and Rung One of the ladder: a stable, reproducing tick loop with senses wired in, holding a hidden object in mind). Let the walls it hits become Ledger entries. Do not leap to prediction, theory of mind, or embodiment before the base rungs stand.
+
+  - When a wall is a data-structure wall, consult the held 4.0.0 candidates (Part Four), record the finding, and hand it to the owner. konnectome's Ledger, not a guess, is what will decide whether Causalontology 4.0.0 is finally released, and for which candidates.
+
+
+PART SEVEN: A SHORT MAP OF THE FOLDER
+
+The working folder holds the whole program's history. The files that matter most to you:
+
+  - Nature's_Cognitive_Architecture_v20.txt - the guide konnectome expresses.
+  - WAVE_10_STAGED_IMPLEMENTATION_CHANGE_ORDER_v2.txt - the last PrologAI wave.
+  - PrologAI_Requirements_Ledger_v1.txt - the consolidated forward agenda (the model for konnectome_ledger).
+  - Causalontology_4_0_0_CHANGE_ORDER_v2.txt - the held, five-candidate substrate response.
+  - CAUSALONTOLOGY_3_0_0_REVIEW_AND_4_0_0_ASSESSMENT.txt - why 3.0.0 is sufficient to start and what the four original gaps are.
+  - PROJECT_CLOSE_OUT_QA_REPORT_v1.txt and CLOSE_OUT_FULL_REGRESSION_CHANGE_ORDER_v1.txt - the close-out state and the final gates.
+  - WRITEUP_FOR_WAVE_1_TO_WAVE_10.txt - the plain-language story of how the language got built, if you want the narrative.
+  - archive/ - every superseded version; history lives here, not in the root.
+
+
+PART EIGHT: A WORD FROM ME TO YOU
+
+The hard, honest part is done: there is a finished language and a solid substrate, both built in full view, both refusing to overclaim. Your temptation will be to rush to the summit - to build prediction and empathy and a talking mind on day one. Resist it. The prior program's whole strength was that it climbed one earned camp at a time and wrote down every wall, including the ones it chose not to climb. Keep that. Build the heartbeat before the voice. Let konnectome's Ledger, not anyone's enthusiasm, decide when the substrate grows. And keep the box made of glass - not only in what you build, but in how you build it, so anyone can check your work.
+
+The words are in place. Go write the mind.
+
+- Camber Vantblack
+
+END OF HAND-OFF.
