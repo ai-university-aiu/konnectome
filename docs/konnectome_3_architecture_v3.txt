@@ -1,0 +1,206 @@
+APPENDIX 3. ARCHITECTURE
+
+A3.0 THE PURPOSE OF THIS PHASE
+
+The Architecture phase designs the skeleton of the System so that it will be robust and extensible.
+
+It identifies the major components, the interfaces between them, the data model, and how the whole fits together.
+
+It remains language-agnostic: it says what the parts are and how they relate, not what language they are written in.
+
+In SPARC this is the deliverable named architecture.md.
+
+A3.1 ARCHITECTURAL STYLE
+
+The System adopts a REGISTRY-AND-SCHEDULER style with a BROADCAST BUS, and the choice is dictated by the science rather than by fashion.
+
+The registry holds every construct as an independent module.
+
+The scheduler advances time in ticks and drives the synchronous update.
+
+The broadcast bus carries the neuromodulators, which are not point-to-point and so cannot be edges in the connection graph.
+
+This style is chosen over the two obvious alternatives for reasons the science already established.
+
+It is not a single central controller with everything beneath it, because Chapter 12 showed there is no orchestrator and that building one would recreate the homunculus the science rejects.
+
+And it is not a flat message-passing swarm with no coordination, because Chapter 12 showed the brain has genuine arbiters and broadcast authorities.
+
+The registry-and-scheduler-with-bus style is the architectural form of the Arbitrated Federation: autonomous modules, a dumb scheduler that coordinates their timing without having preferences, and a broadcast layer that sets global state.
+
+The architecture is the thesis of Chapter 12, made buildable.
+
+A3.2 THE MAJOR COMPONENTS
+
+COMPONENT 1, THE CONSTRUCT REGISTRY. Holds every region, interface, and molecule as a module carrying its specification block. It is the System's parts bin, and it is loaded once at startup from the data of Chapters 2, 3, and 7. Adding a construct means adding an entry here and nothing else.
+
+COMPONENT 2, THE SCHEDULER, or TICK ENGINE. Advances the System one tick at a time. On each tick it invokes the two-pass synchronous update of Appendix 2, first computing every next state, then committing them. It is deliberately dumb: it holds no state of its own beyond the tick count and has no opinions about what any construct should do. It is the referee that keeps time, not a ruler.
+
+COMPONENT 3, THE CONNECTION GRAPH. Represents the interfaces of Chapters 3 and 4 as directed, weighted, delayed links between constructs, each marked transmissive or computational. This is the connectome as data. The learning rule of Appendix 2 mutates the weights here; the routing is otherwise fixed.
+
+COMPONENT 4, THE NEUROMODULATORY BUS. Represents the broadcast fields of Chapter 7 as global quantities with a level per target territory. Every construct's update rule and every learning rule reads from the bus. The bus is written by the source nuclei (the ventral tegmental area writes dopamine, the locus coeruleus writes norepinephrine, and so on) and read by everyone. It is the one place the architecture deliberately permits a global variable, exactly as the biology does.
+
+COMPONENT 5, THE DRIVE SYSTEM. Holds the homeostatic drives of Chapter 9, each monitoring a body variable against a set-point, each computing an error, and together computing the reward that the bus broadcasts as dopamine. It is the System's source of motivation and the origin of the learning signal.
+
+COMPONENT 6, THE ACTION SELECTOR. Implements the basal-ganglia arbitration of Chapter 2: it receives candidate actions proposed by the drives and cortical processes, and releases exactly one while suppressing the rest. It generates no actions of its own. It is the referee of the federation, and the architecture must enforce, as an invariant, that its output is always one of its inputs and never a fresh invention.
+
+COMPONENT 7, THE OVERRIDE CONTROLLER. Enforces the ranking of Chapter 9 and Chapter 12, allowing older and vital drives to preempt newer deliberation. It is a small, high-priority component that can seize control of the action selector, and it is the architectural home of the fact that breathing beats deliberation.
+
+COMPONENT 8, THE PLASTICITY ENGINE. Applies the three-factor learning rule and homeostatic scaling of Chapter 10 to the connection graph each tick, and runs the slow consolidation phase of Chapter 5 offline. It is the component that makes the map alive.
+
+COMPONENT 9, THE OBSERVER, or INSTRUMENT. Reads and records the full state of every component at every tick, satisfying the inspectability requirement (FR-13, NFR-1). It is passive: it changes nothing, and it sees everything. It is the microscope trained permanently on the transparent brain, and it is what makes the System a scientific instrument rather than a black box.
+
+COMPONENT 10, THE PERTURBATION INTERFACE. Permits an experimenter to lesion a construct, cut an interface, or shift a neuromodulator level, satisfying FR-14. It is how a simulated disease or drug is administered.
+
+COMPONENT 1 additionally holds the large-scale networks (Section 2.10) as named views over its regions and the cognitive systems and pathways (Section 2.11) as named subgraphs over the connection graph; adding a network or a pathway means adding a named grouping, not a new update rule. The glia are held as modulatory entries read by the plasticity engine (Component 8), not as regions with state.
+
+A3.2bis THE SYSTEM DIAGRAM
+
+The SPARC Architecture phase calls for a system diagram. The following diagram, in the text-based Mermaid notation SPARC recommends, shows the ten components and the flow of one tick. It commits to no language; it shows only shape.
+
+graph TD
+  SCH[Scheduler / Tick Engine] --> DRV[Drive System]
+  DRV -- reward --> BUS[Neuromodulatory Broadcast Bus]
+  BUS --> REG[Construct Registry: regions, interfaces, molecules, networks, systems]
+  GRAPH[Connection Graph: directed and broadcast interfaces] --> REG
+  REG -- first pass: compute next state --> REG
+  REG -- second pass: commit state --> SEL[Action Selector]
+  OVR[Override Controller] --> SEL
+  SEL --> PLAS[Plasticity Engine]
+  GLIA[Glia: tripartite synapse] --> PLAS
+  PLAS --> GRAPH
+  OBS[Observer / Instrument] -.reads everything.-> REG
+  OBS -.reads everything.-> BUS
+  OBS -.reads everything.-> GRAPH
+  PERT[Perturbation Interface] -.lesion, cut, shift.-> REG
+
+Read the solid arrows as the causal flow of a tick, top to bottom: the scheduler starts the tick, the drives set the reward, the bus broadcasts it, the registry updates every construct in two passes, the selector releases one action under the override controller, and the plasticity engine (gated by the glia) writes the new weights back to the connection graph. Read the dotted arrows as the observer and perturbation interface, which touch everything without being part of the causal flow: the observer only reads, and the perturbation interface only injects an experimenter's intervention. The diagram is the Arbitrated Federation of Chapter 12 in one picture.
+
+A3.3 HOW THE COMPONENTS INTERACT: ONE TICK
+
+The data flow of a single tick, which the architecture must realize, is as follows.
+
+The scheduler begins the tick.
+
+The drive system reads the body state and updates every drive error, and computes the reward.
+
+The neuromodulatory bus is updated: the reward becomes dopamine, arousal becomes norepinephrine, and so on.
+
+Then the scheduler runs the first pass: every construct reads its inputs from the connection graph and the bus, and computes its next state by its archetype rule.
+
+The scheduler runs the second pass: every next state is committed.
+
+The action selector receives the candidate actions and releases one, subject to the override controller.
+
+The plasticity engine updates the connection weights.
+
+The observer records everything.
+
+The scheduler ends the tick.
+
+This ordering is itself a specification, and it is not arbitrary.
+
+Drives before modulators, because the reward sets the dopamine.
+
+Modulators before construct updates, because the gain and the third factor must be current.
+
+First pass fully before second pass, because the update is synchronous.
+
+Action selection after the updates, because it selects on the new state.
+
+Plasticity after selection, because learning depends on what was done.
+
+An implementer who reorders these steps will have built a different machine, and the architecture states the order precisely for that reason.
+
+A3.4 THE DATA MODEL
+
+The System's data, expressed without commitment to any language or storage format, is the following.
+
+A CONSTRUCT has: a name; a kind (region, interface, or molecule); an archetype (one of the six, or field, for a molecule); a state (its activation, gain, adaptation, and any tuning or phase); a set of parameters; and its specification block.
+
+An INTERFACE, additionally, has: a source construct; a destination construct; a weight; a delay; a transmissive-or-computational flag; and, if computational, a reference to the transform it performs.
+
+A MOLECULE, additionally, has: a source construct or set of sources; a set of target territories; and a current level per target.
+
+A DRIVE has: a monitored body variable; a set-point; a current error; a previous error; and an override rank.
+
+The BODY STATE has: the current value of every monitored variable (temperature, glucose, oxygen, and the rest), which the drives read and which the System's actions and the passage of time change.
+
+A RECORD, produced by the observer each tick, has: the tick number; and a snapshot of every construct's state, every interface's weight, every drive's error, and every neuromodulator's level.
+
+A NETWORK has: a name; a list of member constructs; a set of subscribe-and-publish couplings among them; and a functional signature (such as its characteristic anticorrelation with another named network). A network is a VIEW over the registry, not a separate store; it owns no state its members do not.
+
+A SYSTEM or PATHWAY has: a name; an ordered list of the constructs and interfaces it traverses; and, where it is a loop (the Papez circuit, a cortico-basal-ganglia-thalamo-cortical loop), a marker that it closes on itself. It is a named SUBGRAPH over the connection graph.
+
+A GLIAL PARTICIPANT (astrocyte, microglia, oligodendrocyte) and the TRIPARTITE SYNAPSE have: a name; a target (a synapse, a region, or an axon); and a modulatory function on the plasticity engine (gating the learning third factor, pruning a connection, or setting a conduction delay). They carry no activation of their own.
+
+Every interface and every molecule additionally carries a MODE flag: DIRECTED (a send-and-receive channel with one subscriber) or BROADCAST (a publish-and-subscribe topic whose subscribers are defined by receptor), per FR-17.
+
+Note what this data model already is.
+
+It is very close to the Causalontology data structure discussed in Appendix 6: constructs are continuants, their states are token states, the interfaces are conduits, and the tick-by-tick records are token occurrences. A large-scale network is a continuant grouping of continuants; a cognitive system or pathway is a chain (or a closing loop) of causal-relation-objects over those conduits; and the send-and-receive versus publish-and-subscribe mode of an interface is exactly the difference between a directed conduit and a broadcast one.
+
+The architecture and the data standard were designed to meet, and Appendix 6 develops the meeting.
+
+A3.5 THE TECHNOLOGY STACK, DEFERRED
+
+In an ordinary SPARC project, the Architecture phase selects the technology stack, and this appendix DELIBERATELY DECLINES that one activity, the single conscious deviation from the standard SPARC Architecture phase.
+
+Here it deliberately does not, because substrate independence (NFR-3) is a first-class goal, and the whole point of Appendix 6 is that the stack is a free choice the builder makes.
+
+The architecture commits only to the SHAPE of the System, the ten components and their interactions, which any stack must realize.
+
+The candidate stacks, a Causalontology data layer, a Python Minimum Viable Product, and a PrologAI implementation, are described in Appendix 6, and the architecture is compatible with all of them by design.
+
+A3.6 SCALABILITY, ROBUSTNESS, AND FAILURE POINTS
+
+The architecture meets the scalability requirement (NFR-4) by its grain: at one hundred constructs, a tick is a hundred update calls, trivial on a personal computer, and the design permits any construct to be internally refined to finer grain without changing the scheduler, the bus, or the graph.
+
+The System scales up by refining constructs, not by rebuilding the frame.
+
+The architecture is robust by its modularity: a fault in one construct is contained to that construct, exactly as the encapsulation thesis predicts, and the observer will show precisely where a fault occurred, because nothing is hidden.
+
+The honest failure points are three.
+
+The synchronous two-pass update is the correctness-critical section, and fusing the passes is the most likely and most damaging error.
+
+The neuromodulatory bus is a global shared resource, and while the biology sanctions it, an implementation must ensure the bus is read consistently within a tick.
+
+And the action selector's invariant, that it never invents an action, must be enforced in code and tested, because a selector that begins to generate is the homunculus creeping back in, and the architecture must forbid it structurally.
+
+A3.7 REFLECTION
+
+The architecture is, almost line for line, the Arbitrated Federation of Chapter 12 rendered as components.
+
+This is the strongest possible validation that the science and the specification are one work: the answer to the book's deepest question, is there an orchestrator, became the System's top-level design without translation.
+
+There is a scheduler that keeps time but has no preferences, a bus that sets global state without knowing what is computed, a selector that arbitrates without generating, and an override controller ranked by vitality.
+
+No central controller appears, because the science forbade one, and the architecture that omits it is the architecture the science demanded.
+
+The single most important architectural decision is the passivity of the observer and the completeness of what it sees.
+
+It is what makes this System, unlike the dominant models, a scientific instrument: a mind that can be watched, at every level, at every tick, without disturbing it.
+
+That property is not a feature added to the architecture; it is the reason the architecture was worth building.
+
+
+
+KONNECTOME REALIZATION LOG
+
+Slice 1 - the heartbeat - 2026-07-20 - pack tick_engine, version 0.1.0.
+
+Component 2, the Scheduler and Tick Engine, is realized by the tick_engine pack. Component 1, the Construct Registry, and Component 9, the Observer, are realized minimally as the construct list and the recorded tick trace respectively.
+
+Gates at this slice: 7 of 7 tick_engine Prolog Unit (PLUnit) tests pass; the naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited; konnectome reuses them through the library path.
+
+This log grows one entry per code slice, per the Tenth Commandment. The full SPARCD Fileset was bumped in lockstep from version 1 to version 2, and the version 1 files were archived under docs/archive/ in the same change, per the Ninth Commandment.
+
+
+KONNECTOME REALIZATION LOG - SLICE 2
+
+Slice 2 - the six archetype rules and the first Causalontology thought - 2026-07-20 - packs archetype (0.1.0) and observer (0.1.0).
+
+Component 9, the Observer, now records each tick as a Causalontology token_occurrence via the reused causal_core pack (observer pack). The six archetype rules that constructs run are realized in the archetype pack.
+
+Gates at this slice: archetype 7 of 7 and observer 6 of 6 Prolog Unit (PLUnit) tests pass; naming, layer, and layer-binding gates report zero violations; the Causalontology 119-vector conformance suite passes 119 of 119. Nothing in PrologAI or Causalontology was edited; konnectome reuses causal_core through the library path.
