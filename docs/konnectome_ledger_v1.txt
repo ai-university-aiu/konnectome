@@ -115,7 +115,7 @@ deepened; PENDING = not built yet.
 
  THE TEN ARCHITECTURE COMPONENTS (Appendix 3, Section A3.2)
  -----------------------------------------------------------------------------------
- Component 1  Construct Registry        | tick_engine (the construct list)  | PARTIAL
+ Component 1  Construct Registry        | cognitive_cycle world             | REALIZED
  Component 2  Scheduler / Tick Engine   | tick_engine (tick_engine_run/5,   | REALIZED
                                         |  tick_engine_step/3, two passes)  |
  Component 3  Connection Graph          | connection_graph                  | REALIZED
@@ -214,5 +214,12 @@ ten-component architecture. PrologAI expressed the vitality override and the exp
 directly. Honest non-closure: Component 1 (the construct registry) remains a minimal construct list
 rather than a dedicated pack, and full end-to-end wiring of all ten components into one running tick
 is a later integration slice; recorded as pending, not as walls.
+
+Slice-8 note (2026-07-20). Building cognitive_cycle - the integrated one-tick loop - hit NO wall.
+It wires all ten components in the Section A3.3 order, and completes Component 1 (the construct
+registry) as the world it carries. Every one of the ten architecture components is now realized and
+running together. Honest non-closure: the construct update does not yet read the bus for per-tick
+gain, action proposals are supplied rather than generated from the regions, and the body does not yet
+respond to actions; recorded as pending refinements, not as walls.
 
  Walls: OPEN 0 | ROUTED 0 | CLOSED 0 | UNNECESSARY 0.   Observations: 2.
