@@ -25,7 +25,7 @@ Before you write a single line, read and follow these.
 
 • The Settings, General, Instructions for Claude (the owner's standing instructions to you as an assistant). They ask, among other things, for a web search before answering, plain-text output presented as a downloadable text artifact, no markdown formatting characters, bullet points using the bullet character followed by one space, a blank line between every sentence and every bullet, acronyms spelled out on first use, technical terms defined on first use, and a space-dash-space in place of an em-dash. Read them and honor them.
 
-• /home/ccaitwo/PrologAI/CLAUDE.md. This file is git-untracked (it is in that repository's gitignore), so it does not travel in any pull request, but it holds PrologAI's current-state narrative and the current SPARC volume versions. Read it for the language's state.
+• /home/ccaitwo/CLAUDE.md. This file is git-untracked, so it does not travel in any pull request, but it holds the system-wide current-state narrative and the current SPARC volume versions. It was moved up from the PrologAI repository to the family root because it belongs to the whole system, not one repository; a session whose working directory is under /home/ccaitwo/ (PrologAI, konnectome, causalontology, or Mentova) auto-loads it. Read it for the state of the language and the family.
 
 • All the documents in docs/. Read every one of them. The most important are listed in Part Two.
 
