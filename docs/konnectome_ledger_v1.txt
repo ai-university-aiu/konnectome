@@ -124,23 +124,25 @@ deepened; PENDING = not built yet.
  Component 6  Action Selector           | (to be built)                     | PENDING
  Component 7  Override Controller       | (to be built)                     | PENDING
  Component 8  Plasticity Engine         | (to be built)                     | PENDING
- Component 9  Observer / Instrument     | tick_engine (the tick trace)      | PARTIAL
+ Component 9  Observer / Instrument     | observer + tick_engine trace      | REALIZED
  Component 10 Perturbation Interface    | (to be built)                     | PENDING
 
  THE SIX ARCHETYPE RULES (Appendix 2, Section A2.3)
  -----------------------------------------------------------------------------------
- relay | integrator | oscillator | attractor | gate | comparator  | (to be built) | PENDING
-   (The heartbeat uses three minimal stand-in update kinds - clock, copy, hold - inside
-    tick_engine to exercise the scheduler; the true six archetypes are the next slice.)
+ relay | integrator | oscillator | attractor | gate | comparator  | archetype      | REALIZED
+   (The archetype pack realizes the A2.2 dispatch and the A2.3 six rules, isolation-tested
+    per A4.2. Wiring them into the scheduler via the connection graph is a later slice. The
+    heartbeat's three stand-in kinds - clock, copy, hold - remain in tick_engine for the
+    scheduler test.)
 
  THE DATA MODEL (Appendix 3, Section A3.4) - stored as Causalontology records
  -----------------------------------------------------------------------------------
  Construct state (per tick)   | to become a Causalontology state_assertion    | PENDING
- Tick record (per tick)       | to become a Causalontology token_occurrence   | PENDING
+ Tick record (per tick)       | observer (Causalontology token_occurrence)    | REALIZED
  Interface / conduit          | to become a Causalontology conduit            | PENDING
-   (Reused via PrologAI's library(causal_core); see Section Five, slice-1 note. The
-    heartbeat records ticks as plain Prolog terms; promotion to token_occurrence is
-    slice 2, where a held record first becomes a durable thought.)
+   (Reused via PrologAI's library(causal_core). The observer pack (slice 2) records each
+    tick as a token_occurrence instantiating a shared 'tick' occurrent, content-addressed
+    by causal_core_identify, keeping the 119 conformance vectors green.)
 
 
 ================================================================================
@@ -166,4 +168,18 @@ causal_core pack) is planned for slice 2, where a held record first becomes a du
 thought; that is a sequencing choice, not a wall. Honest non-closure recorded, per the
 Fourth Commandment.
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 0 | UNNECESSARY 0.   Observations: 1.
+Observation-2 (2026-07-20, from slice 2). Causalontology's token_occurrence requires an
+absolute RFC 3339 interval start, whereas a konnectome tick is dimensionless-ordinal. The
+observer resolves this by advancing a nominal one-second-per-tick simulated clock from a
+fixed simulation start, which is deterministic and reproducible and keeps the 119 vectors
+green. STATUS: LOGGED, NOT ROUTED. It is not a wall - the record is expressible - and the
+3.0.0 ordinal "ticks" unit remains available to record native ordinal windows between ticks
+when konnectome models them (a later slice). No change order is needed.
+
+Slice-2 note (2026-07-20). Building the six archetype rules (archetype pack) and the first
+Causalontology thought (observer pack) hit NO wall. PrologAI expressed the archetypes
+directly, and causal_core recorded the token_occurrence with no ontology change. The
+archetypes are isolation-tested but not yet wired into the scheduler (that needs the
+connection graph, Component 3); recorded as pending, not as a wall.
+
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 0 | UNNECESSARY 0.   Observations: 2.

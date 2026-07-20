@@ -34,7 +34,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/PARENT_ORG-AI--UNIVERSITY--AIU-570000?style=for-the-badge" alt="Parent org ai-university-aiu">
   <a href="https://github.com/ai-university-aiu/Mentova"><img src="https://img.shields.io/badge/COUSINS-PROLOGAI_+_CAUSALONTOLOGY_+_MENTOVA-480000?style=for-the-badge" alt="Cousins PrologAI, Causalontology, Mentova"></a>
-  <img src="https://img.shields.io/badge/STATUS-SCAFFOLDING,_BUILD_IN_PROGRESS-3A0000?style=for-the-badge" alt="Status: scaffolding, build in progress">
+  <img src="https://img.shields.io/badge/STATUS-BUILDING,_RUNG_2_OF_6-3A0000?style=for-the-badge" alt="Status: scaffolding, build in progress">
 </p>
 
 <p align="center"><sub>The ARC-AGI scores are earned by the reference language, PrologAI, through Mentova - not by konnectome. konnectome inherits them as gates it must never break (Thirteenth Commandment). The banner above is a placeholder the user will replace.</sub></p>
@@ -122,12 +122,12 @@ The six-phase waterfall is mirrored in six versioned documents, each seeded verb
 
 | Phase | File | Seeded from |
 |---|---|---|
-| 1. Specification | [`docs/konnectome_1_specification_v2.txt`](docs/konnectome_1_specification_v2.txt) | Appendix 1 |
-| 2. Pseudocode | [`docs/konnectome_2_pseudocode_v2.txt`](docs/konnectome_2_pseudocode_v2.txt) | Appendix 2 |
-| 3. Architecture | [`docs/konnectome_3_architecture_v2.txt`](docs/konnectome_3_architecture_v2.txt) | Appendix 3 |
-| 4. Refinement | [`docs/konnectome_4_refinement_v2.txt`](docs/konnectome_4_refinement_v2.txt) | Appendix 4 |
-| 5. Completion | [`docs/konnectome_5_completion_v2.txt`](docs/konnectome_5_completion_v2.txt) | Appendix 5 |
-| 6. Demonstration | [`docs/konnectome_6_demonstration_v2.txt`](docs/konnectome_6_demonstration_v2.txt) | Appendix 6 |
+| 1. Specification | [`docs/konnectome_1_specification_v3.txt`](docs/konnectome_1_specification_v3.txt) | Appendix 1 |
+| 2. Pseudocode | [`docs/konnectome_2_pseudocode_v3.txt`](docs/konnectome_2_pseudocode_v3.txt) | Appendix 2 |
+| 3. Architecture | [`docs/konnectome_3_architecture_v3.txt`](docs/konnectome_3_architecture_v3.txt) | Appendix 3 |
+| 4. Refinement | [`docs/konnectome_4_refinement_v3.txt`](docs/konnectome_4_refinement_v3.txt) | Appendix 4 |
+| 5. Completion | [`docs/konnectome_5_completion_v3.txt`](docs/konnectome_5_completion_v3.txt) | Appendix 5 |
+| 6. Demonstration | [`docs/konnectome_6_demonstration_v3.txt`](docs/konnectome_6_demonstration_v3.txt) | Appendix 6 |
 
 ## The build ladder
 
@@ -148,8 +148,13 @@ The build does not leap to prediction, theory of mind, or a talking mind before 
 konnectome/
   CONSTITUTION.md              The fourteen commandments that govern the build.
   README.md                    This file.
+  bin/                         Test runner and the naming / layer / binding gate scripts.
+  packs/                       konnectome's Prolog packs, each with pack.pl, prolog/, test/.
+    tick_engine/               Slice 1: the scheduler and tick engine (Component 2).
+    archetype/                 Slice 2: the six dynamical archetype rules (Section A2.3).
+    observer/                  Slice 2: records each tick as a Causalontology token_occurrence.
   docs/
-    konnectome_1..6_*_v1.txt   The SPARCD Fileset (seeded from the manuscript appendices).
+    konnectome_1..6_*_vN.txt   The SPARCD Fileset (seeded from the appendices; versioned per slice).
     konnectome_ledger_v1.txt   The running scoreboard of findings (Fourth Commandment).
     PrologAI_CHANGE_ORDER_v1.txt        Additive PrologAI-language gaps (Third Commandment).
     Causalontology_4_0_0_CHANGE_ORDER_v2.txt   Data-structure gaps for the frozen ontology.
@@ -161,7 +166,12 @@ konnectome/
 
 ## Status
 
-konnectome is freshly scaffolded. The documents, the Constitution, the ledger, the change orders, and the SPARCD Fileset are in place; the Step 6 code build, which begins at the base of the ladder, has not yet started. This README, and every badge on it, will be kept honest as the build climbs.
+The build has begun and is climbing the ladder. Two slices have landed on `main`:
+
+- **Slice 1 - the heartbeat** (`tick_engine`): the Scheduler and Tick Engine (Component 2), with the two-pass synchronous update. 7 of 7 tests.
+- **Slice 2 - archetypes and the first thought** (`archetype`, `observer`): the six dynamical archetype rules (Appendix 2, Section A2.3) and the observer recording each tick as a Causalontology `token_occurrence` (Component 9) via the reused `causal_core`. 7 of 7 and 6 of 6 tests; the 119 conformance vectors stay green.
+
+Next: wiring the archetypes into the scheduler through the connection graph (Component 3). This README, and every badge on it, is kept honest as the build climbs.
 
 ## License and attribution
 
