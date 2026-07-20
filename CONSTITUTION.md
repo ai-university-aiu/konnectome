@@ -152,5 +152,17 @@ THE FOURTEENTH COMMANDMENT: BRANCH AND REPORT DISCIPLINE:
 No Artificial-Intelligence tool is credited as author or co-author anywhere. No Roman numerals in
 any document or identifier. These match the house rules of the cousin repositories, so konnectome
 reads as one of the family.
+ ...
+THE FIFTEENTH COMMANDMENT: THE TUTORIAL:
+Add the following to /docs/:
+konnectome_tutorial_v1.txt
+Once this file is created,
+write to the file a complete head to toe, top to bottom tutorial on konnectome.
+Describing and explaining every concept relating to konnectome.
+Make the tutorial able to be read and understood by a beginner, learner, layperson, newcomer, novice.
+Maintain versioned updates to /docs/konnectome_tutorial_v1.txt as any new code changes are applied.
+(The tutorial is versioned under the same archive discipline as the Ninth Commandment: when a code
+change bumps it, the superseded version moves to docs/archive/ in the same change, so only the latest
+tutorial lives outside the archive, and it always describes the konnectome that exists.)
 
 END OF CONSTITUTION.

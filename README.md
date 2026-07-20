@@ -157,6 +157,7 @@ konnectome/
   docs/
     konnectome_1..6_*_vN.txt   The SPARCD Fileset (seeded from the appendices; versioned per slice).
     konnectome_ledger_v1.txt   The running scoreboard of findings (Fourth Commandment).
+    konnectome_tutorial_v1.txt A complete beginner tutorial (Fifteenth Commandment), versioned.
     PrologAI_CHANGE_ORDER_v1.txt        Additive PrologAI-language gaps (Third Commandment).
     Causalontology_4_0_0_CHANGE_ORDER_v2.txt   Data-structure gaps for the frozen ontology.
     NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt  The source book.
