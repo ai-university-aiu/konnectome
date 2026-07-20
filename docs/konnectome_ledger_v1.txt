@@ -121,7 +121,7 @@ deepened; PENDING = not built yet.
  Component 3  Connection Graph          | connection_graph                  | REALIZED
  Component 4  Neuromodulatory Bus       | neuromodulator_bus                | REALIZED
  Component 5  Drive System              | drive_system                      | REALIZED
- Component 6  Action Selector           | (to be built)                     | PENDING
+ Component 6  Action Selector           | action_selector                   | REALIZED
  Component 7  Override Controller       | (to be built)                     | PENDING
  Component 8  Plasticity Engine         | (to be built)                     | PENDING
  Component 9  Observer / Instrument     | observer + tick_engine trace      | REALIZED
@@ -194,5 +194,12 @@ packs) hit NO wall. PrologAI expressed the broadcast bus and the drive loop dire
 non-closure: the bus holds a global level per modulator (per-target-territory levels are a
 later refinement), and the drive reward is computed but not yet consumed by an action selector
 (Component 6) or by learning (Component 8); recorded as pending, not as walls.
+
+Slice-5 note (2026-07-20). Building the action selector (action_selector pack) hit NO wall.
+PrologAI expressed the arbitration and the never-invent invariant directly. Honest non-closure:
+the selector picks the single highest-salience candidate (the basal-ganglia go, no-go, and stop
+pathways, and the override controller of Component 7, are later refinements); the drive-bias
+helper connects it to the reward, but full wiring of proposals from every region is pending, not
+a wall.
 
  Walls: OPEN 0 | ROUTED 0 | CLOSED 0 | UNNECESSARY 0.   Observations: 2.
