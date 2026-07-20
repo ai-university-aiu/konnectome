@@ -192,7 +192,7 @@ Step 3: To this file write the following information for the next building or ma
 - A reminder to read The SPARCD Fileset (docs/konnectome_1_specification through konnectome_6_demonstration, at their current versions).
 - A reminder to read docs/NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt, the guiding book.
 - A reminder to read the Settings, General, Instructions for Claude (the owner's standing instructions to the assistant).
-- A reminder to read /home/ccaitwo/PrologAI/CLAUDE.md, which is git-untracked (gitignored) and holds PrologAI's current-state narrative.
+- A reminder to read /home/ccaitwo/CLAUDE.md, which is git-untracked (gitignored) and holds the system-wide current-state narrative (it lives at the family root, not inside one repository, because it belongs to the whole system).
 - A reminder to read the current docs/konnectome_tutorial (the maintained beginner tutorial), and to read all of the documents in docs/.
 - A list of the important docs/ files and what each is: the ledger, the SPARCD Fileset, the two change orders, the tutorial, the thought-combination guide, the guiding-principle documents, the context documents, and the earlier hand-offs (named by the convention of Step 2).
 - A report of what was done in the session that is ending: the slices built, the packs, the tests, the pull requests merged, the current main commit, and the current SPARCD and tutorial versions.
