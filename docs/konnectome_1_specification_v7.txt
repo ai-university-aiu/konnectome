@@ -1,0 +1,264 @@
+APPENDIX 1. SPECIFICATION
+
+A1.0 THE PURPOSE OF THIS PHASE
+
+The Specification phase defines the problem completely before any code is written.
+
+Its restraint is its point: not one line of program code appears here.
+
+What appears is a complete, plain-language statement of what the system must do, the qualities it must have, the scenarios it must serve, the boundaries it must respect, and the criteria by which it will be judged finished.
+
+In the language of SPARC, this appendix is the deliverable traditionally named specification.md.
+
+A1.1 PROJECT OVERVIEW
+
+PROJECT NAME: Nature's Cognitive Architecture, referred to hereafter as the System.
+
+PROJECT GOAL: to build a running software model of the human cognitive architecture at the grain established in this book, meaning the grain of roughly one hundred brain regions, forty named interfaces, the principal chemical messengers, and the dynamics, drives, and plasticity that make them change over time.
+
+The System is not a model of individual neurons or synapses; it is a model of the regional architecture and its control loops.
+
+TARGET AUDIENCE: three audiences, in order.
+
+First, the independent researcher or student who wishes to build and study a whole-architecture cognitive model on modest hardware.
+
+Second, the research laboratory with serious compute that wishes to scale the model and test it against real datasets.
+
+Third, the implementation engine, human or artificial, that will construct the System from this specification.
+
+WHAT THE SYSTEM IS NOT, STATED UP FRONT: it is not a large language model, and it is not trained on text.
+
+It is a mechanistic, glass-box architecture whose every part corresponds to a named neuroscientific construct and whose every operation is inspectable.
+
+This is a deliberate contrast to the dominant paradigm, and its rationale is developed in Appendix 6.
+
+A1.2 FUNCTIONAL REQUIREMENTS
+
+A functional requirement, labelled with the prefix FR, states what the System must DO.
+
+Each is drawn directly from the chapter cited.
+
+FR-1, THE CONSTRUCT REGISTRY. The System must represent every named construct of Chapters 2, 3, and 7, meaning each region, each interface, and each molecule, as a distinct, inspectable entity carrying its established function and its specification block (its dynamical archetype, its state variables, the drives it serves, its plasticity rule, and its modulators).
+
+FR-2, STATE. Every region must hold a state consisting at minimum of an activation, a gain, and an adaptation variable, as defined in Chapter 8, and, where its archetype requires, a tuning or content variable and a phase variable.
+
+FR-3, THE UPDATE RULE. The System must be able to compute, for every construct, its next state from its current state, its inputs, and the ambient neuromodulator levels, according to the dynamical archetype assigned to it in Chapter 8. This is the core operation: next_state = update(current_state, inputs, neuromodulators).
+
+FR-4, THE TICK. The System must advance in discrete time steps, called ticks. One tick is one synchronous update of every construct at once, as specified in Chapter 8, Section 8.4. The System must be able to run for an arbitrary number of ticks.
+
+FR-5, THE INTERFACES AS CONDUITS. The System must route signals between regions through the interfaces of Chapters 3 and 4, each carrying a delay and a weight, and each being either transmissive (passing its signal unchanged) or computational (applying its named transform), per the Perfect Wire Test of Chapter 3.
+
+FR-6, THE NEUROMODULATORY BUS. The System must represent the neuromodulators of Chapter 7 not as point-to-point connections but as broadcast fields with a level per target territory, and must make those levels available to every construct's update rule and every learning rule.
+
+FR-7, THE DRIVES. The System must represent the homeostatic drives of Chapter 9, each with a monitored variable, a set-point, a computed error, and a corrective bias on action selection. The System must compute reward as the reduction of drive error, per the homeostatic reinforcement learning unification of Chapter 9.
+
+FR-8, ACTION SELECTION. The System must arbitrate among competing drive-proposed actions through a selection mechanism corresponding to the basal ganglia of Chapter 2, which selects exactly one action by releasing its inhibition while suppressing the rest, and which generates no actions of its own.
+
+FR-9, THE OVERRIDE HIERARCHY. The System must enforce the override ordering of Chapter 9 and Chapter 12, in which older and more vital drives can preempt newer deliberative processes, such that, for example, the respiration drive cannot be suppressed to the point of self-termination.
+
+FR-10, PLASTICITY. The System must change the weights of its interfaces over time according to the three-factor learning rule of Chapter 10: a weight changes in proportion to the product of the activity at its two ends and a neuromodulatory third factor, bounded by homeostatic scaling that holds each region's average activity near a target.
+
+FR-11, THE ELIGIBILITY TRACE. The System must implement the eligibility trace of Chapter 10, so that a reward arriving shortly after an action can strengthen the connection that earned it.
+
+FR-12, CONSOLIDATION. The System must support a distinct slow-timescale plasticity, corresponding to the structural plasticity and sleep replay of Chapters 5 and 10, in which important recent changes are consolidated during a dedicated offline phase.
+
+FR-13, INSPECTABILITY. At any tick, the System must be able to report the full state of any construct, the level of any neuromodulator, the error of any drive, and the weight of any interface. Nothing is hidden. This is a hard requirement, not a convenience, and it is the property that distinguishes this System from opaque models.
+
+FR-14, PERTURBATION AND LESION. The System must permit any construct to be disabled, any interface to be cut, and any neuromodulator to be raised or lowered, so that the System can reproduce the lesion and pharmacological experiments that are the evidential basis of the science. The System that cannot be given a simulated Parkinson's disease by depleting dopamine has not faithfully implemented this book.
+
+FR-15, THE LARGE-SCALE NETWORKS. The System must represent the large-scale cognitive networks of Chapter 2, Section 2.10 (the default mode, salience, dorsal attention, frontoparietal control, cingulo-opercular, language, sensorimotor, visual, auditory, and limbic networks) as named groupings over the regions of the registry, each carrying its member nodes, its subscribe-and-publish couplings, and its functional signature, including the characteristic anticorrelations (for example, the default mode network deactivating as the dorsal attention and frontoparietal networks engage).
+
+FR-16, THE COGNITIVE SYSTEMS AND PATHWAYS. The System must represent the cognitive systems and pathways of Chapter 2, Section 2.11, as named subgraphs and loops over the connection graph: the cortico-basal-ganglia-thalamo-cortical loops, the direct, indirect, and hyperdirect pathways, and the Papez circuit; and it must represent the glia of Section 2.11.5 (astrocytes, microglia, and oligodendrocytes) and the tripartite synapse as modulatory participants that gate plasticity and connectivity rather than as signal-carrying regions.
+
+FR-17, THE TWO COMMUNICATION PRIMITIVES. The System must distinguish the two messaging primitives established in Chapters 3 and 7: a DIRECTED channel (send and receive) for a point-to-point interface, whose publisher is wired to a single subscriber; and a BROADCAST topic (publish and subscribe) for a volume-transmission interface and for every neuromodulatory and hormonal field, whose publisher addresses no one and whose subscribers are defined by the receptor they carry. A construct's inputs are what it subscribes to; its outputs are what it publishes.
+
+A1.3 NON-FUNCTIONAL REQUIREMENTS
+
+A non-functional requirement, labelled with the prefix NFR, states a QUALITY the System must have.
+
+NFR-1, GLASS-BOX TRANSPARENCY. Every state, every weight, every signal must be a named, human-readable quantity tied to a named construct. No part of the System may be an uninterpretable numerical blob. This is the System's defining virtue and its central contrast with the prevailing paradigm.
+
+NFR-2, DETERMINISM AND REPRODUCIBILITY. Given the same initial state and the same inputs, the System must produce the same trajectory. Any randomness must be seeded and recorded, so that any run can be replayed exactly.
+
+NFR-3, SUBSTRATE INDEPENDENCE. The specification must be expressible without commitment to any programming language or data structure, so that it can be implemented in any language. This requirement is the subject of Appendix 6 and is a first-class goal, not an afterthought.
+
+NFR-4, SCALABILITY BY GRAIN. The System must run at the regional grain on modest hardware (a personal computer), and its design must not preclude later refinement to finer grain given greater compute. The architecture must scale down to be buildable at home and scale up to be serious in a laboratory.
+
+NFR-5, MODULARITY. Each construct must be a self-contained module with a clean interface, so that constructs can be added, replaced, or refined without rewriting the System. This mirrors the encapsulation thesis of the science itself: the brain is modular, and so must be its model.
+
+NFR-6, BIOLOGICAL FIDELITY, BOUNDED. The System must be faithful to the neuroscience at the regional grain, and must not claim fidelity it does not have. Where the System simplifies, the simplification must be documented, in the discipline kept throughout this book.
+
+NFR-7, VERIFIABILITY. Every requirement here must be checkable by an automated test, as developed in Appendices 4 and 5. A requirement that cannot be tested is not a requirement; it is a hope.
+
+A1.4 USER SCENARIOS
+
+A user scenario is a short plain-language account of what a user wants to accomplish.
+
+SCENARIO 1, THE STUDENT. A student loads the System, runs it for a thousand ticks with a simple sensory input, and watches the activation of the visual regions, the value computed by the orbitofrontal cortex, and the action selected by the basal ganglia, tick by tick, to understand how a decision forms.
+
+SCENARIO 2, THE LESION EXPERIMENT. A researcher depletes the System's dopamine to twenty percent of normal and observes the System's action selection slow and freeze, reproducing the bradykinesia of Parkinson's disease, then restores dopamine and observes recovery. The researcher has run a controlled experiment on a transparent brain.
+
+SCENARIO 3, THE LEARNING TASK. A researcher presents the System with a stimulus repeatedly paired with a reward, and observes the relevant interface weights strengthen by the three-factor rule, so that the System comes to predict the reward from the stimulus. The researcher then presents the stimulus without reward and observes extinction. The System has learned and unlearned.
+
+SCENARIO 4, THE DRIVE CONFLICT. A researcher raises the System's hunger drive and its threat drive simultaneously and observes the override hierarchy resolve the conflict in favour of threat, then lowers the threat and observes hunger resume control of behaviour. The researcher has watched motivation arbitrate.
+
+SCENARIO 5, THE SCALE-UP. A laboratory with serious compute connects the System to a real dataset, refines selected regions to finer grain, and runs the System for millions of ticks to test whether cognitively meaningful behaviour emerges. This scenario is the bridge to Appendix 6 and to the AGI question.
+
+A1.4bis USER PERSONAS
+
+The SPARC Specification phase asks for personas, the fictional profiles of typical users, so the requirements are grounded in who will actually use the System. Three personas follow, matching the three audiences of Section A1.1.
+
+PERSONA 1, THE STUDENT-BUILDER (Maya). A graduate student in cognitive science with modest hardware and strong curiosity but limited systems-programming experience. She wants to build the System at home, watch a decision form tick by tick, and reproduce a famous experiment to understand the mechanism. Her need drives the inspectability, the modest-hardware grain, and the one-hour-to-first-experiment documentation goal.
+
+PERSONA 2, THE LABORATORY RESEARCHER (Dr. Okafor). A computational neuroscientist with serious compute who wants to scale the System, connect it to real datasets, refine selected regions to finer grain, and run controlled lesion and pharmacological experiments as reproducible science. His need drives the scalability-by-grain, determinism-and-reproducibility, and perturbation requirements.
+
+PERSONA 3, THE IMPLEMENTATION ENGINE (an artificial or human builder). The agent, human or artificial, that constructs the System from this specification in a chosen language on a chosen substrate. Its need drives the substrate independence, the language-agnostic pseudocode, and the explicit acceptance criteria that make "done" checkable rather than judged.
+
+A1.4ter INTERFACE AND INTERACTION GUIDELINES
+
+The System has no consumer graphical interface, but it is not without a user experience: it is a scientific instrument, and its interaction surface is the observer and the experiment controls. The SPARC User-Interface-and-User-Experience guidelines are stated here in the terms that apply to such an instrument.
+
+GUIDELINE 1, THE OBSERVER IS THE PRIMARY INTERFACE. The user reads the System through the observer of Appendix 3, which reports the full state of any construct, network, drive, and neuromodulator at any tick. The observer's output must be human-readable and named, never an uninterpretable numerical blob, so that a person can follow a decision as it forms.
+
+GUIDELINE 2, EXPERIMENTS ARE THE PRIMARY CONTROLS. The user acts on the System through the perturbation interface: lesion a construct, cut an interface, or shift a neuromodulator. Each control must be a single, named, reversible operation, so that running the Parkinson experiment is one legible act, not a reconfiguration.
+
+GUIDELINE 3, LEGIBILITY OVER CONVENIENCE. Where a choice arises between a faster interaction and a more inspectable one, the instrument chooses inspectability, consistent with the System's defining virtue. The interface exists to make the glass box readable, not to hide it behind a dashboard.
+
+GUIDELINE 4, REPRODUCIBILITY IS PART OF THE EXPERIENCE. Every interaction is recorded with its seed and its tick, so that any session a user runs can be replayed exactly by another user, which for a scientific instrument is the whole of a good user experience.
+
+A1.5 TECHNICAL CONSTRAINTS
+
+CONSTRAINT 1: the specification must remain language-agnostic and data-structure-agnostic through Appendix 5. Language and data-structure choices belong to implementation, discussed in Appendix 6, not to specification.
+
+CONSTRAINT 2: the reference implementations named by the author are a Causalontology 2.0.0 data layer, a Python Minimum Viable Product, and a PrologAI implementation. The specification must be compatible with all three and must privilege none.
+
+CONSTRAINT 3: no secret, credential, or environment-specific value may appear anywhere in the eventual code, per SPARC quality rules.
+
+CONSTRAINT 4: the eventual code must observe the SPARC quality bounds: files of five hundred lines or fewer, functions of fifty lines or fewer, comprehensive input validation, modular design with clean interface boundaries, and self-documenting code.
+
+CONSTRAINT 5: the eventual code must use the structured commit-message convention SPARC prescribes, with the prefixes feat for a feature, test for a test, fix for a bug fix, docs for documentation, arch for an architecture change, quality for a refactor, and deploy for a deployment change, so that the history of the build is itself legible.
+
+A1.6 ASSUMPTIONS
+
+ASSUMPTION 1: the regional grain is sufficient to produce cognitively interesting behaviour. This is a hypothesis, not a certainty, and testing it is part of the project's purpose.
+
+ASSUMPTION 2: the six dynamical archetypes of Chapter 8 are sufficient to describe the dynamics of every construct at the regional grain. Where a construct resists all six, that is a finding, and the archetype set is extended, in the manner the science itself was extended.
+
+ASSUMPTION 3: the three-factor learning rule of Chapter 10 is sufficient for the System to learn at the regional grain. This too is a hypothesis under test.
+
+ASSUMPTION 4: the modeling commitments marked throughout the science chapters as THIS FRAMEWORK'S CHOICE are adopted as the specification's baseline, and may be revised in Refinement.
+
+A1.7 ACCEPTANCE CRITERIA
+
+The System is accepted as a faithful implementation of this specification if and only if all of the following hold, each of which is made into an automated test in Appendix 5.
+
+Each is labelled with the prefix AC, for Acceptance Criterion, and numbered.
+
+AC-1: every named construct of Chapters 2, 3, and 7 is present in the registry with its specification block.
+
+AC-2: the System advances by ticks, and one tick updates every construct exactly once.
+
+AC-3: a signal presented at a sensory region propagates through the correct chain of interfaces to produce an action, in the correct number of ticks given the interface delays.
+
+AC-4: depleting dopamine slows and then halts action selection, and restoring it recovers, reproducing the Parkinsonian signature.
+
+AC-5: a stimulus repeatedly paired with reward comes to predict that reward through weight change, and the change reverses under extinction.
+
+AC-6: two simultaneous drives are arbitrated in the order specified by the override hierarchy, and the respiration drive cannot be voluntarily suppressed to self-termination.
+
+AC-7: every state, weight, drive error, and neuromodulator level is reportable at every tick.
+
+AC-8: a full run is exactly reproducible from its seed.
+
+AC-9: the System runs at the regional grain on a personal computer within a stated time budget per thousand ticks.
+
+AC-10: every large-scale network of Chapter 2, Section 2.10, is present in the registry as a named grouping over its member regions, with its couplings and its functional signature.
+
+AC-11: every cognitive system and pathway of Chapter 2, Section 2.11, is present as a named subgraph or loop, the glia are present as modulatory participants, and each interface and field is marked as a directed (send-and-receive) channel or a broadcast (publish-and-subscribe) topic.
+
+A1.8 REFLECTION
+
+The discipline of SPARC requires that each phase reflect on its own choices.
+
+Three deserve note.
+
+The decision to make INSPECTABILITY a hard functional requirement (FR-13) and the System's defining quality (NFR-1) is the most consequential in the specification, and it is a deliberate wager against the prevailing direction of the field.
+
+The dominant models are powerful and opaque.
+
+This System trades raw power for total transparency, on the bet that a mind we can inspect is worth more, scientifically and in the long run practically, than a mind we cannot.
+
+If that bet is wrong, the System will be an educational instrument rather than a competitive intelligence.
+
+If it is right, it is a path the opaque models cannot follow.
+
+The decision to specify at the REGIONAL GRAIN (Assumption 1) is the specification's largest risk.
+
+It may be that cognition requires finer detail than one hundred regions can hold.
+
+The specification mitigates this by requiring that the design scale to finer grain (NFR-4) without being rebuilt, so that the grain can be refined if the hypothesis fails, rather than the System abandoned.
+
+The decision to add DEMONSTRATION as a sixth phase reflects a conviction that a specification of a mind carries an unusual obligation.
+
+An ordinary specification may end at Completion, with a working system.
+
+A specification that claims a path toward general intelligence owes its reader more: an honest account of what it is, what it is not, and what it might become.
+
+Appendix 6 discharges that obligation, and its confident, well-founded case for the path to general intelligence is part of the specification, not an afterword to it.
+
+
+
+KONNECTOME REALIZATION LOG
+
+Slice 1 - the heartbeat - 2026-07-20 - pack tick_engine, version 0.1.0.
+
+The scheduler requirement - a deliberately dumb tick engine that keeps time by a two-pass synchronous update - is now realized in code by the tick_engine pack (predicate tick_engine_run/5).
+
+Gates at this slice: 7 of 7 tick_engine Prolog Unit (PLUnit) tests pass; the naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited; konnectome reuses them through the library path.
+
+This log grows one entry per code slice, per the Tenth Commandment. The full SPARCD Fileset was bumped in lockstep from version 1 to version 2, and the version 1 files were archived under docs/archive/ in the same change, per the Ninth Commandment.
+
+
+KONNECTOME REALIZATION LOG - SLICE 2
+
+Slice 2 - the six archetype rules and the first Causalontology thought - 2026-07-20 - packs archetype (0.1.0) and observer (0.1.0).
+
+The six archetype rules and the observer's Causalontology recording are now realized in code: the archetype pack realizes the six dynamical rules, and the observer pack realizes the per-tick token_occurrence record.
+
+Gates at this slice: archetype 7 of 7 and observer 6 of 6 Prolog Unit (PLUnit) tests pass; naming, layer, and layer-binding gates report zero violations; the Causalontology 119-vector conformance suite passes 119 of 119. Nothing in PrologAI or Causalontology was edited; konnectome reuses causal_core through the library path.
+
+
+KONNECTOME REALIZATION LOG - SLICE 3
+
+Slice 3 - the connection graph - 2026-07-20 - pack connection_graph (0.1.0).
+
+The connection-graph requirement - directed, weighted, delayed interfaces that supply each construct's input - is realized by the connection_graph pack.
+
+Gates at this slice: connection_graph 4 of 4 Prolog Unit (PLUnit) tests pass (tick_engine 7, archetype 7, observer 6 unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited; connection_graph reuses the archetype pack.
+
+
+KONNECTOME REALIZATION LOG - SLICE 4
+
+Slice 4 - the reward loop - 2026-07-20 - packs neuromodulator_bus (0.1.0) and drive_system (0.1.0).
+
+The reward loop is realized: the drive system computes reward as the total reduction of drive error, and the neuromodulatory bus broadcasts it as dopamine.
+
+Gates at this slice: neuromodulator_bus 4 of 4 and drive_system 5 of 5 Prolog Unit (PLUnit) tests pass (the earlier four packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 5
+
+Slice 5 - the action selector - 2026-07-20 - pack action_selector (0.1.0).
+
+The action-selector requirement - release exactly one candidate action, never inventing one - is realized by the action_selector pack.
+
+Gates at this slice: action_selector 6 of 6 Prolog Unit (PLUnit) tests pass (the earlier six packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 6
+
+Slice 6 - the plasticity engine - 2026-07-20 - pack plasticity_engine (0.1.0).
+
+The learning rule is realized: the plasticity engine changes connection weights by the three-factor rule, closing the loop from reward to memory.
+
+Gates at this slice: plasticity_engine 5 of 5 Prolog Unit (PLUnit) tests pass (the earlier seven packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.

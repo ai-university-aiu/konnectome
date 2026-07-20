@@ -1,0 +1,249 @@
+THE KONNECTOME TUTORIAL
+
+Version 4.
+
+A complete, top-to-bottom guide to konnectome, written for a beginner, a learner, a layperson, a newcomer, a novice. No prior knowledge is assumed. Every term is explained the first time it is used.
+
+
+PART ONE - WHAT KONNECTOME IS, IN ONE BREATH
+
+
+konnectome is a computer program that is trying to grow a mind the way nature grows one: the smallest working piece first, and each piece earning the next.
+
+The word Proto-AGI describes it. Proto means early or first. AGI stands for Artificial General Intelligence, which means a machine that can reason broadly about many kinds of problems, the way a person can, rather than being good at only one narrow task. So a Proto-AGI is an early, honest prototype on the road toward that goal. konnectome is a prototype, not a finished mind, and it says so plainly.
+
+The name konnectome comes from the word connectome. A connectome is the complete map of the connections between the parts of a brain - which piece talks to which, and how. konnectome builds a small, inspectable version of such a map in software.
+
+One more promise is built into konnectome: it is a glass box, not a black box. A black box gives you an answer but hides its reasons. A glass box lets you see every step. In konnectome, every decision can be read and explained; nothing important is hidden inside numbers no one can interpret.
+
+
+PART TWO - THE FAMILY OF REPOSITORIES
+
+
+A repository (often shortened to repo) is a folder of files, tracked over time by a tool called Git, usually stored online at a site called GitHub. konnectome is one of four related repositories, all owned by the same organization, called ai-university-aiu. Think of them as a family.
+
+• PrologAI is the language. It is written in Prolog, which is a programming language built around logic and rules rather than step-by-step instructions. PrologAI is a glass-box cognitive architecture, meaning a inspectable framework for building thinking systems. konnectome is written using PrologAI.
+
+• Causalontology is the data structure. A data structure is an agreed way of arranging information so that programs can share it. Causalontology is a shared vocabulary for describing causes and effects - what makes what happen. konnectome stores its thoughts as Causalontology records.
+
+• Mentova is the flagship application - the first full mind built on this family - and it holds the reasoning core that scores perfectly on a famous public reasoning test called the Abstraction and Reasoning Corpus for Artificial General Intelligence (ARC-AGI).
+
+• konnectome is the newest member. It uses the finished PrologAI language and the frozen Causalontology data structure to build brain-like machinery, following a book (described in Part Six).
+
+konnectome does not change its cousins by reaching into them. If konnectome ever needs something new from PrologAI or Causalontology, it writes the request down in a change order (explained in Part Ten) and waits; it never edits a cousin in place.
+
+
+PART THREE - THE VOCABULARY, DEFINED SIMPLY
+
+
+These are the words you will meet. Each is defined in plain language.
+
+• Tick: one step of simulated time. konnectome does not use clock seconds; it counts in ordinal ticks, which just means tick one, tick two, tick three, and so on, like frames of a film.
+
+• Construct: any part of the modeled brain - a region, a connection, or a chemical. Each construct has a name and a state (its current condition, such as how active it is).
+
+• Archetype: a shape of behavior. konnectome's guiding book claims that the whole brain runs on only six basic behaviors, called archetypes, rather than a hundred special cases. They are named relay, integrator, oscillator, attractor, gate, and comparator (all explained in Part Eight).
+
+• Synchronous update: a rule for advancing time fairly. On each tick, every construct first looks at everyone's current state and figures out its own next state; only after everyone has decided does everyone change at once. This way no construct gets to peek at a neighbor's future. Doing this in two separate passes (first compute, then commit) is the safe way, and konnectome is careful to keep the two passes apart.
+
+• Ontology: an organized inventory of what exists and how the things relate. Causalontology is an ontology specialized for causes and effects.
+
+• Content-addressed identity: a way of naming a record by its own contents. A hash is a mathematical fingerprint: feed it any data and it returns a fixed-length code, and any change to the data changes the code. Causalontology names each record by the hash of its contents, so two people who write down the same fact automatically get the same name for it. The specific hash used is called the Secure Hash Algorithm 256-bit (SHA-256).
+
+• token_occurrence: the Causalontology word for a particular happening at a particular time - for example, one specific tick. konnectome records each tick as a token_occurrence.
+
+• Causal Relation Object (CRO): the Causalontology word for a reified cause-and-effect claim - the record that says these causes produce that effect. Reified means turned into a thing you can hold, name, and examine, rather than a bare arrow.
+
+• Conformance vector: a published test case - an input and the exact answer a correct program must give. Causalontology has one hundred nineteen of them, and staying correct means passing all of them.
+
+
+PART FOUR - HOW KONNECTOME IS GOVERNED: THE CONSTITUTION
+
+
+konnectome is built under a written CONSTITUTION.md file of fifteen numbered rules called commandments. Here they are in plain language.
+
+• One: build with Artificial General Intelligence and Artificial Super Intelligence (a mind beyond human level) in mind, guided by three roadmap documents.
+
+• Two: Causalontology is the structure for konnectome's thoughts, and it is frozen - changed only through a gated request process, never edited directly.
+
+• Three: PrologAI is the language, under the same gate; konnectome never edits it directly.
+
+• Four: every wall the build hits is written first in the ledger (a running scoreboard), then routed to exactly one place.
+
+• Five: the six-step waterfall method (Part Five) guides the work.
+
+• Six: English Readable Code - every line of code carries one plain-English comment above it.
+
+• Seven: six documents, one per method phase, seeded from the guiding book's appendices.
+
+• Eight: an audit - every named brain part in the book must have a matching code piece, tracked in a coverage list.
+
+• Nine: only the latest version of any document lives in the open; older versions move to an archive folder.
+
+• Ten: any code change is mirrored into the six method documents, with versions bumped and old ones archived.
+
+• Eleven: the README (the repository's front page) is kept current and in the project's crimson-to-gold colors.
+
+• Twelve: whole words only - names are whole English words joined by underscores, never cryptic abbreviations.
+
+• Thirteen: a safety gate - no change may break the ARC-AGI scores or the one hundred nineteen Causalontology conformance vectors.
+
+• Fourteen: branch-and-report discipline - work on a side branch, open a pull request, never credit an artificial-intelligence tool as an author, and use no Roman numerals.
+
+• Fifteen: this tutorial - keep a complete, beginner-friendly tutorial, versioned and updated as the code grows.
+
+
+PART FIVE - THE METHOD: SPARCD, ENGLISH READABLE CODE, WHOLE WORDS
+
+
+konnectome follows a waterfall method, which means doing each phase in order and writing it down. The method is called SPARCD, one letter per phase:
+
+• S, Specification: what the system must do.
+
+• P, Pseudocode: the logic in plain, careful English before any real code.
+
+• A, Architecture: the major parts and how they fit.
+
+• R, Refinement: improving the design by writing tests first, then code.
+
+• C, Completion: the finished, tested build.
+
+• D, Demonstration: showing what it can actually do.
+
+Six documents in the docs/ folder, one per phase, hold this method for konnectome. Each was seeded from the matching appendix of the guiding book, and each is bumped to a new version whenever code changes.
+
+English Readable Code, abbreviated ERC, is the rule that every single line of program code has one plain-English sentence directly above it explaining that line. This lets a newcomer read the intent without knowing Prolog.
+
+Whole-Word System means every name is made of whole English words in lower case joined by underscores (for example, tick_engine and connection_graph), never short codes. This is for clarity.
+
+
+PART SIX - THE ARCHITECTURE: TEN COMPONENTS
+
+
+konnectome follows a book titled Nature's Cognitive Architecture, which describes a mind as ten cooperating components. konnectome builds them one at a time.
+
+• Component 1, the Construct Registry: the parts bin that holds every construct.
+
+• Component 2, the Scheduler (or Tick Engine): the dumb timekeeper that advances one tick at a time and runs the two-pass synchronous update. It has no opinions; it only keeps time.
+
+• Component 3, the Connection Graph: the connectome as data - the directed, weighted links between constructs.
+
+• Component 4, the Neuromodulatory Bus: a broadcast channel for brain chemicals (such as dopamine) that set the global mood and the learning signal.
+
+• Component 5, the Drive System: the homeostatic drives (needs kept near a set-point, like hunger near fullness) that create motivation and reward.
+
+• Component 6, the Action Selector: chooses exactly one action from the competing proposals and never invents one of its own.
+
+• Component 7, the Override Controller: lets old, vital needs (like breathing) override slower deliberation.
+
+• Component 8, the Plasticity Engine: changes the connection weights over time - this is learning.
+
+• Component 9, the Observer: watches and records everything at every tick, changing nothing. It is what makes konnectome a glass box.
+
+• Component 10, the Perturbation Interface: lets an experimenter poke the system (lesion a part, shift a chemical) to run experiments.
+
+
+PART SEVEN - THE BUILD LADDER
+
+
+The guiding book gives a developmental ladder, inspired by how human infants grow (the stages of the psychologist Jean Piaget) and by developmental robotics (building machines that learn in the same infant-to-adult order). konnectome climbs it smallest rung first:
+
+• Rung one: a heartbeat - a stable, repeating tick loop that keeps time.
+
+• Rung two: senses wired in, and holding a hidden object in mind.
+
+• Rung three: language - reading, and eventually speaking from an inner state.
+
+• Rung four: reasoning - logic and cause-and-effect trials.
+
+• Rung five: emotion and understanding other minds.
+
+• Rung six: a body - inhabiting a robot and using its senses.
+
+The build never leaps ahead; each rung must stand before the next is attempted.
+
+
+PART EIGHT - WHAT IS BUILT SO FAR
+
+
+konnectome's code lives in packs. A pack is a small, self-contained module with three files: a manifest (its name and version), the code, and a test suite. Eight packs exist so far.
+
+• tick_engine (Component 2, the heartbeat). It runs the system for a chosen number of ticks using the two-pass synchronous update. A passive observer records each tick. Its tests prove it keeps time, records each tick once, never lets a construct see a neighbor's future, and gives the exact same result every run.
+
+• archetype (the six rules). It holds the six behaviors every construct can have:
+  relay - pass the input, scaled (a pipe);
+  integrator - add up input while slowly leaking (a bucket);
+  oscillator - keep a steady rhythm (a metronome);
+  attractor - complete a remembered pattern from a fragment (a memory);
+  gate - flip a switch only when pushed hard enough, then resist flipping back (a stiff switch);
+  comparator - report the difference between expected and actual (a scale).
+  Each rule has its own test, drawn from a famous experiment.
+
+• observer (Component 9, the first thought). It records each tick as a Causalontology token_occurrence, naming it by the hash of its contents through the reused PrologAI causal_core code. This is konnectome's first durable thought, stored in the shared data structure without changing a line of it. Its tests prove the record is valid, correctly named, repeatable, and different for different ticks.
+
+• connection_graph (Component 3, the wiring). It holds the directed, weighted links between constructs, gathers the total input arriving at each construct, and lets a signal travel across a chain one hop per tick. Its main test presents a signal at one end of a three-link chain and confirms it arrives at the far end after exactly three ticks, and not one tick sooner.
+
+• neuromodulator_bus (Component 4, the broadcast bus). It is the one shared channel of brain-chemical levels - dopamine, norepinephrine, and the rest. Source parts write a level onto it, and every other part reads; an absent chemical reads as zero. Its tests prove a broadcast level can be read back, the newest broadcast wins, and different chemicals are held independently.
+
+• drive_system (Component 5, the reward loop). It holds homeostatic drives - needs kept near a set-point, like temperature near thirty-seven. Each tick a drive measures how far its monitored value sits from its set-point, and the reward for the whole system is the total amount by which that distance shrank across all drives. Moving closer earns a positive reward; moving away earns a negative one; the very first tick earns none. The reward is then broadcast as dopamine on the bus. Its tests prove all of these behaviors.
+
+• action_selector (Component 6, the referee). It receives candidate actions, each with a salience (a strength or urgency), and releases exactly one - the strongest - while suppressing the rest. Its one iron rule is that it never invents an action: what it releases is always one of the choices it was given. A pressing drive can raise the salience of the action that would relieve it, so what the system most needs tends to win. Its tests prove the strongest wins, exactly one is released, nothing is ever invented, ties break the same way every time, and a pressing drive can bias its action to win.
+
+• plasticity_engine (Component 8, learning). It is the three-factor learning rule that makes the map alive. For each connection, the weight change is the product of three things: how active the sending end was, how active the receiving end was, and how much dopamine (reward) was present. A connection grows stronger only when both ends fire together AND the moment was rewarded. This closes the loop of the mind: the system wants, acts, is rewarded, and learns. Its tests prove that coincident activity plus dopamine strengthens a connection, that without dopamine nothing is learned, that a silent end learns nothing, and that a computational connection does not change.
+
+
+PART NINE - HOW TO RUN IT YOURSELF
+
+
+konnectome uses a program called SWI-Prolog to run its code and tests. From the konnectome folder, these commands check the build. Each prints a clear pass-or-fail result.
+
+• Run one pack's tests (for example, the tick engine):
+  bin/run_pack_tests.sh tick_engine
+
+• Check that every name follows the whole-word rule:
+  bin/check_pack_naming.sh
+
+• Check that no lower layer depends on a higher one:
+  bin/check_layers.sh
+
+• Check the layer-to-stratum binding:
+  bin/check_layer_binding.sh
+
+A layer is a numbered level of the code; the rule is simply that a lower level may not depend on a higher one, so the foundation never leans on the roof.
+
+
+PART TEN - THE LEDGER AND THE CHANGE ORDERS
+
+
+As konnectome is built, it sometimes meets a wall - something the language or the data structure cannot yet express. Every wall is written down first in the ledger, a file named konnectome_ledger_v1.txt that is the honest scoreboard of the whole build. From the ledger, a wall is routed to exactly one of three places:
+
+• If the missing thing must be shared between programs as a signed, named record, it is a data-structure gap, and it goes to the Causalontology change order (a held file that gathers such requests).
+
+• If it is a missing feature of the language, it goes to the PrologAI change order.
+
+• If konnectome can solve it in its own code, it becomes a new pack or module.
+
+A wall that turns out to be unnecessary is recorded just as honestly as one that needed building. So far, konnectome has hit no walls; it has recorded two small observations for the owner, and it has changed neither cousin.
+
+
+PART ELEVEN - WHERE TO LOOK NEXT
+
+
+Everything konnectome needs is inside its own docs/ folder, so you never have to look elsewhere.
+
+• CONSTITUTION.md - the fifteen rules that govern the build.
+
+• konnectome_1_specification through konnectome_6_demonstration - the six method documents (the latest versions live outside the archive).
+
+• konnectome_ledger_v1.txt - the running scoreboard.
+
+• NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt - the guiding book.
+
+• The guiding-principle and context documents - the roadmaps, the plain-language explainers, and the history of how the family came to be.
+
+• docs/archive/ - the older, superseded versions of everything, kept for the record.
+
+This tutorial itself is versioned. As konnectome grows a new pack or component, this file is updated and its old version moved to the archive, so it always describes the konnectome that actually exists today.
+
+
+End of the konnectome tutorial, version 4.

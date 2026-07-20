@@ -123,7 +123,7 @@ deepened; PENDING = not built yet.
  Component 5  Drive System              | drive_system                      | REALIZED
  Component 6  Action Selector           | action_selector                   | REALIZED
  Component 7  Override Controller       | (to be built)                     | PENDING
- Component 8  Plasticity Engine         | (to be built)                     | PENDING
+ Component 8  Plasticity Engine         | plasticity_engine                 | REALIZED
  Component 9  Observer / Instrument     | observer + tick_engine trace      | REALIZED
  Component 10 Perturbation Interface    | (to be built)                     | PENDING
 
@@ -201,5 +201,11 @@ the selector picks the single highest-salience candidate (the basal-ganglia go, 
 pathways, and the override controller of Component 7, are later refinements); the drive-bias
 helper connects it to the reward, but full wiring of proposals from every region is pending, not
 a wall.
+
+Slice-6 note (2026-07-20). Building the plasticity engine (plasticity_engine pack) hit NO
+wall, and it closes the loop of the mind: the reward broadcast by slice 4 is now consumed as
+the third factor of learning, strengthening the connections that earned it. Honest non-closure:
+homeostatic scaling (the bound that keeps learning from exploding) and the eligibility trace
+(Section A2.6) are later refinements; recorded as pending, not as walls.
 
  Walls: OPEN 0 | ROUTED 0 | CLOSED 0 | UNNECESSARY 0.   Observations: 2.
