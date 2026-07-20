@@ -72,7 +72,8 @@ konnectome is building against these cousin commits (Step 4 requirement):
                     solving core; loaded read-only by the regression harness).
 
 Target repository: https://github.com/ai-university-aiu/konnectome (public; empty at
-start of this build; scaffolded on branch feature/initial-scaffold via pull request).
+start of this build; scaffold merged as pull request 1; slices land as feature-branch
+pull requests).
 
 
 ================================================================================
@@ -83,64 +84,86 @@ The six SPARCD Fileset files were seeded verbatim from the appendices of
 docs/NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt (Nature's Cognitive Architecture,
 version 20), per the Seventh Commandment. Source line ranges, for audit:
 
- - konnectome_1_specification_v1.txt   <- Appendix 1, Specification   (lines 9388-9595)
- - konnectome_2_pseudocode_v1.txt      <- Appendix 2, Pseudocode      (lines 9596-9928)
- - konnectome_3_architecture_v1.txt    <- Appendix 3, Architecture    (lines 9929-10114)
- - konnectome_4_refinement_v1.txt      <- Appendix 4, Refinement      (lines 10115-10268)
- - konnectome_5_completion_v1.txt      <- Appendix 5, Completion       (lines 10269-10412)
- - konnectome_6_demonstration_v1.txt   <- Appendix 6, Demonstration   (lines 10413-10915)
+ - konnectome_1_specification   <- Appendix 1, Specification   (lines 9388-9595)
+ - konnectome_2_pseudocode      <- Appendix 2, Pseudocode      (lines 9596-9928)
+ - konnectome_3_architecture    <- Appendix 3, Architecture    (lines 9929-10114)
+ - konnectome_4_refinement      <- Appendix 4, Refinement      (lines 10115-10268)
+ - konnectome_5_completion      <- Appendix 5, Completion       (lines 10269-10412)
+ - konnectome_6_demonstration   <- Appendix 6, Demonstration   (lines 10413-10915)
 
 Appendix 6 was sliced through its closing marker "END OF NATURE'S COGNITIVE
 ARCHITECTURE, VERSION 20"; the manuscript's document-level CHANGE LOG that follows it is
-versioning metadata, not appendix content, and was deliberately not carried into the
-Demonstration file.
+versioning metadata, not appendix content, and was deliberately not carried in.
+
+Per the Tenth Commandment, every code slice bumps the SPARCD Fileset. The current
+version is v2 (bumped in lockstep by slice 1); the v1 files are in docs/archive/.
 
 
 ================================================================================
 SECTION FOUR - THE EIGHTH COMMANDMENT AUDIT: CONSTRUCT COVERAGE LIST
 ================================================================================
 
-This is the re-runnable audit. It names, for each construct in Nature's Cognitive
+This is the re-runnable audit. It names, for each construct of Nature's Cognitive
 Architecture, the konnectome module that realizes it, so a missing construct is visible
-at a glance. It must cover every named construct AND every previously-unnamed construct
-(PUC) - the archetypes, the drives, the neuromodulators, the learning rule, the
-components (observer, scheduler/tick engine, connection graph), the regions, and the
-interfaces (each with its SUBSCRIBE/PUBLISH signature).
+at a glance. It is organized by the ten architecture components of Appendix 3, then the
+six archetype rules, then the data model. It grows one realization per slice. It must
+eventually cover every named construct AND every previously-unnamed construct (PUC),
+each with its SUBSCRIBE and PUBLISH interface.
 
-STATUS AT BUILD START: not yet populated. The full construct inventory is generated as
-the FIRST action of Step 6 (build-out), by reading the science chapters and appendices
-of the manuscript, before any module is written; each construct's realizing module is
-then filled in here as it is built. Seeded below are the constructs already named in the
-appendices, so the list's shape is visible; all are marked "no module yet" because no
-konnectome code exists at the checkpoint.
+Legend: REALIZED = a module exists and is tested; PARTIAL = minimally realized, to be
+deepened; PENDING = not built yet.
 
- CONSTRUCT (from manuscript)                        | REALIZING MODULE      | STATUS
- ---------------------------------------------------+-----------------------+-------------
- Archetype rule: relay                              | (to be built)         | no module yet
- Archetype rule: integrator                         | (to be built)         | no module yet
- Archetype rule: oscillator                         | (to be built)         | no module yet
- Archetype rule: attractor                          | (to be built)         | no module yet
- Archetype rule: gate                               | (to be built)         | no module yet
- Archetype rule: comparator                         | (to be built)         | no module yet
- Molecule kind: field (neuromodulatory bus)         | (to be built)         | no module yet
- Component: observer                                | (to be built)         | no module yet
- Component: scheduler / tick engine                 | (to be built)         | no module yet
- Component: connection graph (the connectome)       | (to be built)         | no module yet
- Two-pass synchronous update (compute, then commit) | (to be built)         | no module yet
- Drive loop (set-point drives)                      | (to be built)         | no module yet
- Learning rule (three-factor plasticity)            | (to be built)         | no module yet
- Modulators: glia, tripartite synapse               | (to be built)         | no module yet
+ THE TEN ARCHITECTURE COMPONENTS (Appendix 3, Section A3.2)
+ -----------------------------------------------------------------------------------
+ Component 1  Construct Registry        | tick_engine (the construct list)  | PARTIAL
+ Component 2  Scheduler / Tick Engine   | tick_engine (tick_engine_run/5,   | REALIZED
+                                        |  tick_engine_step/3, two passes)  |
+ Component 3  Connection Graph          | (to be built)                     | PENDING
+ Component 4  Neuromodulatory Bus       | (to be built)                     | PENDING
+ Component 5  Drive System              | (to be built)                     | PENDING
+ Component 6  Action Selector           | (to be built)                     | PENDING
+ Component 7  Override Controller       | (to be built)                     | PENDING
+ Component 8  Plasticity Engine         | (to be built)                     | PENDING
+ Component 9  Observer / Instrument     | tick_engine (the tick trace)      | PARTIAL
+ Component 10 Perturbation Interface    | (to be built)                     | PENDING
 
- (This seed is partial. The complete inventory, including all previously-unnamed
- constructs and their SUBSCRIBE/PUBLISH interfaces, is produced at Step 6 start.)
+ THE SIX ARCHETYPE RULES (Appendix 2, Section A2.3)
+ -----------------------------------------------------------------------------------
+ relay | integrator | oscillator | attractor | gate | comparator  | (to be built) | PENDING
+   (The heartbeat uses three minimal stand-in update kinds - clock, copy, hold - inside
+    tick_engine to exercise the scheduler; the true six archetypes are the next slice.)
+
+ THE DATA MODEL (Appendix 3, Section A3.4) - stored as Causalontology records
+ -----------------------------------------------------------------------------------
+ Construct state (per tick)   | to become a Causalontology state_assertion    | PENDING
+ Tick record (per tick)       | to become a Causalontology token_occurrence   | PENDING
+ Interface / conduit          | to become a Causalontology conduit            | PENDING
+   (Reused via PrologAI's library(causal_core); see Section Five, slice-1 note. The
+    heartbeat records ticks as plain Prolog terms; promotion to token_occurrence is
+    slice 2, where a held record first becomes a durable thought.)
 
 
 ================================================================================
-SECTION FIVE - FINDINGS
+SECTION FIVE - FINDINGS AND OBSERVATIONS
 ================================================================================
 
-STATUS AT BUILD START: 0 findings. No walls hit yet, because no build slice has run yet.
-The first finding will be recorded here when the first Step 6 slice hits a wall. Walls
-are discovered by building, never guessed from the armchair.
+Findings and observations discovered by building, newest first.
 
- Total findings: 0 | OPEN: 0 | ROUTED: 0 | CLOSED: 0 | UNNECESSARY: 0.
+Observation-1 (2026-07-20, from slice 1 reconnaissance). The Causalontology 3.0.0
+specification file spec/identity.md still states "seventeen whole-word schemes" and omits
+the eighteenth kind (the cross_stratal_seam) from one inline list, though the kind table
+directly below it and the rest of the specification correctly carry all eighteen. This is
+a stale count in prose. STATUS: LOGGED, NOT ROUTED. It is not a data-structure gap
+konnectome hit by building, it does not affect the one-hundred-nineteen conformance
+vectors, and causalontology is a frozen cousin; it is recorded here as an observation for
+the owner, not written to the change order.
+
+Slice-1 note (2026-07-20). Building the heartbeat - the tick_engine pack, Component 2,
+with its two-pass synchronous update - hit NO wall. PrologAI expressed the scheduler and
+the passive observer directly, with no language gap, and no Causalontology record was
+needed yet. Representing each tick as a Causalontology token_occurrence (via the reused
+causal_core pack) is planned for slice 2, where a held record first becomes a durable
+thought; that is a sequencing choice, not a wall. Honest non-closure recorded, per the
+Fourth Commandment.
+
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 0 | UNNECESSARY 0.   Observations: 1.
