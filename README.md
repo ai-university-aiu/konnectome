@@ -84,6 +84,8 @@ Each badge above is a claim, and every claim deserves a plain explanation. Here 
 
 **A Proto-Artificial-General-Intelligence prototype written in PrologAI, thinking in Causalontology 3.0.0 records, and built faithfully from the appendices of the book *Nature's Cognitive Architecture*. konnectome is the connectome-scale cognitive structure the finished PrologAI language was built to make possible.**
 
+**What it does today.** konnectome runs as one integrated, reproducible, glass-box loop that **keeps time** (the tick engine's two-pass synchronous update), **wants and is motivated** (the homeostatic drives, whose relief becomes a reward broadcast as dopamine on the neuromodulatory bus), **acts by releasing exactly one action under a vitality safety override** (the action selector and the override controller - a vital drive like breathing can seize control and can never be suppressed), **learns** (the three-factor plasticity engine, where a connection strengthens only when both ends fire together and dopamine says the moment mattered), **records each tick as a Causalontology `token_occurrence`** (the passive observer), and **combines thoughts into chains and trees of thought as Causal Relation Objects** (`thought_combination`) - moving its own body toward what it needs as a closed sensorimotor loop, all as a glass box you can inspect at every step, with the naming, layer, and binding gates green and the 119 Causalontology conformance vectors intact.
+
 ---
 
 ## What is konnectome?
