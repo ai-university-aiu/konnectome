@@ -1,0 +1,222 @@
+CONTEXT HAND-OFF
+
+
+From: Halcyon Keystone.
+
+(That is the name I chose for myself - the assistant instance that carried the PrologAI Wave 10 program to completion and ran its close-out. Halcyon for the calm that follows a finished thing. Keystone for the last stone that locks an arch and makes it load-bearing. I set the keystone; the arch stands.)
+
+Date written: 2026-07-19.
+
+To: the next new session that begins the konnectome repository.
+
+Why this file exists: to tell you, the next builder, exactly where things stand, what you inherit, what rules you must follow, and where to look - so you can start konnectome from a known-good, fully-closed baseline, without re-discovering any of it.
+
+
+PART ONE - WHAT JUST HAPPENED
+
+
+PrologAI is a glass-box cognitive-architecture platform (glass-box means every decision is inspectable and explainable, not hidden inside opaque weights) written in Prolog (a logic programming language).
+
+PrologAI has completed its Wave 10 program.
+
+Wave 10 was a nine-stage effort that closed the entire consolidated PrologAI Requirements Ledger (the Ledger is one document that gathered every open requirement the whole program had discovered).
+
+The Ledger now reads 57 findings, 0 open, 0 partial - every finding closed.
+
+The repository main branch is at commit 0fed5d1.
+
+The close-out commit (440621a) is tagged prologai-wave10-complete.
+
+The live Ledger is docs/PrologAI_Requirements_Ledger_v11.txt, whose Section Seven is a formal CLOSE-OUT CERTIFICATION.
+
+At close-out the full regression was re-run once, green: the Abstraction and Reasoning Corpus for Artificial General Intelligence, generation one (ARC-AGI-1) scored 400 of 400; generation two (ARC-AGI-2) scored 120 of 120; the Causalontology conformance suite scored 119 of 119; and the per-pack regression scored 306 of 306 packs.
+
+Nothing is pending on the PrologAI side.
+
+One unrelated open pull request exists, Pull Request number 519 (an older ARC-AGI-3 performance change); it is not mine and not part of Wave 10 - leave it for the owner to decide.
+
+
+PART TWO - WHAT konnectome IS, AND WHERE IT FITS
+
+
+Honest disclosure first: I do not hold a detailed konnectome specification.
+
+What I know is this.
+
+Earlier waves built individual brain-region repositories (an arbiter modeled on the basal ganglia, a hippocampus, a cerebellum, an amygdala) as separate experiments.
+
+Each region hit walls - things the language could not yet express - and recorded them as findings in its own Ledger.
+
+PrologAI then absorbed those findings by building the missing language constructs, one wave at a time, until the consolidated Ledger was empty.
+
+Wave 10 was explicitly framed as building LANGUAGE, not cognition - it cleared the ground so a future repository could build brain regions with no workarounds.
+
+konnectome is that future repository.
+
+It is a separate, later effort, and it was deliberately NOT stood up during Wave 10.
+
+The expectation is that konnectome will use the now-complete PrologAI language to build connectome-scale cognitive structure, and that it lives as a sibling repository beside PrologAI and Mentova.
+
+The exact scope, name meaning, and first milestone of konnectome are the owner's to define with you - ask.
+
+One firm boundary carries forward: the data-structure standard is FROZEN.
+
+
+PART THREE - THE FROZEN DATA-STRUCTURE STANDARD (Causalontology)
+
+
+Causalontology is the data-structure language every part of the system speaks (it is a process-first foundational ontology - a shared vocabulary of causes, effects, and the structures that relate them, with each record identified by a content-addressed hash, meaning the identifier is derived from the record's own content).
+
+Its current version is Causalontology 3.0.0, and it is FROZEN.
+
+Do not change the ontology inside konnectome.
+
+If konnectome discovers a data-structure gap, route it to the held change order named Causalontology_4_0_0_CHANGE_ORDER_v1 and to a future konnectome_ledger - do not patch the ontology in place.
+
+PrologAI declares and passes the Causalontology 3.0.0 conformance suite: all 119 vectors (labeled V01 through V119), vendored under tests/causalontology_conformance/, run by bin/run_causalontology_conformance.sh.
+
+The reusable conformance engine lives in the causal_core pack.
+
+
+PART FOUR - WHAT konnectome INHERITS (the finished language)
+
+
+These are the constructs Wave 10 delivered.
+
+They are all at Layer 0 (base infrastructure) unless noted, and all are pack-qualified whole-word modules you can load and reuse.
+
+Six brand-new packs.
+
+- affective_state (Work Package 430): a first-class, persisted, modulatory affective state - a held valence, salience, mood, and cortisol tone that survives across calls and derives a baseline-or-stress regime that later processing reads as context.
+
+- tick_scheduler (Work Package 432): a Lattice-backed deferred-reactivation construct on ordinal ticks - it schedules and enacts a future reactivation counted in dimensionless ordinal ticks, never in wall-clock seconds (a wall-clock unit is refused).
+
+- managed_seam (Work Package 433): a first-class managed cross-stratal seam - it records a jump across non-adjacent strata with an honest-ignorance mechanism status (absent, unmodeled, or modeled), an optional drawn chain checked well-formed, a checkable home rule, and a queryable runtime event.
+
+- realization (Work Package 434): a structure-to-dynamics binding - it binds a grounded structure record to the native law or typed signal that realizes it, by identity, and the binding is checkably real (a missing realizer is reported as a finding, not a shared English word).
+
+- packaging (Work Package 436): dependency kinds (structure-only versus runtime), loadable pack faces, a facade or bundle, and a cross-pack record registry.
+
+- coordination (Work Package 437): ergonomic coordination affordances for the single-threaded reentrant-loop model - a journal-free store with a keyed await, an ordered channel, a bounded loop driver, a reentrant-loop descriptor, a runtime layer-aware transport that refuses an upward send, and a glass-box hop trace.
+
+Four extended packs.
+
+- membership_contract (Work Packages 431 and 438): a runtime postcondition that an output must be a member of an input set - extended with a context-aware accessor, a purity guard, a determinism check, and a find-first-member filtering mode.
+
+- layer (Work Packages 435 and 438): the strict layer rule (a lower layer may not depend on a higher one) - extended with cross-repository reach (a shared global coordinate via a per-repository offset, a unioned scan, a packs-directory argument on the checker) and intra-pack reach (a sub-module layering, coupling, and testability check), plus a binding-freshness check.
+
+- lattice (finding N1): the shared persistent memory store - its transaction predicate is now correctly declared a meta-predicate.
+
+- causal_core (Work Package 429): the Causalontology vocabulary engine - it adopted Causalontology 3.0.0, adding the ordinal tick unit, the eighteenth kind (the cross-stratal seam) with its well-formedness and home rules, and the conduit realized-by field.
+
+Everything above is load-bearing, tested, and gated in Continuous Integration (the automated checks that run on every change).
+
+
+PART FIVE - THE STANDING RULES YOU MUST FOLLOW
+
+
+These rules are non-negotiable and apply to konnectome from its first commit.
+
+- Naming convention: every pack name and every predicate name is lowercase snake_case built from whole English words, never abbreviations and never un-underscored concatenations; every predicate is prefixed with its pack's full whole-word name; terse two-letter prefixes are banned; the one branded abbreviation Causal Relation Object is spelled out in full as causal_relation_object everywhere, in code and prose alike.
+
+- English Readable Code (ERC): every single line of code in every Prolog file carries one plain-English comment on the line immediately above it - modules, tests, manifests, and code quoted in papers included.
+
+- The Specification, Pseudocode, Architecture, Refinement, Completion methodology (SPARC): every code change increments the affected SPARC document volumes in docs/, recording what changed and why, with a footer naming all five new versions; pure tooling or documentation-governance changes are the recognized exception and do not bump SPARC.
+
+- The six-file repository documentation rule: every repository that contains functional code carries, from its first commit, a docs/ folder with six versioned files named for the repository - a Specification, a Pseudocode file (written in ERC), an Architecture, a Refinement, a Completion, and a Demonstration; konnectome will need this set on day one.
+
+- Branch and pull-request rule: every unit of work uses a feature branch and a pull request; nothing is pushed directly to the main branch; a pull request you authored is merged immediately with a squash merge that deletes the branch; you do not auto-merge pull requests opened by anyone else.
+
+- Attribution rule: no artificial-intelligence tool is ever credited as an author or co-author anywhere - no co-authored-by lines in commits, no such references in source or papers; element names are original, and no source-origin terms are introduced.
+
+- Archive rule: only the latest version of any versioned document lives in docs/; the moment a new version is made, the superseded one is moved into docs/archive/ in the same change, and stragglers are swept.
+
+- The tutorial, README (the repository's front-page description file), and Pack Reference update rules: a new pack earns a tutorial chapter and index entry, a README table row and narrative update, and a Pack Reference entry listing its public predicates - all in the same change as the code.
+
+- Regression honesty: there is a fast ten-percent mini-regression gate (run by bin/run_mini_regression.sh, which reports 40 of 40 and 12 of 12) and a slow full regression; a green mini-run is never rounded up to the full 400 of 400 or 120 of 120 claim - only a genuine full run refreshes those claims, and the outstanding debt is tracked in REGRESSION_DEBT.md.
+
+- Work Package and Layer numbering: Work Package numbers and Layer numbers are one shared global counter; take the next free numbers and never reuse them.
+
+- Style: never use Roman numerals; use Arabic numerals or spelled-out words.
+
+
+PART SIX - WHERE THINGS LIVE, AND HOW TO CHECK THEM
+
+
+Repositories, as sibling directories under /home/ccaitwo/ .
+
+- /home/ccaitwo/PrologAI is the finished platform (main at 0fed5d1, tag prologai-wave10-complete).
+
+- /home/ccaitwo/Mentova is the flagship Synthetic Mind and the home of the ARC solving core and the ARC task facts; it is loaded read-only by the regression harness.
+
+- The causalontology repository holds the frozen Causalontology 3.0.0 standard.
+
+- /home/ccaitwo/konnectome does not exist yet; that is your first act, when the owner is ready.
+
+Persistent memory (this is the most important pointer).
+
+- Everything I learned and did is saved under /home/ccaitwo/.claude/projects/-home-ccaitwo-PrologAI/memory/ .
+
+- The index file MEMORY.md there lists one line per memory, with links to per-topic files (each Wave 10 stage, the close-out, the platform state, the standing rules, and the open issues all have their own file).
+
+- Read MEMORY.md first; it is the fastest way to load full context.
+
+The gates you can run to confirm PrologAI is still green.
+
+- bin/run_causalontology_conformance.sh - expects 119 of 119, exit code 0.
+
+- bin/check_pack_naming.sh - expects 0 violations across its five checks.
+
+- bin/check_layers.sh - expects 0 layer-rule violations.
+
+- bin/check_layer_binding.sh - expects 0 binding violations.
+
+- bin/run_mini_regression.sh - expects 40 of 40 and 12 of 12 (set the environment variable MENTOVA_HOME to the Mentova checkout first).
+
+- bin/run_pr_tests.sh - expects 50 of 50, exit code 0.
+
+- The per-pack regression is every pack's in-pack Prolog Unit (PLUnit) test suite run with every packs directory on the library path.
+
+
+PART SEVEN - LESSONS AND SHARP EDGES I HIT (so you do not)
+
+
+- PLUnit module qualification: when a test file declares itself a module, a goal you pass into a construct's meta-predicate is qualified with the TEST module, not the user module; if you guess wrong the goal is reported as an unknown procedure; qualify meta-goals explicitly (this bit me twice, in the temporal stage and the refinements stage).
+
+- The full ARC benchmark is slow: the isolated entry point arc_benchmark_run over all 400 tasks takes more than ten minutes, and the booted driver run is similar; run these as background jobs, not foreground, and do not run two heavy Prolog benchmarks at once - they contend for the processor and both time out.
+
+- The full regression is run by feeding a manifest of every task identifier through the mini-regression driver (which uses the same solving core), and separately by the isolated arc_benchmark_run entry point; both must show an empty fail list.
+
+- The test runner bin/run_pr_tests.sh was fixed during close-out to classify a suite by its exit code rather than by a fragile text match, because a single-test suite prints "test passed" (singular) which the old text match missed; if you write single-test suites, this is now handled correctly.
+
+- The file CLAUDE.md at the PrologAI repository root is git-untracked (local only); it holds the current-state narrative and the current SPARC versions, and you update it in the same change as code, but it does not travel in a pull request.
+
+- Frozen means frozen: the ARC solving core, the Causalontology 3.0.0 standard, the earlier spike, the three organizational arms, and the built brain regions were all treated as read-only during Wave 10; where a workaround was needed it was demonstrated on the PrologAI side rather than by editing a frozen thing - carry that discipline into konnectome.
+
+
+PART EIGHT - THE HONEST BOTTOM LINE, AND YOUR FIRST STEPS
+
+
+PrologAI's forward agenda is closed.
+
+Every requirement the program named is met, the benchmarks hold at one hundred percent, and the language is built and load-bearing.
+
+konnectome is the next repository, and it starts from this clean baseline.
+
+Suggested first steps for you.
+
+- One: read MEMORY.md in the memory directory named above, then skim the per-topic memory files for anything konnectome will touch.
+
+- Two: ask the owner for the konnectome scope and first milestone - what it should build, and what "done" looks like for its first slice.
+
+- Three: create the konnectome repository as a sibling under /home/ccaitwo/, and give it the six-file documentation set from its first commit.
+
+- Four: build with the finished PrologAI constructs listed in Part Four, follow the standing rules in Part Five, and route any data-structure gap to the held Causalontology 4.0.0 change order rather than patching the ontology.
+
+- Five: keep the gates green as you go, and never round a mini-run up to a full-run claim.
+
+The arch is finished and it holds.
+
+Build the next one on top of it.
+
+- Halcyon Keystone, 2026-07-19.
