@@ -1,0 +1,209 @@
+APPENDIX 5. COMPLETION
+
+A5.0 THE PURPOSE OF THIS PHASE
+
+The Completion phase finishes the System properly: it tests everything, documents everything, deploys, and monitors.
+
+Its deliverable is a live, documented, monitored System and, in SPARC, the document named completion.md.
+
+Completion is where a project stops being a promising prototype and becomes something another person can install, run, trust, and build upon.
+
+A5.1 THE FULL TEST STRATEGY
+
+The completed System must carry a complete test suite at three levels, all automated and all runnable with a single command.
+
+UNIT LEVEL: every archetype rule, every drive, and every learning step tested in isolation, as in Appendix 4.
+
+INTEGRATION LEVEL: the propagation, decision-chain, and computational-interface tests, verifying that constructs work together.
+
+SYSTEM LEVEL: the famous-experiment tests, the Parkinson, learning, H.M., drive-conflict, and social-pain reproductions, verifying that the whole System behaves as a brain.
+
+The suite must reach the coverage targets SPARC sets, and it must run in continuous integration, meaning automatically on every change, so that no change can silently break a reproduced experiment.
+
+The definition of a passing build is that every one of the acceptance criteria of Appendix 1 is met by an automated test, and all pass.
+
+For that claim to be checkable rather than merely asserted, the mapping from each acceptance criterion to its covering test is stated explicitly here.
+
+AC-1 (every named construct present with its specification block) is covered by a registry-completeness unit test that iterates the constructs of Chapters 2, 3, and 7 (regions, interfaces, and molecules) and asserts each is loaded.
+
+AC-10 and AC-11 (the large-scale networks of Section 2.10 and the cognitive systems, pathways, and glia of Section 2.11) are covered by an extension of the same registry-completeness test, which additionally iterates every named network as a grouping over its members, every named system and pathway as a subgraph, and every glial participant, and asserts each is present with its couplings, its mode flags (directed or broadcast), and its modulatory function.
+
+AC-2 (one tick updates every construct exactly once) is covered by a scheduler unit test that counts updates per tick.
+
+AC-3 (a signal propagates through the correct interfaces in the correct number of ticks) is the propagation integration test.
+
+AC-4 (dopamine depletion halts and restoration recovers action selection) is the Parkinson system test.
+
+AC-5 (a stimulus paired with reward comes to predict it, and extinguishes) is the learning system test.
+
+AC-6 (two drives are arbitrated in override order, and respiration cannot be self-suppressed) is the drive-conflict system test.
+
+AC-7 (every state, weight, drive error, and neuromodulator level is reportable) is covered by an observer unit test that reads each quantity at a sampled tick.
+
+AC-8 (a run is exactly reproducible from its seed) is covered by a determinism test that runs the same seed twice and asserts identical trajectories.
+
+AC-9 (the System runs at the regional grain within its time budget) is covered by a performance test measuring wall-clock time per thousand ticks.
+
+Every acceptance criterion thus has exactly one named covering test, and no criterion is left unverified.
+
+The H.M. test, which reproduces the amnesia of the disabled plasticity engine, is an additional system test beyond the nine criteria, included because the case is central to the book.
+
+A5.2 THE DEFINITION OF DONE
+
+The System is DONE, for version one, when all of the following are true.
+
+Every named construct of Chapters 2, 3, and 7 is present and running, and every large-scale network, cognitive system and pathway, and glial participant of Sections 2.10 and 2.11 is present as a named grouping, subgraph, or modulator.
+
+Every acceptance criterion of Appendix 1 passes as an automated test.
+
+The System runs at the regional grain on a personal computer within its stated time budget.
+
+Every state, weight, drive, and neuromodulator is inspectable at every tick.
+
+A full run is exactly reproducible from its seed.
+
+The five famous-experiment tests pass.
+
+The documentation described below is complete.
+
+And the System is installable by a stranger from its repository in a documented number of steps.
+
+Note what "done" does NOT require: it does not require that the System be intelligent, or that it pass any test of general capability.
+
+Version one is done when it is a faithful, transparent, runnable model of the regional architecture.
+
+Whether such a model, scaled and fed, becomes intelligent is the question of Appendix 6, and it is explicitly out of scope for Completion of version one.
+
+Conflating "the model runs faithfully" with "the model is a mind" would be the one dishonesty this book has refused throughout, and Completion refuses it here.
+
+A5.3 DOCUMENTATION
+
+Two bodies of documentation are required.
+
+FOR THE USER: a guide that explains how to install the System, how to run it for a number of ticks, how to present an input, how to read the observer's output, how to run each of the famous experiments, and how to lesion a construct or shift a molecule.
+
+The user guide must let a curious person reproduce the Parkinson experiment within an hour of installing.
+
+FOR THE DEVELOPER: a guide that explains the ten components, the tick ordering, the data model, how to add a new construct, how to add a new archetype, and how the code maps to the chapters of this book.
+
+The developer guide's central promise is that every line of code traces to a passage of the science, and it must make that tracing explicit, so that the System remains a glass box not only at runtime but in its source.
+
+This book itself is the specification-level documentation, and the appendices are written so that the mapping from science to system is legible without a separate document.
+
+That is by design: the book and the specification are one artifact.
+
+A5.4 DEPLOYMENT AND MONITORING
+
+Deployment of a scientific instrument differs from deployment of a consumer product, and the plan reflects that.
+
+The System is deployed as an open-source repository that a researcher clones and runs locally, not as a hosted service.
+
+Its "deployment" is a tagged, versioned release with a reproducible environment specification, so that a run on one machine reproduces on another.
+
+This matters more here than in most software: a scientific result that cannot be reproduced on another machine is not a result.
+
+Monitoring, for a System whose defining virtue is inspectability, is the observer of Appendix 3 made permanent.
+
+The running System continuously reports its own state, and the monitoring layer watches for the pathological signatures the science warns of: runaway synchrony, weight explosion, a frozen selector, a collapsed drive.
+
+These are the System's equivalent of the vital signs a clinician watches, and their appearance in a run is either a bug to fix or, intriguingly, a simulated disease to study.
+
+A5.5 SECURITY, SUCH AS IT IS
+
+A local scientific model has a light security surface, but the SPARC rules still bind.
+
+No secret or credential may appear in the code.
+
+All external input, meaning any dataset fed to the System, must be validated before it is trusted.
+
+And, because this System is a model of a mind, one ethical safeguard is added to the ordinary security checklist and made a hard requirement: the token-level records of any run that includes data about real, identifiable people are local by default and are never published without deliberate act, exactly the safety discipline the companion data standard requires.
+
+A model of a brain that ingests human data inherits the duty of care that comes with human data.
+
+A5.6 POST-COMPLETION: WHAT SHIPS
+
+What ships at the end of Completion, version one, is: a running, open-source, glass-box model of the human cognitive architecture at the regional grain; a complete test suite that reproduces five landmark neuroscience experiments from first principles; a user guide and a developer guide; a reproducible release; and a monitoring layer that watches the model's vital signs.
+
+It is a scientific instrument, buildable at home, that anyone can install, run, inspect, perturb, and extend.
+
+What does not ship, and is not claimed, is an intelligence.
+
+That is the next mountain, and the honest map to it is Appendix 6.
+
+A5.7 REFLECTION
+
+Completion is where the temptation to overclaim is strongest, and where this book most firmly declines it.
+
+A working model that reproduces Parkinson's disease and Pavlovian learning from first principles is a genuine achievement, and it would be easy to let the reader believe it is more than it is.
+
+The discipline of Completion is to state exactly what is done and exactly what is not: a faithful, transparent, runnable architecture is done; a mind is not.
+
+The distance between those two is the subject of the final appendix, and naming that distance honestly is itself part of finishing the work.
+
+A specification that ended by pretending the gap was closed would have failed at the last step, however well it had done at every earlier one.
+
+
+
+KONNECTOME REALIZATION LOG
+
+Slice 1 - the heartbeat - 2026-07-20 - pack tick_engine, version 0.1.0.
+
+Slice 1 is complete and green: 7 of 7 tick_engine tests pass, and the naming, layer, and layer-binding gates each report zero violations.
+
+Gates at this slice: 7 of 7 tick_engine Prolog Unit (PLUnit) tests pass; the naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited; konnectome reuses them through the library path.
+
+This log grows one entry per code slice, per the Tenth Commandment. The full SPARCD Fileset was bumped in lockstep from version 1 to version 2, and the version 1 files were archived under docs/archive/ in the same change, per the Ninth Commandment.
+
+
+KONNECTOME REALIZATION LOG - SLICE 2
+
+Slice 2 - the six archetype rules and the first Causalontology thought - 2026-07-20 - packs archetype (0.1.0) and observer (0.1.0).
+
+Slice 2 is complete and green: 7 of 7 archetype tests, 6 of 6 observer tests, all naming/layer/binding gates at zero violations, and the Causalontology 119-vector conformance at 119 of 119.
+
+Gates at this slice: archetype 7 of 7 and observer 6 of 6 Prolog Unit (PLUnit) tests pass; naming, layer, and layer-binding gates report zero violations; the Causalontology 119-vector conformance suite passes 119 of 119. Nothing in PrologAI or Causalontology was edited; konnectome reuses causal_core through the library path.
+
+
+KONNECTOME REALIZATION LOG - SLICE 3
+
+Slice 3 - the connection graph - 2026-07-20 - pack connection_graph (0.1.0).
+
+Slice 3 is complete and green: 4 of 4 connection_graph tests, all four packs green (24 tests in total), all gates at zero violations, and the Causalontology 119-vector conformance unchanged at 119 of 119.
+
+Gates at this slice: connection_graph 4 of 4 Prolog Unit (PLUnit) tests pass (tick_engine 7, archetype 7, observer 6 unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited; connection_graph reuses the archetype pack.
+
+
+KONNECTOME REALIZATION LOG - SLICE 4
+
+Slice 4 - the reward loop - 2026-07-20 - packs neuromodulator_bus (0.1.0) and drive_system (0.1.0).
+
+Slice 4 is complete and green: neuromodulator_bus 4 of 4 and drive_system 5 of 5 tests, all six packs green (33 tests in total), and all gates at zero violations.
+
+Gates at this slice: neuromodulator_bus 4 of 4 and drive_system 5 of 5 Prolog Unit (PLUnit) tests pass (the earlier four packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 5
+
+Slice 5 - the action selector - 2026-07-20 - pack action_selector (0.1.0).
+
+Slice 5 is complete and green: action_selector 6 of 6 tests, all seven packs green (39 tests in total), and all gates at zero violations.
+
+Gates at this slice: action_selector 6 of 6 Prolog Unit (PLUnit) tests pass (the earlier six packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 6
+
+Slice 6 - the plasticity engine - 2026-07-20 - pack plasticity_engine (0.1.0).
+
+Slice 6 is complete and green: plasticity_engine 5 of 5 tests, all eight packs green (44 tests in total), and all gates at zero violations.
+
+Gates at this slice: plasticity_engine 5 of 5 Prolog Unit (PLUnit) tests pass (the earlier seven packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 7
+
+Slice 7 - completing the architecture - 2026-07-20 - packs override_controller (0.1.0) and perturbation_interface (0.1.0).
+
+Slice 7 is complete and green: override_controller 4 of 4 and perturbation_interface 4 of 4 tests, all ten packs green (52 tests in total), and all gates at zero violations.
+
+Gates at this slice: override_controller 4 of 4 and perturbation_interface 4 of 4 Prolog Unit (PLUnit) tests pass (the earlier eight packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
