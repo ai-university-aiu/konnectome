@@ -1,0 +1,183 @@
+APPENDIX 4. REFINEMENT
+
+A4.0 THE PURPOSE OF THIS PHASE
+
+The Refinement phase improves the design and the eventual code through iteration: repeated cycles of testing and revision.
+
+Its signature practice is Test-Driven Development, abbreviated TDD, in which one writes a failing test first, then just enough code to make it pass, then cleans up, a cycle called Red-Green-Refactor.
+
+SPARC favours the London School of TDD, which tests each unit in isolation using stand-in fakes for its collaborators, and emphasizes behaviour and interactions.
+
+In SPARC this is the deliverable named refinement.md, together with the growing, tested codebase.
+
+A4.1 THE TEST-DRIVEN LOOP, APPLIED TO A BRAIN
+
+The System is unusually well suited to test-driven development, for a reason worth naming: its acceptance criteria (Appendix 1) are drawn from real neuroscience experiments, and a neuroscience experiment IS a test.
+
+To test the System is to run, in software, the lesion and learning studies that are the evidential basis of the science.
+
+Every test below is a famous experiment rewritten as an automated check.
+
+The loop for each construct and each behaviour is: first write a test that states the expected result and fails because the code does not yet exist (Red); then write the smallest update rule or connection that makes the test pass (Green); then clean up the code without changing its behaviour (Refactor); then move to the next.
+
+A4.2 THE UNIT TESTS: EACH ARCHETYPE IN ISOLATION
+
+Following the London School, each archetype rule is tested in isolation, with its inputs supplied by fakes.
+
+TEST OF THE RELAY: given a fixed input and a fixed gain, the next activation equals input times gain.
+
+A pipe passes what it is given, scaled.
+
+If this fails, the relay is not a relay.
+
+TEST OF THE INTEGRATOR: given a constant input over many ticks, the activation rises and approaches a bound; given no input, it decays toward zero.
+
+A bucket fills and leaks.
+
+TEST OF THE OSCILLATOR: over many ticks with no input, the phase advances at the natural frequency and wraps, and the gain rises and falls once per cycle.
+
+A metronome keeps time.
+
+TEST OF THE ATTRACTOR: given a partial version of a stored pattern, the activation converges to the whole stored pattern; given a pattern near two stored ones, it converges to the nearer.
+
+A memory completes from a fragment.
+
+TEST OF THE GATE: given a sub-threshold drive, the mode does not change; given a supra-threshold drive, it flips and then resists flipping back.
+
+A stiff switch.
+
+TEST OF THE COMPARATOR: given equal expected and actual inputs, the output is zero; given an actual input above expectation, the output is positive; below, negative.
+
+A scale reports the difference.
+
+This is also, precisely, the test that the dopamine reward-prediction-error signal behaves correctly.
+
+A4.3 THE INTEGRATION TESTS: CONSTRUCTS WORKING TOGETHER
+
+Integration tests check that constructs wired together produce the right chain of behaviour.
+
+TEST OF PROPAGATION: a signal presented at a sensory region appears at its cortical target after exactly the number of ticks dictated by the interface delays, and nowhere sooner.
+
+This tests the connection graph and the scheduler together.
+
+TEST OF THE DECISION CHAIN: a valued stimulus presented to the sensory regions leads, through the valuation regions and the action selector, to the selection of the appropriate action, in the correct order.
+
+This tests the perception-to-action arc.
+
+TEST OF THE COMPUTATIONAL INTERFACE: the inferior olive, given an intended movement and a differing outcome, emits an error signal that is neither of its inputs.
+
+This tests that a computational interface computes rather than conveys, the Perfect Wire Test made into an assertion.
+
+A4.4 THE SYSTEM TESTS: THE FAMOUS EXPERIMENTS
+
+The system-level tests are the acceptance criteria of Appendix 1, and each reproduces a landmark result.
+
+THE PARKINSON TEST (AC-4): deplete dopamine to a low fraction of normal; action selection slows and then halts; restore dopamine; it recovers.
+
+This reproduces the cardinal signature of Parkinson's disease and the effect of dopamine-replacement therapy, in software, from first principles.
+
+Passing it is strong evidence the System's action selection is faithful.
+
+THE LEARNING TEST (AC-5): pair a stimulus with reward repeatedly; the connecting weights strengthen by the three-factor rule until the stimulus predicts the reward; then present the stimulus alone; the weights weaken and the prediction extinguishes.
+
+This reproduces Pavlovian conditioning and extinction, the foundation of the psychology of learning.
+
+THE H.M. TEST: disable the plasticity engine; the System continues to perceive, act, and use what it already knows, and forms no new memories.
+
+This reproduces the amnesia of patient H.M., the case on which this whole book centres, and it is the test that proves the plasticity engine is the seat of new memory.
+
+THE DRIVE-CONFLICT TEST (AC-6): raise two drives at once; the override hierarchy resolves them in the specified order; and no amount of deliberative input can suppress the respiration drive to self-termination.
+
+This reproduces the vitality ranking of Chapter 12 and enforces the System's one inviolable safety property.
+
+THE SOCIAL-PAIN TEST: deliver a social-rejection signal; the same circuitry that registers physical pain activates.
+
+This reproduces one of the more striking findings of social neuroscience and tests that the social-connection drive is a genuinely defended set-point.
+
+A4.4bis THE NETWORK, PATHWAY, AND GLIAL TESTS
+
+Because the body names constructs above the single region, the test suite adds checks at that level.
+
+THE NETWORK TEST: engage a task that recruits the dorsal attention and frontoparietal networks; the default mode network's mean activation must fall as theirs rises, reproducing the task-positive-versus-task-negative anticorrelation of Section 2.10. A network that does not deactivate on task has not been coupled correctly.
+
+THE PATHWAY TEST: drive the direct pathway and observe an action released (go); drive the indirect pathway and observe it suppressed (no-go); drive the hyperdirect pathway and observe a fast global cancellation (stop). Then run the Papez circuit and confirm a memory trace injected at the hippocampus circulates through the mammillary bodies, anterior thalamus, and cingulate and returns, and that cutting any node breaks the loop, reproducing diencephalic amnesia.
+
+THE GLIAL TEST: disable the astrocytic gating of the tripartite synapse and confirm that plasticity is impaired even though every neuronal construct is intact, reproducing the finding that the glia gate learning. This is the tripartite-synapse counterpart of the H.M. test: memory fails not because a region is lost but because its plasticity partner is silenced.
+
+A4.5 OPTIMIZATION AND THE HARDENING LOOP
+
+Once the tests pass, Refinement optimizes.
+
+The candidate optimizations, in order of value, are: caching the neuromodulatory bridge closures so the bus is not recomputed needlessly; vectorizing the construct update so a tick over one hundred constructs is one batched operation rather than one hundred calls; and profiling to find the few constructs whose rules dominate the tick cost and simplifying them.
+
+None of these may change the System's behaviour: an optimization that changes a test result is a bug, by definition.
+
+The hardening loop then runs the System for long durations and looks for the failure modes the science predicts and warns against: runaway excitation (a seizure, which the homeostatic scaling must prevent), weight explosion (which the scaling must also bound), and a frozen action selector (which indicates a stuck gate).
+
+Each discovered failure becomes a new test, so that the System can never regress into it again.
+
+A4.6 THE KNOWN TRADE-OFFS
+
+Refinement is where trade-offs are made explicit, and honesty requires stating them.
+
+THE GRAIN TRADE-OFF: the regional grain buys tractability and inspectability at the cost of fidelity.
+
+A finer grain would be more faithful and far more expensive.
+
+The System accepts the coarser grain for version one and provides the path to refine it.
+
+This is the largest trade-off in the work.
+
+THE ARCHETYPE TRADE-OFF: six archetypes buy simplicity and uniformity at the cost of some accuracy for constructs that fit no archetype cleanly.
+
+The System accepts a small loss of accuracy for a large gain in buildability, and extends the archetype set only when a construct genuinely resists all six.
+
+THE DETERMINISM TRADE-OFF: strict reproducibility (NFR-2) buys scientific rigour at the cost of the biological realism of noise, which the brain uses.
+
+The System resolves this by making randomness seeded and recorded, so that it has controlled noise that is also exactly replayable, keeping both rigour and realism.
+
+THE SPEED-VERSUS-CLARITY TRADE-OFF: the two-pass synchronous update is slower than an in-place update would be, but it is correct where the faster version is subtly wrong.
+
+The System pays the speed to keep the correctness, and this is not negotiable.
+
+A4.7 REFLECTION
+
+The Refinement phase reveals a property of this System that few software projects enjoy: its tests are not invented by its builders but inherited from a century of neuroscience.
+
+The Parkinson test, the learning test, the H.M. test, the drive-conflict test, and the social-pain test are not checks a programmer dreamed up to exercise the code; they are the actual experiments that established the science the code implements.
+
+This gives the System an unusually strong form of validation.
+
+It is correct not merely when it does what its author intended, but when it reproduces what nature does, as measured by experiments its author did not run.
+
+A model that can be given Parkinson's disease by depleting a single simulated molecule, and cured by restoring it, has passed a test no amount of ordinary software testing could design.
+
+
+
+KONNECTOME REALIZATION LOG
+
+Slice 1 - the heartbeat - 2026-07-20 - pack tick_engine, version 0.1.0.
+
+The scheduler test of Sections A2.9 and A4.3 is realized as the PLUnit suite test_tick_engine.pl: a run of N ticks records exactly N numbered snapshots, the two passes never interleave, no construct reads a neighbour's future within a tick, and the run is reproducible.
+
+Gates at this slice: 7 of 7 tick_engine Prolog Unit (PLUnit) tests pass; the naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited; konnectome reuses them through the library path.
+
+This log grows one entry per code slice, per the Tenth Commandment. The full SPARCD Fileset was bumped in lockstep from version 1 to version 2, and the version 1 files were archived under docs/archive/ in the same change, per the Ninth Commandment.
+
+
+KONNECTOME REALIZATION LOG - SLICE 2
+
+Slice 2 - the six archetype rules and the first Causalontology thought - 2026-07-20 - packs archetype (0.1.0) and observer (0.1.0).
+
+The six archetype isolation tests of Section A4.2 are realized as the archetype PLUnit suite (relay scales, integrator fills and leaks, oscillator keeps time, attractor completes from a fragment, gate resists flipping, comparator reports the difference), plus a dispatch-routing test; the observer suite verifies the token_occurrence is valid, content-addressed, reproducible, and distinct per tick.
+
+Gates at this slice: archetype 7 of 7 and observer 6 of 6 Prolog Unit (PLUnit) tests pass; naming, layer, and layer-binding gates report zero violations; the Causalontology 119-vector conformance suite passes 119 of 119. Nothing in PrologAI or Causalontology was edited; konnectome reuses causal_core through the library path.
+
+
+KONNECTOME REALIZATION LOG - SLICE 3
+
+Slice 3 - the connection graph - 2026-07-20 - pack connection_graph (0.1.0).
+
+The propagation integration test of Section A4.3 is realized: a signal at a source reaches its target after exactly the number of one-tick hops, and nowhere sooner.
+
+Gates at this slice: connection_graph 4 of 4 Prolog Unit (PLUnit) tests pass (tick_engine 7, archetype 7, observer 6 unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited; connection_graph reuses the archetype pack.

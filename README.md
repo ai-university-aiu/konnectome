@@ -122,12 +122,12 @@ The six-phase waterfall is mirrored in six versioned documents, each seeded verb
 
 | Phase | File | Seeded from |
 |---|---|---|
-| 1. Specification | [`docs/konnectome_1_specification_v3.txt`](docs/konnectome_1_specification_v3.txt) | Appendix 1 |
-| 2. Pseudocode | [`docs/konnectome_2_pseudocode_v3.txt`](docs/konnectome_2_pseudocode_v3.txt) | Appendix 2 |
-| 3. Architecture | [`docs/konnectome_3_architecture_v3.txt`](docs/konnectome_3_architecture_v3.txt) | Appendix 3 |
-| 4. Refinement | [`docs/konnectome_4_refinement_v3.txt`](docs/konnectome_4_refinement_v3.txt) | Appendix 4 |
-| 5. Completion | [`docs/konnectome_5_completion_v3.txt`](docs/konnectome_5_completion_v3.txt) | Appendix 5 |
-| 6. Demonstration | [`docs/konnectome_6_demonstration_v3.txt`](docs/konnectome_6_demonstration_v3.txt) | Appendix 6 |
+| 1. Specification | [`docs/konnectome_1_specification_v4.txt`](docs/konnectome_1_specification_v4.txt) | Appendix 1 |
+| 2. Pseudocode | [`docs/konnectome_2_pseudocode_v4.txt`](docs/konnectome_2_pseudocode_v4.txt) | Appendix 2 |
+| 3. Architecture | [`docs/konnectome_3_architecture_v4.txt`](docs/konnectome_3_architecture_v4.txt) | Appendix 3 |
+| 4. Refinement | [`docs/konnectome_4_refinement_v4.txt`](docs/konnectome_4_refinement_v4.txt) | Appendix 4 |
+| 5. Completion | [`docs/konnectome_5_completion_v4.txt`](docs/konnectome_5_completion_v4.txt) | Appendix 5 |
+| 6. Demonstration | [`docs/konnectome_6_demonstration_v4.txt`](docs/konnectome_6_demonstration_v4.txt) | Appendix 6 |
 
 ## The build ladder
 
@@ -153,6 +153,7 @@ konnectome/
     tick_engine/               Slice 1: the scheduler and tick engine (Component 2).
     archetype/                 Slice 2: the six dynamical archetype rules (Section A2.3).
     observer/                  Slice 2: records each tick as a Causalontology token_occurrence.
+    connection_graph/          Slice 3: the connection graph (Component 3), signal propagation.
   docs/
     konnectome_1..6_*_vN.txt   The SPARCD Fileset (seeded from the appendices; versioned per slice).
     konnectome_ledger_v1.txt   The running scoreboard of findings (Fourth Commandment).
@@ -166,12 +167,13 @@ konnectome/
 
 ## Status
 
-The build has begun and is climbing the ladder. Two slices have landed on `main`:
+The build has begun and is climbing the ladder. Three slices have landed on `main`:
 
 - **Slice 1 - the heartbeat** (`tick_engine`): the Scheduler and Tick Engine (Component 2), with the two-pass synchronous update. 7 of 7 tests.
 - **Slice 2 - archetypes and the first thought** (`archetype`, `observer`): the six dynamical archetype rules (Appendix 2, Section A2.3) and the observer recording each tick as a Causalontology `token_occurrence` (Component 9) via the reused `causal_core`. 7 of 7 and 6 of 6 tests; the 119 conformance vectors stay green.
+- **Slice 3 - the connection graph** (`connection_graph`): the connectome as data (Component 3) - directed, weighted, delayed interfaces - so constructs feed one another tick to tick, with a signal propagating one hop per tick. 4 of 4 tests.
 
-Next: wiring the archetypes into the scheduler through the connection graph (Component 3). This README, and every badge on it, is kept honest as the build climbs.
+Next: multi-tick delay lines and wiring every archetype through the graph. This README, and every badge on it, is kept honest as the build climbs.
 
 ## License and attribution
 

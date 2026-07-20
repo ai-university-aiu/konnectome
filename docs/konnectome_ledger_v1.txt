@@ -118,7 +118,7 @@ deepened; PENDING = not built yet.
  Component 1  Construct Registry        | tick_engine (the construct list)  | PARTIAL
  Component 2  Scheduler / Tick Engine   | tick_engine (tick_engine_run/5,   | REALIZED
                                         |  tick_engine_step/3, two passes)  |
- Component 3  Connection Graph          | (to be built)                     | PENDING
+ Component 3  Connection Graph          | connection_graph                  | REALIZED
  Component 4  Neuromodulatory Bus       | (to be built)                     | PENDING
  Component 5  Drive System              | (to be built)                     | PENDING
  Component 6  Action Selector           | (to be built)                     | PENDING
@@ -181,5 +181,12 @@ Causalontology thought (observer pack) hit NO wall. PrologAI expressed the arche
 directly, and causal_core recorded the token_occurrence with no ontology change. The
 archetypes are isolation-tested but not yet wired into the scheduler (that needs the
 connection graph, Component 3); recorded as pending, not as a wall.
+
+Slice-3 note (2026-07-20). Building the connection graph (connection_graph pack) hit NO
+wall. PrologAI expressed the directed weighted interfaces and the input gathering directly,
+and the relay archetype was reused to convey a signal. Honest non-closure: this slice
+honours a one-tick interface delay (the natural synchronous delay); multi-tick delay lines,
+computational-interface transforms, and representing interfaces as Causalontology conduits
+are recorded as pending, not as walls.
 
  Walls: OPEN 0 | ROUTED 0 | CLOSED 0 | UNNECESSARY 0.   Observations: 2.
