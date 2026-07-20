@@ -119,8 +119,8 @@ deepened; PENDING = not built yet.
  Component 2  Scheduler / Tick Engine   | tick_engine (tick_engine_run/5,   | REALIZED
                                         |  tick_engine_step/3, two passes)  |
  Component 3  Connection Graph          | connection_graph                  | REALIZED
- Component 4  Neuromodulatory Bus       | (to be built)                     | PENDING
- Component 5  Drive System              | (to be built)                     | PENDING
+ Component 4  Neuromodulatory Bus       | neuromodulator_bus                | REALIZED
+ Component 5  Drive System              | drive_system                      | REALIZED
  Component 6  Action Selector           | (to be built)                     | PENDING
  Component 7  Override Controller       | (to be built)                     | PENDING
  Component 8  Plasticity Engine         | (to be built)                     | PENDING
@@ -188,5 +188,11 @@ and the relay archetype was reused to convey a signal. Honest non-closure: this 
 honours a one-tick interface delay (the natural synchronous delay); multi-tick delay lines,
 computational-interface transforms, and representing interfaces as Causalontology conduits
 are recorded as pending, not as walls.
+
+Slice-4 note (2026-07-20). Building the reward loop (neuromodulator_bus and drive_system
+packs) hit NO wall. PrologAI expressed the broadcast bus and the drive loop directly. Honest
+non-closure: the bus holds a global level per modulator (per-target-territory levels are a
+later refinement), and the drive reward is computed but not yet consumed by an action selector
+(Component 6) or by learning (Component 8); recorded as pending, not as walls.
 
  Walls: OPEN 0 | ROUTED 0 | CLOSED 0 | UNNECESSARY 0.   Observations: 2.
