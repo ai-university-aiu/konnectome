@@ -1,0 +1,416 @@
+APPENDIX 2. PSEUDOCODE
+
+WRITTEN IN ENGLISH READABLE CODE (ERC)
+
+A2.0 A WORD ON ENGLISH READABLE CODE (ERC)
+
+This appendix is written in English Readable Code, abbreviated ERC, a controlled form of precise English in which each sentence corresponds to one exactly defined computational operation, defined by D. R. Dison.
+
+ERC reads like ordinary English and yet can be translated, sentence by sentence, into any real programming language, because every sentence has one and only one meaning.
+
+It is chosen for the Pseudocode phase for the reason SPARC prizes pseudocode in the first place: it states the logic in plain language, where a mistake is cheap to see and fix, before any programming language is chosen.
+
+ERC is the ideal notation for a specification meant to be programming-language-agnostic, which this one is (see Appendix 6), because it commits to the logic without committing to a language.
+
+A note on convention.
+
+Each ERC procedure opens with a sentence of the form "The purpose of this procedure is to" and closes with "The procedure is complete." One operation is written per sentence.
+
+Variable names are written as plain spaced English phrases.
+
+Where a procedure takes inputs or returns a value in a way the base ERC catalogue does not fully template, this appendix extends ERC in the obvious readable way and marks the fact; such extensions are noted as ERC EXTENSION.
+
+What follows is not the whole System in ERC, which would run to many hundreds of procedures.
+
+It is the load-bearing core: the main tick loop, the single-construct update, the six archetype rules, the drive loop, and the learning rule.
+
+From these, every remaining construct follows the same pattern, exactly as Chapter 11 established the per-construct block and then applied it uniformly.
+
+A2.1 THE MAIN LOOP: RUNNING THE SYSTEM
+
+The purpose of this procedure is to run the whole System for a chosen number of ticks.
+
+Create a number variable called total ticks with initial value one thousand.
+Create a number variable called current tick with initial value zero.
+Create a list variable called all constructs with initial value empty list.
+Load every region and interface and molecule into all constructs.
+
+While current tick is less than total ticks, repeat the following steps:
+    Read the body state and update every drive error, and compute this tick's reward.
+    Update all neuromodulator levels for this tick, including broadcasting the reward as phasic dopamine.
+    For each construct in all constructs, perform the following operations:
+        Compute the next state of the construct for this tick.
+    End the loop.
+    For each construct in all constructs, perform the following operations:
+        Set the current state of the construct to its next state.
+    End the loop.
+    Select one action from the competing drive proposals.
+    Apply all plasticity weight changes for this tick.
+    Record the full state of the System for this tick.
+    Calculate the sum of current tick and one.
+    Set current tick to the sum.
+End the loop.
+
+Display a message that the run is complete to the console.
+The procedure is complete.
+
+A note on the two separate loops over all constructs.
+
+The first loop computes every construct's next state from the current states of its neighbours; the second loop then commits every next state at once.
+
+Separating them is what makes one tick a synchronous update, in which every construct sees the same past and no construct sees a neighbour's future.
+
+This is a deliberate and load-bearing choice, and an implementer who fuses the two loops will have built a subtly different and wrong machine.
+
+A2.2 UPDATING ONE CONSTRUCT: THE DISPATCH
+
+The purpose of this procedure is to compute the next state of a single construct according to its dynamical archetype.
+
+Read the archetype of the construct.
+
+Check if the archetype is equal to the word relay.
+If the condition is true, then perform the following actions:
+    Compute the next state using the relay rule.
+End the conditional block.
+
+Check if the archetype is equal to the word integrator.
+If the condition is true, then perform the following actions:
+    Compute the next state using the integrator rule.
+End the conditional block.
+
+Check if the archetype is equal to the word oscillator.
+If the condition is true, then perform the following actions:
+    Compute the next state using the oscillator rule.
+End the conditional block.
+
+Check if the archetype is equal to the word attractor.
+If the condition is true, then perform the following actions:
+    Compute the next state using the attractor rule.
+End the conditional block.
+
+Check if the archetype is equal to the word gate.
+If the condition is true, then perform the following actions:
+    Compute the next state using the gate rule.
+End the conditional block.
+
+Check if the archetype is equal to the word comparator.
+If the condition is true, then perform the following actions:
+    Compute the next state using the comparator rule.
+End the conditional block.
+
+The procedure is complete.
+
+This dispatch is the whole of the "one canonical computation, rewired" thesis made into code.
+
+There are six rules, not one hundred.
+
+Every construct is one of six kinds, and its identity is its parameters and its connections, not a bespoke rule.
+
+A2.3 THE SIX ARCHETYPE RULES
+
+The purpose of this procedure is to compute the next activation of a RELAY construct.
+Gather the total weighted input arriving from all incoming interfaces.
+Create a number variable called total input with that gathered value.
+Read the current gain of the construct, which the neuromodulators have set.
+Calculate the product of total input and the current gain.
+Create a number variable called next activation with the product.
+Set the next state activation of the construct to next activation.
+The procedure is complete.
+
+The purpose of this procedure is to compute the next activation of an INTEGRATOR construct.
+Read the current activation of the construct.
+Create a number variable called decayed activation with the current activation.
+Multiply decayed activation by a leak factor slightly less than one.
+Gather the total weighted input arriving from all incoming interfaces.
+Create a number variable called total input with that gathered value.
+Calculate the sum of decayed activation and total input.
+Create a number variable called next activation with the sum.
+Set the next state activation of the construct to next activation.
+The procedure is complete.
+
+The purpose of this procedure is to compute the next state of an OSCILLATOR construct.
+Read the current phase of the construct.
+Read the natural frequency of the construct.
+Calculate the sum of the current phase and the natural frequency.
+Create a number variable called next phase with the sum.
+Wrap next phase back into the range of one full cycle.
+Compute the receptivity of the construct from next phase.
+Set the next state phase of the construct to next phase.
+Set the next state gain of the construct to the computed receptivity.
+The procedure is complete.
+
+The purpose of this procedure is to compute the next state of an ATTRACTOR construct.
+Read the current activation pattern of the construct.
+Gather the input pattern arriving from all incoming interfaces.
+Create a variable called combined pattern by blending the current pattern with the input pattern.
+Find the stored pattern that is most similar to combined pattern.
+Create a variable called nearest pattern with that stored pattern.
+Move the activation pattern a small step toward nearest pattern.
+Set the next state activation pattern of the construct to the moved pattern.
+The procedure is complete.
+
+The purpose of this procedure is to compute the next state of a GATE construct.
+Read the current mode of the construct.
+Gather the total drive arriving to switch the gate.
+Create a number variable called switch drive with that gathered value.
+Read the switching threshold of the construct.
+Check if switch drive is greater than the switching threshold.
+If the condition is true, then perform the following actions:
+    Flip the mode of the construct to the opposite mode.
+Otherwise, perform the following actions:
+    Keep the mode of the construct unchanged.
+End the conditional block.
+Set the next state mode of the construct to the resulting mode.
+The procedure is complete.
+
+The purpose of this procedure is to compute the next activation of a COMPARATOR construct.
+Read the expected input of the construct.
+Read the actual input of the construct.
+Calculate the difference of the actual input and the expected input.
+Create a number variable called prediction error with the difference.
+Set the next state activation of the construct to prediction error.
+The procedure is complete.
+
+These six procedures are the dynamical heart of the System.
+
+Every region in Chapter 2 and every interface in Chapter 3 runs one of them, differing only in its parameters, its stored patterns, its threshold, or its connections.
+
+This is the machine form of the book's oldest claim.
+
+A2.4 THE DRIVE LOOP: WHAT THE SYSTEM WANTS
+
+The purpose of this procedure is to update every drive and compute the reward for this tick.
+
+Create a list variable called all drives with initial value empty list.
+Load every homeostatic drive into all drives.
+Create a number variable called total reward with initial value zero.
+
+For each drive in all drives, perform the following operations:
+    Read the monitored variable of the drive from the body state.
+    Read the set point of the drive.
+    Calculate the difference of the monitored variable and the set point.
+    Create a number variable called new error with the absolute size of the difference.
+    Check if the drive has no previous error recorded yet, which is true only on the first tick.
+    If the condition is true, then perform the following actions:
+        Set the previous error of the drive to new error, so that the first tick yields no spurious reward.
+    End the conditional block.
+    Read the previous error of the drive.
+    Calculate the difference of the previous error and new error.
+    Create a number variable called error reduction with the difference.
+    Calculate the sum of total reward and error reduction.
+    Set total reward to the sum.
+    Set the previous error of the drive to new error.
+    Bias action selection toward behaviors that reduce this drive, in proportion to new error.
+End the loop.
+
+Broadcast total reward as the phasic dopamine signal for this tick.
+The procedure is complete.
+
+Notice the last two lines, and what they accomplish.
+
+The reward is defined as the total reduction of drive error across all drives, exactly the homeostatic reinforcement learning unification of Chapter 9.
+
+And that reward is then broadcast as dopamine, which Chapter 10 established is the third factor in learning.
+
+In these two sentences the drives, the reward, and the learning signal become one quantity.
+
+This is the loop of the mind, closed in plain English.
+
+A2.5 THE LEARNING RULE: HOW THE SYSTEM CHANGES ITSELF
+
+The purpose of this procedure is to change the weight of every interface according to the three-factor rule.
+
+Create a list variable called all interfaces with initial value empty list.
+Load every interface that can learn into all interfaces.
+Read the current dopamine level as the third factor.
+Create a number variable called third factor with the current dopamine level.
+
+For each interface in all interfaces, perform the following operations:
+    Read the recent activity at the sending end of the interface.
+    Create a number variable called sending activity with that value.
+    Read the recent activity at the receiving end of the interface.
+    Create a number variable called receiving activity with that value.
+    Calculate the product of sending activity and receiving activity.
+    Create a number variable called coincidence with the product.
+    Calculate the product of coincidence and third factor.
+    Create a number variable called raw weight change with the product.
+    Multiply raw weight change by the learning rate.
+    Create a number variable called weight change with the result.
+    Read the current weight of the interface.
+    Calculate the sum of the current weight and weight change.
+    Set the weight of the interface to the sum.
+End the loop.
+
+Apply homeostatic scaling so that each region's average activity stays near its target.
+The procedure is complete.
+
+Read the three multiplied quantities in the middle of the loop: the sending activity, the receiving activity, and the third factor.
+
+Those are Hebb's two factors and the neuromodulatory third factor of Chapter 10, and their product is the weight change.
+
+A connection strengthens only when its two ends are active together AND dopamine says the moment mattered.
+
+The final line, the homeostatic scaling, is the bound that keeps the learning from exploding, the negative feedback on plasticity itself.
+
+The whole of Chapter 10 is these two ideas, and here they are, as a procedure a machine can run.
+
+A2.6 THE ELIGIBILITY TRACE, IN BRIEF
+
+The purpose of this procedure is to let a reward strengthen a connection that was active a moment ago.
+
+For each interface in all interfaces, perform the following operations:
+    Read the current coincidence at the interface.
+    Read the current eligibility trace of the interface.
+    Multiply the current eligibility trace by a fading factor slightly less than one.
+    Calculate the sum of the faded trace and the current coincidence.
+    Set the eligibility trace of the interface to the sum.
+End the loop.
+
+When a reward arrives, multiply each interface's eligibility trace by the third factor, and add the result to its weight.
+The procedure is complete.
+
+The eligibility trace is a fading memory of recent coincidence, so that a reward arriving a second after an action can still find the connection that earned it.
+
+It is the bridge between fast coincidence and slower reward, and Chapter 10 flagged it as well supported experimentally.
+
+A2.7 REFLECTION
+
+Three reflections on the pseudocode.
+
+First, the choice of ERC over a real language is the phase's central decision, and it directly serves the substrate-independence requirement (NFR-3).
+
+Because the logic above commits to no language, it can be translated into Python, into PrologAI, into any language, without rewriting the thinking.
+
+The pseudocode is the contract; the code in each language must honor it.
+
+Second, the pseudocode makes visible how few moving parts the System has.
+
+A reader who feared that modeling a brain requires a hundred bespoke mechanisms can see here that it requires a main loop, six archetype rules, a drive loop, and a learning rule.
+
+The complexity of the System lives in its DATA, the hundred constructs and their connections, not in its CODE.
+
+This is the deepest engineering consequence of the encapsulation thesis, and it is why the System is buildable at all.
+
+Third, an honest note on the ERC extensions, of which there are two kinds, and both are flagged here rather than hidden.
+
+The first is parameter passing: the base ERC catalogue templates procedures without a formal parameter mechanism, and several procedures above take a construct or an interface as their subject in a way that extends the base notation.
+
+The second is composite operations: sentences such as "Gather the total weighted input arriving from all incoming interfaces," "Wrap next phase back into the range of one full cycle," "Find the stored pattern that is most similar to combined pattern," and "Move the activation pattern a small step toward nearest pattern" are not base ERC primitives but named composite operations, each of which stands for a short block of primitive arithmetic, comparison, and list operations that a full implementation must expand, exactly as ERC's own rule requires composites to expand fully to primitives with no residual ambiguity.
+
+They are written at the composite level here for readability, because expanding every weighted sum and every similarity search into primitive loops would bury the logic the pseudocode exists to make plain.
+
+Both kinds of extension are readable and unambiguous, and both are named in the spirit of ERC's rule that a sentence must have one exact meaning.
+
+A full implementation formalizes the parameter convention and expands the composites; the logic is unaffected.
+
+A2.8 NETWORKS, SYSTEMS, AND THE EXTENDED DYNAMICS LABELS
+
+Three notes keep the load-bearing core above consistent with the fuller body of Chapter 2.
+
+First, a large-scale NETWORK (Section 2.10) is not a new kind of update rule; it is a named VIEW over regions that already run their own archetype rules. The System represents a network as a list of member constructs plus its couplings, and computes a network-level quantity (such as its mean activation or its anticorrelation with another network) by reading the members it already updates. No per-network rule is added to the dispatch of Section A2.2.
+
+Second, a cognitive SYSTEM or PATHWAY (Section 2.11) is likewise not a new rule but a named SUBGRAPH or LOOP over the connection graph. The direct, indirect, and hyperdirect pathways are three labelled routes through the existing basal-ganglia constructs; the Papez circuit is a labelled cycle over existing regions and interfaces. The System represents each as an ordered list of the constructs and interfaces it traverses, and runs it by running those constructs and interfaces in order.
+
+Third, the DYNAMICS labels used in the fuller construct profiles (publisher, broadcast publisher, selector, detector, controller, stabilizer, and the compound labels such as integrator-and-publisher or comparator-and-switch) all reduce to the six archetypes of Section A2.3 plus the molecule FIELD kind, applied singly or in sequence. A publisher or broadcast publisher is a construct that, having computed its state by an archetype rule, writes that state to the neuromodulatory or signalling bus (the field kind). A selector is a GATE; a detector is a COMPARATOR or RELAY; a controller and a stabilizer are a GATE or an INTEGRATOR holding a set-point. A compound label names two archetypes run in sequence within one construct. The glia and the tripartite synapse are MODULATORS: they do not carry a signal but adjust the third factor of the learning rule and the persistence of connections, and so enter the System through the plasticity procedure of Section A2.5, not the update dispatch. This preserves the thesis of six rules, not one hundred: nothing above requires a seventh archetype, and, per Assumption 2 of Appendix 1, one is added only if a construct is ever found that resists all six.
+
+A2.9 THE TEST PLAN FOR EACH CORE PROCEDURE
+
+The SPARC Pseudocode phase requires that the pseudocode carry a plan for how each piece will be tested, so the logic and its verification are designed together. Each core procedure above is paired here with the test that verifies it; the tests themselves are written in full in Appendix 4.
+
+THE MAIN LOOP (Section A2.1) is verified by the scheduler test: a run of N ticks updates every construct exactly N times, the two passes never interleave, and no construct reads a neighbour's future within a tick.
+
+THE DISPATCH (Section A2.2) is verified by dispatching a construct of each archetype and asserting the matching rule was called and no other.
+
+THE SIX ARCHETYPE RULES (Section A2.3) are each verified by their isolation test of Appendix 4, Section A4.2: the relay scales, the integrator fills and leaks, the oscillator keeps time, the attractor completes a pattern, the gate resists flipping, and the comparator reports a difference.
+
+THE DRIVE LOOP (Section A2.4) is verified by presenting a monitored variable that departs from and returns to its set-point and asserting that the reward equals the total reduction of drive error and is broadcast as phasic dopamine.
+
+THE LEARNING RULE (Section A2.5) is verified by the learning test: a stimulus paired with reward strengthens the connecting weight by the product of the two activities and the third factor, and homeostatic scaling holds the average activity near target.
+
+THE ELIGIBILITY TRACE (Section A2.6) is verified by rewarding a connection one tick after it was active and asserting the weight still strengthens, and by withholding reward and asserting the trace fades.
+
+Each plan names the single behaviour its test must pin down, in the test-first spirit of Refinement: the procedure and its test are written as a pair, never the procedure alone.
+
+
+
+KONNECTOME REALIZATION LOG
+
+Slice 1 - the heartbeat - 2026-07-20 - pack tick_engine, version 0.1.0.
+
+The main-loop pseudocode of Section A2.1, in its two separate passes over all constructs, is realized by tick_engine_run/5 and tick_engine_step/3. The six-archetype dispatch of Sections A2.2 and A2.3 is deferred to the next slice; the heartbeat uses three minimal update kinds (clock, copy, hold) sufficient to exercise the scheduler.
+
+Gates at this slice: 7 of 7 tick_engine Prolog Unit (PLUnit) tests pass; the naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited; konnectome reuses them through the library path.
+
+This log grows one entry per code slice, per the Tenth Commandment. The full SPARCD Fileset was bumped in lockstep from version 1 to version 2, and the version 1 files were archived under docs/archive/ in the same change, per the Ninth Commandment.
+
+
+KONNECTOME REALIZATION LOG - SLICE 2
+
+Slice 2 - the six archetype rules and the first Causalontology thought - 2026-07-20 - packs archetype (0.1.0) and observer (0.1.0).
+
+The dispatch of Section A2.2 and the six archetype rules of Section A2.3 are realized by the archetype pack (archetype_step/3 plus the six rule predicates).
+
+Gates at this slice: archetype 7 of 7 and observer 6 of 6 Prolog Unit (PLUnit) tests pass; naming, layer, and layer-binding gates report zero violations; the Causalontology 119-vector conformance suite passes 119 of 119. Nothing in PrologAI or Causalontology was edited; konnectome reuses causal_core through the library path.
+
+
+KONNECTOME REALIZATION LOG - SLICE 3
+
+Slice 3 - the connection graph - 2026-07-20 - pack connection_graph (0.1.0).
+
+The 'gather the total weighted input arriving from all incoming interfaces' composite of Section A2.3 is realized by connection_graph_total_input/4, and a two-pass network step propagates signals across the graph.
+
+Gates at this slice: connection_graph 4 of 4 Prolog Unit (PLUnit) tests pass (tick_engine 7, archetype 7, observer 6 unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited; connection_graph reuses the archetype pack.
+
+
+KONNECTOME REALIZATION LOG - SLICE 4
+
+Slice 4 - the reward loop - 2026-07-20 - packs neuromodulator_bus (0.1.0) and drive_system (0.1.0).
+
+The drive loop of Section A2.4 is realized by drive_system_step/6 (reward is the total error reduction, with no spurious first-tick reward), and the reward is broadcast as phasic dopamine on the neuromodulator_bus.
+
+Gates at this slice: neuromodulator_bus 4 of 4 and drive_system 5 of 5 Prolog Unit (PLUnit) tests pass (the earlier four packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 5
+
+Slice 5 - the action selector - 2026-07-20 - pack action_selector (0.1.0).
+
+The 'select one action from the competing drive proposals' step of Section A2.1 is realized by action_selector_select/2.
+
+Gates at this slice: action_selector 6 of 6 Prolog Unit (PLUnit) tests pass (the earlier six packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 6
+
+Slice 6 - the plasticity engine - 2026-07-20 - pack plasticity_engine (0.1.0).
+
+The learning rule of Section A2.5 is realized by plasticity_engine_step/5: the weight change is the product of the sending activity, the receiving activity, and the dopamine third factor, scaled by the learning rate.
+
+Gates at this slice: plasticity_engine 5 of 5 Prolog Unit (PLUnit) tests pass (the earlier seven packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 7
+
+Slice 7 - completing the architecture - 2026-07-20 - packs override_controller (0.1.0) and perturbation_interface (0.1.0).
+
+The action selection under the vitality override is completed by override_controller_arbitrate/4, and the perturbation operations (lesion, cut, shift) are realized for experiments.
+
+Gates at this slice: override_controller 4 of 4 and perturbation_interface 4 of 4 Prolog Unit (PLUnit) tests pass (the earlier eight packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 8
+
+Slice 8 - one running tick - 2026-07-20 - pack cognitive_cycle (0.1.0).
+
+The main loop of Section A2.1 is realized end to end by cognitive_cycle_step/3, which runs the drive loop, the two-pass update, action selection, plasticity, and recording in the specified order.
+
+Gates at this slice: cognitive_cycle 4 of 4 Prolog Unit (PLUnit) tests pass (the earlier ten packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 9
+
+Slice 9 - hardening the loop - 2026-07-20 - packs connection_graph (0.2.0), drive_system (0.2.0), cognitive_cycle (0.2.0).
+
+The gain-reading of Section A2.3 (the neuromodulators set the gain), the action biasing of Section A2.4, and the body's response to action are realized by connection_graph_step_modulated/5, drive_system_proposals/3, and drive_system_apply_action/4.
+
+Gates at this slice: connection_graph 6 of 6, drive_system 9 of 9, and cognitive_cycle 4 of 4 Prolog Unit (PLUnit) tests pass (the other eight packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.

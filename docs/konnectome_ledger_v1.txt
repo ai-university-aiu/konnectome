@@ -222,4 +222,11 @@ running together. Honest non-closure: the construct update does not yet read the
 gain, action proposals are supplied rather than generated from the regions, and the body does not yet
 respond to actions; recorded as pending refinements, not as walls.
 
+Slice-9 note (2026-07-20). The three honest non-closures logged at slice 8 are now closed. The
+construct update reads the bus for gain (connection_graph_step_modulated with a modulated relay),
+action proposals are generated from the drives in proportion to their error (drive_system_proposals),
+and the body responds to the released action (drive_system_apply_action). The integration test shows
+a closed sensorimotor loop: acting to reduce a need moves the body toward its set-point, and that
+improvement feeds back as the next reward. No wall was hit.
+
  Walls: OPEN 0 | ROUTED 0 | CLOSED 0 | UNNECESSARY 0.   Observations: 2.

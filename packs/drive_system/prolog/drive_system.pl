@@ -3,11 +3,15 @@
     % drive_system_error/3: one drive's current error, the distance from its set-point.
     drive_system_error/3,
     % drive_system_step/6: advance all drives one tick, compute the reward, broadcast it as dopamine.
-    drive_system_step/6
+    drive_system_step/6,
+    % drive_system_proposals/3: each drive proposes an action to reduce it, in proportion to its error.
+    drive_system_proposals/3,
+    % drive_system_apply_action/4: the released action moves the body, so the body responds to what is done.
+    drive_system_apply_action/4
 ]).
 
-% Import membership and list summation for reading body variables and summing rewards.
-:- use_module(library(lists), [memberchk/2, sum_list/2]).
+% Import membership, summation, and selection for body variables, rewards, and body updates.
+:- use_module(library(lists), [memberchk/2, sum_list/2, select/3]).
 % Import maplist for updating every drive together.
 :- use_module(library(apply), [maplist/4]).
 % Reuse the neuromodulatory bus to broadcast the reward as dopamine.
@@ -47,3 +51,40 @@ drive_system_step(Drives0, BodyState, Bus0, Drives, Reward, Bus) :-
     sum_list(Reductions, Reward),
     % Broadcast that reward as the phasic dopamine level for this tick.
     neuromodulator_bus_broadcast(Bus0, dopamine, Reward, Bus).
+
+% drive_system_proposals(+Drives, +BodyState, -Candidates): each drive proposes an action to reduce it.
+drive_system_proposals(Drives, BodyState, Candidates) :-
+    % Each drive proposes reducing itself, with a salience equal to its current error (A2.4 biasing).
+    findall(action(reduce(Name), Error),
+            ( member(drive(Name, Variable, SetPoint, Previous), Drives),
+              drive_system_error(drive(Name, Variable, SetPoint, Previous), BodyState, Error) ),
+            Candidates).
+
+% drive_system_toward(+Value, +SetPoint, -NewValue): move a value one step toward the set-point.
+drive_system_toward(Value, SetPoint, NewValue) :-
+    % Step down if above the set-point, up if below, and hold if already there.
+    ( Value > SetPoint -> NewValue is Value - 1
+    ; Value < SetPoint -> NewValue is Value + 1
+    ; NewValue = Value
+    ).
+
+% drive_system_move_variable(+Variable, +SetPoint, +BodyState0, -BodyState): step one body variable toward its set-point.
+drive_system_move_variable(Variable, SetPoint, BodyState0, BodyState) :-
+    % If the body carries the variable, step it toward the set-point; otherwise leave the body unchanged.
+    ( select(Variable-Value, BodyState0, Rest)
+      -> drive_system_toward(Value, SetPoint, NewValue),
+         keysort([Variable-NewValue | Rest], BodyState)
+      ;  BodyState = BodyState0
+    ).
+
+% drive_system_apply_action(+Outcome, +Drives, +BodyState0, -BodyState): the released action moves the body.
+% A reduce action moves that drive's monitored variable one step toward its set-point.
+drive_system_apply_action(released(reduce(Name)), Drives, BodyState0, BodyState) :-
+    % Find the named drive so its monitored variable and set-point are known.
+    memberchk(drive(Name, Variable, SetPoint, _Previous), Drives),
+    % Commit to this clause once the reduce action names a real drive.
+    !,
+    % Move that drive's monitored variable one step toward its set-point.
+    drive_system_move_variable(Variable, SetPoint, BodyState0, BodyState).
+% Any other outcome (a different action, or none) leaves the body unchanged.
+drive_system_apply_action(_Outcome, _Drives, BodyState, BodyState).
