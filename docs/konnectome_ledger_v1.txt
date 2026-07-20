@@ -229,4 +229,15 @@ and the body responds to the released action (drive_system_apply_action). The in
 a closed sensorimotor loop: acting to reduce a need moves the body toward its set-point, and that
 improvement feeds back as the next reward. No wall was hit.
 
+Slice-10 note (2026-07-20). Building thought combination (the thought_combination pack) hit NO
+wall. It is not one of the ten architecture components; it is the substrate the Second Commandment
+names - konnectome's thoughts, thought patterns, chains of thought, and trees of thought - realized
+by minting Causalontology Causal Relation Objects through the reused causal_core. An atomic thought
+is an occurrent; a combination is a content-addressed causal_relation_object over occurrent causes
+and effects; a chain of thought reuses one combination's effect as another's cause; a tree of thought
+is a branching, converging set (a directed acyclic graph). The 119 conformance vectors stayed green.
+Honest non-closure: the token tier (a particular combination that actually happened), provenance and
+signed strength, mechanism decomposition with the hierarchy-consistency check, and refinement lineage
+are recorded as pending elaborations, not walls.
+
  Walls: OPEN 0 | ROUTED 0 | CLOSED 0 | UNNECESSARY 0.   Observations: 2.
