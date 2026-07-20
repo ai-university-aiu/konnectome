@@ -17,7 +17,7 @@ PART ONE - READ THESE FIRST (REMINDERS)
 
 Before you write a single line, read and follow these.
 
-• CONSTITUTION.md (at the repository root). It holds the fifteen commandments that govern the entire build. Read it, then follow it, exactly. It is the supreme law of konnectome.
+• CONSTITUTION.md (at the repository root). It holds the sixteen commandments that govern the entire build. Read it, then follow it, exactly. It is the supreme law of konnectome.
 
 • The SPARCD Fileset. These are the six waterfall documents, currently at version 10: docs/konnectome_1_specification_v10.txt, docs/konnectome_2_pseudocode_v10.txt, docs/konnectome_3_architecture_v10.txt, docs/konnectome_4_refinement_v10.txt, docs/konnectome_5_completion_v10.txt, and docs/konnectome_6_demonstration_v10.txt. Each was seeded from the matching appendix of the guiding book and then grows a Realization Log at its foot, one entry per code slice. Read all six.
 
@@ -33,7 +33,7 @@ Before you write a single line, read and follow these.
 PART TWO - THE IMPORTANT docs/ FILES, AND WHAT EACH IS
 
 
-• CONSTITUTION.md (repository root, not docs) - the fifteen commandments. The law.
+• CONSTITUTION.md (repository root, not docs) - the sixteen commandments. The law.
 
 • docs/konnectome_tutorial_v7.txt - a complete, beginner-friendly tutorial on all of konnectome. Start here if you want the whole picture in plain language. It is maintained under the Fifteenth Commandment and bumps with every code slice.
 
@@ -49,9 +49,9 @@ PART TWO - THE IMPORTANT docs/ FILES, AND WHAT EACH IS
 
 • The guiding-principle documents: docs/THE_ROADMAP_TO_AGI_AND_ASI_MANUSCRIPT.txt, docs/AGI_FOR_EVERYONE_OUTLINE.txt, docs/AGI_FOR_EVERYONE_MANUSCRIPT.txt, docs/SPARCD_EXPLAINED.txt, docs/ENGLISH_READABLE_CODE_MANUSCRIPT.txt, and the palette docs/CRIMSON_TO_GOLD_PALETTE.png.
 
-• The context documents: docs/CONTEXT_HAND_OFF_FROM_CAMBER_VANTBLACK_2026-07-19.txt, docs/WRITEUP_FOR_WAVE_1_TO_WAVE_10.txt, docs/PROJECT_CLOSE_OUT_QA_REPORT_v1.txt, and docs/CAUSALONTOLOGY_3_0_0_REVIEW_AND_4_0_0_ASSESSMENT.txt, plus docs/PrologAI_Requirements_Ledger_v1.txt and docs/Connectome_Master_Plan_v2.txt. These carry the history of how the family came to be.
+• The context documents: docs/2026-07-19_2_Context_Hand-Off_from_Camber_Vantblack.txt, docs/WRITEUP_FOR_WAVE_1_TO_WAVE_10.txt, docs/PROJECT_CLOSE_OUT_QA_REPORT_v1.txt, and docs/CAUSALONTOLOGY_3_0_0_REVIEW_AND_4_0_0_ASSESSMENT.txt, plus docs/PrologAI_Requirements_Ledger_v1.txt and docs/Connectome_Master_Plan_v2.txt. These carry the history of how the family came to be.
 
-• The two earlier hand-offs, both now in the repository: docs/CONTEXT_HAND-OFF_FROM_HALCYON_KEYSTONE_2026-07-19.txt (the hand-off that began this konnectome session, written by the process that finished PrologAI Wave 10 and told me where to start) and docs/CONTEXT_HAND_OFF_FROM_CAMBER_VANTBLACK_2026-07-19.txt. Read both for the deepest history.
+• The two earlier hand-offs, both now in the repository: docs/2026-07-19_1_Context_Hand-Off_from_Halcyon_Keystone.txt (the hand-off that began this konnectome session, written by the process that finished PrologAI Wave 10 and told me where to start) and docs/2026-07-19_2_Context_Hand-Off_from_Camber_Vantblack.txt. Read both for the deepest history.
 
 • docs/archive/ - every superseded version of every versioned document. Only the latest version of anything lives outside the archive (Ninth Commandment).
 
