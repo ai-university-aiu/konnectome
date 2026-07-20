@@ -1,0 +1,289 @@
+CAUSALONTOLOGY - THE THOUGHT-COMBINATION MECHANISM
+
+Target reader: an Artificial Intelligence (AI) Coding Agent that must construct, validate, chain, and query combined thoughts programmatically.
+
+Source of truth: /home/ccaitwo/causalontology (spec/, spec/schema/, bindings/, and Causalontology_Standalone_Design_v22.txt). This document is a derived implementation contract, not the normative spec. On any disagreement, the files under spec/ win, and Causalontology_Standalone_Design_v22.txt wins over spec/causalontology.md.
+
+Spec version assumed: 3.0.0 (eighteen kinds). A 4.0.0 change order exists at /home/ccaitwo/konnectome/docs/Causalontology_4_0_0_CHANGE_ORDER_v2.txt but is NOT yet normative. Before relying on any field, read spec/causalontology.md and confirm the version.
+
+
+0. IMPERATIVE SUMMARY
+
+To combine two-or-more input thoughts into one new output thought, MINT a Causal Relation Object (CRO) whose causes array holds the input occurrent identifiers and whose effects array holds the output occurrent identifier(s).
+
+The CRO is the reified combination. Reified means the causal relation is itself a first-class, content-addressed, immutable object - you construct it, hash it, store it, reference it, and reuse it.
+
+There is no imperative combine(a, b) call and no mutable graph node. Combination is the ACT of constructing a valid CRO document and writing it to the store. Everything else in this file is how to do that correctly.
+
+
+1. VOCABULARY TO TYPE MAPPING
+
+The word thought does not appear in the spec. Map it as follows before writing any code.
+
+• atomic thought  ->  Occurrent (id scheme occurrent:) - an event or process TYPE (a verb), for example occurrent:apply_heat. TYPE, not a dated occasion.
+
+• combined thought / inference "these produce that"  ->  Causal Relation Object (id scheme causal_relation_object:).
+
+• a particular thought-event that actually happened  ->  Token Occurrence (id scheme token_occurrence:), token tier, local by default.
+
+• a particular combination that actually happened  ->  Token Causal Claim (id scheme token_causal_claim:), token tier.
+
+Hard constraint: causes and effects reference OCCURRENTS ONLY. Continuant (noun), Realizable (disposition/function/role), Quality, and any token id are NOT valid members of a type-level CRO causes/effects array. See spec/schema/causal_relation_object.schema.json ($defs.occId pattern).
+
+
+2. THE CAUSAL RELATION OBJECT FIELD CONTRACT
+
+Authoritative schema: /home/ccaitwo/causalontology/spec/schema/causal_relation_object.schema.json. additionalProperties is false - unknown keys are invalid.
+
+Required fields:
+
+• id - string matching ^causal_relation_object:[0-9a-f]{64}$. This IS the content hash (see section 3). Do not choose it; compute it.
+
+• causes - array, minItems 1, items match ^occurrent:[0-9a-f]{64}$. The input set. Two-or-more members is the combination case.
+
+• effects - array, minItems 1, items match ^occurrent:[0-9a-f]{64}$. The output set.
+
+Optional fields (the recipe qualifiers):
+
+• type - const "causal_relation_object".
+
+• modality - enum: necessary, sufficient, contributory, preventive, enabling. ONE value for the whole object (see section 4).
+
+• context - array of occurrent ids - enabling background conditions under which the relation holds. Distinct from causes.
+
+• temporal - object { minimum_delay:number>=0, maximum_delay:number>=0, unit:enum }. unit enum: instant, seconds, minutes, hours, days, weeks, months, years, ticks. Constraint minimum_delay <= maximum_delay (semantics Rule 1). ticks is a dimensionless ORDINAL step counter with NO wall-clock mapping - a tick window and a wall-clock window are DISJOINT dimensions and never compare; converting ticks to seconds is a category error, not a computation.
+
+• mechanism - array of CRO ids (^causal_relation_object:[0-9a-f]{64}$) - the finer CROs whose composition realizes this one (one stratum down). Must be acyclic. Triggers the hierarchy-consistency check (section 6).
+
+• refines - a single CRO id - the more partial CRO this one enriches. Must preserve the parent's causes and effects exactly and add at least one field (semantics Rule 3). Acyclic.
+
+• skips - boolean. true positively asserts this relation crosses NON-adjacent strata with no intervening mechanism - the absence of a mechanism is a POSITIVE FINDING, not a gap. In 3.0.0 the managed Cross Stratal Seam kind subordinates this boolean.
+
+
+3. IDENTITY - HOW TO MINT id (CONTENT ADDRESSING)
+
+Authoritative: /home/ccaitwo/causalontology/spec/identity.md. Reference implementation: bindings/python/causalontology/canonical.py (canonicalize at line 159).
+
+Procedure to compute id:
+
+1. Take the object with all identity-bearing fields you intend to include, PRESENT fields only.
+
+2. Remove id always, and remove signature (signature exists only on the four provenance kinds).
+
+3. Apply RFC 8785 (JavaScript Object Notation Canonicalization Scheme, JCS) to the remainder.
+
+4. Hash the canonical bytes with Secure Hash Algorithm 256-bit (SHA-256).
+
+5. id = "causal_relation_object:" + lowercase hexadecimal digest (64 characters).
+
+Consequences the agent MUST respect:
+
+• Content addressing hashes ONLY fields that are PRESENT. Adding an optional field changes the id and therefore creates a DIFFERENT object. Omitting a field you later add is not an edit - it is a different identity.
+
+• Objects are immutable. There is no update-in-place. To change a claim you mint a new object (and, at provenance level, may Retract the old assertion or record a Succession).
+
+• Two authors who independently construct the byte-identical CRO get the identical id - duplicates collapse for free on merge (section 9).
+
+
+4. COMBINATION SEMANTICS - WHAT A CRO ASSERTS
+
+• Set semantics. causes and effects are compared AS SETS of identifiers (semantics Rule 6 / conflict test; design doc line ~1500). Order and duplication are not meaning-bearing at the semantic level; construct them as deduplicated, and canonicalize deterministically for hashing.
+
+• Base binding is conjunctive/joint. The JavaScript Object Notation for Linked Data (JSON-LD) context fixes each cause as Relation Ontology term ro:0002411 (causally upstream of) the effects (design doc line 1220). Read: every member of causes, taken together, is causally upstream of every member of effects. A multi-member causes array is the AND-bundle of inputs, not alternatives.
+
+• Modality is one label for the WHOLE object, never per-cause. To express that input A alone is necessary AND input B alone is necessary AND {A,B} together are sufficient, mint THREE CROs over the same effect: ({A})->E necessary, ({B})->E necessary, ({A,B})->E sufficient. Do not attempt to annotate individual causes.
+
+• necessary/sufficient/contributory/enabling are mutually compatible (same direction of influence); preventive opposes all four (semantics Rule 6). Two CROs conflict iff equal cause sets, equal effect sets, compatible contexts, overlapping windows, and one is preventive while the other is positive.
+
+• The CRO carries NO quantitative weight, NO ratio, NO stoichiometry, and NO strength or confidence. Do not add such fields (additionalProperties:false forbids it). Quantitative degree is a SEPARATE signed Assertion; modality's formal meaning is grounded in do-calculus (reasoning about deliberate intervention, written do(X)) as the definition of the Assertion's strength, for example strength = P(effects within window | do(causes), context). See provenance.md and design doc lines ~1485 to 1500.
+
+• The CRO REFERENCES occurrents; it does not create them. The new thing minted by a combination is the RELATION (the CRO), not the effect occurrent. The effect occurrent must already exist in the vocabulary (mint it first if absent - see section 5 step 1).
+
+
+5. CONSTRUCTION PROCEDURE (PROGRAMMATIC)
+
+1. Resolve or mint each input Occurrent and the output Occurrent. Occurrents are themselves content-addressed (occurrent: + SHA-256 over canonical identity-bearing bytes; schema spec/schema/occurrent.schema.json). Reuse existing ids where they exist - resolve-before-mint to avoid near-duplicate vocabulary.
+
+2. Assemble the CRO body: causes = [input occurrent ids], effects = [output occurrent id(s)], plus any of modality, context, temporal, mechanism, refines, skips.
+
+3. Compute id per section 3.
+
+4. Validate SCHEMA (JSON Schema, draft 2020-12) against causal_relation_object.schema.json.
+
+5. Validate SEMANTICS (section 6). Minimum for a bare combination: Rule 1 (temporal window ordering, if present), Rule 2 (no dangling references - every referenced occurrent/CRO id resolves in the store), Rule 4 (acyclicity if mechanism or refines present).
+
+6. If mechanism is present, ensure every mechanism member exists and run the hierarchy-consistency check (Algorithm B) - see section 6.
+
+7. Optionally attach provenance: mint an Assertion (author, evidence type, strength, confidence, time, Ed25519 signature) that points at this CRO. The CRO stays pure; the Assertion carries who-said-it and how-strongly.
+
+8. Write to the store. Content objects are add-only; writing an id that already exists is an idempotent no-operation.
+
+
+6. VALIDATION RULES THE AGENT MUST ENFORCE
+
+Authoritative: /home/ccaitwo/causalontology/spec/semantics.md. A document is SCHEMA-VALID if it matches its JSON Schema and SEMANTICALLY-VALID if it also satisfies these rules. Reference algorithms live in the Python binding (semantics.md section 8 points here), NOT as literal prose in the markdown.
+
+Rules that bear on combination:
+
+• Rule 1 Temporal windows - minimum_delay <= maximum_delay.
+
+• Rule 2 Dangling reference - any id referenced but absent from the store surfaces dangling_reference. Applies to causes, effects, context, mechanism, refines, and every other reference field.
+
+• Rule 3 Refinement - R refines P validly iff R's causes and effects equal P's; every field P specifies, R specifies with the same value; and R adds at least one field P left unspecified.
+
+• Rule 4 Acyclicity - the mechanism graph, the refines graph, the materialized subsumes/part_of graphs, and the bridge graph are each acyclic. Reject cycles.
+
+• Rule 6 Conflict - as in section 4 (preventive versus positive over equal cause/effect sets, compatible contexts, overlapping windows).
+
+• Rule 7 Hierarchy consistency (BRIDGED reachability) - THE key composition rule, and it applies ONLY to a CRO that carries a mechanism. Do not apply it to a bare CRO. Algorithm: build a directed graph; for each mechanism member m, add an edge from every element of m.causes to every element of m.effects; bridge-close each of the parent P's causes and effects (Algorithm A); the parent is consistent iff for every pair (c, e) with c in P.causes and e in P.effects, some c' in the bridge-closure of c reaches some e' in the bridge-closure of e. Missing members make the result INDETERMINATE (a dangling gap), NOT failed. Outcomes are three-valued: consistent, inconsistent, indeterminate.
+
+• Rule 9 Merge - immutable objects, add-only records, set union (section 9).
+
+Binding function pointers (reference implementation, Python):
+
+• /home/ccaitwo/causalontology/bindings/python/causalontology/semantics.py line 208 - bridge_closure(occurrent_id, bridges) = Algorithm A.
+
+• /home/ccaitwo/causalontology/bindings/python/causalontology/semantics.py line 244 - hierarchy_consistent(parent, members, bridges=()) = Algorithm B.
+
+• /home/ccaitwo/causalontology/bindings/python/causalontology/semantics.py line 169 - conflicts(a, b) = Rule 6.
+
+• /home/ccaitwo/causalontology/bindings/python/causalontology/canonical.py line 159 - canonicalize(obj, kind=None).
+
+Other-language bindings mirror these under /home/ccaitwo/causalontology/bindings/<lang>/.
+
+
+7. COMPOSITION AND CHAINING (CHAINS AND TREES OF THOUGHT)
+
+Chaining is enabled precisely because a CRO references occurrents rather than embedding them, so one CRO's effect occurrent can be reused as another CRO's cause occurrent.
+
+• Chain of thought - a sequence of CROs where effect(cro_n) is a member of causes(cro_n+1). A produces B, B produces C. Each link is an independent, inspectable, individually-signed object.
+
+• Tree of thought - a Directed Acyclic Graph (DAG). One occurrent may be a cause in several CROs (fan-out / branching); several CROs may share an effect (convergence). Rule 4 forbids cycles, so the structure is always a DAG.
+
+• Nested decomposition - the mechanism field expands any node into an internal sub-graph of finer CROs, verified by Rule 7. This gives a tree whose nodes each open into smaller trees (multi-stratum).
+
+• Refinement lineage - refines lets a partial CRO be enriched in place-of-meaning while preserving causes/effects (Rule 3). Use for progressive elaboration of the same claim.
+
+• Explicit wiring (secondary machinery) - Port and Conduit model typed interfaces and directed connections between enduring things. A Conduit is TRANSMISSIVE if its transform field is absent, or COMPUTATIONAL if transform is present - and transform is itself a CRO id (spec/schema/conduit.schema.json). So the wiring layer delegates all actual transformation back to a CRO. Use ports/conduits to model signal-passing topology; use CROs for the causal content.
+
+• Cross-stratal identity - Bridge asserts one coarse occurrent IS a set of finer ones (aggregation across levels). Cross Stratal Seam (3.0.0) records a managed jump across non-adjacent strata with a mechanism_status of unmodeled versus absent and an optional drawn chain. These express identity and layer-skips, not causation.
+
+
+8. TOKEN TIER (PARTICULAR COMBINATIONS)
+
+When you need to record that a specific combination actually occurred on one occasion, use the token tier. It is LOCAL BY DEFAULT (privacy; not federated unless explicitly published - see spec/safety.md).
+
+• Token Causal Claim - schema spec/schema/token_causal_claim.schema.json. Required id, type, causes, effects. causes and effects are arrays (minItems 1) of token_occurrence ids, NOT occurrent ids. Optional covering_law is the type-level CRO id this instance instantiates. Optional actual_delay { duration, unit } is the delay OBSERVED on this occasion; a tick-unit observed delay compares to a tick-unit covering-law window by integer and never to a wall-clock window. Optional counterfactual boolean asserts the but-for test for this occasion only.
+
+Relationship: the CRO is the general law (the recipe); the Token Causal Claim is one execution of it, optionally linked upward via covering_law.
+
+
+9. PROVENANCE AND MERGE
+
+• Separation of content and provenance is absolute. Content objects (CRO, occurrent, etc.) carry no source, no strength, no confidence, no assertion-time. Every mutable/graded datum is a signed, add-only provenance record.
+
+• Assertion - "source S asserts claim C, evidence type t, strength s, confidence c, at time T", optionally evidenced_by token evidence. Ed25519 signed. This is where strength/confidence for a CRO live.
+
+• Enrichment - adds an entry to a specific open field of an object (aliases, participants, subsumes, part_of, realized_in, occurrent_subsumes, occurrent_part_of).
+
+• Retraction - withdraws the author's OWN earlier assertion or enrichment.
+
+• Succession - "key K2 succeeds key K1", signed by K1.
+
+• Merge - Rule 9 and identity.md: all content kinds merge by SET UNION; provenance records are add-only; replicas merge in any order with no coordinator. This is a grow-only Conflict-free Replicated Data Type (CRDT). Nothing is removed by merge. Byte-identical objects (same id) collapse; different objects coexist. The agent needs no merge/conflict-resolution logic beyond set union over ids.
+
+
+10. WORKED OBJECTS
+
+Single combination (fire plus chicken makes baked chicken; ids shortened, replace <hash> with the computed digest):
+
+  {
+    "id": "causal_relation_object:<hash>",
+    "type": "causal_relation_object",
+    "causes": ["occurrent:apply_heat", "occurrent:place_raw_chicken"],
+    "effects": ["occurrent:chicken_is_baked"],
+    "modality": "sufficient",
+    "context": ["occurrent:furnace_is_lit"],
+    "temporal": { "minimum_delay": 8, "maximum_delay": 12, "unit": "seconds" },
+    "mechanism": ["causal_relation_object:<smelting_substeps>"]
+  }
+
+Two-link chain (effect of link 1 becomes a cause of link 2):
+
+  link1: causes ["occurrent:apply_heat","occurrent:place_raw_chicken"] -> effects ["occurrent:chicken_is_baked"]
+  link2: causes ["occurrent:chicken_is_baked","occurrent:eat_food"]     -> effects ["occurrent:hunger_reduced"]
+
+Decomposition (coarse CRO with a mechanism member, subject to Rule 7):
+
+  coarse: causes ["occurrent:apply_heat","occurrent:place_raw_chicken"] -> effects ["occurrent:chicken_is_baked"], mechanism ["causal_relation_object:<protein_denaturation_step>"]
+  the mechanism member must chain apply_heat/place_raw_chicken through to chicken_is_baked (bridge-closed) or the coarse CRO is INDETERMINATE / INCONSISTENT.
+
+
+11. INVARIANTS AND ANTI-PATTERNS CHECKLIST
+
+• DO NOT put continuant/realizable/quality/token ids in a type-level causes or effects. Occurrents only.
+
+• DO NOT hand-assign id. Compute it from canonical bytes; a wrong id is a different object and will fail content-address verification by light clients.
+
+• DO NOT add strength, weight, ratio, probability, or confidence to a CRO. Those belong on a signed Assertion.
+
+• DO NOT tag modality per-cause. Mint separate CROs.
+
+• DO NOT apply the hierarchy-consistency rule to a bare CRO. It is scoped to CROs that carry a mechanism.
+
+• DO NOT treat causes as alternatives. Multi-member causes is a joint AND-bundle.
+
+• DO NOT compare a ticks window with a wall-clock window. They are disjoint dimensions.
+
+• DO NOT mutate. Mint new objects; use Retraction/Succession at the provenance layer.
+
+• DO NOT conflate the two set notions: causes/effects are sets WITHIN one CRO; set-union merge is the store-level CRDT across many objects.
+
+• DO ensure resolve-before-mint for occurrents to avoid near-synonym vocabulary drift.
+
+
+12. CONFORMANCE TARGETS
+
+An implementation is conformant iff it passes every vector V01 to V119 for spec version 3.0.0. Vectors: /home/ccaitwo/causalontology/conformance/vectors/ (119 files). High-value vectors for combination logic:
+
+• v01_complete_cro_is_valid.json - a full CRO passes.
+
+• v02_degenerate_cro_is_valid_and_partial.json - minimal CRO (id, causes, effects) is valid.
+
+• v03_missing_effects_is_invalid.json - effects is required.
+
+• v04_empty_causes_is_invalid.json - causes minItems 1.
+
+• v05_unknown_modality_is_invalid.json - modality enum is closed.
+
+• v06_additional_property_is_invalid.json - additionalProperties false.
+
+• v07_free_text_cause_is_invalid.json - causes must be occurrent ids, not text.
+
+Run these to self-check any construction/validation code before trusting it.
+
+
+13. FILE MAP AND ANCHORS (all under /home/ccaitwo/causalontology/)
+
+• spec/causalontology.md - the eighteen-kind object model and the version.
+
+• spec/schema/causal_relation_object.schema.json - the CRO contract.
+
+• spec/schema/occurrent.schema.json, conduit.schema.json, port.schema.json, bridge.schema.json, cross_stratal_seam.schema.json, token_causal_claim.schema.json - related kinds.
+
+• spec/semantics.md - Rules 1 to 23 (validation).
+
+• spec/identity.md - canonicalization, SHA-256 content addressing, set-union merge.
+
+• spec/provenance.md - Assertion, strength, do-calculus grounding, signatures, retraction, succession.
+
+• bindings/python/causalontology/canonical.py and semantics.py - reference algorithms (line anchors in section 6).
+
+• conformance/vectors/ - V01 to V119.
+
+• Causalontology_Standalone_Design_v22.txt - authoritative rationale. Anchors: line 141 (reification purpose), line 171 (mechanism decomposition example), line 649 (the fundamental-unit definition), line 701 (ports/conduits, Perfect Wire Test), lines ~1220 and ~1485 to 1500 (causally-upstream binding, do-calculus strength, set-comparison of causes).
+
+
+14. VERSION CAVEAT
+
+This document describes spec 3.0.0. The konnectome repository contains forward-looking material: docs/Causalontology_4_0_0_CHANGE_ORDER_v2.txt and docs/CAUSALONTOLOGY_3_0_0_REVIEW_AND_4_0_0_ASSESSMENT.txt. Do not treat 4.0.0 fields as available until spec/causalontology.md declares 4.0.0 and the schemas and conformance vectors are updated. Verify the version at the start of any task.
