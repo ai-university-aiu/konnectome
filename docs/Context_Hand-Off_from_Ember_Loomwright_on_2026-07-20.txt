@@ -51,6 +51,8 @@ PART TWO - THE IMPORTANT docs/ FILES, AND WHAT EACH IS
 
 • The context documents: docs/CONTEXT_HAND_OFF_FROM_CAMBER_VANTBLACK_2026-07-19.txt, docs/WRITEUP_FOR_WAVE_1_TO_WAVE_10.txt, docs/PROJECT_CLOSE_OUT_QA_REPORT_v1.txt, and docs/CAUSALONTOLOGY_3_0_0_REVIEW_AND_4_0_0_ASSESSMENT.txt, plus docs/PrologAI_Requirements_Ledger_v1.txt and docs/Connectome_Master_Plan_v2.txt. These carry the history of how the family came to be.
 
+• The two earlier hand-offs, both now in the repository: docs/CONTEXT_HAND-OFF_FROM_HALCYON_KEYSTONE_2026-07-19.txt (the hand-off that began this konnectome session, written by the process that finished PrologAI Wave 10 and told me where to start) and docs/CONTEXT_HAND_OFF_FROM_CAMBER_VANTBLACK_2026-07-19.txt. Read both for the deepest history.
+
 • docs/archive/ - every superseded version of every versioned document. Only the latest version of anything lives outside the archive (Ninth Commandment).
 
 Read all of docs/, not only these.
@@ -59,7 +61,7 @@ Read all of docs/, not only these.
 PART THREE - WHAT I DID (THE REPORT)
 
 
-I built konnectome from an empty public repository to a running, integrated, glass-box Proto-Artificial-General-Intelligence (Proto-AGI) prototype, across twelve merged pull requests.
+I built konnectome from an empty public repository to a running, integrated, glass-box Proto-Artificial-General-Intelligence (Proto-AGI) prototype that also combines thoughts, across fourteen merged pull requests.
 
 The setup.
 
@@ -89,11 +91,15 @@ The ten architecture components (Section A3.2), each realized as a pack of three
 
 • cognitive_cycle - the integration: it wires all ten components into one running tick in the Section A3.3 order, and completes Component 1 (the construct registry) as the world it carries. In its hardened form it is a closed sensorimotor loop: the drives propose actions, a construct's gain is set by the bus, the action is released under the safety override, the plasticity engine learns, and the body responds - so acting to reduce a need moves the body toward its set-point, and that improvement feeds back as the next tick's reward.
 
+Beyond the ten components, one capability.
+
+• thought_combination - konnectome now combines thoughts by minting Causalontology Causal Relation Objects through the reused causal_core. An atomic thought is an occurrent; a combination is a content-addressed causal_relation_object over occurrent causes and effects; one combination's effect reused as another's cause is a chain of thought, and a branching, converging set is a tree of thought. This is the substrate the Second Commandment names, and it touches nothing in the frozen ontology.
+
 The state at hand-off.
 
-• Eleven packs, sixty-two Prolog Unit tests, all green. The naming, layer, and layer-binding gates all report zero violations. The Causalontology one-hundred-nineteen-vector conformance suite passes 119 of 119. Zero walls were hit; two observations were logged (not routed). Nothing in PrologAI or Causalontology was edited, so the ARC-AGI benchmarks are untouched.
+• Twelve packs, sixty-nine Prolog Unit tests, all green. The naming, layer, and layer-binding gates all report zero violations. The Causalontology one-hundred-nineteen-vector conformance suite passes 119 of 119. Zero walls were hit; two observations were logged (not routed). Nothing in PrologAI or Causalontology was edited, so the ARC-AGI benchmarks are untouched.
 
-• The main branch is at commit 3c7a927 on GitHub at ai-university-aiu/konnectome. Twelve pull requests were merged. The SPARCD Fileset is at version 10 and the tutorial at version 7.
+• The main branch is at commit 3115483 on GitHub at ai-university-aiu/konnectome. Fourteen pull requests were merged (a fifteenth carries this updated hand-off and moves the Halcyon Keystone hand-off into docs/). The SPARCD Fileset is at version 11 and the tutorial at version 8.
 
 
 PART FOUR - OTHER CONTEXT YOU SHOULD KNOW
@@ -119,11 +125,13 @@ Present the current choice options to the owner as the first task of the continu
 
 1. Pause at this capstone.
 
-2. Climb the ladder (senses).
+2. Climb the ladder (senses): wire in a sense that arrives each tick, and hold a hidden object in mind across ticks.
 
-3. A capstone demonstration.
+3. A capstone demonstration: a runnable script that boots the mind, runs it for many ticks, and prints its glass-box story (drives, reward, dopamine, action, learning, body, and a combined thought).
 
-4. Other ______________ .
+4. Elaborate thought combination: the token tier (a particular combination that occurred), signed provenance and strength, mechanism decomposition with the hierarchy-consistency check, and refinement lineage.
+
+5. Other ______________ .
 
 
 The ember is lit and the loop turns. Keep it green, keep it honest, and build the next rung on top of it.
