@@ -122,12 +122,12 @@ The six-phase waterfall is mirrored in six versioned documents, each seeded verb
 
 | Phase | File | Seeded from |
 |---|---|---|
-| 1. Specification | [`docs/konnectome_1_specification_v1.txt`](docs/konnectome_1_specification_v1.txt) | Appendix 1 |
-| 2. Pseudocode | [`docs/konnectome_2_pseudocode_v1.txt`](docs/konnectome_2_pseudocode_v1.txt) | Appendix 2 |
-| 3. Architecture | [`docs/konnectome_3_architecture_v1.txt`](docs/konnectome_3_architecture_v1.txt) | Appendix 3 |
-| 4. Refinement | [`docs/konnectome_4_refinement_v1.txt`](docs/konnectome_4_refinement_v1.txt) | Appendix 4 |
-| 5. Completion | [`docs/konnectome_5_completion_v1.txt`](docs/konnectome_5_completion_v1.txt) | Appendix 5 |
-| 6. Demonstration | [`docs/konnectome_6_demonstration_v1.txt`](docs/konnectome_6_demonstration_v1.txt) | Appendix 6 |
+| 1. Specification | [`docs/konnectome_1_specification_v2.txt`](docs/konnectome_1_specification_v2.txt) | Appendix 1 |
+| 2. Pseudocode | [`docs/konnectome_2_pseudocode_v2.txt`](docs/konnectome_2_pseudocode_v2.txt) | Appendix 2 |
+| 3. Architecture | [`docs/konnectome_3_architecture_v2.txt`](docs/konnectome_3_architecture_v2.txt) | Appendix 3 |
+| 4. Refinement | [`docs/konnectome_4_refinement_v2.txt`](docs/konnectome_4_refinement_v2.txt) | Appendix 4 |
+| 5. Completion | [`docs/konnectome_5_completion_v2.txt`](docs/konnectome_5_completion_v2.txt) | Appendix 5 |
+| 6. Demonstration | [`docs/konnectome_6_demonstration_v2.txt`](docs/konnectome_6_demonstration_v2.txt) | Appendix 6 |
 
 ## The build ladder
 
