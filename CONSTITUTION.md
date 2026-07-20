@@ -164,5 +164,42 @@ Maintain versioned updates to /docs/konnectome_tutorial_v1.txt as any new code c
 (The tutorial is versioned under the same archive discipline as the Ninth Commandment: when a code
 change bumps it, the superseded version moves to docs/archive/ in the same change, so only the latest
 tutorial lives outside the archive, and it always describes the konnectome that exists.)
+ ...
+THE SIXTEENTH COMMANDMENT: CONTEXT-WINDOW MANAGEMENT AND THE HAND-OFF PROTOCOL:
+A long session degrades (context rot, and the lost-in-the-middle effect), and the assistant cannot see
+the context window's fill level from its own side, so the trigger must never rely on the assistant
+watching a token count. Two triggers govern the hand-off. First, the MILESTONE trigger: after each
+merged slice or unit of work, the assistant proactively offers to write a Context Hand-Off and to
+continue in a fresh session. Second, the OWNER trigger: the owner watches the true gauge with the
+/context command (and /usage for plan limits), and when the window is high - as a guideline, above one
+hundred thousand tokens, or above roughly sixty percent of the window - the owner asks for a hand-off.
+On either trigger, the assistant carries out the Hand-Off Protocol below, commits the result on a
+feature/ branch through a pull request (Fourteenth Commandment), and then PAUSES. A fresh session then
+re-loads state from docs/ - the ledger, the SPARCD Fileset, the tutorial, and the latest hand-off - and
+continues from the known-good baseline, because all durable state lives on disk and never only in the
+conversation.
+
+THE HAND-OFF PROTOCOL. The assistant performs these steps.
+Step 1: Give yourself a fun, creative, original name.
+Step 2: Write to file:
+/home/ccaitwo/konnectome/docs/[DATE]_[SERIAL NUMBER]_Context_Hand-Off_from_[NAME].txt
+where [DATE] is the current date as year-month-day (for example 2026-07-20); [SERIAL NUMBER] is the next
+free number for that date, starting at 1 (so a second hand-off written on the same day is _2); and [NAME]
+is the name chosen in Step 1 - for example, 2026-07-20_1_Context_Hand-Off_from_Ember_Loomwright.txt .
+Step 3: To this file write the following information for the next building or maintenance process to read:
+- The name chosen and the date, and a sentence on why the name was chosen.
+- A reminder to read and follow CONSTITUTION.md (all sixteen commandments).
+- A reminder to read The SPARCD Fileset (docs/konnectome_1_specification through konnectome_6_demonstration, at their current versions).
+- A reminder to read docs/NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt, the guiding book.
+- A reminder to read the Settings, General, Instructions for Claude (the owner's standing instructions to the assistant).
+- A reminder to read /home/ccaitwo/PrologAI/CLAUDE.md, which is git-untracked (gitignored) and holds PrologAI's current-state narrative.
+- A reminder to read the current docs/konnectome_tutorial (the maintained beginner tutorial), and to read all of the documents in docs/.
+- A list of the important docs/ files and what each is: the ledger, the SPARCD Fileset, the two change orders, the tutorial, the thought-combination guide, the guiding-principle documents, the context documents, and the earlier hand-offs (named by the convention of Step 2).
+- A report of what was done in the session that is ending: the slices built, the packs, the tests, the pull requests merged, the current main commit, and the current SPARCD and tutorial versions.
+- The build-against cousin commits (causalontology, PrologAI, Mentova), for reproducibility.
+- Any other context the assistant judges important for the next process: open observations, honest non-closures, sharp edges, and anything discovered that is not obvious from the code.
+- The current first-task menu of options for the continuation to present to the owner, ending with an "Other ______" option.
+- A short sign-off.
+Step 4: Commit the hand-off on a feature/ branch through a pull request, then PAUSE.
 
 END OF CONSTITUTION.

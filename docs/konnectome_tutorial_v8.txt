@@ -60,7 +60,7 @@ These are the words you will meet. Each is defined in plain language.
 PART FOUR - HOW KONNECTOME IS GOVERNED: THE CONSTITUTION
 
 
-konnectome is built under a written CONSTITUTION.md file of fifteen numbered rules called commandments. Here they are in plain language.
+konnectome is built under a written CONSTITUTION.md file of sixteen numbered rules called commandments. Here they are in plain language.
 
 • One: build with Artificial General Intelligence and Artificial Super Intelligence (a mind beyond human level) in mind, guided by three roadmap documents.
 
@@ -91,6 +91,8 @@ konnectome is built under a written CONSTITUTION.md file of fifteen numbered rul
 • Fourteen: branch-and-report discipline - work on a side branch, open a pull request, never credit an artificial-intelligence tool as an author, and use no Roman numerals.
 
 • Fifteen: this tutorial - keep a complete, beginner-friendly tutorial, versioned and updated as the code grows.
+
+• Sixteen: context-window management - because the assistant cannot see how full the context window is, it offers a hand-off at each milestone and the owner watches the /context gauge; when the window is high, a dated hand-off document is written and the session pauses, so a fresh session can continue from the files on disk.
 
 
 PART FIVE - THE METHOD: SPARCD, ENGLISH READABLE CODE, WHOLE WORDS
@@ -239,7 +241,7 @@ PART ELEVEN - WHERE TO LOOK NEXT
 
 Everything konnectome needs is inside its own docs/ folder, so you never have to look elsewhere.
 
-• CONSTITUTION.md - the fifteen rules that govern the build.
+• CONSTITUTION.md - the sixteen rules that govern the build.
 
 • konnectome_1_specification through konnectome_6_demonstration - the six method documents (the latest versions live outside the archive).
 
