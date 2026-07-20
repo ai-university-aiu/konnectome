@@ -34,7 +34,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/PARENT_ORG-AI--UNIVERSITY--AIU-570000?style=for-the-badge" alt="Parent org ai-university-aiu">
   <a href="https://github.com/ai-university-aiu/Mentova"><img src="https://img.shields.io/badge/COUSINS-PROLOGAI_+_CAUSALONTOLOGY_+_MENTOVA-480000?style=for-the-badge" alt="Cousins PrologAI, Causalontology, Mentova"></a>
-  <img src="https://img.shields.io/badge/STATUS-BUILDING,_9_OF_10_COMPONENTS-3A0000?style=for-the-badge" alt="Status: scaffolding, build in progress">
+  <img src="https://img.shields.io/badge/STATUS-ALL_TEN_COMPONENTS_RUNNING-3A0000?style=for-the-badge" alt="Status: scaffolding, build in progress">
 </p>
 
 <p align="center"><sub>The ARC-AGI scores are earned by the reference language, PrologAI, through Mentova - not by konnectome. konnectome inherits them as gates it must never break (Thirteenth Commandment). The banner above is a placeholder the user will replace.</sub></p>
@@ -122,12 +122,12 @@ The six-phase waterfall is mirrored in six versioned documents, each seeded verb
 
 | Phase | File | Seeded from |
 |---|---|---|
-| 1. Specification | [`docs/konnectome_1_specification_v8.txt`](docs/konnectome_1_specification_v8.txt) | Appendix 1 |
-| 2. Pseudocode | [`docs/konnectome_2_pseudocode_v8.txt`](docs/konnectome_2_pseudocode_v8.txt) | Appendix 2 |
-| 3. Architecture | [`docs/konnectome_3_architecture_v8.txt`](docs/konnectome_3_architecture_v8.txt) | Appendix 3 |
-| 4. Refinement | [`docs/konnectome_4_refinement_v8.txt`](docs/konnectome_4_refinement_v8.txt) | Appendix 4 |
-| 5. Completion | [`docs/konnectome_5_completion_v8.txt`](docs/konnectome_5_completion_v8.txt) | Appendix 5 |
-| 6. Demonstration | [`docs/konnectome_6_demonstration_v8.txt`](docs/konnectome_6_demonstration_v8.txt) | Appendix 6 |
+| 1. Specification | [`docs/konnectome_1_specification_v9.txt`](docs/konnectome_1_specification_v9.txt) | Appendix 1 |
+| 2. Pseudocode | [`docs/konnectome_2_pseudocode_v9.txt`](docs/konnectome_2_pseudocode_v9.txt) | Appendix 2 |
+| 3. Architecture | [`docs/konnectome_3_architecture_v9.txt`](docs/konnectome_3_architecture_v9.txt) | Appendix 3 |
+| 4. Refinement | [`docs/konnectome_4_refinement_v9.txt`](docs/konnectome_4_refinement_v9.txt) | Appendix 4 |
+| 5. Completion | [`docs/konnectome_5_completion_v9.txt`](docs/konnectome_5_completion_v9.txt) | Appendix 5 |
+| 6. Demonstration | [`docs/konnectome_6_demonstration_v9.txt`](docs/konnectome_6_demonstration_v9.txt) | Appendix 6 |
 
 ## The build ladder
 
@@ -160,10 +160,11 @@ konnectome/
     plasticity_engine/         Slice 6: the plasticity engine (Component 8), three-factor learning.
     override_controller/       Slice 7: the override controller (Component 7), the safety property.
     perturbation_interface/    Slice 7: the perturbation interface (Component 10), for experiments.
+    cognitive_cycle/           Slice 8: one integrated tick wiring all ten components together.
   docs/
     konnectome_1..6_*_vN.txt   The SPARCD Fileset (seeded from the appendices; versioned per slice).
     konnectome_ledger_v1.txt   The running scoreboard of findings (Fourth Commandment).
-    konnectome_tutorial_v5.txt A complete beginner tutorial (Fifteenth Commandment), versioned.
+    konnectome_tutorial_v6.txt A complete beginner tutorial (Fifteenth Commandment), versioned.
     PrologAI_CHANGE_ORDER_v1.txt        Additive PrologAI-language gaps (Third Commandment).
     Causalontology_4_0_0_CHANGE_ORDER_v2.txt   Data-structure gaps for the frozen ontology.
     NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt  The source book.
@@ -174,7 +175,7 @@ konnectome/
 
 ## Status
 
-The build has begun and is climbing the ladder. Seven slices have landed on `main` (ten packs, 52 tests, all green):
+The build has begun and is climbing the ladder. Eight slices have landed on `main` (eleven packs, 56 tests, all green):
 
 - **Slice 1 - the heartbeat** (`tick_engine`): the Scheduler and Tick Engine (Component 2), with the two-pass synchronous update. 7 of 7 tests.
 - **Slice 2 - archetypes and the first thought** (`archetype`, `observer`): the six dynamical archetype rules (Appendix 2, Section A2.3) and the observer recording each tick as a Causalontology `token_occurrence` (Component 9) via the reused `causal_core`. 7 of 7 and 6 of 6 tests; the 119 conformance vectors stay green.
@@ -183,8 +184,9 @@ The build has begun and is climbing the ladder. Seven slices have landed on `mai
 - **Slice 5 - the action selector** (`action_selector`): the referee (Component 6) that releases exactly one candidate action - the strongest, drive-biased - and never invents one. 6 of 6 tests.
 - **Slice 6 - the plasticity engine** (`plasticity_engine`): the three-factor learning rule (Component 8) - sending activity, receiving activity, and dopamine - that changes connection weights. This closes the loop of the mind: want, act, reward, learn. 5 of 5 tests.
 - **Slice 7 - completing the architecture** (`override_controller`, `perturbation_interface`): the override controller (Component 7 - vital drives seize control, the inviolable safety property) and the perturbation interface (Component 10 - lesion, cut, shift for experiments). 4 of 4 and 4 of 4 tests. **All ten architecture components now stand.**
+- **Slice 8 - one running tick** (`cognitive_cycle`): all ten components wired into a single end-to-end tick (Section A3.3 order) - the whole mind runs as one loop that wants, acts under its safety override, learns, and records each tick as a Causalontology thought, reproducibly. 4 of 4 tests. **konnectome now runs.**
 
-Next: wiring the ten components into one running tick end to end, and climbing the developmental ladder (senses, language, reasoning). This README, and every badge on it, is kept honest as the build climbs.
+Next: climbing the developmental ladder of Appendix 6 - senses wired in, holding an object in mind, then language and reasoning. This README, and every badge on it, is kept honest as the build climbs.
 
 ## License and attribution
 
