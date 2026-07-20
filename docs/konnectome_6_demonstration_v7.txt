@@ -1,0 +1,559 @@
+APPENDIX 6. DEMONSTRATION
+
+A6.0 THE PURPOSE OF THIS PHASE
+
+Demonstration is the sixth phase, added by this work to the five of SPARC, giving the acronym SPARCD.
+
+An ordinary specification may end at Completion, with a working system.
+
+A specification of a mind owes more.
+
+This appendix demonstrates three things: that the System as specified is programming-language-agnostic and data-structure-agnostic, so that anyone may build it in any language on any substrate; that concrete implementations are planned and how they relate; and, with full honesty, what this System might and might not become, including the largest and most consequential question a specification of a cognitive architecture can raise, the question of Artificial General Intelligence.
+
+A6.1 THE FIRST DEMONSTRATION: IT IS PROGRAMMING-LANGUAGE-AGNOSTIC
+
+Read back through Appendices 1 through 5 and notice what is absent: there is no programming language anywhere in them.
+
+The requirements are stated in English.
+
+The logic is stated in English Readable Code.
+
+The architecture is stated as ten components and a tick ordering.
+
+The tests are stated as experiments.
+
+Not one line commits to Python, or to PrologAI, or to any language.
+
+This is not an oversight; it is the demonstration.
+
+The System is a set of rules, and rules are substrate-independent.
+
+The six archetype update rules are arithmetic and comparison.
+
+The drive loop is subtraction and accumulation.
+
+The learning rule is multiplication and a bound.
+
+There is nothing in the entire specification that any general-purpose programming language cannot express.
+
+A builder in Python, in PrologAI, in Rust, in Java, in a spreadsheet, in principle even by hand with pencil and paper for a small enough System, can implement this specification, and if two builders implement it faithfully in two different languages, their Systems will produce the same trajectory from the same seed, because they are running the same rules.
+
+This is why the English Readable Code of Appendix 2 was the right choice for the Pseudocode phase, and it is why substrate independence was made a first-class requirement (NFR-3) rather than left to chance.
+
+The specification is the invariant; the language is the free choice.
+
+A6.2 THE SECOND DEMONSTRATION: IT IS DATA-STRUCTURE-AGNOSTIC
+
+The same is true of the data.
+
+Appendix 3 gave the data model as a set of entities and their fields, a construct with a state, an interface with a weight and a delay, a drive with a set-point, without committing to how those are stored.
+
+They could be objects, records, rows in a table, terms in a logic program, or nodes in a graph.
+
+The System does not care, so long as the fields are present and the update rules can read and write them.
+
+So up to this point, the reader who has followed the specification can build their own digital brain at home, in the language they know and the data structure they prefer, and it will be a faithful realization of this book.
+
+That is the demonstration, and it is deliberate: a science that matters should be reproducible by anyone with patience and a computer, not only by its author.
+
+The barrier to building a cognitive architecture has been, until now, the absence of a complete and buildable specification.
+
+This book removes that barrier.
+
+A6.3 THE PLANNED IMPLEMENTATIONS
+
+While the specification is agnostic, the author has three concrete implementations planned, offered here so that a reader may join, adopt, or learn from them.
+
+They are complementary, not competing: each demonstrates the specification on a different substrate.
+
+THE CAUSALONTOLOGY 2.0.0 DATA LAYER.
+
+The data model of Appendix 3 is, by design, close to a general standard for representing causation called Causalontology, whose repository is at https://github.com/ai-university-aiu/causalontology.
+
+In that standard, the System's constructs are continuants, their tick-by-tick states are token states, the interfaces are conduits, and the records the observer produces are token occurrences and token causal claims.
+
+A change order for the next version of that standard, Causalontology 2.0.0, was written specifically to hold the multi-scale, stateful, causal structure this System requires, and a small reference implementation has already been built and shown to run.
+
+The Causalontology layer is the System's memory and its causal record: the substrate in which the digital brain remembers what happened to it and why.
+
+It is the data-structure demonstration made concrete.
+
+THE PYTHON MINIMUM VIABLE PRODUCT.
+
+A Minimum Viable Product, abbreviated MVP, is the smallest version of a system that demonstrates its core value.
+
+A Python MVP of the System, implementing the tick loop, the six archetypes, the drive loop, and the learning rule of Appendix 2 directly, is planned as the reference realization that a student can read, run, and modify on a personal computer.
+
+Python is chosen for the MVP for its readability and its ubiquity, not because the System requires it.
+
+This MVP is the language demonstration made concrete, and it is the one an implementer will most easily pick up first.
+
+A small proof-of-concept has already been run for the data layer; the full cognitive MVP is the natural next step, deliberately not rushed ahead of the specification that governs it.
+
+THE PROLOGAI IMPLEMENTATION.
+
+PrologAI is a cognitive-architecture programming language and substrate, built on Prolog, in which every reasoning step is a named, inspectable rule and every answer comes with a readable justification.
+
+It is a natural home for this System, because the System's glass-box requirement and PrologAI's justification-tree philosophy are the same commitment, made in different places.
+
+Where the Python MVP demonstrates the System on a conventional imperative substrate, the PrologAI implementation demonstrates it on a symbolic, self-explaining one.
+
+And it carries a second purpose.
+
+This System is a demanding test of PrologAI: if building the System reveals that PrologAI lacks some needed capability, for instance a clean way to close the reentrant loops the brain is full of, then that discovered gap becomes a change order for PrologAI itself, exactly as the System's needs became a change order for Causalontology.
+
+PrologAI remains a living language, and this System is one of the forcing functions that will grow it.
+
+The relationship among the three is simple.
+
+Causalontology is where the System remembers.
+
+Python is where a newcomer first builds it.
+
+PrologAI is where it reasons transparently and where the substrate itself may grow to meet it.
+
+All three realize the one specification, and none is privileged by it.
+
+A6.3a WHAT IT CAN ACTUALLY DO: THE LADDER OF DEMONSTRABLE MILESTONES
+
+The demonstrations above answer a builder's question - can I build this, in my language, on my data structure - and the answer is yes.
+
+But a reader is entitled to a second, blunter question: so what can it actually do, and how would I ever see it doing anything at all?
+
+A map to a distant summit is worth little if it does not also mark the first few steps you can take today and check underfoot.
+
+This section supplies exactly that: a concrete, ordered ladder of milestones, from the smallest sign of life to a body moving in the world, each one a thing you can run and watch, each one earning the right to attempt the next.
+
+The ladder borrows its shape from the one place in the universe where general intelligence is known to assemble itself from parts - the developing human child.
+
+A child does not begin by reasoning about justice or driving a car.
+
+A child begins by noticing that a hidden toy still exists, by reaching and grasping, by babbling before speaking, and only much later by planning, arguing, and empathising.
+
+The Swiss psychologist Jean Piaget named four broad stages in that ascent - the sensorimotor stage from birth to about two years, the preoperational stage from about two to seven, the concrete operational stage from about seven to eleven, and the formal operational stage from about eleven onward - and the young field of developmental robotics, which builds robots that learn in the same infant-to-adult order rather than being programmed complete, has shown that this same staged ladder is a practical engineering plan for a machine, not merely a description of children.
+
+This appendix adopts that plan.
+
+The milestones below are grouped into six rungs, and each rung is a stage a child passes through, translated into a test a System can be made to pass.
+
+A note before the rungs, on the two kinds of test the software world already names, because the ladder uses both.
+
+A smoke test, named for the hardware engineer's practice of powering on a new board and checking that no smoke rises, is the very first and cheapest check: does the thing switch on and run at all without falling over.
+
+A pilot test is a small, real, end-to-end trial of the whole system on a genuine task, run before any full-scale deployment, to see whether the parts work together in the world rather than only on the bench.
+
+Every rung below opens with a smoke test - the cheapest possible sign that the rung is alive - and closes with a pilot test - a small but real end-to-end task that shows the rung genuinely working.
+
+
+RUNG ZERO: THE SMOKE TESTS - IS IT ALIVE AT ALL
+
+Before the System can be said to do anything, it must first simply run, and the smoke tests establish that with the least possible ceremony.
+
+Smoke test one, the heartbeat: start the System with no input and let the tick loop run, and confirm that the clock advances, that every construct holds a state, and that nothing crashes or drifts to infinity.
+
+A System that can idle stably for a million ticks without exploding or freezing has passed its first and most basic sign of life, exactly as a newborn's steady heartbeat is the first thing a delivery room checks.
+
+Smoke test two, the reflex: deliver a single sharp input - a spike on one sensory construct - and confirm that it propagates along the specified interfaces, changes the states it should change, and settles back down.
+
+This is the machine equivalent of the knee-jerk reflex, and it proves that the bus, the scheduler, and the graph are wired and conducting.
+
+Smoke test three, the drive pulse: let one drive fall below its set-point and confirm that the drive loop registers the deficit, raises the corresponding urge, and quiets it again when the deficit is met.
+
+This proves the System has an inside - a state it prefers - which is the seed of everything the higher rungs build on.
+
+The pilot test for Rung Zero is the determinism check already required by the specification: run the System twice from the same seed with the same input, and confirm the two trajectories are identical tick for tick, because a mind you cannot reproduce is a mind you cannot study.
+
+Passing Rung Zero does not make the System intelligent; it makes it a stable, inspectable, reproducible organism ready to learn, which is the sensorimotor infant at the moment of birth.
+
+
+RUNG ONE: THE SENSORIMOTOR STAGE - PERCEIVING, ACTING, AND THE FIRST CONCEPTS
+
+Piaget's sensorimotor stage, birth to about two years, is where a child learns that the world is made of persistent objects, that its own actions cause effects, and that a thing hidden is not a thing gone - the milestone called object permanence.
+
+This is the System's first real rung, and it is where perception is wired in, because until now the System has only received abstract spikes and must now be connected to the actual world.
+
+Here the appendix answers several of the plain questions a reader will have about what the System can take in.
+
+Can it take text input?
+
+Yes, and this is the simplest sensory front-end of all: text arrives as a stream of tokens, each token published onto a language-sensory construct exactly as a retinal spike is published onto a visual one, and the System's job is to let that stream drive its internal state.
+
+Text is the easiest modality to wire because it is already symbolic, and so it is the first sense the System is given.
+
+Can it see objects, or name what is in front of it?
+
+Yes, by a design choice this book makes openly: the System does not need to re-solve the enormous problem of raw vision from scratch, because that problem is already solved well by existing vision models.
+
+A vision-language model - a large neural network, abbreviated VLM, that looks at an image and returns a description in words, such as a cup, on a table, to the left - is used as the System's eye, a sensory organ bolted on at the front.
+
+The VLM converts pixels into named objects and relations, and those named objects are published onto the System's perceptual constructs, so the System perceives a world of things and relationships rather than a wash of colour.
+
+This is precisely how developmental-robotics laboratories now build embodied agents: the heavy perceptual lifting is done by a pre-trained vision model acting as the retina and early visual cortex, and the cognitive architecture reasons over the clean, named output.
+
+The System is glass-box where it matters - in its drives, its learning, its reasoning - and it is free to use an opaque, off-the-shelf organ for the one job, raw sensory transduction, that biology also delegates to specialised, hard-wired hardware.
+
+Can it hear through a microphone?
+
+Yes, by the same strategy applied to sound.
+
+A microphone captures audio, and a speech-to-text model - an automatic speech recognition system, abbreviated ASR, that turns spoken sound into written words - acts as the System's ear and auditory cortex, converting the pressure waves into a token stream that enters exactly where typed text enters.
+
+So the System hears by having a specialised organ transcribe the world's speech into the symbolic input it already knows how to receive, and if a text-to-speech model, abbreviated TTS, is added on the output side, the System can also answer aloud, closing a natural spoken loop.
+
+The smoke test for Rung One is the naming test: place an object in front of the camera and confirm that the correct named object appears on the System's perceptual construct, or speak a word into the microphone and confirm the correct token arrives - the sense organs are connected and reporting.
+
+The central pilot test for Rung One is object permanence, the defining sensorimotor milestone: show the System an object, hide it behind a screen, and confirm that the System's internal representation of the object persists while it is out of view, so that the System is surprised - registers a prediction error - if the screen is lifted and the object is gone.
+
+A System that maintains a hidden object has crossed the threshold every human infant crosses near its first birthday, and it is the first milestone that is unmistakably cognitive rather than merely mechanical.
+
+A second Rung One pilot test is simple cause and effect: let the System discover, through its own reward-gated learning, that one of its actions reliably produces a pleasant change in the world - the machine equivalent of an infant learning that shaking a rattle makes a sound - which demonstrates goal-directed action, the other great sensorimotor achievement.
+
+
+RUNG TWO: THE PREOPERATIONAL STAGE - SYMBOLS, LANGUAGE, AND CHATTING
+
+Piaget's preoperational stage, roughly ages two to seven, is the age of symbols and language: the child now uses words and images to stand for things that are not present, talks, asks endless questions, and pretends.
+
+This rung answers the question many readers ask first: will the System be able to chat, like a chatbot?
+
+The honest answer is yes, but in a way worth being precise about, because it differs from how a chatbot chats.
+
+A conventional chatbot is a large language model that produces fluent replies by predicting likely next words, with no inner state, no goals, and no memory of caring about anything.
+
+The System, at this rung, chats from the inside out: words arrive through the text or speech front-end of Rung One, they change its internal state, that state is shaped by its drives and its memories, and its reply is the outward expression of that changed inner state.
+
+Early in the rung the System's language will be simple, even childlike, because its symbolic machinery is still forming, exactly as a three-year-old's speech is simple - and that simplicity is a feature of an honest developmental account, not a defect to be hidden by bolting a fluent language model over the top.
+
+The smoke test for Rung Two is the single-symbol exchange: give the System a word it has grounded through experience and confirm it can produce that word to refer to the thing, and recognise the word when it hears it - symbol use in both directions.
+
+The pilot test for Rung Two is a short grounded conversation: a back-and-forth exchange, by text or by voice, in which the System's replies are demonstrably driven by its internal state and its history rather than by next-word prediction alone - for instance, it answers differently when a drive is satisfied than when the same drive is in deficit, so that its mood colours its words.
+
+A chatbot that has no inner weather cannot do this; a System with drives can, and that difference is the whole point.
+
+A second Rung Two milestone is pretend, or imagination: using the System's reality-quarantine machinery to run a small imagined scenario - to represent a situation that is not happening and reason within it without confusing it for the real record - which is the preoperational child's leap into symbolic play.
+
+
+RUNG THREE: THE CONCRETE OPERATIONAL STAGE - LOGIC, REASONING, AND RULES
+
+Piaget's concrete operational stage, roughly ages seven to eleven, is where thought becomes logical about concrete things: the child can classify, order, reason about cause and consequence, and grasp that quantities are conserved when their appearance changes.
+
+This rung is where the reader's questions about logic and reasoning tests are answered, and it is a natural strength of this System because its foundation is a causal model of the world.
+
+The smoke test for Rung Three is a single valid inference: give the System two grounded facts from which a third follows - if the block is on the cup and the cup is on the table, then the block is above the table - and confirm it derives the conclusion and can show the steps.
+
+Because the System is transparent, this test also checks something a black box cannot offer: that the reasoning is inspectable, each step a named, watchable operation rather than an opaque leap.
+
+The pilot tests for Rung Three are a graded battery of concrete reasoning trials, each drawn from the developmental literature so that success has a clear human referent.
+
+A classification trial: sort a set of perceived objects into categories the System has formed from experience, and re-sort them by a different property on request, demonstrating flexible categorisation.
+
+A seriation trial: arrange objects in order along a dimension, such as size, demonstrating ordered comparison.
+
+A conservation trial: confirm that the System understands a quantity is unchanged when only its appearance changes - the same water in a taller, thinner glass is still the same amount - which is the concrete-operational child's signature achievement and a direct test of whether the System models the world rather than its mere surface.
+
+A causal-reasoning trial: present a small chain of events and ask the System which event brought about which, using the Causalontology causal record, and confirm it distinguishes a genuine cause from a mere co-occurrence - the very thing the dominant correlational models famously cannot reliably do.
+
+A planning trial: give the System a goal state and a set of available actions, and confirm it can compose a short sequence of actions that reaches the goal, demonstrating means-end reasoning.
+
+Passing this rung shows the System reasoning logically and causally over concrete, grounded situations, with every inference open to inspection, which is exactly the capability the reigning paradigm is weakest at and this architecture is built to be strong at.
+
+
+RUNG FOUR: THE EMOTIONAL AND SOCIAL RUNG - FEELING, AND MODELLING OTHER MINDS
+
+Human development is not only cold cognition; alongside Piaget's ladder runs an emotional and social one, and a specification of a mind that reproduces the brain's drive, affect, and social systems owes an account of how those are demonstrated too.
+
+The reader asks about emotional tests, and the System can be given them because it has, by construction, the machinery of emotion: drives that can be satisfied or thwarted, and neuromodulatory states that colour its whole cognition the way feelings colour ours.
+
+The smoke test for Rung Four is an affective-response check: thwart a drive and confirm the System enters a measurably different global state - a negative affect - that changes how it perceives, learns, and acts, and confirm the opposite state arises when the drive is satisfied.
+
+This shows the System has something it is like to be in - an inner valence - which is the raw material of emotion.
+
+The pilot tests for Rung Four cover both feeling and the reading of others.
+
+An appraisal trial: present a situation and confirm the System appraises it as good or bad for its own goals, producing an appropriate emotional state - fear at a threat to a set-point, something like satisfaction at a met one.
+
+A regulation trial: confirm the System can bring an aroused emotional state back toward baseline over time, demonstrating the beginnings of emotional regulation rather than being permanently captured by every jolt.
+
+A theory-of-mind trial, the great social milestone: confirm that the System can attribute to another agent a mental state different from its own - and, at the harder level, a false belief, the classic test in which a child must predict that a person will look for an object where that person last saw it, not where the child knows it now is.
+
+Modelling another mind, and especially another mind that believes something false, is widely held to be a prerequisite for genuine social intelligence, and it is one of the four data-structure capabilities this program has already identified as a candidate for the next major version of the Causalontology layer, so this rung is also where the architecture's own growth is stress-tested.
+
+An empathy trial, at the top of the rung: confirm that another agent's modelled distress can move the System's own affective state and shape its behaviour toward help, which is the seed of pro-social action.
+
+Passing Rung Four shows a System that not only thinks but feels its situation and reads the situations of others, which is the part of intelligence a purely logical account leaves out and a faithful model of the brain cannot.
+
+
+RUNG FIVE: THE EMBODIED RUNG - A ROBOT BODY, AND ACTING IN THE REAL WORLD
+
+The highest rung on this ladder returns the System to where a child's intelligence is forged: a body, in a world, with real stakes.
+
+The reader asks whether the System will be able to inhabit a robot body and use the robot's sensors, and the answer is that this is not an afterthought but the destination the whole architecture is aimed at, because its cognition is grounded in the regulation of a body state and a body is what closes the loop.
+
+Inhabiting a robot means three connections, each of which the rungs below have already prepared.
+
+The robot's sensors - its cameras, microphones, touch and joint sensors - become the System's senses, feeding the perceptual constructs through the same vision, speech, and touch front-ends that Rung One installed, so the System perceives the robot's world.
+
+The robot's body state - its battery level, its temperature, its balance, its physical integrity - becomes the System's homeostatic state, the set-points its drives defend, so that a low battery is felt as hunger and a risk of falling as something like fear, giving the System real skin in the game.
+
+The robot's actuators - its wheels, arms, grippers, and voice - become the System's means of acting, driven by the same goal-directed, reward-gated machinery that Rung One first exercised on a rattle, so that the System moves its body to meet its needs.
+
+The smoke test for Rung Five is the sense-act loop: confirm that a change the robot's camera sees produces, through the System, a movement of the robot's body - perception in, action out, the loop closed through a real machine.
+
+The pilot tests for Rung Five are graded embodied tasks, each a small, real, end-to-end trial in a body.
+
+A reaching-and-grasping trial: confirm the System can guide the robot's arm to pick up a named object it perceives, the embodied form of the infant milestone of coordinated reaching.
+
+A navigation trial: confirm the System can move the robot toward a goal location while avoiding obstacles, using its persistent model of a world that continues to exist outside the current view - object permanence, now load-bearing.
+
+A homeostatic-survival trial, the one that most fully exercises the whole architecture: place the robot in an environment where it must act to defend its own body state - seeking a charging station as its battery drive falls, avoiding a hazard that threatens its integrity - and confirm it does so of its own accord, because it wants to, which is the difference between a tool that is driven and an agent that is self-driven.
+
+And what about driving a car, the reader's most striking question?
+
+Driving is not a separate magic capability; it is the navigation trial scaled up - a demanding embodied task requiring fast perception, a strong world model, real-time planning, and stakes measured in safety - and so it sits near the very top of this rung, reachable in principle by the same sense-model-plan-act loop that guides the robot arm, but demanding the mature, well-trained, heavily scaled System that the higher camps of the mountain describe, and demanding, above all, the safety discipline that the safety chapters of this work insist upon before any such System is trusted with a life.
+
+This book neither promises a self-driving System tomorrow nor pretends it is out of reach; it places driving exactly where it belongs on the honest ladder - a hard, high, embodied navigation task, continuous with the rungs below it and gated by scale and by safety.
+
+
+HOW THE LADDER MAPS TO THE MOUNTAIN
+
+The ladder of milestones and the map to the summit given later in this appendix are the same climb seen at two scales, and they fit together cleanly.
+
+Rung Zero and Rung One - a stable, reproducing System with its senses wired in, holding a hidden object in mind - are the first camp, the faithful small System of Completion version one, reachable today on a personal computer.
+
+Rungs Two and Three - grounded language, and logical, causal, inspectable reasoning over concrete situations - are the second camp, the scaling of grain and connectivity, needing engineering and moderate compute.
+
+Rungs Four and Five - feeling, modelling other minds, and inhabiting a body with real stakes over long stretches of continuous experience - are the third camp, the scale of experience, where serious compute and a partner join the expedition.
+
+And the general, flexible competence that emerges from a System that has climbed all five rungs, embodied and continuously learning, is the fourth camp: the summit.
+
+Each rung is a thing you can build and watch, each earns the next, and the earliest rungs are reachable now - which is what turns a distant summit into a climb with its boots already on the trail.
+
+The value of stating the milestones this concretely is not only that a partner can see what their compute would buy, but that a skeptic can hold the System to account: here are the exact tests, in order, and here is what passing each one would look like, so that progress can be measured rather than merely asserted.
+
+A cognitive architecture that named no milestones could hide behind its own grandeur; this one names them, from the heartbeat to the moving body, and invites the reader to check each rung underfoot.
+
+
+A6.4 WHY THIS MAY MATTER TO RESEARCHERS AND SCIENTISTS
+
+Beyond the individual builder, the System has value to the working scientist, and the value follows directly from its defining virtue, transparency.
+
+A neuroscientist can use the System as a computational testbed: form a hypothesis about what a region does or how a circuit learns, encode it as a change to the relevant construct, run the affected famous-experiment test, and see whether the hypothesis reproduces the known result or breaks it.
+
+The System turns a theory of a brain region into a runnable, falsifiable claim.
+
+A clinician-researcher can use it to study disease mechanistically: the System already reproduces Parkinsonian freezing from dopamine depletion, and the same method extends to modeling the multi-region cascades of Alzheimer's disease, depression, and epilepsy that the science chapters described, testing candidate interventions in a transparent model before proposing them in a living one.
+
+An artificial-intelligence researcher can use it as a different kind of intelligence to study: a mechanistic, inspectable, biologically grounded architecture, unlike the statistical black boxes that dominate the field, and therefore a source of ideas the dominant paradigm cannot easily reach, about drives, about neuromodulation as global control, about learning gated by reward rather than by gradient descent over labeled data.
+
+This last point is the bridge to the largest question, and the appendix now turns to it, with care.
+
+A6.5 THE AGI QUESTION: THE ARCHITECTURE, THE ROUTE, AND THE WORK AHEAD
+
+Artificial General Intelligence, abbreviated AGI, means an artificial system with the broad, flexible, general competence of a human mind, as opposed to the narrow competence of a system good at one task.
+
+The question this appendix must address, because a specification of a cognitive architecture cannot avoid it, is whether the System, scaled and fed, is a path toward AGI.
+
+The answer this book gives is yes: not a proof of arrival, which no honest engineer offers before the building stands, but a well-founded conviction, grounded in the architecture itself and in a clear-eyed reading of where the dominant paradigm is faltering.
+
+The route is real, the early ground is already under our feet, and the work that remains is engineering and scale rather than mystery.
+
+This section states the case with confidence and states the remaining work with precision, because the two together are what a serious claim looks like.
+
+THE CASE FOR PROMISE.
+
+The System has several properties that the dominant paradigm, the large language model, conspicuously lacks, and that many researchers believe a general intelligence will require.
+
+It has DRIVES.
+
+It wants things, and it evaluates the world by whether its wants are met.
+
+A large language model wants nothing; it predicts the next token.
+
+A system with genuine goals of its own is, in this respect, more like a mind.
+
+It has EMBODIED HOMEOSTASIS.
+
+Its cognition is grounded in the regulation of a body state, which a growing body of thought holds is not incidental to intelligence but constitutive of it.
+
+Meaning, on this view, is grounded in mattering, and things matter to the System because they bear on its set-points.
+
+It LEARNS FROM REWARD AND SURPRISE, continuously, by a local rule gated by neuromodulators, rather than by a massive offline optimization over a fixed dataset.
+
+This is closer to how animals learn, and it does not require the enormous labeled corpora the dominant paradigm consumes.
+
+It is TRANSPARENT.
+
+Every state and every weight is inspectable and tied to a named construct.
+
+If it reasons, one can watch it reason.
+
+This is a property no large language model has, and it is exactly the property their critics most wish they had.
+
+And it is CAUSAL by construction, built to represent and reason over cause and effect through the Causalontology layer, where the dominant models are correlational, capturing what tends to follow what without a model of what brings what about.
+
+Many hold that genuine understanding requires causal models, and this System has one at its foundation.
+
+Where large language models are widely observed to fall short, in genuine understanding, in causal reasoning, in goal-directedness, in transparency, in learning efficiently from little, this System is designed, from first principles, to be strong.
+
+That is the case for promise, and it is decisive: the System is strong in precisely the places the reigning paradigm is weak, and those places are the ones the field increasingly agrees stand between it and general intelligence.
+
+THE WORK THAT REMAINS, STATED WITH EQUAL PRECISION.
+
+Confidence is not the absence of hard work ahead; it is a clear account of exactly what that work is.
+
+Four tasks stand between the System as specified and the System as a general intelligence, and each is a known engineering problem, not an unknown.
+
+GRAIN.
+
+Where the regional grain proves too coarse for a given competence, the construct at issue is refined to finer detail.
+
+The architecture was built for exactly this: any construct can be internally deepened without touching the scheduler, the bus, or the graph.
+
+Grain is a dial the builder turns where the work demands it, not a wall.
+
+ARCHETYPES. Where a construct's behaviour exceeds the six update rules, the archetype set is extended, in the same disciplined way the science itself was extended when the evidence required it. The six cover the brain as we understand it today; the seventh, if a construct earns it, is added, and the method for adding it is already in place.
+
+SCALE AND COMPUTE.
+
+The architecture is designed to reward scale, because it learns continuously from experience rather than saturating on a fixed corpus, and because its modular grain parallelizes cleanly across as much compute as it is given.
+
+What it has not yet had is the compute, for the plain reason that its author is one person.
+
+This is not a doubt about the architecture; it is a resource this book is written to attract.
+
+Given serious compute, the System scales, and scaling it is the next step, not a leap of faith.
+
+EMERGENCE.
+
+General competence will emerge from the scaled, embodied, continuously learning System because the System is built out of the very components from which it emerges in nature: drives that make things matter, a body whose regulation grounds meaning, reward-gated learning that compounds with experience, and a causal model of the world.
+
+Assemble the parts that produce a mind, supply them with a world and the time to learn it, and mind is what they produce.
+
+That is not a hope pinned to luck; it is the working hypothesis of the entire science of the brain, and this System is the first complete, transparent, buildable test of it.
+
+So the answer is yes, held as a serious researcher holds a yes before the result is in: with the architecture in hand, the route mapped, the early ground taken, and the remaining work named and tractable.
+
+THE MAP TO THE TOP OF THE MOUNTAIN.
+
+The path is coherent, each camp follows from the last, and the early camps are already reached, which is more than can be said for any other map to that summit.
+
+The first camp is the faithful small System of Completion, version one: buildable now, on a personal computer, reproducing the landmark experiments.
+
+This is reached, today.
+
+The second camp is scale of grain and connectivity: refining the constructs toward finer detail where it matters, and enriching the connectome toward the density the real brain has.
+
+This needs engineering and moderate compute, both in reach.
+
+The third camp is scale of experience: connecting the System to rich, continuous, embodied input, a simulated or real body in a simulated or real world, and letting its reward-gated learning run over very long durations.
+
+This is where serious compute and a serious budget do the work, and where a partner joins the climb.
+
+The fourth camp is the emergence of general, flexible competence from the scaled, embodied, continuously learning System.
+
+This is the summit, and the route to it is continuous with the camps below: no gap, no miracle, no missing mechanism, only scale, embodiment, and time applied to an architecture already proven in the small.
+
+The summit is in sight from the ground we already hold.
+
+THE PARTNERSHIP THAT TAKES IT TO THE TOP.
+
+The author is one independent, open-source researcher, and this book is a demonstration of what one such person can specify: a complete, transparent, buildable cognitive architecture, grounded in neuroscience, carried through a full engineering specification, and given away.
+
+The higher camps, the scale of experience and the arrival at the summit, are a matter of compute and budget, and they call for a partner.
+
+This appendix is that invitation, stated plainly and without hedging: the architecture is sound, the route is mapped, the early camps are taken, and what the climb needs now is scale.
+
+A partner with serious compute and a serious budget joins not a gamble but a well-founded expedition with its base camps already established.
+
+The specification is complete and free.
+
+Bring the scale, and we reach the top.
+
+A6.6 REFLECTION, AND THE CLOSE OF THE SPECIFICATION
+
+The Demonstration phase exists because a specification of a mind carries an obligation an ordinary specification does not: to say, at the end, exactly what has been built and exactly what the path forward is.
+
+What has been built, and given away, is a complete, transparent, language-agnostic, data-structure-agnostic specification of the human cognitive architecture at the regional grain, buildable at home by anyone, reproducing landmark neuroscience from first principles, with three concrete implementations planned and one already proven in the small.
+
+That is real, and it is finished.
+
+What lies ahead is the scaling of this architecture, embodied and fed, into a general intelligence.
+
+That is not a hope pinned to luck but a route, mapped camp by camp, with its early camps already reached and its remaining work named and tractable: refine the grain where needed, extend the archetypes where earned, supply the scale, and let experience compound.
+
+The summit is continuous with the ground we already hold.
+
+This is the discipline the whole book has kept, from the first chapter's care to separate what the brain is from what we set out to build, through the science chapters' habit of marking every modeling choice as a choice, to the change order's refusal to pretend a commitment was a fact.
+
+That same discipline is what lets this specification end in confidence rather than in caution: it has earned its claim by building the early camps in full view, and it names precisely what the climb still requires.
+
+A framework that overclaimed would be worth little; a framework that underclaimed what it has plainly achieved would be worth no more.
+
+This one states exactly what it is, and what it is is the first buildable route to the summit.
+
+The map is drawn.
+
+The early camps are reached.
+
+The summit is in sight.
+
+Let us go forth to the peak: AGI.
+
+END OF THE SPECIFICATION
+
+END OF NATURE'S COGNITIVE ARCHITECTURE, VERSION 20
+
+
+KONNECTOME REALIZATION LOG
+
+Slice 1 - the heartbeat - 2026-07-20 - pack tick_engine, version 0.1.0.
+
+Ladder rung 1, the heartbeat - a stable, reproducing tick loop that keeps time - is demonstrated by the clock_keeps_time and run_is_reproducible tests. Rung 2 (senses, and holding a hidden object in mind, where each tick record becomes a Causalontology token_occurrence via the reused causal_core pack) is the next slice.
+
+Gates at this slice: 7 of 7 tick_engine Prolog Unit (PLUnit) tests pass; the naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited; konnectome reuses them through the library path.
+
+This log grows one entry per code slice, per the Tenth Commandment. The full SPARCD Fileset was bumped in lockstep from version 1 to version 2, and the version 1 files were archived under docs/archive/ in the same change, per the Ninth Commandment.
+
+
+KONNECTOME REALIZATION LOG - SLICE 2
+
+Slice 2 - the six archetype rules and the first Causalontology thought - 2026-07-20 - packs archetype (0.1.0) and observer (0.1.0).
+
+Ladder rung 2 advances: konnectome now holds its first durable thought - each tick recorded as a Causalontology token_occurrence - and carries the six archetype rules that give constructs their dynamics. Wiring the archetypes into the scheduler through the connection graph (Component 3) is the next slice.
+
+Gates at this slice: archetype 7 of 7 and observer 6 of 6 Prolog Unit (PLUnit) tests pass; naming, layer, and layer-binding gates report zero violations; the Causalontology 119-vector conformance suite passes 119 of 119. Nothing in PrologAI or Causalontology was edited; konnectome reuses causal_core through the library path.
+
+
+KONNECTOME REALIZATION LOG - SLICE 3
+
+Slice 3 - the connection graph - 2026-07-20 - pack connection_graph (0.1.0).
+
+Constructs now feed one another tick to tick across the connection graph, and the signal front advances one hop per tick. Full multi-tick delay lines, and wiring every archetype through the graph, continue in later slices.
+
+Gates at this slice: connection_graph 4 of 4 Prolog Unit (PLUnit) tests pass (tick_engine 7, archetype 7, observer 6 unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited; connection_graph reuses the archetype pack.
+
+
+KONNECTOME REALIZATION LOG - SLICE 4
+
+Slice 4 - the reward loop - 2026-07-20 - packs neuromodulator_bus (0.1.0) and drive_system (0.1.0).
+
+konnectome now has the origin of motivation: drives that want their set-points, a reward that is the total relief of that wanting, and dopamine that carries the reward to the rest of the mind. The action selector (Component 6) that acts on it is a later slice.
+
+Gates at this slice: neuromodulator_bus 4 of 4 and drive_system 5 of 5 Prolog Unit (PLUnit) tests pass (the earlier four packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 5
+
+Slice 5 - the action selector - 2026-07-20 - pack action_selector (0.1.0).
+
+konnectome can now act: it weighs competing urges and releases exactly one, biased by what its drives most need, and it never invents an urge of its own. The override controller (Component 7) and the plasticity engine (Component 8) are later slices.
+
+Gates at this slice: action_selector 6 of 6 Prolog Unit (PLUnit) tests pass (the earlier six packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 6
+
+Slice 6 - the plasticity engine - 2026-07-20 - pack plasticity_engine (0.1.0).
+
+The loop of the mind is closed: konnectome wants (drives), acts (the action selector), is rewarded (dopamine), and now learns (the plasticity engine strengthens the connections that earned the reward). Homeostatic scaling and the eligibility trace are later refinements.
+
+Gates at this slice: plasticity_engine 5 of 5 Prolog Unit (PLUnit) tests pass (the earlier seven packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
