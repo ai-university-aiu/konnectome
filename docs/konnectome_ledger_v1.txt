@@ -122,10 +122,10 @@ deepened; PENDING = not built yet.
  Component 4  Neuromodulatory Bus       | neuromodulator_bus                | REALIZED
  Component 5  Drive System              | drive_system                      | REALIZED
  Component 6  Action Selector           | action_selector                   | REALIZED
- Component 7  Override Controller       | (to be built)                     | PENDING
+ Component 7  Override Controller       | override_controller               | REALIZED
  Component 8  Plasticity Engine         | plasticity_engine                 | REALIZED
  Component 9  Observer / Instrument     | observer + tick_engine trace      | REALIZED
- Component 10 Perturbation Interface    | (to be built)                     | PENDING
+ Component 10 Perturbation Interface    | perturbation_interface            | REALIZED
 
  THE SIX ARCHETYPE RULES (Appendix 2, Section A2.3)
  -----------------------------------------------------------------------------------
@@ -207,5 +207,12 @@ wall, and it closes the loop of the mind: the reward broadcast by slice 4 is now
 the third factor of learning, strengthening the connections that earned it. Honest non-closure:
 homeostatic scaling (the bound that keeps learning from exploding) and the eligibility trace
 (Section A2.6) are later refinements; recorded as pending, not as walls.
+
+Slice-7 note (2026-07-20). Building the override controller and the perturbation interface
+(override_controller and perturbation_interface packs) hit NO wall, and it completes the
+ten-component architecture. PrologAI expressed the vitality override and the experimenter's pokes
+directly. Honest non-closure: Component 1 (the construct registry) remains a minimal construct list
+rather than a dedicated pack, and full end-to-end wiring of all ten components into one running tick
+is a later integration slice; recorded as pending, not as walls.
 
  Walls: OPEN 0 | ROUTED 0 | CLOSED 0 | UNNECESSARY 0.   Observations: 2.
