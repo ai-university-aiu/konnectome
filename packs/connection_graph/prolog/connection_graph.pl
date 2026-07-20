@@ -8,6 +8,8 @@
     connection_graph_state_get/3,
     % connection_graph_step/4: one two-pass synchronous tick of a network over the graph.
     connection_graph_step/4,
+    % connection_graph_step_modulated/5: a tick whose relay gains are set by the neuromodulatory bus.
+    connection_graph_step_modulated/5,
     % connection_graph_run/6: run a network for a chosen number of ticks.
     connection_graph_run/6
 ]).
@@ -18,6 +20,8 @@
 :- use_module(library(apply), [include/3, foldl/4]).
 % Reuse the relay archetype rule; a transmissive interface conveys, scaled by gain.
 :- use_module(library(archetype), [archetype_relay/3]).
+% Reuse the neuromodulatory bus to read the gain a modulator sets for a construct.
+:- use_module(library(neuromodulator_bus), [neuromodulator_bus_level/3]).
 
 % The connection graph is the connectome as data: a list of directed, weighted, delayed
 % interfaces, each marked transmissive (it conveys a signal) or computational (it computes one).
@@ -76,6 +80,40 @@ connection_graph_step(Graph, Constructs, State, NextState) :-
             ( member(construct(Name, Kind), Constructs),
               % Compute its next activation from the read-only state and the graph.
               connection_graph_next(Kind, Name, Graph, State, NextActivation) ),
+            NextPairs),
+    % Second pass: commit all next activations at once into a canonical state.
+    keysort(NextPairs, NextState).
+
+% connection_graph_next_modulated(+Kind, +Name, +Graph, +State, +Bus, -NextActivation): a bus-aware update.
+% A source construct still holds its current activation.
+connection_graph_next_modulated(source, Name, _Graph, State, _Bus, NextActivation) :-
+    % Read and keep the source's current activation.
+    connection_graph_state_get(State, Name, NextActivation).
+% A relay with a fixed gain behaves as before, ignoring the bus.
+connection_graph_next_modulated(relay(Gain), Name, Graph, State, _Bus, NextActivation) :-
+    % Gather the total weighted input and pass it, scaled by the fixed gain.
+    connection_graph_total_input(Graph, Name, State, TotalInput),
+    % Apply the relay archetype rule.
+    archetype_relay(TotalInput, Gain, NextActivation).
+% A modulated relay's effective gain is its base gain scaled by a modulator's level on the bus.
+connection_graph_next_modulated(relay_modulated(BaseGain, Modulator), Name, Graph, State, Bus, NextActivation) :-
+    % Gather the total weighted input arriving at this construct.
+    connection_graph_total_input(Graph, Name, State, TotalInput),
+    % Read the modulator's current level from the bus; the neuromodulators set the gain.
+    neuromodulator_bus_level(Bus, Modulator, Level),
+    % The effective gain is the base gain scaled by that level.
+    EffectiveGain is BaseGain * Level,
+    % Apply the relay archetype rule with the current, bus-set gain.
+    archetype_relay(TotalInput, EffectiveGain, NextActivation).
+
+% connection_graph_step_modulated(+Graph, +Constructs, +State, +Bus, -NextState): a bus-modulated tick.
+connection_graph_step_modulated(Graph, Constructs, State, Bus, NextState) :-
+    % First pass: compute every construct's next activation, letting the bus set relay gains.
+    findall(Name-NextActivation,
+            % For each construct in the network, taken in turn.
+            ( member(construct(Name, Kind), Constructs),
+              % Compute its next activation from the read-only state, the graph, and the bus.
+              connection_graph_next_modulated(Kind, Name, Graph, State, Bus, NextActivation) ),
             NextPairs),
     % Second pass: commit all next activations at once into a canonical state.
     keysort(NextPairs, NextState).

@@ -4,9 +4,45 @@
 :- use_module(library(neuromodulator_bus)).
 % Load the Prolog Unit (PLUnit) testing framework.
 :- use_module(library(plunit)).
+% Load membership for checking proposed actions.
+:- use_module(library(lists), [memberchk/2]).
 
 % Open the test block for the drive_system pack.
 :- begin_tests(drive_system).
+
+% Each drive proposes an action to reduce itself, with a salience equal to its error.
+test(each_drive_proposes_to_reduce_itself_by_its_error) :-
+    % Two fresh drives and a body away from both set-points.
+    Drives = [drive(temperature, temperature, 37, none), drive(glucose, glucose, 100, none)],
+    drive_system_proposals(Drives, [temperature-40, glucose-90], Candidates),
+    % The temperature proposal carries its error of three.
+    assertion(memberchk(action(reduce(temperature), 3), Candidates)),
+    % The glucose proposal carries its error of ten.
+    assertion(memberchk(action(reduce(glucose), 10), Candidates)).
+
+% A reduce action moves the body one step toward the drive's set-point.
+test(a_reduce_action_moves_the_body_toward_the_set_point) :-
+    % A temperature drive and a body above its set-point.
+    Drives = [drive(temperature, temperature, 37, none)],
+    drive_system_apply_action(released(reduce(temperature)), Drives, [temperature-40], Body),
+    % The body moved one step down toward the set-point.
+    assertion(Body == [temperature-39]).
+
+% A non-reduce action leaves the body unchanged.
+test(a_non_reduce_action_leaves_the_body_unchanged) :-
+    % A temperature drive and a body.
+    Drives = [drive(temperature, temperature, 37, none)],
+    drive_system_apply_action(released(breathe), Drives, [temperature-40], Body),
+    % The body is unchanged by an unrelated action.
+    assertion(Body == [temperature-40]).
+
+% A body already at the set-point holds when its reduce action fires.
+test(a_body_at_the_set_point_holds) :-
+    % A temperature drive and a body exactly at the set-point.
+    Drives = [drive(temperature, temperature, 37, none)],
+    drive_system_apply_action(released(reduce(temperature)), Drives, [temperature-37], Body),
+    % The body holds at the set-point.
+    assertion(Body == [temperature-37]).
 
 % A drive's error is the absolute distance of its monitored variable from its set-point.
 test(error_is_absolute_distance_from_set_point) :-

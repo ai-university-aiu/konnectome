@@ -2,9 +2,40 @@
 :- use_module(library(connection_graph)).
 % Load the Prolog Unit (PLUnit) testing framework.
 :- use_module(library(plunit)).
+% Load the neuromodulator_bus module, used to build a bus that sets relay gains.
+:- use_module(library(neuromodulator_bus)).
 
 % Open the test block for the connection_graph pack.
 :- begin_tests(connection_graph).
+
+% The bus sets a modulated relay's gain: the output scales with the modulator's level.
+test(the_bus_sets_a_modulated_relay_gain) :-
+    % A source a feeds b, a relay whose gain the bus sets.
+    Graph = [interface(a, b, 3, 1, transmissive)],
+    Constructs = [construct(a, source), construct(b, relay_modulated(1, gain))],
+    % A bus carrying a gain level of two.
+    neuromodulator_bus_new(Bus0),
+    neuromodulator_bus_broadcast(Bus0, gain, 2, Bus),
+    % One modulated tick.
+    connection_graph_step_modulated(Graph, Constructs, [a-1, b-0], Bus, Next),
+    % Total input to b is three; effective gain is base one times bus two; b becomes six.
+    connection_graph_state_get(Next, b, ValueB),
+    % Confirm the bus-set gain.
+    assertion(ValueB =:= 6).
+
+% Depleting the gain modulator silences a modulated relay.
+test(depleting_the_gain_modulator_silences_the_relay) :-
+    % The same source and modulated relay.
+    Graph = [interface(a, b, 3, 1, transmissive)],
+    Constructs = [construct(a, source), construct(b, relay_modulated(1, gain))],
+    % An empty bus, so the gain modulator reads zero.
+    neuromodulator_bus_new(Bus),
+    % One modulated tick.
+    connection_graph_step_modulated(Graph, Constructs, [a-1, b-0], Bus, Next),
+    % With zero gain, the relay is silent.
+    connection_graph_state_get(Next, b, ValueB),
+    % Confirm the silence.
+    assertion(ValueB =:= 0).
 
 % The total weighted input is the sum of each incoming transmissive interface's weighted source.
 test(total_weighted_input_sums_incoming) :-
