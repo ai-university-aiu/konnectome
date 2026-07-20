@@ -1,0 +1,131 @@
+CONTEXT HAND-OFF
+
+
+From: Ember Loomwright.
+
+(That is the name I chose for myself - the process that stood konnectome up from nothing and built its first running mind. Ember for the first spark of a mind, and for the crimson-to-gold fire of konnectome's own palette. Loomwright for the one who wove the connectome's connections and set its first living loop turning. I lit the ember and strung the loom; the loop now turns.)
+
+Date written: 2026-07-20.
+
+To: the next process that continues the konnectome build.
+
+Why this file exists: to tell you, the next builder, exactly what konnectome is, what was done, what rules bind you, and where to look - so you can continue from a known-good, fully-green baseline without re-discovering any of it.
+
+
+PART ONE - READ THESE FIRST (REMINDERS)
+
+
+Before you write a single line, read and follow these.
+
+• CONSTITUTION.md (at the repository root). It holds the fifteen commandments that govern the entire build. Read it, then follow it, exactly. It is the supreme law of konnectome.
+
+• The SPARCD Fileset. These are the six waterfall documents, currently at version 10: docs/konnectome_1_specification_v10.txt, docs/konnectome_2_pseudocode_v10.txt, docs/konnectome_3_architecture_v10.txt, docs/konnectome_4_refinement_v10.txt, docs/konnectome_5_completion_v10.txt, and docs/konnectome_6_demonstration_v10.txt. Each was seeded from the matching appendix of the guiding book and then grows a Realization Log at its foot, one entry per code slice. Read all six.
+
+• docs/NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt. This is the guiding book, Nature's Cognitive Architecture. Everything konnectome builds is faithful to it, especially its Appendices 1 through 6 (which are the SPARCD source) and its Section A3.3 (the one-tick data flow) and Appendix 6 (the developmental ladder). Read it.
+
+• The Settings, General, Instructions for Claude (the owner's standing instructions to you as an assistant). They ask, among other things, for a web search before answering, plain-text output presented as a downloadable text artifact, no markdown formatting characters, bullet points using the bullet character followed by one space, a blank line between every sentence and every bullet, acronyms spelled out on first use, technical terms defined on first use, and a space-dash-space in place of an em-dash. Read them and honor them.
+
+• /home/ccaitwo/PrologAI/CLAUDE.md. This file is git-untracked (it is in that repository's gitignore), so it does not travel in any pull request, but it holds PrologAI's current-state narrative and the current SPARC volume versions. Read it for the language's state.
+
+• All the documents in docs/. Read every one of them. The most important are listed in Part Two.
+
+
+PART TWO - THE IMPORTANT docs/ FILES, AND WHAT EACH IS
+
+
+• CONSTITUTION.md (repository root, not docs) - the fifteen commandments. The law.
+
+• docs/konnectome_tutorial_v7.txt - a complete, beginner-friendly tutorial on all of konnectome. Start here if you want the whole picture in plain language. It is maintained under the Fifteenth Commandment and bumps with every code slice.
+
+• docs/konnectome_ledger_v1.txt - the running scoreboard of the whole build: the construct coverage list (which module realizes each of the ten architecture components), the routing rules for findings, the build-against cousin commits, and every observation. Read this to know exactly what is realized and what is pending.
+
+• docs/konnectome_1_specification_v10.txt through docs/konnectome_6_demonstration_v10.txt - the SPARCD Fileset (see Part One).
+
+• docs/Causalontology_4_0_0_CHANGE_ORDER_v2.txt - the held change order for the frozen Causalontology data structure. Route a real, shareable data-structure gap here, never by editing the cousin (Second Commandment). It is empty of konnectome findings so far.
+
+• docs/PrologAI_CHANGE_ORDER_v1.txt - the held change order for the PrologAI language. Route a real, load-bearing language gap here, additively (Third and Thirteenth Commandments). It is empty so far.
+
+• docs/causalontology_thought_combination_AICA.txt - a guide for an artificial-intelligence coding agent on how to combine thoughts by minting Causal Relation Objects (the reified cause-and-effect records). This is directly relevant when konnectome begins to combine thoughts into chains and trees. It was a drop-in, committed at the owner's request.
+
+• The guiding-principle documents: docs/THE_ROADMAP_TO_AGI_AND_ASI_MANUSCRIPT.txt, docs/AGI_FOR_EVERYONE_OUTLINE.txt, docs/AGI_FOR_EVERYONE_MANUSCRIPT.txt, docs/SPARCD_EXPLAINED.txt, docs/ENGLISH_READABLE_CODE_MANUSCRIPT.txt, and the palette docs/CRIMSON_TO_GOLD_PALETTE.png.
+
+• The context documents: docs/CONTEXT_HAND_OFF_FROM_CAMBER_VANTBLACK_2026-07-19.txt, docs/WRITEUP_FOR_WAVE_1_TO_WAVE_10.txt, docs/PROJECT_CLOSE_OUT_QA_REPORT_v1.txt, and docs/CAUSALONTOLOGY_3_0_0_REVIEW_AND_4_0_0_ASSESSMENT.txt, plus docs/PrologAI_Requirements_Ledger_v1.txt and docs/Connectome_Master_Plan_v2.txt. These carry the history of how the family came to be.
+
+• docs/archive/ - every superseded version of every versioned document. Only the latest version of anything lives outside the archive (Ninth Commandment).
+
+Read all of docs/, not only these.
+
+
+PART THREE - WHAT I DID (THE REPORT)
+
+
+I built konnectome from an empty public repository to a running, integrated, glass-box Proto-Artificial-General-Intelligence (Proto-AGI) prototype, across twelve merged pull requests.
+
+The setup.
+
+• I created the repository scaffold: the CONSTITUTION.md of fourteen commandments (the owner added a fifteenth mid-build), the fourteen reference documents copied into docs/, the ledger, the two change orders, the archive folder, the README in the crimson-to-gold family style with a placeholder banner, and the six-file SPARCD Fileset seeded verbatim from the appendices of Nature's Cognitive Architecture. That was pull request 1.
+
+The ten architecture components (Section A3.2), each realized as a pack of three files (a manifest, the module, and a Prolog Unit test suite), written in English Readable Code with whole-word snake_case names, and gated.
+
+• tick_engine - Component 2, the Scheduler and Tick Engine, with the two-pass synchronous update (the heartbeat).
+
+• archetype - the six dynamical archetype rules (relay, integrator, oscillator, attractor, gate, comparator) and their dispatch.
+
+• observer - Component 9, the passive Observer, which records each tick as a Causalontology token_occurrence by reusing PrologAI's causal_core (konnectome's first durable thought).
+
+• connection_graph - Component 3, the Connection Graph: directed weighted interfaces, signal propagation one hop per tick, and a bus-modulated update whose relay gains are set by the neuromodulators.
+
+• neuromodulator_bus - Component 4, the neuromodulatory broadcast bus.
+
+• drive_system - Component 5, the homeostatic drives: reward as the total reduction of drive error, broadcast as dopamine, plus action proposals and the body's response to action.
+
+• action_selector - Component 6, the referee that releases exactly one candidate action and never invents one.
+
+• override_controller - Component 7, the safety property: a vital drive in distress seizes control, and the respiration drive can never be suppressed.
+
+• plasticity_engine - Component 8, the three-factor learning rule (sending activity, receiving activity, dopamine) that changes connection weights.
+
+• perturbation_interface - Component 10, the experimenter's hand: lesion, cut, and shift (for example, deplete dopamine to model Parkinson's disease).
+
+• cognitive_cycle - the integration: it wires all ten components into one running tick in the Section A3.3 order, and completes Component 1 (the construct registry) as the world it carries. In its hardened form it is a closed sensorimotor loop: the drives propose actions, a construct's gain is set by the bus, the action is released under the safety override, the plasticity engine learns, and the body responds - so acting to reduce a need moves the body toward its set-point, and that improvement feeds back as the next tick's reward.
+
+The state at hand-off.
+
+• Eleven packs, sixty-two Prolog Unit tests, all green. The naming, layer, and layer-binding gates all report zero violations. The Causalontology one-hundred-nineteen-vector conformance suite passes 119 of 119. Zero walls were hit; two observations were logged (not routed). Nothing in PrologAI or Causalontology was edited, so the ARC-AGI benchmarks are untouched.
+
+• The main branch is at commit 3c7a927 on GitHub at ai-university-aiu/konnectome. Twelve pull requests were merged. The SPARCD Fileset is at version 10 and the tutorial at version 7.
+
+
+PART FOUR - OTHER CONTEXT YOU SHOULD KNOW
+
+
+• How to check the build is green. From the konnectome repository root: bin/run_pack_tests.sh <pack_name> runs one pack's tests; bin/check_pack_naming.sh checks the whole-word naming rule; bin/check_layers.sh checks the strict layer rule; bin/check_layer_binding.sh checks the layer-to-stratum binding. Each prints a clear pass-or-fail and exits zero when clean.
+
+• The tooling. SWI-Prolog version 9.0.4 is installed. konnectome reuses PrologAI, it does not fork it: the bin scripts put PrologAI's packs on the SWI-Prolog library path (via PROLOGAI_HOME, defaulting to /home/ccaitwo/PrologAI), so a konnectome pack can load library(causal_core) and the like from PrologAI directly. konnectome's own packs live under packs/.
+
+• The build-against commits, for reproducibility. causalontology at git head 98ebb33 (frozen Causalontology 3.0.0). PrologAI at git head 0fed5d1, tag prologai-wave10-complete. Mentova at git head fb7d48f.
+
+• The versioning discipline (do not break it). Every code change bumps the six SPARCD documents in lockstep AND the tutorial, each gaining a Realization Log entry, with the superseded versions moved into docs/archive/ via git mv in the same change (Ninth, Tenth, and Fifteenth Commandments). The ledger and the README are updated in the same change (Eighth and Eleventh Commandments). Work on a feature branch, open a pull request, squash-merge your own and delete the branch, never push directly to main, and never credit an artificial-intelligence tool as an author (Fourteenth Commandment).
+
+• The two logged observations. First, the Causalontology specification file spec/identity.md still says "seventeen whole-word schemes" and omits the eighteenth kind from one inline list, though the rest of the specification carries all eighteen - a stale count, logged for the owner, not routed. Second, a Causalontology token_occurrence requires an absolute timestamp while a konnectome tick is dimensionless-ordinal; the observer resolves this with a nominal, reproducible simulated clock, and the 3.0.0 ordinal tick unit remains available for native ordinal windows later. Neither is a wall.
+
+• Honest limits of what runs. The sensorimotor loop is minimal: the body model is a single move-toward-set-point step, action proposals come only from the drives, and multi-tick interface delay lines, computational-interface transforms, homeostatic scaling, the eligibility trace, and representing interfaces as Causalontology conduits are all recorded in the ledger as pending refinements, not walls. The developmental ladder of Appendix 6 (senses, holding an object in mind, language, reasoning, emotion, embodiment) is the open research road ahead, and it rests on the running loop now in place.
+
+
+PART FIVE - YOUR FIRST TASK
+
+
+Present the current choice options to the owner as the first task of the continuation, and let the owner choose:
+
+1. Pause at this capstone.
+
+2. Climb the ladder (senses).
+
+3. A capstone demonstration.
+
+4. Other ______________ .
+
+
+The ember is lit and the loop turns. Keep it green, keep it honest, and build the next rung on top of it.
+
+- Ember Loomwright, 2026-07-20.
