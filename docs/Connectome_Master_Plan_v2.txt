@@ -160,11 +160,11 @@ L4 - the discovery that PrologAI cannot express its own keystone rule - could no
 Keep every instrument in this program in PrologAI, for that reason.
 
 
-PART EIGHT: THE GROUNDING RULE - CAUSALONTOLOGY 2.0.0
+PART EIGHT: THE GROUNDING RULE - CAUSALONTOLOGY 3.0.0
 
 Unchanged by the verdict, and restated for completeness.
 
-Every repository in this family grounds its STRUCTURE in the Causalontology 2.0.0 schema. None grounds its DYNAMICS there.
+Every repository in this family grounds its STRUCTURE in the Causalontology 3.0.0 schema. None grounds its DYNAMICS there.
 
 GROUNDED (structure):
 
@@ -188,7 +188,7 @@ NOT GROUNDED (dynamics - keep native):
 
 The rule, once: Causalontology models causation, levels, interfaces, and history. It does not model behavior. Do not force a rate constant into a causal_relation_object.
 
-WHY GROUND AT ALL: it holds the data layer constant across the arms, which is what makes the granularity A/B valid - the experiment varies code architecture, so the vocabulary must not vary with it. It is already built, proven, and gated at 107 conformance vectors in PrologAI's own causal_core packs under Continuous Integration (CI). And its kinds fit the anatomy, because the anatomy is the forcing function that produced them.
+WHY GROUND AT ALL: it holds the data layer constant across the arms, which is what makes the granularity A/B valid - the experiment varies code architecture, so the vocabulary must not vary with it. It is already built, proven, and gated at 119 conformance vectors in PrologAI's own causal_core packs under Continuous Integration (CI). And its kinds fit the anatomy, because the anatomy is the forcing function that produced them.
 
 THE SPIKE WAS EXEMPT, correctly, and the exemption is now spent. From connectome-proto-agi onward, the grounding rule applies.
 
@@ -203,7 +203,7 @@ Each repository is created with exactly two files, and the split is deliberate.
 
 For a NEW repository there is no prior state to protect, so the first scaffold commit may go straight to main; the gate is that the harness runs and reports honestly. Branch discipline, rollback tags, and the green gate resume for every change after the scaffold.
 
-NOTE FOR WAVE 1: the PrologAI foundation work is NOT a new repository. It is a change order against an existing, benchmark-critical repository, so the full discipline applies - branch, rollback tag, hard regression gate on ARC-AGI-1 (400/400) and ARC-AGI-2 (120/120), and the 107-vector conformance harness must still pass. The layer construct must not disturb the solving core.
+NOTE FOR WAVE 1: the PrologAI foundation work is NOT a new repository. It is a change order against an existing, benchmark-critical repository, so the full discipline applies - branch, rollback tag, hard regression gate on ARC-AGI-1 (400/400) and ARC-AGI-2 (120/120), and the 119-vector conformance harness must still pass. The layer construct must not disturb the solving core.
 
 
 PART TEN: WHAT IS RETIRED
@@ -214,7 +214,7 @@ It is not a Nature's Cognitive Architecture prototype and never was. Its own fir
 
 It proved five things - the skip asymmetry, bridged reachability, the realizable collision repair, pipe versus computer, and the token tier - all claims about the data layer, not about cognition. It contains no regions, no loops, no neurotransmitters, no tick.
 
-It has been superseded: the production implementation now exists and passes all 107 vectors in both the Python reference and PrologAI, gated in CI.
+It has been superseded: the production implementation now exists and passes all 119 vectors in both the Python reference and PrologAI, gated in CI.
 
 It did its job. Archive it as history. It is not the seed of connectome-proto-agi.
 
