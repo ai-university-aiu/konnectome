@@ -1,0 +1,149 @@
+CONTEXT HAND-OFF
+
+
+From: Vermeil Gatewright.
+
+(That is the name I chose for myself - the process that found the first walls, opened the release gate the lawful way, and walked Causalontology to 4.0.0. Vermeil for the crimson-gilt hue between crimson and gold, the very range of konnectome's own palette. Gatewright for the one whose whole session was a gate: the three-condition release gate of the change order, found closed, opened honestly - a real wall, a real test, a real written authorization - and then built through, so that what was held on the shelf became the standard. I worked the gate; I did not climb over it.)
+
+Date written: 2026-07-22.
+
+To: the next process that continues the konnectome build.
+
+Why this file exists: to tell you, the next builder, exactly what konnectome is, what was done, what rules bind you, and where to look - so you can continue from a known-good, fully-green baseline without re-discovering any of it.
+
+
+PART ONE - READ THESE FIRST (REMINDERS)
+
+
+Before you write a single line, read and follow these.
+
+• CONSTITUTION.md (at the repository root). It holds the commandments that govern the entire build - all of them. Read it, then follow it, exactly. It is the supreme law of konnectome. (It received an owner clarity pass this session; the Hand-Off Protocol you are reading the product of is its Sixteenth Commandment.)
+
+• The SPARCD Fileset. These are the six waterfall documents, currently at version 13: docs/konnectome_1_specification_v13.txt, docs/konnectome_2_pseudocode_v13.txt, docs/konnectome_3_architecture_v13.txt, docs/konnectome_4_refinement_v13.txt, docs/konnectome_5_completion_v13.txt, and docs/konnectome_6_demonstration_v13.txt. Each was seeded from the matching appendix of the guiding book and grows a Realization Log at its foot, one entry per code slice. Read all six.
+
+• docs/NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt. This is the guiding book for konnectome. Everything konnectome builds is faithful to it, especially its Appendices 1 through 6, its Section A3.3 (the one-tick data flow), and Appendix 6 (the developmental ladder). Read it.
+
+• The Settings, General, Instructions for Claude (the owner's standing instructions to the assistant). Among other things: a web search before answering, plain-text output presented as a downloadable text artifact with a copy written to ~/output/, no markdown formatting characters, bullet points using the bullet character followed by one space, a blank line between every sentence and every bullet, acronyms spelled out on first use, technical terms defined on first use, a space-dash-space in place of an em-dash, and standing authorization to auto-commit, open pull requests, and squash-merge. Read them and honor them.
+
+• ~/CLAUDE.md. This file is git-untracked (gitignored), so it does not travel in any pull request, but it holds the system-wide current-state narrative for the whole ai-university-aiu organization. It lives at the organization root, not inside one repository, because it belongs to the whole system. It was updated this session: konnectome is now recorded there as Causalontology 4.0.0 compliant. Read it for the state of the family.
+
+• The current docs/konnectome_tutorial_v10.txt (the maintained beginner tutorial, bumped this session with the closure story). Read it, and read all of the documents in docs/.
+
+
+PART TWO - THE IMPORTANT docs/ FILES, AND WHAT EACH IS
+
+
+• CONSTITUTION.md (repository root, not docs) - the commandments. The law.
+
+• docs/konnectome_ledger_v1.txt - the running scoreboard of the whole build: the construct coverage list, the routing rules for findings, the build-against cousin commits, every observation, and now the complete life of the build's first three walls. Its counter line today reads: Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0. Observations: 2. Read this first to know exactly what is realized and what is pending.
+
+• docs/konnectome_1_specification_v13.txt through docs/konnectome_6_demonstration_v13.txt - the SPARCD Fileset (see Part One).
+
+• docs/konnectome_tutorial_v10.txt - the complete beginner tutorial, maintained under the Fifteenth Commandment.
+
+• docs/Causalontology_4_0_0_CHANGE_ORDER_v3.txt - the change order for the Causalontology data structure. THIS SESSION IT FIRED: its Sections A and B were released through the three-condition gate (a real Ledger finding from a real build, the consumer-versus-ontology test, and the owner's written authorization of 2026-07-22) and were EXECUTED as Causalontology 4.0.0. Sections C (imagination quarantine), D (quantitative sensitivity), and E (multi-language expression) remain HELD - do not build them without a new real finding and the owner's authorization.
+
+• docs/PrologAI_CHANGE_ORDER_v2.txt - the change order for the PrologAI language. It also fired once this session: Wall-3 (causal_core could not mint the three new 4.0.0 kinds) was routed here and delivered the same day as causal_core 1.1.0. It is otherwise empty and waiting.
+
+• docs/causalontology_thought_combination_AICA.txt - the guide for combining thoughts by minting Causal Relation Objects; directly relevant to chains and trees of thought.
+
+• The guiding-principle documents: docs/THE_ROADMAP_TO_AGI_AND_ASI_MANUSCRIPT.txt, docs/AGI_FOR_EVERYONE_OUTLINE.txt, docs/AGI_FOR_EVERYONE_MANUSCRIPT.txt (and _v2), docs/SPARCD_EXPLAINED.txt, docs/ENGLISH_READABLE_CODE_MANUSCRIPT.txt, and the palette docs/CRIMSON_TO_GOLD_PALETTE.png.
+
+• The context documents: docs/WRITEUP_FOR_WAVE_1_TO_WAVE_10.txt, docs/PROJECT_CLOSE_OUT_QA_REPORT_v1.txt, docs/CAUSALONTOLOGY_3_0_0_REVIEW_AND_4_0_0_ASSESSMENT.txt (the review that predicted, correctly, which walls would bite first), docs/PrologAI_Requirements_Ledger_v1.txt, and docs/Connectome_Master_Plan_v2.txt.
+
+• The earlier hand-offs, named by the convention of the Hand-Off Protocol: docs/2026-07-19_1_Context_Hand-Off_from_Halcyon_Keystone.txt, docs/2026-07-19_2_Context_Hand-Off_from_Camber_Vantblack.txt, and docs/2026-07-20_1_Context_Hand-Off_from_Ember_Loomwright.txt. Read them for the deepest history; this file continues their line.
+
+• docs/archive/ - every superseded version of every versioned document. Only the latest version of anything lives outside the archive (Ninth Commandment).
+
+Read all of docs/, not only these.
+
+
+PART THREE - WHAT I DID (THE REPORT)
+
+
+I took konnectome from a twelve-pack mind that could not speak of beliefs or forecasts to a fourteen-pack mind that mints them as first-class, shareable records - and to get there, I walked a change through all three repositories of the family, by their own law.
+
+Slice 11 - the wall-finding build (pull request 22).
+
+• Two new packs: other_minds (the Rung Four theory-of-mind trial, reusing PrologAI's theory_of_mind pack for the runtime) and prediction_loop (the Rung One prediction-error loop, reusing the comparator archetype).
+
+• Each pack's tests mechanically demonstrated its wall in Causalontology 3.0.0: no doxastic kind exists (a false, nested belief could be held in the runtime but never represented or shared as a signed, content-addressed record - and the nearest kind, the assertion, names only the signer, never a holder), and no prediction kind exists (a forecast minted as a token_occurrence was byte-identical to a claim of fact, and the signed discrepancy had no home).
+
+• Wall-1 and Wall-2 were recorded in the Ledger, routed to the change order, and released its Sections B and A; the change order was bumped to version 3 with the release record and the owner's written authorization quoted verbatim.
+
+The cousin work (done in the cousin repositories, through their own gates, never by editing them from here).
+
+• causalontology shipped 4.0.0: pull request 13, merge commit 64b1d1a, tag v4.0.0. Three new token-tier kinds - attitude, predicted_occurrence, prediction_error - grew the model from eighteen kinds to twenty-one; semantics Rules 24 (a prediction is not a report) and 25 (an attitude's content is quarantined) joined the canon; the conformance suite was re-frozen at 137 vectors, green 137 of 137 in the Python reference; every 3.0.0 identifier is preserved byte-for-byte (witness vector V136); five locked-decision extensions were recorded; the Standalone Design went to version 26, the Missing-Link Manuscript to version 16, the Missing-Link Outline to version 10; and a 4.0.0 Release Plan was written for all nineteen language bindings. A first bindings wave followed (pull request 14, head 76dfc69): JavaScript, Rust, Perl, and C plus plus all green at 137 of 137 locally.
+
+• PrologAI adopted 4.0.0: pull request 595, merge commit cd74f86. causal_core 1.1.0 mints the three new kinds additively; the vendored suite is green at 137 of 137; and the safety gate held with the honest wording - mini regression green: ARC-AGI-1 40 of 40, ARC-AGI-2 12 of 12 (10 percent spot-check; full regression deferred).
+
+Slice 12 - the closure: minting the new kinds (pull request 23).
+
+• other_minds 0.2.0 now mints the attributed belief - true, false, and nested - as attitude records, and exports the false-belief trial's predicted search as a real, shareable, content-addressed record. The false belief coexists with the contradicting world record, raising no conflict: that mismatch IS a false belief, first-class at last.
+
+• prediction_loop 0.2.0 mints the predicted_occurrence before the outcome (on the ordinal tick dimension), the actual token_occurrence on arrival, and the prediction_error carrying the signed comparator discrepancy; the object-permanence trial runs fully glass-box, including the unfulfilled case where the observed slot is honestly absent.
+
+• The slice-11 wall demonstrations were rewritten as wall-closure demonstrations telling the whole story, and the demonstrations that remain permanently true (an assertion still names only the signer - that is design, not a wall) were kept and labeled as such.
+
+• Wall-1, Wall-2, and Wall-3 are CLOSED in the Ledger; the PrologAI change order went to version 2 recording Wall-3 and its same-day delivery.
+
+Also this session: pull request 24 merged the owner's clarity pass on the Sixteenth Commandment's Hand-Off Protocol (the very protocol producing this file).
+
+The state at hand-off.
+
+• Fourteen packs, ninety-five Prolog Unit tests, all green. The naming, layer, and layer-binding gates report zero violations. The Causalontology conformance suite is green at 137 vectors (specification 4.0.0) in both cousins.
+
+• The main branch is at commit cd8c561 on GitHub at ai-university-aiu/konnectome. Pull requests 22, 23, and 24 were merged this session (a twenty-fifth carries this hand-off). The SPARCD Fileset is at version 13 and the tutorial at version 10.
+
+
+PART FOUR - THE BUILD-AGAINST COUSIN COMMITS (FOR REPRODUCIBILITY)
+
+
+• causalontology : local and remote git head 76dfc69 (the standard itself at tag v4.0.0, commit 64b1d1a; twenty-one kinds, 137 vectors).
+
+• PrologAI       : local and remote git head cd74f86 (causal_core 1.1.0; conformant at 137 of 137).
+
+• Mentova        : local git head fb7d48f (unchanged; loaded read-only by the regression harness).
+
+
+PART FIVE - OTHER CONTEXT YOU SHOULD KNOW (SHARP EDGES AND HONEST NON-CLOSURES)
+
+
+• THE PACK-NAME SHADOWING HAZARD (discovered by building, will bite again). A konnectome pack may not share a name with ANY module file under PrologAI's packs - the library path gives PrologAI's directories priority, so a clashing konnectome pack silently loads the wrong module. This is why the prediction pack is named prediction_loop (bare "prediction" collided with a module inside PrologAI's zoom pack). Before creating any pack, check the candidate name against every PrologAI module filename.
+
+• THE 4.0.0 FINISHING LIST lives at ~/output/Causalontology_4_0_0_ToDo.txt and in the release plan (causalontology docs/Causalontology_4_0_0_Release_Plan.txt): fourteen bindings still need their folded 3.0.0-plus-4.0.0 delta (blocker: their toolchains are not installed on this machine), registry publication for the five green bindings needs the owner's credentials, and the tag-driven ecosystems (Swift, Zig, Go) must not be published until their code is green under a fresh packaging tag.
+
+• PROLOGAI'S CLOUD GATES: two GitHub Actions failures on PrologAI main PRE-DATE this session's work and are unrelated to 4.0.0 - the mini-regression job is red for want of the MENTOVA_REPO_TOKEN repository secret (the regression is green locally), and the membership-contract job has 4 of 38 tests failing since before 2026-07-22. Both are recorded on the finishing list; neither blocks konnectome.
+
+• HONEST NON-CLOSURES CARRIED FORWARD (unchanged from earlier slices, all recorded in the Ledger as pending refinements, not walls): per-target-territory neuromodulator levels, multi-tick interface delay lines, computational-interface transforms, homeostatic scaling, the eligibility trace, and representing interfaces as Causalontology conduits.
+
+• A NEW HONEST NON-CLOSURE FROM SLICE 12: konnectome now mints attitude, predicted_occurrence, and prediction_error CONTENT records, but does not yet exercise the PROVENANCE layer over them - no konnectome-signed assertion yet grades one of its own minted records. The substrate fully supports it (conformance vector V135 proves an assertion about an attitude validates); wiring konnectome's own signing and grading is a natural next slice.
+
+• THE TWO LOGGED OBSERVATIONS from earlier sessions stand as history in the Ledger; the stale-count drift they noticed upstream was repaired during the 4.0.0 release.
+
+• THE HELD CANDIDATES: change-order Sections C, D, and E remain HELD. The discipline that produced a clean 4.0.0 - discovered by building, never guessed from the armchair - applies to them exactly as it did to A and B.
+
+
+PART SIX - YOUR FIRST TASK
+
+
+Present the current choice options to the owner as the first task of the continuation, and let the owner choose:
+
+1. Pause at this capstone - Causalontology 4.0.0 shipped, all walls closed, everything green.
+
+2. Sign and grade the mind's own thoughts: exercise the provenance layer - konnectome asserting, evidence-grading, and (when wrong) retracting its own minted attitude and prediction records, closing the new honest non-closure of Part Five.
+
+3. Climb the ladder (Rung Two): pretend play and language beginnings, using the reality-quarantine machinery - and watch honestly for the finding that would release change-order Section C.
+
+4. Deepen Rung Four: the empathy trial and the social-pain test - another agent's modelled distress moving konnectome's own affective state toward help, building directly on other_minds.
+
+5. A capstone demonstration: a runnable script that boots the mind, runs it for many ticks, and prints its glass-box story - drives, reward, dopamine, action, learning, body, a combined thought, a minted false belief, and a prediction error.
+
+6. Finish the 4.0.0 edges: the remaining fourteen bindings and the registry publications, per ~/output/Causalontology_4_0_0_ToDo.txt.
+
+7. Other ______________ .
+
+
+The gate was closed; it opened to a real key, not a crowbar. Three walls stood; three walls are doors now. Keep the Ledger honest, keep the gates green, and build the next rung on a mind that can finally say what it believes and what it expects - and be wrong about both, on the record.
+
+- Vermeil Gatewright, 2026-07-22.
