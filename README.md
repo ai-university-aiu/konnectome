@@ -6,7 +6,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/PROTO--AGI-PROTOTYPE-FFCE59?style=for-the-badge" alt="Proto-AGI prototype">
   <a href="https://github.com/ai-university-aiu/PrologAI"><img src="https://img.shields.io/badge/WRITTEN_IN-PROLOGAI-FFB24B?style=for-the-badge" alt="Written in PrologAI"></a>
-  <a href="https://github.com/ai-university-aiu/causalontology"><img src="https://img.shields.io/badge/THOUGHTS_IN-CAUSALONTOLOGY_3.0.0-FF933A?style=for-the-badge" alt="Thoughts in Causalontology 3.0.0"></a>
+  <a href="https://github.com/ai-university-aiu/causalontology"><img src="https://img.shields.io/badge/THOUGHTS_IN-CAUSALONTOLOGY_4.0.0-FF933A?style=for-the-badge" alt="Thoughts in Causalontology 4.0.0"></a>
 </p>
 
 <!-- ROW 2: THE METHOD -->
@@ -20,7 +20,7 @@
 <p align="center">
   <a href="https://github.com/ai-university-aiu/PrologAI"><img src="https://img.shields.io/badge/ARC--AGI--1-400%2F400_INHERITED-E04217?style=for-the-badge" alt="ARC-AGI-1 400/400 inherited"></a>
   <a href="https://github.com/ai-university-aiu/PrologAI"><img src="https://img.shields.io/badge/ARC--AGI--2-120%2F120_INHERITED-D73C17?style=for-the-badge" alt="ARC-AGI-2 120/120 inherited"></a>
-  <img src="https://img.shields.io/badge/CONFORMANCE-119_VECTORS_GREEN-C93118?style=for-the-badge" alt="Conformance 119 vectors green">
+  <img src="https://img.shields.io/badge/CONFORMANCE-137_VECTORS_GREEN-C93118?style=for-the-badge" alt="Conformance 137 vectors green">
 </p>
 
 <!-- ROW 4: THE CHARACTER -->
@@ -50,7 +50,7 @@ Each badge above is a claim, and every claim deserves a plain explanation. Here 
 
 - **`PROTO-AGI | PROTOTYPE`** - Proto-AGI stands for *Proto Artificial General Intelligence*: an early, honest prototype on the road toward a machine that can reason broadly, not a finished general mind. konnectome is that prototype - a build in progress, not a product.
 - **`WRITTEN IN | PROLOGAI`** - PrologAI is the glass-box cognitive-architecture programming language konnectome is written in. "Glass-box" means every decision can be inspected and explained, never hidden inside opaque numbers. The badge links to the PrologAI repository.
-- **`THOUGHTS IN | CAUSALONTOLOGY 3.0.0`** - Causalontology is the shared data structure that holds konnectome's "thoughts", "chains of thought", and "trees of thought". It is a process-first ontology (an organized vocabulary of causes and effects) where every record is identified by a fingerprint of its own content. konnectome uses version 3.0.0, which is frozen to it except through a gated change-order process.
+- **`THOUGHTS IN | CAUSALONTOLOGY 4.0.0`** - Causalontology is the shared data structure that holds konnectome's "thoughts", "chains of thought", and "trees of thought". It is a process-first ontology (an organized vocabulary of causes and effects) where every record is identified by a fingerprint of its own content. konnectome uses version 4.0.0, which added the attitude, predicted_occurrence, and prediction_error kinds; it is frozen to konnectome except through a gated change-order process.
 
 **Row 2 - The Method**
 
@@ -61,7 +61,7 @@ Each badge above is a claim, and every claim deserves a plain explanation. Here 
 **Row 3 - The Gates It Must Keep Green**
 
 - **`ARC-AGI-1 | 400/400 INHERITED`** and **`ARC-AGI-2 | 120/120 INHERITED`** - ARC-AGI stands for the *Abstraction and Reasoning Corpus for Artificial General Intelligence*, a famous series of public reasoning tests. The reference language PrologAI already solves all 400 of 400 and all 120 of 120 public tasks, by pure readable-logic induction with no Large Language Model. konnectome did not earn these scores; it inherits them as a promise it must never break (the Thirteenth Commandment: any change konnectome asks of PrologAI is additive and must not regress these).
-- **`CONFORMANCE | 119 VECTORS GREEN`** - a conformance vector is a published test case (an input and the exact result a correct implementation must produce). Causalontology 3.0.0 has 119 of them, and any data-structure change konnectome proposes must keep all 119 passing.
+- **`CONFORMANCE | 137 VECTORS GREEN`** - a conformance vector is a published test case (an input and the exact result a correct implementation must produce). Causalontology 4.0.0 has 137 of them (119 from 3.0.0, plus 18 for the three new kinds), and any data-structure change konnectome proposes must keep all 137 passing.
 
 **Row 4 - The Character**
 
@@ -82,9 +82,9 @@ Each badge above is a claim, and every claim deserves a plain explanation. Here 
 > *"The map is drawn. The early camps are reached. The summit is in sight. Let us go forth to the peak: AGI."*
 > - Nature's Cognitive Architecture
 
-**A Proto-Artificial-General-Intelligence prototype written in PrologAI, thinking in Causalontology 3.0.0 records, and built faithfully from the appendices of the book *Nature's Cognitive Architecture*. konnectome is the connectome-scale cognitive structure the finished PrologAI language was built to make possible.**
+**A Proto-Artificial-General-Intelligence prototype written in PrologAI, thinking in Causalontology 4.0.0 records, and built faithfully from the appendices of the book *Nature's Cognitive Architecture*. konnectome is the connectome-scale cognitive structure the finished PrologAI language was built to make possible.**
 
-**konnectome is able to** (as one integrated, reproducible, glass-box loop) **keep time** (the tick engine's two-pass synchronous update), **want and stay motivated** (the homeostatic drives, whose relief becomes a reward broadcast as dopamine on the neuromodulatory bus), **act by releasing exactly one action under a vitality safety override** (the action selector and the override controller - a vital drive like breathing can seize control and can never be suppressed), **learn** (the three-factor plasticity engine, where a connection strengthens only when both ends fire together and dopamine says the moment mattered), **record each tick as a Causalontology `token_occurrence`** (the passive observer), and **combine thoughts into chains and trees of thought as Causal Relation Objects** (`thought_combination`) - moving its own body toward what it needs as a closed sensorimotor loop, all as a glass box you can inspect at every step, with the naming, layer, and binding gates green and the 119 Causalontology conformance vectors intact.
+**konnectome is able to** (as one integrated, reproducible, glass-box loop) **keep time** (the tick engine's two-pass synchronous update), **want and stay motivated** (the homeostatic drives, whose relief becomes a reward broadcast as dopamine on the neuromodulatory bus), **act by releasing exactly one action under a vitality safety override** (the action selector and the override controller - a vital drive like breathing can seize control and can never be suppressed), **learn** (the three-factor plasticity engine, where a connection strengthens only when both ends fire together and dopamine says the moment mattered), **record each tick as a Causalontology `token_occurrence`** (the passive observer), and **combine thoughts into chains and trees of thought as Causal Relation Objects** (`thought_combination`) - moving its own body toward what it needs as a closed sensorimotor loop, all as a glass box you can inspect at every step, with the naming, layer, and binding gates green and the 137 Causalontology conformance vectors intact.
 
 ---
 
@@ -93,7 +93,7 @@ Each badge above is a claim, and every claim deserves a plain explanation. Here 
 **konnectome builds a mind the way nature grows one: smallest faithful slice first, each slice earning the next.** It is the fourth member of a family of sibling repositories owned by ai-university-aiu:
 
 - [**PrologAI**](https://github.com/ai-university-aiu/PrologAI) is the *language* - a glass-box cognitive architecture whose Wave 10 program is complete and load-bearing.
-- [**Causalontology**](https://github.com/ai-university-aiu/causalontology) is the *data structure* - a process-first standard for reified causation, frozen at version 3.0.0, in which konnectome stores every thought.
+- [**Causalontology**](https://github.com/ai-university-aiu/causalontology) is the *data structure* - a process-first standard for reified causation, frozen at version 4.0.0, in which konnectome stores every thought.
 - [**Mentova**](https://github.com/ai-university-aiu/Mentova) is the *flagship Synthetic Mind* and the home of the reasoning core that scores 400 of 400 and 120 of 120 on the two public ARC-AGI benchmarks.
 - **konnectome** is the *cognitive structure* - it uses the finished language and the frozen data structure to build the brain-like machine described in *Nature's Cognitive Architecture*, with no workarounds.
 
@@ -115,7 +115,7 @@ konnectome is built and maintained under a written [**CONSTITUTION.md**](CONSTIT
 10. **Mirrored changes** - any code change is mirrored in the SPARCD Fileset, with versions bumped and old versions archived.
 11. **The README** - kept current, styled like the cousin repositories, in the crimson-to-gold palette.
 12. **Whole-Word System** - whole English words, snake_case, pack-qualified, no terse prefixes.
-13. **The safety gate** - no change may regress ARC-AGI-1, ARC-AGI-2, or the 119-vector Causalontology conformance suite.
+13. **The safety gate** - no change may regress ARC-AGI-1, ARC-AGI-2, or the 137-vector Causalontology conformance suite.
 14. **Branch and report discipline** - feature branches and pull requests; no direct pushes to main; no artificial-intelligence tool credited as author; no Roman numerals.
 
 ## The SPARCD Fileset
@@ -124,12 +124,12 @@ The six-phase waterfall is mirrored in six versioned documents, each seeded verb
 
 | Phase | File | Seeded from |
 |---|---|---|
-| 1. Specification | [`docs/konnectome_1_specification_v12.txt`](docs/konnectome_1_specification_v12.txt) | Appendix 1 |
-| 2. Pseudocode | [`docs/konnectome_2_pseudocode_v12.txt`](docs/konnectome_2_pseudocode_v12.txt) | Appendix 2 |
-| 3. Architecture | [`docs/konnectome_3_architecture_v12.txt`](docs/konnectome_3_architecture_v12.txt) | Appendix 3 |
-| 4. Refinement | [`docs/konnectome_4_refinement_v12.txt`](docs/konnectome_4_refinement_v12.txt) | Appendix 4 |
-| 5. Completion | [`docs/konnectome_5_completion_v12.txt`](docs/konnectome_5_completion_v12.txt) | Appendix 5 |
-| 6. Demonstration | [`docs/konnectome_6_demonstration_v12.txt`](docs/konnectome_6_demonstration_v12.txt) | Appendix 6 |
+| 1. Specification | [`docs/konnectome_1_specification_v13.txt`](docs/konnectome_1_specification_v13.txt) | Appendix 1 |
+| 2. Pseudocode | [`docs/konnectome_2_pseudocode_v13.txt`](docs/konnectome_2_pseudocode_v13.txt) | Appendix 2 |
+| 3. Architecture | [`docs/konnectome_3_architecture_v13.txt`](docs/konnectome_3_architecture_v13.txt) | Appendix 3 |
+| 4. Refinement | [`docs/konnectome_4_refinement_v13.txt`](docs/konnectome_4_refinement_v13.txt) | Appendix 4 |
+| 5. Completion | [`docs/konnectome_5_completion_v13.txt`](docs/konnectome_5_completion_v13.txt) | Appendix 5 |
+| 6. Demonstration | [`docs/konnectome_6_demonstration_v13.txt`](docs/konnectome_6_demonstration_v13.txt) | Appendix 6 |
 
 ## The build ladder
 
@@ -169,9 +169,9 @@ konnectome/
   docs/
     konnectome_1..6_*_vN.txt   The SPARCD Fileset (seeded from the appendices; versioned per slice).
     konnectome_ledger_v1.txt   The running scoreboard of findings (Fourth Commandment).
-    konnectome_tutorial_v9.txt A complete beginner tutorial (Fifteenth Commandment), versioned.
-    PrologAI_CHANGE_ORDER_v1.txt        Additive PrologAI-language gaps (Third Commandment).
-    Causalontology_4_0_0_CHANGE_ORDER_v3.txt   Data-structure gaps for the frozen ontology (Sections A and B released).
+    konnectome_tutorial_v10.txt A complete beginner tutorial (Fifteenth Commandment), versioned.
+    PrologAI_CHANGE_ORDER_v2.txt        Additive PrologAI-language gaps (Third Commandment); Wall-3 closed by causal_core 1.1.0.
+    Causalontology_4_0_0_CHANGE_ORDER_v3.txt   Data-structure gaps for the frozen ontology (Sections A and B shipped as 4.0.0; C, D, E held).
     NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt  The source book.
     (plus the guiding-principle and context documents, and the palette)
     images/                    The README banner.
@@ -180,7 +180,7 @@ konnectome/
 
 ## Status
 
-The build has begun and is climbing the ladder. Eleven slices have landed on `main` (fourteen packs, 87 tests, all green):
+The build has begun and is climbing the ladder. Twelve slices have landed on `main` (fourteen packs, 95 tests, all green):
 
 - **Slice 1 - the heartbeat** (`tick_engine`): the Scheduler and Tick Engine (Component 2), with the two-pass synchronous update. 7 of 7 tests.
 - **Slice 2 - archetypes and the first thought** (`archetype`, `observer`): the six dynamical archetype rules (Appendix 2, Section A2.3) and the observer recording each tick as a Causalontology `token_occurrence` (Component 9) via the reused `causal_core`. 7 of 7 and 6 of 6 tests; the 119 conformance vectors stay green.
@@ -194,7 +194,9 @@ The build has begun and is climbing the ladder. Eleven slices have landed on `ma
 - **Slice 10 - thought combination** (`thought_combination`): konnectome combines thoughts by minting **Causal Relation Objects** via the reused `causal_core` - atomic thoughts as occurrents, combinations as content-addressed CROs, chained into **chains and trees of thought**. 7 of 7 tests; the 119 conformance vectors stay green.
 - **Slice 11 - other minds and prediction, the wall-finding build** (`other_minds`, `prediction_loop`): the Rung Four theory-of-mind trial (a false, nested belief, reusing PrologAI's `theory_of_mind`) and the Rung One prediction-error loop (an expected occurrence, and the signed surprise). Both run at runtime - but neither the attributed belief nor the expected-versus-observed discrepancy can be **exported** as a shared Causalontology record, because 3.0.0 has no doxastic or predictive kind. 8 of 8 and 10 of 10 tests; the 119 conformance vectors stay green at Causalontology 3.0.0. **The build's first two walls, Wall-1 and Wall-2, recorded and ROUTED to the Causalontology 4.0.0 change order (Sections A and B released, C/D/E held).**
 
-Next: the Causalontology 4.0.0 change order releases Sections A and B (prediction, and theory of mind) - the two walls this slice found - as one coordinated major version, so konnectome can later SHARE what it can already privately hold; Sections C, D, and E remain held. This README, and every badge on it, is kept honest as the build climbs.
+- **Slice 12 - the closure: minting the new kinds** (`other_minds`, `prediction_loop`): the export half. With **Causalontology 4.0.0** shipped (twenty-one kinds, the conformance suite re-frozen at 137 vectors) and PrologAI's **`causal_core` 1.1.0** making the new kinds mintable, `other_minds` (0.2.0) now mints the attributed belief - true, false, and nested - as **attitude** records and exports the false-belief trial's predicted search as a shareable record, and `prediction_loop` (0.2.0) mints the **predicted_occurrence**, the actual `token_occurrence`, and the **prediction_error** carrying the signed discrepancy. 10 of 10 and 16 of 16 tests; the 137 conformance vectors stay green at Causalontology 4.0.0 in both cousins. **Wall-1, Wall-2, and Wall-3 are all CLOSED** - the two data-structure walls by Causalontology 4.0.0, and Wall-3 (the closure's own wall: `causal_core` could not yet mint the new kinds) by `causal_core` 1.1.0 the same day.
+
+Next: with the two developmental-ladder milestones now both run AND exported, konnectome climbs on - the base rungs stand, thought combination and the social and predictive milestones are recorded as shared records, and Sections C, D, and E of the Causalontology change order remain held for the walls a future slice may find. This README, and every badge on it, is kept honest as the build climbs.
 
 ## License and attribution
 

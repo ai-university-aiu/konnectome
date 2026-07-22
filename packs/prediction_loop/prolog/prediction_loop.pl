@@ -19,17 +19,29 @@
     % prediction_loop_tick_instant/3: the deterministic absolute instant of a numbered tick.
     prediction_loop_tick_instant/3,
     % prediction_loop_record_outcome/4: record what ACTUALLY happened as a Causalontology token_occurrence.
-    prediction_loop_record_outcome/4
+    prediction_loop_record_outcome/4,
+    % prediction_loop_predictor/1: the predicting construct's own content-addressed continuant identifier.
+    prediction_loop_predictor/1,
+    % prediction_loop_record_prediction/4: mint a forecast BEFORE the outcome, as a predicted_occurrence at an ordinal start_tick.
+    prediction_loop_record_prediction/4,
+    % prediction_loop_record_prediction_strength/5: mint a graded forecast carrying the optional, identity-bearing strength.
+    prediction_loop_record_prediction_strength/5,
+    % prediction_loop_record_prediction_interval/4: mint a forecast over an explicit interval, gated by Rule 24.
+    prediction_loop_record_prediction_interval/4,
+    % prediction_loop_record_prediction_error/4: mint the prediction_error pairing forecast and observation (or its absence).
+    prediction_loop_record_prediction_error/4,
+    % prediction_loop_object_permanence_trial_records/5: the Rung One trial run fully glass-box, every step a real record.
+    prediction_loop_object_permanence_trial_records/5
 ]).
 
-% Import membership for reading expectations back out of the store.
-:- use_module(library(lists), [member/2]).
-% Import foldl for accumulating one expectation per hidden tick.
-:- use_module(library(apply), [foldl/4]).
+% Import membership, list concatenation, and last-element access for the store and the glass-box trial.
+:- use_module(library(lists), [member/2, append/3, last/2]).
+% Import foldl for accumulating one expectation per hidden tick, and maplist for minting one forecast per held tick.
+:- use_module(library(apply), [foldl/4, maplist/3]).
 % Import the comparator archetype rule; konnectome reuses its own dynamical heart, it does not re-derive it.
 :- use_module(library(archetype), [archetype_comparator/3]).
-% Reuse PrologAI's Causalontology core to content-address a record; konnectome does not fork it.
-:- use_module(library(causal_core), [causal_core_identify/3]).
+% Reuse PrologAI's Causalontology core to content-address records and check local semantics; konnectome does not fork it.
+:- use_module(library(causal_core), [causal_core_identify/3, causal_core_validate_semantics/3]).
 
 % Prediction, at Rung One of the developmental ladder (Appendix 6), is object permanence: an object
 % hidden behind a screen is still expected to be there, tick after tick, and the System is surprised -
@@ -39,11 +51,18 @@
 % signed difference, actual minus expected. What HAPPENED is minted for real as a Causalontology
 % token_occurrence, mirroring the observer pack's minting pattern. The EXPORT half - recording the
 % EXPECTATION itself as a first-class record distinct from the observation, and the signed graded
-% discrepancy between them, as shareable, evidence-graded, content-addressed records - is NOT
-% expressible in Causalontology 3.0.0: the closed list of eighteen kinds has no predicted_occurrence
-% and no prediction_error kind, a forecast minted as a token_occurrence is indistinguishable from a
-% report of fact, and no kind's identity fields offer the discrepancy a slot. The pack's test suite
-% demonstrates that wall mechanically; the loop works, but its story cannot be shared.
+% discrepancy between them - was NOT expressible in Causalontology 3.0.0, whose closed list of
+% eighteen kinds had no predicted_occurrence and no prediction_error kind; the slice-11 test suite
+% demonstrated that wall mechanically, and it was recorded as Wall-2 of the konnectome ledger
+% (hit 2026-07-22 at Causalontology 3.0.0). The wall was routed through the gated Causalontology
+% change order and CLOSED by Causalontology 4.0.0 - the kind list grew to twenty-one, gaining
+% predicted_occurrence and prediction_error - together with causal_core 1.1.0, which
+% content-addresses the new kinds and checks Rule 24 locally. This slice-12 delivery is the export
+% half Wall-2 demanded: a forecast is minted BEFORE the outcome as a predicted_occurrence carrying
+% the ordinal start_tick dimension (Rule 24 gated), what actually happened is minted as a
+% token_occurrence exactly as before, and the comparator's signed number is minted as the
+% prediction_error pairing them - the loop's whole story is now shareable, content-addressed record
+% by record, and a forecast is distinguishable from a report by its very kind.
 
 % ---------------------------------------------------------------------------
 % THE EXPECTATION STORE - holding 'occurrent O expected at tick T' across ticks
@@ -161,3 +180,124 @@ prediction_loop_record_outcome(SimulationStart, TickNumber, Label, Record) :-
     causal_core_identify(Base, token_occurrence, Id),
     % Attach the identifier, yielding the complete stored record.
     put_dict(id, Base, Id, Record).
+
+% ---------------------------------------------------------------------------
+% MINTING WHAT IS EXPECTED - the forecast as a Causalontology predicted_occurrence
+% (the export half Wall-2 demanded; expressible since Causalontology 4.0.0 and
+% causal_core 1.1.0; a forecast now differs from a report by its very kind)
+% ---------------------------------------------------------------------------
+
+% prediction_loop_predictor(-PredictorId): the predicting construct's own continuant identifier.
+prediction_loop_predictor(PredictorId) :-
+    % Build the modeled construct doing the predicting - the expectation store itself - as a continuant.
+    Predictor = _{type: "continuant", label: "prediction_loop_expectation_store", category: "system"},
+    % Content-address it; the same construct always mints the same identifier.
+    causal_core_identify(Predictor, continuant, PredictorId).
+
+% prediction_loop_checked_prediction_(+Base, -Record): the Rule 24 gate, then the minting step.
+prediction_loop_checked_prediction_(Base, Record) :-
+    % Ask causal_core's local semantic rules (Rule 24) to judge the predicted interval's temporal dimensions.
+    causal_core_validate_semantics(Base, predicted_occurrence, Reasons),
+    % An empty reason list is a clean bill of health.
+    (   Reasons == []
+    % With clean semantics, minting proceeds.
+    ->  true
+    % Any reason is a hard refusal, raised carrying the core's own wording (for example dimension_conflict).
+    ;   throw(error(prediction_loop_refused_prediction(Reasons), context(prediction_loop_checked_prediction_/2, "causal_core refused the predicted_occurrence")))
+    ),
+    % Content-address the forecast over its identity-bearing fields (instantiates, interval, predictor, strength).
+    causal_core_identify(Base, predicted_occurrence, Id),
+    % Attach the identifier, yielding the complete stored record.
+    put_dict(id, Base, Id, Record).
+
+% prediction_loop_record_prediction_interval(+OccurrentTypeId, +Interval, +PredictorId, -Record): explicit interval.
+prediction_loop_record_prediction_interval(OccurrentTypeId, Interval, PredictorId, Record) :-
+    % Build the predicted_occurrence: what is expected, over which interval, foreseen by whom.
+    Base = _{type: "predicted_occurrence", instantiates: OccurrentTypeId, interval: Interval, predictor: PredictorId},
+    % Gate it through Rule 24 and mint it.
+    prediction_loop_checked_prediction_(Base, Record).
+
+% prediction_loop_record_prediction(+OccurrentTypeId, +TickNumber, +PredictorId, -Record): a tick-dimensioned forecast.
+prediction_loop_record_prediction(OccurrentTypeId, TickNumber, PredictorId, Record) :-
+    % The predicted interval carries only the ordinal dimension: the integer tick the arrival is expected at.
+    Interval = _{start_tick: TickNumber},
+    % Gate and mint through the explicit-interval path.
+    prediction_loop_record_prediction_interval(OccurrentTypeId, Interval, PredictorId, Record).
+
+% prediction_loop_record_prediction_strength(+OccurrentTypeId, +TickNumber, +PredictorId, +Strength, -Record): graded.
+prediction_loop_record_prediction_strength(OccurrentTypeId, TickNumber, PredictorId, Strength, Record) :-
+    % Build the graded predicted_occurrence; the optional strength is identity-bearing when present.
+    Base = _{type: "predicted_occurrence", instantiates: OccurrentTypeId, interval: _{start_tick: TickNumber}, predictor: PredictorId, strength: Strength},
+    % Gate it through Rule 24 and mint it.
+    prediction_loop_checked_prediction_(Base, Record).
+
+% ---------------------------------------------------------------------------
+% MINTING THE SURPRISE - the comparator's signed number as a prediction_error
+% ---------------------------------------------------------------------------
+
+% prediction_loop_error_base_(+ObservedOutcome, +PredictedId, +Discrepancy, -Base): the error's body,
+% dispatched on whether an observation arrived; the cut commits to the unfulfilled shape for absent.
+prediction_loop_error_base_(absent, PredictedId, Discrepancy, Base) :-
+    % Commit: the atom absent means the unfulfilled case, never an identifier.
+    !,
+    % Nothing was observed, so the observed slot stays absent: only the forecast and the signed number.
+    Base = _{type: "prediction_error", predicted: PredictedId, discrepancy: Discrepancy}.
+prediction_loop_error_base_(ObservedId, PredictedId, Discrepancy, Base) :-
+    % A real observation arrived: pair the forecast with the observed token_occurrence and the signed number.
+    Base = _{type: "prediction_error", predicted: PredictedId, observed: ObservedId, discrepancy: Discrepancy}.
+
+% prediction_loop_record_prediction_error(+PredictedId, +ObservedOutcome, +Discrepancy, -Record): pair the
+% forecast with what arrived; ObservedOutcome is the observed token_occurrence's identifier, or the
+% atom absent when nothing arrived (the unfulfilled case - the reveal of a gone object).
+prediction_loop_record_prediction_error(PredictedId, ObservedOutcome, Discrepancy, Record) :-
+    % Build the error's body, with or without an observed slot.
+    prediction_loop_error_base_(ObservedOutcome, PredictedId, Discrepancy, Base),
+    % Content-address the error over its identity-bearing fields (predicted, observed, discrepancy).
+    causal_core_identify(Base, prediction_error, Id),
+    % Attach the identifier, yielding the complete stored record.
+    put_dict(id, Base, Id, Record).
+
+% ---------------------------------------------------------------------------
+% THE GLASS-BOX TRIAL - object permanence with every step a real record
+% ---------------------------------------------------------------------------
+
+% prediction_loop_predict_at_(+OccurrentTypeId, +PredictorId, +TickNumber, -Record): one held tick's forecast.
+prediction_loop_predict_at_(OccurrentTypeId, PredictorId, TickNumber, Record) :-
+    % Each tick the expectation is held, that expectation is minted as its own forecast record.
+    prediction_loop_record_prediction(OccurrentTypeId, TickNumber, PredictorId, Record).
+
+% prediction_loop_reveal_records_(+RevealOutcome, +SimulationStart, +RevealTickNumber, +PredictedId,
+% +SignedError, -Outcome, -ErrorRecord): the reveal's records, one clause per way the reveal can go.
+prediction_loop_reveal_records_(present, SimulationStart, RevealTickNumber, PredictedId, SignedError, Outcome, ErrorRecord) :-
+    % The screen lifted on the object: mint what actually happened as a token_occurrence, exactly as before.
+    prediction_loop_record_outcome(SimulationStart, RevealTickNumber, "hidden_object_present", Outcome),
+    % Read the observed outcome's identifier.
+    get_dict(id, Outcome, ObservedId),
+    % Pair forecast and observation with the comparator's signed number (zero when reality matched).
+    prediction_loop_record_prediction_error(PredictedId, ObservedId, SignedError, ErrorRecord).
+prediction_loop_reveal_records_(absent, _SimulationStart, _RevealTickNumber, PredictedId, SignedError, absent, ErrorRecord) :-
+    % Nothing happened, so nothing is minted as having happened: the error's observed slot stays absent.
+    prediction_loop_record_prediction_error(PredictedId, absent, SignedError, ErrorRecord).
+
+% prediction_loop_object_permanence_trial_records(+SimulationStart, +HiddenTickNumbers, +RevealTickNumber,
+% +RevealOutcome, -Trial): the Rung One trial run fully glass-box - every held expectation, the reveal,
+% and the surprise all end as real, content-addressed Causalontology records the mind can share.
+prediction_loop_object_permanence_trial_records(SimulationStart, HiddenTickNumbers, RevealTickNumber, RevealOutcome, Trial) :-
+    % Run the runtime trial exactly as before: hold the expectation each tick and score the reveal.
+    prediction_loop_object_permanence_trial(HiddenTickNumbers, RevealTickNumber, RevealOutcome, SignedError),
+    % Name the hidden object's presence as the same content-addressed occurrent the runtime used.
+    prediction_loop_outcome_type("hidden_object_present", OccurrentTypeId),
+    % Name the predicting construct.
+    prediction_loop_predictor(PredictorId),
+    % The expectation is held at every hidden tick, and still at the tick the screen lifts.
+    append(HiddenTickNumbers, [RevealTickNumber], PredictedTickNumbers),
+    % Mint one predicted_occurrence per held tick - all of them BEFORE any outcome exists.
+    maplist(prediction_loop_predict_at_(OccurrentTypeId, PredictorId), PredictedTickNumbers, PredictionRecords),
+    % The reveal-tick forecast is the one the error will grade.
+    last(PredictionRecords, RevealPrediction),
+    % Read the graded forecast's identifier.
+    get_dict(id, RevealPrediction, PredictedId),
+    % Observe the reveal (or its absence) and mint the prediction_error pairing.
+    prediction_loop_reveal_records_(RevealOutcome, SimulationStart, RevealTickNumber, PredictedId, SignedError, Outcome, ErrorRecord),
+    % Assemble the whole glass-box story: the forecasts, the outcome (or absent), the error, and the raw number.
+    Trial = _{predictions: PredictionRecords, outcome: Outcome, error: ErrorRecord, signed_error: SignedError}.

@@ -21,7 +21,13 @@
     % other_minds_individual_record/3: mint a modelled individual as a content-addressed token_individual.
     other_minds_individual_record/3,
     % other_minds_content_record/5: mint a believed content as a content-addressed state_assertion.
-    other_minds_content_record/5
+    other_minds_content_record/5,
+    % other_minds_attitude_record/4: mint an attribution as a content-addressed attitude.
+    other_minds_attitude_record/4,
+    % other_minds_nested_attitude_records/5: mint a two-level attribution as two attitudes, the outer about the inner.
+    other_minds_nested_attitude_records/5,
+    % other_minds_search_prediction_export/5: end the false-belief trial by exporting its prediction as an attitude record.
+    other_minds_search_prediction_export/5
 ]).
 
 % Reuse PrologAI's theory-of-mind runtime for belief attribution; konnectome does not fork it.
@@ -47,13 +53,18 @@
 % konnectome's own record of the world - including a FALSE belief, the classic trial in which an
 % agent will look for an object where the agent believes it is, not where it actually is - and a
 % NESTED attribution, konnectome's model of the other agent's model. The RUNTIME half below is fully
-% expressible today by reusing PrologAI's theory_of_mind pack unchanged. The EXPORT half - recording
-% an attribution as a shareable, signed, evidence-graded, content-addressed Causalontology record so
-% a second mind or repository can receive it - is NOT expressible in Causalontology 3.0.0, which has
-% no attitude, belief, desire, or intention kind. This pack's test suite demonstrates that wall
-% mechanically; the two minting helpers at the bottom mint only the EXPRESSIBLE ingredients of an
-% attribution (the modelled individual and the believed content), never the attitude that joins them.
-% A world fact or belief about where an object sits takes the term shape object_location(Object, Place).
+% expressible by reusing PrologAI's theory_of_mind pack unchanged. The EXPORT half - recording an
+% attribution as a shareable, content-addressed Causalontology record so a second mind or repository
+% can receive it - was NOT expressible when this pack was first built: Causalontology 3.0.0 had no
+% attitude kind, and that finding was recorded as Wall-1 (2026-07-22) and ROUTED through the gated
+% change order rather than worked around. Causalontology 4.0.0 plus causal_core 1.1.0 CLOSED the
+% wall by adding the attitude kind (identity fields: holder, attitude_type, content), whose content
+% is quarantined by semantics Rule 25 - an attitude records a mind, never a fact, so a false belief
+% raises no conflict and is first-class and shareable, and a content may name another attitude,
+% giving nesting a home. The minting predicates at the bottom now export the WHOLE attribution: the
+% modelled individual, the believed content, the attitude that joins them, the nested attitude, and
+% the false-belief trial's own predicted-search result. A world fact or belief about where an
+% object sits takes the term shape object_location(Object, Place).
 
 % other_minds_reset/0: forget the recorded world and every attributed belief.
 other_minds_reset :-
@@ -121,3 +132,47 @@ other_minds_content_record(SubjectId, Quality, Value, Instant, Record) :-
     causal_core_identify(Base, state_assertion, Id),
     % Attach the identifier, yielding the complete stored record.
     put_dict(id, Base, Id, Record).
+
+% other_minds_attitude_record(+HolderId, +AttitudeType, +ContentId, -Record): mint an attribution as a content-addressed attitude.
+% This is the export Wall-1 demanded: unmintable under Causalontology 3.0.0, minted here under 4.0.0 and causal_core 1.1.0.
+other_minds_attitude_record(HolderId, AttitudeType, ContentId, Record) :-
+    % An attribution is a Causalontology attitude: a holder (the modelled mind), an attitude type, and a content reference.
+    Base = _{type: "attitude", holder: HolderId, attitude_type: AttitudeType, content: ContentId},
+    % Content-address it over its identity-bearing fields (holder, attitude_type, content).
+    causal_core_identify(Base, attitude, Id),
+    % Attach the identifier, yielding the complete stored record.
+    put_dict(id, Base, Id, Record).
+
+% other_minds_nested_attitude_records(+OuterHolderId, +InnerHolderId, +ContentId, -InnerRecord, -OuterRecord): mint a two-level attribution.
+other_minds_nested_attitude_records(OuterHolderId, InnerHolderId, ContentId, InnerRecord, OuterRecord) :-
+    % Mint the inner attitude first: the inner holder believes the content.
+    other_minds_attitude_record(InnerHolderId, "believes", ContentId, InnerRecord),
+    % Read the inner attitude's identifier; Rule 25 lets an attitude's content reference another attitude.
+    get_dict(id, InnerRecord, InnerId),
+    % Mint the outer attitude about the inner one: the outer holder believes that the inner holder believes the content.
+    other_minds_attitude_record(OuterHolderId, "believes", InnerId, OuterRecord).
+
+% other_minds_search_prediction_export(+Agent, +Object, +Instant, -Place, -Record): end the false-belief trial by exporting its result.
+other_minds_search_prediction_export(Agent, Object, Instant, Place, Record) :-
+    % Ask the runtime where the agent will search: the place the agent BELIEVES the object is, not where it actually is.
+    other_minds_predict_search(Agent, Object, Place),
+    % Render the agent's name as a string designator for minting.
+    atom_string(Agent, AgentDesignator),
+    % Mint the agent, the holder of the exported belief, as a content-addressed token_individual.
+    other_minds_individual_record("agent", AgentDesignator, HolderRecord),
+    % Read the holder's identifier.
+    get_dict(id, HolderRecord, HolderId),
+    % Render the object's name as a string designator for minting.
+    atom_string(Object, ObjectDesignator),
+    % Mint the object the belief is about as a content-addressed token_individual.
+    other_minds_individual_record(ObjectDesignator, ObjectDesignator, ObjectRecord),
+    % Read the object's identifier.
+    get_dict(id, ObjectRecord, ObjectId),
+    % Render the believed place as the string value of the object's location quality.
+    atom_string(Place, PlaceValue),
+    % Mint the believed content - the object sits at the believed place - as a content-addressed state_assertion.
+    other_minds_content_record(ObjectId, "location", PlaceValue, Instant, ContentRecord),
+    % Read the content's identifier.
+    get_dict(id, ContentRecord, ContentId),
+    % Mint the trial's result: the attribution itself, a real, shareable, content-addressed attitude record.
+    other_minds_attitude_record(HolderId, "believes", ContentId, Record).

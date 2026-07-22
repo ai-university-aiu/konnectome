@@ -50,7 +50,7 @@ PART THREE - THE THREE ROUTING DESTINATIONS (route each finding to EXACTLY ONE)
    runtime) -> docs/Causalontology_4_0_0_CHANGE_ORDER_v3.txt. Gated by the Thirteenth
    Commandment: must keep the 119-vector conformance suite green.
  - LANGUAGE gap (a real, load-bearing PrologAI-language wall) ->
-   docs/PrologAI_CHANGE_ORDER_v1.txt. Additive only, gated by the Thirteenth
+   docs/PrologAI_CHANGE_ORDER_v2.txt. Additive only, gated by the Thirteenth
    Commandment: must not regress ARC-AGI-1 (400 of 400) or ARC-AGI-2 (120 of 120)
    through Mentova.
  - konnectome-SOLVABLE gap (expressible inside konnectome's own code) -> a named
@@ -65,11 +65,20 @@ Build opened: 2026-07-19.
 
 konnectome is building against these cousin commits (Step 4 requirement):
 
- - causalontology : local git head 98ebb33 (frozen standard, Causalontology 3.0.0).
- - PrologAI       : local git head 0fed5d1, tag prologai-wave10-complete (the finished
-                    language; Wave 10 closed, benchmarks green).
+ - causalontology : local git head 76dfc69 (the standard re-frozen as Causalontology 4.0.0
+                    at tag v4.0.0, squash-merged pull request 13, merge commit 64b1d1a; head
+                    76dfc69 is the first wave of bindings - pull request 14 - adding JavaScript,
+                    Rust, Perl, and C++, all green at 137 of 137 locally).
+ - PrologAI       : local git head cd74f86 (causal_core 1.1.0, pull request 595, which
+                    content-addresses the three new Causalontology 4.0.0 kinds additively; the
+                    vendored conformance suite is green at 137 of 137).
  - Mentova        : local git head fb7d48f (flagship Synthetic Mind; home of the ARC
-                    solving core; loaded read-only by the regression harness).
+                    solving core; loaded read-only by the regression harness; unchanged).
+
+The conformance gate is now the 137-vector Causalontology 4.0.0 suite (re-frozen from the
+119-vector 3.0.0 suite by adding eighteen vectors for the three new kinds; every 3.0.0
+identifier preserved byte-for-byte, witness vector 136). konnectome keeps it green at 137 of
+137 in both the Causalontology Python reference and the PrologAI vendored suite.
 
 Target repository: https://github.com/ai-university-aiu/konnectome (public; empty at
 start of this build; scaffold merged as pull request 1; slices land as feature-branch
@@ -144,15 +153,19 @@ deepened; PENDING = not built yet.
     tick as a token_occurrence instantiating a shared 'tick' occurrent, content-addressed
     by causal_core_identify, keeping the 119 conformance vectors green.)
 
- THE DEVELOPMENTAL-LADDER MILESTONES (Appendix 6) - runtime realized, export gated on 4.0.0
+ THE DEVELOPMENTAL-LADDER MILESTONES (Appendix 6) - runtime realized AND exported (Causalontology 4.0.0)
  -----------------------------------------------------------------------------------
- Rung Four theory of mind    | other_minds (reuses PrologAI theory_of_mind)  | RUNTIME REALIZED, EXPORT PENDING (Wall-1)
- Rung One prediction error   | prediction_loop (the comparator loop)         | RUNTIME REALIZED, EXPORT PENDING (Wall-2)
-   (Slice 11. Both milestones run and pass inside konnectome's reused theory-of-mind and
-    comparator runtimes, but neither the attributed belief nor the expected-versus-observed
-    discrepancy can be EXPORTED as a shared Causalontology record: the eighteen kinds carry no
-    doxastic kind and no predicted_occurrence or prediction_error kind. Routed as Wall-1 and
-    Wall-2 to docs/Causalontology_4_0_0_CHANGE_ORDER (Sections B and A).)
+ Rung Four theory of mind    | other_minds (reuses PrologAI theory_of_mind)  | REALIZED
+ Rung One prediction error   | prediction_loop (the comparator loop)         | REALIZED
+   (Slice 12. Both milestones now run AND export as shared, signed, content-addressed
+    Causalontology records. other_minds mints the attributed belief - true, false, and nested -
+    as attitude records (holder, attitude_type, content), and exports the false-belief trial's
+    predicted-search result as a shareable attitude record. prediction_loop mints the
+    predicted_occurrence before arrival, the actual token_occurrence on arrival, and the
+    prediction_error carrying the signed discrepancy. Wall-1 and Wall-2 were CLOSED by
+    Causalontology 4.0.0 - the twenty-one kinds now carry the doxastic attitude kind and the
+    predicted_occurrence and prediction_error kinds, and the suite is re-frozen at 137 vectors -
+    plus PrologAI's causal_core 1.1.0, which makes the three new kinds mintable from konnectome.)
 
 
 ================================================================================
@@ -160,6 +173,26 @@ SECTION FIVE - FINDINGS AND OBSERVATIONS
 ================================================================================
 
 Findings and observations discovered by building, newest first.
+
+Wall-3 (2026-07-22, from slice 12, the closure build itself) - the closure's own wall, discovered
+and CLOSED the same day. With Causalontology 4.0.0 released - its closed kind list grown from
+eighteen to twenty-one, now carrying attitude, predicted_occurrence, and prediction_error, and its
+conformance suite re-frozen at 137 vectors - konnectome turned to MINT those three kinds through its
+reused library, and could not: PrologAI's causal_core 1.0.0 implemented only the eighteen 3.0.0
+kinds, and causal_core_identity_fields/2 carried no rows for the three new ones, so
+causal_core_identify failed on an attitude, a predicted_occurrence, and a prediction_error alike.
+This was neither a data-structure gap (the standard already carried the kinds) nor a
+konnectome-solvable gap (konnectome may not edit its cousins); it was a LANGUAGE-LIBRARY gap - the
+PrologAI library had not yet caught up to the released standard - so it routed to the PrologAI change
+order rather than the Causalontology one. It is the third routing destination the Ledger names, used
+for the first time. CONSUMER-VERSUS-ONTOLOGY TEST: not applicable - the ontology already carried the
+kinds; the gap was purely the language library's additive lag behind a shipped standard. STATUS:
+OPEN (2026-07-22) -> ROUTED (2026-07-22) to docs/PrologAI_CHANGE_ORDER_v2.txt, additive only, gated
+by the Thirteenth Commandment -> CLOSED (2026-07-22) by causal_core 1.1.0 (PrologAI pull request 595,
+merge commit cd74f86), which added the three causal_core_identity_fields/2 rows additively, kept the
+vendored conformance suite green at 137 of 137, and passed its honest mini regression - ARC-AGI-1 40
+of 40 and ARC-AGI-2 12 of 12, a 10 percent spot-check with the full regression deferred, never
+rounded up. Discovered by building, delivered through a gated change order, and released the same day.
 
 Owner-Authorization-1 (2026-07-22). The owner's written instruction of 2026-07-22 authorizes
 the release of the Causalontology 4.0.0 change order: "I would like to get to Causalontology
@@ -186,6 +219,21 @@ a model OF ANOTHER agent, and konnectome's runtime already holds it privately; o
 impossible). STATUS: ROUTED to docs/Causalontology_4_0_0_CHANGE_ORDER (Section B, agent attitude and
 theory of mind).
 
+CLOSURE (2026-07-22, slice 12). CLOSED. Causalontology 4.0.0 (repository ai-university-aiu/causalontology,
+squash-merged pull request 13, merge commit 64b1d1a, tag v4.0.0) added the ATTITUDE kind: a record whose
+holder, attitude_type, and content fields let a belief name whose mind holds it, carry false content
+without poisoning the commons (Rule 25, doxastic quarantine), and nest one attitude inside another (the
+outer content is the inner attitude's identifier). The assertion kind is unchanged - it still names only
+the SIGNER, so the permanent design the wall observed is retained, not walled: the holder now lives in the
+attitude kind, invisible to an assertion's content identity. PrologAI's causal_core 1.1.0 (pull request
+595, merge commit cd74f86) then made the new kind mintable from konnectome. In slice 12 the other_minds
+pack (0.2.0) mints the true belief, the false belief that coexists with the world's contrary
+state_assertion (both records distinct, no conflict), and the nested konnectome-models-Sally attribution,
+each as a real attitude record with a deterministic re-mint and an infer-kind round trip; and it exports
+the false-belief trial's predicted-search result as a shareable, content-addressed attitude record while
+the runtime belief survives. What closed it: Causalontology 4.0.0's attitude kind (twenty-one kinds, 137
+vectors) plus causal_core 1.1.0. Conformance green at 137 of 137 in both cousins.
+
 Wall-2 (2026-07-22, from slice 11, prediction_loop). konnectome needed to RECORD an EXPECTED
 occurrence as distinct from an OBSERVED one, and the signed, graded discrepancy between them, and
 could not: no predicted_occurrence or prediction_error kind exists, a prediction minted as a
@@ -199,6 +247,18 @@ CONSUMER-VERSUS-ONTOLOGY TEST: PASSES - the predictive loop must be inspectable 
 external auditors and shareable across minds (the glass-box thesis), not a transient number inside
 one runtime. STATUS: ROUTED to docs/Causalontology_4_0_0_CHANGE_ORDER (Section A, prediction,
 expectation, and prediction error).
+
+CLOSURE (2026-07-22, slice 12). CLOSED. Causalontology 4.0.0 (merge commit 64b1d1a, tag v4.0.0) added
+two kinds: the PREDICTED_OCCURRENCE (instantiates, interval, predictor, strength) - a forecast now
+distinct in identity from a report - and the PREDICTION_ERROR (predicted, observed, discrepancy). Their
+addition lifts the token tier to seven kinds and the whole closed list to twenty-one. PrologAI's
+causal_core 1.1.0 made both mintable from konnectome. In slice 12 the prediction_loop pack (0.2.0) mints
+the predicted_occurrence BEFORE arrival (on the start_tick dimension), the actual token_occurrence on
+arrival, and the prediction_error pairing that carries the signed comparator discrepancy - the object-
+permanence surprise, once a transient minus-one-point-zero inside one runtime, is now a first-class,
+shareable, content-addressed record an external auditor can read. What closed it: Causalontology 4.0.0's
+predicted_occurrence and prediction_error kinds (twenty-one kinds, 137 vectors) plus causal_core 1.1.0.
+Conformance green at 137 of 137 in both cousins.
 
 Observation-1 (2026-07-20, from slice 1 reconnaissance). The Causalontology 3.0.0
 specification file spec/identity.md still states "seventeen whole-word schemes" and omits
@@ -307,4 +367,20 @@ Both walls passed the consumer-versus-ontology test and were ROUTED to the Causa
 change order (Wall-1 to Section B, Wall-2 to Section A). Honest non-closure at the ontology layer,
 recorded as two real findings, per the Second and Fourth Commandments.
 
- Walls: OPEN 0 | ROUTED 2 | CLOSED 0 | UNNECESSARY 0.   Observations: 2.
+Slice-12 note (2026-07-22). Building the closure - minting the three new kinds through the other_minds
+(0.2.0) and prediction_loop (0.2.0) packs - hit NO NEW wall, and it CLOSED all three walls the build
+had held. This is the lockstep the whole method was built to demonstrate. Wall-1 and Wall-2, routed to
+the Causalontology change order at slice 11, were released as Causalontology 4.0.0 (twenty-one kinds,
+137 vectors); Wall-3, the closure's own wall - causal_core 1.0.0 could not yet mint the new kinds - was
+routed to the PrologAI change order and closed the same day by causal_core 1.1.0. What the build could
+previously only hold at runtime it now EXPORTS as shared, signed, content-addressed records: a belief
+that can be false and can nest (minted as attitude records), a forecast distinct from a report (the
+predicted_occurrence), and the surprise as a first-class record (the prediction_error). The two
+'EXPORT PENDING' rows of Section Four are now fully REALIZED. Gates at this slice: other_minds 10 of 10
+and prediction_loop 16 of 16 Prolog Unit tests pass (the earlier twelve packs unchanged, 69 tests; 95 in
+total); naming, layer, and layer-binding gates report zero violations; the Causalontology conformance
+suite is green at 137 of 137 (specification 4.0.0) in both cousins. Causalontology and PrologAI were
+extended only through their own gated change orders, never edited directly. Honest closure recorded,
+per the Second, Third, and Fourth Commandments.
+
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 2.
