@@ -47,7 +47,7 @@ PART THREE - THE THREE ROUTING DESTINATIONS (route each finding to EXACTLY ONE)
 
  - DATA-STRUCTURE gap (must be SHARED across agents or repositories as a signed,
    evidence-graded, content-addressed record, not merely computed inside one konnectome
-   runtime) -> docs/Causalontology_4_0_0_CHANGE_ORDER_v2.txt. Gated by the Thirteenth
+   runtime) -> docs/Causalontology_4_0_0_CHANGE_ORDER_v3.txt. Gated by the Thirteenth
    Commandment: must keep the 119-vector conformance suite green.
  - LANGUAGE gap (a real, load-bearing PrologAI-language wall) ->
    docs/PrologAI_CHANGE_ORDER_v1.txt. Additive only, gated by the Thirteenth
@@ -144,12 +144,61 @@ deepened; PENDING = not built yet.
     tick as a token_occurrence instantiating a shared 'tick' occurrent, content-addressed
     by causal_core_identify, keeping the 119 conformance vectors green.)
 
+ THE DEVELOPMENTAL-LADDER MILESTONES (Appendix 6) - runtime realized, export gated on 4.0.0
+ -----------------------------------------------------------------------------------
+ Rung Four theory of mind    | other_minds (reuses PrologAI theory_of_mind)  | RUNTIME REALIZED, EXPORT PENDING (Wall-1)
+ Rung One prediction error   | prediction_loop (the comparator loop)         | RUNTIME REALIZED, EXPORT PENDING (Wall-2)
+   (Slice 11. Both milestones run and pass inside konnectome's reused theory-of-mind and
+    comparator runtimes, but neither the attributed belief nor the expected-versus-observed
+    discrepancy can be EXPORTED as a shared Causalontology record: the eighteen kinds carry no
+    doxastic kind and no predicted_occurrence or prediction_error kind. Routed as Wall-1 and
+    Wall-2 to docs/Causalontology_4_0_0_CHANGE_ORDER (Sections B and A).)
+
 
 ================================================================================
 SECTION FIVE - FINDINGS AND OBSERVATIONS
 ================================================================================
 
 Findings and observations discovered by building, newest first.
+
+Owner-Authorization-1 (2026-07-22). The owner's written instruction of 2026-07-22 authorizes
+the release of the Causalontology 4.0.0 change order: "I would like to get to Causalontology
+4.0.0 locked-in, please. As soon as possible, please, and thank you!" This satisfies the THIRD
+release-gate condition of that change order - the owner authorizes the release of a candidate in
+writing - for whichever candidates this Ledger releases. Together with the two other conditions
+that Wall-1 and Wall-2 below satisfy (a real finding from a real build, and a passed
+consumer-versus-ontology test), the gate is fully open for the two sections those walls route to.
+STATUS: AUTHORIZATION RECORDED.
+
+Wall-1 (2026-07-22, from slice 11, other_minds) - the first wall of the build. konnectome needed
+to REPRESENT and SHARE another agent's belief - false and nested - as a signed, evidence-graded,
+content-addressed record, and could not: the eighteen kinds contain no doxastic kind,
+causal_core_identify fails on an attitude-shaped record, and the nearest kind (assertion) names
+only the SIGNER, never a HOLDER, cannot hold false content without poisoning the commons, and
+cannot nest. Demonstrated by building: an assertion dict WITH a holder field and one WITHOUT
+content-address to the IDENTICAL identifier, so whose mind holds the belief is invisible to content
+identity; and causal_core_identify FAILS outright on the attitude dict, whether the kind is passed
+explicitly or inferred from the record's own type field. The false belief, the basket-search
+prediction, and the nested konnectome-models-Sally attribution all hold inside the reused
+theory_of_mind runtime and survive the failed export. CONSUMER-VERSUS-ONTOLOGY TEST: PASSES - the
+attribution must travel to other minds and repositories as shared data (theory of mind is precisely
+a model OF ANOTHER agent, and konnectome's runtime already holds it privately; only the SHARING is
+impossible). STATUS: ROUTED to docs/Causalontology_4_0_0_CHANGE_ORDER (Section B, agent attitude and
+theory of mind).
+
+Wall-2 (2026-07-22, from slice 11, prediction_loop). konnectome needed to RECORD an EXPECTED
+occurrence as distinct from an OBSERVED one, and the signed, graded discrepancy between them, and
+could not: no predicted_occurrence or prediction_error kind exists, a prediction minted as a
+token_occurrence is byte-identical to a claim of fact (demonstrated: the same content-addressed
+identifier for a forecast and a report of the same content), and a marker field is invisible to
+identity and rejected by the closed schema (adding predicted:true leaves the identifier unchanged).
+The comparator computes the signed, graded error each tick - a signed minus-one-point-zero on the
+object-permanence trial when the screen lifts on nothing - and the actual outcome is minted as a
+real token_occurrence, but the number and the expectation have no home among the eighteen kinds.
+CONSUMER-VERSUS-ONTOLOGY TEST: PASSES - the predictive loop must be inspectable and gradable by
+external auditors and shareable across minds (the glass-box thesis), not a transient number inside
+one runtime. STATUS: ROUTED to docs/Causalontology_4_0_0_CHANGE_ORDER (Section A, prediction,
+expectation, and prediction error).
 
 Observation-1 (2026-07-20, from slice 1 reconnaissance). The Causalontology 3.0.0
 specification file spec/identity.md still states "seventeen whole-word schemes" and omits
@@ -240,4 +289,22 @@ Honest non-closure: the token tier (a particular combination that actually happe
 signed strength, mechanism decomposition with the hierarchy-consistency check, and refinement lineage
 are recorded as pending elaborations, not walls.
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 0 | UNNECESSARY 0.   Observations: 2.
+Slice-11 note (2026-07-22). Building other minds and the prediction loop (the other_minds and
+prediction_loop packs) HIT the build's first two walls, and they are the first entries routed from
+this Ledger. What was expressible: both runtimes work as glass boxes - other_minds, reusing
+PrologAI's theory_of_mind pack, holds Sally's false belief, predicts she searches the basket where
+she last saw the marble rather than the box where it now is, and nests konnectome's model of Sally
+believing the basket; prediction_loop holds an expectation across ticks, mints the actual outcome as
+a Causalontology token_occurrence, and computes the signed, graded prediction error each tick (a
+signed minus-one-point-zero on the object-permanence trial when the screen lifts on nothing). What
+was NOT expressible: neither the attributed belief nor the expected-versus-observed discrepancy can
+leave the runtime as a shared Causalontology record. The eighteen kinds carry no doxastic kind and
+no predicted_occurrence or prediction_error kind; causal_core_identify fails on an attitude-shaped
+record; the nearest kind, assertion, records only the SIGNER, not the HOLDER, and content-addresses
+a belief with a holder and one without to the IDENTICAL identifier; and a prediction minted as a
+token_occurrence is byte-identical to a claim of fact, its predicted marker invisible to identity.
+Both walls passed the consumer-versus-ontology test and were ROUTED to the Causalontology 4.0.0
+change order (Wall-1 to Section B, Wall-2 to Section A). Honest non-closure at the ontology layer,
+recorded as two real findings, per the Second and Fourth Commandments.
+
+ Walls: OPEN 0 | ROUTED 2 | CLOSED 0 | UNNECESSARY 0.   Observations: 2.

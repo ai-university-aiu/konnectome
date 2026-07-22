@@ -124,12 +124,12 @@ The six-phase waterfall is mirrored in six versioned documents, each seeded verb
 
 | Phase | File | Seeded from |
 |---|---|---|
-| 1. Specification | [`docs/konnectome_1_specification_v11.txt`](docs/konnectome_1_specification_v11.txt) | Appendix 1 |
-| 2. Pseudocode | [`docs/konnectome_2_pseudocode_v11.txt`](docs/konnectome_2_pseudocode_v11.txt) | Appendix 2 |
-| 3. Architecture | [`docs/konnectome_3_architecture_v11.txt`](docs/konnectome_3_architecture_v11.txt) | Appendix 3 |
-| 4. Refinement | [`docs/konnectome_4_refinement_v11.txt`](docs/konnectome_4_refinement_v11.txt) | Appendix 4 |
-| 5. Completion | [`docs/konnectome_5_completion_v11.txt`](docs/konnectome_5_completion_v11.txt) | Appendix 5 |
-| 6. Demonstration | [`docs/konnectome_6_demonstration_v11.txt`](docs/konnectome_6_demonstration_v11.txt) | Appendix 6 |
+| 1. Specification | [`docs/konnectome_1_specification_v12.txt`](docs/konnectome_1_specification_v12.txt) | Appendix 1 |
+| 2. Pseudocode | [`docs/konnectome_2_pseudocode_v12.txt`](docs/konnectome_2_pseudocode_v12.txt) | Appendix 2 |
+| 3. Architecture | [`docs/konnectome_3_architecture_v12.txt`](docs/konnectome_3_architecture_v12.txt) | Appendix 3 |
+| 4. Refinement | [`docs/konnectome_4_refinement_v12.txt`](docs/konnectome_4_refinement_v12.txt) | Appendix 4 |
+| 5. Completion | [`docs/konnectome_5_completion_v12.txt`](docs/konnectome_5_completion_v12.txt) | Appendix 5 |
+| 6. Demonstration | [`docs/konnectome_6_demonstration_v12.txt`](docs/konnectome_6_demonstration_v12.txt) | Appendix 6 |
 
 ## The build ladder
 
@@ -164,12 +164,14 @@ konnectome/
     perturbation_interface/    Slice 7: the perturbation interface (Component 10), for experiments.
     cognitive_cycle/           Slice 8: one integrated tick wiring all ten components together.
     thought_combination/       Slice 10: combining thoughts as Causal Relation Objects (chains, trees).
+    other_minds/               Slice 11: theory of mind - a false, nested belief (reuses PrologAI theory_of_mind).
+    prediction_loop/           Slice 11: the expectation store, comparator, and prediction-error loop.
   docs/
     konnectome_1..6_*_vN.txt   The SPARCD Fileset (seeded from the appendices; versioned per slice).
     konnectome_ledger_v1.txt   The running scoreboard of findings (Fourth Commandment).
-    konnectome_tutorial_v8.txt A complete beginner tutorial (Fifteenth Commandment), versioned.
+    konnectome_tutorial_v9.txt A complete beginner tutorial (Fifteenth Commandment), versioned.
     PrologAI_CHANGE_ORDER_v1.txt        Additive PrologAI-language gaps (Third Commandment).
-    Causalontology_4_0_0_CHANGE_ORDER_v2.txt   Data-structure gaps for the frozen ontology.
+    Causalontology_4_0_0_CHANGE_ORDER_v3.txt   Data-structure gaps for the frozen ontology (Sections A and B released).
     NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt  The source book.
     (plus the guiding-principle and context documents, and the palette)
     images/                    The README banner.
@@ -178,7 +180,7 @@ konnectome/
 
 ## Status
 
-The build has begun and is climbing the ladder. Ten slices have landed on `main` (twelve packs, 69 tests, all green):
+The build has begun and is climbing the ladder. Eleven slices have landed on `main` (fourteen packs, 87 tests, all green):
 
 - **Slice 1 - the heartbeat** (`tick_engine`): the Scheduler and Tick Engine (Component 2), with the two-pass synchronous update. 7 of 7 tests.
 - **Slice 2 - archetypes and the first thought** (`archetype`, `observer`): the six dynamical archetype rules (Appendix 2, Section A2.3) and the observer recording each tick as a Causalontology `token_occurrence` (Component 9) via the reused `causal_core`. 7 of 7 and 6 of 6 tests; the 119 conformance vectors stay green.
@@ -190,8 +192,9 @@ The build has begun and is climbing the ladder. Ten slices have landed on `main`
 - **Slice 8 - one running tick** (`cognitive_cycle`): all ten components wired into a single end-to-end tick (Section A3.3 order) - the whole mind runs as one loop that wants, acts under its safety override, learns, and records each tick as a Causalontology thought, reproducibly. 4 of 4 tests. **konnectome now runs.**
 - **Slice 9 - hardening the loop** (`connection_graph`, `drive_system`, `cognitive_cycle`): the construct gain is now set by the bus, the drives propose the actions, and the body responds to what is done - a **closed sensorimotor loop** where acting to reduce a need moves the body toward its set-point, and that improvement becomes the next reward. 62 tests.
 - **Slice 10 - thought combination** (`thought_combination`): konnectome combines thoughts by minting **Causal Relation Objects** via the reused `causal_core` - atomic thoughts as occurrents, combinations as content-addressed CROs, chained into **chains and trees of thought**. 7 of 7 tests; the 119 conformance vectors stay green.
+- **Slice 11 - other minds and prediction, the wall-finding build** (`other_minds`, `prediction_loop`): the Rung Four theory-of-mind trial (a false, nested belief, reusing PrologAI's `theory_of_mind`) and the Rung One prediction-error loop (an expected occurrence, and the signed surprise). Both run at runtime - but neither the attributed belief nor the expected-versus-observed discrepancy can be **exported** as a shared Causalontology record, because 3.0.0 has no doxastic or predictive kind. 8 of 8 and 10 of 10 tests; the 119 conformance vectors stay green at Causalontology 3.0.0. **The build's first two walls, Wall-1 and Wall-2, recorded and ROUTED to the Causalontology 4.0.0 change order (Sections A and B released, C/D/E held).**
 
-Next: climbing the developmental ladder of Appendix 6 - senses wired in, holding an object in mind, then language and reasoning. This README, and every badge on it, is kept honest as the build climbs.
+Next: the Causalontology 4.0.0 change order releases Sections A and B (prediction, and theory of mind) - the two walls this slice found - as one coordinated major version, so konnectome can later SHARE what it can already privately hold; Sections C, D, and E remain held. This README, and every badge on it, is kept honest as the build climbs.
 
 ## License and attribution
 

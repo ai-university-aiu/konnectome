@@ -1,0 +1,167 @@
+CAUSALONTOLOGY 4.0.0 CHANGE ORDER (VERSION 3) - SECTIONS A AND B RELEASED FOR EXECUTION; SECTIONS C, D, AND E REMAIN HELD
+
+DO NOT SEND THIS TO THE IMPLEMENTATION SERVER NOW. This is a staged, shelf-ready change order. It is deliberately gated: no part of it is executed until the konnectome repository's Requirements Ledger has matured and has RECORDED, as a real finding from a real build, that the substrate could not represent something konnectome needed. A gap that konnectome has not yet hit is a gap this order does not yet close. This document exists so that when a finding lands, the response is ready and coordinated rather than improvised.
+
+WHAT CHANGED IN VERSION 2. This version adds a FIFTH candidate addition, Section E, MULTI-LANGUAGE EXPRESSION. It makes Causalontology a multi-language-capable standard: ENGLISH remains the first language and the default language - the language a record needs nothing extra to be read in, exactly as today - while any object may additionally carry human-readable labels and definitions in OTHER human languages, and the standard gains a formal seam for expressing itself in multiple COMPUTER languages in the future. The design is deliberately a LABELS-AND-PRESENTATION layer: the meaning of a record stays language-neutral and its content-addressed identity is unchanged byte-for-byte, so nothing about the four original candidates (A through D) or any shipped 3.0.0 record is disturbed. Section E is HELD and GATED exactly like candidates A through D: it is released only on a real konnectome finding that the substrate could not carry a needed non-English label or a needed computer-language expression as shared, signed data, plus the owner's written authorization. Everywhere version 1 said 'four candidate gaps' or 'four candidate additions,' read 'five'; everywhere it said 'Sections A through D,' read 'Sections A through E.'
+
+WHAT CHANGED IN VERSION 3. The konnectome Requirements Ledger's Wall-1 and Wall-2 (both 2026-07-22, from build slice 11) have RELEASED Sections B and A respectively through the three-condition release gate, and this version records that release. Wall-1 is a real finding from a real build: konnectome, modelling another agent's mind by reusing PrologAI's theory-of-mind runtime, could hold a false and nested belief privately but could not REPRESENT or SHARE it as a signed, evidence-graded, content-addressed record, because the eighteen kinds carry no doxastic kind, causal_core_identify fails on an attitude-shaped record, and the nearest kind (assertion) names only the signing SOURCE, never a HOLDER, cannot carry false content without poisoning the commons, and cannot nest - so Section B (agent attitude and theory of mind) is released. Wall-2 is likewise a real finding: konnectome's prediction loop could compute a signed, graded prediction error each tick but could not RECORD an EXPECTED occurrence as distinct from an OBSERVED one, because 3.0.0 has no predicted_occurrence or prediction_error kind, a prediction minted as a token_occurrence is byte-identical to a claim of fact, and a marker field is invisible to content-addressed identity and rejected by the closed schema - so Section A (prediction, expectation, and prediction error) is released. Both findings passed the consumer-versus-ontology test (each capability must travel to other minds and repositories as shared data, not merely live inside one runtime), and the owner authorized the release in writing on 2026-07-22: "I would like to get to Causalontology 4.0.0 locked-in, please. As soon as possible, please, and thank you!" All three gate conditions therefore hold for Sections A and B, which ship together as ONE coordinated 4.0.0, while Sections C, D, and E remain HELD with no finding. This version changes no schema text below; the candidate sub-orders of Part Four are unchanged. Where earlier text calls these candidates 'held' or 'gated,' that remains true for C, D, and E; for A and B it is now superseded by the release recorded in the new Part Seven. Execution proceeds per Part Five and Part Seven.
+
+Target repository (when eventually executed): https://github.com/ai-university-aiu/causalontology
+
+Source of the requirements: the four candidate gaps identified in CAUSALONTOLOGY_3_0_0_REVIEW_AND_4_0_0_ASSESSMENT.txt, read against The Roadmap to Artificial General Intelligence and Super Intelligence and Nature's Cognitive Architecture version 19. Each candidate is a potential 4.0.0 addition; none is authorized until konnectome's Ledger proves it bit.
+
+Author context: D. R. Dison / ai-university-aiu. Owner and controller of the Causalontology standard.
+
+
+PART ONE: WHY THIS IS HELD, AND THE GATE THAT RELEASES IT
+
+Causalontology 3.0.0 is sufficient to build PrologAI through Wave 10 and konnectome version one, the faithful glass-box regional model that is the coded expression of the version 19 guide. The review established that plainly. What 3.0.0 does not yet carry are five capabilities the full Proto-Artificial-General-Intelligence ambition may require: a prediction and prediction-error construct, an agent-attitude and theory-of-mind construct, an imagination and reality quarantine, a quantitative sensitivity (Jacobian) representation, and multi-language expression (human and, in future, computer languages) beyond the English default.
+
+The program's own discipline forbids adding these from the armchair. The connectome program never guessed what PrologAI lacked; it built regions and let each wall become a Ledger entry. This order applies that same enforce-then-build, discover-by-building rule one layer up, to the data structure.
+
+THE RELEASE GATE. A candidate part of this order (Part Four, Sections A through E) is authorized for execution ONLY when ALL of the following hold for that candidate:
+
+  - konnectome's Requirements Ledger contains a finding, from a real konnectome build, stating that konnectome needed to REPRESENT, SHARE, SIGN, or EVIDENCE-GRADE the thing this candidate adds, and could not, because Causalontology has no kind or field for it.
+
+  - The finding passes the CONSUMER-VERSUS-ONTOLOGY TEST: the capability must need to be shared across agents or repositories as a signed, evidence-graded, content-addressed record. If it can live inside one mind's PrologAI runtime, it stays a PrologAI pack and this candidate remains held. (PrologAI already has imagination and theory-of-mind packs; promotion into the ontology is justified only by a sharing need.)
+
+  - The owner authorizes the release of that candidate in writing.
+
+When more than one candidate is released at once, they ship as ONE coordinated 4.0.0, not as several dribbled major versions. If only one is released, it ships alone as 4.0.0 and the rest remain held for a later 4.x or 5.0.0.
+
+
+PART TWO: THE GOVERNANCE FRAME (why each of these is correctly a MAJOR version)
+
+Causalontology's Locked Decision 24 (the enumeration rule of Part 13) makes a NEW OBJECT KIND, or a change to any CLOSED ENUMERATION, a MAJOR version, carried openly by extension. Every candidate below is exactly such a change - a new kind, a new value in a closed enumeration, or a new field on an existing kind. Section E is of the last two forms (an optional label field, and a serialization-form enumeration), and is the most conservative on identity of all five, because its additions are non-meaning-bearing. So promotion to 4.0.0 is the correct vehicle, and each addition must be:
+
+  - ADDITIVE AND IDENTITY-PRESERVING wherever possible, as all three 3.0.0 additions were: content addressing hashes only the fields PRESENT, so any 3.0.0 record valid under 4.0.0 keeps its content-addressed identifier byte-for-byte. State, per addition, whether it preserves identity (a new kind, or a new optional field) or deliberately re-baselines it (a change to an existing required field); the strong default and preference is preserve.
+
+  - CARRIED BY EXTENSION, NOT OVERRIDE. No locked decision is silently overridden; each extension is recorded as a 4.0.0 decision in the standard's locked-decision register, exactly as the three 3.0.0 extensions were.
+
+  - WHOLE-WORD NAMED, per Principle P7: every new identifier is whole English words, no abbreviation.
+
+  - CONFORMANCE-GATED. The conformance suite (currently one hundred and nineteen vectors, V01 through V119, green) is extended with new vectors covering each released addition and re-baselined; the release is not done until the full suite is green and every prior valid record still validates and keeps its identifier.
+
+
+PART THREE: THE NON-NEGOTIABLE RULES (apply to whichever candidates are released)
+
+  - CONTENT-ADDRESSED IDENTITY IS HANDLED DELIBERATELY, per Part Two, and proven by new witness vectors that an existing record's identifier is unchanged.
+
+  - THE TOKEN TIER, THE REQUIRED-FIELDS MINIMALISM, PRINCIPLE P7, AND CONTENT-ADDRESSED IDENTITY STAY UNCHANGED in character; the additions extend the model, they do not restructure it.
+
+  - THE THIRTY-PLUS LOCKED DECISIONS are reviewed; each amended one is recorded as a 4.0.0 decision with its rationale. The three 3.0.0 extensions (the tick unit, cross_stratal_seam, realized_by) are unchanged.
+
+  - Per the causalontology repository's own CLAUDE.md rules: work on a feature/ branch and open a pull request; do not push directly to main; the four documents that describe the standard (README, the Standalone Design, the Missing-Link Outline, the Missing-Link Manuscript) are each updated in their own register and each versioned document is incremented with the superseded version moved to archive/ with git mv; a release plan is written for the seventeen language bindings; no Artificial-Intelligence attribution; no Roman numerals.
+
+
+PART FOUR: THE FOUR CANDIDATE ADDITIONS (each executed only when its gate opens)
+
+Each candidate below is written as a complete, ready sub-order. When konnectome's Ledger releases a candidate, execute that section; leave the others held.
+
+SECTION A - PREDICTION, EXPECTATION, AND PREDICTION ERROR (candidate; release on a konnectome active-inference finding)
+
+  WHAT KONNECTOME MUST HAVE FOUND FIRST: that it needed to record an EXPECTED or PREDICTED occurrence as a first-class, shareable, evidence-graded object distinct from what was OBSERVED, and to record the PREDICTION ERROR between them, and could not, because 3.0.0 has only the token_occurrence of what actually happened.
+
+  WHAT TO BUILD: a token-tier PREDICTED_OCCURRENCE kind - a sibling of token_occurrence that records an occurrence a source EXPECTS at (or by) a stated time, carrying the occurrent type it predicts, the predicting source, the time or window predicted, and a strength; and a PREDICTION_ERROR record (a kind, or a token_causal_claim specialization) that pairs a predicted_occurrence with the token_occurrence that did or did not fulfil it, carrying the signed, graded discrepancy. The prediction-error record is the reification of the reward-prediction-error signal the version 19 guide's COMPARATOR archetype computes, so that the predictive loop becomes first-class and inspectable rather than a transient number.
+
+  DESIGN CONSTRAINTS: additive and identity-preserving (a new kind disturbs no existing record); the predicted_occurrence must be clearly NOT an assertion that the thing happened (a prediction is not a claim of fact); it pins to the same temporal model, including the ordinal tick unit. Add conformance vectors for a fulfilled and an unfulfilled prediction and for the error record.
+
+SECTION B - AGENT ATTITUDE AND THEORY OF MIND (candidate; the likeliest first trigger; release on a konnectome social/theory-of-mind finding)
+
+  WHAT KONNECTOME MUST HAVE FOUND FIRST: that it needed to represent that an AGENT holds a BELIEF, DESIRE, or INTENTION about a proposition - including a FALSE belief, and a NESTED attribution (agent A believes that agent B believes X) - as a shareable, reason-over-able record, and could not, because provenance records only WHO SIGNS a claim (a cryptographic key), which is not the same as attributing a mental state that can be false and can nest.
+
+  WHAT TO BUILD: a first-class ATTITUDE kind (or a small family of them) that records a HOLDER (an agent continuant), an ATTITUDE TYPE from a closed enumeration (believes, desires, intends, knows, expects, fears - the enumeration itself extensible only by a future major version), a CONTENT (a reference by identity to any content object, INCLUDING another attitude, which is what makes nesting expressible), and, crucially, the fact that the attitude's content may be FALSE without the holder knowing - the attitude records what the holder's mind contains, not what is true. This is the doxastic construct provenance cannot be, and it is the substrate of theory of mind, the roadmap's named prerequisite for general intelligence.
+
+  DESIGN CONSTRAINTS: a new kind, additive and identity-preserving. The HOLDER is a modeled agent inside the ontology, distinct from the cryptographic SOURCE that signs the record about the holder (one agent can record its model of another agent's belief). The CONTENT reference must be allowed to point at another attitude, so that A-believes-that-B-believes-X is a two-level structure. An attitude is NOT an assertion and carries no do-calculus strength of its own; it may itself be asserted, graded, and retracted by a source through the ordinary provenance layer. Add conformance vectors for a true belief, a false belief, a desire, an intention, and a nested attribution.
+
+SECTION C - THE IMAGINATION AND REALITY QUARANTINE (candidate; release on a konnectome imagination-sharing finding; least urgent)
+
+  WHAT KONNECTOME MUST HAVE FOUND FIRST: that it needed to tag or QUARANTINE a whole SET of records as an imagined, expected, desired, or recalled world, distinct from the actual commons of what happened, and to SHARE that quarantined world, and could not, because 3.0.0 has only the per-claim simulation evidence type and the per-claim counterfactual boolean, not a world-level partition.
+
+  WHAT TO BUILD: a REALITY (or WORLD) tag - a scheme-qualified label a record may carry that names which reality it belongs to, from a closed enumeration (actual, expected, desired, imagined, recalled, counterfactual), with the rule that records in a non-actual reality NEVER contaminate reasoning over the actual commons unless deliberately promoted. This reifies the quarantine the PrologAI imagination pack performs, so an imagined rollout can be a first-class, signed, evidence-graded, shareable set of records rather than a runtime-only structure. The actual reality is the default and is identity-preserving (a record with no reality tag is actual, exactly as today).
+
+  DESIGN CONSTRAINTS: prefer an optional tag (identity-preserving: an untagged record is actual and keeps its identifier) over a new kind. Align the reality enumeration with the existing simulation evidence type and counterfactual boolean rather than duplicating them - state the relationship precisely. Add conformance vectors for an actual, an imagined, and a counterfactual record, and for the non-contamination rule.
+
+SECTION D - QUANTITATIVE SENSITIVITY AND THE JACOBIAN (candidate; lowest priority; release only on a konnectome sensitivity-sharing finding)
+
+  WHAT KONNECTOME MUST HAVE FOUND FIRST: that it needed to RECORD and SHARE a quantitative SENSITIVITY - how much an effect changes per unit change of a cause, a Jacobian entry, or a goal gradient - as inspectable data, and could not, because a causal_relation_object's strength is a do-calculus probability, not a rate of change, and realized_by only REFERENCES a native rate law without representing the derivative. Note well: J-Space is a PrologAI RUNTIME workspace, and sensitivities are usually state-dependent; this candidate is authorized ONLY if konnectome proves it must persist and share sensitivities as data, not merely compute them.
+
+  WHAT TO BUILD: an optional SENSITIVITY field on the causal_relation_object (or a companion record) carrying a scheme-qualified quantitative rate - the partial derivative of the effect with respect to the cause, or the goal gradient, with its unit and the state or operating point at which it holds, since a sensitivity that is not pinned to an operating point is meaningless. It is a REFERENCE-plus-value: the value is the local rate; the binding to the native law that produced it uses the existing realized_by machinery.
+
+  DESIGN CONSTRAINTS: prefer an optional field (identity-preserving) over a new kind. Require the operating point, so a sensitivity is never a floating number. Do not turn Causalontology into a differential-equation solver; it records a sampled sensitivity, it does not compute dynamics. Add conformance vectors for a sensitivity with an operating point and for its absence.
+
+
+SECTION E - MULTI-LANGUAGE EXPRESSION (candidate; release on a konnectome localization or computer-language-binding finding)
+
+  THE GOAL, IN PLAIN TERMS: make Causalontology a multi-language-capable standard. English is the FIRST language and the DEFAULT: a record with no language information is English, and reads exactly as it does today, so nothing a reader knows changes. On top of that default, any object may ALSO carry human-readable labels and definitions in other human languages (so the same causal_relation_object can present its name and gloss in English, Spanish, Mandarin, Arabic, and so on), and the standard gains a formal, extensible seam for being expressed in multiple COMPUTER languages in the future (so a future machine-readable form beyond today's canonical JavaScript Object Notation, abbreviated JSON, is a first-class, named binding rather than an ad-hoc fork). This is presentation and expression, not new meaning.
+
+  WHAT KONNECTOME MUST HAVE FOUND FIRST: that it needed to RECORD, SIGN, SHARE, or EVIDENCE-GRADE a non-English label or definition on an object (for example, to build or serve a mind that reasons or reports in a language other than English, where the localized text must travel WITH the record as shared data), or that it needed a computer-language expression of the standard to be a named, versioned, shareable binding rather than a private transformation - and could not, because 3.0.0 carries no language-tagged label field and no binding register. If konnectome only ever needs English, or only needs localization inside one runtime that never leaves it, this candidate stays held (the consumer-versus-ontology test).
+
+  WHAT TO BUILD, PART ONE - THE HUMAN-LANGUAGE LABEL LAYER (the core of this candidate):
+
+    - A language-neutral IDENTITY CORE, made explicit. State as a locked-decision extension what is already true in practice: an object's content-addressed identity is computed over its MEANING-BEARING fields, and human-readable labels are NOT meaning-bearing. This guarantees that adding, changing, or translating a label NEVER changes an object's identifier - the strongest possible identity-preservation, and the reason this whole candidate is safe.
+
+    - An optional, repeatable LABEL field (a small companion structure, a "language label set") a record may carry, each entry pairing a LANGUAGE TAG (a standard BCP 47 language tag, the widely used identifier such as "en" for English, "es" for Spanish, "zh-Hans" for simplified Chinese) with a human-readable NAME and an optional human-readable DEFINITION or gloss in that language. English ("en") is the DEFAULT: if a record carries labels at all, an English label is REQUIRED and is the fallback any consumer uses when it lacks the reader's language; other-language labels are purely additive.
+
+    - The rule that labels are ADVISORY PRESENTATION, never semantics: no reasoning rule, no do-calculus, no conformance algorithm may branch on a label's text. Labels are for humans to read; the machine reasons over identity and structure, which stay language-neutral. This keeps the standard's meaning one thing across all human languages - the same causal claim, wearing different names.
+
+  WHAT TO BUILD, PART TWO - THE COMPUTER-LANGUAGE EXPRESSION SEAM (the future-facing half):
+
+    - A named SERIALIZATION-FORM (or "expression binding") register: a small closed enumeration, extensible only by a future major version, naming each computer-language expression the standard officially supports, with today's canonical RFC 8785-canonicalized JSON as the first and default entry. This does not add a data kind; it formalizes that a computer-language form is a NAMED, VERSIONED binding of the one language-neutral model, so a future form is adopted by extension (a new enumeration value plus its conformance vectors) rather than by forking the standard.
+
+    - The invariant that binds them all: EVERY serialization-form must round-trip to the same canonical bytes and therefore the same content-addressed identifier. A record expressed in a future computer language and a record expressed in canonical JSON that mean the same thing MUST share an identifier. The computer language is a free choice of skin over an invariant skeleton, precisely as PrologAI itself is language-agnostic over the one specification - the same principle, applied to the data standard.
+
+  DESIGN CONSTRAINTS:
+
+    - ADDITIVE AND FULLY IDENTITY-PRESERVING. The label field is optional and non-meaning-bearing; the serialization-form register describes bindings, not content. Every 3.0.0 record is a valid 4.0.0 record and keeps its identifier byte-for-byte. This is the safest of the five candidates on identity, and its witness vectors must PROVE an identifier is unchanged when labels in three languages are added and when the record is re-expressed in a second serialization form.
+
+    - ENGLISH-FIRST IS A STATED, LOCKED DECISION. Record as a 4.0.0 locked decision that English is the default and required-fallback human language and canonical JSON is the default serialization-form, so "no language information present" has one unambiguous meaning forever.
+
+    - WHOLE-WORD NAMED, per Principle P7: language_label_set, language_tag, serialization_form - no abbreviations in the identifiers (the external standards BCP 47, JSON, and RFC 8785 keep their standard names, per the external-proper-name allowance).
+
+    - Add conformance vectors for: a record with English-only labels; a record with English plus two other-language labels (identifier unchanged); a record whose non-English labels are present but whose English fallback is required and used; the reasoning-does-not-branch-on-labels rule; and a record round-tripped through a second declared serialization-form to the identical identifier.
+
+    NOTE ON SCOPE. This candidate localizes the standard's OWN objects (their names and glosses) and formalizes its expression forms. It does NOT translate the arbitrary CONTENT a mind stores (a konnectome mind's memories or utterances in another language are ordinary content the mind handles at its own layer); and it does NOT make Causalontology a natural-language processor. It makes the DATA STANDARD speak many human languages to its readers and offer many computer-language skins over one language-neutral, content-addressed core - English first, others additive, identity untouched.
+
+
+PART FIVE: THE DOCUMENTS AND THE RELEASE (when any candidate is released)
+
+Whichever candidates are released ship together as one coordinated 4.0.0, following the same discipline as the 3.0.0 release:
+
+  - Amend the standard: catalogue any new kind, add its schema, define it and its content-addressed identity policy in a new normative Part, record the new conformance vectors, and record each locked-decision extension. For Section E specifically, the amendment adds no data kind: it adds the optional language-label field, the language-neutral-identity locked decision, the English-first locked decision, and the serialization-form register, each with its vectors.
+
+  - Update the four descriptive documents, each in its own register, each versioned and archived: README (overview and migration note), the Standalone Design (the normative canon, incremented from version 22 to its next version, prior archived), the Missing-Link Outline (incremented, prior archived), and the Missing-Link Manuscript (incremented, prior archived). Keep the registers distinct; the same facts appear in all four but in four voices.
+
+  - Write the release plan: a Causalontology 4.0.0 release plan in docs/, with the common pre-release steps and a per-language section for all seventeen bindings (Python, JavaScript, TypeScript, Rust, Java, Kotlin, C-sharp and dot-NET, Ruby, PHP, Dart, Elixir, Erlang, Lua, Swift, Go with its major-version import-path rule, and Zig), each publishing 4.0.0 only after passing that language's 4.0.0 conformance. If Section E is released, each binding must additionally honor the language-neutral-identity rule (labels never change an identifier) and register itself against the serialization-form enumeration, so the seventeen existing bindings and any future computer-language form are all named entries over the one invariant model.
+
+  - Gate, branch, pull request, squash-merge per the CLAUDE.md rules; conformance green at the new vector count; every prior valid record's identifier unchanged; no Artificial-Intelligence attribution.
+
+
+PART SIX: NOTE, NOT AN ACTION
+
+This change order is HELD. It adds nothing to Causalontology now. It is the prepared, coordinated response to findings konnectome has not yet made, staged so that when a real build hits a real wall the substrate could not express, the fix is ready, correctly scoped as a major version by the standard's own governance, and released only for the capability that genuinely bit and genuinely needs to be shared as data - whether that is prediction, theory of mind, imagination, sensitivity, or a non-English label or computer-language binding that must travel with the record. Until konnectome's Requirements Ledger matures and its owner authorizes a release, this file waits on the shelf. Build konnectome on Causalontology 3.0.0; keep its Ledger honest; and let this 4.0.0, if it comes, be a discovery rather than a guess.
+
+PART SEVEN: THE RELEASE RECORD - SECTIONS A AND B RELEASED (2026-07-22)
+
+This part records the release of Sections A and B, the first candidates of this change order to pass the gate. It is written when the release fires, per the discipline of Part One, so the release is a documented discovery rather than an improvisation. Sections C, D, and E are not affected by it and remain held.
+
+THE TWO FINDINGS, IN FULL (mirroring the konnectome Ledger's Wall-1 and Wall-2).
+
+  Wall-1 (2026-07-22, konnectome build slice 11, pack other_minds). konnectome needed to REPRESENT and SHARE another agent's belief - false and nested - as a signed, evidence-graded, content-addressed record, and could not: the eighteen kinds contain no doxastic kind, causal_core_identify fails on an attitude-shaped record, and the nearest kind (assertion) names only the SIGNER, never a HOLDER, cannot hold false content without poisoning the commons, and cannot nest. Demonstrated by building: an assertion record with a holder field and one without content-address to the IDENTICAL identifier, and causal_core_identify fails outright on the attitude dict whether the kind is passed explicitly or inferred from the record's own type field. The runtime, reusing PrologAI's theory_of_mind pack, holds the false belief, the basket-search prediction, and the nested konnectome-models-Sally attribution privately; only the SHARING is impossible. This releases Section B, AGENT ATTITUDE AND THEORY OF MIND.
+
+  Wall-2 (2026-07-22, konnectome build slice 11, pack prediction_loop). konnectome needed to RECORD an EXPECTED occurrence as distinct from an OBSERVED one, and the signed, graded discrepancy between them, and could not: no predicted_occurrence or prediction_error kind exists, a prediction minted as a token_occurrence is byte-identical to a claim of fact (the same content-addressed identifier for a forecast and a report of the same content), and a marker field is invisible to identity and rejected by the closed schema (adding predicted:true leaves the identifier unchanged). The comparator computes the signed, graded error each tick - a signed minus-one-point-zero on the object-permanence trial when the screen lifts on nothing - and the actual outcome is minted as a real token_occurrence, but the number and the expectation have no home among the eighteen kinds. This releases Section A, PREDICTION, EXPECTATION, AND PREDICTION ERROR.
+
+THE GATE CHECK, CONDITION BY CONDITION (the three conditions of Part One, for each released section).
+
+  Condition one - a real finding from a real konnectome build that it needed to REPRESENT, SHARE, SIGN, or EVIDENCE-GRADE the thing and could not: MET for Section B by Wall-1 and for Section A by Wall-2, each a runtime finding from build slice 11, discovered by building and not guessed from the armchair.
+
+  Condition two - the consumer-versus-ontology test, that the capability must be shared across agents or repositories as a signed, evidence-graded, content-addressed record and cannot merely live inside one runtime: PASSES for both. A theory-of-mind attribution is by definition a model OF ANOTHER agent and must travel to other minds and repositories; a prediction loop must be inspectable and gradable by external auditors and shareable across minds, the glass-box thesis. Neither is a private runtime convenience.
+
+  Condition three - the owner authorizes the release in writing: MET by the owner's written instruction of 2026-07-22: "I would like to get to Causalontology 4.0.0 locked-in, please. As soon as possible, please, and thank you!"
+
+All three conditions hold for both Sections A and B. Per Part One, when more than one candidate is released at once they ship as ONE coordinated 4.0.0; Sections A and B therefore ship together as Causalontology 4.0.0. Sections C, D, and E remain HELD, each awaiting its own finding.
+
+EXECUTION NOW PROCEEDS. With the gate open for Sections A and B, execution of this change order proceeds in the causalontology repository per Part Five: amend the standard with the predicted_occurrence and prediction_error kinds (Section A) and the attitude kind (Section B), each with its schema, its content-addressed-identity policy, and its locked-decision extension; add the new conformance vectors and re-baseline the suite past the current one hundred nineteen; update the four descriptive documents each in its own register; write the 4.0.0 release plan across the seventeen language bindings; and gate, branch, pull request, and squash-merge per the causalontology repository's CLAUDE.md rules, with conformance green at the new vector count, every prior valid record's identifier unchanged, no Artificial-Intelligence attribution, and no Roman numerals. The sub-orders of Sections C, D, and E are not executed; they remain held on the shelf.
+
+
+END OF HELD CHANGE ORDER.
