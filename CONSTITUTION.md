@@ -169,9 +169,13 @@ THE SIXTEENTH COMMANDMENT: THE BUILD LOG:
 (NEW in version 3, by the owner's instruction of 2026-07-26. The former Sixteenth Commandment, the
 Hand-Off Protocol, becomes the Seventeenth.)
 Log all activities as part of the konnectome build to the document:
-/home/ccaitwo/konnectome/docs/BUILDING_KONNECTOME.txt
+/home/ccaitwo/konnectome/docs/BUILDING_KONNECTOME_v2.txt
+(The build log is a versioned document under the Ninth Commandment: the current version lives in
+docs/ under this name pattern, and every superseded version - including the original, unversioned
+BUILDING_KONNECTOME.txt, archived as BUILDING_KONNECTOME_v1.txt - lives in docs/archive/. Version 2,
+by the owner's instruction of 2026-07-26, starts the log from the beginning of the konnectome story.)
 Voice this log with dual purpose: as a scientific paper and as a New York Times Best-Selling Book.
-The log is append-only and grows with the build: every session of build activity appends its entries
+The log is append-only and grows with the build: every session of build activity appends its chapters
 in order, so the document carries the complete story of how konnectome was built - rigorous enough
 to cite, alive enough to read.
  ...

@@ -554,8 +554,8 @@ set-point distance, so a released help could overshoot into harm - fixed at the 
 at the set-point (drive_system 0.3.0, its own regression test added; homeostasis now settles AT its
 set-point, never past it); and the exported resonance boundary now re-validates the distress term with
 named refusals, so a hand-rolled term can never raise belonging above its set-point. Gates: empathy 17
-of 17 and drive_system 10 of 10 Prolog Unit (PLUnit) tests pass (the other seventeen packs unchanged;
-180 in total); naming, layer, and layer-binding gates report zero violations; the Causalontology
+of 17, drive_system 10 of 10, and symbol_exchange 19 of 19 Prolog Unit (PLUnit) tests pass (the other sixteen packs unchanged;
+181 in total); naming, layer, and layer-binding gates report zero violations; the Causalontology
 conformance suite is untouched and green at 137 of 137 (specification 4.0.0) in both cousins. Honest remaining ascent, recorded as pending refinements, not walls: the appraisal pilot and the
 regulation pilot of Rung Four, and the capstone story joining Rung Two and this deepening into its
 telling under a bumped version. No cousin was edited, per the Second, Third, and Fourth Commandments.
