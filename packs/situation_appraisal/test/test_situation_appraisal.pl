@@ -130,6 +130,28 @@ test(owned_appraisal_is_reproducible) :-
     % Content-addressing makes the two identifiers identical.
     assertion(FirstIdentifier == SecondIdentifier).
 
+% Two float situations equidistant on opposite sides of the set-point leave the goal unchanged: neutral, not a rounding-noise good or bad.
+test(equidistant_float_change_is_neutral) :-
+    % A drive defending a set-point that the float bodies straddle exactly.
+    Drive = drive(temperature, temperature, 3, none),
+    % Before and after sit 3.48 from the set-point on opposite sides - mathematically no change.
+    situation_appraisal_appraise_change(Drive, [temperature-6.48], [temperature-(-0.48)], Appraisal),
+    % Read the valence.
+    situation_appraisal_valence(Appraisal, Valence),
+    % A change that is only floating-point residue is read as no change at all.
+    assertion(Valence == neutral).
+
+% That same rounding-noise change is refused as an attitude, never minted as a false good or bad.
+test(equidistant_float_change_is_unrecordable, throws(error(situation_appraisal_unrecordable_valence(neutral), _))) :-
+    % A drive whose set-point the float bodies straddle exactly.
+    Drive = drive(temperature, temperature, 3, none),
+    % The fixed instant stamps the attempt.
+    situation_appraisal_test_instant(Instant),
+    % The equidistant change appraises neutral.
+    situation_appraisal_appraise_change(Drive, [temperature-6.48], [temperature-(-0.48)], appraisal(Valence, _)),
+    % And a neutral appraisal cannot be owned as an attitude - the refusal must fire, not a false mint.
+    situation_appraisal_record("the_equidistant_shift", Valence, Instant, _Record).
+
 % A neutral valence has no affective home and is refused as an attitude.
 test(neutral_valence_is_unrecordable, throws(error(situation_appraisal_unrecordable_valence(neutral), _))) :-
     % The fixed instant stamps the attempt.
