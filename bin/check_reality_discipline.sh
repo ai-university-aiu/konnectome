@@ -3,21 +3,25 @@
 #
 # The rule this gate enforces: crossing between pretend and reality is pretend_play's job alone.
 # The reused PrologAI imagination pack is deliberately unguarded on the shared library path -
-# its imagination_promote/3 can move a fact between realities and its imagination_assert/2 can
-# write any reality directly, including observed. konnectome's refusal to promote pretend into
-# the observed record lives in the pretend_play wrapper, so the refusal holds only if no other
-# konnectome pack ever reaches around the wrapper. This gate makes that build discipline
-# checkable: outside packs/pretend_play/, no konnectome source or test line may reference any
-# imagination-pack predicate at all.
+# its imagination_promote/3 can move a fact between realities, its imagination_assert/2 can
+# write any reality directly, including observed, and its internal store can be written through
+# a module-qualified goal. konnectome's refusal to promote pretend into the observed record
+# lives in the pretend_play wrapper, so the refusal holds only if no other konnectome pack ever
+# reaches around the wrapper. This gate makes that build discipline checkable at the textual
+# level: outside packs/pretend_play/, no konnectome file may carry any imagination-pack
+# predicate name, any imagination-module qualifier, or the library(imagination) import. A reach
+# that constructs both its module name and its call at runtime leaves no textual trace and is
+# beyond any textual gate; that residue remains a discipline, stated honestly in the ledger.
 #
 # Usage: bin/check_reality_discipline.sh
 # Exit 0 = the discipline holds; 1 = a pack outside pretend_play touches the imagination pack.
 set -u
 # Resolve the konnectome repository root from this script's location.
 cd "$(dirname "$0")/.." || exit 2
-# Collect every offending line: an imagination-pack reference, in a Prolog source or test file,
-# outside the pretend_play pack, on a line that is code rather than a plain-English comment.
-VIOLATIONS=$(grep -rn "imagination_" packs/ --include="*.pl" \
+# Collect every offending line in every file under packs/ outside pretend_play, on a line that
+# is code rather than a plain-English comment: a predicate-name reference (imagination_), a
+# module-qualified reach (imagination:), or the import that resolves either (library(imagination)).
+VIOLATIONS=$(grep -rn -E "imagination[_:]|library\(imagination\)" packs/ \
   | grep -v "^packs/pretend_play/" \
   | grep -v -E "^[^:]*:[0-9]+:[[:space:]]*%" || true)
 # An empty collection means every reality crossing goes through pretend_play's guarded interface.

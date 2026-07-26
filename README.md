@@ -84,7 +84,7 @@ Each badge above is a claim, and every claim deserves a plain explanation. Here 
 
 **A Proto-Artificial-General-Intelligence prototype written in PrologAI, thinking in Causalontology 4.0.0 records, and built faithfully from the appendices of the book *Nature's Cognitive Architecture*. konnectome is the connectome-scale cognitive structure the finished PrologAI language was built to make possible.**
 
-**konnectome is able to** (as one integrated, reproducible, glass-box loop) **keep time** (the tick engine's two-pass synchronous update), **want and stay motivated** (the homeostatic drives, whose relief becomes a reward broadcast as dopamine on the neuromodulatory bus), **act by releasing exactly one action under a vitality safety override** (the action selector and the override controller - a vital drive like breathing can seize control and can never be suppressed), **learn** (the three-factor plasticity engine, where a connection strengthens only when both ends fire together and dopamine says the moment mattered), **record each tick as a Causalontology `token_occurrence`** (the passive observer), and **combine thoughts into chains and trees of thought as Causal Relation Objects** (`thought_combination`) - moving its own body toward what it needs as a closed sensorimotor loop, all as a glass box you can inspect at every step, with the naming, layer, and binding gates green and the 137 Causalontology conformance vectors intact.
+**konnectome is able to** (as one integrated, reproducible, glass-box loop) **keep time** (the tick engine's two-pass synchronous update), **want and stay motivated** (the homeostatic drives, whose relief becomes a reward broadcast as dopamine on the neuromodulatory bus), **act by releasing exactly one action under a vitality safety override** (the action selector and the override controller - a vital drive like breathing can seize control and can never be suppressed), **learn** (the three-factor plasticity engine, where a connection strengthens only when both ends fire together and dopamine says the moment mattered), **record each tick as a Causalontology `token_occurrence`** (the passive observer), and **combine thoughts into chains and trees of thought as Causal Relation Objects** (`thought_combination`) - moving its own body toward what it needs as a closed sensorimotor loop, all as a glass box you can inspect at every step, with the naming, layer, binding, and reality-discipline gates green and the 137 Causalontology conformance vectors intact.
 
 ---
 
@@ -117,7 +117,7 @@ konnectome is built and maintained under a written [**CONSTITUTION.md**](CONSTIT
 12. **Whole-Word System** - whole English words, snake_case, pack-qualified, no terse prefixes.
 13. **The safety gate** - no change may regress ARC-AGI-1, ARC-AGI-2, or the 137-vector Causalontology conformance suite.
 14. **Branch and report discipline** - feature branches and pull requests; no direct pushes to main; no artificial-intelligence tool credited as author; no Roman numerals.
-15. **The tutorial** - a maintained, beginner-friendly [`docs/konnectome_tutorial`](docs/konnectome_tutorial_v14.txt), kept current and versioned under the archive discipline.
+15. **The tutorial** - a maintained, beginner-friendly [`docs/konnectome_tutorial`](docs/konnectome_tutorial_v15.txt), kept current and versioned under the archive discipline.
 16. **The build log** - every build activity is logged to [`docs/BUILDING_KONNECTOME_v2.txt`](docs/BUILDING_KONNECTOME_v2.txt), voiced with dual purpose: as a scientific paper and as a best-selling book.
 17. **Context-window management and the hand-off protocol** - when the window runs high, a durable Context Hand-Off is written and the session paused, so a fresh session reloads state from `docs/` and continues from a known-good baseline.
 
@@ -127,12 +127,12 @@ The six-phase waterfall is mirrored in six versioned documents, each seeded verb
 
 | Phase | File | Seeded from |
 |---|---|---|
-| 1. Specification | [`docs/konnectome_1_specification_v17.txt`](docs/konnectome_1_specification_v17.txt) | Appendix 1 |
-| 2. Pseudocode | [`docs/konnectome_2_pseudocode_v17.txt`](docs/konnectome_2_pseudocode_v17.txt) | Appendix 2 |
-| 3. Architecture | [`docs/konnectome_3_architecture_v17.txt`](docs/konnectome_3_architecture_v17.txt) | Appendix 3 |
-| 4. Refinement | [`docs/konnectome_4_refinement_v17.txt`](docs/konnectome_4_refinement_v17.txt) | Appendix 4 |
-| 5. Completion | [`docs/konnectome_5_completion_v17.txt`](docs/konnectome_5_completion_v17.txt) | Appendix 5 |
-| 6. Demonstration | [`docs/konnectome_6_demonstration_v17.txt`](docs/konnectome_6_demonstration_v17.txt) | Appendix 6 |
+| 1. Specification | [`docs/konnectome_1_specification_v18.txt`](docs/konnectome_1_specification_v18.txt) | Appendix 1 |
+| 2. Pseudocode | [`docs/konnectome_2_pseudocode_v18.txt`](docs/konnectome_2_pseudocode_v18.txt) | Appendix 2 |
+| 3. Architecture | [`docs/konnectome_3_architecture_v18.txt`](docs/konnectome_3_architecture_v18.txt) | Appendix 3 |
+| 4. Refinement | [`docs/konnectome_4_refinement_v18.txt`](docs/konnectome_4_refinement_v18.txt) | Appendix 4 |
+| 5. Completion | [`docs/konnectome_5_completion_v18.txt`](docs/konnectome_5_completion_v18.txt) | Appendix 5 |
+| 6. Demonstration | [`docs/konnectome_6_demonstration_v18.txt`](docs/konnectome_6_demonstration_v18.txt) | Appendix 6 |
 
 ## The build ladder
 
@@ -178,7 +178,7 @@ konnectome/
     konnectome_1..6_*_vN.txt   The SPARCD Fileset (seeded from the appendices; versioned per slice).
     konnectome_ledger_v1.txt   The running scoreboard of findings (Fourth Commandment).
     BUILDING_KONNECTOME_v2.txt The build log (Sixteenth Commandment): the whole story from the true beginning, paper and book at once, versioned.
-    konnectome_tutorial_v14.txt A complete beginner tutorial (Fifteenth Commandment), versioned.
+    konnectome_tutorial_v15.txt A complete beginner tutorial (Fifteenth Commandment), versioned.
     PrologAI_CHANGE_ORDER_v2.txt        Additive PrologAI-language gaps (Third Commandment); Wall-3 closed by causal_core 1.1.0.
     Causalontology_4_0_0_CHANGE_ORDER_v3.txt   Data-structure gaps for the frozen ontology (Sections A and B shipped as 4.0.0; C, D, E held).
     NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt  The source book.

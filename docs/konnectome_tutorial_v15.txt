@@ -393,7 +393,7 @@ konnectome uses a program called SWI-Prolog to run its code and tests. From the 
 • Check the layer-to-stratum binding:
   bin/check_layer_binding.sh
 
-• Check the reality discipline - that pretend never crosses into the observed record except through pretend_play's guarded doorway (see Part Thirteen):
+• Check the reality discipline - that no pack but pretend_play so much as names the reused imagination machinery, by predicate, module qualifier, or import, so pretend only ever crosses toward reality through the guarded doorway (see Part Thirteen):
   bin/check_reality_discipline.sh
 
 A layer is a numbered level of the code; the rule is simply that a lower level may not depend on a higher one, so the foundation never leans on the roof.

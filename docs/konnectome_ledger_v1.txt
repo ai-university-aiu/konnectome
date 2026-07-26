@@ -567,11 +567,18 @@ only in pretend_play's own interface, while the reused imagination pack's crossi
 library path - so the documented rule held by good behaviour, not by construction. The two honest
 options were (a) keep it a build discipline and interface-scope every documentary claim, or (b) harden
 konnectome-side and make the discipline checkable. THE DECISION IS (b): a fourth standing gate,
-bin/check_reality_discipline.sh, now refuses any merge in which a konnectome source or test line
-outside packs/pretend_play references any imagination-pack predicate at all - plain-English comment
-lines excused, because English Readable Code must be free to discuss what it fences. The gate was
-proven able to fail before it was trusted to pass: a deliberate violation was injected, caught by file
-and line, and removed. The reused imagination pack itself is untouched (it is a cousin's code and
+bin/check_reality_discipline.sh, now refuses any merge in which any file of any pack outside
+packs/pretend_play carries any textual road to the reused machinery - an imagination predicate name,
+the imagination module qualifier, or the library(imagination) import - plain-English comment lines
+excused, because English Readable Code must be free to discuss what it fences. The gate was proven
+able to fail before it was trusted to pass: a deliberate violation was injected, caught by file and
+line, and removed. Its own adversarial review then defeated the first draft twice - a
+module-qualified store write that names no predicate, and a runtime-constructed call resolved by a
+bare import - and once through a test file with an uncommon extension; it was hardened to close all
+three roads and proven red again before its clean run was accepted. THE HONEST RESIDUE: a call that
+constructs both its module and its goal at runtime leaves no textual trace, and no textual gate can
+see it; that residue is recorded here as the discipline it remains - kept the way never-edit-a-cousin
+is kept, and no longer breakable silently by ordinary code. The reused imagination pack itself is untouched (it is a cousin's code and
 remains exactly as shipped); what is fenced is konnectome's own reach. The companion mark from the
 same review - the malformed drive term failing silently in symbol_exchange_condition/3 - was already
 closed by slice 16 with the named refusal symbol_exchange_bad_drive and its permanent test. Nothing
