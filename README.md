@@ -73,7 +73,7 @@ Each badge above is a claim, and every claim deserves a plain explanation. Here 
 
 - **`PARENT ORG | AI-UNIVERSITY-AIU`** - the parent organization that owns konnectome and its cousins.
 - **`COUSINS | PROLOGAI + CAUSALONTOLOGY + MENTOVA`** - konnectome's sibling repositories: PrologAI (the language), Causalontology (the data structure), and Mentova (the flagship Synthetic Mind and home of the reasoning core). The badge links to Mentova.
-- **`STATUS | THE MIND RUNS AND TELLS ITS STORY`** - the honest current state: fourteen slices have landed (sixteen packs, 132 tests, all green), all ten architecture components run as one loop, and one command - `bin/run_capstone_demonstration.sh` - boots the mind and prints its whole glass-box story.
+- **`STATUS | THE MIND RUNS AND TELLS ITS STORY`** - the honest current state: fifteen slices have landed (eighteen packs, 162 tests, all green), all ten architecture components run as one loop, Rung Two of the ladder is open (first grounded words and quarantined pretend play), and one command - `bin/run_capstone_demonstration.sh` - boots the mind and prints its whole glass-box story.
 
 </details>
 
@@ -117,7 +117,7 @@ konnectome is built and maintained under a written [**CONSTITUTION.md**](CONSTIT
 12. **Whole-Word System** - whole English words, snake_case, pack-qualified, no terse prefixes.
 13. **The safety gate** - no change may regress ARC-AGI-1, ARC-AGI-2, or the 137-vector Causalontology conformance suite.
 14. **Branch and report discipline** - feature branches and pull requests; no direct pushes to main; no artificial-intelligence tool credited as author; no Roman numerals.
-15. **The tutorial** - a maintained, beginner-friendly [`docs/konnectome_tutorial`](docs/konnectome_tutorial_v12.txt), kept current and versioned under the archive discipline.
+15. **The tutorial** - a maintained, beginner-friendly [`docs/konnectome_tutorial`](docs/konnectome_tutorial_v13.txt), kept current and versioned under the archive discipline.
 16. **The build log** - every build activity is logged to [`docs/BUILDING_KONNECTOME.txt`](docs/BUILDING_KONNECTOME.txt), voiced with dual purpose: as a scientific paper and as a best-selling book.
 17. **Context-window management and the hand-off protocol** - when the window runs high, a durable Context Hand-Off is written and the session paused, so a fresh session reloads state from `docs/` and continues from a known-good baseline.
 
@@ -127,12 +127,12 @@ The six-phase waterfall is mirrored in six versioned documents, each seeded verb
 
 | Phase | File | Seeded from |
 |---|---|---|
-| 1. Specification | [`docs/konnectome_1_specification_v15.txt`](docs/konnectome_1_specification_v15.txt) | Appendix 1 |
-| 2. Pseudocode | [`docs/konnectome_2_pseudocode_v15.txt`](docs/konnectome_2_pseudocode_v15.txt) | Appendix 2 |
-| 3. Architecture | [`docs/konnectome_3_architecture_v15.txt`](docs/konnectome_3_architecture_v15.txt) | Appendix 3 |
-| 4. Refinement | [`docs/konnectome_4_refinement_v15.txt`](docs/konnectome_4_refinement_v15.txt) | Appendix 4 |
-| 5. Completion | [`docs/konnectome_5_completion_v15.txt`](docs/konnectome_5_completion_v15.txt) | Appendix 5 |
-| 6. Demonstration | [`docs/konnectome_6_demonstration_v15.txt`](docs/konnectome_6_demonstration_v15.txt) | Appendix 6 |
+| 1. Specification | [`docs/konnectome_1_specification_v16.txt`](docs/konnectome_1_specification_v16.txt) | Appendix 1 |
+| 2. Pseudocode | [`docs/konnectome_2_pseudocode_v16.txt`](docs/konnectome_2_pseudocode_v16.txt) | Appendix 2 |
+| 3. Architecture | [`docs/konnectome_3_architecture_v16.txt`](docs/konnectome_3_architecture_v16.txt) | Appendix 3 |
+| 4. Refinement | [`docs/konnectome_4_refinement_v16.txt`](docs/konnectome_4_refinement_v16.txt) | Appendix 4 |
+| 5. Completion | [`docs/konnectome_5_completion_v16.txt`](docs/konnectome_5_completion_v16.txt) | Appendix 5 |
+| 6. Demonstration | [`docs/konnectome_6_demonstration_v16.txt`](docs/konnectome_6_demonstration_v16.txt) | Appendix 6 |
 
 ## The build ladder
 
@@ -171,11 +171,13 @@ konnectome/
     prediction_loop/           Slice 11: the expectation store, comparator, and prediction-error loop.
     self_provenance/           Slice 13: the mind grades, asserts, supersedes, and retracts its own records.
     capstone_demonstration/    Slice 14: the runnable glass-box story of the whole mind.
+    symbol_exchange/           Slice 15: first words, grounded in lived experience (reuses PrologAI language).
+    pretend_play/              Slice 15: pretend under the five-reality quarantine (reuses PrologAI imagination).
   docs/
     konnectome_1..6_*_vN.txt   The SPARCD Fileset (seeded from the appendices; versioned per slice).
     konnectome_ledger_v1.txt   The running scoreboard of findings (Fourth Commandment).
     BUILDING_KONNECTOME.txt    The build log (Sixteenth Commandment): the whole story, paper and book at once.
-    konnectome_tutorial_v12.txt A complete beginner tutorial (Fifteenth Commandment), versioned.
+    konnectome_tutorial_v13.txt A complete beginner tutorial (Fifteenth Commandment), versioned.
     PrologAI_CHANGE_ORDER_v2.txt        Additive PrologAI-language gaps (Third Commandment); Wall-3 closed by causal_core 1.1.0.
     Causalontology_4_0_0_CHANGE_ORDER_v3.txt   Data-structure gaps for the frozen ontology (Sections A and B shipped as 4.0.0; C, D, E held).
     NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt  The source book.
@@ -186,7 +188,7 @@ konnectome/
 
 ## Status
 
-The build has begun and is climbing the ladder. Fourteen slices have landed on `main` (sixteen packs, 132 tests, all green):
+The build has begun and is climbing the ladder. Fifteen slices have landed on `main` (eighteen packs, 162 tests, all green):
 
 - **Slice 1 - the heartbeat** (`tick_engine`): the Scheduler and Tick Engine (Component 2), with the two-pass synchronous update. 7 of 7 tests.
 - **Slice 2 - archetypes and the first thought** (`archetype`, `observer`): the six dynamical archetype rules (Appendix 2, Section A2.3) and the observer recording each tick as a Causalontology `token_occurrence` (Component 9) via the reused `causal_core`. 7 of 7 and 6 of 6 tests; the 119 conformance vectors stay green.
@@ -206,7 +208,9 @@ The build has begun and is climbing the ladder. Fourteen slices have landed on `
 
 - **Slice 14 - the capstone: the mind runs, and its own records tell the story** (`capstone_demonstration`): the repository's first runnable entry point. One command - `bin/run_capstone_demonstration.sh` - boots the whole mind and prints its **glass-box story** in rung order: the heartbeat with per-tick reward, dopamine, one released action, and one observer record; the body regulated to its set-point and the weight grown by the three-factor rule; the object-permanence forecast **confirmed** (signed error zero, stance superseded to `observation`) and **surprised** (signed error minus one, assertion **retracted**); a chain of combined thoughts; the false belief beside the world's contrary record; and the provenance layer standing behind - and honestly disowning - the mind's own stances. Deterministic: told twice, the story is identical. 20 of 20 tests, including independent dynamics checks so the story cannot grade its own homework; the 137 conformance vectors re-measured green in both cousins. **No new wall.**
 
-Next: with the mind now running end to end and telling its own story, konnectome climbs on - Rung Two (symbols and pretend play) and the deepening of Rung Four (empathy and social pain) are the next milestones, and Sections C, D, and E of the Causalontology change order remain held for the walls a future slice may find. This README, and every badge on it, is kept honest as the build climbs.
+- **Slice 15 - Rung Two opens: first words and pretend play** (`symbol_exchange`, `pretend_play`): the language rung, opened the honest way. A word may only be **grounded in a condition the mind has lived** - the standard vocabulary (`warm` for the deficit, `settled` for the satisfaction) is built from a real run of the whole mind, and grounding a word in an unlived condition is refused with a named error. Both directions of symbol use work (produce and recognize, the hearing passing through PrologAI's reused `language` word bank), and the pilot's key property is pinned by test: **the mood colours the words** - the same question draws `[warm, settled]` from a too-warm mind and `[settled]` from one at its set-point. Pretend play reuses PrologAI's `imagination` five-reality quarantine: rollouts seal into the `imagined` reality, the observed record is never written by pretending, and **promotion into `observed` is refused outright**. The Section C watch was kept and recorded: **no world-level sharing need arose; the section stays held**. 18 of 18 and 12 of 12 tests. **No new wall.**
+
+Next: with Rung Two open, konnectome climbs on - the deepening of Rung Four (the empathy trial and the social-pain test) is the next milestone, the capstone story will grow the new rungs into its telling, and Sections C, D, and E of the Causalontology change order remain held for the walls a future slice may find. This README, and every badge on it, is kept honest as the build climbs.
 
 ## License and attribution
 
