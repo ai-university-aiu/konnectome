@@ -1,0 +1,343 @@
+APPENDIX 3. ARCHITECTURE
+
+A3.0 THE PURPOSE OF THIS PHASE
+
+The Architecture phase designs the skeleton of the System so that it will be robust and extensible.
+
+It identifies the major components, the interfaces between them, the data model, and how the whole fits together.
+
+It remains language-agnostic: it says what the parts are and how they relate, not what language they are written in.
+
+In SPARC this is the deliverable named architecture.md.
+
+A3.1 ARCHITECTURAL STYLE
+
+The System adopts a REGISTRY-AND-SCHEDULER style with a BROADCAST BUS, and the choice is dictated by the science rather than by fashion.
+
+The registry holds every construct as an independent module.
+
+The scheduler advances time in ticks and drives the synchronous update.
+
+The broadcast bus carries the neuromodulators, which are not point-to-point and so cannot be edges in the connection graph.
+
+This style is chosen over the two obvious alternatives for reasons the science already established.
+
+It is not a single central controller with everything beneath it, because Chapter 12 showed there is no orchestrator and that building one would recreate the homunculus the science rejects.
+
+And it is not a flat message-passing swarm with no coordination, because Chapter 12 showed the brain has genuine arbiters and broadcast authorities.
+
+The registry-and-scheduler-with-bus style is the architectural form of the Arbitrated Federation: autonomous modules, a dumb scheduler that coordinates their timing without having preferences, and a broadcast layer that sets global state.
+
+The architecture is the thesis of Chapter 12, made buildable.
+
+A3.2 THE MAJOR COMPONENTS
+
+COMPONENT 1, THE CONSTRUCT REGISTRY. Holds every region, interface, and molecule as a module carrying its specification block. It is the System's parts bin, and it is loaded once at startup from the data of Chapters 2, 3, and 7. Adding a construct means adding an entry here and nothing else.
+
+COMPONENT 2, THE SCHEDULER, or TICK ENGINE. Advances the System one tick at a time. On each tick it invokes the two-pass synchronous update of Appendix 2, first computing every next state, then committing them. It is deliberately dumb: it holds no state of its own beyond the tick count and has no opinions about what any construct should do. It is the referee that keeps time, not a ruler.
+
+COMPONENT 3, THE CONNECTION GRAPH. Represents the interfaces of Chapters 3 and 4 as directed, weighted, delayed links between constructs, each marked transmissive or computational. This is the connectome as data. The learning rule of Appendix 2 mutates the weights here; the routing is otherwise fixed.
+
+COMPONENT 4, THE NEUROMODULATORY BUS. Represents the broadcast fields of Chapter 7 as global quantities with a level per target territory. Every construct's update rule and every learning rule reads from the bus. The bus is written by the source nuclei (the ventral tegmental area writes dopamine, the locus coeruleus writes norepinephrine, and so on) and read by everyone. It is the one place the architecture deliberately permits a global variable, exactly as the biology does.
+
+COMPONENT 5, THE DRIVE SYSTEM. Holds the homeostatic drives of Chapter 9, each monitoring a body variable against a set-point, each computing an error, and together computing the reward that the bus broadcasts as dopamine. It is the System's source of motivation and the origin of the learning signal.
+
+COMPONENT 6, THE ACTION SELECTOR. Implements the basal-ganglia arbitration of Chapter 2: it receives candidate actions proposed by the drives and cortical processes, and releases exactly one while suppressing the rest. It generates no actions of its own. It is the referee of the federation, and the architecture must enforce, as an invariant, that its output is always one of its inputs and never a fresh invention.
+
+COMPONENT 7, THE OVERRIDE CONTROLLER. Enforces the ranking of Chapter 9 and Chapter 12, allowing older and vital drives to preempt newer deliberation. It is a small, high-priority component that can seize control of the action selector, and it is the architectural home of the fact that breathing beats deliberation.
+
+COMPONENT 8, THE PLASTICITY ENGINE. Applies the three-factor learning rule and homeostatic scaling of Chapter 10 to the connection graph each tick, and runs the slow consolidation phase of Chapter 5 offline. It is the component that makes the map alive.
+
+COMPONENT 9, THE OBSERVER, or INSTRUMENT. Reads and records the full state of every component at every tick, satisfying the inspectability requirement (FR-13, NFR-1). It is passive: it changes nothing, and it sees everything. It is the microscope trained permanently on the transparent brain, and it is what makes the System a scientific instrument rather than a black box.
+
+COMPONENT 10, THE PERTURBATION INTERFACE. Permits an experimenter to lesion a construct, cut an interface, or shift a neuromodulator level, satisfying FR-14. It is how a simulated disease or drug is administered.
+
+COMPONENT 1 additionally holds the large-scale networks (Section 2.10) as named views over its regions and the cognitive systems and pathways (Section 2.11) as named subgraphs over the connection graph; adding a network or a pathway means adding a named grouping, not a new update rule. The glia are held as modulatory entries read by the plasticity engine (Component 8), not as regions with state.
+
+A3.2bis THE SYSTEM DIAGRAM
+
+The SPARC Architecture phase calls for a system diagram. The following diagram, in the text-based Mermaid notation SPARC recommends, shows the ten components and the flow of one tick. It commits to no language; it shows only shape.
+
+graph TD
+  SCH[Scheduler / Tick Engine] --> DRV[Drive System]
+  DRV -- reward --> BUS[Neuromodulatory Broadcast Bus]
+  BUS --> REG[Construct Registry: regions, interfaces, molecules, networks, systems]
+  GRAPH[Connection Graph: directed and broadcast interfaces] --> REG
+  REG -- first pass: compute next state --> REG
+  REG -- second pass: commit state --> SEL[Action Selector]
+  OVR[Override Controller] --> SEL
+  SEL --> PLAS[Plasticity Engine]
+  GLIA[Glia: tripartite synapse] --> PLAS
+  PLAS --> GRAPH
+  OBS[Observer / Instrument] -.reads everything.-> REG
+  OBS -.reads everything.-> BUS
+  OBS -.reads everything.-> GRAPH
+  PERT[Perturbation Interface] -.lesion, cut, shift.-> REG
+
+Read the solid arrows as the causal flow of a tick, top to bottom: the scheduler starts the tick, the drives set the reward, the bus broadcasts it, the registry updates every construct in two passes, the selector releases one action under the override controller, and the plasticity engine (gated by the glia) writes the new weights back to the connection graph. Read the dotted arrows as the observer and perturbation interface, which touch everything without being part of the causal flow: the observer only reads, and the perturbation interface only injects an experimenter's intervention. The diagram is the Arbitrated Federation of Chapter 12 in one picture.
+
+A3.3 HOW THE COMPONENTS INTERACT: ONE TICK
+
+The data flow of a single tick, which the architecture must realize, is as follows.
+
+The scheduler begins the tick.
+
+The drive system reads the body state and updates every drive error, and computes the reward.
+
+The neuromodulatory bus is updated: the reward becomes dopamine, arousal becomes norepinephrine, and so on.
+
+Then the scheduler runs the first pass: every construct reads its inputs from the connection graph and the bus, and computes its next state by its archetype rule.
+
+The scheduler runs the second pass: every next state is committed.
+
+The action selector receives the candidate actions and releases one, subject to the override controller.
+
+The plasticity engine updates the connection weights.
+
+The observer records everything.
+
+The scheduler ends the tick.
+
+This ordering is itself a specification, and it is not arbitrary.
+
+Drives before modulators, because the reward sets the dopamine.
+
+Modulators before construct updates, because the gain and the third factor must be current.
+
+First pass fully before second pass, because the update is synchronous.
+
+Action selection after the updates, because it selects on the new state.
+
+Plasticity after selection, because learning depends on what was done.
+
+An implementer who reorders these steps will have built a different machine, and the architecture states the order precisely for that reason.
+
+A3.4 THE DATA MODEL
+
+The System's data, expressed without commitment to any language or storage format, is the following.
+
+A CONSTRUCT has: a name; a kind (region, interface, or molecule); an archetype (one of the six, or field, for a molecule); a state (its activation, gain, adaptation, and any tuning or phase); a set of parameters; and its specification block.
+
+An INTERFACE, additionally, has: a source construct; a destination construct; a weight; a delay; a transmissive-or-computational flag; and, if computational, a reference to the transform it performs.
+
+A MOLECULE, additionally, has: a source construct or set of sources; a set of target territories; and a current level per target.
+
+A DRIVE has: a monitored body variable; a set-point; a current error; a previous error; and an override rank.
+
+The BODY STATE has: the current value of every monitored variable (temperature, glucose, oxygen, and the rest), which the drives read and which the System's actions and the passage of time change.
+
+A RECORD, produced by the observer each tick, has: the tick number; and a snapshot of every construct's state, every interface's weight, every drive's error, and every neuromodulator's level.
+
+A NETWORK has: a name; a list of member constructs; a set of subscribe-and-publish couplings among them; and a functional signature (such as its characteristic anticorrelation with another named network). A network is a VIEW over the registry, not a separate store; it owns no state its members do not.
+
+A SYSTEM or PATHWAY has: a name; an ordered list of the constructs and interfaces it traverses; and, where it is a loop (the Papez circuit, a cortico-basal-ganglia-thalamo-cortical loop), a marker that it closes on itself. It is a named SUBGRAPH over the connection graph.
+
+A GLIAL PARTICIPANT (astrocyte, microglia, oligodendrocyte) and the TRIPARTITE SYNAPSE have: a name; a target (a synapse, a region, or an axon); and a modulatory function on the plasticity engine (gating the learning third factor, pruning a connection, or setting a conduction delay). They carry no activation of their own.
+
+Every interface and every molecule additionally carries a MODE flag: DIRECTED (a send-and-receive channel with one subscriber) or BROADCAST (a publish-and-subscribe topic whose subscribers are defined by receptor), per FR-17.
+
+Note what this data model already is.
+
+It is very close to the Causalontology data structure discussed in Appendix 6: constructs are continuants, their states are token states, the interfaces are conduits, and the tick-by-tick records are token occurrences. A large-scale network is a continuant grouping of continuants; a cognitive system or pathway is a chain (or a closing loop) of causal-relation-objects over those conduits; and the send-and-receive versus publish-and-subscribe mode of an interface is exactly the difference between a directed conduit and a broadcast one.
+
+The architecture and the data standard were designed to meet, and Appendix 6 develops the meeting.
+
+A3.5 THE TECHNOLOGY STACK, DEFERRED
+
+In an ordinary SPARC project, the Architecture phase selects the technology stack, and this appendix DELIBERATELY DECLINES that one activity, the single conscious deviation from the standard SPARC Architecture phase.
+
+Here it deliberately does not, because substrate independence (NFR-3) is a first-class goal, and the whole point of Appendix 6 is that the stack is a free choice the builder makes.
+
+The architecture commits only to the SHAPE of the System, the ten components and their interactions, which any stack must realize.
+
+The candidate stacks, a Causalontology data layer, a Python Minimum Viable Product, and a PrologAI implementation, are described in Appendix 6, and the architecture is compatible with all of them by design.
+
+A3.6 SCALABILITY, ROBUSTNESS, AND FAILURE POINTS
+
+The architecture meets the scalability requirement (NFR-4) by its grain: at one hundred constructs, a tick is a hundred update calls, trivial on a personal computer, and the design permits any construct to be internally refined to finer grain without changing the scheduler, the bus, or the graph.
+
+The System scales up by refining constructs, not by rebuilding the frame.
+
+The architecture is robust by its modularity: a fault in one construct is contained to that construct, exactly as the encapsulation thesis predicts, and the observer will show precisely where a fault occurred, because nothing is hidden.
+
+The honest failure points are three.
+
+The synchronous two-pass update is the correctness-critical section, and fusing the passes is the most likely and most damaging error.
+
+The neuromodulatory bus is a global shared resource, and while the biology sanctions it, an implementation must ensure the bus is read consistently within a tick.
+
+And the action selector's invariant, that it never invents an action, must be enforced in code and tested, because a selector that begins to generate is the homunculus creeping back in, and the architecture must forbid it structurally.
+
+A3.7 REFLECTION
+
+The architecture is, almost line for line, the Arbitrated Federation of Chapter 12 rendered as components.
+
+This is the strongest possible validation that the science and the specification are one work: the answer to the book's deepest question, is there an orchestrator, became the System's top-level design without translation.
+
+There is a scheduler that keeps time but has no preferences, a bus that sets global state without knowing what is computed, a selector that arbitrates without generating, and an override controller ranked by vitality.
+
+No central controller appears, because the science forbade one, and the architecture that omits it is the architecture the science demanded.
+
+The single most important architectural decision is the passivity of the observer and the completeness of what it sees.
+
+It is what makes this System, unlike the dominant models, a scientific instrument: a mind that can be watched, at every level, at every tick, without disturbing it.
+
+That property is not a feature added to the architecture; it is the reason the architecture was worth building.
+
+
+
+KONNECTOME REALIZATION LOG
+
+Slice 1 - the heartbeat - 2026-07-20 - pack tick_engine, version 0.1.0.
+
+Component 2, the Scheduler and Tick Engine, is realized by the tick_engine pack. Component 1, the Construct Registry, and Component 9, the Observer, are realized minimally as the construct list and the recorded tick trace respectively.
+
+Gates at this slice: 7 of 7 tick_engine Prolog Unit (PLUnit) tests pass; the naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited; konnectome reuses them through the library path.
+
+This log grows one entry per code slice, per the Tenth Commandment. The full SPARCD Fileset was bumped in lockstep from version 1 to version 2, and the version 1 files were archived under docs/archive/ in the same change, per the Ninth Commandment.
+
+
+KONNECTOME REALIZATION LOG - SLICE 2
+
+Slice 2 - the six archetype rules and the first Causalontology thought - 2026-07-20 - packs archetype (0.1.0) and observer (0.1.0).
+
+Component 9, the Observer, now records each tick as a Causalontology token_occurrence via the reused causal_core pack (observer pack). The six archetype rules that constructs run are realized in the archetype pack.
+
+Gates at this slice: archetype 7 of 7 and observer 6 of 6 Prolog Unit (PLUnit) tests pass; naming, layer, and layer-binding gates report zero violations; the Causalontology 119-vector conformance suite passes 119 of 119. Nothing in PrologAI or Causalontology was edited; konnectome reuses causal_core through the library path.
+
+
+KONNECTOME REALIZATION LOG - SLICE 3
+
+Slice 3 - the connection graph - 2026-07-20 - pack connection_graph (0.1.0).
+
+Component 3, the Connection Graph, is realized by the connection_graph pack: the connectome as data, directed weighted interfaces marked transmissive or computational, driving source and relay constructs.
+
+Gates at this slice: connection_graph 4 of 4 Prolog Unit (PLUnit) tests pass (tick_engine 7, archetype 7, observer 6 unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited; connection_graph reuses the archetype pack.
+
+
+KONNECTOME REALIZATION LOG - SLICE 4
+
+Slice 4 - the reward loop - 2026-07-20 - packs neuromodulator_bus (0.1.0) and drive_system (0.1.0).
+
+Component 4, the Neuromodulatory Bus, and Component 5, the Drive System, are realized by the neuromodulator_bus and drive_system packs.
+
+Gates at this slice: neuromodulator_bus 4 of 4 and drive_system 5 of 5 Prolog Unit (PLUnit) tests pass (the earlier four packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 5
+
+Slice 5 - the action selector - 2026-07-20 - pack action_selector (0.1.0).
+
+Component 6, the Action Selector, is realized by the action_selector pack, enforcing the never-invent invariant of Section A3.6.
+
+Gates at this slice: action_selector 6 of 6 Prolog Unit (PLUnit) tests pass (the earlier six packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 6
+
+Slice 6 - the plasticity engine - 2026-07-20 - pack plasticity_engine (0.1.0).
+
+Component 8, the Plasticity Engine, is realized by the plasticity_engine pack, applying the three-factor rule to the connection graph's weights.
+
+Gates at this slice: plasticity_engine 5 of 5 Prolog Unit (PLUnit) tests pass (the earlier seven packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 7
+
+Slice 7 - completing the architecture - 2026-07-20 - packs override_controller (0.1.0) and perturbation_interface (0.1.0).
+
+Component 7, the Override Controller, and Component 10, the Perturbation Interface, are realized by the override_controller and perturbation_interface packs. All ten components of Section A3.2 now have a realization.
+
+Gates at this slice: override_controller 4 of 4 and perturbation_interface 4 of 4 Prolog Unit (PLUnit) tests pass (the earlier eight packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 8
+
+Slice 8 - one running tick - 2026-07-20 - pack cognitive_cycle (0.1.0).
+
+The one-tick data flow of Section A3.3 is realized by the cognitive_cycle pack, which composes all ten components in the load-bearing order; this also completes Component 1, the Construct Registry, as the world it carries.
+
+Gates at this slice: cognitive_cycle 4 of 4 Prolog Unit (PLUnit) tests pass (the earlier ten packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 9
+
+Slice 9 - hardening the loop - 2026-07-20 - packs connection_graph (0.2.0), drive_system (0.2.0), cognitive_cycle (0.2.0).
+
+The one-tick data flow of Section A3.3 now reads the bus for gain before the construct update, generates action proposals from the drives, and lets the released action move the body.
+
+Gates at this slice: connection_graph 6 of 6, drive_system 9 of 9, and cognitive_cycle 4 of 4 Prolog Unit (PLUnit) tests pass (the other eight packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 10
+
+Slice 10 - thought combination - 2026-07-20 - pack thought_combination (0.1.0).
+
+The thought_combination pack sits beside the running mind as the way konnectome forms combined thoughts as Causalontology Causal Relation Objects; a CRO's effect reused as another's cause is a chain of thought, and a branching set is a tree of thought.
+
+Gates at this slice: thought_combination 7 of 7 Prolog Unit (PLUnit) tests pass (the earlier eleven packs unchanged); naming, layer, and layer-binding gates report zero violations; the Causalontology 119-vector conformance passes 119 of 119. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 11
+
+Slice 11 - other minds and prediction, the wall-finding build - 2026-07-22 - packs other_minds (0.1.0) and prediction_loop (0.1.0).
+
+These two packs sit beside the ten architecture components, not among them: other_minds realizes the Rung Four theory-of-mind trial by reusing PrologAI's theory_of_mind pack (over the same Causalontology causal_core), and prediction_loop realizes the Rung One expectation-and-comparator loop by reusing the comparator archetype. Both are layer-zero reuses with no konnectome dependency, exactly as the observer reused causal_core. The architecture gains a social model and a predictive loop while its ten-component skeleton, its tick ordering, and its bus are untouched; what it could not gain is a place in the shared data model of Section A3.4 for the belief or the prediction, since that model maps onto the eighteen Causalontology kinds and none of them is doxastic or predictive.
+
+Gates at this slice: other_minds 8 of 8 and prediction_loop 10 of 10 Prolog Unit (PLUnit) tests pass (the earlier twelve packs unchanged, 69 tests); naming, layer, and layer-binding gates report zero violations; the Causalontology 119-vector conformance suite is untouched and green. Two walls were hit, recorded as Wall-1 and Wall-2, and ROUTED to the Causalontology change order (Sections B and A). Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 12
+
+Slice 12 - the closure: minting the new kinds - 2026-07-22 - packs other_minds (0.2.0) and prediction_loop (0.2.0).
+
+These two packs still sit beside the ten architecture components, not among them, exactly as at slice 11 - but the shared DATA MODEL of Section A3.4, which maps konnectome's durable thoughts onto Causalontology kinds, has gained the three kinds it lacked. Slice 11 recorded that none of the eighteen kinds was doxastic or predictive, so neither the belief nor the prediction could take a place in that model. Causalontology 4.0.0 lifted the closed list to twenty-one kinds - adding a doxastic ATTITUDE kind and the PREDICTED_OCCURRENCE and PREDICTION_ERROR kinds, the token tier now seven - and PrologAI's causal_core 1.1.0 made them mintable through the same layer-zero library path the observer already used. other_minds (0.2.0) now writes the attributed belief into the data model as an attitude record - holder, attitude_type, content - including the false belief that coexists with the world's contrary state_assertion and the nested attribution; prediction_loop (0.2.0) writes the forecast, the outcome, and the signed discrepancy as predicted_occurrence, token_occurrence, and prediction_error records. The ten-component skeleton, the tick ordering, and the neuromodulatory bus are untouched; what the architecture gained is a shared, exportable home in Section A3.4 for the social and predictive state the runtimes already held. The one architectural obstacle particular to this slice - PrologAI's causal_core lagging the released standard, so the new kinds could not be minted - was Wall-3, routed to the PrologAI change order and closed the same day by causal_core 1.1.0.
+
+Gates at this slice: other_minds 10 of 10 and prediction_loop 16 of 16 Prolog Unit (PLUnit) tests pass (the earlier twelve packs unchanged); naming, layer, and layer-binding gates report zero violations; the Causalontology conformance suite is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. Wall-1, Wall-2, and Wall-3 are CLOSED. Causalontology and PrologAI were extended through their own gated change orders, never edited directly.
+
+
+KONNECTOME REALIZATION LOG - SLICE 13
+
+Slice 13 - the provenance layer: the mind grades and, when wrong, disowns its own thoughts - 2026-07-26 - pack self_provenance (0.1.0).
+
+The self_provenance pack sits beside the ten architecture components, not among them - exactly as other_minds, prediction_loop, and thought_combination do. It is a layer-zero reuse of PrologAI's library(causal_core) with no konnectome dependency, so it adds no update rule, seizes no place in the tick order of Section A3.3, and never touches the neuromodulatory bus. What it adds is a PROVENANCE layer OVER the shared data model of Section A3.4. That data model always assumed this layer - its own note reads that every claim carries its provenance as a signed assertion - but konnectome had not yet exercised it over its own records. The observer (Component 9) RECORDS what happened; slice 12 gave the belief and the forecast a home as attitude, predicted_occurrence, and prediction_error records; slice 13 now lets the mind ASSERT about those records under its own source identity, GRADE the evidence on the standard's ordered scale, and RETRACT an assertion when a later tick disconfirms it. The distinction Rule 25 draws is honoured in the architecture: the HOLDER of an attitude (a modelled agent inside the data model) and the SOURCE that signs an assertion about it (konnectome's own identity) are different things, and the tests demonstrate them differing. The assertion and retraction records are content-addressed through the same layer-zero library path the observer already used, so the provenance layer is a shared, exportable home for the mind's graded, self-corrected stances, added without disturbing the ten-component skeleton at all.
+
+The one architectural note particular to this slice is an honest deployment boundary, not a wall: a real Ed25519 signature needs a private key, which Section A5.5's no-secret rule and Specification Constraint 3 bar from the code, so konnectome carries its public source identity and defers the signing act to deployment. The signature is not identity-bearing, so the records are content-addressed and shareable without it; a strict consumer quarantines them as unsigned until the deployment key-holder signs them.
+
+Gates at this slice: self_provenance 17 of 17 Prolog Unit (PLUnit) tests pass (the earlier fourteen packs unchanged, 95 tests; 112 in total); naming, layer, and layer-binding gates report zero violations; the Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; the slice-12 honest non-closure is CLOSED. Nothing in PrologAI or Causalontology was edited; self_provenance reuses causal_core through the library path.
+
+
+KONNECTOME REALIZATION LOG - SLICE 14
+
+Slice 14 - the capstone: the mind runs, and its own records tell the story - 2026-07-26 - pack capstone_demonstration (0.1.0), and the first runnable entry point, bin/run_capstone_demonstration.sh.
+
+The capstone sits beside the ten architecture components, not among them - the same seat other_minds, prediction_loop, thought_combination, and self_provenance took - and it is the most emphatic case yet of that seat, because it touches the architecture ONLY through the front door. It reads the running mind exclusively through the cognitive cycle's world and per-tick summaries; it never reaches into the bus, never reorders the one-tick data flow of Section A3.3, and never adds an update rule. Its boot world is a declaration, not a mechanism: the body, the drive, the constructs, the learnable interface, the armed override, and the fixed simulation start are stated as data, and everything that then happens is the ten components doing what the architecture already says they do. What the slice adds to the architecture is an ENTRY POINT: bin/run_capstone_demonstration.sh, the first script in bin/ that runs the mind rather than checking it, built on the same library-path discipline as the four gates. The Rule 25 distinction the data model draws is narrated where the architecture enforces it: the story prints the modelled holder's identifier beside the signing source's identifier and states that they differ. The capstone declares layer zero and imports only its konnectome siblings through the library path, so the layer gates hold without exception.
+
+Gates at this slice: capstone_demonstration 20 of 20 Prolog Unit (PLUnit) tests pass (the earlier fifteen packs unchanged, 112 tests; 132 in total); naming, layer, and layer-binding gates report zero violations; the Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins, re-measured this slice. No new wall was hit and no new honest non-closure was recorded; the slice-13 deployment-signature non-closure stands, and the story itself narrates it. Nothing in PrologAI or Causalontology was edited; the capstone reads its siblings through the library path.
+
+
+KONNECTOME REALIZATION LOG - SLICE 15
+
+Slice 15 - Rung Two begins: words grounded in lived experience, and pretend under quarantine - 2026-07-26 - packs symbol_exchange (0.1.0) and pretend_play (0.1.0).
+
+Both packs sit beside the ten architecture components, in the reuse seat this architecture has now made a pattern: a thin konnectome wrapper importing a finished PrologAI pack through the library path, exactly as other_minds sits over theory_of_mind and self_provenance over causal_core. symbol_exchange reuses the language pack's word bank - hearing a word writes a trace into the reused store, which is precisely how an incoming word changes the mind's state - and reads the mind itself only through the front door, stepping cognitive_cycle_step tick by tick to collect lived conditions and reading the drive's distance from its set-point through drive_system_error. pretend_play reuses the imagination pack's five-reality quarantine (observed, desired, expected, imagined, recalled), whose discipline is architectural in exactly this appendix's sense: a pretend rollout auto-seals everything it visits into the imagined reality, the observed reality is never written by pretending, and the only crossing is a deliberate, auditable promotion - onto which konnectome adds one rule of its own, a guard that refuses promotion into observed outright, because in this architecture only the world's own reveal writes the observed record. Neither pack touches the neuromodulatory bus, the tick order of Section A3.3, or any update rule; neither adds a construct kind; both declare layer zero and pass the three gates. The record-level seat is equally conservative: a pretend relation is minted as an ordinary type-tier causal relation object through thought_combination - a generic that claims no happening - and the stance on it goes through self_provenance at simulation grade, so the shared data model of Section A3.4 needed nothing new.
+
+Gates at this slice: symbol_exchange 18 of 18 and pretend_play 12 of 12 Prolog Unit (PLUnit) tests pass (the earlier sixteen packs unchanged, 132 tests; 162 in total); naming, layer, and layer-binding gates report zero violations; the Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; the Section C watch was kept and its result is recorded in the ledger: the per-claim machinery sufficed, no world-level sharing need arose, and Section C remains held. Nothing in PrologAI or Causalontology was edited; the rung reuses the language and imagination packs through the library path, exactly as other_minds reuses theory_of_mind.
+
+
+KONNECTOME REALIZATION LOG - SLICE 16
+
+Slice 16 - Rung Four deepens: the social-pain test and the empathy trial - 2026-07-26 - pack empathy (0.1.0).
+
+The empathy pack sits beside the ten components in the established reuse seat, and its architectural content is a claim about which components it does NOT add: there is no eleventh component for emotion. The social-pain circuit is Components 5 and 4 doing what Section A3.2 already says they do - the Drive System registering a violated set-point and the Neuromodulatory Bus broadcasting the signed consequence - over a drive whose monitored variable happens to be social. The manuscript's own anatomy note is honoured structurally: the comparator region that fires on pain fires on social rejection, so konnectome routes the rejection through the same comparator-shaped error computation rather than a parallel path, and the tests prove the outputs identical. The empathy trial threads four components in their canonical order - the resonated body feeds the Drive System, the drives propose, the Action Selector releases exactly one candidate, the body responds - and the Override Controller keeps its place above them all: a vital drive in distress still seizes control from the helping action, so the safety architecture is indifferent to whether the pressure below it is physical or social. At the data-model seat, the modelled distress travels as an attitude record of the existing 4.0.0 enumeration (fears), the stance and retraction as the existing provenance kinds; the shared model of Section A3.4 needed nothing new, and no cousin was touched.
+
+Gates at this slice: empathy 17 of 17, drive_system 10 of 10, and symbol_exchange 19 of 19 Prolog Unit (PLUnit) tests pass (the other sixteen packs unchanged; 181 in total), the counts carrying two review-born fixes and one paid debt: drive_system (0.3.0) now caps the homeostatic step at its set-point, so a fractional distance settles exactly and help can never overshoot into harm - pinned by its own regression test; naming, layer, and layer-binding gates report zero violations; the Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; the remaining ascent of the rung (the appraisal and regulation pilots, and the capstone joining the new milestones into its telling) is recorded as pending, not hidden. Nothing in PrologAI or Causalontology was edited; empathy reads its siblings through the library path.
+
+
+KONNECTOME REALIZATION LOG - SLICE 17
+
+Slice 17 - the reality-discipline gate: the rule made checkable - 2026-07-26 - bin/check_reality_discipline.sh (no pack version moved).
+
+The wrapper seat this architecture made a pattern - a thin konnectome pack importing a finished PrologAI pack through the library path, as other_minds sits over theory_of_mind, self_provenance over causal_core, and pretend_play over imagination - had one seam the reviews exposed: the seat was exclusive by convention only. Any pack could import the reused imagination predicates and cross realities around the wrapper's refusal. This slice closes the seam architecturally, with the same instrument the strict layer rule already uses: a gate. bin/check_reality_discipline.sh joins the naming, layer, and layer-binding gates as the fourth standing check, and it makes the pretend_play seat exclusive at the level a build can check: every textual road to the reused machinery - the predicate names, the imagination module qualifier, and the library(imagination) import - is refused in every file of every other pack. A reach that constructs its module and its call at runtime leaves no textual trace, and no textual gate can see it; that residue is named in the ledger and remains a discipline - now one that ordinary code cannot break silently. The architecture's doorways are now all of one kind - named, guarded, and checkable.
+
+Gates at this slice: no pack changed and no test count moved - the suite stands at one hundred eighty-one Prolog Unit (PLUnit) tests across nineteen packs, all green. The naming, layer, and layer-binding gates report zero violations, and they are joined by a fourth: the new reality-discipline gate (bin/check_reality_discipline.sh) reports zero violations, and was proven able to fail - a deliberate violation was injected, caught, and removed before its first clean run was accepted. The Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited - the imagination pack remains exactly as reused, and the discipline that fences it is konnectome's own.
