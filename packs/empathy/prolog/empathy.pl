@@ -88,17 +88,32 @@ empathy_modelled_distress(Agent, Level, Distress) :-
     ;   throw(error(empathy_bad_agent(Agent),
                     context(empathy_modelled_distress/3, "the modelled agent is named by a plain atom")))
     ),
+    % The candidate model pairs the agent with the level.
+    Distress = modelled_distress(Agent, Level),
+    % The shared validator holds the one rule on levels, so every boundary refuses the same way.
+    empathy_check_distress(Distress).
+
+% empathy_check_distress(+Distress): the shared validator - a well-formed model with a level in range.
+empathy_check_distress(Distress) :-
+    % The term must be a modelled distress at all.
+    (   Distress = modelled_distress(_Agent, Level)
+    ->  true
+    ;   throw(error(empathy_bad_distress_term(Distress),
+                    context(empathy_check_distress/1, "the distress must be a modelled_distress term")))
+    ),
     % The distress level is a number between zero and one.
     (   number(Level), Level >= 0, Level =< 1
     ->  true
     ;   throw(error(empathy_bad_distress(Level),
-                    context(empathy_modelled_distress/3, "the distress level must be a number between zero and one")))
-    ),
-    % The guarded model pairs the agent with the level.
-    Distress = modelled_distress(Agent, Level).
+                    context(empathy_check_distress/1, "the distress level must be a number between zero and one")))
+    ).
 
 % empathy_resonance(+Distress, +Body0, -Body): the modelled distress moves the mind's own belonging.
-empathy_resonance(modelled_distress(_Agent, Level), Body0, Body) :-
+empathy_resonance(Distress, Body0, Body) :-
+    % Re-validate at this exported boundary: a hand-rolled term never bypasses the level rule.
+    empathy_check_distress(Distress),
+    % Read the validated level.
+    Distress = modelled_distress(_Agent, Level),
     % The body must carry belonging for the resonance to move it.
     (   memberchk(belonging-Belonging0, Body0)
     ->  true

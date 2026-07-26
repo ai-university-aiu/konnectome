@@ -60,11 +60,12 @@ drive_system_proposals(Drives, BodyState, Candidates) :-
               drive_system_error(drive(Name, Variable, SetPoint, Previous), BodyState, Error) ),
             Candidates).
 
-% drive_system_toward(+Value, +SetPoint, -NewValue): move a value one step toward the set-point.
+% drive_system_toward(+Value, +SetPoint, -NewValue): move a value one step toward the set-point, never past it.
 drive_system_toward(Value, SetPoint, NewValue) :-
-    % Step down if above the set-point, up if below, and hold if already there.
-    ( Value > SetPoint -> NewValue is Value - 1
-    ; Value < SetPoint -> NewValue is Value + 1
+    % Step down if above the set-point, up if below, and hold if already there - and the step is
+    % capped by the remaining distance, because homeostasis settles AT its set-point, never beyond it.
+    ( Value > SetPoint -> NewValue is max(SetPoint, Value - 1)
+    ; Value < SetPoint -> NewValue is min(SetPoint, Value + 1)
     ; NewValue = Value
     ).
 

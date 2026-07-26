@@ -130,6 +130,34 @@ test(resonance_floors_at_zero) :-
     % No state below zero.
     assertion(Belonging =:= 0).
 
+% The resonance boundary re-validates: a hand-rolled negative level is refused by name, never obeyed
+% (found by the slice-16 adversarial review: an unvalidated term could RAISE belonging above its set-point).
+test(resonance_refuses_a_malformed_level, throws(error(empathy_bad_distress(_), _))) :-
+    % A negative distress bypassing the constructor is still refused at the boundary.
+    empathy_resonance(modelled_distress(ana, -3), [belonging-1], _Body).
+
+% The resonance boundary refuses a term that is not a modelled distress at all, never failing silently.
+test(resonance_refuses_a_malformed_term, throws(error(empathy_bad_distress_term(_), _))) :-
+    % A term of the wrong shape is refused by name.
+    empathy_resonance(distress(ana, 1), [belonging-1], _Body).
+
+% A fractional distress draws a proportionate help that settles belonging AT its set-point
+% (found by the same review: the old unit step overshot fractional distances, so help could harm;
+% the drive machinery now caps its homeostatic step at the set-point).
+test(fractional_distress_shapes_a_proportionate_help) :-
+    % The standard social drive alone.
+    empathy_social_connection_drive(SocialDrive),
+    % Ana in partial distress.
+    empathy_modelled_distress(ana, 0.4, Distress),
+    % Run the trial from a connected body.
+    empathy_trial(Distress, [SocialDrive], [belonging-1], Outcome, Body),
+    % The partial pain still selects the helping action.
+    assertion(Outcome == released(reduce(social_connection))),
+    % And the help settles belonging exactly at the set-point - never past it.
+    memberchk(belonging-Belonging, Body),
+    % Settled, not overshot.
+    assertion(Belonging =:= 1).
+
 % The empathy trial: modelled distress shapes behaviour toward help, through selection, never invention.
 test(empathy_trial_shapes_behaviour_toward_help) :-
     % The mind carries a mildly pressing physical drive and a satisfied social drive.
