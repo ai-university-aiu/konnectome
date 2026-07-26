@@ -150,19 +150,19 @@ konnectome follows a book titled Nature's Cognitive Architecture, which describe
 PART SEVEN - THE BUILD LADDER
 
 
-The guiding book gives a developmental ladder, inspired by how human infants grow (the stages of the psychologist Jean Piaget) and by developmental robotics (building machines that learn in the same infant-to-adult order). konnectome climbs it smallest rung first:
+The guiding book gives a developmental ladder, inspired by how human infants grow (the stages of the psychologist Jean Piaget) and by developmental robotics (building machines that learn in the same infant-to-adult order). The book counts the rungs from zero, the way builders often count floors from the ground, and this tutorial follows the book so the numbers here match what the capstone story prints. konnectome climbs it smallest rung first:
 
-• Rung one: a heartbeat - a stable, repeating tick loop that keeps time.
+• Rung zero: a heartbeat - a stable, repeating tick loop that keeps time.
 
-• Rung two: senses wired in, and holding a hidden object in mind.
+• Rung one: senses wired in, and holding a hidden object in mind.
 
-• Rung three: language - reading, and eventually speaking from an inner state.
+• Rung two: symbols and language - words grounded in experience, and pretend play.
 
-• Rung four: reasoning - logic and cause-and-effect trials.
+• Rung three: reasoning - logic and cause-and-effect trials.
 
-• Rung five: emotion and understanding other minds.
+• Rung four: emotion and understanding other minds.
 
-• Rung six: a body - inhabiting a robot and using its senses.
+• Rung five: a body - inhabiting a robot and using its senses.
 
 The build never leaps ahead; each rung must stand before the next is attempted.
 
@@ -209,7 +209,7 @@ konnectome's code lives in packs. A pack is a small, self-contained module with 
 
 • self_provenance (grading and disowning the mind's own thoughts). This is how konnectome takes responsibility for a thought instead of merely having it. Provenance means the record of where a claim comes from and how much to trust it. With this pack, konnectome makes an assertion about one of its own records - a belief it attributed, a forecast it made - and on that assertion it writes an evidence grade (how the claim was come by: by acting, by watching, by simulating, by reasoning, by a human hint, or by import, ranked strongest to weakest in that order) and a confidence (a number from zero to one). When a later tick proves a thought wrong - the screen lifts and the expected object is gone - konnectome retracts its own assertion, the honest exit; and when a forecast is confirmed it supersedes the old grade with a stronger one. Its seventeen tests prove all of this, including that the mind that HOLDS a belief and the mind that VOUCHES for it are kept distinct, and that a graded thought is a shareable record even before it is cryptographically signed. One honest limit is written down: a real signature needs a private key, which is a secret and may never live in the code, so konnectome carries its public identity and leaves the actual signing to whoever runs it. It reuses PrologAI's causal_core and never touches the frozen data structure (see Part Eleven for the whole story).
 
-• capstone_demonstration (the mind, run and told whole). This is the one pack that exists so a person can WATCH everything above happen. It boots the whole mind, runs it for a chosen number of ticks, and prints a story in plain English in which every line is carried by a real record: the heartbeat and its rewards, the learning, the regulated body, the forecast and the surprise, a chain of combined thoughts, Sally's false belief, and the mind grading and - when the world disagrees - taking back its own claims. Its nineteen tests prove the story is deterministic (told twice, it is identical), that it cannot flatter the mind (the tests re-run the same world outside the story and check the dynamics directly), that the milestones appear in ladder order, and that the story names honestly what it does not demonstrate. It comes with the repository's first runnable command, described in Part Thirteen (see Part Twelve for the whole story).
+• capstone_demonstration (the mind, run and told whole). This is the one pack that exists so a person can WATCH everything above happen. It boots the whole mind, runs it for a chosen number of ticks, and prints a story in plain English in which every line is carried by a real record: the heartbeat and its rewards, the learning, the regulated body, the forecast and the surprise, a chain of combined thoughts, Sally's false belief, and the mind grading and - when the world disagrees - taking back its own claims. Its twenty tests prove the story is deterministic (told twice, it is identical), that it cannot flatter the mind (the tests re-run the same world outside the story and check the dynamics directly), that the milestones appear in ladder order, and that the story names honestly what it does not demonstrate. It comes with the repository's first runnable command, described in Part Thirteen (see Part Twelve for the whole story).
 
 
 PART NINE - SLICE 11: OTHER MINDS, PREDICTION, AND THE FIRST TWO WALLS

@@ -25,7 +25,8 @@ SECTION ONE - WHAT THIS IS AND HOW TO READ IT
 PART ONE - THE LEDGER'S ROLE
 
 konnectome is a Proto-Artificial-General-Intelligence (Proto-AGI) prototype written in
-PrologAI, storing its thoughts as Causalontology 3.0.0 records, and built from the
+PrologAI, storing its thoughts as Causalontology records (3.0.0 at the build's opening;
+4.0.0 since the slice-12 closure), and built from the
 appendices of Nature's Cognitive Architecture. The build method is enforce-then-build,
 inherited from the PrologAI program: a wall the build hits becomes an entry here; a
 load-bearing entry is routed to exactly one place; the next slice rests on the result
@@ -159,7 +160,8 @@ deepened; PENDING = not built yet.
  -----------------------------------------------------------------------------------
  Rung Four theory of mind    | other_minds (reuses PrologAI theory_of_mind)  | REALIZED
  Rung One prediction error   | prediction_loop (the comparator loop)         | REALIZED
-   (Slice 12. Both milestones now run AND export as shared, signed, content-addressed
+   (Slice 12. Both milestones now run AND export as shared, content-addressed (and, at
+    deployment, signed - see Observation-3)
     Causalontology records. other_minds mints the attributed belief - true, false, and nested -
     as attitude records (holder, attitude_type, content), and exports the false-belief trial's
     predicted-search result as a shareable attitude record. prediction_loop mints the
@@ -458,8 +460,8 @@ record; and the provenance layer standing behind and disowning the mind's own st
 structurally honest: it checks the dynamics before claiming them, its tests re-run the same world outside
 the story and measure the body and the weight directly, and the story closes by naming what it does not
 demonstrate (Rungs Two, Three, and Five, and the deployment-deferred signature of Observation-3). Gates:
-capstone_demonstration 19 of 19 Prolog Unit (PLUnit) tests pass (the earlier fifteen packs unchanged,
-112 tests; 131 in total); naming, layer, and layer-binding gates report zero violations; the Causalontology
+capstone_demonstration 20 of 20 Prolog Unit (PLUnit) tests pass (the earlier fifteen packs unchanged,
+112 tests; 132 in total); naming, layer, and layer-binding gates report zero violations; the Causalontology
 conformance suite is untouched and green at 137 of 137 (specification 4.0.0) in both cousins, re-measured
 this slice. No cousin was edited, per the Second, Third, and Fourth Commandments.
 

@@ -72,7 +72,9 @@
     % memberchk/2: find the monitored variable inside the body state list.
     memberchk/2,
     % append/2: join the story's sections into one list of lines.
-    append/2
+    append/2,
+    % last/2: the reveal-tick forecast is the last of the trial's minted predictions.
+    last/2
 ]).
 
 % The capstone demonstration boots the whole mind and lets its own records tell what happened.
@@ -214,10 +216,12 @@ capstone_demonstration_prediction_lines(Lines) :-
     prediction_loop_object_permanence_trial_records(Start, [3, 4, 5], 6, present, Confirmed),
     % Read the confirmed trial's signed error.
     get_dict(signed_error, Confirmed, ConfirmedError),
-    % Read the confirmed trial's first minted forecast.
-    get_dict(predictions, Confirmed, [FirstForecast|_]),
+    % Read the trial's minted forecasts.
+    get_dict(predictions, Confirmed, ForecastRecords),
+    % The reveal-tick forecast - the one the trial's error record grades - is the last minted.
+    last(ForecastRecords, RevealForecast),
     % Read that forecast's content-addressed identifier.
-    get_dict(id, FirstForecast, ForecastIdentifier),
+    get_dict(id, RevealForecast, ForecastIdentifier),
     % Read the confirmed trial's observed outcome record.
     get_dict(outcome, Confirmed, OutcomeRecord),
     % Read the outcome's content-addressed identifier.
@@ -234,9 +238,9 @@ capstone_demonstration_prediction_lines(Lines) :-
     format(string(ConfirmedLine),
            "At tick 6 the screen lifts and the object is there: outcome ~w, signed error ~w - no surprise.",
            [OutcomeIdentifier, ConfirmedError]),
-    % The forecast's line.
+    % The forecast's line, naming the reveal-tick forecast the error record will grade.
     format(string(ForecastLine),
-           "While the object is hidden the mind holds a forecast on the record: ~w.",
+           "While the object is hidden the mind holds a forecast for the reveal on the record: ~w.",
            [ForecastIdentifier]),
     % The surprised reveal's line.
     format(string(SurprisedLine),
@@ -326,27 +330,28 @@ capstone_demonstration_social_lines(AttitudeRecord, Lines) :-
         ExportLine
     ].
 
-% capstone_demonstration_provenance_lines(+AttitudeRecord, -Lines): the provenance layer narrated.
-capstone_demonstration_provenance_lines(AttitudeRecord, Lines) :-
-    % The story's fixed simulation start stamps the provenance records.
+% capstone_demonstration_provenance_social_stance(+AttitudeIdentifier, -SocialAssertionIdentifier): the mind stands behind its attribution.
+capstone_demonstration_provenance_social_stance(AttitudeIdentifier, SocialAssertionIdentifier) :-
+    % The story's fixed simulation start stamps the stance.
     capstone_demonstration_simulation_start(Start),
-    % Konnectome's own public signing identity.
-    self_provenance_source(Source),
-    % Read the attitude's content-addressed identifier.
-    get_dict(id, AttitudeRecord, AttitudeIdentifier),
-    % Read the attitude's modelled holder.
-    get_dict(holder, AttitudeRecord, HolderIdentifier),
     % The social assertion is stamped at the trial's own instant, tick zero.
     self_provenance_instant(Start, 0, SocialInstant),
     % The mind asserts its own attribution on observation evidence with high confidence.
     self_provenance_assertion(AttitudeIdentifier, "observation", 0.9, SocialInstant, SocialAssertion),
     % Read the social assertion's identifier.
-    get_dict(id, SocialAssertion, SocialAssertionIdentifier),
+    get_dict(id, SocialAssertion, SocialAssertionIdentifier).
+
+% capstone_demonstration_provenance_forecast_stances(-ForecastIdentifier, -ForecastAssertionIdentifier, -SupersedeRetractionIdentifier, -UpgradedAssertionIdentifier, -RetractionIdentifier): the forecast asserted, upgraded, and disowned.
+capstone_demonstration_provenance_forecast_stances(ForecastIdentifier, ForecastAssertionIdentifier,
+                                                   SupersedeRetractionIdentifier, UpgradedAssertionIdentifier,
+                                                   RetractionIdentifier) :-
+    % The story's fixed simulation start stamps the stances.
+    capstone_demonstration_simulation_start(Start),
     % The forecast the provenance acts are about: the reusable outcome occurrent.
     prediction_loop_outcome_type("hidden_object_present", OutcomeTypeIdentifier),
     % The predicting construct's own identifier.
     prediction_loop_predictor(PredictorIdentifier),
-    % Mint the tick-six forecast as a predicted_occurrence record.
+    % Mint the reveal-tick forecast as a predicted_occurrence record - the very record Rung One displayed.
     prediction_loop_record_prediction(OutcomeTypeIdentifier, 6, PredictorIdentifier, Forecast),
     % Read the forecast's identifier.
     get_dict(id, Forecast, ForecastIdentifier),
@@ -356,7 +361,7 @@ capstone_demonstration_provenance_lines(AttitudeRecord, Lines) :-
     self_provenance_assertion(ForecastIdentifier, "simulation", 0.6, ForecastInstant, ForecastAssertion),
     % Read the forecast assertion's identifier.
     get_dict(id, ForecastAssertion, ForecastAssertionIdentifier),
-    % In the kind world the reveal confirms the forecast, so the stance is superseded to observation.
+    % In the kind world the reveal confirms the forecast, so the stance is superseded to observation at the reveal instant.
     self_provenance_supersede(ForecastAssertion, "observation", 0.95,
                               "the object-permanence reveal confirmed the forecast",
                               ForecastInstant, SupersedeRetraction, UpgradedAssertion),
@@ -364,12 +369,31 @@ capstone_demonstration_provenance_lines(AttitudeRecord, Lines) :-
     get_dict(id, SupersedeRetraction, SupersedeRetractionIdentifier),
     % Read the upgraded assertion's identifier.
     get_dict(id, UpgradedAssertion, UpgradedAssertionIdentifier),
+    % The cruel world's retraction is stamped one tick AFTER the reveal - the mind meets the surprise, then disowns
+    % the claim - and the later timestamp gives this retraction its own identity, distinct from the supersession's
+    % withdrawal, so the two worlds' acts are tellable apart from the records alone.
+    self_provenance_instant(Start, 7, RetractionInstant),
     % In the cruel world the reveal contradicts the forecast, so the assertion is retracted outright.
     self_provenance_retraction(ForecastAssertion,
                                "the object-permanence reveal contradicted the forecast",
-                               ForecastInstant, Retraction),
+                               RetractionInstant, Retraction),
     % Read the retraction's identifier.
-    get_dict(id, Retraction, RetractionIdentifier),
+    get_dict(id, Retraction, RetractionIdentifier).
+
+% capstone_demonstration_provenance_lines(+AttitudeRecord, -Lines): the provenance layer narrated.
+capstone_demonstration_provenance_lines(AttitudeRecord, Lines) :-
+    % Konnectome's own public signing identity.
+    self_provenance_source(Source),
+    % Read the attitude's content-addressed identifier.
+    get_dict(id, AttitudeRecord, AttitudeIdentifier),
+    % Read the attitude's modelled holder.
+    get_dict(holder, AttitudeRecord, HolderIdentifier),
+    % Mint the social stance.
+    capstone_demonstration_provenance_social_stance(AttitudeIdentifier, SocialAssertionIdentifier),
+    % Mint the forecast stances: asserted, superseded in the kind world, retracted in the cruel one.
+    capstone_demonstration_provenance_forecast_stances(ForecastIdentifier, ForecastAssertionIdentifier,
+                                                       SupersedeRetractionIdentifier, UpgradedAssertionIdentifier,
+                                                       RetractionIdentifier),
     % The signing line.
     format(string(SourceLine),
            "Every stance below is made under the mind's own public identity ~w - Rule 25 kept: the modelled holder ~w and the signing source are different identities.",

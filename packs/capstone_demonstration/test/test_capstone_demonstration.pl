@@ -28,6 +28,23 @@ capstone_demonstration_test_contains(Story, Fragment) :-
     % One carrying line is enough.
     !.
 
+% capstone_demonstration_test_retraction_identifiers(+Story, -Identifiers): the distinct retraction identifiers the story carries.
+capstone_demonstration_test_retraction_identifiers(Story, Identifiers) :-
+    % Collect the sixty-four-character body of every retraction identifier printed anywhere in the story.
+    findall(Hex,
+            % Scan each line for the retraction scheme and read the identifier body that follows it.
+            ( member(Line, Story),
+              % Find an occurrence of the retraction scheme prefix.
+              sub_string(Line, Before, _, _, "retraction:"),
+              % The identifier body starts right after the eleven-character prefix.
+              Start is Before + 11,
+              % Read the sixty-four-character body; a line without room here simply does not match.
+              sub_string(Line, Start, 64, _, Hex)
+            ),
+            Bodies),
+    % Distinct identifiers only.
+    sort(Bodies, Identifiers).
+
 % capstone_demonstration_test_first_index(+Story, +Fragment, -Index): the position of the first line carrying the fragment.
 capstone_demonstration_test_first_index(Story, Fragment, Index) :-
     % Walk the lines with their positions.
@@ -200,6 +217,17 @@ test(story_respects_rung_order) :-
     assertion(RungOne < RungFour),
     % The provenance layer closes the story.
     assertion(RungFour < Provenance).
+
+% The two worlds' take-backs are tellable apart from the records alone: the supersession's withdrawal and the
+% cruel world's outright retraction carry two DIFFERENT identifiers (found by the pre-merge adversarial review:
+% with one shared instant they minted one identical record, because a retraction's reason is not identity-bearing).
+test(story_distinguishes_the_two_retractions) :-
+    % Tell the story.
+    capstone_demonstration_story(10, Story),
+    % Collect every distinct retraction identifier the story prints.
+    capstone_demonstration_test_retraction_identifiers(Story, Identifiers),
+    % The kind world's withdrawal and the cruel world's retraction are two distinct records.
+    assertion(length(Identifiers, 2)).
 
 % The story claims only what is shown: the undemonstrated rungs and the unsigned records are named honestly.
 test(story_marks_the_honest_limits) :-

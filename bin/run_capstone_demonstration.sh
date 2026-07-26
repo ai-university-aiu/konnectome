@@ -16,6 +16,8 @@ cd "$(dirname "$0")/.." || exit 2
 TICKS="${1:-10}"
 # Refuse a tick argument that is not a plain whole number, before it reaches the mind.
 case "$TICKS" in ''|*[!0-9]*) echo "usage: bin/run_capstone_demonstration.sh [num_ticks]"; exit 1;; esac
+# Refuse a tick count below six - too few heartbeats to carry the demonstration - on the same usage path.
+[ "$TICKS" -ge 6 ] || { echo "usage: bin/run_capstone_demonstration.sh [num_ticks]  (num_ticks is at least six)"; exit 1; }
 # Build the library path over konnectome's own packs first.
 LIB=""
 for d in packs/*/prolog; do LIB="$LIB -p library=$d"; done
