@@ -91,19 +91,30 @@ situation_appraisal_appraise_change(Drive, BodyBefore, BodyAfter, Appraisal) :-
     % The appraisal carries its valence and the size of the effect.
     Appraisal = appraisal(Valence, Magnitude).
 
+% situation_appraisal_change_epsilon(-Epsilon): a change smaller than this is treated as no change at all.
+% The change is a difference of two independently-rounded set-point errors, so two situations equidistant
+% on opposite sides of the set-point yield a mathematically-zero change that floating-point rounding leaves
+% at a residue near 1.0e-16. Without this band that residue would be read as a real good-or-bad turn and,
+% worse, minted as an owned attitude the neutral case is meant to refuse. The band absorbs only rounding.
+situation_appraisal_change_epsilon(1.0e-9).
+
 % situation_appraisal_change_valence(+Change, -Valence): error fell (good), rose (bad), or held (neutral).
 situation_appraisal_change_valence(Change, good) :-
-    % The situation reduced the distance to the set-point.
-    Change > 0,
+    % The band below which a change is only rounding noise, not a real turn.
+    situation_appraisal_change_epsilon(Epsilon),
+    % The situation reduced the distance to the set-point by a real amount.
+    Change > Epsilon,
     % Serving the goal is good.
     !.
 % A situation that raised the error harmed the goal.
 situation_appraisal_change_valence(Change, bad) :-
-    % The situation increased the distance to the set-point.
-    Change < 0,
+    % The band below which a change is only rounding noise, not a real turn.
+    situation_appraisal_change_epsilon(Epsilon),
+    % The situation increased the distance to the set-point by a real amount.
+    Change < -Epsilon,
     % Harming the goal is bad.
     !.
-% A situation that left the error unchanged is neither good nor bad.
+% A situation whose change is zero or only rounding noise is neither good nor bad.
 situation_appraisal_change_valence(_Change, neutral).
 
 % situation_appraisal_valence(+Appraisal, -Valence): read the valence out of an appraisal term.

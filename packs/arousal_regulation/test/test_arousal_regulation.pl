@@ -155,5 +155,23 @@ test(negative_ticks_refused, throws(error(arousal_regulation_bad_ticks(-1), _)))
     % A run cannot be a negative number of ticks.
     arousal_regulation_settle(Bus1, -1, _Bus).
 
+% A fractional tick count is refused - ticks are whole, not partial.
+test(fractional_ticks_refused, throws(error(arousal_regulation_bad_ticks(1.5), _))) :-
+    % Start aroused at one.
+    neuromodulator_bus_new(Bus0),
+    % Raise arousal to one.
+    arousal_regulation_arouse(Bus0, 1.0, Bus1),
+    % A run is a whole number of ticks, never a fraction.
+    arousal_regulation_settle(Bus1, 1.5, _Bus).
+
+% A non-finite arousal is refused - infinity would make the return never terminate.
+test(infinite_arousal_is_refused, throws(error(arousal_regulation_bad_level(_), _))) :-
+    % Start from a fresh bus.
+    neuromodulator_bus_new(Bus0),
+    % Build a positive infinity without depending on a reader-flag literal.
+    Infinity is inf,
+    % Arousal must be finite, so infinity is refused before it can be regulated forever.
+    arousal_regulation_arouse(Bus0, Infinity, _Bus).
+
 % Close the arousal_regulation test block.
 :- end_tests(arousal_regulation).

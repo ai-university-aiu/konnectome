@@ -59,21 +59,24 @@ arousal_regulation_arouse(Bus0, Level, Bus) :-
     % Write the aroused level onto the shared bus for every construct to read.
     neuromodulator_bus_broadcast(Bus0, Modulator, Level, Bus).
 
-% arousal_regulation_check_level(+Level): arousal must be a number at or above the tonic baseline.
+% arousal_regulation_check_level(+Level): arousal must be a finite number at or above the tonic baseline.
 arousal_regulation_check_level(Level) :-
     % A real level is a number.
     number(Level),
     % The tonic baseline is the floor arousal rises from.
     arousal_regulation_baseline(Baseline),
-    % Arousal is a raising of the level, never a level below rest.
+    % Arousal is a raising of the level, never a level below rest (this also rejects a not-a-number level).
     Level >= Baseline,
+    % Arousal must be finite: an infinite level never shrinks toward baseline, so the return would never
+    % terminate - and infinity is not less than itself, so this comparison rejects it without any arithmetic.
+    Level < inf,
     % A good level is accepted.
     !.
 % Any other level is refused as a hard error.
 arousal_regulation_check_level(Level) :-
-    % Refuse a non-numeric or below-baseline arousal with a named, inspectable error.
+    % Refuse a non-numeric, non-finite, or below-baseline arousal with a named, inspectable error.
     throw(error(arousal_regulation_bad_level(Level),
-                context(arousal_regulation_arouse/3, "arousal must be a number at or above the tonic baseline"))).
+                context(arousal_regulation_arouse/3, "arousal must be a finite number at or above the tonic baseline"))).
 
 % arousal_regulation_level(+Bus, -Level): read the current arousal level off the bus.
 arousal_regulation_level(Bus, Level) :-
