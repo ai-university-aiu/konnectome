@@ -140,6 +140,12 @@ test(condition_refuses_a_wordy_body_value, throws(error(symbol_exchange_bad_body
     % The body says the temperature is hot, which is a word, not a number.
     symbol_exchange_condition([drive(temperature, temperature, 37, none)], [temperature-hot], _Condition).
 
+% A drive term of the wrong shape is refused by name, never a silent failure
+% (the one small hole the build log's ninth chapter recorded as awaiting its named refusal - now closed).
+test(condition_refuses_a_malformed_drive_term, throws(error(symbol_exchange_bad_drive(_), _))) :-
+    % A bare atom is not a drive term.
+    symbol_exchange_condition([hunger], [temperature-40], _Condition).
+
 % Heard words that are not a list are refused by name, never a silent failure.
 test(reply_refuses_words_that_are_not_a_list, throws(error(symbol_exchange_bad_words(_), _))) :-
     % The standard vocabulary.

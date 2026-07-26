@@ -52,8 +52,12 @@ symbol_exchange_conditions([in_deficit, satisfied]).
 
 % symbol_exchange_condition(+Drives, +Body, -Condition): the mind's current condition, read from its first drive.
 symbol_exchange_condition([Drive|_], Body, Condition) :-
-    % Read the drive's monitored variable from the drive term itself.
-    Drive = drive(_Name, Variable, _SetPoint, _Previous),
+    % The first drive must be a well-formed drive term - a wrong shape is refused by name, never a silent failure.
+    (   Drive = drive(_Name, Variable, _SetPoint, _Previous)
+    ->  true
+    ;   throw(error(symbol_exchange_bad_drive(Drive),
+                    context(symbol_exchange_condition/3, "the first drive must be a drive(Name, Variable, SetPoint, Previous) term")))
+    ),
     % The body must actually carry the monitored variable - a silent miss is refused by name.
     (   memberchk(Variable-Value, Body)
     ->  true

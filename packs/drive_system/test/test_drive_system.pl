@@ -105,5 +105,18 @@ test(multiple_drives_sum_their_reductions) :-
     % The reward is the sum of the two reductions, which is six.
     assertion(Reward =:= 6).
 
+% A homeostatic step never overshoots: a fractional distance settles AT the set-point, not past it
+% (found by the slice-16 adversarial review: the fixed unit step crossed fractional set-point distances,
+% so a released action could carry the body PAST the state its drive defends).
+test(fractional_distance_settles_without_overshoot) :-
+    % A body half a degree above the set-point.
+    drive_system_apply_action(released(reduce(temperature)),
+                              [drive(temperature, temperature, 37, none)],
+                              [temperature-37.5], Body),
+    % The step lands exactly at the set-point, never below it.
+    memberchk(temperature-Temperature, Body),
+    % Settled, not overshot.
+    assertion(Temperature =:= 37).
+
 % Close the test block for the drive_system pack.
 :- end_tests(drive_system).
