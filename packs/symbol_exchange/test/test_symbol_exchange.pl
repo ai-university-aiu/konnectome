@@ -128,6 +128,39 @@ test(recognition_refuses_an_ungrounded_word, throws(error(symbol_exchange_unknow
     % Banana was never grounded in anything.
     symbol_exchange_recognize(Groundings, banana, _Condition).
 
+% A drive whose monitored variable is absent from the body is refused by name, never a silent failure
+% (found by the pre-merge adversarial review: the condition reader failed silently on a missing variable).
+test(condition_refuses_a_missing_body_variable, throws(error(symbol_exchange_missing_variable(_), _))) :-
+    % The hunger drive watches glucose, but the body carries only temperature.
+    symbol_exchange_condition([drive(hunger, glucose, 5, none)], [temperature-40], _Condition).
+
+% A body value that is not a number is refused by name, never as a raw arithmetic error
+% (found by the same review: a wordy value leaked a bare type error from the arithmetic depths).
+test(condition_refuses_a_wordy_body_value, throws(error(symbol_exchange_bad_body_value(_), _))) :-
+    % The body says the temperature is hot, which is a word, not a number.
+    symbol_exchange_condition([drive(temperature, temperature, 37, none)], [temperature-hot], _Condition).
+
+% Heard words that are not a list are refused by name, never a silent failure.
+test(reply_refuses_words_that_are_not_a_list, throws(error(symbol_exchange_bad_words(_), _))) :-
+    % The standard vocabulary.
+    symbol_exchange_test_groundings(Groundings),
+    % A bare word is not a list of words.
+    symbol_exchange_reply(Groundings, [drive(temperature, temperature, 37, none)], [temperature-40], not_a_list, _Reply).
+
+% The reply validates the mind's state BEFORE it listens, so a mind that cannot answer never mutates the word bank
+% (found by the same review: the old order heard the words first, leaving a trace of a conversation that never happened).
+test(reply_validates_before_it_hears) :-
+    % The standard vocabulary.
+    symbol_exchange_test_groundings(Groundings),
+    % A drive whose variable the body does not carry: the reply must refuse by name.
+    catch(symbol_exchange_reply(Groundings, [drive(hunger, glucose, 5, none)], [temperature-40], [zebra_word], _Reply),
+          % The named refusal is the expected outcome.
+          error(symbol_exchange_missing_variable(_), _),
+          % The refusal is what we wanted.
+          true),
+    % And the never-heard word left no trace: the word bank was not mutated by the failed exchange.
+    assertion(\+ language_word_trace(zebra_word, _, _)).
+
 % The pilot property: the same heard words draw DIFFERENT replies when the drive is in deficit and when it is satisfied.
 test(reply_differs_by_drive_state) :-
     % The standard vocabulary.

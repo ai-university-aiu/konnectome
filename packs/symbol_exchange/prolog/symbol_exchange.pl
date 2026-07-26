@@ -52,6 +52,20 @@ symbol_exchange_conditions([in_deficit, satisfied]).
 
 % symbol_exchange_condition(+Drives, +Body, -Condition): the mind's current condition, read from its first drive.
 symbol_exchange_condition([Drive|_], Body, Condition) :-
+    % Read the drive's monitored variable from the drive term itself.
+    Drive = drive(_Name, Variable, _SetPoint, _Previous),
+    % The body must actually carry the monitored variable - a silent miss is refused by name.
+    (   memberchk(Variable-Value, Body)
+    ->  true
+    ;   throw(error(symbol_exchange_missing_variable(Variable),
+                    context(symbol_exchange_condition/3, "the body does not carry the drive's monitored variable")))
+    ),
+    % The carried value must be a number - a wordy value is refused by name, never as a raw arithmetic error.
+    (   number(Value)
+    ->  true
+    ;   throw(error(symbol_exchange_bad_body_value(Variable-Value),
+                    context(symbol_exchange_condition/3, "the monitored variable's value must be a number")))
+    ),
     % The drive's error is its distance from the set-point.
     drive_system_error(Drive, Body, Error),
     % A positive error is a deficit; a zero error is satisfaction.
@@ -163,10 +177,16 @@ symbol_exchange_recognize(Groundings, Word, Condition) :-
 
 % symbol_exchange_reply(+Groundings, +Drives, +Body, +HeardWords, -ReplyWords): hear, then reply from the inside out.
 symbol_exchange_reply(Groundings, Drives, Body, HeardWords, ReplyWords) :-
+    % The heard words must be a list of words - anything else is refused by name.
+    (   is_list(HeardWords)
+    ->  true
+    ;   throw(error(symbol_exchange_bad_words(HeardWords),
+                    context(symbol_exchange_reply/5, "the heard words must be a list")))
+    ),
+    % Read the mind's own condition FIRST, so a mind that cannot answer never mutates the word bank by listening.
+    symbol_exchange_condition(Drives, Body, Condition),
     % The incoming words arrive through the reused word bank, changing the mind's language state, exactly once.
     once(language_hear(HeardWords, _TraceIdentifiers)),
-    % The reply is drawn from the mind's own current condition, not from the words alone.
-    symbol_exchange_condition(Drives, Body, Condition),
     % A mind in deficit names its state and the state it seeks; a satisfied mind speaks one settled word.
     (   Condition == in_deficit
     ->  symbol_exchange_produce(Groundings, in_deficit, StateWord),
