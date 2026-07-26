@@ -107,7 +107,7 @@ ARCHITECTURE, VERSION 20"; the manuscript's document-level CHANGE LOG that follo
 versioning metadata, not appendix content, and was deliberately not carried in.
 
 Per the Tenth Commandment, every code slice bumps the SPARCD Fileset. The current
-version is v16 (bumped in lockstep by slice 15); every superseded version lives in
+version is v17 (bumped in lockstep by slice 16); every superseded version lives in
 docs/archive/.
 
 
@@ -215,6 +215,24 @@ deepened; PENDING = not built yet.
     claiming no happening) with a simulation-graded stance via self_provenance. Honest
     non-closures: the full pilot conversation, a richer vocabulary, Rung Two joining the capstone
     story, and the token-tier export of a whole pretend episode - see the Slice-15 note.)
+
+ THE DEVELOPMENTAL LADDER, RUNG FOUR (Appendix 6, Section A6.3a) - deepened
+ -----------------------------------------------------------------------------------
+ The social-pain test (A4.4)   | empathy over the UNCHANGED drive_system       | REALIZED
+ The empathy trial             | empathy (resonance -> proposals -> selection) | REALIZED
+   (Slice 16. The social-pain system test is realized as the famous experiment it re-runs: a
+    social_connection drive defends belonging as a genuine set-point; a rejection signal severs
+    it; and the violation registers through the IDENTICAL drive_system machinery that registers
+    a thwarted physical drive - same error predicate, same step, same negative reward broadcast
+    as dopamine - with the equivalence pinned number for number by test. No bespoke emotion
+    pathway exists. The empathy trial: another agent's MODELLED distress resonates into the
+    mind's own belonging (its own error rises - feeling-with is literal), the drives propose,
+    and the selection flips from the mild physical need to the helping action, which is released
+    (never invented) and shown restoring connection. Respiration in distress still seizes
+    control over social helping. The attribution travels as an attitude of the existing 4.0.0
+    enumeration (the agent FEARS her connection severed), asserted at observation grade and
+    retracted when misattributed (Rule 10). Honest remaining ascent: the appraisal and
+    regulation pilots of the rung, and the capstone story joining the new milestones.)
 
 
 ================================================================================
@@ -515,5 +533,26 @@ violations; the Causalontology conformance suite is untouched and green at 137 o
 pilot conversation; a richer grounded vocabulary; the capstone story joining Rung Two under a bumped
 version; and the token-tier pretend-episode export, if it ever proves load-bearing. No cousin was
 edited, per the Second, Third, and Fourth Commandments.
+
+Slice-16 note (2026-07-26). Deepening Rung Four (the empathy pack: the social-pain test and the empathy
+trial) hit NO wall, and the slice's central discipline was architectural restraint: no bespoke emotion
+pathway was built, because the specification's own account says the machinery of emotion exists BY
+CONSTRUCTION in the drives. The social-pain test therefore added nothing to the pain path at all - the
+rejection signal is one body-variable write, and the error, the step, the signed negative reward, and the
+dopamine broadcast are the unchanged drive_system and neuromodulator_bus predicates running over a drive
+named social_connection - and the tests pin the shared-circuitry equivalence number for number against an
+equal-magnitude physical thwarting. The empathy trial composes only existing machinery: resonance (the
+modelled distress lowering the mind's own belonging, guarded by named refusals), the drives' own
+proposals, the selector's release, and the body's response; the helping action is never invented, and the
+respiration override still seizes control over social helping, so the inviolable safety property is
+re-proven under social pressure. The social attribution is owned as records: the modelled distress is an
+attitude of the EXISTING 4.0.0 closed enumeration (fears) - no new attitude type was needed, so no
+data-structure gap arose - graded observation through self_provenance and retracted when misattributed
+(Rule 10). Gates: empathy 14 of 14 Prolog Unit (PLUnit) tests pass (the earlier eighteen packs unchanged,
+162 tests; 176 in total); naming, layer, and layer-binding gates report zero violations; the
+Causalontology conformance suite is untouched and green at 137 of 137 (specification 4.0.0) in both
+cousins. Honest remaining ascent, recorded as pending refinements, not walls: the appraisal pilot and the
+regulation pilot of Rung Four, and the capstone story joining Rung Two and this deepening into its
+telling under a bumped version. No cousin was edited, per the Second, Third, and Fourth Commandments.
 
  Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 3.
