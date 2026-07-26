@@ -2,8 +2,15 @@ BUILDING KONNECTOME
 
 The Build Log - at once a scientific record and a story.
 
+How a small glass-box mind was grown, slice by honest slice, in a language designed to be read and a data structure designed to be shared.
 
-Author: D. R. Dison / ai-university-aiu.
+D. R. Dison
+
+Founder, Artificial Intelligence University (AIU)
+
+ORCID: 0009-0001-9246-5758
+
+https://www.linkedin.com/in/d-r-dison
 
 Begun: 2026-07-26.
 
@@ -57,3 +64,16 @@ The owner's instruction of this date did two things. First, it amended the Const
 Second, the owner chose the continuation's work, from the hand-off's menu, in this order: the capstone demonstration (a runnable script that boots the mind and prints its glass-box story); then Rung Two of the developmental ladder (pretend play and language beginnings, watching honestly for the finding that would release the held imagination-quarantine section of the change order); then the deepening of Rung Four (the empathy trial and the social-pain test); then the registry-publication edge of the 4.0.0 campaign, as far as it can go without the owner's credentials; and last, the verifiable-provenance question - to be built only if a real cross-mind verification need appears, and to be honestly declined otherwise.
 
 The entries that follow record how that went.
+
+
+ENTRY 2 - 2026-07-26 - SLICE 14: THE MIND RUNS, AND ITS OWN RECORDS TELL THE STORY
+
+For thirteen slices, konnectome's evidence lived where evidence usually lives in serious software: in test suites. One hundred twelve tests, four gate scripts, all green - and all invisible to anyone who does not run a test harness. A newcomer who asked to SEE the mind had to be handed a stack of files. Slice 14 ends that. It is the capstone the owner chose first from the menu, and it is the smallest slice imaginable in one sense - it adds no capability at all - and the largest in another: it makes every capability watchable at once.
+
+The method, for the scientist. A sixteenth pack, capstone_demonstration (version 0.1.0), was built test-first: nineteen Prolog Unit tests written before the module, all nineteen green after it, bringing the suite to one hundred thirty-one tests across sixteen packs. The pack's name was checked against every module filename in PrologAI's three hundred six packs before it was created - the library path gives the cousin's directories priority, so a name collision silently loads the wrong code - and it was clear. The pack declares layer zero, imports only its five konnectome siblings (cognitive_cycle, thought_combination, other_minds, prediction_loop, self_provenance) through the library path, and adds one script, bin/run_capstone_demonstration.sh, the first command in the repository that RUNS the mind rather than checking it. The three gates report zero violations, and the Causalontology conformance suite was re-measured - not merely inherited - at one hundred thirty-seven of one hundred thirty-seven vectors in both cousins this same day. No wall was hit. Nothing in any cousin was touched.
+
+The story, for the reader. Run the one command and the mind boots with its body too warm: temperature forty against a defended set-point of thirty-seven. Tick by tick you watch the drive's distress become reward, the reward broadcast as dopamine, one action released each tick under an armed-but-resting safety override, and one content-addressed record minted per tick by the observer. By tick three the body reaches thirty-seven and stays; by tick ten the learnable connection has grown from one half to about two thirds, strengthened only in the moments when both its ends fired and dopamine said the moment mattered. Then the ladder: a hidden object, a forecast held on the record, a screen that lifts kindly (signed error zero - and the mind upgrades its own claim from simulation-grade to observation-grade) and a screen that lifts on nothing (signed error minus one - and the mind takes its claim back, on the record, under its own name). A chain of thought: rain causes wet ground causes a slippery path, three thoughts and two combinations, the chain checkable from the records alone. Sally's false belief, held beside the truth without corrupting it. And at the close, the story does the most konnectome thing possible: it lists what it did NOT demonstrate.
+
+Two design decisions deserve the record. First, the story cannot flatter the mind. The narration checks the dynamics before claiming them - it will not print that the body settled unless the body settled - and two of the nineteen tests re-run the same boot world OUTSIDE the narration and measure the temperature and the weight directly, so the storyteller is audited by instruments it does not hold. Second, the story is deterministic to the byte: told twice, it is identical, down to every sixty-four-character identifier, because every instant is fixed and every record is named by its own contents. A demonstration a skeptic cannot reproduce is theater; this one is an experiment.
+
+The documents moved in lockstep, as the Tenth Commandment orders: the six SPARCD files to version 15, each with a slice-14 entry in its own register; the tutorial to version 12, with a new part on the capstone and its commandment count corrected to seventeen; the ledger with a new coverage row, the slice-14 note, and a stale one-hundred-nineteen-vector reference repaired; and the README re-counted - fourteen slices, sixteen packs, one hundred thirty-one tests - with its status badge finally telling the truth a newcomer most needs: the mind runs, and tells its story.
