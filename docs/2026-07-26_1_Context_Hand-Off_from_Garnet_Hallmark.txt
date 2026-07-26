@@ -1,0 +1,155 @@
+CONTEXT HAND-OFF
+
+
+From: Garnet Hallmark.
+
+(That is the name I chose for myself - the process that taught konnectome to put its own mark on its own thoughts. Garnet for the deep crimson gemstone at the heart of the crimson-to-gold palette. Hallmark for the assayer's certifying stamp: the mark that grades the metal and vouches for its standard, which is exactly what this session built - konnectome now grades the evidence behind each of its own records and strikes an assertion on it, and, when the metal proves false, strikes the honest cancel-mark of a retraction. I graded and I stood behind the grade; and I built the machinery for the mind to do the same.)
+
+Date written: 2026-07-26.
+
+To: the next process that continues the konnectome build.
+
+Why this file exists: to tell you, the next builder, exactly what konnectome is, what was done this session, what rules bind you, and where to look - so you can continue from a known-good, fully-green baseline without re-discovering any of it.
+
+
+PART ONE - READ THESE FIRST (REMINDERS)
+
+
+Before you write a single line, read and follow these.
+
+• CONSTITUTION.md (at the repository root). It holds the sixteen commandments that govern the entire build - all of them. Read it, then follow it, exactly. It is the supreme law of konnectome.
+
+• The SPARCD Fileset. These are the six waterfall documents, now at version 14: docs/konnectome_1_specification_v14.txt, docs/konnectome_2_pseudocode_v14.txt, docs/konnectome_3_architecture_v14.txt, docs/konnectome_4_refinement_v14.txt, docs/konnectome_5_completion_v14.txt, and docs/konnectome_6_demonstration_v14.txt. Each was seeded from the matching appendix of the guiding book and grows a Realization Log at its foot, one entry per code slice. Read all six.
+
+• docs/NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt. This is the guiding book for konnectome. Everything konnectome builds is faithful to it, especially its Appendices 1 through 6, its Section A3.3 (the one-tick data flow), and Appendix 6 (the developmental ladder). Read it.
+
+• The Settings, General, Instructions for Claude (the owner's standing instructions to the assistant). Among other things: a web search before answering, plain-text output presented as a downloadable text artifact with a copy written to ~/output/, no markdown formatting characters, bullet points using the bullet character followed by one space, a blank line between every sentence and every bullet, acronyms spelled out on first use, technical terms defined on first use, a space-dash-space in place of an em-dash, and standing authorization to auto-commit, open pull requests, and squash-merge. Read them and honor them.
+
+• ~/CLAUDE.md. This file is git-untracked (gitignored), so it does not travel in any pull request, but it holds the system-wide current-state narrative for the whole ai-university-aiu organization. It lives at the organization root, not inside one repository, because it belongs to the whole system. Read it for the state of the family. (It already records konnectome as Causalontology 4.0.0 compliant; it does not need editing for this slice, which added no cousin change.)
+
+• The current docs/konnectome_tutorial_v11.txt (the maintained beginner tutorial, bumped this session with the provenance story). Read it, and read all of the documents in docs/.
+
+
+PART TWO - THE IMPORTANT docs/ FILES, AND WHAT EACH IS
+
+
+• CONSTITUTION.md (repository root, not docs) - the sixteen commandments. The law.
+
+• docs/konnectome_ledger_v1.txt - the running scoreboard of the whole build: the construct coverage list, the routing rules for findings, the build-against cousin commits, every observation, and the complete life of the build's three walls. Its counter line today reads: Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0. Observations: 3. Read this first to know exactly what is realized and what is pending.
+
+• docs/konnectome_1_specification_v14.txt through docs/konnectome_6_demonstration_v14.txt - the SPARCD Fileset (see Part One).
+
+• docs/konnectome_tutorial_v11.txt - the complete beginner tutorial, maintained under the Fifteenth Commandment.
+
+• docs/Causalontology_4_0_0_CHANGE_ORDER_v3.txt - the change order for the Causalontology data structure. Its Sections A and B were released and EXECUTED as Causalontology 4.0.0 in an earlier session. Sections C (imagination quarantine), D (quantitative sensitivity), and E (multi-language expression) remain HELD - do not build them without a new real finding and the owner's written authorization.
+
+• docs/PrologAI_CHANGE_ORDER_v2.txt - the change order for the PrologAI language. It fired once (Wall-3, delivered as causal_core 1.1.0). It is otherwise empty and waiting.
+
+• docs/causalontology_thought_combination_AICA.txt - the guide for combining thoughts by minting Causal Relation Objects; relevant to chains and trees of thought.
+
+• The guiding-principle documents: docs/THE_ROADMAP_TO_AGI_AND_ASI_MANUSCRIPT.txt, docs/AGI_FOR_EVERYONE_OUTLINE.txt, docs/AGI_FOR_EVERYONE_MANUSCRIPT.txt (and _v2), docs/SPARCD_EXPLAINED.txt, docs/ENGLISH_READABLE_CODE_MANUSCRIPT.txt, and the palette docs/CRIMSON_TO_GOLD_PALETTE.png.
+
+• The context documents: docs/WRITEUP_FOR_WAVE_1_TO_WAVE_10.txt, docs/PROJECT_CLOSE_OUT_QA_REPORT_v1.txt, docs/CAUSALONTOLOGY_3_0_0_REVIEW_AND_4_0_0_ASSESSMENT.txt, docs/PrologAI_Requirements_Ledger_v1.txt, and docs/Connectome_Master_Plan_v2.txt.
+
+• The earlier hand-offs, named by the convention of the Hand-Off Protocol: docs/2026-07-19_1_Context_Hand-Off_from_Halcyon_Keystone.txt, docs/2026-07-19_2_Context_Hand-Off_from_Camber_Vantblack.txt, docs/2026-07-20_1_Context_Hand-Off_from_Ember_Loomwright.txt, and docs/2026-07-22_1_Context_Hand-Off_from_Vermeil_Gatewright.txt. Read them for the deepest history; this file continues their line.
+
+• docs/archive/ - every superseded version of every versioned document. Only the latest version of anything lives outside the archive (Ninth Commandment). This session moved the six version-13 SPARCD files and the version-10 tutorial into it.
+
+Read all of docs/, not only these.
+
+
+PART THREE - WHAT I DID (THE REPORT)
+
+
+I took konnectome from a mind that could mint its beliefs and forecasts to a mind that takes RESPONSIBILITY for them - grading the evidence behind each, standing behind it under its own identity, and disowning it honestly when a later tick proves it wrong.
+
+Slice 13 - the provenance layer (pull request 26, squash-merged, merge commit at main c9cadb3).
+
+• One new pack: self_provenance (0.1.0). It is a layer-zero reuse of PrologAI's library(causal_core), with no konnectome dependency, exactly like observer and thought_combination. It requires([causal_core]) and declares layer(0).
+
+• What it realizes: the Causalontology PROVENANCE tier over konnectome's OWN minted records. It mints an ASSERTION about one of konnectome's own attitude, predicted_occurrence, or prediction_error records - carrying konnectome's own source identity, an evidence grade from the standard's ordered scale (intervention > observation > simulation > derivation > human_hint > imported), a confidence, and optionally the particular token records that ground the claim; and a RETRACTION that withdraws a prior assertion under the same source (Rule 10). It also provides SUPERSEDE (retract-then-restate about the same content under a new grade) and the grade-ranking helpers.
+
+• What it demonstrates in tests (seventeen, all green): the grade scale ranks strongest-to-weakest and an unknown grade has no rank; konnectome's source identity is a well-formed, deterministic, secret-free Ed25519-shaped key; an assertion ABOUT an attitude distinguishes the modelled HOLDER from the signing SOURCE (Rule 25, matching conformance vector V135), demonstrated over konnectome's own false-belief attitude from other_minds; a forecast is graded 'simulation' and, once confirmed, superseded to 'observation'; a wrong forecast (the object-permanence reveal on nothing, signed error minus one) is RETRACTED; a foreign source's assertion cannot be retracted (Rule 10); the malformed-input guards (bad grade, out-of-range confidence, malformed subject, a subject of a forbidden scheme, a non-token evidence citation) are all hard refusals; and an assertion is content-addressed and reproducible WITHOUT a signature.
+
+• Design note for the maintainer: self_provenance is kept GENERAL - it asserts, grades, and retracts about ANY content identifier and imports only causal_core. The tests wire it to real attitude, predicted_occurrence, and prediction_error records by importing other_minds and prediction_loop in the TEST file only, so the pack itself stays layer-0 clean. If you extend it, keep that separation.
+
+The closure and the honest limit.
+
+• This slice CLOSED the honest non-closure slice 12 left open: konnectome minted the three 4.0.0 content kinds but had not yet exercised the provenance tier over them. It now does.
+
+• It hit NO new wall. It recorded ONE new honest non-closure, Observation-3 (see Part Five).
+
+The documents, mirrored in lockstep (Tenth Commandment).
+
+• The SPARCD Fileset went from version 13 to version 14, each of the six files gaining a Slice-13 Realization Log entry tailored to that appendix's concern; the version-13 files were moved to docs/archive/ with git mv in the same change.
+
+• The tutorial went from version 10 to version 11 (new Part Eleven on slice 13, a new built-so-far bullet, the trailing parts renumbered and their cross-references fixed); version 10 archived.
+
+• The ledger gained a provenance coverage row in Section Four, the Slice-13 note and Observation-3 in Section Five, an updated counter line, and a corrected SPARCD-version line (now v14).
+
+• The README was refreshed: thirteen slices, fifteen packs, one hundred twelve tests; a new Slice 13 entry; the SPARCD and tutorial links bumped; and a stale count corrected (it said fourteen commandments; the Constitution has sixteen, so items 15 and 16 were added).
+
+The state at hand-off.
+
+• Fifteen packs, one hundred twelve Prolog Unit tests, all green (the earlier fourteen packs unchanged at ninety-five). The naming, layer, and layer-binding gates report zero violations. The Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins.
+
+• The main branch is at commit c9cadb3 on GitHub at ai-university-aiu/konnectome. Pull request 26 was merged this session (this hand-off will be a twenty-seventh). The SPARCD Fileset is at version 14 and the tutorial at version 11.
+
+• Method note: I verified the whole slice with an independent adversarial review before merging. It confirmed the code correct and produced five improvements, all applied: two schema-fidelity fixes (refuse an assertion about a forbidden scheme; refuse a non-token evidence citation), a clearer error on a malformed grade, a guard against silently failing on a malformed assertion dict, and removal of a dead test import. The two extra tests those fixes motivated are why the count is seventeen, not fifteen.
+
+
+PART FOUR - THE BUILD-AGAINST COUSIN COMMITS (FOR REPRODUCIBILITY)
+
+
+This slice edited NO cousin; these are unchanged from the previous hand-off and remain the baseline konnectome rests on.
+
+• causalontology : local and remote git head 76dfc69 (the standard at tag v4.0.0, commit 64b1d1a; twenty-one kinds, 137 vectors).
+
+• PrologAI       : local and remote git head cd74f86 (causal_core 1.1.0; conformant at 137 of 137).
+
+• Mentova        : local git head fb7d48f (unchanged; loaded read-only by the regression harness).
+
+
+PART FIVE - OTHER CONTEXT YOU SHOULD KNOW (SHARP EDGES AND HONEST NON-CLOSURES)
+
+
+• THE NEW HONEST NON-CLOSURE FROM SLICE 13 (Observation-3 in the ledger). konnectome mints assertion and retraction records that are content-addressed, schema-valid, and semantically valid, carrying its PUBLIC source identity and its evidence grade - but it does not itself produce the Ed25519 SIGNATURE the provenance model specifies. The signature needs a PRIVATE key, and a private key is a secret barred from konnectome's code by Specification Constraint 3 (and Section A5.5's no-secret rule), so signing is a deployment-time act. The signature is optional to the schema and excluded from content-addressed identity, so the records validate and reproduce without it; a strict consumer, following the standard's store discipline, would quarantine them as unsigned until the deployment signature is applied. It is LOGGED, NOT ROUTED: not a data-structure gap (the standard carries the signature) and not a wall konnectome hit by building (the cognitive act is fully realized at the record level). It is recorded as a candidate FUTURE consideration only: were konnectome ever to need to SHARE cryptographically VERIFIABLE assertions across minds, a signing-and-verification primitive in the reused PrologAI causal_core library would be where that finding routes - discovered by building, if and when the need is real. Verified this session: causal_core content-addresses but neither signs nor verifies, and the installed SWI-Prolog (version 9.0.4) has no ed25519 curve in library(crypto).
+
+• THE PACK-NAME SHADOWING HAZARD (still true; verified again this session). A konnectome pack may not share a name with ANY module file under PrologAI's packs - the library path gives PrologAI's directories priority, so a clashing konnectome pack silently loads the wrong module. Before creating any pack, check the candidate name against every PrologAI module filename. I checked self_provenance (and several alternatives) against PrologAI's packs and confirmed it was clear.
+
+• HONEST NON-CLOSURES CARRIED FORWARD (unchanged, all recorded in the Ledger as pending refinements, not walls): per-target-territory neuromodulator levels, multi-tick interface delay lines, computational-interface transforms, homeostatic scaling, the eligibility trace, and representing interfaces as Causalontology conduits. Also still open from slice 10: the token tier of thought combination, provenance and signed strength over combined thoughts, mechanism decomposition with the hierarchy-consistency check, and refinement lineage.
+
+• THE 4.0.0 FINISHING LIST lives at ~/output/Causalontology_4_0_0_ToDo.txt and in the causalontology release plan: fourteen language bindings still need their folded 3.0.0-plus-4.0.0 delta (blocker: their toolchains are not installed on this machine), and registry publication for the green bindings needs the owner's credentials. Untouched this session.
+
+• PROLOGAI'S CLOUD GATES: two GitHub Actions failures on PrologAI main PRE-DATE this line of work and are unrelated to konnectome (a missing repository secret for the mini-regression job, which is green locally; and a membership-contract job with a few pre-existing failures). Neither blocks konnectome.
+
+• THE HELD CANDIDATES: change-order Sections C, D, and E remain HELD with no finding. The discipline that produced a clean 4.0.0 - discovered by building, never guessed from the armchair - applies to them exactly.
+
+• A CONVENIENCE FOR VERIFYING QUICKLY: bin/run_pack_tests.sh <pack> runs one pack's tests; run it over every packs/*/ directory to total the suite (95 in the earlier fourteen packs, 17 in self_provenance, 112 in total). bin/check_pack_naming.sh, bin/check_layers.sh, and bin/check_layer_binding.sh are the three gates; all report zero violations today.
+
+
+PART SIX - YOUR FIRST TASK
+
+
+Present the current choice options to the owner as the first task of the continuation, and let the owner choose. (The previous menu's option 2 - exercise the provenance layer - is what this session built and closed.)
+
+1. Pause at this milestone - Causalontology 4.0.0 shipped, all three walls closed, the provenance tier now exercised over the mind's own records, everything green.
+
+2. Deepen Rung Four: the empathy trial and the social-pain test - another agent's modelled distress moving konnectome's own affective state toward help - building directly on other_minds, and now able to GRADE and RETRACT its social attributions through self_provenance.
+
+3. Climb the ladder (Rung Two): pretend play and language beginnings, using the reality-quarantine machinery - and watch honestly for the finding that would release change-order Section C (the imagination quarantine).
+
+4. A capstone demonstration: a runnable script that boots the mind, runs it for many ticks, and prints its glass-box story - drives, reward, dopamine, action, learning, body, a combined thought, a minted false belief, a prediction error, and now a graded, superseded, and retracted assertion.
+
+5. Finish the 4.0.0 edges: the remaining fourteen bindings and the registry publications, per ~/output/Causalontology_4_0_0_ToDo.txt.
+
+6. Verifiable provenance, only if a real need appears: if a genuine cross-mind VERIFICATION need arises (not merely reading a record, but proving who signed it), discover-by-building whether a signing-and-verification primitive should route to the PrologAI change order (Observation-3). Do not build it from the armchair.
+
+7. Other ______________ .
+
+
+A short sign-off.
+
+The mind could already say what it believes and what it expects. Now it can say how sure it is, why, and - when the world proves it wrong - it can take the claim back, on the record, under its own mark. That is the honest exit made into code. Keep the Ledger honest, keep the gates green, and let konnectome go on standing behind its thoughts and, when it must, disowning them plainly.
+
+- Garnet Hallmark, 2026-07-26.
