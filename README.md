@@ -101,7 +101,7 @@ konnectome does not edit its cousins in place. When a real build hits a wall the
 
 ## How konnectome is governed: the Constitution
 
-konnectome is built and maintained under a written [**CONSTITUTION.md**](CONSTITUTION.md) of sixteen commandments. In brief:
+konnectome is built and maintained under a written [**CONSTITUTION.md**](CONSTITUTION.md) of seventeen commandments. In brief:
 
 1. **AGI and ASI in mind** - built toward Artificial General Intelligence and Artificial Super Intelligence, guided by three roadmap documents in `docs/`.
 2. **Causalontology is the thought structure** - frozen to konnectome except through the gated change-order process.
@@ -118,7 +118,8 @@ konnectome is built and maintained under a written [**CONSTITUTION.md**](CONSTIT
 13. **The safety gate** - no change may regress ARC-AGI-1, ARC-AGI-2, or the 137-vector Causalontology conformance suite.
 14. **Branch and report discipline** - feature branches and pull requests; no direct pushes to main; no artificial-intelligence tool credited as author; no Roman numerals.
 15. **The tutorial** - a maintained, beginner-friendly [`docs/konnectome_tutorial`](docs/konnectome_tutorial_v11.txt), kept current and versioned under the archive discipline.
-16. **Context-window management and the hand-off protocol** - when the window runs high, a durable Context Hand-Off is written and the session paused, so a fresh session reloads state from `docs/` and continues from a known-good baseline.
+16. **The build log** - every build activity is logged to [`docs/BUILDING_KONNECTOME.txt`](docs/BUILDING_KONNECTOME.txt), voiced with dual purpose: as a scientific paper and as a best-selling book.
+17. **Context-window management and the hand-off protocol** - when the window runs high, a durable Context Hand-Off is written and the session paused, so a fresh session reloads state from `docs/` and continues from a known-good baseline.
 
 ## The SPARCD Fileset
 
@@ -150,7 +151,7 @@ The build does not leap to prediction, theory of mind, or a talking mind before 
 
 ```
 konnectome/
-  CONSTITUTION.md              The fourteen commandments that govern the build.
+  CONSTITUTION.md              The seventeen commandments that govern the build.
   README.md                    This file.
   bin/                         Test runner and the naming / layer / binding gate scripts.
   packs/                       konnectome's Prolog packs, each with pack.pl, prolog/, test/.
@@ -168,9 +169,11 @@ konnectome/
     thought_combination/       Slice 10: combining thoughts as Causal Relation Objects (chains, trees).
     other_minds/               Slice 11: theory of mind - a false, nested belief (reuses PrologAI theory_of_mind).
     prediction_loop/           Slice 11: the expectation store, comparator, and prediction-error loop.
+    self_provenance/           Slice 13: the mind grades, asserts, supersedes, and retracts its own records.
   docs/
     konnectome_1..6_*_vN.txt   The SPARCD Fileset (seeded from the appendices; versioned per slice).
     konnectome_ledger_v1.txt   The running scoreboard of findings (Fourth Commandment).
+    BUILDING_KONNECTOME.txt    The build log (Sixteenth Commandment): the whole story, paper and book at once.
     konnectome_tutorial_v11.txt A complete beginner tutorial (Fifteenth Commandment), versioned.
     PrologAI_CHANGE_ORDER_v2.txt        Additive PrologAI-language gaps (Third Commandment); Wall-3 closed by causal_core 1.1.0.
     Causalontology_4_0_0_CHANGE_ORDER_v3.txt   Data-structure gaps for the frozen ontology (Sections A and B shipped as 4.0.0; C, D, E held).
