@@ -107,7 +107,7 @@ ARCHITECTURE, VERSION 20"; the manuscript's document-level CHANGE LOG that follo
 versioning metadata, not appendix content, and was deliberately not carried in.
 
 Per the Tenth Commandment, every code slice bumps the SPARCD Fileset. The current
-version is v19 (bumped in lockstep by slice 18); every superseded version lives in
+version is v20 (bumped in lockstep by slice 19); every superseded version lives in
 docs/archive/.
 
 
@@ -485,6 +485,21 @@ PrologAI causal_core library (which today content-addresses but neither signs no
 primitive is available in this SWI-Prolog build) would be where that finding is routed - discovered by
 building, if and when the need is real, never guessed from the armchair.
 
+Observation-4 (2026-07-26, from slice 19). The appraisal pilot (situation_appraisal) reads a situation's
+valence straight from the drives' set-point error and, when it OWNS that valence on the record, draws the
+attitude from Causalontology's closed attitude enumeration (believes, desires, intends, knows, expects, fears).
+A threatening situation maps cleanly to fears - the same clean fit empathy uses. But the book names the positive
+appraisal affect SATISFACTION (a met set-point), and the closed enumeration has no word for satisfaction or
+contentment: the nearest home is desires, which denotes an unfulfilled wanting, not a fulfilled state.
+situation_appraisal therefore approximates a met or improving situation as one the mind desires to keep, and
+records the imperfection here rather than hiding it behind a silent mapping. STATUS: LOGGED, NOT ROUTED. It is
+not a wall konnectome hit by building - the valence itself is computed exactly, and only the SHARED, exported
+attitude approximates - and appraisal never needs to export satisfaction to function. It is recorded for the
+owner as a candidate FUTURE consideration only: were a mind ever to need to SHARE a contentment attitude across
+minds as a first-class record, a new attitude_type in a future Causalontology major version (the enumeration is
+extensible only by a future major version) would be where that finding is routed - discovered by building, if
+and when the need is real, never guessed from the armchair.
+
 Slice-14 note (2026-07-26). Building the capstone demonstration (the capstone_demonstration pack and
 bin/run_capstone_demonstration.sh, the repository's first runnable entry point) hit NO wall and recorded
 NO new honest non-closure. The capstone invents nothing: it boots the whole mind through cognitive_cycle,
@@ -601,4 +616,7 @@ cousins. No new wall; no cousin edited, per the Second, Third, and Fourth Comman
 
 Slice-18 note (2026-07-26). Growing the capstone story (the capstone_demonstration pack, from version 0.1.0 to 0.2.0, over the one runnable entry point bin/run_capstone_demonstration.sh) hit NO wall and recorded NO new honest non-closure. The capstone still invents nothing: the bump is two new chapters wired into its narration, each a call outward into packs earlier slices already built and tested. The Rung Two chapter demonstrates the first grounded words - a word spoken only where the mind actually lived the condition it names, and a reply coloured by the drive state, so deficit and set-point answer differently - and pretend under quarantine, the rollout sealed in the reused five-reality machinery with the crossing into the observed record refused by name. The Rung Four chapter demonstrates the social pain - a social_connection drive defending belonging exactly as temperature defends thirty-seven, the two thwartings equal number for number through the identical predicate - and the empathy trial, where modelling another's distress lowers the mind's own belonging and flips the selection toward a released, never-invented help, with respiration still overriding kindness and the help capped so belonging lands exactly at its set-point. Every new chapter is verified by an INDEPENDENT dynamics check: the tests re-run the same siblings outside the story and re-mint every identifier, so the story still cannot grade its own homework. This closes the item slice 15 and slice 16 both recorded as pending ascent, not a wall: the capstone story joining Rung Two and this deepening into its telling under a bumped version - now paid. And the printed honest-limits list SHRANK by exactly one rung: it now names only Rung Three (concrete reasoning), Rung Five (embodiment), Rung Four's own appraisal and regulation pilots, and the deployment-deferred signature of Observation-3; Rung Two, once listed there, is shown rather than deferred. Gates: capstone_demonstration 36 of 36 Prolog Unit (PLUnit) tests pass (the other eighteen packs unchanged, 161 tests; 197 in total across nineteen packs, all green); naming, layer, layer-binding, and reality-discipline gates report zero violations; the Causalontology conformance suite is untouched and green at 137 of 137 (specification 4.0.0) in both cousins. No new wall; no cousin edited, per the Second, Third, and Fourth Commandments.
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 3.
+
+Slice-19 note (2026-07-26). Rung Four of the developmental ladder is finished: its two remaining pilots, situation_appraisal (0.1.0) and arousal_regulation (0.1.0), are built as thin reuse wrappers over machinery that already exists, so feeling arrives here by construction - no new Causalontology kind, and no eleventh architecture component for emotion. situation_appraisal reads the drives' own set-point error through drive_system_error and maps a signed error, or a change in it, to a valence from the standard's closed enumeration, calling a violated set-point a threat the mind fears and a met or improving one good and desired, owning the appraisal as an attitude graded through self_provenance at observation and retractable under Rule 10. arousal_regulation carries the aroused state as norepinephrine on the neuromodulatory bus (Architecture Component 4) and closes a fixed half of the distance to its tonic baseline each tick, settling exactly at baseline within a hair of it and never overshooting - the same homeostatic discipline the drive system's own capped step keeps. This closes the slice-16 pending item, the appraisal pilot and the regulation pilot of Rung Four. Gates: situation_appraisal 12 of 12, arousal_regulation 12 of 12, 221 in total, 137 of 137. No new wall; no cousin edited, per the Second, Third, and Fourth Commandments.
+
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 4.
