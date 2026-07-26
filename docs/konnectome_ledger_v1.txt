@@ -25,7 +25,8 @@ SECTION ONE - WHAT THIS IS AND HOW TO READ IT
 PART ONE - THE LEDGER'S ROLE
 
 konnectome is a Proto-Artificial-General-Intelligence (Proto-AGI) prototype written in
-PrologAI, storing its thoughts as Causalontology 3.0.0 records, and built from the
+PrologAI, storing its thoughts as Causalontology records (3.0.0 at the build's opening;
+4.0.0 since the slice-12 closure), and built from the
 appendices of Nature's Cognitive Architecture. The build method is enforce-then-build,
 inherited from the PrologAI program: a wall the build hits becomes an entry here; a
 load-bearing entry is routed to exactly one place; the next slice rests on the result
@@ -48,7 +49,8 @@ PART THREE - THE THREE ROUTING DESTINATIONS (route each finding to EXACTLY ONE)
  - DATA-STRUCTURE gap (must be SHARED across agents or repositories as a signed,
    evidence-graded, content-addressed record, not merely computed inside one konnectome
    runtime) -> docs/Causalontology_4_0_0_CHANGE_ORDER_v3.txt. Gated by the Thirteenth
-   Commandment: must keep the 119-vector conformance suite green.
+   Commandment: must keep the conformance suite green (one hundred nineteen vectors at
+   3.0.0; one hundred thirty-seven since the 4.0.0 re-freeze - see Section Two).
  - LANGUAGE gap (a real, load-bearing PrologAI-language wall) ->
    docs/PrologAI_CHANGE_ORDER_v2.txt. Additive only, gated by the Thirteenth
    Commandment: must not regress ARC-AGI-1 (400 of 400) or ARC-AGI-2 (120 of 120)
@@ -105,7 +107,7 @@ ARCHITECTURE, VERSION 20"; the manuscript's document-level CHANGE LOG that follo
 versioning metadata, not appendix content, and was deliberately not carried in.
 
 Per the Tenth Commandment, every code slice bumps the SPARCD Fileset. The current
-version is v14 (bumped in lockstep by slice 13); every superseded version lives in
+version is v15 (bumped in lockstep by slice 14); every superseded version lives in
 docs/archive/.
 
 
@@ -158,7 +160,8 @@ deepened; PENDING = not built yet.
  -----------------------------------------------------------------------------------
  Rung Four theory of mind    | other_minds (reuses PrologAI theory_of_mind)  | REALIZED
  Rung One prediction error   | prediction_loop (the comparator loop)         | REALIZED
-   (Slice 12. Both milestones now run AND export as shared, signed, content-addressed
+   (Slice 12. Both milestones now run AND export as shared, content-addressed (and, at
+    deployment, signed - see Observation-3)
     Causalontology records. other_minds mints the attributed belief - true, false, and nested -
     as attitude records (holder, attitude_type, content), and exports the false-belief trial's
     predicted-search result as a shareable attitude record. prediction_loop mints the
@@ -182,6 +185,17 @@ deepened; PENDING = not built yet.
     137 vectors. Honest non-closure: the Ed25519 SIGNATURE is deferred to deployment - a private key
     is a secret barred from code (Constraint 3) - so the records carry the public source identity,
     are content-addressed, and are shareable without it. See Observation-3.)
+
+ THE DEMONSTRATION (Appendix 6, the SPARCD Demonstration phase) - made runnable
+ -----------------------------------------------------------------------------------
+ The capstone story        | capstone_demonstration + bin/run_capstone_demonstration.sh | REALIZED
+   (Slice 14. One script boots the whole mind and prints the glass-box story in rung order:
+    the heartbeat, reward, dopamine, action, learning, and regulated body; the object-permanence
+    forecast confirmed (signed error zero) and surprised (signed error minus one); a chain of
+    combined thoughts; the false belief beside the world's contrary record; and the provenance
+    layer asserting, grading, superseding, and retracting over those records. Deterministic:
+    the story told twice is identical. The story itself names the rungs not yet demonstrated
+    and the deployment-deferred signature. Reads its siblings only through the library path.)
 
 
 ================================================================================
@@ -433,5 +447,22 @@ cryptographically VERIFIABLE assertions across minds, a signing-and-verification
 PrologAI causal_core library (which today content-addresses but neither signs nor verifies, and no Ed25519
 primitive is available in this SWI-Prolog build) would be where that finding is routed - discovered by
 building, if and when the need is real, never guessed from the armchair.
+
+Slice-14 note (2026-07-26). Building the capstone demonstration (the capstone_demonstration pack and
+bin/run_capstone_demonstration.sh, the repository's first runnable entry point) hit NO wall and recorded
+NO new honest non-closure. The capstone invents nothing: it boots the whole mind through cognitive_cycle,
+runs it for a chosen number of ticks, and narrates what the fifteen earlier packs already do, in rung
+order - the heartbeat with its per-tick reward, dopamine broadcast, released action, and observer record;
+the regulated body and the weight grown by the three-factor rule; the object-permanence forecast confirmed
+(signed error zero, stance superseded to observation) and surprised (signed error minus one, assertion
+retracted); a chain of combined thoughts; the false belief held in quarantine beside the world's contrary
+record; and the provenance layer standing behind and disowning the mind's own stances. The narration is
+structurally honest: it checks the dynamics before claiming them, its tests re-run the same world outside
+the story and measure the body and the weight directly, and the story closes by naming what it does not
+demonstrate (Rungs Two, Three, and Five, and the deployment-deferred signature of Observation-3). Gates:
+capstone_demonstration 20 of 20 Prolog Unit (PLUnit) tests pass (the earlier fifteen packs unchanged,
+112 tests; 132 in total); naming, layer, and layer-binding gates report zero violations; the Causalontology
+conformance suite is untouched and green at 137 of 137 (specification 4.0.0) in both cousins, re-measured
+this slice. No cousin was edited, per the Second, Third, and Fourth Commandments.
 
  Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 3.
