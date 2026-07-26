@@ -67,6 +67,75 @@
     % self_provenance_supersede/7: retract a stance and restate it under a new evidence grade.
     self_provenance_supersede/7
 ]).
+% Reuse symbol exchange: the first grounded words and the drive-coloured reply.
+:- use_module(library(symbol_exchange), [
+    % symbol_exchange_vocabulary/3: live the run and ground the standard two-word vocabulary.
+    symbol_exchange_vocabulary/3,
+    % symbol_exchange_reply/5: the pilot - the reply coloured by the mind's own drive state.
+    symbol_exchange_reply/5
+]).
+% Reuse pretend play: the pretend game sealed inside the five-reality quarantine.
+:- use_module(library(pretend_play), [
+    % pretend_play_reset/0: clear every reality before the pretend scene.
+    pretend_play_reset/0,
+    % pretend_play_transition_add/3: teach the one what-if transition the scene pretends over.
+    pretend_play_transition_add/3,
+    % pretend_play_pretend/3: roll the pretend scene forward through the taught transitions.
+    pretend_play_pretend/3,
+    % pretend_play_quarantined/1: the pretended fact is sealed in the imagined reality only.
+    pretend_play_quarantined/1,
+    % pretend_play_holds/2: check a fact against one named reality directly.
+    pretend_play_holds/2,
+    % pretend_play_promote/3: the guarded crossing - auditable between quarantined realities, refused into observed.
+    pretend_play_promote/3,
+    % pretend_play_thought/3: mint the pretend relation as a content-addressed thought.
+    pretend_play_thought/3,
+    % pretend_play_stance/3: the mind's simulation-graded stance on a pretend thought.
+    pretend_play_stance/3
+]).
+% Reuse empathy: the social pain, the empathy trial, and the retractable social attribution.
+:- use_module(library(empathy), [
+    % empathy_social_connection_drive/1: the standard social drive defending belonging.
+    empathy_social_connection_drive/1,
+    % empathy_rejection/2: the social severance signal over the body.
+    empathy_rejection/2,
+    % empathy_modelled_distress/3: the only sanctioned constructor of a modelled distress.
+    empathy_modelled_distress/3,
+    % empathy_resonance/3: modelled distress resonating into the mind's own belonging.
+    empathy_resonance/3,
+    % empathy_trial/5: the whole empathy trial - resonance, proposals, selection, applied help.
+    empathy_trial/5,
+    % empathy_trial_candidates/5: the trial up to selection, exposing the candidates.
+    empathy_trial_candidates/5,
+    % empathy_distress_record/3: the modelled distress minted as a shareable fears attitude.
+    empathy_distress_record/3,
+    % empathy_attribution_stance/3: the mind's observation-graded stance on its own attribution.
+    empathy_attribution_stance/3,
+    % empathy_attribution_retract/4: the honest exit when the attribution was mistaken.
+    empathy_attribution_retract/4
+]).
+% Reuse the drive system: the one error predicate both pains pass through, and the shared step.
+:- use_module(library(drive_system), [
+    % drive_system_error/3: the absolute distance of a monitored variable from its set-point.
+    drive_system_error/3,
+    % drive_system_step/6: one tick of the unchanged drive machinery, reward and broadcast included.
+    drive_system_step/6
+]).
+% Reuse the neuromodulator bus: reading the dopamine broadcast off the shared bus.
+:- use_module(library(neuromodulator_bus), [
+    % neuromodulator_bus_level/3: the level of one neuromodulator on the bus.
+    neuromodulator_bus_level/3
+]).
+% Reuse the override controller: breath still overrides kindness.
+:- use_module(library(override_controller), [
+    % override_controller_arbitrate/4: a vital drive in distress seizes control from any released action.
+    override_controller_arbitrate/4
+]).
+% Reuse the action selector: the released help must appear among the candidates.
+:- use_module(library(action_selector), [
+    % action_selector_is_candidate/2: the released outcome was proposed, never invented.
+    action_selector_is_candidate/2
+]).
 % Reuse the list library for membership checks over body state.
 :- use_module(library(lists), [
     % memberchk/2: find the monitored variable inside the body state list.
@@ -80,11 +149,12 @@
 % The capstone demonstration boots the whole mind and lets its own records tell what happened.
 % It is the Demonstration phase of the SPARCD method made runnable: one deterministic story,
 % told in rung order - the heartbeat and the regulated body (Rung Zero), the object-permanence
-% forecast and its signed surprise (Rung One), a combined thought, the false belief attributed
-% to another mind (Rung Four), and the provenance layer standing behind and, when the world
-% disagrees, honestly disowning the mind's own stances. The story claims only what is shown:
-% the rungs not yet demonstrated are named as such, and the records are declared unsigned,
-% because the signing key is a secret this code may never hold.
+% forecast and its signed surprise (Rung One), a combined thought, the first grounded words and
+% the pretend game under quarantine (Rung Two), the false belief attributed to another mind
+% (Rung Four), the rung's deepening - the social pain and the empathy trial - and the provenance
+% layer standing behind and, when the world disagrees, honestly disowning the mind's own stances.
+% The story claims only what is shown: the rungs not yet demonstrated are named as such, and the
+% records are declared unsigned, because the signing key is a secret this code may never hold.
 
 % capstone_demonstration_simulation_start(-Start): the fixed simulation start instant.
 capstone_demonstration_simulation_start("2026-07-26T00:00:00Z").
@@ -129,14 +199,18 @@ capstone_demonstration_story(NumTicks, Story) :-
     capstone_demonstration_prediction_lines(Prediction),
     % The combined thought: a chain of thought as content-addressed records.
     capstone_demonstration_thought_lines(Thought),
+    % Rung Two: the first grounded words, and the pretend game under quarantine.
+    capstone_demonstration_first_words_lines(FirstWords),
     % Rung Four: the false belief attributed to another mind, exported as an attitude record.
     capstone_demonstration_social_lines(AttitudeRecord, Social),
+    % Rung Four, deepened: the social pain and the empathy trial.
+    capstone_demonstration_empathy_lines(Empathy),
     % The provenance layer: the mind grades, supersedes, and retracts its own stances.
     capstone_demonstration_provenance_lines(AttitudeRecord, Provenance),
     % The honest limits: what this story does not claim.
     capstone_demonstration_epilogue_lines(Epilogue),
     % The story is the sections joined in rung order.
-    append([Title, Heartbeat, Prediction, Thought, Social, Provenance, Epilogue], Story).
+    append([Title, Heartbeat, Prediction, Thought, FirstWords, Social, Empathy, Provenance, Epilogue], Story).
 
 % capstone_demonstration_check_ticks(+NumTicks): the tick count must be an integer of at least six.
 capstone_demonstration_check_ticks(NumTicks) :-
@@ -291,6 +365,111 @@ capstone_demonstration_thought_lines(Lines) :-
         "The first thought's effect is the second thought's cause: a chain of thought, checkable from the records alone."
     ].
 
+% capstone_demonstration_first_words_lines(-Lines): Rung Two narrated - the first words, and the pretend game.
+capstone_demonstration_first_words_lines(Lines) :-
+    % The words grow from the same boot world the heartbeat lived.
+    capstone_demonstration_world(World0),
+    % Live ten ticks and ground the standard two-word vocabulary in the conditions actually lived.
+    symbol_exchange_vocabulary(World0, 10, Groundings),
+    % The story only claims the grounding the run achieved: both words, each in a lived condition.
+    Groundings == [grounding(warm, in_deficit), grounding(settled, satisfied)],
+    % Read the two groundings for the narration.
+    Groundings = [grounding(DeficitWord, DeficitCondition), grounding(SatisfiedWord, SatisfiedCondition)],
+    % The pilot's drive: the same temperature drive the heartbeat runs on.
+    ReplyDrives = [drive(temperature, temperature, 37, none)],
+    % Ask while the body runs warm.
+    symbol_exchange_reply(Groundings, ReplyDrives, [temperature-40], [how, are, you], DeficitReply),
+    % Ask the same words while the body sits at the set-point.
+    symbol_exchange_reply(Groundings, ReplyDrives, [temperature-37], [how, are, you], SatisfiedReply),
+    % The story only claims the discriminator the run achieved: in deficit, the state word then the sought word.
+    DeficitReply == [warm, settled],
+    % Satisfied, the state word alone.
+    SatisfiedReply == [settled],
+    % The same heard words really drew different replies in different drive states.
+    DeficitReply \== SatisfiedReply,
+    % Join the deficit reply's words for the narration.
+    atomic_list_concat(DeficitReply, " ", DeficitText),
+    % Join the satisfied reply's words for the narration.
+    atomic_list_concat(SatisfiedReply, " ", SatisfiedText),
+    % Start the pretend runtime from a clean slate, so the telling is deterministic.
+    pretend_play_reset,
+    % Teach the one what-if transition the scene pretends over.
+    pretend_play_transition_add(settled, sun_beats_down, too_warm),
+    % Roll the pretend scene forward through the taught transition.
+    pretend_play_pretend(settled, [sun_beats_down], Trajectory),
+    % The story only claims the trajectory the pretend achieved.
+    Trajectory == [settled, too_warm],
+    % The pretended state is sealed in the imagined reality only.
+    pretend_play_quarantined(visited(too_warm)),
+    % The observed record never holds the pretended state.
+    \+ pretend_play_holds(observed, visited(too_warm)),
+    % A deliberate, auditable crossing carries the pretended state into expectation.
+    pretend_play_promote(imagined, visited(too_warm), expected),
+    % The crossing really happened.
+    pretend_play_holds(expected, visited(too_warm)),
+    % The crossing into observed is refused by name - the story shows the refusal, never the success.
+    catch(pretend_play_promote(imagined, visited(too_warm), observed),
+          error(pretend_play_forbidden_promotion(visited(too_warm)), _),
+          Refused = true),
+    % The refusal really fired.
+    Refused == true,
+    % Even after the auditable crossing and the refused one, the observed record still holds nothing pretended.
+    \+ pretend_play_holds(observed, visited(too_warm)),
+    % Mint the pretend relation as a content-addressed thought.
+    pretend_play_thought("sun_beats_down", "body_too_warm", PretendThought),
+    % Read the pretend thought's content-addressed identifier.
+    get_dict(id, PretendThought, PretendIdentifier),
+    % The story's fixed simulation start stamps the stance.
+    capstone_demonstration_simulation_start(Start),
+    % The mind's stance on its pretend thought is graded simulation, never observation.
+    pretend_play_stance(PretendThought, Start, PretendStance),
+    % The stance really carries the simulation grade.
+    get_dict(evidence_type, PretendStance, "simulation"),
+    % The stance really is about the pretend thought.
+    get_dict(about, PretendStance, PretendIdentifier),
+    % Read the stance's content-addressed identifier.
+    get_dict(id, PretendStance, StanceIdentifier),
+    % The grounding's line.
+    format(string(GroundingLine),
+           "Living ten ticks from its too-warm boot, the mind lives both of its conditions and grounds two words in them: ~w in ~w, and ~w in ~w.",
+           [DeficitWord, DeficitCondition, SatisfiedWord, SatisfiedCondition]),
+    % The deficit reply's line.
+    format(string(DeficitLine),
+           "In deficit - its temperature at 40 against the defended 37 - it answers: ~w.",
+           [DeficitText]),
+    % The satisfied reply's line.
+    format(string(SatisfiedLine),
+           "Satisfied - its temperature at the set-point - it answers: ~w.",
+           [SatisfiedText]),
+    % The pretend trajectory's line.
+    format(string(TrajectoryLine),
+           "Pretending the sun beats down on a settled body, the scene rolls forward: ~w - and every visited state is sealed in the imagined reality.",
+           [Trajectory]),
+    % The pretend thought's line.
+    format(string(ThoughtLine),
+           "The pretend thought - sun beats down causes body too warm - is minted as ~w.",
+           [PretendIdentifier]),
+    % The stance's line.
+    format(string(StanceLine),
+           "The mind's stance on it is graded simulation at confidence 0.5, minted as ~w: pretend evidence never outranks observation.",
+           [StanceIdentifier]),
+    % The rung's lines in order.
+    Lines = [
+        "",
+        "RUNG TWO - THE FIRST WORDS, AND PRETENDING WITHOUT LYING",
+        "Words are not labels pasted on things: a word may be grounded only in a condition the mind actually lived.",
+        GroundingLine,
+        "Asked the same heard words twice - how, are, you - the reply is coloured by the drive state, not by a script.",
+        DeficitLine,
+        SatisfiedLine,
+        "Then the mind pretends, without lying: the pretend game runs inside the five-reality quarantine.",
+        TrajectoryLine,
+        "A deliberate, auditable crossing may carry a pretended state into expectation - and here it does.",
+        "But the crossing into the observed record is refused outright, in the pack's own words: pretend may never be promoted into the observed record.",
+        ThoughtLine,
+        StanceLine
+    ].
+
 % capstone_demonstration_social_lines(-AttitudeRecord, -Lines): Rung Four narrated - the false belief.
 capstone_demonstration_social_lines(AttitudeRecord, Lines) :-
     % Start the social scene from a clean runtime.
@@ -328,6 +507,150 @@ capstone_demonstration_social_lines(AttitudeRecord, Lines) :-
         "The mind even nests the model: konnectome models konnectome modelling Sally's belief.",
         SearchLine,
         ExportLine
+    ].
+
+% capstone_demonstration_empathy_lines(-Lines): Rung Four deepened - the social pain and the empathy trial.
+capstone_demonstration_empathy_lines(Lines) :-
+    % A physical thwarting: the body one degree from its defended set-point.
+    drive_system_error(drive(temperature, temperature, 37, none), [temperature-38], PhysicalError),
+    % The standard social drive: belonging defended at a set-point of one.
+    empathy_social_connection_drive(SocialDrive),
+    % Connection at the set-point carries no error.
+    drive_system_error(SocialDrive, [belonging-1], ConnectedError),
+    % The story only claims the satisfaction the numbers show.
+    ConnectedError =:= 0,
+    % The severance: a rejection drops belonging to zero.
+    empathy_rejection([belonging-1], RejectedBody),
+    % The social severance read through the very same predicate as the physical thwarting.
+    drive_system_error(SocialDrive, RejectedBody, SocialError),
+    % The story only claims the equivalence the numbers show: the two pains are equal.
+    PhysicalError =:= SocialError,
+    % One tick of the unchanged drive machinery over the severed connection.
+    drive_system_step([drive(social_connection, belonging, 1, 0)], [belonging-0], [], _PainDrives, PainReward, PainBus),
+    % The story only claims the pain the machinery produced.
+    PainReward =:= -1,
+    % The pain is broadcast as dopamine on the shared bus.
+    neuromodulator_bus_level(PainBus, dopamine, PainLevel),
+    % The story only claims the broadcast the bus carries.
+    PainLevel =:= -1,
+    % One tick of the same machinery over the restored connection.
+    drive_system_step([drive(social_connection, belonging, 1, 1)], [belonging-1], [], _ReliefDrives, ReliefReward, _ReliefBus),
+    % The story only claims the relief the machinery produced.
+    ReliefReward =:= 1,
+    % Two drives compete in the trial: a mildly pressing temperature and a satisfied connection.
+    TrialDrives = [drive(temperature, temperature, 37, none), SocialDrive],
+    % The shared body the trial starts from.
+    TrialBody = [temperature-37.5, belonging-1],
+    % With Ana fine, there is no distress to model.
+    empathy_modelled_distress(ana, 0, NoDistress),
+    % The calm trial.
+    empathy_trial(NoDistress, TrialDrives, TrialBody, CalmOutcome, _CalmBody),
+    % The story only claims the calm selection the trial made: the mind tends its own temperature.
+    CalmOutcome == released(reduce(temperature)),
+    % With Ana in full distress, the mind models her trouble.
+    empathy_modelled_distress(ana, 1, FullDistress),
+    % Resonance alone: modelling her distress lowers the mind's OWN belonging.
+    empathy_resonance(FullDistress, [belonging-1], ResonatedBody),
+    % The story only claims the resonance the machinery produced.
+    ResonatedBody == [belonging-0],
+    % The empathy trial: resonance, proposals, selection, applied help.
+    empathy_trial(FullDistress, TrialDrives, TrialBody, HelpOutcome, HelpedBody),
+    % The story only claims the flip the trial made: the helping action is released.
+    HelpOutcome == released(reduce(social_connection)),
+    % The help restored belonging exactly to its set-point.
+    memberchk(belonging-HelpedBelonging, HelpedBody),
+    % Settled at the set-point, never past it.
+    HelpedBelonging =:= 1,
+    % The help left the temperature untouched.
+    memberchk(temperature-HelpedTemperature, HelpedBody),
+    % The other drive's variable is exactly where it stood.
+    HelpedTemperature =:= 37.5,
+    % The trial up to selection, exposing the candidates the drives proposed.
+    empathy_trial_candidates(FullDistress, TrialDrives, TrialBody, Candidates, CandidateOutcome),
+    % The released help appears among the candidates: proposed by the drives, never invented.
+    action_selector_is_candidate(CandidateOutcome, Candidates),
+    % A partial distress: level 0.4.
+    empathy_modelled_distress(ana, 0.4, PartialDistress),
+    % The trial over the social drive alone.
+    empathy_trial(PartialDistress, [SocialDrive], [belonging-1], PartialOutcome, PartialBody),
+    % The proportionate help was released.
+    PartialOutcome == released(reduce(social_connection)),
+    % Read where the help landed belonging.
+    memberchk(belonging-LandedBelonging, PartialBody),
+    % The story only claims the landing the capped step achieved: exactly at the set-point.
+    LandedBelonging =:= 1,
+    % Respiration in distress arbitrates against the released help.
+    override_controller_arbitrate([override(respiration, 0, 0.9, breathe)], 0.5, released(reduce(social_connection)), BreathOutcome),
+    % The story only claims the override the arbiter made: breath wins.
+    BreathOutcome == released(breathe),
+    % The story's fixed simulation start stamps the social records.
+    capstone_demonstration_simulation_start(Start),
+    % The modelled distress is owned on the record as a shareable fears attitude.
+    empathy_distress_record("ana", Start, DistressRecord),
+    % The attitude really is the standard's fears attitude.
+    get_dict(attitude_type, DistressRecord, "fears"),
+    % Read the attitude's content-addressed identifier.
+    get_dict(id, DistressRecord, DistressIdentifier),
+    % The mind's stance on its own attribution: observation grade, confidence 0.8.
+    empathy_attribution_stance(DistressRecord, Start, AttributionStance),
+    % The stance really carries the observation grade.
+    get_dict(evidence_type, AttributionStance, "observation"),
+    % Read the stance's content-addressed identifier.
+    get_dict(id, AttributionStance, AttributionStanceIdentifier),
+    % Ana turns out to be fine: the misattributed distress is withdrawn.
+    empathy_attribution_retract(AttributionStance,
+                                "the modelled distress was misattributed; the agent is well",
+                                Start, AttributionRetraction),
+    % The withdrawal really targets the stance.
+    get_dict(retracts, AttributionRetraction, AttributionStanceIdentifier),
+    % Read the withdrawal's content-addressed identifier.
+    get_dict(id, AttributionRetraction, AttributionRetractionIdentifier),
+    % The equivalence's line.
+    format(string(EquivalenceLine),
+           "A physical thwarting of one degree and a social severance of one unit read the same through the identical predicate: error ~w equals error ~w.",
+           [PhysicalError, SocialError]),
+    % The pain and relief line.
+    format(string(PainLine),
+           "One tick after the severance the unchanged machinery answers with reward ~w, broadcast as dopamine ~w - machine social pain; restored, it answers with reward ~w - machine relief.",
+           [PainReward, PainLevel, ReliefReward]),
+    % The calm trial's line.
+    format(string(CalmLine),
+           "With Ana fine, the mind tends its own mildly pressing temperature: ~w.",
+           [CalmOutcome]),
+    % The flip's line.
+    format(string(FlipLine),
+           "With Ana in full distress the selection flips and the helping action is released - ~w - proposed by the drives, never invented, restoring belonging to ~w.",
+           [HelpOutcome, HelpedBelonging]),
+    % The proportionate help's line.
+    format(string(PartialLine),
+           "A partial distress of 0.4 draws a proportionate help that lands belonging exactly at ~w - settled at the set-point, never past it.",
+           [LandedBelonging]),
+    % The override's line.
+    format(string(BreathLine),
+           "And breath still overrides kindness: with respiration in distress, the arbiter answers ~w.",
+           [BreathOutcome]),
+    % The record's line.
+    format(string(RecordLine),
+           "The social read is owned on the record: Ana FEARS her connection severed, minted as ~w, held at observation grade by assertion ~w.",
+           [DistressIdentifier, AttributionStanceIdentifier]),
+    % The honest exit's line.
+    format(string(RetractionLine),
+           "Ana turns out to be fine, so the misattributed distress is withdrawn: ~w - the honest exit, over a claim about another's heart.",
+           [AttributionRetractionIdentifier]),
+    % The deepening's lines in order.
+    Lines = [
+        "",
+        "RUNG FOUR, DEEPENED - THE SOCIAL PAIN AND THE EMPATHY TRIAL",
+        "A rejection is not a metaphor here: the social_connection drive defends a body variable called belonging at a set-point of 1, exactly as the temperature drive defends 37.",
+        EquivalenceLine,
+        PainLine,
+        "Modelling Ana in full distress lowers the mind's OWN belonging - it feels worse because she does.",
+        CalmLine,
+        FlipLine,
+        PartialLine,
+        BreathLine,
+        RecordLine,
+        RetractionLine
     ].
 
 % capstone_demonstration_provenance_social_stance(+AttitudeIdentifier, -SocialAssertionIdentifier): the mind stands behind its attribution.
@@ -431,7 +754,7 @@ capstone_demonstration_epilogue_lines(Lines) :-
     Lines = [
         "",
         "WHAT IS HONESTLY NOT DEMONSTRATED",
-        "Rung Two (symbols and pretend play), Rung Three (concrete reasoning), and Rung Five (embodiment) are not yet demonstrated, and this story does not claim them.",
+        "Rung Three (concrete reasoning) and Rung Five (embodiment) are not yet demonstrated - nor are Rung Four's appraisal and regulation pilots - and this story does not claim them.",
         "Every record above is content-addressed and shareable, but unsigned: the Ed25519 private key is a secret barred from this code, so signing is a deployment act, and a strict consumer quarantines these records until the key-holder signs them.",
         "This has been the whole of the mind, told by its own records. Nothing above is claimed that a reader cannot re-mint, re-run, and check."
     ].
