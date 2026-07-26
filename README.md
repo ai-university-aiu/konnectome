@@ -73,7 +73,7 @@ Each badge above is a claim, and every claim deserves a plain explanation. Here 
 
 - **`PARENT ORG | AI-UNIVERSITY-AIU`** - the parent organization that owns konnectome and its cousins.
 - **`COUSINS | PROLOGAI + CAUSALONTOLOGY + MENTOVA`** - konnectome's sibling repositories: PrologAI (the language), Causalontology (the data structure), and Mentova (the flagship Synthetic Mind and home of the reasoning core). The badge links to Mentova.
-- **`STATUS | THE MIND RUNS AND TELLS ITS STORY`** - the honest current state: eighteen slices have landed (nineteen packs, 197 tests, all green, four standing gates), all ten architecture components run as one loop, Rung Two of the ladder is open (first grounded words and quarantined pretend play), Rung Four is deepened (social pain and the empathy trial), and one command - `bin/run_capstone_demonstration.sh` - boots the mind and prints its whole glass-box story, which now speaks its first words and feels another's trouble in its own telling.
+- **`STATUS | THE MIND RUNS AND TELLS ITS STORY`** - the honest current state: nineteen slices have landed (twenty-one packs, 221 tests, all green, four standing gates), all ten architecture components run as one loop, Rung Two of the ladder is open (first grounded words and quarantined pretend play), Rung Four is finished (social pain, the empathy trial, and the appraisal and regulation pilots), and one command - `bin/run_capstone_demonstration.sh` - boots the mind and prints its whole glass-box story, which now speaks its first words and feels another's trouble in its own telling.
 
 </details>
 
@@ -127,12 +127,12 @@ The six-phase waterfall is mirrored in six versioned documents, each seeded verb
 
 | Phase | File | Seeded from |
 |---|---|---|
-| 1. Specification | [`docs/konnectome_1_specification_v19.txt`](docs/konnectome_1_specification_v19.txt) | Appendix 1 |
-| 2. Pseudocode | [`docs/konnectome_2_pseudocode_v19.txt`](docs/konnectome_2_pseudocode_v19.txt) | Appendix 2 |
-| 3. Architecture | [`docs/konnectome_3_architecture_v19.txt`](docs/konnectome_3_architecture_v19.txt) | Appendix 3 |
-| 4. Refinement | [`docs/konnectome_4_refinement_v19.txt`](docs/konnectome_4_refinement_v19.txt) | Appendix 4 |
-| 5. Completion | [`docs/konnectome_5_completion_v19.txt`](docs/konnectome_5_completion_v19.txt) | Appendix 5 |
-| 6. Demonstration | [`docs/konnectome_6_demonstration_v19.txt`](docs/konnectome_6_demonstration_v19.txt) | Appendix 6 |
+| 1. Specification | [`docs/konnectome_1_specification_v20.txt`](docs/konnectome_1_specification_v20.txt) | Appendix 1 |
+| 2. Pseudocode | [`docs/konnectome_2_pseudocode_v20.txt`](docs/konnectome_2_pseudocode_v20.txt) | Appendix 2 |
+| 3. Architecture | [`docs/konnectome_3_architecture_v20.txt`](docs/konnectome_3_architecture_v20.txt) | Appendix 3 |
+| 4. Refinement | [`docs/konnectome_4_refinement_v20.txt`](docs/konnectome_4_refinement_v20.txt) | Appendix 4 |
+| 5. Completion | [`docs/konnectome_5_completion_v20.txt`](docs/konnectome_5_completion_v20.txt) | Appendix 5 |
+| 6. Demonstration | [`docs/konnectome_6_demonstration_v20.txt`](docs/konnectome_6_demonstration_v20.txt) | Appendix 6 |
 
 ## The build ladder
 
@@ -174,6 +174,8 @@ konnectome/
     symbol_exchange/           Slice 15: first words, grounded in lived experience (reuses PrologAI language).
     pretend_play/              Slice 15: pretend under the five-reality quarantine (reuses PrologAI imagination).
     empathy/                   Slice 16: social pain through the shared drive machinery, and the empathy trial.
+    situation_appraisal/       Slice 19: a situation appraised good or bad for the mind's own goals (reuses drive_system).
+    arousal_regulation/        Slice 19: an aroused state brought back to baseline (reuses neuromodulator_bus).
   docs/
     konnectome_1..6_*_vN.txt   The SPARCD Fileset (seeded from the appendices; versioned per slice).
     konnectome_ledger_v1.txt   The running scoreboard of findings (Fourth Commandment).
@@ -189,7 +191,7 @@ konnectome/
 
 ## Status
 
-The build has begun and is climbing the ladder. Eighteen slices have landed on `main` (nineteen packs, 197 tests, all green):
+The build has begun and is climbing the ladder. Nineteen slices have landed on `main` (twenty-one packs, 221 tests, all green):
 
 - **Slice 1 - the heartbeat** (`tick_engine`): the Scheduler and Tick Engine (Component 2), with the two-pass synchronous update. 7 of 7 tests.
 - **Slice 2 - archetypes and the first thought** (`archetype`, `observer`): the six dynamical archetype rules (Appendix 2, Section A2.3) and the observer recording each tick as a Causalontology `token_occurrence` (Component 9) via the reused `causal_core`. 7 of 7 and 6 of 6 tests; the 119 conformance vectors stay green.
@@ -217,7 +219,9 @@ The build has begun and is climbing the ladder. Eighteen slices have landed on `
 
 - **Slice 18 - the capstone grows: the story learns Rung Two and the empathy deepening** (`capstone_demonstration` 0.2.0): the one runnable command that tells the whole mind's glass-box story gained **two new chapters**. Rung Two now sounds in the telling - the mind grounds its first words in conditions it actually lived and answers the same question differently in deficit and at rest, then pretends inside the five-reality quarantine with promotion into the observed record refused by name. And Rung Four's deepening joins it - the social pain read through the identical drive machinery, and the empathy trial in which modelling another's distress flips the selection to help, with breath still overriding kindness. Every new chapter carries its own **independent dynamics check**, so the story still cannot grade its own homework, and the printed honest-limits list **shrank by one rung**: Rung Two is no longer named as undemonstrated. Deterministic as ever, told twice identically. 36 of 36 tests (grown from 20); the 137 conformance vectors green in both cousins. **No new wall.**
 
-Next: with Rung Two open, Rung Four deepened, and the capstone now telling both, konnectome climbs on - the appraisal and regulation pilots of Rung Four remain (the last of that rung), and Sections C, D, and E of the Causalontology change order remain held for the walls a future slice may find. This README, and every badge on it, is kept honest as the build climbs.
+- **Slice 19 - Rung Four finished: the appraisal and regulation pilots** (`situation_appraisal`, `arousal_regulation`): the rung's last two behaviours, built as thin reuse wrappers with **no eleventh component for emotion and no new Causalontology kind**. `situation_appraisal` judges a situation good or bad for the mind's **own goals**, read straight from the drives' set-point error via `drive_system_error` - a violated set-point is a **threat the mind fears**, a met or improving one is **good and desired** - and owns the verdict as an attitude of the standard's closed enumeration, graded `observation` and **retracted** under Rule 10 when the world corrects it. `arousal_regulation` takes an aroused state carried as **norepinephrine on the neuromodulatory bus** and returns it toward its tonic baseline over ticks, each tick closing half the remaining distance and **settling exactly at baseline, never overshooting** - the same homeostatic discipline the drive system's own capped step keeps. One honest observation recorded (Observation-4): the closed attitude enumeration has no word for *satisfaction*, so a met set-point is approximated as a *desire to keep* it. 12 of 12 and 12 of 12 tests; the 137 conformance vectors green in both cousins. **No new wall.**
+
+Next: with **Rung Four now finished** (smoke test, theory of mind, empathy, appraisal, and regulation all realized), konnectome turns to the rungs still unopened - **Rung Three** (concrete reasoning: logic and cause-and-effect) and **Rung Five** (embodiment) - while Sections C, D, and E of the Causalontology change order remain held for the walls a future slice may find. This README, and every badge on it, is kept honest as the build climbs.
 
 ## License and attribution
 
