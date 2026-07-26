@@ -1,5 +1,7 @@
 CAUSALONTOLOGY 3.0.0 - TOP-TO-BOTTOM REVIEW, AND WHETHER A 4.0.0 IS NEEDED
 
+STALENESS NOTE (2026-07-26): this review is kept as the historical rationale. Its recommendation - let konnectome's build surface the need, then cut one coordinated 4.0.0 - was followed exactly: build slice 11 hit Wall-1 (attitude) and Wall-2 (prediction), those findings released Sections B and A of the change order, and Causalontology 4.0.0 shipped on 2026-07-22 (twenty-one kinds, 137 conformance vectors) and went live on its first public registries on 2026-07-26. Read this document as the reasoning that led there, not as the current state.
+
 A review prepared for D. R. Dison / ai-university-aiu, holding three documents in view at once: the live Causalontology Standalone Design version 22 (the 3.0.0 edition); Nature's Cognitive Architecture version 19 (the guide whose Systems-Programming-Analysis-Refinement-Completion, SPARC, appendices konnectome will express in code); and The Roadmap to Artificial General Intelligence and Super Intelligence. The frame is the stated stack: Causalontology is the data structure, PrologAI is the programming language built on it, and the as-yet-unborn konnectome repository is the application, written in PrologAI, that expresses the guide.
 
 
