@@ -107,7 +107,7 @@ ARCHITECTURE, VERSION 20"; the manuscript's document-level CHANGE LOG that follo
 versioning metadata, not appendix content, and was deliberately not carried in.
 
 Per the Tenth Commandment, every code slice bumps the SPARCD Fileset. The current
-version is v17 (bumped in lockstep by slice 16); every superseded version lives in
+version is v18 (bumped in lockstep by slice 17); every superseded version lives in
 docs/archive/.
 
 
@@ -559,5 +559,26 @@ of 17, drive_system 10 of 10, and symbol_exchange 19 of 19 Prolog Unit (PLUnit) 
 conformance suite is untouched and green at 137 of 137 (specification 4.0.0) in both cousins. Honest remaining ascent, recorded as pending refinements, not walls: the appraisal pilot and the
 regulation pilot of Rung Four, and the capstone story joining Rung Two and this deepening into its
 telling under a bumped version. No cousin was edited, per the Second, Third, and Fourth Commandments.
+
+Slice-17 note (2026-07-26). The last slice-15 review debt is paid, and the DECISION the debt asked for
+is recorded here precisely. The finding: the refusal to promote pretend into the observed record lived
+only in pretend_play's own interface, while the reused imagination pack's crossing predicates
+(imagination_promote/3, imagination_assert/2) remained callable, unguarded, by any pack on the shared
+library path - so the documented rule held by good behaviour, not by construction. The two honest
+options were (a) keep it a build discipline and interface-scope every documentary claim, or (b) harden
+konnectome-side and make the discipline checkable. THE DECISION IS (b): a fourth standing gate,
+bin/check_reality_discipline.sh, now refuses any merge in which a konnectome source or test line
+outside packs/pretend_play references any imagination-pack predicate at all - plain-English comment
+lines excused, because English Readable Code must be free to discuss what it fences. The gate was
+proven able to fail before it was trusted to pass: a deliberate violation was injected, caught by file
+and line, and removed. The reused imagination pack itself is untouched (it is a cousin's code and
+remains exactly as shipped); what is fenced is konnectome's own reach. The companion mark from the
+same review - the malformed drive term failing silently in symbol_exchange_condition/3 - was already
+closed by slice 16 with the named refusal symbol_exchange_bad_drive and its permanent test. Nothing
+now remains of the slice-15 review's confirmed findings: each is fixed with a permanent test or
+enforced by a standing gate. Gates: no test count moved (181 across nineteen packs, all green);
+naming, layer, layer-binding, and the new reality-discipline gate all report zero violations; the
+Causalontology conformance suite is untouched and green at 137 of 137 (specification 4.0.0) in both
+cousins. No new wall; no cousin edited, per the Second, Third, and Fourth Commandments.
 
  Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 3.
