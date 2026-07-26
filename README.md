@@ -101,7 +101,7 @@ konnectome does not edit its cousins in place. When a real build hits a wall the
 
 ## How konnectome is governed: the Constitution
 
-konnectome is built and maintained under a written [**CONSTITUTION.md**](CONSTITUTION.md) of fourteen commandments. In brief:
+konnectome is built and maintained under a written [**CONSTITUTION.md**](CONSTITUTION.md) of sixteen commandments. In brief:
 
 1. **AGI and ASI in mind** - built toward Artificial General Intelligence and Artificial Super Intelligence, guided by three roadmap documents in `docs/`.
 2. **Causalontology is the thought structure** - frozen to konnectome except through the gated change-order process.
@@ -117,6 +117,8 @@ konnectome is built and maintained under a written [**CONSTITUTION.md**](CONSTIT
 12. **Whole-Word System** - whole English words, snake_case, pack-qualified, no terse prefixes.
 13. **The safety gate** - no change may regress ARC-AGI-1, ARC-AGI-2, or the 137-vector Causalontology conformance suite.
 14. **Branch and report discipline** - feature branches and pull requests; no direct pushes to main; no artificial-intelligence tool credited as author; no Roman numerals.
+15. **The tutorial** - a maintained, beginner-friendly [`docs/konnectome_tutorial`](docs/konnectome_tutorial_v11.txt), kept current and versioned under the archive discipline.
+16. **Context-window management and the hand-off protocol** - when the window runs high, a durable Context Hand-Off is written and the session paused, so a fresh session reloads state from `docs/` and continues from a known-good baseline.
 
 ## The SPARCD Fileset
 
@@ -124,12 +126,12 @@ The six-phase waterfall is mirrored in six versioned documents, each seeded verb
 
 | Phase | File | Seeded from |
 |---|---|---|
-| 1. Specification | [`docs/konnectome_1_specification_v13.txt`](docs/konnectome_1_specification_v13.txt) | Appendix 1 |
-| 2. Pseudocode | [`docs/konnectome_2_pseudocode_v13.txt`](docs/konnectome_2_pseudocode_v13.txt) | Appendix 2 |
-| 3. Architecture | [`docs/konnectome_3_architecture_v13.txt`](docs/konnectome_3_architecture_v13.txt) | Appendix 3 |
-| 4. Refinement | [`docs/konnectome_4_refinement_v13.txt`](docs/konnectome_4_refinement_v13.txt) | Appendix 4 |
-| 5. Completion | [`docs/konnectome_5_completion_v13.txt`](docs/konnectome_5_completion_v13.txt) | Appendix 5 |
-| 6. Demonstration | [`docs/konnectome_6_demonstration_v13.txt`](docs/konnectome_6_demonstration_v13.txt) | Appendix 6 |
+| 1. Specification | [`docs/konnectome_1_specification_v14.txt`](docs/konnectome_1_specification_v14.txt) | Appendix 1 |
+| 2. Pseudocode | [`docs/konnectome_2_pseudocode_v14.txt`](docs/konnectome_2_pseudocode_v14.txt) | Appendix 2 |
+| 3. Architecture | [`docs/konnectome_3_architecture_v14.txt`](docs/konnectome_3_architecture_v14.txt) | Appendix 3 |
+| 4. Refinement | [`docs/konnectome_4_refinement_v14.txt`](docs/konnectome_4_refinement_v14.txt) | Appendix 4 |
+| 5. Completion | [`docs/konnectome_5_completion_v14.txt`](docs/konnectome_5_completion_v14.txt) | Appendix 5 |
+| 6. Demonstration | [`docs/konnectome_6_demonstration_v14.txt`](docs/konnectome_6_demonstration_v14.txt) | Appendix 6 |
 
 ## The build ladder
 
@@ -169,7 +171,7 @@ konnectome/
   docs/
     konnectome_1..6_*_vN.txt   The SPARCD Fileset (seeded from the appendices; versioned per slice).
     konnectome_ledger_v1.txt   The running scoreboard of findings (Fourth Commandment).
-    konnectome_tutorial_v10.txt A complete beginner tutorial (Fifteenth Commandment), versioned.
+    konnectome_tutorial_v11.txt A complete beginner tutorial (Fifteenth Commandment), versioned.
     PrologAI_CHANGE_ORDER_v2.txt        Additive PrologAI-language gaps (Third Commandment); Wall-3 closed by causal_core 1.1.0.
     Causalontology_4_0_0_CHANGE_ORDER_v3.txt   Data-structure gaps for the frozen ontology (Sections A and B shipped as 4.0.0; C, D, E held).
     NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt  The source book.
@@ -180,7 +182,7 @@ konnectome/
 
 ## Status
 
-The build has begun and is climbing the ladder. Twelve slices have landed on `main` (fourteen packs, 95 tests, all green):
+The build has begun and is climbing the ladder. Thirteen slices have landed on `main` (fifteen packs, 112 tests, all green):
 
 - **Slice 1 - the heartbeat** (`tick_engine`): the Scheduler and Tick Engine (Component 2), with the two-pass synchronous update. 7 of 7 tests.
 - **Slice 2 - archetypes and the first thought** (`archetype`, `observer`): the six dynamical archetype rules (Appendix 2, Section A2.3) and the observer recording each tick as a Causalontology `token_occurrence` (Component 9) via the reused `causal_core`. 7 of 7 and 6 of 6 tests; the 119 conformance vectors stay green.
@@ -196,7 +198,9 @@ The build has begun and is climbing the ladder. Twelve slices have landed on `ma
 
 - **Slice 12 - the closure: minting the new kinds** (`other_minds`, `prediction_loop`): the export half. With **Causalontology 4.0.0** shipped (twenty-one kinds, the conformance suite re-frozen at 137 vectors) and PrologAI's **`causal_core` 1.1.0** making the new kinds mintable, `other_minds` (0.2.0) now mints the attributed belief - true, false, and nested - as **attitude** records and exports the false-belief trial's predicted search as a shareable record, and `prediction_loop` (0.2.0) mints the **predicted_occurrence**, the actual `token_occurrence`, and the **prediction_error** carrying the signed discrepancy. 10 of 10 and 16 of 16 tests; the 137 conformance vectors stay green at Causalontology 4.0.0 in both cousins. **Wall-1, Wall-2, and Wall-3 are all CLOSED** - the two data-structure walls by Causalontology 4.0.0, and Wall-3 (the closure's own wall: `causal_core` could not yet mint the new kinds) by `causal_core` 1.1.0 the same day.
 
-Next: with the two developmental-ladder milestones now both run AND exported, konnectome climbs on - the base rungs stand, thought combination and the social and predictive milestones are recorded as shared records, and Sections C, D, and E of the Causalontology change order remain held for the walls a future slice may find. This README, and every badge on it, is kept honest as the build climbs.
+- **Slice 13 - the provenance layer: the mind grades and disowns its own thoughts** (`self_provenance`): konnectome now exercises the Causalontology **provenance tier** over the records it minted at slice 12. It mints an **assertion** about one of its own `attitude`, `predicted_occurrence`, or `prediction_error` records - carrying its own source identity, an **evidence grade** on the standard's ordered scale (`intervention` > `observation` > `simulation` > `derivation` > `human_hint` > `imported`), and a confidence - and a **retraction** that withdraws a prior assertion under the same source (Rule 10), so a disconfirmed forecast is disowned honestly; a confirmed forecast is **superseded** from `simulation` to `observation`. The Rule 25 distinction between an attitude's modelled **holder** and an assertion's signing **source** is demonstrated (conformance vector V135). 17 of 17 tests; the 137 conformance vectors stay green in both cousins. **No new wall** - this slice closes the slice-12 honest non-closure (the mind had minted its records but not yet graded them). One honest limit recorded: the Ed25519 **signature** needs a private key, a secret barred from code (Constraint 3), so signing is a deployment-time act and the minted records carry the public source identity, content-addressed and shareable without it.
+
+Next: with the mind now grading and correcting its own thoughts on the record, konnectome climbs on - the base rungs stand, the social and predictive milestones are recorded as shared records, the provenance tier is exercised over them, and Sections C, D, and E of the Causalontology change order remain held for the walls a future slice may find. This README, and every badge on it, is kept honest as the build climbs.
 
 ## License and attribution
 
