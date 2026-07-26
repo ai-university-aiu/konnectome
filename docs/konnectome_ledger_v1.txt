@@ -107,7 +107,7 @@ ARCHITECTURE, VERSION 20"; the manuscript's document-level CHANGE LOG that follo
 versioning metadata, not appendix content, and was deliberately not carried in.
 
 Per the Tenth Commandment, every code slice bumps the SPARCD Fileset. The current
-version is v15 (bumped in lockstep by slice 14); every superseded version lives in
+version is v16 (bumped in lockstep by slice 15); every superseded version lives in
 docs/archive/.
 
 
@@ -196,6 +196,25 @@ deepened; PENDING = not built yet.
     layer asserting, grading, superseding, and retracting over those records. Deterministic:
     the story told twice is identical. The story itself names the rungs not yet demonstrated
     and the deployment-deferred signature. Reads its siblings only through the library path.)
+
+ THE DEVELOPMENTAL LADDER, RUNG TWO (Appendix 6, Section A6.3a) - opened
+ -----------------------------------------------------------------------------------
+ Symbol exchange (smoke test)  | symbol_exchange (reuses PrologAI language)    | REALIZED
+ Pretend under quarantine      | pretend_play (reuses PrologAI imagination)    | REALIZED
+   (Slice 15. The smoke test's defining phrase - a word GROUNDED THROUGH EXPERIENCE - is a hard
+    precondition: grounding a word in a condition the mind never lived is refused with a named
+    error, and the standard vocabulary (warm for the deficit, settled for the satisfaction) is
+    built from a genuinely lived run of the whole cognitive cycle. Both directions of symbol use
+    are realized: production and recognition, the hearing arriving through the reused language
+    word bank. The pilot's load-bearing discriminator is pinned by test: the same heard words
+    draw different replies from a mind in deficit ([warm, settled]) and a mind at its set-point
+    ([settled]) - the mood colours the words. Pretend reuses the imagination pack's five-reality
+    quarantine; a rollout auto-seals into the imagined reality, the observed record is never
+    written by pretending, and konnectome adds one rule: promotion into observed is refused
+    outright. Record level: a pretend relation is a type-tier causal_relation_object (a generic
+    claiming no happening) with a simulation-graded stance via self_provenance. Honest
+    non-closures: the full pilot conversation, a richer vocabulary, Rung Two joining the capstone
+    story, and the token-tier export of a whole pretend episode - see the Slice-15 note.)
 
 
 ================================================================================
@@ -464,5 +483,37 @@ capstone_demonstration 20 of 20 Prolog Unit (PLUnit) tests pass (the earlier fif
 112 tests; 132 in total); naming, layer, and layer-binding gates report zero violations; the Causalontology
 conformance suite is untouched and green at 137 of 137 (specification 4.0.0) in both cousins, re-measured
 this slice. No cousin was edited, per the Second, Third, and Fourth Commandments.
+
+Slice-15 note (2026-07-26). Building Rung Two's opening (the symbol_exchange and pretend_play packs) hit
+NO wall - and this slice carried an explicit WATCH, ordered by the owner's choice of this work: watch
+honestly for the finding that would release change-order Section C, the imagination and reality
+quarantine. The watch was kept, and its result is a clean non-finding, recorded here precisely. What
+Section C would require: that konnectome needed to tag or QUARANTINE a whole SET of records as an
+imagined world, distinct from the actual commons, and to SHARE that quarantined world across agents or
+repositories, and could not, because the standard has only per-claim machinery. What building actually
+required: nothing of the kind. The runtime quarantine is the reused PrologAI imagination pack - the very
+pack the change order's own consumer-versus-ontology note names as the reason imagination stays a
+language concern until a sharing need is real - and it sufficed entirely: pretend rollouts seal into the
+imagined reality, never touch the observed record, and cross realities only by deliberate promotion,
+which konnectome further restricts by refusing promotion into observed. At the record level the
+per-claim machinery sufficed too: the pretend relation is minted as a type-tier causal_relation_object -
+a generic that claims no happening, so it cannot pollute the commons by construction - and the mind's
+stance on it is graded simulation through self_provenance, honestly ranked below observation. One
+boundary was examined and deliberately declined: exporting a whole pretend EPISODE at the token tier
+(token records for happenings that never happened) was considered and rejected this slice, because
+unmarked token records of un-happened things are exactly the pollution the quarantine exists to prevent;
+the standard's per-claim counterfactual boolean on token_causal_claim was verified available (identity
+fields: causes, effects, covering_law, actual_delay, counterfactual) should that export ever become a
+real, load-bearing need. THE WATCH RESULT: were konnectome ever to need to SHARE a whole quarantined
+imagined world as signed, evidence-graded, content-addressed records - not compute it, SHARE it - that
+finding would route to Section C through the full release gate. It has not happened, so nothing was
+built and nothing routed: a non-finding recorded as honestly as a finding, per the Fourth Commandment.
+Gates: symbol_exchange 14 of 14 and pretend_play 12 of 12 Prolog Unit (PLUnit) tests pass (the earlier
+sixteen packs unchanged, 132 tests; 158 in total); naming, layer, and layer-binding gates report zero
+violations; the Causalontology conformance suite is untouched and green at 137 of 137 (specification
+4.0.0) in both cousins. Honest non-closures recorded as pending ascent, not walls: the full Rung Two
+pilot conversation; a richer grounded vocabulary; the capstone story joining Rung Two under a bumped
+version; and the token-tier pretend-episode export, if it ever proves load-bearing. No cousin was
+edited, per the Second, Third, and Fourth Commandments.
 
  Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 3.
