@@ -105,7 +105,8 @@ ARCHITECTURE, VERSION 20"; the manuscript's document-level CHANGE LOG that follo
 versioning metadata, not appendix content, and was deliberately not carried in.
 
 Per the Tenth Commandment, every code slice bumps the SPARCD Fileset. The current
-version is v2 (bumped in lockstep by slice 1); the v1 files are in docs/archive/.
+version is v14 (bumped in lockstep by slice 13); every superseded version lives in
+docs/archive/.
 
 
 ================================================================================
@@ -166,6 +167,21 @@ deepened; PENDING = not built yet.
     Causalontology 4.0.0 - the twenty-one kinds now carry the doxastic attitude kind and the
     predicted_occurrence and prediction_error kinds, and the suite is re-frozen at 137 vectors -
     plus PrologAI's causal_core 1.1.0, which makes the three new kinds mintable from konnectome.)
+
+ THE PROVENANCE TIER (Appendix 3 data model: "every claim carries its provenance") - over konnectome's own records
+ -----------------------------------------------------------------------------------
+ Assert, grade, retract, supersede | self_provenance (reuses causal_core)      | REALIZED
+   (Slice 13. konnectome exercises the Causalontology provenance layer over the attitude,
+    predicted_occurrence, and prediction_error records it minted at slice 12: it asserts about its
+    own records under its own source identity, grades the evidence on the ordered scale (intervention
+    > observation > simulation > derivation > human_hint > imported), states a confidence, and
+    retracts or supersedes an assertion when a later tick disconfirms or confirms the thought. It
+    honors Rule 10 (a retraction is signed by the retracted record's source) and Rule 25 (the
+    modelled HOLDER of an attitude differs from the signing SOURCE of an assertion about it -
+    conformance vector V135). Reused via library(causal_core); the conformance suite stays green at
+    137 vectors. Honest non-closure: the Ed25519 SIGNATURE is deferred to deployment - a private key
+    is a secret barred from code (Constraint 3) - so the records carry the public source identity,
+    are content-addressed, and are shareable without it. See Observation-3.)
 
 
 ================================================================================
@@ -383,4 +399,39 @@ suite is green at 137 of 137 (specification 4.0.0) in both cousins. Causalontolo
 extended only through their own gated change orders, never edited directly. Honest closure recorded,
 per the Second, Third, and Fourth Commandments.
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 2.
+Slice-13 note (2026-07-26). Building the provenance layer (the self_provenance pack) hit NO wall, and it
+CLOSED the honest non-closure slice 12 had recorded - that konnectome minted the three Causalontology 4.0.0
+content kinds (attitude, predicted_occurrence, prediction_error) but had not yet exercised the PROVENANCE tier
+OVER them. self_provenance mints an assertion ABOUT one of konnectome's own minted records, carrying
+konnectome's own source identity, an evidence grade from the standard's ordered scale (intervention >
+observation > simulation > derivation > human_hint > imported), a confidence, and, optionally, the particular
+token records that ground the claim; and a retraction that withdraws a prior assertion under the same source
+(the Rule 10 discipline), so a disconfirmed forecast is disowned honestly rather than quietly forgotten. The
+Rule 25 distinction between the modelled HOLDER of an attitude and the signing SOURCE of an assertion about it
+is demonstrated over konnectome's own false-belief attitude, matching Causalontology conformance vector V135. A
+forecast is graded 'simulation' before the outcome (a synthetic mind's model-based evidence, honestly ranked
+below observation) and superseded to 'observation' once the world confirms it; the object-permanence surprise
+(the signed error minus one when the screen lifts on nothing) triggers a retraction. No cousin was edited:
+self_provenance reuses causal_core through the library path, and the conformance suite is untouched and green at
+137 vectors in both cousins. Gates: self_provenance 17 of 17 Prolog Unit (PLUnit) tests pass (the earlier
+fourteen packs unchanged, 95 tests; 112 in total); naming, layer, and layer-binding gates report zero
+violations. Honest non-closure recorded (see Observation-3), per the Fourth Commandment.
+
+Observation-3 (2026-07-26, from slice 13). konnectome mints assertion and retraction records that are
+content-addressed, schema-valid, and semantically valid, carrying its PUBLIC source identity and its evidence
+grade - the shareable substance of the provenance layer - but it does not itself produce the Ed25519 SIGNATURE
+the provenance model specifies. The signature needs a PRIVATE key, and a private key is a secret barred from
+konnectome's code by Specification Constraint 3 (and Section A5.5's no-secret rule), so signing is a
+deployment-time act performed by the key-holder who runs the mind. The signature is optional to the schema and
+is excluded from content-addressed identity, so the records validate and reproduce without it; a strict
+consumer, following the standard's store discipline, would quarantine them as unsigned until the deployment
+signature is applied. STATUS: LOGGED, NOT ROUTED. It is not a data-structure gap (the standard already carries
+the signature and its evidence grading), and it is not a wall konnectome hit by building (the cognitive act of
+asserting, grading, and retracting is fully realized at the record level); it is a deployment boundary. It is
+recorded here for the owner as a candidate FUTURE consideration only: were konnectome ever to need to SHARE
+cryptographically VERIFIABLE assertions across minds, a signing-and-verification primitive in the reused
+PrologAI causal_core library (which today content-addresses but neither signs nor verifies, and no Ed25519
+primitive is available in this SWI-Prolog build) would be where that finding is routed - discovered by
+building, if and when the need is real, never guessed from the armchair.
+
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 3.
