@@ -1,5 +1,7 @@
 CAUSALONTOLOGY - THE THOUGHT-COMBINATION MECHANISM
 
+STALENESS NOTE (2026-07-26): this document was written in the 3.0.0 era and is kept as reference. Causalontology 4.0.0 is now the live specification (twenty-one kinds, 137 conformance vectors, published to its first registries on 2026-07-26); the change order this document cites now lives at Causalontology_4_0_0_CHANGE_ORDER_v3.txt with Sections A and B executed. The mechanism described here is unchanged by 4.0.0, but follow this document's own rule before relying on any field: read spec/causalontology.md and confirm the version.
+
 Target reader: an Artificial Intelligence (AI) Coding Agent that must construct, validate, chain, and query combined thoughts programmatically.
 
 Source of truth: /home/ccaitwo/causalontology (spec/, spec/schema/, bindings/, and Causalontology_Standalone_Design_v22.txt). This document is a derived implementation contract, not the normative spec. On any disagreement, the files under spec/ win, and Causalontology_Standalone_Design_v22.txt wins over spec/causalontology.md.

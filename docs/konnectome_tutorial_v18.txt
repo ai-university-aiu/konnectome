@@ -1,6 +1,6 @@
 THE KONNECTOME TUTORIAL
 
-Version 15.
+Version 18.
 
 A complete, top-to-bottom guide to konnectome, written for a beginner, a learner, a layperson, a newcomer, a novice. No prior knowledge is assumed. Every term is explained the first time it is used.
 
@@ -170,7 +170,7 @@ The build never leaps ahead; each rung must stand before the next is attempted.
 PART EIGHT - WHAT IS BUILT SO FAR
 
 
-konnectome's code lives in packs. A pack is a small, self-contained module with three files: a manifest (its name and version), the code, and a test suite. Nineteen packs exist so far.
+konnectome's code lives in packs. A pack is a small, self-contained module with three files: a manifest (its name and version), the code, and a test suite. Twenty-one packs exist so far.
 
 • tick_engine (Component 2, the heartbeat). It runs the system for a chosen number of ticks using the two-pass synchronous update. A passive observer records each tick. Its tests prove it keeps time, records each tick once, never lets a construct see a neighbor's future, and gives the exact same result every run.
 
