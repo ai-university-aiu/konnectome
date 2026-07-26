@@ -1,0 +1,59 @@
+BUILDING KONNECTOME
+
+The Build Log - at once a scientific record and a story.
+
+
+Author: D. R. Dison / ai-university-aiu.
+
+Begun: 2026-07-26.
+
+Kept under the Sixteenth Commandment of CONSTITUTION.md, which orders: log all activities as part of the konnectome build to this document, and voice the log with dual purpose - as a scientific paper and as a New York Times Best-Selling Book.
+
+The log is append-only. Entries are added in order, at the foot, and never rewritten. What was true when it was written stays written; corrections arrive as later entries, on the record, the same way konnectome itself retracts a claim - honestly, and without erasing the original.
+
+
+HOW TO READ THIS DOCUMENT
+
+This document is written in two voices at once, and both are load-bearing.
+
+For the scientist: every claim in this log carries its number. Test counts are exact, dates are absolute, commit hashes are quoted, and a result that was not achieved is recorded as plainly as one that was. Nothing here is rounded up. Where the build failed, paused, or declined to build something, the entry says so and says why, because in this program an honest non-closure is a result, not an embarrassment.
+
+For the reader: this is the story of a mind being built in the open - a small, glass-box mind called konnectome, written in a language designed to be read (PrologAI), thinking in a data structure designed to be shared (Causalontology), governed by a written constitution, and grown one honest slice at a time. It has a heartbeat. It has drives. It gets surprised. It models other minds, including their false beliefs. And as of the day this log begins, it grades the evidence behind its own claims, stands behind them under its own name, and takes them back - on the record - when the world proves it wrong.
+
+The two voices are not in tension. The story is only good because the numbers are real.
+
+
+PROLOGUE - THE STORY SO FAR (2026-07-19 TO 2026-07-26)
+
+Every build in this organization begins the same way: with law, not code.
+
+On the nineteenth of July, twenty twenty-six, the konnectome repository was created holding little more than a written CONSTITUTION.md - at first fourteen commandments, later sixteen, now seventeen - binding the build to a guiding book (Nature's Cognitive Architecture), a frozen thought-structure standard (Causalontology, changeable only through a gated change order), a readable reference language (PrologAI, changeable only the same way), a running ledger of every wall the build would ever hit, and a six-phase waterfall method called SPARCD: Specification, Pseudocode, Architecture, Refinement, Completion, Demonstration.
+
+The rule underneath all the other rules is this: findings are discovered by building, never guessed from the armchair.
+
+On the twentieth of July, in one long day, the first ten slices landed. A scheduler and tick engine gave the mind a heartbeat - a two-pass synchronous update, compute-then-commit, so that no construct ever sees a neighbour's future. Six dynamical archetypes - relay, integrator, oscillator, attractor, gate, comparator - gave it the only six kinds of moving part it is allowed. A connection graph gave it wiring; a neuromodulatory bus gave it broadcast chemistry; a drive system gave it wants, error signals, and reward; an action selector - forbidden by construction from inventing actions, because a selector that generates is the homunculus creeping back in - gave it choice; an override controller gave it one inviolable safety property (no deliberation may ever suppress the breath drive to self-termination); a plasticity engine gave it three-factor learning; an observer gave it a memory of every tick as a content-addressed record; a perturbation interface gave the scientists a way in; and a cognitive cycle wired all ten components into one faithful tick. A tenth-slice pack taught it to combine thoughts into chains and trees as Causal Relation Objects.
+
+On the twenty-second of July the build hit its first two walls, minutes apart, and the program showed what it is made of. Slice 11 tried to give the mind a theory of other minds and found the shared data structure had no kind of record for a belief - a mind could state a fact but could not attribute a false one. That same slice tried to give it expectation and found a forecast minted as a fact was byte-for-byte identical to a claim of fact. Two walls, honestly recorded in the ledger, routed through the gated change order, and answered the same day by Causalontology 4.0.0: three new kinds of record (attitude, predicted_occurrence, prediction_error), twenty-one kinds in all, a conformance suite re-frozen at one hundred thirty-seven vectors with every old identifier preserved byte-for-byte. A third wall - the language library could not yet mint the new kinds - was routed to PrologAI and closed the same day by causal_core 1.1.0. By nightfall the mind held a false belief about a marble in a basket, expected a hidden object to still exist, and measured its own surprise, signed, when a screen lifted on nothing.
+
+On the twenty-sixth of July, slice 13 gave the mind responsibility. A new pack, self_provenance, taught konnectome to mint an assertion about its own records - carrying its own public source identity, an evidence grade from a fixed ladder (intervention above observation above simulation above derivation above human_hint above imported), and a confidence - to supersede a simulation-graded forecast with an observation-graded confirmation, and, when a forecast proved wrong, to strike the honest cancel-mark: a retraction, signed by the same source, on the record. Seventeen tests, all green. One honest limit, logged and not routed: the records are complete, content-addressed, and shareable, but unsigned - the Ed25519 private key is a secret, secrets are barred from the code by the specification's own constraint, and so cryptographic signing belongs to whoever deploys the mind, not to the mind itself.
+
+Thirteen slices. Fifteen packs. One hundred twelve tests, all green. Three walls, all closed. Zero shortcuts taken, and every one of those numbers checkable from the files beside this one.
+
+That is the story so far. The log proper begins below.
+
+
+ENTRY 1 - 2026-07-26 - THE CONSTITUTION LEARNS TO KEEP A DIARY
+
+Activities of the continuation session, in order.
+
+The session opened by re-verifying the baseline the previous session (the Garnet Hallmark hand-off, pull request 27, merge commit 26c26b4) claimed to leave behind. Claimed: fifteen packs, one hundred twelve Prolog Unit tests, three gates at zero violations. Measured: one hundred twelve of one hundred twelve tests pass; the naming, layer, and layer-binding gates report zero violations; the working tree is clean. The claim held.
+
+The verification also found the ground had moved - in good directions - since the hand-off was written. The cousin repositories had advanced in other sessions. In causalontology, pull request 15 folded the combined 3.0.0-plus-4.0.0 delta into the remaining fourteen language bindings, so all nineteen bindings of the standard now pass the full one-hundred-thirty-seven-vector conformance suite locally; what remains of that campaign is registry publication, which waits on the owner's credentials. In PrologAI, pull request 597 recorded the genuine full regression - four hundred of four hundred on the first Abstraction and Reasoning Corpus for Artificial General Intelligence (ARC-AGI-1) and one hundred twenty of one hundred twenty on the second (ARC-AGI-2) - repaying the regression debt earlier entries had carried as an honest ten percent spot-check. konnectome's whole suite was re-run against the moved cousins and stayed green: the baseline holds on the new ground.
+
+Then the owner spoke, and this document was born.
+
+The owner's instruction of this date did two things. First, it amended the Constitution: the Hand-Off Protocol, until now the Sixteenth Commandment, became the Seventeenth, and a new Sixteenth Commandment took its place - log all activities as part of the konnectome build to this document, voiced with dual purpose, as a scientific paper and as a New York Times Best-Selling Book. The amendment was applied to CONSTITUTION.md, the README's commandment count was corrected to seventeen (repairing, in passing, a stale line that still said fourteen, and a missing self_provenance line in the repository-layout tree), and this file was created as the commandment's first act - so the log's first entry is the story of its own birth. A constitution that already demanded honesty in the ledger now also demands memory in prose.
+
+Second, the owner chose the continuation's work, from the hand-off's menu, in this order: the capstone demonstration (a runnable script that boots the mind and prints its glass-box story); then Rung Two of the developmental ladder (pretend play and language beginnings, watching honestly for the finding that would release the held imagination-quarantine section of the change order); then the deepening of Rung Four (the empathy trial and the social-pain test); then the registry-publication edge of the 4.0.0 campaign, as far as it can go without the owner's credentials; and last, the verifiable-provenance question - to be built only if a real cross-mind verification need appears, and to be honestly declined otherwise.
+
+The entries that follow record how that went.

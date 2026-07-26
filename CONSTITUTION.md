@@ -165,7 +165,17 @@ Maintain versioned updates to /docs/konnectome_tutorial_v1.txt as any new code c
 change bumps it, the superseded version moves to docs/archive/ in the same change, so only the latest
 tutorial lives outside the archive, and it always describes the konnectome that exists.)
  ...
-THE SIXTEENTH COMMANDMENT: CONTEXT-WINDOW MANAGEMENT AND THE HAND-OFF PROTOCOL:
+THE SIXTEENTH COMMANDMENT: THE BUILD LOG:
+(NEW in version 3, by the owner's instruction of 2026-07-26. The former Sixteenth Commandment, the
+Hand-Off Protocol, becomes the Seventeenth.)
+Log all activities as part of the konnectome build to the document:
+/home/ccaitwo/konnectome/docs/BUILDING_KONNECTOME.txt
+Voice this log with dual purpose: as a scientific paper and as a New York Times Best-Selling Book.
+The log is append-only and grows with the build: every session of build activity appends its entries
+in order, so the document carries the complete story of how konnectome was built - rigorous enough
+to cite, alive enough to read.
+ ...
+THE SEVENTEENTH COMMANDMENT: CONTEXT-WINDOW MANAGEMENT AND THE HAND-OFF PROTOCOL:
 A long session degrades (context rot, and the lost-in-the-middle effect), and the assistant cannot see
 the context window's fill level from its own side, so the trigger must never rely on the assistant
 watching a token count. Two triggers govern the hand-off. First, the MILESTONE trigger: after each
