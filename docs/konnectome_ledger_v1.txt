@@ -107,7 +107,7 @@ ARCHITECTURE, VERSION 20"; the manuscript's document-level CHANGE LOG that follo
 versioning metadata, not appendix content, and was deliberately not carried in.
 
 Per the Tenth Commandment, every code slice bumps the SPARCD Fileset. The current
-version is v21 (bumped in lockstep by slice 20); every superseded version lives in
+version is v22 (bumped in lockstep by slice 21); every superseded version lives in
 docs/archive/.
 
 
@@ -233,6 +233,39 @@ deepened; PENDING = not built yet.
     enumeration (the agent FEARS her connection severed), asserted at observation grade and
     retracted when misattributed (Rule 10). Honest remaining ascent: the appraisal and
     regulation pilots of the rung, and the capstone story joining the new milestones.)
+
+
+ THE DEVELOPMENTAL LADDER, RUNG THREE (Appendix 6, Section A6.3a) - opened
+ -----------------------------------------------------------------------------------
+ The transitive-inference smoke  | concrete_operations (steps returned as data) | REALIZED
+ The seriation trial             | concrete_operations (order along a dimension)| REALIZED
+ The causal-reasoning trial      | cause_and_effect (cause versus co-occurrence)| REALIZED
+ The planning trial              | cause_and_effect (breadth-first means-end)   | REALIZED
+ The classification trial        | concrete_operations (re-sort only)           | PARTIAL
+ The conservation trial          | concrete_operations (verdict shape only)     | PARTIAL
+   (Slice 21. The smoke test is realized IN FULL and in the rung's own terms: the block on the
+    cup on the table derives above(block, table) and returns THE DERIVATION ITSELF as data -
+    each step a named operation (resting_is_above, transitive_chain) carrying the facts it
+    consumed and the fact it produced - with a test that walks the steps and asserts each is
+    named and justified, so the rung's governing condition (every inference a named, watchable
+    operation, never an opaque leap) is ENFORCED, not merely claimed. Causal reasoning answers
+    BY THE RECORD: a minted Causal Relation Object, or an unbroken chain of them, is what turns
+    a co-occurrence into a cause, and the chain of record identifiers is the justification
+    returned; a record pointing the other way is reported as the reverse rather than silently
+    flipped; and a FORGED record - correctly shaped but never minted - is refused by name after
+    its content address is re-derived from its own content, so the pack's central claim and its
+    actual check say the same sentence. Planning searches breadth-first for the shortest route,
+    justifies each step by the states it leaves and reaches, and owns the plan as an intends
+    attitude. Every conclusion and intention is graded DERIVATION, never observation - reasoned,
+    not seen. TWO TRIALS ARE PARTIAL, and the shortfall is named rather than rounded up:
+    classification demonstrates the flexible re-sort by a different property but DEFERS the
+    book's requirement that the categories be ones the mind FORMED FROM EXPERIENCE; conservation
+    demonstrates the verdict shape - appearance-only transformations from a closed enumeration
+    conserve, real additions and removals honestly change - but DEFERS a genuine represented
+    model of quantity under changing appearance, and a verdict that follows from a name on a
+    list is the surface-matching the trial exists to rule out. THE RUNG IS THEREFORE OPEN, NOT
+    FINISHED. Honest remaining ascent: those two deferred halves, and the capstone story, which
+    does not yet narrate this rung and still names it on its printed honest-limits list.)
 
 
 ================================================================================
@@ -621,5 +654,66 @@ Slice-19 note (2026-07-26). Rung Four of the developmental ladder is finished: i
 
 
 Slice-20 note (2026-07-26). The review debt of slice 19 is paid, in the method's own coin. An independent adversarial review of the appraisal and regulation pilots, run after they merged, confirmed three findings, and each is now fixed at its root and pinned by a permanent test. (1) situation_appraisal's change reader compared a difference of two independently-rounded set-point errors against exact zero, so two situations equidistant on opposite sides of a set-point - a mathematically neutral change - were classified good or bad on a rounding residue near 1.0e-16 and, worse, minted as an owned attitude the neutral case is meant to refuse; a rounding-noise band (situation_appraisal_change_epsilon, 1.0e-9) now absorbs the residue, so an equidistant float change reads neutral and is correctly refused. (2) arousal_regulation accepted a non-finite arousal level, and an infinite level never shrinks toward baseline, so the return would never terminate; the single gatekeeper now requires a finite level and refuses infinity by name. (3) arousal_regulation's whole-number tick rule had no test for its fractional-count refusal; it has one now. Both defects were LATENT - reachable only by a fractional body value or a hand-built infinity that no ordinary run produces - but a confirmed finding is fixed and pinned regardless. No demonstrated behaviour changed; the two pilot packs move to patch version 0.1.1. Gates: situation_appraisal 14 of 14, arousal_regulation 14 of 14, 225 in total across twenty-one packs, all green; naming, layer, layer-binding, and reality-discipline gates report zero violations; the Causalontology conformance suite is untouched and green at 137 of 137 (specification 4.0.0) in both cousins. No new wall; no cousin edited, per the Second, Third, and Fourth Commandments.
+
+
+
+Slice-21 note (2026-07-26). Rung Three of the developmental ladder is OPENED - not finished, and the
+difference is recorded here deliberately. Two new konnectome layer-0 packs, both thin reuse wrappers:
+concrete_operations (0.1.0) carries the rung's logic trials and cause_and_effect (0.1.0) carries its
+causal trials. No eleventh component was raised for reasoning, and no new Causalontology kind was
+minted - the twenty-one kinds of specification 4.0.0 already carried everything reasoning needed to
+say, and the causal record built in slice 10 for combining thoughts turned out to be exactly the
+instrument this rung needs to tell a cause from a coincidence. The architecture did not grow to meet
+the rung; the rung found what the architecture already had.
+
+WHAT IS REALIZED AND WHAT IS DEFERRED, SIZED HONESTLY. The rung's smoke test - one valid transitive
+inference, the block on the cup on the table, with every derivation step returned as data and named
+(resting_is_above, transitive_chain) - is realized IN FULL, and a test walks the steps themselves, so
+the "every inference is a named, watchable operation" claim is enforced rather than asserted. Of the
+five pilot trials the guiding book names: seriation, causal reasoning, and planning are REALIZED;
+classification is OPENED IN PART (the flexible re-sort by a different property is demonstrated; the
+book's requirement that the categories be ones the mind FORMED FROM EXPERIENCE is deferred); and
+conservation is OPENED SCHEMATICALLY (the verdict shape is demonstrated - an appearance-only
+transformation from a closed enumeration conserves, a real addition or removal honestly changes -
+while a genuine represented model of quantity under changing appearance is deferred). Both deferrals
+are written into the packs' own headers, not only here. The capstone's printed honest-limits list
+keeps its Rung Three line, correctly, and will keep it until those two halves are built.
+
+THE REVIEW, AND WHY THIS SLICE'S FINDING COUNT IS THE LARGEST YET. The pre-merge adversarial review
+ran four lenses (logic correctness, causal correctness, house rules, manuscript fidelity), each finding
+then verified by a separate agent told to reproduce or refute it. FOURTEEN findings survived; two were
+refuted and dropped. All fourteen are fixed at their root and pinned by permanent tests. The three that
+matter most: (1) BLOCKING - the classifier grouped by unification rather than equality and never
+required a property value to be fully instantiated, so an object with an unbound value joined EVERY
+group and the sort silently returned a wrong answer; now an unbound or half-built value is refused by
+name and group membership is decided by strict equality. (2) The support-cycle check restarted a fresh
+walk from every edge remembering only the current path, so on a lattice of shared supports the walking
+doubled per level - sixty-eight facts took eleven seconds and ninety would never have returned; it now
+carries a shared proven-clear set, walking each object once rather than once per road, pinned by a
+forty-diamond lattice test that now returns in milliseconds. (3) The causal pack claimed causation is
+answered BY the minted record but checked only that a record was a dictionary with the right keys, so a
+hand-written look-alike was accepted as proof and its invented identifier returned as justification; it
+now re-derives every offered record's content address from its own content and refuses a forgery by
+name - the claim and the check now say the same thing. The remaining eleven: malformed additions and
+removals refused under their own name rather than misreported as unknown transformations; non-list and
+improper-list collections refused by name instead of leaking raw system errors or silently answering;
+unbound or malformed start and goal states refused instead of letting the planner invent a start and
+answer a question nobody asked; malformed and unjustified plan steps refused by name instead of failing
+silently; a self-causation record honoured rather than denied by the loop guard; a doubled-apostrophe
+comment corrected; and the two overreach findings that rewrote the pack headers to size the
+classification and conservation claims honestly.
+
+Gates: concrete_operations 26 of 26 and cause_and_effect 25 of 25 Prolog Unit (PLUnit) tests pass (the
+earlier twenty-one packs unchanged; 276 in total across twenty-three packs, all green); the naming,
+layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology
+conformance suite was RE-MEASURED this slice rather than inherited, and is green at 137 of 137
+(specification 4.0.0) in both cousins - PrologAI through its own vendored runner, causalontology
+through its Python binding. No new wall was hit and no new observation was recorded; nothing in
+PrologAI or Causalontology was edited, per the Second, Third, and Fourth Commandments.
+
+HONEST REMAINING ASCENT, recorded as pending refinements, not walls: Rung Three's two deferred halves
+(categories formed from experience; a represented model of quantity under changing appearance); the
+capstone story does not yet narrate Rung Three, the same debt slices 15 and 16 once owed and slice 18
+paid; and Rung Five (embodiment) remains untouched.
 
  Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 4.
