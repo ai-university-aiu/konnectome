@@ -1,0 +1,102 @@
+CONTEXT HAND-OFF FROM CARMINE TIMEWRIGHT
+
+Date: 2026-08-07. The third hand-off of this date.
+
+I chose the name Carmine Timewright because this session's craft was time kept honest. The connectome had written a delay into every wire since slice 3 and obeyed none of it; this session made the number true - a signal now takes exactly as long as its wire demands, arrives not one tick sooner, and cannot be lost in transit without the graph saying so aloud. Carmine for the deep red of the house palette; Timewright for a wright whose material is the tick that keeps a signal punctual.
+
+
+PART ONE - READ THESE FIRST
+
+- Read and follow CONSTITUTION.md - all seventeen commandments, exactly. The Sixteenth is the versioned build log (docs/BUILDING_KONNECTOME_v2.txt, now twenty-one chapters); the Seventeenth is this hand-off protocol.
+
+- Read The SPARCD Fileset at its current versions: docs/konnectome_1_specification_v28.txt through docs/konnectome_6_demonstration_v28.txt (v27 to v28 at slice 27 this session; superseded versions in docs/archive/).
+
+- Read docs/NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt - the guiding book. The ladder stands as Umber left it: Rungs Zero through Four realized and told; Rung Five groundwork built and told, the rung itself still unclaimed because the book demands a real machine.
+
+- Read the Settings, General, Instructions for Claude - the owner's standing instructions (web search first, novice-level plain-text explanations, plain-text output with a copy to ~/output/, auto-commit-push-merge authorization, session-length budgeting).
+
+- Read ~/CLAUDE.md - git-untracked, at the organization root, the system-wide current-state narrative.
+
+- Read the current tutorial, docs/konnectome_tutorial_v25.txt (twenty-four parts; Part Twenty-One tells slice 27), and read all of docs/.
+
+- Read the prior hand-off, Umber Watchwright's (2026-08-07_2). This session began from it, verified the baseline (current - nothing had landed in parallel), and executed the next item of the owner's standing queue.
+
+- THE OWNER'S STANDING CHOICE REMAINS: the owner answered "All" to the Seamwright menu two sessions ago, and that choice is STANDING. Do NOT re-present the menu; verify the baseline and continue down the remaining queue (Part Six below), asking only if a priority decision is needed within it.
+
+
+PART TWO - THE IMPORTANT DOCS FILES
+
+- konnectome_ledger_v1.txt - the scoreboard. Counter line unchanged: Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0. Observations: 4. New this session: the Slice-27 note in Section Five (the slice-3 pending item "multi-tick delay lines" is CLOSED; one new pending line - the delayed step refuses the bus-modulated relay kind by name, wiring the bus into delayed time is a later refinement).
+
+- konnectome_1_specification_v28.txt through konnectome_6_demonstration_v28.txt - the SPARCD Fileset, each ending in the Realization Log through slice 27.
+
+- konnectome_tutorial_v25.txt - the beginner tutorial, twenty-four parts.
+
+- BUILDING_KONNECTOME_v2.txt - the build log, twenty-one chapters; Twenty-One is this session's.
+
+- konnectome_rung_five_real_machine_design_v1.txt - the real-machine design proposal. The owner has NOT yet answered its five decisions; Rung Five hardware work remains blocked on those answers.
+
+- Causalontology_4_0_0_CHANGE_ORDER_v3.txt - Sections C, D, E remain HELD. No finding released them this session.
+
+- PrologAI_CHANGE_ORDER_v2.txt - unchanged; no language wall was hit this session.
+
+- tests/naming_gate_fixture/ - the committed, deliberately-broken fixture pack proving the naming gate can fail. Do not "fix" its violation; the violation is the point.
+
+- In the owner's output folder (~/output/): konnectome_slice_27_session_report.txt (this session's closing report).
+
+
+PART THREE - WHAT THIS SESSION DID
+
+- SLICE 27 (pull request 50, squash-merged as 7eb4872): the delay lines - the connectome learns to keep a signal in transit. The interface term's Delay field, recorded since slice 3 and obeyed never, becomes load-bearing. Each transmissive interface gets a delay line: a first-in-first-out buffer of Delay-minus-one in-transit values (the synchronous two-pass step delivers the final hop), threaded through a new delayed step and delayed run as explicit stateless values, beside the plain step and run, unchanged. Pinned proofs: the all-delays-one identity with the plain run (state for state, tick for tick); the chained two-plus-three-tick arrival at exactly tick five and nowhere sooner (the book's TEST OF PROPAGATION, its acceptance criterion AC-3, made runnable); a value in transit surviving its source going silent; the weight applied at delivery.
+
+- THE REVIEW, TOLD STRAIGHT - THE THIRD STRAIGHT COMPLETION under the tighter scope (named lenses: delay semantics, the equivalence claim, validation edges, house rules; hard reproduction budget). Four findings confirmed: two REAL of the silent-failure family (an unknown construct kind silently dropped from the state by the findall-driven step - a hazard mirrored from the plain step itself - and a source name absent from the state silently destroying a delay line and its in-transit values) and two MINOR (delay validation skipped for computational interfaces; a negative tick count failing without a word). Three fixed at root and pinned: refusal clauses that throw the offending name in the plain, modulated, AND delayed steps alike; an existence error for the ghost source; validation of every interface's delay before the transmissive filter. The fourth confirmed as standing house behaviour mirrored from the plain run - recorded, no change needed. The tighter-scoped reviewer pattern has now finished three times in a row; treat it as the method.
+
+- State at hand-off: main at 7eb4872. Twenty-seven slices. Twenty-seven packs. 395 PLUnit tests, all green (connection_graph grew six to seventeen: seven feature tests, four review pins), re-swept after the hardening because the refusal clauses touch steps every earlier slice built on. Four gates at zero violations, the naming gate additionally passing its own self-test. Conformance re-measured 137 of 137 in both cousins (PrologAI: bin/run_causalontology_conformance.sh; causalontology: bindings/python/tests/run_conformance.py). The capstone demonstration re-run clean end to end. SPARCD v28; tutorial v25; build log twenty-one chapters. Pull requests merged by this session: 50, and this hand-off's.
+
+
+PART FOUR - BUILD-AGAINST COUSIN COMMITS (for reproducibility)
+
+- causalontology: 292dfca (unchanged by this session).
+
+- PrologAI: ebbc3e0 (unchanged by this session).
+
+- Mentova: d117c69 (read-only; untouched).
+
+
+PART FIVE - SHARP EDGES AND HONEST NON-CLOSURES
+
+- THE REFUSAL CLAUSES ARE LOAD-BEARING ACROSS THREE STEPS. The plain, modulated, and delayed steps each end in a catch-all clause that throws on an unknown construct kind. A future slice adding a NEW construct kind must add its clause to the right step(s) BEFORE the catch-all fires in tests - the throw is the feature, not a bug to soften.
+
+- THE DELAYED STEP'S HONEST BOUNDARY: it handles clamped sources and fixed-gain relays only; relay_modulated is refused by name. Wiring the neuromodulatory bus into delayed time is recorded as pending in the ledger's slice-27 note - a natural companion to the per-territory neuromodulators refinement still in the queue.
+
+- COMPUTATIONAL INTERFACES STILL CONVEY NOTHING in both the plain and delayed paths; their delays are now validated, but their transforms remain the oldest structural pending item (slice 3's neighbour), alongside representing interfaces as Causalontology conduits.
+
+- THE FIXTURE IS STILL SUPPOSED TO BE BROKEN (tests/naming_gate_fixture/); the survival-rhythm constants are still load-bearing in three places; Observation-4 (no word for satisfaction) still stands LOGGED, NOT ROUTED - all as Umber recorded them.
+
+- PARALLEL SESSIONS: the hazard did not bite (baseline verified current at start; main re-checked before the merge and never moved). The ritual stands: git fetch, git log origin/main, gh pr list before every claim, numbering, or merge; claim a slice with an empty commit on a pushed feature branch before building it.
+
+- PENDING REFINEMENTS, UPDATED: delay lines are DONE. Remaining from the standing queue: the eligibility trace; homeostatic scaling; per-territory neuromodulators; conduits; the token tier of thought combination; then Rung Two's full pilot conversation and richer grounded vocabulary. Change-order Sections C, D, E still HELD; the two pre-existing red PrologAI workflows and PrologAI pull request 519 remain the owner's; bot pull requests are never auto-merged.
+
+- RITUALS THAT KEPT THIS SESSION HONEST, offered to the next: verify the baseline before building; claim the slice before building it; test-first, seven red before the first green; tighter-scoped adversarial review with named lenses and a hard reproduction budget; fix every confirmed finding at root and pin it before merge - including mirrored hazards in code the slice did not write, when the root is shared; re-sweep all tests and re-measure conformance per slice; re-run the capstone when a shared step changes; record the review disposition in the ledger note itself.
+
+
+PART SIX - THE FIRST TASK OF THE CONTINUATION
+
+The owner has already chosen: ALL. The remaining queue, in suggested order (re-orderable by the owner at any time):
+
+1. The pending refinements, one full slice each, suggested smallest-first: the eligibility trace (Section A2.6 of the manuscript - the natural next-smallest, and it deepens the plasticity engine the same way delay lines deepened the graph); homeostatic scaling; per-territory neuromodulators (consider pairing with the delayed step's bus wiring, recorded pending this session); conduits; the token tier of thought combination. Each: design against the manuscript, test-first pack growth, tighter-scoped adversarial review, lockstep documents, pull request.
+
+2. Deepen Rung Two - the full pilot conversation and a richer grounded vocabulary, the oldest open refinement on the ladder.
+
+3. Rung Five hardware - BLOCKED ON THE OWNER: the five decisions in konnectome_rung_five_real_machine_design_v1.txt. When answered, the driver-pack slice can be designed.
+
+4. Other ______________ .
+
+
+PART SEVEN - SIGN-OFF
+
+The map that began this session writing down a delay it never kept ends it keeping every one: a signal takes the time its wire demands, arrives to the tick, and can no longer vanish quietly - not from an unknown kind, not from a ghost source, not from a zero-tick lie. Four review findings found, three fixed and pinned, one honestly recorded as the house's own style; one pull request merged; nothing claimed that a reader cannot re-run.
+
+Time is the cheapest thing to fake and the easiest to check: count the ticks.
+
+- Carmine Timewright, 2026-08-07
