@@ -107,7 +107,7 @@ ARCHITECTURE, VERSION 20"; the manuscript's document-level CHANGE LOG that follo
 versioning metadata, not appendix content, and was deliberately not carried in.
 
 Per the Tenth Commandment, every code slice bumps the SPARCD Fileset. The current
-version is v22 (bumped in lockstep by slice 21); every superseded version lives in
+version is v23 (bumped in lockstep by slice 22); every superseded version lives in
 docs/archive/.
 
 
@@ -235,14 +235,14 @@ deepened; PENDING = not built yet.
     regulation pilots of the rung, and the capstone story joining the new milestones.)
 
 
- THE DEVELOPMENTAL LADDER, RUNG THREE (Appendix 6, Section A6.3a) - opened
+ THE DEVELOPMENTAL LADDER, RUNG THREE (Appendix 6, Section A6.3a) - trials complete
  -----------------------------------------------------------------------------------
  The transitive-inference smoke  | concrete_operations (steps returned as data) | REALIZED
  The seriation trial             | concrete_operations (order along a dimension)| REALIZED
  The causal-reasoning trial      | cause_and_effect (cause versus co-occurrence)| REALIZED
  The planning trial              | cause_and_effect (breadth-first means-end)   | REALIZED
- The classification trial        | concrete_operations (re-sort only)           | PARTIAL
- The conservation trial          | concrete_operations (verdict shape only)     | PARTIAL
+ The classification trial        | category_formation + concrete_operations     | REALIZED
+ The conservation trial          | quantity_model (model-read verdict)          | REALIZED
    (Slice 21. The smoke test is realized IN FULL and in the rung's own terms: the block on the
     cup on the table derives above(block, table) and returns THE DERIVATION ITSELF as data -
     each step a named operation (resting_is_above, transitive_chain) carrying the facts it
@@ -266,6 +266,20 @@ deepened; PENDING = not built yet.
     list is the surface-matching the trial exists to rule out. THE RUNG IS THEREFORE OPEN, NOT
     FINISHED. Honest remaining ascent: those two deferred halves, and the capstone story, which
     does not yet narrate this rung and still names it on its printed honest-limits list.)
+   (Slice 22. The two deferred halves are BUILT and the rung's five trials are all REALIZED.
+    Classification is completed by category_formation: the categories are FORMED FROM
+    EXPERIENCE by PrologAI's concept_formation engine, reused unmodified - the first konnectome
+    use of that engine - with the flexible re-sort delegated to the slice-21 classifier, an
+    object fitting no formed category reported outside_every_category rather than forced, and
+    the terse engine identifiers renamed to whole words at one guarded translation boundary.
+    Conservation is completed by quantity_model: an amount is a REPRESENTED MODEL - individuated
+    units plus an appearance - transformations act on the representation, and the verdict is
+    read by RE-MEASURING the model, never from the transformation's name; the lossy pour (named
+    like a pour, spills a unit) is judged changed, the receipt that the verdict sides with the
+    world against the name. Both packs own their conclusions BY ENACTMENT: the record predicates
+    accept no quoted text, but run the learning episode or the conservation trial themselves and
+    mint what the enactment produced. The rung's trials are COMPLETE; the capstone story still
+    does not narrate the rung, and its honest-limits line stands until the story is taught.)
 
 
 ================================================================================
@@ -715,5 +729,70 @@ HONEST REMAINING ASCENT, recorded as pending refinements, not walls: Rung Three'
 (categories formed from experience; a represented model of quantity under changing appearance); the
 capstone story does not yet narrate Rung Three, the same debt slices 15 and 16 once owed and slice 18
 paid; and Rung Five (embodiment) remains untouched.
+
+Slice-22 note (2026-08-07). Rung Three's two deferred halves are BUILT, and the rung's five trials
+are all REALIZED - the rung is complete in its trials, with the story's chapter still owed. Two new
+konnectome layer-0 packs, both thin reuse wrappers in the house pattern:
+category_formation (0.1.0): categories the mind FORMED FROM EXPERIENCE - the book's own words for
+the classification trial's deferred half - realized by reusing PrologAI's concept_formation engine
+unmodified (the first konnectome use of that engine): each learning episode resets the engine's
+store, observes the experiences as property-value bundles, induces categories by seed clustering
+over a caller-given shared-pair floor, and resets again, the episode owning the store at both ends;
+the terse engine identifiers (con_1, ...) are renamed to whole words (formed_category_1, ...) at one
+guarded boundary that refuses an unrecognized scheme by name. Sorting places objects into the FIRST
+formed category whose defining core they carry; an object fitting none is reported
+outside_every_category, never forced; the flexible re-sort by a different property is the slice-21
+classifier reused, its refusals surfacing under its own names. Twenty-six tests.
+quantity_model (0.1.0): a REPRESENTED MODEL of quantity under changing appearance - the conservation
+trial's deferred half: an amount is individuated units plus an appearance, transformations act on
+the representation (a pour carries every unit across; an addition mints fresh names past the highest
+existing one; a removal takes real units), and the verdict is read by RE-MEASURING the model, never
+from the transformation's name. The receipt is the lossy pour: named like a pour, spills a unit,
+judged changed(5, 4) - the verdict sides with the world against the name, the book's "models the
+world rather than its mere surface" enforced by test. Twenty-nine tests.
+concrete_operations was re-sized to 0.1.1, documentation only: its header, manifest title, and the
+schematic verdict's own export now point each deferred half at the sibling that realized it.
+
+THE REVIEW, AND THE GATE HOLE IT CAUGHT. The pre-merge adversarial review (told to REFUTE, five
+lenses, every kept finding reproduced live against the code) returned sixteen findings - two
+blocking, ten should-fix, four nits - and all confirmed findings are fixed at the root and pinned by
+permanent tests. The two that matter most: (1) BLOCKING - the sorter matched objects against a
+category by an ordered-set subset test while accepting any ground list as a hand-built core, so a
+core written out of order silently exiled a rightful member to outside_every_category (a wrong
+answer, not a refusal); a core must now be exactly the sorted duplicate-free set the learner mints.
+(2) BLOCKING, AND A KNOWN GATE HOLE - an unprefixed helper predicate (numlist_or_empty) shipped in
+quantity_model and bin/check_pack_naming.sh PASSED it, because the gate's minority-cluster check
+hunts known terse and retired prefixes and this straggler carried none; the helper was renamed
+(quantity_model_numbers_up_to), and THE HOLE IS RECORDED HERE so review hunts unprefixed helpers by
+hand until the gate learns to see them. The forgery family was shut by name (empty defining core,
+the reserved sentinel name, doubled category identifiers, doubled property keys, doubled unit
+names), and the largest door with it: both record predicates previously owned ANY quoted text as if
+enacted; both now take no text at all and instead ENACT - the learning episode or the conservation
+trial - minting only what the enactment produced. Honest-name fixes: an unbound transformation is
+refused as unknown (it formerly unified into the pour clause and was refused as a malformed
+appearance - a true refusal with a false reason); a minus-one spill is refused as a bad amount (it
+would GAIN); the comparison predicate's contract is stated and pinned (it compares two models by
+measurement alone and does not certify that any transformation connects them - the trial and the
+record do that). Two review JUDGMENTS are recorded as honest sizing, not defects: the caller-given
+shared-pair floor tunes how coarse the induced categories are (the mind forms them; the caller sets
+the grain), and the represented model's appearance field is written but never read - no code path
+estimates quantity from looks, so the lossy pour is the trial's proof of world-over-surface while
+the deeper temptation to read looks never arises in this code.
+
+Gates: category_formation 26 of 26 and quantity_model 29 of 29 Prolog Unit (PLUnit) tests pass;
+concrete_operations' 26 stay green under its re-sized header; 331 in total across twenty-five packs,
+all green. The naming, layer, layer-binding, and reality-discipline gates report zero violations
+(with the recorded naming-gate asterisk above). The Causalontology conformance suite was RE-MEASURED
+this slice rather than inherited: 137 of 137 (specification 4.0.0) in both cousins - PrologAI through
+its own vendored runner, causalontology through its Python binding. No new wall was hit and no new
+observation was minted; nothing in PrologAI or Causalontology was edited, per the Second, Third, and
+Fourth Commandments.
+
+HONEST REMAINING ASCENT, recorded as pending refinements, not walls: the capstone story narrates
+neither Rung Three nor Rung Four's appraisal and regulation chapters (the recorded story debts, the
+next slice's work); Rung Five (embodiment) remains untouched, and the guiding book's own Rung Five
+text asks for a REAL machine - a fact that will size any software-only opening of that rung; and the
+naming gate's unprefixed-helper hole awaits a gate that can see it.
+
 
  Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 4.
