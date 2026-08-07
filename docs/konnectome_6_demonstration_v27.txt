@@ -1,0 +1,797 @@
+APPENDIX 6. DEMONSTRATION
+
+A6.0 THE PURPOSE OF THIS PHASE
+
+Demonstration is the sixth phase, added by this work to the five of SPARC, giving the acronym SPARCD.
+
+An ordinary specification may end at Completion, with a working system.
+
+A specification of a mind owes more.
+
+This appendix demonstrates three things: that the System as specified is programming-language-agnostic and data-structure-agnostic, so that anyone may build it in any language on any substrate; that concrete implementations are planned and how they relate; and, with full honesty, what this System might and might not become, including the largest and most consequential question a specification of a cognitive architecture can raise, the question of Artificial General Intelligence.
+
+A6.1 THE FIRST DEMONSTRATION: IT IS PROGRAMMING-LANGUAGE-AGNOSTIC
+
+Read back through Appendices 1 through 5 and notice what is absent: there is no programming language anywhere in them.
+
+The requirements are stated in English.
+
+The logic is stated in English Readable Code.
+
+The architecture is stated as ten components and a tick ordering.
+
+The tests are stated as experiments.
+
+Not one line commits to Python, or to PrologAI, or to any language.
+
+This is not an oversight; it is the demonstration.
+
+The System is a set of rules, and rules are substrate-independent.
+
+The six archetype update rules are arithmetic and comparison.
+
+The drive loop is subtraction and accumulation.
+
+The learning rule is multiplication and a bound.
+
+There is nothing in the entire specification that any general-purpose programming language cannot express.
+
+A builder in Python, in PrologAI, in Rust, in Java, in a spreadsheet, in principle even by hand with pencil and paper for a small enough System, can implement this specification, and if two builders implement it faithfully in two different languages, their Systems will produce the same trajectory from the same seed, because they are running the same rules.
+
+This is why the English Readable Code of Appendix 2 was the right choice for the Pseudocode phase, and it is why substrate independence was made a first-class requirement (NFR-3) rather than left to chance.
+
+The specification is the invariant; the language is the free choice.
+
+A6.2 THE SECOND DEMONSTRATION: IT IS DATA-STRUCTURE-AGNOSTIC
+
+The same is true of the data.
+
+Appendix 3 gave the data model as a set of entities and their fields, a construct with a state, an interface with a weight and a delay, a drive with a set-point, without committing to how those are stored.
+
+They could be objects, records, rows in a table, terms in a logic program, or nodes in a graph.
+
+The System does not care, so long as the fields are present and the update rules can read and write them.
+
+So up to this point, the reader who has followed the specification can build their own digital brain at home, in the language they know and the data structure they prefer, and it will be a faithful realization of this book.
+
+That is the demonstration, and it is deliberate: a science that matters should be reproducible by anyone with patience and a computer, not only by its author.
+
+The barrier to building a cognitive architecture has been, until now, the absence of a complete and buildable specification.
+
+This book removes that barrier.
+
+A6.3 THE PLANNED IMPLEMENTATIONS
+
+While the specification is agnostic, the author has three concrete implementations planned, offered here so that a reader may join, adopt, or learn from them.
+
+They are complementary, not competing: each demonstrates the specification on a different substrate.
+
+THE CAUSALONTOLOGY 2.0.0 DATA LAYER.
+
+The data model of Appendix 3 is, by design, close to a general standard for representing causation called Causalontology, whose repository is at https://github.com/ai-university-aiu/causalontology.
+
+In that standard, the System's constructs are continuants, their tick-by-tick states are token states, the interfaces are conduits, and the records the observer produces are token occurrences and token causal claims.
+
+A change order for the next version of that standard, Causalontology 2.0.0, was written specifically to hold the multi-scale, stateful, causal structure this System requires, and a small reference implementation has already been built and shown to run.
+
+The Causalontology layer is the System's memory and its causal record: the substrate in which the digital brain remembers what happened to it and why.
+
+It is the data-structure demonstration made concrete.
+
+THE PYTHON MINIMUM VIABLE PRODUCT.
+
+A Minimum Viable Product, abbreviated MVP, is the smallest version of a system that demonstrates its core value.
+
+A Python MVP of the System, implementing the tick loop, the six archetypes, the drive loop, and the learning rule of Appendix 2 directly, is planned as the reference realization that a student can read, run, and modify on a personal computer.
+
+Python is chosen for the MVP for its readability and its ubiquity, not because the System requires it.
+
+This MVP is the language demonstration made concrete, and it is the one an implementer will most easily pick up first.
+
+A small proof-of-concept has already been run for the data layer; the full cognitive MVP is the natural next step, deliberately not rushed ahead of the specification that governs it.
+
+THE PROLOGAI IMPLEMENTATION.
+
+PrologAI is a cognitive-architecture programming language and substrate, built on Prolog, in which every reasoning step is a named, inspectable rule and every answer comes with a readable justification.
+
+It is a natural home for this System, because the System's glass-box requirement and PrologAI's justification-tree philosophy are the same commitment, made in different places.
+
+Where the Python MVP demonstrates the System on a conventional imperative substrate, the PrologAI implementation demonstrates it on a symbolic, self-explaining one.
+
+And it carries a second purpose.
+
+This System is a demanding test of PrologAI: if building the System reveals that PrologAI lacks some needed capability, for instance a clean way to close the reentrant loops the brain is full of, then that discovered gap becomes a change order for PrologAI itself, exactly as the System's needs became a change order for Causalontology.
+
+PrologAI remains a living language, and this System is one of the forcing functions that will grow it.
+
+The relationship among the three is simple.
+
+Causalontology is where the System remembers.
+
+Python is where a newcomer first builds it.
+
+PrologAI is where it reasons transparently and where the substrate itself may grow to meet it.
+
+All three realize the one specification, and none is privileged by it.
+
+A6.3a WHAT IT CAN ACTUALLY DO: THE LADDER OF DEMONSTRABLE MILESTONES
+
+The demonstrations above answer a builder's question - can I build this, in my language, on my data structure - and the answer is yes.
+
+But a reader is entitled to a second, blunter question: so what can it actually do, and how would I ever see it doing anything at all?
+
+A map to a distant summit is worth little if it does not also mark the first few steps you can take today and check underfoot.
+
+This section supplies exactly that: a concrete, ordered ladder of milestones, from the smallest sign of life to a body moving in the world, each one a thing you can run and watch, each one earning the right to attempt the next.
+
+The ladder borrows its shape from the one place in the universe where general intelligence is known to assemble itself from parts - the developing human child.
+
+A child does not begin by reasoning about justice or driving a car.
+
+A child begins by noticing that a hidden toy still exists, by reaching and grasping, by babbling before speaking, and only much later by planning, arguing, and empathising.
+
+The Swiss psychologist Jean Piaget named four broad stages in that ascent - the sensorimotor stage from birth to about two years, the preoperational stage from about two to seven, the concrete operational stage from about seven to eleven, and the formal operational stage from about eleven onward - and the young field of developmental robotics, which builds robots that learn in the same infant-to-adult order rather than being programmed complete, has shown that this same staged ladder is a practical engineering plan for a machine, not merely a description of children.
+
+This appendix adopts that plan.
+
+The milestones below are grouped into six rungs, and each rung is a stage a child passes through, translated into a test a System can be made to pass.
+
+A note before the rungs, on the two kinds of test the software world already names, because the ladder uses both.
+
+A smoke test, named for the hardware engineer's practice of powering on a new board and checking that no smoke rises, is the very first and cheapest check: does the thing switch on and run at all without falling over.
+
+A pilot test is a small, real, end-to-end trial of the whole system on a genuine task, run before any full-scale deployment, to see whether the parts work together in the world rather than only on the bench.
+
+Every rung below opens with a smoke test - the cheapest possible sign that the rung is alive - and closes with a pilot test - a small but real end-to-end task that shows the rung genuinely working.
+
+
+RUNG ZERO: THE SMOKE TESTS - IS IT ALIVE AT ALL
+
+Before the System can be said to do anything, it must first simply run, and the smoke tests establish that with the least possible ceremony.
+
+Smoke test one, the heartbeat: start the System with no input and let the tick loop run, and confirm that the clock advances, that every construct holds a state, and that nothing crashes or drifts to infinity.
+
+A System that can idle stably for a million ticks without exploding or freezing has passed its first and most basic sign of life, exactly as a newborn's steady heartbeat is the first thing a delivery room checks.
+
+Smoke test two, the reflex: deliver a single sharp input - a spike on one sensory construct - and confirm that it propagates along the specified interfaces, changes the states it should change, and settles back down.
+
+This is the machine equivalent of the knee-jerk reflex, and it proves that the bus, the scheduler, and the graph are wired and conducting.
+
+Smoke test three, the drive pulse: let one drive fall below its set-point and confirm that the drive loop registers the deficit, raises the corresponding urge, and quiets it again when the deficit is met.
+
+This proves the System has an inside - a state it prefers - which is the seed of everything the higher rungs build on.
+
+The pilot test for Rung Zero is the determinism check already required by the specification: run the System twice from the same seed with the same input, and confirm the two trajectories are identical tick for tick, because a mind you cannot reproduce is a mind you cannot study.
+
+Passing Rung Zero does not make the System intelligent; it makes it a stable, inspectable, reproducible organism ready to learn, which is the sensorimotor infant at the moment of birth.
+
+
+RUNG ONE: THE SENSORIMOTOR STAGE - PERCEIVING, ACTING, AND THE FIRST CONCEPTS
+
+Piaget's sensorimotor stage, birth to about two years, is where a child learns that the world is made of persistent objects, that its own actions cause effects, and that a thing hidden is not a thing gone - the milestone called object permanence.
+
+This is the System's first real rung, and it is where perception is wired in, because until now the System has only received abstract spikes and must now be connected to the actual world.
+
+Here the appendix answers several of the plain questions a reader will have about what the System can take in.
+
+Can it take text input?
+
+Yes, and this is the simplest sensory front-end of all: text arrives as a stream of tokens, each token published onto a language-sensory construct exactly as a retinal spike is published onto a visual one, and the System's job is to let that stream drive its internal state.
+
+Text is the easiest modality to wire because it is already symbolic, and so it is the first sense the System is given.
+
+Can it see objects, or name what is in front of it?
+
+Yes, by a design choice this book makes openly: the System does not need to re-solve the enormous problem of raw vision from scratch, because that problem is already solved well by existing vision models.
+
+A vision-language model - a large neural network, abbreviated VLM, that looks at an image and returns a description in words, such as a cup, on a table, to the left - is used as the System's eye, a sensory organ bolted on at the front.
+
+The VLM converts pixels into named objects and relations, and those named objects are published onto the System's perceptual constructs, so the System perceives a world of things and relationships rather than a wash of colour.
+
+This is precisely how developmental-robotics laboratories now build embodied agents: the heavy perceptual lifting is done by a pre-trained vision model acting as the retina and early visual cortex, and the cognitive architecture reasons over the clean, named output.
+
+The System is glass-box where it matters - in its drives, its learning, its reasoning - and it is free to use an opaque, off-the-shelf organ for the one job, raw sensory transduction, that biology also delegates to specialised, hard-wired hardware.
+
+Can it hear through a microphone?
+
+Yes, by the same strategy applied to sound.
+
+A microphone captures audio, and a speech-to-text model - an automatic speech recognition system, abbreviated ASR, that turns spoken sound into written words - acts as the System's ear and auditory cortex, converting the pressure waves into a token stream that enters exactly where typed text enters.
+
+So the System hears by having a specialised organ transcribe the world's speech into the symbolic input it already knows how to receive, and if a text-to-speech model, abbreviated TTS, is added on the output side, the System can also answer aloud, closing a natural spoken loop.
+
+The smoke test for Rung One is the naming test: place an object in front of the camera and confirm that the correct named object appears on the System's perceptual construct, or speak a word into the microphone and confirm the correct token arrives - the sense organs are connected and reporting.
+
+The central pilot test for Rung One is object permanence, the defining sensorimotor milestone: show the System an object, hide it behind a screen, and confirm that the System's internal representation of the object persists while it is out of view, so that the System is surprised - registers a prediction error - if the screen is lifted and the object is gone.
+
+A System that maintains a hidden object has crossed the threshold every human infant crosses near its first birthday, and it is the first milestone that is unmistakably cognitive rather than merely mechanical.
+
+A second Rung One pilot test is simple cause and effect: let the System discover, through its own reward-gated learning, that one of its actions reliably produces a pleasant change in the world - the machine equivalent of an infant learning that shaking a rattle makes a sound - which demonstrates goal-directed action, the other great sensorimotor achievement.
+
+
+RUNG TWO: THE PREOPERATIONAL STAGE - SYMBOLS, LANGUAGE, AND CHATTING
+
+Piaget's preoperational stage, roughly ages two to seven, is the age of symbols and language: the child now uses words and images to stand for things that are not present, talks, asks endless questions, and pretends.
+
+This rung answers the question many readers ask first: will the System be able to chat, like a chatbot?
+
+The honest answer is yes, but in a way worth being precise about, because it differs from how a chatbot chats.
+
+A conventional chatbot is a large language model that produces fluent replies by predicting likely next words, with no inner state, no goals, and no memory of caring about anything.
+
+The System, at this rung, chats from the inside out: words arrive through the text or speech front-end of Rung One, they change its internal state, that state is shaped by its drives and its memories, and its reply is the outward expression of that changed inner state.
+
+Early in the rung the System's language will be simple, even childlike, because its symbolic machinery is still forming, exactly as a three-year-old's speech is simple - and that simplicity is a feature of an honest developmental account, not a defect to be hidden by bolting a fluent language model over the top.
+
+The smoke test for Rung Two is the single-symbol exchange: give the System a word it has grounded through experience and confirm it can produce that word to refer to the thing, and recognise the word when it hears it - symbol use in both directions.
+
+The pilot test for Rung Two is a short grounded conversation: a back-and-forth exchange, by text or by voice, in which the System's replies are demonstrably driven by its internal state and its history rather than by next-word prediction alone - for instance, it answers differently when a drive is satisfied than when the same drive is in deficit, so that its mood colours its words.
+
+A chatbot that has no inner weather cannot do this; a System with drives can, and that difference is the whole point.
+
+A second Rung Two milestone is pretend, or imagination: using the System's reality-quarantine machinery to run a small imagined scenario - to represent a situation that is not happening and reason within it without confusing it for the real record - which is the preoperational child's leap into symbolic play.
+
+
+RUNG THREE: THE CONCRETE OPERATIONAL STAGE - LOGIC, REASONING, AND RULES
+
+Piaget's concrete operational stage, roughly ages seven to eleven, is where thought becomes logical about concrete things: the child can classify, order, reason about cause and consequence, and grasp that quantities are conserved when their appearance changes.
+
+This rung is where the reader's questions about logic and reasoning tests are answered, and it is a natural strength of this System because its foundation is a causal model of the world.
+
+The smoke test for Rung Three is a single valid inference: give the System two grounded facts from which a third follows - if the block is on the cup and the cup is on the table, then the block is above the table - and confirm it derives the conclusion and can show the steps.
+
+Because the System is transparent, this test also checks something a black box cannot offer: that the reasoning is inspectable, each step a named, watchable operation rather than an opaque leap.
+
+The pilot tests for Rung Three are a graded battery of concrete reasoning trials, each drawn from the developmental literature so that success has a clear human referent.
+
+A classification trial: sort a set of perceived objects into categories the System has formed from experience, and re-sort them by a different property on request, demonstrating flexible categorisation.
+
+A seriation trial: arrange objects in order along a dimension, such as size, demonstrating ordered comparison.
+
+A conservation trial: confirm that the System understands a quantity is unchanged when only its appearance changes - the same water in a taller, thinner glass is still the same amount - which is the concrete-operational child's signature achievement and a direct test of whether the System models the world rather than its mere surface.
+
+A causal-reasoning trial: present a small chain of events and ask the System which event brought about which, using the Causalontology causal record, and confirm it distinguishes a genuine cause from a mere co-occurrence - the very thing the dominant correlational models famously cannot reliably do.
+
+A planning trial: give the System a goal state and a set of available actions, and confirm it can compose a short sequence of actions that reaches the goal, demonstrating means-end reasoning.
+
+Passing this rung shows the System reasoning logically and causally over concrete, grounded situations, with every inference open to inspection, which is exactly the capability the reigning paradigm is weakest at and this architecture is built to be strong at.
+
+
+RUNG FOUR: THE EMOTIONAL AND SOCIAL RUNG - FEELING, AND MODELLING OTHER MINDS
+
+Human development is not only cold cognition; alongside Piaget's ladder runs an emotional and social one, and a specification of a mind that reproduces the brain's drive, affect, and social systems owes an account of how those are demonstrated too.
+
+The reader asks about emotional tests, and the System can be given them because it has, by construction, the machinery of emotion: drives that can be satisfied or thwarted, and neuromodulatory states that colour its whole cognition the way feelings colour ours.
+
+The smoke test for Rung Four is an affective-response check: thwart a drive and confirm the System enters a measurably different global state - a negative affect - that changes how it perceives, learns, and acts, and confirm the opposite state arises when the drive is satisfied.
+
+This shows the System has something it is like to be in - an inner valence - which is the raw material of emotion.
+
+The pilot tests for Rung Four cover both feeling and the reading of others.
+
+An appraisal trial: present a situation and confirm the System appraises it as good or bad for its own goals, producing an appropriate emotional state - fear at a threat to a set-point, something like satisfaction at a met one.
+
+A regulation trial: confirm the System can bring an aroused emotional state back toward baseline over time, demonstrating the beginnings of emotional regulation rather than being permanently captured by every jolt.
+
+A theory-of-mind trial, the great social milestone: confirm that the System can attribute to another agent a mental state different from its own - and, at the harder level, a false belief, the classic test in which a child must predict that a person will look for an object where that person last saw it, not where the child knows it now is.
+
+Modelling another mind, and especially another mind that believes something false, is widely held to be a prerequisite for genuine social intelligence, and it is one of the four data-structure capabilities this program has already identified as a candidate for the next major version of the Causalontology layer, so this rung is also where the architecture's own growth is stress-tested.
+
+An empathy trial, at the top of the rung: confirm that another agent's modelled distress can move the System's own affective state and shape its behaviour toward help, which is the seed of pro-social action.
+
+Passing Rung Four shows a System that not only thinks but feels its situation and reads the situations of others, which is the part of intelligence a purely logical account leaves out and a faithful model of the brain cannot.
+
+
+RUNG FIVE: THE EMBODIED RUNG - A ROBOT BODY, AND ACTING IN THE REAL WORLD
+
+The highest rung on this ladder returns the System to where a child's intelligence is forged: a body, in a world, with real stakes.
+
+The reader asks whether the System will be able to inhabit a robot body and use the robot's sensors, and the answer is that this is not an afterthought but the destination the whole architecture is aimed at, because its cognition is grounded in the regulation of a body state and a body is what closes the loop.
+
+Inhabiting a robot means three connections, each of which the rungs below have already prepared.
+
+The robot's sensors - its cameras, microphones, touch and joint sensors - become the System's senses, feeding the perceptual constructs through the same vision, speech, and touch front-ends that Rung One installed, so the System perceives the robot's world.
+
+The robot's body state - its battery level, its temperature, its balance, its physical integrity - becomes the System's homeostatic state, the set-points its drives defend, so that a low battery is felt as hunger and a risk of falling as something like fear, giving the System real skin in the game.
+
+The robot's actuators - its wheels, arms, grippers, and voice - become the System's means of acting, driven by the same goal-directed, reward-gated machinery that Rung One first exercised on a rattle, so that the System moves its body to meet its needs.
+
+The smoke test for Rung Five is the sense-act loop: confirm that a change the robot's camera sees produces, through the System, a movement of the robot's body - perception in, action out, the loop closed through a real machine.
+
+The pilot tests for Rung Five are graded embodied tasks, each a small, real, end-to-end trial in a body.
+
+A reaching-and-grasping trial: confirm the System can guide the robot's arm to pick up a named object it perceives, the embodied form of the infant milestone of coordinated reaching.
+
+A navigation trial: confirm the System can move the robot toward a goal location while avoiding obstacles, using its persistent model of a world that continues to exist outside the current view - object permanence, now load-bearing.
+
+A homeostatic-survival trial, the one that most fully exercises the whole architecture: place the robot in an environment where it must act to defend its own body state - seeking a charging station as its battery drive falls, avoiding a hazard that threatens its integrity - and confirm it does so of its own accord, because it wants to, which is the difference between a tool that is driven and an agent that is self-driven.
+
+And what about driving a car, the reader's most striking question?
+
+Driving is not a separate magic capability; it is the navigation trial scaled up - a demanding embodied task requiring fast perception, a strong world model, real-time planning, and stakes measured in safety - and so it sits near the very top of this rung, reachable in principle by the same sense-model-plan-act loop that guides the robot arm, but demanding the mature, well-trained, heavily scaled System that the higher camps of the mountain describe, and demanding, above all, the safety discipline that the safety chapters of this work insist upon before any such System is trusted with a life.
+
+This book neither promises a self-driving System tomorrow nor pretends it is out of reach; it places driving exactly where it belongs on the honest ladder - a hard, high, embodied navigation task, continuous with the rungs below it and gated by scale and by safety.
+
+
+HOW THE LADDER MAPS TO THE MOUNTAIN
+
+The ladder of milestones and the map to the summit given later in this appendix are the same climb seen at two scales, and they fit together cleanly.
+
+Rung Zero and Rung One - a stable, reproducing System with its senses wired in, holding a hidden object in mind - are the first camp, the faithful small System of Completion version one, reachable today on a personal computer.
+
+Rungs Two and Three - grounded language, and logical, causal, inspectable reasoning over concrete situations - are the second camp, the scaling of grain and connectivity, needing engineering and moderate compute.
+
+Rungs Four and Five - feeling, modelling other minds, and inhabiting a body with real stakes over long stretches of continuous experience - are the third camp, the scale of experience, where serious compute and a partner join the expedition.
+
+And the general, flexible competence that emerges from a System that has climbed all five rungs, embodied and continuously learning, is the fourth camp: the summit.
+
+Each rung is a thing you can build and watch, each earns the next, and the earliest rungs are reachable now - which is what turns a distant summit into a climb with its boots already on the trail.
+
+The value of stating the milestones this concretely is not only that a partner can see what their compute would buy, but that a skeptic can hold the System to account: here are the exact tests, in order, and here is what passing each one would look like, so that progress can be measured rather than merely asserted.
+
+A cognitive architecture that named no milestones could hide behind its own grandeur; this one names them, from the heartbeat to the moving body, and invites the reader to check each rung underfoot.
+
+
+A6.4 WHY THIS MAY MATTER TO RESEARCHERS AND SCIENTISTS
+
+Beyond the individual builder, the System has value to the working scientist, and the value follows directly from its defining virtue, transparency.
+
+A neuroscientist can use the System as a computational testbed: form a hypothesis about what a region does or how a circuit learns, encode it as a change to the relevant construct, run the affected famous-experiment test, and see whether the hypothesis reproduces the known result or breaks it.
+
+The System turns a theory of a brain region into a runnable, falsifiable claim.
+
+A clinician-researcher can use it to study disease mechanistically: the System already reproduces Parkinsonian freezing from dopamine depletion, and the same method extends to modeling the multi-region cascades of Alzheimer's disease, depression, and epilepsy that the science chapters described, testing candidate interventions in a transparent model before proposing them in a living one.
+
+An artificial-intelligence researcher can use it as a different kind of intelligence to study: a mechanistic, inspectable, biologically grounded architecture, unlike the statistical black boxes that dominate the field, and therefore a source of ideas the dominant paradigm cannot easily reach, about drives, about neuromodulation as global control, about learning gated by reward rather than by gradient descent over labeled data.
+
+This last point is the bridge to the largest question, and the appendix now turns to it, with care.
+
+A6.5 THE AGI QUESTION: THE ARCHITECTURE, THE ROUTE, AND THE WORK AHEAD
+
+Artificial General Intelligence, abbreviated AGI, means an artificial system with the broad, flexible, general competence of a human mind, as opposed to the narrow competence of a system good at one task.
+
+The question this appendix must address, because a specification of a cognitive architecture cannot avoid it, is whether the System, scaled and fed, is a path toward AGI.
+
+The answer this book gives is yes: not a proof of arrival, which no honest engineer offers before the building stands, but a well-founded conviction, grounded in the architecture itself and in a clear-eyed reading of where the dominant paradigm is faltering.
+
+The route is real, the early ground is already under our feet, and the work that remains is engineering and scale rather than mystery.
+
+This section states the case with confidence and states the remaining work with precision, because the two together are what a serious claim looks like.
+
+THE CASE FOR PROMISE.
+
+The System has several properties that the dominant paradigm, the large language model, conspicuously lacks, and that many researchers believe a general intelligence will require.
+
+It has DRIVES.
+
+It wants things, and it evaluates the world by whether its wants are met.
+
+A large language model wants nothing; it predicts the next token.
+
+A system with genuine goals of its own is, in this respect, more like a mind.
+
+It has EMBODIED HOMEOSTASIS.
+
+Its cognition is grounded in the regulation of a body state, which a growing body of thought holds is not incidental to intelligence but constitutive of it.
+
+Meaning, on this view, is grounded in mattering, and things matter to the System because they bear on its set-points.
+
+It LEARNS FROM REWARD AND SURPRISE, continuously, by a local rule gated by neuromodulators, rather than by a massive offline optimization over a fixed dataset.
+
+This is closer to how animals learn, and it does not require the enormous labeled corpora the dominant paradigm consumes.
+
+It is TRANSPARENT.
+
+Every state and every weight is inspectable and tied to a named construct.
+
+If it reasons, one can watch it reason.
+
+This is a property no large language model has, and it is exactly the property their critics most wish they had.
+
+And it is CAUSAL by construction, built to represent and reason over cause and effect through the Causalontology layer, where the dominant models are correlational, capturing what tends to follow what without a model of what brings what about.
+
+Many hold that genuine understanding requires causal models, and this System has one at its foundation.
+
+Where large language models are widely observed to fall short, in genuine understanding, in causal reasoning, in goal-directedness, in transparency, in learning efficiently from little, this System is designed, from first principles, to be strong.
+
+That is the case for promise, and it is decisive: the System is strong in precisely the places the reigning paradigm is weak, and those places are the ones the field increasingly agrees stand between it and general intelligence.
+
+THE WORK THAT REMAINS, STATED WITH EQUAL PRECISION.
+
+Confidence is not the absence of hard work ahead; it is a clear account of exactly what that work is.
+
+Four tasks stand between the System as specified and the System as a general intelligence, and each is a known engineering problem, not an unknown.
+
+GRAIN.
+
+Where the regional grain proves too coarse for a given competence, the construct at issue is refined to finer detail.
+
+The architecture was built for exactly this: any construct can be internally deepened without touching the scheduler, the bus, or the graph.
+
+Grain is a dial the builder turns where the work demands it, not a wall.
+
+ARCHETYPES. Where a construct's behaviour exceeds the six update rules, the archetype set is extended, in the same disciplined way the science itself was extended when the evidence required it. The six cover the brain as we understand it today; the seventh, if a construct earns it, is added, and the method for adding it is already in place.
+
+SCALE AND COMPUTE.
+
+The architecture is designed to reward scale, because it learns continuously from experience rather than saturating on a fixed corpus, and because its modular grain parallelizes cleanly across as much compute as it is given.
+
+What it has not yet had is the compute, for the plain reason that its author is one person.
+
+This is not a doubt about the architecture; it is a resource this book is written to attract.
+
+Given serious compute, the System scales, and scaling it is the next step, not a leap of faith.
+
+EMERGENCE.
+
+General competence will emerge from the scaled, embodied, continuously learning System because the System is built out of the very components from which it emerges in nature: drives that make things matter, a body whose regulation grounds meaning, reward-gated learning that compounds with experience, and a causal model of the world.
+
+Assemble the parts that produce a mind, supply them with a world and the time to learn it, and mind is what they produce.
+
+That is not a hope pinned to luck; it is the working hypothesis of the entire science of the brain, and this System is the first complete, transparent, buildable test of it.
+
+So the answer is yes, held as a serious researcher holds a yes before the result is in: with the architecture in hand, the route mapped, the early ground taken, and the remaining work named and tractable.
+
+THE MAP TO THE TOP OF THE MOUNTAIN.
+
+The path is coherent, each camp follows from the last, and the early camps are already reached, which is more than can be said for any other map to that summit.
+
+The first camp is the faithful small System of Completion, version one: buildable now, on a personal computer, reproducing the landmark experiments.
+
+This is reached, today.
+
+The second camp is scale of grain and connectivity: refining the constructs toward finer detail where it matters, and enriching the connectome toward the density the real brain has.
+
+This needs engineering and moderate compute, both in reach.
+
+The third camp is scale of experience: connecting the System to rich, continuous, embodied input, a simulated or real body in a simulated or real world, and letting its reward-gated learning run over very long durations.
+
+This is where serious compute and a serious budget do the work, and where a partner joins the climb.
+
+The fourth camp is the emergence of general, flexible competence from the scaled, embodied, continuously learning System.
+
+This is the summit, and the route to it is continuous with the camps below: no gap, no miracle, no missing mechanism, only scale, embodiment, and time applied to an architecture already proven in the small.
+
+The summit is in sight from the ground we already hold.
+
+THE PARTNERSHIP THAT TAKES IT TO THE TOP.
+
+The author is one independent, open-source researcher, and this book is a demonstration of what one such person can specify: a complete, transparent, buildable cognitive architecture, grounded in neuroscience, carried through a full engineering specification, and given away.
+
+The higher camps, the scale of experience and the arrival at the summit, are a matter of compute and budget, and they call for a partner.
+
+This appendix is that invitation, stated plainly and without hedging: the architecture is sound, the route is mapped, the early camps are taken, and what the climb needs now is scale.
+
+A partner with serious compute and a serious budget joins not a gamble but a well-founded expedition with its base camps already established.
+
+The specification is complete and free.
+
+Bring the scale, and we reach the top.
+
+A6.6 REFLECTION, AND THE CLOSE OF THE SPECIFICATION
+
+The Demonstration phase exists because a specification of a mind carries an obligation an ordinary specification does not: to say, at the end, exactly what has been built and exactly what the path forward is.
+
+What has been built, and given away, is a complete, transparent, language-agnostic, data-structure-agnostic specification of the human cognitive architecture at the regional grain, buildable at home by anyone, reproducing landmark neuroscience from first principles, with three concrete implementations planned and one already proven in the small.
+
+That is real, and it is finished.
+
+What lies ahead is the scaling of this architecture, embodied and fed, into a general intelligence.
+
+That is not a hope pinned to luck but a route, mapped camp by camp, with its early camps already reached and its remaining work named and tractable: refine the grain where needed, extend the archetypes where earned, supply the scale, and let experience compound.
+
+The summit is continuous with the ground we already hold.
+
+This is the discipline the whole book has kept, from the first chapter's care to separate what the brain is from what we set out to build, through the science chapters' habit of marking every modeling choice as a choice, to the change order's refusal to pretend a commitment was a fact.
+
+That same discipline is what lets this specification end in confidence rather than in caution: it has earned its claim by building the early camps in full view, and it names precisely what the climb still requires.
+
+A framework that overclaimed would be worth little; a framework that underclaimed what it has plainly achieved would be worth no more.
+
+This one states exactly what it is, and what it is is the first buildable route to the summit.
+
+The map is drawn.
+
+The early camps are reached.
+
+The summit is in sight.
+
+Let us go forth to the peak: AGI.
+
+END OF THE SPECIFICATION
+
+END OF NATURE'S COGNITIVE ARCHITECTURE, VERSION 20
+
+
+KONNECTOME REALIZATION LOG
+
+Slice 1 - the heartbeat - 2026-07-20 - pack tick_engine, version 0.1.0.
+
+Ladder rung 1, the heartbeat - a stable, reproducing tick loop that keeps time - is demonstrated by the clock_keeps_time and run_is_reproducible tests. Rung 2 (senses, and holding a hidden object in mind, where each tick record becomes a Causalontology token_occurrence via the reused causal_core pack) is the next slice.
+
+Gates at this slice: 7 of 7 tick_engine Prolog Unit (PLUnit) tests pass; the naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited; konnectome reuses them through the library path.
+
+This log grows one entry per code slice, per the Tenth Commandment. The full SPARCD Fileset was bumped in lockstep from version 1 to version 2, and the version 1 files were archived under docs/archive/ in the same change, per the Ninth Commandment.
+
+
+KONNECTOME REALIZATION LOG - SLICE 2
+
+Slice 2 - the six archetype rules and the first Causalontology thought - 2026-07-20 - packs archetype (0.1.0) and observer (0.1.0).
+
+Ladder rung 2 advances: konnectome now holds its first durable thought - each tick recorded as a Causalontology token_occurrence - and carries the six archetype rules that give constructs their dynamics. Wiring the archetypes into the scheduler through the connection graph (Component 3) is the next slice.
+
+Gates at this slice: archetype 7 of 7 and observer 6 of 6 Prolog Unit (PLUnit) tests pass; naming, layer, and layer-binding gates report zero violations; the Causalontology 119-vector conformance suite passes 119 of 119. Nothing in PrologAI or Causalontology was edited; konnectome reuses causal_core through the library path.
+
+
+KONNECTOME REALIZATION LOG - SLICE 3
+
+Slice 3 - the connection graph - 2026-07-20 - pack connection_graph (0.1.0).
+
+Constructs now feed one another tick to tick across the connection graph, and the signal front advances one hop per tick. Full multi-tick delay lines, and wiring every archetype through the graph, continue in later slices.
+
+Gates at this slice: connection_graph 4 of 4 Prolog Unit (PLUnit) tests pass (tick_engine 7, archetype 7, observer 6 unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited; connection_graph reuses the archetype pack.
+
+
+KONNECTOME REALIZATION LOG - SLICE 4
+
+Slice 4 - the reward loop - 2026-07-20 - packs neuromodulator_bus (0.1.0) and drive_system (0.1.0).
+
+konnectome now has the origin of motivation: drives that want their set-points, a reward that is the total relief of that wanting, and dopamine that carries the reward to the rest of the mind. The action selector (Component 6) that acts on it is a later slice.
+
+Gates at this slice: neuromodulator_bus 4 of 4 and drive_system 5 of 5 Prolog Unit (PLUnit) tests pass (the earlier four packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 5
+
+Slice 5 - the action selector - 2026-07-20 - pack action_selector (0.1.0).
+
+konnectome can now act: it weighs competing urges and releases exactly one, biased by what its drives most need, and it never invents an urge of its own. The override controller (Component 7) and the plasticity engine (Component 8) are later slices.
+
+Gates at this slice: action_selector 6 of 6 Prolog Unit (PLUnit) tests pass (the earlier six packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 6
+
+Slice 6 - the plasticity engine - 2026-07-20 - pack plasticity_engine (0.1.0).
+
+The loop of the mind is closed: konnectome wants (drives), acts (the action selector), is rewarded (dopamine), and now learns (the plasticity engine strengthens the connections that earned the reward). Homeostatic scaling and the eligibility trace are later refinements.
+
+Gates at this slice: plasticity_engine 5 of 5 Prolog Unit (PLUnit) tests pass (the earlier seven packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 7
+
+Slice 7 - completing the architecture - 2026-07-20 - packs override_controller (0.1.0) and perturbation_interface (0.1.0).
+
+The ten-component architecture of the manuscript now stands in konnectome: a scheduler, a connection graph, a bus, drives, an action selector, an override controller, a plasticity engine, an observer, a perturbation interface, and a construct registry. The mind can keep time, want, act, be overridden by what is vital, learn, and be experimented upon - all as a glass box.
+
+Gates at this slice: override_controller 4 of 4 and perturbation_interface 4 of 4 Prolog Unit (PLUnit) tests pass (the earlier eight packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 8
+
+Slice 8 - one running tick - 2026-07-20 - pack cognitive_cycle (0.1.0).
+
+The loop of the mind runs as one system: konnectome wants, updates, acts under its safety override, learns, and records each tick as a Causalontology thought - reproducibly, and as a glass box. The next mountain is the developmental ladder: senses, language, and reasoning.
+
+Gates at this slice: cognitive_cycle 4 of 4 Prolog Unit (PLUnit) tests pass (the earlier ten packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 9
+
+Slice 9 - hardening the loop - 2026-07-20 - packs connection_graph (0.2.0), drive_system (0.2.0), cognitive_cycle (0.2.0).
+
+konnectome now closes the loop on its own body: it wants, proposes what would help, acts with its gain set by its own chemistry, learns from the result, and moves its body toward what it needs - and the body's improvement feeds back as the next reward. The three honest non-closures of slice 8 are closed.
+
+Gates at this slice: connection_graph 6 of 6, drive_system 9 of 9, and cognitive_cycle 4 of 4 Prolog Unit (PLUnit) tests pass (the other eight packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 10
+
+Slice 10 - thought combination - 2026-07-20 - pack thought_combination (0.1.0).
+
+konnectome can now combine thoughts: it mints a reified, content-addressed cause-and-effect relation from input thoughts, links them into chains and trees of thought, and does so without touching the frozen ontology - the substrate reasoning will stand on.
+
+Gates at this slice: thought_combination 7 of 7 Prolog Unit (PLUnit) tests pass (the earlier eleven packs unchanged); naming, layer, and layer-binding gates report zero violations; the Causalontology 119-vector conformance passes 119 of 119. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 11
+
+Slice 11 - other minds and prediction, the wall-finding build - 2026-07-22 - packs other_minds (0.1.0) and prediction_loop (0.1.0).
+
+Two rungs of the ladder become demonstrable at runtime. Rung Four, the emotional and social rung: konnectome attributes to Sally a belief different from its own - a FALSE belief - and predicts that Sally searches the basket where she last saw the marble, not the box where it now is, and it nests that model (konnectome models Sally believing the basket). Rung One, the sensorimotor rung: konnectome expects an object behind a screen and registers a signed SURPRISE - a prediction error - when the screen lifts and the object is gone. Both trials run and pass. But the demonstration is honest about the ceiling this slice found: konnectome can privately hold the false belief and privately feel the surprise, yet it cannot yet SHARE either as a Causalontology record another mind could read, because the frozen 3.0.0 substrate has no kind for a belief or a prediction. Those two walls are routed to the change order, whose release as Causalontology 4.0.0 is what lifts the ceiling.
+
+Gates at this slice: other_minds 8 of 8 and prediction_loop 10 of 10 Prolog Unit (PLUnit) tests pass (the earlier twelve packs unchanged, 69 tests); naming, layer, and layer-binding gates report zero violations; the Causalontology 119-vector conformance suite is untouched and green. Two walls were hit, recorded as Wall-1 and Wall-2, and ROUTED to the Causalontology change order (Sections B and A). Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 12
+
+Slice 12 - the closure: minting the new kinds - 2026-07-22 - packs other_minds (0.2.0) and prediction_loop (0.2.0).
+
+The story that slice 11 left at a cliffhanger now finishes. At slice 11 konnectome could privately attribute to Sally a FALSE belief - predicting she searches the basket where she last saw the marble, not the box where it now is - and even nest that model, and it could privately feel a signed SURPRISE when the object-permanence screen lifted on nothing; but it could SHARE neither, because the frozen 3.0.0 substrate had no kind for a belief or a prediction. Slice 12 lifts that ceiling. Causalontology 4.0.0 shipped the three missing kinds, and konnectome now writes the belief out as a shareable ATTITUDE record another mind can read - true, false, and nested alike, the false one living quietly beside the world's own contrary record without poisoning it - and writes the surprise out as a PREDICTED_OCCURRENCE paired with a real outcome into a PREDICTION_ERROR record. And the demonstration this slice is proudest of is the wall lifecycle itself, shown end to end: a wall was HIT by building (the eighteen kinds had no belief and no prediction), RECORDED honestly in the ledger, ROUTED to exactly one destination, RELEASED as Causalontology 4.0.0 with the owner's written go-ahead, and EXECUTED as the two export packs - and when the closure met one more wall of its own (the language library had not yet caught up to the new standard, so the kinds could not be minted), that third wall was routed to the PrologAI change order and CLOSED the same day by causal_core 1.1.0. Three walls hit, three walls closed, nothing smuggled and no cousin edited in place: the method demonstrating itself.
+
+Gates at this slice: other_minds 10 of 10 and prediction_loop 16 of 16 Prolog Unit (PLUnit) tests pass (the earlier twelve packs unchanged); naming, layer, and layer-binding gates report zero violations; the Causalontology conformance suite is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. Wall-1, Wall-2, and Wall-3 are CLOSED. Causalontology and PrologAI were extended through their own gated change orders, never edited directly.
+
+
+KONNECTOME REALIZATION LOG - SLICE 13
+
+Slice 13 - the provenance layer: the mind grades and, when wrong, disowns its own thoughts - 2026-07-26 - pack self_provenance (0.1.0).
+
+This appendix asks what the System is, what it is not, and what it might become, and it reads the developmental ladder as the map toward general intelligence. Provenance is a rung on that map that the roadmap names as a prerequisite for TRUSTWORTHY general intelligence: a mind that can state how sure it is, ground its confidence in graded evidence, and correct itself on the record when the world proves it wrong. Slice 13 demonstrates konnectome doing exactly this over the milestones the previous slices reached. It asserts the attributed belief of the false-belief trial (the social milestone, Rung Four) on observation evidence, distinguishing the modelled agent who HOLDS the belief from konnectome the SOURCE who vouches for the attribution. It asserts its object-permanence forecast (the predictive milestone, Rung One) on simulation evidence - honestly ranking a model-based forecast below a direct observation - and, when the screen lifts and the object is gone, it RETRACTS that forecast, the honest exit; when the object is present, it SUPERSEDES the forecast to the stronger observation grade. This is the glass-box thesis carried to the metacognitive rung: not only can an observer watch the mind think, the observer can watch the mind grade its own thoughts and disown them when they fail, all as shareable, content-addressed records rather than a private change of heart.
+
+What is honestly NOT yet demonstrated, and is recorded as such: the cryptographic signature that would let a third party VERIFY, not merely read, konnectome's assertions. That signature needs a private key, a secret this System's own rules bar from its code, so it is a deployment-time act; the demonstration shows the graded, self-corrected records the mind produces, and leaves the signing to the key-holder who runs the mind. The System claims the metacognitive capability it built and does not claim the cryptographic authentication it deferred - the discipline of claiming only what is shown.
+
+Gates at this slice: self_provenance 17 of 17 Prolog Unit (PLUnit) tests pass (the earlier fourteen packs unchanged, 95 tests; 112 in total); naming, layer, and layer-binding gates report zero violations; the Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; the slice-12 honest non-closure is CLOSED. Nothing in PrologAI or Causalontology was edited; self_provenance reuses causal_core through the library path.
+
+
+KONNECTOME REALIZATION LOG - SLICE 14
+
+Slice 14 - the capstone: the mind runs, and its own records tell the story - 2026-07-26 - pack capstone_demonstration (0.1.0), and the first runnable entry point, bin/run_capstone_demonstration.sh.
+
+This slice is this appendix made runnable. The Demonstration phase has, until now, lived in prose - each Realization Log entry telling what its slice showed - while the showing itself stayed scattered across fifteen test suites. The capstone gathers it: one script boots the mind and walks the ladder in rung order, exactly as Section A6.3a's discipline demands, and the order is not a stylistic choice but a TESTED property - the suite asserts that Rung Zero's narration precedes Rung One's, Rung One's precedes Rung Four's, and the provenance layer closes the telling. Rung Zero is shown as a lived heartbeat: ten ticks of reward, dopamine, one released action each tick, and an observer record per tick, ending with the body at its defended set-point and the interface weight grown by the three-factor rule. Rung One is shown twice, kindly and cruelly: the same forecast confirmed (signed error zero) and surprised (signed error minus one), because a demonstration of prediction that never shows the surprise is only half a demonstration. The combined thought is shown as a chain whose linkage is checkable from the records alone. Rung Four is shown as the false belief held in quarantine beside the world's contrary record, nested one level, exported as a shareable attitude. And the provenance layer closes the story with the mind standing behind, upgrading, and - in the cruel world - disowning its own stances. The demonstration's deepest claim is reproducibility: the story told twice is the same story, and a reader can re-mint any identifier it prints. What is honestly not demonstrated is printed by the demonstration itself: Rungs Two, Three, and Five, and the deployment signature - the claim-only-what-is-shown discipline, now enforced by the artifact rather than merely promised beside it.
+
+Gates at this slice: capstone_demonstration 20 of 20 Prolog Unit (PLUnit) tests pass (the earlier fifteen packs unchanged, 112 tests; 132 in total); naming, layer, and layer-binding gates report zero violations; the Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins, re-measured this slice. No new wall was hit and no new honest non-closure was recorded; the slice-13 deployment-signature non-closure stands, and the story itself narrates it. Nothing in PrologAI or Causalontology was edited; the capstone reads its siblings through the library path.
+
+
+KONNECTOME REALIZATION LOG - SLICE 15
+
+Slice 15 - Rung Two begins: words grounded in lived experience, and pretend under quarantine - 2026-07-26 - packs symbol_exchange (0.1.0) and pretend_play (0.1.0).
+
+Rung Two of this appendix's ladder is now OPEN, and what is demonstrable is exactly what the rung's smoke test and pilot discriminator name. Demonstrable today: give the mind the word warm - a word grounded in a deficit it actually lived, tick by tick, through the same world the capstone boots - and it recognises the word as naming that deficit, the hearing itself leaving a trace in the reused word bank; ask it for the word for its current condition and it produces warm or settled from its own drive state; and ask it the same question in two worlds and its mood colours its words - the too-warm mind answers warm, settled (what I am, what I seek) and the settled mind answers settled, a two-word childlike difference that is the entire point, because a stateless chatbot cannot produce it. Demonstrable alongside: the mind pretends - a beating sun carrying its settled body back to too warm, a path it never lived - reasons within the pretence, and the pretence never touches the observed record; promoting pretend into expectation is a deliberate act, and promoting it into the observed record is refused outright. What this appendix records as NOT demonstrated, in its claim-only-what-is-shown discipline: the full pilot conversation is not yet held, the capstone story does not yet narrate Rung Two (its honest-limits section still lists the rung, and stays truthful until a bumped capstone joins these milestones into the telling), and no cryptographic signature authenticates any of it - the deployment boundary stands. The rung is opened the way the ladder orders rungs opened: smoke first, honestly, with the pilot's core property proven and the pilot's full breadth still ahead.
+
+Gates at this slice: symbol_exchange 18 of 18 and pretend_play 12 of 12 Prolog Unit (PLUnit) tests pass (the earlier sixteen packs unchanged, 132 tests; 162 in total); naming, layer, and layer-binding gates report zero violations; the Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; the Section C watch was kept and its result is recorded in the ledger: the per-claim machinery sufficed, no world-level sharing need arose, and Section C remains held. Nothing in PrologAI or Causalontology was edited; the rung reuses the language and imagination packs through the library path, exactly as other_minds reuses theory_of_mind.
+
+
+KONNECTOME REALIZATION LOG - SLICE 16
+
+Slice 16 - Rung Four deepens: the social-pain test and the empathy trial - 2026-07-26 - pack empathy (0.1.0).
+
+This appendix's Rung Four asked for feeling and the reading of others, and after this slice both of its chosen trials are demonstrable as runnable fact. Demonstrable today: sever the mind's belonging and watch the social-pain finding reproduce itself in miniature - the same error predicate that registers a too-warm body registers the rejection, the same step turns it into a reward of minus one, the same bus broadcasts it as dopamine - so the striking claim of the social neuroscience the book cites, that a broken heart and a broken arm share circuitry, is not narrated but computed, twice, and shown equal. Demonstrable alongside: the empathy trial at the top of the rung. Model Ana in distress and the mind FEELS it - its own belonging falls, its own error rises - and, given a mildly pressing physical need and Ana in full distress, the selection flips: the mind that would have tended its own temperature releases the helping action instead, and helping restores connection for both. The trial's honesty is structural: the help is proposed by the drives and released by the selector, never invented; and breath still overrides everything, because a mind that could empathize itself out of breathing would be broken, not kind. The attribution is owned on the record: Ana FEARS her connection severed - an attitude of the standard's own enumeration, deterministically minted - asserted at observation grade, and, when Ana proves fine, retracted, the honest exit now exercised over a SOCIAL record. Not demonstrated, and said so: the appraisal and regulation pilots, and the capstone story does not yet tell this rung's deepening - the claim-only-what-is-shown discipline holds.
+
+Gates at this slice: empathy 17 of 17, drive_system 10 of 10, and symbol_exchange 19 of 19 Prolog Unit (PLUnit) tests pass (the other sixteen packs unchanged; 181 in total), the counts carrying two review-born fixes and one paid debt: drive_system (0.3.0) now caps the homeostatic step at its set-point, so a fractional distance settles exactly and help can never overshoot into harm - pinned by its own regression test; naming, layer, and layer-binding gates report zero violations; the Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; the remaining ascent of the rung (the appraisal and regulation pilots, and the capstone joining the new milestones into its telling) is recorded as pending, not hidden. Nothing in PrologAI or Causalontology was edited; empathy reads its siblings through the library path.
+
+
+KONNECTOME REALIZATION LOG - SLICE 17
+
+Slice 17 - the reality-discipline gate: the rule made checkable - 2026-07-26 - bin/check_reality_discipline.sh (no pack version moved).
+
+What is demonstrable this slice is a rule holding. Run bin/check_reality_discipline.sh and watch the build prove, in one command, that the only doorway between pretence and the observed record is the guarded one - and if a doubter wants the stronger demonstration, add the forbidden line anywhere outside pretend_play and watch the gate name it and refuse. The review debt of slice 15 is now fully paid, and paid in the method's own coin: one mark (the silently failing malformed drive term) was closed by slice 16 with a named refusal and a permanent test; the other (the wrapper-only promotion refusal) is closed by this slice with a standing gate, proven able to fail before it was trusted to pass. The claim-only-what-is-shown discipline gains its sharpest form yet: every textual road to the crossing - predicate name, module qualifier, import - is now a property of every merge the repository will ever accept, and the one residue no text betrays, a call constructed entirely at runtime, is named in the ledger for exactly what it is.
+
+Gates at this slice: no pack changed and no test count moved - the suite stands at one hundred eighty-one Prolog Unit (PLUnit) tests across nineteen packs, all green. The naming, layer, and layer-binding gates report zero violations, and they are joined by a fourth: the new reality-discipline gate (bin/check_reality_discipline.sh) reports zero violations, and was proven able to fail - a deliberate violation was injected, caught, and removed before its first clean run was accepted. The Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited - the imagination pack remains exactly as reused, and the discipline that fences it is konnectome's own.
+
+
+KONNECTOME REALIZATION LOG - SLICE 18
+
+Slice 18 - the capstone speaks and feels: Rung Two's first words and Rung Four's deepening join the one runnable story - 2026-07-26 - pack capstone_demonstration (0.2.0).
+
+What a reader can now run and watch is the same single command, telling a longer and truer story. Run bin/run_capstone_demonstration.sh and, past the heartbeat and the regulated body and the object-permanence forecast the earlier capstone already showed, the mind now speaks: it says warm because it lived too-warm, and a moment later, settled, because it reached its set-point - and asked the same question in each state it answers with different words, so a reader hears the inner weather change. It then pretends, imagining a sun that carries its settled body back to too-warm inside the sealed imagination reality, and a reader watches the attempt to smuggle that pretence into the observed record refused by name. Further down, the mind is rejected and a reader sees belonging break with the identical error, step, and minus-one reward that a broken body would show, the two pains printed side by side as equal; and when another agent's distress is modelled, a reader watches the mind's own belonging fall, the selection flip from self-tending to a released help, the help land belonging exactly at its set-point, and breath still take precedence over kindness when both press at once. The story closes, as it always has, on the list of what it does NOT show - and the reader who ran slice 14's version will notice the one difference that matters most: Rung Two has left that list. Because every printed line is checked by an independent test that re-runs the siblings and re-mints the identifiers, and because the whole story is deterministic to the byte, a skeptic can run it twice and get the same words - the demonstration is an experiment, not a performance.
+
+Gates at this slice: capstone_demonstration thirty-six of thirty-six Prolog Unit (PLUnit) tests pass (the other eighteen packs unchanged, one hundred sixty-one tests; one hundred ninety-seven in total across nineteen packs, all green); the naming, layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited - the capstone reads its siblings through the library path.
+
+
+KONNECTOME REALIZATION LOG - SLICE 19
+
+Slice 19 - Rung Four finished: the appraisal and regulation pilots - 2026-07-26 - packs situation_appraisal (0.1.0) and arousal_regulation (0.1.0).
+
+A reader can now load the two packs across the library path and watch Rung Four's last two behaviours run. Drive one of the mind's set-points into violation and ask situation_appraisal for its verdict, and the record answers with a threat the mind fears, owned as an attitude of the standard's closed enumeration and stamped with self_provenance at observation; let the same drive be met or improving and ask again, and the verdict turns to good, something the mind desires; correct the world once more and the earlier appraisal is retracted under Rule 10 before your eyes. Set the norepinephrine level on the neuromodulatory bus above its tonic baseline and step arousal_regulation tick by tick, and you can watch each tick close a fixed half of the remaining distance, the level march monotonically down toward rest, and, within a hair of baseline, settle exactly at baseline with no overshoot. The twelve tests in each pack can be run to see every one of these claims checked, and the whole repository's two hundred twenty-one tests to see the rung finished with nothing else disturbed.
+
+Gates at this slice: situation_appraisal twelve of twelve and arousal_regulation twelve of twelve Prolog Unit (PLUnit) tests pass (the earlier nineteen packs unchanged; two hundred twenty-one in total across twenty-one packs, all green); the four standing gates - naming, layer, layer-binding, and reality-discipline - report zero violations; the Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins; no new wall was hit; and no cousin was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 20
+
+Slice 20 - the pilots' review debts paid: appraisal's rounding boundary and regulation's finiteness - 2026-07-26 - packs situation_appraisal (0.1.1) and arousal_regulation (0.1.1).
+
+Slice 20 pays the review debt slice 19 left on the record. The independent adversarial review of the appraisal and regulation pilots, run after they merged, confirmed three findings, and each is now fixed at its root and pinned by a permanent test. First, the appraisal pilot's change reader compared a difference of two independently-rounded set-point errors against exact zero, so two situations equidistant on opposite sides of a set-point - a mathematically neutral change - were read as a good or bad turn on a rounding residue near one part in ten thousand trillion, and, worse, minted as an owned attitude the neutral case is meant to refuse; a rounding-noise band now absorbs that residue, so an equidistant float change reads neutral and is correctly refused before it can become a false record. Second, the regulation pilot accepted a non-finite arousal level, and an infinite level never shrinks toward baseline, so the return would never terminate; the single gatekeeper now requires a finite level and refuses infinity by name. Third, the regulation pilot's whole-number tick rule had no test for its fractional-count refusal; it has one now. No demonstrated behaviour changed - every earlier claim still holds number for number, and every prior test still passes - and the two pilot packs move to patch version 0.1.1. The lesson the method keeps: a finding confirmed by an adversarial review is fixed at its root and pinned, even when the defect is latent - here reachable only by a fractional body value or a hand-built infinity that no ordinary run produces.
+
+Gates at this slice: situation_appraisal fourteen of fourteen and arousal_regulation fourteen of fourteen Prolog Unit (PLUnit) tests pass (the four new tests pin the three confirmed findings; the other nineteen packs unchanged; two hundred twenty-five in total across twenty-one packs, all green); the naming, layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 21
+
+Slice 21 - Rung Three opened: the concrete-reasoning trials - 2026-07-26 - packs concrete_operations (0.1.0) and cause_and_effect (0.1.0).
+
+HOW A READER WATCHES THIS SLICE. Both packs are watched the way every konnectome faculty is watched - by running their tests and reading what the tests assert, since the assertions ARE the demonstration:
+
+    bin/run_pack_tests.sh concrete_operations
+    bin/run_pack_tests.sh cause_and_effect
+
+THE SMOKE TEST, WATCHED. The clearest thing to look at first is the test named block_above_table_is_derived_with_steps_shown. It asks the mind to derive that a block resting on a cup resting on a table stands above the table, and it does not check the conclusion alone - it checks the WHOLE derivation, step by step, against an exact expected list: the block rests on the cup, so the block is above the cup (a step named resting_is_above); the cup rests on the table, so the cup is above the table (the same named step); and those two facts join to conclude the block is above the table (a step named transitive_chain). A reader can see the mind's entire reasoning as data, with nothing hidden between premise and conclusion. A companion test walks every step of a longer derivation and asserts that each one carries a name and the facts it consumed - so the "every step is a named, watchable operation" claim is enforced by test, not merely stated in a comment.
+
+THE CAUSAL TRIAL, WATCHED. Read direct_cause_is_found_with_its_record_as_reason and then co_occurrence_without_a_record_is_not_causation side by side. In the first, the sun shines and the stone warms, a causal record links them, and the mind answers "genuine cause" - giving that record's own identifier as its reason. In the second, the rooster crows and the sun rises, with no record between them, and the mind answers "co-occurrence only". The pair is the whole trial in two tests: the mind's answer changes because the EVIDENCE changed, not because the events changed. Then read forged_causal_record_is_refused, where a dictionary shaped exactly like a causal record, carrying real events but an invented identifier, is refused by name - the mind will not accept a look-alike as proof.
+
+THE PLANNING TRIAL, WATCHED. multi_step_plan_chains_means_to_end takes a bare camp to a fed camp through gathering wood, lighting the fire, and cooking the meal, and asserts the exact three-step sequence with each step's from-state and to-state. shortest_plan_is_chosen puts a one-step ferry beside a two-step bridge detour and asserts the ferry wins. goal_already_reached_plans_nothing asserts the empty plan when there is nothing to do - the honest answer, not a busy one.
+
+THE REFUSALS, WATCHED. Roughly a third of the fifty-one tests watch the mind REFUSE something: a support cycle, a malformed fact, an object with no value on the sorting property, an object whose value is unbound, a collection that is not a list, a negative addition, a removal larger than what is present, an unknown transformation, a forged record, an unbound start state, a plan step with no justification. Each refusal is a named error, and each named error has a test that watches it fire. A reader who wants to know what this mind will NOT do can read those tests alone.
+
+WHAT IS NOT YET DEMONSTRATED, AND SAID SO. The one runnable capstone story (bin/run_capstone_demonstration.sh) does not yet narrate Rung Three - this slice's trials live in the test suites, where the evidence is rigorous but visible only to a reader who runs a harness. That is recorded as this slice's own open edge, in the same words earlier slices used when they owed the story a chapter. The capstone's printed honest-limits list still names Rung Three, correctly, and will until the rung's two deferred halves are built and the story is taught to tell it.
+
+Gates at this slice: concrete_operations twenty-six of twenty-six and cause_and_effect twenty-five of twenty-five Prolog Unit (PLUnit) tests pass (the earlier twenty-one packs unchanged; two hundred seventy-six in total across twenty-three packs, all green); the naming, layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 22
+
+Slice 22 - Rung Three finished in its trials: the two deferred halves built - 2026-08-07 - packs category_formation (0.1.0) and quantity_model (0.1.0).
+
+HOW A READER WATCHES THIS SLICE. Both packs are watched the way every konnectome faculty is watched - by running their tests and reading what the tests assert, since the assertions ARE the demonstration:
+
+    bin/run_pack_tests.sh category_formation
+    bin/run_pack_tests.sh quantity_model
+
+THE FORMED CATEGORIES, WATCHED. Start with categories_are_formed_from_experience: four experiences - a red round fruit, another red round fruit, a blue round toy, a blue square toy - go in, and two categories come out, each named, each carrying the defining core its members share and the members that earned it. Nothing handed the mind those categories; the test asserts the exact induced pair. Then defining_core_is_truly_shared verifies the claim independently, walking the raw experiences and confirming every member carries every core pair - the test does not trust the wrapper's own answer. Then resort_by_a_different_property_on_request re-sorts the same four objects by shape and asserts a DIFFERENT partition - the round group mixes a fruit and a toy - which is the book's flexible categorisation, demonstrated on one collection.
+
+THE TALLER, THINNER GLASS, WATCHED. the_taller_thinner_glass_conserves is the book's own example told literally: five units of water in a short wide glass, poured into a tall thin one; the appearance is asserted to have really changed, and the verdict is asserted conserved at five - because measurement counted the same five units on both sides. a_pour_carries_every_unit shows WHY: the identical unit list, one by one.
+
+THE LOSSY POUR, WATCHED - THE CENTRAL TEST. a_lossy_pour_is_judged_by_the_model_not_the_name is the single test that separates modelling the world from matching its surface. A transformation that CALLS itself a pour spills one unit on the way to the taller glass. Its name looks appearance-only; the world lost a unit; the verdict is asserted changed, five to four. The closed name-list of slice 21 would have been fooled here - this test is the receipt that the model is not.
+
+THE OWNED RECORDS, WATCHED. conservation_stance_is_graded_derivation runs the record predicate, which enacts the pour trial ITSELF, then independently re-runs the same trial and asserts the record's content is the measured verdict byte for byte - the record cannot say what the trial did not measure. record_refuses_what_the_trial_refuses and record_refuses_what_learning_refuses watch the enactment's own refusals guard the record path.
+
+THE REFUSALS, WATCHED. Over a third of the fifty-five tests watch a refusal fire by name: an unsorted or empty hand-built core, the reserved sentinel name, a doubled category identifier, a doubled experience name, a doubled property key, a doubled unit name, a half-built appearance, an unbound transformation, a negative spill, a lossy pour that lost nothing, a removal larger than what is present. Each named error has the test that watches it.
+
+WHAT IS NOT YET DEMONSTRATED, AND SAID SO. The one runnable capstone story does not yet narrate Rung Three - the finished trials live in the test suites. The capstone's printed honest-limits list still names Rung Three, correctly, and will until the story is taught to tell it.
+
+Gates at this slice: category_formation twenty-six of twenty-six and quantity_model twenty-nine of twenty-nine Prolog Unit (PLUnit) tests pass, and concrete_operations' twenty-six stay green under its re-sized header (the earlier packs otherwise unchanged; three hundred thirty-one in total across twenty-five packs, all green); the naming, layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 23
+
+Slice 23 - The story learns its owed chapters: Rung Three told, and Rung Four finished in the telling - 2026-08-07 - pack capstone_demonstration (0.3.0).
+
+HOW A READER WATCHES THIS SLICE. This slice IS the watching. One command boots the mind and prints the whole grown story:
+
+    bin/run_capstone_demonstration.sh
+
+THE REASONING CHAPTER, WATCHED. After the first words and before the false belief, the story now prints RUNG THREE - THE CONCRETE REASONING, EVERY STEP SHOWN. The derivation appears as three printed steps naming what each consumed and produced; the formed categories appear with their defining cores and members and the plain sentence that nobody handed them down; the yellow pencil is exiled outside every category by name; the shape re-sort crosses the formed partition in one line; the pour conserves at five WITH ITS REASON - the model re-counts the same five units - and the lossy pour is judged changed five to four with the name-versus-world moral said aloud; the sun-and-stone cause cites its record identifier while the rooster and the sunrise stay co-occurrence only; and the camp plan chains its three justified steps. Every one of those sentences sits below a strict live check in the chapter's own code: if any reused engine ever answers differently, the story refuses to print rather than lie.
+
+THE FINISHING CHAPTER, WATCHED. Between the empathy trial and the provenance layer, RUNG FOUR, FINISHED - THE APPRAISAL AND THE REGULATION prints the threat at distance three owned as a FEARS attitude with its minted identifier, the satisfaction owned as a DESIRE to keep with the enumeration's missing word declared (ledger Observation-4, told to the reader, not hidden in a file), the good and bad turns of two degrees each, the threat's withdrawal when the body cools on its own, and the alarm falling one to one half to rest, EXACTLY at baseline, in eight ticks.
+
+THE SHRUNKEN DISCLAIMER, WATCHED. The epilogue now names one rung: Rung Five (embodiment) is not yet demonstrated - the guiding book's own text asks for a real machine - and this story does not claim it. The unsigned-records declaration and the closing promise - nothing above is claimed that a reader cannot re-mint, re-run, and check - stand unchanged.
+
+Gates at this slice: capstone_demonstration forty-four of forty-four Prolog Unit (PLUnit) tests pass (the earlier packs unchanged; three hundred thirty-nine in total across twenty-five packs, all green); the naming, layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 24
+
+Slice 24 - Rung Five opened as groundwork: the body interface, and the sense-act loop through the honestly-named simulated body, the rung itself not claimed - 2026-08-07 - packs simulated_body (0.1.0) and body_interface (0.1.0).
+
+HOW A READER WATCHES THIS SLICE. The groundwork is watched the way every faculty is watched - by running the suites and reading what they assert:
+
+    bin/run_pack_tests.sh simulated_body
+    bin/run_pack_tests.sh body_interface
+
+THE SMOKE LOOP, WATCHED. Read the_sense_act_loop_closes_through_the_simulated_body. The world shows the camera an obstacle; one pass of the loop runs sense, drive step, proposal, selection, command, enactment; and the test asserts three things in order: the mind released the steering action, the actuator log carries the movement - the body really moved - and the camera reads clear again, because the movement changed what the machine will see next. Perception in, action out, the loop closed - through the honestly-named stand-in, as groundwork, with the rung not claimed in the test's own comment.
+
+THE SURVIVAL GROUNDWORK, WATCHED. Read the_mind_defends_its_own_battery_of_its_own_accord. Four ticks of draining life come back as an exact trace: the battery falls to three quarters and the mind holds still, because a mild hunger is not yet pressing; it falls to one half and the mind recharges to full, because now it presses; and the rhythm repeats. Nothing outside the mind commands the recharge - the drive proposes it, the selector releases it, the actuator enacts it. The companion test extends the same rhythm to six ticks unchanged.
+
+THE HONESTY, WATCHED. Read forged_record_cannot_be_stanced_as_observed and foreign_record_cannot_borrow_the_loop_stance: a hand-built look-alike and a tampered designator are both refused by name before the observation grade is granted. Read at_a_tie_the_drives_outrank_the_reflexes: the one tie in the seam, made deliberate and pinned. And read the capstone's own suite, untouched this slice: the story still disclaims embodiment with the book's real-machine reason - the groundwork changed what the REPOSITORY can do, and changed nothing about what the STORY claims, which is exactly the boundary between groundwork and a rung.
+
+Gates at this slice: simulated_body sixteen of sixteen and body_interface twenty-one of twenty-one Prolog Unit (PLUnit) tests pass (the earlier packs unchanged; three hundred seventy-six in total across twenty-seven packs, all green); the naming, layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 25
+
+Slice 25 - The story learns the body seam: Rung Five's groundwork told, and the rung not claimed - 2026-08-07 - pack capstone_demonstration (0.4.0).
+
+HOW A READER WATCHES THIS SLICE. This slice IS the watching. One command boots the mind and prints the whole grown story:
+
+    bin/run_capstone_demonstration.sh
+
+THE SEAM CHAPTER, WATCHED. Between RUNG FOUR, FINISHED and THE PROVENANCE LAYER the story now prints THE BODY SEAM - RUNG FIVE'S GROUNDWORK, TOLD AND NOT CLAIMED. It opens with the refusal - there is no real machine here, and this chapter does not pretend one - and then tells what can be told honestly: the obstacle surfacing as the mind's percept unchanged; the closed pass that releases the steering reflex, moves the body, and leaves the camera reading clear - acting changed what the machine will see next; the hunger identity, error 0.5 equalling error 0.5 through the one predicate every pain passes through; the survival rhythm - hold at 0.75, recharge OF ITS OWN ACCORD at the pressing 0.5, again and again, with nothing outside the mind commanding the act; the deliberate tie where a starving battery outranks a seen obstacle; the loop record minted by ENACTING the pass with its identifier printed; and the observation-graded stance granted only after the record proved it was genuinely minted. The chapter closes the way it opened: the rung is NOT claimed - reaching, navigation, and true survival wait for a machine that is real.
+
+THE EPILOGUE, WATCHED. The honest-limits list still names Rung Five with the book's real-machine reason, byte for byte, and now adds the boundary aloud: the body-seam chapter above is that rung's GROUNDWORK - and groundwork is not the rung: this story does not promote it.
+
+Gates at this slice: capstone_demonstration fifty-two of fifty-two Prolog Unit (PLUnit) tests pass (the earlier packs unchanged; three hundred eighty-four in total across twenty-seven packs, all green); the naming, layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 26
+
+Slice 26 - The naming gate learns to see: the unprefixed-helper hole closed, and the hand-hunt retired - 2026-08-07 - tooling bin/check_pack_naming.sh, with a committed fixture and a self-test.
+
+HOW A READER WATCHES THIS SLICE. Two commands, both self-reporting:
+
+    bin/check_pack_naming.sh
+    bin/check_pack_naming.sh --self-test
+
+THE GATE, WATCHED. The first command scans all twenty-seven packs under the six checks and reports zero violations. The second is the demonstration that matters: it runs the same gate against the committed fixture pack - a module whose one deliberate flaw is an unprefixed helper bearing no known terse stem, the exact shape slice 22 proved invisible - and prints SELF-TEST PASS only because the gate now catches that helper by name. A reader who wants to see the gate fail can open tests/naming_gate_fixture/unprefixed_helper_fixture/prolog/unprefixed_helper_fixture.pl, read the violation and its comment declaring itself deliberate, and run the fixture scan directly with PACKS_ROOT=tests/naming_gate_fixture.
+
+Gates at this slice: the extended naming gate reports zero violations across all twenty-seven packs AND passes its own self-test - the committed fixture's unprefixed helper is caught by name; the layer, layer-binding, and reality-discipline gates report zero violations; three hundred eighty-four Prolog Unit (PLUnit) tests across twenty-seven packs, all green and unchanged by this slice; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
