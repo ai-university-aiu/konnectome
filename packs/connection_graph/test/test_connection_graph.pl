@@ -221,5 +221,99 @@ test(a_bad_delay_on_a_computational_interface_is_refused,
     % A computational interface claiming a negative delay.
     connection_graph_delay_lines_new([interface(a, b, 1, -7, computational)], _Lines).
 
+% With every delay at one tick, the delayed modulated step reproduces the plain modulated step exactly.
+test(all_delays_one_makes_the_delayed_modulated_step_the_modulated_step) :-
+    % A graph of one-tick delays into a bus-modulated relay.
+    Graph = [interface(a, b, 0.5, 1, transmissive)],
+    Constructs = [construct(a, source), construct(b, relay_modulated(2, dopamine))],
+    State = [a-1, b-0],
+    % A bus carrying a global dopamine level.
+    neuromodulator_bus_new(Bus0),
+    neuromodulator_bus_broadcast(Bus0, dopamine, 0.5, Bus),
+    % Step both paths.
+    connection_graph_step_modulated(Graph, Constructs, State, Bus, PlainNext),
+    connection_graph_delay_lines_new(Graph, Lines),
+    connection_graph_step_delayed_modulated(Constructs, State, Lines, Bus, DelayedNext, _NextLines),
+    % The two paths agree state for state.
+    assertion(PlainNext == DelayedNext).
+
+% A modulated relay in delayed time applies the bus gain at the tick of delivery.
+test(a_delayed_signal_is_modulated_at_delivery) :-
+    % A two-tick wire into a bus-modulated relay: the signal spends one tick in transit.
+    Graph = [interface(a, b, 1, 2, transmissive)],
+    Constructs = [construct(a, source), construct(b, relay_modulated(1, dopamine))],
+    State0 = [a-1, b-0],
+    connection_graph_delay_lines_new(Graph, Lines0),
+    % Tick one: dopamine is silent, and the signal is still in transit - b stays silent.
+    neuromodulator_bus_new(SilentBus),
+    connection_graph_step_delayed_modulated(Constructs, State0, Lines0, SilentBus, State1, Lines1),
+    connection_graph_state_get(State1, b, BAtOne),
+    assertion(BAtOne =:= 0),
+    % Tick two: dopamine rises to one just as the value arrives - the gain is read at delivery.
+    neuromodulator_bus_broadcast(SilentBus, dopamine, 1, RisenBus),
+    connection_graph_step_delayed_modulated(Constructs, State1, Lines1, RisenBus, State2, _Lines2),
+    connection_graph_state_get(State2, b, BAtTwo),
+    % The delivered value of one, weighted one, gained one-times-one.
+    assertion(BAtTwo =:= 1).
+
+% A construct reads the modulator level of its OWN territory: per-territory neuromodulation.
+test(a_modulated_relay_reads_its_own_territory_level) :-
+    % Two identical modulated relays fed by one source over one-tick wires.
+    Graph = [interface(a, b, 1, 1, transmissive), interface(a, c, 1, 1, transmissive)],
+    Constructs = [construct(a, source), construct(b, relay_modulated(1, dopamine)),
+                  construct(c, relay_modulated(1, dopamine))],
+    State = [a-1, b-0, c-0],
+    % Dopamine at four tenths everywhere, but at nine tenths in b's own territory.
+    neuromodulator_bus_new(Bus0),
+    neuromodulator_bus_broadcast(Bus0, dopamine, 0.4, Bus1),
+    neuromodulator_bus_broadcast_territory(Bus1, dopamine, b, 0.9, Bus),
+    % One delayed modulated tick.
+    connection_graph_delay_lines_new(Graph, Lines),
+    connection_graph_step_delayed_modulated(Constructs, State, Lines, Bus, Next, _NextLines),
+    % b amplifies by its territory's level; c falls back to the diffuse field.
+    connection_graph_state_get(Next, b, BLevel),
+    connection_graph_state_get(Next, c, CLevel),
+    assertion(BLevel =:= 0.9),
+    assertion(CLevel =:= 0.4).
+
+% The plain modulated step reads territories the same way: one semantics across both times.
+test(the_plain_modulated_step_reads_territories_too) :-
+    % One source into one modulated relay.
+    Graph = [interface(a, b, 1, 1, transmissive)],
+    Constructs = [construct(a, source), construct(b, relay_modulated(1, dopamine))],
+    State = [a-1, b-0],
+    % A global level and a territory override for b.
+    neuromodulator_bus_new(Bus0),
+    neuromodulator_bus_broadcast(Bus0, dopamine, 0.4, Bus1),
+    neuromodulator_bus_broadcast_territory(Bus1, dopamine, b, 0.9, Bus),
+    % One plain modulated tick.
+    connection_graph_step_modulated(Graph, Constructs, State, Bus, Next),
+    % b reads its own territory in undelayed time too.
+    connection_graph_state_get(Next, b, BLevel),
+    assertion(BLevel =:= 0.9).
+
+% An unknown construct kind is refused by name in the delayed modulated step, never silently dropped.
+test(an_unknown_kind_is_refused_in_the_delayed_modulated_step,
+     error(domain_error(delayed_modulated_step_construct_kind, mystery))) :-
+    % A kind no step has defined must throw.
+    neuromodulator_bus_new(Bus),
+    connection_graph_step_delayed_modulated([construct(a, mystery)], [a-1], [], Bus, _, _).
+
+% A ghost source is refused by name in the delayed modulated step, exactly as in the delayed step.
+test(a_ghost_source_is_refused_in_the_delayed_modulated_step,
+     error(existence_error(construct_activation, ghost))) :-
+    % A delay line from a source the state does not know must throw.
+    Graph = [interface(ghost, b, 1, 2, transmissive)],
+    connection_graph_delay_lines_new(Graph, Lines),
+    neuromodulator_bus_new(Bus),
+    connection_graph_step_delayed_modulated([construct(b, relay_modulated(1, dopamine))],
+                                            [b-0], Lines, Bus, _, _).
+
+% REVIEW PIN: an unbound modulator inside a relay is refused through the bus, never silently read.
+test(an_unbound_modulator_in_a_relay_is_refused, error(instantiation_error)) :-
+    % A modulated relay whose modulator was left unbound must throw at the read.
+    neuromodulator_bus_new(Bus),
+    connection_graph_step_delayed_modulated([construct(b, relay_modulated(1, _))], [b-0], [], Bus, _, _).
+
 % Close the test block for the connection_graph pack.
 :- end_tests(connection_graph).

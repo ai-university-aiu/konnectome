@@ -17,7 +17,9 @@
     % connection_graph_step_delayed/5: one synchronous tick that honours multi-tick delays.
     connection_graph_step_delayed/5,
     % connection_graph_run_delayed/6: run a delay-honouring network for a chosen number of ticks.
-    connection_graph_run_delayed/6
+    connection_graph_run_delayed/6,
+    % connection_graph_step_delayed_modulated/6: a delayed tick whose relay gains the bus sets per territory.
+    connection_graph_step_delayed_modulated/6
 ]).
 
 % Import list utilities for membership and reversing the trace.
@@ -26,8 +28,8 @@
 :- use_module(library(apply), [include/3, foldl/4, maplist/2]).
 % Reuse the relay archetype rule; a transmissive interface conveys, scaled by gain.
 :- use_module(library(archetype), [archetype_relay/3]).
-% Reuse the neuromodulatory bus to read the gain a modulator sets for a construct.
-:- use_module(library(neuromodulator_bus), [neuromodulator_bus_level/3]).
+% Reuse the neuromodulatory bus to read the gain a modulator sets for a construct's own territory.
+:- use_module(library(neuromodulator_bus), [neuromodulator_bus_level_territory/4]).
 
 % The connection graph is the connectome as data: a list of directed, weighted, delayed
 % interfaces, each marked transmissive (it conveys a signal) or computational (it computes one).
@@ -115,8 +117,8 @@ connection_graph_next_modulated(relay(Gain), Name, Graph, State, _Bus, NextActiv
 connection_graph_next_modulated(relay_modulated(BaseGain, Modulator), Name, Graph, State, Bus, NextActivation) :-
     % Gather the total weighted input arriving at this construct.
     connection_graph_total_input(Graph, Name, State, TotalInput),
-    % Read the modulator's current level from the bus; the neuromodulators set the gain.
-    neuromodulator_bus_level(Bus, Modulator, Level),
+    % Read the modulator's level in this construct's OWN territory; an unset territory reads the diffuse field.
+    neuromodulator_bus_level_territory(Bus, Modulator, Name, Level),
     % The effective gain is the base gain scaled by that level.
     EffectiveGain is BaseGain * Level,
     % Apply the relay archetype rule with the current, bus-set gain.
@@ -336,3 +338,58 @@ connection_graph_loop_delayed(Tick, NumTicks, Constructs, State, Lines, Acc, Tra
     % Record this tick's full network snapshot and continue.
     connection_graph_loop_delayed(NextTick, NumTicks, Constructs, NextState, NextLines,
                                   [tick_record(NextTick, NextState)|Acc], Trace, Final).
+
+% connection_graph_next_delayed_modulated(+Kind, +Name, +Deliveries, +State, +Bus, -Next): delayed, bus-aware.
+% A source construct holds its current activation, representing a clamped sensory input.
+connection_graph_next_delayed_modulated(source, Name, _Deliveries, State, _Bus, NextActivation) :-
+    % Read and keep the source's current activation.
+    connection_graph_state_get(State, Name, NextActivation).
+% A relay with a fixed gain gathers its delivered input and ignores the bus, as ever.
+connection_graph_next_delayed_modulated(relay(Gain), Name, Deliveries, _State, _Bus, NextActivation) :-
+    % Gather the total weighted input delivered to this construct this tick.
+    connection_graph_total_delivered(Deliveries, Name, TotalInput),
+    % Apply the relay archetype rule to that input.
+    archetype_relay(TotalInput, Gain, NextActivation).
+% A modulated relay's gain is set, at the tick of delivery, by its own territory's modulator level.
+connection_graph_next_delayed_modulated(relay_modulated(BaseGain, Modulator), Name, Deliveries, _State, Bus, NextActivation) :-
+    % Gather the total weighted input delivered to this construct this tick.
+    connection_graph_total_delivered(Deliveries, Name, TotalInput),
+    % Read the modulator's level in this construct's OWN territory; an unset territory reads the diffuse field.
+    neuromodulator_bus_level_territory(Bus, Modulator, Name, Level),
+    % The effective gain is the base gain scaled by that level, read at delivery time.
+    EffectiveGain is BaseGain * Level,
+    % Apply the relay archetype rule with the current, bus-set gain.
+    archetype_relay(TotalInput, EffectiveGain, NextActivation).
+
+% A construct of a kind the delayed modulated step does not know is refused aloud, never silently dropped.
+connection_graph_next_delayed_modulated(Kind, _Name, _Deliveries, _State, _Bus, _NextActivation) :-
+    % Only a clamped source belongs among the plain kinds.
+    Kind \== source,
+    % A relay with any fixed gain also belongs.
+    Kind \= relay(_),
+    % A relay whose gain the bus sets also belongs.
+    Kind \= relay_modulated(_, _),
+    % Refuse the unknown kind by name, so the state can never shrink in silence.
+    throw(error(domain_error(delayed_modulated_step_construct_kind, Kind), _)).
+
+% connection_graph_step_delayed_modulated(+Constructs, +State, +Lines, +Bus, -NextState, -NextLines).
+connection_graph_step_delayed_modulated(Constructs, State, Lines, Bus, NextState, NextLines) :-
+    % First pass, part one: advance every delay line one tick from the current state only.
+    findall(Delivery-NextLine,
+            % For each delay line, taken in turn.
+            ( member(Line, Lines),
+              % Take in the source's emission and give out the value whose time has come.
+              connection_graph_advance_line(State, Line, Delivery, NextLine) ),
+            Advanced),
+    % Split the advanced pairs into this tick's deliveries and the lines' next buffers.
+    findall(Delivery, member(Delivery-_, Advanced), Deliveries),
+    findall(NextLine, member(_-NextLine, Advanced), NextLines),
+    % First pass, part two: compute every construct's next activation from the deliveries and the bus.
+    findall(Name-NextActivation,
+            % For each construct in the network, taken in turn.
+            ( member(construct(Name, Kind), Constructs),
+              % Compute its next activation from the read-only state, the deliveries, and the bus.
+              connection_graph_next_delayed_modulated(Kind, Name, Deliveries, State, Bus, NextActivation) ),
+            NextPairs),
+    % Second pass: commit all next activations at once into a canonical state.
+    keysort(NextPairs, NextState).

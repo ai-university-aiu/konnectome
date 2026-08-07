@@ -1086,4 +1086,35 @@ The four gates report zero violations, the naming gate passing its own self-test
 re-measured at 137 of 137 (specification 4.0.0) in both cousins. No new wall; no cousin edited,
 per the Second, Third, and Fourth Commandments.
 
+
+Slice-30 note (2026-08-07). Per-territory neuromodulators: the field learns local concentrations,
+and delayed time learns the bus. FR-6's second half - a broadcast field with a level per target
+territory, the molecule of Chapter 7 modeled as a global parameter with per-target levels - and
+the slice-27 pending line (the delayed step refusing the bus-modulated relay kind by name) both
+land in one slice, the pairing the slice-27 note itself suggested. The neuromodulator_bus pack
+grows two public predicates: a territory broadcast (an entry territory(Modulator, Territory)-Level
+beside the global pairs, newest wins, only its own entry replaced) and a territory read answering
+by the diffuse-field law - own level first, global fallback second, silence third. The design
+decision that makes territories free to adopt: a construct IS its own territory (its name), so no
+registry, no mapping, no caller changes; the plain modulated step switched to the territory read
+with a pinned backward-compatibility identity on territory-free buses. The connection_graph pack
+grows one public predicate: a delayed modulated step carrying delay lines and bus together, gain
+read AT THE TICK OF DELIVERY, never emission, with the all-delays-one identity against the plain
+modulated step pinned, and the delayed step's refusals (unknown kind, ghost source) kept in the
+same voice. The slice-27 pending line is CLOSED. The independent adversarial review (tighter
+scope, named lenses, hard reproduction budget - the sixth straight completion) confirmed NO REAL
+finding - identity, delivery-tick timing, and backward compatibility all survived adversarial
+reproduction - and two MINOR with one root in the bus's flat key space: a territory-shaped
+compound posing as a modulator could alias and even silently overwrite a territory entry, and the
+reads repeated the slice-28 lesson by silently binding unbound names. One guard fixed both -
+modulator and territory names must be plain atoms, refused aloud as uninstantiated or by name
+otherwise, across all four bus predicates - pinned by five review tests. Seventeen tests grew
+(twelve feature, five pins): neuromodulator_bus four to fourteen, connection_graph seventeen to
+twenty-four, the repository 438 to 455 across twenty-seven packs, all green, re-swept. New pending
+line: the plasticity engine's third factor still reads the global dopamine level - a per-territory
+third factor for learning is the natural next use of the new read. The four gates report zero
+violations, the naming gate passing its own self-test; conformance re-measured at 137 of 137
+(specification 4.0.0) in both cousins. No new wall; no cousin edited, per the Second, Third, and
+Fourth Commandments.
+
  Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 4.
