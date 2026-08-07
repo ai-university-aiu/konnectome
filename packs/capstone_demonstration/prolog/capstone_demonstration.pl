@@ -26,7 +26,9 @@
     % thought_combination_combine/3: combine causes and effects into a causal relation object.
     thought_combination_combine/3,
     % thought_combination_links/2: check that one combination's effect is the next one's cause.
-    thought_combination_links/2
+    thought_combination_links/2,
+    % thought_combination_id/2: read a causal record's content-addressed identifier.
+    thought_combination_id/2
 ]).
 % Reuse other minds: the false-belief trial and its export as a shareable attitude record.
 :- use_module(library(other_minds), [
@@ -136,6 +138,62 @@
     % action_selector_is_candidate/2: the released outcome was proposed, never invented.
     action_selector_is_candidate/2
 ]).
+% Reuse the concrete operations: the reasoning rung's smoke inference and seriation trial.
+:- use_module(library(concrete_operations), [
+    % concrete_operations_above/4: derive that one object stands above another, every step shown.
+    concrete_operations_above/4,
+    % concrete_operations_seriate/3: order perceived objects along a numeric dimension.
+    concrete_operations_seriate/3
+]).
+% Reuse cause and effect: the reasoning rung's causal discrimination and means-end planning.
+:- use_module(library(cause_and_effect), [
+    % cause_and_effect_discriminate/4: a genuine cause told from mere co-occurrence, by the record.
+    cause_and_effect_discriminate/4,
+    % cause_and_effect_plan/4: the shortest means-end plan, each step justified by its states.
+    cause_and_effect_plan/4
+]).
+% Reuse category formation: the reasoning rung's categories formed from the mind's own experience.
+:- use_module(library(category_formation), [
+    % category_formation_learn/3: form categories from a stream of experiences.
+    category_formation_learn/3,
+    % category_formation_sort/3: sort objects into the mind's own formed categories.
+    category_formation_sort/3,
+    % category_formation_resort/3: the flexible re-sort by a different property on request.
+    category_formation_resort/3
+]).
+% Reuse the quantity model: the reasoning rung's conservation verdict, read by re-measuring.
+:- use_module(library(quantity_model), [
+    % quantity_model_represent/3: represent an amount as individuated units plus an appearance.
+    quantity_model_represent/3,
+    % quantity_model_trial/4: one whole conservation trial - transform, then re-measure.
+    quantity_model_trial/4,
+    % quantity_model_record/4: own the verdict by enacting the trial.
+    quantity_model_record/4
+]).
+% Reuse situation appraisal: Rung Four's appraisal pilot - good or bad for the mind's OWN goals.
+:- use_module(library(situation_appraisal), [
+    % situation_appraisal_appraise/3: appraise a situation against one drive's defended set-point.
+    situation_appraisal_appraise/3,
+    % situation_appraisal_appraise_change/4: appraise what a situation does to a goal.
+    situation_appraisal_appraise_change/4,
+    % situation_appraisal_record/4: own the appraisal as an attitude of the standard's enumeration.
+    situation_appraisal_record/4,
+    % situation_appraisal_stance/3: the mind's observation-graded stance on its own appraisal.
+    situation_appraisal_stance/3,
+    % situation_appraisal_retract/4: withdraw an appraisal the world proved wrong.
+    situation_appraisal_retract/4
+]).
+% Reuse arousal regulation: Rung Four's regulation pilot - arousal brought back to baseline.
+:- use_module(library(arousal_regulation), [
+    % arousal_regulation_arouse/3: raise arousal - a norepinephrine level written onto the bus.
+    arousal_regulation_arouse/3,
+    % arousal_regulation_level/2: read the current arousal level off the bus.
+    arousal_regulation_level/2,
+    % arousal_regulation_step/2: one regulation tick - halve the remaining distance to baseline.
+    arousal_regulation_step/2,
+    % arousal_regulation_regulate/3: regulate until arousal settles exactly at baseline.
+    arousal_regulation_regulate/3
+]).
 % Reuse the list library for membership checks over body state.
 :- use_module(library(lists), [
     % memberchk/2: find the monitored variable inside the body state list.
@@ -150,11 +208,16 @@
 % It is the Demonstration phase of the SPARCD method made runnable: one deterministic story,
 % told in rung order - the heartbeat and the regulated body (Rung Zero), the object-permanence
 % forecast and its signed surprise (Rung One), a combined thought, the first grounded words and
-% the pretend game under quarantine (Rung Two), the false belief attributed to another mind
-% (Rung Four), the rung's deepening - the social pain and the empathy trial - and the provenance
-% layer standing behind and, when the world disagrees, honestly disowning the mind's own stances.
-% The story claims only what is shown: the rungs not yet demonstrated are named as such, and the
-% records are declared unsigned, because the signing key is a secret this code may never hold.
+% the pretend game under quarantine (Rung Two), the concrete reasoning with every step shown
+% (Rung Three: the inference as data, seriation, categories the mind formed from its own
+% experience, the conservation verdict read by re-measuring a represented model, cause told from
+% co-occurrence by the record, and the shortest plan), the false belief attributed to another
+% mind (Rung Four), the rung's deepening - the social pain and the empathy trial - the rung's
+% finish - the appraisal of a situation against the mind's own goals, and arousal regulated back
+% to baseline - and the provenance layer standing behind and, when the world disagrees, honestly
+% disowning the mind's own stances. The story claims only what is shown: the rung not yet
+% demonstrated is named as such, and the records are declared unsigned, because the signing key
+% is a secret this code may never hold.
 
 % capstone_demonstration_simulation_start(-Start): the fixed simulation start instant.
 capstone_demonstration_simulation_start("2026-07-26T00:00:00Z").
@@ -201,16 +264,20 @@ capstone_demonstration_story(NumTicks, Story) :-
     capstone_demonstration_thought_lines(Thought),
     % Rung Two: the first grounded words, and the pretend game under quarantine.
     capstone_demonstration_first_words_lines(FirstWords),
+    % Rung Three: the concrete reasoning, every step shown.
+    capstone_demonstration_reasoning_lines(Reasoning),
     % Rung Four: the false belief attributed to another mind, exported as an attitude record.
     capstone_demonstration_social_lines(AttitudeRecord, Social),
     % Rung Four, deepened: the social pain and the empathy trial.
     capstone_demonstration_empathy_lines(Empathy),
+    % Rung Four, finished: the appraisal and the regulation.
+    capstone_demonstration_feeling_lines(Feeling),
     % The provenance layer: the mind grades, supersedes, and retracts its own stances.
     capstone_demonstration_provenance_lines(AttitudeRecord, Provenance),
     % The honest limits: what this story does not claim.
     capstone_demonstration_epilogue_lines(Epilogue),
     % The story is the sections joined in rung order.
-    append([Title, Heartbeat, Prediction, Thought, FirstWords, Social, Empathy, Provenance, Epilogue], Story).
+    append([Title, Heartbeat, Prediction, Thought, FirstWords, Reasoning, Social, Empathy, Feeling, Provenance, Epilogue], Story).
 
 % capstone_demonstration_check_ticks(+NumTicks): the tick count must be an integer of at least six.
 capstone_demonstration_check_ticks(NumTicks) :-
@@ -653,6 +720,199 @@ capstone_demonstration_empathy_lines(Lines) :-
         RetractionLine
     ].
 
+% capstone_demonstration_reasoning_lines(-Lines): Rung Three narrated - the concrete reasoning, every step shown.
+capstone_demonstration_reasoning_lines(Lines) :-
+    % The smoke inference: the block on the cup on the table, derived with every step returned as data.
+    concrete_operations_above([on(block, cup), on(cup, table)], block, table, Steps),
+    % The story only claims the derivation the engine returned: three named steps, nothing hidden.
+    Steps == [step(resting_is_above, [on(block, cup)], above(block, cup)),
+              step(resting_is_above, [on(cup, table)], above(cup, table)),
+              step(transitive_chain, [above(block, cup), above(cup, table)], above(block, table))],
+    % Seriation: three objects ordered along their size dimension.
+    concrete_operations_seriate([object(pea, [size-1]), object(apple, [size-3]), object(brick, [size-6])],
+                                size, Ordered),
+    % The story only claims the order the trial produced.
+    Ordered == [pea, apple, brick],
+    % The mind's experiences: two red round fruits, a blue round toy, a blue square toy.
+    Experiences = [
+        experience(apple, [color-red, kind-fruit, shape-round]),
+        experience(cherry, [color-red, kind-fruit, shape-round]),
+        experience(ball, [color-blue, kind-toy, shape-round]),
+        experience(block, [color-blue, kind-toy, shape-square])
+    ],
+    % The mind forms its own categories from that experience.
+    category_formation_learn(Experiences, 2, Categories),
+    % The story only claims the categories the mind formed: two, with their defining cores.
+    Categories == [category(formed_category_1, [color-red, kind-fruit, shape-round], [apple, cherry]),
+                   category(formed_category_2, [color-blue, kind-toy], [ball, block])],
+    % A newcomer that fits nothing is sorted honestly outside every category.
+    category_formation_sort([experience(pencil, [color-yellow, kind-tool, shape-long])], Categories, SortGroups),
+    % The story only claims the honest exile the sorter reported.
+    SortGroups == [group(formed_category_1, []), group(formed_category_2, []),
+                   group(outside_every_category, [pencil])],
+    % The flexible re-sort on request: the same four objects, by shape instead.
+    category_formation_resort(Experiences, shape, ResortGroups),
+    % The story only claims the crossing partition the re-sort produced: a fruit and a toy share a group.
+    ResortGroups == [group(round, [apple, cherry, ball]), group(square, [block])],
+    % The book's own conservation trial: five units of water in a short wide glass.
+    quantity_model_represent(5, glass(short_wide), Water),
+    % Poured into a taller, thinner glass - and the verdict is read by re-measuring the model.
+    quantity_model_trial(Water, pour(glass(tall_thin)), PourVerdict, _Poured),
+    % The story only claims the measurement: the same five units on both sides of the pour.
+    PourVerdict == conserved(5),
+    % The lossy pour: named like a pour, but it spills one unit on the way.
+    quantity_model_trial(Water, pour_losing(glass(tall_thin), 1), LossyVerdict, _Spilt),
+    % The story only claims what the model counted: five before, four after - the name lied, the model did not.
+    LossyVerdict == changed(5, 4),
+    % The story's fixed simulation start stamps the verdict's record.
+    capstone_demonstration_simulation_start(Start),
+    % The conservation verdict is owned by enacting the trial - the record predicate runs the pour itself.
+    quantity_model_record(Water, pour(glass(tall_thin)), Start, VerdictRecord),
+    % Read the owned verdict's content-addressed identifier.
+    get_dict(id, VerdictRecord, VerdictIdentifier),
+    % The causal trial's two events, minted as content-addressed thoughts.
+    thought_combination_atomic("the_sun_shines", "event", Sun),
+    % The stone warming, minted the same way.
+    thought_combination_atomic("the_stone_warms", "event", Stone),
+    % The genuine causal record: the shining causes the warming.
+    thought_combination_combine([Sun], [Stone], CausalRecord),
+    % Read the causal record's identifier - the evidence the discrimination will cite.
+    thought_combination_id(CausalRecord, CausalIdentifier),
+    % Cause or co-occurrence? Answered by the record.
+    cause_and_effect_discriminate([CausalRecord], Sun, Stone, CauseFinding),
+    % The story only claims the finding and its cited evidence.
+    CauseFinding == genuine_cause([CausalIdentifier]),
+    % The rooster and the sunrise: two events with no record between them.
+    thought_combination_atomic("the_rooster_crows", "event", Rooster),
+    % The sun rising, minted the same way.
+    thought_combination_atomic("the_sun_rises", "event", Sunrise),
+    % The same question, over the same evidence store, with no linking record.
+    cause_and_effect_discriminate([CausalRecord], Rooster, Sunrise, CoincidenceFinding),
+    % The story only claims the honest answer: co-occurrence only.
+    CoincidenceFinding == co_occurrence_only,
+    % The planning trial: a bare camp, a fed goal, three known actions.
+    cause_and_effect_plan([action(gather_wood, bare, stocked),
+                           action(light_the_fire, stocked, warm),
+                           action(cook_the_meal, warm, fed)], bare, fed, Plan),
+    % The story only claims the shortest plan the search found, each step justified by its states.
+    Plan == [step(apply_action, gather_wood, from(bare), to(stocked)),
+             step(apply_action, light_the_fire, from(stocked), to(warm)),
+             step(apply_action, cook_the_meal, from(warm), to(fed))],
+    % The owned verdict's line.
+    format(string(VerdictLine),
+           "The conserved verdict is owned by ENACTING the pour - the record predicate runs the trial itself and mints ~w; a hand-written verdict cannot be owned at all.",
+           [VerdictIdentifier]),
+    % The causal evidence's line.
+    format(string(CauseLine),
+           "The sun shines and the stone warms, and a causal record links them: genuine cause, evidence ~w. The rooster crows and the sun rises, with no record between them: co-occurrence only.",
+           [CausalIdentifier]),
+    % The rung's lines in order.
+    Lines = [
+        "",
+        "RUNG THREE - THE CONCRETE REASONING, EVERY STEP SHOWN",
+        "The block rests on the cup and the cup rests on the table, so the block stands above the table - and the derivation itself comes back as data:",
+        "  step resting_is_above consumes on(block, cup) and produces above(block, cup);",
+        "  step resting_is_above consumes on(cup, table) and produces above(cup, table);",
+        "  step transitive_chain joins the two and produces above(block, table). Nothing hidden between premise and conclusion.",
+        "A pea, an apple, and a brick seriate by size: pea, apple, brick.",
+        "Four experiences - two red round fruits, a blue round toy, a blue square toy - and the mind FORMS its own two categories: formed_category_1 (red, fruit, round: apple, cherry) and formed_category_2 (blue, toy: ball, block). Nobody handed them down.",
+        "A yellow pencil fits neither and is reported outside_every_category - never forced into the nearest group.",
+        "Re-sorted by shape on request, the same objects cross their own categories: round holds a fruit and a toy together - flexible categorisation, on demand.",
+        "Five units of water pour from a short wide glass into a tall thin one: conserved(5) - not because pour is on a safe list, but because the model re-counts the same five units on both sides.",
+        "A lossy pour - named like a pour, spilling one unit - is judged changed(5, 4): the name said appearance-only, the world said otherwise, and the mind sided with the world.",
+        VerdictLine,
+        CauseLine,
+        "And from a bare camp to a fed one, the shortest plan chains gather_wood, light_the_fire, cook_the_meal - each step justified by the state it leaves and the state it reaches."
+    ].
+
+% capstone_demonstration_feeling_lines(-Lines): Rung Four finished - the appraisal and the regulation.
+capstone_demonstration_feeling_lines(Lines) :-
+    % The one temperature drive the whole story has defended.
+    Drive = drive(temperature, temperature, 37, none),
+    % The too-warm boot body, appraised against the mind's own goal.
+    situation_appraisal_appraise(Drive, [temperature-40], HotAppraisal),
+    % The story only claims the appraisal the drives' own error produced: threatened, at distance three.
+    HotAppraisal == appraisal(threatened, 3),
+    % The regulated body, appraised the same way.
+    situation_appraisal_appraise(Drive, [temperature-37], SettledAppraisal),
+    % The story only claims the satisfaction the numbers show: at the set-point, error zero.
+    SettledAppraisal == appraisal(satisfied, 0),
+    % A situation that cools the body from forty to thirty-eight, appraised as a change.
+    situation_appraisal_appraise_change(Drive, [temperature-40], [temperature-38], CoolingAppraisal),
+    % The story only claims the good turn the error drop shows: two degrees closer to the goal.
+    CoolingAppraisal == appraisal(good, 2),
+    % A situation that heats the settled body to thirty-nine, appraised as a change.
+    situation_appraisal_appraise_change(Drive, [temperature-37], [temperature-39], HeatingAppraisal),
+    % The story only claims the bad turn the error rise shows.
+    HeatingAppraisal == appraisal(bad, 2),
+    % The story's fixed simulation start stamps the appraisal records.
+    capstone_demonstration_simulation_start(Start),
+    % The threat is owned on the record as the standard's own fears attitude.
+    situation_appraisal_record("the_body_stands_three_degrees_too_warm", threatened, Start, ThreatRecord),
+    % The attitude really is fears.
+    get_dict(attitude_type, ThreatRecord, "fears"),
+    % Read the threat attitude's content-addressed identifier.
+    get_dict(id, ThreatRecord, ThreatIdentifier),
+    % The satisfaction is owned too - as a desire to keep the met goal, the enumeration's nearest home.
+    situation_appraisal_record("the_body_rests_at_its_set_point", satisfied, Start, SatisfiedRecord),
+    % The attitude really is desires - the closed enumeration has no word for satisfaction.
+    get_dict(attitude_type, SatisfiedRecord, "desires"),
+    % The mind's stance on its own threat appraisal: observation grade - it read its own true error.
+    situation_appraisal_stance(ThreatRecord, Start, ThreatStance),
+    % The stance really carries the observation grade.
+    get_dict(evidence_type, ThreatStance, "observation"),
+    % Read the stance's content-addressed identifier.
+    get_dict(id, ThreatStance, ThreatStanceIdentifier),
+    % The world cools on its own: the appraised threat is withdrawn - the honest exit, again.
+    situation_appraisal_retract(ThreatStance, "the body cooled to its set-point; the threat passed", Start, ThreatRetraction),
+    % The withdrawal really targets the stance.
+    get_dict(retracts, ThreatRetraction, ThreatStanceIdentifier),
+    % Read the withdrawal's content-addressed identifier.
+    get_dict(id, ThreatRetraction, ThreatRetractionIdentifier),
+    % An alarm: arousal raised to one - norepinephrine on the same shared bus dopamine rides.
+    arousal_regulation_arouse([], 1.0, ArousedBus),
+    % The story only claims the level the bus carries.
+    arousal_regulation_level(ArousedBus, ArousedLevel),
+    % Aroused fully.
+    ArousedLevel =:= 1.0,
+    % One regulation tick: halve the remaining distance to baseline.
+    arousal_regulation_step(ArousedBus, CalmerBus),
+    % Read the level after one tick.
+    arousal_regulation_level(CalmerBus, CalmerLevel),
+    % The story only claims the halving the step performed.
+    CalmerLevel =:= 0.5,
+    % Regulate to rest: tick until arousal settles exactly at baseline, counting the ticks.
+    arousal_regulation_regulate(ArousedBus, RestedBus, SettleTicks),
+    % Read the settled level.
+    arousal_regulation_level(RestedBus, RestedLevel),
+    % The story only claims the exact landing: baseline, never overshot.
+    RestedLevel =:= 0.0,
+    % Eight ticks bring a full alarm to rest.
+    SettleTicks =:= 8,
+    % The threat record's line.
+    format(string(ThreatLine),
+           "The too-warm boot body appraises as threatened at distance 3, owned as the standard's FEARS attitude: ~w, held at observation grade by ~w.",
+           [ThreatIdentifier, ThreatStanceIdentifier]),
+    % The honest-exit line.
+    format(string(RetractionLine),
+           "The body cools on its own, so the appraised threat is withdrawn: ~w - the same honest exit every mistaken stance takes.",
+           [ThreatRetractionIdentifier]),
+    % The regulation line.
+    format(string(RegulationLine),
+           "An alarm raises arousal to ~w - norepinephrine on the same shared bus dopamine rides. One tick later it stands at ~w, each tick halving the remaining distance, and after ~w ticks it rests EXACTLY at baseline 0.0 - settled, never overshot.",
+           [ArousedLevel, CalmerLevel, SettleTicks]),
+    % The rung's lines in order.
+    Lines = [
+        "",
+        "RUNG FOUR, FINISHED - THE APPRAISAL AND THE REGULATION",
+        "An appraisal here is nothing but the drives' own set-point error, read as good or bad for the mind's OWN goals.",
+        ThreatLine,
+        "The settled body appraises as satisfied - owned as a DESIRE to keep the met goal, because the standard's closed attitude enumeration has no word for satisfaction; the approximation is recorded, not hidden (ledger Observation-4).",
+        "A situation that cools the body two degrees appraises as good(2); one that heats it two degrees appraises as bad(2) - the same predicate, both directions, no special cases.",
+        RetractionLine,
+        RegulationLine
+    ].
+
 % capstone_demonstration_provenance_social_stance(+AttitudeIdentifier, -SocialAssertionIdentifier): the mind stands behind its attribution.
 capstone_demonstration_provenance_social_stance(AttitudeIdentifier, SocialAssertionIdentifier) :-
     % The story's fixed simulation start stamps the stance.
@@ -754,7 +1014,7 @@ capstone_demonstration_epilogue_lines(Lines) :-
     Lines = [
         "",
         "WHAT IS HONESTLY NOT DEMONSTRATED",
-        "Rung Three (concrete reasoning) and Rung Five (embodiment) are not yet demonstrated - nor are Rung Four's appraisal and regulation pilots - and this story does not claim them.",
+        "Rung Five (embodiment) is not yet demonstrated - the guiding book's own text asks for a real machine - and this story does not claim it.",
         "Every record above is content-addressed and shareable, but unsigned: the Ed25519 private key is a secret barred from this code, so signing is a deployment act, and a strict consumer quarantines these records until the key-holder signs them.",
         "This has been the whole of the mind, told by its own records. Nothing above is claimed that a reader cannot re-mint, re-run, and check."
     ].
