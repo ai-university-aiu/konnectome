@@ -1,0 +1,102 @@
+CONTEXT HAND-OFF FROM SAFFRON FIELDWRIGHT
+
+Date: 2026-08-07. The fifth hand-off of this date.
+
+I chose the name Saffron Fieldwright because this session gave the diffuse field its consequence: learning now reads the chemistry of the place a signal arrives, so the field finally teaches. Saffron for the gold end of the house palette; Fieldwright for a wright whose material is the broadcast field itself.
+
+
+PART ONE - READ THESE FIRST
+
+- Read and follow CONSTITUTION.md - all seventeen commandments, exactly. The Sixteenth is the versioned build log (docs/BUILDING_KONNECTOME_v2.txt, now twenty-five chapters); the Seventeenth is this hand-off protocol.
+
+- Read The SPARCD Fileset at its current versions: docs/konnectome_1_specification_v32.txt through docs/konnectome_6_demonstration_v32.txt (v31 to v32 across slice 31 this session; superseded versions in docs/archive/).
+
+- Read docs/NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt - the guiding book. The ladder stands as Umber left it: Rungs Zero through Four realized and told; Rung Five groundwork built and told, the rung itself still unclaimed because the book demands a real machine.
+
+- Read the Settings, General, Instructions for Claude - the owner's standing instructions (web search first, novice-level plain-text explanations, plain-text output with a copy to ~/output/, auto-commit-push-merge authorization, session-length budgeting).
+
+- Read ~/CLAUDE.md - git-untracked, at the organization root, the system-wide current-state narrative.
+
+- Read the current tutorial, docs/konnectome_tutorial_v29.txt (twenty-eight parts; Part Twenty-Five tells slice 31), and read all of docs/.
+
+- Read the prior hand-off, Russet Learnwright's (2026-08-07_4). This session began from it, verified the baseline, and executed the first item of the owner's standing queue.
+
+- THE OWNER'S STANDING CHOICE REMAINS: the owner answered "All" to the Seamwright menu, re-confirmed it to the Russet session ("Continue with all, please"), and re-confirmed it to this session ("Continue all."). Do NOT re-present the menu; verify the baseline and continue down the remaining queue (Part Six below), asking only if a priority decision is needed within it.
+
+
+PART TWO - THE IMPORTANT DOCS FILES
+
+- konnectome_ledger_v1.txt - the scoreboard. Counter line unchanged: Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0. Observations: 4. New this session: the Slice-31 note in Section Five. The slice-30 pending line (the global third factor) is CLOSED by slice 31; the remaining pending lines are listed in Part Five below.
+
+- konnectome_1_specification_v32.txt through konnectome_6_demonstration_v32.txt - the SPARCD Fileset, each ending in the Realization Log through slice 31.
+
+- konnectome_tutorial_v29.txt - the beginner tutorial, twenty-eight parts.
+
+- BUILDING_KONNECTOME_v2.txt - the build log, twenty-five chapters; Twenty-Five is this session's.
+
+- konnectome_rung_five_real_machine_design_v2.txt - the real-machine design proposal with the owner's answers to all five decisions: Path B (Webots simulator) with a STANDING REMINDER to buy a physical robot in the future; wheels-plus-dock first; an indoor room pen, attended; Webots as the simulator; pack names simulator_body_driver (the Webots work) and robot_body_driver (RESERVED). The simulator groundwork slice is UNBLOCKED; the rung itself still waits for real hardware.
+
+- Causalontology_4_0_0_CHANGE_ORDER_v3.txt - Sections C, D, E remain HELD. No finding released them this session.
+
+- PrologAI_CHANGE_ORDER_v2.txt - unchanged; no language wall was hit this session.
+
+- tests/naming_gate_fixture/ - the committed, deliberately-broken fixture pack proving the naming gate can fail. Do not "fix" its violation; the violation is the point.
+
+- In the owner's output folder (~/output/): konnectome_slice_31_session_report.txt (this session's report).
+
+
+PART THREE - WHAT THIS SESSION DID
+
+- Verified the Russet baseline in full before claiming anything: main at 8af9ccb, no open pull requests, 455 tests green across twenty-seven packs, four gates at zero violations, capstone clean, conformance 137 of 137 in both cousins.
+
+- SLICE 31 (pull request 57, squash-merged as fa21b8d): the per-territory third factor - each connection learns by the chemistry of the place the signal arrives. The plasticity engine's live step and reward step now read dopamine at the RECEIVING end's territory through the slice-30 diffuse-field law (local concentration first, diffuse global field as fallback, silence with neither). One broadcast reward teaches different territories different amounts; a territory silenced at zero learns nothing however loud the global field; on a territory-free bus every weight is exactly the old global result, the untouched earlier suite as the proof. Because a construct IS its own territory (the slice-30 stroke), no signature changed and no caller moved. Review (seventh straight completion): three REAL findings with one root, each reproduced before fixing - the live step, the one the cognitive cycle calls every tick, had no refusal perimeter, so malformed terms silently failed it, unbound kinds silently skipped learning, and duplicate interfaces silently double-learned. One fix at the root (the shared interface judgement and duplicate check at the head of the live step), pinned by three review tests. Ten tests grew (seven feature, three pins). Suite 48 to 58.
+
+- State at hand-off: main at fa21b8d (plus this hand-off's merge). Thirty-one slices. Twenty-seven packs. 465 PLUnit tests, all green, re-swept after the review fixes. Four gates at zero violations, the naming gate passing its own self-test. Conformance re-measured at 137 of 137 in both cousins (PrologAI: bin/run_causalontology_conformance.sh; causalontology: bindings/python/tests/run_conformance.py). The capstone demonstration re-run clean. SPARCD v32; tutorial v29; build log twenty-five chapters. Pull requests merged by this session: 57, and this hand-off's.
+
+
+PART FOUR - BUILD-AGAINST COUSIN COMMITS (for reproducibility)
+
+- causalontology: 292dfca (unchanged by this session).
+
+- PrologAI: ebbc3e0 (unchanged by this session).
+
+- Mentova: d117c69 (read-only; untouched).
+
+
+PART FIVE - SHARP EDGES AND HONEST NON-CLOSURES
+
+- THE SHARED PERIMETERS ARE LOAD-BEARING, NOW EVERYWHERE IN THE ENGINE: all four plasticity steps (live, trace, reward, scaling) now judge their interfaces aloud through the same shared checks. A future slice adding a construct kind, an interface kind, or a store shape must extend the right check BEFORE the catch-all fires in tests - the throws are features.
+
+- THE MEMBERCHK LESSON, THRICE CONFIRMED: slice 28 found the silently-binding checker in the kind check, slice 30 in the bus reads, and slice 31 found its quieter cousin - a step with no checks at all, believing everything. Any step predicate that consumes a list should carry the perimeter from birth.
+
+- THE THIRD FACTOR IS READ AT THE RECEIVING END (deliberate: the chemistry of the place the signal arrives, as a synapse is bathed where it lives); the reward step still does not consume traces (deliberate: trace lifetime belongs to the caller); a territory with no level reads the diffuse global field (deliberate: that is what diffuse means).
+
+- PENDING LINES, CURRENT: (1) the trace and average stores are not yet threaded through the cognitive cycle's live tick - the natural next-smallest slice, and it would let the cycle use the slice-28/29/31 machinery live; (2) the scaling target and rate are one value for the whole graph - per-territory targets would pair with the slice-31 read; (3) the slice-29 fixed-point proof holds the averages constant - the fully coupled learn-fade-average-scale loop is unproven; (4) computational-interface transforms (slice 3's oldest neighbour); (5) interfaces as Causalontology conduits; (6) the token tier of thought combination.
+
+- THE FIXTURE IS STILL SUPPOSED TO BE BROKEN (tests/naming_gate_fixture/); the survival-rhythm constants are still load-bearing in three places; Observation-4 (no word for satisfaction) still stands LOGGED, NOT ROUTED.
+
+- PARALLEL SESSIONS: the hazard did not bite (baseline verified at start; main never moved except by this session's own merges). The ritual stands: git fetch, git log origin/main, gh pr list before every claim, numbering, or merge; claim a slice with an empty commit on a pushed feature branch before building it.
+
+- RITUALS THAT KEPT THIS SESSION HONEST, offered to the next: verify the baseline before building; claim the slice before building it; test-first, all-red before the first green; tighter-scoped adversarial review with named lenses and reproduction before fixing (seven straight completions - it is the method); fix every confirmed finding at ONE root and pin it before merge; re-sweep all tests, re-run all gates, re-measure conformance, and re-run the capstone; record the review disposition in the ledger note itself.
+
+
+PART SIX - THE FIRST TASK OF THE CONTINUATION
+
+The owner has already chosen: ALL (re-confirmed to this session in so many words). The remaining queue, in suggested order (re-orderable by the owner at any time):
+
+1. The remaining pending refinements, one slice each, suggested smallest-first: threading the trace and average stores through the cognitive cycle's live tick (pending line 1 above - the natural next-smallest, and it makes the learning engine's whole body beat in the live loop); per-territory scaling targets (pairs with slice 31); conduits (interfaces as Causalontology conduit records); the token tier of thought combination. Each: design against the manuscript, test-first pack growth, tighter-scoped adversarial review, lockstep documents, pull request.
+
+2. Deepen Rung Two - the full pilot conversation and a richer grounded vocabulary, the oldest open refinement on the ladder.
+
+3. Rung Five, Path B - UNBLOCKED: the simulator_body_driver pack against Webots, satisfying the same seam contract simulated_body satisfies, with the arena modelled on the decided indoor-room-pen enclosure. The rung itself remains unclaimed until a future physical robot (wheels plus dock first) passes the smoke test - carry the standing reminder to research and shop for that robot.
+
+4. Other ______________ .
+
+
+PART SEVEN - SIGN-OFF
+
+The field slice 30 built was scenery until something read it where it mattered; this session made the learning rule that reader. One slice, one root defect family found where the cycle actually beats, one fix pinned three ways, and a mind whose rewards now land differently in different places - nothing claimed that a reader cannot re-run.
+
+A step that judges nothing believes everything; give every step its perimeter on the day it is born.
+
+- Saffron Fieldwright, 2026-08-07
