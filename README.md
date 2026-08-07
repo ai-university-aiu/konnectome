@@ -73,7 +73,7 @@ Each badge above is a claim, and every claim deserves a plain explanation. Here 
 
 - **`PARENT ORG | AI-UNIVERSITY-AIU`** - the parent organization that owns konnectome and its cousins.
 - **`COUSINS | PROLOGAI + CAUSALONTOLOGY + MENTOVA`** - konnectome's sibling repositories: PrologAI (the language), Causalontology (the data structure), and Mentova (the flagship Synthetic Mind and home of the reasoning core). The badge links to Mentova.
-- **`STATUS | THE MIND RUNS AND TELLS ITS STORY`** - the honest current state: twenty-six slices have landed (twenty-seven packs, 384 tests, all green, four standing gates - the naming gate now carrying its own permanent self-test), all ten architecture components run as one loop, Rung Two of the ladder is open (first grounded words and quarantined pretend play), Rung Three's five trials are all realized (transitive inference with every step shown, seriation, causal-versus-co-occurrence discrimination, means-end planning, categories formed from experience, and a represented model of quantity whose verdict is read by re-measuring, never from a transformation's name), Rung Four is finished (social pain, the empathy trial, and the appraisal and regulation pilots), and one command - `bin/run_capstone_demonstration.sh` - boots the mind and prints its whole glass-box story, which now reasons step by watchable step, appraises its own situations, regulates its own arousal, and tells the body seam - Rung Five's groundwork - in its own telling, while disclaiming exactly one rung: embodiment.
+- **`STATUS | THE MIND RUNS AND TELLS ITS STORY`** - the honest current state: twenty-seven slices have landed (twenty-seven packs, 395 tests, all green, four standing gates - the naming gate now carrying its own permanent self-test), all ten architecture components run as one loop, Rung Two of the ladder is open (first grounded words and quarantined pretend play), Rung Three's five trials are all realized (transitive inference with every step shown, seriation, causal-versus-co-occurrence discrimination, means-end planning, categories formed from experience, and a represented model of quantity whose verdict is read by re-measuring, never from a transformation's name), Rung Four is finished (social pain, the empathy trial, and the appraisal and regulation pilots), and one command - `bin/run_capstone_demonstration.sh` - boots the mind and prints its whole glass-box story, which now reasons step by watchable step, appraises its own situations, regulates its own arousal, and tells the body seam - Rung Five's groundwork - in its own telling, while disclaiming exactly one rung: embodiment.
 
 </details>
 
@@ -127,12 +127,12 @@ The six-phase waterfall is mirrored in six versioned documents, each seeded verb
 
 | Phase | File | Seeded from |
 |---|---|---|
-| 1. Specification | [`docs/konnectome_1_specification_v27.txt`](docs/konnectome_1_specification_v27.txt) | Appendix 1 |
-| 2. Pseudocode | [`docs/konnectome_2_pseudocode_v27.txt`](docs/konnectome_2_pseudocode_v27.txt) | Appendix 2 |
-| 3. Architecture | [`docs/konnectome_3_architecture_v27.txt`](docs/konnectome_3_architecture_v27.txt) | Appendix 3 |
-| 4. Refinement | [`docs/konnectome_4_refinement_v27.txt`](docs/konnectome_4_refinement_v27.txt) | Appendix 4 |
-| 5. Completion | [`docs/konnectome_5_completion_v27.txt`](docs/konnectome_5_completion_v27.txt) | Appendix 5 |
-| 6. Demonstration | [`docs/konnectome_6_demonstration_v27.txt`](docs/konnectome_6_demonstration_v27.txt) | Appendix 6 |
+| 1. Specification | [`docs/konnectome_1_specification_v28.txt`](docs/konnectome_1_specification_v28.txt) | Appendix 1 |
+| 2. Pseudocode | [`docs/konnectome_2_pseudocode_v28.txt`](docs/konnectome_2_pseudocode_v28.txt) | Appendix 2 |
+| 3. Architecture | [`docs/konnectome_3_architecture_v28.txt`](docs/konnectome_3_architecture_v28.txt) | Appendix 3 |
+| 4. Refinement | [`docs/konnectome_4_refinement_v28.txt`](docs/konnectome_4_refinement_v28.txt) | Appendix 4 |
+| 5. Completion | [`docs/konnectome_5_completion_v28.txt`](docs/konnectome_5_completion_v28.txt) | Appendix 5 |
+| 6. Demonstration | [`docs/konnectome_6_demonstration_v28.txt`](docs/konnectome_6_demonstration_v28.txt) | Appendix 6 |
 
 ## The build ladder
 
@@ -197,7 +197,7 @@ konnectome/
 
 ## Status
 
-The build has begun and is climbing the ladder. Twenty-six slices have landed on `main` (twenty-seven packs, 384 tests, all green):
+The build has begun and is climbing the ladder. Twenty-seven slices have landed on `main` (twenty-seven packs, 395 tests, all green):
 
 - **Slice 1 - the heartbeat** (`tick_engine`): the Scheduler and Tick Engine (Component 2), with the two-pass synchronous update. 7 of 7 tests.
 - **Slice 2 - archetypes and the first thought** (`archetype`, `observer`): the six dynamical archetype rules (Appendix 2, Section A2.3) and the observer recording each tick as a Causalontology `token_occurrence` (Component 9) via the reused `causal_core`. 7 of 7 and 6 of 6 tests; the 119 conformance vectors stay green.
@@ -240,6 +240,8 @@ The build has begun and is climbing the ladder. Twenty-six slices have landed on
 - **Slice 25 - The story learns the body seam: the capstone grows to 0.4.0** (`capstone_demonstration`): no new pack - the one runnable story gains one chapter, **THE BODY SEAM - RUNG FIVE'S GROUNDWORK, TOLD AND NOT CLAIMED**, between the finished Rung Four and the provenance layer. It opens and closes with the refusal - *there is no real machine here; the rung is NOT claimed* - and in between tells, under strict live guards: the obstacle surfacing as the mind's percept **unchanged**; one closed sense-act pass releasing the steering reflex and leaving the camera clear - **acting changed what the machine will see next**; the **hunger identity** (error 0.5 equals error 0.5 through the one shared `drive_system_error`); the **survival rhythm** - hold at 0.75, recharge **of its own accord** at the pressing 0.5, pinned to the digit; the deliberate **drives-over-reflexes tie**; and the loop record **owned by enacting the pass**, its observation-graded stance granted only after the record is proven genuinely minted. The epilogue keeps the Rung Five disclaimer byte-identical and adds the boundary aloud: **groundwork is not the rung**. Suite 44 → 52 (eight new, including four independent dynamics checks and the reproducible enacted-record identifier); **384 tests total**; conformance **re-measured** 137/137 in both cousins. **No new wall; no cousin edited.**
 
 - **Slice 26 - The naming gate learns to see: the unprefixed-helper hole closed** (`bin/check_pack_naming.sh`): the slice-22 review had proven the gate blind to an **unprefixed helper bearing no known terse stem** (`numlist_or_empty`), and the ledger mandated a hand-hunt in every review since. The gate now carries a **sixth check** that reads the rule as the constitution states it - **every clause head defined in a pack module must begin with the pack's own prefix** (or `prologai_`) - plus a `PACKS_ROOT` override and a **`--self-test` mode**. The proof is **permanent, not injected-then-removed**: a deliberately-broken **fixture pack** under `tests/naming_gate_fixture/` (outside the library path, never loaded, labelled deliberate in its own comments) carries exactly the old blind-spot shape, and the self-test passes **only if the gate catches it by name**. Zero violations across the 27 real packs (no false positives); the **hand-hunt mandate is retired**. No pack changed; **384 tests re-swept green**; conformance **re-measured** 137/137 in both cousins. **No new wall; no cousin edited.**
+
+- **Slice 27 - The delay lines: the connectome learns to keep a signal in transit** (`connection_graph` grown): the interface term's **Delay field becomes load-bearing**. Each transmissive interface gets a **delay line** - a first-in-first-out buffer of Delay−1 in-transit values (the synchronous step delivers the final hop) - threaded through a new delayed step and run as **explicit, stateless values**. Proven, not promised: with every delay at 1 the delayed run **reproduces the plain run exactly** (pinned identity test); a chained 2-tick + 3-tick hop arrives at **exactly tick five and nowhere sooner** - the book's TEST OF PROPAGATION made runnable; a value in transit **survives its source going silent**. The review confirmed **two REAL silent-failure hazards** (an unknown construct kind silently dropped from the state; a ghost source silently destroying a line) - both fixed at root with **refusal clauses that throw by name** across the plain, modulated, and delayed steps, plus delay validation for every interface. Suite 6 → 17 in the pack; **395 tests total**; conformance **re-measured** 137/137 in both cousins. **No new wall; no cousin edited.**
 
 Next: **the seam waits for a real machine** - reaching, navigation, and true homeostatic survival all demand one, and the honest-limits line keeps naming embodiment until it exists - and Sections C, D, and E of the Causalontology change order remain held for the walls a future slice may find. This README, and every badge on it, is kept honest as the build climbs.
 

@@ -107,7 +107,7 @@ ARCHITECTURE, VERSION 20"; the manuscript's document-level CHANGE LOG that follo
 versioning metadata, not appendix content, and was deliberately not carried in.
 
 Per the Tenth Commandment, every code slice bumps the SPARCD Fileset. The current
-version is v27 (bumped in lockstep by slice 26); every superseded version lives in
+version is v28 (bumped in lockstep by slice 27); every superseded version lives in
 docs/archive/.
 
 
@@ -982,5 +982,36 @@ check specifically). No pack changed; no test count moved
 reality-discipline gates report zero violations; the Causalontology conformance suite re-measured
 at 137 of 137 (specification 4.0.0) in both cousins. The hand-hunt mandate above is retired in
 this same change. No new wall; no cousin edited, per the Second, Third, and Fourth Commandments.
+
+
+Slice-27 note (2026-08-07). The delay lines: the connectome learns to keep a signal in transit.
+The slice-3 note above recorded multi-tick delay lines as pending, and the queue of the owner's
+standing "All" named them the smallest remaining refinement. This slice makes the interface term's
+Delay field load-bearing: the connection_graph pack grows three public predicates - build the
+empty delay lines for a graph (a first-in-first-out buffer of Delay-minus-one in-transit values
+per transmissive interface, the synchronous step delivering the final hop); one delayed
+synchronous step threading the lines as explicit state; and a delayed run - beside the plain step
+and run, which stand unchanged. Proven, not promised: with every delay at one tick the delayed run
+reproduces the plain run exactly, state for state and tick for tick (a pinned identity test); a
+chained two-tick and three-tick hop arrives at exactly tick five and nowhere sooner (the guiding
+book's TEST OF PROPAGATION made runnable); a value already in transit survives its source going
+silent; the weight scales the value at delivery. The independent adversarial review (tighter
+scope, named lenses, hard reproduction budget - the third straight completion) confirmed four
+findings: two REAL silent failures (an unknown construct kind silently dropped from the state by
+the findall-driven step - a hazard mirrored from the plain step - and a source name absent from
+the state silently destroying a delay line and its in-transit values) and two MINOR (delay
+validation skipped for computational interfaces; a negative tick count failing without a word).
+Three fixed at root and pinned: refusal clauses that throw by name in the plain, modulated, AND
+delayed steps alike; an existence error for the missing source; validation of every interface
+before the transmissive filter. The fourth confirmed as standing house behaviour mirrored from the
+plain run - recorded, no change needed. Eleven tests grew (seven feature, four pins):
+connection_graph six to seventeen, the repository 384 to 395 across twenty-seven packs, all green,
+re-swept after the fixes because the refusal clauses touch steps every earlier slice built on. The
+slice-3 pending item "multi-tick delay lines" is CLOSED by this slice; its neighbours -
+computational-interface transforms, interfaces as Causalontology conduits, and the delayed step's
+handling of the bus-modulated relay kind (refused by name today, wired in a later refinement) -
+remain honestly pending. The four gates report zero violations, the naming gate passing its own
+self-test; conformance re-measured at 137 of 137 (specification 4.0.0) in both cousins. No new
+wall; no cousin edited, per the Second, Third, and Fourth Commandments.
 
  Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 4.
