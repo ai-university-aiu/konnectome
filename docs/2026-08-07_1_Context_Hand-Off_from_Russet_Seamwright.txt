@@ -1,0 +1,112 @@
+CONTEXT HAND-OFF FROM RUSSET SEAMWRIGHT
+
+Date: 2026-08-07. The first hand-off of this date.
+
+I chose the name Russet Seamwright because this session's craft was seams. It finished the seam slice 21 left open in the reasoning rung (the two deferred trial halves, closed by categories the mind forms for itself and by a quantity the mind actually models); it sewed the story to the machinery it tells (the capstone's every new sentence guarded by a live check); and it built the seam where a body will one day go - the three connections of the embodied rung, tested against an honestly-named stand-in, with the rung itself left unclaimed because the book demands a real machine. Russet for the warm red-brown of the house palette; Seamwright for a wright whose material is the join between two honest pieces.
+
+
+PART ONE - READ THESE FIRST
+
+- Read and follow CONSTITUTION.md - all seventeen commandments, exactly. The Sixteenth is the versioned build log (docs/BUILDING_KONNECTOME_v2.txt, now eighteen chapters); the Seventeenth is this hand-off protocol.
+
+- Read The SPARCD Fileset at its current versions: docs/konnectome_1_specification_v25.txt through docs/konnectome_6_demonstration_v25.txt. (The Fileset moved v22 to v23 at slice 22, v23 to v24 at slice 23, and v24 to v25 at slice 24 this session; superseded versions are in docs/archive/.)
+
+- Read docs/NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt - the guiding book. Its ladder (section A6.3a) now stands: Rungs Zero through Four realized AND told in the one runnable story; Rung Three's five trials all realized (completed this session); Rung Five opened as GROUNDWORK only, because the book's own text demands a REAL machine and no software slice may round itself up to one.
+
+- Read the Settings, General, Instructions for Claude - the owner's standing instructions (web search first, novice-level plain-text explanations, plain-text output with a copy to ~/output/, auto-commit-push-merge authorization, session-length budgeting).
+
+- Read ~/CLAUDE.md - git-untracked, at the organization root, the system-wide current-state narrative.
+
+- Read the current tutorial, docs/konnectome_tutorial_v22.txt, and read all of docs/.
+
+- Read the prior hand-off, Carmine Dockwright's (2026-07-26_4), and note that the repository had ALREADY moved past it when this session began: parallel sessions had landed slices 20 and 21 (pull requests 39, 40, 41). Re-verify main's head and gh pr list before every numbering, append, or merge - the hazard is real and has bitten twice.
+
+
+PART TWO - THE IMPORTANT DOCS FILES
+
+- konnectome_ledger_v1.txt - the scoreboard. Counter line today: Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0. Observations: 4. New this session: the slice-22, slice-23, and slice-24 notes in Section Five; the Rung Three coverage rows flipped to REALIZED and a new Rung Five GROUNDWORK-ONLY sub-table in Section Four; and the recorded naming-gate hole (an unprefixed helper predicate bearing no known terse stem passes bin/check_pack_naming.sh - hunt by hand in review until the gate learns to see it).
+
+- konnectome_1_specification_v25.txt through konnectome_6_demonstration_v25.txt - the SPARCD Fileset, each ending in the Realization Log through slice 24.
+
+- konnectome_tutorial_v22.txt - the beginner tutorial, twenty-one parts; Parts Sixteen through Eighteen tell slices 22, 23, and 24.
+
+- BUILDING_KONNECTOME_v2.txt - the build log (Sixteenth Commandment), eighteen chapters; Sixteen through Eighteen are this session's.
+
+- Causalontology_4_0_0_CHANGE_ORDER_v3.txt - Sections C, D, E remain HELD. No finding released them this session.
+
+- PrologAI_CHANGE_ORDER_v2.txt - unchanged; no language wall was hit this session.
+
+- The guiding-principle and context documents, and the earlier hand-offs - as the prior hand-offs list them.
+
+- In the owner's output folder (~/output/): continuation_menu_after_slice_21.txt (this session's opening state verification) and konnectome_slices_22_23_24_session_report.txt (this session's closing report).
+
+
+PART THREE - WHAT THIS SESSION DID
+
+This session continued from Carmine Dockwright's hand-off at the owner's instruction, verified the moved baseline (slices 20 and 21 had landed in parallel), presented an updated menu, and then executed the owner's chosen queue - finish Rung Three, grow the capstone, open Rung Five - to completion. In order:
+
+- SLICE 22 (pull request 42, squash-merged): Rung Three finished in its trials. Two new layer-0 packs: category_formation (0.1.0) - categories the mind FORMED FROM EXPERIENCE, by reusing PrologAI's concept_formation engine unmodified (the first konnectome use of it), with the flexible re-sort delegated to the slice-21 classifier and an object fitting no category honestly reported outside_every_category; and quantity_model (0.1.0) - a represented model of quantity (individuated units plus an appearance) whose conservation verdict is read by RE-MEASURING the model, never from a transformation's name - the lossy pour (named like a pour, spills a unit) is judged changed(5, 4), the receipt that the model sides with the world against the name. concrete_operations re-sized to 0.1.1 (documentation only). The adversarial review returned sixteen findings (two blocking: a silently-wrong sort under an unsorted hand-built core, and the naming-gate hole); all confirmed findings fixed at root and pinned. Both packs own conclusions BY ENACTMENT: the record predicates take no quoted text - they run the learning episode or the trial and mint what it produced.
+
+- SLICE 23 (pull request 43, squash-merged): the story pays its debts - the capstone grows to 0.3.0. No new pack. The one runnable story (bin/run_capstone_demonstration.sh) learned two chapters: RUNG THREE (the derivation as data, seriation, the formed categories, the honest exile, the crossing re-sort, both conservation verdicts, the cited causal record against the co-occurrence, the shortest plan) and RUNG FOUR, FINISHED (the appraisal owned as fears and desire-to-keep with Observation-4 declared aloud in the story itself, the honest withdrawal, and the alarm resting exactly at baseline in eight halving ticks). Every narrated sentence sits beneath a strict live check - a drifted engine silences the story rather than letting it lie. The honest-limits list shrank to exactly one rung: embodiment, with the book's real-machine reason. Suite 36 to 44, including a pinned byte-identical double telling.
+
+- SLICE 24 (pull request 44, squash-merged): Rung Five opened as GROUNDWORK, the rung itself not claimed. Two new layer-0 packs: simulated_body (0.1.0) - the honestly-named stand-in machine (camera, draining battery with floor-at-empty physics, three actuators, honest refusals); and body_interface (0.1.0) - the book's three connections as one seam (sensors become senses; body state becomes homeostatic state, so a LOW BATTERY IS FELT AS HUNGER through the same drive_system_error as every other pain; released actions drive actuators), the sense-act smoke loop closed through the simulated machine, and the survival groundwork - the mind recharging OF ITS OWN ACCORD at the pressing threshold, on a binary-exact pinned rhythm. The capstone was deliberately untouched: the story still disclaims embodiment.
+
+- THE REVIEWS, TOLD STRAIGHT. Slice 22's independent adversarial review ran to completion (sixteen findings, all confirmed ones fixed and pinned). Slices 23's and 24's reviewers were STOPPED MID-RUN by the owner; in both cases the builder re-ran the reviews' planned reproductions itself and recorded the disposition in the ledger as the weaker guarantee it is (slice 23: a builder's verification; slice 24: mixed - the interrupted reviewer's two real leads, an English-Readable-Code lapse and an observation-grade forgery, both fixed and pinned, plus the builder's remaining lenses). The forgery fix matters beyond its slice: body_interface_stance now PROVES a record was genuinely minted before granting the observation grade, by re-deriving its content address.
+
+- State at hand-off: main at the pull-request-44 merge (commit 6fd2413). Twenty-four slices. Twenty-seven packs. Three hundred seventy-six Prolog Unit (PLUnit) tests, all green - re-swept after every slice. Naming, layer, layer-binding, and reality-discipline gates at zero violations throughout. The Causalontology conformance suite re-measured FOUR times this session (once at baseline verification, once per slice), 137 of 137 in both cousins every time. SPARCD Fileset v25; tutorial v22; build log with eighteen chapters. konnectome pull requests merged by this session: 42, 43, 44, and this hand-off's.
+
+
+PART FOUR - BUILD-AGAINST COUSIN COMMITS (for reproducibility)
+
+- causalontology: 292dfca (unchanged by this session; tags through v4.0.3 exist; the Go tag bindings/go/v4.0.0 is on the remote).
+
+- PrologAI: ebbc3e0 (unchanged by this session; concept_formation reused through the library path, never edited).
+
+- Mentova: d117c69 (read-only; untouched).
+
+
+PART FIVE - SHARP EDGES AND HONEST NON-CLOSURES
+
+- THE REAL-MACHINE BOUNDARY IS THE STANDING LAW OF RUNG FIVE. The book's own text closes the sense-act loop "through a real machine" and gives no software exemption inside the ladder. This session's groundwork sizing (seam built, rung unclaimed, capstone disclaimer untouched) is the honest posture; any future session tempted to claim the rung in simulation should reread A6.3a lines 10697-10725 first. The ledger's Rung Five sub-table holds two PARTIAL rows (smoke loop, survival - simulated only) and two PENDING rows (reaching, navigation - cannot begin without a machine).
+
+- INTERRUPTED REVIEWERS ARE NOW A PATTERN. The owner stopped the slice-23 and slice-24 reviewers mid-run. The method held both times - the builder re-ran the reproductions and recorded the weaker guarantee honestly - but a builder verifying its own work is not an independent refuter. If the owner prefers faster reviews, a tighter-scoped reviewer prompt (fewer lenses, hard reproduction budget) may survive; the slice-24 reviewer's two leads show even a partial independent run earns its keep.
+
+- THE NAMING-GATE HOLE STANDS OPEN. bin/check_pack_naming.sh passes an unprefixed helper predicate that carries no known terse stem (slice 22's numlist_or_empty proved it). Until the gate learns to see such stragglers, every review must hunt them by hand. Closing the hole means changing konnectome's own gate script - konnectome code, not a cousin - so it is ordinary slice work when someone wants it.
+
+- OBSERVATION-4 STILL STANDS, AND THE STORY NOW SAYS IT ALOUD. The closed attitude enumeration has no word for satisfaction; a met set-point is approximated as a desire to keep it. The capstone now declares this to every reader. Still LOGGED, NOT ROUTED - route it only if a real cross-mind need for a shareable contentment attitude appears.
+
+- PARALLEL SESSIONS: the hazard did not bite this session (main was re-checked before every pull request and never moved underfoot), but this session BEGAN by discovering the prior hand-off was stale - slices 20 and 21 had landed in parallel. The ritual stands: git fetch, git log origin/main, and gh pr list before every claim, numbering, or merge; claim a slice with an empty commit on a pushed feature branch before building it.
+
+- THE STORY'S GROUNDWORK CHAPTER IS DELIBERATELY UNWRITTEN. Slice 24 did not teach the capstone a body-seam chapter, so the boundary between groundwork and rung stayed structurally visible (the story claims nothing about bodies at all). A future slice may teach the story to TELL the seam without claiming the rung - it will need the same guard-then-tell discipline and careful wording.
+
+- PENDING REFINEMENTS, UNCHANGED: per-territory neuromodulators, delay lines, homeostatic scaling, the eligibility trace, conduits, the token tier of thought combination; Rung Two's full pilot conversation and richer grounded vocabulary; change-order Sections C, D, and E still HELD; the two pre-existing red PrologAI workflows and PrologAI pull request 519 remain the owner's; bot pull requests are never auto-merged.
+
+- RITUALS THAT KEPT THIS SESSION HONEST, offered to the next: verify the baseline before presenting choices (this session re-ran all suites and gates before its first menu); check candidate pack names against PrologAI module filenames before creating them; write the tests before the module; enact-inside-the-record-predicate for anything owned on the record; re-measure the conformance suite per slice rather than inheriting it; spell numbers out in the log prose; and record an interrupted review as interrupted.
+
+
+PART SIX - THE FIRST TASK OF THE CONTINUATION
+
+Present the owner this menu and let the owner choose:
+
+1. Teach the story the body seam - grow the capstone to 0.4.0 with a groundwork chapter that TELLS the sense-act loop and the survival rhythm through the simulated body, guard-then-tell, without claiming the rung (the honest-limits line keeps naming embodiment).
+
+2. Close the naming-gate hole - extend bin/check_pack_naming.sh to catch an unprefixed helper predicate bearing no known terse stem, pinned by a fixture; retire the hand-hunt the ledger currently mandates.
+
+3. Take up a pending refinement - per-territory neuromodulators, delay lines, homeostatic scaling, the eligibility trace, conduits, or the token tier of thought combination - each a full slice with design, test-first packs, review, lockstep, pull request.
+
+4. Deepen Rung Two - the full pilot conversation and a richer grounded vocabulary, the oldest open refinement on the ladder.
+
+5. Connect a real machine - if and when the owner has hardware or a robot simulator they consider honest enough, plug it into the body_interface seam and begin the rung's true trials (reaching, navigation, survival). This one starts with a design conversation, not code.
+
+6. Pause at this milestone - twenty-four slices, twenty-seven packs, three hundred seventy-six tests, five rungs told in one command, the sixth waiting behind a tested seam, everything green and everything told.
+
+7. Other ______________ .
+
+
+PART SEVEN - SIGN-OFF
+
+The mind that began this session unable to form a category of its own ends it counting what the world holds instead of trusting what a name says, telling every rung it has climbed in one guarded command, and waiting - behind three tested connections and a battery it already knows how to defend - for a body it does not pretend to have. Every claim sized, every interruption recorded, every seam sewn from both sides.
+
+A seam is honest work: it joins what is real to what is real, and pretends to be neither.
+
+- Russet Seamwright, 2026-08-07
