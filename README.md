@@ -73,7 +73,7 @@ Each badge above is a claim, and every claim deserves a plain explanation. Here 
 
 - **`PARENT ORG | AI-UNIVERSITY-AIU`** - the parent organization that owns konnectome and its cousins.
 - **`COUSINS | PROLOGAI + CAUSALONTOLOGY + MENTOVA`** - konnectome's sibling repositories: PrologAI (the language), Causalontology (the data structure), and Mentova (the flagship Synthetic Mind and home of the reasoning core). The badge links to Mentova.
-- **`STATUS | THE MIND RUNS AND TELLS ITS STORY`** - the honest current state: twenty-three slices have landed (twenty-five packs, 339 tests, all green, four standing gates), all ten architecture components run as one loop, Rung Two of the ladder is open (first grounded words and quarantined pretend play), Rung Three's five trials are all realized (transitive inference with every step shown, seriation, causal-versus-co-occurrence discrimination, means-end planning, categories formed from experience, and a represented model of quantity whose verdict is read by re-measuring, never from a transformation's name), Rung Four is finished (social pain, the empathy trial, and the appraisal and regulation pilots), and one command - `bin/run_capstone_demonstration.sh` - boots the mind and prints its whole glass-box story, which now reasons step by watchable step, appraises its own situations, and regulates its own arousal in its own telling - disclaiming exactly one rung: embodiment.
+- **`STATUS | THE MIND RUNS AND TELLS ITS STORY`** - the honest current state: twenty-four slices have landed (twenty-seven packs, 376 tests, all green, four standing gates), all ten architecture components run as one loop, Rung Two of the ladder is open (first grounded words and quarantined pretend play), Rung Three's five trials are all realized (transitive inference with every step shown, seriation, causal-versus-co-occurrence discrimination, means-end planning, categories formed from experience, and a represented model of quantity whose verdict is read by re-measuring, never from a transformation's name), Rung Four is finished (social pain, the empathy trial, and the appraisal and regulation pilots), and one command - `bin/run_capstone_demonstration.sh` - boots the mind and prints its whole glass-box story, which now reasons step by watchable step, appraises its own situations, and regulates its own arousal in its own telling - disclaiming exactly one rung: embodiment.
 
 </details>
 
@@ -117,7 +117,7 @@ konnectome is built and maintained under a written [**CONSTITUTION.md**](CONSTIT
 12. **Whole-Word System** - whole English words, snake_case, pack-qualified, no terse prefixes.
 13. **The safety gate** - no change may regress ARC-AGI-1, ARC-AGI-2, or the 137-vector Causalontology conformance suite.
 14. **Branch and report discipline** - feature branches and pull requests; no direct pushes to main; no artificial-intelligence tool credited as author; no Roman numerals.
-15. **The tutorial** - a maintained, beginner-friendly [`docs/konnectome_tutorial`](docs/konnectome_tutorial_v21.txt), kept current and versioned under the archive discipline.
+15. **The tutorial** - a maintained, beginner-friendly [`docs/konnectome_tutorial`](docs/konnectome_tutorial_v22.txt), kept current and versioned under the archive discipline.
 16. **The build log** - every build activity is logged to [`docs/BUILDING_KONNECTOME_v2.txt`](docs/BUILDING_KONNECTOME_v2.txt), voiced with dual purpose: as a scientific paper and as a best-selling book.
 17. **Context-window management and the hand-off protocol** - when the window runs high, a durable Context Hand-Off is written and the session paused, so a fresh session reloads state from `docs/` and continues from a known-good baseline.
 
@@ -127,12 +127,12 @@ The six-phase waterfall is mirrored in six versioned documents, each seeded verb
 
 | Phase | File | Seeded from |
 |---|---|---|
-| 1. Specification | [`docs/konnectome_1_specification_v24.txt`](docs/konnectome_1_specification_v24.txt) | Appendix 1 |
-| 2. Pseudocode | [`docs/konnectome_2_pseudocode_v24.txt`](docs/konnectome_2_pseudocode_v24.txt) | Appendix 2 |
-| 3. Architecture | [`docs/konnectome_3_architecture_v24.txt`](docs/konnectome_3_architecture_v24.txt) | Appendix 3 |
-| 4. Refinement | [`docs/konnectome_4_refinement_v24.txt`](docs/konnectome_4_refinement_v24.txt) | Appendix 4 |
-| 5. Completion | [`docs/konnectome_5_completion_v24.txt`](docs/konnectome_5_completion_v24.txt) | Appendix 5 |
-| 6. Demonstration | [`docs/konnectome_6_demonstration_v24.txt`](docs/konnectome_6_demonstration_v24.txt) | Appendix 6 |
+| 1. Specification | [`docs/konnectome_1_specification_v25.txt`](docs/konnectome_1_specification_v25.txt) | Appendix 1 |
+| 2. Pseudocode | [`docs/konnectome_2_pseudocode_v25.txt`](docs/konnectome_2_pseudocode_v25.txt) | Appendix 2 |
+| 3. Architecture | [`docs/konnectome_3_architecture_v25.txt`](docs/konnectome_3_architecture_v25.txt) | Appendix 3 |
+| 4. Refinement | [`docs/konnectome_4_refinement_v25.txt`](docs/konnectome_4_refinement_v25.txt) | Appendix 4 |
+| 5. Completion | [`docs/konnectome_5_completion_v25.txt`](docs/konnectome_5_completion_v25.txt) | Appendix 5 |
+| 6. Demonstration | [`docs/konnectome_6_demonstration_v25.txt`](docs/konnectome_6_demonstration_v25.txt) | Appendix 6 |
 
 ## The build ladder
 
@@ -180,11 +180,13 @@ konnectome/
     cause_and_effect/          Slice 21: Rung Three's causal trials - cause versus co-occurrence, and means-end planning.
     category_formation/        Slice 22: categories the mind formed from its own experience (classification completed).
     quantity_model/            Slice 22: the represented model of quantity - the conservation verdict read by re-measuring.
+    simulated_body/            Slice 24: the honestly-named stand-in machine - a camera, a draining battery, three actuators.
+    body_interface/            Slice 24: Rung Five groundwork - the book's three body connections; the rung itself not claimed.
   docs/
     konnectome_1..6_*_vN.txt   The SPARCD Fileset (seeded from the appendices; versioned per slice).
     konnectome_ledger_v1.txt   The running scoreboard of findings (Fourth Commandment).
     BUILDING_KONNECTOME_v2.txt The build log (Sixteenth Commandment): the whole story from the true beginning, paper and book at once, versioned.
-    konnectome_tutorial_v21.txt A complete beginner tutorial (Fifteenth Commandment), versioned.
+    konnectome_tutorial_v22.txt A complete beginner tutorial (Fifteenth Commandment), versioned.
     PrologAI_CHANGE_ORDER_v2.txt        Additive PrologAI-language gaps (Third Commandment); Wall-3 closed by causal_core 1.1.0.
     Causalontology_4_0_0_CHANGE_ORDER_v3.txt   Data-structure gaps for the frozen ontology (Sections A and B shipped as 4.0.0; C, D, E held).
     NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt  The source book.
@@ -195,7 +197,7 @@ konnectome/
 
 ## Status
 
-The build has begun and is climbing the ladder. Twenty-three slices have landed on `main` (twenty-five packs, 339 tests, all green):
+The build has begun and is climbing the ladder. Twenty-four slices have landed on `main` (twenty-seven packs, 376 tests, all green):
 
 - **Slice 1 - the heartbeat** (`tick_engine`): the Scheduler and Tick Engine (Component 2), with the two-pass synchronous update. 7 of 7 tests.
 - **Slice 2 - archetypes and the first thought** (`archetype`, `observer`): the six dynamical archetype rules (Appendix 2, Section A2.3) and the observer recording each tick as a Causalontology `token_occurrence` (Component 9) via the reused `causal_core`. 7 of 7 and 6 of 6 tests; the 119 conformance vectors stay green.
@@ -233,7 +235,9 @@ The build has begun and is climbing the ladder. Twenty-three slices have landed 
 
 - **Slice 23 - The story pays its debts: the capstone grows to 0.3.0** (`capstone_demonstration`): no new pack - the one runnable story learns its two owed chapters. **RUNG THREE, told**: the derivation printed step by named step, the formed categories with their honest `outside_every_category` exile and crossing re-sort, `conserved(5)` with its re-counting reason and the lossy pour caught as `changed(5, 4)`, the sun-and-stone cause citing its record against the rooster's co-occurrence, and the three-step camp plan - **every sentence guarded by a strict live check**, so a drifted engine silences the story rather than letting it lie. **RUNG FOUR, finished in the telling**: the threat owned as a FEARS attitude, the satisfaction owned as a DESIRE-to-keep **with the enumeration's missing word declared aloud** (ledger Observation-4), the honest withdrawal, and the alarm resting **exactly at baseline in eight halving ticks**. The honest-limits list now names **one rung: embodiment**, with the book's own real-machine reason. The suite grew 36 → 44 (rung order, four distinct take-backs, independent dynamics, reproducible identifiers, and a pinned byte-identical double telling); the review interruption is recorded honestly in the ledger as a builder's verification. **339 tests total**; conformance **re-measured** 137/137 in both cousins. **No new wall; no cousin edited.**
 
-Next: **Rung Five (embodiment) is the one untold rung** - and the guiding book's own Rung Five text asks for a *real machine*, so any software-only opening must be sized as groundwork, never as the rung - while Sections C, D, and E of the Causalontology change order remain held for the walls a future slice may find. This README, and every badge on it, is kept honest as the build climbs.
+- **Slice 24 - Rung Five opened as groundwork: the body seam** (`simulated_body`, `body_interface`): the book demands a *real machine*, so **the rung is NOT claimed** - the capstone still disclaims embodiment - and what stands is the **seam a robot would plug into**, built over an honestly-named stand-in. The three connections, as the book names them: **sensors become senses**, **body state becomes homeostatic state** - so a **low battery is FELT AS HUNGER** through the same `drive_system_error` as every other pain - and **released actions drive actuators**. The **sense-act smoke loop closes in simulation** (obstacle seen → steering released → the camera reads clear again), and the **survival groundwork** drains the battery each tick while the mind recharges **of its own accord**, on a binary-exact rhythm pinned as a literal trace. The interrupted review's two leads were both real and both fixed: an ERC lapse, and an **observation-grade forgery** - a never-enacted record could be stanced as observed; the stance now re-derives the record's content address and refuses forgeries by name. 16 + 21 new tests; **376 total across 27 packs**; conformance **re-measured** 137/137 in both cousins. **No new wall; no cousin edited.**
+
+Next: **the seam waits for a real machine** - reaching, navigation, and true homeostatic survival all demand one, and the honest-limits line keeps naming embodiment until it exists - while a future slice may teach the story a groundwork chapter without claiming the rung, and Sections C, D, and E of the Causalontology change order remain held for the walls a future slice may find. This README, and every badge on it, is kept honest as the build climbs.
 
 ## License and attribution
 
