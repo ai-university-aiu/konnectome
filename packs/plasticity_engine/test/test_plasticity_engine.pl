@@ -234,5 +234,177 @@ test(an_orphan_trace_is_refused_by_name, error(existence_error(plasticity_engine
     % A trace for an endpoint pair no transmissive interface carries must throw.
     plasticity_engine_trace_step([interface(a, b, 0.5, 1, transmissive)], [a-1, b-1], 0.9, [(a-b)-0, (x-y)-7], _).
 
+% A fresh average store carries a zero running average for every named construct.
+test(a_new_average_store_is_zero_for_every_construct) :-
+    % Two named constructs with current activities.
+    plasticity_engine_average_new([a-1, b-0.5], Averages),
+    % Each construct starts its running average at zero.
+    assertion(Averages == [a-0, b-0]).
+
+% One average tick moves each running average a smoothing step toward the current activity.
+test(the_average_moves_toward_the_activity) :-
+    % A zero average and a fully active construct, smoothed at one half.
+    plasticity_engine_average_step([a-1], 0.5, [a-0], AveragesOne),
+    % The average moves halfway to the activity.
+    AveragesOne = [a-AverageOne],
+    assertion(plasticity_test_close(AverageOne, 0.5)),
+    % A second identical tick closes half the remaining distance.
+    plasticity_engine_average_step([a-1], 0.5, AveragesOne, AveragesTwo),
+    % The average now stands at three quarters.
+    AveragesTwo = [a-AverageTwo],
+    assertion(plasticity_test_close(AverageTwo, 0.75)).
+
+% A construct absent from the activations counts as silent, exactly as the learning step counts it.
+test(an_absent_activity_counts_as_silence_in_the_average) :-
+    % The construct has an average but no listed activity this tick.
+    plasticity_engine_average_step([], 0.5, [a-1], Averages),
+    % The average decays toward zero.
+    Averages = [a-Average],
+    assertion(plasticity_test_close(Average, 0.5)).
+
+% A smoothing factor of zero is refused by name: an average that never moves is not an average.
+test(a_zero_smoothing_factor_is_refused_by_name, error(domain_error(plasticity_engine_smoothing_factor, 0))) :-
+    % A zero smoothing factor must throw.
+    plasticity_engine_average_step([a-1], 0, [a-0], _).
+
+% A smoothing factor above one is refused by name: an average cannot overshoot its own signal.
+test(a_smoothing_factor_above_one_is_refused_by_name, error(domain_error(plasticity_engine_smoothing_factor, 1.5))) :-
+    % A smoothing factor above one must throw.
+    plasticity_engine_average_step([a-1], 1.5, [a-0], _).
+
+% A duplicate average key is refused, never resolved by first-one-wins.
+test(a_duplicate_average_key_is_refused_by_name, error(domain_error(plasticity_engine_duplicate_average, a))) :-
+    % The same construct twice in the average store must throw.
+    plasticity_engine_average_step([a-1], 0.5, [a-0, a-1], _).
+
+% An overactive region scales its incoming transmissive weights down.
+test(an_overactive_region_scales_its_inputs_down) :-
+    % One transmissive interface into b, whose average activity of one sits above the half target.
+    Interfaces0 = [interface(a, b, 0.8, 1, transmissive)],
+    plasticity_engine_scaling_step(Interfaces0, [a-1, b-1], 0.5, 0.1, Interfaces),
+    % The weight shrinks by the scaling factor: 0.8 times (1 + 0.1 times (0.5 - 1)) is 0.76.
+    Interfaces = [interface(a, b, Weight, 1, transmissive)],
+    assertion(plasticity_test_close(Weight, 0.76)).
+
+% An underactive region scales its incoming transmissive weights up.
+test(an_underactive_region_scales_its_inputs_up) :-
+    % One transmissive interface into b, whose zero average sits below the half target.
+    Interfaces0 = [interface(a, b, 0.8, 1, transmissive)],
+    plasticity_engine_scaling_step(Interfaces0, [a-1, b-0], 0.5, 0.1, Interfaces),
+    % The weight grows by the scaling factor: 0.8 times (1 + 0.1 times (0.5 - 0)) is 0.84.
+    Interfaces = [interface(a, b, Weight, 1, transmissive)],
+    assertion(plasticity_test_close(Weight, 0.84)).
+
+% A region exactly at its target leaves every incoming weight untouched.
+test(a_region_at_target_leaves_its_inputs_untouched) :-
+    % One transmissive interface into b, whose average sits exactly at the target.
+    Interfaces0 = [interface(a, b, 0.8, 1, transmissive)],
+    plasticity_engine_scaling_step(Interfaces0, [a-1, b-0.5], 0.5, 0.1, Interfaces),
+    % The scaling factor is exactly one, so the weight does not move.
+    Interfaces = [interface(a, b, Weight, 1, transmissive)],
+    assertion(plasticity_test_close(Weight, 0.8)).
+
+% Scaling is multiplicative and floors at zero: a weight can be silenced but never sign-flipped.
+test(the_scaling_factor_floors_at_zero) :-
+    % A wildly overactive region under a strong scaling rate would compute a negative factor.
+    Interfaces0 = [interface(a, b, 0.8, 1, transmissive)],
+    plasticity_engine_scaling_step(Interfaces0, [a-1, b-100], 0.5, 0.5, Interfaces),
+    % The factor is floored at zero, so the weight is silenced, not inverted.
+    Interfaces = [interface(a, b, Weight, 1, transmissive)],
+    assertion(Weight =:= 0).
+
+% A computational interface is untouched by homeostatic scaling.
+test(a_computational_interface_is_untouched_by_scaling) :-
+    % One computational interface into an overactive region.
+    Interfaces0 = [interface(a, b, 0.8, 1, computational)],
+    plasticity_engine_scaling_step(Interfaces0, [a-1, b-1], 0.5, 0.1, Interfaces),
+    % The computational weight does not move.
+    Interfaces = [interface(a, b, Weight, 1, computational)],
+    assertion(Weight =:= 0.8).
+
+% A receiving construct absent from the averages is refused aloud, never counted as silent.
+test(a_ghost_average_is_refused_by_name_at_the_scaling_step, error(existence_error(plasticity_engine_average, b))) :-
+    % The average store does not know the receiving end b.
+    plasticity_engine_scaling_step([interface(a, b, 0.8, 1, transmissive)], [a-1], 0.5, 0.1, _).
+
+% The scaling step refuses a malformed interface with the shared perimeter's voice.
+test(a_malformed_interface_is_refused_at_the_scaling_step, error(domain_error(plasticity_engine_interface, not_an_interface))) :-
+    % A stray atom in the interface list must throw.
+    plasticity_engine_scaling_step([not_an_interface], [a-1, b-1], 0.5, 0.1, _).
+
+% A scaling rate of one or more is refused by name: the bound must be slow, never an overcorrection.
+test(a_scaling_rate_of_one_or_more_is_refused_by_name, error(domain_error(plasticity_engine_scaling_rate, 1))) :-
+    % A scaling rate of one must throw.
+    plasticity_engine_scaling_step([interface(a, b, 0.8, 1, transmissive)], [a-1, b-1], 0.5, 1, _).
+
+% A negative scaling rate is refused by name: feedback that amplifies is not homeostasis.
+test(a_negative_scaling_rate_is_refused_by_name, error(domain_error(plasticity_engine_scaling_rate, -0.1))) :-
+    % A negative scaling rate must throw.
+    plasticity_engine_scaling_step([interface(a, b, 0.8, 1, transmissive)], [a-1, b-1], 0.5, -0.1, _).
+
+% A negative activity target is refused by name: a region cannot defend an impossible set-point.
+test(a_negative_target_is_refused_by_name, error(domain_error(plasticity_engine_activity_target, -0.5))) :-
+    % A negative target must throw.
+    plasticity_engine_scaling_step([interface(a, b, 0.8, 1, transmissive)], [a-1, b-1], -0.5, 0.1, _).
+
+% plasticity_test_bounded_run(+Ticks, +Interfaces0, -FinalWeight): learn and scale together for many ticks.
+plasticity_test_bounded_run(0, [interface(_, _, Weight, _, _)], Weight) :- !.
+% Each tick applies the fast three-factor learning and then the slow homeostatic bound.
+plasticity_test_bounded_run(Ticks, Interfaces0, FinalWeight) :-
+    % A bus carrying full dopamine every tick: relentless reward, the worst case for stability.
+    neuromodulator_bus_new(Bus0),
+    neuromodulator_bus_broadcast(Bus0, dopamine, 1, Bus),
+    % Fast learning strengthens the weight while both ends stay fully active.
+    plasticity_engine_step(Interfaces0, [a-1, b-1], Bus, 0.1, Learned),
+    % Slow scaling pulls the overactive region's inputs back toward the half target.
+    plasticity_engine_scaling_step(Learned, [a-1, b-1], 0.5, 0.1, Scaled),
+    % Count the tick and continue.
+    RemainingTicks is Ticks - 1,
+    plasticity_test_bounded_run(RemainingTicks, Scaled, FinalWeight).
+
+% The manuscript's promise made runnable: the slow bound keeps the fast learning from exploding.
+test(homeostatic_scaling_bounds_a_relentlessly_rewarded_weight) :-
+    % Fifty ticks of maximal coincidence and maximal dopamine, scaled every tick.
+    plasticity_test_bounded_run(50, [interface(a, b, 0.5, 1, transmissive)], FinalWeight),
+    % Unbounded learning would reach five and a half; the bound holds the weight below its fixed point of 1.9.
+    assertion(FinalWeight < 1.9),
+    % The weight neither explodes nor collapses: it climbs from a half toward the fixed point and stays.
+    assertion(FinalWeight > 1.7).
+
+% REVIEW PIN: a malformed average pair is refused by name at the average step, never silently failed past.
+test(a_malformed_average_pair_is_refused_at_the_average_step, error(domain_error(plasticity_engine_average_pair, bogus))) :-
+    % A bare atom in the average store must throw, not make the step quietly fail.
+    plasticity_engine_average_step([a-1], 0.5, [a-0, bogus], _).
+
+% REVIEW PIN: the scaling step refuses the same malformed store with the same voice - one store, one verdict.
+test(a_malformed_average_pair_is_refused_at_the_scaling_step, error(domain_error(plasticity_engine_average_pair, junk))) :-
+    % The store the average step refuses must never be silently accepted here.
+    plasticity_engine_scaling_step([interface(a, b, 0.8, 1, transmissive)], [b-1, junk], 0.5, 0.1, _).
+
+% REVIEW PIN: an unbound average store is refused as uninstantiated, never walked off a cliff.
+test(an_unbound_average_store_is_refused_at_the_scaling_step, error(instantiation_error)) :-
+    % An unbound store must throw at once, not overflow the stack.
+    plasticity_engine_scaling_step([interface(a, b, 0.8, 1, transmissive)], _, 0.5, 0.1, _).
+
+% REVIEW PIN: the constructor refuses a malformed activation pair - it never mints a store its consumers refuse.
+test(a_malformed_activation_pair_is_refused_by_the_average_constructor, error(domain_error(plasticity_engine_activation_pair, junk))) :-
+    % A bare atom among the activations must throw at construction.
+    plasticity_engine_average_new([a-1, junk], _).
+
+% REVIEW PIN: the constructor refuses a duplicate construct name for the same reason.
+test(a_duplicate_activation_name_is_refused_by_the_average_constructor, error(domain_error(plasticity_engine_duplicate_activation, a))) :-
+    % The same construct twice among the activations must throw at construction.
+    plasticity_engine_average_new([a-1, a-2], _).
+
+% REVIEW PIN, MIRRORED ROOT: a malformed trace pair is refused by name at the trace step too.
+test(a_malformed_trace_pair_is_refused_at_the_trace_step, error(domain_error(plasticity_engine_trace_pair, junk))) :-
+    % The shared store judgement covers the slice-28 trace store as well.
+    plasticity_engine_trace_step([interface(a, b, 0.5, 1, transmissive)], [a-1, b-1], 0.9, [(a-b)-0, junk], _).
+
+% REVIEW PIN, MIRRORED ROOT: the trace constructor refuses a duplicate transmissive interface at construction.
+test(a_duplicate_interface_is_refused_by_the_trace_constructor, error(domain_error(plasticity_engine_duplicate_interface, a-b))) :-
+    % The constructor must never mint duplicate trace keys for its consumers to refuse later.
+    plasticity_engine_trace_new([interface(a, b, 0.5, 1, transmissive), interface(a, b, 0.7, 1, transmissive)], _).
+
 % Close the test block for the plasticity_engine pack.
 :- end_tests(plasticity_engine).
