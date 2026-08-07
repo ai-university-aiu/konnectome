@@ -34,7 +34,7 @@ PART TWO - THE IMPORTANT DOCS FILES
 
 - BUILDING_KONNECTOME_v2.txt - the build log, twenty-one chapters; Twenty-One is this session's.
 
-- konnectome_rung_five_real_machine_design_v1.txt - the real-machine design proposal. The owner has NOT yet answered its five decisions; Rung Five hardware work remains blocked on those answers.
+- konnectome_rung_five_real_machine_design_v2.txt - the real-machine design proposal, now carrying the owner's answers to all five decisions in its Section Five (2026-08-07, after this hand-off was first merged; version 1 archived): Path B (Webots simulator) now with a STANDING REMINDER to buy a physical robot in the future; wheels-plus-dock first when it is bought; an indoor room pen, attended; Webots as the simulator; pack names simulator_body_driver (the Webots work) and robot_body_driver (RESERVED for the future real machine). The simulator groundwork slice is UNBLOCKED; the rung itself still waits for real hardware.
 
 - Causalontology_4_0_0_CHANGE_ORDER_v3.txt - Sections C, D, E remain HELD. No finding released them this session.
 
@@ -88,7 +88,7 @@ The owner has already chosen: ALL. The remaining queue, in suggested order (re-o
 
 2. Deepen Rung Two - the full pilot conversation and a richer grounded vocabulary, the oldest open refinement on the ladder.
 
-3. Rung Five hardware - BLOCKED ON THE OWNER: the five decisions in konnectome_rung_five_real_machine_design_v1.txt. When answered, the driver-pack slice can be designed.
+3. Rung Five, Path B - UNBLOCKED: the owner has answered the five decisions (see konnectome_rung_five_real_machine_design_v2.txt, Section Five). The next embodiment slice is the simulator_body_driver pack against Webots, satisfying the same seam contract simulated_body satisfies, with the arena modelled on the decided indoor-room-pen enclosure. The rung itself remains unclaimed until a future physical robot (wheels plus dock first) passes the smoke test - carry the standing reminder to research and shop for that robot.
 
 4. Other ______________ .
 
