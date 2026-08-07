@@ -1050,4 +1050,40 @@ queued. The four gates report zero violations, the naming gate passing its own s
 conformance re-measured at 137 of 137 (specification 4.0.0) in both cousins. No new wall; no
 cousin edited, per the Second, Third, and Fourth Commandments.
 
+
+Slice-29 note (2026-08-07). Homeostatic scaling: the bound that keeps the learning from exploding.
+The guiding book's FR-10 demands the three-factor rule be BOUNDED - each region's average activity
+held near a target by synaptic scaling, the slow negative feedback on plasticity itself - and the
+owner's standing "All" made it this slice. The plasticity_engine pack grows three public
+predicates beside the untouched learning, trace, and reward machinery: build a fresh zero running-
+average store per construct (an explicit stateless value in the slice-28 style); one average tick
+(an exponential moving average under a smoothing factor, absent activity counting as silence, as
+ever); and a scaling step (each transmissive interface's weight multiplied by one plus the scaling
+rate times the target-minus-average error of its RECEIVING end - all of a region's inputs sharing
+one factor - floored at zero so a weight can be silenced but never sign-flipped, computational
+interfaces untouched). Proven, not promised: the direction laws (overactive inputs shrink,
+underactive grow, at-target untouched) and the manuscript's stability promise as a runnable worst
+case - fifty ticks of maximal coincidence under relentless full dopamine, scaled every tick, hold
+the weight at a finite fixed point just below one and nine tenths where unbounded learning would
+climb past five. The independent adversarial review (tighter scope, named lenses, hard
+reproduction budget - the fifth straight completion) confirmed four findings: two REAL with ONE
+shared root (a malformed entry in the average store made the average step FAIL silently while the
+SAME store was silently ACCEPTED by the scaling step - one store, two verdicts - and the same
+malformation let a duplicate key slip the duplicate check) and two MINOR (an unbound store walked
+into a stack overflow instead of an instantiation error; the constructors could mint stores their
+own consumers refuse). All four fixed at the one root - a shared store judgement refusing
+malformed pairs, unbound tails, and duplicate keys for EVERY keyed store in the pack - and
+mirrored into the slice-28 trace store and both constructors, whose laxity shared the root; seven
+review pins hold it. Twenty-four tests grew (seventeen feature, seven pins): plasticity_engine
+twenty-four to forty-eight, the repository 414 to 438 across twenty-seven packs, all green,
+re-swept after the fixes because the shared judgement now underlies the slice-28 machinery too.
+Recorded, not changed: absent activations still count as silence (standing house behaviour).
+Pending lines updated: the scaling target and rate are one value for the whole graph - per-
+territory targets belong with the per-territory neuromodulators refinement still queued - and the
+fixed-point proof holds the averages constant, proving the bound, not yet the fully coupled loop;
+threading the average and trace stores through the cognitive cycle's live tick remains pending.
+The four gates report zero violations, the naming gate passing its own self-test; conformance
+re-measured at 137 of 137 (specification 4.0.0) in both cousins. No new wall; no cousin edited,
+per the Second, Third, and Fourth Commandments.
+
  Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 4.
