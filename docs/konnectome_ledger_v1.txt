@@ -1014,4 +1014,40 @@ remain honestly pending. The four gates report zero violations, the naming gate 
 self-test; conformance re-measured at 137 of 137 (specification 4.0.0) in both cousins. No new
 wall; no cousin edited, per the Second, Third, and Fourth Commandments.
 
+
+Slice-28 note (2026-08-07). The eligibility trace: a reward one tick late still finds the
+connection that earned it. The prior hand-off's queue named the eligibility trace (the guiding
+book's FR-11 and Section A2.6) the natural next-smallest refinement under the owner's standing
+"All", and this slice builds it into the plasticity_engine pack, which grows three public
+predicates beside the untouched slice-8 learning step: build a fresh zero trace store for a graph
+(one trace per transmissive interface, keyed by endpoints, an explicit stateless value in the
+slice-27 style); one trace tick (the old trace times a fading factor slightly less than one, plus
+the tick's fresh coincidence, the product of the two ends' activities); and a reward step (each
+weight grows by its trace times the dopamine third factor times the learning rate, computational
+weights untouched). Proven, not promised: the manuscript's own acceptance is pinned as two named
+tests - both ends fire at tick one, silence at tick two fades the trace to nine tenths, and the
+reward arriving only then still strengthens the weight by exactly the faded amount; withhold the
+reward and the trace fades geometrically while the weight never moves. The independent adversarial
+review (tighter scope, named lenses, hard reproduction budget - the fourth straight completion)
+confirmed eight findings: four REAL of the silent-failure family (an unbound interface kind
+silently BOUND to transmissive by the checking predicate's own memberchk, at both new steps, the
+caller's variable mutated and the weight learned; a term that is not an interface silently skipped
+by the trace step's findall; the same malformed term making the reward step FAIL silently instead
+of throwing), three MINOR (duplicate trace keys resolved first-one-wins; an orphan trace silently
+discarded when its interface vanished; duplicate transmissive interfaces double-counting one
+coincidence), and one STYLE (an inert cut whose comment overstated it). All eight fixed at one
+root and pinned with seven review tests: a shared refusal perimeter - one predicate judging shape,
+kind (unbound included), duplicate interfaces, duplicate trace keys, ghosts, and orphans - now
+runs before either new step touches a number, and the inert cut is gone. Nineteen tests grew
+(twelve feature, seven pins): plasticity_engine five to twenty-four, the repository 395 to 414
+across twenty-seven packs, all green, re-swept after the fixes. Recorded, not changed: the plain
+slice-8 learning step retains its tolerance of unknown kinds (standing house behaviour, the same
+disposition as slice 27's fourth finding); the reward step deliberately does not consume the
+traces it spends (trace lifetime belongs to the caller). New pending line: the trace store is not
+yet threaded through the cognitive cycle's live tick - carrying it through a running loop is a
+natural companion to the homeostatic-scaling and per-territory-neuromodulator refinements still
+queued. The four gates report zero violations, the naming gate passing its own self-test;
+conformance re-measured at 137 of 137 (specification 4.0.0) in both cousins. No new wall; no
+cousin edited, per the Second, Third, and Fourth Commandments.
+
  Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 4.
