@@ -1,0 +1,152 @@
+KONNECTOME RUNG FIVE - THE REAL MACHINE: A DESIGN PROPOSAL FOR THE OWNER
+
+Version 2. 2026-08-07. Status: THE OWNER HAS ANSWERED - SECTION FIVE RECORDS THE DECISIONS.
+(Version 1, the conversation starter, is archived in docs/archive/.)
+
+This document begins the design conversation the build ladder requires before any Rung Five
+work can be claimed. It proposes options and names the decisions that belong to the owner.
+Nothing in it authorizes a purchase, a claim, or a slice. Per the guiding book (section A6.3a,
+RUNG FIVE), the rung's smoke test closes the sense-act loop "through a real machine", and no
+software stand-in can round itself up to one.
+
+
+SECTION ONE - WHERE THE REPOSITORY STANDS TODAY
+
+The seam is built, tested, and told. Slice 24 shipped the two groundwork packs: simulated_body
+(the honestly-named stand-in machine) and body_interface (the book's three connections as one
+interface). Slice 25 taught the one runnable story to tell that groundwork without claiming the
+rung. The ledger's Rung Five sub-table holds two PARTIAL rows (the smoke loop and the survival
+groundwork, demonstrated in simulation only) and two PENDING rows (reaching and navigation,
+which cannot begin without a machine).
+
+What a real machine must plug into is therefore already fixed by working, pinned code. The
+contract of the seam, as body_interface defines it today:
+
+1. SENSES IN. The machine driver must present sensor readings as a list of key-value pairs
+   (today: path_ahead with a value like clear or obstacle, read by body_interface_senses). A
+   real camera means a perception front-end that reduces frames to such readings.
+
+2. BODY STATE IN. The machine driver must present its physical state as key-value pairs
+   including battery_charge as a fraction of full (read by body_interface_homeostasis). The
+   drive system then defends it unchanged: a low battery is felt as hunger through the same
+   drive_system_error as every other pain.
+
+3. ACTIONS OUT. The machine driver must accept the named actuator commands the interface maps
+   released outcomes onto (today: recharge, steer_around, hold_still) and must refuse, not
+   guess at, a command it cannot enact. It must expose an inspectable log of what it enacted,
+   because the tests and the record discipline read that log.
+
+A real machine joins the family by implementing exactly this contract - a new pack (for
+example: robot_body_driver) that satisfies the same call shapes simulated_body satisfies, so
+body_interface runs unchanged against it. That is the entire integration plan at the software
+level, and it is deliberately small.
+
+
+SECTION TWO - THE THREE CANDIDATE PATHS
+
+PATH A - A SMALL REAL ROBOT (the book's own demand, satisfied smallest).
+
+The smallest honest machine needs: a camera or distance sensor (to see an obstacle), a
+readable battery level (to feel hunger), drivable wheels (to steer and to reach a dock), and a
+reachable charging dock (so recharge is a real act, not a variable assignment). Candidate
+classes, in rising cost and capability:
+
+• A wheeled kit robot with a single-board computer (for example a Raspberry-Pi-class rover
+  with a battery gauge and a dock). Cheapest honest option; enough for the smoke test and the
+  survival trial; reaching would wait.
+
+• A small commercial research robot with an arm (adds the reaching-and-grasping trial).
+
+• A vacuum-robot-class platform with an open interface (self-docking is native, which makes
+  the survival trial vivid, but open programmatic control varies by model).
+
+What Path A buys that nothing else can: the rung itself, honestly claimed, when the trials
+pass on hardware.
+
+PATH B - AN HONEST ROBOT SIMULATOR (groundwork extended, rung still not claimed).
+
+A physics simulator (Gazebo, Webots, or PyBullet class) with a simulated camera, battery
+model, and wheeled platform. This would exercise the seam against a far richer world than
+simulated_body - continuous space, real navigation, noisy perception - and would prepare
+every line of the eventual hardware driver. But the book's text gives no software exemption:
+under Path B the rung stays unclaimed and the honest-limits line keeps naming embodiment.
+Path B is a good road; it is not the destination.
+
+PATH C - WAIT. The seam is tested and stable; nothing rots by waiting. The build ladder has
+ample non-embodied work (the pending refinements, Rung Two's deepening) to continue climbing.
+
+
+SECTION THREE - THE TRIALS, IN ORDER, WHEN A MACHINE EXISTS
+
+1. THE SMOKE TEST. A change the camera sees produces, through the mind, a movement of the
+   body - the loop closed through the real machine. This is the first and only gate for
+   saying Rung Five is OPEN on hardware.
+
+2. THE SURVIVAL TRIAL (the book calls it the fullest exercise of the architecture). The robot
+   defends its own battery of its own accord - seeking its dock as the drive presses, exactly
+   as the simulated rhythm already demonstrates. The existing pressing-threshold constant and
+   drive machinery carry over unchanged; what is new is only the world's noise.
+
+3. THE NAVIGATION TRIAL. Movement toward a goal with obstacle avoidance, using a persistent
+   model of the unseen world - object permanence, load-bearing at last.
+
+4. THE REACHING TRIAL. Arm hardware permitting: guide a grasp to a named, perceived object.
+
+Each trial becomes a normal slice: design, test-first driver code, adversarial review,
+lockstep documents, pull request. Failures and partial results are recorded as honestly as
+passes; a trial that cannot pass on the chosen hardware is a finding, not an embarrassment.
+
+SAFETY, STATED EARLY. The override controller's inviolable property (a vital drive can never
+be suppressed) transfers to hardware as: the driver must expose an unconditional stop, the
+survival trial runs in an enclosure with no stairs, water, or bystanders, and no trial ever
+runs unattended until the owner declares otherwise. Driving-class tasks are out of scope
+entirely, per the book's own safety gating.
+
+
+SECTION FOUR - THE DECISIONS THAT BELONG TO THE OWNER
+
+1. Path A, B, or C - and if A, roughly what budget class.
+2. If A: does the first machine need an arm (reaching) or are wheels-plus-dock enough
+   (smoke plus survival first)?
+3. Where the machine lives and what enclosure counts as safe.
+4. Whether Path B runs in parallel as preparation while hardware is chosen.
+5. The name of the driver pack, when one exists (proposal: robot_body_driver, whole words,
+   per the Twelfth Commandment).
+
+These five decisions were answered by the owner on 2026-08-07; Section Five records them.
+
+
+SECTION FIVE - THE OWNER'S DECISIONS (2026-08-07)
+
+DECISION 1 - THE PATH: PATH B NOW, PATH A LATER. There is no physical robot today, and choosing
+one needs research and shopping first. The simulator is the way to go for now - and this document
+carries a STANDING REMINDER: a physical robot is to be acquired in the future, because under the
+guiding book only Path A can ever claim the rung. Until then the rung stays unclaimed and the
+honest-limits line keeps naming embodiment.
+
+DECISION 2 - THE FIRST MACHINE'S SHAPE: WHEELS PLUS DOCK FIRST. When the future robot is bought,
+it starts as the smallest honest machine - drivable wheels, a readable battery, a reachable
+charging dock, a camera or distance sensor. The smoke test and the survival trial come first; an
+arm and the reaching trial wait for a later machine or an upgrade.
+
+DECISION 3 - WHERE IT LIVES: AN INDOOR ROOM PEN, ATTENDED. A single ground-floor room with a
+simple physical pen or barrier: no stairs, no water, no bystanders; every trial attended until
+the owner declares otherwise; the driver's unconditional stop always within reach. Until hardware
+exists, this decision shapes the simulated world: the simulator's arena is modelled on this
+enclosure, so the future real trials inherit a rehearsed geometry.
+
+DECISION 4 - THE SIMULATOR: WEBOTS. Free and open source, runs on Linux, ships wheeled robots
+with cameras and battery models, and exposes a programmatic interface a driver pack can reach
+through a small bridge. The Path B groundwork builds against Webots.
+
+DECISION 5 - THE PACK NAMES: simulator_body_driver AND robot_body_driver. Two honest names,
+whole words, per the Twelfth Commandment. The Webots work lands as simulator_body_driver, keeping
+the simulator-versus-real boundary visible in the name itself; robot_body_driver stays RESERVED
+for the future physical machine, so no reader ever mistakes simulation for the rung.
+
+WHAT THIS UNBLOCKS. The simulator groundwork slice can now be designed: a simulator_body_driver
+pack satisfying the same seam contract simulated_body satisfies (Section One), so body_interface
+runs unchanged against Webots. Rung Five itself remains PARTIAL/PENDING in the ledger until a
+real machine passes the smoke test, per Decision 1's standing reminder.
+
+End of the real-machine design proposal, version 2.
