@@ -406,5 +406,116 @@ test(a_duplicate_interface_is_refused_by_the_trace_constructor, error(domain_err
     % The constructor must never mint duplicate trace keys for its consumers to refuse later.
     plasticity_engine_trace_new([interface(a, b, 0.5, 1, transmissive), interface(a, b, 0.7, 1, transmissive)], _).
 
+% SLICE 31: the learning step reads its third factor at the RECEIVING end's territory, not only globally.
+test(the_step_reads_the_receiving_territory_level) :-
+    % A bus whose diffuse dopamine field is one, but whose territory b holds only a half concentration.
+    neuromodulator_bus_new(Bus0),
+    neuromodulator_bus_broadcast(Bus0, dopamine, 1, Bus1),
+    neuromodulator_bus_broadcast_territory(Bus1, dopamine, b, 0.5, Bus),
+    % One transmissive interface delivering into territory b.
+    Interfaces0 = [interface(a, b, 0.5, 1, transmissive)],
+    % Both ends active together.
+    plasticity_engine_step(Interfaces0, [a-1, b-1], Bus, 0.1, Interfaces),
+    % The weight grew by the LOCAL half concentration, not the global one: 0.5 + 1*1*0.5*0.1 is 0.55.
+    Interfaces = [interface(a, b, Weight, 1, transmissive)],
+    assertion(plasticity_test_close(Weight, 0.55)).
+
+% SLICE 31: a territory with no level of its own still learns by the diffuse global field.
+test(a_territory_without_a_level_learns_by_the_diffuse_field) :-
+    % A bus with a global dopamine level and a local level only in territory c.
+    neuromodulator_bus_new(Bus0),
+    neuromodulator_bus_broadcast(Bus0, dopamine, 1, Bus1),
+    neuromodulator_bus_broadcast_territory(Bus1, dopamine, c, 0.25, Bus),
+    % Two transmissive interfaces: one into the local territory c, one into the unmarked territory b.
+    Interfaces0 = [interface(a, b, 0.5, 1, transmissive), interface(a, c, 0.5, 1, transmissive)],
+    % All ends active together.
+    plasticity_engine_step(Interfaces0, [a-1, b-1, c-1], Bus, 0.1, Interfaces),
+    % Territory b reads the diffuse field of one; territory c reads its own quarter concentration.
+    Interfaces = [interface(a, b, WeightB, 1, transmissive), interface(a, c, WeightC, 1, transmissive)],
+    assertion(plasticity_test_close(WeightB, 0.6)),
+    assertion(plasticity_test_close(WeightC, 0.525)).
+
+% SLICE 31: a territory whose own concentration is zero does not learn, even under a global reward.
+test(a_silent_territory_does_not_learn_under_a_global_reward) :-
+    % A bus broadcasting full dopamine globally but explicitly silencing territory b.
+    neuromodulator_bus_new(Bus0),
+    neuromodulator_bus_broadcast(Bus0, dopamine, 1, Bus1),
+    neuromodulator_bus_broadcast_territory(Bus1, dopamine, b, 0, Bus),
+    % One transmissive interface into the silenced territory.
+    Interfaces0 = [interface(a, b, 0.5, 1, transmissive)],
+    % Both ends active together, yet the local chemistry says the moment did not matter here.
+    plasticity_engine_step(Interfaces0, [a-1, b-1], Bus, 0.1, Interfaces),
+    % The weight does not move: the local zero wins over the global one.
+    Interfaces = [interface(a, b, Weight, 1, transmissive)],
+    assertion(Weight =:= 0.5).
+
+% SLICE 31: the reward step spends each trace at the RECEIVING end's territory concentration.
+test(the_reward_step_reads_the_receiving_territory_level) :-
+    % A bus whose diffuse dopamine field is one, but whose territory b holds only a half concentration.
+    neuromodulator_bus_new(Bus0),
+    neuromodulator_bus_broadcast(Bus0, dopamine, 1, Bus1),
+    neuromodulator_bus_broadcast_territory(Bus1, dopamine, b, 0.5, Bus),
+    % Two transmissive interfaces with full traces: one into territory b, one into the unmarked territory c.
+    Interfaces0 = [interface(a, b, 0.5, 1, transmissive), interface(a, c, 0.5, 1, transmissive)],
+    plasticity_engine_reward_step(Interfaces0, [(a-b)-1, (a-c)-1], Bus, 0.1, Interfaces),
+    % Territory b learns by its local half; territory c learns by the diffuse field of one.
+    Interfaces = [interface(a, b, WeightB, 1, transmissive), interface(a, c, WeightC, 1, transmissive)],
+    assertion(plasticity_test_close(WeightB, 0.55)),
+    assertion(plasticity_test_close(WeightC, 0.6)).
+
+% SLICE 31: a silenced territory spends its trace into nothing, even under a global reward.
+test(a_silent_territory_spends_its_trace_into_nothing) :-
+    % A bus broadcasting full dopamine globally but explicitly silencing territory b.
+    neuromodulator_bus_new(Bus0),
+    neuromodulator_bus_broadcast(Bus0, dopamine, 1, Bus1),
+    neuromodulator_bus_broadcast_territory(Bus1, dopamine, b, 0, Bus),
+    % One transmissive interface with a full trace into the silenced territory.
+    Interfaces0 = [interface(a, b, 0.5, 1, transmissive)],
+    plasticity_engine_reward_step(Interfaces0, [(a-b)-1], Bus, 0.1, Interfaces),
+    % The weight does not move: however strong the trace, the local chemistry reads zero.
+    Interfaces = [interface(a, b, Weight, 1, transmissive)],
+    assertion(Weight =:= 0.5).
+
+% SLICE 31: a receiving name that is not a plain atom is refused by the bus's own guard at the step.
+test(a_compound_receiving_name_is_refused_at_the_step, error(domain_error(neuromodulator_bus_territory, f(b)))) :-
+    % A bus carrying full dopamine.
+    neuromodulator_bus_new(Bus0),
+    neuromodulator_bus_broadcast(Bus0, dopamine, 1, Bus),
+    % A compound receiving name could alias a bus key, so the territory read must throw.
+    plasticity_engine_step([interface(a, f(b), 0.5, 1, transmissive)], [a-1], Bus, 0.1, _).
+
+% SLICE 31: the reward step refuses the compound receiving name with the same voice.
+test(a_compound_receiving_name_is_refused_at_the_reward_step, error(domain_error(neuromodulator_bus_territory, f(b)))) :-
+    % A bus carrying full dopamine.
+    neuromodulator_bus_new(Bus0),
+    neuromodulator_bus_broadcast(Bus0, dopamine, 1, Bus),
+    % The territory read at the receiving end must throw before any weight moves.
+    plasticity_engine_reward_step([interface(a, f(b), 0.5, 1, transmissive)], [(a-f(b))-1], Bus, 0.1, _).
+
+% SLICE 31 REVIEW PIN: an unbound kind is refused at the live step, never silently treated as non-learning.
+test(an_unbound_kind_is_refused_at_the_step, error(instantiation_error)) :-
+    % A bus carrying full dopamine.
+    neuromodulator_bus_new(Bus0),
+    neuromodulator_bus_broadcast(Bus0, dopamine, 1, Bus),
+    % A variable kind must throw, not quietly keep its weight.
+    plasticity_engine_step([interface(a, b, 0.5, 1, _)], [a-1, b-1], Bus, 0.1, _).
+
+% SLICE 31 REVIEW PIN: a term that is not an interface is refused at the live step, never silently failed past.
+test(a_malformed_interface_is_refused_at_the_step, error(domain_error(plasticity_engine_interface, junk))) :-
+    % A bus carrying full dopamine.
+    neuromodulator_bus_new(Bus0),
+    neuromodulator_bus_broadcast(Bus0, dopamine, 1, Bus),
+    % A stray atom in the interface list must throw, not make the whole step quietly fail.
+    plasticity_engine_step([junk], [a-1], Bus, 0.1, _).
+
+% SLICE 31 REVIEW PIN: a duplicate transmissive interface is refused at the live step, never double-learned.
+test(a_duplicate_interface_is_refused_at_the_step, error(domain_error(plasticity_engine_duplicate_interface, a-b))) :-
+    % A bus carrying full dopamine.
+    neuromodulator_bus_new(Bus0),
+    neuromodulator_bus_broadcast(Bus0, dopamine, 1, Bus),
+    % The same endpoint pair twice must throw, not learn the same coincidence twice.
+    plasticity_engine_step([interface(a, b, 0.5, 1, transmissive), interface(a, b, 0.5, 1, transmissive)],
+                           [a-1, b-1], Bus, 0.1, _).
+
 % Close the test block for the plasticity_engine pack.
 :- end_tests(plasticity_engine).
