@@ -56,5 +56,93 @@ test(modulators_are_independent) :-
     % Confirm the second modulator too.
     assertion(Norepinephrine =:= 0.3).
 
+% A territory broadcast is read back at that territory's level.
+test(a_territory_broadcast_is_read_at_its_territory) :-
+    % Broadcast dopamine into the striatum territory alone.
+    neuromodulator_bus_new(Bus0),
+    neuromodulator_bus_broadcast_territory(Bus0, dopamine, striatum, 0.7, Bus),
+    % The striatum reads its own level.
+    neuromodulator_bus_level_territory(Bus, dopamine, striatum, Level),
+    % The territory level is the broadcast one.
+    assertion(Level =:= 0.7).
+
+% A territory without its own level falls back to the global broadcast, the diffuse field.
+test(an_unset_territory_falls_back_to_the_global_level) :-
+    % Broadcast dopamine globally only.
+    neuromodulator_bus_new(Bus0),
+    neuromodulator_bus_broadcast(Bus0, dopamine, 0.4, Bus),
+    % A territory with no level of its own reads the global one.
+    neuromodulator_bus_level_territory(Bus, dopamine, cortex, Level),
+    % The fallback is the global level.
+    assertion(Level =:= 0.4).
+
+% A territory level overrides the global level for that territory alone.
+test(a_territory_level_overrides_the_global_level_locally) :-
+    % Broadcast dopamine globally, then higher into the striatum.
+    neuromodulator_bus_new(Bus0),
+    neuromodulator_bus_broadcast(Bus0, dopamine, 0.4, Bus1),
+    neuromodulator_bus_broadcast_territory(Bus1, dopamine, striatum, 0.9, Bus),
+    % The striatum reads its own level; the cortex reads the global one.
+    neuromodulator_bus_level_territory(Bus, dopamine, striatum, Striatum),
+    neuromodulator_bus_level_territory(Bus, dopamine, cortex, Cortex),
+    % The override is local, the field elsewhere untouched.
+    assertion(Striatum =:= 0.9),
+    assertion(Cortex =:= 0.4).
+
+% With neither a territory nor a global level, a territory reads silence.
+test(an_empty_bus_reads_zero_in_every_territory) :-
+    % An empty bus.
+    neuromodulator_bus_new(Bus),
+    % Any territory reads zero.
+    neuromodulator_bus_level_territory(Bus, dopamine, striatum, Level),
+    % Silence.
+    assertion(Level =:= 0).
+
+% A newer territory broadcast replaces the older one; the newest always wins.
+test(a_newer_territory_broadcast_replaces_the_older) :-
+    % Two broadcasts into the same territory.
+    neuromodulator_bus_new(Bus0),
+    neuromodulator_bus_broadcast_territory(Bus0, dopamine, striatum, 0.2, Bus1),
+    neuromodulator_bus_broadcast_territory(Bus1, dopamine, striatum, 0.8, Bus),
+    % The territory reads the newest level.
+    neuromodulator_bus_level_territory(Bus, dopamine, striatum, Level),
+    % The newest broadcast won.
+    assertion(Level =:= 0.8).
+
+% A territory broadcast never disturbs the global level, and the global read never sees territories.
+test(a_territory_broadcast_leaves_the_global_level_untouched) :-
+    % A global level, then a different territory level.
+    neuromodulator_bus_new(Bus0),
+    neuromodulator_bus_broadcast(Bus0, dopamine, 0.4, Bus1),
+    neuromodulator_bus_broadcast_territory(Bus1, dopamine, striatum, 0.9, Bus),
+    % The global read still returns the global broadcast.
+    neuromodulator_bus_level(Bus, dopamine, Global),
+    % The diffuse field is what it was.
+    assertion(Global =:= 0.4).
+
+% REVIEW PIN: an unbound modulator is refused as uninstantiated, never silently bound to a bus entry.
+test(an_unbound_modulator_is_refused_at_the_global_read, error(instantiation_error)) :-
+    % A variable modulator must throw, not invent an answer.
+    neuromodulator_bus_new(Bus),
+    neuromodulator_bus_level(Bus, _, _).
+
+% REVIEW PIN: the territory read refuses the unbound modulator with the same voice.
+test(an_unbound_modulator_is_refused_at_the_territory_read, error(instantiation_error)) :-
+    % A variable modulator must throw here too.
+    neuromodulator_bus_new(Bus),
+    neuromodulator_bus_level_territory(Bus, _, striatum, _).
+
+% REVIEW PIN: a compound modulator name is refused by name - the two key shapes can never collide.
+test(a_compound_modulator_is_refused_by_name, error(domain_error(neuromodulator_bus_modulator, territory(dopamine, striatum)))) :-
+    % A territory-shaped term posing as a modulator must throw, never alias a territory entry.
+    neuromodulator_bus_new(Bus0),
+    neuromodulator_bus_broadcast(Bus0, territory(dopamine, striatum), 0.1, _).
+
+% REVIEW PIN: an unbound territory is refused as uninstantiated at the territory broadcast.
+test(an_unbound_territory_is_refused_at_the_territory_broadcast, error(instantiation_error)) :-
+    % A variable territory must throw.
+    neuromodulator_bus_new(Bus0),
+    neuromodulator_bus_broadcast_territory(Bus0, dopamine, _, 0.5, _).
+
 % Close the test block for the neuromodulator_bus pack.
 :- end_tests(neuromodulator_bus).
