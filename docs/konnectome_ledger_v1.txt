@@ -107,7 +107,7 @@ ARCHITECTURE, VERSION 20"; the manuscript's document-level CHANGE LOG that follo
 versioning metadata, not appendix content, and was deliberately not carried in.
 
 Per the Tenth Commandment, every code slice bumps the SPARCD Fileset. The current
-version is v26 (bumped in lockstep by slice 25); every superseded version lives in
+version is v27 (bumped in lockstep by slice 26); every superseded version lives in
 docs/archive/.
 
 
@@ -912,9 +912,11 @@ nothing in PrologAI or Causalontology was edited.
 
 HONEST REMAINING ASCENT, recorded as pending refinements, not walls: the rung's real machine (the
 reaching, navigation, and survival trials all demand one; the seam now waits for it); the
-long-standing pending refinements; and the naming gate's unprefixed-helper hole (slice 22)
-still awaiting a gate that can see it. The capstone groundwork chapter, once listed here, was
-built by slice 25 - the story now tells the seam without claiming the rung.
+long-standing pending refinements. The capstone groundwork chapter, once listed here, was
+built by slice 25 - the story now tells the seam without claiming the rung. The naming gate's
+unprefixed-helper hole (slice 22), once listed here, was closed by slice 26 - the gate now checks
+every defined head for the pack's own prefix, a committed fixture pins the old blind-spot shape,
+and the standing hand-hunt mandate is RETIRED.
 
 
 Slice-25 note (2026-08-07). The story learns the body seam, and the boundary holds. The capstone
@@ -952,5 +954,33 @@ twenty-seven packs, all green; the naming, layer, layer-binding, and reality-dis
 zero violations; the Causalontology conformance suite re-measured at 137 of 137 (specification
 4.0.0) in both cousins. No new wall; no cousin edited, per the Second, Third, and Fourth
 Commandments.
+
+Slice-26 note (2026-08-07). The naming gate learns to see, and the hand-hunt is retired. The
+slice-22 review had recorded a hole in bin/check_pack_naming.sh: its detectors hunted prefix
+CLUSTERS (one-off clusters ignored; unknown stubs longer than two letters passing every list), so
+an unprefixed helper bearing no known terse stem - numlist_or_empty proved it - passed the gate,
+and the ledger mandated a hand-hunt in every review until the gate could see it. This slice adds
+check six: every clause head DEFINED in a pack module must begin with the pack's own whole-word
+prefix (or the sanctioned prologai_ namespace) - the house rule checked as written, not
+approximated by a heuristic. The gate gains a PACKS_ROOT override and a --self-test mode, and the
+proof is PERMANENT rather than injected-then-removed: a fixture pack under
+tests/naming_gate_fixture/ (outside the library path, never loaded, its violation labelled
+deliberate in its own comments) carries exactly the slice-22 shape, ships a placeholder test file
+and a properly-prefixed public predicate so it can fail ONLY the new check, and the self-test
+passes only if the gate catches the fixture's helper by name. Measured: the extended gate reports
+zero violations across all twenty-seven real packs (no false positive introduced), and the
+self-test passes (the proven shape cannot return unseen). The independent adversarial review of
+this slice ran to completion and confirmed four findings, none blocking, all fixed before merge:
+the self-test died on a relative invocation path (the script now captures its absolute path before
+changing directory); check six scanned only the pack's main module file (it now scans every
+prolog/*.pl in the pack, so a helper cannot hide in a second source file); a stray PACKS_ROOT could
+turn the whole gate vacuously green (a run that scans zero packs now fails loudly with its own
+error); and the self-test accepted the fixture failing for any reason as long as UNPREFIXED
+appeared (it now requires the UNPREFIXED violation to be the ONLY violation, so it proves the sixth
+check specifically). No pack changed; no test count moved
+(384 across twenty-seven packs, all green, re-swept); the layer, layer-binding, and
+reality-discipline gates report zero violations; the Causalontology conformance suite re-measured
+at 137 of 137 (specification 4.0.0) in both cousins. The hand-hunt mandate above is retired in
+this same change. No new wall; no cousin edited, per the Second, Third, and Fourth Commandments.
 
  Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 4.

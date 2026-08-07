@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # check_pack_naming.sh — enforce the Whole-Word System (Twelfth Commandment).
-# Copied verbatim from the PrologAI reference gate so konnectome enforces the
-# identical rule. Five checks, all merge blockers:
+# Copied from the PrologAI reference gate so konnectome enforces the identical
+# rule, and extended at slice 26. Six checks, all merge blockers:
 #   (1) PREDICATE prefix — every pack's predicates must be prefixed with the
 #       pack's own whole-word name (tick_engine_run, not te_run).
 #   (2) MINORITY straggler prefix — a pack may not carry a SECOND terse/retired
@@ -10,12 +10,48 @@
 #       an abbreviation and not an un-underscored concatenation.
 #   (4) SWI-STDLIB — a pack must not be named for an installed SWI stdlib module.
 #   (5) TEST PRESENCE — every pack must ship test/test_<name>.pl.
+#   (6) UNPREFIXED helper — every clause head DEFINED in the pack module must
+#       begin with the pack's own prefix (or the sanctioned prologai_ namespace).
+#       This closes the slice-22 hole: a one-off helper bearing no known terse
+#       stem (numlist_or_empty proved it) slipped past the cluster checks above,
+#       because one-off clusters were ignored and unknown long stubs passed.
 #
-# Usage:   bin/check_pack_naming.sh            # scan every pack
+# Usage:   bin/check_pack_naming.sh              # scan every pack
 #          bin/check_pack_naming.sh tick_engine  # scan named packs only
+#          bin/check_pack_naming.sh --self-test  # prove the gate can fail, on the
+#                                                # committed fixture pack (exit 0
+#                                                # iff the fixture is caught)
+# PACKS_ROOT overrides the scanned packs directory (the self-test uses this).
 # Exit 0 = clean; exit 1 = at least one violation.
 set -u
+# The script's own absolute path, captured BEFORE the cd so the self-test can
+# re-invoke it correctly however it was started (a relative $0 dies after a cd).
+SELF="$(cd "$(dirname "$0")" && pwd)/$(basename "$0")"
 cd "$(dirname "$0")/.." || exit 2
+# The packs directory being scanned; the self-test points this at the fixture tree.
+PACKS_ROOT="${PACKS_ROOT:-packs}"
+
+# --self-test: run this gate against the committed fixture pack - a pack that
+# deliberately carries an unprefixed helper with no known terse stem - and
+# succeed ONLY if the gate catches it. A gate must be proven able to fail
+# before it is trusted to pass.
+if [ "${1:-}" = "--self-test" ]; then
+  # Run the gate over the fixture tree, capturing its report.
+  report="$(PACKS_ROOT=tests/naming_gate_fixture "$SELF" 2>&1)"; status=$?
+  # The fixture must FAIL the gate, fail it for the unprefixed helper by name,
+  # and fail it for NOTHING ELSE - so the self-test proves the sixth check
+  # specifically, not some other check happening to fire.
+  if [ $status -ne 0 ] \
+     && echo "$report" | grep -q "VIOLATION \[UNPREFIXED\]" \
+     && [ "$(echo "$report" | grep -c "VIOLATION \[")" -eq 1 ]; then
+    echo "SELF-TEST PASS: the gate catches the fixture's unprefixed helper."
+    exit 0
+  fi
+  # Anything else means the hole is open again.
+  echo "$report"
+  echo "SELF-TEST FAIL: the fixture's unprefixed helper was NOT caught - the slice-22 hole is open."
+  exit 1
+fi
 
 # Abbreviation stems that may never appear as a segment of a pack name.
 BANNED_STEMS=" autom seq sym xf xform nbr aggr hist dist pos op ops cmp comp inv sig hyp induct quant crypto ros mcp sona vsa a2a acp anp coocc cooccur rowcol colorop sizeop posop naggr nmode varstat symtab condxf seqinfer ruleinfer objxf objrel objbound iochan multipair multicolor vec2 xsel taskcat transformgen periodfix rowsig gridxform gridtransform "
@@ -37,7 +73,7 @@ declare -A PREFIX_OF
 violations=0
 scanned=0
 targets=("$@")
-[ ${#targets[@]} -eq 0 ] && targets=($(ls -d packs/*/ 2>/dev/null | xargs -n1 basename))
+[ ${#targets[@]} -eq 0 ] && targets=($(ls -d "$PACKS_ROOT"/*/ 2>/dev/null | xargs -r -n1 basename))
 
 is_banned_name() { # $1 = pack name -> 0 if the NAME is an abbreviation/concatenation
   local name="$1" seg
@@ -54,11 +90,11 @@ is_banned_name() { # $1 = pack name -> 0 if the NAME is an abbreviation/concaten
 for p in "${targets[@]}"; do
   # (5) TEST PRESENCE — every pack must ship an in-pack PLUnit test, or it never
   # enters the per-pack regression and can rot invisibly.
-  if [ ! -f "packs/$p/test/test_$p.pl" ]; then
+  if [ ! -f "$PACKS_ROOT/$p/test/test_$p.pl" ]; then
     violations=$((violations+1))
     echo "VIOLATION [NO-TEST]  pack '$p' has no test/test_$p.pl (not in the per-pack regression; can rot invisibly)"
   fi
-  f="packs/$p/prolog/$p.pl"
+  f="$PACKS_ROOT/$p/prolog/$p.pl"
   [ -f "$f" ] || continue
   scanned=$((scanned+1))
 
@@ -74,6 +110,29 @@ for p in "${targets[@]}"; do
       violations=$((violations+1))
       echo "VIOLATION [SWI-STDLIB]  pack '$p' shadows SWI stdlib library($p) (pick a distinct whole-word name)" ;;
   esac
+
+  # (6) UNPREFIXED helper — every clause head defined in the pack must carry
+  # the pack's own prefix or the sanctioned prologai_ namespace. Clause heads
+  # sit at column 0 in the house style; directives start with ':-' and are not
+  # matched; body goals are indented and are not matched. EVERY prolog/*.pl
+  # file in the pack is scanned, not only the main module, so a helper cannot
+  # hide in a second source file.
+  for src in "$PACKS_ROOT/$p/prolog/"*.pl; do
+    # A pack with no source files has nothing to scan here.
+    [ -f "$src" ] || continue
+    # Read every distinct name that begins a line of this source file.
+    mapfile -t heads < <(grep -oE '^[a-z][a-z0-9_]*' "$src" 2>/dev/null | sort -u)
+    for h in "${heads[@]}"; do
+      # The pack's own prefix is the rule; a bare zero-argument head named exactly
+      # for the pack is the same rule at arity zero.
+      case "$h" in "$p"|"${p}_"*) continue ;; esac
+      # The sanctioned shared namespace is allowed.
+      case "$h" in prologai_*) continue ;; esac
+      # Anything else defined here is an unprefixed helper — the slice-22 hole.
+      violations=$((violations+1))
+      echo "VIOLATION [UNPREFIXED]  pack '$p' defines '$h' without its own prefix in $(basename "$src") (should begin '${p}_')"
+    done
+  done
 
   # collect every col-0 predicate prefix cluster with its count
   mapfile -t clusters < <(grep -oE '^[a-z][a-z0-9]*_' "$f" 2>/dev/null | sort | uniq -c | sort -rn)
@@ -115,4 +174,10 @@ for pre in "${!PREFIX_OF[@]}"; do
 done
 echo "---"
 echo "scanned=$scanned  violations=$violations  colliding_prefixes=$collisions"
+# A run that scanned nothing proves nothing: a stray PACKS_ROOT or a missing
+# packs directory must fail loudly rather than pass vacuously.
+if [ "$scanned" -eq 0 ]; then
+  echo "ERROR: no packs scanned under '$PACKS_ROOT' - refusing to report a vacuous pass"
+  exit 2
+fi
 [ "$violations" -eq 0 ] && exit 0 || exit 1
