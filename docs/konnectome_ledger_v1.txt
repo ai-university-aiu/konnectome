@@ -107,7 +107,7 @@ ARCHITECTURE, VERSION 20"; the manuscript's document-level CHANGE LOG that follo
 versioning metadata, not appendix content, and was deliberately not carried in.
 
 Per the Tenth Commandment, every code slice bumps the SPARCD Fileset. The current
-version is v24 (bumped in lockstep by slice 23); every superseded version lives in
+version is v25 (bumped in lockstep by slice 24); every superseded version lives in
 docs/archive/.
 
 
@@ -285,6 +285,22 @@ deepened; PENDING = not built yet.
     re-measured pour and the lossy pour, the cited causal record against the co-occurrence, and
     the shortest plan - each sentence guarded by a strict live check, and the rung's line is GONE
     from the printed honest-limits list, which now names only embodiment.)
+
+ THE DEVELOPMENTAL LADDER, RUNG FIVE (Appendix 6, Section A6.3a) - GROUNDWORK ONLY, rung not claimed
+ -----------------------------------------------------------------------------------
+ The sense-act smoke test        | body_interface (through simulated_body ONLY)| PARTIAL
+ The three body connections      | body_interface (senses, homeostasis, action)| REALIZED
+ The reaching-and-grasping trial | (needs a real machine)                      | PENDING
+ The navigation trial            | (needs a real machine)                      | PENDING
+ The homeostatic-survival trial  | body_interface (simulated groundwork only)  | PARTIAL
+   (Slice 24. The book's Rung Five demands a REAL machine - its smoke test closes the loop
+    "through a real machine" - so the rung is NOT claimed and cannot be by software alone. What
+    stands is the SEAM: the three connections built over the honestly-named simulated_body
+    stand-in, the sense-act loop closed through it, and the survival groundwork - a draining
+    battery the mind defends of its own accord on a pinned deterministic rhythm, with a low
+    battery FELT AS HUNGER through the same drive_system_error as every other pain. The two
+    PARTIAL rows above stay PARTIAL until a real machine stands behind the seam; the two PENDING
+    rows cannot begin without one. The capstone's honest-limits line still names embodiment.)
 
 
 ================================================================================
@@ -844,6 +860,55 @@ HONEST REMAINING ASCENT, recorded as pending refinements, not walls: Rung Five (
 untouched, and the guiding book's Rung Five text demands a REAL machine - any software-only opening
 must be sized as groundwork, never as the rung; the long-standing pending refinements stand; the
 naming gate's unprefixed-helper hole (slice 22) still awaits a gate that can see it.
+
+
+Slice-24 note (2026-08-07). Rung Five is OPENED AS GROUNDWORK, and the word groundwork is
+load-bearing: the guiding book's Rung Five text demands a REAL machine, so the rung is NOT claimed,
+the capstone was NOT touched, and its honest-limits line still names embodiment with the book's own
+reason. Two new konnectome layer-0 packs:
+simulated_body (0.1.0): the honestly-named stand-in machine - a camera, a draining battery, three
+actuators (steer_around refused when the path is clear; recharge filling to full, capped; hold_still
+logging its own stillness), and floor-at-empty drain physics with a negative drain refused by name.
+A world, not a mind: no sibling imports, no state between calls, every step a pure map. Sixteen
+tests.
+body_interface (0.1.0): the book's three connections as one seam over the stand-in - sensors become
+senses (camera readings surfacing as percepts, unchanged); the body state becomes the homeostatic
+state (the identity mapping made explicit, the energy drive defending battery_charge at 1.0 exactly
+as temperature defends 37, so a LOW BATTERY IS FELT AS HUNGER through the same drive_system_error as
+every other pain); released actions drive the actuators (an unmappable release refused by name).
+One sense-act pass (sense, drive step, propose, select, command, enact) closes the book's smoke loop
+through the simulated machine; the survival run drains 0.25 charge per tick and the mind recharges
+OF ITS OWN ACCORD exactly when the hunger presses (threshold 0.5), on a binary-exact two-tick rhythm
+pinned as a literal trace at four and at six ticks. Two declared mapping constants (pressing
+threshold, reflex salience) and one fixed candidate order (drives before reflexes, pinned at the
+tie) are the pack's entire additions - no update rule, no new kind, no eleventh component.
+Twenty-one tests.
+
+THE REVIEW, TOLD HONESTLY - A MIXED DISPOSITION. The independent adversarial reviewer was stopped
+mid-run by the owner for the second slice running, after leaving two concrete leads: a CONFIRMED
+English-Readable-Code lapse (a clause head without its own comment - fixed on the named line), and
+an open question the builder then reproduced: a hand-built record, never enacted, WAS stanced at the
+observation grade. That door is now shut in slice 21's way: body_interface_stance proves the record
+genuinely minted - re-deriving its content address from its own content and requiring the loop's own
+designator - and refuses a forgery or a tampered designator by name (body_interface_unminted_record),
+pinned by two tests. The builder finished the remaining planned lenses itself: the salience TIE
+between a starving battery (error 1.0) and a seen obstacle (reflex 1.0) resolves to the earlier
+candidate in the fixed order - the drives before the reflexes - reproduced, made deliberate in the
+header, and pinned; the survival rhythm extended to six ticks unchanged and pinned; showing to a
+malformed body and a full-charge drain pinned. Disposition recorded as MIXED: two findings from the
+independent reviewer's partial run, the rest a builder's verification - the weaker guarantee, named.
+
+Gates: simulated_body 16 of 16 and body_interface 21 of 21 Prolog Unit (PLUnit) tests pass; 376 in
+total across twenty-seven packs, all green. The naming, layer, layer-binding, and reality-discipline
+gates report zero violations. The Causalontology conformance suite was RE-MEASURED this slice: 137
+of 137 (specification 4.0.0) in both cousins. No new wall was hit and no new observation was minted;
+nothing in PrologAI or Causalontology was edited.
+
+HONEST REMAINING ASCENT, recorded as pending refinements, not walls: the rung's real machine (the
+reaching, navigation, and survival trials all demand one; the seam now waits for it); a capstone
+groundwork chapter, if a future slice judges the story should TELL the seam without claiming the
+rung; the long-standing pending refinements; and the naming gate's unprefixed-helper hole (slice 22)
+still awaiting a gate that can see it.
 
 
  Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 4.
