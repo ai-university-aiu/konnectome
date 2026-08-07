@@ -107,7 +107,7 @@ ARCHITECTURE, VERSION 20"; the manuscript's document-level CHANGE LOG that follo
 versioning metadata, not appendix content, and was deliberately not carried in.
 
 Per the Tenth Commandment, every code slice bumps the SPARCD Fileset. The current
-version is v25 (bumped in lockstep by slice 24); every superseded version lives in
+version is v26 (bumped in lockstep by slice 25); every superseded version lives in
 docs/archive/.
 
 
@@ -301,6 +301,12 @@ deepened; PENDING = not built yet.
     battery FELT AS HUNGER through the same drive_system_error as every other pain. The two
     PARTIAL rows above stay PARTIAL until a real machine stands behind the seam; the two PENDING
     rows cannot begin without one. The capstone's honest-limits line still names embodiment.)
+   (Slice 25. The story now TELLS the groundwork: the capstone (0.4.0) prints a body-seam chapter
+    - the percept unchanged, the closed pass, the felt hunger, the survival rhythm, the deliberate
+    tie, and the enacted, proven-minted loop record - opening and closing with the refusal that
+    the rung is NOT claimed. The sub-table above is unchanged: telling groundwork does not
+    upgrade a PARTIAL row, and the honest-limits line still names embodiment, now with the
+    groundwork boundary said aloud in the epilogue itself.)
 
 
 ================================================================================
@@ -905,10 +911,46 @@ of 137 (specification 4.0.0) in both cousins. No new wall was hit and no new obs
 nothing in PrologAI or Causalontology was edited.
 
 HONEST REMAINING ASCENT, recorded as pending refinements, not walls: the rung's real machine (the
-reaching, navigation, and survival trials all demand one; the seam now waits for it); a capstone
-groundwork chapter, if a future slice judges the story should TELL the seam without claiming the
-rung; the long-standing pending refinements; and the naming gate's unprefixed-helper hole (slice 22)
-still awaiting a gate that can see it.
+reaching, navigation, and survival trials all demand one; the seam now waits for it); the
+long-standing pending refinements; and the naming gate's unprefixed-helper hole (slice 22)
+still awaiting a gate that can see it. The capstone groundwork chapter, once listed here, was
+built by slice 25 - the story now tells the seam without claiming the rung.
 
+
+Slice-25 note (2026-08-07). The story learns the body seam, and the boundary holds. The capstone
+grows to 0.4.0 and gains one chapter, THE BODY SEAM - RUNG FIVE'S GROUNDWORK, TOLD AND NOT CLAIMED,
+placed between the finished Rung Four and the provenance layer. No new pack; the capstone's manifest
+grows by simulated_body and body_interface, both read through public interfaces, every printed value
+produced by the seam packs' own predicates unmodified. The chapter is guard-then-tell throughout:
+the percept surfacing unchanged; the closed pass releasing the steering reflex, moving the body, and
+leaving the camera clear; the hunger identity (error 0.5 equals error 0.5 through the one shared
+drive_system_error); the six-tick survival rhythm pinned exactly (hold at 0.75, recharge of its own
+accord at the pressing 0.5); the deliberate drives-over-reflexes tie; and the loop record owned BY
+ENACTING the pass, its stance granted only after body_interface_stance proved the record genuinely
+minted by re-deriving its content address. The chapter opens and closes with the refusal - there is
+no real machine here; the rung is NOT claimed - and the epilogue's Rung Five disclaimer is kept
+byte-identical with one appended sentence naming the boundary: groundwork is not the rung, and the
+story does not promote it. This closes the pending-ascent item slice 24 recorded (a groundwork
+chapter, if a future slice judged the story should tell the seam); the Rung Five sub-table rows are
+deliberately unchanged - telling groundwork upgrades nothing. THE REVIEW, TOLD STRAIGHT - AND THIS TIME IT FINISHED. After two interrupted reviews (slices 23
+and 24), this slice's independent adversarial reviewer ran to completion under a tighter scope (six
+lenses, a hard reproduction budget). It confirmed four findings, none blocking: two REAL guard gaps
+- the narrated hunger magnitudes (0.25 mild, 0.5 pressing) were printed but not pinned by any guard,
+and the claimed EXACT salience tie never proved the equality (a drifted reflex salience would leave
+the outcome unchanged while falsifying the tie) - and two MINOR - the stance sentence's forgery
+claim ran no live probe, and the steering episode was the one seam claim graded only on the story's
+own output. All four are fixed at root and pinned: the chapter now guards both hunger magnitudes
+exactly, proves the tie by reading the reflex's live salience through the public candidate
+interface and equating it with the starving drive's own error (in the chapter AND in the
+independent test), runs a live forgery probe whose refusal licenses the stance sentence, and the
+steering episode gained its own independent dynamics test. Gates: capstone_demonstration 52 of 52
+Prolog Unit (PLUnit) tests pass (eight new: chapter coverage, the groundwork-not-the-rung wording,
+the chapter's position, the reproducible enacted loop-record identifier, and four independent
+dynamics checks - the survival rhythm, the hunger identity, the exact tie, the steering episode);
+384 in total across
+twenty-seven packs, all green; the naming, layer, layer-binding, and reality-discipline gates report
+zero violations; the Causalontology conformance suite re-measured at 137 of 137 (specification
+4.0.0) in both cousins. No new wall; no cousin edited, per the Second, Third, and Fourth
+Commandments.
 
  Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 4.
