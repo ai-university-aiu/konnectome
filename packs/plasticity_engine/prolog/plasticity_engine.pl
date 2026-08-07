@@ -22,14 +22,18 @@
 :- use_module(library(lists), [memberchk/2, member/2, append/3]).
 % Import maplist for checking and updating every interface together.
 :- use_module(library(apply), [maplist/2, maplist/4]).
-% Reuse the neuromodulatory bus to read the dopamine level as the third factor.
-:- use_module(library(neuromodulator_bus), [neuromodulator_bus_level/3]).
+% Reuse the neuromodulatory bus to read the dopamine level at each receiving territory as the third factor.
+:- use_module(library(neuromodulator_bus), [neuromodulator_bus_level_territory/4]).
 
 % The plasticity engine is Architecture Component 8: the three-factor learning rule of Section A2.5
 % that makes the map alive. For each learnable (transmissive) interface, the weight change is the
 % product of three factors - the sending end's recent activity, the receiving end's recent activity,
-% and the current dopamine level (the third factor) - scaled by a learning rate. A connection
-% strengthens only when its two ends are active TOGETHER and dopamine says the moment mattered.
+% and the current dopamine level (the third factor) - scaled by a learning rate. Since slice 31 the
+% third factor is read at the RECEIVING end's territory through the slice-30 diffuse-field law: a
+% territory with its own dopamine concentration learns by that local level, and a territory without
+% one learns by the diffuse global broadcast, so the old global behaviour is the exact fallback. A
+% connection strengthens only when its two ends are active TOGETHER and the chemistry of the place
+% the signal arrives says the moment mattered.
 % Interfaces are the connection-graph terms interface(From, To, Weight, Delay, Kind); the engine
 % mutates the Weight of transmissive interfaces and leaves computational ones untouched.
 
@@ -47,14 +51,16 @@ plasticity_engine_activation(Activations, Name, Value) :-
     % Use the stored activity if present, otherwise treat an absent construct as silent.
     ( memberchk(Name-Found, Activations) -> Value = Found ; Value = 0 ).
 
-% plasticity_engine_update_interface(+Activations, +ThirdFactor, +LearningRate, +Interface0, -Interface): learn one edge.
-plasticity_engine_update_interface(Activations, ThirdFactor, LearningRate,
+% plasticity_engine_update_interface(+Activations, +Bus, +LearningRate, +Interface0, -Interface): learn one edge.
+plasticity_engine_update_interface(Activations, Bus, LearningRate,
                                    interface(From, To, Weight0, Delay, Kind),
                                    interface(From, To, Weight, Delay, Kind)) :-
     % Only a transmissive interface learns; a computational one keeps its weight.
     ( Kind == transmissive
       -> plasticity_engine_activation(Activations, From, Sending),
          plasticity_engine_activation(Activations, To, Receiving),
+         % Read the third factor at the RECEIVING end's territory: local chemistry first, diffuse field as fallback.
+         neuromodulator_bus_level_territory(Bus, dopamine, To, ThirdFactor),
          plasticity_engine_weight_change(Sending, Receiving, ThirdFactor, LearningRate, WeightChange),
          Weight is Weight0 + WeightChange
       ;  Weight = Weight0
@@ -186,8 +192,8 @@ plasticity_engine_trace_step(Interfaces, Activations, FadingFactor, Traces0, Tra
             ),
             Traces).
 
-% plasticity_engine_reward_interface(+Traces, +ThirdFactor, +LearningRate, +Interface0, -Interface): spend one trace.
-plasticity_engine_reward_interface(Traces, ThirdFactor, LearningRate,
+% plasticity_engine_reward_interface(+Traces, +Bus, +LearningRate, +Interface0, -Interface): spend one trace.
+plasticity_engine_reward_interface(Traces, Bus, LearningRate,
                                    interface(From, To, Weight0, Delay, Kind),
                                    interface(From, To, Weight, Delay, Kind)) :-
     % Only a transmissive interface learns from its trace; a computational one keeps its weight.
@@ -195,6 +201,8 @@ plasticity_engine_reward_interface(Traces, ThirdFactor, LearningRate,
     (  Kind == transmissive
     -> % Read the interface's trace, refusing a ghost aloud.
        plasticity_engine_trace_lookup(Traces, From, To, Trace),
+       % Read the third factor at the RECEIVING end's territory: local chemistry first, diffuse field as fallback.
+       neuromodulator_bus_level_territory(Bus, dopamine, To, ThirdFactor),
        % The reward's weight change is the trace times the third factor times the learning rate.
        Weight is Weight0 + Trace * ThirdFactor * LearningRate
     ;  % A computational interface is untouched by reward.
@@ -205,10 +213,8 @@ plasticity_engine_reward_interface(Traces, ThirdFactor, LearningRate,
 plasticity_engine_reward_step(Interfaces0, Traces, Bus, LearningRate, Interfaces) :-
     % Refuse every malformed interface, unknown kind, duplicate, ghost, and orphan before spending a trace.
     plasticity_engine_check_topology(Interfaces0, Traces),
-    % Read the current dopamine level from the bus as the third factor of learning.
-    neuromodulator_bus_level(Bus, dopamine, ThirdFactor),
-    % Spend every interface's trace into its weight by the three-factor rule.
-    maplist(plasticity_engine_reward_interface(Traces, ThirdFactor, LearningRate),
+    % Spend every interface's trace into its weight, each at its own territory's dopamine concentration.
+    maplist(plasticity_engine_reward_interface(Traces, Bus, LearningRate),
             Interfaces0, Interfaces).
 
 % Homeostatic scaling is the manuscript's slow negative feedback on plasticity itself (Chapter 10 and
@@ -352,8 +358,11 @@ plasticity_engine_scaling_step(Interfaces0, Averages, Target, ScalingRate, Inter
 
 % plasticity_engine_step(+Interfaces0, +Activations, +Bus, +LearningRate, -Interfaces): learn for one tick.
 plasticity_engine_step(Interfaces0, Activations, Bus, LearningRate, Interfaces) :-
-    % Read the current dopamine level from the bus as the third factor of learning.
-    neuromodulator_bus_level(Bus, dopamine, ThirdFactor),
-    % Update every interface's weight by the three-factor rule.
-    maplist(plasticity_engine_update_interface(Activations, ThirdFactor, LearningRate),
+    % Refuse every malformed interface, unknown kind, and duplicate aloud before a single weight moves
+    % (the slice-31 review's root: the live step must judge as loudly as the trace, reward, and scaling steps).
+    maplist(plasticity_engine_check_interface, Interfaces0),
+    plasticity_engine_transmissive_keys(Interfaces0, Keys),
+    plasticity_engine_check_no_duplicate(Keys, plasticity_engine_duplicate_interface),
+    % Update every interface's weight by the three-factor rule, each at its own territory's dopamine.
+    maplist(plasticity_engine_update_interface(Activations, Bus, LearningRate),
             Interfaces0, Interfaces).

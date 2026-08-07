@@ -73,7 +73,7 @@ Each badge above is a claim, and every claim deserves a plain explanation. Here 
 
 - **`PARENT ORG | AI-UNIVERSITY-AIU`** - the parent organization that owns konnectome and its cousins.
 - **`COUSINS | PROLOGAI + CAUSALONTOLOGY + MENTOVA`** - konnectome's sibling repositories: PrologAI (the language), Causalontology (the data structure), and Mentova (the flagship Synthetic Mind and home of the reasoning core). The badge links to Mentova.
-- **`STATUS | THE MIND RUNS AND TELLS ITS STORY`** - the honest current state: thirty slices have landed (twenty-seven packs, 455 tests, all green, four standing gates - the naming gate now carrying its own permanent self-test), all ten architecture components run as one loop, Rung Two of the ladder is open (first grounded words and quarantined pretend play), Rung Three's five trials are all realized (transitive inference with every step shown, seriation, causal-versus-co-occurrence discrimination, means-end planning, categories formed from experience, and a represented model of quantity whose verdict is read by re-measuring, never from a transformation's name), Rung Four is finished (social pain, the empathy trial, and the appraisal and regulation pilots), and one command - `bin/run_capstone_demonstration.sh` - boots the mind and prints its whole glass-box story, which now reasons step by watchable step, appraises its own situations, regulates its own arousal, and tells the body seam - Rung Five's groundwork - in its own telling, while disclaiming exactly one rung: embodiment.
+- **`STATUS | THE MIND RUNS AND TELLS ITS STORY`** - the honest current state: thirty-one slices have landed (twenty-seven packs, 465 tests, all green, four standing gates - the naming gate now carrying its own permanent self-test), all ten architecture components run as one loop, Rung Two of the ladder is open (first grounded words and quarantined pretend play), Rung Three's five trials are all realized (transitive inference with every step shown, seriation, causal-versus-co-occurrence discrimination, means-end planning, categories formed from experience, and a represented model of quantity whose verdict is read by re-measuring, never from a transformation's name), Rung Four is finished (social pain, the empathy trial, and the appraisal and regulation pilots), and one command - `bin/run_capstone_demonstration.sh` - boots the mind and prints its whole glass-box story, which now reasons step by watchable step, appraises its own situations, regulates its own arousal, and tells the body seam - Rung Five's groundwork - in its own telling, while disclaiming exactly one rung: embodiment.
 
 </details>
 
@@ -117,7 +117,7 @@ konnectome is built and maintained under a written [**CONSTITUTION.md**](CONSTIT
 12. **Whole-Word System** - whole English words, snake_case, pack-qualified, no terse prefixes.
 13. **The safety gate** - no change may regress ARC-AGI-1, ARC-AGI-2, or the 137-vector Causalontology conformance suite.
 14. **Branch and report discipline** - feature branches and pull requests; no direct pushes to main; no artificial-intelligence tool credited as author; no Roman numerals.
-15. **The tutorial** - a maintained, beginner-friendly [`docs/konnectome_tutorial`](docs/konnectome_tutorial_v28.txt), kept current and versioned under the archive discipline.
+15. **The tutorial** - a maintained, beginner-friendly [`docs/konnectome_tutorial`](docs/konnectome_tutorial_v29.txt), kept current and versioned under the archive discipline.
 16. **The build log** - every build activity is logged to [`docs/BUILDING_KONNECTOME_v2.txt`](docs/BUILDING_KONNECTOME_v2.txt), voiced with dual purpose: as a scientific paper and as a best-selling book.
 17. **Context-window management and the hand-off protocol** - when the window runs high, a durable Context Hand-Off is written and the session paused, so a fresh session reloads state from `docs/` and continues from a known-good baseline.
 
@@ -127,12 +127,12 @@ The six-phase waterfall is mirrored in six versioned documents, each seeded verb
 
 | Phase | File | Seeded from |
 |---|---|---|
-| 1. Specification | [`docs/konnectome_1_specification_v31.txt`](docs/konnectome_1_specification_v31.txt) | Appendix 1 |
-| 2. Pseudocode | [`docs/konnectome_2_pseudocode_v31.txt`](docs/konnectome_2_pseudocode_v31.txt) | Appendix 2 |
-| 3. Architecture | [`docs/konnectome_3_architecture_v31.txt`](docs/konnectome_3_architecture_v31.txt) | Appendix 3 |
-| 4. Refinement | [`docs/konnectome_4_refinement_v31.txt`](docs/konnectome_4_refinement_v31.txt) | Appendix 4 |
-| 5. Completion | [`docs/konnectome_5_completion_v31.txt`](docs/konnectome_5_completion_v31.txt) | Appendix 5 |
-| 6. Demonstration | [`docs/konnectome_6_demonstration_v31.txt`](docs/konnectome_6_demonstration_v31.txt) | Appendix 6 |
+| 1. Specification | [`docs/konnectome_1_specification_v32.txt`](docs/konnectome_1_specification_v32.txt) | Appendix 1 |
+| 2. Pseudocode | [`docs/konnectome_2_pseudocode_v32.txt`](docs/konnectome_2_pseudocode_v32.txt) | Appendix 2 |
+| 3. Architecture | [`docs/konnectome_3_architecture_v32.txt`](docs/konnectome_3_architecture_v32.txt) | Appendix 3 |
+| 4. Refinement | [`docs/konnectome_4_refinement_v32.txt`](docs/konnectome_4_refinement_v32.txt) | Appendix 4 |
+| 5. Completion | [`docs/konnectome_5_completion_v32.txt`](docs/konnectome_5_completion_v32.txt) | Appendix 5 |
+| 6. Demonstration | [`docs/konnectome_6_demonstration_v32.txt`](docs/konnectome_6_demonstration_v32.txt) | Appendix 6 |
 
 ## The build ladder
 
@@ -186,7 +186,7 @@ konnectome/
     konnectome_1..6_*_vN.txt   The SPARCD Fileset (seeded from the appendices; versioned per slice).
     konnectome_ledger_v1.txt   The running scoreboard of findings (Fourth Commandment).
     BUILDING_KONNECTOME_v2.txt The build log (Sixteenth Commandment): the whole story from the true beginning, paper and book at once, versioned.
-    konnectome_tutorial_v28.txt A complete beginner tutorial (Fifteenth Commandment), versioned.
+    konnectome_tutorial_v29.txt A complete beginner tutorial (Fifteenth Commandment), versioned.
     PrologAI_CHANGE_ORDER_v2.txt        Additive PrologAI-language gaps (Third Commandment); Wall-3 closed by causal_core 1.1.0.
     Causalontology_4_0_0_CHANGE_ORDER_v3.txt   Data-structure gaps for the frozen ontology (Sections A and B shipped as 4.0.0; C, D, E held).
     NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt  The source book.
@@ -197,7 +197,7 @@ konnectome/
 
 ## Status
 
-The build has begun and is climbing the ladder. Thirty slices have landed on `main` (twenty-seven packs, 455 tests, all green):
+The build has begun and is climbing the ladder. Thirty-one slices have landed on `main` (twenty-seven packs, 465 tests, all green):
 
 - **Slice 1 - the heartbeat** (`tick_engine`): the Scheduler and Tick Engine (Component 2), with the two-pass synchronous update. 7 of 7 tests.
 - **Slice 2 - archetypes and the first thought** (`archetype`, `observer`): the six dynamical archetype rules (Appendix 2, Section A2.3) and the observer recording each tick as a Causalontology `token_occurrence` (Component 9) via the reused `causal_core`. 7 of 7 and 6 of 6 tests; the 119 conformance vectors stay green.
@@ -248,6 +248,8 @@ The build has begun and is climbing the ladder. Thirty slices have landed on `ma
 - **Slice 29 - Homeostatic scaling: the bound that keeps the learning from exploding** (`plasticity_engine` grown): FR-10's governor. Each construct gains a **running average** (an explicit stateless store, exponential moving average), and a **scaling step** multiplies every incoming transmissive weight of a region by one shared factor - *1 + rate x (target - average)*, **floored at zero** (silenced, never sign-flipped) - so an overactive region's inputs shrink and a quiet one's grow together. Pinned as a deliberate worst case: **fifty ticks of maximal coincidence under relentless full dopamine** hold the weight at a **finite fixed point just below 1.9** where unbounded learning would climb past five. The review (fifth straight completion) confirmed **two REAL silent failures with one shared root** - one malformed store entry drew **two different silent verdicts from two consumers** - plus two MINOR; all fixed at the root: **one shared store judgement** (shape, unbound tails, duplicate keys) for every keyed store in the pack, **mirrored into the slice-28 trace store** and both constructors, pinned by seven tests. Suite 24 -> 48; **438 tests total**; conformance **re-measured** 137/137 in both cousins. **No new wall; no cousin edited.**
 
 - **Slice 30 - Per-territory neuromodulators: the field learns local concentrations, and delayed time learns the bus** (`neuromodulator_bus` + `connection_graph` grown): FR-6's second half. The bus gains **territory entries** beside the global pairs, read by the diffuse-field law - **own level, else global fallback, else silence** - and every construct **is its own territory** (no registry, no caller changes; territory-free buses pinned backward-compatible). The **slice-27 pending line is CLOSED**: a new delayed modulated step carries delay lines and bus together, the gain read **at the tick of delivery, never emission** (pinned both directions), with the all-delays-one identity against the plain modulated step. The review (sixth straight completion) found **no REAL defect** - two MINOR with one root (the flat key space let a compound alias a territory entry; reads silently bound unbound names) closed by **one atom guard at every bus entrance**, pinned by five tests. Suites 4 -> 14 and 17 -> 24; **455 tests total**; conformance **re-measured** 137/137 in both cousins. **No new wall; no cousin edited.**
+
+- **Slice 31 - The per-territory third factor: each connection learns by the chemistry of the place the signal arrives** (`plasticity_engine` grown at its root): the slice-30 pending line **CLOSED**. The live learning step and the reward step now read the dopamine third factor **at the RECEIVING end's territory** through the diffuse-field law - local concentration first, global fallback, silence with neither - so one broadcast reward teaches **different territories different amounts**, and a territory silenced at zero learns **nothing** however loud the global field; on a territory-free bus every weight is **exactly** the old global result (the whole earlier suite passing untouched is the proof). The review (seventh straight completion) confirmed **three REAL findings with one root**, each reproduced first: the live step had **no refusal perimeter** - malformed terms silently failed it, unbound kinds silently skipped learning, duplicate interfaces silently double-learned - closed by the shared interface judgement at its head, pinned by three tests. Suite 48 -> 58; **465 tests total**; conformance **re-measured** 137/137 in both cousins. **No new wall; no cousin edited.**
 
 Next: **the seam waits for a real machine** - reaching, navigation, and true homeostatic survival all demand one, and the honest-limits line keeps naming embodiment until it exists - and Sections C, D, and E of the Causalontology change order remain held for the walls a future slice may find. This README, and every badge on it, is kept honest as the build climbs.
 
