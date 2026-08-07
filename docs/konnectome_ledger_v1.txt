@@ -107,7 +107,7 @@ ARCHITECTURE, VERSION 20"; the manuscript's document-level CHANGE LOG that follo
 versioning metadata, not appendix content, and was deliberately not carried in.
 
 Per the Tenth Commandment, every code slice bumps the SPARCD Fileset. The current
-version is v23 (bumped in lockstep by slice 22); every superseded version lives in
+version is v24 (bumped in lockstep by slice 23); every superseded version lives in
 docs/archive/.
 
 
@@ -280,6 +280,11 @@ deepened; PENDING = not built yet.
     accept no quoted text, but run the learning episode or the conservation trial themselves and
     mint what the enactment produced. The rung's trials are COMPLETE; the capstone story still
     does not narrate the rung, and its honest-limits line stands until the story is taught.)
+   (Slice 23. The story IS taught: the capstone (0.3.0) narrates the whole rung - the derivation
+    as data, seriation, the formed categories with the honest exile and the crossing re-sort, the
+    re-measured pour and the lossy pour, the cited causal record against the co-occurrence, and
+    the shortest plan - each sentence guarded by a strict live check, and the rung's line is GONE
+    from the printed honest-limits list, which now names only embodiment.)
 
 
 ================================================================================
@@ -793,6 +798,52 @@ neither Rung Three nor Rung Four's appraisal and regulation chapters (the record
 next slice's work); Rung Five (embodiment) remains untouched, and the guiding book's own Rung Five
 text asks for a REAL machine - a fact that will size any software-only opening of that rung; and the
 naming gate's unprefixed-helper hole awaits a gate that can see it.
+
+
+Slice-23 note (2026-08-07). The two recorded STORY DEBTS are paid: the capstone grows to 0.3.0 and
+its one runnable telling now narrates Rung Three whole (the derivation as data, seriation, the
+formed categories with their honest exile and crossing re-sort, the re-measured conserving pour and
+the lossy pour judged by the model against its own name, the cause told from co-occurrence by the
+cited record, and the shortest plan) and Rung Four to its finish (the appraisal read from the
+drives' own error, owned as the standard's fears and desires attitudes with the satisfaction
+approximation of Observation-4 declared aloud in the story itself, the honest withdrawal when the
+world moves on, and a full alarm regulated to rest EXACTLY at baseline in eight halving ticks). No
+new pack and no new kind: the capstone's manifest gains six sibling requirements
+(concrete_operations, cause_and_effect, category_formation, quantity_model, situation_appraisal,
+arousal_regulation), all read through public interfaces. Every narrated sentence sits beneath a
+strict live check in the chapter predicate - a drifted engine silences the story rather than
+letting it lie - and the owned conservation verdict is minted by ENACTING the pour, per slice 22's
+record-by-enactment discipline. The printed honest-limits list shrank to exactly one rung:
+embodiment, disclaimed with the guiding book's own reason (a real machine). The story's take-backs
+rose deliberately from three to four distinct retraction records when the appraisal chapter's
+honest exit joined; the suite pins the raise, as at every raise since slice 14.
+
+THE REVIEW, TOLD HONESTLY. The independent adversarial reviewer assigned to this slice was STOPPED
+MID-RUN by the owner before producing findings. The builder therefore re-ran the review's planned
+reproductions directly and records them as a BUILDER'S VERIFICATION - a weaker guarantee than an
+independent refuter, stated as such: (1) the story told twice in one process is byte-identical, now
+pinned by the permanent test story_is_deterministic_across_two_tellings; (2) the reasoning
+chapter's category episode resets the reused inducer's store at both ends, and no other chapter or
+pack reads that store, so the reset reaches nothing; (3) the narrated eight-tick landing is derived
+from arousal_regulation's own published constants (decay fraction 0.5, snap epsilon 0.01) under
+exact binary halving - platform-stable, not an accident of one machine; (4) the epilogue's
+unsigned-records declaration and closing re-run promise survive unchanged, only the rungs line
+shrank; (5) a line-by-line English-Readable-Code walk of both new chapters found every goal
+carrying its own comment (the mechanical scan's flags were all continuations of single multi-line
+terms). One judgment recorded: the fixed English describing the derivation steps and formed
+categories is hard-coded prose GUARDED by strict equality over live engine output immediately
+above it, matching the guard-then-tell pattern of the earlier chapters.
+
+Gates: capstone_demonstration 44 of 44 Prolog Unit (PLUnit) tests pass (grown from 36); 339 in
+total across twenty-five packs, all green. The naming, layer, layer-binding, and reality-discipline
+gates report zero violations. The Causalontology conformance suite was RE-MEASURED this slice: 137
+of 137 (specification 4.0.0) in both cousins. No new wall was hit and no new observation was
+minted; nothing in PrologAI or Causalontology was edited.
+
+HONEST REMAINING ASCENT, recorded as pending refinements, not walls: Rung Five (embodiment) remains
+untouched, and the guiding book's Rung Five text demands a REAL machine - any software-only opening
+must be sized as groundwork, never as the rung; the long-standing pending refinements stand; the
+naming gate's unprefixed-helper hole (slice 22) still awaits a gate that can see it.
 
 
  Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 4.

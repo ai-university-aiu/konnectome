@@ -26,6 +26,34 @@
     symbol_exchange_reply/5
 ]).
 % Reuse pretend_play so the quarantine the story narrates can be re-proven outside the narration.
+:- use_module(library(category_formation), [
+    % category_formation_learn/3: re-form the chapter's categories independently of the narration.
+    category_formation_learn/3
+]).
+% Load the quantity model so the conservation verdicts can be re-measured independently.
+:- use_module(library(quantity_model), [
+    % quantity_model_represent/3: rebuild the chapter's represented amount.
+    quantity_model_represent/3,
+    % quantity_model_trial/4: re-run the chapter's trials outside the narration.
+    quantity_model_trial/4,
+    % quantity_model_record/4: re-mint the owned verdict by enacting the same trial.
+    quantity_model_record/4
+]).
+% Load situation appraisal so the appraisals can be re-read independently.
+:- use_module(library(situation_appraisal), [
+    % situation_appraisal_appraise/3: re-read the drives' own error directly.
+    situation_appraisal_appraise/3
+]).
+% Load arousal regulation so the settling can be re-run independently.
+:- use_module(library(arousal_regulation), [
+    % arousal_regulation_arouse/3: raise arousal on an empty bus.
+    arousal_regulation_arouse/3,
+    % arousal_regulation_level/2: read the settled level.
+    arousal_regulation_level/2,
+    % arousal_regulation_regulate/3: settle to baseline, counting ticks.
+    arousal_regulation_regulate/3
+]).
+% Load pretend play for the quarantine checks.
 :- use_module(library(pretend_play), [
     % pretend_play_reset/0: clear every reality before the reproduction fixture.
     pretend_play_reset/0,
@@ -258,34 +286,45 @@ test(story_respects_rung_order) :-
     capstone_demonstration_test_first_index(Story, "RUNG TWO", RungTwo),
     % Find where the social rung begins.
     capstone_demonstration_test_first_index(Story, "RUNG FOUR", RungFour),
+    % Find where the reasoning rung begins.
+    capstone_demonstration_test_first_index(Story, "RUNG THREE", RungThree),
     % Find where the social rung's deepening begins.
     capstone_demonstration_test_first_index(Story, "DEEPENED", Deepened),
+    % Find where the social rung's finish begins.
+    capstone_demonstration_test_first_index(Story, "FINISHED", Finished),
     % Find where the provenance layer begins.
     capstone_demonstration_test_first_index(Story, "THE PROVENANCE LAYER", Provenance),
     % The heartbeat comes before the prediction.
     assertion(RungZero < RungOne),
     % The prediction comes before the first words.
     assertion(RungOne < RungTwo),
-    % The first words come before the social milestone.
-    assertion(RungTwo < RungFour),
+    % The first words come before the reasoning.
+    assertion(RungTwo < RungThree),
+    % The reasoning comes before the social milestone.
+    assertion(RungThree < RungFour),
     % The false belief comes before the rung's deepening.
     assertion(RungFour < Deepened),
+    % The deepening comes before the rung's finish.
+    assertion(Deepened < Finished),
     % The provenance layer closes the story.
-    assertion(Deepened < Provenance).
+    assertion(Finished < Provenance).
 
 % The story's take-backs are tellable apart from the records alone: the supersession's withdrawal, the
-% cruel world's outright retraction, and the misattributed distress's withdrawal carry three DIFFERENT
-% identifiers (the two-retraction form of this test was found by the slice-14 pre-merge adversarial review:
-% with one shared instant two take-backs minted one identical record, because a retraction's reason is not
-% identity-bearing; slice 18 deliberately raises the count to three when the empathy chapter's honest exit
-% joined the telling, and this comment records that the change was deliberate).
-test(story_distinguishes_the_three_retractions) :-
+% cruel world's outright retraction, the misattributed distress's withdrawal, and the passed threat's
+% withdrawal carry four DIFFERENT identifiers (the two-retraction form of this test was found by the
+% slice-14 pre-merge adversarial review: with one shared instant two take-backs minted one identical
+% record, because a retraction's reason is not identity-bearing; slice 18 deliberately raised the count
+% to three when the empathy chapter's honest exit joined the telling; slice 23 deliberately raises it to
+% four when the appraisal chapter's honest exit joins, and this comment records that the change was
+% deliberate).
+test(story_distinguishes_the_four_retractions) :-
     % Tell the story.
     capstone_demonstration_story(10, Story),
     % Collect every distinct retraction identifier the story prints.
     capstone_demonstration_test_retraction_identifiers(Story, Identifiers),
-    % The kind world's withdrawal, the cruel world's retraction, and the misattribution's withdrawal are three distinct records.
-    assertion(length(Identifiers, 3)).
+    % The kind world's withdrawal, the cruel world's retraction, the misattribution's withdrawal, and
+    % the passed threat's withdrawal are four distinct records.
+    assertion(length(Identifiers, 4)).
 
 % The story claims only what is shown: the undemonstrated rungs and the unsigned records are named honestly.
 test(story_marks_the_honest_limits) :-
@@ -505,9 +544,134 @@ test(story_no_longer_disclaims_rung_two) :-
     % Tell the story.
     capstone_demonstration_story(10, Story),
     % Rung Two left the not-demonstrated list when the story learned its first words.
-    assertion(\+ capstone_demonstration_test_contains(Story, "Rung Two (symbols and pretend play)")),
-    % The rung's remaining pilots are named as still pending.
-    assertion(capstone_demonstration_test_contains(Story, "appraisal and regulation")).
+    assertion(\+ capstone_demonstration_test_contains(Story, "Rung Two (symbols and pretend play)")).
+
+% Rung Three and Rung Four's pilots left the not-demonstrated list when the story learned to tell
+% them at slice 23; only Rung Five remains, named with the guiding book's own real-machine demand.
+test(story_disclaims_only_rung_five) :-
+    % Tell the story.
+    capstone_demonstration_story(10, Story),
+    % Rung Three is no longer disclaimed - the story now tells it.
+    assertion(\+ capstone_demonstration_test_contains(Story, "Rung Three (concrete reasoning)")),
+    % The appraisal and regulation pilots are no longer disclaimed - the story now tells them.
+    assertion(\+ capstone_demonstration_test_contains(Story, "nor are Rung Four's appraisal and regulation")),
+    % Rung Five is still disclaimed, honestly.
+    assertion(capstone_demonstration_test_contains(Story, "Rung Five (embodiment) is not yet demonstrated")),
+    % And the disclaimer carries the book's own reason: the rung asks for a real machine.
+    assertion(capstone_demonstration_test_contains(Story, "real machine")).
+
+% The story covers the reasoning rung: the header, the named steps, the formed categories, and the
+% conservation verdicts all appear in the telling.
+test(story_covers_rung_three) :-
+    % Tell the story.
+    capstone_demonstration_story(10, Story),
+    % The rung's header appears.
+    assertion(capstone_demonstration_test_contains(Story, "RUNG THREE - THE CONCRETE REASONING")),
+    % The named derivation steps appear.
+    assertion(capstone_demonstration_test_contains(Story, "resting_is_above")),
+    % The joining step appears.
+    assertion(capstone_demonstration_test_contains(Story, "transitive_chain")),
+    % The formed categories appear by their whole-word names.
+    assertion(capstone_demonstration_test_contains(Story, "formed_category_1")),
+    % The honest exile appears.
+    assertion(capstone_demonstration_test_contains(Story, "outside_every_category")),
+    % The book's conserving pour appears with its measured verdict.
+    assertion(capstone_demonstration_test_contains(Story, "conserved(5)")),
+    % The lossy pour appears with its measured verdict - the world over the name.
+    assertion(capstone_demonstration_test_contains(Story, "changed(5, 4)")),
+    % The causal discrimination appears.
+    assertion(capstone_demonstration_test_contains(Story, "co-occurrence only")),
+    % The plan appears.
+    assertion(capstone_demonstration_test_contains(Story, "gather_wood")).
+
+% The story covers the finished Rung Four: the appraisal owned as fears, the recorded
+% satisfaction approximation, and the regulation resting exactly at baseline.
+test(story_covers_the_appraisal_and_regulation) :-
+    % Tell the story.
+    capstone_demonstration_story(10, Story),
+    % The finish's header appears.
+    assertion(capstone_demonstration_test_contains(Story, "RUNG FOUR, FINISHED")),
+    % The threat is owned as the standard's fears attitude.
+    assertion(capstone_demonstration_test_contains(Story, "FEARS attitude")),
+    % The satisfaction approximation is recorded, not hidden.
+    assertion(capstone_demonstration_test_contains(Story, "no word for satisfaction")),
+    % The regulation line lands exactly at baseline.
+    assertion(capstone_demonstration_test_contains(Story, "EXACTLY at baseline")).
+
+% INDEPENDENT DYNAMICS: the reasoning chapter's claims re-derived outside the narration - the
+% story cannot grade its own homework.
+test(reasoning_chapter_matches_independent_runs) :-
+    % Re-form the chapter's categories independently.
+    category_formation_learn([
+        experience(apple, [color-red, kind-fruit, shape-round]),
+        experience(cherry, [color-red, kind-fruit, shape-round]),
+        experience(ball, [color-blue, kind-toy, shape-round]),
+        experience(block, [color-blue, kind-toy, shape-square])
+    ], 2, Categories),
+    % The independent run forms the same two categories the story tells.
+    assertion(Categories == [
+        category(formed_category_1, [color-red, kind-fruit, shape-round], [apple, cherry]),
+        category(formed_category_2, [color-blue, kind-toy], [ball, block])
+    ]),
+    % Re-run the chapter's conserving pour independently.
+    quantity_model_represent(5, glass(short_wide), Water),
+    quantity_model_trial(Water, pour(glass(tall_thin)), PourVerdict, _Poured),
+    % The independent measurement agrees.
+    assertion(PourVerdict == conserved(5)),
+    % Re-run the chapter's lossy pour independently.
+    quantity_model_trial(Water, pour_losing(glass(tall_thin), 1), LossyVerdict, _Spilt),
+    % The independent measurement agrees: the model, not the name.
+    assertion(LossyVerdict == changed(5, 4)).
+
+% INDEPENDENT DYNAMICS: the appraisal is nothing but the drives' own error, re-read directly.
+test(appraisal_reads_the_drives_own_error) :-
+    % Appraise the too-warm boot body directly.
+    situation_appraisal_appraise(drive(temperature, temperature, 37, none), [temperature-40], Hot),
+    % Three degrees from the set-point is a threat at distance three.
+    assertion(Hot == appraisal(threatened, 3)),
+    % Appraise the settled body directly.
+    situation_appraisal_appraise(drive(temperature, temperature, 37, none), [temperature-37], Settled),
+    % At the set-point the goal is met.
+    assertion(Settled == appraisal(satisfied, 0)).
+
+% INDEPENDENT DYNAMICS: a full alarm settles exactly at baseline in eight halving ticks.
+test(regulation_settles_exactly_at_baseline_in_eight_ticks) :-
+    % Raise arousal to one on an empty bus.
+    arousal_regulation_arouse([], 1.0, Aroused),
+    % Regulate to rest, counting the ticks.
+    arousal_regulation_regulate(Aroused, Rested, NumTicks),
+    % Read the settled level.
+    arousal_regulation_level(Rested, Level),
+    % Exactly baseline, never overshot.
+    assertion(Level =:= 0.0),
+    % Eight ticks brought the alarm to rest.
+    assertion(NumTicks =:= 8).
+
+% The story's owned conservation verdict is reproducible: the record re-minted independently, by
+% enacting the same trial, carries the identifier the story printed - byte for byte.
+test(story_verdict_record_is_reproducible) :-
+    % Tell the story.
+    capstone_demonstration_story(10, Story),
+    % The story's fixed simulation start stamps the independent re-mint.
+    capstone_demonstration_simulation_start(Start),
+    % Re-enact the same trial and re-mint the same record.
+    quantity_model_represent(5, glass(short_wide), Water),
+    quantity_model_record(Water, pour(glass(tall_thin)), Start, Record),
+    % Read the re-minted identifier.
+    get_dict(id, Record, Identifier),
+    % The story printed that very identifier.
+    assertion(capstone_demonstration_test_contains(Story, Identifier)).
+
+% The whole story is deterministic: told twice in one process, it comes back byte-identical -
+% no chapter's global-state reset (the category episode's store ownership included) leaks into
+% another telling.
+test(story_is_deterministic_across_two_tellings) :-
+    % Tell the story once.
+    capstone_demonstration_story(10, First),
+    % Tell it again in the same process.
+    capstone_demonstration_story(10, Second),
+    % The two tellings are identical, line for line.
+    assertion(First == Second).
 
 % Close the test block for the capstone_demonstration pack.
 :- end_tests(capstone_demonstration).
