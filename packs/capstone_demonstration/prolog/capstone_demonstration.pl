@@ -194,6 +194,34 @@
     % arousal_regulation_regulate/3: regulate until arousal settles exactly at baseline.
     arousal_regulation_regulate/3
 ]).
+% Reuse the simulated body: the honestly-named stand-in machine the seam chapter tells through.
+:- use_module(library(simulated_body), [
+    % simulated_body_boot/1: boot the stand-in machine - camera clear, battery full, log empty.
+    simulated_body_boot/1,
+    % simulated_body_show/4: the world shows the camera something new.
+    simulated_body_show/4,
+    % simulated_body_actuators/2: read the movement log - the receipt that the body really moved.
+    simulated_body_actuators/2,
+    % simulated_body_drain/3: the physics tick that empties the battery.
+    simulated_body_drain/3
+]).
+% Reuse the body interface: the three connections of Rung Five's groundwork, told and not claimed.
+:- use_module(library(body_interface), [
+    % body_interface_energy_drive/1: the drive that defends a full battery - low battery felt as hunger.
+    body_interface_energy_drive/1,
+    % body_interface_senses/2: the machine's sensors become the mind's senses.
+    body_interface_senses/2,
+    % body_interface_candidates/4: the pressing drives and the seen reflexes propose; nothing else does.
+    body_interface_candidates/4,
+    % body_interface_sense_act_step/7: one closed pass - sense, step, propose, select, command, enact.
+    body_interface_sense_act_step/7,
+    % body_interface_survival_run/5: the draining-battery run the mind survives of its own accord.
+    body_interface_survival_run/5,
+    % body_interface_record/4: own the loop's outcome by enacting the loop.
+    body_interface_record/4,
+    % body_interface_stance/3: the mind's observation-graded stance on its own enacted loop.
+    body_interface_stance/3
+]).
 % Reuse the list library for membership checks over body state.
 :- use_module(library(lists), [
     % memberchk/2: find the monitored variable inside the body state list.
@@ -215,7 +243,11 @@
 % mind (Rung Four), the rung's deepening - the social pain and the empathy trial - the rung's
 % finish - the appraisal of a situation against the mind's own goals, and arousal regulated back
 % to baseline - and the provenance layer standing behind and, when the world disagrees, honestly
-% disowning the mind's own stances. The story claims only what is shown: the rung not yet
+% disowning the mind's own stances. Between the finished Rung Four and the provenance layer the
+% story now also tells Rung Five's GROUNDWORK - the body seam's three connections, the sense-act
+% pass, the felt hunger, and the survival rhythm, all through the honestly-named simulated
+% stand-in - while claiming, in the chapter's own words, that groundwork is not the rung.
+% The story claims only what is shown: the rung not yet
 % demonstrated is named as such, and the records are declared unsigned, because the signing key
 % is a secret this code may never hold.
 
@@ -272,12 +304,14 @@ capstone_demonstration_story(NumTicks, Story) :-
     capstone_demonstration_empathy_lines(Empathy),
     % Rung Four, finished: the appraisal and the regulation.
     capstone_demonstration_feeling_lines(Feeling),
+    % Rung Five's groundwork: the body seam told through the honestly-named stand-in, the rung not claimed.
+    capstone_demonstration_body_seam_lines(BodySeam),
     % The provenance layer: the mind grades, supersedes, and retracts its own stances.
     capstone_demonstration_provenance_lines(AttitudeRecord, Provenance),
     % The honest limits: what this story does not claim.
     capstone_demonstration_epilogue_lines(Epilogue),
     % The story is the sections joined in rung order.
-    append([Title, Heartbeat, Prediction, Thought, FirstWords, Reasoning, Social, Empathy, Feeling, Provenance, Epilogue], Story).
+    append([Title, Heartbeat, Prediction, Thought, FirstWords, Reasoning, Social, Empathy, Feeling, BodySeam, Provenance, Epilogue], Story).
 
 % capstone_demonstration_check_ticks(+NumTicks): the tick count must be an integer of at least six.
 capstone_demonstration_check_ticks(NumTicks) :-
@@ -913,6 +947,124 @@ capstone_demonstration_feeling_lines(Lines) :-
         RegulationLine
     ].
 
+% capstone_demonstration_body_seam_lines(-Lines): Rung Five's groundwork narrated - the body seam
+% told through the honestly-named simulated stand-in, guard-then-tell, and the rung NOT claimed:
+% every sentence below sits beneath a strict live check, and the chapter's own words keep the
+% rung on the honest-limits list, because the guiding book's text asks for a real machine.
+capstone_demonstration_body_seam_lines(Lines) :-
+    % Boot the stand-in machine: camera clear, battery full, log empty.
+    simulated_body_boot(Booted),
+    % The world shows the camera an obstacle in the path ahead.
+    simulated_body_show(Booted, path_ahead, obstacle, Seen),
+    % The machine's sensors become the mind's senses.
+    body_interface_senses(Seen, Percepts),
+    % The story only claims the percept the camera carried, unchanged.
+    Percepts == [percept(path_ahead, obstacle)],
+    % The energy drive that defends a full battery.
+    body_interface_energy_drive(EnergyDrive),
+    % One closed pass of the loop over the seen obstacle, battery full.
+    body_interface_sense_act_step(Seen, [EnergyDrive], [], Steered, _DrivesAfter, _BusAfter, SteerOutcome),
+    % The story only claims the release the selector made: the steering reflex.
+    SteerOutcome == released(steer_around),
+    % Read the actuator log - the receipt that the body really moved.
+    simulated_body_actuators(Steered, SteerLog),
+    % The story only claims the movement the log carries.
+    SteerLog == [steer_around],
+    % Sense again through the moved body.
+    body_interface_senses(Steered, PerceptsAfter),
+    % The story only claims what the camera now reads: the path is clear - acting changed the seeing.
+    PerceptsAfter == [percept(path_ahead, clear)],
+    % A battery at half charge, read through the one error predicate every pain passes through.
+    drive_system_error(EnergyDrive, [battery_charge-0.5], HungerError),
+    % The story only claims the pressing magnitude the engine feels: exactly one half.
+    HungerError =:= 0.5,
+    % A battery at three-quarter charge, read through the same predicate - the mild hunger.
+    drive_system_error(EnergyDrive, [battery_charge-0.75], MildHungerError),
+    % The story only claims the mild magnitude the engine feels: exactly one quarter.
+    MildHungerError =:= 0.25,
+    % A body half a degree from its defended thirty-seven, read through the identical predicate.
+    drive_system_error(drive(temperature, temperature, 37, none), [temperature-36.5], ThermalError),
+    % The story only claims the equivalence the numbers show: the two readings are equal.
+    HungerError =:= ThermalError,
+    % The survival groundwork: six ticks of draining life over the booted machine.
+    simulated_body_boot(SurvivalStart),
+    % Live the run - each tick drains a quarter charge, and the mind answers of its own accord.
+    body_interface_survival_run(SurvivalStart, [EnergyDrive], 6, Trace, _SurvivalFinal),
+    % The story only claims the exact rhythm the run produced: hold at mild hunger, recharge at pressing.
+    Trace == [tick(1, 0.75, nothing, 0.75),
+              tick(2, 0.5, released(reduce(energy)), 1.0),
+              tick(3, 0.75, nothing, 0.75),
+              tick(4, 0.5, released(reduce(energy)), 1.0),
+              tick(5, 0.75, nothing, 0.75),
+              tick(6, 0.5, released(reduce(energy)), 1.0)],
+    % The one deliberate tie: a starving battery against a seen obstacle at equal salience.
+    simulated_body_drain(Booted, 1.0, Starving),
+    % The world shows the starving machine the same obstacle.
+    simulated_body_show(Starving, path_ahead, obstacle, StarvingAndBlocked),
+    % Read the starving drive's own error - the drive side of the claimed tie.
+    drive_system_error(EnergyDrive, [battery_charge-0.0], StarvingError),
+    % Read the reflex's live salience through the public candidate interface: no drives, one obstacle.
+    body_interface_candidates([percept(path_ahead, obstacle)], [], [], ReflexCandidates),
+    % The reflex proposal alone stands, carrying its fixed salience.
+    ReflexCandidates = [action(steer_around, ReflexSalience)],
+    % The story only claims a tie that is exact: the starving error equals the reflex salience.
+    StarvingError =:= ReflexSalience,
+    % One closed pass over the starving, blocked machine.
+    body_interface_sense_act_step(StarvingAndBlocked, [EnergyDrive], [], _TieBody, _TieDrives, _TieBus, TieOutcome),
+    % The story only claims the tie-break the selector made: the drives come before the reflexes.
+    TieOutcome == released(reduce(energy)),
+    % The record's episode: the booted machine drained to a pressing half charge.
+    simulated_body_drain(Booted, 0.5, HalfCharged),
+    % The story's fixed simulation start stamps the seam's records.
+    capstone_demonstration_simulation_start(Start),
+    % The loop's outcome is owned BY ENACTING THE LOOP - the record predicate runs the pass itself.
+    body_interface_record(HalfCharged, [EnergyDrive], Start, LoopRecord),
+    % Read what the enacted pass released, straight from the record's own content.
+    get_dict(value, LoopRecord, LoopValue),
+    % The story only claims the release the enacted pass made: the recharge.
+    LoopValue == "released(reduce(energy))",
+    % Read the loop record's content-addressed identifier.
+    get_dict(id, LoopRecord, LoopIdentifier),
+    % The mind's stance on its own enacted loop - granted only after the record proves it was minted.
+    body_interface_stance(LoopRecord, Start, LoopStance),
+    % The stance really carries the observation grade: the mind ran the loop and read the log.
+    get_dict(evidence_type, LoopStance, "observation"),
+    % Read the stance's content-addressed identifier.
+    get_dict(id, LoopStance, LoopStanceIdentifier),
+    % The live forgery probe: a hand-built look-alike, never enacted, offered for the same grade.
+    catch(body_interface_stance(_{id: "forged_look_alike"}, Start, _ForgedStance),
+          error(body_interface_unminted_record(_), _),
+          ForgeryRefused = true),
+    % The story only claims the refusal that really fired: the forgery earns no grade.
+    ForgeryRefused == true,
+    % The hunger equivalence's line.
+    format(string(HungerLine),
+           "A battery at half charge and a body half a degree from thirty-seven read the same through the identical predicate: error ~w equals error ~w - a low battery is FELT AS HUNGER by the same drive_system_error every other pain passes through.",
+           [HungerError, ThermalError]),
+    % The record's line.
+    format(string(RecordLine),
+           "The loop's outcome is owned BY ENACTING THE LOOP - the record predicate runs the pass itself and mints ~w, its content the enacted release ~w.",
+           [LoopIdentifier, LoopValue]),
+    % The stance's line.
+    format(string(StanceLine),
+           "The mind stands behind its enacted loop at observation grade - it ran the pass and read its own actuator log - as ~w, and only a record that PROVES it was genuinely minted can earn that grade.",
+           [LoopStanceIdentifier]),
+    % The chapter's lines in order.
+    Lines = [
+        "",
+        "THE BODY SEAM - RUNG FIVE'S GROUNDWORK, TOLD AND NOT CLAIMED",
+        "There is no real machine here, and this chapter does not pretend one: the guiding book closes the sense-act loop through a real machine, so embodiment stays on the honest-limits list below.",
+        "What can be told honestly is the seam - the book's three connections, built and tested through the honestly-named simulated stand-in a real robot would one day replace.",
+        "Shown an obstacle, the machine's camera becomes the mind's senses unchanged: percept(path_ahead, obstacle).",
+        "One closed pass runs sense, drive step, proposal, selection, command, enactment: the steering reflex is released - released(steer_around) - the actuator log carries the movement, and the camera reads clear again: acting changed what the machine will see next.",
+        HungerLine,
+        "Left alone with a battery draining a quarter charge per tick, the mind holds still at a mild hunger of 0.25 and recharges OF ITS OWN ACCORD at the pressing 0.5 - hold at 0.75, recharge to full, and the same two-tick rhythm again and again, with nothing outside the mind commanding the act.",
+        "At an exact salience tie a starving battery outranks a seen obstacle - released(reduce(energy)) - because the drives come before the reflexes, deliberately and deterministically.",
+        RecordLine,
+        StanceLine,
+        "All of this is groundwork: the seam is built, tested, and told - and the rung is NOT claimed. Reaching, navigation, and true survival wait for a machine that is real."
+    ].
+
 % capstone_demonstration_provenance_social_stance(+AttitudeIdentifier, -SocialAssertionIdentifier): the mind stands behind its attribution.
 capstone_demonstration_provenance_social_stance(AttitudeIdentifier, SocialAssertionIdentifier) :-
     % The story's fixed simulation start stamps the stance.
@@ -1015,6 +1167,7 @@ capstone_demonstration_epilogue_lines(Lines) :-
         "",
         "WHAT IS HONESTLY NOT DEMONSTRATED",
         "Rung Five (embodiment) is not yet demonstrated - the guiding book's own text asks for a real machine - and this story does not claim it.",
+        "The body-seam chapter above is that rung's GROUNDWORK - three connections tested through an honestly-named simulated stand-in - and groundwork is not the rung: this story does not promote it.",
         "Every record above is content-addressed and shareable, but unsigned: the Ed25519 private key is a secret barred from this code, so signing is a deployment act, and a strict consumer quarantines these records until the key-holder signs them.",
         "This has been the whole of the mind, told by its own records. Nothing above is claimed that a reader cannot re-mint, re-run, and check."
     ].

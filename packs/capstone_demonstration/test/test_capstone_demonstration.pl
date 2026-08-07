@@ -88,6 +88,32 @@
     % drive_system_error/3: the one predicate both pains pass through.
     drive_system_error/3
 ]).
+% Reuse the simulated body so the seam chapter's episodes can be rebuilt outside the narration.
+:- use_module(library(simulated_body), [
+    % simulated_body_boot/1: boot the stand-in machine for the independent seam checks.
+    simulated_body_boot/1,
+    % simulated_body_show/4: show the camera the obstacle the story shows it.
+    simulated_body_show/4,
+    % simulated_body_drain/3: drain the battery to the story's episode charges.
+    simulated_body_drain/3,
+    % simulated_body_actuators/2: read the movement log, for the independent steering check.
+    simulated_body_actuators/2
+]).
+% Reuse the body interface so the seam chapter's claims can be re-derived independently.
+:- use_module(library(body_interface), [
+    % body_interface_energy_drive/1: the drive that defends a full battery.
+    body_interface_energy_drive/1,
+    % body_interface_senses/2: the machine's sensors become the mind's senses, for the steering check.
+    body_interface_senses/2,
+    % body_interface_candidates/4: the candidate interface, for the exact-tie check.
+    body_interface_candidates/4,
+    % body_interface_sense_act_step/7: one closed pass, for the independent tie check.
+    body_interface_sense_act_step/7,
+    % body_interface_survival_run/5: the draining-battery run, for the independent rhythm check.
+    body_interface_survival_run/5,
+    % body_interface_record/4: re-mint the story's loop record by enacting the same pass.
+    body_interface_record/4
+]).
 % Reuse the override controller so breath-beats-kindness can be re-proven directly.
 :- use_module(library(override_controller), [
     % override_controller_arbitrate/4: a vital drive in distress seizes control from any released action.
@@ -672,6 +698,144 @@ test(story_is_deterministic_across_two_tellings) :-
     capstone_demonstration_story(10, Second),
     % The two tellings are identical, line for line.
     assertion(First == Second).
+
+% The story covers the body seam: the chapter's header, the felt hunger, the released steering,
+% and the survival rhythm all appear in the telling.
+test(story_covers_the_body_seam) :-
+    % Tell the story.
+    capstone_demonstration_story(10, Story),
+    % The chapter's header appears.
+    assertion(capstone_demonstration_test_contains(Story, "THE BODY SEAM")),
+    % The book's sentence appears: a low battery is felt as hunger.
+    assertion(capstone_demonstration_test_contains(Story, "FELT AS HUNGER")),
+    % The steering release appears.
+    assertion(capstone_demonstration_test_contains(Story, "released(steer_around)")),
+    % The survival rhythm's self-driven recharge appears.
+    assertion(capstone_demonstration_test_contains(Story, "OF ITS OWN ACCORD")),
+    % The deliberate tie appears: the drives come before the reflexes.
+    assertion(capstone_demonstration_test_contains(Story, "starving battery outranks a seen obstacle")).
+
+% The seam chapter claims groundwork and refuses the rung, in its own words - and the epilogue
+% still disclaims embodiment with the book's real-machine reason.
+test(story_seam_claims_groundwork_not_the_rung) :-
+    % Tell the story.
+    capstone_demonstration_story(10, Story),
+    % The chapter's own refusal appears.
+    assertion(capstone_demonstration_test_contains(Story, "the rung is NOT claimed")),
+    % The epilogue names the groundwork boundary explicitly.
+    assertion(capstone_demonstration_test_contains(Story, "groundwork is not the rung")),
+    % The epilogue's Rung Five disclaimer still stands, word for word.
+    assertion(capstone_demonstration_test_contains(Story, "Rung Five (embodiment) is not yet demonstrated")).
+
+% The seam chapter sits between the finished Rung Four and the provenance layer.
+test(story_seam_chapter_sits_before_the_provenance_layer) :-
+    % Tell the story.
+    capstone_demonstration_story(10, Story),
+    % Find where the social rung's finish begins.
+    capstone_demonstration_test_first_index(Story, "FINISHED", Finished),
+    % Find where the seam chapter begins.
+    capstone_demonstration_test_first_index(Story, "THE BODY SEAM", BodySeam),
+    % Find where the provenance layer begins.
+    capstone_demonstration_test_first_index(Story, "THE PROVENANCE LAYER", Provenance),
+    % The finish comes before the seam.
+    assertion(Finished < BodySeam),
+    % The seam comes before the provenance layer.
+    assertion(BodySeam < Provenance).
+
+% The story's minted loop-record identifier is reproducible outside the story, byte for byte -
+% by ENACTING the same pass, because that is the only way the record can be minted at all.
+test(story_loop_record_identifier_is_reproducible) :-
+    % Tell the story.
+    capstone_demonstration_story(10, Story),
+    % Rebuild the same episode outside the story: the booted machine drained to a pressing half charge.
+    simulated_body_boot(Booted),
+    % Drain to the pressing half charge.
+    simulated_body_drain(Booted, 0.5, HalfCharged),
+    % The energy drive.
+    body_interface_energy_drive(EnergyDrive),
+    % The story's fixed simulation start is the minting instant.
+    capstone_demonstration_simulation_start(Start),
+    % Re-enact the same pass and re-mint the same record.
+    body_interface_record(HalfCharged, [EnergyDrive], Start, Record),
+    % Read the re-minted identifier.
+    get_dict(id, Record, Identifier),
+    % The story printed that very identifier.
+    assertion(capstone_demonstration_test_contains(Story, Identifier)).
+
+% INDEPENDENT DYNAMICS: the survival rhythm the story tells, re-run outside the narration.
+test(seam_survival_rhythm_matches_independent_run) :-
+    % Boot the stand-in machine.
+    simulated_body_boot(Booted),
+    % The energy drive.
+    body_interface_energy_drive(EnergyDrive),
+    % Six ticks of draining life, outside the narration.
+    body_interface_survival_run(Booted, [EnergyDrive], 6, Trace, _BodyFinal),
+    % The exact rhythm the story claims: hold at mild hunger, recharge at pressing, repeated.
+    assertion(Trace == [tick(1, 0.75, nothing, 0.75),
+                        tick(2, 0.5, released(reduce(energy)), 1.0),
+                        tick(3, 0.75, nothing, 0.75),
+                        tick(4, 0.5, released(reduce(energy)), 1.0),
+                        tick(5, 0.75, nothing, 0.75),
+                        tick(6, 0.5, released(reduce(energy)), 1.0)]).
+
+% INDEPENDENT DYNAMICS: a half-empty battery and a half-degree thermal error read equal through
+% the one predicate every pain passes through.
+test(seam_hunger_equals_thermal_error) :-
+    % The energy drive.
+    body_interface_energy_drive(EnergyDrive),
+    % The battery at half charge.
+    drive_system_error(EnergyDrive, [battery_charge-0.5], HungerError),
+    % The body half a degree from its defended set-point.
+    drive_system_error(drive(temperature, temperature, 37, none), [temperature-36.5], ThermalError),
+    % The two readings are equal, number for number.
+    assertion(HungerError =:= ThermalError).
+
+% INDEPENDENT DYNAMICS: at the exact salience tie the drives outrank the reflexes, re-run directly -
+% and the tie is PROVEN exact, not assumed (a review finding: without the equality a drifted reflex
+% salience would leave the outcome unchanged while falsifying the claimed tie).
+test(seam_tie_break_prefers_the_drives) :-
+    % Boot the stand-in machine.
+    simulated_body_boot(Booted),
+    % Starve the battery to empty - the energy error reaches the reflex's fixed salience.
+    simulated_body_drain(Booted, 1.0, Starving),
+    % Show the starving machine an obstacle.
+    simulated_body_show(Starving, path_ahead, obstacle, StarvingAndBlocked),
+    % The energy drive.
+    body_interface_energy_drive(EnergyDrive),
+    % The starving drive's own error - the drive side of the claimed tie.
+    drive_system_error(EnergyDrive, [battery_charge-0.0], StarvingError),
+    % The reflex's live salience, read through the public candidate interface: no drives, one obstacle.
+    body_interface_candidates([percept(path_ahead, obstacle)], [], [], ReflexCandidates),
+    % The reflex proposal alone stands, carrying its fixed salience.
+    ReflexCandidates = [action(steer_around, ReflexSalience)],
+    % The tie really is exact: the starving error equals the reflex salience.
+    assertion(StarvingError =:= ReflexSalience),
+    % One closed pass over the starving, blocked machine.
+    body_interface_sense_act_step(StarvingAndBlocked, [EnergyDrive], [], _Body, _Drives, _Bus, Outcome),
+    % The starving battery outranks the seen obstacle at equal salience.
+    assertion(Outcome == released(reduce(energy))).
+
+% INDEPENDENT DYNAMICS: the steering episode the story tells, re-run outside the narration - the
+% one seam claim a review found graded only on the story's own output.
+test(seam_steering_episode_matches_independent_run) :-
+    % Boot the stand-in machine.
+    simulated_body_boot(Booted),
+    % Show the camera the obstacle.
+    simulated_body_show(Booted, path_ahead, obstacle, Seen),
+    % The energy drive.
+    body_interface_energy_drive(EnergyDrive),
+    % One closed pass of the loop over the seen obstacle, battery full.
+    body_interface_sense_act_step(Seen, [EnergyDrive], [], Steered, _Drives, _Bus, Outcome),
+    % The steering reflex was released.
+    assertion(Outcome == released(steer_around)),
+    % The actuator log carries the movement - the body really moved.
+    simulated_body_actuators(Steered, Log),
+    % Exactly the one steering movement.
+    assertion(Log == [steer_around]),
+    % Sense again through the moved body.
+    body_interface_senses(Steered, PerceptsAfter),
+    % The camera reads clear: acting changed what the machine will see next.
+    assertion(PerceptsAfter == [percept(path_ahead, clear)]).
 
 % Close the test block for the capstone_demonstration pack.
 :- end_tests(capstone_demonstration).
