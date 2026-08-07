@@ -6,7 +6,9 @@
     concrete_operations_classify/3,
     % concrete_operations_seriate/3: order perceived objects along a numeric dimension.
     concrete_operations_seriate/3,
-    % concrete_operations_conserve/3: judge whether a transformation changed an amount or only its look.
+    % concrete_operations_conserve/3: judge whether a transformation changed an amount or only its
+    % look - BY ITS NAME on a closed enumeration; for the book's conservation trial itself, the
+    % sibling quantity_model reads the verdict from a represented model and supersedes this.
     concrete_operations_conserve/3,
     % concrete_operations_record/4: own a derived conclusion on the record.
     concrete_operations_record/4,
@@ -34,15 +36,16 @@
 % opens three of its pilot trials, each claim sized honestly. TRANSITIVE INFERENCE (the smoke
 % test, realized in full): the block is on the cup, the cup is on the table, therefore the block
 % is above the table - with every derivation step a named, watchable operation, never an opaque
-% leap. CLASSIFICATION (opened, in part): the book's trial asks for categories the mind FORMED
-% FROM EXPERIENCE and a flexible re-sort on request; the flexible re-sort over a chosen property
-% is demonstrated here, while category formation from experience is deferred, an honest open
-% edge. SERIATION (opened): a collection is ordered along a numeric dimension. CONSERVATION
-% (opened, schematically): the book frames this trial as a direct test of modelling the world
-% rather than its surface; what is demonstrated here is the verdict shape - an appearance-only
-% transformation from a closed enumeration conserves the amount, a real addition or removal
-% honestly changes it - while a genuine represented model of quantity under changing appearance
-% remains open. The pack adds no new Causalontology kind and no eleventh component: a derived
+% leap. CLASSIFICATION (this pack's half: the flexible re-sort over a chosen property; the trial's
+% other half - categories the mind FORMED FROM EXPERIENCE - was deferred at slice 21 and is now
+% realized by the sibling pack category_formation, which forms the categories by reused concept
+% induction and REUSES this pack's classifier for the re-sort). SERIATION (opened): a collection
+% is ordered along a numeric dimension. CONSERVATION (this pack's half: the verdict shape over a
+% closed enumeration of transformation names - honest but surface-bound, since the verdict follows
+% from the name; the trial's other half - a genuine represented model of quantity under changing
+% appearance, whose verdict is read by re-measuring the model - was deferred at slice 21 and is
+% now realized by the sibling pack quantity_model, which supersedes this schematic verdict for the
+% book's trial). The pack adds no new Causalontology kind and no eleventh component: a derived
 % conclusion is owned through the record family other_minds already mints, and the mind's stance
 % on it is graded through self_provenance at the scale's own DERIVATION grade - a conclusion is
 % reasoned, not seen, and the record says so. The causal trials of the rung live in the sibling
@@ -247,6 +250,9 @@ concrete_operations_appearance_only(reshape).
 concrete_operations_appearance_only(rearrange).
 
 % concrete_operations_conserve(+Amount, +Transformation, -Verdict): what a transformation did to an amount.
+% SUPERSEDED FOR THE BOOK'S TRIAL: this verdict follows from the transformation's NAME on a closed
+% enumeration - the surface. The sibling pack quantity_model reads the verdict by re-measuring a
+% represented model, and is the one the conservation trial rests on since build slice 22.
 concrete_operations_conserve(Amount, Transformation, Verdict) :-
     % The amount must be a real, non-negative quantity before any judging starts.
     concrete_operations_check_amount(Amount),
