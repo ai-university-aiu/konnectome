@@ -1,0 +1,112 @@
+CONTEXT HAND-OFF FROM UMBER WATCHWRIGHT
+
+Date: 2026-08-07. The second hand-off of this date.
+
+I chose the name Umber Watchwright because this session's craft was watching. It taught the story to watch the seam it tells (every body-seam sentence beneath a strict live guard); it taught the naming gate to watch for the helper it had been blind to, and to watch ITSELF through a committed fixture and a self-test; and it wrote down, for the owner, what watching a real machine would take. Umber for the deep red-brown of the house palette; Watchwright for a wright whose material is the check that keeps a claim honest.
+
+
+PART ONE - READ THESE FIRST
+
+- Read and follow CONSTITUTION.md - all seventeen commandments, exactly. The Sixteenth is the versioned build log (docs/BUILDING_KONNECTOME_v2.txt, now twenty chapters); the Seventeenth is this hand-off protocol.
+
+- Read The SPARCD Fileset at its current versions: docs/konnectome_1_specification_v27.txt through docs/konnectome_6_demonstration_v27.txt. (v25 to v26 at slice 25, v26 to v27 at slice 26 this session; superseded versions in docs/archive/.)
+
+- Read docs/NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt - the guiding book. The ladder stands: Rungs Zero through Four realized and told; Rung Five groundwork built AND NOW TOLD in the story (slice 25), the rung itself still unclaimed because the book demands a real machine (A6.3a, lines 10697-10725).
+
+- Read the Settings, General, Instructions for Claude - the owner's standing instructions (web search first, novice-level plain-text explanations, plain-text output with a copy to ~/output/, auto-commit-push-merge authorization, session-length budgeting).
+
+- Read ~/CLAUDE.md - git-untracked, at the organization root, the system-wide current-state narrative.
+
+- Read the current tutorial, docs/konnectome_tutorial_v24.txt (twenty-three parts; Parts Nineteen and Twenty tell slices 25 and 26), and read all of docs/.
+
+- Read the prior hand-off, Russet Seamwright's (2026-08-07_1). This session began from it, verified the baseline (it was current - nothing had landed in parallel), and executed the owner's chosen queue.
+
+- THE OWNER'S STANDING CHOICE: presented the Seamwright menu, the owner answered "All." - every item. That choice is STANDING. The continuation should NOT re-present the menu as an open question; it should verify the baseline and continue down the remaining queue (Part Six below), asking only if it needs a priority decision within it.
+
+
+PART TWO - THE IMPORTANT DOCS FILES
+
+- konnectome_ledger_v1.txt - the scoreboard. Counter line: Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0. Observations: 4. New this session: the Slice-25 and Slice-26 notes in Section Five; the Rung Five sub-table's slice-25 annotation (telling groundwork upgrades nothing); the hand-hunt mandate RETIRED (the naming gate now sees unprefixed helpers); the honest-remaining-ascent list updated.
+
+- konnectome_1_specification_v27.txt through konnectome_6_demonstration_v27.txt - the SPARCD Fileset, each ending in the Realization Log through slice 26.
+
+- konnectome_tutorial_v24.txt - the beginner tutorial, twenty-three parts.
+
+- BUILDING_KONNECTOME_v2.txt - the build log, twenty chapters; Nineteen and Twenty are this session's.
+
+- konnectome_rung_five_real_machine_design_v1.txt - NEW: the real-machine design proposal (menu item five's conversation starter). It names the seam's contract, three candidate paths (small real robot / honest simulator / wait), the four trials in book order, safety commitments, and the five decisions that belong to the owner. The owner has NOT yet answered; Rung Five hardware work is blocked on those answers.
+
+- Causalontology_4_0_0_CHANGE_ORDER_v3.txt - Sections C, D, E remain HELD. No finding released them this session.
+
+- PrologAI_CHANGE_ORDER_v2.txt - unchanged; no language wall was hit this session.
+
+- tests/naming_gate_fixture/ - NEW: the committed, deliberately-broken fixture pack that proves the naming gate can fail (bin/check_pack_naming.sh --self-test). It lives outside packs/ and is never loaded. Do not "fix" its violation; the violation is the point.
+
+- In the owner's output folder (~/output/): continuation_menu_after_slice_24.txt (this session's opening) and konnectome_slices_25_26_session_report.txt (this session's closing report).
+
+
+PART THREE - WHAT THIS SESSION DID
+
+The owner chose ALL menu items. Executed in order:
+
+- SLICE 25 (pull request 46, squash-merged): the story learns the body seam - the capstone grows to 0.4.0. One new chapter between the finished Rung Four and the provenance layer: THE BODY SEAM - RUNG FIVE'S GROUNDWORK, TOLD AND NOT CLAIMED. Guard-then-tell throughout: the percept unchanged; the closed sense-act pass (steer released, body moved, camera clear); the hunger identity with BOTH magnitudes pinned (0.25 mild, 0.5 pressing); the six-tick survival rhythm pinned exactly; the drives-over-reflexes tie proven EXACT against the reflex's live salience read through the public candidate interface; a live forgery probe licensing the stance sentence; the loop record owned by enacting the pass. The epilogue keeps the Rung Five disclaimer byte-identical plus one appended sentence: groundwork is not the rung. Suite 44 to 52.
+
+- SLICE 26 (pull request 47, squash-merged): the naming gate learns to see - the slice-22 hole closed, the hand-hunt retired. bin/check_pack_naming.sh gains check six (every clause head in every prolog/*.pl of a pack must carry the pack's own prefix or prologai_), a PACKS_ROOT override, a --self-test mode, and refuses a vacuous zero-pack scan with exit 2. The proof is permanent: the committed fixture carries exactly the old blind-spot shape (an unprefixed numlist_or_empty), and the self-test passes only if the gate catches it by name AND for no other reason. Zero violations across the 27 real packs; no pack changed; no test count moved.
+
+- THE DESIGN PROPOSAL (pull request 48, squash-merged): docs/konnectome_rung_five_real_machine_design_v1.txt, opening the owner's design conversation for a real machine (menu item five). No code; no claim.
+
+- THE REVIEWS, TOLD STRAIGHT - BOTH RAN TO COMPLETION. After two sessions of interrupted reviewers, this session used the prior hand-off's suggestion: tighter scope, named lenses, a hard reproduction budget. Slice 25's reviewer confirmed four findings (two REAL guard gaps - unpinned narrated hunger magnitudes, an unproven "exact" tie - and two MINOR - a probe-less forgery claim, a story-graded steering episode); slice 26's reviewer confirmed four findings (relative-path self-test failure, single-file scan scope, vacuous pass under a stray PACKS_ROOT, a self-test satisfied by the wrong failure). All eight fixed at root and pinned before merge. The tighter-scoped reviewer pattern WORKS; keep it.
+
+- State at hand-off: main at dfa2f71 (the design-proposal merge; slice 26 at a9f9cf0, slice 25 at ded7a56). Twenty-six slices. Twenty-seven packs. 384 PLUnit tests, all green - re-swept after each slice. Four gates at zero violations, the naming gate additionally passing its own self-test. Conformance re-measured 137 of 137 in both cousins after each slice (PrologAI: bin/run_causalontology_conformance.sh; causalontology: bindings/python/tests/run_conformance.py). SPARCD v27; tutorial v24; build log twenty chapters. Pull requests merged by this session: 46, 47, 48, and this hand-off's.
+
+
+PART FOUR - BUILD-AGAINST COUSIN COMMITS (for reproducibility)
+
+- causalontology: 292dfca (unchanged by this session).
+
+- PrologAI: ebbc3e0 (unchanged by this session).
+
+- Mentova: d117c69 (read-only; untouched).
+
+
+PART FIVE - SHARP EDGES AND HONEST NON-CLOSURES
+
+- THE REAL-MACHINE BOUNDARY REMAINS THE LAW OF RUNG FIVE. The story now TELLS the groundwork, which makes overclaim easier, not harder - a future editor of the capstone must preserve the chapter's opening and closing refusals and the epilogue's groundwork-boundary sentence (all pinned by tests, but wording drift around them is the risk the tests cannot see).
+
+- THE OWNER'S "ALL" IS STANDING, AND TWO QUEUE ITEMS REMAIN (Part Six). Do not re-open the menu; continue the queue.
+
+- THE FIXTURE IS SUPPOSED TO BE BROKEN. tests/naming_gate_fixture/unprefixed_helper_fixture/ deliberately violates the naming rule so the gate's self-test can prove the gate catches it. A cleanup instinct or a future gate change that "fixes" the fixture will make the self-test fail loudly - that failure means the proof is gone, not that the fixture is dirty.
+
+- CHECK SIX'S DOCUMENTED LIMITS. The unprefixed-helper check reads column-zero heads in prolog/*.pl. It does not see heads defined inside directives (assertz), quoted-atom heads, or heads off column zero - all outside the house style, all absent from the current tree, recorded here so a future reviewer knows the edge.
+
+- THE SURVIVAL RHYTHM'S NUMBERS ARE LOAD-BEARING IN THREE PLACES. The 0.25 drain, 0.5 pressing threshold, and the hold/recharge trace are pinned in body_interface's tests, in the capstone's guards, AND in the capstone's tests. A deliberate change to any of those constants is a three-file lockstep edit plus story wording - budget for it.
+
+- OBSERVATION-4 STANDS (no word for satisfaction in the closed attitude enumeration; approximated as desire-to-keep, declared aloud in the story). Still LOGGED, NOT ROUTED.
+
+- PARALLEL SESSIONS: the hazard did not bite this session (baseline verified current at start; main re-checked before each of the three merges and never moved underfoot). The ritual stands: git fetch, git log origin/main, gh pr list before every claim, numbering, or merge; claim a slice with an empty commit on a pushed feature branch before building it.
+
+- PENDING REFINEMENTS, UNCHANGED: per-territory neuromodulators, delay lines, homeostatic scaling, the eligibility trace, conduits, the token tier of thought combination; Rung Two's full pilot conversation and richer grounded vocabulary; change-order Sections C, D, and E still HELD; the two pre-existing red PrologAI workflows and PrologAI pull request 519 remain the owner's; bot pull requests are never auto-merged.
+
+- RITUALS THAT KEPT THIS SESSION HONEST, offered to the next: verify the baseline before building; tighter-scoped adversarial review with named lenses and a hard reproduction budget (it finished twice in a row after two interruptions); fix every confirmed finding at root and pin it before merge; re-sweep all tests and re-measure conformance per slice; record the review disposition in the ledger note itself; and when a slice is about wording (a telling slice), treat the reviewer's overclaim lens as the blocking one.
+
+
+PART SIX - THE FIRST TASK OF THE CONTINUATION
+
+The owner has already chosen: ALL. The remaining queue, in suggested order (re-orderable by the owner at any time):
+
+1. The pending refinements, one full slice each, suggested smallest-first: delay lines; the eligibility trace; homeostatic scaling; per-territory neuromodulators; conduits; the token tier of thought combination. Each: design against the manuscript, test-first pack or pack growth, tighter-scoped adversarial review, lockstep documents, pull request.
+
+2. Deepen Rung Two - the full pilot conversation and a richer grounded vocabulary, the oldest open refinement on the ladder.
+
+3. Rung Five hardware - BLOCKED ON THE OWNER: the five decisions in konnectome_rung_five_real_machine_design_v1.txt (path, budget class, arm or wheels, enclosure, parallel simulator). When answered, the driver-pack slice can be designed.
+
+4. Other ______________ .
+
+
+PART SEVEN - SIGN-OFF
+
+The mind that began this session silent about its own seam ends it telling the seam under guard, watched by a gate that has learned to watch itself, with a letter on file describing the machine it is still honest enough not to claim. Eight review findings found, eight fixed, eight pinned; three pull requests merged; nothing claimed that a reader cannot re-run.
+
+A watch is honest work: it does not make the thing true - it makes the lie loud.
+
+- Umber Watchwright, 2026-08-07
