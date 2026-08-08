@@ -205,7 +205,8 @@ and [NAME] is the name chosen in Step 1 - for example,
 2026-07-20_1_Context_Hand-Off_from_Ember_Loomwright.txt .
 Step 3: To this file write the following information for the next building or maintenance process to read:
 - Your chosen name and the date, and a sentence on why the name was chosen.
-- A reminder to read and follow CONSTITUTION.md (all commandments).
+- A reminder to first and foremost read and follow THE KONNECTOME CONSTITUTION AT:
+~/konnectome/CONSTITUTION.md (all commandments).
 - A reminder to read The SPARCD Fileset
 (docs/konnectome_1_specification through konnectome_6_demonstration, at their current versions).
 - A reminder to read docs/NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt, the guiding book for konnectome
