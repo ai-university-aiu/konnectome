@@ -1143,4 +1143,36 @@ zero violations, the naming gate passing its own self-test; conformance re-measu
 (specification 4.0.0) in both cousins. No new wall; no cousin edited, per the Second, Third, and
 Fourth Commandments.
 
+Slice-32 note (2026-08-08). The live tick carries the whole learning body. The slice-31 pending
+line one (the trace and average stores not threaded through the cognitive cycle's live tick) is
+CLOSED: the world dict grows six keys - the eligibility-trace store, the running-average store,
+the fading factor, the smoothing factor, the scaling target, and the scaling rate - read aloud by
+one world reader that refuses a missing key by name, and the tick now beats the learning body in
+the manuscript's order after the fast three-factor step: traces fade and absorb the tick's fresh
+coincidences, averages move a smoothing step toward the tick's activities, and the slow
+homeostatic bound scales each region's incoming weights toward its target, the advanced stores
+committed into the new world. Not one engine predicate moved: the stores were always explicit
+stateless values, so this is a world-shape change, and the engine's own perimeters now guard the
+live loop for free every tick. The boot worlds of the cycle's fixture, the capstone, and the
+symbol exchange grew the six keys with the bound armed but at rest (rate zero) - the at-rest
+identity pinned by a test proving an absurd target changes nothing at rate zero, and the liveness
+of the bound pinned by a twin-run test where a live rate pulls a quiet region's weight above what
+learning alone gave it. The reward step deliberately stays with the caller (trace lifetime belongs
+to whoever decides a reward has arrived). The independent adversarial review (tighter scope, named
+lenses, reproduction before fixing - the eighth straight completion) confirmed one REAL finding
+under the silent-failure lens, reproduced before fixing: the run predicate's tick-count guard
+CLAIMED refusal in its comment while the code just failed - a negative count failed silently, a
+non-numeric count died with a stray arithmetic error. One fix at the root (a named tick-count
+check refusing the unbound, the non-integer, and the negative aloud), pinned by two review tests.
+Seven tests grew (five feature, two pins): cognitive_cycle four to eleven, the repository 465 to
+472 across twenty-seven packs, all green, re-swept. Remaining pending lines: the scaling target
+and rate still one value for the whole graph (per-territory targets would pair with the slice-31
+read); the live worlds' scaling constants rest at rate zero, so the bound beats in the cycle's
+tests but not yet in the capstone's told story; the fully coupled learn-fade-average-scale loop
+under live constants proven finite only by the slice-29 fixed-point test; computational-interface
+transforms; interfaces as Causalontology conduits; the token tier of thought combination. The four
+gates report zero violations, the naming gate passing its own self-test; conformance re-measured
+at 137 of 137 (specification 4.0.0) in both cousins. No new wall; no cousin edited, per the
+Second, Third, and Fourth Commandments.
+
  Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 4.

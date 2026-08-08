@@ -16,8 +16,12 @@
 :- use_module(library(action_selector), [action_selector_select/2]).
 % Reuse the override controller: a vital drive in distress may seize control.
 :- use_module(library(override_controller), [override_controller_arbitrate/4]).
-% Reuse the plasticity engine: it learns from the new activity and the dopamine.
-:- use_module(library(plasticity_engine), [plasticity_engine_step/5]).
+% Reuse the plasticity engine: the fast three-factor learning, the fading traces, the running
+% averages, and the slow homeostatic bound - the whole learning body, beating in the live tick.
+:- use_module(library(plasticity_engine), [plasticity_engine_step/5,
+                                           plasticity_engine_trace_step/5,
+                                           plasticity_engine_average_step/4,
+                                           plasticity_engine_scaling_step/5]).
 % Reuse the observer: it records the tick as a Causalontology token_occurrence.
 :- use_module(library(observer), [observer_record_tick/3]).
 
@@ -28,31 +32,59 @@
 % selector releases one action under the override controller; the plasticity engine learns; the BODY
 % RESPONDS as the released action moves it toward what it needs; and the observer records the tick. The
 % world is held as a dict, and this is the loop of the mind, now closing on the body it acts upon.
+% Since slice 32 the tick carries the learning engine's WHOLE body: the world dict also holds the
+% eligibility-trace store (slice 28), the running-average store (slice 29), and the four constants
+% that beat them (the fading factor, the smoothing factor, the scaling target, and the scaling rate),
+% so every tick fades and refreshes the traces, moves the averages, and applies the slow homeostatic
+% bound after the fast learning - the Section A2.5-and-A2.6 machinery live in the loop, not waiting
+% for a caller to remember it. The reward step stays with the caller, deliberately: trace lifetime
+% belongs to whoever decides a reward has arrived.
+
+% cognitive_cycle_world_value(+World, +Key, -Value): read one world key, refusing a missing key aloud.
+cognitive_cycle_world_value(World, Key, Value) :-
+    % Use the stored value if present; a world missing a key the tick needs is an error, never a silent failure.
+    (  get_dict(Key, World, Found)
+    -> Value = Found
+    % Refuse the gutted world by the missing key's name, so a stale world can never half-run a tick.
+    ;  throw(error(existence_error(cognitive_cycle_world_key, Key), _))
+    ).
 
 % cognitive_cycle_step(+World0, -World, -Summary): run one whole tick and report what happened.
 cognitive_cycle_step(World0, World, Summary) :-
     % Read the current tick count.
-    get_dict(tick, World0, Tick0),
+    cognitive_cycle_world_value(World0, tick, Tick0),
     % Read the body state the drives monitor and the actions move.
-    get_dict(body, World0, Body0),
+    cognitive_cycle_world_value(World0, body, Body0),
     % Read the current drives.
-    get_dict(drives, World0, Drives0),
+    cognitive_cycle_world_value(World0, drives, Drives0),
     % Read the neuromodulatory bus.
-    get_dict(bus, World0, Bus0),
+    cognitive_cycle_world_value(World0, bus, Bus0),
     % Read the constructs (the registry of what updates each tick).
-    get_dict(constructs, World0, Constructs),
+    cognitive_cycle_world_value(World0, constructs, Constructs),
     % Read the current construct activations.
-    get_dict(activations, World0, Activations0),
+    cognitive_cycle_world_value(World0, activations, Activations0),
     % Read the connection graph's interfaces.
-    get_dict(interfaces, World0, Interfaces0),
+    cognitive_cycle_world_value(World0, interfaces, Interfaces0),
+    % Read the eligibility-trace store the tick advances.
+    cognitive_cycle_world_value(World0, traces, Traces0),
+    % Read the running-average store the tick advances.
+    cognitive_cycle_world_value(World0, averages, Averages0),
+    % Read the fading factor that lets every trace forget.
+    cognitive_cycle_world_value(World0, fading_factor, FadingFactor),
+    % Read the smoothing factor that paces every running average.
+    cognitive_cycle_world_value(World0, smoothing_factor, SmoothingFactor),
+    % Read the activity target each region's slow bound defends.
+    cognitive_cycle_world_value(World0, scaling_target, ScalingTarget),
+    % Read the scaling rate of the slow bound (zero means armed but at rest).
+    cognitive_cycle_world_value(World0, scaling_rate, ScalingRate),
     % Read the vital-drive overrides.
-    get_dict(overrides, World0, Overrides),
+    cognitive_cycle_world_value(World0, overrides, Overrides),
     % Read the override distress threshold.
-    get_dict(override_threshold, World0, Threshold),
+    cognitive_cycle_world_value(World0, override_threshold, Threshold),
     % Read the learning rate.
-    get_dict(learning_rate, World0, LearningRate),
+    cognitive_cycle_world_value(World0, learning_rate, LearningRate),
     % Read the fixed simulation start, for the observer's timestamps.
-    get_dict(simulation_start, World0, SimulationStart),
+    cognitive_cycle_world_value(World0, simulation_start, SimulationStart),
     % STEP ONE (A3.3): the drives read the body, compute the reward, and broadcast it as dopamine.
     drive_system_step(Drives0, Body0, Bus0, Drives1, Reward, Bus1),
     % The regions propose actions: each drive proposes to reduce itself, biased by its current error.
@@ -65,22 +97,43 @@ cognitive_cycle_step(World0, World, Summary) :-
     override_controller_arbitrate(Overrides, Threshold, NormalOutcome, FinalOutcome),
     % STEP FOUR: the plasticity engine learns from the new activations and the dopamine on the bus.
     plasticity_engine_step(Interfaces0, Activations1, Bus1, LearningRate, Interfaces1),
+    % The eligibility traces fade one step and absorb this tick's fresh coincidences (slice 28, live).
+    plasticity_engine_trace_step(Interfaces1, Activations1, FadingFactor, Traces0, Traces1),
+    % The running averages move one smoothing step toward this tick's activities (slice 29, live).
+    plasticity_engine_average_step(Activations1, SmoothingFactor, Averages0, Averages1),
+    % The slow homeostatic bound scales each region's incoming weights toward its target (slice 29, live).
+    plasticity_engine_scaling_step(Interfaces1, Averages1, ScalingTarget, ScalingRate, Interfaces2),
     % STEP FIVE: the body responds - the released action moves the body toward what it needs.
     drive_system_apply_action(FinalOutcome, Drives0, Body0, Body1),
     % STEP SIX: advance the tick counter.
     NextTick is Tick0 + 1,
     % The observer records this tick as a Causalontology token_occurrence.
     observer_record_tick(SimulationStart, NextTick, Record),
-    % Assemble the new world with the updated pieces committed together, including the moved body.
-    put_dict(_{tick: NextTick, body: Body1, drives: Drives1, bus: Bus1, activations: Activations1, interfaces: Interfaces1},
+    % Assemble the new world with the updated pieces committed together, including the moved body
+    % and the learning body's advanced trace and average stores.
+    put_dict(_{tick: NextTick, body: Body1, drives: Drives1, bus: Bus1, activations: Activations1,
+               interfaces: Interfaces2, traces: Traces1, averages: Averages1},
              World0, World),
     % The tick summary reports the tick number, the reward, the released action, and the recorded thought.
     Summary = tick_summary(NextTick, Reward, FinalOutcome, Record).
 
+% cognitive_cycle_check_tick_count(+NumTicks): refuse a tick count time could not run, by name.
+cognitive_cycle_check_tick_count(NumTicks) :-
+    % An unbound count cannot be judged, and must never be silently bound by the check itself.
+    (  var(NumTicks)
+    -> throw(error(instantiation_error, _))
+    % Time moves forward in whole ticks, so the count is an integer at or above zero.
+    ;  integer(NumTicks), NumTicks >= 0
+    -> true
+    % Anything else is refused aloud, never answered by a silent failure or a stray arithmetic error
+    % (the slice-32 review's finding: the run's old comment CLAIMED refusal while the code just failed).
+    ;  throw(error(domain_error(cognitive_cycle_tick_count, NumTicks), _))
+    ).
+
 % cognitive_cycle_run(+World0, +NumTicks, -WorldFinal, -Summaries): run the mind for NumTicks ticks.
 cognitive_cycle_run(World0, NumTicks, WorldFinal, Summaries) :-
-    % Refuse a negative tick count; time never runs backward.
-    NumTicks >= 0,
+    % Refuse a negative, fractional, unbound, or non-numeric tick count aloud; time never runs backward.
+    cognitive_cycle_check_tick_count(NumTicks),
     % Drive the loop from zero with an empty summary accumulator.
     cognitive_cycle_loop(0, NumTicks, World0, [], SummariesReversed, WorldFinal),
     % Reverse the summaries so the earliest tick comes first.

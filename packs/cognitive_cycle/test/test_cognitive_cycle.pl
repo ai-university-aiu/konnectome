@@ -9,7 +9,9 @@
 
 % A fixed starting world, so every test is deterministic and reproducible.
 cognitive_cycle_test_world(World) :-
-    % A minimal but complete world: one drive, one two-construct connection, the body away from set-point.
+    % A minimal but complete world: one drive, one two-construct connection, the body away from set-point,
+    % and since slice 32 the whole learning body's state - the trace store, the average store, and the
+    % four constants that beat them - with the slow scaling bound armed but at rest (rate zero).
     World = world{ tick: 0,
                    body: [temperature-40],
                    drives: [drive(temperature, temperature, 37, none)],
@@ -17,6 +19,12 @@ cognitive_cycle_test_world(World) :-
                    constructs: [construct(a, source), construct(b, relay(1))],
                    activations: [a-1, b-0],
                    interfaces: [interface(a, b, 0.5, 1, transmissive)],
+                   traces: [(a-b)-0],
+                   averages: [a-0, b-0],
+                   fading_factor: 0.6,
+                   smoothing_factor: 0.2,
+                   scaling_target: 0.5,
+                   scaling_rate: 0.0,
                    overrides: [],
                    override_threshold: 0.5,
                    learning_rate: 0.1,
@@ -93,6 +101,96 @@ test(the_cycle_is_reproducible) :-
     get_dict(body, WorldB, BodyB),
     % Confirm the bodies match.
     assertion(BodyA == BodyB).
+
+% The live tick advances the eligibility-trace store: coincidence leaves its fading fingerprint.
+test(the_live_tick_advances_the_trace_store) :-
+    % Start from the fixed world, whose one trace sits at zero.
+    cognitive_cycle_test_world(World0),
+    % Run two ticks, enough for the relay end to wake and the coincidence to register.
+    cognitive_cycle_run(World0, 2, WorldFinal, _Summaries),
+    % Read the trace store the tick now carries.
+    get_dict(traces, WorldFinal, Traces),
+    % The one learnable interface's trace accumulated a positive coincidence.
+    Traces = [(a-b)-Trace],
+    % Confirm the trace rose above its starting zero.
+    assertion(Trace > 0).
+
+% The live tick moves the running averages toward each construct's activity.
+test(the_live_tick_moves_the_running_averages) :-
+    % Start from the fixed world, whose averages sit at zero.
+    cognitive_cycle_test_world(World0),
+    % Run three ticks, so the smoothing steps have something to smooth.
+    cognitive_cycle_run(World0, 3, WorldFinal, _Summaries),
+    % Read the average store the tick now carries.
+    get_dict(averages, WorldFinal, Averages),
+    % The source construct held its activity at one, so its average climbed toward one.
+    memberchk(a-AverageOfSource, Averages),
+    % Confirm the source's average rose above its starting zero.
+    assertion(AverageOfSource > 0),
+    % Confirm the average is still an average, not a copy: it has not overshot the activity.
+    assertion(AverageOfSource =< 1).
+
+% With the scaling rate at zero the slow bound is armed but at rest: the target cannot matter.
+test(scaling_at_rest_leaves_the_weights_to_learning_alone) :-
+    % Start from the fixed world, whose scaling rate is zero.
+    cognitive_cycle_test_world(World0),
+    % Make a twin world differing only in an absurd activity target.
+    put_dict(scaling_target, World0, 1000, WorldAbsurd0),
+    % Run both worlds the same four ticks.
+    cognitive_cycle_run(World0, 4, WorldA, _SummariesA),
+    cognitive_cycle_run(WorldAbsurd0, 4, WorldB, _SummariesB),
+    % Read both final interface lists.
+    get_dict(interfaces, WorldA, InterfacesA),
+    get_dict(interfaces, WorldB, InterfacesB),
+    % At rate zero the target is scenery: the learned weights are identical.
+    assertion(InterfacesA == InterfacesB).
+
+% With a live scaling rate the slow bound beats: a quiet region's incoming weight is pulled up.
+test(a_live_scaling_rate_bends_the_weights) :-
+    % Start from the fixed world.
+    cognitive_cycle_test_world(World0),
+    % Make a twin world differing only in a live scaling rate.
+    put_dict(scaling_rate, World0, 0.2, WorldLive0),
+    % Run both worlds the same four ticks.
+    cognitive_cycle_run(World0, 4, WorldRest, _SummariesRest),
+    cognitive_cycle_run(WorldLive0, 4, WorldLive, _SummariesLive),
+    % Read both final weights on the one learnable interface.
+    get_dict(interfaces, WorldRest, [interface(a, b, WeightRest, 1, transmissive)]),
+    get_dict(interfaces, WorldLive, [interface(a, b, WeightLive, 1, transmissive)]),
+    % The live bound moved the weight where the resting bound could not.
+    assertion(WeightLive =\= WeightRest),
+    % The receiving relay sat below the one-half target, so its incoming weight was pulled UP.
+    assertion(WeightLive > WeightRest).
+
+% A world missing any of the learning body's keys is refused aloud, never silently failed.
+test(a_world_missing_a_learning_store_is_refused_aloud) :-
+    % Every key the slice-32 tick reads must be present, or the tick refuses by name.
+    forall(member(Key, [traces, averages, fading_factor, smoothing_factor, scaling_target, scaling_rate]),
+           ( % Start from the fixed world.
+             cognitive_cycle_test_world(World0),
+             % Remove exactly one of the learning body's keys.
+             del_dict(Key, World0, _Value, WorldMissing),
+             % The tick refuses the gutted world by the missing key's name.
+             catch(cognitive_cycle_step(WorldMissing, _World, _Summary), error(Error, _), true),
+             % Confirm the refusal names the key.
+             Error == existence_error(cognitive_cycle_world_key, Key)
+           )).
+
+% A negative tick count is refused aloud, never answered by a silent failure (the slice-32 review pin).
+test(a_negative_tick_count_is_refused_aloud,
+     [ error(domain_error(cognitive_cycle_tick_count, -1)) ]) :-
+    % Start from the fixed world.
+    cognitive_cycle_test_world(World0),
+    % Time never runs backward: the run refuses the count by name.
+    cognitive_cycle_run(World0, -1, _WorldFinal, _Summaries).
+
+% A tick count that is not a whole number is refused aloud, never by a stray arithmetic error (review pin).
+test(a_non_integer_tick_count_is_refused_aloud,
+     [ error(domain_error(cognitive_cycle_tick_count, banana)) ]) :-
+    % Start from the fixed world.
+    cognitive_cycle_test_world(World0),
+    % Time moves in whole ticks: the run refuses the count by name.
+    cognitive_cycle_run(World0, banana, _WorldFinal, _Summaries).
 
 % Close the test block for the cognitive_cycle pack.
 :- end_tests(cognitive_cycle).
