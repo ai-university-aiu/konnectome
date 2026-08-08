@@ -263,7 +263,9 @@ capstone_demonstration_world(World) :-
     capstone_demonstration_simulation_start(Start),
     % The world starts at tick zero with a too-warm body, one temperature drive defending
     % thirty-seven, an empty bus, a source construct feeding a relay through one learnable
-    % transmissive interface, and the respiration override armed but at rest.
+    % transmissive interface, the learning body's trace and average stores at zero with the
+    % slow scaling bound armed but at rest (rate zero), and the respiration override armed
+    % but at rest.
     World = world{
         tick: 0,
         body: [temperature-40],
@@ -272,6 +274,12 @@ capstone_demonstration_world(World) :-
         constructs: [construct(a, source), construct(b, relay(1))],
         activations: [a-1, b-0],
         interfaces: [interface(a, b, 0.5, 1, transmissive)],
+        traces: [(a-b)-0],
+        averages: [a-0, b-0],
+        fading_factor: 0.6,
+        smoothing_factor: 0.2,
+        scaling_target: 0.5,
+        scaling_rate: 0.0,
         overrides: [override(respiration, 0, 0.0, breathe)],
         override_threshold: 0.5,
         learning_rate: 0.1,

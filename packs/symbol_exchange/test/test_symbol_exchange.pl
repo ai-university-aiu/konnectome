@@ -15,7 +15,8 @@ symbol_exchange_test_simulation_start("2026-07-26T00:00:00Z").
 symbol_exchange_test_world(World) :-
     % The fixed simulation start stamps the run.
     symbol_exchange_test_simulation_start(Start),
-    % The same small world the capstone boots: a too-warm body and a temperature drive defending thirty-seven.
+    % The same small world the capstone boots: a too-warm body, a temperature drive defending
+    % thirty-seven, and the learning body's stores at zero with the scaling bound armed at rest.
     World = world{
         tick: 0,
         body: [temperature-40],
@@ -24,6 +25,12 @@ symbol_exchange_test_world(World) :-
         constructs: [construct(a, source), construct(b, relay(1))],
         activations: [a-1, b-0],
         interfaces: [interface(a, b, 0.5, 1, transmissive)],
+        traces: [(a-b)-0],
+        averages: [a-0, b-0],
+        fading_factor: 0.6,
+        smoothing_factor: 0.2,
+        scaling_target: 0.5,
+        scaling_rate: 0.0,
         overrides: [override(respiration, 0, 0.0, breathe)],
         override_threshold: 0.5,
         learning_rate: 0.1,
