@@ -1,0 +1,92 @@
+THE VISION DOCUMENT SET, READ TOP-DOWN
+
+The Eighth Commandment analysis: the Certified_Neuroscientist corpus of thirty-eight documents, read from the framework downward, assessed against the konnectome that exists.
+
+Date: 2026-08-09. Version 1.
+
+HOW THIS ANALYSIS WAS MADE
+
+The Eighth Commandment mandates a top-down analysis of the Vision Document Set: read the set from the framework documents downward, assess whether any top-level architectural decisions should be revised in their light, record findings in the ledger, and route any genuine wall through the gated change orders. This document is that analysis. The reading order was the commandment's own: first the two framework documents (THE_FIFTEEN_LAYERS_IN_BRIEF and TFELOAOTHNAES), then the four konnectome-facing top layers (the Layer 12 Faculty Specification, the Layer 13 Tutor Protocol, the Layer 14 Knowledge Environment, the Layer 15 Design Method), then the six heavy layer corpora (Layers 4 and 5, the slow variables; Layer 6, the cells, with the five neuronal volumes and the chapter template; Layer 7, the synaptics; Layer 8, the microcircuits; Layer 9's modes companion; Layer 10, the systems; Layer 11, the global states), each read in full at the outline and modes level and read deeply with representative-chapter sampling at the manuscript level. The baseline was verified green before the reading began: 494 tests across twenty-seven packs, four gates at zero violations, the capstone clean, conformance 137 of 137 in both cousins.
+
+The commandment's sobriety clauses governed every judgement below: the set informs and refines, it does not break; nothing here invalidates a passing test, a merged slice, or a green gate; and the Safety Gate stands over all of it.
+
+
+PART ONE - THE VERDICT ON THE TOP-LEVEL DECISIONS
+
+No top-level architectural decision must be reversed. This is the analysis's first and strongest finding, and it was reached independently by every layer's reading.
+
+The registry-and-scheduler-with-broadcast-bus style survives. The ten components survive. The one-tick data flow and its ordering survive. The dumb scheduler, the no-orchestrator thesis, the never-invent action selector, the passive observer, the vitality-ranked override - all survive. The Layer 11 volume, which could most plausibly have demanded a master controller, instead confirms the Arbitrated Federation: its governors (the two-process scheduler, the sleep-wake flip-flop, the stress governors) are bus-publishing constructs above the tick, not a smarter scheduler; the flip-flop is an arbiter, not a homunculus. The Layer 7 volume independently vindicates Component 4: broadcast modulators are not point-to-point edges and do not belong in the connection graph. The Layer 10 volume's global workspace has an EMERGENT arbiter - winner-take-all with recurrent amplification - which is the federation's own shape, not a ruler.
+
+The frame stands. What the corpus adds is pressure INSIDE the frame: five load-bearing refinement themes, each of which the architecture can absorb without a new component, plus one place where the ten-component discipline is under genuine, honest pressure.
+
+
+PART TWO - THE FIVE REFINEMENT THEMES
+
+THEME ONE. THE MODE REGISTER, AT EVERY GRAIN. This is the corpus's most unanimous demand: every layer's modes companion specifies its constructs as hybrid automata - a small register of discrete operating modes, continuous state evolving within the current mode, per-mode transfer functions, an explicit transition table (trigger, direction, timescale), and fault regimes excluded from the register and watched by supervisor processes instead. The demand recurs identically at the cell (386 mode entries), the junction, the motif, the region (77 entries), the system (44 entries), and culminates at Layer 11, where a GLOBAL STATE is defined as a coordinated assignment of modes across everything below - the master mode register. Konnectome today runs one rule per construct, always: the gate archetype's binary flip and arousal's settle-to-baseline are the only mode-like behaviours in the repository. The refinement: a construct-level mode register (mode name, active rule and parameters per mode, transition table), with today's single-rule construct as the degenerate one-mode case, and with transitions throwable from the bus - because the corpus's second unanimous claim is that mode setting is largely a service purchased from above, through the volume transmission channel the bus already is. One naming hazard, recorded now so it is not discovered later: the data model's existing MODE flag on interfaces and molecules means directed-versus-broadcast topology, which will collide with the operating-mode vocabulary; the collision must be resolved (by qualification or rename) before any mode-register slice.
+
+THEME TWO. THE TWO-SHIFT PRINCIPLE - THE OFFLINE CONSOLIDATION CYCLE. The single most central gap the Vision Set names, reached convergently from below (Layers 4 and 5) and from above (Layer 11). The slow-variables volume says fast change and durable commitment must be separable: a write-allocation gate decides which events graduate to durable weights (spaced repetition consolidates where massed does not), a decaying per-connection tag entitles capture and is CONSUMED when spent, and write-permission over learning is itself a slow stored variable (the freeze fence, the readability gate). The global-states volume says the schedule of all of this belongs to a two-process governor driving an alternation the corpus claims is load-bearing: online computation and offline consolidation, with interleaved replay in the offline phase expressly to defeat catastrophic forgetting, synaptic renormalisation run in that phase, and the warning aimed squarely at the current posture: a synthetic mind built from the corpus's parts but run always-on would be a brain denied sleep. Konnectome's own architecture already promises this - Component 8's text commits to a slow consolidation phase run offline - and the promise is unbuilt; meanwhile the machinery of slices 27 through 33 (eligibility traces, homeostatic scaling with per-territory targets, the observer's complete tick record) is precisely the parts an offline phase would compose. The distance to a first honest slice is short, and the standing pending line (the long-run coupled-loop proof) naturally merges into it.
+
+THEME THREE. THE EDGE TYPE SYSTEM. The Layer 7 volume is a catalogue of sixty-four junction types organised along axes, with the deepest split cognitive: every cognitive junction has an adjustable weight, every non-cognitive junction is built for fidelity and proudly refuses an update rule. Konnectome's connection graph carries two edge kinds (transmissive, computational) and one learning rule for all. The refinement: widen the edge kind into a registry-drawn edge TYPE carrying sign discipline, fixed-or-learnable as a property of the type, a learning-rule identity, and a time-constant profile - with today's edges as the default type and behaviour pinned identical by test. Downstream of the registry, in rising order of ambition: short-term facilitation-and-depression state beside the weight, silent-edge life cycle (konnectome's first structural plasticity), and edges whose target is another edge (the teacher lines and the glial wraps).
+
+THEME FOUR. THE MOTIF LIBRARY, AND INHIBITION AS A COMPUTATION. The Layer 8 volume catalogues seventy-one canonical motifs and insists a motif is a WIRING DIAGRAM plus a computation - a typed subgraph with roles, generic wherever it is installed. Konnectome's six archetypes are per-node update rules; the multi-node motif has no first-class representation, though the architecture already owns the cheap mechanism (the named-subgraph views that hold networks and pathways). The refinement: a motif catalogue as named typed subgraph views over the connection graph, starting from the motifs konnectome already implicitly instantiates (winner-take-all in the selector, the comparator in the prediction loop, broadcast in the bus, negative feedback in the drives). Beside it, the volume's Part Two insists inhibition is a distinct computational repertoire - window-cutting, thermostat, sharpening, permission, per-input tap - not merely a negative weight; this converges with Theme Three's sign discipline. And the selector itself is invited to grow from a declarative argmax into a genuine winner-take-all with deliberation, commitment, and settling-time-as-confidence, preserving the never-invent invariant.
+
+THEME FIVE. THE ABSENT COGNITIVE CLUSTER - ATTENTION, WORKING MEMORY, THE WORKSPACE. Scored against the Layer 12 Faculty Specification's fourteen faculties, konnectome's coverage is: reward and social cognition present; episodic, semantic, procedural, language, and executive partial; perception minimal (the honest body seam); attention, working memory, and the global workspace ABSENT - and the corpus treats those three as one connected gating economy (attention amplifies, the gate admits to working memory, ignition broadcasts). Two of the three are ordinary packs in waiting: a working-memory blackboard (a few self-refreshing slots, gated admission, decay, weakest-eviction) and a salience-driven attention bias. The third is the one place the ten-component discipline is under genuine pressure, recorded honestly in Part Four below.
+
+
+PART THREE - WHAT THE TOP LAYERS SETTLE
+
+The four thin konnectome-facing documents change no code and settle much. Layer 12 is the acceptance-test catalogue: fourteen faculties, each with criteria a harness could run, and a stated completion condition - one running instance passing all fourteen suites in one continuous session including at least one full offline consolidation cycle (which makes Theme Two a prerequisite of the endgame, not an option). Layer 13 makes the training interaction a first-class architectural component - the tutor interface, contingent turn-taking, curriculum at competence-plus-one, scaffold withdrawal, alignment through relationship - and konnectome's owner-authorisation constitution is recognisably that principle already in force; Rung Two's deepening (the pilot conversation) should be designed against it. Layer 14 specifies the knowledge environment - durable external memory, mounted formal tools, a curated provenance-tracked corpus, institutional error correction - and konnectome's docs-ledger-and-gates discipline is that provision already running. Layer 15 blesses the method itself: the SPARCD cycle as the compressed selection loop, the regression gate as evolution-never-breaks-the-running-system, duplication-then-divergence as the pack growth pattern, and the ledger as lineage documentation. The top of the corpus, in short, ratifies the constitution konnectome already lives under.
+
+
+PART FOUR - HONEST PRESSURES AND NON-CLOSURES
+
+The eleventh-component question. The global workspace (Layer 10, Chapter 44) is a capacity-limited broadcast of COGNITIVE CONTENT with an emergent winner-take-all arbiter and a hard ignition threshold. The action selector arbitrates actions only; the cognitive cycle hard-codes its tick order. Whether the workspace is an eleventh-component-scale change or another beside-the-skeleton construct is deliberately NOT decided by this analysis; the recommended path is a pilot pack sitting beside the skeleton (a competition over candidate contents publishing one winner per tick), with the component question answered by what the pilot teaches, not from the armchair.
+
+The ephemeral-state question. Working memory is by definition activity, not record - when the activity stops, the content is gone - while konnectome's discipline is that durable state lives in records. A working-memory pack whose slots are deliberately unrecorded (save through the observer's tick trace, which sees everything) appears consistent with both; recorded here so the tension is met by design, not stumbled into.
+
+The astrocyte tension. The architecture holds glia as modulatory entries carrying no activation of their own; the Layer 6 corpus tags eight non-neuronal types cognitive, and the protoplasmic astrocyte chapter specifies a computing, gliotransmitter-releasing integrator with state and a code sample. This is a tension, not a contradiction - noted, not acted on.
+
+The numbering cross-reference. The corpus re-addresses the guiding book's large-scale networks and cognitive systems (its sections 2.10 and 2.11) as Layer 10 constructs (chapters 21 through 30, and 9). Konnectome documents keyed to the guiding book's numbering should cross-reference the new addresses when next touched - informative, non-breaking housekeeping.
+
+
+PART FIVE - WALLS: NONE ROUTED, SIX WATCHES RECORDED
+
+Applying the Second and Third Commandment gates strictly - a causalontology change must be a record that needs SHARING across agents as a signed, evidence-graded, content-addressed artifact, not merely computed inside one runtime; a PrologAI change must be a real language gap; and findings are discovered by building, never guessed from the armchair - the analysis routes NOTHING to either change order today. Six watch items are recorded in the ledger so the builder who hits one knows it was foreseen:
+
+WATCH-1, the mode kind. A mode register and its transitions are runtime state, expressible as ordinary pack data; only if a faculty must EXPORT its operating posture as a shareable signed record does a causalontology mode kind become a candidate. Two layer readings independently rejected this as a wall today.
+
+WATCH-2, the episodic event index. A bound what-where-when conjunction with consolidation status, distinct from its constituent token occurrences - the likeliest genuine wall among the memory slices, to be claimed only when retrieval-by-fragment is actually built and actually cannot express it.
+
+WATCH-3, consolidation provenance. A replayed, re-weighted offline copy of a record (content preserved, arousal tag attenuated) may strain the assert-grade-retract provenance scale; a candidate only if a consolidation slice cannot express the derivation.
+
+WATCH-4, the workspace ignition record. Content X was globally broadcast at tick T, rivals suppressed - a claim about access, not occurrence; possibly plain token occurrence plus provenance, possibly wall-shaped.
+
+WATCH-5, the weight checkpoint. If a trained mind's weight state must ever travel between agents as one signed artifact, verify the existing record kinds carry a whole-world configuration commit under one content address before minting a new kind.
+
+WATCH-6, the language pack's second half. Layer 10's language system is paired comprehension and production over one shared lexicon; the PrologAI language pack konnectome wraps is a word bank. If Rung Two's deepening hits the production half as a real reuse wall, it routes to the PrologAI change order, not to a konnectome reimplementation.
+
+Sections C, D, and E of the causalontology change order remain HELD; nothing in this analysis releases them.
+
+
+PART SIX - THE SUGGESTED SLICE FAMILIES, SMALLEST FIRST
+
+The analysis suggests - the owner disposes. Each family is ordinary test-first pack work behind the usual gates; none touches a cousin.
+
+Family one, the two-shift machinery (Theme Two, and the merged pending line): (a) a global-state value on the bus with exactly two states, online and offline, defaulting to online with today's behaviour pinned identical; (b) wiring the reward step into the live tick with capture consuming the spent traces; (c) a two-process governor pack publishing the flip; (d) the offline works - interleaved replay plus the slow bound at a raised rate, proven by a catastrophic-forgetting rest-twin telling in the house style, which also subsumes the standing long-run-proof pending line; (e) later, the write-allocation gate and the per-territory plasticity fence.
+
+Family two, the mode register (Theme One): the naming-collision resolution; then a construct-level mode register with bus-thrown transitions, the gate archetype re-expressed as its two-mode case, validated against corpus entries (the microglia's four modes, the ependymocyte's proud one).
+
+Family three, the edge type registry (Theme Three): the kind-to-type widening with pinned identity; learnability as a type property; then short-term dynamics and the silent-edge life cycle.
+
+Family four, the cognitive cluster (Theme Five): the working-memory blackboard; the workspace pilot beside the skeleton; attention as salience-driven bias; the bus adopting the corpus's six named broadcast channels (a naming slice that makes every later modulator pack cheap).
+
+Family five, the motif catalogue (Theme Four): motifs as named subgraph views; the selector's winner-take-all deepening.
+
+Family six, tooling: a template parser that splits the corpus's fixed-aspect chapters into loadable per-type fact files, turning the three hundred eighty-seven catalogued types into data and proving the corpus's own mechanical-splice claim.
+
+
+PART SEVEN - CLOSING
+
+The Vision Document Set arrived with fanfare and survives sober reading. It does not break the konnectome that exists; it explains it, and then it points, with unusual convergence, at three things: give the constructs modes, give the mind a night shift, and give thought a stage to ignite on. The frame the first thirty-four slices built is the frame the corpus asks for. What remains is to fill it - one slice, one test, one told story at a time.
+
+END OF ANALYSIS, VERSION 1
