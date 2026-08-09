@@ -517,5 +517,80 @@ test(a_duplicate_interface_is_refused_at_the_step, error(domain_error(plasticity
     plasticity_engine_step([interface(a, b, 0.5, 1, transmissive), interface(a, b, 0.5, 1, transmissive)],
                            [a-1, b-1], Bus, 0.1, _).
 
+% SLICE 33: a region with its own activity target is scaled toward it, not the global one.
+test(a_region_with_its_own_target_is_scaled_toward_it) :-
+    % One transmissive interface into b, whose average of one sits above its OWN target of zero.
+    Interfaces0 = [interface(a, b, 0.8, 1, transmissive)],
+    plasticity_engine_scaling_step_territory(Interfaces0, [a-1, b-1], [b-0], 0.5, 0.1, Interfaces),
+    % The weight shrinks by the LOCAL target's factor: 0.8 times (1 + 0.1 times (0 - 1)) is 0.72, not the global 0.76.
+    Interfaces = [interface(a, b, Weight, 1, transmissive)],
+    assertion(plasticity_test_close(Weight, 0.72)).
+
+% SLICE 33: a region without its own target defends the global target, the exact diffuse fallback.
+test(a_region_without_its_own_target_defends_the_global) :-
+    % Two transmissive interfaces: one into the unmarked territory b, one into c which owns a target of one.
+    Interfaces0 = [interface(a, b, 0.8, 1, transmissive), interface(a, c, 0.8, 1, transmissive)],
+    plasticity_engine_scaling_step_territory(Interfaces0, [a-1, b-1, c-1], [c-1], 0.5, 0.1, Interfaces),
+    % Territory b falls back to the global half target: 0.8 times (1 + 0.1 times (0.5 - 1)) is 0.76.
+    Interfaces = [interface(a, b, WeightB, 1, transmissive), interface(a, c, WeightC, 1, transmissive)],
+    assertion(plasticity_test_close(WeightB, 0.76)),
+    % Territory c sits exactly at its own target of one, so its incoming weight does not move.
+    assertion(plasticity_test_close(WeightC, 0.8)).
+
+% SLICE 33: an empty target store is the exact old global behaviour - the fallback is an identity.
+test(an_empty_target_store_is_the_exact_global_behaviour) :-
+    % One transmissive interface into an overactive region.
+    Interfaces0 = [interface(a, b, 0.8, 1, transmissive)],
+    % The old global step and the new territory step with an empty geography.
+    plasticity_engine_scaling_step(Interfaces0, [a-1, b-1], 0.5, 0.1, InterfacesGlobal),
+    plasticity_engine_scaling_step_territory(Interfaces0, [a-1, b-1], [], 0.5, 0.1, InterfacesEmpty),
+    % The two answers are identical, term for term.
+    assertion(InterfacesGlobal == InterfacesEmpty).
+
+% SLICE 33: a malformed target pair is refused by name, never silently skipped.
+test(a_malformed_target_pair_is_refused_by_name, error(domain_error(plasticity_engine_target_pair, junk))) :-
+    % A bare atom in the target store must throw.
+    plasticity_engine_scaling_step_territory([interface(a, b, 0.8, 1, transmissive)], [a-1, b-1], [b-0.5, junk], 0.5, 0.1, _).
+
+% SLICE 33: a duplicate target key is refused by name, never resolved by first-one-wins.
+test(a_duplicate_target_key_is_refused_by_name, error(domain_error(plasticity_engine_duplicate_target, b))) :-
+    % The same territory twice in the target store must throw.
+    plasticity_engine_scaling_step_territory([interface(a, b, 0.8, 1, transmissive)], [a-1, b-1], [b-0.5, b-0.6], 0.5, 0.1, _).
+
+% SLICE 33: a negative per-territory target is refused with the activity target's own voice.
+test(a_negative_territory_target_is_refused_by_name, error(domain_error(plasticity_engine_activity_target, -0.5))) :-
+    % No territory can defend an impossible set-point, local or global alike.
+    plasticity_engine_scaling_step_territory([interface(a, b, 0.8, 1, transmissive)], [a-1, b-1], [b-(-0.5)], 0.5, 0.1, _).
+
+% SLICE 33: an unbound target store is refused as uninstantiated, never walked off a cliff.
+test(an_unbound_target_store_is_refused, error(instantiation_error)) :-
+    % An unbound store must throw at once, not overflow the stack.
+    plasticity_engine_scaling_step_territory([interface(a, b, 0.8, 1, transmissive)], [a-1, b-1], _, 0.5, 0.1, _).
+
+% SLICE 33 REVIEW PIN: an unbound per-territory target value is refused as uninstantiated, never under a wrong it cannot name.
+test(an_unbound_territory_target_value_is_refused, error(instantiation_error)) :-
+    % A target pair whose value is a variable must throw instantiation_error, not a nameless domain error.
+    plasticity_engine_scaling_step_territory([interface(a, b, 0.8, 1, transmissive)], [a-1, b-1], [b-_], 0.5, 0.1, _).
+
+% SLICE 33 REVIEW PIN: an unbound global target is refused as uninstantiated, with the same one verdict.
+test(an_unbound_global_target_is_refused, error(instantiation_error)) :-
+    % An unbound global target must throw instantiation_error, never a domain error carrying a variable.
+    plasticity_engine_scaling_step([interface(a, b, 0.8, 1, transmissive)], [a-1, b-1], _, 0.1, _).
+
+% SLICE 33 REVIEW PIN: an unbound scaling rate is refused as uninstantiated, with the same one verdict.
+test(an_unbound_scaling_rate_is_refused, error(instantiation_error)) :-
+    % An unbound rate must throw instantiation_error, never a domain error carrying a variable.
+    plasticity_engine_scaling_step([interface(a, b, 0.8, 1, transmissive)], [a-1, b-1], 0.5, _, _).
+
+% SLICE 33 REVIEW PIN, MIRRORED ROOT: an unbound fading factor is refused as uninstantiated too.
+test(an_unbound_fading_factor_is_refused, error(instantiation_error)) :-
+    % The same root pattern lived in the fading-factor check; the same guard now holds it.
+    plasticity_engine_trace_step([interface(a, b, 0.5, 1, transmissive)], [a-1, b-1], _, [(a-b)-0], _).
+
+% SLICE 33 REVIEW PIN, MIRRORED ROOT: an unbound smoothing factor is refused as uninstantiated too.
+test(an_unbound_smoothing_factor_is_refused, error(instantiation_error)) :-
+    % The same root pattern lived in the smoothing-factor check; the same guard now holds it.
+    plasticity_engine_average_step([a-1], _, [a-0], _).
+
 % Close the test block for the plasticity_engine pack.
 :- end_tests(plasticity_engine).

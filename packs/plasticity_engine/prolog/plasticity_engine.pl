@@ -15,7 +15,9 @@
     % plasticity_engine_average_step/4: move every running average a smoothing step toward its activity.
     plasticity_engine_average_step/4,
     % plasticity_engine_scaling_step/5: scale each region's incoming weights toward its activity target.
-    plasticity_engine_scaling_step/5
+    plasticity_engine_scaling_step/5,
+    % plasticity_engine_scaling_step_territory/6: the same slow bound with a per-territory target geography.
+    plasticity_engine_scaling_step_territory/6
 ]).
 
 % Import membership for reading activities, and maplist for updating every interface.
@@ -80,8 +82,11 @@ plasticity_engine_update_interface(Activations, Bus, LearningRate,
 
 % plasticity_engine_check_fading_factor(+FadingFactor): refuse a fading factor outside [0, 1) by name.
 plasticity_engine_check_fading_factor(FadingFactor) :-
+    % An unbound factor cannot be judged, and must never be refused under a wrong it cannot name.
+    (  var(FadingFactor)
+    -> throw(error(instantiation_error, _))
     % A trace must fade, so the factor lies at or above zero and strictly below one.
-    (  number(FadingFactor), FadingFactor >= 0, FadingFactor < 1
+    ;  number(FadingFactor), FadingFactor >= 0, FadingFactor < 1
     -> true
     % Anything else is refused aloud, never silently accepted.
     ;  throw(error(domain_error(plasticity_engine_fading_factor, FadingFactor), _))
@@ -226,15 +231,22 @@ plasticity_engine_reward_step(Interfaces0, Traces, Bus, LearningRate, Interfaces
 % plasticity_engine_average_step (an exponential moving average under a smoothing factor), and spent
 % by plasticity_engine_scaling_step, which multiplies each incoming transmissive weight by one plus
 % the scaling rate times the target-minus-average error of its RECEIVING end, flooring the factor at
-% zero so a weight can be silenced but never sign-flipped. Refusals aloud, as ever: a smoothing
+% zero so a weight can be silenced but never sign-flipped. Since slice 33 the target has a GEOGRAPHY,
+% in the slice-30 diffuse-field law's exact shape: a per-territory target store (a list of Name-Target
+% pairs) rides beside the global target, a territory with its own target defends that target, and a
+% territory without one defends the global target, so the old one-target behaviour is the exact
+% fallback under an empty store. Refusals aloud, as ever: a smoothing
 % factor outside zero-exclusive-to-one-inclusive, a scaling rate outside zero-inclusive-to-one-
 % exclusive, a negative activity target, a duplicate average key, and a receiving construct absent
 % from the averages each throw by name.
 
 % plasticity_engine_check_smoothing_factor(+SmoothingFactor): refuse a smoothing factor outside (0, 1] by name.
 plasticity_engine_check_smoothing_factor(SmoothingFactor) :-
+    % An unbound factor cannot be judged, and must never be refused under a wrong it cannot name.
+    (  var(SmoothingFactor)
+    -> throw(error(instantiation_error, _))
     % An average must move but may not overshoot, so the factor lies above zero and at most one.
-    (  number(SmoothingFactor), SmoothingFactor > 0, SmoothingFactor =< 1
+    ;  number(SmoothingFactor), SmoothingFactor > 0, SmoothingFactor =< 1
     -> true
     % Anything else is refused aloud, never silently accepted.
     ;  throw(error(domain_error(plasticity_engine_smoothing_factor, SmoothingFactor), _))
@@ -242,8 +254,11 @@ plasticity_engine_check_smoothing_factor(SmoothingFactor) :-
 
 % plasticity_engine_check_scaling_rate(+ScalingRate): refuse a scaling rate outside [0, 1) by name.
 plasticity_engine_check_scaling_rate(ScalingRate) :-
+    % An unbound rate cannot be judged, and must never be refused under a wrong it cannot name.
+    (  var(ScalingRate)
+    -> throw(error(instantiation_error, _))
     % The bound must be slow, so the rate lies at or above zero and strictly below one.
-    (  number(ScalingRate), ScalingRate >= 0, ScalingRate < 1
+    ;  number(ScalingRate), ScalingRate >= 0, ScalingRate < 1
     -> true
     % Anything else is refused aloud, never silently accepted.
     ;  throw(error(domain_error(plasticity_engine_scaling_rate, ScalingRate), _))
@@ -251,8 +266,11 @@ plasticity_engine_check_scaling_rate(ScalingRate) :-
 
 % plasticity_engine_check_activity_target(+Target): refuse a negative activity target by name.
 plasticity_engine_check_activity_target(Target) :-
+    % An unbound target cannot be judged, and must never be refused under a wrong it cannot name.
+    (  var(Target)
+    -> throw(error(instantiation_error, _))
     % A region defends a real activity level, so the target lies at or above zero.
-    (  number(Target), Target >= 0
+    ;  number(Target), Target >= 0
     -> true
     % Anything else is refused aloud, never silently accepted.
     ;  throw(error(domain_error(plasticity_engine_activity_target, Target), _))
@@ -322,8 +340,23 @@ plasticity_engine_average_step(Activations, SmoothingFactor, Averages0, Averages
     % Move each construct's running average toward its current activity.
     maplist(plasticity_engine_average_one(Activations, SmoothingFactor), Averages0, Averages).
 
-% plasticity_engine_scale_interface(+Averages, +Target, +ScalingRate, +Interface0, -Interface): scale one edge.
-plasticity_engine_scale_interface(Averages, Target, ScalingRate,
+% plasticity_engine_check_targets(+Targets): refuse a malformed pair, duplicate key, or bad target aloud.
+plasticity_engine_check_targets(Targets) :-
+    % One judgement for shape, unbound tails, and duplicates alike, in the shared store voice.
+    plasticity_engine_check_store(Targets, plasticity_engine_target_pair, plasticity_engine_duplicate_target),
+    % Every per-territory target must be a level a real region could defend, exactly as the global one must.
+    forall(member(_-Target, Targets), plasticity_engine_check_activity_target(Target)).
+
+% plasticity_engine_target_lookup(+Targets, +Name, +GlobalTarget, -Target): a local read, global fallback.
+plasticity_engine_target_lookup(Targets, Name, GlobalTarget, Target) :-
+    % A territory with its own target defends that target; otherwise it defends the diffuse global one.
+    (  memberchk(Name-Found, Targets)
+    -> Target = Found
+    ;  Target = GlobalTarget
+    ).
+
+% plasticity_engine_scale_interface(+Averages, +Targets, +GlobalTarget, +ScalingRate, +Interface0, -Interface): scale one edge.
+plasticity_engine_scale_interface(Averages, Targets, GlobalTarget, ScalingRate,
                                   interface(From, To, Weight0, Delay, Kind),
                                   interface(From, To, Weight, Delay, Kind)) :-
     % Only a transmissive interface is scaled; a computational one keeps its weight.
@@ -331,6 +364,8 @@ plasticity_engine_scale_interface(Averages, Target, ScalingRate,
     (  Kind == transmissive
     -> % Read the receiving region's running average, refusing a ghost aloud.
        plasticity_engine_average_lookup(Averages, To, Average),
+       % Read the target the RECEIVING end's territory defends: its own if it has one, the global one if not.
+       plasticity_engine_target_lookup(Targets, To, GlobalTarget, Target),
        % The raw factor grows a quiet region's inputs and shrinks a loud one's.
        RawFactor is 1 + ScalingRate * (Target - Average),
        % The factor floors at zero: a weight can be silenced but never sign-flipped.
@@ -343,17 +378,25 @@ plasticity_engine_scale_interface(Averages, Target, ScalingRate,
 
 % plasticity_engine_scaling_step(+Interfaces0, +Averages, +Target, +ScalingRate, -Interfaces): the slow bound.
 plasticity_engine_scaling_step(Interfaces0, Averages, Target, ScalingRate, Interfaces) :-
-    % Refuse a target no region could defend and a rate that would overcorrect.
-    plasticity_engine_check_activity_target(Target),
+    % One target for the whole graph is the territory step under an empty geography - one root, one behaviour.
+    plasticity_engine_scaling_step_territory(Interfaces0, Averages, [], Target, ScalingRate, Interfaces).
+
+% plasticity_engine_scaling_step_territory(+Interfaces0, +Averages, +Targets, +GlobalTarget, +ScalingRate, -Interfaces):
+% the slow bound with a per-territory target geography, the global target as the diffuse fallback.
+plasticity_engine_scaling_step_territory(Interfaces0, Averages, Targets, GlobalTarget, ScalingRate, Interfaces) :-
+    % Refuse a global target no region could defend and a rate that would overcorrect.
+    plasticity_engine_check_activity_target(GlobalTarget),
     plasticity_engine_check_scaling_rate(ScalingRate),
+    % Refuse a malformed pair, duplicate key, or indefensible target in the geography before reading it.
+    plasticity_engine_check_targets(Targets),
     % Refuse every malformed interface, unknown kind, and duplicate before touching a weight.
     maplist(plasticity_engine_check_interface, Interfaces0),
     plasticity_engine_transmissive_keys(Interfaces0, Keys),
     plasticity_engine_check_no_duplicate(Keys, plasticity_engine_duplicate_interface),
     % Refuse a duplicate average key before reading a single average.
     plasticity_engine_check_averages(Averages),
-    % Scale every region's incoming transmissive weights toward its activity target.
-    maplist(plasticity_engine_scale_interface(Averages, Target, ScalingRate),
+    % Scale every region's incoming transmissive weights toward the target its own territory defends.
+    maplist(plasticity_engine_scale_interface(Averages, Targets, GlobalTarget, ScalingRate),
             Interfaces0, Interfaces).
 
 % plasticity_engine_step(+Interfaces0, +Activations, +Bus, +LearningRate, -Interfaces): learn for one tick.

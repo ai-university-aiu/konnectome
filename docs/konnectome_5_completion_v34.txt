@@ -1,0 +1,465 @@
+APPENDIX 5. COMPLETION
+
+A5.0 THE PURPOSE OF THIS PHASE
+
+The Completion phase finishes the System properly: it tests everything, documents everything, deploys, and monitors.
+
+Its deliverable is a live, documented, monitored System and, in SPARC, the document named completion.md.
+
+Completion is where a project stops being a promising prototype and becomes something another person can install, run, trust, and build upon.
+
+A5.1 THE FULL TEST STRATEGY
+
+The completed System must carry a complete test suite at three levels, all automated and all runnable with a single command.
+
+UNIT LEVEL: every archetype rule, every drive, and every learning step tested in isolation, as in Appendix 4.
+
+INTEGRATION LEVEL: the propagation, decision-chain, and computational-interface tests, verifying that constructs work together.
+
+SYSTEM LEVEL: the famous-experiment tests, the Parkinson, learning, H.M., drive-conflict, and social-pain reproductions, verifying that the whole System behaves as a brain.
+
+The suite must reach the coverage targets SPARC sets, and it must run in continuous integration, meaning automatically on every change, so that no change can silently break a reproduced experiment.
+
+The definition of a passing build is that every one of the acceptance criteria of Appendix 1 is met by an automated test, and all pass.
+
+For that claim to be checkable rather than merely asserted, the mapping from each acceptance criterion to its covering test is stated explicitly here.
+
+AC-1 (every named construct present with its specification block) is covered by a registry-completeness unit test that iterates the constructs of Chapters 2, 3, and 7 (regions, interfaces, and molecules) and asserts each is loaded.
+
+AC-10 and AC-11 (the large-scale networks of Section 2.10 and the cognitive systems, pathways, and glia of Section 2.11) are covered by an extension of the same registry-completeness test, which additionally iterates every named network as a grouping over its members, every named system and pathway as a subgraph, and every glial participant, and asserts each is present with its couplings, its mode flags (directed or broadcast), and its modulatory function.
+
+AC-2 (one tick updates every construct exactly once) is covered by a scheduler unit test that counts updates per tick.
+
+AC-3 (a signal propagates through the correct interfaces in the correct number of ticks) is the propagation integration test.
+
+AC-4 (dopamine depletion halts and restoration recovers action selection) is the Parkinson system test.
+
+AC-5 (a stimulus paired with reward comes to predict it, and extinguishes) is the learning system test.
+
+AC-6 (two drives are arbitrated in override order, and respiration cannot be self-suppressed) is the drive-conflict system test.
+
+AC-7 (every state, weight, drive error, and neuromodulator level is reportable) is covered by an observer unit test that reads each quantity at a sampled tick.
+
+AC-8 (a run is exactly reproducible from its seed) is covered by a determinism test that runs the same seed twice and asserts identical trajectories.
+
+AC-9 (the System runs at the regional grain within its time budget) is covered by a performance test measuring wall-clock time per thousand ticks.
+
+Every acceptance criterion thus has exactly one named covering test, and no criterion is left unverified.
+
+The H.M. test, which reproduces the amnesia of the disabled plasticity engine, is an additional system test beyond the nine criteria, included because the case is central to the book.
+
+A5.2 THE DEFINITION OF DONE
+
+The System is DONE, for version one, when all of the following are true.
+
+Every named construct of Chapters 2, 3, and 7 is present and running, and every large-scale network, cognitive system and pathway, and glial participant of Sections 2.10 and 2.11 is present as a named grouping, subgraph, or modulator.
+
+Every acceptance criterion of Appendix 1 passes as an automated test.
+
+The System runs at the regional grain on a personal computer within its stated time budget.
+
+Every state, weight, drive, and neuromodulator is inspectable at every tick.
+
+A full run is exactly reproducible from its seed.
+
+The five famous-experiment tests pass.
+
+The documentation described below is complete.
+
+And the System is installable by a stranger from its repository in a documented number of steps.
+
+Note what "done" does NOT require: it does not require that the System be intelligent, or that it pass any test of general capability.
+
+Version one is done when it is a faithful, transparent, runnable model of the regional architecture.
+
+Whether such a model, scaled and fed, becomes intelligent is the question of Appendix 6, and it is explicitly out of scope for Completion of version one.
+
+Conflating "the model runs faithfully" with "the model is a mind" would be the one dishonesty this book has refused throughout, and Completion refuses it here.
+
+A5.3 DOCUMENTATION
+
+Two bodies of documentation are required.
+
+FOR THE USER: a guide that explains how to install the System, how to run it for a number of ticks, how to present an input, how to read the observer's output, how to run each of the famous experiments, and how to lesion a construct or shift a molecule.
+
+The user guide must let a curious person reproduce the Parkinson experiment within an hour of installing.
+
+FOR THE DEVELOPER: a guide that explains the ten components, the tick ordering, the data model, how to add a new construct, how to add a new archetype, and how the code maps to the chapters of this book.
+
+The developer guide's central promise is that every line of code traces to a passage of the science, and it must make that tracing explicit, so that the System remains a glass box not only at runtime but in its source.
+
+This book itself is the specification-level documentation, and the appendices are written so that the mapping from science to system is legible without a separate document.
+
+That is by design: the book and the specification are one artifact.
+
+A5.4 DEPLOYMENT AND MONITORING
+
+Deployment of a scientific instrument differs from deployment of a consumer product, and the plan reflects that.
+
+The System is deployed as an open-source repository that a researcher clones and runs locally, not as a hosted service.
+
+Its "deployment" is a tagged, versioned release with a reproducible environment specification, so that a run on one machine reproduces on another.
+
+This matters more here than in most software: a scientific result that cannot be reproduced on another machine is not a result.
+
+Monitoring, for a System whose defining virtue is inspectability, is the observer of Appendix 3 made permanent.
+
+The running System continuously reports its own state, and the monitoring layer watches for the pathological signatures the science warns of: runaway synchrony, weight explosion, a frozen selector, a collapsed drive.
+
+These are the System's equivalent of the vital signs a clinician watches, and their appearance in a run is either a bug to fix or, intriguingly, a simulated disease to study.
+
+A5.5 SECURITY, SUCH AS IT IS
+
+A local scientific model has a light security surface, but the SPARC rules still bind.
+
+No secret or credential may appear in the code.
+
+All external input, meaning any dataset fed to the System, must be validated before it is trusted.
+
+And, because this System is a model of a mind, one ethical safeguard is added to the ordinary security checklist and made a hard requirement: the token-level records of any run that includes data about real, identifiable people are local by default and are never published without deliberate act, exactly the safety discipline the companion data standard requires.
+
+A model of a brain that ingests human data inherits the duty of care that comes with human data.
+
+A5.6 POST-COMPLETION: WHAT SHIPS
+
+What ships at the end of Completion, version one, is: a running, open-source, glass-box model of the human cognitive architecture at the regional grain; a complete test suite that reproduces five landmark neuroscience experiments from first principles; a user guide and a developer guide; a reproducible release; and a monitoring layer that watches the model's vital signs.
+
+It is a scientific instrument, buildable at home, that anyone can install, run, inspect, perturb, and extend.
+
+What does not ship, and is not claimed, is an intelligence.
+
+That is the next mountain, and the honest map to it is Appendix 6.
+
+A5.7 REFLECTION
+
+Completion is where the temptation to overclaim is strongest, and where this book most firmly declines it.
+
+A working model that reproduces Parkinson's disease and Pavlovian learning from first principles is a genuine achievement, and it would be easy to let the reader believe it is more than it is.
+
+The discipline of Completion is to state exactly what is done and exactly what is not: a faithful, transparent, runnable architecture is done; a mind is not.
+
+The distance between those two is the subject of the final appendix, and naming that distance honestly is itself part of finishing the work.
+
+A specification that ended by pretending the gap was closed would have failed at the last step, however well it had done at every earlier one.
+
+
+
+KONNECTOME REALIZATION LOG
+
+Slice 1 - the heartbeat - 2026-07-20 - pack tick_engine, version 0.1.0.
+
+Slice 1 is complete and green: 7 of 7 tick_engine tests pass, and the naming, layer, and layer-binding gates each report zero violations.
+
+Gates at this slice: 7 of 7 tick_engine Prolog Unit (PLUnit) tests pass; the naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited; konnectome reuses them through the library path.
+
+This log grows one entry per code slice, per the Tenth Commandment. The full SPARCD Fileset was bumped in lockstep from version 1 to version 2, and the version 1 files were archived under docs/archive/ in the same change, per the Ninth Commandment.
+
+
+KONNECTOME REALIZATION LOG - SLICE 2
+
+Slice 2 - the six archetype rules and the first Causalontology thought - 2026-07-20 - packs archetype (0.1.0) and observer (0.1.0).
+
+Slice 2 is complete and green: 7 of 7 archetype tests, 6 of 6 observer tests, all naming/layer/binding gates at zero violations, and the Causalontology 119-vector conformance at 119 of 119.
+
+Gates at this slice: archetype 7 of 7 and observer 6 of 6 Prolog Unit (PLUnit) tests pass; naming, layer, and layer-binding gates report zero violations; the Causalontology 119-vector conformance suite passes 119 of 119. Nothing in PrologAI or Causalontology was edited; konnectome reuses causal_core through the library path.
+
+
+KONNECTOME REALIZATION LOG - SLICE 3
+
+Slice 3 - the connection graph - 2026-07-20 - pack connection_graph (0.1.0).
+
+Slice 3 is complete and green: 4 of 4 connection_graph tests, all four packs green (24 tests in total), all gates at zero violations, and the Causalontology 119-vector conformance unchanged at 119 of 119.
+
+Gates at this slice: connection_graph 4 of 4 Prolog Unit (PLUnit) tests pass (tick_engine 7, archetype 7, observer 6 unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited; connection_graph reuses the archetype pack.
+
+
+KONNECTOME REALIZATION LOG - SLICE 4
+
+Slice 4 - the reward loop - 2026-07-20 - packs neuromodulator_bus (0.1.0) and drive_system (0.1.0).
+
+Slice 4 is complete and green: neuromodulator_bus 4 of 4 and drive_system 5 of 5 tests, all six packs green (33 tests in total), and all gates at zero violations.
+
+Gates at this slice: neuromodulator_bus 4 of 4 and drive_system 5 of 5 Prolog Unit (PLUnit) tests pass (the earlier four packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 5
+
+Slice 5 - the action selector - 2026-07-20 - pack action_selector (0.1.0).
+
+Slice 5 is complete and green: action_selector 6 of 6 tests, all seven packs green (39 tests in total), and all gates at zero violations.
+
+Gates at this slice: action_selector 6 of 6 Prolog Unit (PLUnit) tests pass (the earlier six packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 6
+
+Slice 6 - the plasticity engine - 2026-07-20 - pack plasticity_engine (0.1.0).
+
+Slice 6 is complete and green: plasticity_engine 5 of 5 tests, all eight packs green (44 tests in total), and all gates at zero violations.
+
+Gates at this slice: plasticity_engine 5 of 5 Prolog Unit (PLUnit) tests pass (the earlier seven packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 7
+
+Slice 7 - completing the architecture - 2026-07-20 - packs override_controller (0.1.0) and perturbation_interface (0.1.0).
+
+Slice 7 is complete and green: override_controller 4 of 4 and perturbation_interface 4 of 4 tests, all ten packs green (52 tests in total), and all gates at zero violations.
+
+Gates at this slice: override_controller 4 of 4 and perturbation_interface 4 of 4 Prolog Unit (PLUnit) tests pass (the earlier eight packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 8
+
+Slice 8 - one running tick - 2026-07-20 - pack cognitive_cycle (0.1.0).
+
+Slice 8 is complete and green: cognitive_cycle 4 of 4 tests, all eleven packs green (56 tests in total), all gates at zero violations. Every one of the ten architecture components is now realized and running together.
+
+Gates at this slice: cognitive_cycle 4 of 4 Prolog Unit (PLUnit) tests pass (the earlier ten packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 9
+
+Slice 9 - hardening the loop - 2026-07-20 - packs connection_graph (0.2.0), drive_system (0.2.0), cognitive_cycle (0.2.0).
+
+Slice 9 is complete and green: connection_graph 6 of 6, drive_system 9 of 9, cognitive_cycle 4 of 4, all eleven packs green (62 tests in total), all gates at zero violations.
+
+Gates at this slice: connection_graph 6 of 6, drive_system 9 of 9, and cognitive_cycle 4 of 4 Prolog Unit (PLUnit) tests pass (the other eight packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 10
+
+Slice 10 - thought combination - 2026-07-20 - pack thought_combination (0.1.0).
+
+Slice 10 is complete and green: thought_combination 7 of 7 tests, all twelve packs green (69 tests in total), all gates at zero violations, and the Causalontology 119-vector conformance unchanged at 119 of 119.
+
+Gates at this slice: thought_combination 7 of 7 Prolog Unit (PLUnit) tests pass (the earlier eleven packs unchanged); naming, layer, and layer-binding gates report zero violations; the Causalontology 119-vector conformance passes 119 of 119. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 11
+
+Slice 11 - other minds and prediction, the wall-finding build - 2026-07-22 - packs other_minds (0.1.0) and prediction_loop (0.1.0).
+
+Slice 11 is complete and green, and it is the first slice whose honest completion state includes a wall. What is done: other_minds 8 of 8 and prediction_loop 10 of 10 tests, all fourteen packs green (87 tests in total), all gates at zero violations, and the Causalontology 119-vector conformance untouched at 119 of 119. What is honestly NOT done: the attributed belief and the expected-versus-observed discrepancy are realized at runtime but cannot be EXPORTED as shared, signed, content-addressed Causalontology records, because 3.0.0 carries no doxastic kind and no predicted_occurrence or prediction_error kind. That impossibility is not a defect to patch inside konnectome; it is two real findings, recorded as Wall-1 and Wall-2 and ROUTED to the Causalontology 4.0.0 change order, which the owner has authorized to proceed for Sections B and A.
+
+Gates at this slice: other_minds 8 of 8 and prediction_loop 10 of 10 Prolog Unit (PLUnit) tests pass (the earlier twelve packs unchanged, 69 tests); naming, layer, and layer-binding gates report zero violations; the Causalontology 119-vector conformance suite is untouched and green. Two walls were hit, recorded as Wall-1 and Wall-2, and ROUTED to the Causalontology change order (Sections B and A). Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 12
+
+Slice 12 - the closure: minting the new kinds - 2026-07-22 - packs other_minds (0.2.0) and prediction_loop (0.2.0).
+
+Slice 12 is complete and green, and it is the first slice whose honest completion state includes walls that CLOSED rather than one still open. What is done: other_minds 10 of 10 and prediction_loop 16 of 16 tests, all fourteen packs green (95 tests in total), all gates at zero violations, and the Causalontology conformance suite green at 137 of 137 under specification 4.0.0 in both cousins. What is no longer merely runtime-realized: the attributed belief and the expected-versus-observed discrepancy are now EXPORTED as shared, signed, content-addressed records - the two 'EXPORT PENDING' rows of the ledger's coverage list are fully REALIZED. The three walls the build ever held are all CLOSED. Wall-1 and Wall-2 were closed by Causalontology 4.0.0 - the twenty-one kinds now carry the doxastic attitude kind and the predicted_occurrence and prediction_error kinds, re-frozen at 137 vectors with every prior identifier preserved - plus PrologAI's causal_core 1.1.0, which makes the new kinds mintable from konnectome. Wall-3, the closure's own wall - causal_core 1.0.0 could not yet mint the new kinds - was routed to the PrologAI change order and closed the same day by causal_core 1.1.0. This is a genuine closure, reached by extending the cousins through their own gated change orders and never by editing them in place. Nothing is left export-pending.
+
+Gates at this slice: other_minds 10 of 10 and prediction_loop 16 of 16 Prolog Unit (PLUnit) tests pass (the earlier twelve packs unchanged); naming, layer, and layer-binding gates report zero violations; the Causalontology conformance suite is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. Wall-1, Wall-2, and Wall-3 are CLOSED. Causalontology and PrologAI were extended through their own gated change orders, never edited directly.
+
+
+KONNECTOME REALIZATION LOG - SLICE 13
+
+Slice 13 - the provenance layer: the mind grades and, when wrong, disowns its own thoughts - 2026-07-26 - pack self_provenance (0.1.0).
+
+Toward the Definition of Done, this slice adds a documented, tested provenance layer whose records are shareable and reproducible: a graded, self-corrected thought is a content-addressed record another mind can replay, which is exactly the reproducibility posture this appendix requires of a finished capability. The developer-guide promise holds - every predicate traces to a passage of the companion data standard, here the provenance tier (signatures, evidence grading, and retraction) - and the mapping is legible in the source: an assertion carries the standard's exact identity-bearing fields, a retraction obeys the standard's Rule 10 source discipline, and the six evidence grades are the standard's own closed enumeration in its stated order.
+
+One honesty is recorded here in the completion spirit of documenting every simplification. Section A5.5 makes it a hard rule that no secret or credential appears in the code, and Specification Constraint 3 says the same. A real Ed25519 signature needs a private key, which is precisely such a secret. So konnectome mints content-addressed, schema-valid, semantically-valid assertion and retraction records that carry its PUBLIC source identity and its evidence grade - the shareable substance - but does NOT itself apply the cryptographic signature; that act belongs to deployment, where the key-holder signs the minted bytes. Because the signature is optional to the schema and is excluded from content-addressed identity, the records validate and reproduce without it; a strict consumer, following the standard's store discipline, would quarantine them as unsigned until the deployment signature is applied. This is a deployment boundary honestly stated, not a capability claimed and unbuilt - the one dishonesty this book refuses.
+
+Gates at this slice: self_provenance 17 of 17 Prolog Unit (PLUnit) tests pass (the earlier fourteen packs unchanged, 95 tests; 112 in total); naming, layer, and layer-binding gates report zero violations; the Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; the slice-12 honest non-closure is CLOSED. Nothing in PrologAI or Causalontology was edited; self_provenance reuses causal_core through the library path.
+
+
+KONNECTOME REALIZATION LOG - SLICE 14
+
+Slice 14 - the capstone: the mind runs, and its own records tell the story - 2026-07-26 - pack capstone_demonstration (0.1.0), and the first runnable entry point, bin/run_capstone_demonstration.sh.
+
+Toward the Definition of Done, this slice delivers the artifact the completion phase has implicitly owed since the first pack landed: a way for a person who is not reading test files to SEE the system run. Until now, konnectome's evidence lived in one hundred twelve tests and four gate scripts - rigorous, and invisible to anyone who does not run a test harness. The capstone closes that gap with one documented command: bin/run_capstone_demonstration.sh, optionally given a tick count, boots the mind and prints the whole story on the console. The completion posture of the artifact is what this appendix asks of every finished capability. It is documented (a usage header in the script, the story's own title line, and the tutorial's new part). It is validated at its boundary (the script refuses a non-numeric argument before Prolog is ever reached, and the story predicate refuses a tick count that cannot carry the demonstration). It is honest about scope: the story closes by naming the rungs it does not demonstrate and the signature its records do not yet carry, so the artifact a newcomer runs first is also the artifact that most plainly states the system's limits. And it is versioned forward: as later slices climb Rung Two and deepen Rung Four, the capstone is the natural place their milestones join the telling, under a bumped pack version, so the definition of done for the demonstration grows with the mind instead of staling beside it.
+
+Gates at this slice: capstone_demonstration 20 of 20 Prolog Unit (PLUnit) tests pass (the earlier fifteen packs unchanged, 112 tests; 132 in total); naming, layer, and layer-binding gates report zero violations; the Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins, re-measured this slice. No new wall was hit and no new honest non-closure was recorded; the slice-13 deployment-signature non-closure stands, and the story itself narrates it. Nothing in PrologAI or Causalontology was edited; the capstone reads its siblings through the library path.
+
+
+KONNECTOME REALIZATION LOG - SLICE 15
+
+Slice 15 - Rung Two begins: words grounded in lived experience, and pretend under quarantine - 2026-07-26 - packs symbol_exchange (0.1.0) and pretend_play (0.1.0).
+
+Toward the Definition of Done, this slice completes the OPENING of Rung Two and is precise about what that word means. Done here is: the rung's smoke test realized in both directions over a genuinely lived grounding run; the pilot's load-bearing property - the mood colours the words - realized and pinned by a test; the pretend milestone realized under the reused quarantine with the no-promotion-into-observed rule; and every piece documented, guarded at its boundaries with named refusals, and mirrored across the fileset. NOT done, and recorded as the rung's remaining ascent rather than hidden: the full pilot conversation (a sustained, multi-turn exchange through a text or speech front-end, with memory shaping the replies alongside the drives); a richer grounded vocabulary than the two standard words; the joining of Rung Two into the capstone story (the capstone still honestly lists Rung Two among the undemonstrated rungs until it narrates these milestones under a bumped version); and the token-tier export of a whole pretend EPISODE as shareable records, which was examined and deliberately declined this slice - minting token records for happenings that never happened would be exactly the pollution the quarantine exists to prevent, so the record-level export stays at the type tier where a generic claims no happening. That last boundary is the completion-phase form of the Section C watch: the place a future wall would stand is named, and nothing is built there from the armchair.
+
+Gates at this slice: symbol_exchange 18 of 18 and pretend_play 12 of 12 Prolog Unit (PLUnit) tests pass (the earlier sixteen packs unchanged, 132 tests; 162 in total); naming, layer, and layer-binding gates report zero violations; the Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; the Section C watch was kept and its result is recorded in the ledger: the per-claim machinery sufficed, no world-level sharing need arose, and Section C remains held. Nothing in PrologAI or Causalontology was edited; the rung reuses the language and imagination packs through the library path, exactly as other_minds reuses theory_of_mind.
+
+
+KONNECTOME REALIZATION LOG - SLICE 16
+
+Slice 16 - Rung Four deepens: the social-pain test and the empathy trial - 2026-07-26 - pack empathy (0.1.0).
+
+Toward the Definition of Done, this slice completes the two trials the owner named and is precise about the rung's remaining ascent. Done: the social-pain system test of Section A4.4, realized as the appendix intends the famous experiments to be realized - not a check dreamed up to exercise the code, but the actual experiment re-run: deliver a social-rejection signal, and the same circuitry that registers physical pain activates, the equivalence pinned number for number; the social-connection drive proven a genuinely defended set-point, its violation earning the same negative reward and dopamine any defended set-point earns. Done: the empathy pilot at the top of the rung - modelled distress resonating into the mind's own state and shaping behaviour toward a helping action that is proposed, selected, applied, and shown restoring connection - with the safety property re-proven under social pressure and the social attribution graded and retractable as shareable records. Documented, boundary-guarded with named refusals, and mirrored across the fileset. NOT done, recorded as the rung's remaining ascent: the appraisal pilot (a situation appraised as good or bad for the mind's own goals, producing fear at a threatened set-point) and the regulation pilot (an aroused state brought back toward baseline over time) - both specified by the rung, neither yet built - and the capstone story, which does not yet narrate Rung Two or this deepening, and stays honest by saying so until a bumped capstone joins them.
+
+Gates at this slice: empathy 17 of 17, drive_system 10 of 10, and symbol_exchange 19 of 19 Prolog Unit (PLUnit) tests pass (the other sixteen packs unchanged; 181 in total), the counts carrying two review-born fixes and one paid debt: drive_system (0.3.0) now caps the homeostatic step at its set-point, so a fractional distance settles exactly and help can never overshoot into harm - pinned by its own regression test; naming, layer, and layer-binding gates report zero violations; the Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; the remaining ascent of the rung (the appraisal and regulation pilots, and the capstone joining the new milestones into its telling) is recorded as pending, not hidden. Nothing in PrologAI or Causalontology was edited; empathy reads its siblings through the library path.
+
+
+KONNECTOME REALIZATION LOG - SLICE 17
+
+Slice 17 - the reality-discipline gate: the rule made checkable - 2026-07-26 - bin/check_reality_discipline.sh (no pack version moved).
+
+The definition of done grows by one standing check. From this slice forward, a merge is complete only when FOUR gates report zero violations: naming, layer, layer-binding, and reality discipline. The completion posture of the new gate matches its siblings: it is documented (a usage header in the script, a bullet in the tutorial's run-it-yourself part, the README's gate listing, and this fileset), it reports in the same plain voice, it exits non-zero so automation can block on it, and it closes the last review debt slice 15 left open on the record - the wrapper-only scope of the promotion refusal, until now an honest caveat in the build log's chapter nine, is now a fenced, checkable boundary. Nothing is left of the slice-15 review's confirmed findings: every one is either fixed with a permanent test or enforced by a standing gate.
+
+Gates at this slice: no pack changed and no test count moved - the suite stands at one hundred eighty-one Prolog Unit (PLUnit) tests across nineteen packs, all green. The naming, layer, and layer-binding gates report zero violations, and they are joined by a fourth: the new reality-discipline gate (bin/check_reality_discipline.sh) reports zero violations, and was proven able to fail - a deliberate violation was injected, caught, and removed before its first clean run was accepted. The Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited - the imagination pack remains exactly as reused, and the discipline that fences it is konnectome's own.
+
+
+KONNECTOME REALIZATION LOG - SLICE 18
+
+Slice 18 - the capstone speaks and feels: Rung Two's first words and Rung Four's deepening join the one runnable story - 2026-07-26 - pack capstone_demonstration (0.2.0).
+
+The definition of done for this slice is a list that got shorter by exactly one rung, and the honesty is in what the list still holds. Done: the capstone story now demonstrates Rung Two - grounded first words and pretend under quarantine - and the Rung Four deepening - the social-pain equivalence and the empathy trial - end to end in the one runnable command, and each is done in the full sense this repository means by the word, which is that an independent test proves it outside the telling. This closes the item slice 15 and slice 16 both left standing on the record as pending ascent, not hidden: the capstone story joining Rung Two and the Rung Four deepening into its telling under a bumped version. Not done, and printed by the story itself so no reader has to take the claim on trust: the honest-limits list the run ends on now names only Rung Three (concrete reasoning), Rung Five (embodiment), Rung Four's own appraisal and regulation pilots, and the deployment-deferred signature of Observation-3 - and Rung Two, which stood on that list when slice 14 first printed it, no longer appears there, because it is now shown rather than deferred. The list shrank by the honest amount, one rung, and grew by nothing, which is the only direction the method lets it move.
+
+Gates at this slice: capstone_demonstration thirty-six of thirty-six Prolog Unit (PLUnit) tests pass (the other eighteen packs unchanged, one hundred sixty-one tests; one hundred ninety-seven in total across nineteen packs, all green); the naming, layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited - the capstone reads its siblings through the library path.
+
+
+KONNECTOME REALIZATION LOG - SLICE 19
+
+Slice 19 - Rung Four finished: the appraisal and regulation pilots - 2026-07-26 - packs situation_appraisal (0.1.0) and arousal_regulation (0.1.0).
+
+What is finished is Rung Four of the developmental ladder in full: with the smoke test, the theory-of-mind trial, and the empathy trial already standing, the appraisal and regulation pilots now join them, so all of the rung's realizations are in place and the slice-16 pending item - the appraisal pilot and the regulation pilot of Rung Four - is closed. What is honestly not attempted is any emotion faculty larger than these two thin readings: situation_appraisal derives a valence from the drives but runs no control loop that acts on it, arousal_regulation shapes a single scalar's return to baseline but does not itself decide when arousal should rise, and neither pack adds an update rule or any new way to write state - each is a reading laid over machinery its siblings already own. Feeling at this slice is feeling by construction, and the claim made is only the modest one the pilots can carry under test: that the appraisal and the regulation behave exactly as the drives and the bus they reuse would predict, leaving any richer affective faculty to later work and recording that limit plainly rather than hiding it.
+
+Gates at this slice: situation_appraisal twelve of twelve and arousal_regulation twelve of twelve Prolog Unit (PLUnit) tests pass (the earlier nineteen packs unchanged; two hundred twenty-one in total across twenty-one packs, all green); the four standing gates - naming, layer, layer-binding, and reality-discipline - report zero violations; the Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins; no new wall was hit; and no cousin was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 20
+
+Slice 20 - the pilots' review debts paid: appraisal's rounding boundary and regulation's finiteness - 2026-07-26 - packs situation_appraisal (0.1.1) and arousal_regulation (0.1.1).
+
+Slice 20 pays the review debt slice 19 left on the record. The independent adversarial review of the appraisal and regulation pilots, run after they merged, confirmed three findings, and each is now fixed at its root and pinned by a permanent test. First, the appraisal pilot's change reader compared a difference of two independently-rounded set-point errors against exact zero, so two situations equidistant on opposite sides of a set-point - a mathematically neutral change - were read as a good or bad turn on a rounding residue near one part in ten thousand trillion, and, worse, minted as an owned attitude the neutral case is meant to refuse; a rounding-noise band now absorbs that residue, so an equidistant float change reads neutral and is correctly refused before it can become a false record. Second, the regulation pilot accepted a non-finite arousal level, and an infinite level never shrinks toward baseline, so the return would never terminate; the single gatekeeper now requires a finite level and refuses infinity by name. Third, the regulation pilot's whole-number tick rule had no test for its fractional-count refusal; it has one now. No demonstrated behaviour changed - every earlier claim still holds number for number, and every prior test still passes - and the two pilot packs move to patch version 0.1.1. The lesson the method keeps: a finding confirmed by an adversarial review is fixed at its root and pinned, even when the defect is latent - here reachable only by a fractional body value or a hand-built infinity that no ordinary run produces.
+
+Gates at this slice: situation_appraisal fourteen of fourteen and arousal_regulation fourteen of fourteen Prolog Unit (PLUnit) tests pass (the four new tests pin the three confirmed findings; the other nineteen packs unchanged; two hundred twenty-five in total across twenty-one packs, all green); the naming, layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 21
+
+Slice 21 - Rung Three opened: the concrete-reasoning trials - 2026-07-26 - packs concrete_operations (0.1.0) and cause_and_effect (0.1.0).
+
+WHAT IS FINISHED, STATED WITHOUT ROUNDING UP. Rung Three is OPENED, not finished. Its smoke test - one valid transitive inference with every step shown as a named, watchable operation - is realized in full and pinned by tests that read the steps themselves, not merely the conclusion. Of the five pilot trials, three are realized (seriation, causal reasoning, planning) and two are opened at less than their full depth: classification demonstrates the flexible re-sort but defers the book's requirement that categories be FORMED FROM EXPERIENCE, and conservation demonstrates the verdict shape over a closed transformation enumeration but defers a genuine represented model of quantity under changing appearance. Both deferrals are written into the packs' own headers, into the ledger, and into the tutorial. The honest-limits list the capstone prints keeps its Rung Three line, and will keep it until those two halves are built.
+
+WHAT THE THREE FULLY-REALIZED TRIALS DEMONSTRATE. Seriation orders a collection along a numeric dimension and refuses by name any object without a number there. Causal reasoning distinguishes a genuine cause from mere co-occurrence by the Causalontology causal record itself, returns the chain of record identifiers as its justification, reports a record pointing the other way as the reverse rather than silently flipping it, answers co-occurrence-only when no record links two events however often they are seen together, and refuses a forged record - one shaped like a record but never minted - by name. Planning composes the shortest action sequence from a start state to a goal state by breadth-first search, justifies each step with the states it leaves and reaches, commits to the plan by owning it as the standard's own intends attitude, and grades that intention at DERIVATION - because a plan is reasoned, not observed.
+
+THE GRADING CHOICE, RECORDED. Every conclusion and every intention this slice owns is graded at the evidence scale's DERIVATION grade, never at observation. The mind derived these things by valid steps from premises; it did not see them. Grading a derivation as an observation would overstate the evidence by exactly one rank on the scale, and the scale carries a derivation grade for precisely this record.
+
+TEST AND GATE COUNTS. Fifty-one new tests: twenty-six over concrete_operations, twenty-five over cause_and_effect. The earlier twenty-one packs are unchanged. The repository stands at two hundred seventy-six tests across twenty-three packs, all green. The four standing gates - naming, layer, layer-binding, reality-discipline - report zero violations. The Causalontology conformance suite was RE-MEASURED this slice rather than inherited, and is green at one hundred thirty-seven of one hundred thirty-seven vectors (specification 4.0.0) in both cousins: PrologAI through its own vendored runner, causalontology through its Python binding.
+
+Gates at this slice: concrete_operations twenty-six of twenty-six and cause_and_effect twenty-five of twenty-five Prolog Unit (PLUnit) tests pass (the earlier twenty-one packs unchanged; two hundred seventy-six in total across twenty-three packs, all green); the naming, layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 22
+
+Slice 22 - Rung Three finished in its trials: the two deferred halves built - 2026-08-07 - packs category_formation (0.1.0) and quantity_model (0.1.0).
+
+WHAT IS FINISHED, STATED WITHOUT ROUNDING UP. All five of Rung Three's pilot trials are now REALIZED: seriation, causal reasoning, and planning since slice 21; classification and conservation completed here. Classification is whole: the categories are formed by the mind from the stream of its own experience through the reused induction engine, objects are sorted into those formed categories, an object fitting none is reported outside every category, and the flexible re-sort by a different property on request remains the reused sibling classifier. Conservation is whole: an amount is a represented model - individuated units plus an appearance - transformations act on the representation, and the verdict is read by re-measuring the model, never from the transformation's name; the taller, thinner glass conserves because the same five units are counted on both sides of the pour, and a lossy pour wearing an appearance-only name is judged changed because the model kept the truth.
+
+WHAT REMAINS OPEN, STATED PLAINLY. The rung's trials are complete; the rung's STORY is not. The one runnable capstone (bin/run_capstone_demonstration.sh) does not yet narrate Rung Three, and its printed honest-limits list correctly keeps its Rung Three line until the story is taught to tell it - the same debt slices 15 and 16 once owed for their rungs and slice 18 paid. That debt, together with the still-unnarrated appraisal and regulation chapters of Rung Four, is the next slice's work, recorded here so the completion claim cannot drift past what a reader can watch.
+
+THE GRADING CHOICE, KEPT. Every conclusion this slice owns is graded at the evidence scale's DERIVATION grade, never observation: induced categories and measured verdicts are reasoned from premises and models, not seen. And both record predicates now enact what they own - a learning episode or a conservation trial - so the owned record and the enacted conclusion cannot come apart.
+
+TEST AND GATE COUNTS. Fifty-five new tests: twenty-six over category_formation, twenty-nine over quantity_model. concrete_operations stays at twenty-six, green under its re-sized header and manifest (0.1.1). The repository stands at three hundred thirty-one tests across twenty-five packs, all green. The four standing gates - naming, layer, layer-binding, reality-discipline - report zero violations, with one honest asterisk recorded in the ledger: the naming gate under-detects an unprefixed helper that carries no known terse stem, a hole this slice's review caught by hand. The Causalontology conformance suite was RE-MEASURED this slice rather than inherited, and is green at one hundred thirty-seven of one hundred thirty-seven vectors (specification 4.0.0) in both cousins.
+
+Gates at this slice: category_formation twenty-six of twenty-six and quantity_model twenty-nine of twenty-nine Prolog Unit (PLUnit) tests pass, and concrete_operations' twenty-six stay green under its re-sized header (the earlier packs otherwise unchanged; three hundred thirty-one in total across twenty-five packs, all green); the naming, layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 23
+
+Slice 23 - The story learns its owed chapters: Rung Three told, and Rung Four finished in the telling - 2026-08-07 - pack capstone_demonstration (0.3.0).
+
+WHAT IS FINISHED, STATED WITHOUT ROUNDING UP. Both recorded story debts are paid. The one runnable story now tells Rung Three whole - the derivation as data, seriation, the formed categories with their honest exile and crossing re-sort, the re-measured pour and the lossy pour the model refused to be fooled by, the cause told from co-occurrence by the cited record, and the shortest plan - and tells Rung Four to its finish - the appraisal read from the drives' own error and owned as the standard's attitudes with the satisfaction approximation declared aloud, the honest withdrawal when the world moves on, and the alarm regulated to rest exactly at baseline in eight halving ticks. The printed honest-limits list shrank by exactly the two debts and now names one rung: embodiment, disclaimed with the guiding book's own reason, a real machine.
+
+WHAT REMAINS OPEN, STATED PLAINLY. Rung Five is untouched, and the book's Rung Five text asks for a robot body in the real world - a demand no software slice can round itself up to. The ledger's long-standing pending refinements stand unchanged, and the naming gate's unprefixed-helper hole recorded at slice 22 still awaits a gate that can see it.
+
+TEST AND GATE COUNTS. Eight new tests grew the capstone's suite from thirty-six to forty-four; the repository stands at three hundred thirty-nine tests across twenty-five packs, all green. The four standing gates report zero violations. The Causalontology conformance suite was RE-MEASURED this slice rather than inherited: one hundred thirty-seven of one hundred thirty-seven vectors in both cousins. The capstone runs clean at its default ten ticks and at twelve.
+
+Gates at this slice: capstone_demonstration forty-four of forty-four Prolog Unit (PLUnit) tests pass (the earlier packs unchanged; three hundred thirty-nine in total across twenty-five packs, all green); the naming, layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 24
+
+Slice 24 - Rung Five opened as groundwork: the body interface, and the sense-act loop through the honestly-named simulated body, the rung itself not claimed - 2026-08-07 - packs simulated_body (0.1.0) and body_interface (0.1.0).
+
+WHAT IS FINISHED, STATED WITHOUT ROUNDING UP. Rung Five is OPENED AS GROUNDWORK, and the word groundwork is load-bearing. What stands: the book's three connections, built as one seam over an honestly-named stand-in machine - sensors become senses, the body state becomes the homeostatic state so a low battery is felt as hunger by the same error predicate as every other pain, and released actions drive actuators; the sense-act smoke loop, closed through the simulated body - a change the camera sees produces, through the mind's own drive, proposal, and selection machinery, a movement of the body that changes what the camera sees next; and the homeostatic-survival groundwork, a draining battery the mind defends of its own accord on a pinned deterministic rhythm. What does NOT stand, and is not claimed: the rung. The book demands a real machine, real reaching, real navigation, real survival in a real world; the capstone's honest-limits line still names embodiment with exactly that reason, and it was not touched by this slice.
+
+THE GRADING CHOICE, GUARDED. The loop's outcome is owned by enacting the loop, and its stance is graded OBSERVATION at 0.8 - the mind ran its own pass and read its own actuator log. Because observation is the strongest self-grade in use, the stance now proves the record it grades was genuinely minted before granting it, refusing forgeries by name.
+
+TEST AND GATE COUNTS. Thirty-seven new tests: sixteen over simulated_body, twenty-one over body_interface. The repository stands at three hundred seventy-six tests across twenty-seven packs, all green. The four standing gates report zero violations. The Causalontology conformance suite was RE-MEASURED this slice: one hundred thirty-seven of one hundred thirty-seven vectors in both cousins. The capstone demonstration, untouched, still runs clean and still disclaims embodiment.
+
+Gates at this slice: simulated_body sixteen of sixteen and body_interface twenty-one of twenty-one Prolog Unit (PLUnit) tests pass (the earlier packs unchanged; three hundred seventy-six in total across twenty-seven packs, all green); the naming, layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 25
+
+Slice 25 - The story learns the body seam: Rung Five's groundwork told, and the rung not claimed - 2026-08-07 - pack capstone_demonstration (0.4.0).
+
+WHAT COMPLETION MEANS AT THIS SLICE. The capstone suite grows from forty-four to fifty-two: the chapter's coverage test, the groundwork-not-the-rung wording test, the chapter's position test, the reproducible loop-record identifier (re-minted only by re-enacting the pass, because that is the only way the record can be minted at all), and four independent dynamics checks - the six-tick survival rhythm, the hunger-equals-thermal-error identity, the drives-over-reflexes tie proven EXACT, and the steering episode - each re-run outside the narration, so the story still cannot grade its own homework. The tighter-scoped independent adversarial review ran to completion (the first since slice 22) and confirmed four findings, none blocking - two unpinned narrated numbers, a probe-less forgery claim, and the steering episode's missing independent check - all fixed at root and pinned before merge. The repository stands at three hundred eighty-four tests across twenty-seven packs, all green. The claim is complete and honest: the story now TELLS the groundwork, and still does not claim the rung.
+
+Gates at this slice: capstone_demonstration fifty-two of fifty-two Prolog Unit (PLUnit) tests pass (the earlier packs unchanged; three hundred eighty-four in total across twenty-seven packs, all green); the naming, layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 26
+
+Slice 26 - The naming gate learns to see: the unprefixed-helper hole closed, and the hand-hunt retired - 2026-08-07 - tooling bin/check_pack_naming.sh, with a committed fixture and a self-test.
+
+WHAT COMPLETION MEANS AT THIS SLICE. The slice is complete when four things hold, and all four are measured: the extended gate reports zero violations across the real twenty-seven packs (no false positives); the self-test passes, meaning the committed fixture's unprefixed helper is caught by name (no false negatives on the proven shape); the full suite of three hundred eighty-four tests stands green and untouched, because a gate slice must change no behaviour; and the ledger's standing hand-hunt mandate is retired in the same change, because the mandate existed only while the rule was uncheckable. The independent adversarial review ran to completion and confirmed four findings, none blocking - a relative-path self-test failure, a single-file scan scope, a vacuous pass under a stray environment override, and a self-test satisfied by the wrong failure - all fixed before merge: the gate now scans every source file per pack, refuses to pass when it scanned nothing, and its self-test demands the fixture fail for exactly the one deliberate reason.
+
+Gates at this slice: the extended naming gate reports zero violations across all twenty-seven packs AND passes its own self-test - the committed fixture's unprefixed helper is caught by name; the layer, layer-binding, and reality-discipline gates report zero violations; three hundred eighty-four Prolog Unit (PLUnit) tests across twenty-seven packs, all green and unchanged by this slice; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 27
+
+Slice 27 - The delay lines: the connectome learns to keep a signal in transit - 2026-08-07 - pack connection_graph (grown).
+
+WHAT COMPLETION MEANS AT THIS SLICE. The connection_graph suite grows from six to seventeen: the seven feature tests and the four review pins. The whole repository stands at three hundred ninety-five tests across twenty-seven packs, all green - and the re-sweep after the review fixes is itself part of the completion claim, because the refusal clauses touch the plain and modulated steps every earlier slice built on, and the sweep proves no caller anywhere relied on the silent drop being fixed. The slice-3 ledger non-closure that named multi-tick delay lines pending is closed by this slice; the two neighbours it was recorded beside - computational-interface transforms and interfaces as Causalontology conduits - remain honestly pending, untouched.
+
+Gates at this slice: connection_graph seventeen of seventeen Prolog Unit (PLUnit) tests pass (the earlier packs unchanged; three hundred ninety-five in total across twenty-seven packs, all green); the naming gate reports zero violations across all twenty-seven packs and passes its own self-test; the layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 28
+
+Slice 28 - The eligibility trace: a reward one tick late still finds the connection that earned it - 2026-08-07 - pack plasticity_engine (grown).
+
+WHAT COMPLETION MEANS AT THIS SLICE. The plasticity_engine suite grows from five to twenty-four: the twelve feature tests and the seven review pins beside the five that slice 8 wrote. The whole repository stands at four hundred fourteen tests across twenty-seven packs, all green - and the re-sweep after the review fixes is part of the completion claim, because the shared refusal perimeter is new load-bearing ground under both new steps, and the sweep proves the plain learning step every earlier slice built on is untouched by the growth. The manuscript's own acceptance for Section A2.6 - reward one tick late and the weight still strengthens; withhold it and the trace fades - is pinned as two named tests. Honest boundaries carried forward: the trace store is not yet threaded through the cognitive cycle's live loop; the plain learning step retains its slice-8 tolerance of unknown kinds (standing house behaviour, recorded in the ledger, not silently changed by this slice); computational-interface transforms and interfaces as Causalontology conduits remain the oldest pending neighbours, untouched.
+
+Gates at this slice: plasticity_engine twenty-four of twenty-four Prolog Unit (PLUnit) tests pass (the earlier packs unchanged; four hundred fourteen in total across twenty-seven packs, all green); the naming gate reports zero violations across all twenty-seven packs and passes its own self-test; the layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 29
+
+Slice 29 - Homeostatic scaling: the bound that keeps the learning from exploding - 2026-08-07 - pack plasticity_engine (grown).
+
+WHAT COMPLETION MEANS AT THIS SLICE. The plasticity_engine suite grows from twenty-four to forty-eight: seventeen feature tests and seven review pins beside the twenty-four that stood. The whole repository stands at four hundred thirty-eight tests across twenty-seven packs, all green - and the re-sweep after the review fixes is again part of the completion claim, because the shared store judgement now underlies the slice-28 trace machinery as well, and the sweep proves every earlier caller holds under the stricter perimeter. The manuscript's stability promise - the bound that keeps the learning from exploding - is pinned as a runnable fifty-tick worst case: relentless reward, maximal coincidence, and a finite fixed point. Honest boundaries carried forward: the scaling target and rate are one value for the whole graph, awaiting the per-territory refinement; the stability proof holds the averages constant, proving the bound rather than the fully coupled loop; the average and trace stores are still not threaded through the cognitive cycle's live tick; and the plain learning step keeps its slice-8 tolerances, standing house behaviour, unchanged.
+
+Gates at this slice: plasticity_engine forty-eight of forty-eight Prolog Unit (PLUnit) tests pass (the earlier packs unchanged; four hundred thirty-eight in total across twenty-seven packs, all green); the naming gate reports zero violations across all twenty-seven packs and passes its own self-test; the layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 30
+
+Slice 30 - Per-territory neuromodulators: the field learns local concentrations, and delayed time learns the bus - 2026-08-07 - packs neuromodulator_bus and connection_graph (grown).
+
+WHAT COMPLETION MEANS AT THIS SLICE. The neuromodulator_bus suite grows from four to fourteen and connection_graph from seventeen to twenty-four; the whole repository stands at four hundred fifty-five tests across twenty-seven packs, all green - and the re-sweep is again part of the claim, because the plain modulated step every earlier slice could call now reads territories, and the sweep plus a pinned backward-compatibility identity prove no caller anywhere observes a difference on a territory-free bus. The slice-27 pending line - the delayed step refusing the bus-modulated relay kind - is CLOSED by this slice: neuromodulation and multi-tick time compose. Honest boundaries carried forward: the plasticity engine's third factor still reads the global dopamine level, the per-territory third factor recorded as the natural next use; the average and trace stores are still not threaded through the cognitive cycle's live tick; computational-interface transforms and conduits remain the oldest pending neighbours.
+
+Gates at this slice: neuromodulator_bus fourteen of fourteen and connection_graph twenty-four of twenty-four Prolog Unit (PLUnit) tests pass (the earlier packs unchanged; four hundred fifty-five in total across twenty-seven packs, all green); the naming gate reports zero violations across all twenty-seven packs and passes its own self-test; the layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 31
+
+Slice 31 - The per-territory third factor: each connection learns by the chemistry of the place the signal arrives - 2026-08-07 - pack plasticity_engine (grown at its root).
+
+WHAT COMPLETION MEANS AT THIS SLICE. The plasticity_engine suite grows from forty-eight to fifty-eight; the whole repository stands at four hundred sixty-five tests across twenty-seven packs, all green - and the re-sweep is again part of the claim, because the live learning step every earlier slice could call now reads territories and judges its interfaces aloud, and the sweep proves no caller anywhere observes a difference on a territory-free bus with well-formed interfaces. The slice-30 pending line - the plasticity engine's third factor reading the global dopamine level - is CLOSED by this slice: learning has a geography. Honest boundaries carried forward: the trace and average stores are still not threaded through the cognitive cycle's live tick; the scaling target and rate are still one value for the whole graph, per-territory targets the natural pairing with this slice's read; the fully coupled learn-fade-average-scale loop is still unproven; computational-interface transforms and conduits remain the oldest pending neighbours.
+
+Gates at this slice: plasticity_engine fifty-eight of fifty-eight Prolog Unit (PLUnit) tests pass (the earlier packs unchanged; four hundred sixty-five in total across twenty-seven packs, all green); the naming gate reports zero violations across all twenty-seven packs and passes its own self-test; the layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 32
+
+Slice 32 - The live tick carries the whole learning body: traces, averages, and the slow bound beat in the loop - 2026-08-08 - pack cognitive_cycle (grown; the boot worlds of capstone_demonstration and symbol_exchange grown to carry the stores).
+
+WHAT COMPLETION MEANS AT THIS SLICE. The cognitive_cycle suite grows from four to eleven; the whole repository stands at four hundred seventy-two tests across twenty-seven packs, all green - and the re-sweep is again part of the claim, because every world that boots the mind (the cycle's own fixture, the capstone's, the symbol exchange's) changed shape, and the sweep proves the grown worlds tell exactly the stories the old ones told while the bound rests. The slice-31 pending line one - the trace and average stores not threaded through the live tick - is CLOSED by this slice: the learning engine's whole body beats in the loop. Honest boundaries carried forward: the scaling constants in the live worlds rest at rate zero, so the bound beats in the cycle's tests but not yet in the capstone's told story; the scaling target and rate are still one value for the whole graph, per-territory targets the natural pairing; the fully coupled learn-fade-average-scale loop under live constants is proven finite only by the slice-29 fixed-point test, not yet watched over a long live run; the reward step still waits for its caller; computational-interface transforms and conduits remain the oldest pending neighbours.
+
+Gates at this slice: cognitive_cycle eleven of eleven Prolog Unit (PLUnit) tests pass, and the grown boot worlds of capstone_demonstration (fifty-two of fifty-two) and symbol_exchange (nineteen of nineteen) re-swept green (the earlier packs unchanged; four hundred seventy-two in total across twenty-seven packs, all green); the naming gate reports zero violations across all twenty-seven packs and passes its own self-test; the layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 33
+
+Slice 33 - The per-territory scaling target: each region defends the activity level its own territory owes - 2026-08-08 - pack plasticity_engine (grown at its root; cognitive_cycle grown to read the geography; the boot worlds of capstone_demonstration and symbol_exchange grown to carry it).
+
+WHAT COMPLETION MEANS AT THIS SLICE. The plasticity_engine suite grows from fifty-eight to seventy and the cognitive_cycle suite from eleven to thirteen; the whole repository stands at four hundred eighty-six tests across twenty-seven packs, all green - and the re-sweep is again part of the claim, because every world that boots the mind grew the scaling_targets key, and the sweep proves the grown worlds tell exactly the stories the old ones told while the geography stands empty. The slice-32 pending line one - the scaling target still one value for the whole graph - is CLOSED by this slice: each region can now defend its own set-point, the global target the honest fallback. Honest boundaries carried forward: the scaling RATE is still one value for the whole graph, recorded as a boundary rather than built without a manuscript line demanding it; the live worlds' scaling constants rest at rate zero and their geographies stand empty, so the bound beats per-territory in the engine's and the cycle's tests but not yet in the capstone's told story; the fully coupled learn-fade-average-scale loop under live constants is proven finite only by the slice-29 fixed-point test, not yet watched over a long live run; the reward step still waits for its caller; computational-interface transforms, conduits, and the token tier remain the older pending neighbours.
+
+Gates at this slice: plasticity_engine seventy of seventy Prolog Unit (PLUnit) tests pass and cognitive_cycle thirteen of thirteen, with the grown boot worlds of capstone_demonstration (fifty-two of fifty-two) and symbol_exchange (nineteen of nineteen) re-swept green (the earlier packs unchanged; four hundred eighty-six in total across twenty-seven packs, all green); the naming gate reports zero violations across all twenty-seven packs and passes its own self-test; the layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.

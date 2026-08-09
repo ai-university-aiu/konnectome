@@ -24,6 +24,7 @@ cognitive_cycle_test_world(World) :-
                    fading_factor: 0.6,
                    smoothing_factor: 0.2,
                    scaling_target: 0.5,
+                   scaling_targets: [],
                    scaling_rate: 0.0,
                    overrides: [],
                    override_threshold: 0.5,
@@ -162,10 +163,41 @@ test(a_live_scaling_rate_bends_the_weights) :-
     % The receiving relay sat below the one-half target, so its incoming weight was pulled UP.
     assertion(WeightLive > WeightRest).
 
+% SLICE 33: a per-territory target bends its own region's weights harder than the global target.
+test(a_territory_target_bends_its_own_region) :-
+    % Start from the fixed world with a live scaling rate.
+    cognitive_cycle_test_world(World0),
+    put_dict(scaling_rate, World0, 0.2, WorldLive0),
+    % Make a twin world differing only in a per-territory target of one for the quiet relay b.
+    put_dict(scaling_targets, WorldLive0, [b-1], WorldTerritory0),
+    % Run both worlds the same four ticks.
+    cognitive_cycle_run(WorldLive0, 4, WorldGlobal, _SummariesGlobal),
+    cognitive_cycle_run(WorldTerritory0, 4, WorldTerritory, _SummariesTerritory),
+    % Read both final weights on the one learnable interface into b.
+    get_dict(interfaces, WorldGlobal, [interface(a, b, WeightGlobal, 1, transmissive)]),
+    get_dict(interfaces, WorldTerritory, [interface(a, b, WeightTerritory, 1, transmissive)]),
+    % The relay sits below both targets, but its own higher target of one pulls its incoming weight up harder.
+    assertion(WeightTerritory > WeightGlobal).
+
+% SLICE 33: at rate zero even an absurd per-territory target is scenery - the at-rest identity holds.
+test(a_territory_target_at_rest_changes_nothing) :-
+    % Start from the fixed world, whose scaling rate is zero.
+    cognitive_cycle_test_world(World0),
+    % Make a twin world differing only in an absurd per-territory target for the relay.
+    put_dict(scaling_targets, World0, [b-1000], WorldAbsurd0),
+    % Run both worlds the same four ticks.
+    cognitive_cycle_run(World0, 4, WorldA, _SummariesA),
+    cognitive_cycle_run(WorldAbsurd0, 4, WorldB, _SummariesB),
+    % Read both final interface lists.
+    get_dict(interfaces, WorldA, InterfacesA),
+    get_dict(interfaces, WorldB, InterfacesB),
+    % At rate zero the geography is scenery: the learned weights are identical.
+    assertion(InterfacesA == InterfacesB).
+
 % A world missing any of the learning body's keys is refused aloud, never silently failed.
 test(a_world_missing_a_learning_store_is_refused_aloud) :-
     % Every key the slice-32 tick reads must be present, or the tick refuses by name.
-    forall(member(Key, [traces, averages, fading_factor, smoothing_factor, scaling_target, scaling_rate]),
+    forall(member(Key, [traces, averages, fading_factor, smoothing_factor, scaling_target, scaling_targets, scaling_rate]),
            ( % Start from the fixed world.
              cognitive_cycle_test_world(World0),
              % Remove exactly one of the learning body's keys.
