@@ -279,6 +279,7 @@ capstone_demonstration_world(World) :-
         fading_factor: 0.6,
         smoothing_factor: 0.2,
         scaling_target: 0.5,
+        scaling_targets: [],
         scaling_rate: 0.0,
         overrides: [override(respiration, 0, 0.0, breathe)],
         override_threshold: 0.5,

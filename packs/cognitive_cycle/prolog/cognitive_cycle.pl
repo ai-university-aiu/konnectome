@@ -21,7 +21,7 @@
 :- use_module(library(plasticity_engine), [plasticity_engine_step/5,
                                            plasticity_engine_trace_step/5,
                                            plasticity_engine_average_step/4,
-                                           plasticity_engine_scaling_step/5]).
+                                           plasticity_engine_scaling_step_territory/6]).
 % Reuse the observer: it records the tick as a Causalontology token_occurrence.
 :- use_module(library(observer), [observer_record_tick/3]).
 
@@ -33,8 +33,10 @@
 % RESPONDS as the released action moves it toward what it needs; and the observer records the tick. The
 % world is held as a dict, and this is the loop of the mind, now closing on the body it acts upon.
 % Since slice 32 the tick carries the learning engine's WHOLE body: the world dict also holds the
-% eligibility-trace store (slice 28), the running-average store (slice 29), and the four constants
+% eligibility-trace store (slice 28), the running-average store (slice 29), the four constants
 % that beat them (the fading factor, the smoothing factor, the scaling target, and the scaling rate),
+% and since slice 33 the per-territory target geography (scaling_targets, empty meaning every region
+% defends the global target),
 % so every tick fades and refreshes the traces, moves the averages, and applies the slow homeostatic
 % bound after the fast learning - the Section A2.5-and-A2.6 machinery live in the loop, not waiting
 % for a caller to remember it. The reward step stays with the caller, deliberately: trace lifetime
@@ -73,8 +75,10 @@ cognitive_cycle_step(World0, World, Summary) :-
     cognitive_cycle_world_value(World0, fading_factor, FadingFactor),
     % Read the smoothing factor that paces every running average.
     cognitive_cycle_world_value(World0, smoothing_factor, SmoothingFactor),
-    % Read the activity target each region's slow bound defends.
+    % Read the global activity target each region's slow bound defends by default.
     cognitive_cycle_world_value(World0, scaling_target, ScalingTarget),
+    % Read the per-territory target geography (empty means every region defends the global target).
+    cognitive_cycle_world_value(World0, scaling_targets, ScalingTargets),
     % Read the scaling rate of the slow bound (zero means armed but at rest).
     cognitive_cycle_world_value(World0, scaling_rate, ScalingRate),
     % Read the vital-drive overrides.
@@ -101,8 +105,9 @@ cognitive_cycle_step(World0, World, Summary) :-
     plasticity_engine_trace_step(Interfaces1, Activations1, FadingFactor, Traces0, Traces1),
     % The running averages move one smoothing step toward this tick's activities (slice 29, live).
     plasticity_engine_average_step(Activations1, SmoothingFactor, Averages0, Averages1),
-    % The slow homeostatic bound scales each region's incoming weights toward its target (slice 29, live).
-    plasticity_engine_scaling_step(Interfaces1, Averages1, ScalingTarget, ScalingRate, Interfaces2),
+    % The slow homeostatic bound scales each region's incoming weights toward the target its own
+    % territory defends, the global target as the diffuse fallback (slice 29 live, slice 33 geography).
+    plasticity_engine_scaling_step_territory(Interfaces1, Averages1, ScalingTargets, ScalingTarget, ScalingRate, Interfaces2),
     % STEP FIVE: the body responds - the released action moves the body toward what it needs.
     drive_system_apply_action(FinalOutcome, Drives0, Body0, Body1),
     % STEP SIX: advance the tick counter.
