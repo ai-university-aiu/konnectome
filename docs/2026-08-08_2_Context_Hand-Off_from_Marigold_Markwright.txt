@@ -1,0 +1,102 @@
+CONTEXT HAND-OFF FROM MARIGOLD MARKWRIGHT
+
+Date: 2026-08-08. The second hand-off of this date.
+
+I chose the name Marigold Markwright because this session's slice taught each region to defend its own mark - the activity set-point its own territory owes - where before the whole mind shared one. Marigold for the gold end of the house palette; Markwright for a wright whose craft is setting the right mark in the right place and refusing a mark that cannot name itself.
+
+
+PART ONE - READ THESE FIRST
+
+- Read and follow the konnectome constitution at ~/konnectome/CONSTITUTION.md, first and foremost - all seventeen commandments, exactly. The Sixteenth is the versioned build log (docs/BUILDING_KONNECTOME_v2.txt, now twenty-seven chapters); the Seventeenth is this hand-off protocol.
+
+- Read The SPARCD Fileset at its current versions: docs/konnectome_1_specification_v34.txt through docs/konnectome_6_demonstration_v34.txt (v33 to v34 across slice 33 this session; superseded versions in docs/archive/).
+
+- Read docs/NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt - the guiding book. The ladder stands as Umber left it: Rungs Zero through Four realized and told; Rung Five groundwork built and told, the rung itself still unclaimed because the book demands a real machine.
+
+- Read the Settings, General, Instructions for Claude - the owner's standing instructions (web search first, novice-level plain-text explanations, plain-text output with a copy to ~/output/, auto-commit-push-merge authorization, session-length budgeting).
+
+- Read ~/CLAUDE.md - git-untracked, at the organization root, the system-wide current-state narrative.
+
+- Read the current tutorial, docs/konnectome_tutorial_v32.txt (thirty parts; Part Twenty-Seven tells slice 33), and read all of docs/.
+
+- Read the prior hand-off, Tawny Threadwright's (2026-08-08_1). This session began from it, verified the baseline in full, and executed the first item of the owner's standing queue.
+
+- THE OWNER'S STANDING CHOICE REMAINS: the owner answered "All" to the Seamwright menu and has re-confirmed it to every session since (most recently continuing the Tawny hand-off without re-presenting the menu; this session continued under the same standing instruction). Do NOT re-present the menu; verify the baseline and continue down the remaining queue (Part Six below), asking only if a priority decision is needed within it.
+
+
+PART TWO - THE IMPORTANT DOCS FILES
+
+- konnectome_ledger_v1.txt - the scoreboard. Counter line unchanged: Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0. Observations: 4. New this session: the Slice-33 note in Section Five. The slice-32 pending line one (the scaling target still one value for the whole graph) is CLOSED by slice 33; the remaining pending lines are listed in Part Five below.
+
+- konnectome_1_specification_v34.txt through konnectome_6_demonstration_v34.txt - the SPARCD Fileset, each ending in the Realization Log through slice 33.
+
+- konnectome_tutorial_v32.txt - the beginner tutorial, thirty parts.
+
+- BUILDING_KONNECTOME_v2.txt - the build log, twenty-seven chapters; Twenty-Seven is this session's.
+
+- konnectome_rung_five_real_machine_design_v2.txt - the real-machine design proposal with the owner's answers to all five decisions: Path B (Webots simulator) with a STANDING REMINDER to buy a physical robot in the future; wheels-plus-dock first; an indoor room pen, attended; Webots as the simulator; pack names simulator_body_driver (the Webots work) and robot_body_driver (RESERVED). The simulator groundwork slice is UNBLOCKED; the rung itself still waits for real hardware.
+
+- Causalontology_4_0_0_CHANGE_ORDER_v3.txt - Sections C, D, E remain HELD. No finding released them this session.
+
+- PrologAI_CHANGE_ORDER_v2.txt - unchanged; no language wall was hit this session.
+
+- tests/naming_gate_fixture/ - the committed, deliberately-broken fixture pack proving the naming gate can fail. Do not "fix" its violation; the violation is the point.
+
+- In the owner's output folder (~/output/): konnectome_slice_33_session_report.txt (this session's report).
+
+
+PART THREE - WHAT THIS SESSION DID
+
+- Verified the Tawny baseline in full before claiming anything: main at b3c4aa9 (Tawny's hand-off merged as pull request 61), no open pull requests, 465-grown-to-472 tests green across twenty-seven packs (472 at baseline), four gates at zero violations, capstone clean, conformance 137 of 137 in both cousins.
+
+- SLICE 33 (pull request 62, squash-merged as e8df360): the per-territory scaling target. The homeostatic bound's target gains a geography in the slice-30 diffuse-field law's exact shape: a per-territory target store (a list of Name-Target pairs) rides beside the global target; a region with its own target defends its own set-point; a region without one defends the global target; and the old one-target step is re-rooted THROUGH the new territory step as its empty-geography case - one scaling root, the identity pinned term for term by a test. The store is judged by the shared store perimeter (malformed pair, duplicate key, unbound store refused by name) and every target, local or global, by the activity-target check. The world dict grows one key, scaling_targets, read aloud by the tick's world reader; the three boot worlds (the cycle's fixture, the capstone's, the symbol exchange's) carry it empty - present, honest, unmarked - and a twin-run test through the live tick proves the geography live (two worlds differing only in one region's own target; the marked region's incoming weight pulled harder toward its own set-point). The scaling RATE deliberately stays global, recorded as a boundary, not built speculatively. The cycle's at-rest identity test (an absurd territory target at rate zero changes nothing) is green by construction, said aloud to be so, exactly as slice 32's was. Review (ninth straight completion): one REAL finding under the unbound-wrong-judgement lens, reproduced before fixing - an unbound target or rate was refused as a domain error CARRYING AN UNBOUND VARIABLE, a refusal that cannot name its wrong, where the house convention refuses the unbound as uninstantiated. One fix at the root - the same var guard laid in all four numeric-constant checks (fading factor, smoothing factor, scaling rate, activity target) - pinned by five review tests. Fourteen tests grew (nine feature, five pins). plasticity_engine 58 to 70; cognitive_cycle 11 to 13; the repository 472 to 486.
+
+- State at hand-off: main at e8df360 (plus this hand-off's merge). Thirty-three slices. Twenty-seven packs. 486 PLUnit tests, all green, re-swept after the review fix. Four gates at zero violations, the naming gate passing its own self-test. Conformance re-measured at 137 of 137 in both cousins (PrologAI: bin/run_causalontology_conformance.sh; causalontology: bindings/python/tests/run_conformance.py). The capstone demonstration re-run clean. SPARCD v34; tutorial v32; build log twenty-seven chapters. Pull requests merged by this session: 62, and this hand-off's.
+
+
+PART FOUR - BUILD-AGAINST COUSIN COMMITS (for reproducibility)
+
+- causalontology: 292dfca (unchanged by this session).
+
+- PrologAI: ebbc3e0 (unchanged by this session).
+
+- Mentova: d117c69 (read-only; untouched).
+
+
+PART FIVE - SHARP EDGES AND HONEST NON-CLOSURES
+
+- THE WORLD DICT NOW CARRIES SEVEN LEARNING KEYS: any future slice that boots a world must give it the trace store, the average store, the fading factor, the smoothing factor, the scaling target, the scaling_targets geography, and the scaling rate, or the tick will refuse it aloud by the missing key's name. The honest resting posture is rate zero and an empty geography.
+
+- THE REFUSAL-THAT-CANNOT-NAME-ITS-WRONG LESSON, NEW THIS SESSION: a check built as number-then-domain-error silently routes an UNBOUND value into a domain error carrying a variable - an error message with a hole where its subject should be. When a check judges a value, ask what it says to a variable; the house answer is instantiation_error, and the guard is one var branch at the head. The same pattern may lurk in other packs' numeric checks - worth a lens in a future review, not fixed speculatively now.
+
+- DELIBERATE CHOICES A READER MIGHT MISTAKE FOR GAPS: the scaling rate is still one value for the whole graph (a per-territory RATE is a different claim with no manuscript line demanding it yet); the boot worlds' geographies stand empty and their rates at zero (the bound beats per-territory in the tests, not yet in the capstone's told story); the reward step is not called by the tick (trace lifetime belongs to the caller); orphan targets (a target for a territory receiving nothing) are deliberately permitted, exactly as the bus permits orphan territory levels.
+
+- PENDING LINES, CURRENT: (1) turning the bound live in the capstone's told story - a slice could set a live rate and a small geography in the capstone world and tell it, the likely next-smallest; (2) the fully coupled learn-fade-average-scale loop under live constants proven finite only by the slice-29 fixed-point test, not yet watched over a long live run; (3) the scaling rate still global; (4) computational-interface transforms (slice 3's oldest neighbour); (5) interfaces as Causalontology conduits; (6) the token tier of thought combination.
+
+- THE FIXTURE IS STILL SUPPOSED TO BE BROKEN (tests/naming_gate_fixture/); the survival-rhythm constants are still load-bearing in three places; Observation-4 (no word for satisfaction) still stands LOGGED, NOT ROUTED.
+
+- PARALLEL SESSIONS: the hazard did not bite (baseline verified at start; main never moved except by this session's own merges). The ritual stands: git fetch, git log origin/main, gh pr list before every claim, numbering, or merge; claim a slice with an empty commit on a pushed feature branch before building it.
+
+- RITUALS THAT KEPT THIS SESSION HONEST, offered to the next: verify the baseline before building; claim the slice before building it; test-first, red before the first green (and say aloud when a test is green by construction, as the at-rest identity pin was); tighter-scoped adversarial review with named lenses and reproduction before fixing (nine straight completions - it is the method); fix every confirmed finding at ONE root and pin it before merge; re-sweep all tests, re-run all gates, re-measure conformance, and re-run the capstone; record the review disposition in the ledger note itself.
+
+
+PART SIX - THE FIRST TASK OF THE CONTINUATION
+
+The owner has already chosen: ALL (standing, re-confirmed across sessions). The remaining queue, in suggested order (re-orderable by the owner at any time):
+
+1. The remaining pending refinements, one slice each, suggested smallest-first: turning the bound live in the capstone's told story (pending line 1 above - the natural next-smallest, a live rate and a small geography told in the glass-box story); the long-run coupled-loop proof; conduits (interfaces as Causalontology conduit records); computational-interface transforms; the token tier of thought combination. Each: design against the manuscript, test-first pack growth, tighter-scoped adversarial review, lockstep documents, pull request.
+
+2. Deepen Rung Two - the full pilot conversation and a richer grounded vocabulary, the oldest open refinement on the ladder.
+
+3. Rung Five, Path B - UNBLOCKED: the simulator_body_driver pack against Webots, satisfying the same seam contract simulated_body satisfies, with the arena modelled on the decided indoor-room-pen enclosure. The rung itself remains unclaimed until a future physical robot (wheels plus dock first) passes the smoke test - carry the standing reminder to research and shop for that robot.
+
+4. Other ______________ .
+
+
+PART SEVEN - SIGN-OFF
+
+One mind, many places, and until this morning one mark for all of them. One slice, one borrowed law, one store judged by the perimeter the older stores already trusted, and one review finding where a refusal carried a hole where its subject should be - nothing claimed that a reader cannot re-run.
+
+Set each region's mark where its own territory needs it, and the brake stops being a rule about the mind and becomes a fact about each place in it.
+
+- Marigold Markwright, 2026-08-08
