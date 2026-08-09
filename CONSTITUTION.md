@@ -84,8 +84,8 @@ Each file will start its contents from one entire, similarly numbered appendix f
 These six (6) files will be known as "The SPARCD Fileset".
 
 THE EIGHTH COMMANDMENT: THE VISION DOCUMENT SET:
-(NEW in version 4, by the owner's instruction of 2026-08-09. The former Eighth through Seventeenth
-Commandments become the Ninth through Eighteenth.)
+(NEW in version 4, by the owner's instruction of 2026-08-09. The former Eighth through Eighteenth
+Commandments become the Tenth through Nineteenth.)
 Announce it with fanfare: the complete Certified_Neuroscientist corpus has arrived in /docs/ -
 thirty-eight new documents cataloguing the human nervous and endocrine system layer by layer, the
 richest infusion of guiding knowledge konnectome has ever received. The set comprises, for each
@@ -111,7 +111,7 @@ definitive statements of the fifteen encapsulated layers of abstraction.
 Now the sober instructions that make the fanfare safe:
 1. This is a great deal of new information, and it is acknowledged as such. These files INFORM the
    project; they do not break it. Nothing in this commandment invalidates a passing test, a merged
-   slice, or a green gate. The Safety Gate (the Fourteenth Commandment) stands over this
+   slice, or a green gate. The Safety Gate (the Fifteenth Commandment) stands over this
    commandment as over every other.
 2. The set is to be treated as a VISION DOCUMENT SET: refinements to the project, not
    interruptions of it. They describe, in publish-and-subscribe detail, the only known working
@@ -138,7 +138,40 @@ Now the sober instructions that make the fanfare safe:
    the same interfaces in its own medium. Analogy of function, fidelity of interface, freedom of
    implementation - that is the translation rule.
 
-THE NINTH COMMANDMENT: THE AUDIT:
+THE NINTH COMMANDMENT: THE COGNITIVE ARCHITECTURES TEST-BED:
+(NEW in version 5, by the owner's instruction of 2026-08-09. The former Ninth through Eighteenth
+Commandments become the Tenth through Nineteenth.)
+The directory ~/cognitive_architectures holds the study set of published cognitive architectures
+(the Building Minds with Patterns and Building Sentient Beings books, their page images, and the
+combined talk-transcript analyses). Five rules govern its use.
+1. LOCAL AND READ-ONLY. These files will NOT become part of the konnectome GitHub repository.
+   They remain on the local file-system only, and are treated as read-only: konnectome reads them,
+   cites them, and never edits, moves, or commits them.
+2. THE TEST-BED MANDATE. The files serve as a test-bed for konnectome: konnectome should be able
+   to PERFORM each and every one of the functions of the cognitive architectures listed, described,
+   and explained in that directory. How, exactly, this is achieved is up to the builder. It is
+   acceptable - and expected - that various cognitive architectures are found EMERGENT in
+   konnectome, and even named in konnectome, rather than implemented as literal transcriptions.
+3. THE NORTH STAR IS UNCHANGED. The baseline biologically-inspired architectures of the Vision
+   Document Set (the Eighth Commandment) are the gold-standard, north-star, north-pole, and
+   light-house for konnectome. The test-bed measures coverage; it does not steer the ship. Where a
+   test-bed architecture and the biological blueprint disagree, the biology leads and the
+   disagreement is recorded.
+4. UNACHIEVABLE MEANS BUG. If a cognitive architecture in the test-bed is found unachievable with
+   the current konnectome, PrologAI, and Causalontology setup, this is considered a BUG, and
+   appropriate measures are taken: the finding is recorded in the ledger (the Fourth Commandment)
+   and routed through the gated change orders - Causalontology (the Second Commandment) or
+   PrologAI (the Third Commandment) - under the Safety Gate (the Fifteenth Commandment), exactly
+   as any other wall discovered by building.
+5. KLUDGES ARE DOCUMENTED DISCOVERIES. Where an exception is made to kludge a cognitive
+   architecture into the konnectome system, special documentation shall be written recording HOW
+   the kludge was made, WHY it was necessary, and WHY the mechanism it supplies is not found in the
+   current neuroscience literature - the literature from which this entire project was culled.
+   Such a kludge is not an embarrassment to hide but a candidate discovery to publish: it may mark
+   a mechanism neuroscience has not yet looked for, and each kludge document shall say so
+   explicitly, as a possible source of research for neuroscience.
+
+THE TENTH COMMANDMENT: THE AUDIT:
 As part of the konnectome build-out,
 make sure every named construct (including the previously unnamed constructs (PUC))
 is represented by a code module in konnectome,
@@ -149,19 +182,19 @@ The audit is not one-and-done: keep a coverage list in konnectome_ledger_v1.txt 
 construct in the manuscript, the module that realizes it, so the audit can be re-run at any time and
 a missing construct is visible at a glance.
 
-THE TENTH COMMANDMENT:
+THE ELEVENTH COMMANDMENT:
 A directory /home/ccaitwo/konnectome/docs/archive/ shall be created.
 And when new versions of files are written,
 the older, superseded files will be moved to the /archive/ folder for storage (using git mv, in the
 same change), so that only the latest version of any versioned document lives outside /archive/.
 
-THE ELEVENTH COMMANDMENT:
+THE TWELFTH COMMANDMENT:
 Any and all code changes to konnectome will be accompanied by
 mirrored changes to "The SPARCD Fileset",
 with version numbers incremented,
-and older versions archived per the Tenth Commandment.
+and older versions archived per the Eleventh Commandment.
 
-THE TWELFTH COMMANDMENT:
+THE THIRTEENTH COMMANDMENT:
 /home/ccaitwo/konnectome/README.md
 will be kept up to date as konnectome develops and evolves.
 README.md will look much the same in style, look, and feel as the README.md files for:
@@ -179,7 +212,7 @@ BACKGROUND: #3a0000, #590000, #7c0300, #c02b18,
 FOREGROUND: #e04217, #f26d1f, #ff933a, #ffce59 .
 (Initially, put a placeholder banner image, and the USER will replace it later.)
 
-THE THIRTEENTH COMMANDMENT:
+THE FOURTEENTH COMMANDMENT:
 ai-university-aiu and konnectome are a "Whole-Word System",
 for clarity, readability, and understandability,
 not an abbreviation system or single-letter system.
@@ -192,7 +225,7 @@ snake_case, pack-qualified, with no terse prefixes (no wm_, gd_, ai_, and so on)
 PrologAI itself enforces. External standard names (JSON, BCP 47, SWI-Prolog, Ed25519) keep their
 real names.
 
-THE FOURTEENTH COMMANDMENT: THE SAFETY GATE:
+THE FIFTEENTH COMMANDMENT: THE SAFETY GATE:
 (NEW in version 2, promoted from a parenthetical in version 1's Step 8 to a first-class rule,
 because it protects a proven asset.)
 PrologAI has already passed ARC-AGI-1 (400 of 400) and ARC-AGI-2 (120 of 120) regression through
@@ -202,13 +235,13 @@ it STOPS and is reported, not merged. The same spirit applies to causalontology'
 nineteen-vector conformance suite: a proposed data-structure change must keep it green. A red gate is
 a finding to report, never a thing to force through.
 
-THE FIFTEENTH COMMANDMENT: BRANCH AND REPORT DISCIPLINE:
+THE SIXTEENTH COMMANDMENT: BRANCH AND REPORT DISCIPLINE:
 (NEW in version 2.) Work on a feature/ branch and open a pull request; do not push directly to main.
 No Artificial-Intelligence tool is credited as author or co-author anywhere. No Roman numerals in
 any document or identifier. These match the house rules of the cousin repositories, so konnectome
 reads as one of the family.
  ...
-THE SIXTEENTH COMMANDMENT: THE TUTORIAL:
+THE SEVENTEENTH COMMANDMENT: THE TUTORIAL:
 Add the following to /docs/:
 konnectome_tutorial_v1.txt
 Once this file is created,
@@ -216,16 +249,16 @@ write to the file a complete head to toe, top to bottom tutorial on konnectome.
 Describing and explaining every concept relating to konnectome.
 Make the tutorial able to be read and understood by a beginner, learner, layperson, newcomer, novice.
 Maintain versioned updates to /docs/konnectome_tutorial_v1.txt as any new code changes are applied.
-(The tutorial is versioned under the same archive discipline as the Tenth Commandment: when a code
+(The tutorial is versioned under the same archive discipline as the Eleventh Commandment: when a code
 change bumps it, the superseded version moves to docs/archive/ in the same change, so only the latest
 tutorial lives outside the archive, and it always describes the konnectome that exists.)
  ...
-THE SEVENTEENTH COMMANDMENT: THE BUILD LOG:
-(NEW in version 3, by the owner's instruction of 2026-07-26. The former Seventeenth Commandment, the
-Hand-Off Protocol, becomes the Eighteenth.)
+THE EIGHTEENTH COMMANDMENT: THE BUILD LOG:
+(NEW in version 3, by the owner's instruction of 2026-07-26. The former Eighteenth Commandment, the
+Hand-Off Protocol, becomes the Nineteenth.)
 Log all activities as part of the konnectome build to the document:
 /home/ccaitwo/konnectome/docs/BUILDING_KONNECTOME_v2.txt
-(The build log is a versioned document under the Tenth Commandment: the current version lives in
+(The build log is a versioned document under the Eleventh Commandment: the current version lives in
 docs/ under this name pattern, and every superseded version - including the original, unversioned
 BUILDING_KONNECTOME.txt, archived as BUILDING_KONNECTOME_v1.txt - lives in docs/archive/. Version 2,
 by the owner's instruction of 2026-07-26, starts the log from the beginning of the konnectome story.)
@@ -234,7 +267,7 @@ The log is append-only and grows with the build: every session of build activity
 in order, so the document carries the complete story of how konnectome was built - rigorous enough
 to cite, alive enough to read.
  ...
-THE EIGHTEENTH COMMANDMENT: CONTEXT-WINDOW MANAGEMENT AND THE HAND-OFF PROTOCOL:
+THE NINETEENTH COMMANDMENT: CONTEXT-WINDOW MANAGEMENT AND THE HAND-OFF PROTOCOL:
 A long session degrades (context rot, and the lost-in-the-middle effect), and the assistant cannot see
 the context window's fill level from its own side, so the trigger must never rely on the assistant
 watching a token count. Two triggers govern the hand-off. First, the MILESTONE trigger: after each
@@ -243,7 +276,7 @@ continue in a fresh session. Second, the OWNER trigger: the owner watches the tr
 /context command (and /usage for plan limits), and when the window is high - as a guideline, above one
 hundred thousand tokens, or above roughly sixty percent of the window - the owner asks for a hand-off.
 On either trigger, the assistant carries out the Hand-Off Protocol below, commits the result on a
-feature/ branch through a pull request (Fifteenth Commandment), and then PAUSES. A fresh session then
+feature/ branch through a pull request (Sixteenth Commandment), and then PAUSES. A fresh session then
 re-loads state from docs/ - the ledger, the SPARCD Fileset, the tutorial, and the latest hand-off - and
 continues from the known-good baseline, because all durable state lives on disk and never only in the
 conversation.
