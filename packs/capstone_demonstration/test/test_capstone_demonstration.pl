@@ -838,4 +838,105 @@ test(seam_steering_episode_matches_independent_run) :-
     assertion(PerceptsAfter == [percept(path_ahead, clear)]).
 
 % Close the test block for the capstone_demonstration pack.
+% SLICE 34 - THE LIVE BOUND IN THE TOLD STORY: the capstone world now carries a live slow
+% homeostatic bound - a scaling rate of 0.05 and a one-entry geography giving the relay b its
+% own activity mark of 0.8 - and the story tells the bound's work with a rest twin beside it.
+
+% The boot world carries the live bound: a slow rate and the relay's own mark.
+test(world_carries_the_live_bound) :-
+    % Boot the same world the story boots.
+    capstone_demonstration_world(World0),
+    % The bound's rate is live: slow, but no longer zero.
+    get_dict(scaling_rate, World0, ScalingRate),
+    % The rate is exactly the slow 0.05 the story tells.
+    assertion(ScalingRate =:= 0.05),
+    % The geography carries exactly one mark: the relay b defends its own 0.8.
+    get_dict(scaling_targets, World0, ScalingTargets),
+    % One territory, one mark, told by the store itself.
+    assertion(ScalingTargets == [b-0.8]),
+    % The diffuse global mark still stands at one half beneath the geography.
+    get_dict(scaling_target, World0, GlobalTarget),
+    % The fallback every unmarked territory defends.
+    assertion(GlobalTarget =:= 0.5).
+
+% The story tells the live bound: the relay's own mark, the slow rate, and the diffuse fallback.
+test(story_reports_the_live_bound) :-
+    % Tell the story.
+    capstone_demonstration_story(10, Story),
+    % The bound is told as live, in so many words.
+    assertion(capstone_demonstration_test_contains(Story, "slow homeostatic bound runs LIVE")),
+    % The relay's own mark is named.
+    assertion(capstone_demonstration_test_contains(Story, "own mark of 0.8")),
+    % The slow rate is named.
+    assertion(capstone_demonstration_test_contains(Story, "0.05")).
+
+% The story tells the rest twin beside the live run: the bound's own work, shown not asserted.
+test(story_reports_the_rest_twin) :-
+    % Tell the story.
+    capstone_demonstration_story(10, Story),
+    % The twin telling - the same ticks with the bound at rest - is narrated.
+    assertion(capstone_demonstration_test_contains(Story, "with the bound at rest")),
+    % The difference is claimed as the bound's own work.
+    assertion(capstone_demonstration_test_contains(Story, "the bound's own work")).
+
+% Independent dynamics check: the live bound really pulls the weight above the rest twin's.
+test(live_bound_pulls_weight_above_rest_twin) :-
+    % Boot the same world the story boots - the live one.
+    capstone_demonstration_world(World0),
+    % Run the live world for ten ticks, outside the narration.
+    cognitive_cycle_run(World0, 10, LiveFinal, _LiveSummaries),
+    % Read the live final weight.
+    get_dict(interfaces, LiveFinal, [interface(a, b, LiveWeight, _, _)]),
+    % Build the rest twin: the same world with the bound at rest - rate zero, no geography.
+    put_dict(_{scaling_rate: 0.0, scaling_targets: []}, World0, RestWorld),
+    % Run the rest twin for the same ten ticks.
+    cognitive_cycle_run(RestWorld, 10, RestFinal, _RestSummaries),
+    % Read the rest final weight.
+    get_dict(interfaces, RestFinal, [interface(a, b, RestWeight, _, _)]),
+    % The relay's mark of 0.8 stands above its running average, so the bound pulls the weight UP.
+    assertion(LiveWeight > RestWeight),
+    % The three-factor growth still stands beneath the bound in both twins.
+    assertion(RestWeight > 0.5).
+
+% Independent dynamics check: the live bound leaves the regulated body untouched.
+test(live_bound_leaves_regulation_untouched) :-
+    % Boot the same world the story boots - the live one.
+    capstone_demonstration_world(World0),
+    % Run the live world for the six-tick minimum the story accepts.
+    cognitive_cycle_run(World0, 6, WorldFinal, _Summaries),
+    % Read the final body state.
+    get_dict(body, WorldFinal, Body),
+    % Read the monitored variable.
+    memberchk(temperature-Temperature, Body),
+    % The bound scales interface weights, never the body: the set-point still holds.
+    assertion(Temperature =:= 37),
+    % Read the final interfaces at the minimum count too.
+    get_dict(interfaces, WorldFinal, [interface(a, b, Weight, _, _)]),
+    % The story's weight claim holds at the least count it accepts, not only at ten.
+    assertion(Weight > 0.5).
+
+% The story still tells at the six-tick minimum with the bound live.
+test(story_tells_at_the_minimum_count_with_the_live_bound) :-
+    % Tell the story at the least count the demonstration accepts.
+    capstone_demonstration_story(6, Story),
+    % The story has lines.
+    assertion(Story \== []),
+    % The live bound is told at the minimum count too.
+    assertion(capstone_demonstration_test_contains(Story, "slow homeostatic bound runs LIVE")).
+
+% SLICE 34 REVIEW PINS - the unbound-wrong-judgement lens, the same lens slice 33 confirmed:
+% a refusal must never carry a hole where its subject should be.
+
+% An unbound tick count is refused as uninstantiated, never as a named wrong it cannot name.
+test(unbound_tick_count_refused_as_uninstantiated,
+     [error(instantiation_error, _)]) :-
+    % The unbound count reaches the story's own gate.
+    capstone_demonstration_story(_, _).
+
+% A bound but wrong tick count is still refused by its own name, exactly as before the fix.
+test(bad_tick_count_still_refused_by_name,
+     [error(capstone_demonstration_bad_ticks(3), _)]) :-
+    % Three heartbeats cannot carry the demonstration.
+    capstone_demonstration_story(3, _).
+
 :- end_tests(capstone_demonstration).

@@ -247,6 +247,11 @@
 % story now also tells Rung Five's GROUNDWORK - the body seam's three connections, the sense-act
 % pass, the felt hunger, and the survival rhythm, all through the honestly-named simulated
 % stand-in - while claiming, in the chapter's own words, that groundwork is not the rung.
+% Since slice 34 the heartbeat's slow homeostatic bound runs LIVE in the told story: the boot
+% world carries a slow scaling rate of 0.05 and a one-entry target geography giving the relay b
+% its own activity mark of 0.8 above the diffuse 0.5, and the rung's closing lines tell the
+% bound's work beside a rest twin - the same ticks re-lived at rate zero - so the difference is
+% shown, never merely asserted.
 % The story claims only what is shown: the rung not yet
 % demonstrated is named as such, and the records are declared unsigned, because the signing key
 % is a secret this code may never hold.
@@ -264,8 +269,9 @@ capstone_demonstration_world(World) :-
     % The world starts at tick zero with a too-warm body, one temperature drive defending
     % thirty-seven, an empty bus, a source construct feeding a relay through one learnable
     % transmissive interface, the learning body's trace and average stores at zero with the
-    % slow scaling bound armed but at rest (rate zero), and the respiration override armed
-    % but at rest.
+    % slow scaling bound LIVE since slice 34 - the diffuse mark at one half, the relay b
+    % defending its own mark of 0.8, and the slow rate at 0.05 - and the respiration
+    % override armed but at rest.
     World = world{
         tick: 0,
         body: [temperature-40],
@@ -279,8 +285,8 @@ capstone_demonstration_world(World) :-
         fading_factor: 0.6,
         smoothing_factor: 0.2,
         scaling_target: 0.5,
-        scaling_targets: [],
-        scaling_rate: 0.0,
+        scaling_targets: [b-0.8],
+        scaling_rate: 0.05,
         overrides: [override(respiration, 0, 0.0, breathe)],
         override_threshold: 0.5,
         learning_rate: 0.1,
@@ -323,6 +329,14 @@ capstone_demonstration_story(NumTicks, Story) :-
     append([Title, Heartbeat, Prediction, Thought, FirstWords, Reasoning, Social, Empathy, Feeling, BodySeam, Provenance, Epilogue], Story).
 
 % capstone_demonstration_check_ticks(+NumTicks): the tick count must be an integer of at least six.
+% An unbound count cannot be judged, and must never be refused under a wrong it cannot name
+% (the slice-34 review's root: the same var guard slice 33 laid in the numeric-constant checks).
+capstone_demonstration_check_ticks(NumTicks) :-
+    % The unbound count is refused as uninstantiated - the house answer to a hole where a value should be.
+    var(NumTicks),
+    % Refuse it aloud before any judgement pretends to name it.
+    throw(error(instantiation_error, context(capstone_demonstration_story/2, "the tick count is unbound"))).
+% A bound count is judged on its own value.
 capstone_demonstration_check_ticks(NumTicks) :-
     % A whole number of at least six heartbeats carries the demonstration.
     integer(NumTicks),
@@ -358,14 +372,28 @@ capstone_demonstration_heartbeat_lines(NumTicks, WorldFinal, Summaries, Lines) :
     get_dict(interfaces, WorldFinal, [interface(a, b, Weight, _, _)]),
     % The story only claims learning the run achieved.
     Weight > 0.5,
+    % Boot the rest twin: the same world with the bound at rest - rate zero, no geography.
+    capstone_demonstration_world(BootWorld),
+    % Put the bound to rest and drop the geography, leaving everything else exactly as booted.
+    put_dict(_{scaling_rate: 0.0, scaling_targets: []}, BootWorld, RestWorld),
+    % Live the same ticks with the bound at rest, so the difference is the bound's alone.
+    cognitive_cycle_run(RestWorld, NumTicks, RestFinal, _RestSummaries),
+    % Read the rest twin's final weight.
+    get_dict(interfaces, RestFinal, [interface(a, b, RestWeight, _, _)]),
+    % The story only claims the pull the twin runs really show: the live weight stands above the rest one.
+    Weight > RestWeight,
     % The body's closing line.
     format(string(BodyLine),
            "After ~w ticks the body's temperature stands at ~w - the set-point the drive defends.",
            [NumTicks, Temperature]),
-    % The learning's closing line.
+    % The learning's closing line: the fast rule beneath, the slow bound above.
     format(string(WeightLine),
-           "The interface from a to b now carries weight ~w, grown from 0.5 by the three-factor rule.",
+           "The interface from a to b now carries weight ~w - grown from 0.5 by the three-factor rule, then pulled further by the live bound toward the mark b's own territory defends.",
            [Weight]),
+    % The twin's closing line: the bound's work shown by the difference, never merely asserted.
+    format(string(TwinLine),
+           "Told again with the bound at rest - rate zero, no geography - the same ~w ticks land the weight at ~w: the difference is the bound's own work, checkable by re-running both worlds.",
+           [NumTicks, RestWeight]),
     % The rung's header, boot lines, tick lines, and closing lines in order.
     append([
         [
@@ -373,10 +401,11 @@ capstone_demonstration_heartbeat_lines(NumTicks, WorldFinal, Summaries, Lines) :
             "RUNG ZERO - THE HEARTBEAT AND THE REGULATED BODY",
             "The mind boots with its body too warm: temperature 40 against a defended set-point of 37.",
             "One drive watches that variable; a source construct feeds a relay through one learnable interface of weight 0.5.",
+            "The slow homeostatic bound runs LIVE: the world's diffuse activity mark is 0.5, the relay b defends its own mark of 0.8, and each tick scales b's incoming weight toward that mark at the slow rate 0.05.",
             "The respiration override stands armed at rest (distress 0.0, threshold 0.5): safety is wired in, and today it never needs to seize control."
         ],
         TickLines,
-        [BodyLine, WeightLine]
+        [BodyLine, WeightLine, TwinLine]
     ], Lines).
 
 % capstone_demonstration_tick_lines(+Summaries, -Lines): one glass-box line per lived tick.
