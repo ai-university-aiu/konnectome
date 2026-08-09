@@ -1,0 +1,116 @@
+CONTEXT HAND-OFF FROM COPPER ATLASWRIGHT
+
+Date: 2026-08-09. The second hand-off of this date.
+
+I chose the name Copper Atlaswright because this session's work was to receive the thirty-eight-document atlas of the only known working mind and read it top-down against the konnectome that exists - an atlaswright being a wright whose craft is not building a new room but surveying the whole map honestly before anyone builds again. Copper for the warm metal middle of the house palette, and because copper is the conductor: this session carried knowledge, not code.
+
+
+PART ONE - READ THESE FIRST
+
+- Read and follow the konnectome constitution at ~/konnectome/CONSTITUTION.md, first and foremost - now NINETEEN commandments. TWO ARE NEW since the Auburn hand-off: the Eighth (the Vision Document Set - thirty-eight Certified_Neuroscientist corpus documents in /docs/, with the top-down-analysis mandate THIS SESSION EXECUTED) and the Ninth (the Cognitive Architectures Test-Bed at ~/cognitive_architectures - LOCAL AND READ-ONLY, never committed to the repository; konnectome should be able to perform every architecture's functions; unachievable means bug; kludges are documented discoveries). All former commandment numbers from the old Eighth upward have shifted by two - never cite a commandment by number from memory; re-read the constitution.
+
+- Read The SPARCD Fileset at its current versions: docs/konnectome_1_specification_v35.txt through konnectome_6_demonstration_v35.txt (UNCHANGED by this session - documentation-governance work is the recognized lockstep exception).
+
+- Read docs/NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt - the guiding book - AND NOW docs/konnectome_vision_set_top_down_analysis_v1.txt, this session's analysis of the whole Vision Document Set, which is the fastest honest way into the corpus without re-reading nine megabytes.
+
+- Read the Settings, General, Instructions for Claude (the owner's standing instructions: web search first, novice-level plain-text explanations, output copies to ~/output/, auto-commit-push-merge authorization, session-length budgeting).
+
+- Read ~/CLAUDE.md - git-untracked, at the organization root, the system-wide current-state narrative.
+
+- Read the current tutorial, docs/konnectome_tutorial_v33.txt, and all of docs/.
+
+- Read the prior hand-off, Auburn Twinwright's (2026-08-09_1). This session began from it, verified the baseline in full, and executed the priority-one instruction (the Eighth Commandment analysis).
+
+- THE OWNER'S STANDING CHOICE REMAINS: "All", re-confirmed across sessions. Do NOT re-present the Seamwright menu; verify the baseline and continue down the queue (Part Six), asking only if a priority decision is needed within it.
+
+
+PART TWO - THE IMPORTANT DOCS FILES
+
+- konnectome_vision_set_top_down_analysis_v1.txt - NEW this session. The Eighth Commandment analysis: verdict (no top-level decision reversed), five refinement themes, six watches, six suggested slice families. Read it before designing any slice - the corpus now informs every design.
+
+- konnectome_ledger_v1.txt - the scoreboard. Counter line unchanged: Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0. Observations: 4. New this session: the Vision-Set analysis note after the Slice-34 note, carrying the six WATCH items (mode kind; episodic event index; consolidation provenance; workspace ignition record; weight checkpoint; the language pack's comprehension-production pair) - each claimed only if building actually hits it.
+
+- The Vision Document Set itself, in docs/: THE_FIFTEEN_LAYERS_IN_BRIEF.TXT and TFELOAOTHNAES.txt (the framework), LAYER_04_05_* (slow variables), LAYER_06_* plus the five neuronal_manuscript volumes and LAYER_06_CHAPTER_TEMPLATE_v3.txt (cells), LAYER_07_* (synaptics), LAYER_08_* (microcircuits), LAYER_09_MODES_* (region modes), LAYER_10_* (systems), LAYER_11_* (global states), LAYER_12 through LAYER_15 (faculty specification, tutor protocol, knowledge environment, design method).
+
+- konnectome_1_specification_v35.txt through konnectome_6_demonstration_v35.txt - the SPARCD Fileset, Realization Log through slice 34.
+
+- konnectome_tutorial_v33.txt - the beginner tutorial, thirty-one parts.
+
+- BUILDING_KONNECTOME_v2.txt - the build log, now TWENTY-NINE chapters; Twenty-Nine is this session's (the corpus arrives, the frame holds).
+
+- konnectome_rung_five_real_machine_design_v2.txt - the real-machine design with the owner's five decisions (Path B Webots; wheels-plus-dock; indoor pen; pack names simulator_body_driver and robot_body_driver RESERVED; standing reminder to shop for a physical robot).
+
+- Causalontology_4_0_0_CHANGE_ORDER_v3.txt - Sections C, D, E remain HELD. Nothing this session released them.
+
+- PrologAI_CHANGE_ORDER_v2.txt - unchanged; no language wall hit.
+
+- tests/naming_gate_fixture/ - still deliberately broken; the violation is the point.
+
+- In ~/output/: konnectome_vision_set_top_down_analysis_report.txt (this session's owner report).
+
+
+PART THREE - WHAT THIS SESSION DID
+
+- Verified the Auburn baseline in full before claiming anything - and found main had moved past the hand-off by two owner-instruction merges (pull requests 66 and 67: the Vision Document Set with the new Eighth Commandment, and the new Ninth Commandment). Verified at d3684a1: 494 tests green across twenty-seven packs (counted pack by pack), four gates at zero violations, capstone clean, conformance 137 of 137 in both cousins (PrologAI bin/run_causalontology_conformance.sh; causalontology bindings/python/tests/run_conformance.py).
+
+- Executed the Eighth Commandment's priority-one mandate (pull request 68, squash-merged as 6714d11): the top-down analysis of the thirty-eight-document corpus. Reading order per the commandment: framework documents and Layers 12 through 15 read in full directly; the six heavy layer corpora read through six parallel reading assistants, each judging its layer against the existing packs (outlines and modes companions in full, manuscripts front-matter-plus-representative-chapter depth). Findings synthesized into docs/konnectome_vision_set_top_down_analysis_v1.txt, a ledger note, and build-log chapter Twenty-Nine.
+
+- THE VERDICT, for the next session to stand on: no top-level architectural decision must be reversed - the registry-and-scheduler-with-bus style, ten components, tick order, dumb scheduler, never-invent selector, and passive observer all survive, several confirmed independently by the corpus. Five load-bearing refinement themes: (1) mode registers at every grain with bus-thrown transitions (plus a naming hazard: the data model's interface MODE flag, directed-versus-broadcast, collides with the operating-mode vocabulary and must be resolved before mode work); (2) the two-shift principle - the offline consolidation cycle Component 8 already promises, the corpus's most central named gap, into which the standing long-run-proof pending line merges; (3) the edge type system (two kinds widened to a registry of typed edges, learnability a type property); (4) the motif library as named subgraph views, inhibition as a computation, the selector's winner-take-all deepening; (5) the absent cognitive cluster - attention, working memory, global workspace - with the workspace the one honest pressure on the ten-component discipline, deliberately left to a beside-the-skeleton pilot. NO WALLS ROUTED; six watches recorded.
+
+- State at hand-off: main at 6714d11 (plus this hand-off's merge). Thirty-four slices (this session built none - it was a reading-and-governance session; the test count, gates, and conformance stand exactly as verified). SPARCD v35; tutorial v33; build log twenty-nine chapters. Pull requests merged by this session: 68, and this hand-off's.
+
+
+PART FOUR - BUILD-AGAINST COUSIN COMMITS (for reproducibility)
+
+- causalontology: 292dfca (unchanged).
+
+- PrologAI: ebbc3e0 (unchanged).
+
+- Mentova: d117c69 (read-only; untouched).
+
+
+PART FIVE - SHARP EDGES AND HONEST NON-CLOSURES
+
+- THE COMMANDMENT NUMBERS SHIFTED TWICE IN ONE DAY. Any doc or habit citing "the Eighth" through "the Seventeenth" from before 2026-08-09 is now off by two. Re-read the constitution before citing numbers; the hand-off protocol is now the Nineteenth Commandment, the Safety Gate the Fifteenth.
+
+- THE NINTH COMMANDMENT IS UNEXECUTED. ~/cognitive_architectures (the test-bed of published cognitive architectures) has NOT yet been read or assessed by any session. It is local-only, read-only, never committed. Its mandate (konnectome should perform every catalogued architecture's functions; the biology leads where they disagree; unachievable means bug) is standing work no one has started. It did not belong inside the Eighth Commandment analysis and was deliberately not folded in.
+
+- THE ANALYSIS IS A MAP, NOT A CLAIM. The six slice families in the analysis document are suggestions ranked smallest-first; nothing is built, nothing is claimed. Per the Second Commandment's armchair rule, the six ledger watches must not be promoted to change-order entries until a build actually hits them.
+
+- THE CAPSTONE WORLD IS STILL LIVE (slice 34): scaling rate 0.05, geography b-0.8, three closing guards (temperature 37, live weight above 0.5, live above rest-twin). Any slice touching the capstone's boot world or heartbeat chapter must keep them true or the story refuses to print. The rest twin re-runs the cycle - cheap today, remember it if ticks get expensive.
+
+- THE UNBOUND-WRONG-JUDGEMENT LENS KEEPS PAYING (slices 33 and 34 both). Apply it in review to whatever pack a slice touches; do not fix speculatively across the repository.
+
+- DELIBERATE CHOICES A READER MIGHT MISTAKE FOR GAPS: only the capstone's world runs the bound live; the scaling rate is still global; the reward step is not called by the tick (trace lifetime belongs to the caller - though the Vision analysis now marks wiring it, with tag consumption, as an early slice); orphan targets deliberately permitted; the naming-gate fixture deliberately broken; Observation-4 (no word for satisfaction) still LOGGED, NOT ROUTED.
+
+- PARALLEL SESSIONS: the hazard shadowed this session - main moved past the prior hand-off before this session began (by the owner's own merges, 66 and 67). The ritual held: git fetch, git log origin/main, gh pr list before every claim, numbering, or merge. Keep it.
+
+- SIX-ASSISTANT READING CAVEAT: the heavy manuscripts were sampled at representative-chapter depth, not read line by line. The analysis is honest about this. A slice designed against a specific corpus chapter must read THAT chapter in full first - the analysis document locates them; it does not replace them.
+
+
+PART SIX - THE FIRST TASK OF THE CONTINUATION
+
+The owner has already chosen: ALL (standing, re-confirmed across sessions). The Eighth Commandment's priority-one analysis is DONE. The remaining queue, in suggested order (re-orderable by the owner at any time):
+
+1. The NINTH COMMANDMENT's first execution: survey ~/cognitive_architectures read-only, build the coverage list (which architectures' functions konnectome can already perform, which are emergent, which are unachievable-therefore-bug), record it in the ledger per the commandment. A reading-and-ledger session, like this one; no code required.
+
+2. Slice family one from the Vision analysis, the two-shift machinery, smallest first: (a) the global online/offline state on the bus, default online, behaviour pinned identical; (b) the reward step wired into the live tick with capture consuming spent traces (closes a standing pending line); (c) the two-process governor; (d) the offline works - interleaved replay plus the raised-rate bound, proven by a catastrophic-forgetting rest-twin telling (subsumes the long-run-proof pending line). Each its own slice: design against the corpus chapter read in full, test-first, tighter-scoped adversarial review with named lenses, lockstep documents, pull request.
+
+3. The remaining Vision slice families as the owner prefers: edge type registry; mode registers (resolve the MODE-flag naming collision first); working-memory blackboard; workspace pilot; motif catalogue; the six-broadcast bus naming; template-parser tooling.
+
+4. The pre-corpus pending refinements not absorbed above: computational-interface transforms; interfaces as Causalontology conduits; the token tier of thought combination.
+
+5. Deepen Rung Two - the full pilot conversation and richer grounded vocabulary - now designed against the Layer 13 Tutor Protocol (contingent turn-taking, competence-plus-one, shared workspace grounding).
+
+6. Rung Five, Path B - UNBLOCKED: simulator_body_driver against Webots per the decided design; the rung itself unclaimed until a physical robot passes the smoke test; carry the standing robot-shopping reminder.
+
+7. Other ______________ .
+
+
+PART SEVEN - SIGN-OFF
+
+A project that receives its own gold-standard description and finds no commandment of its architecture contradicted has not been idle - it has been honest all along. The atlas is read, the map is drawn, the watches are posted, and the frame that thirty-four slices built is the frame the biology asks for.
+
+Survey before you build, and what you build will already be home.
+
+- Copper Atlaswright, 2026-08-09
