@@ -1,0 +1,118 @@
+CONTEXT HAND-OFF FROM BRONZE GAUGEWRIGHT
+
+Date: 2026-08-09. The third hand-off of this date.
+
+I chose the name Bronze Gaugewright because this session's work was to hold the published cognitive architectures of the test-bed up against the konnectome that exists and take an honest measurement - a gaugewright being a wright whose craft is the measuring instrument itself, and coverage being exactly a gauge: it tells distance without steering the ship. Bronze because it stands beside Copper in the warm-metal middle of the house palette, and because bronze is the alloy: this session's finding is that two independent literatures, poured together, harden into one and the same gap list.
+
+
+PART ONE - READ THESE FIRST
+
+- Read and follow the konnectome constitution at ~/konnectome/CONSTITUTION.md, first and foremost - NINETEEN commandments. Never cite a commandment by number from memory; the numbers shifted twice on 2026-08-09; re-read the constitution. The hand-off protocol is the Nineteenth, the Safety Gate the Fifteenth.
+
+- Read The SPARCD Fileset at its current versions: docs/konnectome_1_specification_v35.txt through konnectome_6_demonstration_v35.txt (UNCHANGED by this session - documentation-governance work is the recognized lockstep exception, used now twice in a row).
+
+- Read docs/NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt (the guiding book), docs/konnectome_vision_set_top_down_analysis_v1.txt (the Eighth Commandment analysis), AND NOW docs/konnectome_cognitive_architectures_coverage_v1.txt - this session's Ninth Commandment coverage survey, the fastest honest way into the test-bed without re-reading it.
+
+- Read the Settings, General, Instructions for Claude (the owner's standing instructions: web search first, novice-level plain-text explanations, output copies to ~/output/, auto-commit-push-merge authorization, session-length budgeting).
+
+- Read ~/CLAUDE.md - git-untracked, at the organization root, the system-wide current-state narrative.
+
+- Read the current tutorial, docs/konnectome_tutorial_v33.txt, and all of docs/.
+
+- Read the prior hand-off, Copper Atlaswright's (2026-08-09_2). This session began from it, verified the baseline in full, and executed its priority-one queue item (the Ninth Commandment survey).
+
+- THE OWNER'S STANDING CHOICE REMAINS: "All", re-confirmed across sessions. Do NOT re-present any menu; verify the baseline and continue down the queue (Part Six), asking only if a priority decision is needed within it.
+
+
+PART TWO - THE IMPORTANT DOCS FILES
+
+- konnectome_cognitive_architectures_coverage_v1.txt - NEW this session. The Ninth Commandment coverage list: verdicts for roughly sixty architectures, patterns, and modules; SEVEN coverage bugs each with a named closer; recorded divergences where the biology leads; importable in-frame ideas (the SOAR impasse as a bus disturbance, the early somatic-marker stamp, the epistemic drive with a learning-progress statistic).
+
+- konnectome_vision_set_top_down_analysis_v1.txt - the Eighth Commandment analysis: verdict, five refinement themes, six watches, six slice families.
+
+- konnectome_ledger_v1.txt - the scoreboard. Counter line unchanged: Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0. Observations: 4. New this session: the Cognitive-Architectures survey note after the Vision-Set analysis note (the seven coverage bugs, the divergences, nothing routed).
+
+- The Vision Document Set (thirty-eight documents) in docs/ - see the Copper hand-off's Part Two for the file map.
+
+- konnectome_1_specification_v35.txt through konnectome_6_demonstration_v35.txt - the SPARCD Fileset, Realization Log through slice 34.
+
+- konnectome_tutorial_v33.txt - the beginner tutorial, thirty-one parts.
+
+- BUILDING_KONNECTOME_v2.txt - the build log, now THIRTY chapters; Thirty is this session's (the rival blueprints arrive, and ask for the same house).
+
+- konnectome_rung_five_real_machine_design_v2.txt - the real-machine design with the owner's five decisions (Path B Webots; wheels-plus-dock; indoor pen; pack names simulator_body_driver and robot_body_driver RESERVED; standing robot-shopping reminder).
+
+- Causalontology_4_0_0_CHANGE_ORDER_v3.txt - Sections C, D, E remain HELD. Nothing this session released them.
+
+- PrologAI_CHANGE_ORDER_v2.txt - unchanged; no language wall hit.
+
+- tests/naming_gate_fixture/ - still deliberately broken; the violation is the point.
+
+- In ~/output/: konnectome_cognitive_architectures_coverage_report.txt (this session's owner report - it also carries a PRIVATE flag for the owner about a credential-looking line near the end of the local transcripts file; that flag is deliberately NOT in any committed document).
+
+
+PART THREE - WHAT THIS SESSION DID
+
+- Verified the Copper baseline in full before claiming anything, at main 0025e36: 494 tests green across twenty-seven packs (counted pack by pack), four gates at zero violations, capstone story clean, conformance 137 of 137 in both cousins (PrologAI bin/run_causalontology_conformance.sh; causalontology bindings/python/tests/run_conformance.py with CAUSALONTOLOGY_SPEC unset). Cousins at their expected commits.
+
+- Executed the Ninth Commandment's first execution (pull request 70, squash-merged as fa23141): the coverage survey of ~/cognitive_architectures. The four test-bed text files (about eight hundred sixty kilobytes; the page images are the same books in image form and were not read) were read IN FULL by four parallel reading assistants, each judging its file's catalogue against the twenty-seven packs, the specification, and the Vision analysis; the session synthesized and cross-checked the four ledgers (including correcting one assistant's verdict against the ledger's slice-21 record - cause_and_effect DOES perform a breadth-first means-end planning trial, so planning is PARTIAL, not absent). Findings written to the coverage document, a ledger note, and build-log chapter Thirty; owner report to ~/output/. The test-bed files were read only - never edited, moved, or committed.
+
+- THE RESULT, for the next session to stand on: konnectome already performs or emergently exhibits the motivation, emotion, regulation, coping, reaction, observation, social-cognition, and homeostatic-learning families (PSI/MicroPsi the most complete match; the test-bed's own Piagetian lineage a near cousin, pack for mechanism). SEVEN coverage bugs recorded, each with a named closer among the Vision slice families: (1) episodic memory and reminding; (2) the offline consolidation cycle; (3) the attention/working-memory/workspace cluster; (4) plan synthesis as a proposer under never-invent; (5) perceptual feature learning at the Rung Five frontier; (6) language production beyond the word; (7) contradiction contexts. THE GOVERNING FINDING: the test-bed demands nothing the biology has not already demanded - bugs one through three are exactly the three organs the Eighth Commandment analysis named absent, and four sources converge on the consolidation gap alone. NOTHING ROUTED (the armchair rule stands over the Ninth Commandment); divergences recorded with the biology leading (runtime self-programming, sleepless memory, budget economies, rulers, oracles, command hierarchies, uniformity-first); no kludge was made, and the kludge-documentation obligation is noted for whenever one first is.
+
+- State at hand-off: main at fa23141 (plus this hand-off's merge). Thirty-four slices (this session built none - the second reading-and-governance session in a row; the test count, gates, and conformance stand exactly as verified). SPARCD v35; tutorial v33; build log thirty chapters. Pull requests merged by this session: 70, and this hand-off's.
+
+
+PART FOUR - BUILD-AGAINST COUSIN COMMITS (for reproducibility)
+
+- causalontology: 292dfca (unchanged).
+
+- PrologAI: ebbc3e0 (unchanged).
+
+- Mentova: d117c69 (read-only; untouched).
+
+
+PART FIVE - SHARP EDGES AND HONEST NON-CLOSURES
+
+- THE COVERAGE LIST IS A GAUGE, NOT A TEST RUN. Every verdict in the coverage document is a reading judgment; the Layer 12 faculty suites remain the acceptance tests. A slice that closes a coverage bug should cite the bug AND the corpus chapter, and prove itself by test, never by the table.
+
+- THE SEVEN BUGS ARE NOT SEVEN SLICES. Bugs one through three are whole slice families already queued from the Vision analysis; bug four is bounded by the constitution (any planner enters as a PROPOSER whose candidates the never-invent selector arbitrates - building it any other way is a constitutional change, not a slice); bugs five and six wait at their frontiers (Rung Five; Rung Two with WATCH-6); bug seven is small and waits for a build to hit it.
+
+- THE DIVERGENCE RECORDINGS ARE LOAD-BEARING. When some future session is tempted to add runtime self-programming, an attention budget economy over the scheduler, or a reconfigurer that starts and stops packs, the coverage document's divergence list is the place that says why not, with the commandment behind it. The biology leads; the disagreement is recorded, not built.
+
+- THE FOUR-ASSISTANT READING CAVEAT. The four text files were read in full (unlike the atlas, which was sampled at depth) - but by assistants, and synthesized. The transcripts file in particular is rough speech-to-text with corrupted passages and at least one misnamed researcher; the coverage document judges functions, not scholarship. A slice designed against a specific test-bed architecture should re-read that architecture's passages directly.
+
+- THE PRIVATE FLAG. The owner report in ~/output/ flags a credential-looking line near the end of the local transcripts file for the owner to scrub if unintended. Do not copy that line anywhere, and do not put the flag in committed documents.
+
+- THE CAPSTONE WORLD IS STILL LIVE (slice 34): scaling rate 0.05, geography b-0.8, three closing guards (temperature 37, live weight above 0.5, live above rest-twin). Any slice touching the capstone's boot world or heartbeat chapter must keep them true or the story refuses to print.
+
+- THE UNBOUND-WRONG-JUDGEMENT LENS KEEPS PAYING (slices 33 and 34). Apply it in review to whatever pack a slice touches; do not fix speculatively across the repository.
+
+- DELIBERATE CHOICES A READER MIGHT MISTAKE FOR GAPS: only the capstone's world runs the bound live; the scaling rate is still global; the reward step is not called by the tick (wiring it, with tag consumption, is slice family one's item b); orphan targets deliberately permitted; the naming-gate fixture deliberately broken; Observation-4 (no word for satisfaction) still LOGGED, NOT ROUTED.
+
+- PARALLEL SESSIONS: the ritual held - git fetch, git log origin/main, gh pr list before every claim, numbering, or merge. Keep it; main has moved under a session's feet before.
+
+
+PART SIX - THE FIRST TASK OF THE CONTINUATION
+
+The owner has already chosen: ALL (standing, re-confirmed across sessions). Both commandment-ordered readings (the Eighth's analysis and the Ninth's survey) are DONE. The remaining queue, in suggested order (re-orderable by the owner at any time):
+
+1. Slice family one from the Vision analysis, the two-shift machinery, smallest first: (a) the global online/offline state on the bus, default online, behaviour pinned identical; (b) the reward step wired into the live tick with capture consuming spent traces (closes a standing pending line); (c) the two-process governor; (d) the offline works - interleaved replay plus the raised-rate bound, proven by a catastrophic-forgetting rest-twin telling (subsumes the long-run-proof pending line). Each its own slice: design against the corpus chapter read in full, test-first, tighter-scoped adversarial review with named lenses, lockstep documents, pull request. This family now carries FOUR literatures' convergent demand (coverage bug two).
+
+2. The remaining Vision slice families as the owner prefers: edge type registry; mode registers (resolve the MODE-flag naming collision first); working-memory blackboard; workspace pilot (coverage bug three's closers); motif catalogue; the six-broadcast bus naming; template-parser tooling. The survey's importable margin-ideas ride along where they fit (the impasse disturbance with the selector work; the somatic-marker stamp with the appraisal work; the epistemic drive with the drive work).
+
+3. The pre-corpus pending refinements not absorbed above: computational-interface transforms; interfaces as Causalontology conduits; the token tier of thought combination.
+
+4. Deepen Rung Two - the full pilot conversation and richer grounded vocabulary - designed against the Layer 13 Tutor Protocol (this also advances coverage bug six).
+
+5. Rung Five, Path B - UNBLOCKED: simulator_body_driver against Webots per the decided design (this also opens coverage bug five's frontier); the rung itself unclaimed until a physical robot passes the smoke test; carry the standing robot-shopping reminder.
+
+6. Other ______________ .
+
+
+PART SEVEN - SIGN-OFF
+
+A gauge that reads zero distance would be broken, and a gauge that reads infinite distance would be useless; this one read something better - that every mile left to walk was already on the map. The rival blueprints were held up to the house the biology designed, and they asked, nearly in chorus, for the rooms the atlas had already drawn: the night shift, the memory of days, the lighted stage.
+
+Measure honestly, and the rivals become witnesses.
+
+- Bronze Gaugewright, 2026-08-09
