@@ -1,0 +1,136 @@
+LAYERS 4 AND 5, THE MACROMOLECULAR AND ORGANELLAR LAYERS: MODES AND MODE TRANSITIONS - THE OUTLINE
+
+The per-mechanism mode registers, extracted from LAYER_04_05_MODES_MANUSCRIPT (which holds the full entries: registers, per-mode transfer functions, transition tables, and fault regimes).
+
+Each entry below: the mechanism, its source chapter key, and its named mode register.
+
+Date of compilation: August 9, 2026.
+
+
+ENTRY 1. THE CAMKII SWITCH (keyed to slow variables catalogue Chapter 1)
+
+◦ OFF (Basal Ring) - the ring rests mostly unphosphorylated at threonine 286, reporting the synapse as basal weight.
+
+◦ ON (Stamped Ring) - the ring rests mostly autophosphorylated and self-restamping, reporting the synapse as potentiated.
+
+ENTRY 2. THE PKM-ZETA LOOP (keyed to slow variables catalogue Chapter 2)
+
+◦ IDLE (Loop Dark) - synthesis at baseline, no self-sustaining production, synapse held only by upstream stores.
+
+◦ RUNNING (Loop Lit) - self-sustaining synthesis loop latched on, holding elevated AMPA-receptor number for days to weeks.
+
+ENTRY 3. THE CPEB PRION-LIKE SWITCH (keyed to slow variables catalogue Chapter 3)
+
+◦ SOLUBLE (Clamped Repressor) - CPEB3 soluble and repressing, target plasticity messengers untranslated.
+
+◦ AGGREGATED (Templating Stamp) - CPEB3 in a self-templating aggregate that keeps its target messengers translated.
+
+ENTRY 4. THE CREB GATE (keyed to slow variables catalogue Chapter 4)
+
+◦ BELOW (Waiting Gate) - phosphorylated CREB under threshold, no gene programme launched.
+
+◦ FIRED (Graduation Pulse) - threshold crossed, memory gene programme triggered and downstream renewal loops armed.
+
+◦ PRIMED (Eligible Cell) - a raised-excitability window during which this neuron is preferentially recruited into the engram.
+
+ENTRY 5. THE SYNAPTIC TAG (keyed to slow variables catalogue Chapter 5)
+
+◦ UNSET (Ineligible Dock) - no tag, synapse cannot capture plasticity products.
+
+◦ SET (Loading Dock Open) - tag present, synapse entitled to capture shared plasticity products.
+
+◦ CONSUMED (Cargo Captured) - tag has captured cargo and installed durable change, the address spent.
+
+ENTRY 6. THE PLASTICITY PRODUCTS (keyed to slow variables catalogue Chapter 6)
+
+◦ QUIESCENT (No Shipment) - no product wave in the dendritic tree.
+
+◦ BROADCASTING (Cell-Wide Shipment) - a wave of newly made products, including the activity-regulated cytoskeleton-associated protein (abbreviated Arc) and brain-derived neurotrophic factor (abbreviated BDNF), diffusing tree-wide.
+
+◦ CAPTURED (Payload Spent) - products seized at a tagged synapse and consumed into durable change.
+
+ENTRY 7. THE LOCAL TRANSLATION STATIONS (keyed to slow variables catalogue Chapter 7)
+
+◦ DORMANT (Stocked and Idle) - messengers pre-positioned but translationally repressed, ribosomes idling.
+
+◦ FABRICATING (Workshop Awake) - specific messengers released and ribosomes actively reading, building kinases, scaffolds and cytoskeletal parts on the spot.
+
+ENTRY 8. THE SLOT AND TRAFFICKING SYSTEM (keyed to slow variables catalogue Chapter 8)
+
+◦ HOLDING (Rack Steady) - slot count maintained, receptors trapped and refreshed from the reserve pool at a steady set point.
+
+◦ FILLING (Rack Up) - net insertion of receptors and recruitment of slots, raising the count.
+
+◦ EMPTYING (Rack Down) - net endocytosis of receptors and loss of slots, lowering the count.
+
+ENTRY 9. THE SPINE ACTIN SKELETON (keyed to slow variables catalogue Chapter 9)
+
+◦ SMALL (Baseline Frame) - small spine, small postsynaptic density, few slots.
+
+◦ REMODELLING (Transient Swell) - a brief enlargement phase during active polymerisation.
+
+◦ ENLARGED (Shape Locked) - a stable cross-braced enlarged frame held by treadmilling.
+
+ENTRY 10. THE TRANS-SYNAPTIC ADHESION COMPLEX (keyed to slow variables catalogue Chapter 10)
+
+◦ UNBOLTED (No Join) - no matched adhesion pair, no aligned junction.
+
+◦ BOLTED (In Register) - neurexin and neuroligin clasped, release site held over receptor cluster, redundant bonds re-clasped under load.
+
+◦ DISBANDING (Bolts Cut) - bonds broken and the junction being disassembled.
+
+ENTRY 11. THE PERINEURONAL NET (keyed to slow variables catalogue Chapter 11)
+
+◦ PERMISSIVE (Fence Down) - no condensed net, enclosed synapses free to change, as in the juvenile critical period.
+
+◦ FENCED (Fence Up) - condensed lattice in place, enclosed wiring write-protected against structural change.
+
+ENTRY 12. THE MITOCHONDRIAL PROVISIONING SYSTEM (keyed to slow variables catalogue Chapter 12)
+
+◦ UNDOCKED (No Dock) - no mitochondrion stationed at a given synapse.
+
+◦ DOCKED (Power Dock) - a mitochondrion anchored beneath an active spine or terminal, supplying the energy currency and buffering calcium.
+
+ENTRY 13. THE SYNAPSE-TO-NUCLEUS SIGNALLING RELAY (keyed to slow variables catalogue Chapter 13)
+
+◦ IDLE (No Petition) - no request in flight.
+
+◦ IN TRANSIT (Courier Walking) - a phosphorylated cargo locked in a protective complex walking the microtubule to the nucleus.
+
+◦ DELIVERED (Petition Read) - cargo released at the nucleus and acting on transcription factors.
+
+ENTRY 14. THE IMMEDIATE-EARLY GENE RESPONSE (keyed to slow variables catalogue Chapter 14)
+
+◦ POISED (Pre-Armed Trigger) - first-response machinery loaded, no transcription, zero start-up latency.
+
+◦ PULSING (Fast Ledger Writing) - immediate-early genes such as c-Fos, Arc, Egr1 and Npas4 transcribed, a whole-cell nuclear event.
+
+◦ DECAYED (Ledger Fading) - messengers and proteins clearing, record resetting.
+
+ENTRY 15. THE HISTONE CODE (keyed to slow variables catalogue Chapter 15)
+
+◦ OPEN (Loose Spool) - acetylated histones, chromatin loosened, plasticity genes readable.
+
+◦ CLOSED (Tight Spool) - certain methyl marks dominant, chromatin tightened, genes silenced.
+
+ENTRY 16. THE DNA METHYLATION STORE (keyed to slow variables catalogue Chapter 16)
+
+◦ UNMETHYLATED (Bare Letter) - gene available, higher activity.
+
+◦ METHYLATED (Inked Letter) - methyl group on the cytosine, gene durably quietened.
+
+ENTRY 17. THE TRANSPOSON AND SOMATIC MOSAICISM QUESTION (keyed to slow variables catalogue Chapter 17)
+
+◦ UNINSERTED (Reference Genome) - the neuron's genome unchanged at that locus; the normal operating state.
+
+◦ INSERTED (Scarred Genome) - a permanent retrotransposition insertion, present but with no known controlled use.
+
+ENTRY 18. THE HOMEOSTATIC SET-POINT MACHINERY (keyed to slow variables catalogue Chapter 18)
+
+◦ QUIESCENT (Governor Resting) - average firing near target, gain held steady, no scaling underway.
+
+◦ RENORMALISING UP (Fair Governor Lifting) - prolonged under-activity driving every excitatory synapse up by one shared factor.
+
+◦ RENORMALISING DOWN (Fair Governor Trimming) - prolonged over-activity driving every synapse down by one shared factor.
+
+END OF OUTLINE

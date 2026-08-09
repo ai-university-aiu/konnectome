@@ -1,0 +1,396 @@
+LAYER 8, THE MICROCIRCUIT LAYER: THE TYPES
+
+A Complete, Comprehensive, and Thorough List and Outline of the Microcircuit Types of the Human Nervous and Endocrine System
+
+Companion outline to the Layer 6 catalogues (302 neuron types; 85 non-neuronal cell types) in the Certified_Neuroscientist corpus of D. R. Dison, Founder, Artificial Intelligence University (AIU).
+
+Date of compilation: August 9, 2026.
+
+
+HOW TO READ THIS OUTLINE
+
+Layer 8 is the layer of the microcircuit motif: the small, canonical arrangement of connected cells that performs one elementary computation.
+
+The defining fact about this layer, stated in the framework volumes, is that a motif is GENERIC: lateral inhibition is lateral inhibition wherever it appears, and the same handful of motifs recur throughout the brain.
+
+A motif is therefore not a place.
+
+It is a wiring diagram plus a computation, and the same diagram may be installed in the cortex, the spinal cord, the retina, and even a gland.
+
+This outline catalogues the motifs themselves - roughly sixty-five of them, organized into ten parts - from the elementary wiring primitives, through the inhibitory and competitive motifs, the oscillators, the memory circuits, the great regional composites, the reflex arcs, the sensory front-ends, the neuroendocrine microcircuits, and finally the neuro-glial and neurovascular motifs.
+
+Every entry carries one of two tags.
+
+• (COG) means the motif participates in COGNITION: it performs a computation that contributes to perception as interpreted, attention, memory, decision, or learning.
+
+• (NON-COG) means the motif serves a substrate role or another role: pure relay, motor execution, autonomic and endocrine regulation, early sensory filtering, or housekeeping.
+
+Two honest cautions accompany the tags.
+
+First, because motifs are generic, a single wiring diagram can serve cognition in the cortex and mere reflex in the cord; each entry is tagged by its PRINCIPAL role, and the text says where the role changes with the address.
+
+Second, the boundary between a large Layer 8 motif and a small Layer 9 region is one of the framework's soft boundaries; the composites of Part Six sit deliberately at that boundary, treated here as motifs because they are replicated, generic templates rather than named places.
+
+A note on counting: unlike neurons and cells, motifs have no census.
+
+The cortex alone repeats its column motif on the order of one to two million times, and the elementary motifs of Parts One and Two are instantiated in numbers that can only be called astronomical.
+
+
+PART ONE. THE ELEMENTARY WIRING PRIMITIVES
+
+The irreducible connection patterns from which every larger motif is assembled - the two-cell and three-cell "words" of the circuit language, identified in connectome analyses as network motifs (patterns of local connectivity occurring far more often than chance).
+
+1. Convergence (Fan-In) (COG).
+
+Many cells project onto one; the receiving cell integrates, averages, or detects coincidence among its inputs - the physical basis of evidence-summing everywhere from motoneuron to prefrontal decision cell.
+
+2. Divergence (Fan-Out) (COG).
+
+One cell projects to many, copying its message; divergence is what makes a signal a broadcast within a circuit and underlies the amplification stages of every pathway.
+
+3. The Feedforward Chain (Relay) (NON-COG).
+
+Cell A drives cell B drives cell C, without loops - the pure transmission line, faithful but computationally inert, the substrate role in its clearest form.
+
+4. The Recurrent Loop (Reciprocal Pair) (COG).
+
+Cell A excites cell B, and cell B excites cell A - the smallest loop; recurrence turns a network from a pipe into a system with internal state, and internal state is the precondition of memory.
+
+5. The Feedforward Loop (Triad Motif) (COG).
+
+Cell A drives cell C both directly and through intermediary cell B - the three-node motif over-represented in every nervous system yet analysed; the two paths' different delays and signs let the triad compute change detection, persistence filtering, and temporal comparison.
+
+6. Recurrent (Mutual) Excitation Within a Population (COG).
+
+A pool of excitatory cells wired to re-excite one another; the amplifier of the cortex, the substrate of attractor states and persistent activity, and, when inhibition fails, the substrate of seizure.
+
+
+PART TWO. THE INHIBITORY MOTIFS
+
+Inhibition is not the absence of activity but a computation in its own right, and the interneurons of the Layer 6 catalogue implement at least eight distinct inhibitory wiring patterns.
+
+7. Feedforward Inhibition (COG).
+
+An input excites both a principal cell and an interneuron that inhibits the same principal cell; the delayed inhibition chops the excitation into a brief window, enforcing temporal precision - the circuit that makes cortex fast.
+
+8. Feedback (Recurrent) Inhibition (COG).
+
+The principal cell excites an interneuron that inhibits it back; a self-limiting thermostat that controls gain, prevents runaway excitation, and paces population rhythms.
+
+9. Lateral Inhibition (COG).
+
+Active cells inhibit their neighbours through interneurons; the contrast-enhancer and sharpener, named in the framework volumes as the exemplary generic motif - installed in the retina for edges, in the dentate gyrus for memory separation, and in the cortex for selectivity of every kind.
+
+10. Recurrent Inhibition of the Renshaw Type (NON-COG).
+
+The output cell's own axon collateral drives an inhibitory cell that feeds back onto it and its neighbours - discovered at the spinal motoneuron (the Renshaw cell), where it stabilizes motor output; a governor on the final common path.
+
+11. Reciprocal Inhibition (The Push-Pull Pair) (NON-COG).
+
+Two cells or pools inhibit each other so that when one is active the other is silenced; in the spinal cord it relaxes the antagonist muscle while the agonist contracts, and the same diagram reappears in Part Four as the heart of every half-centre oscillator.
+
+12. Presynaptic Inhibition (The Input Tap) (NON-COG).
+
+An inhibitory terminal synapses onto another axon's terminal, turning down that input's release before it ever reaches the receiving cell - selective gating of one input line at a time, used massively to filter sensory afferents during movement.
+
+13. The Perisomatic-Dendritic Division of Labour (COG).
+
+The parvalbumin-positive basket and chandelier cells inhibit the soma and axon initial segment (vetoing output and timing spikes), while the somatostatin-positive Martinotti cells inhibit the distal dendrites (vetoing specific inputs) - one motif, two control points: output gain versus input selection.
+
+14. Disinhibition (The Inhibition of Inhibition) (COG).
+
+An interneuron inhibits another interneuron, releasing the principal cell from its brake; the vasoactive-intestinal-peptide-positive interneurons specialize in silencing the somatostatin cells, opening dendritic gates for learning - the cortex's attention and permission signal, and, in the amygdala's intercalated cell clusters, the gate of fear extinction.
+
+15. Volume (Neurogliaform) Inhibition (COG).
+
+The neurogliaform cell releases a slow cloud of gamma-aminobutyric acid (GABA) that inhibits every process within reach, without addressed synapses - a local blanket damper, the microcircuit-scale echo of the framework's broadcast principle.
+
+
+PART THREE. THE COMPETITIVE AND NORMALIZING MOTIFS
+
+Motifs that make populations compete, so that activity becomes selection.
+
+16. Winner-Take-All (COG).
+
+Mutually inhibiting candidates race, and the strongest silences the rest; the framework volumes name it among the canonical motifs, and it is the circuit form of decision itself - one winner, implemented wherever the brain must choose.
+
+17. Soft Winner-Take-All and Sparse Coding (k-Winners) (COG).
+
+The gentler version in which a few winners survive; combined with strong global inhibition it enforces sparse codes, the format the dentate gyrus and cerebellar granule layer use for pattern separation.
+
+18. Divisive Normalization (COG).
+
+Each cell's response is divided by the summed activity of its pool; identified as a canonical neural computation across species and systems, it keeps codes within dynamic range, implements contrast invariance, and underlies attention's multiplicative effects.
+
+19. Gain Modulation (The Multiplier) (COG).
+
+A modulatory input changes the slope, not the threshold, of a cell's input-output curve, multiplying rather than adding; the circuit mechanism by which context, arousal, and attention rescale computation without changing its content.
+
+20. The Push-Pull (Opponent) Motif (NON-COG).
+
+Two channels carry opposite signs of the same signal (ON versus OFF, flexor versus extensor, agonist hormone versus antagonist hormone), doubling range and speed; tagged for its principal sensory and motor front-end role, though opponency reappears in cognition as opponent value channels.
+
+
+PART FOUR. THE TEMPORAL AND OSCILLATORY MOTIFS
+
+Motifs whose output is not a value but a rhythm or a timing relationship.
+
+21. Coincidence Detection with Delay Lines (NON-COG).
+
+Inputs arrive over paths of deliberately different conduction delay onto a detector that fires only when they arrive together; the Jeffress motif of the medial superior olive computes the location of a sound from microsecond interaural time differences - the brain's most precise timing circuit.
+
+22. The Gamma Oscillator, Pyramidal-Interneuron Type (PING) (COG).
+
+Pyramidal cells excite fast-spiking basket cells, which inhibit the pyramidal cells, which recover and fire together: the loop rings at gamma frequency (about 30 to 90 cycles per second), binding active ensembles into shared time slots - the clock of cortical cooperation.
+
+23. The Gamma Oscillator, Interneuron-Only Type (ING) (COG).
+
+Mutually inhibiting, gap-junction-coupled interneurons ring on their own; the purely inhibitory version of the gamma clock.
+
+24. Theta-Gamma Nesting (The Phase Coder) (COG).
+
+A slow theta rhythm (about 4 to 8 cycles per second) modulates a fast gamma rhythm, so that each theta cycle carries an ordered sequence of gamma slots; the hippocampus writes item sequences into this nested code - a time-division multiplexing scheme, and the temporal skeleton of episodic memory.
+
+25. The Half-Centre Oscillator (NON-COG).
+
+Two pools connected by reciprocal inhibition, each with fatigue or adaptation: one fires while silencing the other, tires, and hands over - the elementary rhythm machine, flexor-extensor alternation in its purest form.
+
+26. The Central Pattern Generator (CPG) (NON-COG).
+
+Networks of coupled half-centres and pacemaker cells that produce a full rhythmic motor program without rhythmic input - locomotion in the lumbar cord, breathing in the pre-Bötzinger complex, chewing and swallowing in the brainstem; named in the framework volumes among the canonical motifs, and the reason walking does not require thinking about walking.
+
+27. The Pacemaker Network (Coupled Cellular Oscillators) (NON-COG).
+
+A population of individually oscillating cells pulled into synchrony by mutual coupling; the suprachiasmatic nucleus's tens of thousands of clock cells couple into one master circadian oscillator - and the same diagram runs the pancreatic islet's pulses of insulin.
+
+28. The Synfire Chain (Sequence Generator) (COG).
+
+Pools of cells wired in feedforward waves so that a packet of synchronous spikes travels pool to pool; a candidate substrate for learned sequences - birdsong's premotor chains are the proven case, and human speech and skilled action plausibly ride on the same motif.
+
+
+PART FIVE. THE MEMORY AND ATTRACTOR MOTIFS
+
+Motifs whose recurrent wiring creates stable states - the circuit forms of remembering.
+
+29. The Autoassociative Attractor Network (COG).
+
+A pool of principal cells with massive recurrent excitation and modifiable synapses stores patterns as stable states, and recalls a whole pattern from any fragment (pattern completion); hippocampal area CA3, with its recurrent collaterals, is the anatomically proven case - the circuit that turns a cue into a memory.
+
+30. The Point Attractor of Persistent Activity (The Working Memory Cell Assembly) (COG).
+
+Recurrent excitation balanced against inhibition holds a population's firing up after the stimulus is gone - activity that outlives its cause; the prefrontal delay-period circuit, the physical present tense of "keeping something in mind."
+
+31. The Line Attractor (Neural Integrator) (NON-COG).
+
+A recurrent network tuned so that any level of activity is stable, letting it add up inputs over time and hold the sum; the brainstem oculomotor integrator that converts eye-velocity commands into eye-position holding is the classic instance - tagged for its motor role, though the same motif accumulates evidence in decision circuits, where it is (COG).
+
+32. The Ring Attractor (COG).
+
+Cells arranged (functionally) in a ring, each exciting neighbours and inhibiting distant cells, so that one bump of activity moves around the ring; the head-direction system's internal compass - the clearest case in all neuroscience of a computational structure predicted by theory and then found in tissue.
+
+33. The Expansion Recoder (Pattern Separator) (COG).
+
+A small input population fans out onto a vastly larger population kept sparse by strong inhibition, so that similar inputs land on dissimilar sparse sets; Marr's motif, installed twice - entorhinal cortex onto dentate granule cells for episodic memory, and mossy fibres onto cerebellar granule cells (the four-input granule cell) for motor learning.
+
+34. The Comparator (Mismatch Detector) (COG).
+
+Two input streams - one direct and current, one processed and predicted - converge on a population that responds to their difference; hippocampal area CA1, receiving entorhinal reality and CA3 memory, is the anatomical exemplar - the novelty alarm of the memory system.
+
+35. The Supervised Error-Correction Module (COG).
+
+A principal cell adjusts the weights of one massive input stream under the instruction of a second, low-rate teaching input; the cerebellar Purkinje cell with its 150,000 parallel-fibre synapses retuned by a single climbing fibre is the motif's definitive installation - the brain's perceptron, running motor calibration and, by way of the cerebrocerebellum, the calibration of thought.
+
+36. The Mutual-Inhibition Flip-Flop (State Switch) (NON-COG).
+
+Two populations connected by strong reciprocal inhibition form a bistable switch that snaps between states and resists dwelling in between; the sleep-wake flip-flop between hypothalamic sleep-promoting and arousal-promoting populations is the canonical case - the circuit form of an either-or.
+
+
+PART SIX. THE GREAT REGIONAL COMPOSITES
+
+Replicated master-templates assembled from the motifs above; each sits at the soft upper boundary of Layer 8, repeated many times to tile a Layer 9 region.
+
+37. The Canonical Cortical Column (COG).
+
+The six-layered module - thalamic input to layer 4, projection up to layers 2/3 for association, down to layer 5 for output and layer 6 for thalamic feedback, all under the four-interneuron inhibitory scaffold - repeated with local variations one to two million times; the framework volumes name it among the canonical motifs, and it is the most consequential circuit template in biology: the tile from which the entire neocortex is built.
+
+38. The Predictive Coding Motif (COG).
+
+The cortical column read as a prediction machine: deep layers send predictions down the hierarchy, superficial layers send back only prediction errors, and perception is the settling of the stack; a functional reading of entry 37 with mounting anatomical support, and the leading candidate for what the column computes.
+
+39. The Thalamic Relay Triad with Reticular Gate (COG).
+
+Relay cell, local interneuron (with its unusual dendrodendritic triadic synapse), and the inhibitory blanket of the thalamic reticular nucleus wrapped around all relays; the reticular gate, driven by cortex, selects which relays transmit - the searchlight circuit of attention, and the switch that disconnects cortex from the world in sleep.
+
+40. The Basal Ganglia Selection Motif (COG).
+
+Tonic inhibition of all action channels, with a direct pathway that releases the chosen channel, an indirect pathway that further suppresses competitors, and a hyperdirect stop line - winner-take-all built at composite scale, biased by dopamine's teaching signal; the circuit of choosing, and of habits.
+
+41. The Hippocampal Trisynaptic Template (COG).
+
+Entorhinal cortex to dentate gyrus (expansion recoding, entry 33) to CA3 (autoassociation, entry 29) to CA1 (comparison, entry 34) and back - three memory motifs composed in series into a single one-way loop; the assembly line of episodic memory.
+
+42. The Cerebellar Cortical Template (NON-COG).
+
+The crystalline repeating module - mossy fibre to granule cell expansion (entry 33), parallel fibres crossing Purkinje dendritic planes (entry 35), climbing fibre teaching line, with Golgi, basket, and stellate inhibition - repeated with near-perfect uniformity throughout the cerebellum; tagged for its principal calibration role, with the honest note that its uniform module also serves the cognitive cerebellum.
+
+
+PART SEVEN. THE REFLEX AND AUTONOMIC ARCS
+
+The oldest motifs: sensor to (few) synapses to effector, computation reduced to its fastest possible form.
+
+43. The Monosynaptic Stretch Reflex Arc (NON-COG).
+
+Muscle spindle afferent directly onto motoneuron - one synapse, the knee-jerk, the shortest circuit in the body and the spinal cord's unit test.
+
+44. The Polysynaptic Withdrawal Arc with Crossed Extension (NON-COG).
+
+Nociceptor to interneuron layers to flexors of the injured limb, with a crossed branch stiffening the opposite limb - protection plus posture in a single wired program.
+
+45. The Golgi Tendon (Force-Limiting) Arc (NON-COG).
+
+Tendon organ afferent to inhibitory interneuron to the same muscle's motoneurons - negative feedback on force itself.
+
+46. The Vestibulo-Ocular Three-Neuron Arc (NON-COG).
+
+Semicircular canal afferent to vestibular nucleus to eye muscle motoneuron - three neurons, about ten milliseconds, holding the visual world still against every head movement; the fastest sensorimotor loop we possess, calibrated continuously by the cerebellar template of entry 42.
+
+47. The Baroreflex Arc (NON-COG).
+
+Arterial stretch sensors to the nucleus tractus solitarius to vagal and sympathetic outflow - blood pressure's beat-by-beat thermostat.
+
+48. The Vago-Vagal Loop (NON-COG).
+
+Gut afferent to nucleus tractus solitarius to dorsal motor nucleus back to gut - the brainstem's digestion-management loop, the circuit context of the framework's vagal layer-skipping channel.
+
+49. The Sympathetic Ganglion Divergence Motif (NON-COG).
+
+One preganglionic neuron onto many ganglion cells, with peptide co-transmission stretching response time - the amplifying distribution board of the fight-or-flight wiring.
+
+50. The Enteric Peristaltic Circuit (The Law of the Intestine) (NON-COG).
+
+Intrinsic sensory neurons to ascending excitatory and descending inhibitory interneuron chains: squeeze behind, relax ahead, repeated along the whole gut - a complete polarized reflex assembled entirely outside the central nervous system.
+
+
+PART EIGHT. THE SENSORY FRONT-END MOTIFS
+
+The specialized filters standing between physics and perception; tagged (NON-COG) as early filtering, with the acknowledgement that everything they pass onward becomes cognition's raw material.
+
+51. Centre-Surround Antagonism (NON-COG).
+
+A cell excited by its receptive field centre and inhibited by the ring around it (or the reverse), built by horizontal-cell lateral inhibition in the retina - the edge detector, the first computation performed on light.
+
+52. The ON-OFF Push-Pull Splitter (NON-COG).
+
+One photoreceptor signal split at the bipolar cell synapse into a brightening channel and a darkening channel by opposite glutamate receptors - one wire in, two opponent wires out.
+
+53. The Rod Convergence (Scotopic Pooling) Pathway (NON-COG).
+
+Thousands of rods funnelled through dedicated rod bipolar and amacrine relays into the cone circuitry - sensitivity bought with acuity, the night-vision motif.
+
+54. The Direction-Selectivity Circuit (NON-COG).
+
+Starburst amacrine dendrites, each preferring outward motion, wired asymmetrically onto direction-selective ganglion cells so that null-direction motion is vetoed by timed inhibition - space-time wiring that computes motion direction in two synapses.
+
+55. The Olfactory Glomerular Module (NON-COG).
+
+All axons carrying one odorant-receptor identity converge onto one glomerulus, with periglomerular interneurons normalizing between modules - one molecule class, one anatomical pixel.
+
+56. The Dendrodendritic Reciprocal Inhibition Motif (NON-COG).
+
+Mitral cell dendrites excite granule cell spines, which inhibit the same and neighbouring mitral dendrites at the same contact - synapses running both ways across one junction, sharpening odour representations without any axon at all.
+
+57. The Interaural Level Subtraction Motif (NON-COG).
+
+The lateral superior olive subtracts inhibition driven by the far ear from excitation driven by the near ear - the loudness-difference channel of sound localization, partner to the delay-line motif of entry 21.
+
+58. The Efferent Gain-Control Loop of the Cochlea (NON-COG).
+
+Brainstem olivocochlear neurons project back onto outer hair cells and afferent terminals, turning the ear's mechanical amplifier down in noise - the sensor whose sensitivity is a controlled variable.
+
+
+PART NINE. THE NEUROENDOCRINE MICROCIRCUITS
+
+The framework insists the endocrine system is not an annex, and Layer 8 is where the insistence pays: glands and hypothalamic nuclei run recognizable microcircuits whose outputs are hormone pulses rather than spike trains.
+
+59. The Hypophysiotropic Cascade Amplifier (NON-COG).
+
+Parvocellular neurons release nanograms of releasing hormone into the portal vessels, driving pituitary cells to release micrograms of trophic hormone, driving a gland to release milligrams of final hormone - a three-stage chemical amplifier with gain of roughly a million, the master motif of Part Seven of the Layer 6 catalogue.
+
+60. The Closed-Loop Negative Feedback Motif (NON-COG).
+
+The final hormone inhibits both pituitary and hypothalamic stages of its own cascade - the thermostat wrapped around every axis, whose set point is what stress physiology means by allostasis when it moves.
+
+61. The KNDy Pulse Generator (NON-COG).
+
+The arcuate network of neurons co-releasing kisspeptin, neurokinin B, and dynorphin, in which neurokinin B recruits the population and dynorphin then terminates the volley - a relaxation oscillator built from peptides, generating the pulses of gonadotropin-releasing hormone on which all human fertility depends; continuous release fails where pulsed release works, making this motif's rhythm literally reproductive.
+
+62. The Magnocellular Burst Synchronizer (The Milk-Ejection Circuit) (NON-COG).
+
+Oxytocin neurons, weakly coupled through glia and local collaterals, fire in explosive synchronized bursts every few minutes during suckling, each burst ejecting a bolus of oxytocin - and of milk; the definitive case of an endocrine output timed by a neuronal microcircuit.
+
+63. The Coupled Circadian Oscillator Network (NON-COG).
+
+Entry 27's pacemaker motif in its grandest installation: the suprachiasmatic nucleus's cellular clocks, each running a molecular feedback loop, coupled by peptides and GABA into one tissue-level oscillator that then times every other motif in this outline.
+
+64. The Islet Syncytium with Hub Cells (NON-COG).
+
+Hundreds of beta cells joined by connexin-36 gap junctions into one electrical sheet, in which a minority of highly connected hub cells lead the calcium waves that make insulin come in coordinated pulses - a wave-broadcasting network motif built in a gland, with follower and leader roles like any cortical assembly.
+
+65. The Islet Paracrine Triad (NON-COG).
+
+Beta, alpha, and delta cells regulating one another by local secretion - insulin and its co-releases restraining the alpha cell, somatostatin braking both, glucagon goading the beta cell - a complete three-cell mutual-regulation motif running on hormones across micrometres.
+
+66. The Folliculostellate Relay Network (NON-COG).
+
+The anterior pituitary's star-shaped non-endocrine cells, gap-junction-coupled into a gland-spanning web that conducts calcium waves between distant endocrine cell clusters - a glial-style coordination circuit inside an endocrine organ, entry 57 of the Layer 6 catalogue acting as a Layer 8 wire.
+
+67. The Ultradian Feedback Oscillator of the Stress Axis (NON-COG).
+
+The pituitary-adrenal pair, coupled by hormone travel delays inside the feedback loop of entry 60, rings on its own with a period near one hour - glucocorticoid pulses generated not by any pacemaker cell but by the loop itself; a systems-level relaxation oscillator made of two glands and a bloodstream.
+
+
+PART TEN. THE NEURO-GLIAL AND NEUROVASCULAR MOTIFS
+
+Microcircuits whose obligatory members are not neurons, closing the loop with the Layer 6 companion volume.
+
+68. The Astrocyte Syncytium (NON-COG).
+
+Astrocytes joined by gap junctions into tiled networks that redistribute potassium, glucose, and calcium waves across territories spanning thousands of synapses - the glial power-and-drainage grid beneath every neuronal motif in this outline.
+
+69. The Tripartite Synaptic Island (COG).
+
+One astrocyte's territory considered WITH the synapses it enwraps and modulates: the astrocyte listens to hundreds of thousands of synapses, integrates slowly in calcium, and speaks back through gliotransmitters that shift thresholds for plasticity across its whole island - a genuine computing motif on a ten-fold slower clock, tagged (COG) in agreement with the protoplasmic astrocyte's tag in the Layer 6 catalogue.
+
+70. The Microglial Pruning Loop (COG).
+
+Synaptic activity marks weak synapses with complement proteins; microglia read the marks and eat the marked - a closed sculpting loop between immune cell and circuit that is a mechanism of normal developmental learning, tagged (COG) in agreement with the microglia's tag in the Layer 6 catalogue.
+
+71. The Neurovascular Coupling Unit (NON-COG).
+
+Active neurons signal through astrocyte end-feet to pericytes and arteriolar smooth muscle, which dilate the supplying vessel within seconds - the demand-driven fuel circuit, and the signal source of functional brain imaging.
+
+
+THE COGNITIVE SCOREBOARD
+
+Of the seventy-one motif types above, thirty-two carry the (COG) tag, and they are not scattered at random.
+
+• Parts One through Three are almost entirely (COG): the elementary loops, the inhibitory repertoire, and the competitive motifs are the general-purpose instruction set of cognition.
+
+• Parts Four and Five split by clock and by state: oscillators that bind cortical ensembles (PING, theta-gamma) and every attractor motif are (COG); oscillators that drive muscles and organs (half-centres, CPGs, pacemakers) are not.
+
+• Part Six, the great composites, is (COG) with one calibrating exception (the cerebellar template).
+
+• Parts Seven through Nine - the reflex arcs, the sensory front-ends, and the entire neuroendocrine suite - are (NON-COG): magnificent machinery, none of it thinking.
+
+• Part Ten seats two non-neuronal motifs at the cognitive table, honouring the Layer 6 volume's central finding.
+
+The deepest lesson of the layer is the one the framework stated at the outset: the motif is generic.
+
+Reciprocal inhibition relaxes your antagonist muscle in entry 11, flips you between sleep and waking in entry 36, and picks the winning thought in entry 16 - one diagram, three destinies, distinguished only by the address at which it is installed and the interfaces it is wired to.
+
+Layer 8 is the proof that the brain, like all good engineering, solves new problems with old parts.
+
+
+END OF OUTLINE
+
+Source basis: THE_FIFTEEN_LAYERS_IN_BRIEF and TFELOAOTHNAES (framework definition of Layer 8 and its named canonical motifs); the Layer 6 catalogues (neuronal_manuscript volumes 1 to 5 and LAYER_06_OTHER_CELLS_MANUSCRIPT, whose SYNAPTIC CONNECTIONS and SYSTEMS INTERFACE fields supplied the per-cell wiring facts); and current literature verified by web search during compilation, including Carandini and Heeger, Normalization as a Canonical Neural Computation (Nature Reviews Neuroscience, 2012); Bastos and colleagues, Canonical Microcircuits for Predictive Coding (Neuron, 2012); the network-motif literature descending from Milo and colleagues (Science, 2002); the KNDy pulse-generator literature (Endocrinology, 2024 update); the islet hub-cell literature; and the standard treatments of central pattern generators, spinal reflex arcs, cerebellar and hippocampal expansion recoding, and attractor networks.

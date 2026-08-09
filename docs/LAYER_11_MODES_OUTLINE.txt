@@ -1,0 +1,188 @@
+LAYER 11, THE WHOLE NERVOUS AND ENDOCRINE SYSTEM LAYER: MODES AND MODE TRANSITIONS - THE OUTLINE
+
+The per-state mode registers, extracted from LAYER_11_MODES_MANUSCRIPT (which holds the full entries: registers, per-mode transfer functions, transition tables, and fault regimes).
+
+Each entry below: the state, its source chapter key, and its named mode register.
+
+Date of compilation: August 9, 2026.
+
+
+ENTRY 1. ALERT TASK-ENGAGED WAKING (The Desynchronised Online Configuration) (keyed to global states catalogue Chapter 1)
+
+◦ Exploitative Engagement - The Locked-On Posture - narrow attention held on the task in hand, driven by the intermediate tonic band of the locus coeruleus (the pontine noradrenaline, that is norepinephrine, nucleus) where task-locked phasic bursts are largest.
+
+◦ Exploratory Sampling - The Wandering Scan - broadened attention that samples alternatives, driven by higher tonic locus coeruleus firing that flattens the phasic response, the disengagement mode of the adaptive-gain account of Aston-Jones and Cohen (2005).
+
+◦ Eyes-Open Task Set - The Open Channel - the ordinary configuration with posterior alpha suppressed and saccades (rapid gaze jumps) running at roughly two to four per second during visual work.
+
+ENTRY 2. RELAXED WAKEFULNESS (The Posterior Alpha Configuration) (keyed to global states catalogue Chapter 2)
+
+◦ Eyes-Closed Alpha Idle - The Humming Rest - the classic posterior alpha configuration, strongest with the eyes shut and the mind free to wander.
+
+◦ Eyes-Open Quiet Wakefulness - The Unoccupied Gaze - awake and unoccupied with the eyes open, alpha partly blocked but no task engaged.
+
+◦ Generative Wandering - The Inward Simulator - the default mode network (the midline and lateral parietal system active during rest and self-reflection) brought forward to run mind-wandering, prospection (imagining futures), and incubation.
+
+ENTRY 3. FOCUSED ABSORPTION (The Optimal-Gain Configuration) (keyed to global states catalogue Chapter 3)
+
+◦ Optimal-Gain Lock - The Clamped Summit - the locus coeruleus (the pontine noradrenaline, that is norepinephrine, nucleus) held in its intermediate tonic band with the self-monitoring circuits transiently quietened, alert waking pinned to the peak of its own performance curve.
+
+ENTRY 4. DROWSY WAKING (The Vigilance-Failing Intermediate) (keyed to global states catalogue Chapter 4)
+
+◦ Descending Drift - The Slow Sag - continuous drowsiness with slow rolling eye movements and drooping lids, waking held on decaying momentum.
+
+◦ Microsleep Intrusion - The Blink Of Absence - abrupt seconds-long theta and delta episodes with the eyes open or closing, sleep briefly stealing the open-eyed record.
+
+ENTRY 5. STAGE N1 (SLEEP ONSET, THE HYPNAGOGIC THRESHOLD) (keyed to global states catalogue Chapter 5)
+
+◦ Settling Descent - The Vestibule - the single lightest configuration of non-rapid-eye-movement sleep, wakefulness relinquished but deep sleep not yet held.
+
+ENTRY 6. STAGE N2 (SPINDLED LIGHT SLEEP) (keyed to global states catalogue Chapter 6)
+
+◦ Spindle-Rich Passage - The Packing Line - the working sub-regime in which sleep spindles recur many times a minute and gate memory transfer.
+
+◦ Quiescent Background - The Steady Idle - the low-event stretches carrying the stable, sensory-gated configuration between spindle trains.
+
+◦ K-Complex Response - The Sentinel Ring - the single giant deflection, spontaneous or stimulus-evoked, that either aborts an arousal or ushers in a spindle.
+
+ENTRY 7. STAGE N3 (SLOW-WAVE SLEEP, THE DEEP WORKS) (keyed to global states catalogue Chapter 7)
+
+◦ Early-Night Deep Works - The High Tide - the high-delta-power configuration of the first one to two cycles, when the night's heaviest rebuilding runs.
+
+◦ Late-Night Residual N3 - The Ebbing Shallows - the thinner, lower-amplitude deep sleep of later cycles, diminished or vanishing as sleep pressure falls.
+
+ENTRY 8. RAPID-EYE-MOVEMENT (REM) SLEEP (THE PARADOXICAL THEATRE) (keyed to global states catalogue Chapter 8)
+
+◦ Phasic REM - The Burst Theatre - bursts of rapid eye movements, muscle twitches, and internal waves, the state's active half.
+
+◦ Tonic REM - The Quiet House - the longer, more quiescent background between the bursts, more open to the outside world.
+
+ENTRY 9. THE ULTRADIAN SLEEP CYCLE (THE NINETY-MINUTE WHEEL) (keyed to global states catalogue Chapter 9)
+
+◦ Deep-Weighted Early Cycles - The Heavy Turns - the first one to two circuits, dominated by stage N3 (deep, slow-wave sleep) with short rapid-eye-movement periods.
+
+◦ REM-Weighted Late Cycles - The Light Turns - the last circuits, dominated by stage N2 and long rapid-eye-movement periods, with N3 diminished or gone.
+
+ENTRY 10. SLEEP INERTIA (THE COLD-START PENALTY) (keyed to global states catalogue Chapter 10)
+
+◦ Deep-Exit Inertia - The Hard Cold Start - the severe grogginess that follows a forced awakening out of high-delta stage N3 (deep, slow-wave sleep), when the cortex must climb furthest.
+
+◦ Light-Exit Inertia - The Warm Restart - the mild penalty after waking from rapid-eye-movement sleep or light N2, whose configuration is already nearer waking.
+
+ENTRY 11. THE SLEEP-WAKE FLIP-FLOP (Reciprocal preoptic-arousal switch) (keyed to global states catalogue Chapter 11)
+
+◦ Wake Pole - The Toggle Up - the arousal nuclei winning and the sleep-promoting side suppressed, the whole organism assigned to the waking states.
+
+◦ Sleep Pole - The Toggle Down - the ventrolateral preoptic nucleus (a small cell group at the front-underside of the hypothalamus, abbreviated VLPO) winning and the arousal nuclei near-silent, the organism assigned to the sleep states.
+
+ENTRY 12. THE REM SWITCH (Pontine REM-on/REM-off flip-flop) (keyed to global states catalogue Chapter 12)
+
+◦ REM-On Pole - The Latch Open - the sublaterodorsal REM-on cells winning, admitting rapid-eye-movement sleep (the paradoxical stage of vivid dreaming, abbreviated REM).
+
+◦ REM-Off Pole - The Latch Shut - the ventrolateral periaqueductal grey and lateral pontine tegmentum REM-off cells winning, holding REM out.
+
+ENTRY 13. THE OREXIN STABILISER (Lateral hypothalamic orexin/hypocretin drive) (keyed to global states catalogue Chapter 13)
+
+◦ Active-Waking Drive - The Firm Hold - full tonic firing during active waking, widening the wake state's basin of stability.
+
+◦ Quiet-Waking Drive - The Light Hold - reduced firing during quiet waking, a lighter steadying pressure.
+
+◦ Sleep Withdrawal - The Released Finger - near-silent firing in sleep, permitting the flip-flops to rest at their sleep positions.
+
+ENTRY 14. PROCESS S, THE HOMEOSTATIC SLEEP PRESSURE (keyed to global states catalogue Chapter 14)
+
+◦ S-charge - The Climbing Bill - the waking regime, in which the debt accrues as adenosine (a by-product of the brain's energy use that promotes sleep) rises.
+
+◦ S-discharge - The Overnight Payback - the sleeping regime, in which deep slow-wave sleep pays the debt down.
+
+◦ S-saturation - The Flattening Shoulder - the near-plateau reached after very long waking, where the exponential charge curve bends toward its ceiling.
+
+ENTRY 15. PROCESS C, THE CIRCADIAN DRIVE (keyed to global states catalogue Chapter 15)
+
+◦ Alerting crest - The Wake-Maintenance Zone - the couple of hours before habitual bedtime when the drive peaks and holds waking against a high sleep debt.
+
+◦ Circadian trough - The Sleep Gate - the late-night low near the core body temperature minimum, when the drive withdraws and sleep is defended.
+
+◦ Rising limb and falling limb - The Day Ramps - the ascending morning and descending evening slopes that carry the organism between crest and trough.
+
+ENTRY 16. THE ASCENDING BROADCAST SYSTEM (keyed to global states catalogue Chapter 16)
+
+◦ Wake blend - The Online Broadcast - high noradrenaline, serotonin, and acetylcholine, announcing waking to the whole forebrain.
+
+◦ Non-rapid-eye-movement blend - The Quiet Broadcast - all aminergic tone low and acetylcholine falling, announcing deep sleep.
+
+◦ Rapid-eye-movement blend - The Paradoxical Broadcast - aminergic tone near zero with acetylcholine high, the chemical inversion no waking or deep-sleep state ever shows.
+
+ENTRY 17. PHASIC AROUSAL (keyed to global states catalogue Chapter 17)
+
+◦ Orienting burst - The Startle Spike - the sub-second locus coeruleus (the "blue spot" pontine source of noradrenaline, the alerting chemical messenger) volley that resets the cortex toward a salient event.
+
+◦ Threat-weighted burst - The Deep Spike - the same volley amplified when the amygdala and basal forebrain acetylcholine co-fire because the event carries threat value.
+
+ENTRY 18. THE ACUTE STRESS STATE (keyed to global states catalogue Chapter 18)
+
+◦ Active mobilisation - Fight-Or-Flight - near-maximal sympathetic outflow with vagal (the rest-and-digest branch) withdrawal, optimised for immediate physical action.
+
+◦ Attentive immobility - The Freeze - a brief high-vigilance hold with a parasympathetic brake still partly engaged, readiness before action.
+
+◦ Recovery ramp - The Stand-Down - the post-threat return, with vagal reactivation, catecholamine clearance, and cortisol feedback.
+
+ENTRY 19. THE SUSTAINED STRESS STATE (keyed to global states catalogue Chapter 19)
+
+◦ Resistance plateau - The Long Loan - the adaptive raised, flattened cortisol baseline that funds a campaign of days to weeks.
+
+◦ Acute-on-chronic surge - The Daily Spike - a Chapter 18 surge superimposed on the plateau when a fresh stressor lands.
+
+ENTRY 20. THE SICKNESS BEHAVIOUR STATE (keyed to global states catalogue Chapter 20)
+
+◦ Febrile mobilisation - The Fever Push - the raised-set-point, warmth-seeking, iron-withholding acute phase that attacks the pathogen.
+
+◦ Hypersomnic recuperation - The Deep-Sleep Recovery - the enhanced non-rapid-eye-movement (the deep, slow-wave family of sleep) drive that promotes recovery while rapid-eye-movement sleep is suppressed.
+
+ENTRY 21. THE FED AND FASTED METABOLIC STATES (keyed to global states catalogue Chapter 21)
+
+◦ Fed (absorptive) - The Banking Mode - insulin-led digestion, absorption, and storage.
+
+◦ Fasted (post-absorptive) - The Spending Mode - glucagon- and ghrelin-led mobilisation of stores and motivation to forage.
+
+◦ Ketotic - The Reserve Mode - the deep-fast configuration in which the liver makes ketone bodies to fuel the brain.
+
+ENTRY 22. THE CIRCADIAN DAY PROGRAMME AND NIGHT PROGRAMME (keyed to global states catalogue Chapter 22)
+
+◦ Day programme - The Earning Shift - the whole nervous and endocrine system configured for foraging, computing, moving, and eating.
+
+◦ Night programme - The Housekeeping Shift - the system configured for sleep, consolidation, waste clearance, and repair.
+
+ENTRY 23. THE MENSTRUAL (OVARIAN) CYCLE PROGRAMME (keyed to global states catalogue Chapter 23)
+
+◦ Follicular - The Rising Half - the pre-ovulatory phase, sub-divided into an early low-hormone window and a late window of climbing oestradiol.
+
+◦ Peri-ovulatory switch - The Surge - the mid-cycle luteinising-hormone surge that flips feedback from negative to positive and releases the egg.
+
+◦ Luteal - The Warm Half - the post-ovulatory phase of high progesterone and a secondary oestradiol peak.
+
+ENTRY 24. THE BASIC REST-ACTIVITY CYCLE (keyed to global states catalogue Chapter 24)
+
+◦ Activity tilt - The Outward Half - a proposed higher-arousal, task-oriented phase of the roughly ninety-minute waking cycle.
+
+◦ Rest tilt - The Inward Half - a proposed lower-arousal, recovery-tilted phase.
+
+ENTRY 25. GENERAL ANAESTHESIA (keyed to global states catalogue Chapter 25)
+
+◦ Induction - The Power-Down - the rapid drop into unconsciousness, often through a brief paradoxical excitation.
+
+◦ Maintenance - The Surgical Plane - the steady held depth carried by continuous infusion or inspired concentration.
+
+◦ Burst suppression - The Deep Clamp - a deliberately deeper regime of alternating high-amplitude bursts and near-flat suppression, used therapeutically for brain protection.
+
+◦ Emergence - The Reboot - the return of consciousness as the drug clears, not simply the reverse of induction.
+
+ENTRY 26. THE DISORDERS OF CONSCIOUSNESS SPECTRUM (keyed to global states catalogue Chapter 26)
+
+◦ Coma - The Dark Machine - no arousal and no awareness, eyes closed, no sleep-wake cycling.
+
+◦ Vegetative state / unresponsive wakefulness - The Empty Wakefulness - preserved arousal with eye opening but no reproducible awareness.
+
+◦ Minimally conscious state - The Flickering Machine - fluctuating, reproducible but inconsistent signs of awareness without reliable communication.
+
+END OF OUTLINE

@@ -1,0 +1,550 @@
+LAYER 8, THE MICROCIRCUIT LAYER: MODES AND MODE TRANSITIONS - THE OUTLINE
+
+The per-type mode registers, extracted from LAYER_08_MODES_MANUSCRIPT (which holds the full entries: registers, per-mode transfer functions, transition tables, and fault regimes).
+
+Each entry below: the type, its source key, and its named mode register.
+
+Date of compilation: August 9, 2026.
+
+
+ENTRY 1. CONVERGENCE (Fan-In Integration Motif) (The Evidence-Pooling Junction) (keyed to microcircuits catalogue Chapter 1)
+
+◦ Averaging Mode - The Smoother - pool many weak asynchronous inputs and pass their mean, suppressing noise.
+
+◦ Integrating Mode - The Evidence Ramp - accumulate input over the membrane window, raising rate with the running total toward a decision.
+
+◦ Coincidence Mode - The Simultaneity Gate - fire supralinearly only when a few strong inputs arrive within a couple of milliseconds.
+
+ENTRY 2. DIVERGENCE (Fan-Out Broadcast Motif) (The One-to-Many Megaphone) (keyed to microcircuits catalogue Chapter 2)
+
+◦ Tonic Mode - The Background Hum - hold a steady ambient transmitter level that biases the gain of every target.
+
+◦ Phasic Mode - The Global Alarm - deliver a transient synchronous pulse copied to all subscribers at once.
+
+ENTRY 3. THE FEEDFORWARD CHAIN (Serial Relay Motif) (The Signal Bucket-Brigade) (keyed to microcircuits catalogue Chapter 3)
+
+◦ Relaying Mode - The Faithful Carry - reproduce the input at the far end after a fixed delay with minimal reshaping.
+
+◦ Non-Relaying Mode - The Closed Gate - the thalamic variant switched into burst firing by hyperpolarisation, ceasing faithful transmission and signalling novelty instead.
+
+ENTRY 4. THE RECURRENT LOOP (Reciprocal Pair) (The Two-Cell Memory Latch) (keyed to microcircuits catalogue Chapter 4)
+
+◦ Transient-Amplifier Mode - The Fading Echo - loop gain below one, so a nudge is boosted then decays.
+
+◦ Integrator Mode - The Perfect Tally - loop gain at one, so input is summed without decay.
+
+◦ Bistable Mode - The Held Bit - loop gain above one with saturation, holding a discrete on-state after the trigger ends.
+
+◦ Ringing Mode - The Reverberator - high gain with fast synapses and delay, so the pair oscillates rather than latches.
+
+ENTRY 5. THE FEEDFORWARD LOOP (Triad Motif) (The Two-Path Change Detector) (keyed to microcircuits catalogue Chapter 5)
+
+◦ Incoherent Mode - The Onset Flag - the indirect path opposes the direct one, producing a pulse at input onset and offset.
+
+◦ Coherent Mode - The Patience Filter - the indirect path agrees, passing only inputs that outlast the indirect-path delay.
+
+ENTRY 6. RECURRENT (MUTUAL) EXCITATION WITHIN A POPULATION (Self-Amplifying Pool) (The Bonfire Circuit) (keyed to microcircuits catalogue Chapter 6)
+
+◦ Stable-Amplifier Mode - The Damped Bonfire - subcritical gain, boosting input transiently then settling.
+
+◦ Attractor Mode - The Held Pattern - balanced supercritical gain with inhibition, holding one of several self-sustaining patterns.
+
+◦ Runaway Mode (admitted only as fault) - The Wildfire - excitation exceeding inhibition's control, hypersynchronous discharge.
+
+ENTRY 7. FEEDFORWARD INHIBITION (Input-Driven Delayed-Brake Motif) (The Coincidence-Window Cutter) (keyed to microcircuits catalogue Chapter 7)
+
+◦ Idle Mode - The Waiting Brake - interneuron near threshold, little passed.
+
+◦ Tight-Gate Mode - The Narrow Window - under strong synchronous drive, a sharp delayed veto that admits only near-coincident excitation.
+
+◦ Widened-Gate Mode - The Loosened Window - after repetitive drive depresses excitation onto the parvalbumin cell, the aperture transiently opens.
+
+ENTRY 8. FEEDBACK (RECURRENT) INHIBITION (Self-Braking Interneuron Loop) (The Activity Thermostat) (keyed to microcircuits catalogue Chapter 8)
+
+◦ Stabiliser Mode - The Gentle Governor - at low drive, holding activity near a set point.
+
+◦ Oscillator Mode - The Sawtooth Pacer - at moderate drive with short delay, pacing a gamma rhythm (the pyramidal-interneuron gamma motif in embryo).
+
+◦ Ceiling Mode - The Hard Cap - at high drive, saturating into a firm ceiling on rate.
+
+ENTRY 9. LATERAL INHIBITION (Neighbour-Suppressing Interneuron Motif) (The Contrast-Carving Circuit) (keyed to microcircuits catalogue Chapter 9)
+
+◦ Contrast-Enhancement Mode - The Edge Sharpener - weak lateral inhibition sculpting a surround around each active unit.
+
+◦ Selection Mode - The Neighbour Silencer - strong recurrent lateral inhibition tipping into winner-take-all suppression (the competitive motifs are lateral inhibition turned up).
+
+ENTRY 10. RECURRENT INHIBITION OF THE RENSHAW TYPE (Motor-Collateral Feedback Interneuron) (The Final-Path Governor) (keyed to microcircuits catalogue Chapter 10)
+
+◦ High-Gain Mode - The Steady-Hold Brake - raised Renshaw excitability for fine steady holds, damping motoneuron rate.
+
+◦ Low-Gain Mode - The Released Governor - reduced recurrent inhibition for strong synchronous efforts.
+
+◦ Phase-Modulated Mode - The Gait Governor - gain scaled cycle by cycle during locomotion.
+
+ENTRY 11. RECIPROCAL INHIBITION (Mutually-Silencing Antagonist Pair) (The Push-Pull Pair) (keyed to microcircuits catalogue Chapter 11)
+
+◦ Static-Relaxation Mode - The Antagonist Release - the resting regime, one side active relaxes its opponent.
+
+◦ Oscillator Mode - The Take-Turns Engine - with fatigue added, a clean alternation (the half-centre oscillator).
+
+◦ Flip-Flop Mode - The Locked Latch - with mutual gain raised, a bistable switch.
+
+◦ Locked Mode - The Stiffened Joint - both sides driven together during co-contraction, the see-saw pinned.
+
+ENTRY 12. PRESYNAPTIC INHIBITION (Axo-Axonic Terminal Gating Motif) (The Input Tap) (keyed to microcircuits catalogue Chapter 12)
+
+◦ Tonic-Set Mode - The Standing Tap - a background level of presynaptic inhibition setting resting afferent gain.
+
+◦ Movement-Gated Mode - The Closed Tap - sharply increased gating of chosen afferents during voluntary movement.
+
+ENTRY 13. THE PERISOMATIC-DENDRITIC DIVISION OF LABOUR (Two-Site Interneuron Targeting Motif) (The Two-Handed Governor) (keyed to microcircuits catalogue Chapter 13)
+
+◦ Perisomatic-Dominant Mode - The Output Timer - parvalbumin (abbreviated PV) inhibition at the soma enforces precise, sparse output timing.
+
+◦ Dendritic-Clamp Mode - The Input Guard - somatostatin (abbreviated SST) inhibition builds on the dendrites to clamp incoming excitation.
+
+◦ Dendrite-Open Mode - The Learning Window - the dendritic brake lifted (by vasoactive-intestinal-peptide cells), opening dendrites for plasticity.
+
+ENTRY 14. DISINHIBITION (The Inhibition-of-Inhibition Motif) (The Permission Circuit) (keyed to microcircuits catalogue Chapter 14)
+
+◦ Guarded Mode - The Closed Permit - the somatostatin guard on, pyramidal dendrites clamped.
+
+◦ Released Mode - The Open Permit - vasoactive-intestinal-peptide firing lifts the guard, dendrites open during arousal and attention.
+
+◦ Behaviour-Locked Mode - The Task Permit - a transient flip during a specific bout such as running or whisking.
+
+ENTRY 15. VOLUME (NEUROGLIAFORM) INHIBITION (The Unaddressed GABA-Cloud Motif) (The Fog Brake) (keyed to microcircuits catalogue Chapter 15)
+
+◦ Tonic-Damp Mode - The Thin Haze - weak background dampening at low activity, setting regional excitability.
+
+◦ Blanket Mode - The Deep Fog - a burst lays a long-lasting inhibitory blanket that can silence a patch and reset local oscillatory phase.
+
+ENTRY 16. WINNER-TAKE-ALL (Mutual-Inhibition Competitive Selection Motif) (The One-Survivor Circuit) (keyed to microcircuits catalogue Chapter 16)
+
+◦ Deliberation Mode - The Open Race - subcritical gain, graded and reversible competition among candidates.
+
+◦ Commitment Mode - The One Survivor - attractor regime, a categorical choice with hysteresis, winner sustained and losers suppressed.
+
+◦ Rivalry Mode - The Flip-Flopper - near-tie oscillation in which candidates alternate.
+
+ENTRY 17. SOFT WINNER-TAKE-ALL AND SPARSE CODING (k-Winners Competitive Thinning Motif) (The Few-Survivors Circuit) (keyed to microcircuits catalogue Chapter 17)
+
+◦ Encoding Mode - The Loosened Committee - novelty and acetylcholine loosen inhibition, admitting more winners (larger k).
+
+◦ Familiar Mode - The Tight Committee - familiarity tightens inhibition, fewer winners.
+
+◦ Neurogenesis Mode - The Rookie Round - young, hyperexcitable granule cells compete on easier terms for a few weeks, refreshing the code.
+
+ENTRY 18. DIVISIVE NORMALIZATION (Pooled-Activity Divisive Scaling Motif) (The Fair-Share Circuit) (keyed to microcircuits catalogue Chapter 18)
+
+◦ Fast-Shunt Mode - The Instant Divider - shunting inhibition dividing each response by pooled activity within 5 to 20 milliseconds.
+
+◦ Depression Mode - The Sluggish Divider - short-term depression extending the division over 50 to 300 milliseconds.
+
+◦ Adaptation Mode - The Slow Rescaler - slow adaptation carrying the same arithmetic over seconds, matching the pool to recent statistics.
+
+ENTRY 19. GAIN MODULATION (Multiplicative Slope-Control Motif) (The Multiplier) (keyed to microcircuits catalogue Chapter 19)
+
+◦ Low-Gain Mode - The Drowsy Knob - too little gain, signals sinking into noise.
+
+◦ Optimal-Gain Mode - The Sweet Spot - an intermediate optimum sharpening signal-to-noise.
+
+◦ High-Gain Mode - The Over-Driven Knob - too much gain, amplifying noise and locking circuits into over-responsive states.
+
+ENTRY 20. THE PUSH-PULL (OPPONENT) MOTIF (Sign-Splitting Dual-Channel Motif) (The Two-Handed Circuit) (keyed to microcircuits catalogue Chapter 20)
+
+◦ Opponent-Difference Mode - The Two-Handed Subtractor - one channel pushes while its opposite pulls, encoding the signed difference about a pivot.
+
+◦ Pivot-Reset Mode - The Recentred Balance - the crossing point re-regulated to the current mean (adaptation level, joint equilibrium, glycaemic set point).
+
+ENTRY 21. COINCIDENCE DETECTION WITH DELAY LINES (The Jeffress Interaural-Time Comparator) (The Microsecond Stopwatch) (keyed to microcircuits catalogue Chapter 21)
+
+◦ Coincidence-Gate Mode - The Microsecond Stopwatch - a fast leaky coincidence gate with a fixed narrow window, firing on sub-millisecond arrival differences.
+
+◦ Retuned-Window Mode - The Adjusted Gate - the same gate with a slower gain and best-delay adjustment set by glycinergic inhibition.
+
+ENTRY 22. THE GAMMA OSCILLATOR, PYRAMIDAL-INTERNEURON TYPE (Pyramidal-Interneuron Network Gamma, PING) (The Cortical Metronome) (keyed to microcircuits catalogue Chapter 22)
+
+◦ Quiet Mode - The Idle Clock - below a drive threshold, quiet or irregular firing.
+
+◦ PING Mode - The Cortical Metronome - above threshold, locked rhythmic gamma paced by excitation.
+
+◦ interneuron-only gamma (ING)-Slip Mode - The Faster Ring - with weak excitation and strong mutual inhibition, a faster interneuron-paced beat (toward Chapter 23).
+
+ENTRY 23. THE GAMMA OSCILLATOR, INTERNEURON-ONLY TYPE (Interneuron Network Gamma, ING) (The Self-Ringing Brake) (keyed to microcircuits catalogue Chapter 23)
+
+◦ Coherent-interneuron-only gamma (ING) Mode - The Self-Ringing Brake - with adequate tonic drive and strong gap-junction coupling, a coherent fast beat at the high end of or above the gamma band.
+
+◦ PING-Transition Mode - The Handover - as excitatory drive strengthens, a smooth handover to pyramidal-paced gamma at somewhat lower frequency.
+
+◦ Asynchronous Mode - The Broken Beat - with too little drive or weak coupling, asynchronous or clustered firing rather than a clean beat.
+
+ENTRY 24. THETA-GAMMA NESTING (Cross-Frequency Phase-Amplitude Coupling) (The Phase Coder) (keyed to microcircuits catalogue Chapter 24)
+
+◦ Theta-Nested Mode - The Phase Coder - during active exploration, rapid-eye-movement sleep, and attention, each theta cycle carves into gamma slots carrying an ordered list.
+
+◦ Non-Theta Replay Mode - The Ripple Player - in the non-theta state the coupling dissolves and the hippocampus produces sharp-wave ripples for memory replay.
+
+◦ CA3-Listening versus Entorhinal-Listening Mode - The Channel Selector - slow gamma nested when CA1 listens to CA3 (memory), fast gamma when listening to entorhinal cortex (the present).
+
+ENTRY 25. THE HALF-CENTRE OSCILLATOR (Reciprocal-Inhibition Alternator with Fatigue) (The Take-Turns Engine) (keyed to microcircuits catalogue Chapter 25)
+
+◦ Quiescent Mode - The Stalled Engine - below drive threshold the pair sits silent or in tonic co-activation, producing no rhythm.
+
+◦ Release (Adaptation) Mode - The Fatigue Handover - the active pool tires until it can no longer hold down its partner, which then surges up.
+
+◦ Escape (Rebound) Mode - The Spring-Loaded Handover - the suppressed pool escapes inhibition through its own post-inhibitory rebound and seizes the floor before its partner has fully tired.
+
+ENTRY 26. THE CENTRAL PATTERN GENERATOR (Coupled Rhythm-and-Pattern Network) (The Autopilot for Muscles) (keyed to microcircuits catalogue Chapter 26)
+
+◦ Off Mode - The Idle Autopilot - below drive threshold the network is silent and only isolated reflexes remain.
+
+◦ Locomotor Gait Modes - Walk, Trot, Gallop and Hop - distinct interlimb coordination patterns selected by drive level and by reconfiguration of the commissural coupling.
+
+◦ Eupnoea Mode - The Quiet Breath - the normal respiratory rhythm generated by the pre-Botzinger complex.
+
+◦ Sigh Mode - The Big Breath - a slow, large-amplitude biphasic augmented breath interleaved with eupnoea from a partly distinct subpopulation.
+
+◦ Gasp Mode - The Last-Resort Breath - a fast, high-amplitude rhythm falling back onto the most intrinsic pacemaker mechanism under low oxygen.
+
+ENTRY 27. THE PACEMAKER NETWORK (Coupled Cellular Oscillators Pulled to Synchrony) (The Chorus of Clocks) (keyed to microcircuits catalogue Chapter 27)
+
+◦ Synchronised Mode - The Chorus - coupling above the critical strength pulls every cellular clock into one coherent phase and a sharpened shared period.
+
+◦ Desynchronised Mode - The Cacophony - coupling too weak, so cells free-run at their own natural frequencies with no tissue rhythm.
+
+◦ Re-Entraining Mode - The Resetting Chorus - the locked population slides its phase to track a shifted external cue (the slow recovery from jet lag).
+
+ENTRY 28. THE SYNFIRE CHAIN (Feedforward Wave Sequence Generator) (The Bucket-Brigade of Spikes) (keyed to microcircuits catalogue Chapter 28)
+
+◦ Propagation Mode - The Marching Volley - a stable synchronous packet travels pool to pool at fixed inter-pool delays, the healthy operating mode.
+
+◦ Idle Mode - The Waiting Brigade - no trigger has arrived, so the chain is silent.
+
+◦ Learning Mode - The Self-Carving Chain - spike-timing-dependent plasticity strengthens forward links so the chain organises out of unstructured recurrence.
+
+ENTRY 29. THE AUTOASSOCIATIVE ATTRACTOR NETWORK (Recurrent Pattern-Completing Excitatory Pool) (The Cue-To-Memory Circuit) (keyed to microcircuits catalogue Chapter 29)
+
+◦ Storage Mode - The Write Head - dentate detonator input dominates and plasticity is enabled to lay down a new pattern.
+
+◦ Recall Mode - The Pattern-Completer - perforant-path cues dominate and the recurrent web settles onto the nearest stored pattern.
+
+◦ Replay Mode - The Offline Rehearsal - the network free-runs stored sequences during sharp-wave ripples in rest and sleep.
+
+ENTRY 30. THE POINT ATTRACTOR OF PERSISTENT ACTIVITY (Recurrently Sustained Delay-Period Ensemble) (The Working Memory Cell Assembly) (keyed to microcircuits catalogue Chapter 30)
+
+◦ Baseline Mode - The Empty Slot - the pool rests near its low fixed point holding nothing.
+
+◦ Memory Mode - The Loaded Slot - a cue has flipped the assembly to its elevated stable state, where it holds after the input ends.
+
+◦ Reset Mode - The Clear Signal - the transient clearing regime in which a global inhibitory volley or reward-signalled response command flips the assembly back to baseline.
+
+ENTRY 31. THE LINE ATTRACTOR (Velocity-To-Position Recurrent Integrator) (The Neural Integrator) (keyed to microcircuits catalogue Chapter 31)
+
+◦ Tuned Mode - The Perfect Ledger - feedback tuned just below unity so every level of activity is near-stable and the running sum is held for tens of seconds.
+
+◦ Leaky Mode - The Draining Ledger - feedback too weak, so the stored value decays back toward centre.
+
+◦ Unstable Mode - The Runaway Ledger - gain above unity, so activity grows and the value ratchets outward.
+
+ENTRY 32. THE RING ATTRACTOR (Circular Continuous Attractor With Local Excitation And Long-Range Inhibition) (The Inner Compass Circuit) (keyed to microcircuits catalogue Chapter 32)
+
+◦ Cue-Anchored Mode - The Landmark Compass - the bump is pinned to visual landmarks and reports true heading.
+
+◦ Path-Integration Mode - The Dead-Reckoning Compass - in darkness the bump is driven by angular velocity alone and slowly drifts.
+
+◦ Teleport Mode - The Jumping Compass - conflicting cues make the bump jump discretely to a new bearing rather than fade between.
+
+◦ Sleep Mode - The Wandering Compass - the bump roams the ring under internal dynamics, decoupled from the world.
+
+ENTRY 33. THE EXPANSION RECODER (Sparse High-Dimensional Recoding Motif) (The Overlap-Breaker) (keyed to microcircuits catalogue Chapter 33)
+
+◦ Sparse Separation Mode - The Overlap-Breaker - the fierce inhibitory brake keeps only a few percent of cells active, decorrelating overlapping inputs.
+
+◦ Adjustable-Sparseness Mode - The Tunable Sieve - neuromodulators transiently sharpen or relax the threshold to tune separation to demand.
+
+ENTRY 34. THE COMPARATOR (Predicted-Versus-Actual Difference Detector) (The Surprise Meter) (keyed to microcircuits catalogue Chapter 34)
+
+◦ Match Mode - The Quiet Bell - prediction cancels reality and the cell reports familiarity.
+
+◦ Mismatch Mode - The Ringing Bell - reality escapes cancellation and the cell reports novelty, often with dendritic plateaus and bursts.
+
+ENTRY 35. THE SUPERVISED ERROR-CORRECTION MODULE (Teacher-Instructed Weight-Tuning Motif) (The Perceptron Cell) (keyed to microcircuits catalogue Chapter 35)
+
+◦ Learning Mode - The Corrected Pupil - paired parallel-fibre and climbing-fibre activity depresses the co-active weights, driving output toward lower error.
+
+◦ Rebalancing Mode - The Forgetting Pupil - unpaired parallel-fibre activity potentiates weights, keeping them from saturating.
+
+◦ Forward Mode - The Calibrated Filter - between teaching events the cell simply reports its weighted sum as a modulation of its high tonic simple-spike rate.
+
+ENTRY 36. THE MUTUAL-INHIBITION FLIP-FLOP (Reciprocally Inhibiting Bistable Switch Motif) (The Either-Or Latch) (keyed to microcircuits catalogue Chapter 36)
+
+◦ Mode A - The First Latch - one pool dominant and self-holding (for example awake).
+
+◦ Mode B - The Second Latch - the other pool dominant and self-holding (for example asleep).
+
+ENTRY 37. THE CANONICAL CORTICAL COLUMN (Six-Layered Thalamocortical Master Template) (The Universal Cortical Tile) (keyed to microcircuits catalogue Chapter 37)
+
+◦ Balanced Waking Mode - The Idling Tile - large excitatory and inhibitory currents cancel to within a few percent, leaving irregular sparse firing at 0.1 to a few hertz.
+
+◦ Desynchronised Processing Mode - The Attending Tile - during active sensory processing the column runs in a low-amplitude high-frequency regime, gamma-locked when vasoactive intestinal peptide (VIP) disinhibition opens it.
+
+◦ Up-Down Slow-Oscillation Mode - The Sleeping Tile - in deep sleep the whole column breathes below 1 hertz, alternating silent down states with active up states.
+
+ENTRY 38. THE PREDICTIVE CODING MOTIF (Hierarchical Error-Minimising Column Read) (The Expectation-Correcting Circuit) (keyed to microcircuits catalogue Chapter 38)
+
+◦ Balanced Inference Mode - The Fair Auditor - priors and evidence weighted by their true reliabilities, the healthy default.
+
+◦ Prior-Dominated Mode - The Believing Auditor - precision turned up on priors, so the system perceives what it expects.
+
+◦ Evidence-Dominated Mode - The Sceptical Auditor - precision turned up on evidence, so nothing ever becomes familiar.
+
+◦ Evidence-Gated Mode - The Dreaming Auditor - prediction running with the sensory stream gated off, as in rapid-eye-movement dreaming.
+
+ENTRY 39. THE THALAMIC RELAY TRIAD WITH RETICULAR GATE (Relay-Interneuron-Reticular Composite) (The Searchlight Gate) (keyed to microcircuits catalogue Chapter 39)
+
+◦ Tonic Relay Mode - The Open Gate - relays depolarised, transmitting driver input faithfully with attention-steered gain (waking).
+
+◦ Burst Mode - The Alert Flare - a hyperpolarised relay answers a delayed input with a high-frequency burst, low fidelity but high detectability, flagging novelty.
+
+◦ Spindle-Gated Mode - The Waxing Lock - reticular-relay volleys at 11 to 16 hertz progressively close the gate at sleep onset.
+
+◦ Delta-Locked Mode - The Deep Lockdown - relays hyperpolarise further and 1-to-4-hertz delta plus the slow oscillation drop transfer toward zero.
+
+ENTRY 40. THE BASAL GANGLIA SELECTION MOTIF (Disinhibitory Channel-Release Composite) (The Permission Machine) (keyed to microcircuits catalogue Chapter 40)
+
+◦ Deliberative Mode - The Careful Chooser - slow, dopamine-sensitive, goal-directed selection through the associative loop.
+
+◦ Habitual Mode - The Autopilot Chooser - overtrained corticostriatal weights in the sensorimotor loop select without deliberation.
+
+◦ Hypokinetic Mode - The Reluctant Chooser - low dopamine raises selection thresholds so nothing is released easily.
+
+◦ Hyperkinetic Mode - The Trigger-Happy Chooser - excess dopamine lets weak candidates win.
+
+◦ Replay Mode - The Sleeping Rehearser - during sleep the loops disengage from behaviour but replay to consolidate the day's selections into skill.
+
+ENTRY 41. THE HIPPOCAMPAL TRISYNAPTIC TEMPLATE (Series-Composed Memory Loop) (The Memory Assembly Line) (keyed to microcircuits catalogue Chapter 41)
+
+◦ Online Theta Mode - The Running Line - encoding and retrieval interleaved on the theta rhythm during active behaviour.
+
+◦ Offline Ripple Mode - The Night Shift - compressed replay of stored sequences during sharp-wave ripples in rest and slow-wave sleep.
+
+◦ Within-Theta Sub-Modes - Read Phase and Write Phase - the oriens-lacunosum-moleculare gate tilts CA1 between reality-dominated and memory-dominated on alternate theta phases.
+
+ENTRY 42. THE CEREBELLAR CORTICAL TEMPLATE (Uniform Adaptive-Filter Module) (The Calibration Crystal) (keyed to microcircuits catalogue Chapter 42)
+
+◦ Calibrated Mode - The Silent-Teacher Crystal - climbing fibres near silent and Purkinje output faithfully cancels predicted consequences.
+
+◦ Adapting Mode - The Re-Tuning Crystal - the world has changed (new spectacles, a growing limb, a damaged muscle), olivary firing climbs and the weights walk.
+
+ENTRY 43. THE MONOSYNAPTIC STRETCH REFLEX ARC (Ia-to-Motoneuron Direct Reflex) (The One-Synapse Snap) (keyed to microcircuits catalogue Chapter 43)
+
+◦ Length-Servo Mode - The One-Synapse Snap - the arc's single mode, resisting muscle stretch with a proportional, velocity-sensitive contraction.
+
+ENTRY 44. THE POLYSYNAPTIC WITHDRAWAL ARC WITH CROSSED EXTENSION (Nociceptive Flexion-Extension Reflex) (The Pull-Back-and-Brace Program) (keyed to microcircuits catalogue Chapter 44)
+
+◦ Withdraw-and-Brace Mode - The Pull-Back Program - the intended mode, flexing the hurt limb away and extending the other to take the falling weight.
+
+◦ Recruitment Sub-Mode - The Spreading Response - as stimulus strength rises the same program recruits more muscles, more segments and finally the crossed limb.
+
+ENTRY 45. THE GOLGI TENDON (FORCE-LIMITING) ARC (Ib Autogenic Inhibition Reflex) (The Tension Governor) (keyed to microcircuits catalogue Chapter 45)
+
+◦ Autogenic-Inhibition Mode - The Tension Governor - during quiet standing and static holds the arc inhibits its own muscle in proportion to force.
+
+◦ Reversed-Excitation Mode - The Load-Bearer - during the stance phase of locomotion the same Ib input reverses to reinforce extension and hold the leg stiff against the ground.
+
+ENTRY 46. THE VESTIBULO-OCULAR THREE-NEURON ARC (Semicircular-Canal-to-Eye-Muscle Reflex) (The World-Steadying Loop) (keyed to microcircuits catalogue Chapter 46)
+
+◦ Stabilise Mode - The World-Steadying Loop - the default mode, moving the eyes exactly opposite the head to hold the image still.
+
+◦ Cancellation Mode - The Following Eye - when eyes and head move together to track a target, the reflex is deliberately suppressed.
+
+ENTRY 47. THE BAROREFLEX ARC (Arterial-Pressure Negative-Feedback Reflex) (The Blood-Pressure Thermostat) (keyed to microcircuits catalogue Chapter 47)
+
+◦ Pressure-Regulating Mode - The Blood-Pressure Thermostat - the single continuous operating mode, holding arterial pressure to a defended set point.
+
+◦ Fast (Vagal) Sub-Arm - The Quick Parry - the parasympathetic heart-rate response.
+
+◦ Slow (Sympathetic) Sub-Arm - The Steady Tone - the vascular and slower cardiac response.
+
+ENTRY 48. THE VAGO-VAGAL LOOP (Gut-to-Brainstem-to-Gut Vagal Reflex) (The Digestion Autopilot) (keyed to microcircuits catalogue Chapter 48)
+
+◦ Accommodative Relaxation Mode - the Receive Mode - senses arrival or anticipation of food and actively relaxes the stomach so volume can rise without pressure rising.
+
+◦ Propulsive-Secretory Mode - the Process Mode - selects the excitatory (cholinergic, using acetylcholine) enteric limb to contract and to drive acid and enzyme secretion.
+
+◦ Restraint Mode - the Hold-Back Mode - the enterogastric setting that slows gastric emptying when the small intestine is already loaded.
+
+ENTRY 49. THE SYMPATHETIC GANGLION DIVERGENCE MOTIF (Preganglionic-to-Postganglionic Fan-Out) (The Alarm Distribution Board) (keyed to microcircuits catalogue Chapter 49)
+
+◦ Faithful-Relay Mode - the Copy Mode - at low input, each secure nicotinic (fast acetylcholine) synapse copies spikes one-for-one with minimal build-up.
+
+◦ Sustained-Amplifier Mode - the Surge Mode - at high input, slow muscarinic and peptidergic potentials accumulate, raising postganglionic excitability and stretching output in time.
+
+ENTRY 50. THE ENTERIC PERISTALTIC CIRCUIT (THE LAW OF THE INTESTINE) (Polarised Ascending-Excitatory, Descending-Inhibitory Reflex) (The Squeeze-Behind, Relax-Ahead Wave) (keyed to microcircuits catalogue Chapter 50)
+
+◦ Propulsive Peristalsis Mode - the Push-Through Wave - the classic polarised reflex, contract-behind and relax-ahead, propelling contents aborally.
+
+◦ Segmentation Mode - the Mixing Churn - non-propagating contractions that mix rather than move, dominant during active digestion.
+
+◦ Migrating Motor Complex Mode - the Housekeeper Sweep - the fasting wave that periodically sweeps residue along the empty gut.
+
+ENTRY 51. CENTRE-SURROUND ANTAGONISM (Concentric Opponent Receptive Field Motif) (The Edge-Carving Circuit) (keyed to microcircuits catalogue Chapter 51)
+
+◦ Photopic Acuity Mode - the Daylight Sharpener - dopamine uncouples horizontal cells, narrowing the surround and favouring fine spatial detail.
+
+◦ Scotopic Sensitivity Mode - the Twilight Pooler - low dopamine lets the horizontal-cell network couple widely, broadening the surround and pooling light for detection.
+
+ENTRY 52. THE ON-OFF PUSH-PULL SPLITTER (Sign-Inverting and Sign-Conserving Bipolar Divergence) (The Bright-and-Dark Fork) (keyed to microcircuits catalogue Chapter 52)
+
+◦ Rectified-Split Mode - the Bright-and-Dark Fork - the single standing mode, in which one cone signal is read by an ON (sign-inverting, metabotropic) channel and an OFF (sign-conserving, ionotropic) channel that carry increments and decrements on separate lines.
+
+ENTRY 53. THE ROD CONVERGENCE (SCOTOPIC POOLING) PATHWAY (Piggyback Rod Signal Injection Motif) (The Photon-Pooling Night Line) (keyed to microcircuits catalogue Chapter 53)
+
+◦ Scotopic Pooling Mode - the Photon Counter - deep dark, maximal spatial and temporal summation, connexin-36 coupling set for sensitivity.
+
+◦ Mesopic Blend Mode - the Twilight Handover - rod and cone signals mix and dopamine begins to uncouple the network.
+
+◦ Photopic Handoff Mode - the Daylight Standby - the pathway saturates and vision passes entirely to the cone system.
+
+ENTRY 54. THE DIRECTION-SELECTIVITY CIRCUIT (Asymmetric Starburst Inhibition Motif) (The Motion-Reading Wiring) (keyed to microcircuits catalogue Chapter 54)
+
+◦ Directional-Discrimination Mode - the Motion Reader - the working regime, in which preferred-direction motion escapes inhibition and null-direction motion is vetoed by well-timed starburst inhibition.
+
+◦ Untuned-Fallback Mode - the Timing-Lost Regime - at very low or very high image speeds the timing relationship breaks down and directional selectivity weakens toward a non-directional response.
+
+ENTRY 55. THE OLFACTORY GLOMERULAR MODULE (Convergent Receptor-Identity Sorting Motif) (The One-Smell Pixel) (keyed to microcircuits catalogue Chapter 55)
+
+◦ High-Sensitivity Pooling Mode - the Faint-Whiff Gatherer - at low odorant concentration, sensitivity and convergent pooling dominate to detect weak signals.
+
+◦ Gain-Controlled Normalisation Mode - the Anti-Saturation Clamp - at high concentration, dopaminergic and GABAergic inhibition suppress input to prevent saturation and hold identity constant.
+
+ENTRY 56. THE DENDRODENDRITIC RECIPROCAL INHIBITION MOTIF (Two-Way Dendritic Synapse Sharpening Motif) (The Axonless Handshake) (keyed to microcircuits catalogue Chapter 56)
+
+◦ Fast Gamma Mode - the Rhythm Clock - spike-driven, prompt reciprocal inhibition that organises principal cells into gamma-band time slots.
+
+◦ Slow Graded Mode - the Lingering Damper - subthreshold, N-methyl-D-aspartate-and-calcium-driven inhibition that produces lasting, graded suppression.
+
+ENTRY 57. THE INTERAURAL LEVEL SUBTRACTION MOTIF (Excitation-Minus-Inhibition Loudness-Comparison Motif) (The Louder-Ear Subtractor) (keyed to microcircuits catalogue Chapter 57)
+
+◦ Graded-Subtraction Mode - the Balance Point - the informative regime around the midline, where small changes in interaural level produce large changes in firing.
+
+◦ Saturated Mode - the Rail - when sound is far to one side, the cell sits at maximum or minimum firing and no longer discriminates.
+
+ENTRY 58. THE EFFERENT GAIN-CONTROL LOOP OF THE COCHLEA (Olivocochlear Amplifier-Damping Motif) (The Turn-Down-the-Ear Loop) (keyed to microcircuits catalogue Chapter 58)
+
+◦ High-Gain Quiet Mode - the Wide-Open Ear - in quiet, the olivocochlear efferents rest and the cochlear amplifier runs at maximum sensitivity.
+
+◦ Damped Unmasking Mode - the Turn-Down Setting - in loud or noisy conditions, medial olivocochlear drive onto outer hair cells lowers amplifier gain, protecting the ear and unmasking transients in continuous noise.
+
+ENTRY 59. THE HYPOPHYSIOTROPIC CASCADE AMPLIFIER (Portal-Coupled Three-Stage Endocrine Fan-Out) (The Chemical Amplifier) (keyed to microcircuits catalogue Chapter 59)
+
+◦ Basal Mode - the Idle Amplifier - low-frequency releasing-hormone pulses and resting gain.
+
+◦ Stimulated Mode - the High-Gain Surge - stress, cold, or reproductive signals raise pulse frequency and stage gains for a large output.
+
+◦ Suppressed Mode - the Braked Amplifier - the feedback loop clamps output below basal.
+
+ENTRY 60. THE CLOSED-LOOP NEGATIVE FEEDBACK MOTIF (Hormone-Axis Feedback Thermostat) (The Set-Point Keeper) (keyed to microcircuits catalogue Chapter 60)
+
+◦ Homeostatic Mode - the Set-Point Keeper - holds the controlled hormone at a fixed target against disturbances.
+
+◦ Allostatic Mode - the Moved Target - the set point is deliberately shifted (for example the raised cortisol set point of chronic stress).
+
+◦ Broken-Loop Mode - the Runaway - feedback is lost and the controlled hormone runs to extremes (a fault regime, admitted only because it names the failure).
+
+ENTRY 61. THE KNDY PULSE GENERATOR (Arcuate Kisspeptin-Neurokinin-Dynorphin Relaxation Oscillator) (The Fertility Clock) (keyed to microcircuits catalogue Chapter 61)
+
+◦ Pulsatile Mode - the Fertility Tick - neurokinin B recruits and synchronises the arcuate population into volleys and dynorphin shuts each volley off, setting the gonadotropin-releasing-hormone pulse.
+
+◦ Suppressed Mode - the Silenced Clock - prepubertal, lactational, or energy-deficit states slow or stop the tick.
+
+◦ Surge Mode - the Ovulatory Burst - a high-output, positive-feedback burst driven with the partner anteroventral-periventricular kisspeptin population.
+
+ENTRY 62. THE MAGNOCELLULAR BURST SYNCHRONIZER (Oxytocin Milk-Ejection Burst Network) (The Milk-Ejection Circuit) (keyed to microcircuits catalogue Chapter 62)
+
+◦ Asynchronous Background Mode - the Idle Chorus - oxytocin neurons fire independently at one to three spikes per second with no coordinated output.
+
+◦ Synchronised Bursting Mode - the Milk-Ejection Pulse - the population locks into a shared explosive burst every few minutes, each burst ejecting a pulse of oxytocin.
+
+◦ Facilitated Mode - the Primed Chorus - a sub-state in which small amounts of oxytocin in the hypothalamus promote bursting.
+
+ENTRY 63. THE COUPLED CIRCADIAN OSCILLATOR NETWORK (Suprachiasmatic Peptide-Coupled Cellular-Clock Ensemble) (The Master Clock) (keyed to microcircuits catalogue Chapter 63)
+
+◦ Entrained Mode - the Locked Clock - phase-locked to the external light-dark cycle at exactly 24 hours.
+
+◦ Free-Running Mode - the Drifting Clock - in constant conditions, oscillating at its intrinsic period (a little over 24 hours in humans).
+
+◦ Desynchronised Mode - the Split Clock - core and shell, or clock and periphery, transiently out of phase, as in jet lag or shift work.
+
+ENTRY 64. THE ISLET SYNCYTIUM WITH HUB CELLS (Gap-Junction-Coupled Beta-Cell Sheet) (The Insulin Wave Chorus) (keyed to microcircuits catalogue Chapter 64)
+
+◦ Quiescent Uncoupled Mode - the Silent Sheet - below the glucose threshold, cells are silent and effectively uncoupled in output.
+
+◦ Synchronised Wave Mode - the Insulin Chorus - above threshold, connexin-36 coupling forces coherent bursting and islet-wide calcium waves.
+
+◦ Continuous-Spiking Mode - the Flat-Out Setting - at very high glucose, sustained firing.
+
+ENTRY 65. THE ISLET PARACRINE TRIAD (Mutual Local-Secretion Regulation of Alpha, Beta and Delta Cells) (The Three-Cell Sugar Cabinet) (keyed to microcircuits catalogue Chapter 65)
+
+◦ Insulin-Dominant Mode - the Store Setting - at high glucose the beta node dominates and restrains the alpha node.
+
+◦ Glucagon-Dominant Mode - the Mobilise Setting - at low glucose the alpha node dominates and drives counter-regulation.
+
+◦ Somatostatin-Braked Mode - the Shared Damper - the delta node scales its braking to whichever opponent is loud, holding the ratio within a safe band.
+
+ENTRY 66. THE FOLLICULOSTELLATE RELAY NETWORK (Gap-Junction-Coupled Non-Endocrine Web of the Anterior Pituitary) (The Gland's Star Wiring) (keyed to microcircuits catalogue Chapter 66)
+
+◦ Coupled Conductor Mode - the Star Grid Live - well-coupled, the web carries a stimulus at one point as a travelling calcium wave to distant endocrine clusters, synchronising secretion.
+
+◦ Uncoupled Fragmented Mode - the Broken Grid - inflammatory signals close the connexin channels and the web fragments into isolated domains.
+
+ENTRY 67. THE ULTRADIAN FEEDBACK OSCILLATOR OF THE STRESS AXIS (Delay-Coupled Pituitary-Adrenal Relaxation Oscillator) (The Hourly Cortisol Clock) (keyed to microcircuits catalogue Chapter 67)
+
+◦ Sub-Threshold Steady Mode - the Flat Line - below a threshold central drive the loop settles to a constant glucocorticoid level with no oscillation.
+
+◦ Self-Pulsing Ultradian Mode - the Hourly Clock - above threshold, delayed negative feedback between pituitary and adrenal produces roughly hourly pulses with no upstream pacemaker.
+
+◦ Stress-Perturbed Mode - the Override Ripple - acute stress shifts pulse phase and amplitude, with the response depending on the phase at which the stressor arrives.
+
+ENTRY 68. THE ASTROCYTE SYNCYTIUM (Gap-Junction-Coupled Glial Network) (The Glial Power-and-Drainage Grid) (keyed to microcircuits catalogue Chapter 68)
+
+◦ Resting Idle Mode - the Baseline Grid - holding ionic and metabolic set points at rest.
+
+◦ Buffering Mode - the Active Drain - activity-driven, absorbing and redistributing potassium and clearing glutamate with gap junctions fully engaged.
+
+◦ Propagating-Wave Mode - the Signalling Ripple - strong stimulation triggers regenerative intercellular calcium waves across the network.
+
+◦ Uncoupled Mode - the Collapsed Grid - inflammation, acidosis, and injury close connexin channels, coupling collapses, buffering fails, and tissue becomes hyperexcitable (a fault regime, admitted because it names the failure).
+
+ENTRY 69. THE TRIPARTITE SYNAPTIC ISLAND (Astrocyte-Enwrapped Synaptic Territory) (The Slow Listener) (keyed to microcircuits catalogue Chapter 69)
+
+◦ Silent Mode - the Quiet Listener - sub-threshold synaptic activity produces only scattered local calcium blips with no territorial output.
+
+◦ Integrating Mode - the Summing Listener - sustained activity summates calcium toward threshold.
+
+◦ Surge Mode - the Flood Release - threshold crossed, a global calcium event sweeps the island and gliotransmitter (glutamate, D-serine, adenosine triphosphate) floods the territory, shifting plasticity thresholds en masse.
+
+◦ Coupled Mode - the Spreading Listener - calcium waves pass through gap junctions to neighbouring islands, widening the affected area.
+
+ENTRY 70. THE MICROGLIAL PRUNING LOOP (Complement-Tagged Synapse Elimination Circuit) (The Weakest-Link Eater) (keyed to microcircuits catalogue Chapter 70)
+
+◦ Surveillant Mode - the Patrolling Watch - resting microglia sample continuously without eating.
+
+◦ Pruning Mode - the Weakest-Link Eater - during developmental windows, microglia engulf complement-tagged weak synapses.
+
+◦ Reactive Mode - the Inflammatory Phagocyte - injury or disease shifts microglia to inflammatory phagocytosis that can prune pathologically (a fault regime).
+
+◦ Aberrant Mode - the Mis-Set Pruner - over- or under-active complement tagging removes too many or too few synapses (a fault regime).
+
+ENTRY 71. THE NEUROVASCULAR COUPLING UNIT (Activity-to-Blood-Flow Signalling Ensemble) (The Demand-Driven Fuel Valve) (keyed to microcircuits catalogue Chapter 71)
+
+◦ Resting Tone Mode - the Idle Valve - tonic pericyte and smooth-muscle tone set a baseline flow.
+
+◦ Functional-Hyperaemia Mode - the Demand Open - local activity dilates vessels and raises flow to feed active neurons.
+
+◦ Autoregulatory Mode - the Pressure Buffer - the same actors hold flow constant against changes in arterial blood pressure.
+
+◦ Dysfunctional Mode - the Sluggish Valve - hypertension, small-vessel disease, and Alzheimer disease blunt or delay the response (a fault regime).
+
+END OF OUTLINE

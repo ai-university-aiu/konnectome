@@ -1,0 +1,1796 @@
+LAYER 10, THE NEURAL AND NEUROENDOCRINE SYSTEMS LAYER: MODES AND MODE TRANSITIONS
+
+The Per-System Mode Catalogues of Every System of the Human Nervous and Endocrine System
+
+A Companion Volume to LAYER_10_SYSTEMS_MANUSCRIPT
+
+Keyed, chapter by chapter, to the forty-four-chapter systems catalogue, in the Certified_Neuroscientist corpus of D. R. Dison, Founder, Artificial Intelligence University (AIU).
+
+Date of compilation: August 9, 2026.
+
+
+INTRODUCTION: THE MODES OF THE MACHINES THAT THINK
+
+The corpus vocabulary and formalism are unchanged - state continuous, mode discrete, hybrid automaton, admission rule, fault watchdogs - applied here to whole systems.
+
+A system's modes are its operating postures: the visual system's foveal scrutiny and ambient vigilance; the memory systems' encoding, retrieval, and consolidation configurations; the action systems' goal-directed and habitual regimes; the broadcast systems' tonic and phasic voices - the canonical case of the layer; the axes' basal, pulse, surge, and circadian regimes; and the workspace's subliminal and ignited conditions.
+
+Two regularities organise the entries.
+
+First, system modes are dominantly set by two masters: the Layer 11 global states (which schedule every system) and the neuromodulatory broadcasts (which are themselves systems of this catalogue setting the modes of the others) - the layer contains its own mode-setting machinery, which is what makes it a layer of government as well as of work.
+
+Second, the corpus's design lesson holds a fourth time: the cognitive systems are mode-rich, and the relays and executors are proudly mode-poor.
+
+Each entry is paste-ready for its source chapter, keyed by chapter number; the forty-four entries follow in chapter order.
+
+
+ENTRY 1. THE VISUAL SYSTEM, DORSAL AND VENTRAL STREAMS (keyed to systems catalogue Chapter 1)
+
+MODES AND MODE TRANSITIONS:
+
+The visual system is a two-stream hierarchy whose modes are set by which stream leads and by the state of its thalamic gates, the lateral geniculate nucleus (the retinal relay) and the pulvinar (the cortico-cortical traffic regulator).
+
+Its mode machinery is dominated by attention and by the sleep-wake broadcast, not by the retina, which never changes mode.
+
+• THE MODE REGISTER.
+
+◦ Foveal Scrutiny - The Close Reader - ventral-stream-led analysis of one attended object at high spatial frequency, the focal mode of the two-mode vision literature.
+
+◦ Ambient Vigilance - The Wide Watch - dorsal-stream and peripheral low-spatial-frequency layout monitoring for orienting, posture, and navigation.
+
+◦ Offline Replay - The Night Projector - slow-wave-sleep replay of recent patterns with the geniculate gate closed in burst mode.
+
+◦ Endogenous Imagery - The Dream Screen - rapid-eye-movement (REM) top-down image generation with no retinal input.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Foveal Scrutiny: feedforward and feedback run together under attentional gain of roughly 1.2 to 2 fold on attended features, acetylcholine boosting feedforward relative to lateral drive, fixations lengthening to about 250 to 400 milliseconds with short saccades (high confidence).
+
+◦ Ambient Vigilance: magnocellular and collicular channels dominate, short fixations near 100 to 250 milliseconds with long saccades sweep the scene, and low spatial frequencies suffice to update the spatial frame (high confidence).
+
+◦ Offline Replay: geniculate relay cells fire in bursts, primary visual cortex (V1) joins the global slow oscillation near 0.5 to 1 hertz, and recent stimulus statistics are re-expressed for consolidation (moderate confidence).
+
+◦ Endogenous Imagery: feedback pathways drive the hierarchy from the top down, producing vivid percepts without input (moderate confidence on mechanism).
+
+• THE TRANSITION TABLE.
+
+◦ Ambient Vigilance to Foveal Scrutiny: a salient or task-relevant location wins the parietal priority map and the pulvinar routes traffic to ventral analysis, within one or two fixations, roughly 200 to 600 milliseconds; free viewing characteristically runs ambient first, then focal.
+
+◦ Foveal Scrutiny to Ambient Vigilance: task completion, a peripheral transient, or a noradrenaline surprise burst resets the priority map within about 100 to 300 milliseconds.
+
+◦ Waking modes to Offline Replay: thrown from above by the slow-wave-sleep broadcast closing the geniculate gate into burst mode, over minutes at sleep onset, the dominant transition of this system.
+
+◦ Offline Replay to Endogenous Imagery: the REM broadcast reopens cortical dynamics without reopening the retina, on the roughly 90 minute sleep cycle.
+
+◦ Any waking mode toward collicular fast-path bias: acute stress favours magnocellular motion channels over fine ventral analysis, within seconds.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: runaway feedback without input discipline appears as hallucination, and Charcot-Wilbrand-type loss of imagery marks the opposite failure; the healthy boundary is patrolled by thalamic reticular inhibition and by cortical gain normalisation (divisive normalisation), with photoreceptor and cortical adaptation as the slow watchdogs.
+
+
+ENTRY 2. THE AUDITORY SYSTEM (keyed to systems catalogue Chapter 2)
+
+MODES AND MODE TRANSITIONS:
+
+The auditory system is the sense that never fully closes, so its modes are postures of listening rather than on-off states.
+
+Its gates are the olivocochlear efferents at the ear, the medial geniculate relay, and the low road to the amygdala that bypasses cortex.
+
+• THE MODE REGISTER.
+
+◦ Speech-Tuned Analysis - The Conversation Lock - attention-steered foreground extraction of one voice with cortical fields retuned to its features.
+
+◦ Scene Analysis - The Soundscape Sorter - broadband segregation of concurrent streams by pitch, timbre, and location without a single foreground.
+
+◦ Sentinel Listening - The Night Watch - the sleep configuration in which the geniculate gate attenuates but the deviance and alarm channels stay open.
+
+◦ Startle Priming - The Hair Trigger - stress posture favouring the geniculo-amygdala low road with lowered startle thresholds.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Speech-Tuned Analysis: cortical receptive fields shift toward the attended voice within minutes under acetylcholine and noradrenaline, olivocochlear feedback aids listening in noise, and temporal fine structure is tracked to millisecond precision (high confidence).
+
+◦ Scene Analysis: brainstem and cortical maps run in parallel, grouping cues by common onset and harmonicity, with no single stream enjoying attentional gain (high confidence).
+
+◦ Sentinel Listening: throughput drops but mismatch responses to deviant sounds persist in sleeping cortex, and salient sounds such as a name or a baby's cry still ignite arousal (high confidence, well replicated).
+
+◦ Startle Priming: the low road delivers coarse threat spectra to the amygdala in roughly 10 to 20 milliseconds less than the cortical route, at the price of accuracy (moderate confidence on latency figures).
+
+• THE TRANSITION TABLE.
+
+◦ Scene Analysis to Speech-Tuned Analysis: behavioural relevance of one stream, signalled by frontal attention and cholinergic tone, locks the foreground within seconds.
+
+◦ Speech-Tuned Analysis to Scene Analysis: foreground loss or a loud transient releases the lock within hundreds of milliseconds.
+
+◦ Waking modes to Sentinel Listening: thrown from above by the sleep broadcast partially closing the geniculate gate, over minutes, the dominant transition.
+
+◦ Any mode to Startle Priming: acute stress or a conditioned threat sound, via noradrenaline and amygdala feedback, within one second.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: gain that keeps rising without input produces tinnitus, the phantom of an over-compensating amplifier; watchdogs are olivocochlear feedback, cortical inhibitory retuning, and homeostatic gain control, which fail slowly with cochlear damage.
+
+
+ENTRY 3. THE SOMATOSENSORY SYSTEM (keyed to systems catalogue Chapter 3)
+
+MODES AND MODE TRANSITIONS:
+
+This system's signature mode variable is the dorsal horn gate, whose gain on the pain channel can swing more than tenfold in either direction, which no other sense permits.
+
+Touch and pain therefore run as one chain with two very different throttles.
+
+• THE MODE REGISTER.
+
+◦ Exploratory Touch - The Active Reader - attention-boosted discriminative touch during haptic exploration.
+
+◦ Background Monitoring - The Idle Skin - low-gain default posture reporting only change and threat.
+
+◦ Descending Analgesia - The Battlefield Gate - stress posture in which the periaqueductal grey and rostral ventromedial medulla close the dorsal horn gate hard.
+
+◦ Sleep Damping - The Muffled Sheet - thalamically damped touch with privileged pain entry.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Exploratory Touch: cortical maps retune within seconds to the attended body part, with attentional gain on the order of tens of percent and movement-locked gating of self-touch (high confidence).
+
+◦ Background Monitoring: tonic low gain with adaptation removing constant input, so clothing vanishes from report (high confidence).
+
+◦ Descending Analgesia: endogenous opioids, serotonin, and noradrenaline drop pain gain severalfold, the substrate of stress analgesia and placebo relief, so wounds can go unfelt until safety (high confidence).
+
+◦ Sleep Damping: the thalamic gate damps touch strongly, yet pain retains entry, and one night of sleep loss measurably lowers next-day pain thresholds (high confidence, robust human finding).
+
+• THE TRANSITION TABLE.
+
+◦ Background Monitoring to Exploratory Touch: attention and movement intention, within hundreds of milliseconds.
+
+◦ Any mode to Descending Analgesia: acute threat via the periaqueductal grey, within seconds; expectation alone, the placebo route, acts over similar timescales.
+
+◦ Waking modes to Sleep Damping: thrown from above by the sleep broadcast, over minutes; REM sleep adds central exclusion of touch during atonia.
+
+◦ Descending Analgesia to hyperalgesic rebound posture: safety plus inflammation can reverse the gate direction over minutes to hours.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: a gate stuck open is central sensitisation and chronic pain, a gate stuck shut hides injury; watchdogs are segmental touch-driven inhibition (the rub-it-better circuit), descending serotonergic and noradrenergic balance, and inhibitory interneuron integrity in the dorsal horn.
+
+
+ENTRY 4. THE OLFACTORY SYSTEM (keyed to systems catalogue Chapter 4)
+
+MODES AND MODE TRANSITIONS:
+
+The olfactory system's gate is the sniff itself, so its modes are largely respiratory postures, retuned by hunger hormones rather than by a thalamic relay it does not use.
+
+• THE MODE REGISTER.
+
+◦ Sampling Sniff - The Deliberate Nose - active high-flow sniffing that interrogates an odour source.
+
+◦ Passive Watch - The Resting Nostril - low-flow breathing with detection only of strong or novel odours.
+
+◦ Appetitive Sharpening - The Pre-Meal Whet - ghrelin-driven sensitisation of food odour channels before meals.
+
+◦ Bulbar Disconnection - The Sleeping Nose - slow-wave-sleep decoupling of piriform cortex from the bulb.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Sampling Sniff: sniffs at roughly 2 to 8 hertz phase-lock bulb activity, and one sniff of about 200 to 400 milliseconds suffices for discrimination (high confidence).
+
+◦ Passive Watch: nasal airflow at resting respiratory rate near 0.2 to 0.3 hertz yields weak drive, with detection thresholds effectively raised (high confidence).
+
+◦ Appetitive Sharpening: ghrelin lowers odour thresholds before meals and satiety collapses food odour value at the orbitofrontal stage, an hour-scale hormonal envelope on either waking mode (moderate to high confidence).
+
+◦ Bulbar Disconnection: piriform cortex disengages so completely that odours almost never wake a sleeper, the sense's famous alarm failure, while odour re-presentation during slow-wave sleep can still strengthen paired memories (high confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Passive Watch to Sampling Sniff: odour detection or curiosity triggers sniffing within one respiratory cycle, under a second.
+
+◦ Either waking mode into Appetitive Sharpening: hunger hormones, over tens of minutes, thrown from the hormonal layer above.
+
+◦ Waking modes to Bulbar Disconnection: the slow-wave-sleep broadcast, over minutes, the dominant transition.
+
+◦ Any mode toward threat-odour vigilance: stress noradrenaline heightens bulb responsiveness within seconds to minutes (moderate confidence).
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: the piriform cortex is seizure-prone if runaway recurrent excitation escapes; watchdogs are strong feedforward and feedback inhibition in bulb and cortex and adaptation at the receptor sheet, and the sleep alarm failure is accepted as a design cost rather than a fault.
+
+
+ENTRY 5. THE GUSTATORY SYSTEM (keyed to systems catalogue Chapter 5)
+
+MODES AND MODE TRANSITIONS:
+
+Taste is an episodic, meal-locked system whose master mode variable is hunger state, applied at every station from the bud to the orbitofrontal cortex.
+
+A small register is proper here, since the system is idle without food in the mouth.
+
+• THE MODE REGISTER.
+
+◦ Ingestive Appraisal - The Mouthful Auditor - active tasting during eating with value updated mouthful by mouthful.
+
+◦ Sated Discounting - The Full-Table Shrug - post-meal posture in which orbitofrontal taste value collapses for the eaten food.
+
+◦ Standby - The Closed Kitchen - the idle state between meals and throughout sleep, thalamic gate closed with the rest.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Ingestive Appraisal: bud-to-insula throughput runs continuously during eating, with leptin damping and endocannabinoids boosting sweet signalling at the bud itself, and hedonic value computed against current need (high confidence).
+
+◦ Sated Discounting: sensory-specific satiety drops the value of the eaten food substantially while sparing other tastes, over the course of one meal (high confidence).
+
+◦ Standby: near-zero drive for want of input, in slow-wave and rapid-eye-movement (REM) sleep alike (high confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Standby to Ingestive Appraisal: food contact and anticipatory cephalic signals, within seconds.
+
+◦ Ingestive Appraisal to Sated Discounting: gut and hormonal satiety signals accumulating over roughly 10 to 30 minutes of a meal.
+
+◦ Any mode under stress toward comfort-food bias: cortisol tilts preference toward sweet, fat, dense calories over hours, thrown from the stress axis above.
+
+◦ Waking modes to Standby: meal end or the sleep broadcast, minutes.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: a discounting stage that fails to engage supports overeating, and chemotherapy or infection can lock the system into aversion; watchdogs are the hormonal satiety cascade and the brainstem's hard-wired rejection reflexes for bitter and spoiled input, which operate even without cortex.
+
+
+ENTRY 6. THE VESTIBULAR SYSTEM (keyed to systems catalogue Chapter 6)
+
+MODES AND MODE TRANSITIONS:
+
+The vestibular system is a reflex machine whose main mode distinction is whether head motion is self-generated or imposed, since prediction cancels the former so the reflex does not fight the plan.
+
+• THE MODE REGISTER.
+
+◦ Reafference-Cancelled Drive - The Trusted Pilot - voluntary-movement posture with predicted self-motion partially subtracted.
+
+◦ Full-Gain Stabilisation - The Grabbed Gyroscope - passive or unexpected motion handled at full reflex gain.
+
+◦ Sleep Idle - The Parked Gimbal - the still-head idle of slow-wave sleep.
+
+◦ Endogenous Burst Drive - The Dream Spinner - rapid-eye-movement (REM) bursting of the vestibular nuclei that drives the rapid eye movements and injects flying and falling into dreams.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Reafference-Cancelled Drive: cerebellar prediction subtracts the expected sensory consequence of the motor command, leaving the reflex to correct only the error, with vestibulo-ocular gain held near 1.0 and latency near 10 to 15 milliseconds (high confidence).
+
+◦ Full-Gain Stabilisation: uncancelled canal and otolith drive stabilises gaze and posture at the same short latency, with cerebellar inhibition as the master gain control (high confidence).
+
+◦ Sleep Idle: with the head still the reflex has nothing to do and idles (high confidence).
+
+◦ Endogenous Burst Drive: nucleus bursts generate saccade-like eye movements internally, without head motion (moderate to high confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Full-Gain Stabilisation to Reafference-Cancelled Drive: issuance of a voluntary head-movement command attaches the prediction within tens of milliseconds, movement by movement.
+
+◦ Reafference-Cancelled Drive to Full-Gain Stabilisation: prediction mismatch, a slip or push, restores full gain immediately.
+
+◦ Waking modes to Sleep Idle to Endogenous Burst Drive: thrown entirely from above by the sleep-stage broadcast on the roughly 90 minute cycle, the dominant transitions.
+
+◦ Any waking mode under stress: postural gain rises with arousal within seconds, and chronic anxiety and dizziness form a documented two-way pair.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: sensory conflict between canals, otoliths, and vision is motion sickness, and alcohol-altered canal buoyancy gives positional vertigo; watchdogs are cerebellar recalibration over minutes to days and velocity storage discharge, with antihistamine and anticholinergic damping as the pharmacological stand-in.
+
+
+ENTRY 7. THE INTEROCEPTIVE SYSTEM (keyed to systems catalogue Chapter 7)
+
+MODES AND MODE TRANSITIONS:
+
+Interoception runs its reflex floors continuously, so its modes are really postures of cortical access, set by insular gain, with a parabrachial alarm channel that overrides every gate.
+
+• THE MODE REGISTER.
+
+◦ Background Publication - The Quiet Bulletin - default low-resolution publication of the feeling background that weights ongoing choice.
+
+◦ Attentive Introspection - The Body Scan - attention-opened insular gain making the same visceral input vividly felt.
+
+◦ Visceral Alarm - The Override Siren - parabrachial takeover for air hunger and severe visceral threat, gate-proof by design.
+
+◦ Sleep Autonomy - The Unwatched Engine Room - reflex floors running under uncontested brainstem control while insular access closes.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Background Publication: viscero-solitary-parabrachial-insular throughput at low gain, sufficient to colour mood and bias decisions without explicit feeling (high confidence).
+
+◦ Attentive Introspection: insular gain raised by attention makes heartbeat and gut state reportable, and anxiety raises the same gain pathologically (high confidence).
+
+◦ Visceral Alarm: parabrachial signalling overrides all gating within seconds and can force waking from any sleep stage (high confidence).
+
+◦ Sleep Autonomy: blood pressure and heart rate dip in slow-wave sleep, while rapid-eye-movement (REM) sleep turns autonomic state stormy with surges in both directions (high confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Background Publication to Attentive Introspection: attention or worry, within seconds; inflammation opens the gain over hours, producing the heavy-bodied feeling of sickness behaviour.
+
+◦ Any mode to Visceral Alarm: air hunger, a full bladder, severe visceral threat, seconds, overriding sleep and attention alike.
+
+◦ Waking modes to Sleep Autonomy: the sleep broadcast, minutes, thrown from above.
+
+◦ Attentive Introspection self-locking under stress: sympathetic arousal raises reports which raise arousal, the loop that lets anxiety feel like heart disease, building over minutes.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: the introspection-arousal loop closing on itself is the panic spiral; watchdogs are baroreflex negative feedback, vagal parasympathetic braking, and habituation of insular responses, all of which anxiety disorders erode.
+
+
+ENTRY 8. THE CORTICOSPINAL SYSTEM (keyed to systems catalogue Chapter 8)
+
+MODES AND MODE TRANSITIONS:
+
+The corticospinal tract is a cable modulated only at its two ends, so it is deliberately mode-poor: its register is essentially transmit versus blocked, and that poverty is its virtue.
+
+• THE MODE REGISTER.
+
+◦ Gated Transmission - The Open Line - awake availability, with release decided upstream by the basal ganglia and loudness set at the spinal end.
+
+◦ Central Suppression - The Quiet Line - slow-wave-sleep posture with descending drive low and voluntary movement centrally suppressed.
+
+◦ Atonic Block - The Cut Line - rapid-eye-movement (REM) posture in which cortical output cells fire freely but the command is blocked at the spinal end by active atonia.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Gated Transmission: commands travel at roughly 50 to 70 metres per second in the fast component, with serotonergic and noradrenergic descending fibres setting motoneuron gain, effectively deciding how loud the command sounds on arrival (high confidence).
+
+◦ Central Suppression: low descending drive, movements rare and fragmentary (high confidence).
+
+◦ Atonic Block: brainstem-driven inhibition of motoneurons holds muscles slack while the cortex dreams of moving, which is why dreams are not acted out (high confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Gated Transmission internal gating: the basal ganglia release or withhold individual commands moment by moment, tens of milliseconds, the intention gate.
+
+◦ Gated Transmission to Central Suppression to Atonic Block: thrown entirely from above by the sleep-stage broadcast, minutes per stage on the roughly 90 minute cycle, the dominant transitions.
+
+◦ Any waking posture under stress: brainstem monoamines raise spinal gain within seconds, and fine control can degrade into tremor and clumsiness.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: failure of the atonic block is dream-enactment disorder, a known early marker of synuclein disease; failure of transmission is paresis.
+
+◦ Watchdogs are the atonia circuit itself, spinal recurrent (Renshaw) inhibition limiting motoneuron runaway, and reflex-loop damping; the tract otherwise trusts its two ends and carries no mode logic of its own.
+
+
+ENTRY 9. THE CORTICO-BASAL-GANGLIA-THALAMO-CORTICAL LOOP SYSTEM (keyed to systems catalogue Chapter 9)
+
+MODES AND MODE TRANSITIONS:
+
+The choosing machine holds behaviour behind a tonic inhibitory brake and selects by lifting it, so its modes are policies for how the brake is worked, with dopamine as the master mode-setter.
+
+• THE MODE REGISTER.
+
+◦ Deliberative Selection - The Weighed Vote - goal-directed selection with outcome value consulted before the brake lifts.
+
+◦ Habitual Release - The Rubber Stamp - stimulus-triggered release of well-practised sequences with minimal deliberation.
+
+◦ Offline Replay - The Night Rehearsal - slow-wave-sleep participation in replay that consolidates procedural memory while overt action is suppressed.
+
+◦ Free-Wheeling Selection - The Dream Chooser - rapid-eye-movement (REM) selection with dopamine and limbic drive high and motor output blocked downstream.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Deliberative Selection: go and no-go pathways compete under balanced dopamine, with striatal acetylcholine opposing and shaping dopamine's action and serotonin setting patience; selection costs roughly 100 to 300 milliseconds per decision (high confidence).
+
+◦ Habitual Release: sensorimotor loop dominance gives fast, low-cost release, insensitive to outcome devaluation, the defining laboratory signature (high confidence).
+
+◦ Offline Replay: loop activity re-expresses practised sequences without release (moderate confidence).
+
+◦ Free-Wheeling Selection: the machine chooses freely in dreams without releasing movement (moderate confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Deliberative Selection to Habitual Release: overtraining shifts control from associative to sensorimotor territories over days to weeks; within a session, stress, tonic dopamine, and cortisol push the same shift within minutes, the fast, habitual, low-deliberation bias, and dopamine depletion tips the same balance.
+
+◦ Habitual Release to Deliberative Selection: surprise, error, or outcome devaluation recruits the associative loop within seconds.
+
+◦ Waking modes to Offline Replay to Free-Wheeling Selection: thrown from above by the sleep-stage broadcast, the dominant transitions.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: a brake that will not lift is parkinsonian akinesia, a brake that lifts unbidden is tic and dyskinesia, and parkinsonian beta entrainment is the pathological rhythm, excluded from the register.
+
+◦ Watchdogs are the subthalamic hold-your-horses brake, striatal cholinergic opposition to dopamine, and homeostatic corticostriatal plasticity.
+
+
+ENTRY 10. THE CEREBELLAR SYSTEM (keyed to systems catalogue Chapter 10)
+
+MODES AND MODE TRANSITIONS:
+
+The cerebellum runs one computation, prediction and correction, so its modes are set almost entirely by the learning gate: whether the inferior olive is broadcasting errors.
+
+• THE MODE REGISTER.
+
+◦ Calibrated Prediction - The Steady Hand - continuous forward-model prediction and correction with learning quiescent.
+
+◦ Error-Driven Recalibration - The Tuning Session - olive-gated plasticity while errors are being signalled.
+
+◦ Offline Consolidation - The Night Bench - sleep participation in consolidating newly learned motor skills.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Calibrated Prediction: mossy-fibre context drives Purkinje output through learned weights, correcting movement tens of milliseconds ahead of feedback, with noradrenaline and serotonin setting gain (high confidence).
+
+◦ Error-Driven Recalibration: climbing fibres fire complex spikes at roughly 1 hertz, electrically coupled olive cells broadcasting errors in synchronised bursts, and paired parallel-fibre input is depressed, shifting weights trial by trial over minutes (high confidence).
+
+◦ Offline Consolidation: slow-wave-sleep replay stabilises the day's gains, and cerebellar and olivary activity persist in rapid-eye-movement (REM) sleep, possibly refining motor memories (moderate confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Calibrated Prediction to Error-Driven Recalibration: performance error opens the olive gate within a single trial, hundreds of milliseconds; brainstem monoamines adjust the readiness to learn on a slower envelope.
+
+◦ Error-Driven Recalibration to Calibrated Prediction: error falls below the olive's threshold and the gate closes, over trials to minutes.
+
+◦ Waking modes to Offline Consolidation: the sleep broadcast, thrown from above, minutes.
+
+◦ Any mode under stress: timing degrades within seconds, showing as clumsiness and tremor.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: a stuck-open olive gate over-learns noise and an unco-ordinated output is ataxia; watchdogs are the deep-nuclei feedback loop that quenches olive firing once errors are corrected, Purkinje inhibitory dominance over the nuclei, and bidirectional plasticity that unwinds bad calibration.
+
+
+ENTRY 11. THE OCULOMOTOR SYSTEM (keyed to systems catalogue Chapter 11)
+
+MODES AND MODE TRANSITIONS:
+
+Gaze control alternates between discrete jumps and continuous tracking, held safe by two stacked brakes, the basal ganglia oculomotor gate and the omnipause neuron, the last brake before the eye moves.
+
+• THE MODE REGISTER.
+
+◦ Saccadic Acquisition - The Snap Aim - ballistic target acquisition by collicular burst.
+
+◦ Smooth Pursuit - The Camera Dolly - continuous velocity matching of a moving target.
+
+◦ Fixation Hold - The Locked Tripod - active suppression of saccades while detail is extracted.
+
+◦ Endogenous Saccade Storm - The Dream Darter - rapid-eye-movement (REM) internally driven bursts firing the movements that name the state.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Saccadic Acquisition: bursts drive the eye at up to roughly 500 degrees per second with latencies near 200 milliseconds, released only when the basal ganglia lift collicular inhibition and the omnipause neurons fall silent (high confidence).
+
+◦ Smooth Pursuit: cortical motion estimates drive gaze at up to roughly 30 to 100 degrees per second, with catch-up saccades patching lag (high confidence).
+
+◦ Fixation Hold: rostral collicular and omnipause activity suppress movement while foveal analysis proceeds, fixations typically 200 to 400 milliseconds (high confidence).
+
+◦ Endogenous Saccade Storm: brainstem burst machinery fires without external targets (high confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Fixation Hold to Saccadic Acquisition: priority-map decision plus basal ganglia disinhibition, every 200 to 400 milliseconds in normal viewing, the fastest routinely cycled mode pair in the brain.
+
+◦ Saccadic Acquisition to Smooth Pursuit: appearance of coherent target motion, within about 100 to 150 milliseconds.
+
+◦ Waking modes to still eyes to Endogenous Saccade Storm: thrown from above by the sleep-stage broadcast, the dominant slow transitions.
+
+◦ Any mode under fatigue and stress: saccades slow and latencies lengthen within minutes, a measurable drowsiness sign used in vigilance testing.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: omnipause failure gives opsoclonus, unwilled saccadic chaos, and cerebellar miscalibration gives dysmetric overshoot; watchdogs are the omnipause brake itself, cerebellar saccade adaptation trimming amplitude trial by trial, and the tonic collicular inhibition of the basal ganglia gate.
+
+
+ENTRY 12. THE AUTONOMIC MOTOR SYSTEM (keyed to systems catalogue Chapter 12)
+
+MODES AND MODE TRANSITIONS:
+
+The housekeeping outflow balances two hands, sympathetic and parasympathetic, so its modes are balance postures thrown almost entirely from above, by emotion, homeostatic need, hormones, and the sleep schedule.
+
+• THE MODE REGISTER.
+
+◦ Sympathetic-Led Engagement - The Working Tilt - awake, active posture with the balance shifted toward sympathetic tone.
+
+◦ Parasympathetic Restoration - The Night Housekeeping - slow-wave-sleep dominance of the vagal hand while the body restores itself.
+
+◦ Autonomic Storm - The Dream Squall - rapid-eye-movement (REM) irregularity with surges of both divisions.
+
+◦ Fight-or-Flight Mobilisation - The Full Alarm - acute-stress mobilisation of the whole sympathetic and adrenal apparatus at once.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Sympathetic-Led Engagement: the rostral ventrolateral medulla sets vasomotor tone and heart rate to match posture and effort, on a seconds timescale, with circulating adrenaline amplifying effects (high confidence).
+
+◦ Parasympathetic Restoration: heart rate and blood pressure fall by roughly 10 to 20 percent below waking baseline, digestion and repair favoured (high confidence).
+
+◦ Autonomic Storm: irregular surges in both divisions, one reason heart attacks cluster in the dream-rich early morning (high confidence, epidemiologically supported).
+
+◦ Fight-or-Flight Mobilisation: within seconds heart rate, blood pressure, and glucose mobilisation jump together, adrenaline sustaining the surge for minutes (high confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Sympathetic-Led Engagement to Parasympathetic Restoration: the slow-wave-sleep broadcast, minutes, thrown from above.
+
+◦ Parasympathetic Restoration to Autonomic Storm: REM onset on the roughly 90 minute cycle, thrown from above.
+
+◦ Any mode to Fight-or-Flight Mobilisation: amygdala and hypothalamic threat signals, one to a few seconds, overriding the schedule.
+
+◦ Continuous micro-transitions: baroreflex and respiratory gating shift the balance beat by beat, the system's normal fine grain.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: a storm without a trigger is dysautonomia, and mobilisation that never stands down is hypertension and chronic stress load; watchdogs are the baroreflex negative-feedback loop, vagal braking, and hormonal counter-regulation, all operating below awareness.
+
+
+ENTRY 13. THE EPISODIC MEMORY SYSTEM (keyed to systems catalogue Chapter 13)
+
+MODES AND MODE TRANSITIONS:
+
+The experience-recorder loop is the textbook mode machine of the brain: encoding, retrieval, and consolidation use the same circuit under different cholinergic and rhythmic settings, and the modes must alternate because their synaptic requirements conflict.
+
+• THE MODE REGISTER.
+
+◦ Encoding Posture - The Open Shutter - storage-favouring configuration under high acetylcholine.
+
+◦ Retrieval Posture - The Playback Head - completion-favouring configuration under low acetylcholine.
+
+◦ Ripple Consolidation - The Nightly Copy - slow-wave-sleep replay via sharp-wave ripples performing the hippocampo-cortical transfer.
+
+◦ Theta Integration - The Dream Re-Tagger - rapid-eye-movement (REM) theta with cortex partially disconnected, favouring integration and emotional re-tagging.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Encoding Posture: septal acetylcholine enhances plasticity while suppressing the recurrent CA3-to-CA1 retrieval pathway, sparing entorhinal input, so new patterns are stored without being overwritten by old ones, the Hasselmo mechanism; dopamine and noradrenaline mark novelty, gating which events earn lasting change (high confidence).
+
+◦ Retrieval Posture: with cholinergic suppression lifted, CA3 pattern completion drives recall through the anterior thalamic gate, without whose permissive relay the index cannot drive cortical recall (high confidence).
+
+◦ Ripple Consolidation: ripples near 100 to 200 hertz nest in cortical slow oscillations and spindles, re-expressing daytime sequences at compressed speed (high confidence).
+
+◦ Theta Integration: theta near 4 to 8 hertz runs with noradrenaline absent, loosening associations (moderate confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Encoding to Retrieval and back: at the fast grain, the two postures alternate within single theta cycles, encoding at one phase and retrieval at the other, roughly every 125 to 250 milliseconds; at the slow grain, attentive novelty raises acetylcholine toward encoding and familiarity lowers it toward retrieval, over seconds.
+
+◦ Waking postures to Ripple Consolidation: the slow-wave-sleep broadcast collapses acetylcholine, thrown from above, the dominant transition.
+
+◦ Ripple Consolidation to Theta Integration: REM onset restores acetylcholine without noradrenaline, on the sleep cycle.
+
+◦ Any posture under stress: cortisol enhances gist encoding and impairs detail retrieval, minutes to hours.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: retrieval running during encoding corrupts new memories with old, and runaway CA3 recurrence is the temporal-lobe seizure focus; watchdogs are the cholinergic suppression itself, theta phase separation, and strong interneuron control of ripple timing.
+
+
+ENTRY 14. THE SEMANTIC MEMORY SYSTEM (keyed to systems catalogue Chapter 14)
+
+MODES AND MODE TRANSITIONS:
+
+The meaning distillery is mode-poorer than its episodic supplier: the hub serves comprehension continuously, and its main mode variable is how widely retrieval is allowed to spread.
+
+• THE MODE REGISTER.
+
+◦ Precision Retrieval - The Narrow Tap - frontally controlled selection of the task-relevant feature under sharp cholinergic tone.
+
+◦ Associative Spread - The Wide Ladle - loosened retrieval admitting remote associations, characteristic of rest and rapid-eye-movement (REM) sleep.
+
+◦ Overnight Distillation - The Slow Still - slow-wave-sleep receipt of episodic replay, weights adjusted toward new knowledge.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Precision Retrieval: the frontal semantic-control loop gates which hub features reach the workspace, resolving competition among meanings within a few hundred milliseconds per retrieval (high confidence).
+
+◦ Associative Spread: control loosens and distant concepts pair, the regime in which remote associates surface in dreams and creative incubation (moderate confidence).
+
+◦ Overnight Distillation: hub-and-spoke weights shift toward newly replayed material, with new words gaining lexical competition effects overnight (high confidence for the word-learning evidence).
+
+• THE TRANSITION TABLE.
+
+◦ Precision Retrieval to Associative Spread: task release, drowsiness, or REM onset relaxes frontal control, seconds to minutes, largely thrown from the arousal broadcast above.
+
+◦ Associative Spread to Precision Retrieval: task demand re-engages the control loop within about one second.
+
+◦ Waking modes to Overnight Distillation: the slow-wave-sleep broadcast, minutes, thrown from above.
+
+◦ Any mode under stress: retrieval narrows to dominant meanings within minutes, a forced and impoverished Precision Retrieval.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: hub degeneration gives semantic dementia's smooth loss of meaning, and control failure gives semantic aphasia's selection errors; the everyday watchdog is the frontal control loop itself, with bilateral hub redundancy as the structural safeguard.
+
+◦ A methodological note carried from the source chapter: the hub sits in a magnetic-susceptibility shadow, so imaging thinness here reflects the instrument, not the biology, and confidence on fine mode boundaries is accordingly moderate.
+
+
+ENTRY 15. THE PROCEDURAL MEMORY SYSTEM (keyed to systems catalogue Chapter 15)
+
+MODES AND MODE TRANSITIONS:
+
+The habit forge has two mode axes: learning versus executing, and holding control versus ceding it to deliberation, the latter shared with the Chapter 9 selection loops.
+
+• THE MODE REGISTER.
+
+◦ Forging - The Hot Anvil - dopamine-gated skill acquisition during practice.
+
+◦ Fluent Execution - The Cold Stamp - fast, automatic execution of consolidated skills.
+
+◦ Spindle Consolidation - The Night Shift - sleep replay locking in the day's motor gains.
+
+◦ Stress Takeover - The Emergency Foreman - stress-driven assumption of control from the goal-directed system.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Forging: dopamine gates both learning rate and vigour, which is why Parkinson disease slows movement and blocks new habit formation at once; gains accrue over sessions with a large offline component (high confidence).
+
+◦ Fluent Execution: sequences run with minimal attention and are insensitive to outcome devaluation, the defining habit signature, chunked so initiation cost is paid once per sequence (high confidence).
+
+◦ Spindle Consolidation: stage-two spindle-linked and slow-wave replay improves speed and accuracy overnight without further practice, while rapid-eye-movement (REM) sleep continues sequence integration under paralysis (high confidence).
+
+◦ Stress Takeover: cortisol and noradrenaline bias control from goal-directed to habitual within minutes, so practised routines survive emergencies (high confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Forging to Fluent Execution: overtraining shifts control across striatal territories over days to weeks.
+
+◦ Fluent Execution to Forging: error or changed contingency reopens dopamine-gated plasticity within trials.
+
+◦ Waking modes to Spindle Consolidation: the sleep broadcast, thrown from above.
+
+◦ Deliberation to Stress Takeover: acute stress, minutes, thrown from the stress axis above; recovery follows cortisol clearance over tens of minutes to hours.
+
+◦ Global brake: the subthalamic gate can hold all release regardless of mode, tens of milliseconds.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: a forge that will not close is compulsion and addiction's habit arm, and a forge that cannot open is the new-learning failure of dopamine depletion; watchdogs are goal-directed monitoring that audits habits after errors, the subthalamic brake, and outcome devaluation testing by the deliberative system.
+
+
+ENTRY 16. THE WORKING MEMORY SYSTEM (keyed to systems catalogue Chapter 16)
+
+MODES AND MODE TRANSITIONS:
+
+The present-thought blackboard is an attractor circuit with an explicit admission gate, so its modes are postures of holding versus updating, a trade-off no single setting can win.
+
+• THE MODE REGISTER.
+
+◦ Robust Maintenance - The Held Chalk - attractors locked against distraction while contents are used.
+
+◦ Gated Updating - The Fresh Slate - basal-ganglia-gated admission of new content, old content released.
+
+◦ Erased Idle - The Wiped Board - slow-wave-sleep erasure, delay activity being incompatible with the slow oscillation's silent states.
+
+◦ Ungoverned Flicker - The Doodling Board - rapid-eye-movement (REM) fragments igniting without gate control, one account of dream incoherence.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Robust Maintenance: persistent prefrontal-parietal activity holds roughly 3 to 4 items across delays of seconds, with dopamine D1 receptor tone on an inverted-U, too little and attractors cannot hold, too much and they cannot update; acetylcholine and noradrenaline set robustness to distraction (high confidence).
+
+◦ Gated Updating: the basal ganglia gate admits task-relevant items in roughly 100 to 300 milliseconds, the explicit admission control (high confidence).
+
+◦ Erased Idle: contents do not survive sleep onset (high confidence).
+
+◦ Ungoverned Flicker: fragments ignite without admission control (moderate confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Robust Maintenance to Gated Updating: task context or reward prediction signals open the gate, sub-second, cycling many times per minute during fluent thought.
+
+◦ Waking modes to Erased Idle to Ungoverned Flicker: thrown from above by the sleep-stage broadcast, the dominant slow transitions.
+
+◦ Any mode under acute stress: excess catecholamines push D1 tone off the inverted-U, the gate loosens, and capacity effectively drops, within minutes; the same curve explains why Parkinson medication can impair this system.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: a gate stuck shut is perseveration, a gate stuck open is distractibility, and both live on the same dopamine curve; watchdogs are the inverted-U itself as a self-limiting envelope, noradrenaline-mediated network resets, and parietal normalisation limiting attractor runaway.
+
+
+ENTRY 17. THE REWARD AND MOTIVATION SYSTEM (keyed to systems catalogue Chapter 17)
+
+MODES AND MODE TRANSITIONS:
+
+The wanting economy prices options continuously, and its deepest mode axis is exploitation versus exploration, with a separate hedonic channel, liking, gated by opioid hotspots rather than by dopamine wanting.
+
+• THE MODE REGISTER.
+
+◦ Exploitative Pricing - The Known-Vendor Round - valuation and pursuit of established rewards under stable dopamine prediction errors.
+
+◦ Exploratory Sampling - The Market Stroll - novelty-weighted sampling of alternatives when established values decay or uncertainty rises.
+
+◦ Hedonic Consummation - The Tasting Table - opioid-hotspot liking during consumption, dissociable from wanting.
+
+◦ Replay Bookkeeping - The Night Audit - sleep replay preferentially consolidating rewarded experience via accumbens participation.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Exploitative Pricing: phasic dopamine prediction errors update values, with hunger, thirst, and hormonal state retuning them at hypothalamic and orbitofrontal stations; higher tonic dopamine favours exploitation (high confidence, pharmacology supported).
+
+◦ Exploratory Sampling: lowered dopamine tone or raised uncertainty increases random sampling without impairing learning, and novelty itself is paid a bonus (moderate to high confidence).
+
+◦ Hedonic Consummation: accumbens shell and ventral pallidum opioid hotspots gate liking separately from dopamine wanting, the wanting-liking dissociation (high confidence).
+
+◦ Replay Bookkeeping: rewarded sequences are preferentially re-expressed in slow-wave sleep, while in rapid-eye-movement (REM) sleep dopamine tone persists as noradrenaline vanishes, one reason dreams are motivated but unfocused (moderate confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Exploitative Pricing to Exploratory Sampling: accumulating negative prediction errors or environmental volatility, over tens of seconds to minutes, with noradrenaline signalling that the world has changed.
+
+◦ Exploratory Sampling to Exploitative Pricing: discovery of a reliably better option, within a few rewarded trials.
+
+◦ Any mode under stress: cortisol shifts valuation toward immediate reward within minutes, and chronic stress sensitises the system to drugs and relapse over weeks, thrown from the stress axis above.
+
+◦ Waking modes to Replay Bookkeeping: the sleep broadcast, thrown from above.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: an economy locked in exploitation of one commodity is addiction, wanting outrunning liking; watchdogs are satiety retuning at the hypothalamic and orbitofrontal stations, prefrontal top-down veto, and homeostatic dopamine receptor regulation, each of which addiction progressively defeats.
+
+
+ENTRY 18. THE LANGUAGE SYSTEM (keyed to systems catalogue Chapter 18)
+
+MODES AND MODE TRANSITIONS:
+
+The word loom runs comprehension and production through dorsal and ventral weaves, and its modes are directions and audiences of weaving, metered at initiation by the basal ganglia gate.
+
+• THE MODE REGISTER.
+
+◦ Comprehension Weave - The Listening Loom - sound-to-meaning mapping during listening and reading.
+
+◦ Production Weave - The Speaking Loom - meaning-to-articulation mapping with online self-monitoring.
+
+◦ Inner Speech - The Silent Loom - production run covertly with articulation withheld, the medium of much thought.
+
+◦ Unmonitored Dream Speech - The Loose Loom - rapid-eye-movement (REM) production that is fluent but unmonitored.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Comprehension Weave: the ventral stream maps sound to meaning at conversational rates near 3 to 6 syllables per second, robust to noise through prediction (high confidence).
+
+◦ Production Weave: lexical selection, dorsal-stream sequencing, and auditory self-monitoring run in a pipeline of roughly 600 milliseconds from concept to onset, with the basal ganglia metering initiation, which is why Parkinson disease quiets speech and why stuttering implicates this loop (high confidence).
+
+◦ Inner Speech: the production pipeline runs with the final gate held, retaining prediction of its own auditory consequence (moderate confidence).
+
+◦ Unmonitored Dream Speech: fluent output without error checking (moderate confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Comprehension and Production Weaves alternate on conversational turn-taking cues with gaps commonly near 200 milliseconds, the fastest socially thrown transition in this catalogue.
+
+◦ Production Weave to Inner Speech and back: intention alone, sub-second.
+
+◦ Waking weaves to overnight lexical consolidation to Unmonitored Dream Speech: thrown from above by the sleep-stage broadcast, with newly learned words gaining competition effects overnight.
+
+◦ Any mode under stress: arousal sets fluency, and retrieval blocks and disfluencies multiply within seconds.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: monitoring failure with fluent output resembles jargon aphasia, initiation-gate failure appears as stutter or mutism; watchdogs are auditory self-monitoring against the forward model, the basal ganglia meter itself, and bilateral redundancy of the ventral stream, and in about 95 percent of right-handers the whole register runs in the left hemisphere.
+
+
+ENTRY 19. THE EXECUTIVE CONTROL SYSTEM (keyed to systems catalogue Chapter 19)
+
+MODES AND MODE TRANSITIONS:
+
+The cognitive government's central mode axis is focused exploitation versus distractible exploration, traded by locus coeruleus noradrenaline, with a standing constitutional clause that stress devolves power to the habit forge.
+
+• THE MODE REGISTER.
+
+◦ Focused Exploitation - The Closed Session - stable task set held against distraction, phasic-noradrenaline regime.
+
+◦ Divergent Exploration - The Open Floor - loosened task set sampling alternatives, tonic-noradrenaline regime.
+
+◦ Devolved Emergency Rule - The Caretaker Cabinet - stress handover of control to habit and amygdala.
+
+◦ Offline Recess - The Adjourned House - sleep withdrawal of executive function.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Focused Exploitation: prefrontal dopamine on the Chapter 16 inverted-U stabilises the task set, and phasic locus coeruleus bursts to task events sharpen responding; authority sags with time-on-task over tens of minutes (high confidence).
+
+◦ Divergent Exploration: elevated tonic noradrenaline flattens the task set, raising distractibility and the chance of finding a better task, the adaptive-gain account (moderate to high confidence).
+
+◦ Devolved Emergency Rule: practised routines survive because control has shifted to the forge, and novel plans do not (high confidence).
+
+◦ Offline Recess: the network is largely offline in slow-wave sleep, and the dorsolateral station is deactivated in rapid-eye-movement (REM) sleep, dreams being correspondingly ungoverned; sleep deprivation therefore presents first as executive failure (high confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Focused Exploitation to Divergent Exploration: falling utility of the current task raises tonic noradrenaline over seconds to minutes.
+
+◦ Divergent Exploration to Focused Exploitation: discovery of a rewarding task restores phasic mode within seconds.
+
+◦ Any mode to Devolved Emergency Rule: acute stress via noradrenaline and cortisol, within minutes, thrown from above; restoration follows stress offset over tens of minutes.
+
+◦ Waking modes to Offline Recess: the sleep broadcast, thrown from above, the dominant slow transition.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: permanent exploitation is perseverative rigidity, permanent exploration is distractible disorganisation, and a government that never reconvenes after stress is the executive profile of chronic stress disorders; watchdogs are performance monitoring by the cingulate raising alarms on error, the dopamine inverted-U bounding both extremes, and sleep itself as the scheduled restorer.
+
+
+ENTRY 20. THE SOCIAL COGNITION SYSTEM (keyed to systems catalogue Chapter 20)
+
+MODES AND MODE TRANSITIONS:
+
+The other-minds mirror runs whenever another agent is present or imagined, which for humans is nearly always, so its modes are stances toward agents rather than on-off states, with the amygdala gating how much any face matters at all.
+
+• THE MODE REGISTER.
+
+◦ Mentalising Stance - The Deep Read - full model-building of another's beliefs, desires, and intentions.
+
+◦ Fast Face-Intent Reading - The Glance Check - rapid appraisal of identity, gaze, and expression without deep modelling.
+
+◦ Threat-Contracted Reading - The Narrowed Eye - stress posture contracted to threat detection with empathy narrowed.
+
+◦ Social Simulation - The Night Rehearsal Stage - rapid-eye-movement (REM) activity generating densely populated social dream scenarios.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Mentalising Stance: the mentalising network builds recursive belief models over seconds, with oxytocin and vasopressin retuning gaze-to-eyes, trust, and in-group weighting (high confidence for network engagement, moderate for hormone effect sizes).
+
+◦ Fast Face-Intent Reading: face identity and expression are classified within roughly 100 to 170 milliseconds, sufficient for interaction without deliberate inference (high confidence).
+
+◦ Threat-Contracted Reading: testosterone shifts reading toward dominance, and acute stress narrows empathy to threat relevance (moderate confidence).
+
+◦ Social Simulation: the system is conspicuously active in REM sleep, and person models consolidate with declarative memory in slow-wave sleep (moderate confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Fast Face-Intent Reading to Mentalising Stance: ambiguity or stakes in another's behaviour recruit the deep read within about one second.
+
+◦ Mentalising Stance to Fast Face-Intent Reading: routine interaction lets the deep model idle, seconds.
+
+◦ Any stance to Threat-Contracted Reading: amygdala threat gating under stress, seconds, thrown from the arousal systems above.
+
+◦ Waking stances to consolidation to Social Simulation: the sleep-stage broadcast, thrown from above.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: a mirror stuck in threat reading is the hostile-attribution bias of anxiety and paranoia, and a mirror that never engages marks autistic and lesion profiles; watchdogs are contextual prefrontal reappraisal of amygdala alarms and the slow hormonal envelopes that return the system to baseline after stress.
+
+
+ENTRY 21. THE DEFAULT MODE NETWORK (keyed to systems catalogue Chapter 21)
+
+MODES AND MODE TRANSITIONS:
+
+The inward storyteller is itself one pole of the brain's largest mode axis, inward versus outward, so its register describes how the story is being told, with the salience network holding its off-switch.
+
+• THE MODE REGISTER.
+
+◦ Narrative Rest - The Fireside Teller - dominant quiet-waking self-referential simulation of past, future, and others.
+
+◦ Task Suppression - The Hushed Teller - anticorrelated quiescence while outward task networks hold the floor.
+
+◦ Dream Narration - The Unchecked Teller - the altered REM configuration narrating without executive supervision.
+
+◦ Fragmented Idle - The Scattered Teller - deep slow-wave fragmentation of network coherence.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Narrative Rest: midline hubs run mind-wandering, autobiographical recall, and prospection, occupying a large fraction of unoccupied waking thought, with dopamine, acetylcholine, and the arousal systems setting engagement (high confidence).
+
+◦ Task Suppression: activity drops below baseline during demanding external tasks, and failure to suppress predicts lapses and errors (high confidence).
+
+◦ Dream Narration: the network is altered rather than silenced in rapid-eye-movement (REM) sleep, consistent with dreaming's narrative feel (moderate confidence).
+
+◦ Fragmented Idle: long-range coherence breaks up in deep slow-wave sleep (moderate to high confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Narrative Rest to Task Suppression: the salience network throws the off-switch on detecting a behaviourally relevant event, within roughly one second, the defining externally thrown transition.
+
+◦ Task Suppression to Narrative Rest: task offset or waning engagement, seconds, the drift back that experimenters call mind-wandering onset.
+
+◦ Any waking mode under acute stress: suppression is imposed and sustained, the outward lock, minutes.
+
+◦ Waking modes to Fragmented Idle to Dream Narration: the sleep-stage broadcast, thrown from above.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: a teller that cannot be hushed is rumination and depressive self-focus, and one that intrudes into tasks is the lapse profile of attention disorders; the principal watchdog is the salience network's switch itself, backed by noradrenergic resets and by task structure in the environment.
+
+
+ENTRY 22. THE SALIENCE / VENTRAL ATTENTION NETWORK (keyed to systems catalogue Chapter 22)
+
+MODES AND MODE TRANSITIONS:
+
+The alarm switchboard is the brain's mode-transition operator, so its own register is small and postural: what varies is the threshold and stickiness of its switching, with norepinephrine (noradrenaline) carrying surprise and dopamine and acetylcholine shaping what counts as salient.
+
+• THE MODE REGISTER.
+
+◦ Calibrated Vigilance - The Attentive Operator - normal waking posture, monitoring all channels and switching networks on genuine relevance.
+
+◦ Damped Watch - The Night Operator - slow-wave-sleep posture with raised thresholds but preserved alarm entry.
+
+◦ Stress Lock - The Jammed Switchboard - hyperactive posture locking the brain into the outward mode.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Calibrated Vigilance: the insular-cingulate core detects salient events and triggers network reconfiguration, engaging executive networks and suppressing the default mode within a few hundred milliseconds of a genuinely relevant stimulus (high confidence).
+
+◦ Damped Watch: detection thresholds rise with sleep depth, yet sufficiently salient signals still force arousal, consistent with the sentinel configurations of Chapters 2 and 7 (moderate to high confidence).
+
+◦ Stress Lock: noradrenaline-driven hyperactivity lowers the switching threshold toward zero, so nearly everything is treated as salient and the outward mode cannot be released (high confidence for the stress bias, moderate for mechanism detail).
+
+• THE TRANSITION TABLE.
+
+◦ Calibrated Vigilance internal switching: each detected event throws a default-to-executive or executive-to-default transition in other networks, sub-second, the network's job rather than a mode change of its own.
+
+◦ Calibrated Vigilance to Damped Watch: the sleep broadcast, minutes, thrown from above.
+
+◦ Calibrated Vigilance to Stress Lock: acute stress via locus coeruleus surprise signalling, seconds to minutes, thrown from above.
+
+◦ Stress Lock to Calibrated Vigilance: stress offset and cortisol clearance, tens of minutes, often the slowest recovery in this catalogue.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: a switchboard that jams is the hypervigilance of anxiety and post-traumatic stress, and one that under-calls is the missed-alarm profile of neglect and apathy; watchdogs are prefrontal reappraisal lowering false-alarm gain, habituation to repeated non-events, and the hormonal stand-down of the stress axis, with the honest note that the switchboard has no switchboard above it and depends on these external brakes.
+
+
+ENTRY 23. THE DORSAL ATTENTION NETWORK (The frontoparietal orienting network) (keyed to systems catalogue Chapter 23)
+
+MODES AND MODE TRANSITIONS:
+
+This network is a two-state engagement machine whose whole existence is a beam that is either aimed and on or stood down.
+
+Its mode-setting axis is network engagement versus deactivation and sleep reconfiguration, the canonical network case.
+
+• THE MODE REGISTER.
+
+◦ Engaged-Orienting - Spotlight On - top-down gain aimed at a chosen place or feature to select targets for eye and hand.
+
+◦ Disengaged-Standby - Spotlight Off - awake but unaimed, holding no priority, ready to be recruited.
+
+◦ Offline-Sleep - Lights Out - taken down in sleep when voluntary orienting has no role.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Engaged-Orienting the network multiplies the signal at the attended location by a gain of roughly 1.2 to 1.5 (raising firing by tens of percent, not tenfold), builds a parietal priority map, and issues a gaze command in about 200 to 300 milliseconds; confidence high.
+
+◦ In Disengaged-Standby the priority map is flat and only bottom-up salience sets the winner; confidence high.
+
+◦ In Offline-Sleep top-down bias is absent; confidence high.
+
+• THE TRANSITION TABLE.
+
+◦ Goal to attend, from Disengaged-Standby to Engaged-Orienting, hundreds of milliseconds; a within-network, goal-driven transition.
+
+◦ Task release or mind-wandering, from Engaged-Orienting to Disengaged-Standby, seconds.
+
+◦ Sleep onset thrown from above (the Layer 11 schedule), from either waking mode to Offline-Sleep, minutes; a state-level transition.
+
+◦ Acute stress thrown from above, biasing control away from Engaged-Orienting toward stimulus-driven capture by the ventral system, seconds; a neuromodulatory override.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature of failure is a beam that cannot be aimed to one side, seen as hemispatial neglect after right parietal damage; acetylcholine supplies the gain whose loss dims orienting, and reciprocal inhibition with the ventral attention network is the normal watchdog against runaway capture.
+
+
+ENTRY 24. THE FRONTOPARIETAL CONTROL NETWORK (The central executive network) (keyed to systems catalogue Chapter 24)
+
+MODES AND MODE TRANSITIONS:
+
+This is the network that reconfigures all the others, so its modes are the postures of a controller: holding a goal, switching it, or standing down.
+
+Its mode-setting axis is engagement versus deactivation and sleep reconfiguration, tuned by dopamine on an inverted-U.
+
+• THE MODE REGISTER.
+
+◦ Goal-Holding - Governor Steering - a task set and its contents kept alive against distraction, biasing attention, sensory, and motor systems.
+
+◦ Task-Switching - Regear - the brief reconfiguration when the goal changes.
+
+◦ Idle-Deactivated - Governor Resting - awake but off-task, control relaxed.
+
+◦ Offline-Sleep - Governor Asleep - largely down in slow-wave and rapid-eye-movement (REM) sleep, one reason dreams go unexamined.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Goal-Holding it maintains about four chunks (range three to five) as persistent delay-period activity over seconds to tens of seconds and publishes control biases plus a default-mode suppression signal; confidence high.
+
+◦ In Task-Switching it pays a reconfiguration cost of roughly 100 to 300 milliseconds; confidence high.
+
+◦ In Idle-Deactivated maintenance lapses and the default mode network is released; confidence medium.
+
+◦ In Offline-Sleep persistent activity cannot be sustained; confidence high.
+
+• THE TRANSITION TABLE.
+
+◦ Salience-network engagement trigger, from Idle-Deactivated to Goal-Holding, hundreds of milliseconds; thrown from the salience switchboard.
+
+◦ New rule or cue, from Goal-Holding to Task-Switching and back, about 100 to 300 milliseconds; within-network.
+
+◦ Dopamine off its inverted-U optimum, degrading Goal-Holding towards lapse, seconds; a neuromodulatory throw.
+
+◦ Sleep onset and acute stress thrown from above, from Goal-Holding to Offline-Sleep or to habit-system control, minutes to seconds; state and stress-axis transitions.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is executive dysfunction after prefrontal injury and control collapsing to habit under acute cortisol; the inverted-U dopamine tuning and salience-network gating are the watchdogs that keep gain near optimum and re-engage the controller when it lapses.
+
+
+ENTRY 25. THE CINGULO-OPERCULAR NETWORK (The task-set maintenance network) (keyed to systems catalogue Chapter 25)
+
+MODES AND MODE TRANSITIONS:
+
+This is a slow, tonic keel-holder whose defining mode is simply staying on, punctuated by fast error twitches.
+
+Its mode-setting axis is tonic engagement versus deactivation, set by noradrenaline.
+
+• THE MODE REGISTER.
+
+◦ Tonic-Maintained - Steady Helm - one task-set held across whole blocks of minutes with sustained alertness.
+
+◦ Phasic-Error - Course Correction - a brief signal thrown by a mistake that re-arms the set.
+
+◦ Offline-Collapse - Helm Abandoned - the tonic signal falls at sleep onset.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Tonic-Maintained it publishes a set signal that decays slowly, with vigilance measurably fading over roughly 30 minutes without reinforcement; confidence high.
+
+◦ In Phasic-Error it emits an error-related negativity near 100 milliseconds after a mistake and boosts set strength; confidence high.
+
+◦ In Offline-Collapse the tonic signal is gone; confidence high.
+
+• THE TRANSITION TABLE.
+
+◦ Task onset, from Offline-Collapse or rest to Tonic-Maintained, seconds; within-network.
+
+◦ Error or negative feedback, a momentary throw into Phasic-Error and back, about 100 milliseconds; within-network.
+
+◦ Noradrenaline arousal drift thrown from above, raising or lowering the tonic level, minutes; a neuromodulatory throw wired to the stress axis.
+
+◦ Sleep onset thrown from above, from Tonic-Maintained to Offline-Collapse, minutes; a state transition whose crossing marks sleep onset.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is performance lapses when tonic control fails and, at the other extreme, an over-amplified error signal under stress or in obsessive-compulsive disorder; noradrenergic arousal is the tonic set-point and error-driven re-arming is the watchdog against drift.
+
+
+ENTRY 26. THE LANGUAGE NETWORK (The perisylvian language network) (keyed to systems catalogue Chapter 26)
+
+MODES AND MODE TRANSITIONS:
+
+This network is a bidirectional loom that runs in one of two directions, comprehending or producing, plus a quiet inner-speech idle.
+
+Its mode-setting axis is engagement versus deactivation and sleep reconfiguration.
+
+• THE MODE REGISTER.
+
+◦ Comprehending - Sound-to-Sense - incoming words parsed into meaning.
+
+◦ Producing - Sense-to-Sound - meaning unwoven into articulatory programs.
+
+◦ Inner-Speech-Idle - Silent Loom - internally generated language at rest, loosely active in REM dream dialogue.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Comprehending it runs incrementally at roughly 3 to 6 syllables per second, detecting semantic anomaly near 400 milliseconds and syntactic revision near 600; confidence high.
+
+◦ In Producing it runs near 2 to 3 words per second; confidence high.
+
+◦ In Inner-Speech-Idle it generates covert language with no acoustic output; confidence medium.
+
+• THE TRANSITION TABLE.
+
+◦ Heard or read input, from Inner-Speech-Idle to Comprehending, hundreds of milliseconds; within-network.
+
+◦ Intention to speak, from meaning to Producing, hundreds of milliseconds; within-network.
+
+◦ Turn-taking in dialogue, alternating Comprehending and Producing, sub-second; within-network.
+
+◦ Sleep state thrown from above, from waking modes to loose REM inner speech or silence in deep sleep, minutes; a state transition.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is the aphasias, non-fluent from Broca damage and fluent from Wernicke damage, with conduction aphasia from arcuate damage; left-hemisphere lateralisation is the structural gate and dual-stream prediction-and-revision is the internal watchdog against parse failure.
+
+
+ENTRY 27. THE SENSORIMOTOR NETWORK (The perception-action loop network) (keyed to systems catalogue Chapter 27)
+
+MODES AND MODE TRANSITIONS:
+
+This is the fastest cortical loop, and its modes are the postures of the body loop: acting, consolidating, or held paralysed.
+
+Its mode-setting axis is engagement versus deactivation and sleep reconfiguration.
+
+• THE MODE REGISTER.
+
+◦ Active-Executing - Hands Working - commands out and feedback in, closing the loop in tens of milliseconds.
+
+◦ Spindle-Consolidating - Rehearsing Offline - stage-two sleep spindles run over it to consolidate motor memory.
+
+◦ Atonia-Locked - Paralysed at the Gate - actively paralysed at its spinal exit during REM sleep.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Active-Executing transcortical feedback corrections arrive in 50 to 100 milliseconds with movement-related beta rhythms near 20 hertz, conduction up to roughly 70 metres per second, skilled sequences near 10 movements per second; confidence high.
+
+◦ In Spindle-Consolidating stage-two spindles replay and stabilise the day's motor learning; confidence high.
+
+◦ In Atonia-Locked cortical motor patterns continue but spinal output is blocked; confidence high.
+
+• THE TRANSITION TABLE.
+
+◦ Intention to move, from rest to Active-Executing, tens of milliseconds; within-network, gated by the basal ganglia.
+
+◦ Sleep onset thrown from above, from Active-Executing to Spindle-Consolidating, minutes; a state transition.
+
+◦ REM onset thrown from above, into Atonia-Locked, minutes; a brainstem state transition.
+
+◦ Adrenaline emergency, raising loop gain within Active-Executing, seconds; a hormonal throw.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is hemiplegia after stroke, loss of vigour in Parkinson disease, and output-neuron death in amyotrophic lateral sclerosis; the normal REM atonia is itself a watchdog whose failure produces REM behaviour disorder, and basal-ganglia gating restrains unwanted release.
+
+
+ENTRY 28. THE VISUAL NETWORK (The occipital hierarchy network) (keyed to systems catalogue Chapter 28)
+
+MODES AND MODE TRANSITIONS:
+
+This staged refinery runs on retinal input when awake and, remarkably, runs itself from within during sleep.
+
+Its mode-setting axis is engagement versus deactivation and sleep reconfiguration.
+
+• THE MODE REGISTER.
+
+◦ Retinal-Driven - Eyes-On Refinery - the waking hierarchy transforming real optic input.
+
+◦ Replay-Consolidating - Offline Rerun - slow-wave replay of the day's visual experience.
+
+◦ Internally-Generated - Dreaming Screen - REM imagery rendered with no retinal input.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Retinal-Driven a feedforward sweep reaches object recognition in roughly 150 milliseconds with recurrent refinement for hundreds more, compressing about one megabyte per second of optic input into a scene gist graspable in a 100 millisecond glance; confidence high.
+
+◦ In Replay-Consolidating activity is internally sequenced for memory rather than perception; confidence medium.
+
+◦ In Internally-Generated the same maps render imagery top-down; confidence medium.
+
+• THE TRANSITION TABLE.
+
+◦ Eyes open with light, from rest to Retinal-Driven, tens of milliseconds; within-network.
+
+◦ Slow-wave sleep thrown from above, from Retinal-Driven to Replay-Consolidating, minutes; a state transition.
+
+◦ REM onset thrown from above, to Internally-Generated, minutes; a state transition.
+
+◦ Dorsal-attention top-down selection, biasing which content is refined within Retinal-Driven, hundreds of milliseconds; a network-level throw.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is cortical blindness, prosopagnosia and visual agnosia from ventral-stream loss, and motion blindness from MT-plus loss; feedback from higher stages plus cholinergic and noradrenergic gain-setting are the normal watchdogs stabilising the hierarchy.
+
+
+ENTRY 29. THE AUDITORY NETWORK (The temporal hearing network) (keyed to systems catalogue Chapter 29)
+
+MODES AND MODE TRANSITIONS:
+
+This is the network that never fully sleeps on duty, so its modes are shades of vigilance rather than on and off.
+
+Its mode-setting axis is engagement versus deactivation and sleep reconfiguration.
+
+• THE MODE REGISTER.
+
+◦ Attentive-Sifting - Cocktail-Party Filter - one attended stream sharpened at the expense of others.
+
+◦ Ambient-Monitoring - Open Ear - passive waking listening with no selected stream.
+
+◦ Sleep-Sentry - Night Watch - reduced but still evaluating salient sounds during sleep.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Attentive-Sifting it follows one stream well while resolving gaps of 2 to 3 milliseconds and interaural delays of tens of microseconds across roughly 20 hertz to 20 kilohertz; confidence high.
+
+◦ In Ambient-Monitoring gain is uniform across the scene with no single stream boosted; confidence high.
+
+◦ In Sleep-Sentry it still triggers arousal to a name or an infant's cry; confidence high.
+
+• THE TRANSITION TABLE.
+
+◦ Attention to a talker, from Ambient-Monitoring to Attentive-Sifting, hundreds of milliseconds; a cholinergic and attentional throw.
+
+◦ Sleep onset thrown from above, from waking modes to Sleep-Sentry, minutes; a state transition, notable in that hearing is the last sense to fade.
+
+◦ Salient sound during sleep, momentarily raising Sleep-Sentry towards waking, sub-second; a bottom-up throw that can wake the sleeper.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is cortical deafness and pure word deafness from bilateral lesions, and tinnitus as a deafferented map's phantom; attentional gain and the still-active sentry function are the normal watchdogs, the phantom itself being the fault when gain is uncontrolled.
+
+
+ENTRY 30. THE LIMBIC NETWORK (The orbitofrontal-temporopolar valuation network) (keyed to systems catalogue Chapter 30)
+
+MODES AND MODE TRANSITIONS:
+
+This valuation network is a fast appraiser riding a slow mood, so its modes run at two timescales at once.
+
+Its mode-setting axis is engagement versus deactivation and sleep reconfiguration, retuned by the broadest modulator list of the networks.
+
+• THE MODE REGISTER.
+
+◦ Appraising - Snap Verdict - a fast value-and-affect tag on the current stimulus.
+
+◦ Mood-Toning - Background Weather - a slow affective tone held for hours.
+
+◦ Replay-Emotional - Night Rework - reprocessing of emotional memory in sleep.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Appraising value signals emerge within 150 to 300 milliseconds, computed relative to context and reference points, fast but systematically biasable; confidence high.
+
+◦ In Mood-Toning the same network holds a tone over hours that biases every appraisal; confidence high.
+
+◦ In Replay-Emotional it is replayed with the hippocampus in slow-wave sleep and dominates the narratives of REM sleep; confidence medium.
+
+• THE TRANSITION TABLE.
+
+◦ Salient or valued stimulus, into Appraising, hundreds of milliseconds; within-network.
+
+◦ Accumulated appraisals, drifting Mood-Toning, minutes to hours; within-network.
+
+◦ Sleep state thrown from above, into Replay-Emotional, minutes; a state transition.
+
+◦ Cortisol and stress thrown from above, biasing appraisal toward threat, seconds to minutes; a hormonal throw, the strongest endocrine coupling of the networks.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is depression and anxiety as disorders of appraisal, addiction as capture of its reward machinery, and Kluver-Bucy syndrome from bilateral temporal damage; orbitofrontal regulation of the amygdala and dopamine-gated reward learning are the normal watchdogs on runaway affect.
+
+
+ENTRY 31. THE DOPAMINE SYSTEM (The Mesostriatal and Mesocorticolimbic Dopaminergic Projection) (keyed to systems catalogue Chapter 31)
+
+MODES AND MODE TRANSITIONS:
+
+This is the canonical tonic-versus-phasic broadcaster: a slow background that motivates and fast bursts that teach.
+
+Its mode-setting axis is tonic versus phasic broadcasting.
+
+• THE MODE REGISTER.
+
+◦ Tonic-Vigour - Idle Throttle - a slow background level setting how briskly the organism will move.
+
+◦ Phasic-Teaching - Surprise Pulse - a burst or dip broadcasting the reward prediction error.
+
+◦ Sleep-Quiescent - Night Trickle - phasic teaching largely off, tonic persisting, with a REM rise.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Tonic-Vigour the pacemaker fires at roughly 0.5 to 8 hertz, setting ambient dopamine over seconds to minutes and the vigour set-point; confidence high.
+
+◦ In Phasic-Teaching bursts exceed 15 to 20 hertz for 100 to 500 milliseconds, peaking near 100 milliseconds after a surprising cue, read as strengthen by low-affinity D1 cells and weaken by high-affinity D2 cells; confidence high.
+
+◦ In Sleep-Quiescent tonic activity helps stamp in rewarded learning during replay, and ventral tegmental activity rises in REM; confidence medium.
+
+• THE TRANSITION TABLE.
+
+◦ Cholinergic and glutamatergic drive from the pedunculopontine and laterodorsal tegmental nuclei, from Tonic-Vigour to Phasic-Teaching, tens of milliseconds; a within-system gating throw.
+
+◦ Lateral habenula input, throwing a worse-than-expected dip, tens of milliseconds; a within-system throw.
+
+◦ Stress and orexin thrown from above, raising tonic vigour and biasing toward habit, tens of seconds to minutes; hormonal and arousal throws.
+
+◦ Sleep state thrown from above, into Sleep-Quiescent, minutes; a state transition.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is nigral cell loss producing Parkinson disease after roughly 50 to 70 percent are gone, D2 overtransmission producing schizophrenia's psychosis, and teaching-signal capture producing addiction (these are faults, not normal modes); striatal cholinergic-interneuron pauses, ventral pallidal and habenular feedback, and self-scaling burst size are the watchdogs.
+
+
+ENTRY 32. THE NORADRENALINE SYSTEM (The Locus Coeruleus Noradrenergic Projection) (keyed to systems catalogue Chapter 32)
+
+MODES AND MODE TRANSITIONS:
+
+This grain-sized nucleus runs the textbook tonic-versus-phasic broadcast, its two firing modes trading focus against search along the adaptive-gain continuum confirmed by Aston-Jones and Cohen.
+
+Its mode-setting axis is tonic versus phasic broadcasting.
+
+• THE MODE REGISTER.
+
+◦ Phasic-Exploit - Sharp Focus - moderate tonic firing with crisp event-locked bursts supporting focused, exploitative attention on a task.
+
+◦ Tonic-Explore - Restless Scan - high tonic firing without bursts supporting distractible, exploratory scanning.
+
+◦ Reset-Pulse - Slate-Wipe - a large phasic burst that interrupts and reconfigures target networks.
+
+◦ Sleep-Silent - Blue Dark - low in slow-wave and near-silent in REM sleep.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Phasic-Exploit tonic runs 1 to 3 hertz with bursts of 8 to 20 hertz lasting a few hundred milliseconds about 100 to 200 milliseconds after a salient event, gain near the top of the inverted-U; confidence high.
+
+◦ In Tonic-Explore high tonic firing lowers event-related gain and disengages from the current task so alternatives can be sampled (adaptive-gain theory); confidence high.
+
+◦ In Reset-Pulse a burst above threshold ejects target networks from their attractor; confidence medium.
+
+◦ In Sleep-Silent output falls to permit slow oscillations and adrenoceptor recalibration; confidence high.
+
+• THE TRANSITION TABLE.
+
+◦ Utility assessment from anterior cingulate and orbitofrontal cortex, sliding between Phasic-Exploit and Tonic-Explore, seconds to minutes; a within-system throw.
+
+◦ Salient or unexpected event, momentary Reset-Pulse, a few hundred milliseconds; a within-system throw.
+
+◦ Corticotropin-releasing hormone and orexin thrown from above, driving hard tonic firing under stress, seconds; hormonal and arousal throws.
+
+◦ Sleep state thrown from above, into Sleep-Silent, minutes; a state transition.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is chronic overactivity in anxiety and post-traumatic stress disorder with the reset and arousal functions stuck on, and early degeneration contributing to Alzheimer and Parkinson disease; alpha-2 autoreceptors (the target of clonidine and guanfacine) are the self-braking watchdog, and the inverted-U itself flags the over-aroused fault.
+
+
+ENTRY 33. THE SEROTONIN SYSTEM (The Raphe Serotonergic Projection) (keyed to systems catalogue Chapter 33)
+
+MODES AND MODE TRANSITIONS:
+
+This is the steadiest broadcast in the brain, a slow tonic system whose real richness is not its firing modes but the region-specific demultiplexing of one signal through more than a dozen receptors.
+
+Its mode-setting axis is tonic versus phasic broadcasting, at the tonic-dominant extreme.
+
+• THE MODE REGISTER.
+
+◦ Tonic-Patience - Long-Horizon Hum - a steady level plus a signal that rises while waiting, biasing toward waiting over grabbing.
+
+◦ Mood-Setting - Slow Weather - the hours-to-weeks background tone antidepressants target.
+
+◦ Sleep-Graded - Dimmed Seam - slowed in slow-wave sleep and essentially silent in REM.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Tonic-Patience raphe cells fire very regularly at roughly 0.5 to 3 hertz, the patience signal building over seconds of waiting, read through inhibitory 5-HT1A and excitatory 5-HT2A receptors with opposite regional effects; confidence high.
+
+◦ In Mood-Setting effects operate over hours to weeks, which is why selective serotonin reuptake inhibitors raise 5-HT within hours but lift mood only after two to six weeks; confidence high.
+
+◦ In Sleep-Graded firing slows then stops, a permissive condition for REM imagery; confidence high.
+
+• THE TRANSITION TABLE.
+
+◦ Aversive and contextual input from habenula and prefrontal cortex, modulating Tonic-Patience, seconds; a within-system throw.
+
+◦ 5-HT1A autoreceptor desensitisation, slowly lifting Mood-Setting, weeks; a within-system parameter drift underlying delayed antidepressant action.
+
+◦ Cortisol and chronic stress thrown from above, lowering 5-HT function, days; a hormonal throw.
+
+◦ Sleep state thrown from above, into Sleep-Graded, minutes; a state transition.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is hypofunction in major depression, anxiety, and obsessive-compulsive disorder, and developmental disturbance implicated in autism (faults, not normal modes); the 5-HT1A autoreceptor self-limit is the standing watchdog, and the opponent balance with dopamine restrains impulsivity.
+
+
+ENTRY 34. THE ACETYLCHOLINE SYSTEM (The Basal Forebrain and Brainstem Cholinergic Projection) (keyed to systems catalogue Chapter 34)
+
+MODES AND MODE TRANSITIONS:
+
+This broadcast runs a slow tonic state signal and a fast, spatially targeted phasic flag, and its signature mode pair is the encoding-versus-retrieval switch it throws over the cortex.
+
+Its mode-setting axis is tonic versus phasic broadcasting.
+
+• THE MODE REGISTER.
+
+◦ High-Tonic-Encoding - Record Button On - waking high acetylcholine boosting feedforward sensory input and suppressing feedback, favouring writing the new.
+
+◦ Low-Tonic-Retrieval - Playback Mode - slow-wave-sleep low acetylcholine releasing the cortex to replay and consolidate.
+
+◦ Phasic-Salience - Attention Ping - a fast, restricted transient flagging an attention-worthy cue.
+
+◦ REM-Paradox - Dreaming Chemistry - acetylcholine back at waking levels while the aminergic systems stay silent.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In High-Tonic-Encoding thalamic cells are switched to tonic relay, cortical feedforward gain is high, and the septohippocampal drive paces theta at 4 to 8 hertz; confidence high.
+
+◦ In Low-Tonic-Retrieval feedback and stored expectation dominate, favouring consolidation; confidence high.
+
+◦ In Phasic-Salience transients of tens to a few hundred milliseconds are delivered to restricted cortical zones; confidence medium.
+
+◦ In REM-Paradox the unique high-acetylcholine, low-amine mixture is thought to underlie dreaming; confidence medium.
+
+• THE TRANSITION TABLE.
+
+◦ Orexin and noradrenaline wakefulness and salience, into High-Tonic-Encoding, seconds; arousal throws.
+
+◦ Reward or threat, throwing a Phasic-Salience ping, tens to hundreds of milliseconds; a within-system throw.
+
+◦ Slow-wave sleep thrown from above, into Low-Tonic-Retrieval, minutes; a state transition.
+
+◦ REM onset thrown from above, into REM-Paradox, minutes; a state transition.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is basal-forebrain loss producing the amnesia of Alzheimer disease and muscarinic blockade producing confusion and amnesia; acetylcholinesterase clearing transmitter within milliseconds (the target of Alzheimer drugs) and presynaptic autoreceptors are the watchdogs.
+
+
+ENTRY 35. THE HISTAMINE SYSTEM (The Tuberomammillary Histaminergic Projection) (keyed to systems catalogue Chapter 35)
+
+MODES AND MODE TRANSITIONS:
+
+This is the plainest broadcaster in the volume: a near one-bit wake signal graded by vigilance, tonic by nature with essentially no phasic mode.
+
+Its mode-setting axis is tonic broadcasting versus sleep silence.
+
+• THE MODE REGISTER.
+
+◦ Wake-On - Lights Up - tonic firing that sustains the aroused waking state, strongest in attentive waking.
+
+◦ Sleep-Off - Lights Down - silence in both slow-wave and REM sleep.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Wake-On the cells fire slowly and irregularly at under about 10 hertz, graded off-low-moderate-high from quiet to attentive waking, acting through excitatory H1 and H2 receptors to keep thalamus and cortex in transmitting, activated mode; confidence high.
+
+◦ In Sleep-Off firing ceases before sleep onset and stays off through both sleep states, unlike acetylcholine; confidence high.
+
+• THE TRANSITION TABLE.
+
+◦ Orexin wake command thrown from above, into Wake-On, minutes; an arousal-hierarchy throw, histamine sitting downstream of orexin.
+
+◦ Ventrolateral-preoptic gamma-aminobutyric acid inhibition at sleep onset, into Sleep-Off, minutes; a flip-flop state throw.
+
+◦ Heightened vigilance or stress thrown from above, raising Wake-On firing, minutes; an arousal throw.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is drowsiness when H1 receptors are blocked by sedating antihistamines and impaired wake-stabilisation downstream of orexin loss in narcolepsy; the H3 autoreceptor self-brake and co-released gamma-aminobutyric acid keep the on-state self-limiting rather than a runaway high, the mutual-inhibition flip-flop with the preoptic nucleus being the boundary watchdog.
+
+
+ENTRY 36. THE OREXIN SYSTEM (The Lateral Hypothalamic Orexinergic Projection) (keyed to systems catalogue Chapter 36)
+
+MODES AND MODE TRANSITIONS:
+
+This system does not so much switch states as hold them steady, so its modes are the postures of a stabiliser adding hysteresis to the sleep-wake switch.
+
+Its mode-setting axis is tonic wake-stabilising drive versus sleep silence, integrated over metabolic and circadian inputs.
+
+• THE MODE REGISTER.
+
+◦ Wake-Stabilising - Latch Held - tonic firing that excites all arousal nuclei at once, deepening the wake state.
+
+◦ Motivated-Boost - Foraging Gear - stronger firing during active, motivated behaviour.
+
+◦ Sleep-Silent - Latch Released - silence in both slow-wave and REM sleep, permitting sleep to consolidate.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Wake-Stabilising it supplies excitatory drive plus co-released glutamate through orexin receptors 1 and 2, adding hysteresis so the brain resists flickering between states; confidence high.
+
+◦ In Motivated-Boost firing rises with hunger and effort, integrating metabolic, circadian, and emotional inputs into one state-drive; confidence high.
+
+◦ In Sleep-Silent it normally holds REM atonia out of waking; confidence high.
+
+• THE TRANSITION TABLE.
+
+◦ Low glucose and ghrelin, raising drive toward Motivated-Boost; leptin and glucose lowering it, minutes; hormonal throws, the cells being direct metabolic sensors.
+
+◦ Suprachiasmatic circadian drive thrown from above, raising drive across the active day, hours; a circadian throw.
+
+◦ Preoptic sleep-pressure inhibition, into Sleep-Silent, minutes; a state throw.
+
+◦ Corticotropin-releasing hormone stress thrown from above, recruiting Wake-Stabilising, seconds to minutes; a hormonal throw.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is autoimmune orexin-neuron loss producing narcolepsy type 1 with cataplexy (the switch flickering), and orexin excess contributing to insomnia; the switch-stabilising motif itself is the watchdog, and reciprocal preoptic inhibition sets the sleep boundary.
+
+
+ENTRY 37. THE HYPOTHALAMIC-PITUITARY-ADRENAL (HPA) AXIS (keyed to systems catalogue Chapter 37)
+
+MODES AND MODE TRANSITIONS:
+
+The hypothalamic-pituitary-adrenal (HPA) axis is a pulsing thermostat whose modes are its regimes of cortisol output: a basal hourly pulse under a daily envelope, overridden by acute stress.
+
+Its mode-setting axis is basal versus pulse versus surge versus circadian regimes.
+
+• THE MODE REGISTER.
+
+◦ Circadian-Envelope - Daily Tide - the 24-hour programme peaking near waking and troughing late at night.
+
+◦ Basal-Ultradian - Hourly Drip - roughly one cortisol pulse per hour riding that envelope.
+
+◦ Acute-Stress-Surge - Alarm Flood - a fast cortisol rise answering a challenge.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Circadian-Envelope daily cortisol output is on the order of 10 to 20 milligrams with wide individual variation, set by suprachiasmatic drive; confidence high.
+
+◦ In Basal-Ultradian pulses recur about every 60 minutes, each cortisol pulse trailing its adrenocorticotropic-hormone pulse by minutes, the diurnal rhythm expressed as circadian modulation of pulse amplitude (web-confirmed); confidence high.
+
+◦ In Acute-Stress-Surge cortisol rises over 10 to 30 minutes and clears over hours while pulsatility is maintained, and strong or chronic stress can blunt the circadian modulation so nadir pulses approach peak size (web-confirmed); confidence medium.
+
+• THE TRANSITION TABLE.
+
+◦ Amygdala threat or immune cytokines, from Basal-Ultradian into Acute-Stress-Surge, minutes; a driven throw, its size depending on the ultradian phase it lands on.
+
+◦ Suprachiasmatic circadian drive thrown from above, shaping the Circadian-Envelope, 24 hours; a circadian throw.
+
+◦ Glucocorticoid negative feedback at pituitary then hypothalamus, closing each pulse, tens of minutes; the internal watchdog throw.
+
+◦ Sleep phase thrown from above, holding the trough in early-night slow-wave sleep and climbing toward the morning peak, hours; a state transition.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is a raised, feedback-loosened envelope in chronic stress and depression, Cushing syndrome from excess, and Addison disease from deficiency; fast pituitary and slower hypothalamic-hippocampal glucocorticoid feedback is the built-in watchdog defending the thermostat.
+
+
+ENTRY 38. THE HYPOTHALAMIC-PITUITARY-GONADAL (HPG) AXIS (keyed to systems catalogue Chapter 38)
+
+MODES AND MODE TRANSITIONS:
+
+The hypothalamic-pituitary-gonadal (HPG) axis speaks entirely in pulse frequency, so its modes are the tempos of the KNDy pulse generator plus the once-a-cycle sign-flip to a surge.
+
+Its mode-setting axis is basal versus pulse versus surge versus circadian regimes.
+
+• THE MODE REGISTER.
+
+◦ Slow-Pulse-FSH - Low-Gear Tick - slow gonadotropin-releasing-hormone pulses favouring follicle-stimulating hormone.
+
+◦ Fast-Pulse-LH - High-Gear Tick - fast pulses favouring luteinising hormone.
+
+◦ Positive-Feedback-Surge - Ovulatory Trigger - the mid-cycle sign-switch producing the luteinising-hormone surge.
+
+◦ Quiescent - Generator Idle - the childhood pause and stress or energy-deficit suspension.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Slow-Pulse-FSH and Fast-Pulse-LH pulses recur every 30 to 120 minutes, arcuate KNDy kisspeptin mediating oestradiol negative feedback so a rate becomes a luteinising-to-follicle-stimulating ratio (web-confirmed); confidence high.
+
+◦ In Positive-Feedback-Surge rising oestradiol flips from negative to positive feedback, acting through anteroventral-periventricular kisspeptin neurons to trigger the surge and ovulation (web-confirmed); confidence high.
+
+◦ In Quiescent the generator is silent; too-continuous stimulation also jams the decoder and shuts the axis down; confidence high.
+
+• THE TRANSITION TABLE.
+
+◦ Oestradiol crossing threshold at mid-cycle, from Fast-Pulse-LH into Positive-Feedback-Surge, hours within the roughly 28-day cycle; a hormonal sign-switch throw.
+
+◦ Sleep in early puberty thrown from above, running the generator faster at night, hours; a state and circadian throw.
+
+◦ Leptin permission and cortisol suppression thrown from above, into or out of Quiescent, days; metabolic and stress throws.
+
+◦ Puberty and menopause, re-parameterising the whole register, years; developmental throws.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is Kallmann syndrome and hypogonadotropic hypogonadism, polycystic ovary syndrome with altered pulse frequency, and hypothalamic amenorrhoea from stress or low energy; frequency-decoding at the gonadotroph and steroid feedback are the watchdogs, with the paradoxical shutdown under steady stimulation a built-in guard against jamming.
+
+
+ENTRY 39. THE HYPOTHALAMIC-PITUITARY-THYROID (HPT) AXIS (keyed to systems catalogue Chapter 39)
+
+MODES AND MODE TRANSITIONS:
+
+The hypothalamic-pituitary-thyroid (HPT) axis is the slowest dial, so its modes are near-steady set-point regimes that shift over days, not pulses.
+
+Its mode-setting axis is basal set-point versus circadian and demand-driven regimes.
+
+• THE MODE REGISTER.
+
+◦ Set-Point-Hold - Steady Dial - the defended individual thyroid-hormone level.
+
+◦ Circadian-Ripple - Night Nudge - a gentle thyroid-stimulating-hormone nocturnal rise.
+
+◦ Cold-Upregulated - Warm-Up Turn - a raised setting to generate heat.
+
+◦ Illness-Downregulated - Idle Down - the suppressed low-metabolic state of non-thyroidal illness.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Set-Point-Hold thyroid-stimulating hormone changes logarithmically for small thyroid-hormone changes, thyroxine's half-life about seven days, so the loop responds over days; confidence high.
+
+◦ In Circadian-Ripple thyroid-stimulating hormone shows a modest night peak; confidence high.
+
+◦ In Cold-Upregulated the axis rises to drive thermogenesis; confidence high.
+
+◦ In Illness-Downregulated severe illness or starvation lowers the axis to spare energy; confidence high.
+
+• THE TRANSITION TABLE.
+
+◦ Cold exposure thrown from above, into Cold-Upregulated, hours; a thermoregulatory throw.
+
+◦ Severe illness or starvation, into Illness-Downregulated, days; a metabolic throw.
+
+◦ Suprachiasmatic drive thrown from above, shaping Circadian-Ripple, 24 hours; a circadian throw.
+
+◦ Cortisol modulating local deiodinase conversion, trimming tissue active-hormone level within Set-Point-Hold, hours; a hormonal throw.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is Graves-disease hyperthyroidism, Hashimoto-disease hypothyroidism, and congenital deficiency causing developmental disability; high-gain logarithmic negative feedback and local deiodinase trimming are the watchdogs defending the set-point centrally while realising it locally.
+
+
+ENTRY 40. THE GROWTH HORMONE AND SOMATOSTATIN AXIS (keyed to systems catalogue Chapter 40)
+
+MODES AND MODE TRANSITIONS:
+
+This push-pull axis sculpts clean pulses from opposed drives, and its defining mode is the big pulse fired in the first deep sleep of the night.
+
+Its mode-setting axis is basal versus pulse regimes gated by sleep.
+
+• THE MODE REGISTER.
+
+◦ Somatostatin-Braked - Brake On - the inhibited baseline between pulses, output low.
+
+◦ Sleep-Pulse - Night Build - the large growth-hormone pulse locked to the first slow-wave-sleep episode.
+
+◦ Daytime-Sparse-Pulse - Odd-Hours Trickle - the few smaller pulses scattered across the day.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Somatostatin-Braked the periventricular brake holds the somatotroph quiet, insulin-like growth factor 1 setting the long-run suppression; confidence high.
+
+◦ In Sleep-Pulse up to about 70 percent of the day's growth hormone is secreted in the pulse tied to the first slow-wave sleep, in a window of somatostatin withdrawal; confidence high.
+
+◦ In Daytime-Sparse-Pulse three to five pulses per day in total occur, the rest small and sparse; confidence high.
+
+• THE TRANSITION TABLE.
+
+◦ First slow-wave-sleep episode thrown from above, from Somatostatin-Braked into Sleep-Pulse, minutes; a state transition, the permissive gate of the axis.
+
+◦ Ghrelin with hunger, promoting a pulse; high glucose and insulin-like growth factor 1 suppressing one, minutes to hours; metabolic and feedback throws.
+
+◦ Thyroid and sex steroids thrown from above, potentiating pulse amplitude, days; hormonal throws.
+
+◦ Puberty and ageing, re-scaling amplitude, years; developmental throws.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is gigantism and acromegaly from excess and short stature from deficiency, with blunted pulses in obesity and sleep loss; the somatostatin brake and insulin-like growth factor 1 negative feedback are the watchdogs that keep the output a clean pulse train rather than a steady flood.
+
+
+ENTRY 41. THE MELATONIN AXIS (keyed to systems catalogue Chapter 41)
+
+MODES AND MODE TRANSITIONS:
+
+This axis has essentially one job with two faces: it is on in darkness and off in light, a gated nightly broadcast whose whole meaning is its timing.
+
+Its mode-setting axis is basal circadian regime gated by light.
+
+• THE MODE REGISTER.
+
+◦ Night-Secreting - Darkness Stamp - melatonin released across the biological night.
+
+◦ Day-Suppressed - Light Off - synthesis shut off by day and by light at night.
+
+◦ Phase-Shifting - Clock-Setter - the dusk and dawn windows in which the hormone resets its own clock.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Night-Secreting onset under dim light comes roughly two hours before habitual bedtime, peaking between two and four in the morning; confidence high.
+
+◦ In Day-Suppressed even modest light at night suppresses melatonin within minutes, so fidelity depends on real darkness; confidence high.
+
+◦ In Phase-Shifting MT2 receptors shift the suprachiasmatic clock's phase and MT1 receptors slow its firing, best placed at dusk and dawn; confidence high.
+
+• THE TRANSITION TABLE.
+
+◦ Dusk and darkness thrown from above by the suprachiasmatic clock, into Night-Secreting, minutes to hours; a circadian throw.
+
+◦ Light onset or light at night, into Day-Suppressed, minutes; a photic throw.
+
+◦ A shifted light-dark cycle, re-entraining Phase-Shifting, days; the slow adjustment felt as jet lag.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is jet lag, shift-work disorder, and delayed or non-24-hour sleep-wake rhythm disorders; the light gate and the MT1 and MT2 feedback onto the clock are the watchdogs, whose corruption by stray night light is the axis's characteristic failure.
+
+
+ENTRY 42. THE GLUCOSE HOMEOSTASIS AXIS (keyed to systems catalogue Chapter 42)
+
+MODES AND MODE TRANSITIONS:
+
+This is a push-pull fuel controller whose modes are the fed and fasted regimes plus a fast emergency defence of a low.
+
+Its mode-setting axis is basal versus fed versus fasted versus counter-regulatory regimes.
+
+• THE MODE REGISTER.
+
+◦ Fed-Insulin - Store Mode - rising glucose raising insulin and lowering glucagon to store fuel.
+
+◦ Fasted-Glucagon - Release Mode - falling glucose reversing the balance toward hepatic glucose release.
+
+◦ Counter-Regulatory-Defence - Fuel Alarm - the fast cascade recruited when glucose falls too low.
+
+◦ Basal-Pulsatile - Idle Ledger - the small five-minute insulin pulses on baseline between meals.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Fed-Insulin insulin follows a meal within minutes on a five-minute pulsatile baseline; confidence high.
+
+◦ In Fasted-Glucagon the liver releases glucose to defend a fasting level near roughly 70 to 100 milligrams per decilitre; confidence high.
+
+◦ In Counter-Regulatory-Defence glucagon, adrenaline, cortisol, and growth hormone are recruited as glucose falls into roughly the 64 to 74 milligrams per decilitre range, answering within about ten minutes; confidence high.
+
+◦ In Basal-Pulsatile output idles between meals; confidence medium.
+
+• THE TRANSITION TABLE.
+
+◦ A meal or an overnight fast, sliding between Fed-Insulin and Fasted-Glucagon, minutes to hours; a metabolic throw, shaped by gut incretins.
+
+◦ Glucose crossing the low threshold, into Counter-Regulatory-Defence, minutes; a brain-gated emergency throw.
+
+◦ Stress thrown from above, raising glucose through the coupled stress axis, minutes; a hormonal throw.
+
+◦ Circadian day, re-tuning the whole economy, 24 hours; a circadian throw.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is type 1 and type 2 diabetes mellitus, and dangerous hypoglycaemia in which the brain fails first, with hypoglycaemia unawareness after repeated lows; the insulin-glucagon opponent pair and the counter-regulatory cascade are the watchdogs, the fail-first-organ-runs-the-loop coupling being the axis's structural hazard.
+
+
+ENTRY 43. THE GUT-BRAIN AXIS (keyed to systems catalogue Chapter 43)
+
+MODES AND MODE TRANSITIONS:
+
+This bidirectional bus has no single firing mode but a set of digestive regimes running at three speeds, with a living microbial third party writing on the line.
+
+Its mode-setting axis is basal versus fed versus fasted regimes across nerve, hormone, and immune channels.
+
+• THE MODE REGISTER.
+
+◦ Fed-Digesting - Table Set - active digestion, satiety signalling, and post-meal gut-hormone waves.
+
+◦ Fasted-Housekeeping - Sweep Cycle - the migrating motor complex sweeping the empty gut.
+
+◦ Hunger-Signalling - Empty Belly - ghrelin-driven appetite drive telegraphed upward.
+
+◦ Stress-Rerouted - Nervous Gut - altered motility and secretion under stress.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Fed-Digesting short-chain fatty acids from fibre drive gut serotonin synthesis, activating vagal afferents within milliseconds to seconds and gut-hormone waves over minutes to an hour; confidence high.
+
+◦ In Fasted-Housekeeping the migrating motor complex recurs every 90 to 120 minutes; confidence high.
+
+◦ In Hunger-Signalling ghrelin rises, coupling to appetite and the growth axis; confidence high.
+
+◦ In Stress-Rerouted vagal tone and cortisol reroute motility; confidence medium, the microbiome-to-behaviour links being the most recently mapped and least certain.
+
+• THE TRANSITION TABLE.
+
+◦ A meal or fasting, sliding between Fed-Digesting, Fasted-Housekeeping, and Hunger-Signalling, minutes to hours; a metabolic throw.
+
+◦ Stress thrown from above, into Stress-Rerouted, seconds to minutes; a stress-axis and vagal throw.
+
+◦ Diet and antibiotics reshaping the microbiome, slowly altering every mode, days to weeks; an ecological throw.
+
+◦ Sleep-wake cycle thrown from above, shifting gut activity, hours; a state transition.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is irritable bowel syndrome as the archetypal disorder of the axis, with links to mood disorders and gut-origin pathology in Parkinson disease; vagal tone setting the gain and the enteric nervous system's own reflex loops are the watchdogs on a bus that a living microbial population can perturb.
+
+
+ENTRY 44. THE GLOBAL WORKSPACE DYNAMICS (The Ignition and Broadcast System) (keyed to systems catalogue Chapter 44)
+
+MODES AND MODE TRANSITIONS:
+
+This capstone dynamic is an all-or-none threshold machine, and its modes are the levels of Dehaene, Changeux, and Naccache's testable taxonomy: subliminal, preconscious, and ignited.
+
+Its mode-setting axis is subliminal versus ignited, with a preconscious waiting-room between them.
+
+• THE MODE REGISTER.
+
+◦ Subliminal - Below the Line - bottom-up activation too weak to trigger a large-scale reverberating state, content inaccessible (web-confirmed).
+
+◦ Preconscious - In the Waiting Room - activation strong enough but not yet attended, held back by the availability of top-down attention (web-confirmed).
+
+◦ Ignited-Conscious - Lit and Broadcast - a single content amplified in an all-or-none surge and broadcast brain-wide.
+
+◦ Offline-Collapsed - Broadcast Down - the loss of ignition in slow-wave sleep and anaesthesia.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Subliminal processing stays local and private, dissipating without broadcast; confidence high.
+
+◦ In Preconscious a strong representation waits, accessible in principle if attention is directed to it; confidence medium.
+
+◦ In Ignited-Conscious a non-linear recurrent surge sweeps prefrontal and parietal cortex at roughly 250 to 300 milliseconds, near a genuine threshold with little middle ground, holding one content for hundreds of milliseconds to a few seconds at a few episodes per second; confidence high.
+
+◦ In Offline-Collapsed long-range broadcast breaks down; confidence high.
+
+• THE TRANSITION TABLE.
+
+◦ Top-down attention amplifying a candidate past threshold, from Preconscious to Ignited-Conscious, a few hundred milliseconds; the defining within-system throw.
+
+◦ Weak input never reaching threshold, staying Subliminal; a bottom-up limit.
+
+◦ Salience-network hand-off, replacing one ignited content with the next, sub-second; a network throw.
+
+◦ Arousal from noradrenaline and acetylcholine thrown from above, setting whether ignition can occur at all, minutes; a neuromodulatory gate, into Offline-Collapsed under sleep and anaesthesia.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is loss of the workspace in coma and the vegetative state, content trapped on one side in neglect, and disorganised broadcast in schizophrenia; mutual inhibition between coalitions (winner-take-all) and the arousal gate are the watchdogs, ensuring one content ignites at a time rather than a runaway many.

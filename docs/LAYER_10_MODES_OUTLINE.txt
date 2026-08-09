@@ -1,0 +1,410 @@
+LAYER 10, THE NEURAL AND NEUROENDOCRINE SYSTEMS LAYER: MODES AND MODE TRANSITIONS - THE OUTLINE
+
+The per-system mode registers, extracted from LAYER_10_MODES_MANUSCRIPT (which holds the full entries: registers, per-mode transfer functions, transition tables, and fault regimes).
+
+Each entry below: the system, its source chapter key, and its named mode register.
+
+Date of compilation: August 9, 2026.
+
+
+ENTRY 1. THE VISUAL SYSTEM, DORSAL AND VENTRAL STREAMS (keyed to systems catalogue Chapter 1)
+
+◦ Foveal Scrutiny - The Close Reader - ventral-stream-led analysis of one attended object at high spatial frequency, the focal mode of the two-mode vision literature.
+
+◦ Ambient Vigilance - The Wide Watch - dorsal-stream and peripheral low-spatial-frequency layout monitoring for orienting, posture, and navigation.
+
+◦ Offline Replay - The Night Projector - slow-wave-sleep replay of recent patterns with the geniculate gate closed in burst mode.
+
+◦ Endogenous Imagery - The Dream Screen - rapid-eye-movement (REM) top-down image generation with no retinal input.
+
+ENTRY 2. THE AUDITORY SYSTEM (keyed to systems catalogue Chapter 2)
+
+◦ Speech-Tuned Analysis - The Conversation Lock - attention-steered foreground extraction of one voice with cortical fields retuned to its features.
+
+◦ Scene Analysis - The Soundscape Sorter - broadband segregation of concurrent streams by pitch, timbre, and location without a single foreground.
+
+◦ Sentinel Listening - The Night Watch - the sleep configuration in which the geniculate gate attenuates but the deviance and alarm channels stay open.
+
+◦ Startle Priming - The Hair Trigger - stress posture favouring the geniculo-amygdala low road with lowered startle thresholds.
+
+ENTRY 3. THE SOMATOSENSORY SYSTEM (keyed to systems catalogue Chapter 3)
+
+◦ Exploratory Touch - The Active Reader - attention-boosted discriminative touch during haptic exploration.
+
+◦ Background Monitoring - The Idle Skin - low-gain default posture reporting only change and threat.
+
+◦ Descending Analgesia - The Battlefield Gate - stress posture in which the periaqueductal grey and rostral ventromedial medulla close the dorsal horn gate hard.
+
+◦ Sleep Damping - The Muffled Sheet - thalamically damped touch with privileged pain entry.
+
+ENTRY 4. THE OLFACTORY SYSTEM (keyed to systems catalogue Chapter 4)
+
+◦ Sampling Sniff - The Deliberate Nose - active high-flow sniffing that interrogates an odour source.
+
+◦ Passive Watch - The Resting Nostril - low-flow breathing with detection only of strong or novel odours.
+
+◦ Appetitive Sharpening - The Pre-Meal Whet - ghrelin-driven sensitisation of food odour channels before meals.
+
+◦ Bulbar Disconnection - The Sleeping Nose - slow-wave-sleep decoupling of piriform cortex from the bulb.
+
+ENTRY 5. THE GUSTATORY SYSTEM (keyed to systems catalogue Chapter 5)
+
+◦ Ingestive Appraisal - The Mouthful Auditor - active tasting during eating with value updated mouthful by mouthful.
+
+◦ Sated Discounting - The Full-Table Shrug - post-meal posture in which orbitofrontal taste value collapses for the eaten food.
+
+◦ Standby - The Closed Kitchen - the idle state between meals and throughout sleep, thalamic gate closed with the rest.
+
+ENTRY 6. THE VESTIBULAR SYSTEM (keyed to systems catalogue Chapter 6)
+
+◦ Reafference-Cancelled Drive - The Trusted Pilot - voluntary-movement posture with predicted self-motion partially subtracted.
+
+◦ Full-Gain Stabilisation - The Grabbed Gyroscope - passive or unexpected motion handled at full reflex gain.
+
+◦ Sleep Idle - The Parked Gimbal - the still-head idle of slow-wave sleep.
+
+◦ Endogenous Burst Drive - The Dream Spinner - rapid-eye-movement (REM) bursting of the vestibular nuclei that drives the rapid eye movements and injects flying and falling into dreams.
+
+ENTRY 7. THE INTEROCEPTIVE SYSTEM (keyed to systems catalogue Chapter 7)
+
+◦ Background Publication - The Quiet Bulletin - default low-resolution publication of the feeling background that weights ongoing choice.
+
+◦ Attentive Introspection - The Body Scan - attention-opened insular gain making the same visceral input vividly felt.
+
+◦ Visceral Alarm - The Override Siren - parabrachial takeover for air hunger and severe visceral threat, gate-proof by design.
+
+◦ Sleep Autonomy - The Unwatched Engine Room - reflex floors running under uncontested brainstem control while insular access closes.
+
+ENTRY 8. THE CORTICOSPINAL SYSTEM (keyed to systems catalogue Chapter 8)
+
+◦ Gated Transmission - The Open Line - awake availability, with release decided upstream by the basal ganglia and loudness set at the spinal end.
+
+◦ Central Suppression - The Quiet Line - slow-wave-sleep posture with descending drive low and voluntary movement centrally suppressed.
+
+◦ Atonic Block - The Cut Line - rapid-eye-movement (REM) posture in which cortical output cells fire freely but the command is blocked at the spinal end by active atonia.
+
+ENTRY 9. THE CORTICO-BASAL-GANGLIA-THALAMO-CORTICAL LOOP SYSTEM (keyed to systems catalogue Chapter 9)
+
+◦ Deliberative Selection - The Weighed Vote - goal-directed selection with outcome value consulted before the brake lifts.
+
+◦ Habitual Release - The Rubber Stamp - stimulus-triggered release of well-practised sequences with minimal deliberation.
+
+◦ Offline Replay - The Night Rehearsal - slow-wave-sleep participation in replay that consolidates procedural memory while overt action is suppressed.
+
+◦ Free-Wheeling Selection - The Dream Chooser - rapid-eye-movement (REM) selection with dopamine and limbic drive high and motor output blocked downstream.
+
+ENTRY 10. THE CEREBELLAR SYSTEM (keyed to systems catalogue Chapter 10)
+
+◦ Calibrated Prediction - The Steady Hand - continuous forward-model prediction and correction with learning quiescent.
+
+◦ Error-Driven Recalibration - The Tuning Session - olive-gated plasticity while errors are being signalled.
+
+◦ Offline Consolidation - The Night Bench - sleep participation in consolidating newly learned motor skills.
+
+ENTRY 11. THE OCULOMOTOR SYSTEM (keyed to systems catalogue Chapter 11)
+
+◦ Saccadic Acquisition - The Snap Aim - ballistic target acquisition by collicular burst.
+
+◦ Smooth Pursuit - The Camera Dolly - continuous velocity matching of a moving target.
+
+◦ Fixation Hold - The Locked Tripod - active suppression of saccades while detail is extracted.
+
+◦ Endogenous Saccade Storm - The Dream Darter - rapid-eye-movement (REM) internally driven bursts firing the movements that name the state.
+
+ENTRY 12. THE AUTONOMIC MOTOR SYSTEM (keyed to systems catalogue Chapter 12)
+
+◦ Sympathetic-Led Engagement - The Working Tilt - awake, active posture with the balance shifted toward sympathetic tone.
+
+◦ Parasympathetic Restoration - The Night Housekeeping - slow-wave-sleep dominance of the vagal hand while the body restores itself.
+
+◦ Autonomic Storm - The Dream Squall - rapid-eye-movement (REM) irregularity with surges of both divisions.
+
+◦ Fight-or-Flight Mobilisation - The Full Alarm - acute-stress mobilisation of the whole sympathetic and adrenal apparatus at once.
+
+ENTRY 13. THE EPISODIC MEMORY SYSTEM (keyed to systems catalogue Chapter 13)
+
+◦ Encoding Posture - The Open Shutter - storage-favouring configuration under high acetylcholine.
+
+◦ Retrieval Posture - The Playback Head - completion-favouring configuration under low acetylcholine.
+
+◦ Ripple Consolidation - The Nightly Copy - slow-wave-sleep replay via sharp-wave ripples performing the hippocampo-cortical transfer.
+
+◦ Theta Integration - The Dream Re-Tagger - rapid-eye-movement (REM) theta with cortex partially disconnected, favouring integration and emotional re-tagging.
+
+ENTRY 14. THE SEMANTIC MEMORY SYSTEM (keyed to systems catalogue Chapter 14)
+
+◦ Precision Retrieval - The Narrow Tap - frontally controlled selection of the task-relevant feature under sharp cholinergic tone.
+
+◦ Associative Spread - The Wide Ladle - loosened retrieval admitting remote associations, characteristic of rest and rapid-eye-movement (REM) sleep.
+
+◦ Overnight Distillation - The Slow Still - slow-wave-sleep receipt of episodic replay, weights adjusted toward new knowledge.
+
+ENTRY 15. THE PROCEDURAL MEMORY SYSTEM (keyed to systems catalogue Chapter 15)
+
+◦ Forging - The Hot Anvil - dopamine-gated skill acquisition during practice.
+
+◦ Fluent Execution - The Cold Stamp - fast, automatic execution of consolidated skills.
+
+◦ Spindle Consolidation - The Night Shift - sleep replay locking in the day's motor gains.
+
+◦ Stress Takeover - The Emergency Foreman - stress-driven assumption of control from the goal-directed system.
+
+ENTRY 16. THE WORKING MEMORY SYSTEM (keyed to systems catalogue Chapter 16)
+
+◦ Robust Maintenance - The Held Chalk - attractors locked against distraction while contents are used.
+
+◦ Gated Updating - The Fresh Slate - basal-ganglia-gated admission of new content, old content released.
+
+◦ Erased Idle - The Wiped Board - slow-wave-sleep erasure, delay activity being incompatible with the slow oscillation's silent states.
+
+◦ Ungoverned Flicker - The Doodling Board - rapid-eye-movement (REM) fragments igniting without gate control, one account of dream incoherence.
+
+ENTRY 17. THE REWARD AND MOTIVATION SYSTEM (keyed to systems catalogue Chapter 17)
+
+◦ Exploitative Pricing - The Known-Vendor Round - valuation and pursuit of established rewards under stable dopamine prediction errors.
+
+◦ Exploratory Sampling - The Market Stroll - novelty-weighted sampling of alternatives when established values decay or uncertainty rises.
+
+◦ Hedonic Consummation - The Tasting Table - opioid-hotspot liking during consumption, dissociable from wanting.
+
+◦ Replay Bookkeeping - The Night Audit - sleep replay preferentially consolidating rewarded experience via accumbens participation.
+
+ENTRY 18. THE LANGUAGE SYSTEM (keyed to systems catalogue Chapter 18)
+
+◦ Comprehension Weave - The Listening Loom - sound-to-meaning mapping during listening and reading.
+
+◦ Production Weave - The Speaking Loom - meaning-to-articulation mapping with online self-monitoring.
+
+◦ Inner Speech - The Silent Loom - production run covertly with articulation withheld, the medium of much thought.
+
+◦ Unmonitored Dream Speech - The Loose Loom - rapid-eye-movement (REM) production that is fluent but unmonitored.
+
+ENTRY 19. THE EXECUTIVE CONTROL SYSTEM (keyed to systems catalogue Chapter 19)
+
+◦ Focused Exploitation - The Closed Session - stable task set held against distraction, phasic-noradrenaline regime.
+
+◦ Divergent Exploration - The Open Floor - loosened task set sampling alternatives, tonic-noradrenaline regime.
+
+◦ Devolved Emergency Rule - The Caretaker Cabinet - stress handover of control to habit and amygdala.
+
+◦ Offline Recess - The Adjourned House - sleep withdrawal of executive function.
+
+ENTRY 20. THE SOCIAL COGNITION SYSTEM (keyed to systems catalogue Chapter 20)
+
+◦ Mentalising Stance - The Deep Read - full model-building of another's beliefs, desires, and intentions.
+
+◦ Fast Face-Intent Reading - The Glance Check - rapid appraisal of identity, gaze, and expression without deep modelling.
+
+◦ Threat-Contracted Reading - The Narrowed Eye - stress posture contracted to threat detection with empathy narrowed.
+
+◦ Social Simulation - The Night Rehearsal Stage - rapid-eye-movement (REM) activity generating densely populated social dream scenarios.
+
+ENTRY 21. THE DEFAULT MODE NETWORK (keyed to systems catalogue Chapter 21)
+
+◦ Narrative Rest - The Fireside Teller - dominant quiet-waking self-referential simulation of past, future, and others.
+
+◦ Task Suppression - The Hushed Teller - anticorrelated quiescence while outward task networks hold the floor.
+
+◦ Dream Narration - The Unchecked Teller - the altered REM configuration narrating without executive supervision.
+
+◦ Fragmented Idle - The Scattered Teller - deep slow-wave fragmentation of network coherence.
+
+ENTRY 22. THE SALIENCE / VENTRAL ATTENTION NETWORK (keyed to systems catalogue Chapter 22)
+
+◦ Calibrated Vigilance - The Attentive Operator - normal waking posture, monitoring all channels and switching networks on genuine relevance.
+
+◦ Damped Watch - The Night Operator - slow-wave-sleep posture with raised thresholds but preserved alarm entry.
+
+◦ Stress Lock - The Jammed Switchboard - hyperactive posture locking the brain into the outward mode.
+
+ENTRY 23. THE DORSAL ATTENTION NETWORK (The frontoparietal orienting network) (keyed to systems catalogue Chapter 23)
+
+◦ Engaged-Orienting - Spotlight On - top-down gain aimed at a chosen place or feature to select targets for eye and hand.
+
+◦ Disengaged-Standby - Spotlight Off - awake but unaimed, holding no priority, ready to be recruited.
+
+◦ Offline-Sleep - Lights Out - taken down in sleep when voluntary orienting has no role.
+
+ENTRY 24. THE FRONTOPARIETAL CONTROL NETWORK (The central executive network) (keyed to systems catalogue Chapter 24)
+
+◦ Goal-Holding - Governor Steering - a task set and its contents kept alive against distraction, biasing attention, sensory, and motor systems.
+
+◦ Task-Switching - Regear - the brief reconfiguration when the goal changes.
+
+◦ Idle-Deactivated - Governor Resting - awake but off-task, control relaxed.
+
+◦ Offline-Sleep - Governor Asleep - largely down in slow-wave and rapid-eye-movement (REM) sleep, one reason dreams go unexamined.
+
+ENTRY 25. THE CINGULO-OPERCULAR NETWORK (The task-set maintenance network) (keyed to systems catalogue Chapter 25)
+
+◦ Tonic-Maintained - Steady Helm - one task-set held across whole blocks of minutes with sustained alertness.
+
+◦ Phasic-Error - Course Correction - a brief signal thrown by a mistake that re-arms the set.
+
+◦ Offline-Collapse - Helm Abandoned - the tonic signal falls at sleep onset.
+
+ENTRY 26. THE LANGUAGE NETWORK (The perisylvian language network) (keyed to systems catalogue Chapter 26)
+
+◦ Comprehending - Sound-to-Sense - incoming words parsed into meaning.
+
+◦ Producing - Sense-to-Sound - meaning unwoven into articulatory programs.
+
+◦ Inner-Speech-Idle - Silent Loom - internally generated language at rest, loosely active in REM dream dialogue.
+
+ENTRY 27. THE SENSORIMOTOR NETWORK (The perception-action loop network) (keyed to systems catalogue Chapter 27)
+
+◦ Active-Executing - Hands Working - commands out and feedback in, closing the loop in tens of milliseconds.
+
+◦ Spindle-Consolidating - Rehearsing Offline - stage-two sleep spindles run over it to consolidate motor memory.
+
+◦ Atonia-Locked - Paralysed at the Gate - actively paralysed at its spinal exit during REM sleep.
+
+ENTRY 28. THE VISUAL NETWORK (The occipital hierarchy network) (keyed to systems catalogue Chapter 28)
+
+◦ Retinal-Driven - Eyes-On Refinery - the waking hierarchy transforming real optic input.
+
+◦ Replay-Consolidating - Offline Rerun - slow-wave replay of the day's visual experience.
+
+◦ Internally-Generated - Dreaming Screen - REM imagery rendered with no retinal input.
+
+ENTRY 29. THE AUDITORY NETWORK (The temporal hearing network) (keyed to systems catalogue Chapter 29)
+
+◦ Attentive-Sifting - Cocktail-Party Filter - one attended stream sharpened at the expense of others.
+
+◦ Ambient-Monitoring - Open Ear - passive waking listening with no selected stream.
+
+◦ Sleep-Sentry - Night Watch - reduced but still evaluating salient sounds during sleep.
+
+ENTRY 30. THE LIMBIC NETWORK (The orbitofrontal-temporopolar valuation network) (keyed to systems catalogue Chapter 30)
+
+◦ Appraising - Snap Verdict - a fast value-and-affect tag on the current stimulus.
+
+◦ Mood-Toning - Background Weather - a slow affective tone held for hours.
+
+◦ Replay-Emotional - Night Rework - reprocessing of emotional memory in sleep.
+
+ENTRY 31. THE DOPAMINE SYSTEM (The Mesostriatal and Mesocorticolimbic Dopaminergic Projection) (keyed to systems catalogue Chapter 31)
+
+◦ Tonic-Vigour - Idle Throttle - a slow background level setting how briskly the organism will move.
+
+◦ Phasic-Teaching - Surprise Pulse - a burst or dip broadcasting the reward prediction error.
+
+◦ Sleep-Quiescent - Night Trickle - phasic teaching largely off, tonic persisting, with a REM rise.
+
+ENTRY 32. THE NORADRENALINE SYSTEM (The Locus Coeruleus Noradrenergic Projection) (keyed to systems catalogue Chapter 32)
+
+◦ Phasic-Exploit - Sharp Focus - moderate tonic firing with crisp event-locked bursts supporting focused, exploitative attention on a task.
+
+◦ Tonic-Explore - Restless Scan - high tonic firing without bursts supporting distractible, exploratory scanning.
+
+◦ Reset-Pulse - Slate-Wipe - a large phasic burst that interrupts and reconfigures target networks.
+
+◦ Sleep-Silent - Blue Dark - low in slow-wave and near-silent in REM sleep.
+
+ENTRY 33. THE SEROTONIN SYSTEM (The Raphe Serotonergic Projection) (keyed to systems catalogue Chapter 33)
+
+◦ Tonic-Patience - Long-Horizon Hum - a steady level plus a signal that rises while waiting, biasing toward waiting over grabbing.
+
+◦ Mood-Setting - Slow Weather - the hours-to-weeks background tone antidepressants target.
+
+◦ Sleep-Graded - Dimmed Seam - slowed in slow-wave sleep and essentially silent in REM.
+
+ENTRY 34. THE ACETYLCHOLINE SYSTEM (The Basal Forebrain and Brainstem Cholinergic Projection) (keyed to systems catalogue Chapter 34)
+
+◦ High-Tonic-Encoding - Record Button On - waking high acetylcholine boosting feedforward sensory input and suppressing feedback, favouring writing the new.
+
+◦ Low-Tonic-Retrieval - Playback Mode - slow-wave-sleep low acetylcholine releasing the cortex to replay and consolidate.
+
+◦ Phasic-Salience - Attention Ping - a fast, restricted transient flagging an attention-worthy cue.
+
+◦ REM-Paradox - Dreaming Chemistry - acetylcholine back at waking levels while the aminergic systems stay silent.
+
+ENTRY 35. THE HISTAMINE SYSTEM (The Tuberomammillary Histaminergic Projection) (keyed to systems catalogue Chapter 35)
+
+◦ Wake-On - Lights Up - tonic firing that sustains the aroused waking state, strongest in attentive waking.
+
+◦ Sleep-Off - Lights Down - silence in both slow-wave and REM sleep.
+
+ENTRY 36. THE OREXIN SYSTEM (The Lateral Hypothalamic Orexinergic Projection) (keyed to systems catalogue Chapter 36)
+
+◦ Wake-Stabilising - Latch Held - tonic firing that excites all arousal nuclei at once, deepening the wake state.
+
+◦ Motivated-Boost - Foraging Gear - stronger firing during active, motivated behaviour.
+
+◦ Sleep-Silent - Latch Released - silence in both slow-wave and REM sleep, permitting sleep to consolidate.
+
+ENTRY 37. THE HYPOTHALAMIC-PITUITARY-ADRENAL (HPA) AXIS (keyed to systems catalogue Chapter 37)
+
+◦ Circadian-Envelope - Daily Tide - the 24-hour programme peaking near waking and troughing late at night.
+
+◦ Basal-Ultradian - Hourly Drip - roughly one cortisol pulse per hour riding that envelope.
+
+◦ Acute-Stress-Surge - Alarm Flood - a fast cortisol rise answering a challenge.
+
+ENTRY 38. THE HYPOTHALAMIC-PITUITARY-GONADAL (HPG) AXIS (keyed to systems catalogue Chapter 38)
+
+◦ Slow-Pulse-FSH - Low-Gear Tick - slow gonadotropin-releasing-hormone pulses favouring follicle-stimulating hormone.
+
+◦ Fast-Pulse-LH - High-Gear Tick - fast pulses favouring luteinising hormone.
+
+◦ Positive-Feedback-Surge - Ovulatory Trigger - the mid-cycle sign-switch producing the luteinising-hormone surge.
+
+◦ Quiescent - Generator Idle - the childhood pause and stress or energy-deficit suspension.
+
+ENTRY 39. THE HYPOTHALAMIC-PITUITARY-THYROID (HPT) AXIS (keyed to systems catalogue Chapter 39)
+
+◦ Set-Point-Hold - Steady Dial - the defended individual thyroid-hormone level.
+
+◦ Circadian-Ripple - Night Nudge - a gentle thyroid-stimulating-hormone nocturnal rise.
+
+◦ Cold-Upregulated - Warm-Up Turn - a raised setting to generate heat.
+
+◦ Illness-Downregulated - Idle Down - the suppressed low-metabolic state of non-thyroidal illness.
+
+ENTRY 40. THE GROWTH HORMONE AND SOMATOSTATIN AXIS (keyed to systems catalogue Chapter 40)
+
+◦ Somatostatin-Braked - Brake On - the inhibited baseline between pulses, output low.
+
+◦ Sleep-Pulse - Night Build - the large growth-hormone pulse locked to the first slow-wave-sleep episode.
+
+◦ Daytime-Sparse-Pulse - Odd-Hours Trickle - the few smaller pulses scattered across the day.
+
+ENTRY 41. THE MELATONIN AXIS (keyed to systems catalogue Chapter 41)
+
+◦ Night-Secreting - Darkness Stamp - melatonin released across the biological night.
+
+◦ Day-Suppressed - Light Off - synthesis shut off by day and by light at night.
+
+◦ Phase-Shifting - Clock-Setter - the dusk and dawn windows in which the hormone resets its own clock.
+
+ENTRY 42. THE GLUCOSE HOMEOSTASIS AXIS (keyed to systems catalogue Chapter 42)
+
+◦ Fed-Insulin - Store Mode - rising glucose raising insulin and lowering glucagon to store fuel.
+
+◦ Fasted-Glucagon - Release Mode - falling glucose reversing the balance toward hepatic glucose release.
+
+◦ Counter-Regulatory-Defence - Fuel Alarm - the fast cascade recruited when glucose falls too low.
+
+◦ Basal-Pulsatile - Idle Ledger - the small five-minute insulin pulses on baseline between meals.
+
+ENTRY 43. THE GUT-BRAIN AXIS (keyed to systems catalogue Chapter 43)
+
+◦ Fed-Digesting - Table Set - active digestion, satiety signalling, and post-meal gut-hormone waves.
+
+◦ Fasted-Housekeeping - Sweep Cycle - the migrating motor complex sweeping the empty gut.
+
+◦ Hunger-Signalling - Empty Belly - ghrelin-driven appetite drive telegraphed upward.
+
+◦ Stress-Rerouted - Nervous Gut - altered motility and secretion under stress.
+
+ENTRY 44. THE GLOBAL WORKSPACE DYNAMICS (The Ignition and Broadcast System) (keyed to systems catalogue Chapter 44)
+
+◦ Subliminal - Below the Line - bottom-up activation too weak to trigger a large-scale reverberating state, content inaccessible (web-confirmed).
+
+◦ Preconscious - In the Waiting Room - activation strong enough but not yet attended, held back by the availability of top-down attention (web-confirmed).
+
+◦ Ignited-Conscious - Lit and Broadcast - a single content amplified in an all-or-none surge and broadcast brain-wide.
+
+◦ Offline-Collapsed - Broadcast Down - the loss of ignition in slow-wave sleep and anaesthesia.
+
+END OF OUTLINE

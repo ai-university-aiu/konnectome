@@ -1,0 +1,511 @@
+LAYER 6, THE CELLULAR LAYER: THE OTHER CELLS
+
+A Complete, Comprehensive, and Thorough List and Outline of the Non-Neuronal Cells of the Human Nervous and Endocrine System
+
+Companion outline to the five-volume neuronal catalogue (302 neuron types) in the Certified_Neuroscientist corpus of D. R. Dison, Founder, Artificial Intelligence University (AIU).
+
+Date of compilation: August 9, 2026.
+
+
+HOW TO READ THIS OUTLINE
+
+The five-volume neuronal manuscript catalogued every named type of neuron in the human nervous system.
+
+This outline catalogues everything else at Layer 6: the cells that are not neurons but that are part of, or inseparable from, the human nervous and endocrine system.
+
+The largest class is the glia (from the Greek word for glue): the non-neuronal cells of nervous tissue that support, insulate, feed, defend, and regulate the neurons.
+
+The second largest class is the endocrine cells: the cells whose product is a hormone (a chemical messenger released into the bloodstream) rather than an action potential delivered down a wire.
+
+Every cell type below carries one of two tags.
+
+• (COG) means the cell type participates in COGNITION: it actively shapes computation, synaptic plasticity (the strengthening and weakening of connections, which is the physical basis of learning), memory, attention, or the moment-to-moment processing of information.
+
+• (NON-COG) means the cell type does not participate in cognition directly, but serves a substrate role: structure, insulation, nourishment, defence, plumbing, barrier duty, hormone manufacture, or developmental scaffolding.
+
+The tag records the cell's principal role.
+
+A generation ago every cell in this outline would have been tagged (NON-COG), because glia were thought to be passive glue.
+
+The modern evidence has promoted several of them, and the tags below reflect that revolution honestly.
+
+A note on cross-references: seven secretory cell types (magnocellular neurosecretory cells, parvocellular neurosecretory cells, adrenal chromaffin cells, Merkel cells, pinealocytes, glomus cells, and the paraneurons generally) already hold full chapters in the neuronal catalogue, because they are genuine hybrids - cells that are simultaneously neuron-like and gland-like.
+
+They are listed again here, marked CROSS-REFERENCE, so that this outline is complete on its own, but their full treatment lives in the neuron volumes.
+
+A note on numbers: the adult human brain contains roughly 86 billion neurons and roughly 85 billion non-neuronal cells - close to a one-to-one ratio overall, though the ratio varies enormously by region (the cerebral cortex holds about 3.8 non-neuronal cells per neuron; the cerebellum holds about 0.2).
+
+
+PART ONE. THE GLIA OF THE CENTRAL NERVOUS SYSTEM
+
+The central nervous system (CNS) is the brain and the spinal cord.
+
+Its glia fall into four great families: the astrocytes, the oligodendrocyte lineage, the microglia, and the ependymal cells.
+
+
+SECTION 1. THE ASTROCYTES - THE STAR CELLS
+
+The astrocyte (from the Greek for star cell) is the most abundant and most versatile glial cell of the CNS.
+
+One astrocyte may contact over one million synapses (the junctions where one neuron signals another), and astrocytes are now recognized as the third partner of the tripartite synapse: the presynaptic terminal, the postsynaptic terminal, and the enveloping astrocyte process.
+
+Astrocytes clear neurotransmitter (the chemical messenger of the synapse) from the cleft, buffer potassium ions, feed neurons lactate (a fuel molecule), control local blood flow, maintain the blood-brain barrier, and release gliotransmitters (glial signalling molecules such as glutamate, adenosine triphosphate, and D-serine) that modulate synaptic strength.
+
+Because inhibiting astrocytes demonstrably impairs learning and memory, the family patriarch is tagged (COG).
+
+1. Protoplasmic Astrocyte (COG).
+
+The bushy, densely branched astrocyte of the grey matter (the neuron-body-rich tissue), tiling the neuropil in non-overlapping domains and enwrapping synapses - the principal cognitive partner cell of the cortex.
+
+2. Fibrous Astrocyte (NON-COG).
+
+The long-armed, sparsely branched astrocyte of the white matter (the axon-cable tissue), supporting myelinated tracts and the nodes of Ranvier (the gaps in the insulation where the nerve impulse regenerates).
+
+3. Interlaminar Astrocyte (COG).
+
+A primate-enriched, human-prominent astrocyte of cortical layer one, sending metres-per-cell-scale straight processes down through several cortical layers - a cell type essentially absent in rodents, suspected of long-range calcium signalling across the layers of the human cortex.
+
+4. Varicose Projection Astrocyte (COG).
+
+A second human- and great-ape-specific astrocyte of the deep cortical layers, with long, beaded (varicose) processes crossing neighbouring domains - function still unresolved, but its existence is one of the clearest cellular specializations of the human brain.
+
+5. Velate Astrocyte (NON-COG).
+
+A veil-like astrocyte of the cerebellar granule layer, wrapping sheet-like processes around the enormously dense granule neurons and buffering their ionic environment.
+
+6. Bergmann Glia (COG).
+
+The radially aligned astrocyte of the cerebellar cortex, its fibres climbing alongside Purkinje neuron dendrites; in development it is the migration ladder for granule neurons, and in adulthood its processes ensheath Purkinje synapses and participate in cerebellar synaptic plasticity - the cerebellum's contribution to motor learning.
+
+7. Müller Cell (NON-COG).
+
+The radial glial cell of the retina, spanning its entire thickness; it is simultaneously the retina's astrocyte, its metabolic support, and - remarkably - a living optical fibre that guides light through the scattering layers of the inverted retina to the photoreceptors.
+
+8. Tanycyte (NON-COG).
+
+The specialized radial glial cell of the floor of the third ventricle, stretching from the cerebrospinal fluid to the median eminence; it gates hormone traffic between blood, brain, and cerebrospinal fluid, senses glucose and nutrients for the hypothalamic feeding circuits, and forms the operational floor of Layer-Skipping Channel 3 (the circumventricular channel).
+
+9. Pituicyte (NON-COG).
+
+The astrocyte of the posterior pituitary; it engulfs or retracts from the hormone-releasing axon terminals of the magnocellular neurosecretory cells, physically throttling the release of oxytocin and vasopressin into the blood.
+
+10. Gomori-Positive Astrocyte (NON-COG).
+
+A distinctive iron- and mitochondria-rich astrocyte of the hypothalamic arcuate region and hippocampus, named for the Gomori stain that reveals its granules; implicated in local metabolic sensing.
+
+11. Surface-Associated and Glia Limitans Astrocyte (NON-COG).
+
+The astrocytes whose end-feet tile the outer surface of the brain and every penetrating blood vessel, forming the glia limitans (the limiting glial wall) - the brain's inner fence against the meninges and vasculature.
+
+12. Reactive Astrocyte (NON-COG).
+
+Not a resting type but a state: any astrocyte transformed by injury or disease into a hypertrophic, scar-forming, inflammation-signalling cell - the bricklayer of the glial scar.
+
+
+SECTION 2. THE OLIGODENDROCYTE LINEAGE - THE INSULATORS
+
+The oligodendrocyte (from the Greek for few-branch cell) is the myelinating cell of the CNS.
+
+Myelin is the fatty, multilayered insulation wrapped around axons that makes nerve impulses jump from node to node, multiplying conduction speed up to one-hundred-fold.
+
+13. Myelinating (Interfascicular) Oligodendrocyte (COG).
+
+The classic oligodendrocyte of the white matter, each one wrapping up to fifty separate axon segments; tagged (COG) because adaptive myelination - the activity-dependent tuning of myelin to synchronize spike arrival times - is now an established mechanism of learning, including motor learning and memory consolidation.
+
+14. Satellite (Perineuronal) Oligodendrocyte (NON-COG).
+
+An oligodendrocyte parked against a neuron cell body in the grey matter, non-myelinating in the resting state, serving metabolic and ionic support and standing by as a local reserve.
+
+15. Oligodendrocyte Precursor Cell, also called the NG2 Glia or Polydendrocyte (COG).
+
+The fourth major glial population (about five percent of all CNS cells), named for its NG2 proteoglycan marker; it is the only non-neuronal cell known to RECEIVE genuine synapses from neurons, it listens to circuit activity, divides throughout life, and differentiates into new myelinating oligodendrocytes on demand - the standing army of adaptive myelination.
+
+
+SECTION 3. THE MICROGLIA - THE RESIDENT IMMUNE CELLS
+
+16. Microglia (COG).
+
+The resident immune cell of the CNS - not born of nervous tissue at all, but an immigrant from the embryonic yolk sac that entered the brain before the blood-brain barrier closed.
+
+In health, each microglial cell patrols its territory with restless fine processes, touching and testing every synapse; it prunes (eats) weak or surplus synapses during development and continues to sculpt circuits in adulthood, which is why it is tagged (COG).
+
+In disease, it transforms into an amoeboid phagocyte (an engulfing cell), and its chronic activation is central to neurodegeneration and to the inflammatory hypothesis of depression - it is the receiving station of Layer-Skipping Channel 5, the neuroimmune channel.
+
+
+SECTION 4. THE EPENDYMAL FAMILY - THE VENTRICLE LINERS
+
+The ventricles are the fluid-filled chambers of the brain, and cerebrospinal fluid (CSF) is the clear liquid that fills them and bathes the CNS.
+
+17. Ependymocyte (NON-COG).
+
+The ciliated cuboidal cell lining the ventricles and the spinal canal; the coordinated beating of its cilia (hair-like motile projections) stirs and streams the CSF.
+
+18. Choroid Plexus Epithelial Cell (NON-COG).
+
+The secretory cousin of the ependymocyte, covering the choroid plexus (the cauliflower-like tissue inside the ventricles); it manufactures the CSF - roughly half a litre per day - and forms the blood-CSF barrier.
+
+
+PART TWO. THE GLIA OF THE PERIPHERAL NERVOUS SYSTEM
+
+The peripheral nervous system (PNS) is everything outside the brain and spinal cord: the nerves, the ganglia (clusters of neuron cell bodies outside the CNS), and the nerve endings.
+
+Nearly all PNS glia descend from the neural crest, the migratory embryonic cell population that also builds the sympathetic ganglia and the adrenal medulla.
+
+19. Myelinating Schwann Cell (NON-COG).
+
+The myelinating cell of the PNS; unlike the oligodendrocyte it wraps exactly one segment of exactly one axon, and it is the reason peripheral nerves can regenerate where central tracts cannot.
+
+20. Non-Myelinating (Remak) Schwann Cell (NON-COG).
+
+A Schwann cell that bundles many thin, unmyelinated axons - including the slow pain fibres - in separate pockets of a shared sleeve called a Remak bundle.
+
+21. Repair Schwann Cell (NON-COG).
+
+A state rather than a resting type: after nerve injury, both Schwann cell types reprogram into an elongated repair cell that clears myelin debris and forms the bands of Büngner, the living rails along which a severed axon regrows.
+
+22. Terminal (Perisynaptic) Schwann Cell, also called Teloglia (NON-COG).
+
+The glial cap of the neuromuscular junction (the synapse between nerve and muscle); it senses transmission, stabilizes the junction, and guides its repair after damage.
+
+23. Satellite Glial Cell (NON-COG).
+
+The flattened glial envelope wrapped around each neuron cell body in the sensory, sympathetic, and parasympathetic ganglia; it buffers the neuron's environment, and its gap-junction coupling after injury contributes to chronic pain.
+
+24. Enteric Glial Cell (NON-COG).
+
+The glia of the enteric nervous system, the gut's own semi-autonomous nervous system; enteric glia outnumber enteric neurons, regulate gut motility and the intestinal barrier, and converse with the immune system and the microbiome - the glial half of the gut-brain axis.
+
+25. Olfactory Ensheathing Cell (NON-COG).
+
+A unique glial cell of the olfactory nerve, bridging PNS and CNS territory; it ensheathes the unmyelinated axons of olfactory sensory neurons and escorts the new axons that this uniquely regenerating nerve grows throughout life - which is why it is a leading candidate cell for spinal cord repair therapies.
+
+26. Perineurial Glial Cell (NON-COG).
+
+The concentric, tight-junction-coupled cells forming the perineurium, the lamellar sheath around each nerve fascicle; it is the blood-nerve barrier, the peripheral counterpart of the blood-brain barrier.
+
+27. Boundary Cap Cell (NON-COG).
+
+A transient neural-crest-derived glial population stationed at the points where nerve roots enter and exit the spinal cord; in development it polices the CNS-PNS frontier, keeping neuron cell bodies in and letting axons through, then contributes daughters to the Schwann cell and satellite glial pools.
+
+28. Cutaneous (Skin) Glia, including the Nociceptive Schwann Cell (NON-COG).
+
+Specialized terminal glia in the skin, including the recently discovered mesh of nociceptive Schwann cells that is itself mechanosensitive - glia that help transduce pain at the body surface.
+
+29. Lamellar Corpuscle Cells of Meissner and Pacini (NON-COG).
+
+The onion-like stacks of modified Schwann cell lamellae that form the touch and vibration end organs of the skin, mechanically filtering the stimulus before the sensory axon ever fires.
+
+
+PART THREE. THE SUPPORTING CELLS OF THE SENSE ORGANS
+
+Every special sense organ pairs its sensory receptor cells with dedicated non-neuronal supporting cells, glia in all but name.
+
+30. Cochlear Supporting Cells: the Deiters, Pillar, Hensen, Border, and Inner Phalangeal Cells (NON-COG).
+
+The precision scaffolding of the organ of Corti (the hearing organ of the cochlea): Deiters cells cradle the outer hair cells and form the reticular lamina with the pillar cells, whose stiff tunnel is essential to cochlear micromechanics - and, unlike birds and fish, the human versions cannot regenerate lost hair cells, which is why deafness from hair cell loss is permanent.
+
+31. Vestibular Supporting Cells (NON-COG).
+
+The equivalent supporting population of the balance organs (the semicircular canal cristae and the otolith maculae), sustaining the vestibular hair cells and recycling potassium.
+
+32. Olfactory Sustentacular Cell (NON-COG).
+
+The tall supporting cell of the olfactory epithelium, insulating the olfactory sensory neurons, detoxifying inhaled chemicals, and secreting mucus components; it earned unwanted fame as the principal initial target of the COVID-19 virus in the nose, which is why that disease stole the sense of smell.
+
+33. Olfactory Horizontal and Globose Basal Cells (NON-COG).
+
+The two stem cell populations of the olfactory epithelium, continuously rebuilding the only sensory neuron population that regenerates throughout human life.
+
+34. Taste Bud Type I Cell (NON-COG).
+
+The glial-like dark cell of the taste bud, wrapping the receptor cells, clearing transmitter, and limiting cross-talk between neighbouring taste cells.
+
+35. Retinal Pigment Epithelial Cell (NON-COG).
+
+The pigmented service layer behind the photoreceptors: it absorbs stray light, recycles the visual pigment (the retinoid cycle), and phagocytoses the worn-out tips of the photoreceptors every single day - its failure is macular degeneration.
+
+
+PART FOUR. THE DEVELOPMENTAL AND STEM CELL POPULATIONS
+
+36. Radial Glial Cell (NON-COG).
+
+The master scaffold and master progenitor of the developing brain: a cell stretching from ventricle to pial surface that both GENERATES most neurons and macroglia and serves as the climbing ladder for newborn neurons migrating outward - the developmental scaffolding cell par excellence, largely gone by birth, its descendants persisting as Bergmann glia, Müller cells, tanycytes, and the adult stem cells below.
+
+37. Outer (Basal) Radial Glial Cell (NON-COG).
+
+A second radial glial population, vastly expanded in humans, occupying the outer subventricular zone; its proliferative amplification is one of the principal cellular explanations for the expansion of the human cortex.
+
+38. Adult Neural Stem Cell of the Ventricular-Subventricular Zone, the B1 Cell (NON-COG).
+
+A radial-glia-descended astrocyte-like stem cell lining the lateral ventricle walls, retained into adulthood; in humans its neurogenic output declines to near-quiescence after infancy, and it stands as a reserve and a subject of intense regenerative research.
+
+39. Adult Hippocampal Radial Glia-Like Cell, the Type 1 Cell (COG).
+
+The stem cell of the dentate gyrus subgranular zone, source of adult-born granule neurons; to the extent that adult human hippocampal neurogenesis persists - the evidence remains actively contested - this cell feeds new neurons into the pattern-separation machinery of memory, earning a cautious (COG).
+
+40. Transit-Amplifying Progenitor and Neuroblast Populations (NON-COG).
+
+The intermediate dividing cells (type C cells and neuroblasts) between stem cell and neuron - short-lived factory stages rather than functional residents.
+
+
+PART FIVE. THE VASCULAR, BARRIER, AND MENINGEAL CELLS
+
+The brain is one of the most vascularized organs in the body, and its blood vessels are cellularly unique: nowhere else does the vasculature form a barrier this tight.
+
+The functional ensemble of vessel, glia, and neuron is called the neurovascular unit.
+
+41. Brain Microvascular Endothelial Cell (NON-COG).
+
+The specialized cell lining every brain capillary, stitched to its neighbours by continuous tight junctions with no fenestrations (windows) and almost no vesicle traffic; it IS the blood-brain barrier, the wall that Layer-Skipping Channel 1 (the steroid channel) dissolves through and Channel 3 (the circumventricular ports) deliberately omits.
+
+42. Pericyte (NON-COG).
+
+The contractile mural cell embracing the capillary from within its basement membrane, at higher density in the brain than anywhere else in the body; it induces and maintains the barrier, regulates capillary diameter and blood flow, and its degeneration is an early event in Alzheimer's disease and in white matter disease.
+
+43. Vascular Smooth Muscle Cell of the Brain Vessels (NON-COG).
+
+The muscular wrap of the brain's arterioles, the effector of neurovascular coupling - the mechanism by which active brain regions summon more blood, and the signal read out by functional brain imaging.
+
+44. Perivascular Fibroblast (NON-COG).
+
+A recently characterized collagen-producing cell of the perivascular (around-the-vessel) spaces of larger brain vessels, part of the plumbing of the glymphatic system - the brain's CSF-driven waste-clearance circuit, which runs chiefly during deep sleep.
+
+45. Meningeal Fibroblast Populations: the Dural, Arachnoid, and Pial Cells (NON-COG).
+
+The connective tissue cells of the three meninges (the brain's coverings): the tough dura mater, the web-like arachnoid mater - whose arachnoid barrier cell layer forms the meningeal barrier - and the delicate pia mater hugging the brain surface.
+
+46. Arachnoid Cap and Granulation Cells (NON-COG).
+
+The specialized arachnoid cells of the arachnoid granulations, the one-way valves that drain CSF into the venous blood.
+
+47. Choroid Plexus Stromal Cells: Fibroblasts and Pericytes of the Plexus (NON-COG).
+
+The connective tissue and mural cells of the choroid plexus core, supporting its fenestrated (windowed) capillaries - one of the few places inside the skull where the vessels are deliberately leaky.
+
+
+PART SIX. THE IMMUNE CELLS OF THE NERVOUS SYSTEM BORDERS
+
+Beyond the microglia of Part One, the nervous system keeps a standing immune garrison at its borders.
+
+48. Border-Associated Macrophages: the Perivascular, Meningeal, and Choroid Plexus Macrophages (NON-COG).
+
+Yolk-sac-derived resident macrophages (professional engulfing cells) stationed in the perivascular spaces, the meninges, and the choroid plexus stroma - the gatekeepers standing between blood and brain, and with microglia the second receiving station of the neuroimmune layer-skipping channel.
+
+49. Epiplexus (Kolmer) Cell (NON-COG).
+
+A macrophage riding on the CSF-facing surface of the choroid plexus epithelium, sampling the cerebrospinal fluid itself.
+
+50. Meningeal Lymphocytes, Dendritic Cells, and Mast Cells (NON-COG).
+
+The adaptive and granule-bearing immune populations of the meninges and their lymphatic vessels; meningeal T cells (a class of adaptive immune white blood cells) have been shown to modulate mood and social behaviour from outside the parenchyma, a frontier finding that may yet promote this entry's tag.
+
+
+PART SEVEN. THE ENDOCRINE CELLS OF THE MAJOR GLANDS
+
+Here the outline crosses from the wire to the bloodstream: the cells whose entire output is hormonal.
+
+All are tagged (NON-COG) - their business is regulation, not computation - though their products (cortisol, thyroid hormone, oestrogen, testosterone) profoundly SET THE OPERATING CONDITIONS of every cognitive cell above.
+
+SECTION 1. THE PITUITARY GLAND
+
+51. Somatotrope (NON-COG). The growth hormone cell of the anterior pituitary.
+
+52. Lactotrope (NON-COG). The prolactin cell, driver of milk production.
+
+53. Thyrotrope (NON-COG). The thyroid-stimulating hormone cell.
+
+54. Gonadotrope (NON-COG). The cell producing the two gonad-driving hormones, luteinizing hormone (luteinising hormone (LH)) and follicle-stimulating hormone (FSH).
+
+55. Corticotrope (NON-COG). The adrenocorticotropic hormone (ACTH) cell - the pituitary link of the hypothalamic-pituitary-adrenal (HPA) stress axis.
+
+56. Melanotrope of the Intermediate Lobe (NON-COG). The melanocyte-stimulating hormone cell, vestigial in the adult human.
+
+57. Folliculostellate Cell (NON-COG).
+
+The star-shaped, non-hormonal sustentacular cell of the anterior pituitary - its glia-in-all-but-name: a gap-junction-coupled network that relays calcium waves across the gland and coordinates the endocrine cells around it.
+
+CROSS-REFERENCE. The posterior pituitary contains no endocrine cell bodies at all: its hormones (oxytocin and vasopressin) come from the magnocellular neurosecretory cells (neuron catalogue, Chapter 90), throttled by the pituicytes of Part One.
+
+SECTION 2. THE PINEAL GLAND
+
+58. Pinealocyte (NON-COG) - CROSS-REFERENCE, neuron catalogue Chapter 283.
+
+The melatonin cell, a modified photoreceptor descendant translating the clock's night signal into the hormone of darkness.
+
+59. Pineal Interstitial (Glial) Cell (NON-COG).
+
+The astrocyte-like support cell among the pinealocytes.
+
+SECTION 3. THE THYROID AND PARATHYROID GLANDS
+
+60. Thyroid Follicular Cell (NON-COG).
+
+The cell of the thyroid follicles, manufacturing thyroxine (T4) and triiodothyronine (T3) - the master set-point hormones of whole-body and whole-brain metabolic rate, without which the infant brain cannot develop (the lesion of untreated congenital hypothyroidism).
+
+61. Parafollicular (C) Cell (NON-COG).
+
+The calcitonin-secreting cell between the follicles, a neural-crest-derived member of the diffuse neuroendocrine system.
+
+62. Parathyroid Chief Cell (NON-COG).
+
+The parathyroid hormone cell, the minute-to-minute governor of blood calcium - the ion on which every synapse and every muscle twitch depends.
+
+63. Parathyroid Oxyphil Cell (NON-COG).
+
+The mitochondria-stuffed second parathyroid cell, of still-debated function, accumulating with age.
+
+SECTION 4. THE ADRENAL GLAND
+
+64. Zona Glomerulosa Cell (NON-COG). The aldosterone cell of the outer adrenal cortex, governor of salt and blood pressure.
+
+65. Zona Fasciculata Cell (NON-COG). The cortisol factory of the middle cortex - the far terminus of the HPA axis and the launching cell of Layer-Skipping Channel 1, the steroid hormone channel.
+
+66. Zona Reticularis Cell (NON-COG). The adrenal androgen cell of the inner cortex.
+
+67. Adrenal Chromaffin Cell (NON-COG) - CROSS-REFERENCE, neuron catalogue Chapter 261.
+
+The adrenaline and noradrenaline cell of the adrenal medulla: developmentally a sympathetic neuron that traded its axon for access to the circulation - the single strongest anatomical proof that the nervous and endocrine systems are one architecture.
+
+68. Adrenal Medullary Sustentacular Cell (NON-COG).
+
+The glial-like supporting cell among the chromaffin cells.
+
+SECTION 5. THE ENDOCRINE PANCREAS
+
+The islets of Langerhans, the endocrine micro-organs scattered through the pancreas.
+
+69. Beta Cell (NON-COG). The insulin cell - and the brain, though not insulin-dependent for glucose uptake, is rich in insulin receptors that modulate memory circuits.
+
+70. Alpha Cell (NON-COG). The glucagon cell, insulin's opposing player.
+
+71. Delta Cell (NON-COG). The somatostatin cell, the islet's local brake.
+
+72. Gamma (PP) Cell (NON-COG). The pancreatic polypeptide cell, a satiety signaller.
+
+73. Epsilon Cell (NON-COG). The rare ghrelin-producing islet cell.
+
+SECTION 6. THE GONADS AS ENDOCRINE ORGANS
+
+74. Leydig Cell (NON-COG). The testosterone cell of the testis interstitium.
+
+75. Sertoli Cell (NON-COG). The nurse cell of the seminiferous tubule, secreting inhibin and anti-Müllerian hormone and forming the blood-testis barrier - the gonadal analogue of an astrocyte.
+
+76. Granulosa Cell (NON-COG). The oestrogen-producing cell of the ovarian follicle, and after ovulation the progesterone-producing lutein cell of the corpus luteum.
+
+77. Theca Cell (NON-COG). The androgen-precursor cell partnering the granulosa cell in the two-cell model of oestrogen synthesis.
+
+
+PART EIGHT. THE DIFFUSE NEUROENDOCRINE SYSTEM
+
+Beyond the named glands lies a scattered empire: single hormone-secreting cells embedded in the linings of the gut, airway, and skin - the diffuse neuroendocrine system (DNES), historically called the APUD system (Amine Precursor Uptake and Decarboxylation, an old chemical criterion).
+
+Its gut members alone constitute, by cell count, the largest endocrine organ in the human body.
+
+78. The Enteroendocrine Cell Family (NON-COG).
+
+The hormone cells of the stomach and intestinal lining, one per hundred epithelial cells yet collectively immense, comprising at least ten classical lettered types.
+
+• G Cell - gastrin, the acid-secretion command.
+
+• Enterochromaffin (EC) Cell - the body's principal serotonin factory (about ninety percent of all human serotonin is made here, not in the brain).
+
+• Enterochromaffin-Like (ECL) Cell - histamine, amplifying acid secretion.
+
+• D Cell - somatostatin, the universal local brake.
+
+• I Cell - cholecystokinin (CCK), the fat-and-protein satiety hormone.
+
+• K Cell - glucose-dependent insulinotropic peptide (GIP), an incretin (a gut hormone that boosts insulin).
+
+• L Cell - glucagon-like peptide 1 (GLP-1) and peptide YY - the incretin and satiety hormones mimicked by the modern weight-loss drugs.
+
+• S Cell - secretin, the first hormone ever discovered.
+
+• M Cell - motilin, the housekeeping-contraction clock of the fasting gut.
+
+• X/A-Like Cell - ghrelin, the hunger hormone of the empty stomach.
+
+79. Neuropod Cell (NON-COG).
+
+The enteroendocrine subpopulation that grows a basal process and forms a genuine synapse onto a vagal afferent fibre, reporting gut chemistry to the brainstem in milliseconds - the transducer cell of Layer-Skipping Channel 4, the vagal and interoceptive channel.
+
+80. Pulmonary Neuroendocrine Cell (NON-COG).
+
+The airway's solitary and clustered sensory-secretory cells, oxygen-sensing sentinels wired to vagal afferents.
+
+81. Merkel Cell (NON-COG) - CROSS-REFERENCE, neuron catalogue Chapter 282.
+
+The touch-transducing, peptide-containing cell of the fingertip epidermis - a DNES member drafted into mechanosensation.
+
+82. Glomus (Type I) Cell of the Carotid and Aortic Bodies (NON-COG) - CROSS-REFERENCE, neuron catalogue Chapter 281 context.
+
+The oxygen-tasting chemoreceptor cell of the great arteries, the trigger of the gasp reflex of hypoxia.
+
+83. Glomus Type II (Sustentacular) Cell (NON-COG).
+
+Its glial-like partner and local stem cell.
+
+84. Paraganglion Chief Cells, Sympathetic and Parasympathetic (NON-COG).
+
+The scattered chromaffin and non-chromaffin cell clusters along the sympathetic chains and great vessels - the organ of Zuckerkandl and its kin, adrenal-medulla outposts that are prominent in the fetus.
+
+85. Juxtaglomerular Cell of the Kidney (NON-COG).
+
+The renin-secreting modified smooth muscle cell of the kidney arteriole - included here because renin launches the angiotensin cascade that drives thirst through the circumventricular organs, one of the clearest blood-to-brain command lines in physiology.
+
+
+PART NINE. THE HYBRID AND CROSS-REFERENCE ROSTER
+
+For completeness, the cells that straddle the neuron and non-neuron worlds, catalogued in full in the neuron volumes.
+
+• Magnocellular Neurosecretory Cell - neuron catalogue Chapter 90 (NON-COG).
+
+• Parvocellular Neurosecretory Cell - neuron catalogue Chapter 93 (NON-COG).
+
+• Adrenal Chromaffin Cell - Chapter 261 (NON-COG).
+
+• Glomus Cell Afferent Complex - Chapter 281 (NON-COG).
+
+• Merkel Cell - Chapter 282 (NON-COG).
+
+• Pinealocyte - Chapter 283 (NON-COG).
+
+• The Paraneurons in General - Chapter 284 (NON-COG).
+
+
+PART TEN. THE COGNITIVE SCOREBOARD
+
+Of the eighty-five numbered cell types and families above, the (COG) roster is short and telling.
+
+• Protoplasmic Astrocyte - partner of the tripartite synapse.
+
+• Interlaminar Astrocyte - the human-enriched cross-layer signaller.
+
+• Varicose Projection Astrocyte - the human-specific deep-layer astrocyte.
+
+• Bergmann Glia - participant in cerebellar motor learning.
+
+• Myelinating Oligodendrocyte - agent of adaptive myelination.
+
+• Oligodendrocyte Precursor Cell (NG2 Glia) - the synapse-receiving glial cell.
+
+• Microglia - the synapse pruner and circuit sculptor.
+
+• Adult Hippocampal Radial Glia-Like Cell - the contested wellspring of new memory neurons.
+
+Eight cell types out of eighty-five.
+
+Everything else is substrate: the insulation, the plumbing, the barriers, the fuel lines, the scaffolds, the sentries, and the hormone factories.
+
+But the substrate is not optional.
+
+Remove any (NON-COG) entry on this list and cognition fails just as surely - only more slowly, and by starvation, poisoning, or flood rather than by computational error.
+
+The neurons think.
+
+These cells make thinking physically possible, and a small elite of them, we now know, think along.
+
+
+END OF OUTLINE
+
+Source basis: the five-volume neuronal catalogue (neuronal_manuscript_vol1of5_v2 through vol5of5_v2); THE_FIFTEEN_LAYERS_IN_BRIEF; TFELOAOTHNAES (the definitive framework description); and current literature including Reed and colleagues, Peripheral Glia Diversity, Journal of Anatomy 2022; the Journal of Neuroscience 2024 review Neuron-Glial Interactions: Implications for Plasticity, Behavior, and Cognition; the Journal of Neuroinflammation 2024 review Border-Associated Macrophages in the Central Nervous System; Endotext, Diffuse Hormonal Systems; and the StatPearls and Kenhub histology references on glial cells.

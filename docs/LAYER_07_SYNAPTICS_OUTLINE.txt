@@ -1,0 +1,352 @@
+LAYER 7, THE SYNAPTIC AND JUNCTIONAL LAYER: THE TYPES
+
+A Complete, Comprehensive, and Thorough List and Outline of the Synaptic and Junctional Types of the Human Nervous and Endocrine System
+
+Companion outline to the Layer 6 catalogues (302 neuron types; 85 non-neuronal cell types), the Layer 8 catalogue (71 microcircuit types), and the Layer 9 manuscript, in the Certified_Neuroscientist corpus of D. R. Dison, Founder, Artificial Intelligence University (AIU).
+
+Date of compilation: August 9, 2026.
+
+
+HOW TO READ THIS OUTLINE
+
+Layer 7 is the framework's one relation-layer: its unit is not a cell and not a circuit but the junction between cells - the synapse, built from parts owned by two different cells, whose defining state variable, the weight, belongs to the relationship and to neither partner.
+
+This outline catalogues the junction types themselves: sixty-four of them, in eight parts.
+
+A note on what counts as a type here: a synaptic type is a recurring junctional design - a characteristic combination of messenger, machinery, geometry, and partners - just as a Layer 8 motif is a recurring wiring diagram.
+
+One physical synapse in the tissue is typically several of the entries below at once: a single cortical excitatory contact is a glutamatergic synapse (Part One) on a dendritic spine (Part Two) wrapped by an astrocyte into a tripartite ensemble (Part Seven).
+
+The parts of this outline are therefore AXES OF CLASSIFICATION as much as bins, and each entry is the pure type along its axis.
+
+Every entry carries one of two tags.
+
+• (COG) means the junction type participates in COGNITION: its transmission or its plasticity contributes to perception as interpreted, attention, memory, decision, or learning.
+
+• (NON-COG) means the junction type serves a substrate or other role: motor execution, autonomic and endocrine regulation, early sensory relay, developmental scaffolding, or housekeeping.
+
+As throughout the corpus, the tag records the principal role, with the text noting where the role changes with the address.
+
+
+PART ONE. THE CHEMICAL SYNAPSE, BY MESSENGER SYSTEM
+
+The classical synapse in its chemical varieties: vesicle, cleft, receptor - sorted by what is in the vesicle.
+
+1. The Glutamatergic Fast Excitatory Synapse (AMPA and NMDA) (COG).
+
+The brain's standard excitatory contact - alpha-amino-3-hydroxy-5-methyl-4-isoxazolepropionic acid (AMPA) receptors for speed, N-methyl-D-aspartate (NMDA) receptors as the coincidence-detecting, calcium-admitting teachers - the majority synapse of the central nervous system and the principal site of long-term potentiation.
+
+2. The Kainate-Receptor Synapse (COG).
+
+The third ionotropic glutamate system, slower and more modulatory, prominent at hippocampal mossy fibre contacts, tuning excitability on both sides of the cleft.
+
+3. The Metabotropic Glutamate Synapse (COG).
+
+Glutamate read not as a current but as a message to G-protein cascades - perisynaptic receptors that set gain, gate plasticity, and drive the endocannabinoid reply of entry 15.
+
+4. The GABA-A Fast Inhibitory Synapse (COG).
+
+The standard brake: gamma-aminobutyric acid (GABA) opening chloride channels within a millisecond - the synapse of every interneuron motif in the Layer 8 catalogue, and the target of benzodiazepines and most anaesthetics.
+
+5. The GABA-B Slow Metabotropic Synapse (COG).
+
+The same messenger read slowly through G-protein-coupled receptors onto potassium channels and calcium channels - inhibition as a state change, hundreds of milliseconds long, and the receptor of the neurogliaform blanket.
+
+6. The Glycinergic Synapse (NON-COG).
+
+The spinal cord and brainstem's own fast brake - the synapse of the Renshaw cell and the Ia reciprocal circuit, and the synapse poisoned by strychnine and tetanus toxin.
+
+7. The Nicotinic Cholinergic Synapse (NON-COG).
+
+Acetylcholine opening a fast cation channel: the synapse of every autonomic ganglion and of the neuromuscular junction - the periphery's standard fast relay, with a smaller central deployment modulating attention circuits.
+
+8. The Muscarinic Cholinergic Junction (COG).
+
+Acetylcholine read slowly through G-protein-coupled receptors - the cortex's and hippocampus's mode-setting input from the basal forebrain, the switch that turns attention and encoding states on, and the parasympathetic effector signal in the periphery.
+
+9. The Dopaminergic Synapse and Varicosity (COG).
+
+Dopamine released from en passant varicosities, acting on D1- and D2-class receptors over micrometres and hundreds of milliseconds - the teaching signal of the basal ganglia selection motif and the reward system's broadcast wire.
+
+10. The Noradrenergic Varicosity (COG).
+
+Noradrenaline sprayed cortex-wide from locus coeruleus varicosities - the gain and arousal dial of the framework's volume transmission channel, more broadcast than synapse yet anchored at recognisable junctional sites.
+
+11. The Serotonergic Synapse and Varicosity (COG).
+
+Serotonin acting through more than a dozen receptor classes - the most receptor-diverse messenger system in the brain, setting mood-coloured operating points across the forebrain.
+
+12. The Histaminergic Varicosity (NON-COG).
+
+The wake-promoting broadcast from the tuberomammillary nucleus - the arousal substrate whose blockade is why antihistamines sedate.
+
+13. The Peptidergic (Dense-Core Vesicle) Synapse (NON-COG).
+
+Neuropeptides - substance P, enkephalin, oxytocin, neuropeptide Y, and dozens more - released from dense-core vesicles, requiring burst firing, diffusing far, acting long: the slow annotation channel that rides alongside every fast transmitter.
+
+14. The Purinergic Synapse (NON-COG).
+
+Adenosine triphosphate (ATP) as a transmitter in its own right, with its breakdown product adenosine as the brake - the synapse family of autonomic effectors, of glial signalling, and of sleep pressure.
+
+15. The Endocannabinoid Retrograde Signal (COG).
+
+The backwards synapse: the postsynaptic cell manufactures lipid messengers on demand that travel back across the cleft to presynaptic cannabinoid receptors, turning the input down - the volume control by which a neuron edits its own inputs.
+
+16. The Nitric Oxide Retrograde Gaseous Signal (COG).
+
+A gas as messenger: made postsynaptically at active NMDA receptor synapses, diffusing backwards and sideways through membranes, recruiting neighbours into plasticity - the framework's most local broadcast.
+
+
+PART TWO. THE SYNAPSE BY GEOMETRY AND TARGET
+
+Where on the receiving cell the contact lands, and what shape it takes - because placement is computation.
+
+17. The Axospinous Synapse (The Spine Synapse) (COG).
+
+The excitatory contact onto a dendritic spine - the mushroom, thin, and stubby spine heads that compartmentalise calcium and make each synapse a private computational unit; the majority synapse of the cortex and the physical majority of human memory.
+
+18. The Perforated Synapse (COG).
+
+The large, discontinuous-density variant of the spine synapse - the enlarged, often recently potentiated contact, a morphological signature of stored change.
+
+19. The Axodendritic Shaft Synapse (COG).
+
+The contact onto the dendritic shaft itself - the standard placement of somatostatin-family dendritic inhibition and of excitation onto aspiny interneurons.
+
+20. The Axosomatic Synapse (COG).
+
+The contact onto the cell body - the basket cell's placement of choice, where inhibition arrives with maximum authority over spike output.
+
+21. The Axo-Axonic Initial Segment Synapse (The Chandelier Cartridge) (COG).
+
+The contact onto the axon initial segment itself - the chandelier cell's candlestick rows at the one point where the spike is born; the last-word veto.
+
+22. The Presynaptic Terminal-on-Terminal Synapse (NON-COG).
+
+An axon terminal synapsing onto another axon terminal, taxing its release before it happens - the hardware of presynaptic inhibition, deployed massively on sensory afferents in the spinal cord.
+
+23. The Dendrodendritic Reciprocal Synapse (NON-COG).
+
+Dendrite to dendrite, with the return contact micrometres away in the same junction - the olfactory bulb's mitral-granule design, transmission with no axon involved at either end.
+
+24. The En Passant Varicosity (NON-COG).
+
+Not a terminal but a bead on a passing wire: release sites strung along the axon like streetlights - the design of the autonomic ground plexus and of every monoamine broadcast axon.
+
+25. The Serial and Triadic Synapse (COG).
+
+Synapses arranged in chains within one glomerular capsule - terminal onto dendrite onto dendrite, as in the thalamic triad - the geometry that lets one junction gate another within a micrometre.
+
+
+PART THREE. THE GIANT AND NAMED SYNAPSES
+
+The celebrity junctions: designs so specialised and so large that anatomy gave them personal names.
+
+26. The Neuromuscular Junction (The Motor Endplate) (NON-COG).
+
+The synapse between motor axon and muscle fibre: hundreds of release sites, a folded receptor-packed postsynaptic gutter, and a safety factor above two - the detonator synapse that must never fail, and the target of myasthenia gravis, curare, and botulinum toxin.
+
+27. The Calyx of Held (NON-COG).
+
+The auditory brainstem's hand-shaped giant terminal grasping its target cell whole - the fastest, most reliable synapse in the mammalian brain, built for sound-localisation timing at hundreds of hertz.
+
+28. The Endbulb of Held (NON-COG).
+
+The auditory nerve's giant terminal onto bushy cells of the cochlear nucleus - the first central synapse of hearing, preserving microsecond spike timing from the ear inward.
+
+29. The Hippocampal Mossy Fibre Bouton (COG).
+
+The dentate granule cell's giant multi-release-site terminal gripping CA3 thorny excrescences - a conditional detonator whose explosive facilitation lets a sparse code speak with authority; the teacher synapse of the autoassociative memory motif.
+
+30. The Climbing Fibre-Purkinje Synapse (COG).
+
+One inferior olive axon wrapping one Purkinje cell in hundreds of release sites - the all-or-none teaching synapse of the cerebellum, firing the complex spike that instructs motor learning.
+
+31. The Parallel Fibre-Purkinje Synapse (COG).
+
+The student synapse to entry 30's teacher: one of about 150,000 weak contacts per Purkinje cell, individually negligible, collectively the adjustable weight matrix of the cerebellar perceptron.
+
+32. The Photoreceptor Ribbon Synapse (NON-COG).
+
+The retina's conveyor-belt synapse: a proteinaceous ribbon tethering thousands of vesicles for continuous graded release, transmitting darkness as a steady stream and light as its modulation.
+
+33. The Hair Cell Ribbon Synapse (NON-COG).
+
+The cochlea's and vestibule's ribbon design, running on otoferlin rather than the standard calcium sensors - graded, indefatigable release precise to microseconds; its congenital failure is a leading form of inherited deafness.
+
+34. The Vestibular Calyx Synapse (NON-COG).
+
+The balance system's chalice: an afferent ending that swallows the type I hair cell whole, mixing conventional quantal transmission with direct ephaptic and potassium-mediated coupling inside the enclosed cleft.
+
+35. The Cerebellar Glomerulus (The Mossy Fibre Rosette) (NON-COG).
+
+A giant mossy fibre terminal enclosed with dozens of granule cell dendrites and Golgi cell contacts in one glial-wrapped capsule - a multi-party junction serving the expansion recoder motif.
+
+36. The Thalamic Triad Glomerulus (COG).
+
+The encapsulated three-party junction of the thalamic relay - retinal terminal, interneuron dendrite, relay dendrite - where the attention gate of the Layer 8 catalogue is physically built.
+
+37. The C-Bouton (NON-COG).
+
+The large cholinergic terminal stamped onto motoneuron cell bodies, dialling motor output gain up for effortful movement - the body's built-in turbo switch.
+
+
+PART FOUR. THE ELECTRICAL AND MIXED JUNCTIONS
+
+Transmission without a messenger: cells joined by pore or by field.
+
+38. The Neuronal Gap Junction (The Electrical Synapse) (COG).
+
+Two half-channels of connexin 36 docked across a two-to-four-nanometre cleft, joining interneuron networks into synchronous timing grids - bidirectional, delay-free, and quietly plastic; the substrate of interneuron-only gamma.
+
+39. The Mixed Chemical-Electrical Synapse (NON-COG).
+
+Gap junction and chemical machinery side by side in one contact - common in fish and frog escape circuits, rare and still contested in the adult human brain; catalogued honestly as a minor human type.
+
+40. The Glial Gap Junction Plaque (NON-COG).
+
+The astrocyte-astrocyte and oligodendrocyte-astrocyte junctions of connexin 43 and connexin 30 - thousands of channels per plaque, welding the glial syncytium of the Layer 8 catalogue into one tissue-scale buffer network.
+
+41. The Pannexin Hemichannel (NON-COG).
+
+The unpaired half-channel: a pore from cytoplasm to extracellular space releasing ATP and signalling molecules without any partner cell - a junction with the world rather than with a neighbour.
+
+42. The Ephaptic Coupling Site (NON-COG).
+
+The junction that is not a junction: cells close enough that one cell's electrical field directly sways its neighbour's membrane - deployed deliberately at the basket cell pinceau onto the Purkinje axon and among olfactory nerve bundles.
+
+
+PART FIVE. THE PLASTICITY-DEFINED AND LIFE-CYCLE TYPES
+
+Synapses classified by where they stand in the life of a connection.
+
+43. The Silent (NMDA-Only) Synapse (COG).
+
+A structurally complete glutamatergic synapse with NMDA receptors but no AMPA receptors - inaudible at resting voltage, awakened by the insertion of AMPA receptors during potentiation; the brain's stock of pre-built, unwritten connections, abundant in development and in adult-born neurons.
+
+44. The Nascent Filopodial Contact (NON-COG).
+
+The trial synapse: a dendritic filopodium touching a passing axon, forming a provisional contact that will either mature into a spine synapse or withdraw - the physical form of wiring under evaluation.
+
+45. The Tagged, Retracting Synapse (NON-COG).
+
+The synapse marked for removal - complement proteins flagging weak contacts for microglial pruning - the disassembly-in-progress type, and the down escalator of the pruning loop motif.
+
+
+PART SIX. THE NEUROEFFECTOR AND NEUROSECRETORY JUNCTIONS
+
+Where the nervous system's wiring hands its message to muscle, gland, epithelium, or the bloodstream itself.
+
+46. The Autonomic Neuroeffector Junction (NON-COG).
+
+The loose junction of the visceral motor system: transmitter released from passing varicosities into wide clefts onto gap-junction-coupled smooth muscle sheets - no endplate, no fixed postsynaptic density, transmission by neighbourhood rather than by address.
+
+47. The Splanchnic-Chromaffin Synapse (NON-COG).
+
+The cholinergic synapse from sympathetic preganglionic axon onto the adrenal chromaffin cell - the one synapse whose postsynaptic reply is a hormone surge into the blood; the wire-to-hormone adapter of the framework's one-architecture claim.
+
+48. The Neurohaemal Junction (NON-COG).
+
+The terminal that synapses onto the bloodstream: neurosecretory endings abutting fenestrated capillaries at the median eminence and posterior pituitary, releasing hormone into the portal or systemic circulation - the interface where Layer 7 hands its cargo directly to Layer 11, and the anatomical port of the framework's circumventricular channel.
+
+49. The Neuropod-Vagal Epithelial Synapse (NON-COG).
+
+The gut sensor cell's genuine glutamatergic synapse onto a vagal afferent - the millisecond food-to-brainstem line, the transducer junction of the framework's vagal layer-skipping channel.
+
+50. The Efferent Synapse onto the Hair Cell (NON-COG).
+
+The brain's synapse onto its own sensor: olivocochlear terminals inhibiting outer hair cells through a rare nicotinic-receptor-to-potassium-channel coupling - the volume knob installed inside the microphone.
+
+51. The Merkel Cell-Neurite Complex (NON-COG).
+
+The skin's touch cell joined to its afferent by a genuine serotonergic synapse - the epithelial synapse that gives fine touch its sustained fidelity.
+
+52. The Neuro-Immune Junction (NON-COG).
+
+The emerging class of directed contacts between nerve terminals and immune cells - sympathetic terminals on lymphoid tissue, sensory fibres conversing with mast cells - junctions in the strict sense whose transmission is measured in inflammation rather than millivolts.
+
+
+PART SEVEN. THE GLIAL AND NON-NEURONAL SYNAPSES
+
+Junctions in which at least one partner is not a neuron - the Layer 7 face of the other-cells catalogue.
+
+53. The Tripartite Synapse Ensheathment (COG).
+
+The astrocyte process wrapped around the cleft as a genuine third party - clearing transmitter, sensing traffic through its own receptors, and answering with gliotransmitters that gate plasticity; the junctional form of the tripartite island motif.
+
+54. The Neuron-OPC Synapse (COG).
+
+The only known synapse onto a non-neuronal cell built with full synaptic machinery: axon terminals releasing glutamate and GABA onto oligodendrocyte precursor cells - the circuit's direct order line to its own insulation factory.
+
+55. The Axo-Myelinic Synapse (COG).
+
+The axon signalling to its own myelin sheath: glutamate released beneath the wrap, read by the oligodendrocyte, tuning metabolic support and myelin remodelling - the junction that makes adaptive myelination addressable.
+
+56. The Perisynaptic Schwann Cap (NON-COG).
+
+The terminal Schwann cell's cap over the neuromuscular junction - the peripheral tripartite arrangement, listening to transmission and directing repair.
+
+57. The Microglia-Synapse Contact (COG).
+
+The transient, minutes-long touch of a microglial process onto a synapse - the inspection contact of the pruning loop, through which the immune system reads and edits the connectome.
+
+
+PART EIGHT. THE ENDOCRINE JUNCTIONAL EQUIVALENTS
+
+The framework holds that the endocrine system is the same architecture on a slower wire; Layer 7 is where its junctions live.
+
+58. The Beta Cell Gap Junction Network (NON-COG).
+
+Connexin 36 - the neuronal connexin - joining the islet's beta cells into one electrical sheet, the junctional fabric of the islet syncytium motif; its loss fragments insulin pulses in diabetes.
+
+59. The Pituitary Gap Junction Web (NON-COG).
+
+The connexin 43 junctions joining folliculostellate cells to each other and to endocrine cells - the gland-spanning calcium relay fabric of the anterior pituitary.
+
+60. The Granulosa-Oocyte Gap Junction (NON-COG).
+
+Connexin 37 channels joining the egg to its nurse cells - the junction through which the follicle feeds, silences, and finally releases the oocyte; the most consequential gap junction in reproduction.
+
+61. The Paracrine Junction (NON-COG).
+
+The local diffusion contact: a secreting cell and its neighbour within micrometres, message carried by interstitial fluid - the islet's alpha-beta-delta conversation and the tissue-level default of endocrine signalling.
+
+62. The Autocrine Loop (NON-COG).
+
+The cell's junction with itself: secreted messenger returning to receptors on the secreting cell - the self-monitoring wire of endocrine and immune cells alike.
+
+63. The Juxtacrine Contact Junction (NON-COG).
+
+Signalling by touching: membrane-bound ligand meeting membrane-bound receptor - the ephrin and Notch conversations that wire development and hold tissues in register.
+
+64. The Hormone-Receptor Virtual Synapse (NON-COG).
+
+The endocrine synapse at a distance: gland and target cell joined not by a cleft but by the circulation, the "presynaptic" terminal being a secretory cell and the "cleft" being the bloodstream - kilometres of vasculature collapsed into one logical junction; the entry that makes the endocrine half of Layer 7 explicit rather than honorary.
+
+
+THE COGNITIVE SCOREBOARD
+
+Of the sixty-four junction types above, twenty-seven carry the (COG) tag.
+
+• The chemical messenger systems split by speed and address: the fast addressed transmitters and their plasticity partners (entries 1 through 5, 8 through 11, 15, 16) are cognition's fabric; the peripheral relays and slow broadcasts (6, 7, 12, 13, 14) are substrate.
+
+• Geometry is overwhelmingly (COG), because placement is computation: spine, perforated, shaft, somatic, initial-segment, and triadic placements (17 through 21, 25) are the inhibitory division of labour made physical.
+
+• The giants split by assignment: the memory-system and cerebellar-learning giants (29, 30, 31) and the thalamic triad (36) think; the auditory, retinal, vestibular, and motor giants relay and execute.
+
+• The electrical junctions contribute one thinker - the interneuron gap junction (38), clock fabric of gamma.
+
+• The plasticity types contribute the silent synapse (43), memory's blank tape.
+
+• The glial synapses seat four members at the table (53, 54, 55, 57) - the strongest confirmation yet of the Layer 6 volume's finding that a small elite of non-neuronal cells thinks along.
+
+• The neuroeffector and endocrine junctions (Parts Six and Eight) are (NON-COG) without exception: the places where the nervous system stops computing and starts doing.
+
+The layer's closing lesson mirrors its definition: the weight belongs to the relationship.
+
+Every (COG) entry above is a junction whose strength is adjustable and whose adjustment IS learning; every (NON-COG) entry is a junction built for fidelity instead - and the difference between a synapse that learns and a synapse that must never change is the difference between a mind and a machine that keeps it alive.
+
+
+END OF OUTLINE
+
+Source basis: THE_FIFTEEN_LAYERS_IN_BRIEF and TFELOAOTHNAES (the framework, including the relation-layer account of Layer 7); the Layer 6 and Layer 8 catalogues of this corpus; LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT; and current literature verified by web search during compilation, including the Gray type I and type II classification literature; the ribbon synapse reviews (Physiological Reviews, 2019); the calyx of Held and hippocampal mossy fibre literatures; the silent synapse literature; the axo-myelinic synapse proposal (Nature Reviews Neuroscience, 2017); the neuronal gap junction and connexin 36 literature; the autonomic neuroeffector junction model of Burnstock; and the islet, pituitary, and granulosa-oocyte connexin literatures.

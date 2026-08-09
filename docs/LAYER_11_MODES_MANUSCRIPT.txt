@@ -1,0 +1,940 @@
+LAYER 11, THE WHOLE NERVOUS AND ENDOCRINE SYSTEM LAYER: MODES AND MODE TRANSITIONS
+
+The Per-State Mode Catalogues of Every Global State of the Human Nervous and Endocrine System
+
+A Companion Volume to LAYER_11_GLOBAL_STATES_MANUSCRIPT
+
+Keyed, chapter by chapter, to the twenty-six-chapter global states catalogue, in the Certified_Neuroscientist corpus of D. R. Dison, Founder, Artificial Intelligence University (AIU).
+
+Date of compilation: August 9, 2026.
+
+
+INTRODUCTION: THE MODES OF THE MODES
+
+A Layer 11 chapter is already a state - an entry in the architecture's master mode register.
+
+Its MODES are therefore its SUB-REGIMES: the qualitatively distinct configurations within the state - rapid-eye-movement (REM) sleep's phasic bursts and tonic stillness, the deep and lighter grades of slow-wave sleep, the exploitation and exploration postures of alert waking, the alarm and resistance stages of stress, the follicular and luteal halves of the ovarian programme, the induction, maintenance, and emergence phases of anaesthesia.
+
+The corpus vocabulary and formalism are unchanged - state continuous, mode discrete, hybrid automaton, admission rule, fault watchdogs - and each entry is paste-ready for its source chapter, keyed by chapter number.
+
+The register hierarchy this volume completes: cells hold modes; junctions hold modes; motifs hold modes; regions hold modes; states assign all of them - and states themselves have sub-modes, which is where the recursion grounds, because the sub-modes of a global state are configurations of the whole organism, and there is nothing larger inside the skin to assign them.
+
+The twenty-six entries follow in chapter order.
+
+
+ENTRY 1. ALERT TASK-ENGAGED WAKING (The Desynchronised Online Configuration) (keyed to global states catalogue Chapter 1)
+
+MODES AND MODE TRANSITIONS:
+
+This state is a mode-poor workhorse whose one job is done in a small number of tunings of a single online configuration, so its register is short and its transitions are mostly demand-driven tilts of gain rather than deep reconfigurations.
+
+• THE MODE REGISTER.
+
+◦ Exploitative Engagement - The Locked-On Posture - narrow attention held on the task in hand, driven by the intermediate tonic band of the locus coeruleus (the pontine noradrenaline, that is norepinephrine, nucleus) where task-locked phasic bursts are largest.
+
+◦ Exploratory Sampling - The Wandering Scan - broadened attention that samples alternatives, driven by higher tonic locus coeruleus firing that flattens the phasic response, the disengagement mode of the adaptive-gain account of Aston-Jones and Cohen (2005).
+
+◦ Eyes-Open Task Set - The Open Channel - the ordinary configuration with posterior alpha suppressed and saccades (rapid gaze jumps) running at roughly two to four per second during visual work.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Exploitative Engagement the whole system runs at high signal-to-noise on one channel, locus coeruleus tonic rate near one to two spikes per second, electroencephalogram (the scalp recording of brain rhythms, abbreviated EEG) desynchronised beta at thirteen to thirty cycles per second, reaction times of roughly two hundred to four hundred milliseconds; high confidence.
+
+◦ In Exploratory Sampling tonic firing climbs above roughly three spikes per second, performance on the current task falls, and the system trades depth for breadth, the everyday cost being distractibility; moderate confidence on exact rate bands.
+
+• PER-MODE TRANSFER FUNCTIONS (continued).
+
+◦ Sustained attention within one unbroken task degrades measurably within twenty to thirty minutes regardless of mode, a limit every vigilance study confirms.
+
+• THE TRANSITION TABLE.
+
+◦ Falling task utility - Exploitative Engagement to Exploratory Sampling - seconds; internal to the state, set by the locus coeruleus gain machinery of the Layer 9 catalogue.
+
+◦ A newly rewarding target - Exploratory Sampling back to Exploitative Engagement - seconds; internal.
+
+◦ Deepening challenge-skill match - Exploitative Engagement into focused absorption (Chapter 3) - ten to twenty minutes; a sideways exit thrown from above.
+
+◦ Rising sleep pressure or an unfavourable circadian phase - any mode down toward relaxed wakefulness (Chapter 2) - minutes; thrown by the two-process governor of Chapters 14 and 15.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: tonic firing climbing past optimum, so attention will neither lock nor usefully wander, the operating point of everyday over-arousal.
+
+◦ Warning condition: microsleep intrusion, which belongs to drowsy waking (Chapter 4) and signals the state can no longer be held; the watchdog is the vigilance monitor that hands control to phasic arousal within a heartbeat.
+
+◦ Pathological collapse of the state into sleep (narcolepsy type 1) is a fault of the orexin stabiliser (Chapter 13), not a mode of this state.
+
+
+ENTRY 2. RELAXED WAKEFULNESS (The Posterior Alpha Configuration) (keyed to global states catalogue Chapter 2)
+
+MODES AND MODE TRANSITIONS:
+
+This is a two-posture idle whose sub-regimes are set by the eyes and by how close beneath it the drowsy platform waits, and its defining trick is that the idle is secretly generative.
+
+• THE MODE REGISTER.
+
+◦ Eyes-Closed Alpha Idle - The Humming Rest - the classic posterior alpha configuration, strongest with the eyes shut and the mind free to wander.
+
+◦ Eyes-Open Quiet Wakefulness - The Unoccupied Gaze - awake and unoccupied with the eyes open, alpha partly blocked but no task engaged.
+
+◦ Generative Wandering - The Inward Simulator - the default mode network (the midline and lateral parietal system active during rest and self-reflection) brought forward to run mind-wandering, prospection (imagining futures), and incubation.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In the Eyes-Closed Alpha Idle the electroencephalogram (the scalp recording of brain rhythms, abbreviated EEG) shows the alpha rhythm at eight to thirteen cycles per second, typically near ten, at twenty to sixty microvolts over the back of the head, abolished within a second by eye opening or mental arithmetic; high confidence.
+
+◦ In Generative Wandering the default mode network is elevated above task levels and self-reported wandering fills somewhere near thirty to fifty percent of waking thought by experience-sampling studies; moderate confidence on the fraction.
+
+◦ Across modes the locus coeruleus (the pontine noradrenaline nucleus) eases to roughly half to one spike per second while staying well above sleep levels, a lowered flag rather than a new one.
+
+• THE TRANSITION TABLE.
+
+◦ Eye closure - Eyes-Open Quiet Wakefulness to Eyes-Closed Alpha Idle - about one second, the time for alpha to return; internal.
+
+◦ Eye opening or a task - either idle mode up to alert task engagement (Chapter 1) - under half a second, signed by alpha blocking; a fast exit.
+
+◦ Withdrawal of demand plus high sleep pressure - Eyes-Closed Alpha Idle down into drowsy waking (Chapter 4) - minutes, as alpha slows and fragments; thrown by the two-process governor.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: alpha slowing below eight cycles per second, a graded marker of failing cortical function rather than a healthy mode.
+
+◦ Warning condition: the generative idle captured by a negative attractor, the ruminative loop of depression, which is a disorder of the state's content and not a normal sub-regime; there is no fast internal watchdog, only the arousal machinery that can be called to exit.
+
+
+ENTRY 3. FOCUSED ABSORPTION (The Optimal-Gain Configuration) (keyed to global states catalogue Chapter 3)
+
+MODES AND MODE TRANSITIONS:
+
+This state is admitted with a moderate-confidence note and is best read as a single clamped operating point rather than a set of sub-modes, so its register is deliberately of one, and it is mode-poor and proudly so.
+
+• THE MODE REGISTER.
+
+◦ Optimal-Gain Lock - The Clamped Summit - the locus coeruleus (the pontine noradrenaline, that is norepinephrine, nucleus) held in its intermediate tonic band with the self-monitoring circuits transiently quietened, alert waking pinned to the peak of its own performance curve.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ While the lock holds, the whole system runs peak skilled performance with locus coeruleus tonic rate near one to two spikes per second and large phasic bursts, the adaptive-gain regime of Aston-Jones and Cohen (2005) in which the system exploits the task rather than exploring away from it.
+
+◦ The electroencephalogram (the scalp recording of brain rhythms, abbreviated EEG) shows a task-engaged fast background with, in several studies, elevated frontal midline theta at four to eight cycles per second; the functional-imaging evidence for transient hypofrontality (reduced activity in self-monitoring prefrontal cortex) is convergent but moderate in confidence.
+
+◦ Pupil diameter sits mid-range and stable, the correlate of intermediate tonic firing, and subjective time distortion and loss of self-consciousness are the behavioural hallmarks.
+
+• THE TRANSITION TABLE.
+
+◦ Ten to twenty minutes of uninterrupted work as monitoring falls away - alert task engagement (Chapter 1) into Optimal-Gain Lock - minutes; a sideways entry that must be earned and cannot be commanded.
+
+◦ The match breaking too hard - Optimal-Gain Lock up into over-arousal and distractible waking - seconds; internal collapse off the right flank of the inverted U.
+
+◦ The match breaking too easy - Optimal-Gain Lock down toward the idle of relaxed wakefulness (Chapter 2) - seconds to minutes; internal.
+
+◦ Interruption - Optimal-Gain Lock back to ordinary self-monitoring waking - seconds, often with mild disorientation about elapsed time; internal.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: tonic firing climbing past optimum so performance slides down the right flank of the inverted U, the everyday form of choking under pressure.
+
+◦ Warning condition: engineered capture, gambling and gaming devices holding a user in pseudo-flow, a misuse of the machinery rather than a mode of it; no disease is a disorder of flow itself, and there is no dedicated internal watchdog because the lock is held only by the task feedback.
+
+
+ENTRY 4. DROWSY WAKING (The Vigilance-Failing Intermediate) (keyed to global states catalogue Chapter 4)
+
+MODES AND MODE TRANSITIONS:
+
+This is a single unstable platform rather than a family of postures, and its one meaningful internal distinction is between the smooth descending drift and the abrupt seconds-long microsleep that punctuates it.
+
+• THE MODE REGISTER.
+
+◦ Descending Drift - The Slow Sag - continuous drowsiness with slow rolling eye movements and drooping lids, waking held on decaying momentum.
+
+◦ Microsleep Intrusion - The Blink Of Absence - abrupt seconds-long theta and delta episodes with the eyes open or closing, sleep briefly stealing the open-eyed record.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Descending Drift the posterior alpha rhythm slows by roughly one cycle per second, fragments, and shifts forward on the head while theta at four to seven cycles per second intrudes, measured on the electroencephalogram (the scalp recording of brain rhythms, abbreviated EEG); lids droop past roughly eighty percent closure by PERCLOS (the percentage of eyelid closure over the pupil across a time window) at severe risk; high confidence.
+
+◦ In Microsleep Intrusion the cortex slips briefly offline for zero point five to fifteen seconds while the subject still believes itself awake, and psychomotor lapses slower than five hundred milliseconds multiply severalfold; high confidence.
+
+◦ Across both, locus coeruleus (the pontine noradrenaline nucleus) tonic firing falls below roughly half a spike per second and rising extracellular adenosine (the wake-cost metabolite) presses the arousal broadcasts down.
+
+• THE TRANSITION TABLE.
+
+◦ Falling arousal broadcasts - relaxed wakefulness (Chapter 2) into Descending Drift - minutes; thrown by the two-process governor of Chapters 14 and 15.
+
+◦ Deepening drift - Descending Drift to Microsleep Intrusion - seconds; internal.
+
+◦ Stimulation or demand - either mode up to alert waking (Chapter 1) - seconds but unstable while sleep pressure stands; a rescue that does not last.
+
+◦ Committed onset - Descending Drift down into stage N1 (Chapter 5) - often unnoticed; thrown by the sleep-wake flip-flop of Chapter 11 crossing into sleep.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: the state misreporting itself as its neighbour, the subject insisting it is awake while microsleeps intrude, the operationally lethal property.
+
+◦ Warning condition: PERCLOS above eighty percent and lapses over five hundred milliseconds; the only watchdog biology ships is external warning output (slow lids, rolling eyes, nodding posture) because a hair-trigger transition would be worse.
+
+◦ The platform appearing irresistibly and out of schedule in narcolepsy or severe sleep apnoea is a fault of the state machinery, not a normal mode.
+
+
+ENTRY 5. STAGE N1 (SLEEP ONSET, THE HYPNAGOGIC THRESHOLD) (keyed to global states catalogue Chapter 5)
+
+MODES AND MODE TRANSITIONS:
+
+This is a transit corridor, not a dwelling, so it is genuinely mode-poor: one weakly held settling configuration whose only real event is the jerk that can throw the system back to waking.
+
+• THE MODE REGISTER.
+
+◦ Settling Descent - The Vestibule - the single lightest configuration of non-rapid-eye-movement sleep, wakefulness relinquished but deep sleep not yet held.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ The electroencephalogram (the scalp recording of brain rhythms, abbreviated EEG) replaces relaxed-waking alpha at eight to twelve cycles per second, that is hertz, with lower-voltage mixed activity dominated by theta at four to seven hertz; the eyes show slow rolling pendular movements; high confidence.
+
+◦ Vertex sharp waves (brief high-amplitude deflections over the top of the head) appear late in the stage, often coupled to a hypnic jerk (a sudden involuntary whole-body contraction at sleep onset).
+
+◦ The stage occupies only about two to five percent of a healthy adult night, with single bouts of roughly one to seven minutes; moderate confidence.
+
+◦ Noradrenaline (that is norepinephrine, the alerting signal from the locus coeruleus), serotonin, and histamine are all in mid-fall rather than at a new set-point, which keeps the state reversible.
+
+• THE TRANSITION TABLE.
+
+◦ Alpha dropout with slow rolling eyes - drowsy waking (Chapter 4) into Settling Descent - seconds to a couple of minutes; thrown as the sleep-wake flip-flop of Chapter 11 first tips.
+
+◦ First sleep spindle or K-complex - Settling Descent down into stage N2 (Chapter 6) - the marked crossing; internal to the descent, deliberately quick because a stable switch should not linger at its unstable midpoint.
+
+◦ A hypnic jerk or an external stimulus - Settling Descent back up to waking - under a second; an easy reversal.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: an abnormally high proportion of N1, a general marker of disrupted, non-restorative sleep across many disorders.
+
+◦ Warning condition: sleep-onset rapid-eye-movement periods and prominent hypnagogic (dreamlike sleep-onset) hallucinations with cataplexy, which point toward narcolepsy and belong to the fault regimes of the state machinery; there is no fast internal watchdog, only the flip-flop's readiness to return to waking.
+
+
+ENTRY 6. STAGE N2 (SPINDLED LIGHT SLEEP) (keyed to global states catalogue Chapter 6)
+
+MODES AND MODE TRANSITIONS:
+
+This is the plurality state of the night by time, and it genuinely runs two passages: the spindle-rich stretches that do the memory work and the quieter, K-complex-punctuated background between them.
+
+• THE MODE REGISTER.
+
+◦ Spindle-Rich Passage - The Packing Line - the working sub-regime in which sleep spindles recur many times a minute and gate memory transfer.
+
+◦ Quiescent Background - The Steady Idle - the low-event stretches carrying the stable, sensory-gated configuration between spindle trains.
+
+◦ K-Complex Response - The Sentinel Ring - the single giant deflection, spontaneous or stimulus-evoked, that either aborts an arousal or ushers in a spindle.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In the Spindle-Rich Passage the electroencephalogram (the scalp recording of brain rhythms, abbreviated EEG) shows spindles of eleven to sixteen hertz, most typically twelve to fifteen, lasting zero point five to three seconds, generated by the thalamic reticular nucleus (a thin shell of inhibitory neurons around the thalamus); spindle density runs roughly two to five per minute of non-rapid-eye-movement sleep; high confidence.
+
+◦ Fast spindles (about thirteen to sixteen hertz) are the ones most predictive of overnight memory consolidation, and spindle density is highest in the later cycles of the night, so late-night N2 is where much of this transfer concentrates; moderate to high confidence.
+
+◦ Across the stage acetylcholine is intermediate while noradrenaline (that is norepinephrine), serotonin, and histamine are low, the low-aminergic, moderate-cholinergic climate that permits stable spindling; N2 fills about forty-five to fifty-five percent of the night, the largest share.
+
+• THE TRANSITION TABLE.
+
+◦ First spindle or K-complex - stage N1 (Chapter 5) into N2 - the scored crossing; internal to sleep onset.
+
+◦ Spindle train onset - Quiescent Background to Spindle-Rich Passage - seconds; internal, recurring once or twice a minute.
+
+◦ Slow waves reaching twenty percent of the epoch - N2 down into stage N3 (Chapter 7) - concentrated in early cycles; thrown by rising sleep pressure.
+
+◦ Late-cycle lightening - N2 into rapid-eye-movement sleep (Chapter 8) - at cycle boundaries; thrown by the rapid-eye-movement switch of Chapter 12.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: reduced spindle density, reported in schizophrenia and in ageing and linked to impaired sleep-dependent memory.
+
+◦ Warning condition: fragmentation of N2 by sleep apnoea (repeated nocturnal airway collapse), which broadly degrades consolidation; the K-complex is the state's own sleep-protective watchdog against arousing stimuli.
+
+
+ENTRY 7. STAGE N3 (SLOW-WAVE SLEEP, THE DEEP WORKS) (keyed to global states catalogue Chapter 7)
+
+MODES AND MODE TRANSITIONS:
+
+The deepest sleep is not uniform across the night: its real sub-modes are graded by depth, the high-delta early-night deep works versus the lighter, thinner N3 of later cycles once sleep pressure has discharged.
+
+• THE MODE REGISTER.
+
+◦ Early-Night Deep Works - The High Tide - the high-delta-power configuration of the first one to two cycles, when the night's heaviest rebuilding runs.
+
+◦ Late-Night Residual N3 - The Ebbing Shallows - the thinner, lower-amplitude deep sleep of later cycles, diminished or vanishing as sleep pressure falls.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In both modes the electroencephalogram (the scalp recording of brain rhythms, abbreviated EEG) is dominated by delta below about four hertz and the slow oscillation of roughly zero point five to one hertz, an alternation of an active up-state and a silent down-state; scoring requires slow waves to fill at least twenty percent of the epoch; high confidence.
+
+◦ In the Early-Night Deep Works delta power is at its greatest because it is the marker of homeostatic sleep drive, enhanced after prolonged waking and discharged as sleep proceeds; this mode hosts the largest growth-hormone pulse of the day and runs glymphatic clearance (the fluid washing of metabolic waste) at full flow; high confidence.
+
+◦ In Late-Night Residual N3 delta power has decayed across successive non-rapid-eye-movement episodes, so the same offline machinery runs weaker and briefer; after sleep deprivation the system rebounds by producing more and deeper N3 first, showing this is priority repayment; high confidence.
+
+◦ Total N3 is about thirteen to twenty-three percent of the night in healthy young adults, concentrated early; acetylcholine falls to its lowest of the cycle, permissive for hippocampus-to-cortex transfer.
+
+• THE TRANSITION TABLE.
+
+◦ Slow waves reaching the twenty percent threshold - stage N2 (Chapter 6) into Early-Night Deep Works - within the first cycle; thrown by highest sleep pressure.
+
+◦ Delta-power discharge across the night - Early-Night Deep Works to Late-Night Residual N3 - cycle by cycle; internal, driven by the two-process governor of Chapter 14.
+
+◦ Lightening before the cycle's rapid-eye-movement period - either N3 mode up into N2 - tens of minutes; internal.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: an incomplete awakening out of deep sleep, the non-rapid-eye-movement parasomnias of sleepwalking, sleep terrors, and confusional arousals, which arise from this stage.
+
+◦ Warning condition: chronic loss of N3 with impaired glymphatic clearance and amyloid accumulation, implicated in Alzheimer-type neurodegeneration; there is no fast internal watchdog, and a forced awakening from high-delta N3 produces the most severe sleep inertia (Chapter 10).
+
+
+ENTRY 8. RAPID-EYE-MOVEMENT (REM) SLEEP (THE PARADOXICAL THEATRE) (keyed to global states catalogue Chapter 8)
+
+MODES AND MODE TRANSITIONS:
+
+Rapid-eye-movement sleep, abbreviated REM, is the clearest two-mode state in the catalogue: it alternates between phasic bursts and a quieter tonic background, and the two are markedly different neural regimes, not merely loud and soft versions of one thing.
+
+• THE MODE REGISTER.
+
+◦ Phasic REM - The Burst Theatre - bursts of rapid eye movements, muscle twitches, and internal waves, the state's active half.
+
+◦ Tonic REM - The Quiet House - the longer, more quiescent background between the bursts, more open to the outside world.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Phasic REM the eyes dart, twitches break the atonia (the near-total loss of muscle tone), and internal ponto-geniculo-occipital waves (named for the brainstem, thalamic, and cortical sites they cross) sweep through; neocortical gamma at thirty to sixty hertz and above is higher than in tonic REM, and arousal thresholds are highest, so the sleeper is hardest to wake; moderate to high confidence.
+
+◦ In Tonic REM alpha at eight to thirteen hertz and beta at fourteen to thirty hertz power and synchronisation are elevated, the auditory cortex still responds somewhat to sound, and the state is relatively more open to the environment; the electroencephalogram (the scalp recording of brain rhythms, abbreviated EEG) is low-voltage and mixed-frequency, resembling waking; moderate confidence.
+
+◦ Across both, acetylcholine runs high while noradrenaline (that is norepinephrine) and serotonin fall to their lowest of the twenty-four-hour cycle, and it is this noradrenaline-off climate that lets emotional memories be replayed and stripped of their arousal charge; REM fills about twenty to twenty-five percent of the night, back-loaded toward morning.
+
+• THE TRANSITION TABLE.
+
+◦ Aminergic tone falling far enough late in a cycle - stage N2 (Chapter 6) into REM - at cycle boundaries; thrown by the rapid-eye-movement switch of Chapter 12.
+
+◦ Internal burst onset - Tonic REM to Phasic REM - sub-second to seconds; internal to the state.
+
+◦ Burst subsidence - Phasic REM back to Tonic REM - seconds; internal.
+
+◦ Aminergic recovery or awakening - either mode out into light sleep or brief waking - minutes; thrown by the rapid-eye-movement switch, and because the cortex is already activated, waking from REM gives less sleep inertia than from N3.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: loss of atonia, so the sleeper acts out dreams, rapid-eye-movement sleep behaviour disorder, an early marker of Parkinson-type neurodegeneration and a fault of the atonia arm rather than a mode.
+
+◦ Warning condition: failed overnight emotional de-escalation and nightmare replay in post-traumatic stress disorder, and sleep-onset REM in narcolepsy; the state's own protective feature is the active motor inhibition that normally keeps the burst theatre from reaching the body.
+
+
+ENTRY 9. THE ULTRADIAN SLEEP CYCLE (THE NINETY-MINUTE WHEEL) (keyed to global states catalogue Chapter 9)
+
+MODES AND MODE TRANSITIONS:
+
+This is a scheduler, not a state, so its modes are the phases of one turning wheel: the early turns weighted toward deep sleep and the late turns weighted toward dreaming, an ordering that is itself the design.
+
+• THE MODE REGISTER.
+
+◦ Deep-Weighted Early Cycles - The Heavy Turns - the first one to two circuits, dominated by stage N3 (deep, slow-wave sleep) with short rapid-eye-movement periods.
+
+◦ REM-Weighted Late Cycles - The Light Turns - the last circuits, dominated by stage N2 and long rapid-eye-movement periods, with N3 diminished or gone.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Each cycle lasts about ninety minutes, with a normal range of roughly seventy to one hundred and twenty, and a night holds four to six cycles; high confidence.
+
+◦ In the Heavy Turns N3 is greatest and the growth-hormone pulse and deep parasympathetic calm are concentrated, discharging the heaviest sleep-pressure repayment early; whole-brain metabolism is at its nightly troughs here.
+
+◦ In the Light Turns rapid-eye-movement periods lengthen from under ten minutes toward as much as forty, autonomic variability rises, and the pre-dawn cortisol rise coincides, concentrating emotional and integrative processing before waking; high confidence.
+
+• THE TRANSITION TABLE.
+
+◦ Sleep onset - waking into the first Heavy Turn - at the start of the night; thrown by the sleep-wake flip-flop of Chapter 11.
+
+◦ Across-night discharge of sleep pressure - Heavy Turns to Light Turns - cycle by cycle; thrown by Process S (Chapter 14) reducing N3 in successive cycles.
+
+◦ The pontine rapid-eye-movement oscillator firing roughly every ninety minutes - the intra-cycle return of REM within either mode - about ninety minutes; thrown by the rapid-eye-movement switch of Chapter 12.
+
+◦ Final awakening, usually out of a late N2 or REM period - Light Turns out to waking - at the end of the programme.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: loss of the normal non-rapid-eye-movement-to-REM progression, or intrusion of sleep-onset REM, seen in narcolepsy.
+
+◦ Warning condition: shortened REM latency, that is REM arriving too early in the night, a recognised marker in depression, and loss of the early-night N3 weighting in ageing; the brief arousals or lightenings between cycles are normal punctuation of the wheel rather than faults.
+
+
+ENTRY 10. SLEEP INERTIA (THE COLD-START PENALTY) (keyed to global states catalogue Chapter 10)
+
+MODES AND MODE TRANSITIONS:
+
+This is a transitional penalty, not a schedulable state, so it is mode-poor, and its one meaningful variation is graded by the depth of the sleep just exited rather than by any internal switch.
+
+• THE MODE REGISTER.
+
+◦ Deep-Exit Inertia - The Hard Cold Start - the severe grogginess that follows a forced awakening out of high-delta stage N3 (deep, slow-wave sleep), when the cortex must climb furthest.
+
+◦ Light-Exit Inertia - The Warm Restart - the mild penalty after waking from rapid-eye-movement sleep or light N2, whose configuration is already nearer waking.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Deep-Exit Inertia cerebral blood flow and metabolism in the anterior executive regions remain below waking levels and take up to twenty to thirty minutes to recover, slow-wave-like activity can briefly persist in the electroencephalogram (the scalp recording of brain rhythms, abbreviated EEG) after the eyes open, and in the first fifteen to thirty minutes the impairment can exceed that of mild alcohol intoxication; high confidence.
+
+◦ In Light-Exit Inertia the penalty is milder and briefer because the cortex was already activated, which is the rationale, of limited precision, behind timing an alarm to the light end of a cycle; moderate confidence.
+
+◦ Across both, aminergic tone (noradrenaline, that is norepinephrine, plus serotonin and histamine) and orexin drive are rising but have not yet reached waking set-points, and this chemical shortfall is why the cortex runs degraded for the first tens of minutes.
+
+• THE TRANSITION TABLE.
+
+◦ Abrupt flip of the sleep-wake switch before the substrate has caught up - stage N3 into Deep-Exit Inertia - at the moment of awakening; thrown by the sleep-wake flip-flop of Chapter 11.
+
+◦ Awakening from lighter sleep - N2 or rapid-eye-movement sleep into Light-Exit Inertia - at awakening; thrown by the same switch.
+
+◦ Recovery of anterior blood flow and aminergic tone - either mode out to full alert waking (Chapter 1) - about twenty to thirty minutes, hastened by light, activity, and caffeine.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: severe, prolonged, or confusional awakening, the sleep-drunkenness of idiopathic hypersomnia and the disorders of arousal.
+
+◦ Warning condition: inertia-driven errors in shift workers and on-call responders woken to act immediately; the state's own signal is a warm-up flag that outputs are unreliable until anterior blood flow and broadcasts catch up, and there is no faster watchdog.
+
+
+ENTRY 11. THE SLEEP-WAKE FLIP-FLOP (Reciprocal preoptic-arousal switch) (keyed to global states catalogue Chapter 11)
+
+MODES AND MODE TRANSITIONS:
+
+This is a governor, not a state, and by design it has exactly two stable positions and forbids the middle, so its register is a clean pair of poles held apart by runaway mutual inhibition.
+
+• THE MODE REGISTER.
+
+◦ Wake Pole - The Toggle Up - the arousal nuclei winning and the sleep-promoting side suppressed, the whole organism assigned to the waking states.
+
+◦ Sleep Pole - The Toggle Down - the ventrolateral preoptic nucleus (a small cell group at the front-underside of the hypothalamus, abbreviated VLPO) winning and the arousal nuclei near-silent, the organism assigned to the sleep states.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ At the Wake Pole the arousal transmitters, noradrenaline (that is norepinephrine), serotonin, histamine, and acetylcholine, are high, the electroencephalogram (the scalp recording of brain rhythms, abbreviated EEG) is fast and low-voltage, and thalamic relay neurons fire in tonic single-spike mode; high confidence.
+
+◦ At the Sleep Pole the VLPO fires roughly two to three times faster than in waking, releasing gamma-aminobutyric acid (the brain's main inhibitory messenger, abbreviated GABA) and galanin onto the arousal nuclei, and thalamic cells flip to burst firing; high confidence.
+
+◦ Because each side suppresses the other, any small advantage runs away to a complete win, so at any instant one side is loud and the other quiet, and the design signature is a snap, not a level.
+
+• THE TRANSITION TABLE.
+
+◦ Accumulated sleep pressure plus falling circadian arousal - Wake Pole to Sleep Pole - seconds to a few minutes; thrown by Process S (Chapter 14) and Process C (Chapter 15), not internal to the switch.
+
+◦ Discharged pressure plus rising circadian arousal - Sleep Pole to Wake Pole - seconds to a few minutes; thrown by the same two-process governor.
+
+◦ Both crossings are fast and complete by the runaway feedback, which is the whole design goal; the wake side is held steady by the orexin stabiliser of Chapter 13.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: time spent in the contested mid-band the design exists to forbid, seen behaviourally as drowsy waking (Chapter 4) and as a switch blurred by sleep deprivation.
+
+◦ Warning condition: insomnia when the sleep side cannot win or hold, and pathological sleepiness with state intrusions when the wake side cannot hold; the watchdog against inappropriate flipping is the orexin stabiliser, whose loss in narcolepsy lets the switch chatter, which belongs to Chapter 13.
+
+
+ENTRY 12. THE REM SWITCH (Pontine REM-on/REM-off flip-flop) (keyed to global states catalogue Chapter 12)
+
+MODES AND MODE TRANSITIONS:
+
+This is a second governor nested inside sleep, a smaller and faster flip-flop with two poles, and like the big toggle above it, it is built to give sharp on and off edges rather than a gradual deepening.
+
+• THE MODE REGISTER.
+
+◦ REM-On Pole - The Latch Open - the sublaterodorsal REM-on cells winning, admitting rapid-eye-movement sleep (the paradoxical stage of vivid dreaming, abbreviated REM).
+
+◦ REM-Off Pole - The Latch Shut - the ventrolateral periaqueductal grey and lateral pontine tegmentum REM-off cells winning, holding REM out.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ At the REM-On Pole the package arrives together: an awake-like fast low-voltage electroencephalogram (the scalp recording of brain rhythms, abbreviated EEG), bursts of rapid eye movement, and near-complete atonia (loss of muscle tone) enforced by REM-on glutamatergic cells driving inhibitory neurons in the medulla and spinal cord; high confidence.
+
+◦ At the REM-Off Pole those elements are withheld and ordinary non-rapid-eye-movement sleep continues; the two pontine populations are mutually inhibitory GABAergic (gamma-aminobutyric-acid-releasing) groups, so the circuit is a second instance of the flip-flop motif.
+
+◦ The switch is biased by aminergic and cholinergic tone: falling noradrenaline (that is norepinephrine) and serotonin release the REM-on side while acetylcholine promotes it, so REM appears when the aminergic broadcasts fall silent; REM fills about twenty to twenty-five percent of the night.
+
+• THE TRANSITION TABLE.
+
+◦ Non-rapid-eye-movement sleep lowering aminergic tone enough - REM-Off Pole to REM-On Pole - sharp; internal to the switch, fired roughly every ninety minutes by the ultradian cycle of Chapter 9.
+
+◦ The REM-off side regaining the upper hand, or awakening - REM-On Pole to REM-Off Pole - sharp; internal, both crossings sharp by the flip-flop design.
+
+◦ Sleep-state permission is set from above by the sleep-wake flip-flop of Chapter 11, since this nested switch runs only while the parent is at its sleep pole.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: the atonia arm failing so dreams are acted out, rapid-eye-movement sleep behaviour disorder, an early marker of later neurodegeneration.
+
+◦ Warning condition: the switch intruding into waking so its components appear out of place as the cataplexy, sleep paralysis, and hypnagogic (dreamlike sleep-onset) hallucinations of narcolepsy; the motor-lockout is the switch's own protective output, and its failure lets a running dream drive the body.
+
+
+ENTRY 13. THE OREXIN STABILISER (Lateral hypothalamic orexin/hypocretin drive) (keyed to global states catalogue Chapter 13)
+
+MODES AND MODE TRANSITIONS:
+
+This is a stabiliser, not a switch, so it has no poles of its own; its sub-regimes are the levels of a single steadying pressure, ramped up across the day and withdrawn at night, the finger that presses harder as waking wears on.
+
+• THE MODE REGISTER.
+
+◦ Active-Waking Drive - The Firm Hold - full tonic firing during active waking, widening the wake state's basin of stability.
+
+◦ Quiet-Waking Drive - The Light Hold - reduced firing during quiet waking, a lighter steadying pressure.
+
+◦ Sleep Withdrawal - The Released Finger - near-silent firing in sleep, permitting the flip-flops to rest at their sleep positions.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Active-Waking Drive the orexin (also called hypocretin) neurons fire steadily, exciting the arousal nuclei (locus coeruleus, dorsal raphe, tuberomammillary nucleus, basal forebrain) and opposing the sleep-promoting ventrolateral preoptic nucleus, so waking and sleep both come in long consolidated bouts; the human population is small, on the order of fifty to eighty thousand neurons; high confidence.
+
+◦ The drive is gated by the circadian clock, strongest in the biological day, and it ramps up in the evening wake-maintenance zone to counter peak sleep pressure; its steady firing is metabolically demanding, supported by astrocyte-supplied lactate.
+
+◦ In Sleep Withdrawal cerebrospinal-fluid orexin falls, and levels below about one hundred and ten picograms per millilitre are diagnostic of orexin-deficient narcolepsy; high confidence.
+
+• THE TRANSITION TABLE.
+
+◦ Morning waking under circadian control - Sleep Withdrawal to Active-Waking Drive - minutes to the hour-scale daily envelope; thrown by Process C (Chapter 15).
+
+◦ Withdrawal of behavioural activity - Active-Waking Drive to Quiet-Waking Drive - seconds for firing, within sustained waking; internal.
+
+◦ Sleep onset - either waking drive to Sleep Withdrawal - at the flip-flop crossing of Chapter 11; the finger lifts to permit sleep.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: state chatter, frequent short bouts of waking and sleep instead of long consolidated ones, the loss of hysteresis on the sleep-wake switch.
+
+◦ Warning condition: selective loss of orexin neurons, usually autoimmune, causing narcolepsy type 1, with sleep attacks, cataplexy, sleep paralysis, and hallucinations; the stabiliser is itself the watchdog, a debounce or Schmitt-trigger hysteresis band on a noisy switch, and losing it does not merely add noise but produces a specific disabling syndrome.
+
+
+ENTRY 14. PROCESS S, THE HOMEOSTATIC SLEEP PRESSURE (keyed to global states catalogue Chapter 14)
+
+MODES AND MODE TRANSITIONS:
+
+Process S is not a state that computation runs in but a governor, so its modes are the operating regimes of a running total, and it has exactly two, set by whether the organism is awake or asleep.
+
+• THE MODE REGISTER.
+
+◦ S-charge - The Climbing Bill - the waking regime, in which the debt accrues as adenosine (a by-product of the brain's energy use that promotes sleep) rises.
+
+◦ S-discharge - The Overnight Payback - the sleeping regime, in which deep slow-wave sleep pays the debt down.
+
+◦ S-saturation - The Flattening Shoulder - the near-plateau reached after very long waking, where the exponential charge curve bends toward its ceiling.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In S-charge the whole system climbs roughly exponentially with a waking time constant near 18 hours (moderate confidence, from the classic two-process model), biasing the sleep-wake switch of Chapter 11 steadily toward sleep.
+
+◦ In S-discharge the debt falls with a much faster sleep time constant near 4 hours, read out as declining slow-wave activity (electroencephalogram (a scalp recording of the brain's electrical waves, abbreviated EEG) power at 0.5 to 4 hertz), steepest in the first cycles of the night, high confidence.
+
+◦ In S-saturation the marginal pressure per extra waking hour shrinks, which is why the first recovery night after sleep loss shows markedly elevated slow-wave activity rather than an unbounded rise.
+
+• THE TRANSITION TABLE.
+
+◦ Charge to discharge - thrown not internally but by the sleep-wake flip-flop of Chapter 11 crossing into sleep - seconds to switch, hours to complete the payback.
+
+◦ Discharge to charge - thrown by that same flip-flop crossing into waking - abrupt at the switch, then a slow climb.
+
+◦ Charge to saturation - internal, a smooth bending of the curve over extended waking, not a discrete flip.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ A standing daytime debt under chronic sleep restriction, and poor discharge in insomnia and ageing, are the boundary signatures; the watchdog is the next sleep's slow-wave activity, which reads the unpaid balance out loud.
+
+
+ENTRY 15. PROCESS C, THE CIRCADIAN DRIVE (keyed to global states catalogue Chapter 15)
+
+MODES AND MODE TRANSITIONS:
+
+Process C is a free-running twenty-four-hour waveform rather than a switch, so its modes are the functionally distinct phases of one smooth cycle, named by what the alerting drive is doing.
+
+• THE MODE REGISTER.
+
+◦ Alerting crest - The Wake-Maintenance Zone - the couple of hours before habitual bedtime when the drive peaks and holds waking against a high sleep debt.
+
+◦ Circadian trough - The Sleep Gate - the late-night low near the core body temperature minimum, when the drive withdraws and sleep is defended.
+
+◦ Rising limb and falling limb - The Day Ramps - the ascending morning and descending evening slopes that carry the organism between crest and trough.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In the alerting crest the suprachiasmatic nucleus (the master clock above the crossing of the optic nerves) drives arousal nuclei and the orexin system of Chapter 13 hardest, opposing Process S so alertness is highest when the debt is greatest, high confidence.
+
+◦ In the circadian trough melatonin (the darkness hormone) is high, core temperature is at its roughly 36.4 degrees Celsius nadir, and the switch threshold is biased firmly toward sleep.
+
+◦ On the limbs the drive changes monotonically over hours, phase-advanced by morning light and phase-delayed by evening light at up to about one hour per day.
+
+• THE TRANSITION TABLE.
+
+◦ Trough to rising limb to crest and back - internal to Process C, paced by the molecular clock at a fixed twenty-four-hour period, not thrown by any faster governor.
+
+◦ Whole-waveform phase shift - thrown externally by light reaching the retina - re-entrainment over several days after a large shift.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Misalignment between the waveform and the imposed schedule is the boundary signature (jet lag, shift-work disorder, delayed and advanced sleep-phase disorders, free-running rhythm in blindness); the watchdog is daily light, whose loss lets the clock drift off the solar day.
+
+
+ENTRY 16. THE ASCENDING BROADCAST SYSTEM (keyed to global states catalogue Chapter 16)
+
+MODES AND MODE TRANSITIONS:
+
+This organ is the announcement service rather than the decider, so its modes are the distinct chemical blends it holds, one per broadcast state, and the blend, not any single chemical, names the mode.
+
+• THE MODE REGISTER.
+
+◦ Wake blend - The Online Broadcast - high noradrenaline, serotonin, and acetylcholine, announcing waking to the whole forebrain.
+
+◦ Non-rapid-eye-movement blend - The Quiet Broadcast - all aminergic tone low and acetylcholine falling, announcing deep sleep.
+
+◦ Rapid-eye-movement blend - The Paradoxical Broadcast - aminergic tone near zero with acetylcholine high, the chemical inversion no waking or deep-sleep state ever shows.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In the wake blend thalamic relay cells are held in tonic (faithful relay) firing and cortex is desynchronised, delivered by a handful of small nuclei whose axons reach nearly the whole brain within seconds.
+
+◦ In the non-rapid-eye-movement blend cortical slow-oscillation motifs are permitted and hippocampus-to-cortex replay is enabled, the low-metabolic broadcast of deep sleep.
+
+◦ In the rapid-eye-movement blend cortex is desynchronised as in waking yet the aminergic silence marks it unmistakably as sleep, high confidence for the profile, the exact concentrations moderate.
+
+• THE TRANSITION TABLE.
+
+◦ Wake blend to non-rapid-eye-movement blend - thrown by the sleep-wake flip-flop of Chapter 11 - aminergic tone falls within seconds at sleep onset.
+
+◦ Non-rapid-eye-movement blend to rapid-eye-movement blend - thrown by the rapid-eye-movement switch of Chapter 12 - the aminergic-off, cholinergic-on crossing at rapid-eye-movement onset.
+
+◦ All blends are shaped continuously by circadian phase from Process C of Chapter 15; the broadcast holds no schedule of its own.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ A mis-set blend produces delirium; loss of one channel (orexin in narcolepsy, or locus coeruleus degeneration early in Alzheimer disease) blurs the states; the system degrades gracefully rather than cleanly, which is itself the warning sign.
+
+
+ENTRY 17. PHASIC AROUSAL (keyed to global states catalogue Chapter 17)
+
+MODES AND MODE TRANSITIONS:
+
+This is the mode-poor state of the catalogue by design: it does one thing, an interrupt, and does it one way, so its register is deliberately small and proud of it.
+
+• THE MODE REGISTER.
+
+◦ Orienting burst - The Startle Spike - the sub-second locus coeruleus (the "blue spot" pontine source of noradrenaline, the alerting chemical messenger) volley that resets the cortex toward a salient event.
+
+◦ Threat-weighted burst - The Deep Spike - the same volley amplified when the amygdala and basal forebrain acetylcholine co-fire because the event carries threat value.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In the orienting burst the locus coeruleus fires 2 to 3 spikes at 15 to 70 milliseconds latency, the electroencephalogram (a scalp recording of brain waves, abbreviated EEG) desynchronises within about 40 milliseconds, and the pupil dilates 0.2 to 0.5 millimetres, the whole envelope over within 1 to 5 seconds, moderate confidence and stimulus-dependent.
+
+◦ In the threat-weighted burst the same envelope runs deeper and is more likely to arm the fork toward escalation, tagging the moment for privileged memory.
+
+• THE TRANSITION TABLE.
+
+◦ Parent waking state to burst - thrown by a salience-flagged sensory event - complete within about 100 milliseconds, requiring no permission from any slower governor.
+
+◦ Burst back to parent state - internal decay within seconds, quenched by the cell's own noradrenaline acting on its inhibitory autoreceptors, a designed refractory period.
+
+◦ Burst to acute stress - thrown when the snapshot evaluation returns "real threat," handing control to Chapter 18.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Exaggerated, poorly habituating startle in post-traumatic stress disorder and pathological startle in hyperekplexia are the boundary signatures; the watchdog is habituation itself, which normally tunes the same trigger down over 3 to 10 repetitions.
+
+
+ENTRY 18. THE ACUTE STRESS STATE (keyed to global states catalogue Chapter 18)
+
+MODES AND MODE TRANSITIONS:
+
+The acute stress state is a small mode-machine with two healthy defensive configurations plus a recovery ramp, all sitting on the alarm reaction of Selye's general adaptation syndrome (the three-stage stress model of alarm, resistance, and exhaustion).
+
+• THE MODE REGISTER.
+
+◦ Active mobilisation - Fight-Or-Flight - near-maximal sympathetic outflow with vagal (the rest-and-digest branch) withdrawal, optimised for immediate physical action.
+
+◦ Attentive immobility - The Freeze - a brief high-vigilance hold with a parasympathetic brake still partly engaged, readiness before action.
+
+◦ Recovery ramp - The Stand-Down - the post-threat return, with vagal reactivation, catecholamine clearance, and cortisol feedback.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In active mobilisation heart rate reaches 150 to 180 beats per minute, plasma adrenaline rises 5 to 10 times baseline within 1 to 2 minutes, the liver opens its sugar stores, and gut and skin blood flow is shunted to muscle, moderate confidence.
+
+◦ In attentive immobility outward action is suppressed while perception sharpens and the sympatho-adrenal engine idles armed, the orienting freeze that precedes fight or flight.
+
+◦ In the recovery ramp the heart slows within seconds to minutes while the cortisol tail (peaking at 15 to 30 minutes, 2 to 4 times baseline) takes 60 to 90 minutes to return to baseline, often with post-threat trembling.
+
+• THE TRANSITION TABLE.
+
+◦ Phasic arousal to active mobilisation or freeze - thrown by amygdala threat confirmation - within a few seconds.
+
+◦ Freeze to active mobilisation - internal, when action becomes possible or necessary.
+
+◦ Active mobilisation to recovery ramp - internal, thrown by medial prefrontal safety signalling and cortisol negative feedback.
+
+◦ Active mobilisation to sustained stress - thrown when the stressor does not end, handing over to Chapter 19.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Panic disorder (the state firing without a threat), takotsubo cardiomyopathy (the stress-stunned heart), and phaeochromocytoma (an adrenaline-secreting tumour) mark the fault space; the watchdog is the prefrontal safety signal that should end the surge.
+
+
+ENTRY 19. THE SUSTAINED STRESS STATE (keyed to global states catalogue Chapter 19)
+
+MODES AND MODE TRANSITIONS:
+
+This state is Selye's stage of resistance made concrete, and its healthy modes are the ways the hypothalamic-pituitary-adrenal (HPA) axis (the chain from hypothalamus to pituitary gland to adrenal cortex) holds cortisol high; its stage of exhaustion is a fault, not a mode.
+
+• THE MODE REGISTER.
+
+◦ Resistance plateau - The Long Loan - the adaptive raised, flattened cortisol baseline that funds a campaign of days to weeks.
+
+◦ Acute-on-chronic surge - The Daily Spike - a Chapter 18 surge superimposed on the plateau when a fresh stressor lands.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In the resistance plateau the normal cortisol rhythm (morning peak of roughly 10 to 20 micrograms per decilitre, evening trough below 5) is elevated and flattened, glucose and abdominal fat rise, slow-wave sleep is curtailed, and inflammatory markers drift up over weeks, low-to-moderate confidence on exact magnitudes.
+
+◦ In the acute-on-chronic surge the sympatho-adrenal engine of Chapter 18 fires briefly against the raised baseline, and each such spike without a recovery interval deepens the plateau.
+
+• THE TRANSITION TABLE.
+
+◦ Acute stress to resistance plateau - thrown by non-resolution of Chapter 18, or by repeated daily surges without recovery - over hours.
+
+◦ Plateau to daily surge and back - internal, re-thrown by each persisting demand and superimposed on the circadian cortisol programme it visibly deforms.
+
+◦ Plateau to exit - thrown when the stressor lifts - rhythm amplitude recovers first, feedback sensitivity later, hippocampal architecture over weeks to months, largely reversible.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The corrosive continuation is allostatic load; its endpoints are Cushing's syndrome, major depression with axis overdrive, hypertension, type 2 diabetes, and hippocampal atrophy; the watchdog is the axis's own brake (glucocorticoid feedback at the hippocampus), which corrodes under the very signal it should limit, so the fault silently disables its own alarm.
+
+
+ENTRY 20. THE SICKNESS BEHAVIOUR STATE (keyed to global states catalogue Chapter 20)
+
+MODES AND MODE TRANSITIONS:
+
+Sickness behaviour is a two-phase infection protocol commanded by cytokines (the immune system's signalling proteins), and its modes are the febrile mobilisation and the recuperative rest that fight and then recover from the pathogen.
+
+• THE MODE REGISTER.
+
+◦ Febrile mobilisation - The Fever Push - the raised-set-point, warmth-seeking, iron-withholding acute phase that attacks the pathogen.
+
+◦ Hypersomnic recuperation - The Deep-Sleep Recovery - the enhanced non-rapid-eye-movement (the deep, slow-wave family of sleep) drive that promotes recovery while rapid-eye-movement sleep is suppressed.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In febrile mobilisation core temperature is regulated upward by 1 to 3 degrees Celsius, metabolic rate rises roughly 10 to 13 percent per degree, appetite and locomotion fall, and interleukin-6 (a pro-inflammatory cytokine) climbs from under 5 picograms per millilitre to tens or hundreds, high confidence for the human endotoxin picture.
+
+◦ In hypersomnic recuperation deep non-rapid-eye-movement sleep is promoted, the one maintenance job the state advances rather than defers, while behavioural withdrawal conserves energy and limits contagion.
+
+• THE TRANSITION TABLE.
+
+◦ Waking to febrile mobilisation - thrown by immune detection over 1 to 3 hours, the slowest entry ramp in the arousal and defence family, set by cytokine synthesis rather than nerve conduction.
+
+◦ Mobilisation to recuperation and back - internal, oscillating with pathogen load across the episode.
+
+◦ Sickness to acute stress and back - the protocol yields temporarily to a Chapter 18 emergency, then resumes.
+
+◦ Sickness to exit - thrown by resolution signalling (interleukin-10, cortisol, the vagal anti-inflammatory reflex) once pathogen load falls, over hours to days.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Persisting inflammation shades into depression (the inflammation-depression bridge), post-infectious fatigue, delirium, and sepsis-associated encephalopathy; in the elderly fever blunts while the behavioural and cognitive components exaggerate; the watchdog is resolution signalling that should end the protocol.
+
+
+ENTRY 21. THE FED AND FASTED METABOLIC STATES (keyed to global states catalogue Chapter 21)
+
+MODES AND MODE TRANSITIONS:
+
+This chapter is itself a mode pair - the duty cycle of the fuel system - so its register is the set of metabolic configurations the body crosses several times a day, thrown partly by organs with no neurons in charge.
+
+• THE MODE REGISTER.
+
+◦ Fed (absorptive) - The Banking Mode - insulin-led digestion, absorption, and storage.
+
+◦ Fasted (post-absorptive) - The Spending Mode - glucagon- and ghrelin-led mobilisation of stores and motivation to forage.
+
+◦ Ketotic - The Reserve Mode - the deep-fast configuration in which the liver makes ketone bodies to fuel the brain.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In fed mode blood glucose rises from a fasting 4 to 5.5 millimoles per litre toward 7 to 8, insulin rises 5 to 10 times baseline, ghrelin (the stomach's hunger hormone) falls, vagal (rest-and-digest) tone dominates, and postprandial drowsiness follows large meals, high confidence.
+
+◦ In fasted mode glucose is held near 4 to 5 millimoles per litre by glucagon, ghrelin peaks anticipate habitual mealtimes, the arcuate hunger neurons drive foraging, and ghrelin sharpens hippocampal learning of food locations.
+
+◦ In ketotic mode ketone bodies rise from under 0.1 toward 1 to 5 millimoles per litre by day 3 to 7, by which point they can supply more than half the brain's fuel, and autophagy (the cell's recycling of damaged parts) is promoted.
+
+• THE TRANSITION TABLE.
+
+◦ Fasted to fed - begins before swallowing via the cephalic phase (sight and smell of food triggering vagal insulin release), the state pre-loading its own transition.
+
+◦ Fed to fasted - internal, gradual over 3 to 5 hours as absorption completes.
+
+◦ Fasted to ketotic - internal, over 1 to 3 days of continued fast; refeeding reverses it within hours.
+
+◦ Scheduling is circadian-entrained, the clock of Chapter 22 pre-positioning hormones before expected meals.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Type 1 and type 2 diabetes are the fed switch broken, hypoglycaemia is the fasted guard-rail failing (confusion, seizure, coma), obesity involves leptin resistance, and the refeeding syndrome marks a transition done too fast; the watchdog is the sympatho-adrenal counter-regulation that defends brain glucose.
+
+
+ENTRY 22. THE CIRCADIAN DAY PROGRAMME AND NIGHT PROGRAMME (keyed to global states catalogue Chapter 22)
+
+MODES AND MODE TRANSITIONS:
+
+This programme is a two-mode master timetable: the body configured to be out in the world, and the body configured to repair itself in the dark, with a slow hormone-carried handover between them.
+
+• THE MODE REGISTER.
+
+◦ Day programme - The Earning Shift - the whole nervous and endocrine system configured for foraging, computing, moving, and eating.
+
+◦ Night programme - The Housekeeping Shift - the system configured for sleep, consolidation, waste clearance, and repair.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In the day programme cortisol (the readiness hormone) is high near waking, sympathetic tone rises, core body temperature climbs toward its early-evening peak near 37.2 degrees Celsius, and online cognition and foraging run, high confidence.
+
+◦ In the night programme melatonin (the darkness hormone) is high, parasympathetic (rest-and-digest) tone deepens into a nocturnal heart-rate and blood-pressure dip, temperature falls toward its pre-waking nadir near 36.4 degrees Celsius, and the maintenance jobs of the sleep states run.
+
+• THE TRANSITION TABLE.
+
+◦ Day to night - thrown internally by the suprachiasmatic nucleus (the roughly twenty-thousand-neuron clock above the optic chiasm) via dim-light melatonin onset in the early evening - completing over a few hours as temperature falls.
+
+◦ Night to day - thrown by the pre-waking cortisol rise - led hormonally rather than by the alarm clock.
+
+◦ The programme runs a free-running period near 24.2 hours, corrected daily to 24.0 by light reaching the retina.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Rapid phase shifts desynchronise the peripheral tissue clocks from the suprachiasmatic nucleus and from each other (jet lag, shift-work disorder, delayed and advanced sleep-phase disorders); the watchdog is daily light, whose absence lets the flattened, advanced rhythm of ageing and dementia set in.
+
+
+ENTRY 23. THE MENSTRUAL (OVARIAN) CYCLE PROGRAMME (keyed to global states catalogue Chapter 23)
+
+MODES AND MODE TRANSITIONS:
+
+The ovarian programme is a roughly monthly two-master-mode tide - follicular and luteal - with a brief peri-ovulatory switch between them, driven from the ovary rather than the brain's clock.
+
+• THE MODE REGISTER.
+
+◦ Follicular - The Rising Half - the pre-ovulatory phase, sub-divided into an early low-hormone window and a late window of climbing oestradiol.
+
+◦ Peri-ovulatory switch - The Surge - the mid-cycle luteinising-hormone surge that flips feedback from negative to positive and releases the egg.
+
+◦ Luteal - The Warm Half - the post-ovulatory phase of high progesterone and a secondary oestradiol peak.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In the early follicular window both oestradiol and progesterone are low, with some evidence of better mental-rotation performance; in the late follicular window oestradiol rises to its pre-ovulatory peak, moderate confidence.
+
+◦ In the peri-ovulatory switch the luteinising-hormone surge runs over roughly 24 to 48 hours, timed by the kisspeptin neurons that read oestradiol.
+
+◦ In the luteal phase progesterone raises core body temperature 0.3 to 0.7 degrees Celsius, and its neurosteroid metabolite allopregnanolone (a positive modulator at the gamma-aminobutyric acid type A receptor, the brain's main inhibitory receptor) thickens sleep spindles and raises daytime sleepiness, while objective sleep continuity stays largely unchanged, high confidence for the spindle effect.
+
+• THE TRANSITION TABLE.
+
+◦ Follicular to luteal - thrown by ovulation following the luteinising-hormone surge.
+
+◦ Luteal to follicular (menstruation) - thrown by the fall of progesterone as the corpus luteum regresses, the ovarian structure that held the luteal climate for about 14 days.
+
+◦ The whole cycle is nested inside the daily circadian programme of Chapter 22, biasing but not overriding it.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Premenstrual dysphoric disorder (abnormal sensitivity to allopregnanolone), luteal insomnia, menstrual migraine, and disrupted cycles in polycystic ovary syndrome and energy-deficient amenorrhoea mark the fault space; the watchdog is the hypothalamic feedback loop that times the surge.
+
+
+ENTRY 24. THE BASIC REST-ACTIVITY CYCLE (keyed to global states catalogue Chapter 24)
+
+MODES AND MODE TRANSITIONS:
+
+This is the catalogue's one low-confidence entry, a proposed waking echo of the sleep cycle, so its modes are offered as hypotheses and the honest caveat is that the rhythm's independent existence during waking is disputed.
+
+• THE MODE REGISTER.
+
+◦ Activity tilt - The Outward Half - a proposed higher-arousal, task-oriented phase of the roughly ninety-minute waking cycle.
+
+◦ Rest tilt - The Inward Half - a proposed lower-arousal, recovery-tilted phase.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In the activity tilt alertness, reaction time, and outward focus are claimed to run higher, with the nasal cycle (alternating airflow dominance between nostrils) and heart-rate variability as the most-cited autonomic correlates, low confidence.
+
+◦ In the rest tilt daydreaming, spontaneous rest breaks, and inward focus are claimed to rise, offering brief cheap restorative pauses if the rhythm is real; amplitudes are small and easily masked by meals, activity, and the stronger circadian curve.
+
+• THE TRANSITION TABLE.
+
+◦ Activity tilt to rest tilt and back - proposed as continuous and sinusoidal rather than switched, with a period scattering widely between 70 and 120 minutes, which is part of why it is hard to demonstrate.
+
+◦ At night this same machinery is hypothesised to become the well-established non-rapid-eye-movement / rapid-eye-movement sleep cycle of Chapter 9.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ No disorder is defined by disruption of this cycle, and no dedicated pacemaker has been isolated; the principal "failure" here is of the hypothesis itself, whose independent existence in waking is not firmly established.
+
+
+ENTRY 25. GENERAL ANAESTHESIA (keyed to global states catalogue Chapter 25)
+
+MODES AND MODE TRANSITIONS:
+
+General anaesthesia is an engineered off-switch clamped from outside, and its modes are the clinical phases the anaesthetist titrates - induction, maintenance, and emergence - plus a deliberate deep operating regime, burst suppression.
+
+• THE MODE REGISTER.
+
+◦ Induction - The Power-Down - the rapid drop into unconsciousness, often through a brief paradoxical excitation.
+
+◦ Maintenance - The Surgical Plane - the steady held depth carried by continuous infusion or inspired concentration.
+
+◦ Burst suppression - The Deep Clamp - a deliberately deeper regime of alternating high-amplitude bursts and near-flat suppression, used therapeutically for brain protection.
+
+◦ Emergence - The Reboot - the return of consciousness as the drug clears, not simply the reverse of induction.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In maintenance propofol and the volatile ethers, acting at the gamma-aminobutyric acid type A receptor (the brain's main inhibitory receptor), impose a hallmark frontal alpha rhythm (8 to 12 cycles per second) with slow-delta activity while cortical information integration collapses, high confidence.
+
+◦ In burst suppression the electroencephalogram (a scalp recording of brain waves, abbreviated EEG) alternates bursts with silence, the cerebral metabolic rate of oxygen is deeply downregulated, and depth is monitored by a burst-suppression ratio between 0 and 1.
+
+◦ In induction the drop takes seconds to about 2 minutes; in emergence recovery runs over minutes to tens of minutes, sometimes through distinct reactivation stages.
+
+• THE TRANSITION TABLE.
+
+◦ Waking to induction - thrown externally by the drug, not by the brain's own sleep-wake scheduler - seconds to a couple of minutes.
+
+◦ Induction to maintenance to burst suppression - thrown by titrating drug concentration up, the clinician's control knob.
+
+◦ Any depth to emergence - thrown by drug clearance as concentration falls.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Intraoperative awareness (the off-switch failing), over-deep prolonged burst suppression linked to post-operative delirium, an isoelectric (flat) trace, and cardiorespiratory depression mark the fault space; the watchdog is the processed-EEG depth monitor the anaesthetist reads.
+
+
+ENTRY 26. THE DISORDERS OF CONSCIOUSNESS SPECTRUM (keyed to global states catalogue Chapter 26)
+
+MODES AND MODE TRANSITIONS:
+
+This chapter is the fault space of the whole layer, so its "modes" are the clinical grades of a broken state machine, admitted here only as a map of the edge, with the honest flag that none is a natural state.
+
+• THE MODE REGISTER.
+
+◦ Coma - The Dark Machine - no arousal and no awareness, eyes closed, no sleep-wake cycling.
+
+◦ Vegetative state / unresponsive wakefulness - The Empty Wakefulness - preserved arousal with eye opening but no reproducible awareness.
+
+◦ Minimally conscious state - The Flickering Machine - fluctuating, reproducible but inconsistent signs of awareness without reliable communication.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In coma a slow or featureless electroencephalogram (a scalp recording of brain waves, abbreviated EEG) accompanies markedly reduced cerebral metabolism and no arousal to stimulation.
+
+◦ In the vegetative state a surviving brainstem arousal engine drives eye opening and sleep-wake cycling while a too-damaged cortex generates no awareness, the defining dissociation of arousal from awareness, with metabolism most severely reduced.
+
+◦ In the minimally conscious state partial restoration of long-range thalamocortical and cortico-cortical communication supports intermittent command-following or visual pursuit, tracked by metabolic recovery in associative cortex and thalamus.
+
+• THE TRANSITION TABLE.
+
+◦ Health to coma - thrown by the lesion (trauma, oxygen deprivation, haemorrhage), not by any governor.
+
+◦ Coma to vegetative to minimally conscious to confusional recovery - a graded re-emergence over months to years, tracked by standardised scales such as the Coma Recovery Scale-Revised.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The spectrum itself is the failure of Layer 11's machinery; the clinical failure mode is misdiagnosis (up to about forty percent of vegetative-state diagnoses are overturned on careful reassessment), and the watchdog is functional imaging that can detect covert command-following, the cognitive-motor dissociation that must not be confused with locked-in syndrome (full consciousness with near-total paralysis).

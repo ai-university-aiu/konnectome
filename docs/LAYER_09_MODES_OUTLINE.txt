@@ -1,0 +1,766 @@
+LAYER 9, THE BRAIN REGIONS, NUCLEI, AND PATHWAYS LAYER: MODES AND MODE TRANSITIONS - THE OUTLINE
+
+The per-type mode registers, extracted from LAYER_09_MODES_MANUSCRIPT (which holds the full entries: registers, per-mode transfer functions, transition tables, and fault regimes).
+
+Each entry below: the type, its source key, and its named mode register.
+
+Date of compilation: August 9, 2026.
+
+
+ENTRY 2.1.1. PRIMARY VISUAL CORTEX (V1, STRIATE CORTEX, BRODMANN AREA 17) (keyed to Nature's Cognitive Architecture section 2.1.1)
+
+◦ Waking Desynchronised Mode - The Open Aperture - low-amplitude fast local field potential in the beta-gamma range, faithful relay of retinal contours to the cortex.
+
+◦ Attentive High-Gain Sub-mode - The Widened Pupil - a within-wake amplification in which attention or locomotion raises the gain on the driven channels.
+
+◦ Slow-Wave Up-Down Mode - The Tidal Cortex - the non-REM (rapid-eye-movement) sleep regime of synchronised up and down states below one hertz.
+
+◦ REM Activation Mode - The Ghost Screen - a wake-like desynchronised regime running on internally generated rather than retinal drive.
+
+ENTRY 2.1.2. SECONDARY AND HIGHER VISUAL AREAS (V2, V3, V4, V5/MT) (keyed to Nature's Cognitive Architecture section 2.1.2)
+
+◦ Waking Feedforward Mode - The Assembly Line - desynchronised processing passing form and motion up the ventral and dorsal streams.
+
+◦ Attentive Selection Mode - The Spotlight Stage - feature-based and spatial attention biases the competition among representations.
+
+◦ Slow-Wave Up-Down Mode - The Tidal Cortex - non-rapid-eye-movement (non-REM) synchronised alternation.
+
+◦ REM Activation Mode - The Ghost Screen - internally driven wake-like activity; note that secondary and associative visual areas tend to desynchronise more fully in REM than primary areas do.
+
+ENTRY 2.1.3. PRIMARY AUDITORY CORTEX (A1, HESCHL'S GYRUS, BRODMANN AREAS 41 AND 42) (keyed to Nature's Cognitive Architecture section 2.1.3)
+
+◦ Waking Listening Mode - The Open Ear - desynchronised tonotopic relay of medial-geniculate input.
+
+◦ Attentive Tracking Sub-mode - The Cocked Ear - attention raises gain on an attended stream or frequency band.
+
+◦ Slow-Wave Up-Down Mode - The Tidal Cortex - non-REM synchronised alternation.
+
+◦ rapid-eye-movement (REM) Activation Mode - The Half-Waking Ear - wake-like desynchronisation that in auditory cortex is often incomplete, with residual superficial slow waves.
+
+ENTRY 2.1.4. PRIMARY SOMATOSENSORY CORTEX (S1, POSTCENTRAL GYRUS, BRODMANN AREAS 3, 1, AND 2) (keyed to Nature's Cognitive Architecture section 2.1.4)
+
+◦ Waking Touch Mode - The Open Skin - desynchronised relay of ventral-posterior thalamic input mapping the body surface.
+
+◦ Active Palpation Sub-mode - The Reading Fingertip - attention and self-generated movement re-weight the map, with efference-copy attenuation of self-touch.
+
+◦ Slow-Wave Up-Down Mode - The Tidal Cortex - non-REM synchronised alternation.
+
+◦ rapid-eye-movement (REM) Activation Mode - The Phantom Touch - wake-like desynchronisation on internally generated drive.
+
+ENTRY 2.1.5. PRIMARY MOTOR CORTEX (M1, PRECENTRAL GYRUS, BRODMANN AREA 4) (keyed to Nature's Cognitive Architecture section 2.1.5)
+
+◦ Movement Execution Mode - The Firing Line - active issuing of descending commands during voluntary movement, gamma and broadband desynchronisation.
+
+◦ Postural Hold Mode - The Set Brace - beta-dominated maintenance of a steady posture, the status-quo rhythm.
+
+◦ Slow-Wave Up-Down Mode - The Tidal Cortex - non-REM synchronised alternation.
+
+◦ rapid-eye-movement (REM) Atonia Mode - The Dreaming Hand - cortical activation with descending output blocked by brainstem-imposed muscle atonia.
+
+ENTRY 2.1.6. PREMOTOR CORTEX (PMC) AND SUPPLEMENTARY MOTOR AREA (SMA), BRODMANN AREA 6 (keyed to Nature's Cognitive Architecture section 2.1.6)
+
+◦ Externally Cued Planning Mode - The Cued Draftsman - premotor preparation of movements guided by external events, including mirror activation on observing action.
+
+◦ Internally Generated Sequencing Mode - The Inner Metronome - supplementary-motor-area assembly of self-initiated movement sequences and bimanual coordination.
+
+◦ Motor Preparation Hold Mode - The Loaded Spring - a readiness state with rising preparatory activity before movement onset.
+
+◦ Slow-Wave Up-Down Mode - The Tidal Cortex - non-rapid-eye-movement (non-REM) synchronised alternation, with REM sharing the same suspended-output character.
+
+ENTRY 2.1.7. DORSOLATERAL PREFRONTAL CORTEX (DLPFC, BRODMANN AREAS 9 AND 46) (keyed to Nature's Cognitive Architecture section 2.1.7)
+
+◦ Delay-Period Engaged Mode - The Held Thought - recurrent self-excitation sustains a representation across seconds absent the stimulus.
+
+◦ Rule-Switching Mode - The Turned Rule - reconfiguration to a new task set (cognitive flexibility).
+
+◦ Task-Negative Idle Mode - The Released Hold - disengagement toward rest as the default mode network rises.
+
+◦ Slow-Wave Up-Down Mode - The Tidal Cortex - non-rapid-eye-movement (non-REM) synchronised alternation, with attractor states not maintained.
+
+ENTRY 2.1.8. VENTROMEDIAL PREFRONTAL CORTEX (VMPFC) AND ORBITOFRONTAL CORTEX (OFC), BRODMANN AREAS 10, 11, 12, 25, 32 (keyed to Nature's Cognitive Architecture section 2.1.8)
+
+◦ Valuation Mode - The Price Tag - integration of multisensory and emotional input into a value estimate for each option.
+
+◦ Reversal-Update Mode - The Reprice - rapid rewriting of value when a contingency reverses.
+
+◦ Regulatory Mode - The Cooling Hand - top-down damping of the amygdala and autonomic outflow, the extinction pathway.
+
+◦ Task-Negative Self-Reference Mode - The Inner Ledger - default-mode participation in self-referential and prospective valuation at rest.
+
+ENTRY 2.1.9. ANTERIOR CINGULATE CORTEX (ACC, BRODMANN AREAS 24, 32, 33) (keyed to Nature's Cognitive Architecture section 2.1.9)
+
+◦ Conflict-Monitoring Mode - The Watchtower - ongoing surveillance for response conflict and error.
+
+◦ Error-and-Pain Alarm Mode - The Struck Bell - phasic firing on error, physical pain, and social rejection.
+
+◦ Effort-Allocation Mode - The Taskmaster - recruitment of executive control and adjustment of effort after conflict.
+
+◦ Task-Negative Idle Mode - The Quiet Post - disengaged rest with reduced monitoring load.
+
+ENTRY 2.1.10. POSTERIOR CINGULATE CORTEX (PCC) AND PRECUNEUS, BRODMANN AREAS 23, 31, 7m (keyed to Nature's Cognitive Architecture section 2.1.10)
+
+◦ Task-Negative Self-Model Mode - The Inner Theatre - resting self-referential processing, autobiographical recall, and mental time travel.
+
+◦ Task-Positive Deactivation Mode - The Dimmed House - suppression on the onset of demanding external tasks.
+
+◦ Broad-Monitoring Mode - The Standing Watch - a proposed intermediate state balancing internal and external focus.
+
+◦ Slow-Wave Up-Down Mode - The Tidal Cortex - non-rapid-eye-movement (non-REM) synchronised alternation.
+
+ENTRY 2.1.11. THE DEFAULT MODE NETWORK CORE TRIAD (PUC) (keyed to Nature's Cognitive Architecture section 2.1.11)
+
+◦ Task-Negative Core Mode - The Resting Chorus - the three nodes act together at highest within-network connectivity for self-referential cognition.
+
+◦ Task-Positive Suppression Mode - The Silenced Chorus - the triad is first to deactivate at goal-directed task onset.
+
+◦ Constructive Simulation Mode - The Inner Rehearsal - directed use of the network for autobiographical recall, prospection, and theory of mind.
+
+◦ Slow-Wave Up-Down Mode - The Tidal Cortex - non-rapid-eye-movement (non-REM) synchronised alternation across the hubs.
+
+ENTRY 2.1.12. INSULAR CORTEX (THE INSULA) (keyed to Nature's Cognitive Architecture section 2.1.12)
+
+◦ Interoceptive Monitoring Mode - The Body Gauge - steady reading of the physiological condition of every tissue.
+
+◦ Salience-Detection Mode - The Alarm Bell - bottom-up flagging of a significant bodily or environmental event.
+
+◦ Network-Switching Mode - The Points Lever - anterior-insula switching that suppresses the default mode network and engages the central executive network.
+
+◦ Task-Negative Rest Mode - The Idle Gauge - low-salience resting monitoring.
+
+ENTRY 2.1.13. BROCA'S AREA (LEFT INFERIOR FRONTAL GYRUS, BRODMANN AREAS 44 AND 45) (keyed to Nature's Cognitive Architecture section 2.1.13)
+
+◦ Speech-Production Mode - The Assembler - active sequencing of phonology into an articulatory program handed to motor cortex.
+
+◦ Inner-Speech Mode - The Silent Rehearsal - covert generation of speech without articulation.
+
+◦ Syntactic-Parsing Mode - The Grammar Engine - structural processing of sentence form during comprehension and production.
+
+◦ Task-Negative Idle Mode - The Rested Tongue - disengaged rest.
+
+ENTRY 2.1.14. WERNICKE'S AREA (LEFT POSTERIOR SUPERIOR TEMPORAL GYRUS, BRODMANN AREA 22) (keyed to Nature's Cognitive Architecture section 2.1.14)
+
+◦ Comprehension Mode - The Meaning Maker - mapping incoming sound patterns onto stored word meanings by pattern completion.
+
+◦ Lexical-Retrieval Mode - The Word Finder - supplying phonological word forms to Broca's area for production.
+
+◦ Reading-Input Mode - The Script Reader - accepting written-language input relayed through the angular gyrus.
+
+◦ Task-Negative Idle Mode - The Quiet Lexicon - disengaged rest.
+
+ENTRY 2.1.15. THE MEDIAL TEMPORAL INTERFACE CORTICES: ENTORHINAL, PERIRHINAL, AND PARAHIPPOCAMPAL (keyed to Nature's Cognitive Architecture section 2.1.15)
+
+◦ Encoding-Gateway Mode - The Open Funnel - theta-paced feedforward flow of what and where information into the hippocampus during active exploration.
+
+◦ Retrieval-Return Mode - The Reverse Funnel - entorhinal return projections mediating memory recall to neocortex.
+
+◦ Consolidation-Replay Mode - The Night Relay - sharp-wave-ripple-coupled dialogue with cortex during rest and slow-wave sleep.
+
+◦ Grid-Map Attractor Mode - The Standing Lattice - the medial entorhinal grid-cell metric holding a stable spatial code.
+
+ENTRY 2.1.16. RETROSPLENIAL CORTEX (BRODMANN AREAS 29 AND 30) (keyed to Nature's Cognitive Architecture section 2.1.16)
+
+◦ Reference-Frame Translation Mode - The Compass Rose - active conversion between egocentric (self-relative) and allocentric (map-relative) spatial frames during navigation.
+
+◦ Heading-Integration Mode - The Steady Needle - maintenance of head-direction and place coding during movement.
+
+◦ Task-Negative Internal-Mapping Mode - The Armchair Map - default-mode-linked scene construction and imagined navigation at rest.
+
+◦ Slow-Wave Up-Down Mode - The Tidal Cortex - non-rapid-eye-movement (non-REM) synchronised alternation.
+
+ENTRY 2.1.17. POSTERIOR PARIETAL CORTEX (BRODMANN AREAS 5, 7, 39, 40) (keyed to Nature's Cognitive Architecture section 2.1.17)
+
+◦ Waking Desynchronised Processing Mode - the Open Atlas - the tonic awake regime in which the spatial map is live and continuously updated.
+
+◦ Engaged Spatial-Attention Mode - the Surveyor's Beam - task-positive operation with the dorsal attention network, aiming attention and guiding reach and gaze.
+
+◦ Idling Default Mode - the Daydream Annex - the angular gyrus running with the default mode network during rest and internal thought, while dorsal spatial machinery stands down.
+
+◦ Slow-Wave Up-Down Mode - the Night Ledger - the deep-sleep alternation of whole-population Up and Down states at below 1 hertz, serving consolidation.
+
+◦ Rapid-Eye-Movement (REM) Mode - the Unmoored Map - a desynchronised, internally driven regime in which spatial imagery runs without sensory anchoring.
+
+ENTRY 2.1.18. TEMPORAL ASSOCIATION CORTEX AND THE INFEROTEMPORAL CORTEX (keyed to Nature's Cognitive Architecture section 2.1.18)
+
+◦ Stimulus-Driven Recognition Mode - the Namer of Things - feedforward invariant object recognition during active vision.
+
+◦ Top-Down Retrieval Mode - the Library Walk - semantic and imagery retrieval in which prefrontal and anterior-temporal signals reactivate representations without a matching stimulus.
+
+◦ Idling Default Mode - the Closed Stacks - resting operation with low visual drive, portions of the semantic system running with default mode traffic.
+
+◦ Slow-Wave Up-Down Mode - the Night Rebinding - deep-sleep Up-Down alternation during which perirhinal-hippocampal dialogue consolidates object memory.
+
+◦ rapid-eye-movement (REM) Mode - the Gallery of Sleep - internally generated activation of object and face representations, the plausible source of dream imagery.
+
+ENTRY 2.1.19. FRONTAL EYE FIELDS (FEF, BRODMANN AREA 8) (keyed to Nature's Cognitive Architecture section 2.1.19)
+
+◦ Fixation-Hold Mode - the Steady Gaze - fixation neurons dominant, saccades suppressed, the map quiet.
+
+◦ Covert-Attention Mode - the Silent Spotlight - the map biases visual cortex toward a location while the eyes stay put.
+
+◦ Saccade-Preparation Mode - the Drawn Bow - movement-neuron activity builds toward threshold for a selected target.
+
+◦ Saccade-Execution and Search Mode - the Leaping Eye - repeated winner-take-all target selection and gaze commands during active scanning.
+
+◦ Sleep Modes - the Closed Observatory - the slow-wave Up-Down alternation, and the rapid-eye-movement (REM) regime in which the field helps drive the rapid eye movements that name that sleep stage.
+
+ENTRY 2.1.20. SUPRAMARGINAL GYRUS (SMG, BRODMANN AREA 40) (keyed to Nature's Cognitive Architecture section 2.1.20)
+
+◦ Phonological-Rehearsal Mode - the Echo Shelf - holding a string of speech sounds in short-term store while the articulatory loop refreshes it.
+
+◦ Praxis Mode - the Tool Hand - assembling learned skilled-action representations for tool use and gesture.
+
+◦ Tactile-Spatial Attention Mode - the Feeling Compass - right-lateralised weighting of touch and space during attentive handling.
+
+◦ Idling Default Mode - the Empty Shelf - low-traffic rest between tasks.
+
+◦ Sleep Modes - the Shelf at Night - the standard cortical slow-wave Up-Down alternation and the rapid-eye-movement (REM) desynchronised regime.
+
+ENTRY 2.1.21. TEMPOROPARIETAL JUNCTION (TPJ) (keyed to Nature's Cognitive Architecture section 2.1.21)
+
+◦ Vigilant-Interrupt Mode - the Fire Bell - standing watch with the ventral attention network for salient, behaviourally relevant surprises.
+
+◦ Reorienting Burst Mode - the Bell Rung - the transient interrupt that breaks the dorsal attention network's current focus.
+
+◦ Mentalising Mode - the Other-Minds Desk - theory of mind, the attribution of beliefs and intentions, run in a neighbouring but distinct patch.
+
+◦ Suppressed Mode - the Muffled Bell - active down-regulation during demanding focused search, so that distractors cannot ring it.
+
+◦ Sleep Modes - the Bell at Night - standard cortical slow-wave and rapid-eye-movement (REM) regimes.
+
+ENTRY 2.1.22. SUPERIOR TEMPORAL SULCUS (STS) (keyed to Nature's Cognitive Architecture section 2.1.22)
+
+◦ Social-Stream Parsing Mode - the People Watcher - continuous binding of dynamic faces, gaze, voices, and biological motion into social percepts.
+
+◦ Audiovisual Speech Mode - the Lip Reader - weighting and fusing heard speech with seen mouth movements.
+
+◦ Socially Amplified Mode - the Warmed Lens - the same parsing run at raised gain under oxytocin and attentional drive during motivated social engagement.
+
+◦ Idling Mode - the Empty Street - low drive in the absence of agents, with default-mode-adjacent narrative traffic.
+
+◦ Sleep Modes - the Street at Night - standard cortical slow-wave and rapid-eye-movement (REM) regimes, the latter a plausible stage for social dream content.
+
+ENTRY 2.1.23. MIDDLE TEMPORAL GYRUS (MTG, BRODMANN AREA 21) (keyed to Nature's Cognitive Architecture section 2.1.23)
+
+◦ Automatic Access Mode - the Open Dictionary - fast, uncontrolled mapping of words and objects onto their dominant meanings.
+
+◦ Controlled Retrieval Mode - the Deep Search - goal-directed selection of weak, remote, or context-appropriate meanings under frontal control.
+
+◦ Narrative Default Mode - the Storyteller's Bench - default-mode-coupled semantic drift during rest, recollection, and mind-wandering.
+
+◦ Sleep Modes - the Dictionary at Night - standard slow-wave Up-Down consolidation and rapid-eye-movement (REM) regimes.
+
+ENTRY 2.1.24. FRONTOPOLAR / ANTERIOR PREFRONTAL CORTEX (BRODMANN AREA 10) (keyed to Nature's Cognitive Architecture section 2.1.24)
+
+◦ Single-Task Supervision Mode - the One-Ledger Desk - monitoring a single ongoing goal at low load.
+
+◦ Branching Mode - the Held Bookmark - maintaining a pending superordinate goal across an interruption while a subtask executes.
+
+◦ Prospective-Memory Watch Mode - the Standing Reminder - carrying a delayed intention and checking the world for its trigger.
+
+◦ Exploration Mode - the Scout's Ledger - biasing behaviour toward sampling alternatives rather than exploiting the current best option.
+
+◦ Metacognitive Review Mode - the Auditor of Thought - evaluating one's own confidence and strategy.
+
+◦ Sleep Modes - the Closed Desk - slow-wave Up-Down alternation, with notable frontal deactivation persisting into rapid-eye-movement (REM).
+
+ENTRY 2.1.25. PRE-SUPPLEMENTARY MOTOR AREA (PRE-SMA, ROSTRAL MEDIAL BRODMANN AREA 6) (keyed to Nature's Cognitive Architecture section 2.1.25)
+
+◦ Selection Mode - the Chooser at the Gate - weighing candidate actions before execution.
+
+◦ Sequencing Mode - the Beadstringer - assembling actions into an ordered programme handed to the supplementary motor area.
+
+◦ Set-Switch Mode - the Points Change - dismantling the current task set and installing another.
+
+◦ Braking Mode - the Emergency Hand - the rapid stopping signal sent by the hyperdirect route to the subthalamic nucleus.
+
+◦ Sleep Modes - the Gate at Night - standard slow-wave and rapid-eye-movement (REM) regimes, with REM motor commands blocked downstream by atonia.
+
+ENTRY 2.1.26. SUPPLEMENTARY EYE FIELD (SEF, MEDIAL BRODMANN AREA 6/8) (keyed to Nature's Cognitive Architecture section 2.1.26)
+
+◦ Internally Timed Gaze Mode - the Metronome Eye - issuing self-paced and learned saccade plans without an external trigger.
+
+◦ Sequence Mode - the Choreographer - running an ordered series of gaze shifts as one programme.
+
+◦ Rule-Conflict Mode - the Anti-Look Marshal - enforcing learned rules that oppose reflex, as in the antisaccade task, where one must look away from a flashed target.
+
+◦ Performance-Monitor Mode - the Gaze Auditor - registering errors and predicted reward after saccades and adjusting the next plan.
+
+◦ Sleep Modes - the Dark Rehearsal - standard slow-wave and rapid-eye-movement (REM) regimes.
+
+ENTRY 2.1.27. SUPERIOR PARIETAL LOBULE (SPL, BRODMANN AREAS 5 AND 7) (keyed to Nature's Cognitive Architecture section 2.1.27)
+
+◦ Attentive Survey Mode - the Turning Beacon - sustained visuospatial attention over the scene with the dorsal attention network.
+
+◦ Shift Mode - the Beacon Swung - the transient superior parietal signal that moves attention between locations, objects, or even tasks.
+
+◦ Reach-and-Grasp Guidance Mode - the Hand's Pilot - continuous eye-head-hand coordinate transformation during visually guided action.
+
+◦ Spatial Working-Memory Mode - the Held Grid - maintaining locations across a delay.
+
+◦ Sleep Modes - the Beacon Doused - standard slow-wave Up-Down and rapid-eye-movement (REM) regimes.
+
+ENTRY 2.1.28. PARAHIPPOCAMPAL PLACE AREA (PPA) (keyed to Nature's Cognitive Architecture section 2.1.28)
+
+◦ Scene-Perception Mode - the Threshold Reader - stimulus-driven recognition of places, layouts, and landmarks.
+
+◦ Context-Encoding Mode - the Setting Stamp - tagging ongoing events with their spatial context for the hippocampus.
+
+◦ Scene-Imagery Mode - the Remembered Room - top-down reconstruction of places during recall, imagination, and route planning.
+
+◦ Idling Mode - the Doorway Watch - low-rate baseline with weak scene drive.
+
+◦ Sleep Modes - the Rooms Revisited - slow-wave consolidation traffic with the hippocampal formation, and rapid-eye-movement (REM) scene imagery.
+
+ENTRY 2.1.29. VISUAL WORD FORM AREA (VWFA, LEFT OCCIPITOTEMPORAL FUSIFORM) (keyed to Nature's Cognitive Architecture section 2.1.29)
+
+◦ Expert Reading Mode - the Instant Scribe - fast, parallel, orientation-invariant recognition of practised letter strings.
+
+◦ Effortful Decoding Mode - the Letter-by-Letter Lamp - serial, attention-hungry processing of unfamiliar words, scripts, or degraded print.
+
+◦ Generic Object Mode - the Borrowed Bench - default fusiform object and shape processing when no text is present, the pre-literate tenancy this patch was recycled from.
+
+◦ Sleep Modes - the Scribe at Rest - standard slow-wave and rapid-eye-movement (REM) cortical regimes, with slow consolidation of new orthographic learning.
+
+ENTRY 2.1.30. THE LATERAL OCCIPITAL COMPLEX AND EXTRASTRIATE BODY AREA (LOC, EBA) (keyed to Nature's Cognitive Architecture section 2.1.30)
+
+◦ Shape-Recognition Mode - the Contour Judge - stimulus-driven extraction of object shape by the lateral occipital complex.
+
+◦ Body-Reading Mode - the Silhouette Clerk - recognition of body parts and postures by the extrastriate body area, feeding both social perception and one's own action system.
+
+◦ Imagery Mode - the Inner Gallery - top-down reactivation of shape and body representations during visual imagery and action observation.
+
+◦ Adapted Mode - the Tired Judge - repetition suppression, the reduced response to a repeated form that serves change detection and efficient coding.
+
+◦ Sleep Modes - the Gallery Closed - standard slow-wave Up-Down and rapid-eye-movement (REM) regimes.
+
+ENTRY 2.1.31. SECONDARY SOMATOSENSORY CORTEX (S2, PARIETAL OPERCULUM) (keyed to Nature's Cognitive Architecture section 2.1.31)
+
+◦ Haptic-Recognition Mode - the Reading Hand - active tactile exploration binding touch into recognised objects.
+
+◦ Attentive-Touch Mode - the Listening Skin - raised gain on a monitored body region, bilateral fields allowing comparison across the two hands.
+
+◦ Suppressed-Touch Mode - the Silenced Sleeve - attentional down-weighting of irrelevant tactile input, including the predicted touch of one's own movement.
+
+◦ Affective-Relay Mode - the Feeling Ferry - weighting pain and pleasant-touch traffic onward to the insula.
+
+◦ Sleep Modes - the Numb Watch - standard slow-wave and rapid-eye-movement (REM) regimes with strong tactile gating, salient stimuli still able to force waking.
+
+ENTRY 2.1.32. THE AUDITORY BELT AND PARABELT (BRODMANN AREA 42 AND BEYOND) (keyed to Nature's Cognitive Architecture section 2.1.32)
+
+◦ Open-Monitoring Mode - the Wide Ear - broadband surveillance of the acoustic scene with novelty detection.
+
+◦ Selective-Stream Mode - the Cocktail Ear - extraction of one voice or source from a mixture, the attended stream enhanced and the rest suppressed.
+
+◦ Speech-Tracking Mode - the Syllable Loom - entrainment to the temporal envelope of speech for the language system.
+
+◦ Music-and-Pattern Mode - the Melody Bench - analysis of pitch contour, harmony, and rhythm patterns.
+
+◦ Sleep Sentinel Mode - the Ear That Never Sleeps - reduced but preserved processing during sleep, still able to flag salient sounds such as one's own name.
+
+ENTRY 2.1.33. THE INSULA, ANTERIOR AND POSTERIOR DIVISIONS (keyed to Nature's Cognitive Architecture section 2.1.33)
+
+◦ Quiet-Body Monitoring Mode - the Background Hum - low-salience interoceptive bookkeeping while attention faces the world.
+
+◦ Interoceptive-Attention Mode - the Inward Ear - deliberate attention to heartbeat, breath, and gut, raising anterior readout of posterior maps.
+
+◦ Salience-Alarm Mode - the Klaxon Desk - the anterior insula flagging a homeostatically or emotionally significant event and switching the large-scale networks.
+
+◦ Pain-and-Threat Engagement Mode - the Hot Line - high-gain posterior nociceptive relay with strong anterior affective readout and autonomic output.
+
+◦ Empathic-Simulation Mode - the Borrowed Ache - anterior representation of another's felt state during observed pain or emotion.
+
+◦ Sleep Modes - the Hum at Night - continued visceral monitoring at reduced awareness, with slow-wave gating and rapid-eye-movement (REM) re-engagement of affective circuitry.
+
+ENTRY 2.2.1. THE HIPPOCAMPAL FORMATION (DENTATE GYRUS, CA3, CA2, CA1, SUBICULUM) (keyed to Nature's Cognitive Architecture section 2.2.1)
+
+◦ THETA-ENCODING mode - the Explorer's Weave - active exploration and attentive waking, when the structure writes new experience.
+
+◦ SHARP-WAVE-RIPPLE mode - the Night Librarian - quiet rest and slow-wave sleep, when the structure replays and consolidates.
+
+◦ rapid-eye-movement (REM)-THETA mode - the Dreamer's Reprise - rapid-eye-movement (REM) sleep theta, when circuits are re-run without new encoding.
+
+◦ RETRIEVAL sub-phase within theta - the Reader's Half-Cycle - the opposite theta phase that reads stored patterns rather than writing them.
+
+ENTRY 2.2.2. THE AMYGDALA (LATERAL, BASAL, ACCESSORY BASAL, CENTRAL, MEDIAL, AND CORTICAL NUCLEI) (keyed to Nature's Cognitive Architecture section 2.2.2)
+
+◦ VIGILANCE-SCANNING mode - the Sentinel's Watch - baseline threat surveillance during ordinary waking.
+
+◦ ACUTE-DEFENSIVE mode - the Alarm - a detected threat drives the central-nucleus output division to command freezing, sympathetic surge, and cortisol release.
+
+◦ APPETITIVE-VALUE mode - the Appraiser - assignment of positive value to reward-predicting cues.
+
+◦ SAFETY-EXTINCTION mode - the All-Clear - prefrontal excitation of the intercalated cell masses suppresses the fear response without erasing the memory.
+
+ENTRY 2.2.3. THE BED NUCLEUS OF THE STRIA TERMINALIS (BNST) (keyed to Nature's Cognitive Architecture section 2.2.3)
+
+◦ QUIESCENT mode - the Calm Watch - low tonic output when the environment is predictable and safe.
+
+◦ SUSTAINED-ANXIETY mode - the Long Dread - integration of diffuse, unpredictable, or distant threat into prolonged apprehension.
+
+◦ STRESS-RECRUITED mode - the Braced State - corticotropin-releasing-hormone-driven engagement that couples anxiety to the hypothalamic-pituitary-adrenal (HPA) stress axis.
+
+ENTRY 2.2.4. THE BASAL GANGLIA (keyed to Nature's Cognitive Architecture section 2.2.4)
+
+◦ HOLD mode - the Locked Gate - the tonic default in which internal-pallidal and reticular output inhibits the thalamus and no action is released.
+
+◦ GO-SELECTION mode - the Chosen Channel - the direct pathway disinhibits one thalamic channel to permit a selected action.
+
+◦ NO-GO-SUPPRESSION mode - the Global Brake - the indirect and hyperdirect pathways raise inhibition to withhold or arrest actions.
+
+◦ GOAL-DIRECTED mode - the Deliberator - associative (dorsomedial, caudate) control by action-outcome value.
+
+◦ HABITUAL mode - the Autopilot - sensorimotor (dorsolateral, putamen) stimulus-response control after overtraining.
+
+ENTRY 2.2.5. THE NUCLEUS ACCUMBENS (SHELL AND CORE) AND THE VENTRAL PALLIDUM (keyed to Nature's Cognitive Architecture section 2.2.5)
+
+◦ UNCONDITIONED-REWARD mode - the First Taste - shell-mediated response to primary, unlearned reward.
+
+◦ CUE-DRIVEN-SEEKING mode - the Chaser - core-mediated learned reward-seeking to conditioned cues.
+
+◦ AVERSION-PAUSE mode - the Cold Shoulder - dopamine dips and shell circuits suppress approach to worse-than-expected outcomes.
+
+◦ TONIC-MOTIVATION mode - the Idle Drive - baseline dopamine tone setting general vigour and willingness to work.
+
+ENTRY 2.2.6. THE CLAUSTRUM (keyed to Nature's Cognitive Architecture section 2.2.6)
+
+◦ WAKING-BINDING mode - the Conductor - hypothesised binding of information across cortical modalities into a unified percept during attentive waking.
+
+◦ SLOW-WAVE-SYNCHRONISING mode - the Metronome - hypothesised coordination of cortex-wide slow-wave activity in slow-wave sleep.
+
+◦ IDLE mode - the Rest - low coordinated output between demands.
+
+ENTRY 2.2.7. THE BASAL FOREBRAIN CHOLINERGIC COMPLEX (NUCLEUS BASALIS OF MEYNERT, MEDIAL SEPTAL NUCLEUS, DIAGONAL BAND OF BROCA) (keyed to Nature's Cognitive Architecture section 2.2.7)
+
+◦ ATTENTIVE-BROADCAST mode - the Spotlight - high tonic and phasic acetylcholine enhancing signal-to-noise and gating plasticity during attentive waking.
+
+◦ THETA-PACEMAKER mode - the Metronome - the medial septum and diagonal band pace the hippocampal theta rhythm during exploration and rapid-eye-movement sleep.
+
+◦ QUIET-WAKE-and-SLOW-WAVE mode - the Dimmer - low acetylcholine that permits sharp-wave-ripple consolidation and cortical slow waves.
+
+ENTRY 2.2.8. THE OLFACTORY BULB (keyed to Nature's Cognitive Architecture section 2.2.8)
+
+◦ RESTING-RESPIRATORY mode - the Slow Breath - passive odour sampling locked to quiet breathing.
+
+◦ ACTIVE-SNIFFING mode - the Investigator - fast sniffing that raises sampling rate and sharpens discrimination.
+
+◦ STATE-MODULATED-GAIN mode - the Tuned Nose - arousal and hunger raising sensitivity to salient odours.
+
+ENTRY 2.2.9. THE PIRIFORM CORTEX (PRIMARY OLFACTORY CORTEX) (keyed to Nature's Cognitive Architecture section 2.2.9)
+
+◦ ODOUR-BINDING mode - the Assembler - binding a combinatorial glomerular code into a single recognisable smell.
+
+◦ PATTERN-COMPLETION mode - the Rememberer - completing a partial or noisy input to a stored odour object, a content-addressable memory for scent.
+
+◦ ENCODING mode - the Scribe - acetylcholine-gated learning of a new odour.
+
+ENTRY 2.2.10. THE OLFACTORY TUBERCLE (OT) (keyed to Nature's Cognitive Architecture section 2.2.10)
+
+◦ ODOUR-APPROACH mode - the Beckoner - gating approach to a rewarding smell.
+
+◦ REWARD-LEARNING mode - the Valuer - dopamine-gated updating of an odour's incentive value.
+
+◦ NEUTRAL-SAMPLING mode - the Bystander - low incentive output to a valueless odour.
+
+ENTRY 2.2.11. THE ANTERIOR OLFACTORY NUCLEUS (AON) (keyed to Nature's Cognitive Architecture section 2.2.11)
+
+◦ INTERHEMISPHERIC-SHARING mode - the Bridge - relaying odour to the contralateral bulb by the anterior commissure.
+
+◦ ASSOCIATIVE-INTEGRATION mode - the Weaver - integrating odour with olfactory context for piriform and entorhinal cortex.
+
+◦ STATE-GATING mode - the Doorkeeper - raising or lowering olfactory throughput with arousal and sleep.
+
+ENTRY 2.2.12. THE ENDOPIRIFORM NUCLEUS (keyed to Nature's Cognitive Architecture section 2.2.12)
+
+◦ OLFACTORY-LIMBIC-BINDING mode - the Knitter - integrating smell with limbic context into a bound percept.
+
+◦ RECOGNITION-MEMORY mode - the Recogniser - contributing to recognition memory for odour and context.
+
+◦ QUIESCENT mode - the Rest - low output between demands.
+
+ENTRY 2.2.13. THE TAENIA TECTA (keyed to Nature's Cognitive Architecture section 2.2.13)
+
+◦ OLFACTORY-LIMBIC-RELAY mode - the Forwarder - relaying smell into the limbic continuum.
+
+◦ INTEGRATIVE mode - the Blender - combining olfactory and limbic signals.
+
+◦ QUIESCENT mode - the Rest - baseline low output.
+
+ENTRY 2.2.14. THE ISLANDS OF CALLEJA (keyed to Nature's Cognitive Architecture section 2.2.14)
+
+◦ GROOMING-PROMOTING mode - the Preener - biasing toward self-grooming and repetitive motivated behaviour.
+
+◦ MOOD-MODULATING mode - the Tuner - shifting affective state with local neuromodulator tone.
+
+◦ BASELINE mode - the Rest - low modulatory output.
+
+ENTRY 2.2.15. THE LATERAL SEPTAL NUCLEUS (LS) (keyed to Nature's Cognitive Architecture section 2.2.15)
+
+◦ SOCIAL-REGULATION mode - the Diplomat - shaping social behaviour by hippocampal and amygdalar context.
+
+◦ STRESS-MODULATION mode - the Buffer - relaying limbic signals that temper or amplify the stress response.
+
+◦ FEEDING-and-REWARD mode - the Provisioner - gating feeding and reward through accumbens and hypothalamic targets.
+
+ENTRY 2.3.1. THE THALAMUS (keyed to Nature's Cognitive Architecture section 2.3.1)
+
+◦ TONIC-RELAY mode - the Faithful Gate - waking and rapid-eye-movement (REM) sleep, when relay cells transmit driver input linearly to cortex.
+
+◦ BURST-ALERT mode - the Startle - a low-threshold calcium burst that flags a stimulus after silence and can trigger arousal.
+
+◦ SPINDLE-GATED mode - the Sleep Loom - non-REM sleep, when reticular-relay loops generate sleep spindles and disconnect cortex from the world.
+
+◦ ATTENTIONAL-SELECTION mode - the Guarded Gate - reticular inhibition, biased by prefrontal cortex, passes relevant channels and suppresses distractors.
+
+ENTRY 2.3.2. THE HYPOTHALAMUS (keyed to Nature's Cognitive Architecture section 2.3.2)
+
+◦ FEEDING programme - the Forager - arcuate hunger and satiety signals and lateral-hypothalamic drive orchestrate seeking and consuming.
+
+◦ DEFENCE programme - the Guard - medial and ventromedial circuits command fight, flight, or freeze, prioritised over feeding when both are cued.
+
+◦ THERMOREGULATION programme - the Thermostat - preoptic circuits defend core temperature.
+
+◦ FLUID-BALANCE programme - the Water-Keeper - osmoreceptor-driven vasopressin release and thirst.
+
+◦ SLEEP-WAKE programme - the Flip-Flop - the ventrolateral preoptic sleep switch against the orexin, histamine, and arousal nuclei.
+
+◦ STRESS programme - the Mobiliser - paraventricular corticotropin-releasing-hormone drive of the hypothalamic-pituitary-adrenal (HPA) axis.
+
+◦ REPRODUCTIVE and SOCIAL programme - the Progenitor - preoptic and medial circuits governing mating, parenting, and hormonal cycles.
+
+◦ CIRCADIAN-TIMEKEEPING programme - the Clock - the suprachiasmatic master oscillator setting day against night for every other programme.
+
+ENTRY 2.3.3. THE HABENULA (LATERAL AND MEDIAL) (keyed to Nature's Cognitive Architecture section 2.3.3)
+
+◦ REWARD-EXPECTANT mode - the Hopeful Quiet - low firing while an expected reward is still pending.
+
+◦ OMISSION-PUNISHMENT mode - the Letdown - a burst on reward omission, punishment, or worse-than-expected outcome that suppresses the monoamine systems.
+
+◦ STRESS-TRANSFORMED mode - the Soured Signal - under stress, formerly rewarding events produce punishment-like output.
+
+ENTRY 2.3.4. THE PINEAL GLAND (keyed to Nature's Cognitive Architecture section 2.3.4)
+
+◦ DAY-SILENT mode - the Daylight Rest - suppressed melatonin synthesis during subjective day.
+
+◦ NIGHT-SECRETING mode - the Dark Announcer - nocturnal melatonin release announcing that night has fallen.
+
+◦ DAWN-SUPPRESSION mode - the Reveille - light-triggered acute shutdown of secretion at dawn.
+
+ENTRY 2.3.5. THE SUBTHALAMUS AND THE ZONA INCERTA (ZI) (keyed to Nature's Cognitive Architecture section 2.3.5)
+
+◦ AROUSAL-GATING mode - the Dimmer - setting the gain of higher-order and paraventricular thalamic transmission with brain state.
+
+◦ DEFENCE-MODULATION mode - the Restraint - rostral inhibitory neurons scaling innate flight and freezing.
+
+◦ FEEDING-and-CONSUMMATORY mode - the Provisioner - driving feeding and consummatory behaviour.
+
+◦ SLEEP-PROMOTING mode - the Sandman - contributing to sleep induction and non-rapid-eye-movement (non-REM) state.
+
+ENTRY 2.4.1. THE MIDBRAIN (keyed to Nature's Cognitive Architecture section 2.4.1)
+
+◦ ORIENTING mode - the Scout's Sweep - the colliculi run their sight-sound-touch maps in register and throw the eyes and head toward whatever just changed.
+
+◦ DEFENCE mode - the Cornered Animal - the periaqueductal grey seizes control and commits the body to freeze, flight, or fight while its own descending analgesia silences pain.
+
+◦ REWARD-SEEKING mode - the Prospector - the ventral tegmental area's dopamine neurons drive approach and stamp in the actions that led toward reward.
+
+◦ QUIESCENT-SLEEP mode - the Banked Fire - collicular orienting and dopaminergic phasic bursting fall away as the sleep switch closes down arousal.
+
+ENTRY 2.4.2. THE PONS (keyed to Nature's Cognitive Architecture section 2.4.2)
+
+◦ AROUSED-WAKING mode - the Ringing Bell - the locus coeruleus fires tonically and phasically, flooding the brain with norepinephrine (a monoamine transmitter of alertness).
+
+◦ NON-rapid-eye-movement (REM)-SLEEP mode - the Dimmed Hall - aminergic firing falls and the pontine relays quieten while slow rhythms take the cortex.
+
+◦ REM-SLEEP mode - the Silent Dreamer - the locus coeruleus and raphe go essentially silent while the cholinergic pedunculopontine and laterodorsal tegmental nuclei fire and launch the ponto-geniculo-occipital waves of dreaming.
+
+◦ RELAY mode (state-independent) - the Great Bridge - the pontine nuclei pass twenty million corticopontine fibres onward to the cerebellum irrespective of arousal state.
+
+ENTRY 2.4.3. THE MEDULLA (keyed to Nature's Cognitive Architecture section 2.4.3)
+
+◦ REST-AND-DIGEST mode - the Quiet Housekeeper - the vagal complex (nucleus tractus solitarius and dorsal motor nucleus) drives parasympathetic outflow to heart and gut.
+
+◦ FIGHT-OR-FLIGHT mode - the Alarm Driver - the rostral ventrolateral medulla drives sympathetic outflow, raising blood pressure and heart rate.
+
+◦ PROTECTIVE-REFLEX mode - the Bouncer - the area postrema and reticular vomiting, cough, and swallow centres seize control to expel or guard against a threat.
+
+◦ RESPIRATORY-RHYTHM mode (always on) - the Metronome - the pre-Botzinger complex generates the breath, its rate reset by state.
+
+ENTRY 2.4.4. THE ASCENDING AROUSAL SYSTEM NUCLEI (keyed to Nature's Cognitive Architecture section 2.4.4)
+
+◦ WAKING mode - the Full Broadcast - all aminergic, cholinergic, and orexinergic members fire and hold the cortex desynchronised and conscious.
+
+◦ NON-rapid-eye-movement (REM)-SLEEP mode - the Low Watch - the ensemble is inhibited by the ventrolateral preoptic nucleus and the cortex falls into slow waves.
+
+◦ REM-SLEEP mode - the Split Broadcast - the aminergic members (norepinephrine, serotonin, histamine) go silent while the cholinergic members fire, activating the cortex without waking the body.
+
+ENTRY 2.5. THE CEREBELLUM (keyed to Nature's Cognitive Architecture section 2.5)
+
+◦ FORWARD-MODEL mode - the Steady Hand - the trained circuit predicts and corrects ongoing movement and cognition with the error channel quiet.
+
+◦ ERROR-LEARNING mode - the Stern Tutor - a climbing-fibre error signal drives long-term depression at the parallel-fibre-to-Purkinje-cell synapse, reshaping the model.
+
+◦ OFFLINE-CONSOLIDATION mode - the Night Rehearsal - during sleep the cerebellum participates in replaying and stabilising newly learned skills.
+
+ENTRY 2.6. THE SPINAL CORD (keyed to Nature's Cognitive Architecture section 2.6)
+
+◦ REFLEX mode - the Instant Guardian - monosynaptic and withdrawal reflexes act without the brain, protecting the body in milliseconds.
+
+◦ POSTURAL-STANDING mode - the Patient Pillar - tonic extensor drive holds the body upright against gravity.
+
+◦ LOCOMOTOR mode - the Tireless Walker - the central pattern generator produces the alternating step rhythm autonomously.
+
+◦ VOLUNTARY-OVERRIDE mode - the Piano Player - the corticospinal tract imposes fine fractionated movement on the local circuits.
+
+ENTRY 2.7.1. THE PREVERTEBRAL GANGLION INTEGRATIVE CLUSTER (keyed to Nature's Cognitive Architecture section 2.7.1)
+
+◦ CENTRAL-DOMINANT mode - the Chain of Command - central sympathetic drive prevails, diverting splanchnic blood flow and suppressing gut activity under stress.
+
+◦ ENTERIC-DOMINANT mode - the Local Council - enteric afferents from the gut set the ganglionic output, coordinating motility and secretion locally.
+
+◦ INTEGRATED-BALANCE mode - the Negotiator - the ganglionic interneurons weigh both sources and compute a compromise visceral set-point.
+
+ENTRY 2.8. THE ENTERIC NERVOUS SYSTEM (keyed to Nature's Cognitive Architecture section 2.8)
+
+◦ FASTED-HOUSEKEEPING mode - the Night Sweeper - the migrating motor complex sweeps residue and bacteria along the gut in cyclic waves between meals.
+
+◦ FED-DIGESTIVE mode - the Kneading Mixer - feeding replaces the sweep with segmenting, mixing contractions that blend and propel food.
+
+◦ SECRETORY mode - the Wetting Crew - the submucosal (Meissner's) plexus drives secretion and local blood flow.
+
+◦ DEFENSIVE mode - the Purge - noxious contents trigger rapid propulsion (diarrhoea) or reverse peristalsis, an adaptive expulsion programme.
+
+ENTRY 2.9. THE ENDOCRINE GLANDS AS LAYER 9 STRUCTURES (keyed to Nature's Cognitive Architecture section 2.9)
+
+◦ BASAL-versus-SURGE - the Idle and the Flood - a low maintenance secretion punctuated by a large stimulated release (the adrenal cortisol stress surge, the adrenal medulla's adrenaline dump, the luteinising-hormone ovulatory surge).
+
+◦ CIRCADIAN - the Day-Night Programme - a twenty-four-hour rhythm imposed by the suprachiasmatic clock (the cortisol dawn peak, the melatonin night rise).
+
+◦ PULSATILE-versus-CONTINUOUS - the Drummer and the Drone - hormones released in discrete pulses whose frequency carries meaning versus those held at a steady level (pulsatile gonadotropin-releasing hormone and growth hormone versus near-continuous thyroid hormone).
+
+◦ OVARIAN FOLLICULAR-versus-LUTEAL - the Two Halves of the Month - the follicular phase of rising oestrogen and the luteal phase of progesterone dominance.
+
+ENTRY 2.10.1. THE DEFAULT MODE NETWORK (keyed to Nature's Cognitive Architecture section 2.10.1)
+
+◦ ACTIVE-INTERNAL mode - the Inward Gaze - the network sustains and broadcasts self, memory, and imagination during rest and mind-wandering.
+
+◦ DEACTIVATED-ANTICORRELATED mode - the Stood-Down Watch - the network is suppressed as external task-positive networks engage.
+
+◦ SLEEP-RECONFIGURED mode - the Loosened Web - during deep sleep the network fragments and loses its long-range integration.
+
+ENTRY 2.10.2. THE SALIENCE NETWORK / VENTRAL ATTENTION NETWORK (keyed to Nature's Cognitive Architecture section 2.10.2)
+
+◦ MONITORING mode - the Sentinel - the network scans interoceptive and sensory streams for the most salient event.
+
+◦ SWITCHING mode - the Points-Operator - on detecting salience it interrupts the default network and recruits the executive network.
+
+◦ SLEEP-QUIETENED mode - the Dozing Guard - salience-driven switching is blunted as arousal falls, though strong stimuli still break through.
+
+ENTRY 2.10.3. THE DORSAL ATTENTION NETWORK (keyed to Nature's Cognitive Architecture section 2.10.3)
+
+◦ ENGAGED-ORIENTING mode - the Aimed Beam - the network applies top-down gain to a chosen location or feature.
+
+◦ DISENGAGED-IDLE mode - the Lowered Beam - without a spatial goal the network idles and the default network rises.
+
+◦ ANTICORRELATED-DOMINANT mode - the Ascendant Beam - during demanding external tasks it holds high while the default network is suppressed.
+
+ENTRY 2.10.4. THE FRONTOPARIETAL CONTROL NETWORK / CENTRAL EXECUTIVE NETWORK (keyed to Nature's Cognitive Architecture section 2.10.4)
+
+◦ ACTIVE-CONTROL mode - the Conductor - the network holds a goal in working memory and publishes control biases that reconfigure the other networks.
+
+◦ STANDBY mode - the Waiting Conductor - between tasks it holds no active goal and its persistent activity subsides.
+
+◦ SLEEP-DISSOLVED mode - the Silent Podium - in deep sleep its long-range coordination breaks down.
+
+ENTRY 2.10.5. THE CINGULO-OPERCULAR NETWORK (keyed to Nature's Cognitive Architecture section 2.10.5)
+
+◦ SET-MAINTENANCE mode - the Steady Keel - the network sustains a stable task-set and tonic alertness across many trials.
+
+◦ ERROR-ADJUST mode - the Course Corrector - on a mistake or feedback it publishes a corrective signal that tightens control.
+
+◦ LOW-ALERT mode - the Slackening Keel - as tonic arousal falls, sustained control loosens and lapses appear.
+
+ENTRY 2.10.6. THE LANGUAGE NETWORK (keyed to Nature's Cognitive Architecture section 2.10.6)
+
+◦ COMPREHENSION mode - the Listener - the network maps incoming speech and text onto meaning.
+
+◦ PRODUCTION mode - the Speaker - it maps intended meaning onto articulatory programs.
+
+◦ INNER-REHEARSAL mode - the Silent Voice - it runs the phonological loop for inner speech and verbal working memory without overt output.
+
+ENTRY 2.10.7. THE SENSORIMOTOR NETWORK (keyed to Nature's Cognitive Architecture section 2.10.7)
+
+◦ EXECUTION mode - the Doer - the network issues motor commands and corrects them by sensory feedback in a closed loop.
+
+◦ POSTURAL-HOLD mode - the Bracer - it maintains posture and readiness without overt movement.
+
+◦ MOTOR-LEARNING mode - the Apprentice - practice reshapes its cortical maps.
+
+◦ SLEEP-OFFLINE mode - the Resting Limb - during sleep, movement is gated off and motor memories consolidate.
+
+ENTRY 2.10.8. THE VISUAL NETWORK (keyed to Nature's Cognitive Architecture section 2.10.8)
+
+◦ FEEDFORWARD-PERCEPTION mode - the Open Eye - the retinal image is transformed up the hierarchy into objects, scenes, and motion.
+
+◦ ATTENTION-MODULATED mode - the Focused Eye - top-down gain from the dorsal attention network enhances the attended location or feature.
+
+◦ IDLE-ALPHA mode - the Rested Eye - with eyes closed or the region disengaged, occipital alpha rises as active suppression.
+
+ENTRY 2.10.9. THE AUDITORY NETWORK (keyed to Nature's Cognitive Architecture section 2.10.9)
+
+◦ ANALYSIS mode - the Open Ear - the network analyses all incoming sound into frequency and pattern.
+
+◦ SELECTIVE-LISTENING mode - the Cupped Ear - attention sharpens one stream, the cocktail-party selection.
+
+◦ SLEEP-GATED mode - the Half-Shut Ear - thalamic gating attenuates input in sleep, though salient sounds still rouse.
+
+ENTRY 2.10.10. THE LIMBIC NETWORK (keyed to Nature's Cognitive Architecture section 2.10.10)
+
+◦ APPETITIVE-APPRAISAL mode - the Beckoning - reward and positive value dominate, driving approach.
+
+◦ AVERSIVE-APPRAISAL mode - the Recoil - threat and negative value dominate, driving avoidance and defensive autonomic output.
+
+◦ NEUTRAL-MONITORING mode - the Even Keel - the network holds a baseline appraisal, integrating ongoing interoceptive state.
+
+ENTRY 2.11.1. THE CORTICO-BASAL-GANGLIA-THALAMO-CORTICAL LOOPS (keyed to Nature's Cognitive Architecture section 2.11.1)
+
+◦ SELECTION mode - the Chooser - the loop releases one competing channel from tonic inhibition, permitting a deliberate action or thought.
+
+◦ HABIT mode - the Autopilot - a well-learned action runs from the dorsolateral striatal stream with little deliberation.
+
+◦ HOLD-ALL mode - the Gatekeeper - tonic pallidal inhibition holds every channel shut, permitting nothing until selection tips.
+
+ENTRY 2.11.2. THE DIRECT, INDIRECT, AND HYPERDIRECT PATHWAYS (keyed to Nature's Cognitive Architecture section 2.11.2)
+
+◦ GO-DOMINANT mode - the Green Light - the direct pathway prevails and disinhibits the thalamus to release an action.
+
+◦ NO-GO-DOMINANT mode - the Red Light - the indirect pathway prevails and further inhibits the thalamus to withhold an action.
+
+◦ STOP-OVERRIDE mode - the Emergency Brake - the hyperdirect pathway applies a fast global brake to cancel an action already under way.
+
+ENTRY 2.11.3. THE PAPEZ CIRCUIT (keyed to Nature's Cognitive Architecture section 2.11.3)
+
+◦ ENCODING-CIRCULATION mode - the Scribe's Round - fresh experience enters and circulates the ring under active theta.
+
+◦ CONSOLIDATION-CIRCULATION mode - the Night Copyist - during rest and sleep the loop recirculates traces to stabilise them.
+
+◦ RETRIEVAL-CIRCULATION mode - the Reader's Round - stored content is read back out through the ring.
+
+ENTRY 2.11.4. THE TRIPARTITE SYNAPSE (keyed to Nature's Cognitive Architecture section 2.11.4)
+
+◦ SILENT-PARTNER mode - the Quiet Listener - at low activity the astrocyte merely monitors and clears transmitter without feeding back.
+
+◦ POTENTIATING-GLIA mode - the Helping Hand - the astrocyte releases gliotransmitters (glutamate, D-serine) that permit and strengthen plasticity.
+
+◦ SUPPRESSING-GLIA mode - the Restraining Hand - the astrocyte releases adenosine to damp transmission and raise the threshold for potentiation.
+
+ENTRY 2.11.5. THE GLIA AS COGNITIVE PARTICIPANTS (keyed to Nature's Cognitive Architecture section 2.11.5)
+
+◦ HOMEOSTATIC-SUPPORT mode - the Quartermaster - astrocytes supply metabolic support and gate plasticity in the resting circuit.
+
+◦ SURVEILLANCE-and-PRUNING mode - the Sculptor - microglia survey activity and phagocytose weak synapses, shaping learning and forgetting.
+
+◦ ADAPTIVE-MYELINATION mode - the Speed-Tuner - oligodendrocytes lay down experience-dependent myelin that sets conduction speed.
+
+◦ REACTIVE-DEFENCE mode - the Firefighter - on injury or infection glia switch to a reactive protective programme (admitted as an adaptive used regime, with the note that sustained reactivity becomes pathological).
+
+END OF OUTLINE
