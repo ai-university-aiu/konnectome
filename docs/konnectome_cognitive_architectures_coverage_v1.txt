@@ -1,0 +1,428 @@
+KONNECTOME COGNITIVE ARCHITECTURES COVERAGE  (v1)
+
+The Ninth Commandment's first execution: the coverage survey of the Cognitive
+Architectures Test-Bed. Date: 2026-08-09.
+
+Author: D. R. Dison / ai-university-aiu.
+
+THE MANDATE (the Ninth Commandment, restated). The local, read-only directory
+~/cognitive_architectures holds the study set of published cognitive architectures.
+konnectome should be able to PERFORM each and every one of the functions of the
+architectures catalogued there. Coverage is measured; the ship is steered by the
+biology (the Vision Document Set, the Eighth Commandment). Where a test-bed
+architecture and the biological blueprint disagree, the biology leads and the
+disagreement is recorded. An architecture found unachievable with the current
+konnectome, PrologAI, and Causalontology setup is a BUG, recorded in the ledger and
+routed through the gated change orders under the Safety Gate. A kludge, were one ever
+made, would be documented as a candidate discovery.
+
+THE DISCIPLINE OF THIS DOCUMENT. The test-bed files are cited, never reproduced:
+they are local-only and never become part of this repository. The architectures named
+below are published systems of the public literature; naming them and judging
+konnectome's coverage of their functions is the survey the commandment orders. And
+the armchair rule of the Second Commandment stands over the Ninth: a coverage bug
+named here becomes a LEDGER coverage entry with a named closer, but nothing is routed
+to a change order until a build actually demonstrates the current setup cannot
+express it. This survey read and judged; it built nothing; it therefore routes
+nothing, exactly as the Eighth Commandment analysis routed nothing.
+
+HOW THE SURVEY WAS MADE. Baseline verified green first (494 tests across
+twenty-seven packs counted pack by pack, four gates at zero violations, capstone
+story clean, conformance 137 of 137 in both cousins). The four test-bed text files
+(the two books, the patterns fileset, and the combined talk-transcript analyses -
+about eight hundred sixty kilobytes of prose) were read IN FULL by four parallel
+reading assistants, each judging its file's catalogue against the twenty-seven packs,
+the specification, and the Vision-Set top-down analysis; the four ledgers were then
+synthesized and cross-checked against the konnectome ledger by the session itself.
+The page-image files were not read (their content is the same books in image form).
+One honest caveat, in the Copper Atlaswright tradition: a verdict below is a reading
+judgment, not a test run; the Layer 12 faculty suites, not this table, are the
+acceptance tests.
+
+VERDICT MEANINGS.
+ - PERFORMABLE: existing packs demonstrably cover the architecture's functions.
+ - EMERGENT: the function arises from existing machinery without a named module -
+   the commandment says this is acceptable and expected.
+ - PARTIAL: some functions covered, some not; the missing part is named.
+ - COVERAGE BUG: the function cannot be performed today; per the commandment this is
+   recorded as a bug, with its planned closer named. None is routed to a change order
+   yet (the armchair rule); the WATCH entries of the Vision-Set analysis already
+   stand guard at the likeliest routing points.
+ - DIVERGENCE: the architecture's defining mechanism disagrees with the biological
+   blueprint; the biology leads, and the disagreement is recorded rather than built.
+
+
+================================================================================
+SECTION ONE - THE NAMED ARCHITECTURES OF THE LITERATURE
+================================================================================
+
+PSI and MicroPsi (Dorner; Bach). Motivation, emotion, and behavior from explicit
+homeostatic, social, and cognitive needs; drive reduction; modulator dynamics.
+PERFORMABLE - the survey's most complete match. drive_system (needs, urges, set
+points), arousal_regulation (modulator dynamics), neuromodulator_bus (the broadcast
+modulators, nearly literal), situation_appraisal, empathy and other_minds (the social
+needs). All four sources agree.
+
+Active Inference (Friston). A generative model minimizing surprise; homeostatic
+priors; action fulfilling prediction. PERFORMABLE at one level, PARTIAL in depth:
+prediction_loop (predict, compare, signed error), drive_system (the priors that
+defeat the dark room), plasticity_engine (error-driven update), body_interface
+(closing the loop). Missing: the multi-tier hierarchy of predictions-of-predictions
+and precision-weighted errors.
+
+Behavior Oriented Design / Complete Autonomous Agent (Bryson). Specialized modules,
+arbitration separating how from when, conflicting goals with exclusive means.
+PERFORMABLE - nearly konnectome's own creed: packs, action_selector, drive_system,
+override_controller, tick_engine. The nested-competence hierarchy exceeds the flat
+selector; the planned winner-take-all deepening (Vision theme four) is the closer.
+
+Procedural Reasoning System (Georgeff, Ingrand). React-while-pursuing-goals with
+survival interrupts. PERFORMABLE: cognitive_cycle, action_selector, drive_system,
+override_controller's vitality ranking.
+
+Daydreamer (Mueller). Emotion from real or imagined events; regulation; emotion
+influencing behavior. PERFORMABLE for the emotion loop (situation_appraisal,
+arousal_regulation, pretend_play, neuromodulator_bus); the emotion-driven EPISODIC
+reminding half waits on episodic memory (coverage bug one).
+
+ICOM (the Independent Core Observer Model). Emotion-valued evaluation core under an
+independent observer. PERFORMABLE: drive_system, situation_appraisal,
+arousal_regulation, the passive observer, the bus, the override. konnectome's
+passive observer is the non-homunculus form of the observing core.
+
+The Piagetian Modeler and its successors PAM v2 / PamP2 (Miller). The test-bed's
+own lineage: constructivist, diversity-first, about twenty-seven single-purpose
+mechanisms over a shared memory, developed along Piagetian milestones. PARTIAL, and
+architecturally KIN - the registry-and-scheduler federation of twenty-seven packs
+against a stigmergic swarm of about twenty-seven mechanisms; the observation,
+motivation, reaction, regulation, coping, and social clusters map nearly
+pack-for-mechanism, and the milestone-assessment method IS konnectome's operating
+method. konnectome lacks the Modeler's episodic viewpoints, solvers, realities,
+detectors, and consolidators (the coverage bugs below); the Modeler lacks
+konnectome's neuromodulator bus, override controller, provenance discipline, and
+test-gated constitution - and its own reflection loop was never implemented.
+DIVERGENCE recorded: the Modeler's single always-on activation-differentiated
+memory against the blueprint's two-shift principle and separable fast/durable
+stores; the biology leads (and the test-bed's own later essays partly concede the
+point - a system that only accumulates is never born).
+
+SOAR (Newell, Laird, Rosenbloom). Operators over problem spaces; impasse-driven
+subgoaling; chunking. PARTIAL: operator selection with learned preferences maps to
+action_selector plus plasticity_engine; the impasse recursion and trace chunking
+have no counterpart (no runtime rule synthesis). DIVERGENCE recorded: uniformity-
+first against the blueprint's diversity-first typed cells, edges, motifs, and
+modes. IMPORTABLE IDEA, the survey's best in-frame theft: an impasse (a tie or
+low-confidence selection) publishing a disturbance record on the bus, giving the
+drives something to be curious about.
+
+ACT-R (Anderson). Brain-mapped modules, capacity-limited buffers, declarative
+retrieval by activation, subsymbolic attention. PARTIAL: the module-over-substrate
+shape and the activation-with-decay calculus are performed (packs, weights,
+arousal_regulation); the buffer bottleneck is the absent working-memory blackboard
+and declarative retrieval-by-activation waits on episodic memory.
+
+OpenCog (Goertzel). Cognitive synergy: diverse algorithms cooperating over a shared
+store, a mini-PSI inside. EMERGENT for the synergy principle - it is konnectome's
+own shape - with the attention-allocation economy (ECAN) and evolutionary program
+learning absent (coverage bugs three and the self-programming divergence).
+
+IDA and LIDA (Franklin). Global Workspace Theory: coalition competition, conscious
+broadcast, broadcast-attached learning. COVERAGE BUG (the defining function): the
+bus broadcasts modulator values, not cognitive content; competition, ignition, and
+broadcast learning are the absent workspace. Closer: the workspace pilot pack beside
+the skeleton (Vision theme five; WATCH-4 guards the ignition record). The blueprint
+insists the arbiter be emergent winner-take-all, not a broadcaster-ruler.
+
+Shanahan's cognitive architecture. Internal rehearsal mediated by affect, on a
+global-workspace substrate. PARTIAL: the rehearsal-under-affect loop is performable
+today (pretend_play, prediction_loop, situation_appraisal, simulated_body); the
+workspace substrate is coverage bug three.
+
+NARS (Wang). Reasoning under insufficient knowledge and resources. EMERGENT: the
+stance is konnectome's ambient condition (one-tick budgets, evidence-graded records,
+weight-graded beliefs, never-invent selection under what is known); the term-logic
+letter and budget-driven anytime inference are not implemented. DIVERGENCE noted on
+its non-embodiment; and the AIKR budget economy contradicts the dumb scheduler's
+every-pack-its-turn fairness, which the blueprint ratifies.
+
+CLARION (Sun). Implicit/explicit dual representation with metacognitive monitoring.
+PARTIAL: motivation, emotion, and monitoring map (drive_system, situation_appraisal,
+observer, override_controller); the subsymbolic implicit layer has no counterpart.
+
+AERA (Nivel, Thorisson) and the self-programming-seed pattern. Constructivist
+runtime self-programming: the system writes, scores, and culls its own executable
+models. DIVERGENCE, recorded deliberately and not as a bug: runtime code synthesis
+would breach the never-invent invariant, the regression-gate constitution, and the
+protected-core discipline at once, and the blueprint's Layer 15 blesses the opposite
+- evolution never breaks the running system, with the human in the selection loop.
+konnectome's constructivist loop lives in the SPARCD development process, not the
+runtime. Any future move toward runtime invention is a constitutional change, not a
+slice. The same recording covers genetic modification of behavior structures
+(mutation, crossover, culling) and chunk-synthesis generally.
+
+CHEF and the case-based planners (Hammond; Meta-Darmok / Meta-AQUA; Rogue with
+Prodigy and Xavier; LIVE). Plan memory, retrieval by similarity, failure
+explanation, repair, replanning, self-designed experiments. PARTIAL-to-BUG family:
+failure detection and causal explanation exist (prediction_loop, cause_and_effect,
+situation_appraisal), the tutor-advice channel exists (Layer 13's protocol,
+perturbation_interface), and cause_and_effect already performs a breadth-first
+means-end planning trial owned as an intends attitude (slice 21) - so planning is
+PARTIAL, not absent. Missing across the family: a case memory of whole plans
+(waits on episodic memory), plan repair operators, discrimination-based rule
+splitting, and self-designed experiments (the Designer/Experimenter pair). The
+blueprint's sanctioned road for deliberation is winner-take-all settling plus
+simulation chaining; any richer planner enters only as a PROPOSER whose candidates
+the never-invent selector still arbitrates.
+
+InteRRaP (Muller) and the layered agent societies. PARTIAL: situation recognition,
+goal activation, and vertical takeover-on-failure map (situation_appraisal,
+drive_system, override_controller); peer-agent negotiation is out of scope for a
+single mind, and runtime belief retraction beyond weight update lives in
+causalontology's assert-grade-retract, exercised by self_provenance.
+
+JCB / JCB-English (Linker). Proof-based conversational knowledge base with trust
+levels. PARTIAL: proof over a formal language is PrologAI's native strength, and
+causalontology's signed, evidence-graded records are arguably the stronger form of
+per-source trust; the conversational front end waits on the language coverage bug.
+DIVERGENCE noted: knowledge told, not constructed - against the tutor protocol.
+
+MANIC (Gashler). Unsupervised compression, outcome regression, reinforcement, and
+introspective sensors. PARTIAL: the decision loop and - notably - the introspective
+sensing are covered (observer and self_provenance are inward-facing senses); the
+unsupervised high-dimensional representation learning belongs to the perception
+coverage bug.
+
+Meta Control Loop (Sanz) and the reflection/meta-control patterns. Monitor plus
+runtime reconfigurer. PARTIAL: monitoring is complete (observer; override_controller
+for vitality); the reconfigurer - starting, stopping, rewiring components at runtime
+- does not exist, edges toward the homunculus the blueprint rejects, and the test-bed
+lineage itself never implemented it. The mode registers with bus-thrown transitions
+(Vision theme one) are the sanctioned bounded form.
+
+RCS / NASREM (Albus). Nested sensor-model-planner triples over six timescales.
+PARTIAL: one triple exists at the tick grain, and konnectome has fast (tick) and
+slow (plasticity, homeostatic scaling) but not nested planning horizons; the
+two-shift governor adds a second explicit timescale, not six. DIVERGENCE: strict
+command hierarchy against the arbitrated federation.
+
+QN-MHP (Liu; Feyen). Queuing networks of perception, cognition, motor servers.
+EMERGENT: the registry running many packs per tick with bus transmission exhibits
+the server-network shape; the queuing-theoretic human-performance timing model is an
+orthogonal goal konnectome does not pursue.
+
+PACO-PLUS. Shared object-action categories, real-world manipulation. PARTIAL:
+categories formed from experience and SHARED as content-addressed records are a
+strength (category_formation, causalontology); real-world sensorimotor grounding
+waits at the Rung Five seam.
+
+Holland's HUMAN / CRONOS. Mental simulation and episodic memory. PARTIAL: the
+simulation half is performable; the episodic half is coverage bug one.
+
+LeCun's objective-driven architecture. World model, actor, configurator. PARTIAL:
+prediction_loop, action_selector, drive_system map; the configurator/solver is the
+planning gap. DIVERGENCE: minimal-elements uniformity against heterogeneous modules.
+
+Drescher's schema system. Context-action-result schemas from raw sensorimotor data;
+marginal attribution birthing new schemas from statistics. PARTIAL: schema-like
+learning and failure prediction are covered (cause_and_effect, category_formation,
+prediction_loop); the spinoff engine - minting new discriminated rules from
+contingency statistics - sits at the never-invent boundary and is recorded with the
+divergence above.
+
+Dynamic Interlaced Hierarchies / the transmutation repertoire (Michalski). Shallow
+interlaced hierarchies where moving members yields the inference family. PARTIAL:
+the hierarchies and several operations exist (category_formation,
+concrete_operations); the systematic transmutation operators and a general
+prover/refuter do not, and modus tollens wants first-class negation.
+
+Cyc micro-theories / viewpoints (Lenat). Locally coherent, globally contradictory
+reasoning contexts. COVERAGE BUG (small): no pack holds two locally consistent,
+mutually contradictory belief sets as contexts. Nearest machinery: pretend_play's
+one quarantined as-if channel, and the attitude kind's per-holder quarantine.
+Closer: a viewpoints refinement of the realities family, if building demands it.
+
+Global-workspace micro-agencies and the LLM-hybrid systems (Micro Agency
+architecture; neuro-symbolic-with-LLM; Microsoft Agent AI; Watson / DeepQA;
+AlphaStar; Deep Blue). The oracle-substrate family. DIVERGENCE, recorded once for
+the family: these depend on large pretrained models, corpus-scale retrieval, or
+brute-force adversarial search - substrates konnectome, PrologAI, and Causalontology
+do not provide and the blueprint does not ask for. The test-bed's own essays class
+the oracles as the passing paradigm ("eidetic oracles") and the developmental path
+as the alternative; the biology leads, and konnectome stays on the developmental
+path. Were an external oracle ever WANTED, the Layer 14 knowledge-environment seam
+(external tools behind guarded interfaces) is where it would stand - a tool, not a
+mind. The workspace function of the micro-agency family is coverage bug three.
+
+Image schemas (Johnson, Lakoff) and the perceptual detector suites (icons, geons,
+scenes, shapes, objects, locator, mapper). COVERAGE BUG (deferred frontier):
+perception is deliberately the minimal honest body seam; no feature detectors, no
+spatial mapping. Real perceptual feature learning likely wants a sub-symbolic
+substrate or new bindings - to be discovered by building at the Rung Five seam,
+where the finding would route honestly if the language or the data structure cannot
+express it.
+
+The speaker-hearer language model (Hausser lineage). Grounded acquisition from
+sign sequences; comprehension and production. PARTIAL: symbol_exchange grounds and
+exchanges symbols both ways at the word level over a genuinely lived vocabulary;
+grammar induction and the production half beyond words are absent - WATCH-6 already
+stands at the expected routing point (the PrologAI language pack's
+comprehension-production pair).
+
+The reinforcement-learning family as regulation (Q-learning, MDP variants,
+homeostatic RL). PERFORMABLE in the variant the test-bed itself endorses:
+homeostatic reinforcement - intrinsic reward from drive reduction - is exactly
+plasticity_engine's reward-modulated three-factor rule fed by drive_system, chosen
+over external critics. Hierarchical RL and options await composite-action
+structure.
+
+
+================================================================================
+SECTION TWO - THE DESIGN-PATTERN AND MODULE CATALOGUES
+================================================================================
+
+The test-bed's pattern language (the fourteen classic patterns, the seven new ones,
+and the thirteen-module reference architecture) was judged pattern by pattern; the
+tally, with the missing halves named:
+
+PERFORMABLE: Observation (the observer's complete trace is the historical record);
+Mind-Body (the honest body seam is this pattern by design); Reaction (never-invent
+selection with vitality preemption); Motivation (drives, urges, prioritized
+objectives - near-verbatim); Coordination (the single-purpose inference packs over
+the shared graph); Coping (appraisal-driven goal management - among the closest
+fits); Regulation in its priority-modification form (the correlator is
+prediction_loop, the regulator is the three-factor rule); Simulation in its core
+(reality-tagged offline rehearsal with action inhibited); the agent-framework
+roster (the mechanism-per-pack blackboard discipline IS the arbitrated federation
+in another vocabulary); the drive-and-goal module; the action/motor module; the
+emotion-and-appraisal module (appraise, stamp, modulate diffusely - the bus is the
+diffuse channel asked for).
+
+PARTIAL, missing half named: Deliberation (selection yes; the path-composing solver
+is the planning gap); Compensation (detection yes; inverse-action synthesis needs
+the proposer); Exploration (consequences learned; no intrinsic curiosity bias -
+the epistemic drive is a small pack-in-waiting, the learning-progress statistic its
+one new computation); Discovery (hypothesis-and-test as records; no self-designed
+experiments); Reflection (monitor yes; modifier deliberately unbuilt); the
+sensorium, semantic-memory, procedural-skill, world-model, planner, and learning
+modules (each present in embryo, each missing the same three organs below); the
+somatic-marker pattern (the STAMPING half is performable today - attach the
+prevailing valence and arousal to outcomes as they close, so that when episodic
+memory arrives its retrieval bias finds history waiting - a cheap win worth a
+future slice's side-carry); the reflective triad (the safety governor is
+substantially PRESENT: override_controller in the runtime, the Safety Gate, the
+owner-authorization boundary, and the append-only ledger outside it; metacognitive
+strategy-switching absent).
+
+COVERAGE BUGS (the recurring three, named once): Reminding and the episodic-memory
+module (bug one); Consolidation - compressor, automator, amnestor - and the
+learning module's interleaved replay (bug two); Working memory, the attention
+arbiter, and the global broadcast (bug three).
+
+
+================================================================================
+SECTION THREE - THE COVERAGE BUG LIST (per the commandment: unachievable means bug)
+================================================================================
+
+Recorded here and mirrored in the ledger. None is routed to a change order today:
+the armchair rule holds, the WATCH entries stand at the likeliest routing points,
+and each bug already has a named closer among the Vision-Set slice families -
+which is itself the survey's strongest result: the test-bed demands nothing the
+biology has not already demanded.
+
+BUG ONE - EPISODIC MEMORY AND REMINDING. konnectome cannot be reminded: no episode
+segmentation, no bound what-where-when record, no retrieval by fragment. Named by
+every source (reminding pattern, CHEF, Daydreamer, LIDA, Holland, viewpoints).
+Closer: the memory work of the Vision slice families; WATCH-2 (the episodic event
+index) guards the likeliest genuine causalontology wall in the project.
+
+BUG TWO - THE OFFLINE CONSOLIDATION CYCLE. No compressor, automator, or forgetter
+runs; memory only accumulates. Named independently by all three test-bed lineages
+AND by the Vision Set's two-shift principle - four sources on one gap, the survey's
+loudest convergence. The parts are staged (eligibility traces, homeostatic scaling,
+the observer's record); slice family one is the closer; WATCH-3 guards consolidation
+provenance. Where the test-bed runs consolidation always-on inside the waking loop,
+the blueprint demands the distinct offline phase with interleaved replay; the
+biology leads.
+
+BUG THREE - THE ATTENTION, WORKING-MEMORY, WORKSPACE CLUSTER. No salience arbiter,
+no capacity-limited blackboard, no content broadcast with ignition. Named by ACT-R's
+buffers, IDA/LIDA, Shanahan, the motivation pattern's attention module, the
+simulation supervisor, and the exploration bias alike. Closers: the working-memory
+blackboard pack and the workspace pilot (Vision theme five); WATCH-4 guards the
+ignition record. The blueprint's constraint stands: the arbiter must be emergent
+winner-take-all, never a ruler.
+
+BUG FOUR - PLAN SYNTHESIS AS A PROPOSER. Beyond the slice-21 breadth-first
+means-end trial, no multi-step plan construction, repair, or case reuse exists.
+Bounded by the constitution: any solver enters as a proposer whose candidates the
+never-invent selector arbitrates. Closer: the selector's winner-take-all deepening
+plus simulation chaining (Vision theme four), then a proposer slice if building
+demands more.
+
+BUG FIVE - PERCEPTUAL FEATURE LEARNING. No detectors, no spatial schemas, no maps;
+perception is the minimal honest seam. Deferred to the Rung Five frontier, where
+building against a real (or Webots-simulated) sensor stream will discover honestly
+whether the language or the data structure lacks anything - the one bug plausibly
+carrying a future change-order routing.
+
+BUG SIX - LANGUAGE PRODUCTION BEYOND THE WORD. Grammar and the production half.
+WATCH-6 stands at the expected routing point (the reused language pack's
+comprehension-production pair). Closer: the Rung Two deepening against the Layer 13
+tutor protocol.
+
+BUG SEVEN (SMALL) - CONTRADICTION CONTEXTS. Locally coherent, mutually
+contradictory belief sets (micro-theories) have no home; the attitude kind
+quarantines per holder and pretend_play quarantines one as-if world, but no general
+viewpoint mechanism exists. Recorded; a realities/viewpoints refinement is the
+closer if building hits it.
+
+RECORDED DIVERGENCES (biology leads; not bugs): runtime self-programming and
+structural self-modification (AERA, the seed pattern, genetic behavior operators)
+against the never-invent invariant and Layer 15's gated evolution; the single
+always-on uniform memory against the two-shift principle and the
+working-memory-as-activity doctrine; budget-driven anytime inference (AIKR) against
+the dumb scheduler's ratified fairness; the runtime reconfigurer and the
+broadcaster-ruler against the no-homunculus federation; the oracle substrates
+(LLM, corpus QA, adversarial search) against the developmental path; command
+hierarchies (RCS) against the arbitrated federation; uniformity-first (SOAR,
+LeCun) against diversity-first.
+
+IMPORTABLE IDEAS WORTH A FUTURE SLICE'S MARGIN: the SOAR impasse as a bus-published
+disturbance record (feeds curiosity, cheap, in-frame); the somatic-marker stamping
+half now, so episodic retrieval bias will find history waiting; the epistemic drive
+with a learning-progress statistic (error decrease, not raw error, so noise bores);
+the test-bed's unified plan/gap/goal/competence vocabulary if planner and reasoner
+ever land in one slice family; and its "competence is understanding" framing, ready
+for the capstone narrative.
+
+
+================================================================================
+SECTION FOUR - THE TALLY AND THE HONEST CONCLUSION
+================================================================================
+
+Across the four sources, roughly sixty distinct architectures, patterns, and modules
+were catalogued and judged. The shape of the result: konnectome PERFORMS or exhibits
+EMERGENTLY the motivation, emotion, regulation, coping, reaction, observation,
+social-cognition, and homeostatic-learning families nearly in full - the
+drive/appraisal/plasticity/bus quartet is the best-covered territory, and PSI, the
+test-bed's own Piagetian lineage, behavior-oriented design, and homeostatic
+reinforcement learning are substantially performable today. The distance to the
+rest of the catalogue concentrates in the SAME three organs the Eighth Commandment
+analysis already named absent - episodic memory, the offline consolidation cycle,
+and the attention/working-memory/workspace cluster - plus the bounded planner and
+the deferred perceptual frontier. Closing bugs one through three would flip the
+verdict on roughly a dozen catalogue entries at once.
+
+The survey's governing finding, stated so the next builder can stand on it: THE
+TEST-BED DEMANDS NOTHING THE BIOLOGY HAS NOT ALREADY DEMANDED. Every coverage bug
+maps onto a Vision-Set refinement theme that predates this survey; two independent
+literatures, read months apart by different sessions, converge on one gap list. The
+frame held against the atlas; it holds against the test-bed too. And where the
+test-bed and the biology disagree - invention at runtime, memory without sleep,
+budgets against fairness, rulers against federations - the recorded answer is the
+commandment's own: the biology leads.
+
+No kludge was made this survey, so no kludge document exists yet; the obligation is
+noted for whenever one first is.
+
+END OF COVERAGE SURVEY v1.

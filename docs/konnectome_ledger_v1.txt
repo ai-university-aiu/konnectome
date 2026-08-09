@@ -1273,3 +1273,38 @@ Rung Two should be designed against, Layer 14 the knowledge environment the docs
 already realizes, Layer 15 the SPARCD-and-regression-gate method itself. Six suggested slice
 families, smallest first, are listed in the analysis document for the owner's disposition. No
 code changed; no test moved; no cousin edited, per the Second, Third, and Fourth Commandments.
+
+Cognitive-Architectures survey note (2026-08-09). The Ninth Commandment's first execution: the
+coverage survey of the Cognitive Architectures Test-Bed (~/cognitive_architectures, local-only,
+read-only, cited and never reproduced). The baseline was verified green first (494 tests across
+twenty-seven packs counted pack by pack, four gates at zero violations, capstone clean,
+conformance 137 of 137 in both cousins at causalontology 292dfca and PrologAI ebbc3e0). The four
+test-bed text files were read IN FULL by four parallel reading assistants and synthesized against
+the packs, the specification, and the Vision-Set analysis; the full coverage list is
+docs/konnectome_cognitive_architectures_coverage_v1.txt. THE RESULT, in the commandment's own
+terms: roughly sixty architectures, patterns, and modules judged; the motivation, emotion,
+regulation, coping, reaction, observation, social-cognition, and homeostatic-learning families
+are PERFORMABLE or EMERGENT today (PSI/MicroPsi, behavior-oriented design, procedural reasoning,
+homeostatic reinforcement learning, ICOM, and the test-bed's own Piagetian lineage substantially
+covered); SEVEN COVERAGE BUGS recorded per the unachievable-means-bug rule - (1) episodic memory
+and reminding, (2) the offline consolidation cycle, (3) the attention/working-memory/workspace
+cluster, (4) plan synthesis as a proposer under never-invent, (5) perceptual feature learning at
+the Rung Five frontier, (6) language production beyond the word, (7) contradiction contexts -
+EACH already carrying a named closer among the Vision-Set slice families, because the survey's
+governing finding is that THE TEST-BED DEMANDS NOTHING THE BIOLOGY HAS NOT ALREADY DEMANDED:
+bugs one through three are exactly the three organs the Eighth Commandment analysis named absent,
+and four sources converge on bug two (consolidation) alone. NOTHING ROUTED: the armchair rule of
+the Second Commandment stands over the Ninth - a coverage bug becomes a change-order routing only
+when a build demonstrates the setup cannot express it, and the six standing WATCH entries
+(WATCH-2, -3, -4, -6 especially) already guard the likeliest routing points. RECORDED
+DIVERGENCES, biology leads, per commandment rule three: runtime self-programming (AERA, the
+self-programming seed, genetic behavior operators) against the never-invent invariant and Layer
+15's gated evolution; the single always-on memory against the two-shift principle; budget-driven
+anytime inference against the dumb scheduler's ratified fairness; reconfigurer-rulers and
+broadcaster-rulers against the no-homunculus federation; the oracle substrates against the
+developmental path; command hierarchies and uniformity-first against the arbitrated,
+diversity-first federation. No kludge was made, so no kludge document exists yet; the obligation
+is noted. Importable in-frame ideas recorded for future slices' margins: the SOAR impasse as a
+bus-published disturbance record; the somatic-marker stamping half done early; the epistemic
+drive with a learning-progress statistic. No code changed; no test moved; no cousin edited; the
+test-bed files untouched, per the Second, Third, Fourth, and Ninth Commandments.
