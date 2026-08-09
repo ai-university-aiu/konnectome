@@ -1,0 +1,102 @@
+THE LAYER 6 CHAPTER TEMPLATE, VERSION 3
+
+The standing chapter template for all cell-type chapters (neurons and non-neuronal cells) of the Certified_Neuroscientist corpus.
+
+Version 3 adds one new aspect, MODES AND MODE TRANSITIONS, adopted August 9, 2026, following the modes deliberation.
+
+Chapters written before this date carry the twenty-aspect (neurons) or twenty-aspect (other cells) template of version 2; their modes treatment lives in the companion volume LAYER_06_MODES_MANUSCRIPT, in paste-ready form keyed by chapter number, so that a future merge is a mechanical splice.
+
+All chapters written from this date forward include the new aspect natively, in the position shown below.
+
+
+THE CHAPTER TITLE LINE
+
+CHAPTER N. NAME IN CAPS (Formal expansion) (Plain-English Coined Name) (COG) or (NON-COG)
+
+Followed by an evocative lede of three to five sentences, then one-line glosses for each word-part of the coined name.
+
+
+THE ASPECT HEADERS, IN ORDER
+
+WHAT IT IS AND WHAT IT DOES:
+
+STRUCTURE AND MORPHOLOGY:
+
+SIZE:
+
+STRUCTURAL SUBTYPES:
+
+WHERE IT LIVES:
+
+NUMBER:
+
+ELECTRICAL PROPERTIES:
+
+MODES AND MODE TRANSITIONS:
+
+SYNAPTIC CONNECTIONS:
+
+AXON CHARACTERISTICS:
+
+NEUROTRANSMITTERS:
+
+MYELINATION:
+
+METABOLIC DEMANDS:
+
+PLASTICITY:
+
+SUPPORT SYSTEM:
+
+HOW IT COLOURS ITS REGION:
+
+BEYOND INTEGRATE AND FIRE:
+
+SYSTEMS INTERFACE:
+
+ENGLISH READABLE CODE:
+
+CODE SAMPLE:
+
+WHAT MAKES IT UNMISTAKABLE:
+
+
+THE NEW ASPECT, SPECIFIED
+
+MODES AND MODE TRANSITIONS:
+
+The cell's discrete operating regimes, treated as a hybrid automaton: a small set of modes, continuous state evolving within the current mode, and explicit transition rules.
+
+The section contains four fixed elements, in this order.
+
+• THE MODE REGISTER.
+
+The named list of this type's modes, each with a formal name (the literature's term where one exists) and a coined plain-English name in the corpus tradition.
+
+Admission rule: a regime earns a place in the register only if the healthy system USES it under some normal operating condition.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+For each registered mode, one short statement of the input-to-output rule that holds while the cell is in that mode, with its characteristic parameters (rates, thresholds, duty cycles) and honest confidence notes.
+
+• THE TRANSITION TABLE.
+
+For each transition: the trigger (a state crossing, a synaptic event, a neuromodulator, or a hormone), the direction (from which mode to which), and the timescale.
+
+Where a transition is thrown from above - by brain state, neuromodulator broadcast, or hormonal axis - say so, because mode setting is largely a service purchased from Layers 10 and 11 through the volume transmission channel.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+The regimes this type can be driven into but does not use (excluded from the register by the admission rule), each with its boundary signature, its warning condition, and the biological watchdog that guards against it.
+
+These are faults, not modes: in an engineering realization they are implemented as supervisor processes publishing warnings and errors, never as first-class operating modes.
+
+A note for borderline regimes: the admission rule is applied PER TYPE - depolarization block, for example, belongs in the register of a type that uses it functionally (the olfactory sensory neuron, the drug-relevant dopamine neuron) and in the fault table of a type that only suffers it (the hippocampal pyramidal cell in seizure).
+
+
+HOUSE STYLE
+
+All version 2 house rules continue unchanged: plain text, no markdown characters, no em-dash (space hyphen space instead), one sentence per paragraph with blank lines between, bullet character • with nested ◦, British spelling with -ise forms, acronyms spelled out at first use within each chapter, jargon defined at first use, real quantitative values with ranges and confidence notes, and the (COG)/(NON-COG) code-section rules.
+
+
+END OF TEMPLATE

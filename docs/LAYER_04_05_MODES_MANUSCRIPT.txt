@@ -1,0 +1,673 @@
+LAYERS 4 AND 5, THE MACROMOLECULAR AND ORGANELLAR LAYERS: MODES AND MODE TRANSITIONS
+
+The Per-Mechanism Mode Catalogues of the Slow Variables
+
+A Companion Volume to LAYER_04_05_SLOW_VARIABLES_MANUSCRIPT
+
+Keyed, chapter by chapter, to the eighteen-chapter slow variables catalogue, in the Certified_Neuroscientist corpus of D. R. Dison, Founder, Artificial Intelligence University (AIU).
+
+Date of compilation: August 9, 2026.
+
+
+INTRODUCTION: WHERE MODE AND MEMORY COINCIDE
+
+The corpus vocabulary is unchanged - state continuous, mode discrete, hybrid automaton, admission rule, fault watchdogs - but at these layers it reaches its purest case.
+
+For a molecular switch, the mode register and the stored information COINCIDE: the calcium-calmodulin-dependent protein kinase II ring's OFF and ON are not regimes in which it works - they are the bit it holds.
+
+Here, at the bottom of the corpus's mode hierarchy, being in a mode and remembering something become the same fact - which is the entire design principle of a molecular memory, and the ground on which every register above ultimately rests.
+
+The eighteen entries follow in chapter order, paste-ready and keyed.
+
+MODES AND MODE TRANSITIONS ENTRIES FOR THE MOLECULAR MACHINERY (LAYER 8 MODES MANUSCRIPT)
+(Per-mechanism mode catalogues for the slow variables catalogue of Layers 4 and 5, by D. R. Dison, AIU.)
+
+ORIENTATION FOR THE WHOLE BATCH: molecular machinery gives the cleanest mode-machines in the corpus, because here the mode register and the stored information coincide.
+
+The mechanism does not point at a memory held elsewhere; the mechanism is its own register, and its discrete state is the datum.
+
+That coincidence - register equals content - is the whole point of a molecular memory, and it is why the write, read and erase aspects of each source chapter map almost one-to-one onto modes and transitions.
+
+Each entry below is keyed to its slow variables catalogue chapter and grounded in that chapter's PERSISTENCE TRICK and its WRITE, READ and ERASE operations.
+
+ADMISSION RULE (per mechanism): a state enters the MODE REGISTER only if the healthy mechanism actually rests in it or uses it under normal operation.
+
+Uncontrolled aggregation, pathological silencing, runaway potentiation and irreversible mutation belong in FAULT REGIMES AND WATCHDOGS unless the mechanism genuinely uses the state normally.
+
+
+ENTRY 1. THE CAMKII SWITCH (keyed to slow variables catalogue Chapter 1)
+
+MODES AND MODE TRANSITIONS:
+
+This is the corpus's archetypal two-mode molecular latch, a twelve-subunit ring that is either mostly bare or mostly self-phosphorylated, and the mode it sits in is the stored bit itself.
+
+Calcium-calmodulin-dependent protein kinase two, abbreviated CaMKII, holds one bit at one synapse, so the register and the memory are the same object.
+
+• THE MODE REGISTER.
+
+◦ OFF (Basal Ring) - the ring rests mostly unphosphorylated at threonine 286, reporting the synapse as basal weight.
+
+◦ ON (Stamped Ring) - the ring rests mostly autophosphorylated and self-restamping, reporting the synapse as potentiated.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ OFF: basal calcium cannot start the stamping reaction, protein phosphatase one (abbreviated PP1) wins the race, and the ring passively holds AMPA-receptor number at baseline; stable indefinitely at resting calcium.
+
+◦ ON: an active subunit re-phosphorylates any neighbour PP1 has just cleaned, and subunit exchange copies the ON state onto fresh protein, so gain stays elevated across turnover; confidence high in vitro, strong but still-debated in vivo.
+
+• THE TRANSITION TABLE.
+
+◦ OFF to ON: trigger is a fast high-calcium transient through the N-methyl-D-aspartate receptor (a coincidence detector), driving enough subunits over threshold that stamping becomes self-sustaining; the calcium dependence is steep (Hill coefficient roughly 5, and near 8 when balanced against PP1), giving a sharp switch; timescale seconds.
+
+◦ ON to OFF: trigger is calcium held low long enough, or PP1 disinhibition, so the phosphatase wins the restamping race, which is the molecular side of long-term depression; timescale minutes to hours.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature is drift, because the bit is a population statistic over twelve subunits, so partial resets are possible rather than a clean toggle.
+
+◦ The watchdog is the steepness of the calcium threshold itself, which keeps noise from flipping the ring, plus PP1 as the standing eraser that prevents spurious latching.
+
+
+ENTRY 2. THE PKM-ZETA LOOP (keyed to slow variables catalogue Chapter 2)
+
+MODES AND MODE TRANSITIONS:
+
+This is a two-mode regeneration circuit whose mode is defined by whether a self-feeding synthesis loop is running, not by any stable molecule.
+
+Protein kinase M zeta, abbreviated PKM-zeta, holds the maintained gain of an already-potentiated synapse, so the running-or-idle state of the loop is the stored value.
+
+• THE MODE REGISTER.
+
+◦ IDLE (Loop Dark) - synthesis at baseline, no self-sustaining production, synapse held only by upstream stores.
+
+◦ RUNNING (Loop Lit) - self-sustaining synthesis loop latched on, holding elevated AMPA-receptor number for days to weeks.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ IDLE: no maintenance signal is contributed, and the synapse relies on other slow variables; stable by default.
+
+◦ RUNNING: PKM-zeta sustains the potentiated state and the trafficking that supplies more of itself, topping up despite each molecule being degraded within hours; confidence moderate, because the atypical protein kinase C family as a whole, with PKC-iota/lambda substituting, is now seen as the durable actor.
+
+• THE TRANSITION TABLE.
+
+◦ IDLE to RUNNING: trigger is the strong potentiating stimulus that lifts the local translational brake; once synthesis crosses the self-sustaining level the loop latches; timescale about one hour.
+
+◦ RUNNING to IDLE: trigger is interruption of the loop, physiologically by decay of the maintenance conditions and experimentally by the zeta inhibitory peptide (abbreviated ZIP); cutting the loop even briefly collapses the value permanently; timescale minutes to hours.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature is a loop that fails to latch or silently decays, leaving potentiation to fade.
+
+◦ The honest watchdog is redundancy: PKC-iota/lambda can compensate when PKM-zeta is absent, so the store is buffered against loss of a single kinase, which is why ZIP still erases memory in PKM-zeta knockouts.
+
+
+ENTRY 3. THE CPEB PRION-LIKE SWITCH (keyed to slow variables catalogue Chapter 3)
+
+MODES AND MODE TRANSITIONS:
+
+This is a two-mode conformational latch in which the mode is a protein fold, held soluble by a chemical lock or propagated as a self-templating aggregate.
+
+Cytoplasmic polyadenylation element binding protein three, abbreviated CPEB3, marks a synapse as active, so which fold it sits in is the stored mark.
+
+• THE MODE REGISTER.
+
+◦ SOLUBLE (Clamped Repressor) - CPEB3 soluble and repressing, target plasticity messengers untranslated.
+
+◦ AGGREGATED (Templating Stamp) - CPEB3 in a self-templating aggregate that keeps its target messengers translated.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ SOLUBLE: held by the small ubiquitin-like modifier (abbreviated SUMO), which keeps CPEB3 soluble and repressive; stable while the SUMO clamp is maintained.
+
+◦ AGGREGATED: the aggregate converts newly made soluble CPEB3 to more aggregate, so the state is inherited by shape and can persist indefinitely as long as fresh CPEB3 is supplied; confidence moderate, strong in Aplysia and Drosophila counterparts, less quantified in mammals.
+
+• THE TRANSITION TABLE.
+
+◦ SOLUBLE to AGGREGATED: trigger is a synaptic stimulus that lowers CPEB3 SUMOylation at that spine, permitting the first aggregation seed to template; addressed locally to the stimulated synapse; timescale minutes to hours.
+
+◦ AGGREGATED to SOLUBLE: trigger is re-SUMOylation of new subunits or clearance of the seed faster than it templates; physiological routes and rates are poorly quantified; timescale slow and uncertain.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature is aggregation that spreads beyond the stimulated spine, since prion-like templating is inherently hard to contain.
+
+◦ The watchdog is the SUMO clamp holding CPEB3 soluble by default, plus clearance machinery removing stray seeds; the sober note is that clean erasure of a self-templating store is intrinsically difficult.
+
+
+ENTRY 4. THE CREB GATE (keyed to slow variables catalogue Chapter 4)
+
+MODES AND MODE TRANSITIONS:
+
+This is a threshold gate rather than a maintained store, so its modes are the momentary armed-or-fired state of a decision maker plus the allocation window it opens.
+
+Cyclic adenosine monophosphate response element binding protein, abbreviated CREB, decides whether an event graduates to the gene programme, so its register is that decision, held only transiently.
+
+• THE MODE REGISTER.
+
+◦ BELOW (Waiting Gate) - phosphorylated CREB under threshold, no gene programme launched.
+
+◦ FIRED (Graduation Pulse) - threshold crossed, memory gene programme triggered and downstream renewal loops armed.
+
+◦ PRIMED (Eligible Cell) - a raised-excitability window during which this neuron is preferentially recruited into the engram.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ BELOW: integrates repeated or coincident signals with hysteresis, passing nothing until they sum past the set point; this is why spaced training consolidates better than massed.
+
+◦ FIRED: launches immediate-early gene transcription within minutes to tens of minutes, a one-shot trigger that arms the slower self-holding stores.
+
+◦ PRIMED: elevated CREB lowers the threshold and biases inclusion for hours; confidence high, from lateral amygdala allocation studies.
+
+• THE TRANSITION TABLE.
+
+◦ BELOW to FIRED: trigger is activity driving enough calcium and cyclic adenosine monophosphate signalling to push phosphorylated CREB past threshold, especially spaced input; timescale minutes.
+
+◦ FIRED or PRIMED to BELOW: trigger is removal of phosphorylation as activity subsides, closing the window; timescale hours.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature is over-allocation, a threshold set so low that too many neurons join every engram.
+
+◦ The watchdog is the decay of the excitability window and the requirement for accumulated signal, which together keep allocation sparse; clamping the cell with an inward-rectifier potassium channel experimentally blocks priming.
+
+
+ENTRY 5. THE SYNAPTIC TAG (keyed to slow variables catalogue Chapter 5)
+
+MODES AND MODE TRANSITIONS:
+
+This is a deliberately impermanent two-mode address flag, whose whole virtue is that the register expires, and the mode is the eligibility state of one synapse.
+
+The Frey-Morris capture mark holds a short-lived address, so whether the tag is set is the stored eligibility.
+
+• THE MODE REGISTER.
+
+◦ UNSET (Ineligible Dock) - no tag, synapse cannot capture plasticity products.
+
+◦ SET (Loading Dock Open) - tag present, synapse entitled to capture shared plasticity products.
+
+◦ CONSUMED (Cargo Captured) - tag has captured cargo and installed durable change, the address spent.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ UNSET: no capture occurs, and diffusing products pass by; stable resting state.
+
+◦ SET: the tag binds and retains plasticity products that reach it, converting a fleeting address plus a durable payload into persistence; the tag decays on a one-to-two-hour timescale, with some reports extending to three hours.
+
+◦ CONSUMED: durable strength is installed and the eligibility is retired.
+
+• THE TRANSITION TABLE.
+
+◦ UNSET to SET: trigger is induction of early-phase plasticity, weak or strong, setting the tag through kinase and cytoskeletal change; a weak input suffices; timescale minutes.
+
+◦ SET to CONSUMED: trigger is arrival of plasticity products within the window; timescale minutes to about two hours.
+
+◦ SET to UNSET: trigger is decay with no capture, or a strong depotentiating stimulus that clears the tag; timescale one to two hours.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature is a tag that outlives its window and wrongly captures a later unrelated shipment.
+
+◦ The watchdog is timed self-erasure: an unused address must expire, so decay is a designed feature, not a fault.
+
+
+ENTRY 6. THE PLASTICITY PRODUCTS (keyed to slow variables catalogue Chapter 6)
+
+MODES AND MODE TRANSITIONS:
+
+This is a broadcast-and-capture supply, so its modes describe the delivery state of a shared cargo rather than a bit held in place.
+
+The activity-triggered plasticity-related proteins are the payload the tag addresses, so their register is whether the cell is broadcasting and whether cargo has been seized.
+
+• THE MODE REGISTER.
+
+◦ QUIESCENT (No Shipment) - no product wave in the dendritic tree.
+
+◦ BROADCASTING (Cell-Wide Shipment) - a wave of newly made products, including the activity-regulated cytoskeleton-associated protein (abbreviated Arc) and brain-derived neurotrophic factor (abbreviated BDNF), diffusing tree-wide.
+
+◦ CAPTURED (Payload Spent) - products seized at a tagged synapse and consumed into durable change.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ QUIESCENT: no consolidation material available; resting default.
+
+◦ BROADCASTING: one batch supplies many tagged synapses, and the Arc component self-assembles into a virus-like capsid that can ferry messenger ribonucleic acid to neighbouring cells; products are degraded within hours, so the window overlaps the tag by design.
+
+◦ CAPTURED: shared cargo is converted into a local permanent change, after which the other slow variables hold it.
+
+• THE TRANSITION TABLE.
+
+◦ QUIESCENT to BROADCASTING: trigger is the strong CREB-engaging event that launches the immediate-early gene response and the product wave; timescale minutes to about one hour.
+
+◦ BROADCASTING to CAPTURED: trigger is a valid tag at a synapse the wave reaches; timescale minutes to two hours.
+
+◦ BROADCASTING to QUIESCENT: trigger is degradation of uncaptured products; timescale hours.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature is consolidation of the wrong synapse if products linger past the tag.
+
+◦ The watchdog is rapid default degradation of uncaptured cargo, so timing relative to the tag is everything.
+
+
+ENTRY 7. THE LOCAL TRANSLATION STATIONS (keyed to slow variables catalogue Chapter 7)
+
+MODES AND MODE TRANSITIONS:
+
+This is a just-in-time fabricator whose modes are the operating state of a dendritic workshop holding dormant blueprints.
+
+The on-site translation machinery stores a standing inventory of silenced messengers, so whether it is dormant or fabricating is its register.
+
+• THE MODE REGISTER.
+
+◦ DORMANT (Stocked and Idle) - messengers pre-positioned but translationally repressed, ribosomes idling.
+
+◦ FABRICATING (Workshop Awake) - specific messengers released and ribosomes actively reading, building kinases, scaffolds and cytoskeletal parts on the spot.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ DORMANT: holds silent inventory for hours to days, converting a slow logistics problem into a fast local switch, since only translation, not delivery, need be triggered.
+
+◦ FABRICATING: delivers a local pulse of protein within one to fifteen minutes; individual proteins turn over over hours to days, so the station must re-run to hold a synapse strong; confidence high.
+
+• THE TRANSITION TABLE.
+
+◦ DORMANT to FABRICATING: trigger is a strong synaptic event raising local calcium and activating the target-of-rapamycin and related translation-control pathways, releasing messengers from binding proteins and switching ribosomes to active reading; timescale one to fifteen minutes.
+
+◦ FABRICATING to DORMANT: trigger is fade of the signal, so binding proteins re-silence their messengers and made proteins are cleared by the ubiquitin-proteasome system; timescale minutes to hours.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature is runaway local synthesis or synthesis at the wrong synapse.
+
+◦ The watchdog is re-gagging of messengers by their binding proteins and proteasomal turnover; blocking translation with anisomycin or cycloheximide during the window abolishes the durable phase while sparing the early phase.
+
+
+ENTRY 8. THE SLOT AND TRAFFICKING SYSTEM (keyed to slow variables catalogue Chapter 8)
+
+MODES AND MODE TRANSITIONS:
+
+This is a refreshed register whose mode is the trafficking direction setting the occupied-slot count, the physical operand of synaptic weight.
+
+The postsynaptic slot scaffold stores the number of held receptors, so the direction traffic is being driven is its register.
+
+• THE MODE REGISTER.
+
+◦ HOLDING (Rack Steady) - slot count maintained, receptors trapped and refreshed from the reserve pool at a steady set point.
+
+◦ FILLING (Rack Up) - net insertion of receptors and recruitment of slots, raising the count.
+
+◦ EMPTYING (Rack Down) - net endocytosis of receptors and loss of slots, lowering the count.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ HOLDING: any single receptor dwells only minutes to hours, yet the occupied count persists because a departing receptor is replaced from the local surface pool, exactly like refresh in dynamic random-access memory; the set point is dictated by the Part One switches, not a clock.
+
+◦ FILLING: exocytosis inserts alpha-amino-3-hydroxy-5-methyl-4-isoxazolepropionic-acid receptors (abbreviated AMPA receptors) and recruits postsynaptic density protein ninety-five slots; establishes over minutes to an hour.
+
+◦ EMPTYING: endocytosis removes receptors and slots; establishes over minutes to an hour.
+
+• THE TRANSITION TABLE.
+
+◦ HOLDING to FILLING: trigger is a large brief calcium rise through the N-methyl-D-aspartate receptor (long-term potentiation); timescale minutes.
+
+◦ HOLDING to EMPTYING: trigger is a smaller sustained calcium rise (long-term depression); timescale minutes.
+
+◦ FILLING or EMPTYING to HOLDING: trigger is settling of the new count under the upstream switches; timescale held for hours to days.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature is a rack that empties when refilling stops, and the honest ambiguity of whether blocking the maintenance kinase empties the rack or merely stops refilling it.
+
+◦ The watchdog is the reserve pool and the upstream set point that continually re-trap receptors against turnover.
+
+
+ENTRY 9. THE SPINE ACTIN SKELETON (keyed to slow variables catalogue Chapter 9)
+
+MODES AND MODE TRANSITIONS:
+
+This is a structural latch whose modes are the volume states of a spine, memory turned from a number into a shape.
+
+The regulated spine cytoskeleton stores spine volume, so which geometric state the actin frame holds is its register.
+
+• THE MODE REGISTER.
+
+◦ SMALL (Baseline Frame) - small spine, small postsynaptic density, few slots.
+
+◦ REMODELLING (Transient Swell) - a brief enlargement phase during active polymerisation.
+
+◦ ENLARGED (Shape Locked) - a stable cross-braced enlarged frame held by treadmilling.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ SMALL: holds baseline weight; stable resting geometry.
+
+◦ REMODELLING: actin, cofilin and Arp2/3 drive polymerisation; lasts several minutes before consolidation or collapse.
+
+◦ ENLARGED: subunits exchange ceaselessly yet the braced pool holds a fixed larger volume, because leaving subunits are replaced in place and cross-linkers resist disassembly; holds for hours to days, spines persisting months in vivo; confidence high.
+
+• THE TRANSITION TABLE.
+
+◦ SMALL to REMODELLING: trigger is a potentiating stimulus raising spine calcium and activating the Rho-family guanosine-triphosphate-hydrolysing switch proteins; timescale seconds to two minutes.
+
+◦ REMODELLING to ENLARGED: trigger is consolidation into the stable pool; timescale tens of minutes.
+
+◦ ENLARGED to SMALL: trigger is long-term depression driving cofilin-mediated severing without regrowth; timescale minutes to hours.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature is disassembly under actin-depolymerising drugs such as latrunculin, which prevents or reverses enlargement.
+
+◦ The watchdog is the cross-linked stable pool that resists disassembly; the open question is whether a shrunken spine has truly erased the memory or merely down-weighted a re-enlargeable synapse.
+
+
+ENTRY 10. THE TRANS-SYNAPTIC ADHESION COMPLEX (keyed to slow variables catalogue Chapter 10)
+
+MODES AND MODE TRANSITIONS:
+
+This is a mechanical register whose modes are the assembly state of a bolted joint across the cleft, storing which partner was chosen and locked.
+
+The cleft-spanning adhesion machinery stores the identity and nanometre registration of a connection, so its assembly state is its register.
+
+• THE MODE REGISTER.
+
+◦ UNBOLTED (No Join) - no matched adhesion pair, no aligned junction.
+
+◦ BOLTED (In Register) - neurexin and neuroligin clasped, release site held over receptor cluster, redundant bonds re-clasped under load.
+
+◦ DISBANDING (Bolts Cut) - bonds broken and the junction being disassembled.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ UNBOLTED: no reliable transmission; pre-synaptic default before contact.
+
+◦ BOLTED: many parallel bonds each turning over across hours to days, yet the geometry is self-restoring as long as the adhesion code still matches, so a given transmitter quantum yields a reliable postsynaptic response; the join can hold for the months-to-years life of the synapse.
+
+◦ DISBANDING: transmission reliability falls as registration is lost.
+
+• THE TRANSITION TABLE.
+
+◦ UNBOLTED to BOLTED: trigger is a matching neurexin-neuroligin pair clasping during synaptogenesis, recruiting scaffolds and release machinery; timescale minutes to hours; activity and plasticity tune how firmly it is bolted.
+
+◦ BOLTED to DISBANDING: trigger is synapse elimination, often with microglial complement tagging, during pruning or forgetting; timescale hours to days.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature is loss of register read as reduced reliability, and the cluster of autism-risk genes here shows what mis-registration costs.
+
+◦ The watchdog is redundancy: bolts are replaced one at a time under load, so the joint never slips; whether cutting the bolts erases a memory or merely marks a condemned synapse is often ambiguous.
+
+
+ENTRY 11. THE PERINEURONAL NET (keyed to slow variables catalogue Chapter 11)
+
+MODES AND MODE TRANSITIONS:
+
+This is a write-protect register whose two modes gate whether the enclosed circuit can be rewritten at all, storing a set-point rather than a value.
+
+The chondroitin-sulphate perisomatic lattice holds the closed-or-open plasticity state of a circuit, so which state the net is in is its register.
+
+• THE MODE REGISTER.
+
+◦ PERMISSIVE (Fence Down) - no condensed net, enclosed synapses free to change, as in the juvenile critical period.
+
+◦ FENCED (Fence Up) - condensed lattice in place, enclosed wiring write-protected against structural change.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ PERMISSIVE: synapses inside can undergo the structural changes of the spine actin and adhesion mechanisms; the developmental default before closure.
+
+◦ FENCED: the slow-turnover extracellular matrix physically fences synapses and holds the low-plasticity state by construction, closed by default, persisting for the life of the animal with slow partial turnover; confidence high.
+
+• THE TRANSITION TABLE.
+
+◦ PERMISSIVE to FENCED: trigger is developmental, sensory experience maturing parvalbumin interneurons and condensing the net to close the critical period; timescale weeks of late development; a transition thrown by the developmental programme from above.
+
+◦ FENCED to PERMISSIVE: trigger is enzymatic removal, classically chondroitinase ABC digesting the chains, or antidepressant action releasing tropomyosin-receptor-kinase B from the phosphatase brake; timescale days, with slow re-formation after.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature is a net removed at the wrong time, since the net also protects against maladaptive rewiring and excitotoxicity.
+
+◦ The watchdog is the durability of the matrix itself, holding the closed state as default; reopening plasticity is a double-edged intervention.
+
+
+ENTRY 12. THE MITOCHONDRIAL PROVISIONING SYSTEM (keyed to slow variables catalogue Chapter 12)
+
+MODES AND MODE TRANSITIONS:
+
+This is a supporting non-cognitive service, so its modes describe provisioning state, not a stored value; the register holds a spatial arrangement, not a memory.
+
+The synaptic mitochondrial service stores which synapses have a power dock nearby, so the docking state is its register, admitted only as a supporting resource.
+
+• THE MODE REGISTER.
+
+◦ UNDOCKED (No Dock) - no mitochondrion stationed at a given synapse.
+
+◦ DOCKED (Power Dock) - a mitochondrion anchored beneath an active spine or terminal, supplying the energy currency and buffering calcium.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ UNDOCKED: the synapse draws on diffuse supply and cannot sustain the heaviest plasticity work; default at low-demand sites.
+
+◦ DOCKED: a long-lived self-renewing organelle provides durable local energy and calcium handling that outlasts any single burst, renewed by fission, fusion and protein import; what persists is provisioning capacity, not a learned value.
+
+• THE TRANSITION TABLE.
+
+◦ UNDOCKED to DOCKED: trigger is activity-driven repositioning, local calcium halting and anchoring a mitochondrion at a newly demanding synapse; timescale seconds to minutes, docking lasting minutes to hours.
+
+◦ DOCKED to UNDOCKED: trigger is undocking and transport away, or mitophagy clearing a damaged organelle; timescale minutes upward.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature is loss of provisioning that starves the machinery maintaining a stored value, most acute in fast-spiking parvalbumin interneurons.
+
+◦ The watchdog is mitophagy removing damaged organelles and continual renewal keeping docks serviceable; there is no memory to erase, only a supply to maintain.
+
+
+ENTRY 13. THE SYNAPSE-TO-NUCLEUS SIGNALLING RELAY (keyed to slow variables catalogue Chapter 13)
+
+MODES AND MODE TRANSITIONS:
+
+This is a transport channel, not a store, so its modes describe the in-flight state of a signed request, and the register is consumed on delivery.
+
+The retrograde petition channel holds a routed request briefly, so whether a courier is idle, in transit or delivered is its register.
+
+• THE MODE REGISTER.
+
+◦ IDLE (No Petition) - no request in flight.
+
+◦ IN TRANSIT (Courier Walking) - a phosphorylated cargo locked in a protective complex walking the microtubule to the nucleus.
+
+◦ DELIVERED (Petition Read) - cargo released at the nucleus and acting on transcription factors.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ IDLE: no message; resting default.
+
+◦ IN TRANSIT: the signed cargo is shielded in a trimeric complex so the phosphate marks on ERK and Jacob survive a walk of thirty minutes to several hours; encapsulation for transport means the packet arrives intact or fails cleanly.
+
+◦ DELIVERED: the courier modifies transcription factors, most notably CREB, either promoting or shutting off its programme depending on the courier's origin and phosphorylation state.
+
+• THE TRANSITION TABLE.
+
+◦ IDLE to IN TRANSIT: trigger is coincident strong activity opening enough N-methyl-D-aspartate receptors to activate CaMKII-alpha and ERK and expose the nuclear address; the calcium source biases the sign of the message; timescale seconds to minutes to assemble.
+
+◦ IN TRANSIT to DELIVERED: trigger is dynein-based arrival at the nucleus; timescale thirty minutes to several hours.
+
+◦ IN TRANSIT to IDLE: trigger is failure to deliver, phosphatases stripping the courier or caldendrin sequestering it; timescale seconds to minutes if unprotected.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature is a half-delivered or misrouted request; there is no dedicated erase because the message is consumed on delivery.
+
+◦ The watchdog is the protective complex and the address tag, so a corrupted packet fails cleanly rather than delivering a false instruction; blocking transport or mutating the tag erases the request in flight.
+
+
+ENTRY 14. THE IMMEDIATE-EARLY GENE RESPONSE (keyed to slow variables catalogue Chapter 14)
+
+MODES AND MODE TRANSITIONS:
+
+This is a pre-armed one-shot answer whose modes are the firing state of the fastest genomic write, leaving a readable ledger of which neurons fired.
+
+The first genomic answer holds a transient record of recent activity, so whether the response is silent, pulsing or spent is its register.
+
+• THE MODE REGISTER.
+
+◦ POISED (Pre-Armed Trigger) - first-response machinery loaded, no transcription, zero start-up latency.
+
+◦ PULSING (Fast Ledger Writing) - immediate-early genes such as c-Fos, Arc, Egr1 and Npas4 transcribed, a whole-cell nuclear event.
+
+◦ DECAYED (Ledger Fading) - messengers and proteins clearing, record resetting.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ POISED: keeps the answer costless in latency, awaiting a strong event; resting default.
+
+◦ PULSING: messenger ribonucleic acid appears within five to fifteen minutes, peaks near thirty to sixty minutes, and hands off feed-forward to the enduring writers; the fastest genomic timescale in the dossier.
+
+◦ DECAYED: unstable products clear within hours, resetting the cell for the next event; confidence high.
+
+• THE TRANSITION TABLE.
+
+◦ POISED to PULSING: trigger is any event raising nuclear calcium and activating CREB, such as novel experience, strong sensory input, learning or seizure; timescale minutes.
+
+◦ PULSING to DECAYED: trigger is natural degradation of unstable messengers and proteins; timescale one to four hours for messenger, several hours for protein.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature is seizure-driven runaway induction that swamps the ledger.
+
+◦ The watchdog is the self-limiting instability of the products, which clears the record automatically; laboratory labels installed via the fos promoter are made permanent on purpose, and that permanence is an experimental choice, not the physiological state.
+
+
+ENTRY 15. THE HISTONE CODE (keyed to slow variables catalogue Chapter 15)
+
+MODES AND MODE TRANSITIONS:
+
+This is a readability register whose modes are the open-or-closed compaction state of chromatin, set by a maintained off-centre balance of marks.
+
+The spool-tension store holds gene readability, so whether a locus is open or closed is its register, and web-checked heterochromatin work confirms two-way feedback between compaction and modification state gives genuine bistability.
+
+• THE MODE REGISTER.
+
+◦ OPEN (Loose Spool) - acetylated histones, chromatin loosened, plasticity genes readable.
+
+◦ CLOSED (Tight Spool) - certain methyl marks dominant, chromatin tightened, genes silenced.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ OPEN: an acetyl mark neutralises lysine charge, weakens histone-DNA contact and docks bromodomain readers, so the gene is expressed more; held as a dynamic equilibrium sitting high while writers keep winning locally.
+
+◦ CLOSED: compaction enhances silencer binding, which removes activating marks and feeds further compaction, a self-reinforcing loop; switching between states can take many cell generations in model systems; confidence moderate to high.
+
+• THE TRANSITION TABLE.
+
+◦ CLOSED to OPEN: trigger is learning-evoked CREB recruiting the acetyltransferases CBP and p300 to plasticity-gene promoters, amplified experimentally by histone-deacetylase (abbreviated HDAC) inhibitors; timescale thirty minutes to a few hours, held hours to days.
+
+◦ OPEN to CLOSED: trigger is HDACs removing acetyl groups and re-tightening the wrap; timescale of the middle genomic tier, faster than DNA methylation, slower than the immediate-early response.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature is a locus stuck in either state, silenced when it should be readable or aberrantly open.
+
+◦ The watchdog is the continuous writer-eraser balance that stores the state in where it settles, so turnover of any single mark does not erase it; blocking the erasers with HDAC inhibitors reliably boosts memory.
+
+
+ENTRY 16. THE DNA METHYLATION STORE (keyed to slow variables catalogue Chapter 16)
+
+MODES AND MODE TRANSITIONS:
+
+This is the most durable register in the dossier, whose modes are the covalent methylation state of a gene, written on the master copy and re-templated after replication.
+
+The lifelong ink holds a long-term configuration setting, so whether a cytosine-guanine site is methylated is its register.
+
+• THE MODE REGISTER.
+
+◦ UNMETHYLATED (Bare Letter) - gene available, higher activity.
+
+◦ METHYLATED (Inked Letter) - methyl group on the cytosine, gene durably quietened.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ UNMETHYLATED: the gene is read at higher expression; the default readable state.
+
+◦ METHYLATED: a covalent bond that does not spontaneously fall off, plus DNMT1 reading the half-methylated site after replication and restoring the mark, re-templates the pattern indefinitely by the same self-templating logic as a prion but written on the master copy; read continuously by methyl-binding repressors; persists for the life of the cell; confidence high for durability.
+
+• THE TRANSITION TABLE.
+
+◦ UNMETHYLATED to METHYLATED: trigger is experience-evoked and hormone-evoked recruitment of DNMTs, as in fear conditioning and in early-life sensitive periods; timescale hours, then lifelong.
+
+◦ METHYLATED to UNMETHYLATED: trigger is active demethylation through an enzymatic oxidise-and-excise pathway, the reason the store is so durable; the Meaney maternal-care mark can be shifted pharmacologically, methionine raising methylation, an HDAC inhibitor lowering it; timescale slow, not spontaneous.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature is mis-set lifelong programming, since an early write can bias stress-gene activity for decades.
+
+◦ The watchdog is the maintenance methyltransferase completing a half-copied record like a checksum, giving durability against both turnover and replication; there is no simple eraser, which is both the strength and the danger.
+
+
+ENTRY 17. THE TRANSPOSON AND SOMATIC MOSAICISM QUESTION (keyed to slow variables catalogue Chapter 17)
+
+MODES AND MODE TRANSITIONS:
+
+This is catalogued honestly as a question, not a managed store, so it has a degenerate register of one usable state plus an irreversible event, with no write-read-erase discipline.
+
+Somatic retrotransposition of long interspersed nuclear element one (abbreviated LINE-1, or L1) creates cell-specific genomic differences, so its only register is whether an insertion has occurred, and it is admitted as non-cognitive.
+
+• THE MODE REGISTER.
+
+◦ UNINSERTED (Reference Genome) - the neuron's genome unchanged at that locus; the normal operating state.
+
+◦ INSERTED (Scarred Genome) - a permanent retrotransposition insertion, present but with no known controlled use.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ UNINSERTED: the cell behaves on its reference sequence; no information is thereby held.
+
+◦ INSERTED: persistence is trivially total, the durability of a scar not a designed store; there is no read machinery that interprets the insertion pattern as information, which is the strongest argument that this is not a memory store; confidence deliberately low on any cognitive role.
+
+• THE TRANSITION TABLE.
+
+◦ UNINSERTED to INSERTED: trigger is a retrotransposition event during neurogenesis, promoted by the chromatin and transcription-factor environment of developing neurons, with no evidence of an experience-driven memory-specific write; timescale developmental and brief.
+
+◦ INSERTED to UNINSERTED: no transition exists, because a genomic insertion is permanent.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature is the phenomenon itself edging into pathology when insertions disrupt nearby genes, but for this catalogue the whole entry sits closer to mutation than to a managed store.
+
+◦ The honest watchdog note is that host silencing of mobile elements normally restrains jumping, and that the absence of any read or erase operation is what keeps this out of the true store register.
+
+
+ENTRY 18. THE HOMEOSTATIC SET-POINT MACHINERY (keyed to slow variables catalogue Chapter 18)
+
+MODES AND MODE TRANSITIONS:
+
+This is a governor whose modes are whether the slow renormaliser is holding steady or actively rescaling, storing a defended set point rather than a fixed value.
+
+The multiplicative renormaliser holds a target firing rate and the current global gain, so whether it rests or corrects is its register.
+
+• THE MODE REGISTER.
+
+◦ QUIESCENT (Governor Resting) - average firing near target, gain held steady, no scaling underway.
+
+◦ RENORMALISING UP (Fair Governor Lifting) - prolonged under-activity driving every excitatory synapse up by one shared factor.
+
+◦ RENORMALISING DOWN (Fair Governor Trimming) - prolonged over-activity driving every synapse down by one shared factor.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ QUIESCENT: the machinery defends the firing-rate set point without touching moment-to-moment plasticity; resting default.
+
+◦ RENORMALISING UP or DOWN: correction is multiplicative, every weight times the same scalar, so the relative pattern learning wrote is preserved exactly while overall level is renormalised; deliberately slow over many hours to days; confidence high, from activity-blockade and over-drive studies.
+
+• THE TRANSITION TABLE.
+
+◦ QUIESCENT to RENORMALISING: trigger is average activity deviating persistently from target, physiologically slow drift, experimentally chronic silencing (up-scaling) or over-driving (down-scaling); timescale hours, with up-scaling maintenance becoming tumour-necrosis-factor-alpha-dependent (abbreviated TNF-alpha) beyond about a day.
+
+◦ RENORMALISING to QUIESCENT: trigger is the average returning to target; the machinery continuously re-corrects rather than erasing, so any scaling state is transient.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature is failure to engage, leaving learning's positive feedback to saturate the cell into a roar or silence.
+
+◦ The watchdog is the negative-feedback loop itself, plus the glial TNF-alpha signal for up-scaling; disabling the activity sensor or blocking TNF-alpha removes the correction, which is the experimental route to unmasking runaway.

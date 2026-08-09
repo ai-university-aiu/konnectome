@@ -1,0 +1,2513 @@
+LAYER 8, THE MICROCIRCUIT LAYER: MODES AND MODE TRANSITIONS
+
+The Per-Type Mode Catalogues of Every Microcircuit of the Human Nervous and Endocrine System
+
+A Companion Volume to LAYER_08_MICROCIRCUITS_MANUSCRIPT
+
+Keyed, chapter by chapter, to the seventy-one-chapter microcircuits catalogue, in the Certified_Neuroscientist corpus of D. R. Dison, Founder, Artificial Intelligence University (AIU).
+
+Date of compilation: August 9, 2026.
+
+
+INTRODUCTION: MODES OF A DIAGRAM
+
+The vocabulary is the corpus standard, established in the Layer 6 modes volume: STATE is the continuous instantaneous condition; MODE is the discrete operating regime; the formalism is the hybrid automaton - mode register, per-mode transfer functions, transition table, fault watchdogs - under the admission rule that a regime enters the register only if the healthy system uses it.
+
+Applied to motifs, the vocabulary gains a level: a motif's modes are CIRCUIT regimes, emerging from - but not reducible to - the modes of its member cells and junctions.
+
+A thalamic relay cell has a burst mode (Layer 6); the relay TRIAD has a burst-alert gating mode (Layer 8) that exists only when the cell's mode, the reticular gate's state, and the cortical context align.
+
+The universal menu for motifs: idle versus engaged; oscillating versus silent versus asynchronous; the gaits of the rhythm generators; deliberating versus committed in the competition circuits; loaded versus holding versus reset in the attractors and integrators; encoding versus consolidating versus replay in the memory circuits; relay versus burst-alert versus spindle-gated at the thalamic gate; balanced versus runaway in every excitation-inhibition pairing; coupled versus uncoupled in the syncytial networks; and the up-down alternation that brain state imposes on nearly everything cortical.
+
+The source catalogue anticipated this volume: its DYNAMIC REGIMES AND STATES aspect was this treatment in informal dress, and every entry below formalises its chapter's regimes without contradicting them.
+
+The dominant finding, worth stating in advance: at Layer 8, more than at any layer below, transitions are thrown FROM ABOVE.
+
+Sleep and waking, arousal, attention, stress, and the circadian phase - the broadcasts of Layers 10 and 11 - set the modes of most motifs most of the time; a motif is a machine whose gear lever is usually held by the whole organism.
+
+And the corpus's design lesson recurs: the deciding motifs (attractors, selectors, composites) are mode-rich; the reflex arcs and fidelity relays are proudly mode-poor.
+
+Each entry is PASTE-READY, formatted as a MODES AND MODE TRANSITIONS section for its source chapter and keyed by chapter number, so a future merge is a mechanical splice.
+
+The seventy-one entries follow in chapter order.
+
+
+ENTRY 1. CONVERGENCE (Fan-In Integration Motif) (The Evidence-Pooling Junction) (keyed to microcircuits catalogue Chapter 1)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a single-junction mode-machine whose discrete regime is set by input synchrony and by the balance of fast to slow excitation, not by any rewiring.
+
+• THE MODE REGISTER.
+
+◦ Averaging Mode - The Smoother - pool many weak asynchronous inputs and pass their mean, suppressing noise.
+
+◦ Integrating Mode - The Evidence Ramp - accumulate input over the membrane window, raising rate with the running total toward a decision.
+
+◦ Coincidence Mode - The Simultaneity Gate - fire supralinearly only when a few strong inputs arrive within a couple of milliseconds.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Averaging Mode applies a threshold-linear (rectified-linear) function on the low-pass-filtered weighted sum, with a corner near 10 to 50 hertz set by a membrane time constant of 10 to 20 milliseconds (medium confidence, values from the source chapter).
+
+◦ Integrating Mode acts as a leaky integrator ramping toward threshold near minus 50 millivolts, with stale evidence decaying at the leak rate (medium confidence).
+
+◦ Coincidence Mode engages slow N-methyl-D-aspartate-receptor conductance (N-methyl-D-aspartate abbreviated NMDA, decay near 100 milliseconds) and dendritic spikes so near-simultaneous inputs count for more than their sum (medium confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Rising fast-to-slow-receptor ratio and rising input synchrony - Averaging to Coincidence - milliseconds, driven locally.
+
+◦ Sustained coherent drive below saturation - Averaging to Integrating - tens to hundreds of milliseconds, driven by the input stream.
+
+◦ Neuromodulator shift of background inhibition or receptor balance - any mode to any mode - thrown from above by arousal and attention state over seconds, the dominant case for this junction.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is over-summation when inhibitory edges fail, producing runaway recruitment of the epileptic type; the watchdogs are perisomatic gamma-aminobutyric-acid inhibition (gamma-aminobutyric-acid abbreviated gamma-aminobutyric acid (GABA)) raising the effective threshold, spike-frequency adaptation, and homeostatic synaptic scaling over hours.
+
+◦ The opposite fault is a deafferented cell that can no longer reach threshold, seen after peripheral injury or motor-neuron loss.
+
+
+ENTRY 2. DIVERGENCE (Fan-Out Broadcast Motif) (The One-to-Many Megaphone) (keyed to microcircuits catalogue Chapter 2)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a two-mode broadcaster whose regime is set by the source cell's own firing pattern, switching between a slow context dial and a fast global alarm.
+
+• THE MODE REGISTER.
+
+◦ Tonic Mode - The Background Hum - hold a steady ambient transmitter level that biases the gain of every target.
+
+◦ Phasic Mode - The Global Alarm - deliver a transient synchronous pulse copied to all subscribers at once.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Tonic Mode acts as a slow scalar field, one source setting a baseline concentration that rises and clears over hundreds of milliseconds to seconds (medium confidence, from the source chapter).
+
+◦ Phasic Mode is a synchronous broadcast with gain, one input spike yielding many weighted output events delivered within under one millisecond for addressed contacts (medium confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Burst-promoting afferent drive onto the source cell - Tonic to Phasic - tens to hundreds of milliseconds, driven by the source's own inputs.
+
+◦ Return to pacemaking after the burst - Phasic to Tonic - hundreds of milliseconds.
+
+◦ Arousal and reward broadcasts (locus coeruleus, midbrain dopamine) reset the tonic set point - thrown from above by brain state over seconds to minutes, the dominant case for the aminergic broadcasters.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is loss of the broadcast itself as broadcasting cells slowly degenerate, seen as Parkinsonian slowing (dopamine) or arousal failure (noradrenaline); the watchdog is astrocytic transmitter clearance that keeps copies distinct and bounds the diffuse cloud.
+
+◦ Dysregulated broadcast (addiction, psychosis) is the over-gain fault with no strong local brake, since a diffuse volume signal has no fast feedback of its own.
+
+
+ENTRY 3. THE FEEDFORWARD CHAIN (Serial Relay Motif) (The Signal Bucket-Brigade) (keyed to microcircuits catalogue Chapter 3)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is deliberately mode-poor, and that is its virtue: a faithful pipe should have essentially one operating regime.
+
+• THE MODE REGISTER.
+
+◦ Relaying Mode - The Faithful Carry - reproduce the input at the far end after a fixed delay with minimal reshaping.
+
+◦ Non-Relaying Mode - The Closed Gate - the thalamic variant switched into burst firing by hyperpolarisation, ceasing faithful transmission and signalling novelty instead.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Relaying Mode is the identity with delay (a pure delay line), a mild low-pass in practice, adding roughly 0.5 to a few milliseconds per stage and 10 to 30 milliseconds body-to-cortex, with jitter held to tens of microseconds in high-fidelity auditory relays (high confidence, from the source chapter).
+
+◦ Non-Relaying Mode replaces the graded copy with stereotyped bursts, so the pipe stops carrying content and the register of a bare chain collapses toward one useful mode.
+
+• THE TRANSITION TABLE.
+
+◦ Membrane hyperpolarisation de-inactivating T-type calcium channels - Relaying to Non-Relaying - tens to hundreds of milliseconds, thrown from above by sleep-wake and arousal state (the tonic-burst switch).
+
+◦ Depolarising arousal drive restoring tonic firing - Non-Relaying to Relaying - tens of milliseconds, thrown from above.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is conduction slowing, jitter, or block from demyelination (multiple sclerosis, Guillain-Barre syndrome, Charcot-Marie-Tooth disease); the watchdogs are homeostatic maintenance of release reliability, myelin upkeep by oligodendrocytes and Schwann cells, and astrocytic ion buffering that preserves low-jitter transmission.
+
+
+ENTRY 4. THE RECURRENT LOOP (Reciprocal Pair) (The Two-Cell Memory Latch) (keyed to microcircuits catalogue Chapter 4)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a loop-gain machine in which one dial (the product of reciprocal weights and gain slopes) selects amplifier, integrator, latch, or oscillator.
+
+• THE MODE REGISTER.
+
+◦ Transient-Amplifier Mode - The Fading Echo - loop gain below one, so a nudge is boosted then decays.
+
+◦ Integrator Mode - The Perfect Tally - loop gain at one, so input is summed without decay.
+
+◦ Bistable Mode - The Held Bit - loop gain above one with saturation, holding a discrete on-state after the trigger ends.
+
+◦ Ringing Mode - The Reverberator - high gain with fast synapses and delay, so the pair oscillates rather than latches.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Bistable Mode shows hysteresis: the on-state holds a persistent rate near 10 to 50 hertz for seconds after a stimulus of a few hundred milliseconds, sustained by slow N-methyl-D-aspartate (NMDA) conductance (medium confidence, from the source chapter).
+
+◦ Integrator Mode outputs a running sum; Transient-Amplifier Mode outputs a scaled decaying copy; Ringing Mode outputs a rhythm whose frequency is set by loop delay (medium confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Brief excitatory set signal - Transient-Amplifier or off to Bistable on-state - milliseconds, driven by input.
+
+◦ Inhibitory or reset clear signal - Bistable on-state to off - milliseconds, driven by input.
+
+◦ NMDA hypofunction or falling recurrent gain - Bistable to Transient-Amplifier - thrown from above by neuromodulatory and disease state over seconds and longer.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signatures are unstable working memory when gain is too low (weak recurrent excitation and NMDA hypofunction in schizophrenia) and runaway positive feedback when balancing inhibition fails; the watchdogs are ambient GABAergic inhibition and homeostatic scaling that pin loop gain near the useful edge of bistability.
+
+
+ENTRY 5. THE FEEDFORWARD LOOP (Triad Motif) (The Two-Path Change Detector) (keyed to microcircuits catalogue Chapter 5)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a sign-selected temporal machine: the sign of its indirect path decides whether the triad detects change or filters for persistence.
+
+• THE MODE REGISTER.
+
+◦ Incoherent Mode - The Onset Flag - the indirect path opposes the direct one, producing a pulse at input onset and offset.
+
+◦ Coherent Mode - The Patience Filter - the indirect path agrees, passing only inputs that outlast the indirect-path delay.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Incoherent Mode differentiates: it approximates a temporal derivative or high-pass filter, emitting an onset pulse a few milliseconds wide whose width equals the delay difference (with a 5-millisecond lag it rejects steadier inputs) (medium confidence, from the source chapter).
+
+◦ Coherent Mode integrates-then-thresholds over the delay window, rejecting inputs shorter than the lag and giving an all-or-none delayed response (medium confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Wiring the intermediary as inhibitory versus excitatory - Coherent versus Incoherent - fixed anatomically, not a fast switch.
+
+◦ Spike-timing-dependent plasticity retuning the coincidence window - within-mode retune - minutes.
+
+◦ Short-term depression at the intermediary - Incoherent toward less-adaptive - tens to hundreds of milliseconds over successive inputs, driven by input; brain-state acetylcholine sets intermediary excitability, thrown from above.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is loss of the delayed veto when the parvalbumin intermediary is weakened (parvalbumin-interneuron dysfunction in schizophrenia and epilepsy), degrading temporal precision and removing sharpening that keeps excitation brief; the watchdog is the reliability of fast-spiking feedforward inhibition itself, backed by astrocytic timing control.
+
+
+ENTRY 6. RECURRENT (MUTUAL) EXCITATION WITHIN A POPULATION (Self-Amplifying Pool) (The Bonfire Circuit) (keyed to microcircuits catalogue Chapter 6)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a three-regime pool set by the excitation-inhibition balance, the same engine that makes cortex powerful and, unchecked, makes it seize.
+
+• THE MODE REGISTER.
+
+◦ Stable-Amplifier Mode - The Damped Bonfire - subcritical gain, boosting input transiently then settling.
+
+◦ Attractor Mode - The Held Pattern - balanced supercritical gain with inhibition, holding one of several self-sustaining patterns.
+
+◦ Runaway Mode (admitted only as fault) - The Wildfire - excitation exceeding inhibition's control, hypersynchronous discharge.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Stable-Amplifier Mode applies a bounded gain, returning toward baseline after input (medium confidence, from the source chapter).
+
+◦ Attractor Mode holds persistent activity outlasting the input by seconds, smoothed by slow N-methyl-D-aspartate (NMDA) into a stable plateau (medium confidence); the balanced regime keeps neurons in a fluctuation-driven, asynchronous-irregular state so residual input fluctuations, not the mean, drive firing (medium confidence, corroborated by balanced-network modelling in the web literature).
+
+• THE TRANSITION TABLE.
+
+◦ Sufficient recurrent drive plus matched fast inhibition - Stable-Amplifier to Attractor - tens of milliseconds, driven by input and by learned pattern.
+
+◦ Falling inhibitory strength, neuromodulator drift, or synaptic-scaling failure - Attractor to Runaway - the sharp boundary crossing, seconds and longer, often thrown from above by brain state.
+
+◦ Arousal and sleep-wake broadcasts re-set the working balance - across modes - thrown from above.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is a measurable drift of excitation-inhibition balance toward excitation preceding seizure onset; the watchdogs are fast parvalbumin feedback inhibition, spike-frequency adaptation, and homeostatic scaling that multiplies weights down when average activity runs high, whose failure is one route to chronic epilepsy.
+
+
+ENTRY 7. FEEDFORWARD INHIBITION (Input-Driven Delayed-Brake Motif) (The Coincidence-Window Cutter) (keyed to microcircuits catalogue Chapter 7)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is an aperture machine whose single job, cutting the coincidence window, has a few state-dependent settings rather than distinct computations.
+
+• THE MODE REGISTER.
+
+◦ Idle Mode - The Waiting Brake - interneuron near threshold, little passed.
+
+◦ Tight-Gate Mode - The Narrow Window - under strong synchronous drive, a sharp delayed veto that admits only near-coincident excitation.
+
+◦ Widened-Gate Mode - The Loosened Window - after repetitive drive depresses excitation onto the parvalbumin cell, the aperture transiently opens.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Tight-Gate Mode passes an excitatory postsynaptic potential followed one to two milliseconds later by inhibition, the whole event over within ten milliseconds, letting the circuit repeat at high rates (high confidence, from the source chapter).
+
+◦ Widened-Gate Mode lengthens the excitatory-to-inhibitory gap as parvalbumin drive depresses, admitting less-synchronous input (medium confidence).
+
+◦ Idle Mode passes little; the register is deliberately small.
+
+• THE TRANSITION TABLE.
+
+◦ Strong synchronous afferent volley - Idle to Tight-Gate - milliseconds, driven by input.
+
+◦ Repetitive stimulation depressing excitation onto the interneuron - Tight-Gate to Widened-Gate - tens to hundreds of milliseconds, driven by input history.
+
+◦ Acetylcholine adjusting interneuron excitability - aperture retune, opening in quiet states, tightening during attention - thrown from above by brain state over seconds.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is loss of the delayed brake (parvalbumin dysfunction), letting principal cells fire imprecisely and excitation spread; the watchdog is the fast, reliable perisomatic gamma-aminobutyric acid (GABA)-A synapse itself, backed by activity-dependent scaling of that synapse.
+
+
+ENTRY 8. FEEDBACK (RECURRENT) INHIBITION (Self-Braking Interneuron Loop) (The Activity Thermostat) (keyed to microcircuits catalogue Chapter 8)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a set-point thermostat whose regime is chosen by drive level and loop delay.
+
+• THE MODE REGISTER.
+
+◦ Stabiliser Mode - The Gentle Governor - at low drive, holding activity near a set point.
+
+◦ Oscillator Mode - The Sawtooth Pacer - at moderate drive with short delay, pacing a gamma rhythm (the pyramidal-interneuron gamma motif in embryo).
+
+◦ Ceiling Mode - The Hard Cap - at high drive, saturating into a firm ceiling on rate.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Stabiliser Mode subtracts a delayed copy of activity, a build-up of firing curtailed after the loop delay of a few milliseconds, then recovery and repeat (medium confidence, from the source chapter).
+
+◦ Oscillator Mode entrains firing into rhythmic volleys once the delay and gain suit a gamma cycle (medium confidence).
+
+◦ With facilitating somatostatin feedback the brake ramps over tens to hundreds of milliseconds, a slow integral controller (medium confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Rising principal-cell drive - Stabiliser to Oscillator to Ceiling - milliseconds to tens of milliseconds, driven by input.
+
+◦ Acetylcholine and noradrenaline retuning interneuron excitability - set-point shift - thrown from above by brain state over seconds.
+
+◦ Homeostatic scaling of inhibitory strength - long-term set-point drift - hours to days.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is thermostat failure allowing over-firing when the feedback interneuron is lost or weakened; the watchdog is the loop itself, which is the tissue's homeostatic instrument, backed by slow inhibitory scaling.
+
+
+ENTRY 9. LATERAL INHIBITION (Neighbour-Suppressing Interneuron Motif) (The Contrast-Carving Circuit) (keyed to microcircuits catalogue Chapter 9)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a contrast machine whose strength dial slides from gentle edge enhancement to outright competitive selection.
+
+• THE MODE REGISTER.
+
+◦ Contrast-Enhancement Mode - The Edge Sharpener - weak lateral inhibition sculpting a surround around each active unit.
+
+◦ Selection Mode - The Neighbour Silencer - strong recurrent lateral inhibition tipping into winner-take-all suppression (the competitive motifs are lateral inhibition turned up).
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Contrast-Enhancement Mode subtracts a spatially blurred copy of activity, following excitation by a disynaptic delay of one to three milliseconds in the fast cortical form (medium confidence, from the source chapter).
+
+◦ In the retinal horizontal-cell form the surround is graded and slow, acting over tens of milliseconds to produce sustained surround antagonism (medium confidence).
+
+◦ Selection Mode drives near-winner-take-all suppression of weaker neighbours (medium confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Rising inhibitory gain - Contrast-Enhancement to Selection - within a single response, driven by input strength.
+
+◦ Light level and stimulus statistics - surround widens in dim conditions, narrows in bright ones as gap junctions uncouple - thrown from above by adaptation over seconds.
+
+◦ Dopamine and light adaptation modulate retinal surround gain - within-mode retune - seconds, thrown from above.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is loss of surround (blurred maps, poor contrast) when the inhibitory neighbours fail, or over-suppression that silences legitimate signal; the watchdogs are experience-shaped tuning of the inhibitory kernel during critical periods and fast retinal gain control.
+
+
+ENTRY 10. RECURRENT INHIBITION OF THE RENSHAW TYPE (Motor-Collateral Feedback Interneuron) (The Final-Path Governor) (keyed to microcircuits catalogue Chapter 10)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a task-tuned motor governor with essentially one computation whose gain is set from above rather than switched between qualitative regimes.
+
+• THE MODE REGISTER.
+
+◦ High-Gain Mode - The Steady-Hold Brake - raised Renshaw excitability for fine steady holds, damping motoneuron rate.
+
+◦ Low-Gain Mode - The Released Governor - reduced recurrent inhibition for strong synchronous efforts.
+
+◦ Phase-Modulated Mode - The Gait Governor - gain scaled cycle by cycle during locomotion.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Each mode applies negative feedback proportional to gain: a motoneuron spike, then the Renshaw burst about one millisecond later, then a glycinergic inhibitory potential peaking within a few milliseconds and decaying over tens of milliseconds (high confidence, from the source chapter).
+
+◦ The difference between modes is the size of that recurrent inhibitory potential, not its form (medium confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Descending supraspinal and segmental commands - High-Gain to Low-Gain - thrown from above by task demand, tens to hundreds of milliseconds.
+
+◦ Central-pattern-generator drive during locomotion - into Phase-Modulated - phase-by-phase within the step cycle, driven by the rhythm.
+
+◦ Within-burst potentiation of cholinergic drive - transient gain rise - milliseconds.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is loss or dysmodulation of recurrent inhibition contributing to unstable or spastic output; the watchdog is descending control of Renshaw excitability itself; note that some distal hand motoneuron pools have weak or absent recurrent inhibition, a deliberate specialisation for independent finger control rather than a fault.
+
+
+ENTRY 11. RECIPROCAL INHIBITION (Mutually-Silencing Antagonist Pair) (The Push-Pull Pair) (keyed to microcircuits catalogue Chapter 11)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a see-saw whose behaviour depends on added ingredients (fatigue and gain), spanning a static switch, an oscillator, and a hard latch.
+
+• THE MODE REGISTER.
+
+◦ Static-Relaxation Mode - The Antagonist Release - the resting regime, one side active relaxes its opponent.
+
+◦ Oscillator Mode - The Take-Turns Engine - with fatigue added, a clean alternation (the half-centre oscillator).
+
+◦ Flip-Flop Mode - The Locked Latch - with mutual gain raised, a bistable switch.
+
+◦ Locked Mode - The Stiffened Joint - both sides driven together during co-contraction, the see-saw pinned.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Static-Relaxation Mode gives an agonist excitatory potential followed about 0.8 milliseconds later by the antagonist inhibitory potential, the disynaptic fingerprint (high confidence, from the source chapter).
+
+◦ Oscillator Mode alternates with a duty cycle set by the fatigue of each half-centre (medium confidence).
+
+◦ Flip-Flop Mode holds one side on with hysteresis (medium confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Adding an adaptation or fatigue current - Static to Oscillator - onset over tens to hundreds of milliseconds.
+
+◦ Raising mutual inhibitory gain - Static or Oscillator to Flip-Flop - fast once gain crosses threshold.
+
+◦ Descending commands and presynaptic inhibition reduce pathway gain for co-contraction - into Locked - thrown from above by task demand.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is impaired modulation of the reciprocal pathway in spasticity and dystonia, where the see-saw fails to release or lock appropriately; the watchdog is descending and presynaptic gain control, whose derangement is the disorder.
+
+
+ENTRY 12. PRESYNAPTIC INHIBITION (Axo-Axonic Terminal Gating Motif) (The Input Tap) (keyed to microcircuits catalogue Chapter 12)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a slow input valve whose regime is a background gain setting adjusted by descending state, not a family of computations.
+
+• THE MODE REGISTER.
+
+◦ Tonic-Set Mode - The Standing Tap - a background level of presynaptic inhibition setting resting afferent gain.
+
+◦ Movement-Gated Mode - The Closed Tap - sharply increased gating of chosen afferents during voluntary movement.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Both modes reduce transmitter release at the afferent terminal via primary afferent depolarisation, which rises over 10 to 20 milliseconds and decays over 100 to 200 milliseconds, a slow-opening, slow-closing valve matched to the timescale of a movement rather than a single spike (high confidence, from the source chapter).
+
+◦ Tonic-Set Mode holds a steady attenuation; Movement-Gated Mode deepens it selectively on task-relevant afferents (medium confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Descending motor commands preceding and during movement - Tonic-Set to Movement-Gated - tens to hundreds of milliseconds, thrown from above.
+
+◦ Return to baseline after movement - Movement-Gated to Tonic-Set - hundreds of milliseconds.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is a released tap after spinal cord injury, where the gamma-aminobutyric acid (GABA)-B component is reduced and afferent gain rises, contributing to spasticity; the watchdog is the tonic GABAergic (fast GABA-A and slow GABA-B) background itself, whose loss is the fault, with no fast learning to compensate.
+
+
+ENTRY 13. THE PERISOMATIC-DENDRITIC DIVISION OF LABOUR (Two-Site Interneuron Targeting Motif) (The Two-Handed Governor) (keyed to microcircuits catalogue Chapter 13)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a two-handed governor whose mode is which inhibitory hand (fast perisomatic or slow dendritic) currently dominates the pyramidal cell.
+
+• THE MODE REGISTER.
+
+◦ Perisomatic-Dominant Mode - The Output Timer - parvalbumin (abbreviated PV) inhibition at the soma enforces precise, sparse output timing.
+
+◦ Dendritic-Clamp Mode - The Input Guard - somatostatin (abbreviated SST) inhibition builds on the dendrites to clamp incoming excitation.
+
+◦ Dendrite-Open Mode - The Learning Window - the dendritic brake lifted (by vasoactive-intestinal-peptide cells), opening dendrites for plasticity.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Perisomatic-Dominant Mode delivers sub-millisecond-onset inhibition with gamma-aminobutyric acid (GABA)-A decay near 5 to 10 milliseconds, able to entrain gamma at 30 to 90 cycles per second (high confidence, from the source chapter).
+
+◦ Dendritic-Clamp Mode builds over tens of milliseconds during a train because SST synapses facilitate, a natural theta-timescale and sustained-gating brake (high confidence).
+
+◦ Dendrite-Open Mode removes the dendritic brake so coincident inputs can trigger potentiation (medium confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Onset of sustained local activity - Perisomatic-Dominant to Dendritic-Clamp - tens of milliseconds, driven by input.
+
+◦ Vasoactive-intestinal-peptide firing during arousal, reward, and movement - Dendritic-Clamp to Dendrite-Open - thrown from above by behavioural state, hundreds of milliseconds.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is runaway excitation when PV perisomatic inhibition fails; the watchdogs are the two complementary inhibitory hands themselves and the plasticity of both synapses that reshapes output timing and licenses learning.
+
+
+ENTRY 14. DISINHIBITION (The Inhibition-of-Inhibition Motif) (The Permission Circuit) (keyed to microcircuits catalogue Chapter 14)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a permission switch that gates when a principal cell's dendrites (and its learning) are allowed to open, timed to behavioural state.
+
+• THE MODE REGISTER.
+
+◦ Guarded Mode - The Closed Permit - the somatostatin guard on, pyramidal dendrites clamped.
+
+◦ Released Mode - The Open Permit - vasoactive-intestinal-peptide firing lifts the guard, dendrites open during arousal and attention.
+
+◦ Behaviour-Locked Mode - The Task Permit - a transient flip during a specific bout such as running or whisking.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Released Mode disinhibits by suppressing intermediary somatostatin cells, and because the vasoactive-intestinal-peptide-to-somatostatin synapse facilitates, sustained firing progressively deepens the release over hundreds of milliseconds to seconds (high confidence, from the source chapter).
+
+◦ In cortex this selectively amplifies pyramidal responses to weak but behaviourally relevant stimuli, most strongly at low contrast (medium confidence, corroborated by primary-visual-cortex web literature); attentional modulation is reported to be orthogonal to this disinhibition, a distinct control axis (medium confidence, web literature).
+
+◦ Guarded Mode holds the dendritic brake on (medium confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Locomotion and arousal drive onto vasoactive-intestinal-peptide cells - Guarded to Released - hundreds of milliseconds, thrown from above by behavioural state (the dominant case).
+
+◦ Reward and punishment signals - into Released - a cortex-wide response, thrown from above.
+
+◦ End of the bout - Released to Guarded - hundreds of milliseconds to seconds.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is pathological over-disinhibition removing a needed brake and promoting runaway activity; the watchdog is the somatostatin guard itself and the balance of the three-interneuron circuit, since disinhibition only permits plasticity rather than storing it.
+
+
+ENTRY 15. VOLUME (NEUROGLIAFORM) INHIBITION (The Unaddressed GABA-Cloud Motif) (The Fog Brake) (keyed to microcircuits catalogue Chapter 15)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a slow, diffuse fog brake whose modes are depth of blanket rather than distinct arithmetic, and it paces slow network states.
+
+• THE MODE REGISTER.
+
+◦ Tonic-Damp Mode - The Thin Haze - weak background dampening at low activity, setting regional excitability.
+
+◦ Blanket Mode - The Deep Fog - a burst lays a long-lasting inhibitory blanket that can silence a patch and reset local oscillatory phase.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Both modes act through the slowest phasic inhibition in the brain: a gamma-aminobutyric acid (GABA)-A-slow component peaking over tens of milliseconds and a GABA-B-inward-rectifier-potassium component lasting hundreds of milliseconds to more than a second (high confidence, from the source chapter).
+
+◦ Because the cells are gap-junction-coupled they act as a sheet, so Blanket Mode is well suited to shaping slow-wave and up-state versus down-state transitions (medium confidence).
+
+◦ Tonic-Damp Mode sets a slow background gain against which addressed plasticity occurs (medium confidence).
+
+• THE TRANSITION TABLE.
+
+◦ A burst of neurogliaform firing - Tonic-Damp to Blanket - tens of milliseconds to onset, then decay over hundreds of milliseconds to over a second.
+
+◦ Slow-wave-sleep and up-down-state cycling - recruits Blanket phase-by-phase - thrown from above by brain state, seconds.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is failure of slow inhibition disturbing slow-rhythm pacing and layer-1 input gating; the watchdog is the extrasynaptic GABA handling and GABA-B-inward-rectifier-potassium signalling that terminate the fog, backed by the coupled sheet's self-limiting spread.
+
+
+ENTRY 16. WINNER-TAKE-ALL (Mutual-Inhibition Competitive Selection Motif) (The One-Survivor Circuit) (keyed to microcircuits catalogue Chapter 16)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a decision machine whose modes span deliberation, commitment, and near-tie oscillation, the same dynamics that produce perceptual rivalry.
+
+• THE MODE REGISTER.
+
+◦ Deliberation Mode - The Open Race - subcritical gain, graded and reversible competition among candidates.
+
+◦ Commitment Mode - The One Survivor - attractor regime, a categorical choice with hysteresis, winner sustained and losers suppressed.
+
+◦ Rivalry Mode - The Flip-Flopper - near-tie oscillation in which candidates alternate.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Deliberation Mode shows ramping firing at 10 to 50 hertz rising over hundreds of milliseconds, confined to a constrained state before commitment (medium confidence, from the source chapter and corroborated by biased-competition web literature).
+
+◦ Commitment Mode is a sharp divergence at the decision point into sustained winner activity riding a 30-to-80-hertz gamma rhythm from the basket-cell referee (medium confidence).
+
+◦ Rivalry Mode alternates dominance every 1 to 10 seconds, matching binocular-rivalry dominance-duration statistics (medium confidence, web literature).
+
+• THE TRANSITION TABLE.
+
+◦ Accumulating evidence crossing the divergence point - Deliberation to Commitment - hundreds of milliseconds, driven by input.
+
+◦ Balanced sustained inputs near a tie - Deliberation to Rivalry - seconds, driven by input plus adaptation.
+
+◦ Neuromodulators scaling recurrent gain - Deliberation to Commitment (soft comparator when relaxed, hard latch when aroused) - thrown from above by arousal, seconds.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is a habitual winner annexing the circuit if excitatory bias is unchecked; the watchdogs are paired excitatory and inhibitory plasticity that rebalances the race and the shared inhibitory referee, whose failure yields either indecision or premature lock-in.
+
+
+ENTRY 17. SOFT WINNER-TAKE-ALL AND SPARSE CODING (k-Winners Competitive Thinning Motif) (The Few-Survivors Circuit) (keyed to microcircuits catalogue Chapter 17)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a sparseness machine whose mode is its operating point k, the number of winners admitted, set by brain state and novelty.
+
+• THE MODE REGISTER.
+
+◦ Encoding Mode - The Loosened Committee - novelty and acetylcholine loosen inhibition, admitting more winners (larger k).
+
+◦ Familiar Mode - The Tight Committee - familiarity tightens inhibition, fewer winners.
+
+◦ Neurogenesis Mode - The Rookie Round - young, hyperexcitable granule cells compete on easier terms for a few weeks, refreshing the code.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ All modes apply k-winners thinning: granule cells fire brief reliable bursts phase-locked to theta (4 to 8 hertz) with gamma-paced inhibition slicing each theta cycle into competitive rounds, most cells silent for minutes to hours (medium confidence, from the source chapter).
+
+◦ Encoding Mode raises k, entrenching each winning committee for its context (medium confidence).
+
+◦ Neurogenesis Mode adds a parallel easier-threshold competition that improves separation of similar memories (medium confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Novelty and cholinergic tone loosening the brake - Familiar to Encoding - thrown from above by brain state, hundreds of milliseconds to seconds.
+
+◦ Growing familiarity tightening inhibition - Encoding to Familiar - seconds and longer.
+
+◦ Insertion of new granule cells - into Neurogenesis Mode - a weeks-long developmental window.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is loss of sparseness (too many winners, catastrophic overlap) or over-thinning (too few, no code); the watchdogs are inhibitory plasticity tuning the brake to hold target sparseness and the gamma-paced competitive rounds.
+
+
+ENTRY 18. DIVISIVE NORMALIZATION (Pooled-Activity Divisive Scaling Motif) (The Fair-Share Circuit) (keyed to microcircuits catalogue Chapter 18)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a nested divider running the same fair-share arithmetic at several timescales, retuned by state and adaptation.
+
+• THE MODE REGISTER.
+
+◦ Fast-Shunt Mode - The Instant Divider - shunting inhibition dividing each response by pooled activity within 5 to 20 milliseconds.
+
+◦ Depression Mode - The Sluggish Divider - short-term depression extending the division over 50 to 300 milliseconds.
+
+◦ Adaptation Mode - The Slow Rescaler - slow adaptation carrying the same arithmetic over seconds, matching the pool to recent statistics.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Every mode computes response equal to a driven input divided by a semi-saturation constant (sigma) plus the summed pool, the canonical normalisation equation (high confidence, from the source chapter).
+
+◦ The modes differ only in the timescale of the denominator's assembly, from perceptual frame rate to light adaptation (medium confidence).
+
+◦ Attention effectively multiplies the attended input's contribution to numerator and denominator (medium confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Rising pooled drive - Fast-Shunt engaged first, then Depression, then Adaptation - milliseconds to seconds, driven by input.
+
+◦ Arousal and attention reweighting the pool - within-mode retune - thrown from above by brain state, hundreds of milliseconds.
+
+◦ Adaptation retuning sigma to recent statistics - Adaptation Mode - seconds to minutes (contrast adaptation is this motif re-tuning itself).
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is saturation or loss of gain control when inhibition no longer matches excitation; the watchdog is inhibitory plasticity over days that matches inhibition to average excitation, keeping the operating point centred.
+
+
+ENTRY 19. GAIN MODULATION (Multiplicative Slope-Control Motif) (The Multiplier) (keyed to microcircuits catalogue Chapter 19)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a slowly varying knob multiplying a fast signal, and its modes are the arousal positions along an inverted-U.
+
+• THE MODE REGISTER.
+
+◦ Low-Gain Mode - The Drowsy Knob - too little gain, signals sinking into noise.
+
+◦ Optimal-Gain Mode - The Sweet Spot - an intermediate optimum sharpening signal-to-noise.
+
+◦ High-Gain Mode - The Over-Driven Knob - too much gain, amplifying noise and locking circuits into over-responsive states.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Each mode applies a multiplicative coefficient to the input-output slope via G-protein-coupled effects developing over 100 milliseconds to seconds, with phasic locus-coeruleus bursts sharpening gain within a few hundred milliseconds (medium confidence, from the source chapter).
+
+◦ The dependence follows the inverted-U (the Yerkes-Dodson law written in conductances), and raising gain shifts cortex from segregated toward integrated global dynamics (medium confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Rising arousal and salient-event bursts - Low-Gain to Optimal - hundreds of milliseconds, thrown from above by the arousal systems.
+
+◦ Stress and panic pushing past the optimum - Optimal to High-Gain - seconds, thrown from above by the stress axis.
+
+◦ Tonic state change (sleep to waking, quiet to aroused) - across modes - seconds to minutes, thrown from above.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is chronic mis-set gain (chronic stress and stimulant exposure resetting adrenergic and dopaminergic gain); the watchdog is receptor-density adaptation and the homeostatic tendency of the arousal systems to return toward the optimum, since the knob also gates plasticity and so mis-setting it mis-directs learning.
+
+
+ENTRY 20. THE PUSH-PULL (OPPONENT) MOTIF (Sign-Splitting Dual-Channel Motif) (The Two-Handed Circuit) (keyed to microcircuits catalogue Chapter 20)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a difference amplifier riding a movable pivot, mode-poor by design because its sign assignments are developmentally fixed.
+
+• THE MODE REGISTER.
+
+◦ Opponent-Difference Mode - The Two-Handed Subtractor - one channel pushes while its opposite pulls, encoding the signed difference about a pivot.
+
+◦ Pivot-Reset Mode - The Recentred Balance - the crossing point re-regulated to the current mean (adaptation level, joint equilibrium, glycaemic set point).
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Opponent-Difference Mode outputs the difference of two oppositely signed channels: retinal ON and OFF responses begin within 20 to 50 milliseconds of their preferred transition, the OFF pathway typically a few milliseconds faster; spinal reciprocal action operates within the 20-to-40-millisecond reflex loop; hormonal push-pull over minutes (high confidence, from the source chapter).
+
+◦ Pivot-Reset Mode slides the operating point to mean luminance within seconds, or to a new equilibrium in other channels (medium confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Change in mean input level - Opponent-Difference to Pivot-Reset - seconds (retinal opponency adapts to mean luminance), driven by input statistics.
+
+◦ Motor training retuning the spinal reciprocal pivot - within-mode calibration - sessions.
+
+◦ Slow endocrine remodelling of islet mass to demand - hormonal-channel calibration - days and longer.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is a drifting pivot, as in the raised glucose set point of diabetes; the watchdog is the regulatory loop holding the pivot, since the sign assignments themselves are fixed and cannot compensate.
+
+
+ENTRY 21. COINCIDENCE DETECTION WITH DELAY LINES (The Jeffress Interaural-Time Comparator) (The Microsecond Stopwatch) (keyed to microcircuits catalogue Chapter 21)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a measuring instrument with essentially one mode, built to hold its calibration rather than to switch regimes.
+
+• THE MODE REGISTER.
+
+◦ Coincidence-Gate Mode - The Microsecond Stopwatch - a fast leaky coincidence gate with a fixed narrow window, firing on sub-millisecond arrival differences.
+
+◦ Retuned-Window Mode - The Adjusted Gate - the same gate with a slower gain and best-delay adjustment set by glycinergic inhibition.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Coincidence-Gate Mode has no rhythm of its own; its signature is latency precision, firing sharply tuned to sub-millisecond interaural time differences and following sound envelopes up into the hundreds of hertz, its output a firing-rate hill across the population that shifts with azimuth (high confidence, from the source chapter).
+
+◦ Retuned-Window Mode uses glycinergic inhibition for slow-timescale gain and best-delay adjustment; strong background sound can broaden apparent tuning (medium confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Glycinergic inhibitory drive - Coincidence-Gate to Retuned-Window (sharper or blunter timing) - slow-timescale, within-instrument.
+
+◦ Developmental growth of head size and ear spacing - lifelong recalibration of the delay-line map - months to years, an early-life critical window.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is loss of timing precision (blunted window, degraded localisation); there is no bistable or oscillatory failure mode here, only sharper or blunter timing, and the watchdog is the developmental calibration to individual head geometry plus the strength and timing of glycinergic inhibition, which the mature circuit holds nearly hard-wired.
+
+
+ENTRY 22. THE GAMMA OSCILLATOR, PYRAMIDAL-INTERNEURON TYPE (Pyramidal-Interneuron Network Gamma, PING) (The Cortical Metronome) (keyed to microcircuits catalogue Chapter 22)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is an excitation-paced metronome whose modes are off, rhythmic gamma, and the slip toward interneuron-paced gamma, and whose gamma appears in on-off bouts.
+
+• THE MODE REGISTER.
+
+◦ Quiet Mode - The Idle Clock - below a drive threshold, quiet or irregular firing.
+
+◦ PING Mode - The Cortical Metronome - above threshold, locked rhythmic gamma paced by excitation.
+
+◦ interneuron-only gamma (ING)-Slip Mode - The Faster Ring - with weak excitation and strong mutual inhibition, a faster interneuron-paced beat (toward Chapter 23).
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ PING Mode produces a roughly sinusoidal population rhythm at 30 to 90 hertz, pyramidal spikes clustered just before the inhibitory volley and a near-silent trough, with frequency climbing as drive strengthens; bouts wax and wane over tens to a few hundred milliseconds, often riding slower rhythms (high confidence, from the source chapter).
+
+◦ The band splits into slow gamma (about 30 to 50 hertz) and fast gamma (about 60 to 90 hertz), which in hippocampus route information from different upstream sources (medium confidence, corroborated by web literature: slow gamma relays CA3 input, fast gamma relays entorhinal input).
+
+• THE TRANSITION TABLE.
+
+◦ Drive crossing threshold - Quiet to PING - milliseconds, driven by input.
+
+◦ Weakening excitation with strong inhibition - PING to ING-Slip - milliseconds.
+
+◦ Acetylcholine and network state gating whether gamma appears - Quiet to PING in bouts - thrown from above by brain state, the on-off bouts.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is failed or dysrhythmic gamma when parvalbumin fast-spiking cells are impaired (their protracted maturation and perineuronal nets set gamma's late development); the watchdog is the feedback inhibitory volley itself, which paces and bounds each cycle.
+
+
+ENTRY 23. THE GAMMA OSCILLATOR, INTERNEURON-ONLY TYPE (Interneuron Network Gamma, ING) (The Self-Ringing Brake) (keyed to microcircuits catalogue Chapter 23)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a self-ringing inhibitory metronome, more metronomic and less bursty than the pyramidal-interneuron type because it is not gated by fluctuating excitatory ensembles.
+
+• THE MODE REGISTER.
+
+◦ Coherent-interneuron-only gamma (ING) Mode - The Self-Ringing Brake - with adequate tonic drive and strong gap-junction coupling, a coherent fast beat at the high end of or above the gamma band.
+
+◦ PING-Transition Mode - The Handover - as excitatory drive strengthens, a smooth handover to pyramidal-paced gamma at somewhat lower frequency.
+
+◦ Asynchronous Mode - The Broken Beat - with too little drive or weak coupling, asynchronous or clustered firing rather than a clean beat.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Coherent-ING Mode gives a very regular inhibitory rhythm whose trough is defined by synchronous inhibition rather than an excitatory volley (high confidence, from the source chapter).
+
+◦ PING-Transition Mode lowers frequency as excitation takes over pacing (medium confidence).
+
+◦ Asynchronous Mode fails to lock, producing no coherent beat (medium confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Rising excitatory drive to the interneurons - Coherent-ING to PING-Transition - milliseconds, driven by input.
+
+◦ Falling drive or weakened gap-junction coupling - Coherent-ING to Asynchronous - milliseconds.
+
+◦ Modulation of connexin-36 gap-junction coupling - tightens or loosens synchrony - thrown from above over slower timescales.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is loss of coherence when the connexin-36 interneuron syncytium or parvalbumin population is disrupted (a properly coupled syncytium is a prerequisite for ING); the watchdog is the synchronous inhibitory volley and gap-junction coupling that re-lock the beat.
+
+
+ENTRY 24. THETA-GAMMA NESTING (Cross-Frequency Phase-Amplitude Coupling) (The Phase Coder) (keyed to microcircuits catalogue Chapter 24)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a phase-coding buffer whose master mode is set by brain state: it nests gamma into theta during the theta state and dissolves into replay otherwise.
+
+• THE MODE REGISTER.
+
+◦ Theta-Nested Mode - The Phase Coder - during active exploration, rapid-eye-movement sleep, and attention, each theta cycle carves into gamma slots carrying an ordered list.
+
+◦ Non-Theta Replay Mode - The Ripple Player - in the non-theta state the coupling dissolves and the hippocampus produces sharp-wave ripples for memory replay.
+
+◦ CA3-Listening versus Entorhinal-Listening Mode - The Channel Selector - slow gamma nested when CA1 listens to CA3 (memory), fast gamma when listening to entorhinal cortex (the present).
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Theta-Nested Mode serialises a rank-ordered set into gamma-slot activations within each theta cycle: theta period roughly 125 to 250 milliseconds (4 to 8 hertz), gamma slot roughly 10 to 25 milliseconds, giving about 5 to 9 slots and matching the 7 plus or minus 2 capacity, with phase precession advancing assemblies to earlier phases across cycles (high confidence, from the source chapter).
+
+◦ The CA3-versus-entorhinal channel selection uses slow versus fast gamma as the routing tag (medium confidence, corroborated by web literature on gamma-frequency routing).
+
+• THE TRANSITION TABLE.
+
+◦ Cholinergic and septal theta tone - Non-Theta Replay to Theta-Nested - onset over hundreds of milliseconds, thrown from above by brain state (the dominant control).
+
+◦ Loss of theta drive (quiet waking, slow-wave sleep) - Theta-Nested to Non-Theta Replay - seconds, thrown from above.
+
+◦ Which upstream conversation CA1 is having - CA3-Listening versus Entorhinal-Listening - sub-second, driven by competing upstream drive.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is decoupling (theta and gamma present but unmarried), which abolishes phase precession and the temporal scaffolding of episodic sequence; the watchdog is proper cholinergic innervation and parvalbumin-interneuron maturation, and coupling strength that tracks working-memory demand, since weakened coupling accompanies poorer performance.
+
+
+ENTRY 25. THE HALF-CENTRE OSCILLATOR (Reciprocal-Inhibition Alternator with Fatigue) (The Take-Turns Engine) (keyed to microcircuits catalogue Chapter 25)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a drive-gated relaxation oscillator, so its modes are a silence-versus-beat pair plus two mechanistically distinct ways of producing the beat.
+
+• THE MODE REGISTER.
+
+◦ Quiescent Mode - The Stalled Engine - below drive threshold the pair sits silent or in tonic co-activation, producing no rhythm.
+
+◦ Release (Adaptation) Mode - The Fatigue Handover - the active pool tires until it can no longer hold down its partner, which then surges up.
+
+◦ Escape (Rebound) Mode - The Spring-Loaded Handover - the suppressed pool escapes inhibition through its own post-inhibitory rebound and seizes the floor before its partner has fully tired.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Quiescent Mode output is flat: a scalar tonic drive below threshold maps to no alternation, and the two pools either rest or lock into co-contraction.
+
+◦ In Release Mode the transfer is oscillation whose frequency tracks drive, with cycle periods of roughly 0.3 to 2 seconds in mammalian locomotion (well grounded in the source), each pool holding the floor for a few hundred milliseconds; adaptation build-up over hundreds of milliseconds sets the handover.
+
+◦ In Escape Mode the same oscillation is carried by the hyperpolarisation-activated current and low-threshold calcium rebound, giving different sensitivity to perturbation and modulation (source-grounded; the precise frequency split between the two modes is model-dependent, moderate confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Rising tonic glutamatergic drive across threshold - Quiescent Mode to an oscillating mode - within one to two cycles; this is the on-switch case.
+
+◦ Serotonin and noradrenaline, and drugs acting on the persistent sodium current, shift the balance between Release and Escape - these are transitions thrown from above by descending brainstem modulation, on a timescale of seconds.
+
+◦ Loss of drive (spinal disconnection) - any oscillating mode back to Quiescent Mode - immediate.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Loss of reciprocal glycinergic and gamma-aminobutyric-acid (gamma-aminobutyric acid (GABA)) inhibition collapses alternation into co-contraction and rigidity; corrupted glycine signalling gives the exaggerated startle of hyperekplexia.
+
+◦ The watchdogs are the intrinsic adaptation and rebound currents themselves, which force a handover, plus astrocytic clearance of glycine, GABA and shed potassium that keeps the ionic gradients rhythmogenesis needs.
+
+
+ENTRY 26. THE CENTRAL PATTERN GENERATOR (Coupled Rhythm-and-Pattern Network) (The Autopilot for Muscles) (keyed to microcircuits catalogue Chapter 26)
+
+MODES AND MODE TRANSITIONS:
+
+This composite is the mode-richest of the pure rhythm generators, because its two-tier design lets timing (gait) and content (pattern) switch semi-independently.
+
+• THE MODE REGISTER.
+
+◦ Off Mode - The Idle Autopilot - below drive threshold the network is silent and only isolated reflexes remain.
+
+◦ Locomotor Gait Modes - Walk, Trot, Gallop and Hop - distinct interlimb coordination patterns selected by drive level and by reconfiguration of the commissural coupling.
+
+◦ Eupnoea Mode - The Quiet Breath - the normal respiratory rhythm generated by the pre-Botzinger complex.
+
+◦ Sigh Mode - The Big Breath - a slow, large-amplitude biphasic augmented breath interleaved with eupnoea from a partly distinct subpopulation.
+
+◦ Gasp Mode - The Last-Resort Breath - a fast, high-amplitude rhythm falling back onto the most intrinsic pacemaker mechanism under low oxygen.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In every gait mode the transform is tonic scalar drive in, full multi-muscle motor program out, with rhythm frequency scaling with drive from about 0.5 to a few strides per second (source-grounded).
+
+◦ Walk versus trot versus gallop differ in phase relations between limbs, gear-shifted through speed-specific modules and altered commissural connection strength (web-confirmed: the CPG is now seen as speed-specific modules recruited by drive rather than one unitary generator).
+
+◦ Eupnoea runs near 0.2 to 0.3 cycles per second at rest (about 12 to 18 breaths a minute), sighs are larger, longer and lower in frequency, and gasps are driven by the persistent-sodium bursters alone (web-confirmed distinct interconnected subpopulations for sigh and eupnoea; high confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Rising brainstem locomotor drive - Off to Walk, then Walk to Trot to Gallop - within a stride or two; a spontaneous speed-driven transition.
+
+◦ Serotonin, dopamine and noradrenaline from descending fibres reconfigure commissural coupling - Walk to Hop and between gaits - these are transitions thrown from above by neuromodulatory state.
+
+◦ Falling oxygen and carbon-dioxide signals, sensed partly by astrocytes - Eupnoea to Sigh to Gasp - seconds to minutes; a chemosensory transition.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Pre-Botzinger failure stops breathing outright (Ondine's curse, links to sudden infant death), and commissural interneuron loss forces an obligatory hop.
+
+◦ The watchdogs are the hybrid design itself (pacemaker cells plus network synchronisation give graceful fall-back to gasping), respiratory long-term facilitation after low-oxygen episodes, and astrocytic carbon-dioxide sensing that props up the drive to breathe.
+
+
+ENTRY 27. THE PACEMAKER NETWORK (Coupled Cellular Oscillators Pulled to Synchrony) (The Chorus of Clocks) (keyed to microcircuits catalogue Chapter 27)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a coupling-gated synchroniser, so its two great modes are whether the population is locked into one voice or scattered into many.
+
+• THE MODE REGISTER.
+
+◦ Synchronised Mode - The Chorus - coupling above the critical strength pulls every cellular clock into one coherent phase and a sharpened shared period.
+
+◦ Desynchronised Mode - The Cacophony - coupling too weak, so cells free-run at their own natural frequencies with no tissue rhythm.
+
+◦ Re-Entraining Mode - The Resetting Chorus - the locked population slides its phase to track a shifted external cue (the slow recovery from jet lag).
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Synchronised Mode the transform is the Kuramoto locking transition: many oscillators with a spread of natural frequencies map onto one shared frequency and phase, with an emergent period more precise than any member (source-grounded; high confidence).
+
+◦ The output pulse is near one cycle per 24 hours for the suprachiasmatic nucleus, one insulin pulse every 5 to 10 minutes for the pancreatic islet, and about one beat per second for the sinoatrial node.
+
+◦ In Desynchronised Mode the tissue-level rhythm vanishes while individual cells keep ticking; the order parameter (coherence, 0 for scattered to 1 for fully locked) falls toward 0.
+
+• THE TRANSITION TABLE.
+
+◦ Coupling strength crossing its critical value (loss of vasoactive intestinal polypeptide, vasoactive intestinal peptide (VIP), and its VPAC2 receptor, or of connexin-36 gap junctions) - Synchronised to Desynchronised - a genuine phase transition that can flip sharply.
+
+◦ Light via the retinohypothalamic tract, or glucose for the islet - drives Re-Entraining Mode - phase-setting over days for the circadian clock; these are transitions thrown from above by the environmental cycle.
+
+◦ Season and day length reconfigure suprachiasmatic coupling and switch gamma-aminobutyric acid (GABA) between synchronising and loosening roles - slow, over weeks.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Sub-critical coupling gives circadian disruption and sleep-phase disorders, degraded pulsatile insulin in type 2 diabetes, and sick-sinus syndrome in the heart.
+
+◦ The watchdog is the distributed, redundant architecture itself: because the rhythm lives across thousands of coupled cells it degrades gracefully as members drop out rather than failing at a single point, and astrocytes act as active timekeepers that help hold the phase.
+
+
+ENTRY 28. THE SYNFIRE CHAIN (Feedforward Wave Sequence Generator) (The Bucket-Brigade of Spikes) (keyed to microcircuits catalogue Chapter 28)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a propagation machine whose modes are the three fates of a travelling spike packet plus the offline learning state that builds the chain.
+
+• THE MODE REGISTER.
+
+◦ Propagation Mode - The Marching Volley - a stable synchronous packet travels pool to pool at fixed inter-pool delays, the healthy operating mode.
+
+◦ Idle Mode - The Waiting Brigade - no trigger has arrived, so the chain is silent.
+
+◦ Learning Mode - The Self-Carving Chain - spike-timing-dependent plasticity strengthens forward links so the chain organises out of unstructured recurrence.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Propagation Mode the transform is one trigger in, a precisely-timed ordered sequence out, with spike-timing jitter held to about 1 to a few milliseconds across the whole chain because convergence averages out noise (source-grounded; high confidence for the songbird premotor nucleus HVC).
+
+◦ Each pool's volley lasts a few milliseconds and pools are spaced a few milliseconds apart, so a chain of a few hundred pools clocks a behaviour of hundreds of milliseconds to seconds.
+
+◦ In Learning Mode the pre-before-post timing rule (roughly a tens-of-milliseconds window) selectively strengthens forward links and weakens wrong-way ones (source-grounded; the mammalian version remains a hypothesis, moderate confidence).
+
+• THE TRANSITION TABLE.
+
+◦ A start command onto pool 1 - Idle to Propagation - immediate; the trigger case.
+
+◦ Dopaminergic and cholinergic teaching signals gate plasticity - into and out of Learning Mode - over a sensorimotor learning period; in the songbird this is guided by auditory feedback and basal-ganglia reinforcement.
+
+◦ Crystallisation after learning - Learning Mode to stable Propagation Mode - developmental, once the song is fixed.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Two boundary failures: decay (a pool with too few co-firing cells lets the packet shrink and die, aborting the sequence) and synchronous explosion (too little inhibition lets the volley recruit the whole network at once, a seizure-like runaway).
+
+◦ The watchdog is the fast-spiking parvalbumin interneuron scaffold, whose brief perisomatic inhibition keeps each volley sparse and stops it smearing, plus homeostatic synaptic scaling that stops the chain saturating.
+
+
+ENTRY 29. THE AUTOASSOCIATIVE ATTRACTOR NETWORK (Recurrent Pattern-Completing Excitatory Pool) (The Cue-To-Memory Circuit) (keyed to microcircuits catalogue Chapter 29)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a memory engine whose modes correspond to writing, reading and offline replaying its stored patterns, switched largely by acetylcholine.
+
+• THE MODE REGISTER.
+
+◦ Storage Mode - The Write Head - dentate detonator input dominates and plasticity is enabled to lay down a new pattern.
+
+◦ Recall Mode - The Pattern-Completer - perforant-path cues dominate and the recurrent web settles onto the nearest stored pattern.
+
+◦ Replay Mode - The Offline Rehearsal - the network free-runs stored sequences during sharp-wave ripples in rest and sleep.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Recall Mode the transform is iterated threshold-linear feedback with inhibitory normalisation converging to a fixed point, completing a whole pattern from a fragment; rodent CA3 recall completes within one theta cycle (125 to 250 milliseconds), often within one to two gamma cycles (10 to 30 milliseconds) (source-grounded; high confidence).
+
+◦ Fidelity is high with intact NMDA (N-methyl-D-aspartate) receptors in CA3 (above 70 percent recall of whole contexts from degraded cues) and near chance without them.
+
+◦ In Storage Mode Hebbian weight change writes the sparse pattern; in Replay Mode compressed sequences sweep out during ripples at 110 to 200 cycles per second.
+
+• THE TRANSITION TABLE.
+
+◦ High acetylcholine during active exploration biases toward Storage by suppressing recurrent transmission - Recall to Storage - a transition thrown from above by cholinergic arousal state.
+
+◦ Low acetylcholine during slow-wave sleep releases the recurrent web - Storage to Replay - a brain-state transition.
+
+◦ Theta phase alternates Storage-like and Recall-like conditions about six times a second - fast, within-rhythm cycling.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is runaway recurrence: CA3 is the most seizure-prone tissue in the brain precisely because of its dense recurrent excitation.
+
+◦ The watchdog is feedback inhibition with divisive-plus-subtractive normalisation that pins the active fraction, and the dentate gate upstream that keeps inputs sparse.
+
+
+ENTRY 30. THE POINT ATTRACTOR OF PERSISTENT ACTIVITY (Recurrently Sustained Delay-Period Ensemble) (The Working Memory Cell Assembly) (keyed to microcircuits catalogue Chapter 30)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a bistable sample-and-hold latch whose modes are the two stable states of working memory plus the fragility spectrum dopamine sets between them.
+
+• THE MODE REGISTER.
+
+◦ Baseline Mode - The Empty Slot - the pool rests near its low fixed point holding nothing.
+
+◦ Memory Mode - The Loaded Slot - a cue has flipped the assembly to its elevated stable state, where it holds after the input ends.
+
+◦ Reset Mode - The Clear Signal - the transient clearing regime in which a global inhibitory volley or reward-signalled response command flips the assembly back to baseline.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ The transform is bistable: below a cue threshold the pool rests at 0.5 to 5 spikes per second; a supra-threshold cue flips it to 10 to 50 spikes per second, where it stays (source-grounded; high confidence).
+
+◦ Monkey delay cells hold roughly 10 to 30 spikes per second for delays of 2 to 30 seconds, with cue identity decodable throughout (web-confirmed persistent activity plus attractor coding).
+
+◦ Loading and reset resolve within a few hundred milliseconds, and D1 dopamine-receptor activation introduces the network bistability that makes holding possible (web-confirmed).
+
+• THE TRANSITION TABLE.
+
+◦ A supra-threshold cue - Baseline to Memory (load) - within 100 to 200 milliseconds.
+
+◦ A response command or inhibitory volley - Memory to Baseline (reset) - within about 100 milliseconds; this is the gating-out case.
+
+◦ Dopamine level tunes attractor depth on the inverted-U - a transition thrown from above by arousal and stress, with intermediate dopamine deepening the well and acute stress or fatigue shallowing it (source-grounded and web-confirmed).
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is a shallow attractor that drifts or collapses (distractibility under stress) or a stuck attractor that will not clear.
+
+◦ The watchdog is balanced recurrent inhibition holding the two fixed points apart, with dopaminergic set-point control; activity-silent synaptic mechanisms layer a back-up store on top of the spiking attractor.
+
+
+ENTRY 31. THE LINE ATTRACTOR (Velocity-To-Position Recurrent Integrator) (The Neural Integrator) (keyed to microcircuits catalogue Chapter 31)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a mode-lean integrator: it has essentially one intended operating mode, and its other regimes are graded departures from perfect integration.
+
+• THE MODE REGISTER.
+
+◦ Tuned Mode - The Perfect Ledger - feedback tuned just below unity so every level of activity is near-stable and the running sum is held for tens of seconds.
+
+◦ Leaky Mode - The Draining Ledger - feedback too weak, so the stored value decays back toward centre.
+
+◦ Unstable Mode - The Runaway Ledger - gain above unity, so activity grows and the value ratchets outward.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Tuned Mode output rate equals the time integral of input rate, held with a decay time constant near 25 seconds in intact humans (source-grounded; high confidence).
+
+◦ In Leaky Mode the time constant falls toward roughly a tenth of normal after lesions of the nucleus prepositus hypoglossi, and mechanics alone would give only about 200 milliseconds; in darkness this shows as centripetal eye drift of a fraction of a degree per second.
+
+◦ In Unstable Mode the eyes ratchet outward, seen in some congenital nystagmus.
+
+• THE TRANSITION TABLE.
+
+◦ Cerebellar recalibration adjusts feedback gain - between Tuned and Leaky - over minutes to days; a slow supervised correction.
+
+◦ Alcohol intoxication or cerebellar disease weakens feedback - Tuned to Leaky - acute (minutes for a drug).
+
+◦ Behavioural context adjusts the effective time constant - within Tuned Mode - recent work shows the leak is partly a deliberate setting, not only an error (source-grounded; moderate confidence).
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signatures are drift (leak) and outward ratcheting (instability), both diagnostic of mistuned feedback.
+
+◦ The watchdog is the cerebellar recalibration loop, which continuously retunes the near-unity feedback to hold the integrator on its knife-edge.
+
+
+ENTRY 32. THE RING ATTRACTOR (Circular Continuous Attractor With Local Excitation And Long-Range Inhibition) (The Inner Compass Circuit) (keyed to microcircuits catalogue Chapter 32)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a heading tracker whose modes are the different ways the activity bump is driven and anchored.
+
+• THE MODE REGISTER.
+
+◦ Cue-Anchored Mode - The Landmark Compass - the bump is pinned to visual landmarks and reports true heading.
+
+◦ Path-Integration Mode - The Dead-Reckoning Compass - in darkness the bump is driven by angular velocity alone and slowly drifts.
+
+◦ Teleport Mode - The Jumping Compass - conflicting cues make the bump jump discretely to a new bearing rather than fade between.
+
+◦ Sleep Mode - The Wandering Compass - the bump roams the ring under internal dynamics, decoupled from the world.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In both driven modes the transform is integration on a circle with attractor stabilisation: bump speed matches head-turn speed with near-unity gain across at least plus and minus several hundred degrees per second (source-grounded; high confidence).
+
+◦ Tuning curves are unimodal, 60 to 90 degrees wide, and the population vector tracks true heading within a few degrees when cues are available.
+
+◦ In Path-Integration Mode the estimate drifts a few degrees per minute until a landmark resets it.
+
+• THE TRANSITION TABLE.
+
+◦ Loss or gain of a visible landmark - Cue-Anchored to and from Path-Integration - landmark corrections complete within a few hundred milliseconds.
+
+◦ Cue conflict past a threshold - into Teleport Mode - the bump jumps discretely.
+
+◦ Sleep onset - into Sleep Mode - a transition thrown from above by brain state.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The failure signature is a split or extinguished bump, seen transiently under cue conflict in the fruit fly.
+
+◦ The watchdog is the local-excitation, long-range-inhibition wiring itself, which enforces exactly one bump and suppresses competitors.
+
+
+ENTRY 33. THE EXPANSION RECODER (Sparse High-Dimensional Recoding Motif) (The Overlap-Breaker) (keyed to microcircuits catalogue Chapter 33)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a largely feedforward separator, so it is fairly mode-lean: one healthy sparse mode with a modulatory sparseness adjustment.
+
+• THE MODE REGISTER.
+
+◦ Sparse Separation Mode - The Overlap-Breaker - the fierce inhibitory brake keeps only a few percent of cells active, decorrelating overlapping inputs.
+
+◦ Adjustable-Sparseness Mode - The Tunable Sieve - neuromodulators transiently sharpen or relax the threshold to tune separation to demand.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ The transform is a thresholded expansive nonlinearity (a k-winners-take-all): a random or sparse projection followed by a high threshold that raises output dimensionality while lowering output density (source-grounded; high confidence).
+
+◦ With real numbers, two dentate patterns overlapping by 60 to 80 percent can be driven to output overlaps of only a few percent, because requiring a coincidence of several inputs per granule cell multiplies small input differences.
+
+◦ In Adjustable-Sparseness Mode noradrenaline in the dentate shifts the active fraction to trade sensitivity against separation (source-grounded; moderate confidence on the exact gain).
+
+• THE TRANSITION TABLE.
+
+◦ Noradrenaline and other neuromodulators - between fixed and adjusted sparseness - a transition thrown from above by arousal state, over seconds.
+
+◦ Otherwise the recoding is stimulus-driven and near-instant, with feedforward inhibition clamping the active fraction within one to two milliseconds.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The pathological regime is disinhibition: when the brake fails the granule field becomes hyperexcitable and densely active, degrading separation and, in the dentate, seeding seizures.
+
+◦ The watchdog is the feedforward and feedback inhibitory brake that pins the active fraction regardless of input strength, a form of gain control.
+
+
+ENTRY 34. THE COMPARATOR (Predicted-Versus-Actual Difference Detector) (The Surprise Meter) (keyed to microcircuits catalogue Chapter 34)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a two-state alarm bell whose mode simply reports whether prediction met reality.
+
+• THE MODE REGISTER.
+
+◦ Match Mode - The Quiet Bell - prediction cancels reality and the cell reports familiarity.
+
+◦ Mismatch Mode - The Ringing Bell - reality escapes cancellation and the cell reports novelty, often with dendritic plateaus and bursts.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ The transform is a rectified, gain-controlled difference: output rises with actual minus predicted and is floored at zero when prediction meets or exceeds reality (source-grounded; high confidence).
+
+◦ A fully predicted input can be suppressed to near baseline while an unpredicted input of the same raw magnitude drives a burst, a several-fold change in output.
+
+◦ The comparison is organised on the theta cycle (4 to 8 hertz): entorhinal reality and CA3 prediction arrive at different theta phases, giving a built-in window to line up now against expected.
+
+• THE TRANSITION TABLE.
+
+◦ A prediction error crossing threshold - Match to Mismatch - within tens to hundreds of milliseconds.
+
+◦ Learning that folds the new input into the prediction - Mismatch back to Match - over repeated exposures; the novelty signal can persist to bias subsequent encoding.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The pathological regime is chronic mismatch or failed cancellation, in which everything reads as novel (or nothing does), degrading the guidance of learning.
+
+◦ The watchdog is the dendritic compartmentalisation that keeps prediction and reality on separate compartments so the subtraction stays clean.
+
+
+ENTRY 35. THE SUPERVISED ERROR-CORRECTION MODULE (Teacher-Instructed Weight-Tuning Motif) (The Perceptron Cell) (keyed to microcircuits catalogue Chapter 35)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a supervised learner whose modes are the paired weight-changing states that keep it calibrated.
+
+• THE MODE REGISTER.
+
+◦ Learning Mode - The Corrected Pupil - paired parallel-fibre and climbing-fibre activity depresses the co-active weights, driving output toward lower error.
+
+◦ Rebalancing Mode - The Forgetting Pupil - unpaired parallel-fibre activity potentiates weights, keeping them from saturating.
+
+◦ Forward Mode - The Calibrated Filter - between teaching events the cell simply reports its weighted sum as a modulation of its high tonic simple-spike rate.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Forward Mode the Purkinje cell computes a weighted sum of its parallel-fibre inputs read out around a high baseline of tens of hertz simple spikes (source-grounded; high confidence).
+
+◦ In Learning Mode the weight update follows a delta rule: change proportional to fibre activity times the climbing-fibre teaching signal, which fires near 1 hertz; each pairing gives a small fractional depression, so calibration accrues over tens to hundreds of trials.
+
+◦ The plasticity window is tight: the parallel-fibre input must precede the climbing-fibre signal by roughly 100 to 200 milliseconds for depression.
+
+• THE TRANSITION TABLE.
+
+◦ A climbing-fibre error signal - Forward to Learning - within the 100-to-200-millisecond window; the teaching-signal case.
+
+◦ Unpaired parallel-fibre activity - Forward to Rebalancing - continuous, keeping weights off the ceiling.
+
+◦ A bistable simple-spike toggle between tonic firing and silent down states has also been reported (source-grounded; lower confidence).
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Pathological regimes include olivary hypersynchrony producing tremor and runaway depression when teaching signals are misdelivered.
+
+◦ The watchdog is the potentiation-versus-depression balance that keeps weights bounded, plus gap-junction gating of olivary synchrony that meters how often the teacher fires.
+
+
+ENTRY 36. THE MUTUAL-INHIBITION FLIP-FLOP (Reciprocally Inhibiting Bistable Switch Motif) (The Either-Or Latch) (keyed to microcircuits catalogue Chapter 36)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a hysteretic toggle whose modes are simply its two self-holding states.
+
+• THE MODE REGISTER.
+
+◦ Mode A - The First Latch - one pool dominant and self-holding (for example awake).
+
+◦ Mode B - The Second Latch - the other pool dominant and self-holding (for example asleep).
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ The transform is bistability with hysteresis: over a range of input values the output has two stable solutions and the realised state depends on history, so the same input can hold either state (source-grounded; high confidence).
+
+◦ Transitions are threshold-triggered and near-instantaneous relative to dwell time, giving a sigmoidal switch with a hysteresis loop rather than a graded response.
+
+◦ In real terms, human sleep-wake transitions take seconds to minutes while states last minutes to hours, the signature of a sticky latch.
+
+• THE TRANSITION TABLE.
+
+◦ Circadian clock output and rising homeostatic sleep pressure bias the switch - Mode A to Mode B and back - on the roughly 24-hour and across-waking timescales; these are transitions thrown from above.
+
+◦ A supra-threshold input to the losing pool - abrupt flip - near-instantaneous once the boundary is crossed.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Two failure regimes: instability, when a weak stabiliser lets the switch flip too readily and intrude one state into the other (the state instability of narcolepsy), and a stuck switch, biased so hard one way that transitions are difficult (insomnia or pathological hypersomnolence).
+
+◦ The watchdog is the mutual-inhibition stabiliser itself plus its external circadian and homeostatic biases, which deepen each state and set when a flip is allowed.
+
+
+ENTRY 37. THE CANONICAL CORTICAL COLUMN (Six-Layered Thalamocortical Master Template) (The Universal Cortical Tile) (keyed to microcircuits catalogue Chapter 37)
+
+MODES AND MODE TRANSITIONS:
+
+This is one of the mode-richest tiles in the volume, because a single column is driven through several qualitatively different regimes by brain state and by attention.
+
+• THE MODE REGISTER.
+
+◦ Balanced Waking Mode - The Idling Tile - large excitatory and inhibitory currents cancel to within a few percent, leaving irregular sparse firing at 0.1 to a few hertz.
+
+◦ Desynchronised Processing Mode - The Attending Tile - during active sensory processing the column runs in a low-amplitude high-frequency regime, gamma-locked when vasoactive intestinal peptide (VIP) disinhibition opens it.
+
+◦ Up-Down Slow-Oscillation Mode - The Sleeping Tile - in deep sleep the whole column breathes below 1 hertz, alternating silent down states with active up states.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ The core transform is recurrent amplification with divisive normalisation: response roughly equals driving input to a power near 2 divided by neighbourhood activity plus a constant, then threshold-linear (source-grounded; high confidence).
+
+◦ Amplification from thalamic input to layer 4 is threefold to tenfold, and normalisation keeps output in the 0 to about 100 hertz range across three or more orders of magnitude of input; orientation tuning sharpens about 30 percent from layer 4 to layers 2/3.
+
+◦ In Up-Down Mode the up state resembles the desynchronised waking regime with depolarised high-frequency firing, while the down state is near-silent hyperpolarisation (web-confirmed up-versus-down and synchronised-versus-desynchronised distinction; high confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Ascending arousal and cholinergic tone - Up-Down Slow-Oscillation Mode to Desynchronised Processing Mode - at wake-up, a transition thrown from above.
+
+◦ VIP-interneuron disinhibition under attention - Balanced Waking to gamma-locked Processing - fast, hundreds of milliseconds.
+
+◦ Sleep onset withdrawing arousal - Waking modes to Up-Down slow oscillation - a brain-state transition; superficial layers prefer gamma (30 to 80 hertz), deep layers alpha and beta (8 to 30 hertz).
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is seizure, the pathological runaway when inhibition loses the race to recurrent excitation.
+
+◦ The watchdog is that the column is an inhibition-stabilised network: continuous fast inhibition holds the operating point, with the paradoxical signature that exciting the inhibitory cells can lower their firing.
+
+
+ENTRY 38. THE PREDICTIVE CODING MOTIF (Hierarchical Error-Minimising Column Read) (The Expectation-Correcting Circuit) (keyed to microcircuits catalogue Chapter 38)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is an inference machine whose modes are set by how it weights prior against evidence and by whether the evidence stream is admitted at all.
+
+• THE MODE REGISTER.
+
+◦ Balanced Inference Mode - The Fair Auditor - priors and evidence weighted by their true reliabilities, the healthy default.
+
+◦ Prior-Dominated Mode - The Believing Auditor - precision turned up on priors, so the system perceives what it expects.
+
+◦ Evidence-Dominated Mode - The Sceptical Auditor - precision turned up on evidence, so nothing ever becomes familiar.
+
+◦ Evidence-Gated Mode - The Dreaming Auditor - prediction running with the sensory stream gated off, as in rapid-eye-movement dreaming.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ At each level, error equals precision times the difference of evidence and prediction (a subtractive comparison with multiplicative gain), and the estimate integrates ascending error minus descending constraint (source-grounded; high confidence for the computational form, moderate for the exact laminar mapping).
+
+◦ The stack performs gradient descent on precision-weighted squared error, settling a static scene in 100 to 200 milliseconds; predictable stimuli evoke responses cut by roughly 30 to 50 percent (repetition suppression), and unexpected omissions evoke a response to nothing at all.
+
+◦ Errors travel up in gamma (30 to 80 hertz) from superficial layers, predictions down in alpha and beta (8 to 30 hertz) from deep layers.
+
+• THE TRANSITION TABLE.
+
+◦ Neuromodulatory precision control - Balanced to Prior-Dominated or Evidence-Dominated - a transition thrown from above by attention and arousal.
+
+◦ Sleep gating off the sensory stream - Balanced to Evidence-Gated (dreaming) - a brain-state transition.
+
+◦ Pharmacology: ketamine blunts error via N-methyl-D-aspartate (NMDA) blockade and classical psychedelics loosen priors via serotonin 2A receptors on deep-layer pyramids - drug-driven, minutes to hours.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signatures are hallucination (runaway prior precision) and a world that never becomes familiar (runaway evidence precision).
+
+◦ The watchdog is the precision-weighting machinery that should track true reliability, keeping neither prior nor evidence permanently overweighted.
+
+
+ENTRY 39. THE THALAMIC RELAY TRIAD WITH RETICULAR GATE (Relay-Interneuron-Reticular Composite) (The Searchlight Gate) (keyed to microcircuits catalogue Chapter 39)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is the sensory gate whose two firing modes and their rhythmic sleep variants make it richly multi-modal.
+
+• THE MODE REGISTER.
+
+◦ Tonic Relay Mode - The Open Gate - relays depolarised, transmitting driver input faithfully with attention-steered gain (waking).
+
+◦ Burst Mode - The Alert Flare - a hyperpolarised relay answers a delayed input with a high-frequency burst, low fidelity but high detectability, flagging novelty.
+
+◦ Spindle-Gated Mode - The Waxing Lock - reticular-relay volleys at 11 to 16 hertz progressively close the gate at sleep onset.
+
+◦ Delta-Locked Mode - The Deep Lockdown - relays hyperpolarise further and 1-to-4-hertz delta plus the slow oscillation drop transfer toward zero.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Tonic Mode the transform is approximately linear with divisive gain control: output tracks input at a 30 to 90 percent transfer ratio, the triad subtracting a scaled copy of recent input history to sharpen timing (source-grounded; high confidence, web-confirmed tonic-versus-burst distinction).
+
+◦ In Burst Mode the transform is a thresholded differentiator: sustained input is ignored, but an input after 100-plus milliseconds of inhibition fires a 2-to-7-spike, 150-to-400-hertz burst.
+
+◦ Attention modulates geniculate transmission by roughly 10 to 30 percent in primates, brightening attended channels and damping the rest.
+
+• THE TRANSITION TABLE.
+
+◦ Brainstem cholinergic and other modulators depolarising relays - Burst to Tonic (opening the gate at waking) - a transition thrown from above by arousal.
+
+◦ Reticular-nucleus drive - Tonic to Spindle-Gated to Delta-Locked - progressive across sleep stages; brief selective reticular drive alone can switch relays from tonic to bursting (web-confirmed).
+
+◦ Occasional wake bursts flag a novel stimulus - Tonic to a momentary Burst - fast, an exclamation mark before the prose.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The pathological signature is the 3-hertz spike-and-wave of absence epilepsy, the same reticular-relay loop resonating in daylight.
+
+◦ The watchdog is the reticular nucleus itself, whose aimed inhibition normally meters transfer; general anaesthetics hyperpolarise the same relays, closing the gate pharmacologically.
+
+
+ENTRY 40. THE BASAL GANGLIA SELECTION MOTIF (Disinhibitory Channel-Release Composite) (The Permission Machine) (keyed to microcircuits catalogue Chapter 40)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is an action-selection engine whose modes span deliberate versus habitual control and the dopamine-set gain regimes around them.
+
+• THE MODE REGISTER.
+
+◦ Deliberative Mode - The Careful Chooser - slow, dopamine-sensitive, goal-directed selection through the associative loop.
+
+◦ Habitual Mode - The Autopilot Chooser - overtrained corticostriatal weights in the sensorimotor loop select without deliberation.
+
+◦ Hypokinetic Mode - The Reluctant Chooser - low dopamine raises selection thresholds so nothing is released easily.
+
+◦ Hyperkinetic Mode - The Trigger-Happy Chooser - excess dopamine lets weak candidates win.
+
+◦ Replay Mode - The Sleeping Rehearser - during sleep the loops disengage from behaviour but replay to consolidate the day's selections into skill.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ The transform is a biased winner-take-all by double inhibition: a channel whose output clamp is pushed below roughly 40 percent of its tonic rate escapes into activity, threshold-linear on its own evidence minus pooled competitor evidence, with dopamine multiplying the go term and dividing the no-go term (source-grounded; web-confirmed go-versus-no-go and winner-take-all).
+
+◦ Selection is a stereotyped triphasic sequence: hyperdirect stop in 5 to 8 milliseconds, direct-path release in 15 to 20 milliseconds, indirect-path suppression in 25 to 30 milliseconds (brake, release, sculpt).
+
+◦ Dopamine prediction-error bursts last 100 to 200 milliseconds with an eligibility window about one second behind each action, and a rewarding outcome strengthens the go and weakens the no-go for the action just taken, driving the drift from deliberative toward habitual (web-confirmed).
+
+• THE TRANSITION TABLE.
+
+◦ Overtraining shifting weight from associative to sensorimotor loop - Deliberative to Habitual - over many rewarded repetitions.
+
+◦ Tonic dopamine level - between Hypokinetic, normal and Hyperkinetic - a transition thrown from above by the dopaminergic system and by disease.
+
+◦ Sleep onset - behaviour to Replay Mode - a brain-state transition.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature of failure is excessive beta-band oscillation at 13 to 30 cycles per second (the parkinsonian regime), against the healthy broadband desynchronised firing.
+
+◦ The watchdog is the tonic inhibitory clamp on all channels plus the hyperdirect global brake, which prevents premature or multiple release, and dopamine's running gain control that retunes thresholds.
+
+
+ENTRY 41. THE HIPPOCAMPAL TRISYNAPTIC TEMPLATE (Series-Composed Memory Loop) (The Memory Assembly Line) (keyed to microcircuits catalogue Chapter 41)
+
+MODES AND MODE TRANSITIONS:
+
+This composite inherits the modes of its three component motifs but coordinates them into two great whole-circuit regimes switched by acetylcholine.
+
+• THE MODE REGISTER.
+
+◦ Online Theta Mode - The Running Line - encoding and retrieval interleaved on the theta rhythm during active behaviour.
+
+◦ Offline Ripple Mode - The Night Shift - compressed replay of stored sequences during sharp-wave ripples in rest and slow-wave sleep.
+
+◦ Within-Theta Sub-Modes - Read Phase and Write Phase - the oriens-lacunosum-moleculare gate tilts CA1 between reality-dominated and memory-dominated on alternate theta phases.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ The line runs three stations: expansion-plus-threshold decorrelation in the dentate (a million-dimensional entorhinal vector into a 15-million-dimensional space clipped below 1 percent activity), autoassociative storage and completion in CA3 (whole pattern from a roughly 30 percent fragment), and comparison in CA1 (novelty as a burst when CA3 prediction and entorhinal present disagree) (source-grounded; high confidence).
+
+◦ In Online Theta Mode the whole line is clocked at 4 to 8 hertz with nested gamma at 30 to 90 hertz, writing and reading alternating about six times a second so they never collide; single-traverse latency is 30 to 40 milliseconds.
+
+◦ In Offline Ripple Mode sharp-wave ripples at 80 to 150 hertz in humans sweep compressed replays ten to twenty times faster than experience, driving consolidation over weeks to years (web-confirmed encoding-versus-replay split).
+
+• THE TRANSITION TABLE.
+
+◦ High acetylcholine during exploration versus low acetylcholine during slow-wave sleep - Online Theta to Offline Ripple - a transition thrown from above by cholinergic brain state (source-grounded and web-confirmed).
+
+◦ Theta phase - Read Phase to Write Phase - about six times a second within the online regime.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The pathological regime is seizure: when hilar cell loss weakens the dentate safety gate, the CA3 attractor becomes an epileptic amplifier.
+
+◦ The watchdog is the dentate gate itself, which keeps the line's input sparse and prevents the recurrent CA3 web from igniting.
+
+
+ENTRY 42. THE CEREBELLAR CORTICAL TEMPLATE (Uniform Adaptive-Filter Module) (The Calibration Crystal) (keyed to microcircuits catalogue Chapter 42)
+
+MODES AND MODE TRANSITIONS:
+
+This composite is deliberately mode-lean for a great regional template: it is always a forward filter, and its two modes are simply whether it is currently calibrated or adapting.
+
+• THE MODE REGISTER.
+
+◦ Calibrated Mode - The Silent-Teacher Crystal - climbing fibres near silent and Purkinje output faithfully cancels predicted consequences.
+
+◦ Adapting Mode - The Re-Tuning Crystal - the world has changed (new spectacles, a growing limb, a damaged muscle), olivary firing climbs and the weights walk.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ The transform is an adaptive linear filter with supervised weights: the granule layer expands roughly 250 million mossy-fibre lines into roughly 50 billion sparse conjunction detectors, and each Purkinje cell computes a weighted sum of about 150,000 parallel-fibre inputs, subtracted through the deep nuclei from the ongoing command (source-grounded; high confidence).
+
+◦ Simple spikes run at 40 to 100 per second (fast graded output) while the complex-spike teacher arrives near 1 per second; timing is part of the code, learned to about 10-millisecond precision.
+
+◦ In Adapting Mode the delta-rule update depresses whichever parallel-fibre synapses were active in the preceding 100 milliseconds until the error line falls silent; learning shows in minutes and consolidates over days.
+
+• THE TRANSITION TABLE.
+
+◦ A rise in olivary error signalling when the world changes - Calibrated to Adapting - within minutes; the error-driven case.
+
+◦ Convergence of the filter - Adapting back to Calibrated - as the error line falls silent, with storage transferring partly from cortex to deep nuclei over days.
+
+◦ Purkinje cells also toggle between tonic firing and silent down states, and olivary synchrony waxes and wanes with gap-junction gating (source-grounded; lower confidence on the functional role).
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ There is no attractor and no memory-recall regime; the crystal is always forward, never reminiscing, and its failures are tremor from olivary hypersynchrony and mis-calibration from misdelivered teaching signals.
+
+◦ The watchdog is the potentiation-versus-depression balance that keeps parallel-fibre weights bounded, plus gap-junction gating that meters olivary error volleys.
+
+
+ENTRY 43. THE MONOSYNAPTIC STRETCH REFLEX ARC (Ia-to-Motoneuron Direct Reflex) (The One-Synapse Snap) (keyed to microcircuits catalogue Chapter 43)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is proudly mode-poor: it has essentially one operating mode, and that single-mindedness is its virtue, though its gain is continuously reset from above.
+
+• THE MODE REGISTER.
+
+◦ Length-Servo Mode - The One-Synapse Snap - the arc's single mode, resisting muscle stretch with a proportional, velocity-sensitive contraction.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ The transform is threshold-linear and proportional: motoneuron firing rises roughly linearly with stretch velocity and amplitude once threshold is crossed, a proportional controller with a strong derivative term on muscle length (source-grounded; high confidence).
+
+◦ The whole loop turns a millimetre-scale, millisecond-fast stretch into a compensating contraction with latency near 20 to 40 milliseconds in the leg, dominated by conduction over the roughly one-metre round trip; the central delay across the single synapse is only 0.5 to 1 millisecond.
+
+◦ The reflex is brief and self-terminating because the contraction cancels the stretch that drove it.
+
+• THE TRANSITION TABLE.
+
+◦ The gain is not a mode change but a continuously reset dial: gamma motoneurons tune spindle sensitivity, and descending pathways raise gain during postural effort and lower it during voluntary shortening - all transitions thrown from above.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is a high-gain state after loss of descending inhibition, giving the exaggerated jerks and clonus of spasticity.
+
+◦ The watchdog is descending inhibitory control of loop gain plus the self-cancelling mechanics of the reflex itself.
+
+
+ENTRY 44. THE POLYSYNAPTIC WITHDRAWAL ARC WITH CROSSED EXTENSION (Nociceptive Flexion-Extension Reflex) (The Pull-Back-and-Brace Program) (keyed to microcircuits catalogue Chapter 44)
+
+MODES AND MODE TRANSITIONS:
+
+This reflex is mode-poor but not mode-singular: it runs one protective program whose expression scales with stimulus strength.
+
+• THE MODE REGISTER.
+
+◦ Withdraw-and-Brace Mode - The Pull-Back Program - the intended mode, flexing the hurt limb away and extending the other to take the falling weight.
+
+◦ Recruitment Sub-Mode - The Spreading Response - as stimulus strength rises the same program recruits more muscles, more segments and finally the crossed limb.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ The transform is a graded, thresholded, spatially organised mapping: stimulus intensity sets the magnitude and spread of flexor recruitment (local sign), while location sets which flexors dominate so the limb withdraws directly away from the source (source-grounded; high confidence).
+
+◦ Latencies run from about 70 to 130 milliseconds and longer, an order of magnitude slower than the monosynaptic jerk, the price of computation; the crossed extension follows the flexion by a few milliseconds, the time to cross the midline.
+
+◦ The response outlasts the stimulus because interneuron chains and N-methyl-D-aspartate (NMDA)-dependent wind-up sustain firing after the afferent input stops.
+
+• THE TRANSITION TABLE.
+
+◦ Rising stimulus strength - a recruitment cascade from local twitch to full crossed program - within tens of milliseconds.
+
+◦ Descending brainstem gating - suppression or release of the whole circuit - a transition thrown from above, released and exaggerated after spinal cord injury.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is disinhibited release after chronic spinal lesion, giving flexor spasms and the mass reflex.
+
+◦ The watchdog is descending brainstem gating that normally holds the reflex in check.
+
+
+ENTRY 45. THE GOLGI TENDON (FORCE-LIMITING) ARC (Ib Autogenic Inhibition Reflex) (The Tension Governor) (keyed to microcircuits catalogue Chapter 45)
+
+MODES AND MODE TRANSITIONS:
+
+This reflex is unusually mode-rich for an arc, because it is a reconfigurable feedback element that can reverse its own sign.
+
+• THE MODE REGISTER.
+
+◦ Autogenic-Inhibition Mode - The Tension Governor - during quiet standing and static holds the arc inhibits its own muscle in proportion to force.
+
+◦ Reversed-Excitation Mode - The Load-Bearer - during the stance phase of locomotion the same Ib input reverses to reinforce extension and hold the leg stiff against the ground.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Inhibition Mode the transform is negative-feedback, threshold-linear on force: motoneuron inhibition rises roughly in proportion to whole-muscle tension, clamping force toward a regulated level (source-grounded; high confidence).
+
+◦ Under normal loads it operates continuously and gently; at very high forces its effective gain rises to recruit the protective give-way.
+
+◦ In Excitation Mode the sign flips so force feedback reinforces extension; the central delay is a small number of milliseconds (two central synapses) and the loop tracks force on a tens-of-milliseconds timescale.
+
+• THE TRANSITION TABLE.
+
+◦ Onset of the locomotor stance phase - Inhibition to Reversed-Excitation - within a step cycle; a transition thrown from above by the locomotor state and interneuronal control.
+
+◦ Return to quiet stance - Excitation back to Inhibition - within a step cycle.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ No pathological regime is prominent for this arc in the source; its reconfigurability is a designed feature rather than a fault line (honest low-emphasis note).
+
+◦ The watchdog is the descending and interneuronal control that switches the sign appropriately, so that force feedback protects in one context and supports in the other.
+
+
+ENTRY 46. THE VESTIBULO-OCULAR THREE-NEURON ARC (Semicircular-Canal-to-Eye-Muscle Reflex) (The World-Steadying Loop) (keyed to microcircuits catalogue Chapter 46)
+
+MODES AND MODE TRANSITIONS:
+
+This is the fastest sensorimotor loop in the body and is nearly mode-singular, with one deliberate suppression mode layered on top.
+
+• THE MODE REGISTER.
+
+◦ Stabilise Mode - The World-Steadying Loop - the default mode, moving the eyes exactly opposite the head to hold the image still.
+
+◦ Cancellation Mode - The Following Eye - when eyes and head move together to track a target, the reflex is deliberately suppressed.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Stabilise Mode the transform is a near-unity-gain velocity inverter: eye velocity equals about minus 0.9 to minus 1.0 times head velocity across the behaviourally important range, with a small phase lead compensating the loop's own delay (source-grounded; high confidence).
+
+◦ It works from a fraction of a hertz up to several hertz, faster than voluntary tracking can cover, with total latency about 7 to 15 milliseconds (commonly 8 to 12); the three-synapse central delay is only a few milliseconds.
+
+◦ Velocity storage in the vestibular nuclei extends the low-frequency response beyond the canal's own mechanics.
+
+• THE TRANSITION TABLE.
+
+◦ Intention to track a target with head and eyes together - Stabilise to Cancellation - within the movement; a transition thrown from above (cerebellar and cortical suppression).
+
+◦ Cerebellar recalibration context-sets the gain - within Stabilise Mode - over minutes to days.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is an imbalance between the two sides producing the spontaneous nystagmus of acute vestibular failure.
+
+◦ The watchdog is the cerebellum, which context-sets and recalibrates gain to keep the near-unity inversion accurate.
+
+
+ENTRY 47. THE BAROREFLEX ARC (Arterial-Pressure Negative-Feedback Reflex) (The Blood-Pressure Thermostat) (keyed to microcircuits catalogue Chapter 47)
+
+MODES AND MODE TRANSITIONS:
+
+This reflex is mode-poor in operation but distinctive in having a moving set point and two response arms of different speeds.
+
+• THE MODE REGISTER.
+
+◦ Pressure-Regulating Mode - The Blood-Pressure Thermostat - the single continuous operating mode, holding arterial pressure to a defended set point.
+
+◦ Fast (Vagal) Sub-Arm - The Quick Parry - the parasympathetic heart-rate response.
+
+◦ Slow (Sympathetic) Sub-Arm - The Steady Tone - the vascular and slower cardiac response.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ The transform is negative feedback with a sigmoid pressure-to-output curve: over the operating range output autonomic activity changes roughly linearly with pressure error, saturating at very high and very low pressures, measured as baroreflex gain in milliseconds of heart-period change per millimetre of mercury (source-grounded; high confidence).
+
+◦ The vagal arm responds within a single cardiac cycle (under a second) because acetylcholine acts almost instantly on the sinoatrial node; the sympathetic arm responds over several seconds through slower ganglionic and noradrenergic transmission.
+
+◦ This two-speed signature lets the reflex both parry sudden pressure drops and set steady-state tone, correcting deviations of tens of millimetres of mercury.
+
+• THE TRANSITION TABLE.
+
+◦ The set point is reset upward in chronic hypertension and during exercise, and shifts with sleep, emotion and the respiratory cycle - these are transitions thrown from above by behavioural and autonomic state rather than mode switches within the arc.
+
+◦ Ageing and heart failure lower the gain - a slow degradation over years.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is a defended-but-wrong set point: resetting is why the baroreflex defends a high pressure in a chronic hypertensive as diligently as a normal one in a healthy person, and gain falls with age and in heart failure.
+
+◦ The watchdog is the negative-feedback loop itself, with its sigmoid saturation limiting output at pressure extremes.
+
+
+ENTRY 48. THE VAGO-VAGAL LOOP (Gut-to-Brainstem-to-Gut Vagal Reflex) (The Digestion Autopilot) (keyed to microcircuits catalogue Chapter 48)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a slow, state-selecting supervisory controller, so its modes are the digestive states it imposes on the upper gut, chosen by a gamma-aminobutyric acid (GABA, the main inhibitory transmitter) gate that circulating hormones set.
+
+The register is mode-poor by design, because a visceral autopilot earns its keep by holding a few reliable settings rather than by improvising.
+
+• THE MODE REGISTER.
+
+◦ Accommodative Relaxation Mode - the Receive Mode - senses arrival or anticipation of food and actively relaxes the stomach so volume can rise without pressure rising.
+
+◦ Propulsive-Secretory Mode - the Process Mode - selects the excitatory (cholinergic, using acetylcholine) enteric limb to contract and to drive acid and enzyme secretion.
+
+◦ Restraint Mode - the Hold-Back Mode - the enterogastric setting that slows gastric emptying when the small intestine is already loaded.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Receive Mode rising distension is mapped to increased inhibitory nitrergic (nitric-oxide-releasing) output, holding wall pressure roughly constant over seconds as volume climbs.
+
+◦ In Process Mode the nucleus tractus solitarius to dorsal-motor-nucleus circuit swings to net excitatory drive, producing contraction and secretion over minutes; sign is selectable, which is the loop's defining trick.
+
+◦ In Restraint Mode duodenal load and hormones bias the gate toward inhibition, lowering emptying rate; confidence high on direction, only approximate on rate.
+
+• THE TRANSITION TABLE.
+
+◦ Swallow or the sight and smell of food, thrown from above by vagal command, moves rest to Receive Mode within seconds.
+
+◦ Fed-state hormones (cholecystokinin, glucagon-like peptide-1) reset the GABAergic gate and move Receive to Process to Restraint over minutes; hunger hormone (ghrelin) biases the other way, so fed versus fasted is the dominant top-down state switch.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Vagal neuropathy (as in diabetes) locks the loop out of Process Mode, giving gastroparesis; vagal injury or gastric surgery can abolish Receive Mode, giving dumping syndrome.
+
+◦ The healthy watchdog is the hormonally set GABAergic tone plus the enteric nervous system's own local control, which the vagus modulates rather than replaces.
+
+
+ENTRY 49. THE SYMPATHETIC GANGLION DIVERGENCE MOTIF (Preganglionic-to-Postganglionic Fan-Out) (The Alarm Distribution Board) (keyed to microcircuits catalogue Chapter 49)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a use-dependent broadcast amplifier, and its modes are the two gains at which the distribution board runs, set by how hard the preganglionic input is firing.
+
+The register is small because a relay whose job is to copy and broadcast should have few settings, and its virtue is reliability.
+
+• THE MODE REGISTER.
+
+◦ Faithful-Relay Mode - the Copy Mode - at low input, each secure nicotinic (fast acetylcholine) synapse copies spikes one-for-one with minimal build-up.
+
+◦ Sustained-Amplifier Mode - the Surge Mode - at high input, slow muscarinic and peptidergic potentials accumulate, raising postganglionic excitability and stretching output in time.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Copy Mode output tracks input through the strong nicotinic component within milliseconds, with only about 20 to 30 percent of the weaker convergent inputs being suprathreshold, so the board also gates and recombines.
+
+◦ In Surge Mode the peptidergic late-slow potential (lasting tens of seconds to minutes) sustains firing after brief bursts, converting a short central command into a prolonged body-wide response; fan-out ratio roughly 1 to 10 up to 1 to 100 or more.
+
+• THE TRANSITION TABLE.
+
+◦ Rising preganglionic firing rate, thrown from above by central sympathetic (fight-or-flight) drive, moves Copy to Surge over seconds as slow potentials build.
+
+◦ Falling drive lets the slow and peptidergic components decay over tens of seconds to minutes, returning the board to Copy Mode; small intensely fluorescent interneurons add a minor local damping bias.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Autoimmune autonomic ganglionopathy (antibodies against the ganglionic nicotinic receptor) blocks transmission entirely, a board that will not copy; aberrant sprouting after injury produces sympathetically maintained pain.
+
+◦ The main watchdog is the high safety factor of the secure synapses plus satellite-glial regulation of the neuronal environment; there is no strong intrinsic brake, so central drive itself is the governor.
+
+
+ENTRY 50. THE ENTERIC PERISTALTIC CIRCUIT (THE LAW OF THE INTESTINE) (Polarised Ascending-Excitatory, Descending-Inhibitory Reflex) (The Squeeze-Behind, Relax-Ahead Wave) (keyed to microcircuits catalogue Chapter 50)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a decentralised motor-program generator, so its modes are the distinct gut motor programs the same wiring runs when reconfigured by state.
+
+The register is genuinely multi-mode because the gut must both transport a meal and clean itself out between meals.
+
+• THE MODE REGISTER.
+
+◦ Propulsive Peristalsis Mode - the Push-Through Wave - the classic polarised reflex, contract-behind and relax-ahead, propelling contents aborally.
+
+◦ Segmentation Mode - the Mixing Churn - non-propagating contractions that mix rather than move, dominant during active digestion.
+
+◦ Migrating Motor Complex Mode - the Housekeeper Sweep - the fasting wave that periodically sweeps residue along the empty gut.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Push-Through Mode a local distension is mapped to opposite-signed motor outputs on its two sides, re-triggering at each new bolus position to give a wave travelling on the order of centimetres per second; interneuron reach up to about 40 millimetres.
+
+◦ In Mixing Mode contractions fire locally without net propagation, riding the interstitial-cell-of-Cajal slow wave (a few to about a dozen cycles per minute by region).
+
+◦ In Housekeeper Mode a slow front of activity migrates down metres of gut over roughly 90 to 120 minutes during fasting; confidence high, standard motility physiology.
+
+• THE TRANSITION TABLE.
+
+◦ Arrival of a meal, sensed locally and reinforced by the vago-vagal loop, moves Housekeeper to Mixing and Propulsive Modes within minutes.
+
+◦ Fasting plus the hormone motilin returns the network to Housekeeper Mode over tens of minutes; vagal and hormonal input from above biases which program runs, though the circuit can run any program autonomously.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Congenital aganglionosis (Hirschsprung disease) leaves a segment with no circuit and no relaxation, a functional obstruction; achalasia is loss of the inhibitory nitrergic relax-ahead limb.
+
+◦ The watchdog is the built-in polarity of the wiring plus interstitial-cell-of-Cajal pacemaking, which keeps directionality even as excitability drifts; enteric glia maintain the network.
+
+
+ENTRY 51. CENTRE-SURROUND ANTAGONISM (Concentric Opponent Receptive Field Motif) (The Edge-Carving Circuit) (keyed to microcircuits catalogue Chapter 51)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a difference detector whose modes are the two spatial-tuning regimes it adopts as ambient light rescales the width of its inhibitory surround.
+
+The register is small and switched almost entirely from above, by the luminance-driven neuromodulator dopamine.
+
+• THE MODE REGISTER.
+
+◦ Photopic Acuity Mode - the Daylight Sharpener - dopamine uncouples horizontal cells, narrowing the surround and favouring fine spatial detail.
+
+◦ Scotopic Sensitivity Mode - the Twilight Pooler - low dopamine lets the horizontal-cell network couple widely, broadening the surround and pooling light for detection.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Both modes compute centre minus surround, classically a difference-of-Gaussians: a narrow positive centre weighting minus a broad, weaker negative surround weighting, cancelling roughly 60 to 90 percent of the response to uniform full-field light.
+
+◦ In Daylight Mode the surround is narrow, so the subtraction emphasises fine edges; centre latency a few to tens of milliseconds, surround feedback lag roughly 10 to 50 milliseconds.
+
+◦ In Twilight Mode the surround is wide, trading spatial resolution for signal-to-noise; web sources confirm high dopamine tunes for photopic and low for scotopic vision, chiefly through D1-receptor uncoupling of horizontal cells.
+
+• THE TRANSITION TABLE.
+
+◦ Rising background luminance, a top-down brain-state-like broadcast carried by retinal dopamine, moves Twilight to Daylight Mode over minutes as horizontal-cell gap junctions close.
+
+◦ Falling light and circadian night signals recouple the network, moving Daylight to Twilight Mode; connexin phosphorylation and rod-cone coupling are high in darkness at night and low in daytime.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Retinitis pigmentosa and age-related macular degeneration degrade the mosaic; horizontal-cell or outer-retinal disease flattens the surround, giving washed-out, edge-blind vision.
+
+◦ The watchdog is continuous light-adaptive gain rescaling plus Muller-glial buffering of the tonically active analogue circuit and its pH-dependent surround.
+
+
+ENTRY 52. THE ON-OFF PUSH-PULL SPLITTER (Sign-Inverting and Sign-Conserving Bipolar Divergence) (The Bright-and-Dark Fork) (keyed to microcircuits catalogue Chapter 52)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a hard-wired signed-channel splitter, so it is deliberately mode-poor: its channels do not switch regime, they only shift their shared operating point with adaptation.
+
+The register of one is stated proudly, because the value of this fork is that the sign of each channel is a fixed developmental commitment, not an adjustable setting.
+
+• THE MODE REGISTER.
+
+◦ Rectified-Split Mode - the Bright-and-Dark Fork - the single standing mode, in which one cone signal is read by an ON (sign-inverting, metabotropic) channel and an OFF (sign-conserving, ionotropic) channel that carry increments and decrements on separate lines.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ The transform is a signed split with half-wave rectification: the ON channel outputs the positive part of the light change and the OFF channel the negative part, each roughly threshold-linear above baseline.
+
+◦ The two channels have different intrinsic speeds because they use different machinery: the OFF ionotropic response leads by a few milliseconds while the ON metabotropic cascade lags into tens of milliseconds; adaptation slides both operating points together to stay centred on prevailing luminance.
+
+• THE TRANSITION TABLE.
+
+◦ There is no mode switch to tabulate; the only movement is a shared adaptive shift of baseline with ambient light, and under flicker the two channels simply alternate, ON marking each brightening and OFF each darkening.
+
+◦ Any apparent regime change is inherited from upstream (the rod pathway injecting into this same machinery) rather than generated here.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Complete congenital stationary night blindness (loss of metabotropic glutamate receptor type 6 or its transient-receptor-potential channel) silences the ON channel, a clean natural knock-out of one prong, halving the response to that polarity.
+
+◦ The only watchdog is background-light gain adaptation; the fixed receptor identity means the sign cannot drift, which is itself the circuit's safeguard.
+
+
+ENTRY 53. THE ROD CONVERGENCE (SCOTOPIC POOLING) PATHWAY (Piggyback Rod Signal Injection Motif) (The Photon-Pooling Night Line) (keyed to microcircuits catalogue Chapter 53)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a photon-pooling night line whose modes are the light-level regimes across which it hands the retina over between rod and cone systems.
+
+The register is small and switched from above by ambient luminance acting through dopamine on the pathway's gap junctions.
+
+• THE MODE REGISTER.
+
+◦ Scotopic Pooling Mode - the Photon Counter - deep dark, maximal spatial and temporal summation, connexin-36 coupling set for sensitivity.
+
+◦ Mesopic Blend Mode - the Twilight Handover - rod and cone signals mix and dopamine begins to uncouple the network.
+
+◦ Photopic Handoff Mode - the Daylight Standby - the pathway saturates and vision passes entirely to the cone system.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Pooling Mode the response is approximately the sum of many single-rod signals, so sensitivity rises with the number of rods pooled (hundreds to a few thousand per unit) while resolution falls in proportion; integration lasts roughly 100 to 300 milliseconds.
+
+◦ In Blend Mode gain drops as dopamine partly uncouples the AII amacrine gap junctions, reducing pooling toward cone-like resolution.
+
+◦ In Standby Mode the pathway contributes little; the rod bipolar synapse is saturated.
+
+• THE TRANSITION TABLE.
+
+◦ Falling light, a top-down luminance broadcast via low dopamine, moves Standby to Pooling Mode over the many minutes of dark adaptation.
+
+◦ Rising light and daytime dopamine uncouple connexin-36 and move Pooling through Blend to Standby; coupling is high in darkness and low in daylight.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Rod or rod-bipolar disease abolishes night vision (congenital stationary night blindness, retinitis pigmentosa); the pathway does not learn, so failure is loss, not miscalibration.
+
+◦ The watchdog is automatic gain control across many orders of magnitude at the rod bipolar synapse and AII gap junctions, plus Muller-glial buffering.
+
+
+ENTRY 54. THE DIRECTION-SELECTIVITY CIRCUIT (Asymmetric Starburst Inhibition Motif) (The Motion-Reading Wiring) (keyed to microcircuits catalogue Chapter 54)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a local motion detector, and its modes are really the tuning bands over which its space-time timing comparison works, not commanded regimes.
+
+The register is minimal because a hard-wired directional filter is meant to do one thing across a range of speeds.
+
+• THE MODE REGISTER.
+
+◦ Directional-Discrimination Mode - the Motion Reader - the working regime, in which preferred-direction motion escapes inhibition and null-direction motion is vetoed by well-timed starburst inhibition.
+
+◦ Untuned-Fallback Mode - the Timing-Lost Regime - at very low or very high image speeds the timing relationship breaks down and directional selectivity weakens toward a non-directional response.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Discrimination Mode the output is set by the coincidence of excitation and starburst inhibition: null motion brings inhibition coincident with or just before excitation and cancels it, while preferred motion lets inhibition lag and miss, the comparison playing out over tens of milliseconds.
+
+◦ In Fallback Mode the same dendritic filtering that sets preferred speed can no longer separate the two directions in time, so the rate difference between preferred and null collapses; confidence high, standard retinal physiology.
+
+• THE TRANSITION TABLE.
+
+◦ Image speed and contrast, properties of the stimulus rather than top-down commands, move the cell between Discrimination and Fallback Modes on the timescale of the passing stimulus.
+
+◦ There are no strong neuromodulatory or brain-state switches here; the asymmetric wiring is fixed developmentally.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Disruption of the precise starburst-to-ganglion wiring (developmental miswiring) degrades the timing and hence direction tuning; there is no runaway regime.
+
+◦ The watchdog is the geometry of the wiring itself, refined by activity during a critical period before eye opening, which locks in the asymmetry.
+
+
+ENTRY 55. THE OLFACTORY GLOMERULAR MODULE (Convergent Receptor-Identity Sorting Motif) (The One-Smell Pixel) (keyed to microcircuits catalogue Chapter 55)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a convergence-and-normalisation sorter, so its modes are the concentration regimes across which it keeps the identity code stable.
+
+The register is small and gated from below by input strength and locally by gain-controlling interneurons.
+
+• THE MODE REGISTER.
+
+◦ High-Sensitivity Pooling Mode - the Faint-Whiff Gatherer - at low odorant concentration, sensitivity and convergent pooling dominate to detect weak signals.
+
+◦ Gain-Controlled Normalisation Mode - the Anti-Saturation Clamp - at high concentration, dopaminergic and GABAergic inhibition suppress input to prevent saturation and hold identity constant.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Both modes pool all sensory neurons expressing one receptor gene onto one glomerulus, averaging and denoising; the output is a clean per-receptor channel read out once per sniff.
+
+◦ In Pooling Mode gain is high and the transfer near-linear in weak input; in Normalisation Mode divisive inhibition compresses the response so the code reports identity rather than raw intensity, keeping the pattern stable across concentration.
+
+• THE TRANSITION TABLE.
+
+◦ Rising odorant concentration, a stimulus-driven signal, recruits periglomerular and granule inhibition and moves Pooling to Normalisation Mode within a sniff (a few sniffs per second).
+
+◦ The sniff cycle itself, an active-sampling rhythm set from above by breathing, chunks input into bursts and paces mode read-out; falling concentration relaxes back to Pooling.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Saturation without gain control would collapse the identity code; anosmia follows loss of the convergent input.
+
+◦ The watchdog is dopaminergic and GABAergic divisive normalisation, continuously refreshed by adult neurogenesis of the inhibitory interneurons, which retunes the clamp across life.
+
+
+ENTRY 56. THE DENDRODENDRITIC RECIPROCAL INHIBITION MOTIF (Two-Way Dendritic Synapse Sharpening Motif) (The Axonless Handshake) (keyed to microcircuits catalogue Chapter 56)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a two-way self-and-lateral-inhibition engine, and its modes are the fast and slow inhibitory regimes it runs depending on input strength and neuromodulation.
+
+The register is small but genuinely bimodal in its time course.
+
+• THE MODE REGISTER.
+
+◦ Fast Gamma Mode - the Rhythm Clock - spike-driven, prompt reciprocal inhibition that organises principal cells into gamma-band time slots.
+
+◦ Slow Graded Mode - the Lingering Damper - subthreshold, N-methyl-D-aspartate-and-calcium-driven inhibition that produces lasting, graded suppression.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Gamma Mode the mitral dendrite excites a granule spine that inhibits it back within milliseconds, generating self-inhibition and lateral inhibition that sharpen and decorrelate odour representations and drive rhythm at roughly 40 to 100 cycles per second.
+
+◦ In Graded Mode a calcium-dependent, asynchronous inhibitory component lasts hundreds of milliseconds, deepening contrast without precise timing; the balance between modes is set by input strength and neuromodulation.
+
+• THE TRANSITION TABLE.
+
+◦ Strong, synchronous principal-cell firing pushes the motif into Fast Gamma Mode within milliseconds.
+
+◦ Weaker or more sustained drive, and neuromodulatory tone (acetylcholine, noradrenaline) broadcast from above, bias toward Slow Graded Mode over tens to hundreds of milliseconds.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Loss of granule-cell inhibition degrades odour discrimination; runaway excitation is not a normal regime here.
+
+◦ The watchdog is the reciprocity itself (every excitation returns as inhibition) plus continuous granule-cell replacement by adult neurogenesis that retunes the network to experience.
+
+
+ENTRY 57. THE INTERAURAL LEVEL SUBTRACTION MOTIF (Excitation-Minus-Inhibition Loudness-Comparison Motif) (The Louder-Ear Subtractor) (keyed to microcircuits catalogue Chapter 57)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a real-time analogue subtractor, so its modes are the operating zones of its input-output curve rather than commanded regimes.
+
+The register is small and stimulus-driven, its virtue being a single fast computation.
+
+• THE MODE REGISTER.
+
+◦ Graded-Subtraction Mode - the Balance Point - the informative regime around the midline, where small changes in interaural level produce large changes in firing.
+
+◦ Saturated Mode - the Rail - when sound is far to one side, the cell sits at maximum or minimum firing and no longer discriminates.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Balance-Point Mode firing rate encodes ipsilateral excitation minus contralateral (glycinergic) inhibition, the primary cue for locating high-frequency sounds; glycinergic inhibition arrives within a fraction of a millisecond of excitation.
+
+◦ In Saturated Mode the output is clamped high or low; the steep transition zone is where azimuth resolution is best, and the cell responds to the moment-to-moment balance rather than integrating over long windows.
+
+• THE TRANSITION TABLE.
+
+◦ The azimuth of the sound source, a pure stimulus variable, slides the cell between Balance-Point and Saturated Modes in near-real time.
+
+◦ There is little top-down mode-switching; developmental calibration, not moment-to-moment modulation, sets the balance.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Mis-set excitation-inhibition balance (for example after disrupted glycinergic transmission) shifts the null and degrades localisation; there is no seizure-like regime here.
+
+◦ The watchdog is developmental critical-period calibration plus long-term plasticity of the glycinergic inhibition that keeps the subtraction accurate as the head grows.
+
+
+ENTRY 58. THE EFFERENT GAIN-CONTROL LOOP OF THE COCHLEA (Olivocochlear Amplifier-Damping Motif) (The Turn-Down-the-Ear Loop) (keyed to microcircuits catalogue Chapter 58)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a slow adaptive gain controller, and its modes are the cochlear-amplifier settings it selects for the recent acoustic environment.
+
+The register is small and can be biased from above by attention and arousal even before sound level changes.
+
+• THE MODE REGISTER.
+
+◦ High-Gain Quiet Mode - the Wide-Open Ear - in quiet, the olivocochlear efferents rest and the cochlear amplifier runs at maximum sensitivity.
+
+◦ Damped Unmasking Mode - the Turn-Down Setting - in loud or noisy conditions, medial olivocochlear drive onto outer hair cells lowers amplifier gain, protecting the ear and unmasking transients in continuous noise.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Quiet Mode gain is high, giving best sensitivity and sharpest frequency tuning.
+
+◦ In Damped Mode efferent activation reduces the cochlear response to steady background noise, so transient signals (including speech) stand out better; web sources confirm this antimasking or unmasking effect propagates up to the inferior colliculus, though listeners recruit it only in some conditions.
+
+• THE TRANSITION TABLE.
+
+◦ Rising ambient sound level, sensed through the type-II afferent reflex arc, moves Quiet to Damped Mode over tens of milliseconds to seconds.
+
+◦ Attention and arousal, top-down descending signals, can bias the loop toward Damped Mode ahead of any level change, so this is partly a volitional, brain-state-gated control rather than a purely reflexive one.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ A weak or absent efferent system leaves the ear vulnerable to noise damage and poorer at hearing in noise; over-suppression would blunt sensitivity.
+
+◦ The watchdog is the reflex's own slow negative feedback plus the balance between medial (amplifier) and lateral (afferent-gain, protective) olivocochlear components.
+
+
+ENTRY 59. THE HYPOPHYSIOTROPIC CASCADE AMPLIFIER (Portal-Coupled Three-Stage Endocrine Fan-Out) (The Chemical Amplifier) (keyed to microcircuits catalogue Chapter 59)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a three-stage chemical amplifier whose modes are the gain regimes at which the axis runs, with gain itself a slow state variable.
+
+The register is small and dominated by top-down drive and by the feedback loop of the next chapter.
+
+• THE MODE REGISTER.
+
+◦ Basal Mode - the Idle Amplifier - low-frequency releasing-hormone pulses and resting gain.
+
+◦ Stimulated Mode - the High-Gain Surge - stress, cold, or reproductive signals raise pulse frequency and stage gains for a large output.
+
+◦ Suppressed Mode - the Braked Amplifier - the feedback loop clamps output below basal.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Output equals input multiplied by the product of three stage gains, a total amplification of roughly a millionfold from nanograms of releasing hormone to milligrams of peripheral hormone.
+
+◦ Because the top of the cascade is pulsatile, the signal is pulse-frequency-modulated: releasing-hormone pulses last seconds to minutes, trophic secretion follows within minutes, and the peripheral steroid or thyroid response builds over minutes to hours, the gland acting as a low-pass integrator.
+
+◦ Gain is a state variable: chronic drive up- or down-regulates receptors, so identical input yields different output depending on history (sensitisation, desensitisation).
+
+• THE TRANSITION TABLE.
+
+◦ Stress, cold, or reproductive commands, thrown from above by the hypothalamus, move Basal to Stimulated Mode over minutes.
+
+◦ Rising peripheral hormone, through the Chapter 60 feedback, moves Stimulated toward Suppressed Mode over minutes to hours; receptor and cell-population plasticity resets gain over days to weeks.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Tumours or receptor loss can lock the amplifier into pathological high or low gain (for example corticotroph hypertrophy under chronic stress).
+
+◦ The watchdog is the negative-feedback ring plus receptor down-regulation that limits runaway output.
+
+
+ENTRY 60. THE CLOSED-LOOP NEGATIVE FEEDBACK MOTIF (Hormone-Axis Feedback Thermostat) (The Set-Point Keeper) (keyed to microcircuits catalogue Chapter 60)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a set-point regulator, so its modes are the regulatory regimes it can be placed in, with the set point as the central state variable.
+
+The register is small and, crucially, the set point is deliberately moveable from above by stress and circadian systems.
+
+• THE MODE REGISTER.
+
+◦ Homeostatic Mode - the Set-Point Keeper - holds the controlled hormone at a fixed target against disturbances.
+
+◦ Allostatic Mode - the Moved Target - the set point is deliberately shifted (for example the raised cortisol set point of chronic stress).
+
+◦ Broken-Loop Mode - the Runaway - feedback is lost and the controlled hormone runs to extremes (a fault regime, admitted only because it names the failure).
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Homeostatic Mode the loop is error-minimising: the peripheral hormone inhibits both pituitary and hypothalamic stages, driving the controlled hormone toward the set point exactly as a thermostat holds temperature.
+
+◦ The loop is slow, its delay dominated by minutes-to-hours peripheral hormone synthesis and clearance; that delay combined with loop gain is precisely what makes some axes oscillate rather than settle (Chapter 67).
+
+◦ In Allostatic Mode the same machinery holds a new, higher target; the set point is adjustable by receptor plasticity.
+
+• THE TRANSITION TABLE.
+
+◦ Chronic stress and circadian phase, broadcast from above, move Homeostatic to Allostatic Mode over days to weeks by down-regulating feedback receptors.
+
+◦ Disease or gland failure moves either mode to Broken-Loop Mode; early-life stress can durably reset feedback gain, a developmental form of endocrine learning.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Glucocorticoid resistance (blunted brake) resets the axis higher; loss of feedback gives unregulated extremes.
+
+◦ The watchdog is the feedback receptors themselves and their sensitivity, the biological equivalent of the thermostat's sensor.
+
+
+ENTRY 61. THE KNDY PULSE GENERATOR (Arcuate Kisspeptin-Neurokinin-Dynorphin Relaxation Oscillator) (The Fertility Clock) (keyed to microcircuits catalogue Chapter 61)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a relaxation oscillator that runs the fertility clock, and its modes are the pulse, suppressed, and surge regimes set by sex-steroid feedback and metabolic state.
+
+The register is genuinely multi-mode, which is the heart of reproductive control.
+
+• THE MODE REGISTER.
+
+◦ Pulsatile Mode - the Fertility Tick - neurokinin B recruits and synchronises the arcuate population into volleys and dynorphin shuts each volley off, setting the gonadotropin-releasing-hormone pulse.
+
+◦ Suppressed Mode - the Silenced Clock - prepubertal, lactational, or energy-deficit states slow or stop the tick.
+
+◦ Surge Mode - the Ovulatory Burst - a high-output, positive-feedback burst driven with the partner anteroventral-periventricular kisspeptin population.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Pulsatile Mode the oscillator ticks roughly once per hour in the reproductively active state, each volley lasting minutes; oestradiol acts by negative feedback, suppressing arcuate kisspeptin and dynorphin to set pulse frequency (faster in the follicular phase, slower in the luteal).
+
+◦ In Suppressed Mode leptin and energy availability gate the oscillator off, which is why very low body fat silences it.
+
+◦ In Surge Mode oestradiol switches to positive feedback at the anteroventral-periventricular nucleus, raising kisspeptin to drive the ovulatory surge; web sources confirm this pulse-versus-surge split maps onto oestradiol negative versus positive feedback in two kisspeptin populations.
+
+• THE TRANSITION TABLE.
+
+◦ Rising oestradiol late in the follicular phase flips negative to positive feedback, moving Pulsatile to Surge Mode over hours, a hormonal top-down switch.
+
+◦ Energy deficit, stress, or lactation, signalled by leptin and metabolic cues, move Pulsatile to Suppressed Mode over days; puberty raises KNDy output to start the tick.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Pathological suppression gives hypothalamic amenorrhoea; loss of feedback shape disrupts cyclicity.
+
+◦ The watchdog is the dynorphin auto-inhibition that terminates each volley plus steroid feedback that reshapes neurokinin B and dynorphin across the cycle.
+
+
+ENTRY 62. THE MAGNOCELLULAR BURST SYNCHRONIZER (Oxytocin Milk-Ejection Burst Network) (The Milk-Ejection Circuit) (keyed to microcircuits catalogue Chapter 62)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is an emergent synchroniser, and its modes are the asynchronous background and the synchronised bursting regimes, the latter enabled only by the lactational state.
+
+The register is small but sharply switched, and the enabling state is thrown from above by reproductive physiology.
+
+• THE MODE REGISTER.
+
+◦ Asynchronous Background Mode - the Idle Chorus - oxytocin neurons fire independently at one to three spikes per second with no coordinated output.
+
+◦ Synchronised Bursting Mode - the Milk-Ejection Pulse - the population locks into a shared explosive burst every few minutes, each burst ejecting a pulse of oxytocin.
+
+◦ Facilitated Mode - the Primed Chorus - a sub-state in which small amounts of oxytocin in the hypothalamus promote bursting.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Background Mode weakly coupled oscillators drift independently, giving no milk-ejection output.
+
+◦ In Bursting Mode a suckling background lets the network synchronise into a high-frequency burst that is self-limiting, followed by a recovery interval of about five minutes set by the network, not by any external clock.
+
+◦ In Facilitated Mode injected oxytocin lowers the threshold for bursting while an oxytocin antagonist blocks it, confirming positive-feedback autoexcitation.
+
+• THE TRANSITION TABLE.
+
+◦ Suckling input, together with the lactational state (retracted astrocytes, up-regulated oxytocin receptors) thrown from above, moves Background to Bursting Mode; each burst then resets to Background for the recovery interval.
+
+◦ Weaning reverses the enabling plasticity over days, removing Bursting Mode entirely.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Failure to synchronise gives impaired milk ejection; runaway synchrony is not a normal risk because bursts are self-terminating.
+
+◦ The watchdog is the burst's self-limitation plus the refractory recovery interval and reversible lactation-associated astrocytic and receptor remodelling.
+
+
+ENTRY 63. THE COUPLED CIRCADIAN OSCILLATOR NETWORK (Suprachiasmatic Peptide-Coupled Cellular-Clock Ensemble) (The Master Clock) (keyed to microcircuits catalogue Chapter 63)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is the master clock, a population of cellular oscillators welded into one, and its modes are the entrained, free-running, and desynchronised regimes.
+
+The register is small and dominated by the top-down light-dark cycle acting through the core-shell coupling.
+
+• THE MODE REGISTER.
+
+◦ Entrained Mode - the Locked Clock - phase-locked to the external light-dark cycle at exactly 24 hours.
+
+◦ Free-Running Mode - the Drifting Clock - in constant conditions, oscillating at its intrinsic period (a little over 24 hours in humans).
+
+◦ Desynchronised Mode - the Split Clock - core and shell, or clock and periphery, transiently out of phase, as in jet lag or shift work.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ The network synchronises noisy single-cell rhythms into a stable high-amplitude signal and entrains it to light; output is a daily peak of electrical activity by day and a trough at night, imposing the nocturnal melatonin rise and pre-dawn cortisol peak.
+
+◦ Web sources confirm the light-driven vasoactive-intestinal-peptide core entrains the vasopressin shell; vasoactive intestinal peptide amplifies and phase-delays the shell rhythm to lengthen its period, and core neurons resynchronise within a day while shell neurons need several days.
+
+◦ Seasonal changes in day length reconfigure phase relationships, encoding time of year.
+
+• THE TRANSITION TABLE.
+
+◦ Light at a given phase, the dominant top-down entraining signal reaching the core, gradually resets the clock and moves Free-Running to Entrained Mode over days.
+
+◦ Abrupt light-schedule shifts (travel, shift work) move Entrained to Desynchronised Mode acutely, with the faster core and slower shell realigning over days.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Chronic desynchrony (shift work) and ageing weaken coupling and amplitude, flattening and fragmenting rhythms.
+
+◦ The watchdog is the peptide coupling itself (vasoactive intestinal peptide and vasopressin, with GABAergic links) that restores population synchrony after perturbation.
+
+
+ENTRY 64. THE ISLET SYNCYTIUM WITH HUB CELLS (Gap-Junction-Coupled Beta-Cell Sheet) (The Insulin Wave Chorus) (keyed to microcircuits catalogue Chapter 64)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a gap-junction-coupled oscillator sheet, and its modes are the glucose-set regimes of quiescence, synchronised bursting, and continuous spiking, with coupling itself a slow state.
+
+The register is genuinely multi-mode and switched by the metabolic input glucose.
+
+• THE MODE REGISTER.
+
+◦ Quiescent Uncoupled Mode - the Silent Sheet - below the glucose threshold, cells are silent and effectively uncoupled in output.
+
+◦ Synchronised Wave Mode - the Insulin Chorus - above threshold, connexin-36 coupling forces coherent bursting and islet-wide calcium waves.
+
+◦ Continuous-Spiking Mode - the Flat-Out Setting - at very high glucose, sustained firing.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Wave Mode gap junctions synchronise hundreds of noisy heterogeneous cells so insulin leaves in clean pulses: fast calcium spikes within bursts, bursts and the calcium wave repeating every few minutes (roughly 0.003 to 0.006 hertz), the wave crossing the islet in one to several seconds.
+
+◦ Web sources confirm that without coupling individual cells oscillate unsynchronised and pulsatile secretion is lost, while hub cells disproportionately entrain the sheet; the triphasic and pulsatile output depends on coupling.
+
+◦ In Quiescent Mode metabolic drive is subthreshold; in Continuous Mode the bursting collapses into steady firing.
+
+• THE TRANSITION TABLE.
+
+◦ Rising blood glucose, the metabolic input, moves Quiescent to Wave to Continuous Modes over seconds to minutes.
+
+◦ Chronic glucose, cyclic-adenosine-monophosphate signalling, and inflammatory cytokines slowly up- or down-regulate connexin-36, shifting how tightly the sheet synchronises over hours to days.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Connexin-36 loss or inflammatory uncoupling fragments the coherent wave into asynchronous patches, mapping directly onto type-2-diabetes deterioration.
+
+◦ The watchdog is the gap-junction coupling and hub-cell organisation that average out single-cell noise; their loss is the failure signature.
+
+
+ENTRY 65. THE ISLET PARACRINE TRIAD (Mutual Local-Secretion Regulation of Alpha, Beta and Delta Cells) (The Three-Cell Sugar Cabinet) (keyed to microcircuits catalogue Chapter 65)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a three-node opponent-balancing network, so its modes are the glucose regimes in which one endocrine node leads while somatostatin brakes.
+
+The register is small and driven from below by the metabolic input glucose.
+
+• THE MODE REGISTER.
+
+◦ Insulin-Dominant Mode - the Store Setting - at high glucose the beta node dominates and restrains the alpha node.
+
+◦ Glucagon-Dominant Mode - the Mobilise Setting - at low glucose the alpha node dominates and drives counter-regulation.
+
+◦ Somatostatin-Braked Mode - the Shared Damper - the delta node scales its braking to whichever opponent is loud, holding the ratio within a safe band.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Each cell secretes a hormone that adjusts the others across micrometre distances, computing local negative-feedback stabilisation with opponent balancing; paracrine adjustments act over seconds to minutes, slower than the syncytial calcium waves and faster than bloodstream feedback.
+
+◦ In Store Mode insulin and delta-cell somatostatin suppress glucagon; in Mobilise Mode glucagon rises for counter-regulation; the triad tracks meals and fasting on a minutes-to-hours envelope.
+
+• THE TRANSITION TABLE.
+
+◦ Blood glucose, the metabolic input, moves the triad between Store and Mobilise Modes over seconds to minutes; the delta node tracks whichever opponent is active.
+
+◦ Slower reconfiguration comes from changes in cell mass and receptor expression over days to months (for example alpha-cell hyperplasia in diabetes).
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Loss of delta-cell braking pushes the system into a glucagon-excess regime; disordered ratios contribute to diabetic hyperglycaemia.
+
+◦ The watchdog is the shared somatostatin brake plus the opponent architecture that keeps either channel from running away.
+
+
+ENTRY 66. THE FOLLICULOSTELLATE RELAY NETWORK (Gap-Junction-Coupled Non-Endocrine Web of the Anterior Pituitary) (The Gland's Star Wiring) (keyed to microcircuits catalogue Chapter 66)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a gland-spanning coordinating web, and its modes are simply the coupled and uncoupled states of the network.
+
+The register is minimal, switched from above by inflammatory signals rather than by fast commands.
+
+• THE MODE REGISTER.
+
+◦ Coupled Conductor Mode - the Star Grid Live - well-coupled, the web carries a stimulus at one point as a travelling calcium wave to distant endocrine clusters, synchronising secretion.
+
+◦ Uncoupled Fragmented Mode - the Broken Grid - inflammatory signals close the connexin channels and the web fragments into isolated domains.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Coupled Mode a local stimulus propagates as a calcium wave crossing the web over seconds, coordinating otherwise unconnected hormone-secreting cells; the coupling is set by connexin-43 (phosphorylation over minutes, expression over one to several hours).
+
+◦ In Uncoupled Mode wave propagation fails, so pituitary secretion loses its gland-wide coordination; confidence moderate, an active research area.
+
+• THE TRANSITION TABLE.
+
+◦ Inflammatory cytokines such as tumour-necrosis-factor-alpha, thrown from above by immune signalling, move Coupled to Uncoupled Mode over minutes to hours by closing connexin-43.
+
+◦ Hormones, cytokines, and adenosine tune connexin-43 expression and phosphorylation to adjust the web's reach over hours, restoring Coupled Mode when inflammation resolves.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Persistent uncoupling under chronic inflammation degrades coordinated secretion; there is no runaway excitation.
+
+◦ The watchdog is the reversible connexin-43 regulation itself, which restores coupling as conditions normalise.
+
+
+ENTRY 67. THE ULTRADIAN FEEDBACK OSCILLATOR OF THE STRESS AXIS (Delay-Coupled Pituitary-Adrenal Relaxation Oscillator) (The Hourly Cortisol Clock) (keyed to microcircuits catalogue Chapter 67)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a delay-coupled relaxation oscillator that generates the hourly cortisol rhythm, and its modes are the steady, self-pulsing, and stress-perturbed regimes.
+
+The register is small and its pulsing is amplitude-modulated from above by the circadian clock.
+
+• THE MODE REGISTER.
+
+◦ Sub-Threshold Steady Mode - the Flat Line - below a threshold central drive the loop settles to a constant glucocorticoid level with no oscillation.
+
+◦ Self-Pulsing Ultradian Mode - the Hourly Clock - above threshold, delayed negative feedback between pituitary and adrenal produces roughly hourly pulses with no upstream pacemaker.
+
+◦ Stress-Perturbed Mode - the Override Ripple - acute stress shifts pulse phase and amplitude, with the response depending on the phase at which the stressor arrives.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Ultradian Mode the loop converts steady corticotropin-releasing-hormone drive into pulsatile glucocorticoid, period about one hour, round-trip hormonal delays of minutes; the pulsing is amplitude-modulated across the 24-hour cycle, peaking near waking.
+
+◦ Web sources confirm a phase-response relationship: the size of the stress-induced response depends on the timing of the stress relative to the ongoing pulse, and pulsatility is largely maintained rather than abolished during acute stress.
+
+◦ In Steady Mode the oscillation is absent because drive is below threshold.
+
+• THE TRANSITION TABLE.
+
+◦ Rising central drive crossing threshold moves Steady to Ultradian Mode; the circadian clock, a top-down broadcast, amplitude-modulates the pulses across the day.
+
+◦ An acute stressor moves Ultradian to Stress-Perturbed Mode within minutes, resetting phase and amplitude according to the current pulse phase.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Chronic stress and allostatic load reset feedback gain and set point over days to weeks (Cushing's, Addison's, depression are pathological settings of the same loop).
+
+◦ The watchdog is the delayed glucocorticoid negative feedback that both generates and bounds the pulses, plus receptor-sensitivity adjustment.
+
+
+ENTRY 68. THE ASTROCYTE SYNCYTIUM (Gap-Junction-Coupled Glial Network) (The Glial Power-and-Drainage Grid) (keyed to microcircuits catalogue Chapter 68)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a slow power-and-drainage grid, and its modes are the resting, buffering, wave-propagating, and uncoupled states of the coupled glial network.
+
+The register is genuinely multi-mode, switched by local neural activity and by pathological signals.
+
+• THE MODE REGISTER.
+
+◦ Resting Idle Mode - the Baseline Grid - holding ionic and metabolic set points at rest.
+
+◦ Buffering Mode - the Active Drain - activity-driven, absorbing and redistributing potassium and clearing glutamate with gap junctions fully engaged.
+
+◦ Propagating-Wave Mode - the Signalling Ripple - strong stimulation triggers regenerative intercellular calcium waves across the network.
+
+◦ Uncoupled Mode - the Collapsed Grid - inflammation, acidosis, and injury close connexin channels, coupling collapses, buffering fails, and tissue becomes hyperexcitable (a fault regime, admitted because it names the failure).
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Buffering Mode potassium uptake begins within tens of milliseconds and redistribution across the syncytium plays out over hundreds of milliseconds to seconds; web sources confirm connexin-43 gap junctions accelerate potassium clearance and disperse excess potassium radially through the network.
+
+◦ In Wave Mode calcium crawls the network at roughly 10 to 20 micrometres per second, orders of magnitude slower than a spike.
+
+◦ In Uncoupled Mode reduced gap-junction communication with hemichannel opening releases adenosine triphosphate (ATP) and inflammatory mediators, raising excitability.
+
+• THE TRANSITION TABLE.
+
+◦ Local neuronal firing moves Resting to Buffering Mode within tens of milliseconds; strong or pathological drive moves Buffering to Wave Mode over seconds.
+
+◦ Inflammation, acidosis, and injury, thrown from the tissue environment, move any active mode to Uncoupled Mode by closing connexin-43 over minutes.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Impaired coupling drives hyperexcitability and epileptogenesis; hemichannel opening in stroke spreads injury.
+
+◦ The watchdog is the coupling itself (buffering that limits potassium accumulation during synchronised firing) and homeostatic adjustment of connexin expression.
+
+
+ENTRY 69. THE TRIPARTITE SYNAPTIC ISLAND (Astrocyte-Enwrapped Synaptic Territory) (The Slow Listener) (keyed to microcircuits catalogue Chapter 69)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a slow calcium-threshold plasticity controller, and its modes are the silent, integrating, surge, and coupled regimes of one astrocyte's territory.
+
+The register is genuinely multi-mode and tagged cognitive because the island supervises neuronal learning.
+
+• THE MODE REGISTER.
+
+◦ Silent Mode - the Quiet Listener - sub-threshold synaptic activity produces only scattered local calcium blips with no territorial output.
+
+◦ Integrating Mode - the Summing Listener - sustained activity summates calcium toward threshold.
+
+◦ Surge Mode - the Flood Release - threshold crossed, a global calcium event sweeps the island and gliotransmitter (glutamate, D-serine, adenosine triphosphate) floods the territory, shifting plasticity thresholds en masse.
+
+◦ Coupled Mode - the Spreading Listener - calcium waves pass through gap junctions to neighbouring islands, widening the affected area.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Local calcium transients rise in hundreds of milliseconds; global surges build over seconds and decay over tens of seconds; gliotransmission effects on synaptic strength last seconds to tens of seconds and its plasticity contributions outlast the trigger.
+
+◦ In Surge Mode the island sets whether nearby N-methyl-D-aspartate-receptor-dependent long-term potentiation and depression can occur at all, by supplying or withholding D-serine, so it is a supervisor of neuronal learning, not merely a participant.
+
+• THE TRANSITION TABLE.
+
+◦ Rising sustained synaptic activity moves Silent to Integrating to Surge Mode over hundreds of milliseconds to seconds.
+
+◦ Neuromodulatory and hormonal state, broadcast from above, shift the calcium threshold and the density of tripartite contacts over longer times; strong events move Surge to Coupled Mode by spreading to neighbours.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Excess gliotransmitter release can pathologically raise excitability; loss of D-serine supply blocks plasticity.
+
+◦ The watchdog is the calcium threshold itself, gliotransmitter clearance machinery, and adaptive tuning of contact density with experience and injury.
+
+
+ENTRY 70. THE MICROGLIAL PRUNING LOOP (Complement-Tagged Synapse Elimination Circuit) (The Weakest-Link Eater) (keyed to microcircuits catalogue Chapter 70)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is the slowest in the catalogue, an activity-to-elimination loop, and its modes are the surveillant, pruning, reactive, and aberrant states of the microglia.
+
+The register is multi-mode and tagged cognitive because pruning permanently encodes the outcome of activity competition into anatomy.
+
+• THE MODE REGISTER.
+
+◦ Surveillant Mode - the Patrolling Watch - resting microglia sample continuously without eating.
+
+◦ Pruning Mode - the Weakest-Link Eater - during developmental windows, microglia engulf complement-tagged weak synapses.
+
+◦ Reactive Mode - the Inflammatory Phagocyte - injury or disease shifts microglia to inflammatory phagocytosis that can prune pathologically (a fault regime).
+
+◦ Aberrant Mode - the Mis-Set Pruner - over- or under-active complement tagging removes too many or too few synapses (a fault regime).
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Pruning Mode weak or less-active synapses accumulate complement proteins (C1q then C3); microglia carrying complement receptor 3 bind the C3 tag and engulf the synapse, deleting rather than weakening the connection.
+
+◦ Timescales are the longest in the catalogue: tagging accrues over hours, a single engulfment takes minutes to hours, a refinement episode runs days to weeks, and human cortical pruning runs for years into the early twenties.
+
+◦ The loop is experience-dependent, since the activity that protects or exposes a synapse is set by the animal's sensory and behavioural history.
+
+• THE TRANSITION TABLE.
+
+◦ Developmental windows and accumulating complement tags, gated from above by activity competition, move Surveillant to Pruning Mode over days.
+
+◦ Injury or disease moves any mode to Reactive Mode; dysregulated complement moves Pruning to Aberrant Mode over the long term.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Over-pruning is implicated in schizophrenia and neurodegeneration; under-pruning leaves excess connectivity.
+
+◦ The watchdog is the activity-dependence of tagging itself (used synapses are protected) plus regulatory control of complement expression.
+
+
+ENTRY 71. THE NEUROVASCULAR COUPLING UNIT (Activity-to-Blood-Flow Signalling Ensemble) (The Demand-Driven Fuel Valve) (keyed to microcircuits catalogue Chapter 71)
+
+MODES AND MODE TRANSITIONS:
+
+This motif is a demand-driven fuel valve, and its modes are the resting, functional-hyperaemia, autoregulatory, and dysfunctional states of the neurovascular unit.
+
+The register is multi-mode, switched by local neural activity and by systemic blood pressure.
+
+• THE MODE REGISTER.
+
+◦ Resting Tone Mode - the Idle Valve - tonic pericyte and smooth-muscle tone set a baseline flow.
+
+◦ Functional-Hyperaemia Mode - the Demand Open - local activity dilates vessels and raises flow to feed active neurons.
+
+◦ Autoregulatory Mode - the Pressure Buffer - the same actors hold flow constant against changes in arterial blood pressure.
+
+◦ Dysfunctional Mode - the Sluggish Valve - hypertension, small-vessel disease, and Alzheimer disease blunt or delay the response (a fault regime).
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ In Hyperaemia Mode the response is deliberately slow: onset lag about one second, peak at four to six seconds, then return over several seconds, with an early fast component (direct neuronal and pericyte-mediated) and a later sustained component depending on astrocyte calcium.
+
+◦ Web sources confirm two distinct jobs: functional hyperaemia raises flow to match activity, while autoregulation holds flow constant across a wide pressure range; pericytes control capillary diameter and astrocytes amplify the sustained component.
+
+◦ This sluggishness is the fundamental temporal limit of blood-flow-based brain imaging.
+
+• THE TRANSITION TABLE.
+
+◦ Local neural activity moves Resting to Functional-Hyperaemia Mode within about a second.
+
+◦ Changes in systemic blood pressure engage Autoregulatory Mode; the unit does not learn, so its slow adaptations (angiogenesis, changed vascular tone with exercise and ageing) are structural rather than commanded.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Weakened coupling in hypertension, small-vessel disease, and Alzheimer disease blunts and delays the flow response, starving active tissue.
+
+◦ The watchdog is the multi-actor redundancy of the unit (neurons, astrocytes, pericytes, smooth muscle) plus autoregulation that buffers pressure swings.

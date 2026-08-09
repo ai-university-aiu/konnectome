@@ -1,0 +1,522 @@
+LAYER 7, THE SYNAPTIC AND JUNCTIONAL LAYER: MODES AND MODE TRANSITIONS - THE OUTLINE
+
+The per-type mode registers of every synaptic and junctional type, extracted from LAYER_07_MODES_MANUSCRIPT (which holds the full entries: registers, per-mode transfer functions, transition tables, and fault regimes).
+
+Each entry below: the junction type, its source chapter key, and its named mode register.
+
+Date of compilation: August 9, 2026.
+
+
+ENTRY 1. THE GLUTAMATERGIC FAST EXCITATORY SYNAPSE (AMPA and NMDA Receptor Synapse) (keyed to synaptics catalogue Chapter 1)
+
+◦ Silent (N-methyl-D-aspartate (NMDA)-only) - The Mute Beginner - a contact with NMDA receptors but no alpha-amino-3-hydroxy-5-methyl-4-isoxazolepropionic acid (AMPA) receptors, giving no current at rest and awaiting its first strengthening.
+
+◦ Functional-facilitating - The Eager Repeater - a low-release-probability contact (about 0.1 to 0.3) that grows across a train.
+
+◦ Functional-depressing - The First-Strike Contact - a high-release-probability contact (about 0.5 to 0.9) that fades across a train.
+
+◦ Potentiated maintenance - The Written Weight - a standing long-term-potentiation state with extra AMPA receptors and an enlarged spine.
+
+◦ Depressed maintenance - The Erased Weight - a standing long-term-depression state with AMPA receptors removed.
+
+ENTRY 2. THE KAINATE-RECEPTOR SYNAPSE (keyed to synaptics catalogue Chapter 2)
+
+◦ Sub-threshold single-spike - The Ignored Tap - lone spikes barely register in the slow current.
+
+◦ Facilitated burst-integrating - The Slow-Burn Detonator - a train summates and, at the mossy fibre address, becomes a conditional detonator.
+
+◦ Presynaptic-facilitating autoreceptor - The Low-Glutamate Amplifier - modest spillover raises release probability.
+
+◦ Presynaptic-depressing autoreceptor - The High-Glutamate Throttle - high glutamate cuts release.
+
+◦ Potentiated presynaptic maintenance - The Raised-Release Weight - a lasting rise in release probability after mossy fibre long-term potentiation.
+
+ENTRY 3. THE METABOTROPIC GLUTAMATE SYNAPSE (mGluR G-Protein-Coupled Contact) (keyed to synaptics catalogue Chapter 3)
+
+◦ Below-threshold quiet - The Watchtower at Ease - single quanta do not reach the annulus, so the system is honestly off.
+
+◦ Group I sensitising - The Meaning-of-More Amplifier - postsynaptic excitation and store-calcium release when heavy traffic spills over.
+
+◦ Group II/III braking - The Terminal Damper - presynaptic reduction of release probability by tens of percent.
+
+◦ Long-term-depression induction - The Weakening Order - group I driving mGluR-dependent long-term depression.
+
+◦ Metaplastic set-point - The Rule-Setter - a standing adjustment of the threshold for N-methyl-D-aspartate (NMDA) plasticity.
+
+ENTRY 4. THE GABA-A FAST INHIBITORY SYNAPSE (keyed to synaptics catalogue Chapter 4)
+
+◦ Shunting-brake - The Silent Short Circuit - near the chloride reversal the synapse divides rather than subtracts.
+
+◦ Hyperpolarising-brake - The Downward Pull - at depolarised potentials the same synapse pulls the cell down.
+
+◦ Tonic conductance - The Standing Damp - extrasynaptic alpha5 and delta receptors hold a background inhibition with no time signature.
+
+◦ Depolarising (developmental or injured) - The Reversed Brake - high internal chloride makes the current excitatory.
+
+ENTRY 5. THE GABA-B SLOW METABOTROPIC SYNAPSE (keyed to synaptics catalogue Chapter 5)
+
+◦ Sub-threshold quiet - The Handbrake Off - single interneuron spikes usually do nothing.
+
+◦ Postsynaptic potassium-damp - The Long Hold - a G-protein-gated inwardly rectifying potassium (GIRK) conductance toward about minus 90 millivolts.
+
+◦ Presynaptic release-throttle - The Source Damper - calcium-channel suppression cutting release probability by up to half or more.
+
+◦ Neurogliaform blanket - The One-Spike Cloud - a single neurogliaform spike evoking a reliable slow inhibitory potential over a neighbourhood.
+
+ENTRY 6. THE GLYCINERGIC SYNAPSE (keyed to synaptics catalogue Chapter 6)
+
+◦ Fast-brake (depressing) - The Reflex Veto - the one adult working mode, a reliable brief chloride inhibition.
+
+◦ Shunting-versus-hyperpolarising - The Battery-Set Face - the same current divides near the chloride reversal and subtracts when depolarised.
+
+◦ Depolarising (foetal) - The Early Wiring Signal - a used developmental mode before the chloride gradient matures.
+
+ENTRY 7. THE NICOTINIC CHOLINERGIC SYNAPSE (keyed to synaptics catalogue Chapter 7)
+
+◦ Safety-factor firing - The Detonator - releases far more transmitter than the minimum needed, so the target fires every time.
+
+◦ Ganglionic relay - The Command Pass - the same one-mode reliability at autonomic ganglia.
+
+◦ Foetal endplate form - The Slow Early Channel - the gamma-subunit receptor with longer open time before the adult switch.
+
+ENTRY 8. THE MUSCARINIC CHOLINERGIC JUNCTION (keyed to synaptics catalogue Chapter 8)
+
+◦ Drowsy-relay - The Lights-Low State - low ambient acetylcholine, standing adaptation and leak currents intact, gain low, learning gate shut.
+
+◦ Attentive-encoder - The Lights-Up State - M1-driven closure of leak and adaptation potassium currents, raised gain, learning gate open.
+
+◦ M2/M4 quietening - The Presynaptic Brake - Gi/o-coupled dampening of release and excitability.
+
+ENTRY 9. THE DOPAMINERGIC SYNAPSE AND VARICOSITY (keyed to synaptics catalogue Chapter 9)
+
+◦ Tonic-level - The Background Set-Point - a slowly drifting ambient level read mainly by high-affinity D2 receptors.
+
+◦ Phasic-burst - The Positive Surprise - a transient surge above baseline read mainly by low-affinity D1 receptors.
+
+◦ Phasic-pause - The Negative Surprise - a dip below baseline dropping D1 and D2 occupancy.
+
+◦ Autoreceptor-throttled - The Self-Limited Source - D2 autoreceptors cutting further release.
+
+◦ Potentiated or depressed maintenance - The Taught Weight - lasting cortico-striatal weight change scaled by the error.
+
+ENTRY 10. THE NORADRENERGIC VARICOSITY (keyed to synaptics catalogue Chapter 10)
+
+◦ Low-tonic drowsy - The Dimmed Cortex - too little noradrenaline, gain low.
+
+◦ Mid-tonic focused - The Sharp Peak - the optimum of the inverted-U, favouring alpha-2 then beta actions, highest signal-to-noise.
+
+◦ High-tonic distractible - The Overdriven Stress State - lower-affinity alpha-1 recruitment degrading performance.
+
+◦ Phasic-salience burst - The Lean-In - a transient burst flagging a salient event and tagging memory.
+
+◦ Autoreceptor-throttled - The Self-Limited Source - alpha-2 autoreceptors depressing further release.
+
+ENTRY 11. THE SEROTONERGIC SYNAPSE AND VARICOSITY (keyed to synaptics catalogue Chapter 11)
+
+◦ Ambient set-point - The Mood Baseline - a slow tonic level biasing the whole forebrain's operating point.
+
+◦ Per-cell excitatory read - The Approach Colour - cells rich in Gq/Gs-coupled receptors lifted by the same cloud.
+
+◦ Per-cell inhibitory read - The Withdrawal Colour - cells rich in 5-HT1 (Gi/o) receptors lowered by it.
+
+◦ Fast 5-HT3 event - The Rare Spark - a genuine fast cation current on separate hardware.
+
+◦ Slow adaptation - The Weeks-Long Reset - receptor and autoreceptor adjustment behind antidepressant delay.
+
+ENTRY 12. THE HISTAMINERGIC VARICOSITY (keyed to synaptics catalogue Chapter 12)
+
+◦ Waking-on broadcast - The House-Lights Up - a few-hertz tonic firing holding the forebrain awake.
+
+◦ Sleep-off silence - The House-Lights Down - essentially silent in both non-rapid-eye-movement and rapid-eye-movement sleep.
+
+◦ Autoreceptor-throttled - The Self-Limited Source - H3 feedback holding release within a band.
+
+ENTRY 13. THE PEPTIDERGIC (DENSE-CORE VESICLE) SYNAPSE (keyed to synaptics catalogue Chapter 13)
+
+◦ Sub-threshold silent - The Held Tongue - no release at low firing rates, honestly off.
+
+◦ Burst-release broadcast - The Slow Annotation - steeply rising release once firing exceeds roughly 10 to 20 hertz, maximal near 50 hertz.
+
+◦ Pool-depleted depression - The Empty Larder - the finite non-recycled pool drained across repeated bursts.
+
+ENTRY 14. THE PURINERGIC SYNAPSE (ATP-and-Adenosine Junction) (keyed to synaptics catalogue Chapter 14)
+
+◦ Fast P2X excitation - The Energy-Molecule Spark - adenosine triphosphate (ATP)-gated cation current within milliseconds.
+
+◦ Slow P2Y modulation - The Purine Aside - G-protein-coupled signalling over hundreds of milliseconds.
+
+◦ Adenosine A1 brake - The Sleep-Pressure Damper - accumulating inhibition as ATP is degraded.
+
+◦ Integrated sleep-pressure - The Wakefulness Odometer - adenosine rising over hours of waking.
+
+ENTRY 15. THE ENDOCANNABINOID RETROGRADE SIGNAL (keyed to synaptics catalogue Chapter 15)
+
+◦ Resting full-transmission - The Knob at Full - no suppression, baseline release probability.
+
+◦ Transient suppression - The Backwards Turn-Down - depolarisation-induced suppression of inhibition or of excitation, a seconds-long graded cut.
+
+◦ Endocannabinoid long-term depression - The Lasting Turn-Down - a persistent weakening when CB1 activation coincides with presynaptic activity.
+
+ENTRY 16. THE NITRIC OXIDE RETROGRADE GASEOUS SIGNAL (keyed to synaptics catalogue Chapter 16)
+
+◦ Quiescent - The Silent Gas - no coincident N-methyl-D-aspartate (NMDA) calcium, no production.
+
+◦ Retrograde potentiating puff - The Backwards Whisper - a puff enhancing presynaptic release at the active synapse.
+
+◦ Neighbour-recruiting spread - The Sideways Whisper - the same puff lowering the plasticity threshold of synapses within a few micrometres.
+
+ENTRY 17. THE AXOSPINOUS SYNAPSE (keyed to synaptics catalogue Chapter 17)
+
+◦ Silent - the Mute Room - an N-methyl-D-aspartate (NMDA)-only contact with no working alpha-amino-3-hydroxy-5-methyl-4-isoxazolepropionic acid (AMPA) current, waiting to be unsilenced (catalogued fully at entry 43).
+
+◦ Baseline - the Held Weight - the ordinary functional contact transmitting at its current strength.
+
+◦ Potentiated - the Grown Spine - the enlarged, AMPA-rich high state after learning.
+
+◦ Depressed - the Shrunken Spine - the weakened low state after low-activity or anti-Hebbian input.
+
+◦ Facilitating versus depressing - the Warming versus Tiring regime - the short-term temperament set by presynaptic release probability.
+
+ENTRY 18. THE PERFORATED SYNAPSE (keyed to synaptics catalogue Chapter 18)
+
+◦ Consolidated-reliable - the Scar Held - the near-ceiling weight with a fenestrated or horseshoe density that transmits reliably.
+
+◦ De-perforating - the Fading Scar - the depressed, re-simplified form when the memory is dismantled.
+
+ENTRY 19. THE AXODENDRITIC SHAFT SYNAPSE (keyed to synaptics catalogue Chapter 19)
+
+◦ Facilitating - the Burst Detector - the low-probability regime that clamps the branch hardest when the network runs hot (the Martinotti route).
+
+◦ Depressing - the Early Spender - the high-probability regime that fades across a train.
+
+◦ Homeostatic-set weight - the Slow Trim - the standing inhibitory strength adjusted over hours.
+
+ENTRY 20. THE AXOSOMATIC SYNAPSE (keyed to synaptics catalogue Chapter 20)
+
+◦ Reliable brake - the Clock Hand - the high-probability parvalbumin-basket regime that phase-locks the target to the gamma cycle.
+
+◦ Endocannabinoid-muted - the Hushed Brake - the transient silencing of the cholecystokinin channel by retrograde lipid.
+
+◦ Homeostatic-set weight - the Excitability Tracker - slow adjustment tracking the target's excitability.
+
+ENTRY 21. THE AXO-AXONIC INITIAL SEGMENT SYNAPSE (keyed to synaptics catalogue Chapter 21)
+
+◦ Hyperpolarising veto - the Real Brake - the mature regime where the message raises threshold.
+
+◦ Depolarising veto - the Paradoxical Push - the immature or pathological regime where high internal chloride inverts the sign.
+
+◦ Structurally-tuned authority - the Moved Courtroom - the slow state in which the target relocates its own initial segment relative to the cartridges.
+
+ENTRY 22. THE PRESYNAPTIC TERMINAL-ON-TERMINAL SYNAPSE (keyed to synaptics catalogue Chapter 22)
+
+◦ Tonic floor - the Idling Damp - the ongoing presynaptic inhibition present even at rest.
+
+◦ Deepened gate - the Tightened Knob - the summating, gamma-aminobutyric acid (GABA)-B-engaged block that grows with use.
+
+ENTRY 23. THE DENDRODENDRITIC RECIPROCAL SYNAPSE (keyed to synaptics catalogue Chapter 23)
+
+◦ Recurrent inhibition - the Self-Answer - gamma-aminobutyric acid (GABA) fed back onto the same mitral dendrite that just excited the granule spine.
+
+◦ Lateral inhibition - the Neighbour-Hush - GABA onto neighbouring mitral dendrites, sharpening contrast.
+
+◦ Neurogenic refresh - the Rebuilt Spine - continuous integration of adult-born granule cells refining the network over days.
+
+ENTRY 24. THE EN PASSANT VARICOSITY (keyed to synaptics catalogue Chapter 24)
+
+◦ Tonic small-molecule release - the Steady Glow - the low-rate background delivery of classical transmitter.
+
+◦ Burst peptide and monoamine release - the Flare - the high-frequency mode that recruits dense-core and monoamine cargo.
+
+ENTRY 25. THE SERIAL AND TRIADIC SYNAPSE (keyed to synaptics catalogue Chapter 25)
+
+◦ Tonic relay - the Faithful Pass - the depolarised relay-cell state that reports input linearly.
+
+◦ Burst mode - the Wake-Up Call - the T-type-de-inactivated state good at detection but poor at fidelity.
+
+◦ F2 gating on - the Inner Gate - the metabotropic inhibitory arm that builds under sustained input.
+
+ENTRY 26. THE NEUROMUSCULAR JUNCTION (keyed to synaptics catalogue Chapter 26)
+
+◦ Safety-factor relay - the One True Word - one muscle-fibre action potential per input spike, with a margin sized to absorb depression. A register of one, stated proudly.
+
+ENTRY 27. THE CALYX OF HELD (keyed to synaptics catalogue Chapter 27)
+
+◦ High-fidelity timing relay - the Faithful Grasp - one output spike per input spike, jitter tens of microseconds. A register of one, stated proudly.
+
+ENTRY 28. THE ENDBULB OF HELD (keyed to synaptics catalogue Chapter 28)
+
+◦ Onset-emphasising relay - the Faithful First Word - reliable transmission that runs in a standing depressed state to emphasise onsets and changes. A register of one, stated proudly.
+
+ENTRY 29. THE HIPPOCAMPAL MOSSY FIBRE BOUTON (keyed to synaptics catalogue Chapter 29)
+
+◦ Sub-threshold at rest - the Sleeping Trigger - single resting spikes that often fail entirely.
+
+◦ Facilitated detonator - the Woken Detonator - the burst-driven multivesicular regime that reliably discharges CA3 cells.
+
+◦ Presynaptically potentiated - the Reset Trigger - a lastingly raised basal release probability after strong bursts.
+
+ENTRY 30. THE CLIMBING FIBRE-PURKINJE SYNAPSE (keyed to synaptics catalogue Chapter 30)
+
+◦ All-or-none teaching spike - the Struck Bell - the reliable complex spike delivered at about one hertz.
+
+◦ Graded annotation - the Loudness of the Bell - the analogue spikelet count (2 to 6) and dendritic calcium amplitude that encode error strength (good confidence, revises the strict all-or-none view).
+
+ENTRY 31. THE PARALLEL FIBRE-PURKINJE SYNAPSE (keyed to synaptics catalogue Chapter 31)
+
+◦ Baseline - the Held Grain - the ordinary low-probability functional contact.
+
+◦ Supervised-depressed - the Blamed Grain - the weakened state after coincidence with a climbing fibre teaching spike.
+
+◦ Potentiated - the Blameless Grain - the strengthened state after activity without the teacher.
+
+◦ Endocannabinoid-suppressed - the Self-Hushed Grain - the transient retrograde self-quieting after strong postsynaptic activity.
+
+ENTRY 32. THE PHOTORECEPTOR RIBBON SYNAPSE (keyed to synaptics catalogue Chapter 32)
+
+◦ Dark tonic release - the Belt Running - the depolarised, high-rate steady-stream regime.
+
+◦ Light-suppressed release - the Belt Slowed - the hyperpolarised, low-rate regime.
+
+ENTRY 33. THE HAIR CELL RIBBON SYNAPSE (keyed to synaptics catalogue Chapter 33)
+
+◦ Onset burst - the First Cry - the large transient as the docked pool releases at stimulus onset.
+
+◦ Sustained tireless release - the Steady Speech - the lower replenishment-limited rate that does not collapse.
+
+◦ Spontaneous release - the Quiet Hum - the resting release that sets each fibre's spontaneous rate and threshold.
+
+ENTRY 34. THE VESTIBULAR CALYX SYNAPSE (keyed to synaptics catalogue Chapter 34)
+
+◦ Quantal glutamate - the Ordinary Voice - conventional vesicular transmission.
+
+◦ Ephaptic field coupling - the Instant Whisper - direct electrical field coupling across the enclosed cleft.
+
+◦ Potassium accumulation - the Rising Murmur - a slow depolarising drive as cleft potassium builds.
+
+ENTRY 35. THE CEREBELLAR GLOMERULUS (keyed to synaptics catalogue Chapter 35)
+
+◦ Phasic relay - the Petal Opening - transmission of mossy-fibre bursts to granule cells.
+
+◦ Tonic inhibitory normalisation - the Divisive Brake - the standing gamma-aminobutyric acid (GABA)-A conductance that scales granule-cell gain.
+
+◦ Limited plastic weight - the Faint Trim - the modest adjustability at the mossy-fibre-to-granule-cell synapse (low as a learning site, stated honestly).
+
+ENTRY 36. THE THALAMIC TRIAD GLOMERULUS (keyed to synaptics catalogue Chapter 36)
+
+◦ Tonic relay - the Open Gate - the depolarised faithful-relay state passed to cortex.
+
+◦ Burst mode - the Alarm Gate - the T-type-de-inactivated detecting state, secure but low-fidelity.
+
+◦ F2 feedforward inhibition - the Sharpening Frame - the local inhibitory arm timing and suppressing poorly timed inputs.
+
+◦ Developmental weight - the Sculpted Gate - the refined retinogeniculate strength after activity-dependent pruning.
+
+ENTRY 37. THE C-BOUTON (keyed to synaptics catalogue Chapter 37)
+
+◦ Gain-neutral - the Idle - the resting state with no imposed excitability shift.
+
+◦ Gain-boosted - the Turbo On - the maintained multiplicative increase in motoneuron firing gain during locomotion and effort.
+
+ENTRY 38. THE NEURONAL GAP JUNCTION (THE ELECTRICAL SYNAPSE) (keyed to synaptics catalogue Chapter 38)
+
+◦ Baseline Coupled - Standing Handshake - the resting regime in which junctional conductance holds steady and a scaled low-pass copy of the neighbour's voltage crosses continuously.
+
+◦ Potentiated - Tightened Grip - a run-up regime in which activity and calcium-calmodulin-dependent protein kinase II (an enzyme that attaches phosphate groups when calcium rises) raise open probability and coupling strengthens.
+
+◦ Depressed - Loosened Grip - a run-down regime in which coupling weakens by 10 to 50 percent for tens of minutes or longer, the electrical synapse's long-term depression.
+
+ENTRY 39. THE MIXED CHEMICAL-ELECTRICAL SYNAPSE (keyed to synaptics catalogue Chapter 39)
+
+◦ Electrical Floor - The Instant Tick - the always-on gap-junctional component delivering a zero-delay spikelet.
+
+◦ Chemical Facilitating - Warming Voice - the glutamatergic half building up transmitter during a train (glutamate is the brain's standard excitatory messenger).
+
+◦ Chemical Depressing - Tiring Voice - the glutamatergic half running down as vesicles deplete.
+
+ENTRY 40. THE GLIAL GAP JUNCTION PLAQUE (keyed to synaptics catalogue Chapter 40)
+
+◦ Open Syncytium - Full Mesh - the default high-coupling regime welding hundreds of astrocytes into one continuous interior that shares potassium, glucose, lactate, and water (a syncytium is many cells behaving as one).
+
+◦ Down-Regulated - Throttled Mesh - a reduced-coupling regime imposed by inflammation, endothelin, or acidification, isolating a region.
+
+◦ State-Remodelled - Dialled Mesh - a physiologically retuned coupling extent, as in the hypothalamus during lactation.
+
+ENTRY 41. THE PANNEXIN HEMICHANNEL (keyed to synaptics catalogue Chapter 41)
+
+◦ Closed - Sealed Valve - the near-permanent resting state, open probability near zero, the C-terminal tail plugging the pore.
+
+◦ Reversibly Open - Signalling Puff - a graded, self-limiting opening that publishes adenosine triphosphate (the cell's energy currency doubling as a messenger) in a brief plume.
+
+◦ Caspase-Locked Open - Death Broadcast - the terminal state in which cleavage by caspases (the executioner enzymes of programmed cell death) removes the autoinhibitory tail and locks the channel open to release find-me signals.
+
+ENTRY 42. THE EPHAPTIC COUPLING SITE (keyed to synaptics catalogue Chapter 42)
+
+◦ Field-Coupled - Standing Whisper - the sole regime, in which the source's currents impose a scaled, sign-inverting voltage shift on the target with zero delay.
+
+ENTRY 43. THE SILENT (NMDA-ONLY) SYNAPSE (keyed to synaptics catalogue Chapter 43)
+
+◦ Silent - Blank Tape - the resting state carrying N-methyl-D-aspartate (NMDA) receptors but no functional alpha-amino-3-hydroxy-5-methyl-4-isoxazolepropionic acid (AMPA) receptors, so output at rest is exactly zero (cross-reference Chapter 1, of which this is the AMPA-lacking mode).
+
+◦ Unsilenced - First Words - the functional state after AMPA receptors are inserted, indistinguishable from an ordinary Chapter 1 contact.
+
+◦ Re-Silenced - Erased Tape - the reversion state after AMPA receptors are removed during long-term depression, returning the contact to the reserve.
+
+ENTRY 44. THE NASCENT FILOPODIAL CONTACT (keyed to synaptics catalogue Chapter 44)
+
+◦ Searching - Groping Thread - the actin-driven filopodium extending and sampling passing axons with little or no synaptic machinery.
+
+◦ Stabilising - Taking Hold - the committed state in which adhesion and scaffold assemble, overlapping the silent state of Chapter 43.
+
+◦ Retracting - Letting Go - the withdrawal state ending in demolition of the trial contact.
+
+ENTRY 45. THE TAGGED, RETRACTING SYNAPSE (keyed to synaptics catalogue Chapter 45)
+
+◦ Unmarked - Spared - the protected state, carrying the do-not-eat-me signal CD47 and transmitting normally.
+
+◦ Tagged - Condemned - the state bearing deposited complement proteins (the immune system's ancient debris labels), read as a demolition order.
+
+◦ Retracting - Being Eaten - the disassembly state as microglia nibble the terminal piece by piece and astrocytes phagocytose in parallel.
+
+ENTRY 46. THE AUTONOMIC NEUROEFFECTOR JUNCTION (Visceral Motor Loose Contact) (keyed to synaptics catalogue Chapter 46)
+
+◦ Resting Tone - Idle Streetlight - the low-rate baseline in which sparse, often-failing releases set a standing tissue tone.
+
+◦ Facilitating - Warming String - the built-up regime in which repeated firing accumulates transmitter and the sheet reads a rising command.
+
+ENTRY 47. THE SPLANCHNIC-CHROMAFFIN SYNAPSE (Preganglionic-to-Adrenal-Medulla Contact) (keyed to synaptics catalogue Chapter 47)
+
+◦ Basal Trickle - Idle Drip - the low-frequency regime releasing freely-soluble catecholamines through a restricted fusion pore.
+
+◦ Flight-or-Fight Flood - Alarm Surge - the high-drive regime in which the fusion pore is driven to an expanded state and peptide co-transmitters join the catecholamine bolus.
+
+ENTRY 48. THE NEUROHAEMAL JUNCTION (Neurosecretory-Ending-on-Bloodstream Contact) (keyed to synaptics catalogue Chapter 48)
+
+◦ Sub-Threshold Steady - Quiet Drip - low-rate firing that releases little peptide per spike.
+
+◦ Phasic Burst - Pulsed Release - the efficient regime of long spiking episodes that maximise hormone output.
+
+◦ Reflex Burst - Let-Down Pulse - the intense synchronised burst, as in the oxytocin milk-ejection reflex.
+
+ENTRY 49. THE NEUROPOD-VAGAL EPITHELIAL SYNAPSE (Gut-Sensor-to-Vagus Contact) (keyed to synaptics catalogue Chapter 49)
+
+◦ Fast Glutamatergic - Millisecond Line - the point-to-point vesicular channel that follows luminal stimulus onset closely.
+
+◦ Slow Peptide - Trailing Word - the dense-core co-signal (peptides such as cholecystokinin) that lags the fast report.
+
+ENTRY 50. THE EFFERENT SYNAPSE ONTO THE HAIR CELL (Olivocochlear-to-Outer-Hair-Cell Contact) (keyed to synaptics catalogue Chapter 50)
+
+◦ Resting Gain - Amplifier Free - low or no efferent drive, the outer hair cell left to boost faint sounds.
+
+◦ Facilitated Inhibition - Turned Down - the built-up regime in which sustained efferent firing strengthens the hyperpolarising brake.
+
+ENTRY 51. THE MERKEL CELL-NEURITE COMPLEX (Touch-Cell-to-Afferent Contact) (keyed to synaptics catalogue Chapter 51)
+
+◦ Resting - Untouched - no indentation, minimal release.
+
+◦ Sustaining - Holding the Shape - the maintained-touch regime delivering prolonged excitatory drive that keeps the slowly adapting afferent firing.
+
+ENTRY 52. THE NEURO-IMMUNE JUNCTION (Nerve-to-Immune-Cell Contact) (keyed to synaptics catalogue Chapter 52)
+
+◦ Quiescent Contact - Resting Watch - baseline apposition with little transmitter release and unbiased immune tone.
+
+◦ Sympathetic Damping - Cooling Word - noradrenaline released onto lymphocytes biasing immune tone, typically restraining.
+
+◦ Sensory Priming - Heating Word - sensory neuropeptides (substance P, calcitonin gene-related peptide) driving mast cells toward mediator release and neurogenic inflammation.
+
+ENTRY 53. THE TRIPARTITE SYNAPSE ENSHEATHMENT (Astrocyte-Wrapped Chemical Synapse) (keyed to synaptics catalogue Chapter 53)
+
+◦ Permissive wrap - the Green Light - high D-serine (the co-agonist that the N-methyl-D-aspartate receptor requires alongside glutamate) occupancy, so the wrapped synapse may potentiate.
+
+◦ Restrictive wrap - the Red Light - adenosine tone dominates and clamps release, converting potentiation conditions into depression.
+
+◦ Retracted coverage - the Withdrawn Leaflet - a life-cycle and state mode in which the leaflet pulls back and neighbouring synapses become directly juxtaposed, seen physiologically around oxytocin neurons in lactation.
+
+ENTRY 54. THE NEURON-OPC SYNAPSE (Axon-Oligodendrocyte Precursor Synapse) (keyed to synaptics catalogue Chapter 54)
+
+◦ Facilitating readout - the Pattern Listener - theta-burst-favouring integration of quantal drive while the precursor divides.
+
+◦ Depressing readout - the Fatiguing Line - short-term depression under rapid trains.
+
+◦ Proliferative standing mode - the Waiting Surveyor - integrated activity below threshold, precursor keeps dividing and listening.
+
+◦ Differentiating mode - the Committed Wrapper - integrated calcium load crosses threshold, precursor differentiates and the synapse is dismantled (a used developmental transition, not a fault).
+
+ENTRY 55. THE AXO-MYELINIC SYNAPSE (Axon-to-Myelin Junction) (keyed to synaptics catalogue Chapter 55)
+
+◦ Demand-matched supply - the Fuel Line - periaxonal glutamate tracks spike rate and lactate delivery rises to match.
+
+◦ Remodelling mode - the Speed Tuner - sustained demand nudges sheath thickness and internode geometry, adjusting delay.
+
+◦ Idle mode - the Dumb Cable - low traffic, minimal supply, delay held.
+
+ENTRY 56. THE PERISYNAPTIC SCHWANN CAP (Terminal Schwann Cell Ensheathment of the Neuromuscular Junction) (keyed to synaptics catalogue Chapter 56)
+
+◦ Health mode - the Watching Foreman - sedentary supervision, reading transmission and lightly modulating release.
+
+◦ Repair mode - the Pathfinder - after denervation the cell de-differentiates, extends processes, and guides the returning axon (a genuinely used mode, so admitted).
+
+ENTRY 57. THE MICROGLIA-SYNAPSE CONTACT (Microglial Process-Synapse Apposition) (keyed to synaptics catalogue Chapter 57)
+
+◦ Surveillance mode - the Hourly Round - brief contacts of about five minutes that in health enhance the contacted synapse's activity.
+
+◦ Triage mode - the Lengthened Watch - visits lengthen and multiply within minutes when local activity rises or injury signals appear.
+
+◦ Trogocytic mode - the Nibble - partial engulfment of a bouton, weakening but not deleting the synapse.
+
+◦ Engulfment mode - the Condemnation - whole-synapse phagocytosis of a tagged, weak input (used developmental pruning, so admitted).
+
+ENTRY 58. THE BETA CELL GAP JUNCTION NETWORK (Islet Connexin-36 Electrical Coupling) (keyed to synaptics catalogue Chapter 58)
+
+◦ Coupled sheet - the Chorus - open channels synchronise voltage and calcium across the islet into one clean insulin pulse.
+
+◦ Loosened coupling - the Scattered Crowd - reduced open-channel fraction lets heterogeneous thresholds re-emerge.
+
+◦ Rest gating - the Silenced Sheet - at low glucose, coupling helps hold the quiet, non-secreting resting state across the islet.
+
+ENTRY 59. THE PITUITARY GAP JUNCTION WEB (Folliculostellate Connexin-43 Coupling) (keyed to synaptics catalogue Chapter 59)
+
+◦ Coupled web - the Gland-Spanning Relay - phosphorylated, docked channels carry a regenerative calcium wave across the whole gland.
+
+◦ Uncoupled web - the Severed Lattice - dephosphorylated connexin-43 breaks the relay into local twitches.
+
+ENTRY 60. THE GRANULOSA-OOCYTE GAP JUNCTION (Connexin-37 Trans-Zonal Coupling) (keyed to synaptics catalogue Chapter 60)
+
+◦ Open coupled pipe - the Nurse Line - channels open, feeding the egg and delivering the cyclic nucleotides that hold meiosis arrested.
+
+◦ Closed junction - the Cut Line - abrupt closure at the ovulatory surge stops the arresting signal and releases the egg.
+
+ENTRY 61. THE PARACRINE JUNCTION (Local Diffusion Signalling) (keyed to synaptics catalogue Chapter 61)
+
+◦ Silent neighbourhood - the Quiet Word - no secretion, no local signal.
+
+◦ Excitatory broadcast - the Prompting Word - a messenger that raises nearby target activity.
+
+◦ Inhibitory broadcast - the Restraining Word - a messenger that quietens neighbours, as somatostatin quietens the islet.
+
+ENTRY 62. THE AUTOCRINE LOOP (Self-Signalling) (keyed to synaptics catalogue Chapter 62)
+
+◦ Positive loop - the Self-Commit - the returning messenger reinforces the cell's own state and can lock it in.
+
+◦ Negative loop - the Self-Governor - the returning messenger damps the cell toward a set point.
+
+◦ Silent loop - the Quiet Self - no self-secretion, no feedback.
+
+ENTRY 63. THE JUXTACRINE CONTACT JUNCTION (Membrane-Bound Ligand-Receptor Signalling) (keyed to synaptics catalogue Chapter 63)
+
+◦ No contact - the Open Hand - membranes apart, no signal.
+
+◦ Instructive contact - the Fate Handshake - Notch engagement changes gene expression in the receiving cell.
+
+◦ Repulsive or attractive contact - the Sorting Handshake - Eph-ephrin engagement, bidirectional, reshaping both cells' cytoskeletons.
+
+ENTRY 64. THE HORMONE-RECEPTOR VIRTUAL SYNAPSE (Endocrine Signalling at a Distance) (keyed to synaptics catalogue Chapter 64)
+
+◦ Pulsatile broadcast - the Drumbeat - hormone delivered in discrete pulses that keep the receiver responsive.
+
+◦ Continuous broadcast - the Flood - sustained delivery that drives the receiver into desensitisation.
+
+◦ Sensitised receiver - the Open Ear - up-regulated, coupled receptors giving full response.
+
+◦ Desensitised receiver - the Deaf Ear - uncoupled and down-regulated receptors giving a blunted response.
+
+END OF OUTLINE

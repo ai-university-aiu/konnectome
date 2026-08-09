@@ -1,0 +1,2685 @@
+LAYER 7, THE SYNAPTIC AND JUNCTIONAL LAYER: MODES AND MODE TRANSITIONS
+
+The Per-Type Mode Catalogues of Every Synaptic and Junctional Type of the Human Nervous and Endocrine System
+
+A Companion Volume to LAYER_07_SYNAPTICS_MANUSCRIPT
+
+Keyed, chapter by chapter, to the sixty-four-chapter synaptics catalogue, in the Certified_Neuroscientist corpus of D. R. Dison, Founder, Artificial Intelligence University (AIU).
+
+Date of compilation: August 9, 2026.
+
+
+INTRODUCTION: MODES OF A RELATION
+
+The Layer 6 modes volume established the vocabulary: STATE is the continuous, instantaneous condition; MODE is the discrete operating regime; a system's state moves continuously within its current mode, and crossing a boundary - or having the boundary moved by a modulator - switches the mode.
+
+The formalism is the hybrid automaton: a mode register, per-mode transfer functions, and a transition table, guarded by fault watchdogs.
+
+This volume applies that vocabulary to the junctions - and a junction's modes are a distinctive family, because a junction is a relation, not an object.
+
+Its state variables are relational (the weight, the vesicle occupancy, the residual calcium, the coupling coefficient), and so are its modes.
+
+The universal menu for junctions, from which each type draws its own subset:
+
+• Silent versus functional - the unwritten contact versus the speaking one.
+
+• Facilitating versus depressing - the short-term regimes set by release probability.
+
+• Potentiated, baseline, and depressed - the long-term maintenance regimes that ARE stored memory.
+
+• Evoked synchronous, asynchronous, and spontaneous miniature release - the three ways a chemical synapse speaks.
+
+• Kiss-and-run versus full-collapse - the two vesicle recycling regimes.
+
+• Tonic versus phasic release - the ribbon and endocrine regimes.
+
+• Open, closed, and rectifying - the gap junction regimes.
+
+• Coupled versus uncoupled - the network regimes of glial and endocrine sheets.
+
+• Intact versus retracting - the life-cycle regimes.
+
+• Safety-factor versus fatigued - the effector regimes.
+
+THE ADMISSION RULE, unchanged from the Layer 6 volume and applied per type: a regime enters the register only if the healthy system uses it under some normal operating condition; everything else is a fault regime, watched rather than coded.
+
+The deepest pattern the entries confirm: the learning junctions are mode-rich and the fidelity junctions are mode-poor.
+
+The cortical spine synapse holds half a dozen regimes because changing is its job; the calyx of Held and the motor endplate hold nearly one, because a detonator must not improvise - at Layer 7, as at Layer 6, the length of the register is a statement of what the system trusts the component to decide.
+
+Each entry is PASTE-READY: formatted exactly as a MODES AND MODE TRANSITIONS section for its source chapter and keyed to its chapter number, so a future merge into the synaptics catalogue is a mechanical splice.
+
+The sixty-four entries follow in chapter order.
+
+LAYER 7 MODES MANUSCRIPT - MODES AND MODE TRANSITIONS ENTRIES
+
+Chapters 1 to 16, the synapse by messenger system.
+
+
+ENTRY 1. THE GLUTAMATERGIC FAST EXCITATORY SYNAPSE (AMPA and NMDA Receptor Synapse) (keyed to synaptics catalogue Chapter 1)
+
+MODES AND MODE TRANSITIONS:
+
+This is the mode-richest junction in the catalogue, a learning contact that occupies several discrete operating regimes at once - a silent-versus-functional axis, a facilitating-versus-depressing short-term axis, and a potentiated-versus-baseline-versus-depressed maintenance axis - because it is the brain's principal memory store and must both compute and be rewritten.
+
+Alpha-amino-3-hydroxy-5-methyl-4-isoxazolepropionic acid (AMPA) is the everyday-current receptor; N-methyl-D-aspartate (NMDA) is the coincidence-detecting teacher receptor.
+
+• THE MODE REGISTER.
+
+◦ Silent (NMDA-only) - The Mute Beginner - a contact with NMDA receptors but no AMPA receptors, giving no current at rest and awaiting its first strengthening.
+
+◦ Functional-facilitating - The Eager Repeater - a low-release-probability contact (about 0.1 to 0.3) that grows across a train.
+
+◦ Functional-depressing - The First-Strike Contact - a high-release-probability contact (about 0.5 to 0.9) that fades across a train.
+
+◦ Potentiated maintenance - The Written Weight - a standing long-term-potentiation state with extra AMPA receptors and an enlarged spine.
+
+◦ Depressed maintenance - The Erased Weight - a standing long-term-depression state with AMPA receptors removed.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Silent: zero AMPA conductance at rest; NMDA current only when the cell is already depolarised, so the contact contributes to plasticity but not to firing (well established).
+
+◦ Functional-facilitating: paired-pulse ratio above one, quantal content often a single vesicle, failure rate 50 percent or more, facilitation decaying over 50 to 300 milliseconds (well established).
+
+◦ Functional-depressing: paired-pulse ratio below one, recovery from depression over 0.5 to 1 second (well established).
+
+◦ Potentiated maintenance: AMPA receptor count raised toward about 150, quantal amplitude and reliability both up; persists hours to years with protein synthesis (well established).
+
+◦ Depressed maintenance: AMPA count and spine volume lowered, weight reduced (well established).
+
+• THE TRANSITION TABLE.
+
+◦ Silent to functional (unsilencing): pre-post coincidence during a potentiation protocol admits NMDA calcium and inserts AMPA receptors; seconds to induce, then lasting.
+
+◦ Baseline to potentiated: strong coincident calcium, spike-timing with pre leading post by up to about 20 milliseconds; induced in seconds, expressed over minutes to years.
+
+◦ Baseline to depressed: modest prolonged calcium, post-before-pre timing; minutes.
+
+◦ Facilitating and depressing are set by release probability and re-set from above by neuromodulators (dopamine, acetylcholine, noradrenaline) that shift release probability - flagged as thrown from above.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: runaway potentiation and calcium overload.
+
+◦ Warning condition: excitotoxic NMDA calcium in stroke and injury; anti-NMDA-receptor encephalitis removing the teacher.
+
+◦ Watchdog: astrocytic glutamate clearance within a millisecond, the magnesium block, and homeostatic scaling that renormalises weights.
+
+
+ENTRY 2. THE KAINATE-RECEPTOR SYNAPSE (keyed to synaptics catalogue Chapter 2)
+
+MODES AND MODE TRANSITIONS:
+
+This is a moderately mode-rich burst-integrating contact whose defining current is too slow to report a single spike, so its regimes are organised around whether a burst has crossed threshold and whether its presynaptic autoreceptors are facilitating or depressing release.
+
+Kainate receptors, built from the subunits GluK1 to GluK5, stand on both sides of the cleft.
+
+• THE MODE REGISTER.
+
+◦ Sub-threshold single-spike - The Ignored Tap - lone spikes barely register in the slow current.
+
+◦ Facilitated burst-integrating - The Slow-Burn Detonator - a train summates and, at the mossy fibre address, becomes a conditional detonator.
+
+◦ Presynaptic-facilitating autoreceptor - The Low-Glutamate Amplifier - modest spillover raises release probability.
+
+◦ Presynaptic-depressing autoreceptor - The High-Glutamate Throttle - high glutamate cuts release.
+
+◦ Potentiated presynaptic maintenance - The Raised-Release Weight - a lasting rise in release probability after mossy fibre long-term potentiation.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Single-spike: kainate current roughly a tenth of the alpha-amino-3-hydroxy-5-methyl-4-isoxazolepropionic acid (AMPA) component, decay 10 to 100 milliseconds, negligible summation (well established).
+
+◦ Facilitated burst: supralinear across bursts above about 10 to 20 hertz; mossy fibre release probability rises from near 0.01 to 0.1 up to tenfold or more (well established).
+
+◦ Autoreceptor arms: bell-shaped gain, facilitating at low and depressing at high glutamate (moderate confidence, mechanism partly inferred).
+
+◦ Potentiated presynaptic maintenance: lasting release-probability rise through the cyclic adenosine monophosphate and protein kinase A pathway, N-methyl-D-aspartate (NMDA)-independent; minutes to hours (well established).
+
+• THE TRANSITION TABLE.
+
+◦ Single-spike to facilitated burst: burst above about 10 to 20 hertz; tens to hundreds of milliseconds.
+
+◦ Facilitating to depressing autoreceptor: rising ambient and spillover glutamate; within the burst.
+
+◦ Baseline to potentiated presynaptic: high-frequency mossy fibre activity inducing presynaptic long-term potentiation; minutes.
+
+◦ Astrocytic glutamate clearance sets the spillover field and can be thrown from above by glial state.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: recurrent mossy fibre sprouting building kainate-rich contacts that sustain seizures.
+
+◦ Warning condition: temporal lobe epilepsy; domoic acid excitotoxicity in CA3.
+
+◦ Watchdog: astrocytic transporters and the receptors' own slow kinetics limiting single-spike drive.
+
+
+ENTRY 3. THE METABOTROPIC GLUTAMATE SYNAPSE (mGluR G-Protein-Coupled Contact) (keyed to synaptics catalogue Chapter 3)
+
+MODES AND MODE TRANSITIONS:
+
+This perisynaptic contact is a threshold-gated controller rather than a fast relay, so its modes are defined by whether spillover has crossed its detection threshold and which coupling group is engaged, and it is chiefly a machine for setting other synapses' modes.
+
+Metabotropic glutamate receptors (mGluRs), G-protein-coupled receptors mGluR1 to mGluR8, are sorted into three groups by coupling.
+
+• THE MODE REGISTER.
+
+◦ Below-threshold quiet - The Watchtower at Ease - single quanta do not reach the annulus, so the system is honestly off.
+
+◦ Group I sensitising - The Meaning-of-More Amplifier - postsynaptic excitation and store-calcium release when heavy traffic spills over.
+
+◦ Group II/III braking - The Terminal Damper - presynaptic reduction of release probability by tens of percent.
+
+◦ Long-term-depression induction - The Weakening Order - group I driving mGluR-dependent long-term depression.
+
+◦ Metaplastic set-point - The Rule-Setter - a standing adjustment of the threshold for N-methyl-D-aspartate (NMDA) plasticity.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Below-threshold: no output; genuine detection threshold, not a failure rate (well established).
+
+◦ Group I sensitising: closes potassium channels, releases store calcium, slow excitatory potential rising over about 100 milliseconds, decaying over one to several seconds (well established).
+
+◦ Group II/III braking: cuts release probability by tens of percent, converting depressing contacts toward facilitating (well established).
+
+◦ Long-term-depression induction: local protein synthesis lowers the host weight lastingly; obligatory for cerebellar long-term depression (well established).
+
+◦ Metaplastic set-point: shifts the calcium threshold at which Chapter 1 potentiates or depresses (moderate confidence).
+
+• THE TRANSITION TABLE.
+
+◦ Quiet to engaged: burst-driven spillover crossing the perisynaptic threshold; tens to hundreds of milliseconds onset.
+
+◦ Engaged to desensitised: sustained agonist, receptor phosphorylation and arrestin binding; seconds.
+
+◦ Group I to long-term depression: paired synaptic drive plus group I activation; minutes.
+
+◦ Metaplastic set-point is thrown from above by prior activity history.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: exaggerated group I signalling and runaway protein synthesis (fragile X-like states).
+
+◦ Warning condition: excess mGluR5 long-term depression.
+
+◦ Watchdog: arrestin desensitisation and glial glutamate clearance capping spillover.
+
+
+ENTRY 4. THE GABA-A FAST INHIBITORY SYNAPSE (keyed to synaptics catalogue Chapter 4)
+
+MODES AND MODE TRANSITIONS:
+
+This is a two-to-three-mode gate, mostly a reliable depressing brake whose felt effect flips between shunting and hyperpolarising with the membrane voltage, plus a standing tonic mode from extrasynaptic receptors.
+
+Gamma-aminobutyric acid (GABA) opens a chloride channel within a millisecond.
+
+• THE MODE REGISTER.
+
+◦ Shunting-brake - The Silent Short Circuit - near the chloride reversal the synapse divides rather than subtracts.
+
+◦ Hyperpolarising-brake - The Downward Pull - at depolarised potentials the same synapse pulls the cell down.
+
+◦ Tonic conductance - The Standing Damp - extrasynaptic alpha5 and delta receptors hold a background inhibition with no time signature.
+
+◦ Depolarising (developmental or injured) - The Reversed Brake - high internal chloride makes the current excitatory.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Shunting: chloride conductance 0.3 to 1 nanosiemens per quantum, reversal near minus 70 millivolts, divisive gain control (well established).
+
+◦ Hyperpolarising: genuine downward current when the membrane sits above reversal (well established).
+
+◦ Tonic: a persistent low conductance setting input resistance and gain (well established).
+
+◦ Depolarising: reversal shifted positive by high chloride; excitatory (well established in development and injury).
+
+◦ Short-term: release probability about 0.5 to 0.9 at basket synapses, depression by tens of percent, recovery over hundreds of milliseconds, near-zero failure (well established).
+
+• THE TRANSITION TABLE.
+
+◦ Shunting to hyperpolarising: postsynaptic depolarisation; instantaneous with voltage.
+
+◦ Phasic to tonic: ambient GABA rise recruiting extrasynaptic receptors; seconds.
+
+◦ Adult-brake to depolarising: loss of the potassium-chloride cotransporter KCC2 in development or injury; slow, over the chloride set-point.
+
+◦ Transient suppression from above: cholecystokinin-basket release muted by retrograde endocannabinoids (depolarisation-induced suppression of inhibition) for tens of seconds - flagged as thrown from above.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: loss of the brake into seizure within seconds.
+
+◦ Warning condition: GABRA1, GABRB3, GABRG2 mutations; depolarising GABA after injury.
+
+◦ Watchdog: KCC2 chloride regulation and homeostatic matching of inhibition to local excitation.
+
+
+ENTRY 5. THE GABA-B SLOW METABOTROPIC SYNAPSE (keyed to synaptics catalogue Chapter 5)
+
+MODES AND MODE TRANSITIONS:
+
+This is a threshold-gated slow-state junction, inhibition as a change in the weather rather than a blow, whose few modes turn on which side of the cleft is acting and whether the burst threshold has been crossed.
+
+The gamma-aminobutyric acid (GABA)-B receptor is an obligate dimer coupling through Gi/Go proteins.
+
+• THE MODE REGISTER.
+
+◦ Sub-threshold quiet - The Handbrake Off - single interneuron spikes usually do nothing.
+
+◦ Postsynaptic potassium-damp - The Long Hold - a G-protein-gated inwardly rectifying potassium (GIRK) conductance toward about minus 90 millivolts.
+
+◦ Presynaptic release-throttle - The Source Damper - calcium-channel suppression cutting release probability by up to half or more.
+
+◦ Neurogliaform blanket - The One-Spike Cloud - a single neurogliaform spike evoking a reliable slow inhibitory potential over a neighbourhood.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Sub-threshold: no output below recruitment threshold (well established).
+
+◦ Postsynaptic damp: unitary 0.1 to 1 nanosiemens, onset 20 to 50 milliseconds, peak 100 to 250 milliseconds, decay 200 milliseconds to over a second (well established).
+
+◦ Presynaptic throttle: release probability cut on GABAergic, glutamatergic and monoaminergic terminals (well established).
+
+◦ Blanket: reliable slow inhibitory postsynaptic potential from one spike into the neuropil (well established).
+
+• THE TRANSITION TABLE.
+
+◦ Quiet to engaged: sustained or synchronous firing building spillover past threshold; tens of milliseconds.
+
+◦ Engaged to desensitised: sustained agonist, KCTD12-set desensitisation; seconds.
+
+◦ Recruitment sharpened from above by brain-state synchrony (thalamic burst mode, spindles) - flagged as thrown from above.
+
+◦ Slow excitability set-point drifts over minutes via cyclic adenosine monophosphate reduction.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: the thalamocortical GABA-B rhythm gone rigid in absence epilepsy.
+
+◦ Warning condition: GABBR1 and GABBR2 encephalopathies; baclofen withdrawal.
+
+◦ Watchdog: KCTD-set desensitisation and transporter-set spillover limiting recruitment.
+
+
+ENTRY 6. THE GLYCINERGIC SYNAPSE (keyed to synaptics catalogue Chapter 6)
+
+MODES AND MODE TRANSITIONS:
+
+This is a deliberately mode-poor fidelity brake, a fast reflex veto that must not improvise, with essentially one working mode plus a voltage-set shunt-versus-hyperpolarise distinction and a developmental sign flip.
+
+Glycine opens a chloride-selective channel within a fraction of a millisecond.
+
+• THE MODE REGISTER.
+
+◦ Fast-brake (depressing) - The Reflex Veto - the one adult working mode, a reliable brief chloride inhibition.
+
+◦ Shunting-versus-hyperpolarising - The Battery-Set Face - the same current divides near the chloride reversal and subtracts when depolarised.
+
+◦ Depolarising (foetal) - The Early Wiring Signal - a used developmental mode before the chloride gradient matures.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Fast-brake: single-channel conductance 40 to 90 picosiemens, decay 3 to 10 milliseconds, high release probability, few failures (well established).
+
+◦ Shunt-versus-hyperpolarise: sign set by where the chloride reversal sits relative to rest (well established).
+
+◦ Depolarising foetal: excitatory while internal chloride is high through the transporter NKCC1 (well established).
+
+• THE TRANSITION TABLE.
+
+◦ Depolarising to inhibitory: maturation of the potassium-chloride cotransporter, and a subunit switch from alpha-2 to alpha-1-and-beta; developmental, over days to weeks.
+
+◦ Fast-brake depression: sustained reflex train draining vesicles; recovery over tens to a few hundred milliseconds.
+
+◦ No neuromodulatory mode-switching is used - the register is proudly small.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: loss of the brake into convulsive rigidity.
+
+◦ Warning condition: strychnine block, tetanus toxin, hyperekplexia from alpha-1 or gephyrin mutations.
+
+◦ Watchdog: high safety factor and glycine-transporter clearance; the design bets on reliability, not flexibility.
+
+
+ENTRY 7. THE NICOTINIC CHOLINERGIC SYNAPSE (keyed to synaptics catalogue Chapter 7)
+
+MODES AND MODE TRANSITIONS:
+
+This is a proudly mode-poor detonator relay - a detonator must not improvise - running essentially one high-safety-factor firing mode at the muscle endplate, with a receptor-desensitised fault state and a distinct developmental subunit form.
+
+Acetylcholine opens a fast cation channel of the cys-loop family.
+
+• THE MODE REGISTER.
+
+◦ Safety-factor firing - The Detonator - releases far more transmitter than the minimum needed, so the target fires every time.
+
+◦ Ganglionic relay - The Command Pass - the same one-mode reliability at autonomic ganglia.
+
+◦ Foetal endplate form - The Slow Early Channel - the gamma-subunit receptor with longer open time before the adult switch.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Safety-factor firing: receptors at about ten thousand per square micrometre on fold crests, safety factor above two, acetylcholinesterase clearing within about a millisecond (well established).
+
+◦ Ganglionic relay: smaller boutons, neuronal alpha and beta subunits, reliable relay (well established).
+
+◦ Foetal form: gamma-for-epsilon subunit lowers single-channel conductance and lengthens open time (well established).
+
+• THE TRANSITION TABLE.
+
+◦ Foetal to adult endplate: the epsilon-for-gamma subunit switch during maturation; developmental.
+
+◦ Firing to desensitised: maintained high agonist (for example at high frequency or with cholinesterase inhibition) closing receptors; milliseconds to seconds - a fault, not a used mode.
+
+◦ No brain-state mode-switching at the muscle; the endplate refuses to be modulated.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: depolarising block when receptors desensitise under excess acetylcholine.
+
+◦ Warning condition: myasthenic loss of receptors dropping the safety factor below one; organophosphate poisoning.
+
+◦ Watchdog: the large safety factor itself and rapid acetylcholinesterase clearance.
+
+
+ENTRY 8. THE MUSCARINIC CHOLINERGIC JUNCTION (keyed to synaptics catalogue Chapter 8)
+
+MODES AND MODE TRANSITIONS:
+
+This is a two-mode mode-setting switch delivered by volume transmission, whose whole purpose is to flip the target cell between operating regimes rather than to add a signal.
+
+Muscarinic acetylcholine receptors are G-protein-coupled receptors, subtypes M1 to M5.
+
+• THE MODE REGISTER.
+
+◦ Drowsy-relay - The Lights-Low State - low ambient acetylcholine, standing adaptation and leak currents intact, gain low, learning gate shut.
+
+◦ Attentive-encoder - The Lights-Up State - M1-driven closure of leak and adaptation potassium currents, raised gain, learning gate open.
+
+◦ M2/M4 quietening - The Presynaptic Brake - Gi/o-coupled dampening of release and excitability.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Drowsy-relay: base gain, strong slow after-hyperpolarisation, no plasticity licence (well established).
+
+◦ Attentive-encoder: multiplicative gain rise, lowered threshold for long-term potentiation at nearby glutamatergic synapses; onset tens to hundreds of milliseconds, lasting seconds (well established).
+
+◦ M2/M4: reduced adenylate cyclase activity, opened potassium channels, cut release (well established).
+
+• THE TRANSITION TABLE.
+
+◦ Drowsy to attentive: sustained basal forebrain cholinergic firing raising ambient acetylcholine past threshold; tens to hundreds of milliseconds - flagged as thrown from above by the arousal and attention axis.
+
+◦ Attentive to drowsy: falling acetylcholine and receptor desensitisation; seconds.
+
+◦ The plasticity-enabling flag is a broadcast permission, not a per-contact event.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: chronic loss of the attentive mode.
+
+◦ Warning condition: basal forebrain cholinergic loss in Alzheimer's disease; antimuscarinic delirium; organophosphate storm.
+
+◦ Watchdog: acetylcholinesterase and butyrylcholinesterase clearance and receptor desensitisation.
+
+
+ENTRY 9. THE DOPAMINERGIC SYNAPSE AND VARICOSITY (keyed to synaptics catalogue Chapter 9)
+
+MODES AND MODE TRANSITIONS:
+
+This is a mode-rich reward-error broadcaster whose defining modes are the tonic-versus-phasic release regimes, split further by the two receptor classes of different affinity that read the same cloud in opposite directions.
+
+Dopamine acts on D1-class (Gs) and D2-class (Gi/o) G-protein-coupled receptors.
+
+• THE MODE REGISTER.
+
+◦ Tonic-level - The Background Set-Point - a slowly drifting ambient level read mainly by high-affinity D2 receptors.
+
+◦ Phasic-burst - The Positive Surprise - a transient surge above baseline read mainly by low-affinity D1 receptors.
+
+◦ Phasic-pause - The Negative Surprise - a dip below baseline dropping D1 and D2 occupancy.
+
+◦ Autoreceptor-throttled - The Self-Limited Source - D2 autoreceptors cutting further release.
+
+◦ Potentiated or depressed maintenance - The Taught Weight - lasting cortico-striatal weight change scaled by the error.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Tonic: baseline drift over seconds to minutes, D2 about 40 percent occupied at baseline (well established).
+
+◦ Phasic-burst: 100 to 200 millisecond surge raising D1 occupancy, cascade lasting hundreds of milliseconds to seconds (well established).
+
+◦ Phasic-pause: low D1 and D2 occupancy signalling worse-than-expected outcome (well established).
+
+◦ Autoreceptor-throttled: terminal D2 feedback throttling release (well established).
+
+◦ Maintenance: three-factor plasticity, potentiating direct-pathway synapses on a burst and depressing them on a pause, opposite in the indirect pathway (well established).
+
+• THE TRANSITION TABLE.
+
+◦ Tonic to phasic-burst: reward or reward-predicting cue driving firing above baseline; about 100 to 200 milliseconds - flagged as thrown from above by the reward axis.
+
+◦ Tonic to phasic-pause: omitted or worse-than-expected reward; hundreds of milliseconds.
+
+◦ Release to autoreceptor-throttled: accumulating dopamine at terminal D2 receptors; moment to moment.
+
+◦ Baseline to maintenance: coincident cortico-striatal activity gated by the error term; minutes and lasting.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: collapse of the phasic signal, or a stuck-high tonic level.
+
+◦ Warning condition: substantia nigra loss in Parkinson's disease; addiction hijacking the ventral tegmental broadcast; dysregulation in schizophrenia.
+
+◦ Watchdog: the dopamine transporter, D2 autoreceptors, and degrading enzymes setting tonic-phasic balance.
+
+
+ENTRY 10. THE NORADRENERGIC VARICOSITY (keyed to synaptics catalogue Chapter 10)
+
+MODES AND MODE TRANSITIONS:
+
+This is a mode-rich gain dial working by volume transmission, whose modes are the tonic-versus-phasic release regimes mapped onto an inverted-U so that more is not simply better.
+
+Noradrenaline acts on alpha-1 (Gq), alpha-2 (Gi/o), and beta (Gs) adrenoceptors.
+
+• THE MODE REGISTER.
+
+◦ Low-tonic drowsy - The Dimmed Cortex - too little noradrenaline, gain low.
+
+◦ Mid-tonic focused - The Sharp Peak - the optimum of the inverted-U, favouring alpha-2 then beta actions, highest signal-to-noise.
+
+◦ High-tonic distractible - The Overdriven Stress State - lower-affinity alpha-1 recruitment degrading performance.
+
+◦ Phasic-salience burst - The Lean-In - a transient burst flagging a salient event and tagging memory.
+
+◦ Autoreceptor-throttled - The Self-Limited Source - alpha-2 autoreceptors depressing further release.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Low-tonic: base gain, drowsy (well established).
+
+◦ Mid-tonic: gain peak, multiplicative rise in population signal-to-noise (well established, adaptive-gain theory).
+
+◦ High-tonic: flattened gain, distractibility (well established).
+
+◦ Phasic burst: a few hundred milliseconds, beta-adrenoceptor enhancement of excitation-spike coupling, lowered long-term-potentiation threshold (well established).
+
+◦ Autoreceptor-throttled: alpha-2 feedback (well established).
+
+• THE TRANSITION TABLE.
+
+◦ Along the inverted-U: rising locus coeruleus tonic firing moves the cortex low to mid to high; seconds to minutes - flagged as thrown from above by the arousal axis.
+
+◦ Tonic to phasic: a salient stimulus evoking a burst; a few hundred milliseconds.
+
+◦ Release to autoreceptor-throttled: accumulating noradrenaline at alpha-2 receptors; within the burst.
+
+◦ Sleep-wake switching moves the whole dial from above.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: stuck-high tonic drive (hyperarousal) or collapsed drive (drowsiness).
+
+◦ Warning condition: early locus coeruleus loss in Alzheimer's and Parkinson's disease; post-traumatic stress overconsolidation.
+
+◦ Watchdog: alpha-2 autoreceptors and the noradrenaline transporter holding the optimum.
+
+
+ENTRY 11. THE SEROTONERGIC SYNAPSE AND VARICOSITY (keyed to synaptics catalogue Chapter 11)
+
+MODES AND MODE TRANSITIONS:
+
+This is a mood operating-point setter whose modes are unusual - one shared ambient level is read by each target through its own receptor mix, so the mode lives partly in the reader - plus a rare fast ionotropic channel and the slow therapeutic-adaptation state.
+
+Serotonin (5-hydroxytryptamine, 5-HT) acts on families 5-HT1 to 5-HT7, all G-protein-coupled except the fast 5-HT3 channel.
+
+• THE MODE REGISTER.
+
+◦ Ambient set-point - The Mood Baseline - a slow tonic level biasing the whole forebrain's operating point.
+
+◦ Per-cell excitatory read - The Approach Colour - cells rich in Gq/Gs-coupled receptors lifted by the same cloud.
+
+◦ Per-cell inhibitory read - The Withdrawal Colour - cells rich in 5-HT1 (Gi/o) receptors lowered by it.
+
+◦ Fast 5-HT3 event - The Rare Spark - a genuine fast cation current on separate hardware.
+
+◦ Slow adaptation - The Weeks-Long Reset - receptor and autoreceptor adjustment behind antidepressant delay.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Ambient set-point: slow, regular raphe firing setting a diffuse level read over hundreds of milliseconds to minutes (well established).
+
+◦ Excitatory read: net depolarising shift where excitatory receptors dominate (well established).
+
+◦ Inhibitory read: net hyperpolarising shift where 5-HT1 dominates (well established).
+
+◦ Fast 5-HT3: millisecond cation current, a minority pathway (well established).
+
+◦ Slow adaptation: 5-HT1A and 5-HT1B autoreceptor desensitisation and structural remodelling over weeks (moderate confidence on causal detail).
+
+• THE TRANSITION TABLE.
+
+◦ Set-point drift: changing raphe firing raising or lowering ambient serotonin; seconds to minutes - flagged as thrown from above by mood state.
+
+◦ Excitatory-versus-inhibitory read is fixed by each cell's receptor mix, not switched.
+
+◦ Ambient to slow-adaptation: sustained raised serotonin (for example under a reuptake inhibitor) desensitising autoreceptors; weeks - flagged as thrown from above by pharmacology.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: excess ambient serotonin tipping into serotonin syndrome.
+
+◦ Warning condition: depression, anxiety, obsessive-compulsive disorder.
+
+◦ Watchdog: the serotonin transporter, monoamine oxidase, and autoreceptor negative feedback.
+
+
+ENTRY 12. THE HISTAMINERGIC VARICOSITY (keyed to synaptics catalogue Chapter 12)
+
+MODES AND MODE TRANSITIONS:
+
+This is a mode-poor house-lights switch, a broadcast that sets one global arousal level rather than a message, so its register is essentially an on-off state gated by the sleep-wake flip-flop.
+
+Histamine acts on G-protein-coupled receptors H1, H2, and the H3 autoreceptor; there is no fast channel.
+
+• THE MODE REGISTER.
+
+◦ Waking-on broadcast - The House-Lights Up - a few-hertz tonic firing holding the forebrain awake.
+
+◦ Sleep-off silence - The House-Lights Down - essentially silent in both non-rapid-eye-movement and rapid-eye-movement sleep.
+
+◦ Autoreceptor-throttled - The Self-Limited Source - H3 feedback holding release within a band.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Waking-on: roughly 0 to 5 spikes per second, a slow diffuse rise in extracellular histamine read as an arousal scalar over hundreds of milliseconds to seconds (well established).
+
+◦ Sleep-off: near-zero release, permitting sleep (well established).
+
+◦ Autoreceptor-throttled: H3 feedback depressing further release, a negative feedback (well established).
+
+• THE TRANSITION TABLE.
+
+◦ Sleep-off to waking-on: orexin/hypocretin drive and withdrawal of preoptic inhibition, sharpened by the mutually-inhibitory flip-flop, with a pronounced switch-on delay; seconds - flagged as thrown from above by the sleep-wake axis and circadian clock.
+
+◦ Waking-on to autoreceptor-throttled: accumulating histamine at H3 receptors; over the train.
+
+◦ Daily on-off with the sleep-wake cycle.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: the lights stuck off (sedation) or dysregulated.
+
+◦ Warning condition: H1 blockade by antihistamines causing drowsiness; orexin loss in narcolepsy.
+
+◦ Watchdog: the H3 autoreceptor, histamine N-methyltransferase clearance, and the flip-flop enforcing clean transitions.
+
+
+ENTRY 13. THE PEPTIDERGIC (DENSE-CORE VESICLE) SYNAPSE (keyed to synaptics catalogue Chapter 13)
+
+MODES AND MODE TRANSITIONS:
+
+This is a burst-gated slow-annotation junction with a small register organised around a firing threshold, silent until the neuron shouts and then flooding a field with a peptide it can never recover.
+
+The message is a neuropeptide packaged in large dense-core vesicles read by G-protein-coupled receptors.
+
+• THE MODE REGISTER.
+
+◦ Sub-threshold silent - The Held Tongue - no release at low firing rates, honestly off.
+
+◦ Burst-release broadcast - The Slow Annotation - steeply rising release once firing exceeds roughly 10 to 20 hertz, maximal near 50 hertz.
+
+◦ Pool-depleted depression - The Empty Larder - the finite non-recycled pool drained across repeated bursts.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Sub-threshold: essentially zero release; high-pass, burst-gated character (well established).
+
+◦ Burst-release: diffuse peptide over micrometres biasing excitability for seconds to minutes; within-burst facilitation-to-threshold as bulk calcium accumulates (well established).
+
+◦ Pool-depleted: depression awaiting slow refill by axonal transport over minutes to hours (well established).
+
+• THE TRANSITION TABLE.
+
+◦ Silent to burst-release: firing crossing roughly 10 to 20 hertz, especially burst-then-silence patterns; release lags the burst.
+
+◦ Burst-release to pool-depleted: repeated bursts draining dense-core vesicles; refill minutes to hours.
+
+◦ Peptide expression itself re-set from above over hours to days by hormones and stress - flagged as thrown from above by the hormonal axis.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: sustained peptide release driving pathological states.
+
+◦ Warning condition: substance P in chronic pain; calcitonin-gene-related peptide in migraine; corticotropin-releasing peptide in stress.
+
+◦ Watchdog: the burst threshold itself, finite pool size, and extracellular peptidase clearance.
+
+
+ENTRY 14. THE PURINERGIC SYNAPSE (ATP-and-Adenosine Junction) (keyed to synaptics catalogue Chapter 14)
+
+MODES AND MODE TRANSITIONS:
+
+This is a biphasic junction whose modes are a fast excitatory face and a slow inhibitory face separated by an enzymatic delay line, so the same signal excites now and brakes later, integrating over hours into sleep pressure.
+
+Adenosine triphosphate (ATP) acts on fast P2X channels and slow P2Y receptors; its breakdown product adenosine acts on inhibitory A1 receptors.
+
+• THE MODE REGISTER.
+
+◦ Fast P2X excitation - The Energy-Molecule Spark - ATP-gated cation current within milliseconds.
+
+◦ Slow P2Y modulation - The Purine Aside - G-protein-coupled signalling over hundreds of milliseconds.
+
+◦ Adenosine A1 brake - The Sleep-Pressure Damper - accumulating inhibition as ATP is degraded.
+
+◦ Integrated sleep-pressure - The Wakefulness Odometer - adenosine rising over hours of waking.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ P2X excitation: fast sodium and calcium current, subject to receptor desensitisation (well established).
+
+◦ P2Y modulation: slower second-messenger effects (well established).
+
+◦ A1 brake: inhibits transmitter release and hyperpolarises over seconds (well established).
+
+◦ Integrated sleep-pressure: adenosine accumulating in the basal forebrain across the day, dissipating in sleep, timescale of hours (well established).
+
+• THE TRANSITION TABLE.
+
+◦ Excitation to inhibition: ectonucleotidases CD39 and CD73 converting ATP to adenosine; the built-in delay line, seconds.
+
+◦ P2X to desensitised: maintained agonist; over the train.
+
+◦ Waking to sleep-pressure: tissue metabolic load raising extracellular ATP and adenosine; hours - flagged as thrown from above by the sleep-wake and metabolic axis.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: massive ATP release as a danger signal in stroke and trauma.
+
+◦ Warning condition: microglial P2X driving neuropathic pain; adenosine dysregulation in sleep disorders.
+
+◦ Watchdog: the ectonucleotidase chain, adenosine deaminase, and transporter clearance; caffeine is the everyday A1 blocker that overrides the brake.
+
+
+ENTRY 15. THE ENDOCANNABINOID RETROGRADE SIGNAL (keyed to synaptics catalogue Chapter 15)
+
+MODES AND MODE TRANSITIONS:
+
+This is a backwards volume knob and a genuine learning junction, whose modes run from a transient self-limiting suppression to a lasting long-term depression, all made on demand and coincidence-gated.
+
+The lipid messenger 2-arachidonoylglycerol (2-AG) is made postsynaptically and acts on presynaptic type-1 cannabinoid receptors (CB1).
+
+• THE MODE REGISTER.
+
+◦ Resting full-transmission - The Knob at Full - no suppression, baseline release probability.
+
+◦ Transient suppression - The Backwards Turn-Down - depolarisation-induced suppression of inhibition or of excitation, a seconds-long graded cut.
+
+◦ Endocannabinoid long-term depression - The Lasting Turn-Down - a persistent weakening when CB1 activation coincides with presynaptic activity.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Resting: baseline release probability, knob at full (well established).
+
+◦ Transient suppression: graded reduction of presynaptic release, onset within about 1 second, peak a few seconds, recovery about 10 to 20 seconds set by monoacylglycerol lipase (well established).
+
+◦ Long-term depression: persistently lowered synaptic weight, prominent in striatum, cortex and amygdala (well established).
+
+• THE TRANSITION TABLE.
+
+◦ Resting to transient: a rise in postsynaptic calcium, supralinear when calcium coincides with group-I metabotropic glutamate receptor drive; onset about 1 second.
+
+◦ Transient to resting: monoacylglycerol lipase clearing 2-AG; about 10 to 20 seconds.
+
+◦ Transient to long-term depression: CB1 activation coincident with sustained presynaptic activity; minutes and lasting.
+
+◦ The coincidence rule is chemistry, gated from above by whichever metabotropic inputs are active.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: prolonged suppression when clearance fails (monoacylglycerol lipase deletion).
+
+◦ Warning condition: dysregulation in anxiety, depression, and addiction; exogenous cannabinoids impairing hippocampal plasticity.
+
+◦ Watchdog: monoacylglycerol lipase (neuronal and astrocytic) setting the duration; on-demand synthesis limiting reach.
+
+
+ENTRY 16. THE NITRIC OXIDE RETROGRADE GASEOUS SIGNAL (keyed to synaptics catalogue Chapter 16)
+
+MODES AND MODE TRANSITIONS:
+
+This is the brain's most local broadcast and a coincidence-gated learning junction with a small register, a whispering gas that is either off or emitting a short-range plasticity permission that reaches backwards and sideways.
+
+Nitric oxide (NO) is made from arginine by neuronal nitric oxide synthase (nNOS) tethered beside the N-methyl-D-aspartate (NMDA) receptor.
+
+• THE MODE REGISTER.
+
+◦ Quiescent - The Silent Gas - no coincident NMDA calcium, no production.
+
+◦ Retrograde potentiating puff - The Backwards Whisper - a puff enhancing presynaptic release at the active synapse.
+
+◦ Neighbour-recruiting spread - The Sideways Whisper - the same puff lowering the plasticity threshold of synapses within a few micrometres.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Quiescent: no output; production requires NMDA-receptor calcium (well established).
+
+◦ Retrograde puff: NO activates presynaptic soluble guanylyl cyclase, raising cyclic guanosine monophosphate (cGMP) to enhance release; acts over seconds, plasticity expressed over minutes to hours (well established).
+
+◦ Neighbour-recruiting: distance-weighted fall-off over a few micrometres, supporting clustered plasticity (moderate confidence, range set by low nNOS copy number).
+
+• THE TRANSITION TABLE.
+
+◦ Quiescent to puff: calcium through active NMDA receptors switching on calmodulin-bound nNOS; within the calcium window, seconds.
+
+◦ Puff to quiescent: rapid chemical reaction of NO with oxygen species and haemoglobin; seconds - clearance built into the tissue chemistry.
+
+◦ Puff to neighbour-recruiting: enough coincident activity to raise NO above the neighbours' threshold; a distance-weighted spread, not a switched mode.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: excess NO from overactive NMDA receptors forming damaging species.
+
+◦ Warning condition: excitotoxicity in stroke and neurodegeneration; nNOS dysregulation in mood and cognitive disorders.
+
+◦ Watchdog: the very low nNOS copy number and seconds-long chemical decay confining reach; PSD-95 tethering keeping production coincident with receptor activity.
+
+
+END OF ENTRIES 1 TO 16.
+
+
+ENTRY 17. THE AXOSPINOUS SYNAPSE (keyed to synaptics catalogue Chapter 17)
+
+MODES AND MODE TRANSITIONS:
+
+This is the mode-rich learning contact of the cortex, the physical majority of human memory, and its whole point is that one contact can change regime while its neighbour ten micrometres away does not.
+
+Its modes are the standing plasticity states plus a life-cycle axis, because a spine is not only weighted but born, grown, shrunk, and killed by experience.
+
+Long-term potentiation, so the term is spelled out once, means a lasting strengthening; long-term depression means a lasting weakening.
+
+• THE MODE REGISTER.
+
+◦ Silent - the Mute Room - an N-methyl-D-aspartate (NMDA)-only contact with no working alpha-amino-3-hydroxy-5-methyl-4-isoxazolepropionic acid (AMPA) current, waiting to be unsilenced (catalogued fully at entry 43).
+
+◦ Baseline - the Held Weight - the ordinary functional contact transmitting at its current strength.
+
+◦ Potentiated - the Grown Spine - the enlarged, AMPA-rich high state after learning.
+
+◦ Depressed - the Shrunken Spine - the weakened low state after low-activity or anti-Hebbian input.
+
+◦ Facilitating versus depressing - the Warming versus Tiring regime - the short-term temperament set by presynaptic release probability.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Baseline: a single release site with release probability roughly 0.1 to 0.5, so transmission fails on most spikes; quantal amplitude 0.1 to 1 millivolt at the soma with high variability.
+
+◦ Potentiated: AMPA receptor count rising toward 100 to 200, head volume enlarging within minutes and read out as 0.01 to 0.8 cubic micrometres; input-specific to the stimulated spine (confirmed by uncaging studies, good confidence).
+
+◦ Depressed: NMDA-dependent shrinkage restricted to the stimulated head, AMPA receptors internalised.
+
+◦ Facilitating contacts grow severalfold over tens to hundreds of milliseconds; depressing contacts recover over hundreds of milliseconds to seconds.
+
+• THE TRANSITION TABLE.
+
+◦ NMDA-receptor calcium confined to one head, from Baseline to Potentiated, minutes for growth then hours to years for persistence.
+
+◦ Low-level or mistimed calcium, from Baseline to Depressed, minutes.
+
+◦ AMPA insertion unsilencing, from Silent to Baseline, minutes.
+
+◦ Spine-tag capture with late protein synthesis, holding Potentiated against turnover, hours.
+
+◦ Neuromodulator tone (dopamine at striatal spine necks, 0 to 1 arbitrary units) gates whether induction sticks - a transition thrown from above by ascending broadcast.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: runaway enlargement or wholesale silencing.
+
+◦ Watchdogs: homeostatic synaptic scaling and the neck as a diffusion barrier keeping calcium private.
+
+◦ Fault regimes proper: prefrontal spine loss in schizophrenia, early perisynaptic loss in Alzheimer disease, immature-spine excess in fragile X syndrome, reversible thinning in stress depression.
+
+
+ENTRY 18. THE PERFORATED SYNAPSE (keyed to synaptics catalogue Chapter 18)
+
+MODES AND MODE TRANSITIONS:
+
+This is not so much a mode-machine as a mode itself: the consolidated high state of the axospinous weight, wearing a discontinuous postsynaptic density like a scar left by learning.
+
+It is nearly a two-mode contact - the reliable consolidated form and the modifiable form that can be walked back down.
+
+• THE MODE REGISTER.
+
+◦ Consolidated-reliable - the Scar Held - the near-ceiling weight with a fenestrated or horseshoe density that transmits reliably.
+
+◦ De-perforating - the Fading Scar - the depressed, re-simplified form when the memory is dismantled.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Consolidated: release probability high across multiple sites, roughly 0.5 to 0.9, compound quantal responses, low failure rates; excitatory postsynaptic current 20 to 100 picoamperes, reliable to single spikes.
+
+◦ This is the closest cortical grey matter comes to a reliable synapse, a small safety margin bought for its strongest memories (good confidence in rodent, lower in human).
+
+◦ De-perforating: falls back toward ordinary single-site axospinous behaviour.
+
+• THE TRANSITION TABLE.
+
+◦ Prior long-term-potentiation-grade calcium signalling, from ordinary spine to Consolidated-perforated, 30 minutes to hours after induction.
+
+◦ Depression and depotentiation, from Consolidated to De-perforating, minutes to hours.
+
+◦ Proposed splitting toward multi-synapse boutons is flagged as contested and unsettled, not asserted.
+
+◦ Persistence of the consolidated state runs weeks to months (low confidence in humans).
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: preferential loss of the large perforated form.
+
+◦ Watchdog: local protein synthesis and consolidation tags that hold the state against normal turnover.
+
+◦ Fault regimes: early loss of large perforated hippocampal synapses in Alzheimer disease, falling perforated counts in ageing memory decline, failure to consolidate into the large form in fragile X syndrome.
+
+
+ENTRY 19. THE AXODENDRITIC SHAFT SYNAPSE (keyed to synaptics catalogue Chapter 19)
+
+MODES AND MODE TRANSITIONS:
+
+This is a regulating contact, a branch-line tap onto the dendritic shaft, mode-modest because its job is gain control rather than memory storage.
+
+Its dominant axis is short-term temperament, with a slower homeostatic weight underneath.
+
+• THE MODE REGISTER.
+
+◦ Facilitating - the Burst Detector - the low-probability regime that clamps the branch hardest when the network runs hot (the Martinotti route).
+
+◦ Depressing - the Early Spender - the high-probability regime that fades across a train.
+
+◦ Homeostatic-set weight - the Slow Trim - the standing inhibitory strength adjusted over hours.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Facilitating: inhibition grows severalfold across a spike train with time constants of tens to hundreds of milliseconds; branch conductance 0.5 to 2 nanosiemens per active contact.
+
+◦ Depressing: falls across the train, per-bouton release probability 0.1 to 0.9 by presynaptic class, averaged and made reliable by 3 to 15 boutons per target dendrite.
+
+◦ Homeostatic weight: expressed as gephyrin-anchored receptor count, plastic over hours; quantal inhibitory events 10 to 50 picoamperes; no safety factor applies.
+
+• THE TRANSITION TABLE.
+
+◦ Interneuron spike train at 5 to 100 hertz, engaging Facilitating on the Martinotti route, tens to hundreds of milliseconds.
+
+◦ Dendritic calcium and brain-derived neurotrophic factor signalling, moving the Homeostatic weight up or down, hours.
+
+◦ For excitatory-onto-interneuron contacts, anti-Hebbian and inward-rectification rules run their own down-and-up transitions.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: dendritic disinhibition when the tap fails.
+
+◦ Watchdog: multi-bouton averaging and gephyrin scaffolding stability.
+
+◦ Fault regimes: somatostatin-interneuron loss in Alzheimer disease and major depression; interneuronopathy epilepsies such as Dravet syndrome.
+
+
+ENTRY 20. THE AXOSOMATIC SYNAPSE (keyed to synaptics catalogue Chapter 20)
+
+MODES AND MODE TRANSITIONS:
+
+This is the hand on the throat, a perisomatic brake built like a relay, and the chapter records without apology that it learns little; its virtue is calibration.
+
+It is close to a two-mode contact - the reliable clock brake and a fast state-dependent mute on the cholecystokinin channel.
+
+• THE MODE REGISTER.
+
+◦ Reliable brake - the Clock Hand - the high-probability parvalbumin-basket regime that phase-locks the target to the gamma cycle.
+
+◦ Endocannabinoid-muted - the Hushed Brake - the transient silencing of the cholecystokinin channel by retrograde lipid.
+
+◦ Homeostatic-set weight - the Excitability Tracker - slow adjustment tracking the target's excitability.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Reliable brake: per-bouton release probability 0.5 to 0.9, compound connection almost never failing outright; somatic chloride conductance 1 to 5 nanosiemens per unitary connection, tens of nanosiemens per basket volley; spike shifts of 1 to 10 milliseconds.
+
+◦ Endocannabinoid-muted: release suppressed 0 to 1 (fraction) for tens of seconds.
+
+◦ Homeostatic weight: somatic gamma-aminobutyric acid (GABA)-A (gamma-aminobutyric-acid type A) receptor count adjusted over hours to days, largely homeostatically, not associatively.
+
+• THE TRANSITION TABLE.
+
+◦ Basket spike trains 20 to 100 hertz sustained, holding the Reliable brake, milliseconds.
+
+◦ Retrograde endocannabinoid tone, from Reliable to Muted on the cholecystokinin channel, tens of seconds.
+
+◦ Chronic target-excitability change, moving the Homeostatic weight, hours to days.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: weakened parvalbumin transmission with disturbed gamma rhythm.
+
+◦ Watchdog: redundancy of 10 to 30 converging basket cells per soma.
+
+◦ Fault regimes: schizophrenia gamma disturbance; perisomatic-disinhibition epilepsies; anxiety and benzodiazepine pharmacology at these receptors.
+
+
+ENTRY 21. THE AXO-AXONIC INITIAL SEGMENT SYNAPSE (keyed to synaptics catalogue Chapter 21)
+
+MODES AND MODE TRANSITIONS:
+
+This is the last-word veto at the spike trigger zone, a near-failure-proof relay whose remarkable feature is not whether it speaks but what its word currently counts for.
+
+Its defining axis is the sign of its message, set by the local chloride state, not a learned weight.
+
+• THE MODE REGISTER.
+
+◦ Hyperpolarising veto - the Real Brake - the mature regime where the message raises threshold.
+
+◦ Depolarising veto - the Paradoxical Push - the immature or pathological regime where high internal chloride inverts the sign.
+
+◦ Structurally-tuned authority - the Moved Courtroom - the slow state in which the target relocates its own initial segment relative to the cartridges.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Hyperpolarising veto: 1 to 3 nanosiemens gamma-aminobutyric acid (GABA)-A conductance at the trigger zone, multiplying spike probability by 0 to about 1; per-bouton release probability high, cartridge nearly failure-proof.
+
+◦ Depolarising veto: same conductance, but with GABA reversal above threshold the effect can exceed 1 and promote firing.
+
+◦ Structural tuning: boutons per cartridge 3 to 10 and receptor count adjust over days.
+
+• THE TRANSITION TABLE.
+
+◦ NKCC1 versus KCC2 chloride-transporter balance, switching between Hyperpolarising and Depolarising veto - the sign flip, minutes to days.
+
+◦ Chandelier spikes phase-locked to theta and ripples, 10 to 100 hertz, driving the veto, milliseconds.
+
+◦ Chronic activity, remodelling the Structural authority and relocating the initial segment, days (target-driven feedback from below).
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: veto-to-trigger sign inversion under chloride collapse.
+
+◦ Watchdog: KCC2 maintenance of the low-chloride state.
+
+◦ Fault regimes: prefrontal cartridge and transporter deficits in schizophrenia; chloride-collapse epilepsy; smaller cartridge boutons in autism; ANK3-linked bipolar risk at the postsynaptic scaffold.
+
+
+ENTRY 22. THE PRESYNAPTIC TERMINAL-ON-TERMINAL SYNAPSE (keyed to synaptics catalogue Chapter 22)
+
+MODES AND MODE TRANSITIONS:
+
+This is the volume knob on the wire before the wire, a presynaptic inhibitory contact that sets sensory gain; it is a state that is set and held rather than a click, and it stores no engram.
+
+Its axis is depth of the brake, from a standing tonic level up to a deep gated block.
+
+• THE MODE REGISTER.
+
+◦ Tonic floor - the Idling Damp - the ongoing presynaptic inhibition present even at rest.
+
+◦ Deepened gate - the Tightened Knob - the summating, gamma-aminobutyric acid (GABA)-B-engaged block that grows with use.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Tonic floor: a baseline scaling command that movement then modulates up or down; graded, population effect, not all-or-none.
+
+◦ Deepened gate: reduces host-afferent glutamate release by roughly 20 to 80 percent; note the afferent GABA-A reversal sits near minus 35 millivolts, so primary-afferent depolarisation is the odd case where the brake depolarises.
+
+◦ Reliability lives in the aggregate: any one bouton releases probabilistically, but a terminal carries many.
+
+• THE TRANSITION TABLE.
+
+◦ Repetitive afferent or descending input, from Tonic floor to Deepened gate as depolarisation accumulates, tens to hundreds of milliseconds (GABA-A) then hundreds of milliseconds to over a second (GABA-B).
+
+◦ Descending brainstem and cortical control, setting the standing gate - a transition thrown from above.
+
+◦ Chloride-transporter regulation, adjusting strength over minutes to hours.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: collapse of NKCC1 or KCC2 balance after nerve injury.
+
+◦ Watchdog: chloride-gradient maintenance in the afferent terminal.
+
+◦ Fault regimes: neuropathic allodynia after nerve injury; loss of presynaptic inhibition producing spasticity in spinal cord injury.
+
+
+ENTRY 23. THE DENDRODENDRITIC RECIPROCAL SYNAPSE (keyed to synaptics catalogue Chapter 23)
+
+MODES AND MODE TRANSITIONS:
+
+This is the handshake that answers itself, a two-way dendrite-to-dendrite contact for sensory contrast; it is a substrate for lateral inhibition, not for memory.
+
+Its modes are the direction of the arm currently speaking, plus a slow structural refresh from neurogenesis.
+
+• THE MODE REGISTER.
+
+◦ Recurrent inhibition - the Self-Answer - gamma-aminobutyric acid (GABA) fed back onto the same mitral dendrite that just excited the granule spine.
+
+◦ Lateral inhibition - the Neighbour-Hush - GABA onto neighbouring mitral dendrites, sharpening contrast.
+
+◦ Neurogenic refresh - the Rebuilt Spine - continuous integration of adult-born granule cells refining the network over days.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Recurrent and lateral arms: graded, probabilistic, asynchronous GABA release; unitary reciprocal conductance about 0.2 nanosiemens; reliability from thousands of contacts averaging into a smooth field.
+
+◦ The reverse arm behaves as an accumulator, deepening inhibition as granule-spine calcium summates.
+
+◦ Neurogenic refresh: structural plasticity tuning the inhibitory network without encoding a specific engram.
+
+• THE TRANSITION TABLE.
+
+◦ Repeated mitral activity summating calcium, deepening recurrent and lateral inhibition, tens to hundreds of milliseconds.
+
+◦ Centrifugal cholinergic and noradrenergic modulation of granule excitability, shifting the operating point - thrown from above.
+
+◦ Olfactory experience, driving the Neurogenic refresh, days.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: blunted feedback under N-methyl-D-aspartate (NMDA)-receptor hypofunction.
+
+◦ Watchdog: continual granule-cell renewal maintaining the inhibitory pool.
+
+◦ Fault regimes: NMDA hypofunction in encephalitis and anaesthesia; early smell loss with granule-cell degeneration in Parkinson and Alzheimer disease.
+
+
+ENTRY 24. THE EN PASSANT VARICOSITY (keyed to synaptics catalogue Chapter 24)
+
+MODES AND MODE TRANSITIONS:
+
+This is the streetlight string, a beads-on-a-wire release site built for reach rather than weight storage; it is a broadcast and effector junction, not a learning synapse.
+
+Its principal mode axis is what the firing pattern selects for release: classical fast transmitter versus peptide and monoamine cargo.
+
+• THE MODE REGISTER.
+
+◦ Tonic small-molecule release - the Steady Glow - the low-rate background delivery of classical transmitter.
+
+◦ Burst peptide and monoamine release - the Flare - the high-frequency mode that recruits dense-core and monoamine cargo.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Tonic: diffuse puffs into a wide junctional volume, release probability per bead low and highly variable, many beads failing on any impulse; reliability statistical across the whole string.
+
+◦ Burst: firing pattern shifts release toward peptides and monoamines onto a whole tissue territory; the message is a tissue-average concentration robust to any one bead failing.
+
+◦ Onset tens to hundreds of milliseconds; effect duration seconds to minutes, set by reuptake kinetics.
+
+• THE TRANSITION TABLE.
+
+◦ Firing mode of the parent axon (tonic versus burst), switching between Steady Glow and Flare, milliseconds to seconds.
+
+◦ Autoreceptor and territory-level clearance, setting the standing background concentration.
+
+◦ Ascending drive from the parent nucleus is itself the from-above broadcast this junction serves.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: territory-wide loss of delivery as the string degenerates.
+
+◦ Watchdog: reuptake transporters keeping the tissue average bounded.
+
+◦ Fault regimes: dopaminergic varicosity loss in Parkinson disease; monoaminergic dysfunction in depression and anxiety; autonomic failure in dysautonomia.
+
+
+ENTRY 25. THE SERIAL AND TRIADIC SYNAPSE (keyed to synaptics catalogue Chapter 25)
+
+MODES AND MODE TRANSITIONS:
+
+This is the gate inside the gate, chained junctions within one glomerular capsule; it learns how to gate rather than what was seen, so it counts as cognitive but stores no sensory memory.
+
+Its central mode is the operating state of the relay cell it serves - faithful tonic relay versus detecting burst - set by the triadic and reticular inhibition.
+
+• THE MODE REGISTER.
+
+◦ Tonic relay - the Faithful Pass - the depolarised relay-cell state that reports input linearly.
+
+◦ Burst mode - the Wake-Up Call - the T-type-de-inactivated state good at detection but poor at fidelity.
+
+◦ F2 gating on - the Inner Gate - the metabotropic inhibitory arm that builds under sustained input.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Tonic relay: the direct retinal driver arm is strong and high-probability but depresses, so it passes the temporal derivative of retinal firing.
+
+◦ Burst mode: relay cell fires bursts on de-inactivated low-threshold calcium channels; secure but low-fidelity.
+
+◦ F2 gating: metabotropic F2 terminal integrates sustained input, so inhibitory gating builds up even as direct excitation depresses - the two arms diverge over a train.
+
+• THE TRANSITION TABLE.
+
+◦ Membrane hyperpolarisation, from Tonic relay to Burst, tens of milliseconds.
+
+◦ Cortical feedback and reticular-nucleus inhibition, setting gate-openness - thrown from above by attention and arousal.
+
+◦ Maintained afferent activity, engaging F2 gating, hundreds of milliseconds.
+
+◦ Developmental activity-dependent refinement of the retinogeniculate synapse, the one genuine learning transition, over development.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: runaway thalamocortical rhythm.
+
+◦ Watchdog: reticular-nucleus feedback keeping the gate matched to input.
+
+◦ Fault regimes: absence epilepsy; thalamocortical dysrhythmia in chronic pain and tinnitus; impaired sensory gating in schizophrenia.
+
+
+ENTRY 26. THE NEUROMUSCULAR JUNCTION (keyed to synaptics catalogue Chapter 26)
+
+MODES AND MODE TRANSITIONS:
+
+This is the motor endplate, and it is proudly mode-poor: a one-mode fidelity relay whose adult transfer function is fixed at suprathreshold, because a motor exit that adjusted its weight would make movement unrepeatable.
+
+It says so plainly - a detonator must not improvise.
+
+• THE MODE REGISTER.
+
+◦ Safety-factor relay - the One True Word - one muscle-fibre action potential per input spike, with a margin sized to absorb depression. A register of one, stated proudly.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Release probability per active zone high; quantal content 20 to 200 per spike; receptor density about 10,000 per square micrometre; spontaneous miniature endplate potentials tick at about one per second; failure rate in health essentially zero.
+
+◦ The safety factor - the ratio of endplate potential to threshold - is roughly 2 to 3 in human limb muscle (literature commonly cites 3 to 5 in rodents), which is why humans sit closer to the myasthenic edge.
+
+◦ High release probability means trains produce depression, a quantal-content rundown over tens to hundreds of milliseconds, which the safety factor is sized to absorb.
+
+• THE TRANSITION TABLE.
+
+◦ There is no operating-mode transition in health; the junction is deliberately monostable.
+
+◦ Depression and post-tetanic potentiation are within-mode dynamics absorbed by the margin, not mode changes; they become visible only when the margin is gone (Lambert-Eaton syndrome, where force grows during effort).
+
+◦ Structural sprouting, remodelling, and age-related fragmentation are maintenance, not learning.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: safety factor falling toward 1 so transmission starts to fail.
+
+◦ Watchdog: the built-in safety margin plus the perisynaptic Schwann cap foreman (chapter 56).
+
+◦ Fault regimes: myasthenia gravis and congenital myasthenic syndromes (postsynaptic); Lambert-Eaton syndrome (presynaptic); botulism (release machinery); organophosphate poisoning (cleft enzyme).
+
+
+ENTRY 27. THE CALYX OF HELD (keyed to synaptics catalogue Chapter 27)
+
+MODES AND MODE TRANSITIONS:
+
+This is the grasping-hand synapse, and it is proudly mode-poor: a one-mode fidelity relay, because a timing relay that changed its weight would corrupt the interaural comparison it exists to serve.
+
+No behaviourally meaningful potentiation or depression operates here in maturity.
+
+• THE MODE REGISTER.
+
+◦ High-fidelity timing relay - the Faithful Grasp - one output spike per input spike, jitter tens of microseconds. A register of one, stated proudly.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Each active zone releases with low probability per spike, but roughly 600 zones sum to about 100 to 200 vesicles per spike, far above threshold; failure rates near zero at physiological rates.
+
+◦ Quantal size about 30 to 40 picoamperes; the many-zones-times-low-probability design is exactly how engineering averages away single-site noise.
+
+◦ Trains produce marked depression from vesicle depletion and receptor desensitisation, recovering over hundreds of milliseconds to seconds, with calcium-accelerated replenishment from multiple pools racing to keep the relay above threshold.
+
+• THE TRANSITION TABLE.
+
+◦ No operating-mode transition in health; the calyx is monostable by design.
+
+◦ Depression and its calcium-dependent recovery are within-mode dynamics, buffered by the enormous readily releasable pool of 2,000 to 4,000 vesicles.
+
+◦ Developmental transition from a many-input contact to the single giant calyx is a maturation event, not an adult mode change.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: phase locking degrading as depression outruns replenishment.
+
+◦ Watchdog: the giant multi-pool vesicle reserve and fast calcium-dependent refilling.
+
+◦ Fault regimes: demyelinating neuropathy of trapezoid-body axons; auditory neuropathy spectrum disorder; hyperbilirubinaemic brainstem injury of the newborn damaging MNTB (medial nucleus of the trapezoid body) timing.
+
+
+ENTRY 28. THE ENDBULB OF HELD (keyed to synaptics catalogue Chapter 28)
+
+MODES AND MODE TRANSITIONS:
+
+This is the first-word synapse, and it is proudly mode-poor: a one-mode fidelity relay, because a plastic first-word synapse would let experience rewrite the raw signal before the brain had read it.
+
+Its only distinctive feature is that it lives chronically in a compressed, depressed steady state during ongoing sound - a deliberate onset-emphasising bias, not a learned mode.
+
+• THE MODE REGISTER.
+
+◦ Onset-emphasising relay - the Faithful First Word - reliable transmission that runs in a standing depressed state to emphasise onsets and changes. A register of one, stated proudly.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Quantal content per spike tens to a couple of hundred vesicles; failures rare in health; multiplicity of 100 to 300 active zones performs calyx-style noise-averaging.
+
+◦ High release probability makes depression the ruling dynamic, with fast and slow recovery over tens of milliseconds to seconds; during ongoing sound the synapse holds a chronically depressed steady state.
+
+◦ Bushy-cell output has improved phase locking, feeding the superior olivary comparators.
+
+• THE TRANSITION TABLE.
+
+◦ No operating-mode transition in health; monostable by design.
+
+◦ Entry into and recovery from the standing depressed state is within-mode compression, set by stimulus rate, not a learned switch.
+
+◦ Deafness-induced weakening and shrinkage is pathology and disuse, not learning.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: endbulb atrophy with abnormally thickened postsynaptic densities in congenital deafness.
+
+◦ Watchdog: active-zone multiplicity averaging away single-site failure.
+
+◦ Fault regimes: auditory neuropathy spectrum disorder; deafness-induced endbulb atrophy; auditory-nerve demyelination delaying and jittering the input spike.
+
+
+ENTRY 29. THE HIPPOCAMPAL MOSSY FIBRE BOUTON (keyed to synaptics catalogue Chapter 29)
+
+MODES AND MODE TRANSITIONS:
+
+This is the conditional detonator, a mode-rich contact that is deliberately unreliable at rest and deliberately reliable under insistence - the switch itself is the code.
+
+Its defining axis runs from silent-at-rest through facilitated detonation, with the standing weight stored presynaptically as release probability.
+
+• THE MODE REGISTER.
+
+◦ Sub-threshold at rest - the Sleeping Trigger - single resting spikes that often fail entirely.
+
+◦ Facilitated detonator - the Woken Detonator - the burst-driven multivesicular regime that reliably discharges CA3 cells.
+
+◦ Presynaptically potentiated - the Reset Trigger - a lastingly raised basal release probability after strong bursts.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Sleeping Trigger: basal release probability per site low, order 0.01 to 0.1; single spikes produce tens of picoamperes and frequent outright failures; low probability sustained partly by presynaptic adenosine A1 autoreceptors (confirmed, good confidence).
+
+◦ Woken Detonator: paired-pulse facilitation 2 to 5-fold, frequency facilitation up to 5 to 10-fold; the same 15 to 35 sites release multivesicularly to nanoampere-class current, and post-tetanic potentiation switches the synapse into a full detonator for tens of seconds.
+
+◦ Presynaptically potentiated: basal release probability steps up lastingly and thereby also reshapes the short-term temperament.
+
+• THE TRANSITION TABLE.
+
+◦ Granule-cell burst 5 to 50 hertz raising residual calcium, from Sleeping to Woken, tens of milliseconds to tens of seconds.
+
+◦ Strong bursts raising cyclic adenosine monophosphate via calcium-stimulated adenylyl cyclase, protein kinase A remodelling release - N-methyl-D-aspartate (NMDA)-independent presynaptic long-term potentiation, from baseline to Reset Trigger, hours or longer.
+
+◦ Long-term depression and depotentiation run the same presynaptic dial down.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: sprouted mossy fibres detonating aberrant recurrent circuits.
+
+◦ Watchdog: low basal probability plus feed-forward inhibition via filopodial contacts keeping CA3 from runaway.
+
+◦ Fault regimes: temporal lobe epilepsy with mossy fibre sprouting; zinc-mediated excitotoxicity in status epilepticus; pattern-separation decline in ageing and early Alzheimer disease.
+
+
+ENTRY 30. THE CLIMBING FIBRE-PURKINJE SYNAPSE (keyed to synaptics catalogue Chapter 30)
+
+MODES AND MODE TRANSITIONS:
+
+This is the one-teacher contact, built for constancy: the junction itself learns little and its complex-spike output stays all-or-none, but its plasticity is exported to the students it teaches.
+
+It is nearly a one-mode relay, with a graded annotation riding on top that recent work reads in the spikelet count and calcium amplitude.
+
+• THE MODE REGISTER.
+
+◦ All-or-none teaching spike - the Struck Bell - the reliable complex spike delivered at about one hertz.
+
+◦ Graded annotation - the Loudness of the Bell - the analogue spikelet count (2 to 6) and dendritic calcium amplitude that encode error strength (good confidence, revises the strict all-or-none view).
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Struck Bell: hundreds of release sites (250 to 500) at release probability near 1, making the complex spike the most reliable single-fibre response in the central nervous system - the calyx multiplicity strategy applied to teaching; transmission failure essentially unknown in health.
+
+◦ Paired stimulation yields strong depression recovering over seconds, the price of guaranteeing the first spike, the only one that matters at one hertz.
+
+◦ Graded annotation: presynaptic calcium amplitude scales with input strength and directly sets postsynaptic dendritic calcium.
+
+• THE TRANSITION TABLE.
+
+◦ Inferior-olivary spike carrying sensory prediction error, firing the Struck Bell, at 0.5 to 2 hertz.
+
+◦ Olivary burst spikelet number, setting the Graded annotation and the sign of downstream learning, per event.
+
+◦ The exported calcium storm induces long-term depression at co-active parallel fibre synapses (chapter 31) within roughly 100 milliseconds, with induction developing over minutes - the teacher's mark written in the students.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: multi-innervation returning, when more than one climbing fibre persists on a cell.
+
+◦ Watchdog: developmental pruning to a single fibre, and near-unity reliability defending the teaching signal.
+
+◦ Fault regimes: essential tremor; palatal tremor with olivary hypertrophy; spinocerebellar ataxias and paraneoplastic degeneration with climbing fibre regression.
+
+
+ENTRY 31. THE PARALLEL FIBRE-PURKINJE SYNAPSE (keyed to synaptics catalogue Chapter 31)
+
+MODES AND MODE TRANSITIONS:
+
+This is the adjustable-grain student synapse: by relay standards dreadful, by learning standards ideal, because a weight that must be finely adjustable must start small and stochastic.
+
+It is a mode-rich learning contact whose supervised weight axis is the whole point.
+
+• THE MODE REGISTER.
+
+◦ Baseline - the Held Grain - the ordinary low-probability functional contact.
+
+◦ Supervised-depressed - the Blamed Grain - the weakened state after coincidence with a climbing fibre teaching spike.
+
+◦ Potentiated - the Blameless Grain - the strengthened state after activity without the teacher.
+
+◦ Endocannabinoid-suppressed - the Self-Hushed Grain - the transient retrograde self-quieting after strong postsynaptic activity.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Baseline: release probability per contact low, order 0.1 to 0.5, single-active-zone failures routine; paired-pulse facilitation 1.5 to 3-fold, so bursts speak louder than single spikes; population smoothed across tens of thousands of co-active contacts.
+
+◦ Supervised-depressed: metabotropic glutamate receptor and calcium signalling internalise alpha-amino-3-hydroxy-5-methyl-4-isoxazolepropionic acid (AMPA) receptors, lasting hours to lifelong.
+
+◦ Potentiated: both presynaptic and postsynaptic strengthening when active and blameless.
+
+◦ Self-hushed: input suppressed for tens of seconds by retrograde endocannabinoid.
+
+• THE TRANSITION TABLE.
+
+◦ Parallel-fibre activity coinciding with a climbing fibre complex spike within roughly 100 milliseconds, from Baseline to Supervised-depressed, hours to lifelong.
+
+◦ Parallel-fibre activity without the teacher, from Baseline to Potentiated.
+
+◦ Strong postsynaptic depolarisation releasing endocannabinoid, into Self-hushed, tens of seconds (a from-above-like retrograde command from the same cell).
+
+◦ Modern caveat: potentiation, interneuron plasticity, and intrinsic changes share work the classical model gave to depression alone.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: synapse disassembly or loss of the supervising signal.
+
+◦ Watchdog: the narrow coincidence window keeping credit assignment specific.
+
+◦ Fault regimes: GRID2 ataxia; anti-metabotropic-glutamate-receptor-1 paraneoplastic ataxia; spinocerebellar ataxias; gluten ataxia.
+
+
+ENTRY 32. THE PHOTORECEPTOR RIBBON SYNAPSE (keyed to synaptics catalogue Chapter 32)
+
+MODES AND MODE TRANSITIONS:
+
+This is the conveyor-belt contact, a fidelity relay that reports light level faithfully rather than learning; long-term plasticity does not apply, and its gain is set by adaptation, not a stored weight.
+
+Its true modes are the tonic-release regimes set by light level, dark versus light, on a continuous graded axis.
+
+• THE MODE REGISTER.
+
+◦ Dark tonic release - the Belt Running - the depolarised, high-rate steady-stream regime.
+
+◦ Light-suppressed release - the Belt Slowed - the hyperpolarised, low-rate regime.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Dark: membrane held near minus 45 to minus 35 millivolts, Cav1.4 (near non-inactivating calcium channel) open, hundreds to over a thousand vesicles per second per ribbon; the ribbon exists precisely to prevent depletion, so depression is the exception (confirmed, good confidence).
+
+◦ Light: hyperpolarisation toward minus 70 millivolts deactivates the calcium channels and the ribbon base is depleted of vesicles; complexin-4 clamps residual calcium-dependent release to sharpen the light signal (confirmed, good confidence).
+
+◦ Reliability means low-variance rate coding; there is no all-or-none safety factor because there is no spike to secure.
+
+• THE TRANSITION TABLE.
+
+◦ Phototransduction-driven membrane voltage, continuously moving between Dark tonic and Light-suppressed, milliseconds; the docked pool recovers in tens of milliseconds set by transport down the ribbon.
+
+◦ Light and dark adaptation, resetting operating-point gain over seconds to minutes.
+
+◦ No neuromodulatory mode-switch of the learning kind; the input drive is the whole story.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: resupply failing to keep pace under extreme demand, the only depression case.
+
+◦ Watchdog: the ribbon-tethered reserve (roughly a hundred vesicles) buffering the docked pool.
+
+◦ Fault regimes: CACNA1F mutation causing incomplete congenital stationary night blindness with lost electroretinogram b-wave; ribbon and triad protein defects failing photoreceptor-to-bipolar transmission with preserved receptors.
+
+
+ENTRY 33. THE HAIR CELL RIBBON SYNAPSE (keyed to synaptics catalogue Chapter 33)
+
+MODES AND MODE TRANSITIONS:
+
+This is the tireless microphone contact, a high-fidelity sensory relay whose task is faithful timed transmission of sound; long-term plasticity does not apply, and its gain is set by efferent feedback and adaptation, not a stored weight.
+
+Its modes are the onset burst and the sustained indefatigable stream, an adaptation axis that is itself information.
+
+• THE MODE REGISTER.
+
+◦ Onset burst - the First Cry - the large transient as the docked pool releases at stimulus onset.
+
+◦ Sustained tireless release - the Steady Speech - the lower replenishment-limited rate that does not collapse.
+
+◦ Spontaneous release - the Quiet Hum - the resting release that sets each fibre's spontaneous rate and threshold.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Onset burst: strong initial adaptation as the docked pool of tens of vesicles empties over a few milliseconds; depression dominates this transient.
+
+◦ Sustained: otoferlin-driven fast replenishment within a few milliseconds keeps the sustained rate up, hundreds to thousands of vesicles per second per active zone; strict one-ribbon-to-one-fibre wiring, so reliability rests on a single active zone made reliable by multivesicular release.
+
+◦ Spontaneous: sets detection threshold; the safety factor is the large postsynaptic alpha-amino-3-hydroxy-5-methyl-4-isoxazolepropionic acid (AMPA) current per event reliably driving the afferent to spike.
+
+• THE TRANSITION TABLE.
+
+◦ Stimulus onset depleting the docked pool, from Quiet Hum to First Cry then to Steady Speech, milliseconds.
+
+◦ Otoferlin calcium-bound fraction, governing replenishment rate and thus the sustained level.
+
+◦ Olivocochlear efferent feedback, setting gain from above (see chapter 50).
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: loss of ribbon synapses (synaptopathy) reducing functioning fibres, degrading hearing in noise with a normal audiogram.
+
+◦ Watchdog: otoferlin-driven replenishment defending the sustained rate.
+
+◦ Fault regimes: OTOF mutation causing DFNB9 auditory neuropathy with present otoacoustic emissions and absent nerve response; CACNA1D and CABP2 mutation deafness; noise- and age-related cochlear synaptopathy (hidden hearing loss).
+
+
+ENTRY 34. THE VESTIBULAR CALYX SYNAPSE (keyed to synaptics catalogue Chapter 34)
+
+MODES AND MODE TRANSITIONS:
+
+This is the swallowing chalice, a fast reflex relay built for fidelity and speed; long-term plasticity does not apply, because the vestibulo-ocular reflex is recalibrated in the cerebellum and brainstem, not here.
+
+Uniquely, its modes are three parallel transmission channels running at once, layered rather than switched.
+
+• THE MODE REGISTER.
+
+◦ Quantal glutamate - the Ordinary Voice - conventional vesicular transmission.
+
+◦ Ephaptic field coupling - the Instant Whisper - direct electrical field coupling across the enclosed cleft.
+
+◦ Potassium accumulation - the Rising Murmur - a slow depolarising drive as cleft potassium builds.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Quantal: shows conventional depression and facilitation, sub-millisecond latency, dependent on vesicle pools.
+
+◦ Ephaptic: microsecond coupling immune to the quantal failures that limit conventional synapses - the source of the calyx's extreme reliability.
+
+◦ Potassium: accumulates over milliseconds to tens of milliseconds, adding a slow use-dependent depolarising bias that does not fatigue on vesicle pools.
+
+• THE TRANSITION TABLE.
+
+◦ Graded type I hair cell receptor potential, driving all three modes together, sub-millisecond (ephaptic and quantal) to tens of milliseconds (potassium).
+
+◦ Sustained activity, growing the Potassium mode as cleft potassium accumulates.
+
+◦ No neuromodulatory or plasticity mode-switch; the modes coexist by geometry.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: loss of the enclosed geometry removing the non-quantal floor.
+
+◦ Watchdog: the three parallel modes providing redundancy so no single failure silences the afferent.
+
+◦ Fault regimes: type I hair cell and calyx loss in age-related and aminoglycoside vestibular failure, with imbalance and oscillopsia.
+
+
+ENTRY 35. THE CEREBELLAR GLOMERULUS (keyed to synaptics catalogue Chapter 35)
+
+MODES AND MODE TRANSITIONS:
+
+This is the petal cluster, an encapsulated expansion node built mainly to recode and relay; it is largely not a learning site, because the cerebellum's principal learned weights live downstream at the parallel-fibre synapse of chapter 31.
+
+Its functional axis is the balance between phasic mossy-fibre excitation and tonic inhibitory normalisation.
+
+• THE MODE REGISTER.
+
+◦ Phasic relay - the Petal Opening - transmission of mossy-fibre bursts to granule cells.
+
+◦ Tonic inhibitory normalisation - the Divisive Brake - the standing gamma-aminobutyric acid (GABA)-A conductance that scales granule-cell gain.
+
+◦ Limited plastic weight - the Faint Trim - the modest adjustability at the mossy-fibre-to-granule-cell synapse (low as a learning site, stated honestly).
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Phasic relay: mossy-fibre-to-granule synapses show rate-dependent facilitation and depression and sustain high-frequency bursts; convergence of about four dendrites per granule cell gives redundancy.
+
+◦ Tonic normalisation: a stable divisive brake setting a controllable noise floor and preventing runaway excitation across the vast granule population.
+
+◦ Limited plastic weight: present but modest; the enclosed capsule stabilises the ionic and transmitter environment.
+
+• THE TRANSITION TABLE.
+
+◦ Mossy-fibre burst rate, engaging Phasic relay, milliseconds.
+
+◦ Golgi-cell GABA-glycine feedback at tens of milliseconds and pooled tonic GABA at tens to hundreds of milliseconds, setting the Divisive Brake.
+
+◦ Modest activity-dependent change at the mossy-fibre synapse, adjusting the Faint Trim.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: loss of tonic inhibition allowing runaway granule excitation.
+
+◦ Watchdog: Golgi-cell feedback and the capsule's stabilised microenvironment.
+
+◦ Fault regimes: granule-cell and glomerulus degeneration in hereditary ataxias and cerebellar atrophy; granule-cell migration failure causing cerebellar malformation and ataxia.
+
+
+ENTRY 36. THE THALAMIC TRIAD GLOMERULUS (keyed to synaptics catalogue Chapter 36)
+
+MODES AND MODE TRANSITIONS:
+
+This is the attention gate made of wire, an encapsulated retinogeniculate triad; in the adult its main variability is moment-to-moment gating, but its developmental refinement is a genuine learning process that sculpts the mature gate.
+
+Its central mode is the relay cell's operating state - tonic faithful relay versus detecting burst - set by modulators from above.
+
+• THE MODE REGISTER.
+
+◦ Tonic relay - the Open Gate - the depolarised faithful-relay state passed to cortex.
+
+◦ Burst mode - the Alarm Gate - the T-type-de-inactivated detecting state, secure but low-fidelity.
+
+◦ F2 feedforward inhibition - the Sharpening Frame - the local inhibitory arm timing and suppressing poorly timed inputs.
+
+◦ Developmental weight - the Sculpted Gate - the refined retinogeniculate strength after activity-dependent pruning.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Tonic relay: retinal drivers strong and reliable, often driving a relay spike from a single event; strong short-term depression passes the temporal derivative of retinal firing.
+
+◦ Burst mode: low-threshold calcium bursts on a de-inactivated relay cell, high sensitivity, poor fidelity.
+
+◦ F2 inhibition: feedforward gamma-aminobutyric acid (GABA)-A a few milliseconds, GABA-B and metabotropic tens to hundreds of milliseconds, sharpening timing.
+
+◦ Developmental weight: many weak retinal inputs pruned to a few strong ones by spike-timing and correlation rules.
+
+• THE TRANSITION TABLE.
+
+◦ Relay-cell membrane hyperpolarisation, from Tonic relay to Burst, tens of milliseconds.
+
+◦ Cholinergic and reticular modulatory input, setting gate-openness - thrown from above by attention and arousal (open in attention, throttled in drowsiness).
+
+◦ Developmental activity-dependent refinement, setting the Sculpted Gate, over development.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: abnormal synchronous thalamocortical bursting.
+
+◦ Watchdog: reticular feedback and feedforward F2 inhibition keeping timing sharp.
+
+◦ Fault regimes: absence epilepsy with spike-and-wave; proposed gating deficits in schizophrenia and disorders of attention and consciousness.
+
+
+ENTRY 37. THE C-BOUTON (keyed to synaptics catalogue Chapter 37)
+
+MODES AND MODE TRANSITIONS:
+
+This is the turbo switch, a cholinergic gain-setting terminal on the motoneuron soma; it is not a learning synapse, because motor learning is stored upstream in cortex, basal ganglia, and cerebellum.
+
+It is nearly a two-mode contact: gain off at rest and a slow multiplicative gain-up locked to demanding movement.
+
+• THE MODE REGISTER.
+
+◦ Gain-neutral - the Idle - the resting state with no imposed excitability shift.
+
+◦ Gain-boosted - the Turbo On - the maintained multiplicative increase in motoneuron firing gain during locomotion and effort.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Gain-neutral: baseline potassium (Kv2.1 and SK) conductance sets the motoneuron's ordinary input-output slope; no all-or-none transmission is required.
+
+◦ Gain-boosted: M2 muscarinic activation reduces potassium conductance over a subsurface cistern, giving a slow multiplicative rise in gain; the effect is graded, robust because dozens of large terminals converge and their action is slow and summed.
+
+◦ There is no safety-factor requirement of the neuromuscular-junction kind, because the C-bouton does not carry the motor command itself.
+
+• THE TRANSITION TABLE.
+
+◦ Acetylcholine bursts from Pitx2 cholinergic interneurons during effortful or locomotor tasks, from Idle to Turbo On, hundreds of milliseconds to seconds, outlasting release.
+
+◦ Task cessation, relaxing back to Idle over seconds.
+
+◦ Engagement is task-locked, effectively a from-above command tied to the locomotor state.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: structural and partner changes at the terminal as gain control is lost.
+
+◦ Watchdog: convergence and slow summation making the modulation robust to single-terminal loss.
+
+◦ Fault regimes: amyotrophic lateral sclerosis with C-bouton changes accompanying motoneuron degeneration; spinal injury and motoneuron loss removing this gain-control input.
+
+
+ENTRY 38. THE NEURONAL GAP JUNCTION (THE ELECTRICAL SYNAPSE) (keyed to synaptics catalogue Chapter 38)
+
+MODES AND MODE TRANSITIONS:
+
+This junction is a slow-learning analogue gate: it has no vesicles to facilitate or deplete, so its modes are states of the channel population and its learnt weight, not states of a release machine.
+
+It looks mode-poor from the outside and is quietly mode-rich inside, because only a tiny fraction of its channels are open at rest and phosphorylation can swing that fraction over a wide range.
+
+• THE MODE REGISTER.
+
+◦ Baseline Coupled - Standing Handshake - the resting regime in which junctional conductance holds steady and a scaled low-pass copy of the neighbour's voltage crosses continuously.
+
+◦ Potentiated - Tightened Grip - a run-up regime in which activity and calcium-calmodulin-dependent protein kinase II (an enzyme that attaches phosphate groups when calcium rises) raise open probability and coupling strengthens.
+
+◦ Depressed - Loosened Grip - a run-down regime in which coupling weakens by 10 to 50 percent for tens of minutes or longer, the electrical synapse's long-term depression.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Baseline Coupled: output current equals junctional conductance times the voltage difference, an ohmic sign-preserving rule with conductance about 0.1 to 1 nanosiemens (a nanosiemens is a billionth of the unit of electrical conductance) and coupling coefficient 0.01 to 0.2, high confidence.
+
+◦ Potentiated: the same linear rule at raised conductance, coupling coefficient shifting upward toward the 0.3 to 0.5 ceiling, moderate confidence on the size of the swing in mammals.
+
+◦ Depressed: the same linear rule at lowered conductance, coupling falling by a well-documented 10 to 50 percent in thalamic reticular nucleus and inferior olive, moderate to high confidence.
+
+• THE TRANSITION TABLE.
+
+◦ Activity bursts raising internal calcium and driving calcium-calmodulin-dependent protein kinase II - Baseline Coupled to Potentiated - onset over minutes, lasting tens of minutes to hours.
+
+◦ Sustained or paired activity through the same calcium pathway - Baseline Coupled to Depressed - onset minutes, similar duration, the direction set by the exact calcium and phosphatase balance.
+
+◦ Neuromodulatory broadcast thrown from above: dopamine and nitric oxide dial retinal coupling by changing kinase and phosphatase tone - any mode to any mode - seconds to minutes, flagged as a brain-state and neuromodulatory transition.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is pathological hypercoupling that spreads synchrony into seizure or parkinsonian rhythm; the warning condition is coupling recruited where independent firing is needed.
+
+◦ The biological watchdog is the fast turnover of connexin 36 (the main neuronal gap junction protein, half-life 1 to 5 hours) plus phosphatase counter-regulation, which lets the tissue retune or dismantle a runaway plaque; loss-of-coupling from GJD2 gene variants sits in the opposite fault corner, associated with human myopia.
+
+
+ENTRY 39. THE MIXED CHEMICAL-ELECTRICAL SYNAPSE (keyed to synaptics catalogue Chapter 39)
+
+MODES AND MODE TRANSITIONS:
+
+This junction is a two-machine fidelity relay: one contact runs a guaranteed electrical channel that never fails beside a probabilistic chemical channel that does, so its modes are really the modes of its chemical half riding on a constant electrical floor.
+
+It is catalogued for reliability rather than learning, so its register is deliberately small.
+
+• THE MODE REGISTER.
+
+◦ Electrical Floor - The Instant Tick - the always-on gap-junctional component delivering a zero-delay spikelet.
+
+◦ Chemical Facilitating - Warming Voice - the glutamatergic half building up transmitter during a train (glutamate is the brain's standard excitatory messenger).
+
+◦ Chemical Depressing - Tiring Voice - the glutamatergic half running down as vesicles deplete.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Electrical Floor: linear bidirectional current, coupling coefficient usually well under 0.05 in mammals, never failing, high confidence on its existence, low confidence on exact mammalian strength.
+
+◦ Chemical Facilitating: rising quantal excitatory conductance of a few hundred picosiemens with paired-pulse ratio above one, release probability climbing within its 0.2 to 0.9 range, moderate confidence.
+
+◦ Chemical Depressing: falling conductance with paired-pulse ratio below one as the readily releasable vesicle pool empties, moderate confidence.
+
+• THE TRANSITION TABLE.
+
+◦ Rising firing rate and residual presynaptic calcium - Chemical Facilitating engaged over tens of milliseconds; the electrical floor is unaffected throughout.
+
+◦ Continued high-rate firing depleting vesicles - Facilitating to Depressing - over tens to hundreds of milliseconds.
+
+◦ In goldfish club endings, activity potentiates both halves through connexin 36 phosphorylation; mammalian long-term change is not established, low confidence, so no standing potentiated mode is admitted here.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ No dedicated human disease is pinned to this type; the honest note is that the whole mammalian inventory is uncertain.
+
+◦ The only notable boundary is silent loss of the electrical component, which would slow the relay by about half a millisecond invisibly except to circuits that count microseconds; its clinical risks ride with the connexin 36 pathologies of Chapter 38.
+
+
+ENTRY 40. THE GLIAL GAP JUNCTION PLAQUE (keyed to synaptics catalogue Chapter 40)
+
+MODES AND MODE TRANSITIONS:
+
+This junction is not a signalling wire but a load-sharing pipe, so its modes are regulatory settings of a buffer network rather than transmission regimes.
+
+It is proudly not a learner: it has no event-wise message to facilitate or depress, only a coupling strength that homeostatic signalling raises and lowers.
+
+• THE MODE REGISTER.
+
+◦ Open Syncytium - Full Mesh - the default high-coupling regime welding hundreds of astrocytes into one continuous interior that shares potassium, glucose, lactate, and water (a syncytium is many cells behaving as one).
+
+◦ Down-Regulated - Throttled Mesh - a reduced-coupling regime imposed by inflammation, endothelin, or acidification, isolating a region.
+
+◦ State-Remodelled - Dialled Mesh - a physiologically retuned coupling extent, as in the hypothalamus during lactation.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Open Syncytium: ohmic for ions and diffusive for metabolites, flux proportional to the concentration or voltage difference, dye spreading to tens or hundreds of neighbours, connexin 43 single channels conducting 50 to 110 picosiemens, high confidence.
+
+◦ Down-Regulated: the same diffusive rule at lowered open probability, dye spread shrinking, onset minutes to days, moderate confidence.
+
+◦ State-Remodelled: coupling extent reset by connexin 43 trafficking, direction depending on the physiological demand, moderate confidence.
+
+• THE TRANSITION TABLE.
+
+◦ Neuronal activity, inflammation, or endothelin changing connexin 43 open probability and phosphorylation - Open to Down-Regulated - minutes to days.
+
+◦ Hormonal and state signals such as the lactation axis retuning coupling - Open to State-Remodelled - hours to days, flagged as thrown from above by an endocrine axis.
+
+◦ Recovery through the very fast connexin 43 turnover (half-life 1 to 3 hours) - any mode back toward Open - hours.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is buffering failure: potassium pools at busy synapses, excitability drifts up, and the fuel line thins, an epilepsy-adjacent failure by flooding and starvation.
+
+◦ Reactive astrocytes in epilepsy and Alzheimer disease open aberrant hemichannels; connexin mutations cause Charcot-Marie-Tooth disease, Pelizaeus-Merzbacher-like disease, oculodentodigital dysplasia, and deafness; the watchdog is the network's massive redundancy, which makes single-plaque loss invisible.
+
+
+ENTRY 41. THE PANNEXIN HEMICHANNEL (keyed to synaptics catalogue Chapter 41)
+
+MODES AND MODE TRANSITIONS:
+
+This is a two-state broadcast valve, not a synapse with a weight: it is either shut or open to the extracellular commons, and the open state has graded flavours set by how far its own brake has been released.
+
+It has no partner-specific weight to strengthen, so it has no learning mode at all; regulation is by expression level and gating, proudly stated.
+
+• THE MODE REGISTER.
+
+◦ Closed - Sealed Valve - the near-permanent resting state, open probability near zero, the C-terminal tail plugging the pore.
+
+◦ Reversibly Open - Signalling Puff - a graded, self-limiting opening that publishes adenosine triphosphate (the cell's energy currency doubling as a messenger) in a brief plume.
+
+◦ Caspase-Locked Open - Death Broadcast - the terminal state in which cleavage by caspases (the executioner enzymes of programmed cell death) removes the autoinhibitory tail and locks the channel open to release find-me signals.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Closed: no efflux, high confidence.
+
+◦ Reversibly Open: thresholded saturating efflux down a roughly thousandfold gradient, outwardly rectifying unitary conductance under about 100 picosiemens, quantised by how many subunit tails have swung free, moderate to high confidence.
+
+◦ Caspase-Locked Open: maximal sustained efflux, irreversible, high confidence.
+
+• THE TRANSITION TABLE.
+
+◦ Strong depolarisation, mechanical stretch, raised extracellular potassium above about 10 millimolar, or activation of N-methyl-D-aspartate or purinergic P2X7 receptors - Closed to Reversibly Open - milliseconds to tens of milliseconds.
+
+◦ Sustained stimulation plus inhibition by the very adenosine triphosphate it releases - Reversibly Open back to Closed - a built-in negative feedback that keeps broadcasts brief, seconds.
+
+◦ Caspase cleavage during apoptosis - any state to Caspase-Locked Open - minutes, irreversible, a developmental and cell-death signal thrown from the cell's fate machinery.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is over-opening: N-methyl-D-aspartate-receptor-driven pannexin opening deepens excitotoxicity in stroke, seizure, migraine, and neuropathic pain.
+
+◦ The watchdog is the double brake of self-inhibition by released adenosine triphosphate and rapid inactivation; a germline PANX1 gene loss variant causes a syndromic developmental disorder, the opposite fault corner.
+
+
+ENTRY 42. THE EPHAPTIC COUPLING SITE (keyed to synaptics catalogue Chapter 42)
+
+MODES AND MODE TRANSITIONS:
+
+This is the catalogue's purest one-mode junction: it is a memoryless physical resistance through which one cell's currents polarise a neighbour, with nothing to release, deplete, or store.
+
+Its register of one is legitimate and stated proudly, because a field effect has no discrete regimes to switch between.
+
+• THE MODE REGISTER.
+
+◦ Field-Coupled - Standing Whisper - the sole regime, in which the source's currents impose a scaled, sign-inverting voltage shift on the target with zero delay.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Field-Coupled: the target's membrane shift equals the local extracellular voltage change scaled by geometry, linear, instantaneous, sign-inverting, no threshold and no saturation in the physiological range, about 0.1 to 1 millivolt at the pinceau (the basket cell's cage of axons around the Purkinje cell's output stalk), high confidence.
+
+• THE TRANSITION TABLE.
+
+◦ There are no molecular mode transitions; the coupling changes only if the anatomy or the extracellular resistance changes, over developmental or pathological timescales, not on a synaptic clock.
+
+◦ Assembly of the pinceau postnatally, guided by target activity, is the one slow developmental change that installs the coupling in the first place.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is runaway gain of coupling in epileptic or demyelinated tissue, where the field recruits neighbours beyond synaptic reach.
+
+◦ Loss is equally a fault: in episodic ataxia type 1, KCNA1 potassium channel mutations abolish pinceau field inhibition and cause cerebellar incoordination; the watchdog is the glial ensheathment that sets the extracellular resistance on which the whole effect depends.
+
+
+ENTRY 43. THE SILENT (NMDA-ONLY) SYNAPSE (keyed to synaptics catalogue Chapter 43)
+
+MODES AND MODE TRANSITIONS:
+
+The silent synapse is not a separate species so much as a mode of the glutamatergic fast excitatory synapse of Chapter 1: it is that synapse caught with its alpha-amino-3-hydroxy-5-methyl-4-isoxazolepropionic acid (AMPA) receptor slot empty, so silent versus unsilenced is the master mode pair of this whole entry.
+
+It is the cleanest mode-machine in the catalogue, because its two modes differ not in parameters but in whether the synapse has any voice at all.
+
+• THE MODE REGISTER.
+
+◦ Silent - Blank Tape - the resting state carrying N-methyl-D-aspartate (NMDA) receptors but no functional AMPA receptors, so output at rest is exactly zero (cross-reference Chapter 1, of which this is the AMPA-lacking mode).
+
+◦ Unsilenced - First Words - the functional state after AMPA receptors are inserted, indistinguishable from an ordinary Chapter 1 contact.
+
+◦ Re-Silenced - Erased Tape - the reversion state after AMPA receptors are removed during long-term depression, returning the contact to the reserve.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Silent: transfer function is zero at rest; only when the membrane is depolarised past about minus 40 millivolts does magnesium leave the NMDA pore and a slow calcium-rich current pass, its output being plasticity eligibility rather than drive, high confidence.
+
+◦ Unsilenced: standard linear-then-saturating AMPA rule, quantal current 10 to 30 picoamperes per release, release probability 0.2 to 0.5, high confidence.
+
+◦ Re-Silenced: back to zero resting output, the AMPA conductance removed, moderate to high confidence.
+
+• THE TRANSITION TABLE.
+
+◦ Coincidence of presynaptic glutamate with postsynaptic depolarisation, admitting calcium through the NMDA receptor and activating calcium-calmodulin-dependent protein kinase II - Silent to Unsilenced - onset minutes, consolidation hours.
+
+◦ Prolonged uncorrelated or low activity removing AMPA receptors - Unsilenced to Re-Silenced - minutes to hours, the long-term depression direction.
+
+◦ Brain-state and neuromodulatory context and astrocyte-secreted factors such as glypicans gate whether the wave of unsilencing proceeds - flagged as thrown from above during critical-period and experience-dependent episodes.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is pathological unsilencing: cocaine and opioids generate silent synapses in the nucleus accumbens whose later unsilencing hardwires craving, and anterior cingulate unsilencing amplifies chronic pain.
+
+◦ The opposite fault is failure to unsilence, seen in critical-period deprivation and in fragile X-type immaturity; the watchdog is that unsilencing is bidirectionally revocable, so a wrongly written contact can be re-silenced back to the reserve.
+
+
+ENTRY 44. THE NASCENT FILOPODIAL CONTACT (keyed to synaptics catalogue Chapter 44)
+
+MODES AND MODE TRANSITIONS:
+
+This junction's modes are life-cycle stages, not transmission regimes: it is wiring under evaluation, and its output is a structural verdict rather than a current.
+
+It is mode-poor in electrical terms and mode-defined in structural terms, because the whole point of the type is which of two fates it is heading toward.
+
+• THE MODE REGISTER.
+
+◦ Searching - Groping Thread - the actin-driven filopodium extending and sampling passing axons with little or no synaptic machinery.
+
+◦ Stabilising - Taking Hold - the committed state in which adhesion and scaffold assemble, overlapping the silent state of Chapter 43.
+
+◦ Retracting - Letting Go - the withdrawal state ending in demolition of the trial contact.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Searching: near-null electrically, only occasional N-methyl-D-aspartate (NMDA)-only test currents of a few picoamperes, high confidence that transmission is minimal.
+
+◦ Stabilising: a noisy accumulate-to-bound decision function; integrated coincident activity above threshold returns stabilise, scaffold and receptors arriving over tens of minutes, moderate confidence.
+
+◦ Retracting: output is withdrawal, the contact gone within hours, moderate confidence.
+
+• THE TRANSITION TABLE.
+
+◦ Local glutamate from an active axon steering the filopodium by NMDA-receptor calcium, plus neurexin-neuroligin adhesion handshakes - Searching to Stabilising - minutes to hours.
+
+◦ Sub-threshold or absent coincidence - Searching or Stabilising to Retracting - minutes to hours.
+
+◦ Astrocyte synaptogenic factors (thrombospondins, hevin, glypicans) raising local stabilisation probability - biases Searching toward Stabilising - flagged as thrown from the tripartite support environment.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is failed selection: in fragile X syndrome dendrites carry an excess of long immature filopodia into adulthood, selection never closing.
+
+◦ Developmental insults such as hypoxia and alcohol thin the search front itself, producing under-connected circuits; the watchdog is the deliberate high turnover, which discards most candidates cheaply so that a bad trial is demolished rather than kept.
+
+
+ENTRY 45. THE TAGGED, RETRACTING SYNAPSE (keyed to synaptics catalogue Chapter 45)
+
+MODES AND MODE TRANSITIONS:
+
+This junction is the erase head of the connectome, and its modes track a demolition sequence: unmarked, marked, and being eaten.
+
+Its defining output is not a millivolt but an eat-me address label, so its transitions are the kinetics of removal rather than of release.
+
+• THE MODE REGISTER.
+
+◦ Unmarked - Spared - the protected state, carrying the do-not-eat-me signal CD47 and transmitting normally.
+
+◦ Tagged - Condemned - the state bearing deposited complement proteins (the immune system's ancient debris labels), read as a demolition order.
+
+◦ Retracting - Being Eaten - the disassembly state as microglia nibble the terminal piece by piece and astrocytes phagocytose in parallel.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Unmarked: ordinary synaptic transmission for its underlying glutamatergic type, high confidence.
+
+◦ Tagged: a competitive classification rule; low activity relative to neighbours, plus exposed eat-me lipids, minus the CD47 shield, maps to a tagging probability, moderate to high confidence.
+
+◦ Retracting: fading residual transmission while structure shrinks, full removal taking roughly a day, high confidence on the removal, moderate on the residual signalling.
+
+• THE TRANSITION TABLE.
+
+◦ Activity falling below that of converging neighbours, exposing phosphatidylserine and inviting complement component 1q binding - Unmarked to Tagged - hours to days.
+
+◦ Microglial complement receptor 3 reading the deposited complement and beginning trogocytosis (piecemeal biting of living membrane) - Tagged to Retracting - tens of minutes per bite.
+
+◦ Astrocytic transforming growth factor beta tone inducing neuronal complement, thrown from the glial support cells and gated by developmental stage - biases the whole sequence, months-to-years regional waves, prefrontal completion in the third decade.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is excess pruning: schizophrenia links to complement component 4 overexpression, and Alzheimer disease reactivates the programme to strip synapses early.
+
+◦ The opposite fault is deficient pruning, giving hyperconnected, seizure-prone circuits; the watchdog is the CD47 shield, the appeal process that spares strong synapses from wrongful removal.
+
+
+ENTRY 46. THE AUTONOMIC NEUROEFFECTOR JUNCTION (Visceral Motor Loose Contact) (keyed to synaptics catalogue Chapter 46)
+
+MODES AND MODE TRANSITIONS:
+
+This junction is a mode-poor tone-setter that reads frequency, not single spikes: with low release probability per varicosity and an electrically welded muscle sheet as its true target, its meaningful variation is short-term facilitation over a train.
+
+It stores no weight and does not learn, so it is tagged non-cognitive and admits only its short-term regimes.
+
+• THE MODE REGISTER.
+
+◦ Resting Tone - Idle Streetlight - the low-rate baseline in which sparse, often-failing releases set a standing tissue tone.
+
+◦ Facilitating - Warming String - the built-up regime in which repeated firing accumulates transmitter and the sheet reads a rising command.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Resting Tone: graded slow shift in smooth-muscle tone or gland secretion, individual varicosities unreliable, reliability achieved by pooling many noisy sources across the gap-junction-coupled sheet, high confidence.
+
+◦ Facilitating: paired-pulse and train facilitation as low release probability lets transmitter build, metabotropic actions unfolding over hundreds of milliseconds to seconds, high confidence.
+
+• THE TRANSITION TABLE.
+
+◦ Rising action-potential rate in the postganglionic axon, from 0 to tens of hertz, and residual varicosity calcium - Resting Tone to Facilitating - tens to hundreds of milliseconds.
+
+◦ Co-released chord of a classical transmitter with adenosine triphosphate and neuropeptides shifting the balance of fast and slow components - within the facilitating regime - seconds; central autonomic drive setting the overall rate is flagged as thrown from above.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is autonomic dysfunction: orthostatic hypotension when vascular junctions under-deliver, gut dysmotility, and neurogenic bladder.
+
+◦ The watchdog is the coupled sheet itself, which averages many unreliable varicosities into a smooth dependable response, so single-varicosity failure is invisible.
+
+
+ENTRY 47. THE SPLANCHNIC-CHROMAFFIN SYNAPSE (Preganglionic-to-Adrenal-Medulla Contact) (keyed to synaptics catalogue Chapter 47)
+
+MODES AND MODE TRANSITIONS:
+
+This is a mode-poor, high-safety-factor stress relay whose two modes are set by drive rate: a soluble-catecholamine trickle at rest and a peptide-recruiting flood under sympathetic emergency.
+
+It stores no weight and is a fixed-gain relay, tagged non-cognitive, but it genuinely uses two release regimes, so both are admitted.
+
+• THE MODE REGISTER.
+
+◦ Basal Trickle - Idle Drip - the low-frequency regime releasing freely-soluble catecholamines through a restricted fusion pore.
+
+◦ Flight-or-Fight Flood - Alarm Surge - the high-drive regime in which the fusion pore is driven to an expanded state and peptide co-transmitters join the catecholamine bolus.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Basal Trickle: a reliable relay with modest output, nicotinic acetylcholine receptors (mainly the alpha-3 beta-4 subtype, highly calcium-permeable) firing the cell, restricted-pore catecholamine efflux, moderate to high confidence.
+
+◦ Flight-or-Fight Flood: large amplified catecholamine surge with peptide release, each activated cell emptying many granules, read by the whole body over seconds to minutes, high confidence.
+
+• THE TRANSITION TABLE.
+
+◦ Rising splanchnic preganglionic firing driven by hypothalamic stress circuits, with synaptotagmin-7-supported facilitation building output per spike - Basal Trickle to Flight-or-Fight Flood - seconds, flagged as thrown from above by the stress axis.
+
+◦ Co-release of pituitary adenylate cyclase-activating polypeptide sustaining secretion during prolonged stress - holds the Flood regime - minutes.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is uncontrolled surge: pheochromocytoma, a chromaffin-cell tumour, causes catastrophic catecholamine release and hypertension.
+
+◦ The opposite fault is a blunted response in autonomic failure; the watchdog is the synapse's high safety factor, since few synapses suffice to fire the excitable chromaffin cell, fitting an emergency line that must not fail.
+
+
+ENTRY 48. THE NEUROHAEMAL JUNCTION (Neurosecretory-Ending-on-Bloodstream Contact) (keyed to synaptics catalogue Chapter 48)
+
+MODES AND MODE TRANSITIONS:
+
+This junction is a burst-gated threshold-and-sum device that speaks into the blood: because its dense-core vesicles need high-frequency firing to fuse, its modes are firing-pattern regimes that convert spike bursts into hormone pulses.
+
+It stores no synaptic weight and is tagged non-cognitive, but it genuinely uses distinct steady and phasic regimes, so both are admitted.
+
+• THE MODE REGISTER.
+
+◦ Sub-Threshold Steady - Quiet Drip - low-rate firing that releases little peptide per spike.
+
+◦ Phasic Burst - Pulsed Release - the efficient regime of long spiking episodes that maximise hormone output.
+
+◦ Reflex Burst - Let-Down Pulse - the intense synchronised burst, as in the oxytocin milk-ejection reflex.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Sub-Threshold Steady: hormone appears slowly, dense-core vesicles largely staying unfused, moderate to high confidence.
+
+◦ Phasic Burst: strong frequency-dependent facilitation, phasic bursting near 5 to 20 hertz releasing far more hormone per spike than steady firing, output pulsed into the fenestrated capillary over seconds, high confidence.
+
+◦ Reflex Burst: a brief intense volley (oxytocin cells fire an intense burst roughly every 5 minutes during suckling) producing a discrete hormone pulse, high confidence.
+
+• THE TRANSITION TABLE.
+
+◦ Depolarising afterpotentials and plateau potentials driving vasopressin cells into 20 to 60 second phasic episodes - Steady to Phasic Burst - seconds.
+
+◦ Calcium-dependent potassium currents and calcium-current inactivation terminating the burst - Phasic Burst back to Steady - tens of seconds.
+
+◦ Reflex and hormonal drive (suckling for oxytocin, osmotic and volume signals for vasopressin) - Steady to Reflex Burst - flagged as thrown from above by neuroendocrine reflex axes; glial (pituicyte and tanycyte) retraction remodels access during states such as lactation.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is release failure or excess: central diabetes insipidus from lost vasopressin release, and the syndrome of inappropriate antidiuretic hormone secretion from its excess.
+
+◦ The watchdog is population averaging: many unsynchronised terminals pooling into a shared capillary bed give a smooth plasma level despite stochastic single-cell firing.
+
+
+ENTRY 49. THE NEUROPOD-VAGAL EPITHELIAL SYNAPSE (Gut-Sensor-to-Vagus Contact) (keyed to synaptics catalogue Chapter 49)
+
+MODES AND MODE TRANSITIONS:
+
+This junction is a mode-poor fast transducer relay: an epithelial cell of the gut lining reports luminal nutrients to the vagus nerve in milliseconds through a genuine glutamatergic synapse, alongside its own slower peptide channel.
+
+It stores no weight and is tagged non-cognitive, so its register is small and set by which of its two output channels is engaged.
+
+• THE MODE REGISTER.
+
+◦ Fast Glutamatergic - Millisecond Line - the point-to-point vesicular channel that follows luminal stimulus onset closely.
+
+◦ Slow Peptide - Trailing Word - the dense-core co-signal (peptides such as cholecystokinin) that lags the fast report.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Fast Glutamatergic: nutrient sensing at the apical membrane (sweet-taste and fatty-acid receptors) triggers glutamate release read by ionotropic receptors, a fast excitatory drive reaching the vagus in milliseconds, moderate to high confidence.
+
+◦ Slow Peptide: graded peptide co-release over seconds and longer, moderate confidence.
+
+• THE TRANSITION TABLE.
+
+◦ Luminal nutrient binding apical receptors - resting to Fast Glutamatergic - milliseconds.
+
+◦ Sustained luminal stimulation recruiting the dense-core pathway - Fast Glutamatergic accompanied by Slow Peptide - seconds; the fast vesicular pathway leads and the peptide pathway trails.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is disordered gut-brain reporting, implicated in altered appetite, food preference, and mood-gut interactions, and an emerging target in obesity and functional gut disorders.
+
+◦ No dedicated watchdog is notable; the dedicated fast synapse itself is what buys temporal fidelity over the diffuse hormonal route the same cell also uses.
+
+
+ENTRY 50. THE EFFERENT SYNAPSE ONTO THE HAIR CELL (Olivocochlear-to-Outer-Hair-Cell Contact) (keyed to synaptics catalogue Chapter 50)
+
+MODES AND MODE TRANSITIONS:
+
+This is a mode-poor gain-control junction with a signature trick: an excitatory transmitter wired to an inhibitory outcome, so its modes are levels of a graded, facilitating brake on the cochlear amplifier.
+
+It sets gain but stores no memory weight and is tagged non-cognitive, so its register is confined to short-term regimes.
+
+• THE MODE REGISTER.
+
+◦ Resting Gain - Amplifier Free - low or no efferent drive, the outer hair cell left to boost faint sounds.
+
+◦ Facilitated Inhibition - Turned Down - the built-up regime in which sustained efferent firing strengthens the hyperpolarising brake.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Resting Gain: little postsynaptic potassium current, full electromotile amplification, high confidence.
+
+◦ Facilitated Inhibition: acetylcholine through the alpha-9 alpha-10 nicotinic receptor (highly calcium-permeable) admits calcium that opens SK2 and BK calcium-activated potassium channels, potassium efflux hyperpolarising the cell; calcium-induced calcium release from the subsurface cistern deepens the effect, inhibition building over tens to hundreds of milliseconds, high confidence.
+
+• THE TRANSITION TABLE.
+
+◦ Rising medial olivocochlear firing, driven by sound level and attention, with short-term facilitation over the train - Resting Gain to Facilitated Inhibition - tens to hundreds of milliseconds, flagged as a top-down brain-state command.
+
+◦ Falling efferent drive - Facilitated Inhibition back to Resting Gain - hundreds of milliseconds.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is loss of protection: a weak efferent system leaves the ear vulnerable to noise-induced hearing loss and poorer hearing in noise.
+
+◦ Alpha-9 receptor gain-of-function variants alter the short-term plasticity itself; the watchdog is the fixed calcium-to-potassium coupling, which guarantees the inhibitory sign so the brake cannot invert.
+
+
+ENTRY 51. THE MERKEL CELL-NEURITE COMPLEX (Touch-Cell-to-Afferent Contact) (keyed to synaptics catalogue Chapter 51)
+
+MODES AND MODE TRANSITIONS:
+
+This is a mode-poor sustaining transducer: a skin cell holds a static press and feeds the nerve through a serotonergic synapse so that fine touch keeps its long faithful grip on a held shape.
+
+It stores no weight and is tagged non-cognitive, so its single meaningful regime is the sustained hold, with a quiet resting baseline.
+
+• THE MODE REGISTER.
+
+◦ Resting - Untouched - no indentation, minimal release.
+
+◦ Sustaining - Holding the Shape - the maintained-touch regime delivering prolonged excitatory drive that keeps the slowly adapting afferent firing.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Resting: little serotonin release, high confidence.
+
+◦ Sustaining: mechanical force opens Piezo2 (a mechanically activated cation channel), depolarising the Merkel cell and triggering serotonin release onto the afferent, sustaining firing over hundreds of milliseconds and longer that the nerve's own rapidly adapting current could not hold, moderate to high confidence.
+
+• THE TRANSITION TABLE.
+
+◦ Sustained skin indentation opening Piezo2 - Resting to Sustaining - milliseconds to onset, held for the duration of the touch.
+
+◦ Maintained stimulation giving ongoing adapting release rather than a single transient - within the Sustaining regime - hundreds of milliseconds, matching the slowly adapting afferent it drives.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is fine-touch loss: Piezo2 loss-of-function causes a human touch and proprioception deficit, and Merkel cell loss blurs form and texture discrimination.
+
+◦ Merkel cell carcinoma is an aggressive cancer of this cell type; no fast watchdog is notable, the two-receptor-site arrangement (both Merkel cell and afferent carry Piezo2) providing redundancy in force sensing.
+
+
+ENTRY 52. THE NEURO-IMMUNE JUNCTION (Nerve-to-Immune-Cell Contact) (keyed to synaptics catalogue Chapter 52)
+
+MODES AND MODE TRANSITIONS:
+
+This junction is a slow neuromodulatory contact whose output is measured in inflammation, not millivolts, so its modes are directions of immune bias rather than transmission regimes.
+
+It stores no neural weight and is tagged non-cognitive, and because its two transmitter systems push in different directions, its register is set by which nerve is speaking.
+
+• THE MODE REGISTER.
+
+◦ Quiescent Contact - Resting Watch - baseline apposition with little transmitter release and unbiased immune tone.
+
+◦ Sympathetic Damping - Cooling Word - noradrenaline released onto lymphocytes biasing immune tone, typically restraining.
+
+◦ Sensory Priming - Heating Word - sensory neuropeptides (substance P, calcitonin gene-related peptide) driving mast cells toward mediator release and neurogenic inflammation.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Quiescent Contact: negligible modulation, moderate confidence given the type is only beginning to be catalogued.
+
+◦ Sympathetic Damping: noradrenaline on lymphocyte adrenoceptors shifting cytokine output over minutes to hours, of either sign but often restraining, moderate confidence.
+
+◦ Sensory Priming: neuropeptides on mast-cell receptors, coupled by CADM1 (cell adhesion molecule 1) adhesion that enhances mediator release, read out as inflammation over minutes to hours to days, moderate confidence.
+
+• THE TRANSITION TABLE.
+
+◦ Sympathetic terminal firing driven by central autonomic circuits - Quiescent to Sympathetic Damping - minutes, flagged as thrown from central autonomic control.
+
+◦ Sensory fibre firing at a barrier surface plus CADM1 adhesion signalling - Quiescent to Sensory Priming - minutes; repeated or sustained activity progressively biases the immune cell's secretory state.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ The boundary signature is dysregulation: asthma, chronic itch and pain, inflammatory bowel disease, and failure of the inflammatory reflex that helps drive sepsis and chronic inflammation.
+
+◦ The watchdog is chorus averaging: any single junction is one modest voice, the immune reply integrating many contacts along with hormonal and local cues, so no lone junction can hijack the response.
+
+
+ENTRY 53. THE TRIPARTITE SYNAPSE ENSHEATHMENT (Astrocyte-Wrapped Chemical Synapse) (keyed to synaptics catalogue Chapter 53)
+
+MODES AND MODE TRANSITIONS:
+
+This junction is a mode-rich slow governor: a non-spiking glial leaflet that does not itself fire but switches the wrapped synapse between permission regimes, and its own coverage advances and retracts as a structural mode of its own.
+
+The astrocyte multiplies the plasticity term rather than the transmission term, so most of its modes are about whether the client is allowed to learn.
+
+• THE MODE REGISTER.
+
+◦ Permissive wrap - the Green Light - high D-serine (the co-agonist that the N-methyl-D-aspartate receptor requires alongside glutamate) occupancy, so the wrapped synapse may potentiate.
+
+◦ Restrictive wrap - the Red Light - adenosine tone dominates and clamps release, converting potentiation conditions into depression.
+
+◦ Retracted coverage - the Withdrawn Leaflet - a life-cycle and state mode in which the leaflet pulls back and neighbouring synapses become directly juxtaposed, seen physiologically around oxytocin neurons in lactation.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Permissive wrap: co-agonist site occupancy 50 to 90 percent in healthy hippocampus, scaling calcium admitted per coincidence upward; confidence moderate, resting on rodent slice work.
+
+◦ Restrictive wrap: adenosine acting on A1 receptors subtracts presynaptic release probability for seconds; sign conditional, confidence moderate.
+
+◦ Retracted coverage: transporter clearance falls and spillover rises, so glutamate lingers and perisynaptic receptors are recruited; confidence moderate for the lactation case, high that coverage is adjustable.
+
+• THE TRANSITION TABLE.
+
+◦ Sustained potentiating traffic - permissive to reinforced coverage, coverage growing around potentiated spines over minutes to hours.
+
+◦ Sustained low activity - permissive to retracted, over minutes to hours.
+
+◦ Hormonal broadcast (oxytocin during suckling, thrown from above by the hypothalamic axis) - drives leaflet retraction around oxytocin neurons within the suckling episode, then reverses; flagged as a state-level, top-down transition.
+
+◦ Rising adenosine triphosphate and adenosine tone - permissive to restrictive, seconds.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: excitatory amino acid transporter 2 failure leaves glutamate uncleared, tipping the wrap into excitotoxic spillover as in amyotrophic lateral sclerosis.
+
+◦ Warning condition: chronic D-serine deficit collapses the permissive mode, the modelled plasticity failure of schizophrenia.
+
+◦ Biological watchdog: transporter capacity held well above release under all but extreme bursting, and feedback coupling of coverage to activity.
+
+
+ENTRY 54. THE NEURON-OPC SYNAPSE (Axon-Oligodendrocyte Precursor Synapse) (keyed to synaptics catalogue Chapter 54)
+
+MODES AND MODE TRANSITIONS:
+
+This is a genuinely mode-rich census contact whose postsynaptic partner is a non-neuronal oligodendrocyte precursor cell, and whose defining life-cycle mode is self-erasing: a successful decision dismantles the synapse.
+
+It runs the standard short-term facilitating and depressing regimes on its fast currents, but its consequential modes are existential rather than transmissive.
+
+• THE MODE REGISTER.
+
+◦ Facilitating readout - the Pattern Listener - theta-burst-favouring integration of quantal drive while the precursor divides.
+
+◦ Depressing readout - the Fatiguing Line - short-term depression under rapid trains.
+
+◦ Proliferative standing mode - the Waiting Surveyor - integrated activity below threshold, precursor keeps dividing and listening.
+
+◦ Differentiating mode - the Committed Wrapper - integrated calcium load crosses threshold, precursor differentiates and the synapse is dismantled (a used developmental transition, not a fault).
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Facilitating and depressing readouts: unitary currents a few to tens of picoamperes, calcium influx through GluA2-lacking (calcium-permeable) alpha-amino-3-hydroxy-5-methyl-4-isoxazolepropionic acid receptors rising roughly linearly with rate before saturating; confidence high at single-contact level.
+
+◦ Proliferative mode: output is a probability shift toward division; confidence moderate for human numbers.
+
+◦ Differentiating mode: output is new myelin biased toward the most active neighbour, delivered days to weeks later; confidence high in rodent, moderate in human.
+
+• THE TRANSITION TABLE.
+
+◦ Repetitive, patterned firing - facilitating to depressing within a train, milliseconds to seconds.
+
+◦ Accumulated calcium load above differentiation threshold - proliferative to differentiating, over hours to days.
+
+◦ Early-life high internal chloride - inverts GABAergic input sign so gamma-aminobutyric acid depolarises the young precursor; a developmental, state-level setting.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: in diffuse glioma, neuron-to-tumour synapses built on this template drive growth - the differentiation logic hijacked.
+
+◦ Warning condition: remyelination failure in progressive multiple sclerosis when precursor inputs are disturbed around lesions.
+
+◦ Biological watchdog: integration across many contacts and long times, so single-contact failures do not sway the decision.
+
+
+ENTRY 55. THE AXO-MYELINIC SYNAPSE (Axon-to-Myelin Junction) (keyed to synaptics catalogue Chapter 55)
+
+MODES AND MODE TRANSITIONS:
+
+This junction is a two-to-three mode service contract, not a learning contact: a facilitating integrator of recent traffic that sets fuel supply and, slowly, its own conduction delay.
+
+Its stored variable is delay measured in milliseconds of arrival time rather than a synaptic weight, so its long-term mode is a tuning regime, not a memory.
+
+• THE MODE REGISTER.
+
+◦ Demand-matched supply - the Fuel Line - periaxonal glutamate tracks spike rate and lactate delivery rises to match.
+
+◦ Remodelling mode - the Speed Tuner - sustained demand nudges sheath thickness and internode geometry, adjusting delay.
+
+◦ Idle mode - the Dumb Cable - low traffic, minimal supply, delay held.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Demand-matched supply: myelinic N-methyl-D-aspartate receptors rich in GluN2C, GluN2D and GluN3A give weak magnesium block, so they transduce near-linearly at rest voltage; glucose transporter 1 mobilises and lactate flows through monocarboxylate transporters 1 and 2; confidence high for existence, moderate for ubiquity.
+
+◦ Remodelling mode: g-ratio moves within roughly 0.6 to 0.8, delay ratcheting down over days to months; confidence moderate.
+
+◦ Idle mode: supply near basal; confidence high.
+
+• THE TRANSITION TABLE.
+
+◦ Rising firing (1 to 200 hertz) - idle to demand-matched, seconds to minutes.
+
+◦ Sustained high demand - demand-matched to remodelling, days to months.
+
+◦ Adaptive-myelination signals during skill learning (thrown from above by circuit-level activity) - bias remodelling toward tighter delay tolerances.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: excess sleeve glutamate in white-matter ischaemia turns the supportive pathway excitotoxic, injuring myelin from within (an inverted-U).
+
+◦ Warning condition: demyelination severs the fuel line and denuded axons degenerate from energy failure, as in multiple sclerosis.
+
+◦ Biological watchdog: the saturating supply curve caps delivery, and direct lactate rescue restores axons lacking myelinic N-methyl-D-aspartate receptors.
+
+
+ENTRY 56. THE PERISYNAPTIC SCHWANN CAP (Terminal Schwann Cell Ensheathment of the Neuromuscular Junction) (keyed to synaptics catalogue Chapter 56)
+
+MODES AND MODE TRANSITIONS:
+
+This is a deliberately mode-poor fidelity supervisor: built for stability and repair over the body's most reliable synapse, it has essentially two life-states and no learning mode at all.
+
+The catalogue states plainly that long-term plasticity does not apply here, because the endplate must never change.
+
+• THE MODE REGISTER.
+
+◦ Health mode - the Watching Foreman - sedentary supervision, reading transmission and lightly modulating release.
+
+◦ Repair mode - the Pathfinder - after denervation the cell de-differentiates, extends processes, and guides the returning axon (a genuinely used mode, so admitted).
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Health mode: high-frequency transmission raises cap calcium through muscarinic and purinergic receptors, and a weak feedback term nudges release probability in both directions, buffering short-term depression and helping hold a safety factor above 2; confidence high qualitatively.
+
+◦ Repair mode: no transmission role; output is guidance bridges extending hundreds of micrometres over hours to weeks; confidence high in rodent models.
+
+• THE TRANSITION TABLE.
+
+◦ Injury signals from a degenerating terminal - health to repair, over days (de-differentiation).
+
+◦ Successful reinnervation - repair back to health, over weeks.
+
+◦ Early-life developmental signal - the cap participates in synapse elimination, reducing polyneuronal innervation to the one-axon rule (a used developmental mode).
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: in amyotrophic lateral sclerosis, terminal Schwann cell properties become incompatible with repair before motor neurons die.
+
+◦ Warning condition: cap deterioration accompanies endplate fragmentation in ageing sarcopenia; loss of caps leads to terminal retraction and transmission failure.
+
+◦ Biological watchdog: the maintained safety factor of two or more is the cap's own margin against failure.
+
+
+ENTRY 57. THE MICROGLIA-SYNAPSE CONTACT (Microglial Process-Synapse Apposition) (keyed to synaptics catalogue Chapter 57)
+
+MODES AND MODE TRANSITIONS:
+
+This junction is a mode-rich audit rather than a transmitter contact: a mobile process that visits each synapse on a rota and returns one of several verdicts, with no vesicles and so no facilitation or depression.
+
+It does not learn a weight; it is the connectome's delete operation, so its modes are scheduling and verdict regimes.
+
+• THE MODE REGISTER.
+
+◦ Surveillance mode - the Hourly Round - brief contacts of about five minutes that in health enhance the contacted synapse's activity.
+
+◦ Triage mode - the Lengthened Watch - visits lengthen and multiply within minutes when local activity rises or injury signals appear.
+
+◦ Trogocytic mode - the Nibble - partial engulfment of a bouton, weakening but not deleting the synapse.
+
+◦ Engulfment mode - the Condemnation - whole-synapse phagocytosis of a tagged, weak input (used developmental pruning, so admitted).
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Surveillance: revisit interval about one hour, contact about five minutes, process speed 1 to 3 micrometres per minute; contact enhances activity of the touched synapse; confidence high in rodent live imaging, moderate extrapolated to human.
+
+◦ Verdict modes: condemnation score approximates accumulated complement tag (complement component 1q and complement component 3 fragments read by complement receptor 3) minus activity-dependent protection such as CD47; engulfment biased several-fold toward weaker, less active inputs; trogocytosis far commoner than whole-synapse engulfment; confidence high.
+
+• THE TRANSITION TABLE.
+
+◦ Falling local activity - surveillance contacts shorten and thin, minutes; rising activity lengthens them.
+
+◦ Ischaemia or injury signal - surveillance to prolonged contact (about one hour) frequently followed by bouton disappearance, converting the round into stripping.
+
+◦ Complement tag crossing threshold minus protection - triage to nibble to engulfment, hours to days.
+
+◦ Developmental epoch (thrown from above) - infant overbuild and adolescent thinning raise the pruning rate for years.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: sustained inflammatory activation strips inhibitory terminals and stops enhancing activity, the pathological version of surveillance.
+
+◦ Warning condition: overactive complement pruning in schizophrenia (complement component 4) and Alzheimer disease (C1q, triggering receptor expressed on myeloid cells 2); pathological stripping in neuropathic pain.
+
+◦ Biological watchdog: the do-not-eat protective tags and the activity-dependent protection term keep engulfment selective and errors sublethal.
+
+
+ENTRY 58. THE BETA CELL GAP JUNCTION NETWORK (Islet Connexin-36 Electrical Coupling) (keyed to synaptics catalogue Chapter 58)
+
+MODES AND MODE TRANSITIONS:
+
+This is an endocrine secretory-coupling machine with a small mode register: a passive electrical sheet that is either coupled into one oscillating chorus or loosened toward independent noisy cells, tuned by metabolic state rather than by any learning rule.
+
+Its modes are coupled-versus-uncoupled regimes on a connexin-36 pore that is the neuron's own coupling protein put to endocrine work.
+
+• THE MODE REGISTER.
+
+◦ Coupled sheet - the Chorus - open channels synchronise voltage and calcium across the islet into one clean insulin pulse.
+
+◦ Loosened coupling - the Scattered Crowd - reduced open-channel fraction lets heterogeneous thresholds re-emerge.
+
+◦ Rest gating - the Silenced Sheet - at low glucose, coupling helps hold the quiet, non-secreting resting state across the islet.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Coupled sheet: a passive, bidirectional low-pass filter set by a coupling conductance rather than a gain, producing islet-wide calcium and insulin oscillations of roughly 5 to 10 minute period; confidence high.
+
+◦ Loosened coupling: threshold scatter and electrical noise re-appear, first-phase insulin and pulse amplitude fall; confidence high from connexin-36-null animals.
+
+◦ Rest gating: shared subthreshold state confines the stimulating glucose range and suppresses leaky basal release; confidence high.
+
+• THE TRANSITION TABLE.
+
+◦ Rising blood glucose - rest gating to coupled chorus, over seconds to the burst timescale; a hormonal-axis, metabolically thrown transition from above.
+
+◦ Signalling and phosphorylation changes over minutes to hours - tighten or loosen open-channel probability.
+
+◦ Pacemaker or hub beta cells - lead the phase, the coupled majority following.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: chronic high glucose and inflammation lower connexin-36 expression, weakening the chorus - early type 2 diabetes.
+
+◦ Warning condition: loss of first-phase and pulsatile insulin, readable off a glucose tolerance test; GJD2 variants altering beta cell function.
+
+◦ Biological watchdog: constant connexin turnover (protein half-life hours) rebuilds the sheet, and averaging across many cells is itself the noise-reduction mechanism.
+
+
+ENTRY 59. THE PITUITARY GAP JUNCTION WEB (Folliculostellate Connexin-43 Coupling) (keyed to synaptics catalogue Chapter 59)
+
+MODES AND MODE TRANSITIONS:
+
+This is a two-mode endocrine relay: a connexin-43 lattice of star-shaped support cells that is either coupled and carrying a gland-spanning calcium wave, or uncoupled and broken into isolated hormone factories.
+
+Coupling here is a secretory-coordination regime set by connexin-43 phosphorylation, not a stored weight.
+
+• THE MODE REGISTER.
+
+◦ Coupled web - the Gland-Spanning Relay - phosphorylated, docked channels carry a regenerative calcium wave across the whole gland.
+
+◦ Uncoupled web - the Severed Lattice - dephosphorylated connexin-43 breaks the relay into local twitches.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Coupled web: regenerative cell-to-cell propagation, not passive conduction, so a small local input yields a gland-spanning output; wave speed seconds across reach of millimetres to full gland width; confidence moderate.
+
+◦ Uncoupled web: local calcium rises stay local, gland-wide coordination lost; confidence moderate.
+
+• THE TRANSITION TABLE.
+
+◦ Local paracrine or hormonal cue raising folliculostellate calcium - launches a wave through the coupled web, seconds.
+
+◦ Connexin-43 phosphorylation state shifting over minutes to hours - couples or uncouples the web.
+
+◦ Inflammatory signal tumour necrosis factor alpha (thrown from above by systemic immune state) - dephosphorylates connexin-43 and uncouples the relay rapidly.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: inflammatory uncoupling disturbs pituitary coordination during systemic illness.
+
+◦ Warning condition: altered connexin-43 in pituitary adenomas, where overexpression can suppress tumour cell growth.
+
+◦ Biological watchdog: continuous connexin turnover maintains the backbone, and the folliculostellate cells' own sensing role lets them re-launch coordination once re-coupled.
+
+
+ENTRY 60. THE GRANULOSA-OOCYTE GAP JUNCTION (Connexin-37 Trans-Zonal Coupling) (keyed to synaptics catalogue Chapter 60)
+
+MODES AND MODE TRANSITIONS:
+
+This is a gated-supply junction with a small but decisive mode register: an open pipe that feeds and silences the egg for months, and a single, deliberate closure that wakes it - a case where switching the junction off, not on, is the functional event.
+
+Fidelity, not adjustability, is the point, so there is no learning mode.
+
+• THE MODE REGISTER.
+
+◦ Open coupled pipe - the Nurse Line - channels open, feeding the egg and delivering the cyclic nucleotides that hold meiosis arrested.
+
+◦ Closed junction - the Cut Line - abrupt closure at the ovulatory surge stops the arresting signal and releases the egg.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Open coupled pipe: connexin-37 (gene GJA4) egg-to-granulosa channels pass ions, metabolites, and cyclic adenosine monophosphate and cyclic guanosine monophosphate but not proteins, through hundreds to thousands of trans-zonal projections; the oocyte's arrest depends on granulosa-supplied cyclic guanosine monophosphate diffusing in; confidence high.
+
+◦ Closed junction: coupling collapses and oocyte cyclic guanosine monophosphate falls, permitting meiotic resumption; confidence high.
+
+• THE TRANSITION TABLE.
+
+◦ Cyclic adenosine monophosphate tone during growth - raises connexin-37 expression and holds the pipe open over months.
+
+◦ Luteinising hormone surge (thrown from above by the reproductive axis) - mitogen-activated kinase phosphorylates connexin-43 in the granulosa layer and suppresses its message; follicular cyclic guanosine monophosphate falls to a nadir by about 1.5 hours and connexin-43 phosphorylation peaks near 2 hours - open to closed, within hours.
+
+◦ Ovulation - the junction is dismantled entirely.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: loss of connexin-37 arrests follicles early, eggs fail to reach competence, and luteinised structures form instead.
+
+◦ Warning condition: disturbed follicular coupling in human ovulatory disorders and in assisted-reproduction outcomes.
+
+◦ Biological watchdog: the absolute dependence of the egg makes fidelity itself the safeguard, backed by continuous connexin turnover during growth.
+
+
+ENTRY 61. THE PARACRINE JUNCTION (Local Diffusion Signalling) (keyed to synaptics catalogue Chapter 61)
+
+MODES AND MODE TRANSITIONS:
+
+This junction has no fixed structure and, honestly, a thin mode register: it is a distance-limited broadcast whose only real regimes are whether it is currently speaking and in which direction its sign points.
+
+It stores no weight, so long-term plasticity does not apply, and its strength is set moment to moment by secretion, diffusion, and degradation.
+
+• THE MODE REGISTER.
+
+◦ Silent neighbourhood - the Quiet Word - no secretion, no local signal.
+
+◦ Excitatory broadcast - the Prompting Word - a messenger that raises nearby target activity.
+
+◦ Inhibitory broadcast - the Restraining Word - a messenger that quietens neighbours, as somatostatin quietens the islet.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ All modes: a distance-dependent, saturating dose-response, strong on immediate neighbours and negligible a few to a few tens of micrometres away; onset seconds to minutes; sign set by messenger and receptor; confidence high.
+
+◦ In the pancreatic islet exemplar: beta cell insulin restrains the alpha cell, delta cell somatostatin quietens both, giving a three-way coupled regime; confidence high qualitatively.
+
+• THE TRANSITION TABLE.
+
+◦ Onset of secretion - silent to excitatory or inhibitory, seconds to minutes.
+
+◦ Cessation of secretion or messenger degradation - back to silent, set by messenger half-life.
+
+◦ Change of secreting partner - flips the neighbourhood's effective sign (for example insulin against glucagon).
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: disrupted islet alpha-beta-delta crosstalk contributes to diabetes.
+
+◦ Warning condition: tumour cells hijack paracrine growth-factor loops to corrupt their neighbours.
+
+◦ Biological watchdog: short range and rapid extracellular degradation keep the word local, which is the system's own confinement mechanism.
+
+
+ENTRY 62. THE AUTOCRINE LOOP (Self-Signalling) (keyed to synaptics catalogue Chapter 62)
+
+MODES AND MODE TRANSITIONS:
+
+This is the smallest junction in the corpus and a two-mode feedback element: a cell catching its own messenger, running either as reinforcing positive feedback or as self-limiting negative feedback.
+
+It stores no adjustable weight, so its modes are feedback signs, not learned states.
+
+• THE MODE REGISTER.
+
+◦ Positive loop - the Self-Commit - the returning messenger reinforces the cell's own state and can lock it in.
+
+◦ Negative loop - the Self-Governor - the returning messenger damps the cell toward a set point.
+
+◦ Silent loop - the Quiet Self - no self-secretion, no feedback.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Positive loop: output occupancy of the cell's own receptors drives commitment, as a T lymphocyte secreting interleukin-2 drives its own proliferation; tends to run away toward a decision; confidence high.
+
+◦ Negative loop: settles to a self-regulated set point; confidence high.
+
+◦ Both governed by secretion rate, receptor number, and receptor internalisation, over seconds to minutes.
+
+• THE TRANSITION TABLE.
+
+◦ Onset of self-secretion above receptor threshold - silent to positive or negative, seconds to minutes.
+
+◦ Receptor internalisation limiting the signal - can flip a running positive loop toward self-limitation.
+
+◦ Crowd sensing - same-type neighbours' secretion shifts the loop's effective set point (a state-level input).
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: aberrant positive growth loops free a tumour cell from outside control - a hallmark of cancer.
+
+◦ Warning condition: dysregulated autocrine cytokine loops in chronic inflammatory and autoimmune disease.
+
+◦ Biological watchdog: receptor internalisation and clearance provide the built-in brake against runaway positive feedback.
+
+
+ENTRY 63. THE JUXTACRINE CONTACT JUNCTION (Membrane-Bound Ligand-Receptor Signalling) (keyed to synaptics catalogue Chapter 63)
+
+MODES AND MODE TRANSITIONS:
+
+This junction is a contact-gated switch with a spatial, not a temporal, register: its modes are defined by whether two cells touch and which membrane partners meet, not by any facilitation, depression, or stored weight.
+
+It is above all a developmental patterning junction, so its modes are instructive and repulsive contact regimes.
+
+• THE MODE REGISTER.
+
+◦ No contact - the Open Hand - membranes apart, no signal.
+
+◦ Instructive contact - the Fate Handshake - Notch engagement changes gene expression in the receiving cell.
+
+◦ Repulsive or attractive contact - the Sorting Handshake - Eph-ephrin engagement, bidirectional, reshaping both cells' cytoskeletons.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Instructive contact: ligand binding triggers ADAM-metalloprotease and gamma-secretase cleavage of Notch, releasing the intracellular domain to the nucleus; a contact-gated switch of exquisite spatial precision; gene-expression output over hours; confidence high.
+
+◦ Sorting contact: forward signalling through the Eph receptor tyrosine kinase and reverse through the ephrin change both partners at once; cytoskeletal output over minutes; confidence high.
+
+◦ Both inherently noisy at the single-molecule level, so tissues average over many contacts.
+
+• THE TRANSITION TABLE.
+
+◦ Cells come into apposition - no-contact to instructive or sorting, onset on contact.
+
+◦ In Notch lateral inhibition - one cell adopting a fate forbids its neighbour the same, so contact actively makes the partners different.
+
+◦ Contact ends - back to no-contact; the signal exists only while apposition holds.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: Notch mutations drive or suppress cancers depending on context and cause developmental disorders.
+
+◦ Warning condition: Eph-ephrin dysregulation blurs tissue boundaries and promotes cancer invasion and metastasis.
+
+◦ Biological watchdog: adhesion molecules and the cytoskeleton hold stable contact, and integration over many contacts plus feedback yields reliable patterning from a noisy switch.
+
+
+ENTRY 64. THE HORMONE-RECEPTOR VIRTUAL SYNAPSE (Endocrine Signalling at a Distance) (keyed to synaptics catalogue Chapter 64)
+
+MODES AND MODE TRANSITIONS:
+
+This is the capstone endocrine junction and a genuinely mode-bearing broadcast: the bloodstream is its cleft, and its regimes are pulsatile-versus-continuous traffic and sensitised-versus-desensitised receivers, the endocrine equivalents of phasic and tonic release.
+
+It stores no memory, so its long-term changes are homeostatic receptor and set-point regulation, not learning.
+
+• THE MODE REGISTER.
+
+◦ Pulsatile broadcast - the Drumbeat - hormone delivered in discrete pulses that keep the receiver responsive.
+
+◦ Continuous broadcast - the Flood - sustained delivery that drives the receiver into desensitisation.
+
+◦ Sensitised receiver - the Open Ear - up-regulated, coupled receptors giving full response.
+
+◦ Desensitised receiver - the Deaf Ear - uncoupled and down-regulated receptors giving a blunted response.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ All modes: a saturating, high-gain dose-response, circulating hormone picomolar to nanomolar against receptor dissociation constants subnanomolar to nanomolar (estradiol near 0.1 nanomolar); crossing time about one circulation lap (roughly one minute); confidence high.
+
+◦ Pulsatile with sensitised receiver: as in pulsatile gonadotropin-releasing hormone, which maintains receptor expression and maximal gonadotropin output; confidence high.
+
+◦ Continuous with desensitised receiver: continuous gonadotropin-releasing hormone uncouples the receptor from its signalling molecules then down-regulates receptor number, collapsing gonadotropin secretion; confidence high.
+
+• THE TRANSITION TABLE.
+
+◦ Shift from pulsatile to continuous secretion (thrown from above by the hypothalamic-pituitary axis) - sensitised to desensitised, over the duration of sustained exposure.
+
+◦ Homologous desensitisation - occurs within the span of a single endogenous pulse, seconds to minutes.
+
+◦ Receptor up- or down-regulation and feedback control of gland output - retune effective strength over hours to days.
+
+◦ Carrier-protein buffering and hormone half-life (minutes to about two hours to one to two months) - set how long each broadcast persists.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: too little signal (type 1 diabetes, hypothyroidism), too much (hyperthyroidism, Cushing's syndrome), or a deaf receiver (hormone-resistance syndromes) - a fault in sender, messenger, or receiver.
+
+◦ Warning condition: unintended continuous exposure desensitising a normally pulsatile axis.
+
+◦ Biological watchdog: hypothalamic and pituitary feedback loops monitor circulating levels and hold gland output within a set range, with receptor specificity providing address selectivity.

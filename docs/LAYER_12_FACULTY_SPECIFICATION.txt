@@ -1,0 +1,147 @@
+LAYER 12, THE ORGANISM AND BEHAVIOUR LAYER: THE FACULTY SPECIFICATION
+
+The Faculties of the Behaving, Experiencing Person, as the Acceptance-Test Catalogue for the Konnectome Synthetic Mind
+
+A konnectome-facing document of the Certified_Neuroscientist corpus of D. R. Dison, Founder, Artificial Intelligence University (AIU).
+
+Date of compilation: August 9, 2026.
+
+
+WHAT THIS DOCUMENT IS
+
+Layer 12 is where cognition is EXPERIENCED: the layer of the behaving, experiencing person - perception, action, emotion, motivation, learning, memory, language, decision, and consciousness.
+
+The layers-needed-for-cognition sanity check assigned Layer 12 a distinct role in the konnectome programme: not a parts catalogue but the SPECIFICATION - the list of faculties the assembled machine must exhibit, against which every build is verified.
+
+This document is that specification: fourteen faculties, each stated as a capability, mapped to the Layer 10 system or coalition that implements it, and given acceptance criteria a test harness could run.
+
+The mapping principle, established in the Layer 10 volume: the faculties named at this layer each map to exactly one system or a small coalition, and to nothing smaller.
+
+
+THE FOURTEEN FACULTIES
+
+1. PERCEPTION.
+
+Capability: construct a structured, stable model of the present environment from raw sensor streams, robust to noise, occlusion, and viewpoint.
+
+Implemented by: the sensory systems (Layer 10, Chapters 1 through 7), interpreted through the predictive coding motif.
+
+Acceptance criteria: object constancy under transformation; figure-ground segmentation; cross-modal binding of one event heard and seen; graceful degradation, not collapse, under noise.
+
+2. ATTENTION.
+
+Capability: select, amplify, and sustain processing of task-relevant input while suppressing the rest, and reorient within a fraction of a second to genuine surprise.
+
+Implemented by: the dorsal attention and salience networks with the thalamic reticular gate.
+
+Acceptance criteria: measurable selection benefit and distractor cost; involuntary capture by salient onset; restoration of goal focus after capture.
+
+3. WORKING MEMORY.
+
+Capability: hold and manipulate a small number of items for seconds to minutes without external storage.
+
+Implemented by: the working memory system (Layer 10, Chapter 16) on the persistent-activity attractor motifs.
+
+Acceptance criteria: span in the biological range (roughly four chunks); active manipulation, not mere retention; selective overwrite without wholesale loss.
+
+4. EPISODIC MEMORY.
+
+Capability: store one-shot records of specific events with their context, retrieve them from partial cues, and know they are memories.
+
+Implemented by: the episodic memory system (Layer 10, Chapter 13) - separation, completion, comparison in series.
+
+Acceptance criteria: one-trial learning; pattern completion from fragments; source discrimination between similar episodes; consolidation benefit after an offline phase.
+
+5. SEMANTIC MEMORY.
+
+Capability: hold generalised knowledge - concepts, facts, categories - abstracted from episodes and retrievable by meaning.
+
+Implemented by: the semantic system's hub-and-spokes (Layer 10, Chapter 14).
+
+Acceptance criteria: generalisation to unseen instances; graded typicality; cross-modal access to one concept from word, image, or description.
+
+6. PROCEDURAL SKILL.
+
+Capability: acquire, through practice, fast fluent action sequences that no longer need deliberation.
+
+Implemented by: the procedural system - the selection loops plus the cerebellar calibrator.
+
+Acceptance criteria: power-law improvement with practice; automaticity (low dual-task cost when skilled); persistence without episodic access to the practice.
+
+7. LANGUAGE.
+
+Capability: comprehend and produce unbounded structured messages mapping between sound or text and meaning.
+
+Implemented by: the language system (Layer 10, Chapter 18).
+
+Acceptance criteria: compositional understanding of novel sentences; production constrained by syntax and context; repair dialogue when comprehension fails.
+
+8. DECISION AND VALUATION.
+
+Capability: choose among options under uncertainty by learned value, balancing reward, risk, delay, and effort.
+
+Implemented by: the reward system and selection loops (Layer 10, Chapters 9 and 17).
+
+Acceptance criteria: reward-prediction-error learning curves; sensible discounting; exploration under uncertainty and exploitation under confidence; the capacity to stop (the hyperdirect veto).
+
+9. EMOTION AND AFFECTIVE APPRAISAL.
+
+Capability: appraise events for significance to the organism's goals and let the appraisal retune processing - vigilance, memory salience, decision weights - coherently.
+
+Implemented by: the limbic coalition with the neuromodulatory broadcasts and the interoceptive system.
+
+Acceptance criteria: appraisal-congruent reallocation of attention and memory; decay and regulation, not permanence, of affective states; interoception feeding valuation.
+
+10. MOTOR CONTROL.
+
+Capability: execute accurate, calibrated, adaptable movement of effectors in real time.
+
+Implemented by: the motor systems (Layer 10, Chapters 8 through 12).
+
+Acceptance criteria: closed-loop correction mid-action; adaptation to perturbation within tens of trials; delegation of rhythm to pattern generators.
+
+11. SOCIAL COGNITION.
+
+Capability: model other agents - their attention, intentions, beliefs, and feelings - and use the models in interaction.
+
+Implemented by: the social cognition system (Layer 10, Chapter 20).
+
+Acceptance criteria: gaze and intention following; false-belief reasoning; behaviour adjustment to another agent's knowledge state.
+
+12. EXECUTIVE CONTROL.
+
+Capability: maintain goals over distraction, switch task sets on demand, inhibit prepotent responses, and monitor for errors.
+
+Implemented by: the executive system and frontoparietal network (Layer 10, Chapters 19 and 24).
+
+Acceptance criteria: measurable switch costs that shrink with preparation; successful inhibition; post-error slowing and correction.
+
+13. LEARNING ITSELF.
+
+Capability: improve at all of the above from experience, without catastrophic forgetting, using both online acquisition and offline consolidation.
+
+Implemented by: the plasticity machinery of Layers 4 through 7 under the Layer 11 schedule.
+
+Acceptance criteria: retention of old competence as new competence is added; measurable consolidation benefit from the offline phase; graceful lifetime accumulation.
+
+14. ACCESS CONSCIOUSNESS (THE WORKSPACE CRITERION).
+
+Capability: make one content at a time globally available for report, reasoning, and flexible use, with the all-or-none ignition signature.
+
+Implemented by: the global workspace dynamics (Layer 10, Chapter 44).
+
+Acceptance criteria: capacity-limited serial report; the subliminal-versus-reportable threshold; global availability of ignited content to every other faculty.
+
+An honest note, in the corpus tradition: this criterion specifies ACCESS consciousness - global availability - and takes no position on phenomenal experience, which remains beyond any acceptance test this document knows how to write.
+
+
+HOW TO USE THIS SPECIFICATION
+
+Each faculty is a konnectome acceptance suite: implement the Layer 10 coalition from the catalogues, schedule it under Layer 11, then test the capability against the criteria.
+
+The build order suggested by the dependency structure: perception and motor first, then attention and working memory, then the memory pair, then valuation and executive control, then language and social cognition, with learning and the workspace criterion tested throughout.
+
+The specification is complete when a single running konnectome instance passes all fourteen suites in one continuous session including at least one full offline consolidation cycle.
+
+
+END OF SPECIFICATION

@@ -1,0 +1,2678 @@
+LAYER 6, THE CELLULAR LAYER: MODES AND MODE TRANSITIONS - THE OUTLINE
+
+The per-type mode registers of every cell type, extracted from LAYER_06_MODES_MANUSCRIPT (which holds the full entries: registers, per-mode transfer functions, transition tables, and fault regimes).
+
+Each entry below: the type, its source chapter key, and its named mode register.
+
+Date of compilation: August 9, 2026.
+
+
+PART ONE. THE NEURON CATALOGUE, CHAPTERS 1 TO 301
+
+ENTRY 1. L2/3 IT (Layer 2/3 Intra-Telencephalic) (Context-Weaving Neuron) (keyed to neuron catalogue Chapter 1)
+
+◦ Regular-spiking adapting firing - the Weaver's Tick - the everyday tonic state in which a maintained input gives a train that slows over a few hundred milliseconds, so the cell reports drive while gradually discounting it.
+
+◦ Graded apical calcium mode - the Context Flash - a dendritic calcium-mediated action potential in the layer 1 tuft that is largest just above threshold and damped by stronger drive, letting one dendrite compute exclusive-or and bind local sensation to long-range context.
+
+◦ Sparse quiescence - the Held Breath - the near-silent low-rate state the cell keeps during cortical down states and inattention, spending most of its life close to rest.
+
+ENTRY 2. L4 IT (Layer 4 Intra-Telencephalic) (Arrival-Amplifying Neuron) (keyed to neuron catalogue Chapter 2)
+
+◦ Onset-then-adapt firing - the Arrival Ping - the phasic state in which a maintained input gives a brief opening burst then a slow train, so the layer signals change.
+
+◦ Low tonic idling - the Quiet Floor - the sparse baseline the cell keeps between sensory events.
+
+ENTRY 3. L5 IT (Layer 5 Intra-Telencephalic) (Action-Proposing Neuron) (keyed to neuron catalogue Chapter 3)
+
+◦ Regular-spiking adapting firing - the Steady Proposal - the single everyday state, in which drive gives an adapting train and the cell forwards its proposal to the extra-telencephalic output cell beside it.
+
+◦ Sparse quiescence - the Waiting Line - the low-rate baseline held between proposals.
+
+ENTRY 4. L5 ET (Layer 5 Extra-Telencephalic) (Body-Commanding Neuron) (keyed to neuron catalogue Chapter 4)
+
+◦ Intrinsically bursting tonic firing - the Standing Command - the deep-output default, in which steady drive gives repetitive bursts rather than an adapting train.
+
+◦ Backpropagation-activated calcium burst - the Coincidence Salvo - a long calcium plateau in the tuft that turns one somatic spike into a high-frequency burst when top and base are active together.
+
+◦ Sag-and-rebound - the Spring-Back - the recovery from inhibition powered by a large HCN1-carried sag current that lets the voltage dip then creep back up.
+
+ENTRY 5. L5/6 NP (Layer 5 and 6 Near-Projecting) (Short-Reach Neuron) (keyed to neuron catalogue Chapter 5)
+
+◦ Slow tonic integration - the Slow Murmur - the single defensible everyday state, a cell easy to depolarise but hard to drive fast, reporting the average of its inputs over tens of milliseconds.
+
+◦ Sparse quiescence - the Long Pause - the low-rate baseline expected of a small, slow, wide-field local channel.
+
+ENTRY 6. L6 CT (Layer 6 Cortico-Thalamic) (Input-Tuning Neuron) (keyed to neuron catalogue Chapter 6)
+
+◦ Sparse tonic firing - the Quiet Sentry - the everyday state of the quietest layer in the cortex, many cells firing under one spike per second.
+
+◦ High-frequency facilitating burst - the Rising Insistence - short bursts whose corticothalamic terminals grow progressively stronger through the train, shifting the thalamic relay cell toward excitation.
+
+ENTRY 7. L6 IT (Layer 6 Intra-Telencephalic) (Deep-Layer Courier Neuron) (keyed to neuron catalogue Chapter 7)
+
+◦ Regular-spiking adapting firing - the Courier's Round - the single everyday state, in which drive gives a strongly adapting train that carries expectation to earlier areas.
+
+◦ Sparse quiescence - the Depot - the sub-one-hertz baseline held between deliveries.
+
+ENTRY 8. L6 IT CAR3 (Layer 6 Intra-Telencephalic Carbonic Anhydrase 3) (Cortex-To-Cortex Linking Neuron) (keyed to neuron catalogue Chapter 8)
+
+◦ Regular-spiking adapting firing - the Even Relay - the everyday tonic state, an adapting train delivered across the callosum on its own delay line.
+
+◦ Tuft-soma coincidence burst - the Both-True Burst - a calcium-based tuft computation that makes the cell fire a burst instead of single spikes when local and long-range inputs coincide.
+
+ENTRY 9. L6B (Layer 6 Sublayer B) (Wakefulness-Listening Neuron) (keyed to neuron catalogue Chapter 9)
+
+◦ Spontaneous rhythmic bursting - the Never-Resting Tick - the pacemaker state of a subgroup that bursts with no input at all, an unusual continuous load for a cortical excitatory cell.
+
+◦ Delayed spiking - the Late Answer - a delay to firing on depolarising steps, so the cell responds only to sustained drive.
+
+◦ Plateau-potential analogue memory - the Long Hold - a depolarised plateau lasting hundreds of milliseconds after strong drive, holding a trace after the input has gone.
+
+ENTRY 10. PYRAMIDAL CELLS (keyed to neuron catalogue Chapter 10)
+
+◦ Regular-spiking adapting firing - the Common Tick - the everyday tonic state of most pyramidal cells, an adapting train with moderate accommodation.
+
+◦ Bursting - the Emphasis - a second output channel, whether intrinsic bursting in deep cells or the graded dendritic calcium spike of upper-layer human cells that computes exclusive-or.
+
+◦ Backpropagation-activated calcium plateau - the Coincidence Salvo - the layer 5 mechanism in which a spike travelling back from the axon coincides with tuft input and turns one spike into a burst.
+
+◦ Sparse quiescence - the Rest - the low-rate baseline, since rates run from under 0.1 to 50 hertz.
+
+ENTRY 11. SPINY STELLATE CELLS (keyed to neuron catalogue Chapter 11)
+
+◦ Regular-spiking coincidence detection - the Amplifier's Beat - the everyday state, a short 8 to 12 millisecond time constant making the cell a coincidence detector that multiplies weak thalamic drive by local recurrence.
+
+◦ Sparse quiescence - the Standby - the low-rate baseline of a cell that is sparse at rest.
+
+ENTRY 12. STAR PYRAMID CELLS (keyed to neuron catalogue Chapter 12)
+
+◦ Regular-spiking gain-modulated firing - the Weighted Relay - the everyday state, in which apical input from layer 3 depolarises the trunk, unblocks N-methyl-D-aspartate (NMDA) receptors on the basal tree, and multiplies the effect of thalamic input.
+
+◦ Dendritic bursting - the Alpha Ring - a burst mode underlying the post-stimulus alpha rhythm, the roughly 10 hertz oscillation appearing after a visual stimulus ends.
+
+ENTRY 13. BETZ CELLS (keyed to neuron catalogue Chapter 13)
+
+◦ Pre-movement onset firing - the Early Word - a brief discharge roughly 40 to 100 milliseconds before a movement begins, among the earliest cortical activity of a voluntary act.
+
+◦ Early cessation - the Held Beat - the near-silent pause that follows the onset, a distinctively primate feature.
+
+◦ Delayed sustained acceleration - the Rising Drive - a high, sustained, accelerating rate that carries the command down the thickest axon in the corticospinal tract.
+
+ENTRY 14. MEYNERT CELLS (keyed to neuron catalogue Chapter 14)
+
+◦ Direction-tuned regular-spiking firing - the One-Way Look - the everyday state, responding vigorously to motion one way and barely at all to the other.
+
+◦ Motion-onset transient - the Urgent Snap - the phasic burst delivered fast down two myelinated collaterals when motion sweeps the preferred direction along the long axis of the dendritic tree.
+
+ENTRY 15. VON ECONOMO NEURONS (Spindle Neurons) (keyed to neuron catalogue Chapter 15)
+
+◦ Presumed regular-spiking or bursting tonic firing - the Fast Report - the inferred everyday state of a deep-output projection cell like its Betz relatives, whose excitability should be strongly set by ambient arousal chemicals.
+
+◦ Presumed sparse quiescence - the Held Report - the low-rate baseline expected of a long-range projection neuron.
+
+ENTRY 16. FORK CELLS (keyed to neuron catalogue Chapter 16)
+
+◦ Presumed tonic projection firing - the Twin-Prong Report - the inferred everyday state, shared with von Economo neurons.
+
+◦ Two-compartment coincidence - the Both-Prongs Rule - a mode in which each apical prong can generate its own local calcium spike and the cell fires only when both prongs and the basal dendrite agree.
+
+ENTRY 17. CAJAL-RETZIUS CELLS (keyed to neuron catalogue Chapter 17)
+
+◦ Constitutive reelin secretion - the Steady Beacon - the always-on basal secretory state that lays a reelin gradient guiding every migrating neuron below, released continuously rather than at a synapse.
+
+◦ Immature spontaneous spiking - the Early Flicker - broad slow action potentials with high input resistance, where in early development gamma-aminobutyric acid (GABA), the transmitter that becomes inhibitory later, acts as an accelerator and helps drive the first cortical rhythms.
+
+◦ Programmed deletion - the Timed Exit - the instructed, scheduled cell death that ends the type's job in late fetal and early postnatal life.
+
+ENTRY 18. SUBPLATE NEURONS (First-Born Wiring-Guide Neuron) (keyed to neuron catalogue Chapter 18)
+
+◦ Spindle-burst amplification - the Waiting Volley - the signature fetal state, generating and amplifying brief oscillatory volleys that sweep the otherwise silent immature cortex.
+
+◦ Early tonic spiking - the First Voice - electrical maturity long before any other cortical neuron, spiking while the cortical plate is still quiet.
+
+◦ Programmed deletion - the Scheduled Exit - the timed death that removes the majority and sets the closing edge of the earliest critical periods, leaving sparse interstitial survivors.
+
+ENTRY 19. CORTICAL BASKET CELLS (keyed to neuron catalogue Chapter 19)
+
+◦ Sustained fast-spiking - the Gamma Metronome - the defining state, firing 100 to 200 spikes per second for long stretches with almost no slowing to pace the 30 to 80 cycles-per-second rhythm that binds a percept.
+
+◦ Gap-junction synchronised firing - the Locked Chorus - a network state in which basket cells wired by connexin-36 tunnels synchronise within a millisecond.
+
+◦ Autaptic silence - the Self-Hush - the brief private pause each cell imposes on itself after a spike through robust self-innervation.
+
+ENTRY 20. CHANDELIER CELLS (Axo-Axonic Cells) (keyed to neuron catalogue Chapter 20)
+
+◦ Spontaneous stuttering fast-spiking - the Standing Clamp - the everyday state, firing between stimuli so the clamp on the initial segment is applied by default rather than on request, with a tendency to stutter.
+
+◦ Sign-ambiguous output - the Two-Faced Veto - a genuine operating regime in which gamma-aminobutyric acid (GABA) at the axon initial segment can excite or inhibit, because that compartment lacks the potassium-chloride cotransporter KCC2 and its GABA reversal potential sits near minus 55 millivolts instead of the usual minus 75.
+
+ENTRY 21. TRANSLAMINAR CELLS (All-Layers Blanket-Damping Neuron) (keyed to neuron catalogue Chapter 21)
+
+◦ Fast-spiking vertical firing - the Column Sweep - the parvalbumin members' state, firing 80 to 180 spikes per second and depositing inhibition in layer-specific bands down a straight vertical axon.
+
+◦ Low-threshold spiking with rebound - the Slow Blanket - the somatostatin members' state, adapting firing with a rebound burst on release from hyperpolarisation and slow peptide release.
+
+ENTRY 22. MARTINOTTI CELLS (keyed to neuron catalogue Chapter 22)
+
+◦ Facilitation-recruited firing - the Frequency-Dependent Brake - the everyday state, in which an input that starts almost silent strengthens through a burst until the cell fires and inhibits pyramidal apical tufts across several columns.
+
+◦ Rebound burst - the Spring Volley - a burst on release from inhibition, powered by low-threshold T-type calcium channels and the hyperpolarisation-activated current I h.
+
+◦ Cholinergic lateral inhibition - the Attentive Spread - a state-dependent regime in which acetylcholine depolarises the cell and facilitates its lateral inhibition.
+
+ENTRY 23. NON-MARTINOTTI CELLS (Sentry-Freeing Entry-Layer Neuron) (keyed to neuron catalogue Chapter 23)
+
+◦ Quasi-fast-spiking stuttering - the Intermittent Gate - the everyday state, firing narrow spikes at high rates in bursts separated by irregular silent gaps, so the gaps carry as much information as the bursts.
+
+◦ Prompt tonic inhibition - the Front-Door Damp - the sustained low-average state delivering fast local inhibition to layer 4, unlike the delayed Martinotti cell.
+
+ENTRY 24. SST-CHODL CELLS (Far-Hushing Slow-Wave Neuron) (keyed to neuron catalogue Chapter 24)
+
+◦ Late-spiking accelerating firing - the Slow Ramp - the everyday state, riding a slow voltage ramp for tens to hundreds of milliseconds before the first spike, then accelerating through a current step instead of adapting.
+
+◦ Up-state-locked bursting - the Slow-Wave Chorus - the deep-sleep state in which the cell fires bursts locked to the up state, the depolarised active half of the slow oscillation.
+
+◦ Volume-transmitted hush - the Wide Quiet - a chemical output state in which gamma-aminobutyric acid (GABA) released by volume transmission lingers and recruits slow GABA type B receptors.
+
+ENTRY 25. BIPOLAR CELLS (keyed to neuron catalogue Chapter 25)
+
+◦ Irregular tonic firing - the Idle Whisper - the everyday state, a few spikes per second with irregular or bursting output that broadens and slows during a train, a pattern called accommodation.
+
+◦ Arousal burst with peptide release - the State Announcement - the high-rate state of 20 to 60 spikes per second during arousal, reward or punishment, releasing vasoactive intestinal peptide from dense-core vesicles only when firing in bursts.
+
+◦ Quiescence - the Standby - the low baseline held when behavioural state is steady.
+
+ENTRY 26. DOUBLE BOUQUET CELLS (keyed to neuron catalogue Chapter 26)
+
+◦ Adapting non-fast-spiking firing - the Column Comb - the everyday state, an adapting train at 5 to 30 spikes per second delivering shunting inhibition to dendritic spines within a single microcolumn.
+
+◦ Delayed-onset firing - the Slow Start - a clear delay to the first spike seen in some cells, holding output back until drive is sustained.
+
+ENTRY 27. SMALL BASKET CELLS OF THE VIP TYPE (Slim-Column Soma-Targeting Neuron) (keyed to neuron catalogue Chapter 27)
+
+◦ Irregular tonic firing - the Loose Tick - the single everyday state, a broad spike that slows during steady input, contacting pyramidal cell bodies within 150 micrometres.
+
+◦ Sparse quiescence - the Rest - the low baseline between events.
+
+ENTRY 28. LARGE AND SMALL BASKET CELLS EXPRESSING CHOLECYSTOKININ (Feeling-Coloured Loose-Timing Neuron) (keyed to neuron catalogue Chapter 28)
+
+◦ Accommodating irregular firing - the Mood Tick - the everyday state, recruited by sustained activity through facilitating inputs, with a broad spike and firing that accommodates from an opening burst.
+
+◦ Asynchronous-release smear - the Lingering Blanket - a mode in which the terminal keeps dribbling gamma-aminobutyric acid (GABA) for two hundred to five hundred milliseconds after a burst, turning a spike train into a lasting blanket.
+
+◦ Depolarisation-induced suppression of inhibition - the Requested Silence - a state in which an active target manufactures endocannabinoids that drift back and cut release by 60 to 90 percent for five to twenty seconds.
+
+ENTRY 29. CORTICAL NEUROGLIAFORM CELLS (keyed to neuron catalogue Chapter 29)
+
+◦ Late-spiking accelerating firing - the Slow Ramp - the everyday state, in which a just-suprathreshold current makes the voltage creep up a long ramp so the first spike arrives hundreds of milliseconds later.
+
+◦ Volume-transmitted gamma-aminobutyric acid (GABA) cloud - the Wide Hush - the signature output state, releasing GABA into the extracellular space so a dilute transient lingers for tens of milliseconds and recruits GABA type B receptors that most inhibitory cells cannot reach alone.
+
+ENTRY 30. SINGLE BOUQUET CELLS (keyed to neuron catalogue Chapter 30)
+
+◦ Prompt phasic disinhibition burst - the Green Light - the everyday state, answering a current step with a prompt burst of two to five spikes that lifts the brakes off a small column of deep output neurons.
+
+◦ Adapting tonic firing - the Held Yes - the strongly adapting, irregular low-rate state that follows the burst.
+
+ENTRY 31. CANOPY CELLS (keyed to neuron catalogue Chapter 31)
+
+◦ Quiescent Baseline - the Held Breath - the low-duty-cycle resting state in which the thin horizontal net waits, matched to layer one's lean blood supply.
+
+◦ Onset Burst - the Leading Edge - a brief prompt volley at the arrival of feedback drive that marks where and when a top-down signal began.
+
+ENTRY 32. ALPHA7 CELLS (keyed to neuron catalogue Chapter 32)
+
+◦ Standing Watch - the Depolarised Idle - a high resting state near minus 60 millivolts kept close to threshold by the standing hyperpolarisation-activated current Ih.
+
+◦ Acetylcholine Alert - the Wake-Up Call - a millisecond onset volley when a puff of acetylcholine, the brain's attention transmitter, opens the alpha7 receptor.
+
+◦ Rebound Firing - the Bounce-Back - spikes produced by being switched off, as Ih repolarises the cell after inhibition.
+
+ENTRY 33. LAMP5-LHX6 CELLS (keyed to neuron catalogue Chapter 33)
+
+◦ Late-Silent Hold - the Handbrake On - a quiescent state in which a slowly fading potassium current keeps the cell below threshold.
+
+◦ Delayed Blanket - the Slow Hush - late-spiking output that floods a small ball of tissue with gamma-aminobutyric acid (GABA) by volume transmission.
+
+◦ Persistent Firing - the Held Note - self-sustained spiking for tens of seconds after the stimulus ends, shown by more than 80 percent of the family.
+
+ENTRY 34. ROSEHIP CELLS (keyed to neuron catalogue Chapter 34)
+
+◦ Idle Shaft-Watch - the Quiet Guard - a resting state near minus 61 millivolts poised over the dendritic shafts of layer three pyramidal cells.
+
+◦ Stuttering Discharge - the Halting Veto - irregular spike trains with interspike-interval variability averaging 87 milliseconds that place a slow shunt on one dendritic microdomain.
+
+◦ Theta Resonance - the Four-Per-Second Ring - a preferential response to inputs near 4.17 hertz.
+
+ENTRY 35. BITUFTED CELLS (keyed to neuron catalogue Chapter 35)
+
+◦ Sparse-Input Sleep - the Waiting Damper - the resting state during brief or isolated pyramidal spikes, when facilitating synapses are still weak.
+
+◦ Recruited Damping - the Late Clamp - regular or low-threshold spiking that clamps pyramidal dendrites once a run of spikes has built the input up.
+
+◦ Retrograde Dendritic Release - the Backward Word - dendritic gamma-aminobutyric acid (GABA) release that depresses the very input that drove it.
+
+ENTRY 36. HORIZONTAL CELLS OF LAYER 1 (keyed to neuron catalogue Chapter 36)
+
+◦ Reelin Secretory Tone - the Standing Signpost - continuous low release of reelin into the extracellular space, a positional and plasticity signal.
+
+◦ Slow Horizontal Spiking - the Sideways Bind - broad, strongly adapting spikes under 10 per second that spread excitation across columns.
+
+◦ Springy Rebound - the Self-Righting Sag - Ih-driven return whenever the membrane is pushed down.
+
+ENTRY 37. DENTATE GRANULE CELLS (keyed to neuron catalogue Chapter 37)
+
+◦ Deep Silence - the Closed Mouth - the resting state of the great majority, held near minus 80 millivolts, that keeps the dentate code sparse.
+
+◦ Sparse Single Firing - the Rare Word - a lone spike or two only in the most strongly driven winners.
+
+◦ Immature High-Excitability - the Eager Newcomer - the transient weeks-long regime of adult-born cells, far more excitable and depolarised by gamma-aminobutyric acid (GABA).
+
+ENTRY 38. SEMILUNAR GRANULE CELLS (keyed to neuron catalogue Chapter 38)
+
+◦ Resting Bridge - the Idle Span - the quiescent state near minus 70 to minus 75 millivolts between events.
+
+◦ Plateau Sustain - the Long Echo - a latched calcium plateau of 20 to 30 millivolts that keeps the cell firing for up to ten seconds after the input stops.
+
+ENTRY 39. MOSSY CELLS (keyed to neuron catalogue Chapter 39)
+
+◦ Drowned Integrator - the Flooded Listener - the working state in which the cell receives hundreds of excitatory events per second yet is held sparse by a rising threshold.
+
+◦ Detonation Relay - the One-For-One Shout - occasional near-detonator transmission where one strong presynaptic spike drives one postsynaptic spike.
+
+ENTRY 40. CA3 PYRAMIDAL CELLS (keyed to neuron catalogue Chapter 40)
+
+◦ Regular Single Firing - the Steady Report - single spikes from thorny cells during ordinary encoding.
+
+◦ Complex-Spike Burst - the Recall Detonation - two to six spikes driven by calcium currents and stopped by calcium-activated potassium channels, prominent in athorny bursters.
+
+◦ Ripple Volley - the Replay Beat - fast synchronised firing during sharp-wave ripples that replays stored patterns.
+
+ENTRY 41. CA2 PYRAMIDAL CELLS (keyed to neuron catalogue Chapter 41)
+
+◦ Regular Tonic Firing - the Steady Social Ledger - even, non-bursting output resting near minus 70 millivolts, most active during immobility and slow-wave sleep.
+
+◦ Peptide-Gated Plastic Window - the Permitted Change - a state in which vasopressin or oxytocin lifts the clamp so the Schaffer input may strengthen.
+
+ENTRY 42. CA1 PYRAMIDAL CELLS (keyed to neuron catalogue Chapter 42)
+
+◦ Regular Single Firing - the Faithful Output - single spikes reporting the comparison of CA3 prediction against cortical report.
+
+◦ Complex-Spike Burst - the Emphatic Packet - short high-frequency bursts that a downstream cell reads as a stronger symbol.
+
+◦ Theta Resonance - the Rhythm Lock - a preferential response at 4 to 10 hertz set by distance-dependent dendritic channels.
+
+◦ Dendritic Plateau - the One-Pass Place Field - a seconds-long calcium plateau that builds a place field in a single lap.
+
+ENTRY 43. SUBICULAR PYRAMIDAL CELLS (keyed to neuron catalogue Chapter 43)
+
+◦ Regular Spiking - the Plain Bulletin - single-spike output from the roughly regular-firing minority.
+
+◦ Low-Threshold Burst - the Memory Packet - a tight packet of two to five spikes on a calcium-driven after-depolarisation that a target cannot ignore.
+
+ENTRY 44. ENTORHINAL STELLATE CELLS (keyed to neuron catalogue Chapter 44)
+
+◦ Theta Subthreshold Oscillation - the Idle Hum - a self-generated 4 to 12 hertz membrane oscillation just below threshold.
+
+◦ Resonant Spiking - the Tuned Beat - spikes phased to inputs near the resonance frequency, which shifts along the dorsal-to-ventral axis with grid spacing.
+
+◦ Persistent Firing - the Self-Held Trace - cholinergically switched self-sustained firing for tens of seconds with no synaptic help.
+
+ENTRY 45. ENTORHINAL FAN CELLS (keyed to neuron catalogue Chapter 45)
+
+◦ Silent Rest - the Empty Slate - the quiescent state between binding events.
+
+◦ Regular Accommodating Firing - the Steady Binder - regular spike trains that slow during maintained input and hand object-place-context bundles to the dentate gyrus.
+
+◦ Persistent Firing - the Held Item - self-sustaining firing lasting more than thirty seconds under acetylcholine.
+
+ENTRY 46. PARVALBUMIN BASKET CELLS (keyed to neuron catalogue Chapter 46)
+
+◦ Quiescent Ready - the Poised Metronome - the resting state between recruited rhythms, coincidence-detecting but silent.
+
+◦ Gamma Clocking - the Background Tick - sustained fast spiking that chops excitation into 30 to 80 hertz windows.
+
+◦ Ripple Locking - the Replay Clock - very fast, tightly phase-locked firing during sharp-wave ripples.
+
+ENTRY 47. CHOLECYSTOKININ BASKET CELLS (keyed to neuron catalogue Chapter 47)
+
+◦ Slow Background Inhibition - the Mood Dial - regular accommodating firing that sets a slowly varying perisomatic tone tracking emotional state.
+
+◦ Asynchronous Tail - the Lingering Leak - transmitter that keeps leaking out after the spike in proportion to residual calcium, blurring timing on purpose.
+
+◦ Endocannabinoid Suppression - the Ordered Silence - a seconds-long shut-down imposed retrogradely by the target pyramidal cell.
+
+ENTRY 48. AXO-AXONIC CELLS (keyed to neuron catalogue Chapter 48)
+
+◦ Theta-Locked Veto - the Gate Closed - fast spiking on the descending phase just after the theta peak, holding the veto over pyramidal initial segments.
+
+◦ Ripple Silence - the Gate Lifted - complete silence during sharp-wave ripples, exactly when pyramidal cells fire hardest.
+
+ENTRY 49. BISTRATIFIED CELLS (keyed to neuron catalogue Chapter 49)
+
+◦ Theta-Trough Restraint - the Steady Curb - firing near the theta trough that holds down proximal-dendrite excitation as CA3 input arrives.
+
+◦ Ripple Barrage - the Fierce Clamp - firing near 100 spikes per second during ripples, one to two milliseconds after the pyramidal cells.
+
+ENTRY 50. ORIENS-LACUNOSUM MOLECULARE (O-LM) CELLS (keyed to neuron catalogue Chapter 50)
+
+◦ Theta-Paced Idle - the Slow Sway - rhythmic subthreshold behaviour set by the h-current, tuned near theta and deaf to other rates.
+
+◦ Recruited Tuft Filtering - the Tightening Filter - firing that damps the distal pyramidal tuft, growing with each theta-frequency spike.
+
+◦ Plateau Sustain - the Held Shoulder - a plateau potential of hundreds of milliseconds triggered by glutamate together with acetylcholine.
+
+ENTRY 51. IVY CELLS (keyed to neuron catalogue Chapter 51)
+
+◦ Opioid-Silenced Rest - the Muted Fog - a quiescent state imposed when mu-opioid receptors hyperpolarise the cell.
+
+◦ Late-Spiking Hush - the Slow Mist - late-spiking output at one or two hertz that releases gamma-aminobutyric acid (GABA) as a slow cloud over a neighbourhood.
+
+ENTRY 52. HIPPOCAMPAL NEUROGLIAFORM CELLS (keyed to neuron catalogue Chapter 52)
+
+◦ Braked Silence - the Held Cloud - the late-spiking resting state as a slow potassium brake holds the cell below threshold.
+
+◦ Single-Spike Blanket - the One-Shot Fog - a spike that fogs a sphere of tissue with a biphasic, seconds-reaching inhibition.
+
+ENTRY 53. HILAR PERFORANT PATH-ASSOCIATED (HIPP) CELLS (keyed to neuron catalogue Chapter 53)
+
+◦ Exploratory Regular Firing - the Rising Watch - slow regular spiking that increases when the animal explores.
+
+◦ Burst-Gated Peptide Release - the Anticonvulsant Puff - somatostatin and neuropeptide Y released only on a real burst, suppressing the perforant-path terminals.
+
+ENTRY 54. HILAR COMMISSURAL-ASSOCIATIONAL PATHWAY-RELATED (HICAP) CELLS (keyed to neuron catalogue Chapter 54)
+
+◦ Accommodating Curb - the Loose Rein - regular accommodating firing whose intervals lengthen during maintained input, holding down inner-molecular-layer excitation.
+
+◦ Asynchronous Tail - the Lingering Spill - gamma-aminobutyric acid (GABA) that keeps spilling past the spike from loosely coupled release machinery.
+
+◦ Endocannabinoid Suppression - the Ordered Hush - a seconds-long silencing thrown by a depolarised granule cell.
+
+ENTRY 55. MOLECULAR LAYER PERFORANT PATH-ASSOCIATED (MOPP) CELLS (keyed to neuron catalogue Chapter 55)
+
+◦ Feed-Forward Pre-Empt - the Not-Yet - regular spiking that fires 3 to 6 milliseconds ahead of the granule cells to brake an incoming message while it is still arriving.
+
+◦ Slow Volume Tone - the Lingering Hush - spillover gamma-aminobutyric acid (GABA) acting on GABA type B and delta-subunit GABA type A receptors, lasting hundreds of milliseconds.
+
+◦ Late-Spiking Onset - the Neurogliaform Hesitation - a late-spiking regime in the neurogliaform-like subset that reports onset only.
+
+ENTRY 56. TRILAMINAR CELLS (keyed to neuron catalogue Chapter 56)
+
+◦ Slow-Wave Burst - the Sleep Beat - high-rate bursting during dreamless sleep that intermittently releases parvalbumin basket cells from control.
+
+◦ Waking Tonic - the Quiet-Watch Rate - steady firing during quiet wakefulness and movement.
+
+◦ Rapid-Eye-Movement Hush - the Dreamer's Silence - near-silence when acetylcholine is high.
+
+ENTRY 57. BACK-PROJECTION CELLS (Upstream-Feedback Muting Neuron) (keyed to neuron catalogue Chapter 57)
+
+◦ Theta-Tick - the Background Tick - a low steady discharge that tracks exploration and keeps the feedback synapse primed.
+
+◦ Ripple-Report Burst - the Closing Bell - a high-rate volley during sharp wave ripples (the 150 to 200 hertz replay bursts) that tells area CA3 and the dentate gyrus that CA1 has produced an answer.
+
+ENTRY 58. HIPPOCAMPO-SEPTAL PROJECTING INHIBITORY CELLS (Exploration-Curbing Long-Range Neuron) (keyed to neuron catalogue Chapter 58)
+
+◦ Theta-On Locking - the Exploration Voice - phase-locked firing during active exploration that reports the hippocampus back to the septal pacemaker.
+
+◦ Ripple-On Burst - the Replay Herald - a high-rate volley that begins before the sharp wave ripple and peaks before the ripple peak.
+
+ENTRY 59. RADIATUM-RETROHIPPOCAMPAL CELLS (Early-Arriving Calming Neuron) (keyed to neuron catalogue Chapter 59)
+
+◦ Theta-Time Veto - the Early Calmer - a steady descending-phase discharge during theta that delivers a hippocampal veto onto distant retrosplenial and subicular apical tufts.
+
+◦ Ripple-Quiet - the Replay Holiday - a near-off state during sharp wave ripples, the opposite of trilaminar and hippocampo-septal behaviour.
+
+ENTRY 60. AMYGDALA PRINCIPAL NEURONS (Threat-And-Reward Valuing Neuron) (keyed to neuron catalogue Chapter 60)
+
+◦ Sparse Vigilance - the Quiet Appraiser - a sub-1 hertz strongly adapting discharge that samples thousands of cortical, thalamic and hippocampal inputs and assigns value.
+
+◦ Associative Recall Burst - the Learned Alarm - brief higher-rate firing to a stimulus that training has paired with reward or threat.
+
+ENTRY 61. AMYGDALA INTERCALATED CELLS (Safety-Learning Brake Neuron) (keyed to neuron catalogue Chapter 61)
+
+◦ Tonic Restraint - the Held Brake - continuous fast firing that keeps central amygdala output cells inhibited and fear circuits in check.
+
+◦ Neuromodulatory Silence - the Released Latch - a switched-off state imposed by dopamine or opioids that lifts the brake.
+
+ENTRY 62. CENTRAL AMYGDALA NEURONS (Defence-Response Selecting Neuron) (keyed to neuron catalogue Chapter 62)
+
+◦ Late-Firing Delay - the Held Breath - a delayed first spike that withholds output while evidence builds.
+
+◦ Regular Spiking - the Steady Report - even firing that carries the ongoing defensive command.
+
+◦ Low-Threshold Burst - the Rebound Trigger - a burst that fires on release from inhibition and commits to a response.
+
+ENTRY 63. PIRIFORM CORTEX SEMILUNAR CELLS AND SUPERFICIAL PYRAMIDAL CELLS (keyed to neuron catalogue Chapter 63)
+
+◦ Recognition Mode - the Known Scent - recurrent associational fibres active, completing a learned odour from a fragment.
+
+◦ Acquisition Mode - the New Scent - cholinergic suppression of associational fibres so incoming bulb input is learned rather than pattern-completed.
+
+◦ Sparse Encoding - the Thin Signature - the baseline sparse, adapting representation both classes hold to keep the recurrent network from igniting.
+
+ENTRY 64. CLAUSTRUM PROJECTION NEURONS (Engagement-Gating Sheet Neuron) (keyed to neuron catalogue Chapter 64)
+
+◦ Regular Broadcast - the Chairman's Gavel - moderate regular firing that synchronously engages inhibitory cells across widely separated cortical areas.
+
+◦ Neuromodulated Gain Shift - the Altered Chair - the same broadcast rescaled by serotonin 2A and kappa-opioid tone, given the cell's exceptional density of those receptors.
+
+ENTRY 65. HARM-CONVERGING GATEKEEPER NEURON (keyed to neuron catalogue Chapter 65)
+
+◦ Armed Silence - the Cocked Gate - near-silence at rest, requiring two agreeing harm channels to fire.
+
+◦ Latched Alarm - the Held Alarm - a sustained on-state, kept alight by dynorphin after spiking stops.
+
+ENTRY 66. MEDIUM SPINY NEURONS, ALSO CALLED SPINY PROJECTION NEURONS (keyed to neuron catalogue Chapter 66)
+
+◦ Down State - the Silent Floor - a hyperpolarised resting state near minus 85 millivolts held by inward-rectifier potassium channels, in which the cell ignores input.
+
+◦ Up State - the Listening Plateau - a depolarised shelf near minus 55 to minus 50 millivolts lasting hundreds of milliseconds, the only state from which threshold is reached.
+
+ENTRY 67. D1-TYPE MEDIUM SPINY NEURONS OF THE DIRECT PATHWAY (Go-Signal Movement Neuron) (keyed to neuron catalogue Chapter 67)
+
+◦ Deep Down State - the Locked Floor - a resting state made harder to leave by a stronger inward rectifier than the D2 cell.
+
+◦ Dopamine-Enabled Up State - the Green Light - a plateau and burst that the same cortical input produces only once dopamine has raised excitability.
+
+ENTRY 68. D2-TYPE MEDIUM SPINY NEURONS OF THE INDIRECT PATHWAY (Stop-Signal Movement Neuron) (keyed to neuron catalogue Chapter 68)
+
+◦ Excitable Down State - the Ready Floor - a resting state with weaker inward rectifier, higher input resistance and lower rheobase than the D1 cell, so it leaves rest more easily.
+
+◦ Up-State Firing - the Red Light - a plateau and burst that delivers the stop command to the external pallidum.
+
+ENTRY 69. STRIATAL CHOLINERGIC INTERNEURONS, ALSO CALLED TONICALLY ACTIVE NEURONS (Steady-Beat Surprise-Pause Neuron) (keyed to neuron catalogue Chapter 69)
+
+◦ Tonic Pacemaking - the Background Beat - continuous autonomous firing that bathes the striatum in acetylcholine.
+
+◦ Burst-Pause - the Surprise Pause - a brief excitation followed by a silence timed to salient events.
+
+ENTRY 70. STRIATAL PARVALBUMIN FAST-SPIKING INTERNEURONS (Split-Second Impulse-Curbing Neuron) (keyed to neuron catalogue Chapter 70)
+
+◦ Fast-Spiking Veto - the Split-Second Curb - sustained high-frequency firing that clamps spiny neuron onset within a few milliseconds of a cortical volley.
+
+◦ Stuttering - the Flicker - irregular high-frequency runs separated by unpredictable pauses at drive just above threshold.
+
+◦ Gap-Junction Synchrony - the Shared Veto - a coupled network state in which coupled cells lock together and deliver one region-wide inhibition.
+
+ENTRY 71. STRIATAL SOMATOSTATIN, NITRIC OXIDE SYNTHASE, AND NEUROPEPTIDE Y LOW-THRESHOLD-SPIKING INTERNEURONS (Free-Spreading Messenger Neuron) (keyed to neuron catalogue Chapter 71)
+
+◦ Spontaneous Tonic - the Idle Trickle - self-firing at 1 to 10 hertz from a depolarised rest near minus 56 millivolts.
+
+◦ Low-Threshold Calcium Burst - the Rebound Reply - a T-type calcium spike fired on release from hyperpolarisation.
+
+◦ Plateau Firing - the Long Answer - a persistent-sodium plateau lasting hundreds of milliseconds during which a ragged spike train and nitric oxide release proceed.
+
+ENTRY 72. STRIATAL CALRETININ INTERNEURONS (Human-Enriched Quiet Sentinel Neuron) (keyed to neuron catalogue Chapter 72)
+
+◦ Low-Threshold Tonic - the Quiet Sentinel - a low-rate adapting discharge providing gentle background inhibition that keeps spiny-neuron ensembles from rising together.
+
+◦ Sag-Rebound - the Slow Drift - a modest hyperpolarisation-activated cyclic nucleotide-gated (HCN) sag and rebound on release from inhibition.
+
+ENTRY 73. STRIATAL TYROSINE HYDROXYLASE-EXPRESSING INTERNEURONS (Dopamine-Marked Inhibitory Neuron) (keyed to neuron catalogue Chapter 73)
+
+◦ Quiet Down State - the Waiting Latch - a near-silent state near minus 75 millivolts with exceptionally high input resistance (600 megohms to over 1 gigaohm).
+
+◦ Plateau Potential - the Held Decision - a depolarised state near minus 40 millivolts lasting 200 to 1,500 milliseconds during which the cell fires slowly.
+
+◦ Depolarisation Block - the Jammed On - a used continuation of the plateau in which the cell is too depolarised to reset sodium channels and stops spiking while staying depolarised.
+
+ENTRY 74. GLOBUS PALLIDUS PROTOTYPIC NEURONS (Nonstop Braking Relay Neuron) (keyed to neuron catalogue Chapter 74)
+
+◦ Tonic Pacemaking - the Nonstop Brake - continuous regular high-rate firing that keeps the subthalamic nucleus leashed.
+
+◦ Striatal-Driven Pause - the Gap - a brief silence imposed by an indirect-pathway striatal volley, read against the tonic hum.
+
+ENTRY 75. GLOBUS PALLIDUS ARKYPALLIDAL NEURONS (Backward-Reaching Cancel Neuron) (keyed to neuron catalogue Chapter 75)
+
+◦ Slow Irregular Baseline - the Idle Watch - low-rate irregular firing that keeps the striatal broadcast quiet.
+
+◦ Cancel Burst - the Backward Shout - a high-frequency burst that floods the entire striatum with weak simultaneous inhibition to abort a developing action.
+
+ENTRY 76. SUBTHALAMIC NUCLEUS NEURONS (Sudden-Halt Excitatory Neuron) (keyed to neuron catalogue Chapter 76)
+
+◦ Autonomous Pacemaking - the Self-Running Clock - regular single-spike firing that continues even with every synapse blocked.
+
+◦ Rebound Burst - the Recoil Volley - a rapid volley fired when pallidal inhibition lifts.
+
+◦ Multistable Persistent Firing - the Held Gear - more than one persistent firing state for the same input, documented in human surgical recordings.
+
+ENTRY 77. SUBSTANTIA NIGRA PARS RETICULATA NEURONS (Standing-Brake Release Neuron) (keyed to neuron catalogue Chapter 77)
+
+◦ High-Rate Tonic - the Standing Brake - nonstop fast firing that holds thalamus, colliculus and brainstem targets suppressed.
+
+◦ Brake-Release Pause - the Let-Go - a brief rate drop, driven by direct-pathway striatal input, that releases a target movement.
+
+ENTRY 78. SUBSTANTIA NIGRA PARS COMPACTA NEURONS (Movement-Vigor Supplying Neuron) (keyed to neuron catalogue Chapter 78)
+
+◦ Tonic Pacemaking - the Background Vigor - slow regular firing at 1 to 5 hertz that sets ambient dopamine and movement gain.
+
+◦ Reward Burst - the Better-Than-Expected Volley - a 2 to 6 spike burst at 15 to 30 hertz that releases far more dopamine per spike.
+
+◦ Disappointment Pause - the Worse-Than-Expected Silence - a 100 to 400 millisecond silence signalling a worse outcome than predicted.
+
+ENTRY 79. VENTRAL TEGMENTAL AREA NEURONS (Reward-Pursuit Driving Neuron) (keyed to neuron catalogue Chapter 79)
+
+◦ Dopamine Tonic - the Wanting Idle - slow broad-spike firing at 1 to 8 hertz setting baseline motivation.
+
+◦ Dopamine Burst - the Reward Exclamation - a 2 to 6 spike burst at 15 to 30 hertz releasing disproportionate dopamine.
+
+◦ Gamma-aminobutyric acid Tonic Restraint - the Standing Guard - constant 10 to 40 hertz inhibition the dopamine cells must overcome.
+
+ENTRY 80. NUCLEUS ACCUMBENS MEDIUM SPINY NEURONS (Motivation-To-Action Converting Neuron) (keyed to neuron catalogue Chapter 80)
+
+◦ Down State - the Deaf Floor - a deep resting state near minus 80 to minus 90 millivolts clamped by Kir2 inward-rectifier channels.
+
+◦ Up State - the Verdict Plateau - a plateau near minus 55 millivolts from which sparse firing becomes possible only on convergent input.
+
+ENTRY 81. BOTH-PATHWAY QUIETING NEURON (keyed to neuron catalogue Chapter 81)
+
+◦ Restrained Silence - the Held Cancel - irregular firing under 2 hertz, restrained by a deep afterhyperpolarisation, while neighbours fire above 10 hertz.
+
+◦ Cancel Burst - the Emergency Brake - a 50 to 100 hertz burst that quiets both striatal pathways at once.
+
+ENTRY 82. DASHED-HOPE DAMPING NEURON (keyed to neuron catalogue Chapter 82)
+
+◦ Tonic Baseline - the Standing Subtractor - steady firing at tens of spikes per second, faster than its dopamine neighbours' 1 to 8 hertz.
+
+◦ Expectation Ramp - the Rising Hope - a firing ramp that climbs after a promising cue and stays high through the wait.
+
+ENTRY 83. THALAMOCORTICAL RELAY NEURONS, ALSO CALLED PROJECTION OR PRINCIPAL NEURONS (Relay-Station Gateway Neuron) (keyed to neuron catalogue Chapter 83)
+
+◦ Tonic Mode - the Faithful Relay - evenly spaced spikes whose rate is a running report of input strength, used in waking to pass sensory detail to cortex.
+
+◦ Burst Mode - the Wake-Up Call - a low-threshold calcium hump carrying two to seven tightly packed spikes, used in sleep and to flag a stimulus appearing after quiet.
+
+ENTRY 84. CORE RELAY NEURONS (Pinpoint Sensory-Map Neuron) (keyed to neuron catalogue Chapter 84)
+
+◦ Faithful Tonic - the Pinpoint Report - short-latency high-rate firing (above 200 spikes per second) with a sharp receptive field, a near-copy of a single retinal or touch fibre.
+
+◦ Wake-Up Burst - the Something Appeared - a low-threshold burst signalling a stimulus arriving after quiet, detected by cortex far more reliably than single spikes.
+
+ENTRY 85. MATRIX RELAY NEURONS (Wide-Spreading Synchrony Neuron) (keyed to neuron catalogue Chapter 85)
+
+◦ Low-Rate Tonic - the House Lights - lower average firing than core cells, adapting, carrying a diffuse state signal to apical tufts.
+
+◦ State Burst - the Rousing Flood - a readily fired burst that converts a single cortical spike into a burst by triggering an apical calcium spike.
+
+ENTRY 86. THALAMIC LOCAL INTERNEURONS (Local Sharpening Inhibitor Neuron) (keyed to neuron catalogue Chapter 86)
+
+◦ Local Dendritic Release - the Point Editor - gamma-aminobutyric acid released at a single F2 dendritic terminal in response to local input, without depolarising the soma.
+
+◦ Global Spiking - the Whole-Cell Veto - a conventional narrow fast spike that engages the cell's axonal output onto relay cell bodies.
+
+ENTRY 87. THALAMIC RETICULAR NUCLEUS NEURONS (Attention-Gating Shutter Neuron) (keyed to neuron catalogue Chapter 87)
+
+◦ Tonic gating - the Waking Shutter - steady low-rate inhibition that dims ignored thalamic channels while attention illuminates one.
+
+◦ Rhythmic bursting - the Spindle Metronome - an accelerating-then-decelerating calcium burst that generates the sleep spindle of light non-rapid-eye-movement sleep.
+
+ENTRY 88. HABENULAR NEURONS (Setback-Signalling Aversion Neuron) (keyed to neuron catalogue Chapter 88)
+
+◦ Tonic pacemaking - the Background Tick - a constant low tone reporting the ongoing state of expectation, strongest in the medial habenula.
+
+◦ Disappointment bursting - the Setback Volley - a powerful N-methyl-D-aspartate (NMDA)-driven burst when a promised reward fails to arrive, the inverted reward-prediction error of the lateral habenula.
+
+ENTRY 89. ZONA INCERTA NEURONS (Action-Releasing Gate Neuron) (keyed to neuron catalogue Chapter 89)
+
+◦ Slow tonic gating - the Standing Permission - low-rate inhibition setting the intensity of touch, feeding, fear, pain and sleep.
+
+◦ Rebound bursting - the Release Kick - a low-threshold calcium burst fired the moment cortical drive pauses, converting a gap in input into a surge of output.
+
+ENTRY 90. MAGNOCELLULAR NEUROSECRETORY CELLS (Large-Bodied Blood-Releasing Neuron) (keyed to neuron catalogue Chapter 90)
+
+◦ Basal secretion - the Idle Drip - slow steady firing converting resting body facts into a low background hormone level.
+
+◦ Stimulated high-output firing - the Demand Surge - facilitated firing that empties hormone into blood when the body is salty, bleeding or nursing.
+
+◦ Dendritic broadcast - the Local Whisper - peptide released from dendrites into the nucleus to prime and couple neighbours, a mode running in parallel with the others.
+
+ENTRY 91. OXYTOCIN NEURONS (Birthing-And-Nursing Burst Neuron) (keyed to neuron catalogue Chapter 91)
+
+◦ Slow regular firing - the Steady Drip - evenly spaced background firing setting baseline plasma oxytocin.
+
+◦ Milk-ejection bursting - the Nursing Thunderclap - an explosive synchronised burst every few minutes that ejects milk and, in labour, drives contractions.
+
+◦ Dendritic priming - the Shared Charge - oxytocin released into the glia-free dendritic zone that primes every neighbour toward the next joint burst.
+
+ENTRY 92. VASOPRESSIN NEURONS, ALSO CALLED ANTIDIURETIC HORMONE NEURONS (Water-Sparing Kidney-Signal Neuron) (keyed to neuron catalogue Chapter 92)
+
+◦ Slow irregular firing - the Hydrated Idle - low-rate output when blood is dilute.
+
+◦ Phasic bursting - the Thirst Pulse - alternating bursts and silences that release far more hormone per spike and let terminals recover.
+
+◦ Dendritic autoinhibition - the Self-Timer - dynorphin released from the cell's own dendrites that ends each burst.
+
+ENTRY 93. PARVOCELLULAR NEUROSECRETORY CELLS (Pituitary-Steering Small Neuron) (keyed to neuron catalogue Chapter 93)
+
+◦ Restrained basal firing - the Held Idle - irregular low-rate firing under dense gamma-aminobutyric acid (GABA) restraint, giving a low baseline hormone drip.
+
+◦ Synchronised pulsing - the Episodic Salvo - the group firing together in bursts lasting minutes, the frequency and amplitude of which carry the message.
+
+◦ Glial gating - the Tanycyte Shutter - a mode in which output changes with no change in spikes, as tanycyte processes open or close access to portal blood.
+
+ENTRY 94. CORTICOTROPIN-RELEASING HORMONE (CRH) NEURONS (Stress-Cascade Starting Neuron) (keyed to neuron catalogue Chapter 94)
+
+◦ Rhythmic mini-bursting - the Capped Idle - brief rhythmic bursts that cap the average rate at rest.
+
+◦ Continuous single spiking - the Alarm Ramp - the mode a stressor throws it into, removing the cap and letting rate climb.
+
+◦ Ultradian pulsing - the Hourly Cortisol Beat - a population rhythm near one hour, each upstate producing one cortisol pulse.
+
+ENTRY 95. THYROTROPIN-RELEASING HORMONE (TRH) NEURONS (Chemical-Pace Setting Neuron) (keyed to neuron catalogue Chapter 95)
+
+◦ Set-point firing - the Metabolic Hold - modest irregular firing defending a chosen level of thyroid hormone.
+
+◦ Energy-lowered output - the Fasting Turndown - a deliberately suppressed state that lowers metabolic rate when body fat is scarce, even though thyroid hormone is low.
+
+ENTRY 96. GONADOTROPIN-RELEASING HORMONE (GNRH) NEURONS (Fertility Rhythm-Setting Neuron) (keyed to neuron catalogue Chapter 96)
+
+◦ Near-silent baseline - the Waiting Quiet - sub-hertz firing between pulses.
+
+◦ Pulsatile bursting - the Hourly Beat - a burst of tens of seconds delivering one gonadotropin-releasing hormone pulse.
+
+◦ Surge firing - the Ovulation Command - a prolonged high-output state that triggers the luteinising hormone surge and ovulation.
+
+ENTRY 97. GROWTH HORMONE-RELEASING HORMONE (GHRH) NEURONS (Growth-Spurt Prompting Neuron) (keyed to neuron catalogue Chapter 97)
+
+◦ Braked quiet - the Held Pause - the state while somatostatin holds the potassium channels open.
+
+◦ Rebound bursting - the Growth Prompt - a burst fired on withdrawal of that inhibition, loudest in deep sleep.
+
+ENTRY 98. SOMATOSTATIN NEURONS (Pulse-Trough Curbing Neuron) (keyed to neuron catalogue Chapter 98)
+
+◦ Tonic braking - the Standing No - continuous firing that digs the troughs between growth hormone pulses and also restrains thyroid stimulating hormone.
+
+◦ Nightly withdrawal - the Released Gap - the drop in firing an hour after sleep onset that lets a growth hormone pulse escape.
+
+ENTRY 99. TUBEROINFUNDIBULAR DOPAMINE (TIDA) NEURONS (Milk-Hormone Curbing Neuron) (keyed to neuron catalogue Chapter 99)
+
+◦ Phasic oscillation - the Slow Swing - an intrinsic rhythmic alternation of bursts and silences that clamps prolactin down by default.
+
+◦ Tonic firing - the Nursing Reset - a steady broadened-spike mode prolactin throws it into, resetting dopamine output during lactation.
+
+ENTRY 100. AGOUTI-RELATED PEPTIDE AND NEUROPEPTIDE Y (AGRP/NPY) NEURONS OF THE ARCUATE NUCLEUS (Hunger-Driving Foraging Neuron) (keyed to neuron catalogue Chapter 100)
+
+◦ Fasted drive firing - the Hunger Push - elevated tonic firing generating the urge to forage and eat.
+
+◦ Fed quiet - the Full Rest - low firing when leptin and insulin report adequate stores.
+
+◦ Sensory shut-off - the Sight-of-Food Silence - a rapid collapse of firing on seeing or smelling food, before any calorie is absorbed.
+
+ENTRY 101. PRO-OPIOMELANOCORTIN AND COCAINE- AND AMPHETAMINE-REGULATED TRANSCRIPT (POMC/CART) NEURONS OF THE ARCUATE NUCLEUS (Meal-Ending Fullness Neuron) (keyed to neuron catalogue Chapter 101)
+
+◦ Steady fullness firing - the Enough Signal - firing that rises with leptin and insulin and releases alpha-melanocyte-stimulating hormone to end the meal.
+
+◦ Fasted quiet - the Deprivation Hush - suppressed firing under gamma-aminobutyric acid from the neighbouring hunger neurons when fuel is low.
+
+ENTRY 102. MELANOCORTIN RECEPTOR 4-EXPRESSING NEURONS OF THE PARAVENTRICULAR NUCLEUS (Appetite-Halting Hub Neuron) (keyed to neuron catalogue Chapter 102)
+
+◦ Satiety firing - the Stop-Eating Hub - raised firing when alpha-melanocyte-stimulating hormone dominates, passing a stop signal to the parabrachial nucleus.
+
+◦ Hunger-quieted firing - the Keep-Eating Lull - lowered firing when agouti-related peptide dominates and reopens the potassium channel.
+
+ENTRY 103. OREXIN NEURONS, ALSO CALLED HYPOCRETIN NEURONS, OF THE LATERAL HYPOTHALAMUS (Sleep-Intrusion Blocking Neuron) (keyed to neuron catalogue Chapter 103)
+
+◦ Active-wake firing - the Wake Hold - firing that clamps every other arousal system in the on position.
+
+◦ Quiet-wake and sleep quiet - the Drowsy Idle - reduced firing as arousal falls.
+
+◦ rapid-eye-movement (REM) near-silence - the Dream Cutout - almost complete silence during rapid eye movement sleep, keeping dream paralysis from leaking into waking.
+
+ENTRY 104. MELANIN-CONCENTRATING HORMONE (MCH) NEURONS OF THE LATERAL HYPOTHALAMUS (Dream-Sleep Promoting Neuron) (keyed to neuron catalogue Chapter 104)
+
+◦ Waking silence - the Daytime Off - near-total quiet during waking.
+
+◦ rapid-eye-movement (REM) firing - the Dream Engine - maximal firing during rapid eye movement sleep, promoting that stage and quietening hippocampal memory circuits.
+
+ENTRY 105. HISTAMINERGIC NEURONS OF THE TUBEROMAMMILLARY NUCLEUS (Wake-Holding Ceiling Neuron) (keyed to neuron catalogue Chapter 105)
+
+◦ Waking pacemaking - the Vigilance Tick - regular slow firing that broadcasts histamine and holds alertness.
+
+◦ Sleep silence - the Lights Out - the cessation of firing in slow-wave and, absolutely, in rapid eye movement sleep.
+
+ENTRY 106. KISSPEPTIN, NEUROKININ B, AND DYNORPHIN (KNDY) NEURONS (Hormone-Pulse Generator Neuron) (keyed to neuron catalogue Chapter 106)
+
+◦ Inter-pulse silence - the Charging Quiet - the recovery phase while dynorphin inhibition wears off.
+
+◦ Synchronised bursting - the Fertility Beat - the whole population igniting together to fire one kisspeptin pulse onto gonadotropin-releasing hormone cells.
+
+ENTRY 107. SUPRACHIASMATIC NUCLEUS NEURONS (Master Body-Clock Neuron) (keyed to neuron catalogue Chapter 107)
+
+◦ Subjective-day firing - the Daylight High - raised tonic firing broadcasting the daytime phase to the body.
+
+◦ Subjective-night silence - the Nighttime Low - near-silence, many cells electrically quiet.
+
+◦ Light-reset transient - the Phase Nudge - the gene-induction state triggered when light arrives in the subjective night.
+
+ENTRY 108. PREAUTONOMIC NEURONS OF THE PARAVENTRICULAR NUCLEUS (Organ-Command Setting Neuron) (keyed to neuron catalogue Chapter 108)
+
+◦ Slow tonic drive - the Coasting Set - low-rate firing that biases blood pressure, heart rate and salt handling.
+
+◦ Rebound bursting - the Release Burst - a low-threshold calcium burst fired the instant inhibition lifts.
+
+◦ High-gain overdrive - the Overload Gear - a used but pathological standing state of fast tonic firing under chronic cardiovascular load, admitted here because it is reached routinely in disease and is largely reversible.
+
+ENTRY 109. OREXIGENIC AND THERMOREGULATORY NEURONS OF THE PREOPTIC AREA, INCLUDING WARM-SENSITIVE AND COLD-SENSITIVE CELLS (Body-Heat Thermostat Neuron) (keyed to neuron catalogue Chapter 109)
+
+◦ Graded warm-sensitive pacemaking - the Standing Thermostat - continuous firing that rises with local warmth and tonically inhibits heat-generating pathways.
+
+◦ Raised-set-point firing - the Fever Reset - a state in which prostaglandin silences the brake so the body defends a higher temperature.
+
+ENTRY 110. MAMMILLARY BODY NEURONS (Memory-Circuit Relay Neuron) (keyed to neuron catalogue Chapter 110)
+
+◦ Theta-locked relay firing - the Rhythmic Pass - firing phase-locked to the hippocampal theta rhythm that carries memory traffic to the anterior thalamus.
+
+◦ Rebound bursting - the Held-Then-Fired Burst - a burst that follows release from inhibition and sharpens directional and speed signals.
+
+ENTRY 111. BLOOD-SAMPLING THIRST NEURON (keyed to neuron catalogue Chapter 111)
+
+◦ Graded osmosensitive firing - the Thirst Meter - firing that climbs smoothly with plasma osmolality and angiotensin to generate felt thirst.
+
+◦ Swallow-gated suppression - the Drinking Cutout - a rapid feedforward drop in firing triggered by the act of swallowing, before blood sodium has changed.
+
+ENTRY 112. PUSH-AND-PULL NOVELTY NEURON (keyed to neuron catalogue Chapter 112)
+
+◦ Balanced baseline firing - the Familiar Hum - moderate firing in which co-released glutamate and gamma-aminobutyric acid roughly cancel.
+
+◦ Novelty high-frequency firing - the New-World Alert - fast theta-locked firing that becomes net excitatory and flags a moment to the hippocampus as worth recording.
+
+ENTRY 113. PURKINJE CELLS (keyed to neuron catalogue Chapter 113)
+
+◦ Simple-spike pacemaking - the Steady Brake - continuous tonic firing that shapes the timing and size of movement by speeding and slowing.
+
+◦ Complex spiking - the Error Flag - a rare climbing-fibre-triggered burst of spikelets marking that something went wrong.
+
+◦ Post-complex-spike pause - the Teaching Gap - a brief silence after each complex spike that carries information downstream.
+
+◦ Dendritic calcium spiking - the Branch Compute - local calcium spikes confined to single branches, letting one cell hold several semi-independent computations.
+
+ENTRY 114. CEREBELLAR GRANULE CELLS (keyed to neuron catalogue Chapter 114)
+
+◦ Sub-threshold silence - the Waiting Dark - the quiet resting state that keeps the granule code sparse.
+
+◦ Coincidence bursting - the Timing Spark - a short high-frequency burst fired only when several mossy fibres arrive together, encoding a precise moment.
+
+ENTRY 115. GOLGI CELLS (keyed to neuron catalogue Chapter 115)
+
+◦ Spontaneous pacemaking - the Standing Rhythm - autonomous firing that imposes a theta-band rhythm on the granular layer and sets tonic inhibition.
+
+◦ Driven firing - the Sparseness Clamp - faster firing when mossy and granule input rises, cutting how many granule cells respond.
+
+◦ Granule-driven pause - the Freedom Window - a silence of hundreds of milliseconds when strong granule input arrives, releasing granule cells.
+
+◦ Post-hyperpolarisation speed-up - the Rebound Overdrive - a lasting rise in spontaneous rate after inhibition, so the cell remembers having been inhibited.
+
+ENTRY 116. LUGARO CELLS (keyed to neuron catalogue Chapter 116)
+
+◦ Serotonin-off silence - the Dormant Reserve - near-total silence that costs almost nothing to maintain.
+
+◦ Serotonin-on firing - the Strip Switch - steady regular firing that inhibits Golgi, basket and stellate cells along a strip and changes the operating mode of that slab of cortex.
+
+ENTRY 117. GLOBULAR CELLS (Feedback-Loop Wake-Boosting Neuron) (keyed to neuron catalogue Chapter 117)
+
+◦ Silent held-down state - the Pinned Silence - the resting condition in which about six Purkinje cells clamp the cell below threshold and it emits no spikes at all.
+
+◦ Noradrenaline-driven firing - the Wake-Up Lift - the aroused condition in which noradrenaline from the locus coeruleus depolarises the cell and it fires in the low teens of hertz, disinhibiting the cortex.
+
+◦ Serotonin-driven trickle - the Faint Stir - a weak firing condition, admitted only tentatively, in which serotonin lifts the cell to a couple of hertz at most.
+
+ENTRY 118. CANDELABRUM CELLS (keyed to neuron catalogue Chapter 118)
+
+◦ Quiescent low-rate baseline - the Standing Hush - a near-silent or very slow resting condition that is its default; confidence moderate.
+
+◦ Modulator-lifted firing - the Chemical Nudge - a raised firing condition when serotonin or noradrenaline from the brainstem arrives, by analogy with its Lugaro and globular neighbours; confidence low because direct recordings are scarce.
+
+ENTRY 119. UNIPOLAR BRUSH CELLS (UBCS) (keyed to neuron catalogue Chapter 119)
+
+◦ ON response with long after-discharge - the Slow Echo - the excited condition in which glutamate spillover drives a firing burst that outlasts the input by hundreds of milliseconds to seconds.
+
+◦ OFF response with pause and rebound - the Held Breath - the inhibited condition of the OFF subtype, in which input suppresses firing and release produces a rebound.
+
+◦ Tonic baseline - the Idling Tick - a spontaneous slow regular firing between inputs, on the order of a few hertz.
+
+ENTRY 120. STELLATE CELLS (keyed to neuron catalogue Chapter 120)
+
+◦ Spontaneous tonic firing - the Background Tick - an intrinsic pacemaker baseline of a few to low tens of hertz that provides standing inhibition to Purkinje cells.
+
+◦ Parallel-fibre-driven firing - the Beam Brake - the raised-rate condition when a parallel-fibre beam excites the cell, sharpening Purkinje output by feedforward inhibition.
+
+ENTRY 121. CEREBELLAR BASKET CELLS (keyed to neuron catalogue Chapter 121)
+
+◦ Spontaneous tonic firing - the Background Tick - an intrinsic baseline of a few to low tens of hertz giving standing inhibition at the Purkinje axon hillock.
+
+◦ Parallel-fibre-driven veto - the Axon Clamp - the raised-rate, pinceau-mediated condition that can abruptly silence Purkinje output at the initial segment through combined synaptic and ephaptic action.
+
+ENTRY 122. LARGE GLUTAMATERGIC PROJECTION NEURONS (Movement-Dispatching Output Neuron) (keyed to neuron catalogue Chapter 122)
+
+◦ Tonic high-rate firing - the Steady Dispatch - the intrinsic pacemaker baseline that carries a continuous rate-coded movement command.
+
+◦ Rebound burst - the Bounce-Back - a transient high-frequency burst triggered when strong Purkinje inhibition releases, deinactivating T-type (transient, low-threshold) calcium channels.
+
+◦ Inhibition-shaped pause - the Held Command - the suppressed condition during a synchronous Purkinje volley, which is itself informative because it carves the output.
+
+ENTRY 123. GABAERGIC NUCLEO-OLIVARY NEURONS (Climbing-Input Damping Neuron) (keyed to neuron catalogue Chapter 123)
+
+◦ Tonic inhibitory firing - the Steady Damping - an ongoing low-rate discharge that sets a continuous brake on olivary excitability and electrical coupling.
+
+◦ Climbing-feedback modulation - the Error Trim - a rate change following cerebellar activity that closes the olivo-cortico-nuclear loop, turning the damping up after error signals.
+
+ENTRY 124. GLYCINERGIC NEURONS (Same-Side Restraint Output Neuron) (keyed to neuron catalogue Chapter 124)
+
+◦ Tonic inhibitory firing - the Steady Restraint - an ongoing discharge that holds down ipsilateral premotor targets in proportion to cerebellar drive.
+
+◦ Rebound-shaped firing - the Bounce Restraint - a transient rate rise after release from Purkinje inhibition, by analogy with its glutamatergic nuclear neighbours; confidence lower for this glycinergic type.
+
+ENTRY 125. SMALL LOCAL INTERNEURONS (Close-Quarters Inhibiting Neuron) (keyed to neuron catalogue Chapter 125)
+
+◦ Low tonic baseline - the Standing Hush - a slow resting discharge that keeps local nuclear excitability trimmed.
+
+◦ Input-driven firing - the Local Brake - a raised-rate condition when nearby mossy, climbing collateral, or projection-neuron activity recruits it.
+
+ENTRY 126. HUSH-LIFTING LEARNING NEURON (keyed to neuron catalogue Chapter 126)
+
+◦ Gate-closed baseline - the Held Hush - the resting condition in which downstream targets remain under standing inhibition and plasticity is gated off.
+
+◦ Gate-open disinhibition - the Hush Lift - the active condition in which the cell removes that inhibition, opening a window for learning; confidence low because this is a projected type.
+
+ENTRY 127. GENERAL SOMATIC EFFERENT MOTOR NEURONS (Eye-And-Tongue Aiming Neuron) (keyed to neuron catalogue Chapter 127)
+
+◦ Tonic position-holding firing - the Steady Hold - the eye-position or tongue-posture signal, a maintained rate that opposes elastic restoring forces.
+
+◦ Phasic saccadic burst - the Aim Pulse - the high-frequency burst that drives a rapid movement (the pulse of the pulse-step command).
+
+◦ Recruitment-graded ramp - the Effort Climb - progressive activation across the motor pool as more force is demanded.
+
+ENTRY 128. SPECIAL VISCERAL EFFERENT, ALSO CALLED BRANCHIAL MOTOR, NEURONS (Face-And-Throat Moving Neuron) (keyed to neuron catalogue Chapter 128)
+
+◦ Tonic postural tone - the Steady Set - a low maintained rate giving facial and pharyngeal muscle tone.
+
+◦ Phasic recruited burst - the Action Drive - the burst that powers a chew, a blink, or a swallow.
+
+◦ Rhythmic patterned firing - the Chew-Swallow Beat - participation in central-pattern-generator rhythms for mastication and swallowing.
+
+ENTRY 129. GENERAL VISCERAL EFFERENT PREGANGLIONIC PARASYMPATHETIC NEURONS (Rest-And-Digest Outflow Neuron) (keyed to neuron catalogue Chapter 129)
+
+◦ Tonic parasympathetic tone - the Resting Outflow - a low maintained discharge that sets baseline heart-slowing, secretion, and gut activity.
+
+◦ Reflex-driven surge - the Digest Push - a raised rate during feeding, baroreflex, or other visceral reflexes.
+
+ENTRY 130. SENSORY RELAY NEURONS OF THE TRIGEMINAL, SOLITARY, COCHLEAR, AND VESTIBULAR NUCLEI (First-Stop Sense-Sorting Neuron) (keyed to neuron catalogue Chapter 130)
+
+◦ Faithful tonic relay - the Faithful Relay - the default in which each afferent volley is passed on with high fidelity and modest transformation.
+
+◦ Gain-adjusted relay - the Turned Gain - a state in which descending or local modulation raises or lowers the transfer gain.
+
+◦ Adapting response - the Fading Report - a rapidly adapting variant in some subpopulations that reports change rather than steady level.
+
+ENTRY 131. MESENCEPHALIC TRIGEMINAL NUCLEUS NEURONS (Brain-Resident Jaw-Stretch Neuron) (keyed to neuron catalogue Chapter 131)
+
+◦ Stretch-driven phasic firing - the Stretch Report - the working mode in which muscle-spindle and periodontal input drives firing that encodes jaw stretch and bite force.
+
+◦ Intrinsic burst firing - the Self Burst - a tendency to fire in bursts driven by persistent sodium and other intrinsic currents, sharpening the signal.
+
+◦ Low tonic baseline - the Standing Tick - a modest resting discharge between stretches; confidence moderate.
+
+ENTRY 132. LOCUS COERULEUS NEURONS (Brain-Wide Alerting Neuron) (keyed to neuron catalogue Chapter 132)
+
+◦ Tonic baseline firing - the Background Alert - the slow regular pacemaker discharge that sets overall arousal and behavioural flexibility.
+
+◦ Phasic burst firing - the Salience Flag - short high-rate bursts locked to salient or task-relevant events that punctuate the broadcast.
+
+◦ Silent state - the Sleep Silence - the near-cessation of firing during rapid-eye-movement sleep and deep anaesthesia, thrown from above.
+
+ENTRY 133. RAPHE NUCLEI NEURONS (Mood-Steadying Patience Neuron) (keyed to neuron catalogue Chapter 133)
+
+◦ Slow clock-like tonic firing - the Patient Metronome - the regular pacemaker discharge that provides steady serotonergic tone.
+
+◦ Phasic reward-and-punishment modulation - the Outcome Nudge - modest rate changes on multiple timescales that report reward and punishment.
+
+◦ Silent state - the Dream Silence - the near-cessation during rapid-eye-movement sleep, thrown from above.
+
+ENTRY 134. PEDUNCULOPONTINE AND LATERODORSAL TEGMENTAL NUCLEUS NEURONS (Walk-Starting Arousal Neuron) (keyed to neuron catalogue Chapter 134)
+
+◦ Tonic single-spike firing - the Waking Tick - the regular firing of wakefulness that supports cortical activation and arousal.
+
+◦ Rhythmic burst firing - the Dream Burst - low-threshold-calcium-driven bursts most prominent in rapid-eye-movement sleep and drowsy transitions.
+
+◦ Locomotor-drive firing - the Walk Start - increased firing that engages the mesencephalic locomotor region to initiate and sustain gait.
+
+◦ Quiescent state - the Deep-Sleep Hush - reduced firing in slow-wave sleep.
+
+ENTRY 135. VENTROLATERAL MEDULLARY ADRENERGIC NEURONS (Pressure-Holding Emergency Neuron) (keyed to neuron catalogue Chapter 135)
+
+◦ Tonic sympathetic drive - the Pressure Hold - the ongoing discharge that sets resting sympathetic vasomotor tone and arterial pressure.
+
+◦ Baroreflex-modulated firing - the Baro Trim - beat-by-beat rate adjustment that buffers blood pressure against the baroreceptor signal.
+
+◦ Emergency surge - the Alarm Surge - a large rate increase during hypotension, hypoxia, hypoglycaemia, or stress that raises pressure and mobilises defence.
+
+ENTRY 136. PERIAQUEDUCTAL GREY NEURONS (Freeze-Or-Flee Selecting Neuron) (keyed to neuron catalogue Chapter 136)
+
+◦ Passive-coping output - the Freeze Command - the ventrolateral-column pattern that drives immobility and quiescence.
+
+◦ Active-coping output - the Flee Command - the dorsolateral and lateral-column pattern that drives flight or fight with a sympathetic surge.
+
+◦ Analgesic output - the Pain Gate - descending drive that suppresses pain transmission during threat.
+
+◦ Low tonic baseline - the Watchful Idle - the resting discharge between threats.
+
+ENTRY 137. SPHERICAL BUSHY CELLS (keyed to neuron catalogue Chapter 137)
+
+◦ Primary-like phase-locked relay - the Faithful Relay - the working mode in which large endbulb-of-Held synapses drive spikes locked to the fine structure of the sound waveform, even sharpening the phase-locking of the auditory nerve.
+
+◦ Gain-adjusted relay - the Turned Gain - a modest state in which inhibitory and efferent input trims the transfer, admitted with lower confidence.
+
+ENTRY 138. GLOBULAR BUSHY CELLS (keyed to neuron catalogue Chapter 138)
+
+◦ Primary-like-with-notch phase-locked relay - the Precise Relay - the working mode in which many converging inputs produce a very sharply timed output that drives the medial nucleus of the trapezoid body.
+
+◦ Gain-adjusted relay - the Turned Gain - modest inhibitory and efferent trimming; admitted with lower confidence.
+
+ENTRY 139. STELLATE OR MULTIPOLAR CELLS, T-STELLATE TYPE (Narrow-Band Spectrum-Reporting Neuron) (keyed to neuron catalogue Chapter 139)
+
+◦ Chopper firing - the Steady Chop - the working mode in which intrinsic membrane properties impose a regular chopping rhythm largely independent of the stimulus fine structure, encoding sound-level in a narrow band.
+
+◦ Sub-threshold or silent baseline - the Standing Quiet - the resting condition between sounds.
+
+ENTRY 140. STELLATE OR MULTIPOLAR CELLS, D-STELLATE TYPE (Broad-Band Sound-Damping Neuron) (keyed to neuron catalogue Chapter 140)
+
+◦ Onset response - the Onset Stamp - a sharp burst at sound onset that marks the start of a sound across a wide band.
+
+◦ Sustained wideband inhibition - the Broad Damp - continued firing during a sound that delivers cross-frequency inhibition to other cochlear-nucleus cells.
+
+◦ Silent baseline - the Standing Quiet - the resting condition.
+
+ENTRY 141. OCTOPUS CELLS (keyed to neuron catalogue Chapter 141)
+
+◦ Broadband onset detection - the Onset Stamp - the working mode in which coincident input across many frequencies drives a single, sub-millisecond-precise spike marking a sharp acoustic transient.
+
+◦ Silent baseline - the Standing Quiet - the resting condition between transients, with a very low input resistance keeping the cell unresponsive to weak or slow input.
+
+ENTRY 142. FUSIFORM CELLS, ALSO CALLED PYRAMIDAL CELLS, OF THE DORSAL COCHLEAR NUCLEUS (Sound-Elevation Reading Neuron) (keyed to neuron catalogue Chapter 142)
+
+◦ Tonic baseline firing - the Standing Tick - a spontaneous discharge that provides a working point around which sound modulates.
+
+◦ Buildup response - the Slow Build - a gradually increasing firing pattern at sound onset, set by a transient (A-type) potassium current that delays the first spikes.
+
+◦ Pauser response - the Held Pause - an initial spike followed by a silent gap and then resumed firing, the same current expressed differently.
+
+◦ Spectral-notch reporting - the Notch Reader - the integrative use of excitation and inhibition to signal the frequency of a spectral notch that codes elevation.
+
+ENTRY 143. GIANT CELLS (Deep-Layer Hearing-Output Neuron) (keyed to neuron catalogue Chapter 143)
+
+◦ Tonic baseline firing - the Standing Tick - a spontaneous discharge giving a working point; confidence moderate.
+
+◦ Integrative stimulus-driven firing - the Wide Gather - a raised-rate condition in which converging excitation and inhibition are pooled into an output sent to the inferior colliculus; confidence moderate.
+
+ENTRY 144. CARTWHEEL CELLS (keyed to neuron catalogue Chapter 144)
+
+◦ Simple-spike tonic firing - the Simple Tick - a baseline of single sodium spikes providing ongoing glycinergic inhibition to fusiform cells.
+
+◦ Complex-spike bursting - the Cartwheel Burst - the distinctive calcium-driven bursts of several spikelets that give the cell its name and deliver strong phasic inhibition.
+
+ENTRY 145. SUPERIOR OLIVARY COMPLEX NEURONS (Two-Ear Comparison Neuron) (keyed to neuron catalogue Chapter 145)
+
+◦ Coincidence-detection firing - the Two-Ear Match - the medial-superior-olive mode in which output peaks when excitatory inputs from the two ears arrive simultaneously, encoding interaural time difference.
+
+◦ Excitation-inhibition balance firing - the Loudness Balance - the lateral-superior-olive mode in which ipsilateral excitation is weighed against contralateral inhibition to encode interaural level difference.
+
+◦ Silent or low baseline - the Standing Quiet - the resting condition without sound.
+
+ENTRY 146. MEDIAL OLIVOCOCHLEAR EFFERENT NEURONS (Cochlear-Gain Turning-Down Neuron) (keyed to neuron catalogue Chapter 146)
+
+◦ Low tonic efferent tone - the Standing Turn - a baseline discharge that sets resting cochlear amplifier gain.
+
+◦ Reflex-driven suppression - the Gain Cut - the raised-rate condition of the medial olivocochlear reflex that reduces outer-hair-cell gain in noise, improving signal detection and protecting the cochlea.
+
+ENTRY 147. LATERAL OLIVOCOCHLEAR EFFERENT NEURONS (Inner-Ear Nerve Steadying Neuron) (keyed to neuron catalogue Chapter 147)
+
+◦ Tonic modulatory tone - the Standing Steady - a slow ongoing output that sets and balances auditory-nerve excitability between the two ears.
+
+◦ Slow adjustment - the Balance Trim - graded shifts in that tone that rebalance the ears and protect against excitotoxicity over long timescales.
+
+ENTRY 148. INFERIOR OLIVE NEURONS (Movement-Error Teaching Neuron) (keyed to neuron catalogue Chapter 148)
+
+◦ Subthreshold Oscillatory Coincidence-Detection - the Six-Hertz Metronome - a continuous membrane wobble of a few millivolts at one to ten hertz, most often four to eight hertz, during which the cell almost never spikes and simply keeps time.
+
+◦ Synchronous Teaching Broadcast - the Clustered Complex-Spike - a cluster of gap-junction-coupled cells fires a climbing-fibre spike together when an error arrives at the depolarised phase, teaching a band of Purkinje cells at the same instant.
+
+◦ Decoupled Solitary Mode - the Cut-Adrift Cell - inhibition shunts the gap junctions so a cell oscillates and fires on its own, letting the nucleus behave as many independent units.
+
+ENTRY 149. PONTINE NUCLEI NEURONS (Plan-Forwarding Cerebellum-Feeding Neuron) (keyed to neuron catalogue Chapter 149)
+
+◦ Quiet Standby - the Idle Wire - a low spontaneous rate of a few spikes per second when the overlying cortex is not commanding.
+
+◦ Faithful Forwarding - the Efference-Copy Relay - regular trains up to fifty to one hundred spikes per second that copy layer-five cortical drive across the midline as mossy fibre output.
+
+ENTRY 150. RETICULAR FORMATION NEURONS (Whole-Body Readiness Neuron) (keyed to neuron catalogue Chapter 150)
+
+◦ Tonic State-Setting - the Background Tick - steady firing at five to twenty spikes per second that changes slowly with behavioural state and sets the level of wakefulness, posture and tone.
+
+◦ Rebound Burst - the Sudden Jump - a low-threshold calcium and hyperpolarisation-activated (Ih) burst thrown when the cell is released from inhibition, useful for a sudden coordinated movement.
+
+◦ Startle Volley - the Door-Slam Reflex - the giant pontine cells sit almost silent then fire one high-frequency burst at three-to-eight-millisecond latency to drive the whole-body startle.
+
+◦ Dream-Atonia Drive - the Night Watchman - glycinergic and GABAergic ventromedial medullary cells fire in rapid-eye-movement sleep to paralyse the body.
+
+ENTRY 151. PRE-BOTZINGER COMPLEX NEURONS (Breath-Rhythm Generating Neuron) (keyed to neuron catalogue Chapter 151)
+
+◦ Intrinsic Pacemaker Bursting - the Lone Metronome - a minority of cells burst rhythmically even with all synaptic input blocked, driven by the persistent sodium current.
+
+◦ Group-Pacemaker Recruitment - the Chorus Breath - most cells are silent alone but are swept into the population burst by recurrent excitation, so the breath is built collectively.
+
+◦ Burstlet Priming - the Half-Breath - a small low-amplitude pre-inspiratory ripple that sets rate; only some burstlets grow into full bursts, which is how amplitude and rate are controlled separately.
+
+◦ Silent Expiratory Off-Phase - the Held Pause - active silence enforced by Botzinger and local glycinergic inhibition between breaths.
+
+ENTRY 152. RETROTRAPEZOID NUCLEUS NEURONS (Acid-Sensing Air-Hunger Neuron) (keyed to neuron catalogue Chapter 152)
+
+◦ Quiet Watch - the Normal-Air Silence - near-silence when blood carbon dioxide and therefore proton concentration are normal.
+
+◦ Acid Alarm - the Air-Hunger Drive - accelerating firing as acidity rises, pushing the pre-Botzinger complex to breathe harder and faster.
+
+ENTRY 153. RED NUCLEUS NEURONS (Limb-Path Correcting Neuron) (keyed to neuron catalogue Chapter 153)
+
+◦ Tonic Relay - the Steady Junction - resting discharge of five to fifty spikes per second that passes cerebellar movement commands onward and copies them to the inferior olive.
+
+◦ Movement Onset Burst - the Reach Kick - a burst up to about two hundred spikes per second at the start of a movement.
+
+◦ Rebound Burst - the Answer-to-Silence - a hyperpolarisation-activated (Ih) rebound that fires the cell when a preceding inhibition is released.
+
+ENTRY 154. SUPERIOR COLLICULUS NEURONS (Gaze-Shifting Orienting Neuron) (keyed to neuron catalogue Chapter 154)
+
+◦ Visual Reporting - the What-Is-There Flash - superficial cells answer a flash after forty to seventy milliseconds with a brief burst.
+
+◦ Buildup Ramp - the Rising Intention - intermediate and deep cells climb their firing from target onset until the eye moves.
+
+◦ Saccade Burst - the Look-Now Command - deep cells fire the highest rates in the midbrain, near seven hundred and fifty spikes per second for small movements, then fall silent.
+
+◦ Fixation Hold - the Steady Gaze - front-tip cells hold fifty to one hundred spikes per second while the eyes are still and pause during a movement.
+
+ENTRY 155. INFERIOR COLLICULUS NEURONS (Sound-Gathering Relay Neuron) (keyed to neuron catalogue Chapter 155)
+
+◦ Tonic Frequency Relay - the Faithful Tollgate - disc-shaped cells report one frequency sheet steadily, passing combined brainstem streams to the thalamus.
+
+◦ Cross-Frequency Integration - the Chord Reader - stellate cells spread across sheets to combine pitches into a voice or a chord.
+
+◦ Feature-Tuned Response - the Duration-And-Rhythm Filter - cells tuned to a particular sound duration or loudness-modulation rate fire selectively.
+
+ENTRY 156. VESTIBULAR NUCLEI NEURONS (Head-Motion Balance Neuron) (keyed to neuron catalogue Chapter 156)
+
+◦ Standing Pacemaker Baseline - the Resting Thirty - endogenous firing near thirty spikes per second with no input, the zero point of the whole system.
+
+◦ Bidirectional Velocity Coding - the Turn Meter - firing rises with head rotation one way and falls the other, at about zero point four to one extra spike per second per degree per second.
+
+◦ Self-Motion Cancellation - the Own-Move Subtractor - vestibular-only cells subtract an efference copy of a self-generated head turn and report only what the world did.
+
+ENTRY 157. BODY-ALARM BROADCAST NEURON (keyed to neuron catalogue Chapter 157)
+
+◦ Near-Silence Watch - the Quiet Sentinel - resting discharge of zero point five to three spikes per second that stays below the peptide-release threshold and so is invisible downstream.
+
+◦ Alarm Burst - the Exclamation Mark - long bursts of ten to forty spikes per second lasting seconds to tens of seconds that flood the amygdala with calcitonin-gene-related-peptide (CGRP).
+
+ENTRY 158. POISON-WATCH NAUSEA NEURON (keyed to neuron catalogue Chapter 158)
+
+◦ Baseline Blood-Tasting - the Slow Sampler - steady firing of about one point five spikes per second while it reads circulating chemicals directly, outside the blood-brain barrier.
+
+◦ Nausea Drive - the Send-It-Back Signal - firing above a nausea threshold near six spikes per second when a poison-like substance is detected, triggering nausea, vomiting and one-trial aversion learning.
+
+ENTRY 159. DREAM-SLEEP STILLNESS NEURON (keyed to neuron catalogue Chapter 159)
+
+◦ Clamped Silence - the Daytime Off - under one spike per second in waking and dreamless sleep, held down by gamma-aminobutyric acid (GABA) from the ventrolateral periaqueductal grey and lateral pontine tegmentum.
+
+◦ Rapid-Eye-Movement Atonia Drive - the Night Disconnect - steady firing of twelve to fifteen spikes per second through rapid-eye-movement (REM) sleep that excites glycine cells to paralyse the body.
+
+ENTRY 160. ALPHA MOTOR NEURONS (keyed to neuron catalogue Chapter 160)
+
+◦ Input-Tracking Discharge - the Faithful Printer - firing at five to fifty impulses per second in proportion to synaptic drive, the ordinary graded output.
+
+◦ Plateau Self-Sustained Firing - the Latched Hold - the persistent inward current (PIC), a self-reinforcing sodium and L-type calcium current in the dendrites, latches on so a brief input yields sustained firing and a brief inhibition switches it off.
+
+ENTRY 161. FAST-FATIGABLE (FF) ALPHA MOTOR NEURONS (Seconds-Long Power Motor Neuron) (keyed to neuron catalogue Chapter 161)
+
+◦ Deep Reserve Silence - the Last Resort Off - unrecruited at all but the highest efforts, because its low input resistance leaks current and resists recruitment.
+
+◦ High-Force Burst - the Emergency Kick - brief trains at forty to sixty spikes per second delivering thirty to one hundred and thirty millinewtons per unit when fresh.
+
+ENTRY 162. FAST FATIGUE-RESISTANT (FR) ALPHA MOTOR NEURONS (Minutes-Long Effort Motor Neuron) (keyed to neuron catalogue Chapter 162)
+
+◦ Idle Below Threshold - the Waiting Worker - unrecruited at low effort, since it sits at intermediate excitability.
+
+◦ Sustained Effort Discharge - the Running Rhythm - steady trains at fifteen to thirty-five spikes per second delivering ten to forty millinewtons for minutes.
+
+◦ Plateau-Amplified Locomotor Firing - the Assisted Stride - the persistent inward current amplifies rhythmic pattern-generator drive during locomotion.
+
+ENTRY 163. SLOW (S) ALPHA MOTOR NEURONS (Hours-Long Posture Motor Neuron) (keyed to neuron catalogue Chapter 163)
+
+◦ Tonic Postural Firing - the Standing Hum - near-continuous trains at eight to twenty-five spikes per second holding posture and tone, first recruited and last released.
+
+◦ Plateau Self-Hold - the Set-And-Forget - the strongest and most easily latched persistent inward current of the three types sustains firing so the brain need not keep commanding.
+
+ENTRY 164. GAMMA MOTOR NEURONS, ALSO CALLED FUSIMOTOR NEURONS (Spindle-Tightening Motor Neuron) (keyed to neuron catalogue Chapter 164)
+
+◦ Resting Fusimotor Tone - the Idle Bias - tonic firing at ten to thirty impulses per second that keeps the spindle reporting at rest.
+
+◦ Task-Raised Drive - the Difficulty Setting - firing above fifty impulses per second during movement, raised when a task is unfamiliar, difficult or unpredictable.
+
+ENTRY 165. STATIC GAMMA MOTOR NEURONS (Length-Sense Sharpening Motor Neuron) (keyed to neuron catalogue Chapter 165)
+
+◦ Spontaneous Background Bias - the Resting Odometer - firing at ten to thirty impulses per second even in a relaxed limb, which is why a resting spindle has any background discharge at all.
+
+◦ Posture-Raised Static Drive - the Ruler Setting - higher tonic drive during steady posture, slow deliberate movement and precision holding, tracking the size of the intended posture change.
+
+ENTRY 166. DYNAMIC GAMMA MOTOR NEURONS (Speed-Sense Sharpening Motor Neuron) (keyed to neuron catalogue Chapter 166)
+
+◦ Resting Velocity Bias - the Idle Speedometer - tonic firing at ten to fifty spikes per second that keeps the bag1 fibre modestly loaded.
+
+◦ Task-Raised Dynamic Drive - the Catch Setting - higher steady drive when quick corrections matter, sharpening the spindle's report of stretch velocity.
+
+ENTRY 167. BETA MOTOR NEURONS, ALSO CALLED SKELETOFUSIMOTOR NEURONS (Move-And-Monitor Motor Neuron) (keyed to neuron catalogue Chapter 167)
+
+◦ Coupled Move-And-Monitor Discharge - the One-Rope Trick - a steady train at five to thirty spikes per second that shortens the muscle and in the same instant tightens its spindle in proportion.
+
+ENTRY 168. SYMPATHETIC PREGANGLIONIC NEURONS (keyed to neuron catalogue Chapter 168)
+
+◦ Cardiac-Locked Basal Tone - the Pressure Hum - slow irregular firing under five spikes per second, locked to the heartbeat and modulated by breathing, giving the two-to-six-hertz sympathetic rhythm.
+
+◦ Reflex-Raised Drive - the Stand-Up Surge - increased firing when blood pressure falls or effort and stress rise, setting vessel calibre, heart rate and adrenaline release.
+
+ENTRY 169. SACRAL PARASYMPATHETIC PREGANGLIONIC NEURONS (keyed to neuron catalogue Chapter 169)
+
+◦ Storage Silence - the Held Bladder - held below threshold so a healthy bladder fills for hours without leaking.
+
+◦ Voiding Burst - the Release Command - a sustained burst of ten to thirty spikes per second that empties the bladder and bowel and drives erectile vasodilation.
+
+ENTRY 170. RENSHAW CELLS (keyed to neuron catalogue Chapter 170)
+
+◦ Quiet Between Volleys - the Waiting Brake - near-silence when the motor pool is not firing, with the soma blanketed in inhibition.
+
+◦ Recurrent-Inhibition Burst - the Shout-Down - a long-lasting response opening at an instantaneous frequency near fifteen hundred spikes per second and decaying over thirty to fifty milliseconds after a motor volley.
+
+ENTRY 171. IA INHIBITORY INTERNEURONS (Counter-Muscle Silencing Neuron) (keyed to neuron catalogue Chapter 171)
+
+◦ Resting Quiet - the Idle Gate - silent at rest, waiting on a synchronous volley.
+
+◦ Reciprocal-Inhibition Discharge - the Antagonist Silencer - one to three spikes at disynaptic latency that inhibit the opposing muscle's motor neurons so mover and relaxer never fight.
+
+◦ Command-Copy Tonic Firing - the One-Order Relaxer - tonic activity once voluntary movement begins, carrying a copy of the brain's command to relax the antagonist.
+
+ENTRY 172. IB INHIBITORY INTERNEURONS (Tendon-Load Restraining Neuron) (keyed to neuron catalogue Chapter 172)
+
+◦ Resting Quiet - the Unloaded Idle - silent when no tendon force is being generated.
+
+◦ Standing Restraint - the Force Trimmer - during quiet standing it inhibits the extensors that hold you up, trimming output as tension climbs.
+
+◦ Stance-Phase Assist - the Load Booster - during the stance phase of walking the same input is routed through excitatory partners so heavier loading increases extensor drive and stops the leg collapsing.
+
+ENTRY 173. PROPRIOSPINAL INTERNEURONS (Spine-Spanning Relay Neuron) (keyed to neuron catalogue Chapter 173)
+
+◦ Intersegmental Relay - the Timing Bridge - carries descending commands and reflex signals between segments, setting the phase relationship between limbs by conduction delay.
+
+◦ Plateau Holding - the Postural Latch - a persistent inward current sustains firing so a brief command becomes a held posture.
+
+◦ Detour-Forming Sprout - the Spare-Parts Rewire - after injury the cell grows new axon branches around the damage to reconnect brain to motor pool.
+
+ENTRY 174. COMMISSURAL INTERNEURONS (Across-Midline Coordinating Neuron) (keyed to neuron catalogue Chapter 174)
+
+◦ Alternation Enforcement - the Wait-Your-Turn Signal - crossing inhibition, largely through inhibitory members, that holds the two sides out of phase during walking.
+
+◦ Synchrony Enforcement - the Both-Together Drive - crossing excitation, through excitatory members, that couples the two sides in phase during hopping or bounding.
+
+ENTRY 175. CENTRAL PATTERN GENERATOR INTERNEURONS (keyed to neuron catalogue Chapter 175)
+
+◦ Chemically Gated Silence - the Unprimed Clock - quiescence when the enabling neuromodulators are absent, which is why an isolated cord is silent until serotonin and N-methyl-D-aspartate are added.
+
+◦ Conditional Bursting - the Fictive Step - rhythmic burst packets driven by the persistent sodium current whose slow inactivation is the clock, at roughly zero point two to one hertz in the isolated cord and up to about two hertz in fast walking.
+
+◦ Sensory-Entrained Bursting - the Reactive Stride - the same rhythm reset and lengthened by load feedback, making the circuit a hybrid of clockwork and reflex.
+
+ENTRY 176. DORSAL CLASSES DI1 THROUGH DI6, PLUS LATE-BORN DILA AND DILB (Back-Half Sensory Founder Neuron) (keyed to neuron catalogue Chapter 176)
+
+◦ Progenitor Specification - the Fortnight Stamp - the founding developmental state in which a bone-morphogenetic-protein and Wnt gradient from the roof plate switches on class-defining genes.
+
+◦ Tonic Inhibitory Gating - the Steady Damper - the adult firing mode of dILA and dI4 inhibitory cells, discharging steadily while driven.
+
+◦ Delayed and Transient Excitatory Relay - the Held-Then-Sent Signal - the adult firing mode of dILB cells, in which an A-type potassium current holds off the first spike by tens of milliseconds or a T-type calcium current gives a burst.
+
+ENTRY 177. VENTRAL CLASSES V0, V1, V2, AND V3 (Walking-Circuit Founder Neuron) (keyed to neuron catalogue Chapter 177)
+
+◦ Progenitor Specification - the Belly-Side Stamp - the founding state in which the sonic-hedgehog gradient from the notochord and floor plate assigns the p0 to p3 domains their master genes.
+
+◦ Recurrent-Inhibition Bursting - the Renshaw Answer - the V1 Renshaw mode, a high-frequency burst up to several hundred hertz to a single motor-neuron spike, then silence.
+
+◦ Speed-Recruited Tonic Firing - the Locomotor Gain - the V2a mode, tonic firing recruited progressively as locomotor speed rises.
+
+◦ Burst-Terminating Transition Firing - the Phase Ender - the V1-population mode firing at the transitions of the step cycle to terminate bursts.
+
+ENTRY 178. V0 (Left-Right Alternating Neuron) (keyed to neuron catalogue Chapter 178)
+
+◦ Slow-Speed Alternation - the Walk Keeper - the V0D inhibitory mode, releasing glycine and gamma-aminobutyric acid (GABA) across the midline onto contralateral motor neurons to hold the two legs out of phase at walking speeds.
+
+◦ Fast-Speed Alternation - the Trot Keeper - the V0V excitatory mode, working across the midline through an intermediate inhibitory cell to maintain alternation at fast speeds.
+
+◦ Ipsilateral Gain Setting - the C-Bouton Boost - the V0C cholinergic mode, multiplying ipsilateral motor-neuron output by one point zero to one point six through muscarinic M2 receptors.
+
+ENTRY 179. V1 (Pace-Quickening Damping Neuron) (keyed to neuron catalogue Chapter 179)
+
+◦ Quiescent gate - the Waiting Brake - the resting state in which the cell sits below threshold, poised to interrupt but adding nothing to the circuit.
+
+◦ Recurrent burst - the Return Volley - a brief high-frequency discharge fired the moment a motor command arrives, feeding a copy of that command back as inhibition.
+
+ENTRY 180. V2 (Step-Strength Steadying Neuron) (keyed to neuron catalogue Chapter 180)
+
+◦ Tonic follower - the Faithful Engine - the default state in which the cell fires for as long as it is depolarised, translating drive into output.
+
+◦ Serotonergic plateau - the Latched Burst - a self-sustaining depolarisation that outlasts its input, switched on by brainstem serotonin and off by a brief inhibition.
+
+◦ Onset-adapting quiet (V2b inhibitory sibling) - the Alternation Keeper - a steadier inhibitory output that, with V1, holds a joint's bending and straightening muscles in turns.
+
+ENTRY 181. V3 (Two-Sided Rhythm Balancing Neuron) (keyed to neuron catalogue Chapter 181)
+
+◦ Tonic drive (ventral V3) - the Even Keel - low-threshold sustained firing that converts steady excitation into steady contralateral output.
+
+◦ Onset burst (dorsal V3) - the First-Beat Flag - a fast-adapting response firing mainly at stimulus onset, gated by an A-type potassium current (a fast-inactivating current that delays firing).
+
+ENTRY 182. LAMINA I PROJECTION NEURONS (Pain-Reporting Brain-Bound Neuron) (keyed to neuron catalogue Chapter 182)
+
+◦ Tonic firing - the Steady Report - sustained firing that tracks ongoing noxious drive.
+
+◦ Delayed firing - the Held Report - an A-type potassium current imposes a pause before firing, filtering weak brief inputs.
+
+◦ Phasic or single-spike firing - the Brief Report - an onset-only signal for change.
+
+◦ Wind-up - the Rising Alarm - a normal short-term amplification in which identical C-fibre volleys (the slowest pain fibres) at about one per second give steadily more spikes.
+
+ENTRY 183. ISLET CELLS (keyed to neuron catalogue Chapter 183)
+
+◦ Tonic inhibitory discharge - the Standing Brake - a discharge lasting the whole of a depolarising step rather than adapting away, supplying steady gamma-aminobutyric acid (GABA) to the substantia gelatinosa (the jelly-like pain layer, lamina II).
+
+◦ Post-inhibition rebound - the Spring-Back - an Ih-driven return toward threshold after inhibition, giving a mild pacemaker rhythm. (Ih is the hyperpolarisation-activated current through HCN channels.)
+
+ENTRY 184. VERTICAL CELLS, ALSO CALLED STALKED CELLS (keyed to neuron catalogue Chapter 184)
+
+◦ Delayed coincidence firing - the Patient Adder - a hesitation imposed by the A-type potassium current of Kv4 channels, so single weak inputs are filtered out while several arriving together outrun it.
+
+ENTRY 185. RADIAL CELLS (keyed to neuron catalogue Chapter 185)
+
+◦ A-type delayed or gap firing - the Even Summer - the single working regime, in which a symmetric compact tree lets the cell sum inputs from every direction and fire after an A-current pause, sometimes with a gap (spike, silence, then a train).
+
+ENTRY 186. CENTRAL CELLS (Close-Range Relay Neuron) (keyed to neuron catalogue Chapter 186)
+
+◦ Transient onset firing (excitatory transient central cell) - the Change Caller - a few spikes in the first ten or twenty milliseconds then silence, handing downstream circuits a derivative.
+
+◦ Tonic presynaptic damping (inhibitory subtype) - the Terminal Curb - a steadier output that damps incoming terminals by presynaptic inhibition.
+
+ENTRY 187. ANTENNA CELLS (keyed to neuron catalogue Chapter 187)
+
+◦ Convergent comparison firing - the Two-Way Listener - the working regime in which pain-stream input on the dorsal field and touch-stream input on the ventral field are compared rather than merely summed.
+
+◦ Neurokinin-1 slow-facilitated firing - the Lingering Memory - a slow depolarisation lasting many seconds after a noxious event, a chemical trace of it.
+
+ENTRY 188. LAMINA V WIDE DYNAMIC RANGE NEURONS (Touch-To-Damage Grading Neuron) (keyed to neuron catalogue Chapter 188)
+
+◦ Graded intensity coding - the Loudness Dial - the baseline regime in which firing rate scales smoothly from brush through pressure to pinch or burn.
+
+◦ Wind-up - the Rising Count - a used short-term regime in which one-per-second C-fibre stimulation makes each response two to five times larger over sixteen stimuli.
+
+ENTRY 189. CLARKE COLUMN NEURONS, ALSO CALLED THE POSTERIOR THORACIC NUCLEUS (keyed to neuron catalogue Chapter 189)
+
+◦ Tonic faithful following - the Faithful Relay - the one working regime, firing even when the limb is still so both stretch and shortening register as changes from a baseline, and following input into the hundreds of hertz.
+
+ENTRY 190. LAMINA X NEURONS (Deep-Core Crossroads Neuron) (keyed to neuron catalogue Chapter 190)
+
+◦ Tonic firing - the Steady Merge - the commonest pattern (9 of 21 rat cells), merging gut and skin signals continuously.
+
+◦ Transient, delayed or single-spike firing - the Brief Merge - onset-weighted patterns (transient 6, delayed 3, single-spiking 2).
+
+◦ Fluid-sensing discharge - the Canal Taster - the chemosensory regime of cerebrospinal-fluid-contacting cells reading acidity and flow with slow 3.9 millisecond upstrokes.
+
+ENTRY 191. LISSAUER TRACT INTERNEURONS (Neighbouring-Segment Spreading Neuron) (keyed to neuron catalogue Chapter 191)
+
+◦ Presynaptic inhibition - the Neighbour Curb - the default regime, making axoaxonic contacts (onto another cell's output terminal) to damp arriving fibres and share input one or two segments away.
+
+◦ Dorsal root reflex - the Backfire - a used regime in which strong drive flips the cell into firing backward into the skin.
+
+ENTRY 192. ROD PHOTORECEPTORS (keyed to neuron catalogue Chapter 192)
+
+◦ Dark current, dark-adapted - the Single-Photon Listener - the resting scotopic regime in which the cell can announce one photon.
+
+◦ Light-adapted gain reduction - the Daylight Restraint - a used regime in which sustained light lowers cascade gain so the rod does not simply saturate.
+
+◦ Saturation - the Blinded Ceiling - reached in bright steady light where the circulating current is near zero; admitted because rods progressively escape it to contribute in daylight, so it is a normal boundary of operation.
+
+ENTRY 193. CONE PHOTORECEPTORS (keyed to neuron catalogue Chapter 193)
+
+◦ Dark resting current - the Idle Detector - the baseline regime at low light, releasing glutamate steadily.
+
+◦ Photopic gain control - the Daylight Worker - the working regime running calcium-dependent gain control within milliseconds so response is preserved across a vast intensity range.
+
+ENTRY 194. S-CONES, OR SHORT-WAVELENGTH CONES (Short-Wave Blue-Catching Cell) (keyed to neuron catalogue Chapter 194)
+
+◦ Dark resting current - the Idle Blue Detector - baseline steady glutamate release.
+
+◦ Photopic adapted signalling - the Slow Blue Worker - the light-adapted regime feeding the slowest colour channel.
+
+ENTRY 195. M-CONES, OR MIDDLE-WAVELENGTH CONES (Middle-Wave Green-Catching Cell) (keyed to neuron catalogue Chapter 195)
+
+◦ Dark resting current - the Idle Green Detector - steady baseline release.
+
+◦ Photopic adapted signalling - the Green Worker - the light-adapted daytime regime feeding red-green and luminance channels.
+
+ENTRY 196. L-CONES, OR LONG-WAVELENGTH CONES (Long-Wave Red-Catching Cell) (keyed to neuron catalogue Chapter 196)
+
+◦ Dark resting current - the Idle Red Detector - steady baseline release.
+
+◦ Photopic adapted signalling - the Fast Red Worker - the light-adapted regime serving both colour and the fast brightness signal.
+
+ENTRY 197. ROD BIPOLAR CELLS (keyed to neuron catalogue Chapter 197)
+
+◦ Thresholded scotopic regime - the Deaf Filter - the dim-light regime applying a nonlinear threshold to each rod input separately, discarding constant rod noise while keeping the rare single-photon event.
+
+◦ Light-adapted linearised regime - the Open Ear - a used regime in which a dim background linearises the response-intensity slope, mediated by calcium entry.
+
+ENTRY 198. CONE BIPOLAR CELLS (keyed to neuron catalogue Chapter 198)
+
+◦ Graded sign-preserving or sign-inverting signalling - the Parallel Split - the working regime, each member reading the same cone and filing a differently-signed report.
+
+◦ Terminal calcium-spike boosting - the Local Spark - a used regime in which calcium spikes occur in terminals even though the soma never fires.
+
+ENTRY 199. ON BIPOLAR CELLS (Brightening-Signalling Neuron) (keyed to neuron catalogue Chapter 199)
+
+◦ Sign-inverting depolarising signalling - the Brightening Answer - the one working regime, in which a fall in cone glutamate becomes a rise in this cell's voltage.
+
+ENTRY 200. OFF BIPOLAR CELLS (Darkening-Signalling Neuron) (keyed to neuron catalogue Chapter 200)
+
+◦ Sign-conserving signalling - the Darkening Answer - the working regime, hyperpolarising to light because ionotropic receptors pass the cone message unflipped.
+
+◦ Desensitised transient signalling - the Pulse-Maker - a used regime in which receptor desensitisation converts a maintained step into a brief pulse.
+
+◦ Terminal sodium spiking (some types) - the Terminal Tick - a subset generates tetrodotoxin-sensitive sodium spikes in the axon terminal.
+
+ENTRY 201. MIDGET BIPOLAR CELLS (keyed to neuron catalogue Chapter 201)
+
+◦ Sustained one-cone signalling - the Private Whisper - the sole working regime, carrying one cone's centre against a mixed-cone surround with no fast desensitisation.
+
+ENTRY 202. DIFFUSE BIPOLAR CELLS (keyed to neuron catalogue Chapter 202)
+
+◦ Sustained pooled signalling - the Choir Average - the baseline regime, summing 5 to 14 cones to buy signal-to-noise at the cost of detail.
+
+◦ Transient high-pass signalling - the Motion Flick - a used regime in strongly transient types (DB2, DB3b) expressing the kainate subunit GluK1.
+
+◦ Rod-relay coupling (ON types) - the Night Borrow - a used regime in which connexin-36 coupling to AII amacrine cells makes these the entry point for rod signals into daylight circuitry.
+
+ENTRY 203. BLUE-CONE BIPOLAR CELLS (keyed to neuron catalogue Chapter 203)
+
+◦ Sustained S-cone signalling - the Blue Reach - the sole working regime, depolarising when blue light increases and ignoring the L and M cones it reaches past.
+
+ENTRY 204. GIANT BIPOLAR CELLS (Largest-Spread Two-Ended Neuron) (keyed to neuron catalogue Chapter 204)
+
+◦ Sustained wide-field analogue signalling - the Broad Average - the sole working regime, reporting the average brightness of a patch by a weighted sum over a chosen subset of cones minus a horizontal-cell average.
+
+ENTRY 205. H1 CELLS (Red-Green Backdrop Neuron) (keyed to neuron catalogue Chapter 205)
+
+◦ Photopic cone-feedback signalling - the Cone Backdrop - the daylight regime, averaging 6 to 18 L and M cones and pushing that average back as negative feedback.
+
+◦ Scotopic rod-feedback signalling - the Rod Backdrop - a used regime at the axon terminal, active only in dim light below about 0.01 candela per square metre, serving rod spherules.
+
+ENTRY 206. H2 CELLS (Blue-Sampling Backdrop Neuron) (keyed to neuron catalogue Chapter 206)
+
+◦ Sustained luminosity signalling - the Blue-Fed Backdrop - the sole working regime, hyperpolarising to light of every wavelength and never inverting sign even though it seeks out S-cones.
+
+ENTRY 207. H3 CELLS (Broad-Sweep Backdrop Neuron) (keyed to neuron catalogue Chapter 207)
+
+◦ Inferred sustained luminosity signalling - the Wide Backdrop - the presumed sole regime, a wider and deliberately lopsided version of the H1 cone backdrop that skips S-cones.
+
+ENTRY 208. AII AMACRINE CELLS (Night-Vision Splitting Neuron) (keyed to neuron catalogue Chapter 208)
+
+◦ Scotopic rod-splitting - the Night Splitter - the dim-light regime taking one rod-bipolar signal and dividing it two ways, electrically to ON cone bipolars and sign-inverted by glycine to OFF cone bipolars.
+
+◦ Photopic crossover inhibition - the Daylight Corrector - a used daytime regime supplying glycine that stops OFF cone bipolars saturating at high light.
+
+◦ Spikelet firing - the Little Booster - a regenerative regime firing small fast sodium spikelets (10 to 30 millivolts, one to two milliseconds) on the proximal dendrite to boost signals locally.
+
+ENTRY 209. STARBURST AMACRINE CELLS (keyed to neuron catalogue Chapter 209)
+
+◦ Adult graded direction mode - the Spoke Ledger - each dendrite integrates its own inputs and releases transmitter by local calcium to compute outward motion.
+
+◦ Developmental wave mode - the Wave Maker - before eye opening the cell fires slow recurrent cholinergic bursts that sweep retinal waves across the sheet.
+
+ENTRY 210. A17 AMACRINE CELLS (keyed to neuron catalogue Chapter 210)
+
+◦ Night feedback mode - the Night Curb - each varicosity returns gamma-aminobutyric acid, known as GABA, to the rod bipolar terminal that just excited it, giving automatic gain control for starlight.
+
+◦ Daylight stand-down mode - the Daylight Rest - in bright conditions dopamine uncouples the cells and the feedback synapses depress, so the loop quietens.
+
+ENTRY 211. DOPAMINERGIC AMACRINE CELLS (keyed to neuron catalogue Chapter 211)
+
+◦ Dark pacemaker mode - the Background Tick - the cell ticks at 3 to 10 spikes per second in complete darkness with no input, keeping the night circuitry engaged.
+
+◦ Daylight broadcast mode - the Day Switch - light drives firing to 10 to 30 spikes per second and floods the tissue with dopamine, uncoupling gap junctions and installing high-acuity vision.
+
+ENTRY 212. POLYAXONAL AMACRINE CELLS (keyed to neuron catalogue Chapter 212)
+
+◦ Watch mode - the Quiet Watch - the cell rests nearly silent, sampling rectified bipolar input across a small dendritic field.
+
+◦ Alarm mode - the Elsewhere Wave - a sudden global change fires sodium spikes that propagate outward along every axon at once, delivering long-range inhibition.
+
+ENTRY 213. INTERPLEXIFORM CELLS (keyed to neuron catalogue Chapter 213)
+
+◦ Dark low-output mode - the Dim Report - in prolonged darkness the cell releases little transmitter and leaves the first visual synapse broadly coupled.
+
+◦ Light high-output mode - the Bright Report - sustained bright light raises output, and in the dopaminergic form closes horizontal cell gap junctions through second messengers.
+
+ENTRY 214. MIDGET GANGLION CELLS (keyed to neuron catalogue Chapter 214)
+
+◦ Sustained opponent mode - the Faithful Detail - the cell holds a maintained discharge and reports the red-green cone difference faithfully, the register of one being legitimate and worth stating proudly.
+
+ENTRY 215. PARASOL GANGLION CELLS (keyed to neuron catalogue Chapter 215)
+
+◦ Maintained watch mode - the Idle Alarm - the cell rests near 5 to 20 spikes per second, pooling separately rectified bipolar subunits.
+
+◦ Transient burst mode - the Wake-Up Flash - a change or movement drives a fast burst above 100 spikes per second that decays within 50 to 100 milliseconds even while the stimulus continues.
+
+ENTRY 216. SMALL BISTRATIFIED GANGLION CELLS (keyed to neuron catalogue Chapter 216)
+
+◦ Blue-ON opponent mode - the Sky Difference - the cell adds short-wavelength blue drive to its inner tier and subtracts the long and middle wavelength yellow drive on its outer tier, reporting the difference.
+
+ENTRY 217. INTRINSICALLY PHOTOSENSITIVE RETINAL GANGLION CELLS (keyed to neuron catalogue Chapter 217)
+
+◦ Sub-threshold quiet mode - the Night Hold - below daylight the insensitive melanopsin stays quiet and the cell rides only the fast rod and cone drive.
+
+◦ Sustained irradiance mode - the Daylight Gauge - bright blue-rich light drives a slow sustained few to few-tens of spikes per second that reports total light averaged over minutes.
+
+◦ Persistent after-light mode - the Long Afterglow - the intrinsic response continues many seconds after light stops, holding the pupil and the clock signal.
+
+ENTRY 218. DIRECTION-SELECTIVE GANGLION CELLS (keyed to neuron catalogue Chapter 218)
+
+◦ Preferred-direction mode - the Green Light - motion the right way escapes the null-side veto and the cell bursts.
+
+◦ Null-direction mode - the Red Light - motion the wrong way arrives with timed starburst gamma-aminobutyric acid (GABA) that shunts the drive and the cell falls almost silent.
+
+ENTRY 219. SMOOTH MONOSTRATIFIED, LARGE SPARSE, BROAD THORNY, AND RECURSIVE BISTRATIFIED GANGLION CELLS (keyed to neuron catalogue Chapter 219)
+
+◦ Baseline pooling mode - the Wide Idle - each cell rectifies many small bipolar subunits and rests at a low maintained rate.
+
+◦ Transient report mode - the Coarse Flash - a change in the wide field drives a strongly transient burst that then stops.
+
+ENTRY 220. OLFACTORY SENSORY NEURONS (keyed to neuron catalogue Chapter 220)
+
+◦ Silent mode - the Clean-Air Rest - below the odorant threshold the cell is quiet, firing rarely.
+
+◦ Tonic firing mode - the Odour Report - within its concentration band the cell fires up to about 30 spikes per second, coding odorant presence.
+
+◦ Functional depolarisation block mode - the Overload Hush - at concentrations about a thousandfold above threshold sodium channels slowly inactivate and the high-affinity cell falls silent, sparsening the population code at high concentration.
+
+ENTRY 221. MITRAL CELLS (keyed to neuron catalogue Chapter 221)
+
+◦ Down-state mode - the Quiet Floor - the cell rests near minus 60 millivolts, below threshold and silent.
+
+◦ Oscillating up-state mode - the Metronome Up - persistent sodium current opposed by potassium rings the membrane at 10 to 50 hertz, gating spike timing.
+
+◦ Sniff-locked firing mode - the Late Report - glomerular drive during a sniff produces spikes at a longer latency and lower rate than tufted cells, sharpened by a strong inhibitory surround.
+
+ENTRY 222. TUFTED CELLS (keyed to neuron catalogue Chapter 222)
+
+◦ Intrinsic bursting mode - the Glomerular Pacemaker - external tufted cells burst at 1 to 8 hertz with no input, driven by persistent sodium and hyperpolarisation-activated currents.
+
+◦ Odour-driven early report mode - the First Word - low-threshold high-input-resistance firing at fainter odours and tens of milliseconds earlier in the sniff than mitral cells, so phase lead encodes odour strength.
+
+ENTRY 223. PERIGLOMERULAR CELLS (keyed to neuron catalogue Chapter 223)
+
+◦ Tonic guard mode - the Doorway Hush - the cell holds a low background inhibition on its single glomerulus.
+
+◦ Driven suppression mode - the Volume Turn-Down - stronger glomerular drive raises its gamma-aminobutyric acid (GABA) output both presynaptically on sensory terminals and postsynaptically on output cells.
+
+ENTRY 224. SHORT-AXON CELLS, INCLUDING SUPERFICIAL SHORT-AXON CELLS (keyed to neuron catalogue Chapter 224)
+
+◦ Tonic interglomerular mode - the Neighbour Watch - superficial cells fire tonically at a few hertz and knit distant glomeruli into a contrast network.
+
+◦ Biphasic co-transmission mode - the Turn-Down-Then-Up - a burst delivers fast gamma-aminobutyric acid (GABA) inhibition followed by slower dopamine excitation onto distant external tufted cells.
+
+ENTRY 225. OLFACTORY BULB GRANULE CELLS (keyed to neuron catalogue Chapter 225)
+
+◦ Local spine mode - the Private Whisper - a single gemmule fires a dendritic spike on its own N-methyl-D-aspartate receptors and low-voltage calcium channels and releases gamma-aminobutyric acid (GABA) back to its one mitral partner, without the soma acting.
+
+◦ Global spike mode - the Whole-Cell Sweep - a somatic spike travels up the dendrite and enables release at every gemmule together.
+
+ENTRY 226. BLANES CELLS (keyed to neuron catalogue Chapter 226)
+
+◦ Reactive silent mode - the Cold Switch - at rest near minus 65 millivolts the cell only responds while driven.
+
+◦ Persistent firing mode - the Latched Hold - a brief barrage opens a calcium-activated non-selective cation current, called I-CAN, whose afterdepolarisation sustains firing for minutes.
+
+ENTRY 227. MIGRATORY GONADOTROPIN-RELEASING HORMONE NEURONS (keyed to neuron catalogue Chapter 227)
+
+◦ Migratory mode - the Long Walk - in the embryo the cell crawls from nasal placode into the hypothalamus, a regime before any electrical duty.
+
+◦ Baseline quiescent mode - the Slow Idle - the mature cell fires slowly and irregularly at under one spike per second between pulses.
+
+◦ Synchronised pulse mode - the Feeding Pulse - every 60 to 360 minutes the population bursts for one to five minutes and empties gonadotropin-releasing hormone, known as GnRH, into portal blood.
+
+ENTRY 228. TYPE I SPIRAL GANGLION NEURONS (keyed to neuron catalogue Chapter 228)
+
+◦ Spontaneous-rate class - the Idle Chatter - each fibre holds a fixed background, whispering below one spike per second in low-rate fibres or chattering at 40 to 80 in high-rate fibres, splitting quiet and loud across separate channels.
+
+◦ Onset-and-adapt driven mode - the Opening Volley - sound gives a burst of several hundred spikes per second that settles within milliseconds to a sustained 100 to 250.
+
+◦ Phase-locked mode - the Wave-Rider - up to about 4 to 5 kilohertz the spikes lock to the phase of the tone, above which only the envelope is followed.
+
+ENTRY 229. TYPE II SPIRAL GANGLION NEURONS (keyed to neuron catalogue Chapter 229)
+
+◦ Near-silent watch mode - the Deaf Sentinel - the cell stays quiet at conversational levels because each of its many outer hair cell inputs is tiny.
+
+◦ Damage-driven mode - the Harm Alarm - injury and very loud sound, and the adenosine triphosphate spilled from damaged tissue, drive sparse firing.
+
+ENTRY 230. VESTIBULAR GANGLION NEURONS, ALSO CALLED SCARPA GANGLION NEURONS (keyed to neuron catalogue Chapter 230)
+
+◦ Resting tonic mode - the Never-Silent Hum - the fibre idles at roughly 60 to 100 spikes per second even with the head still.
+
+◦ Excitatory modulation mode - the Speed-Up - hair-bundle deflection in the on direction raises the rate toward several hundred spikes per second.
+
+◦ Inhibitory cutoff mode - the Ewald Floor - deflection the other way slows and can silence the fibre, since firing cannot go below zero.
+
+ENTRY 231. REGULAR-FIRING VESTIBULAR AFFERENTS (keyed to neuron catalogue Chapter 231)
+
+◦ Metronomic tonic mode - the Faithful Metronome - a steady 60 to 100 spikes per second with a normalised coefficient of variation below 0.1, tracking head position and slow velocity linearly.
+
+ENTRY 232. IRREGULAR-FIRING VESTIBULAR AFFERENTS (keyed to neuron catalogue Chapter 232)
+
+◦ Irregular resting mode - the Restless Idle - a background of 60 to 100 spikes per second whose intervals scatter, with a normalised coefficient of variation above 0.1 and often above 0.3.
+
+◦ Phasic transient mode - the Sudden-Jolt - a fast head movement drives a high-gain burst that adapts away within tens to hundreds of milliseconds.
+
+ENTRY 233. GENICULATE GANGLION NEURONS (keyed to neuron catalogue Chapter 233)
+
+◦ Silent mode - the Empty Mouth - between stimuli the pseudounipolar cell is quiet, with no dendrites and no synapses on the soma.
+
+◦ Taste-driven adapting mode - the Flavour Burst - a taste stimulus drives 20 to 60 spikes per second that fades within a second or two.
+
+ENTRY 234. PETROSAL GANGLION NEURONS (keyed to neuron catalogue Chapter 234)
+
+◦ Tonic chemoreceptor mode - the Oxygen Vigil - the carotid-body afferent ticks at 0.5 to 3 spikes per second in room air, a resting discharge that is the running proof of oxygen.
+
+◦ Hypoxic climb mode - the Air-Hunger Surge - as arterial oxygen falls toward 40 millimetres of mercury the rate climbs to 30 to 80 spikes per second.
+
+◦ Pulse-locked baroreceptor mode - the Heartbeat Volley - carotid-sinus afferents fire volleys locked to each heartbeat, coding a rhythm rather than a rate.
+
+ENTRY 235. NODOSE GANGLION NEURONS (keyed to neuron catalogue Chapter 235)
+
+◦ Quiet baseline mode - the Empty Organ - with organs unloaded the fibre is near silent.
+
+◦ Sustained stretch mode - the Fullness Report - stomach or airway stretch holds a steady 5 to 30 spikes per second for as long as the organ stays full.
+
+◦ Hormone-amplified mode - the After-Meal Multiply - gut hormones such as cholecystokinin multiply the response to the same stretch, so the same volume reports as fuller.
+
+ENTRY 236. JUGULAR GANGLION NEURONS (keyed to neuron catalogue Chapter 236)
+
+◦ Silent high-threshold mode - the Still Airway - the cell stays quiet until something is wrong.
+
+◦ Irritant-driven mode - the Cough Alarm - acids, smoke, heat and spilled adenosine triphosphate drive slow irregular firing at 1 to 20 spikes per second.
+
+◦ Sensitised mode - the Hair-Trigger - nerve growth factor from airway inflammation raises TRPV1 and substance P so the sensor fires to gentler stimuli.
+
+ENTRY 237. TRIGEMINAL GANGLION NEURONS (keyed to neuron catalogue Chapter 237)
+
+◦ Silent mode - the Calm Face - the cell rests quiet with, in health, no synapses between neurons.
+
+◦ Touch mode - the Light Contact - fast A-beta mechanoreceptors fire narrow spikes at 0 to 200 hertz and conduct at 30 to 70 metres per second.
+
+◦ Nociceptor mode - the Sharp-And-Burn - A-delta and C nociceptors fire 0 to 40 hertz to mechanical, thermal and chemical harm and drive the axon reflex.
+
+◦ Sensitised mode - the Sore Face - repeated firing drives central sensitisation so brushing the hair hurts.
+
+ENTRY 238. PROPRIOCEPTORS (keyed to neuron catalogue Chapter 238)
+
+◦ Resting tonic mode - the Background Tick - at rest the Ia ending holds about 10 to 20 spikes per second, keeping a running account of limb position.
+
+◦ Static length mode - the Steady Hold - during a maintained stretch the fibre fires 20 to 100 spikes per second in proportion to length.
+
+◦ Dynamic burst mode - the Fast Pull - a rapid stretch drives a burst above 200 spikes per second that reports velocity, shaped by sticky cross-bridges and history-dependence, called thixotropy.
+
+ENTRY 239. LOW-THRESHOLD MECHANORECEPTORS (LTMRS) (Gentle-Touch Sensing Neuron) (keyed to neuron catalogue Chapter 239)
+
+◦ Evoked Encoding - the Faithful Report - firing that tracks skin deformation from rest up to about 500 spikes per second, the only mode healthy touch actually uses.
+
+◦ Resting Tonic Idle - the Background Tick - a low ongoing discharge in the slowly adapting members that lets the cell signal a decrease as well as an increase.
+
+ENTRY 240. A-BETA SLOWLY ADAPTING TYPE 1 (SA1) (Fine-Edge Pressure Neuron) (keyed to neuron catalogue Chapter 240)
+
+◦ Dynamic Ramp Response - the Edge Catch - a high burst during the indentation ramp that reports edges, corners and curvature.
+
+◦ Static Sustained Response - the Steady Press - an irregular maintained discharge that reports ongoing pressure while the skin stays pressed.
+
+ENTRY 241. A-BETA SLOWLY ADAPTING TYPE 2 (SA2) (Skin-Stretch Posture Neuron) (keyed to neuron catalogue Chapter 241)
+
+◦ Resting Metronome - the Background Tick - a regular ongoing discharge of 5 to 20 spikes per second even when nothing touches the skin.
+
+◦ Directional Stretch Encoding - the Strain Report - firing tuned to one preferred axis of lateral pull that signals finger posture and grip direction.
+
+ENTRY 242. A-BETA RAPIDLY ADAPTING TYPE 1 (RA1) (Slip-Catching Flutter Neuron) (keyed to neuron catalogue Chapter 242)
+
+◦ Transient Onset-Offset - the Slip Catch - one or two spikes at stimulus onset and again at release, reporting the first microscopic slip that grip control needs.
+
+◦ Flutter Entrainment - the Flutter Lock - one spike per cycle phase-locked to vibration in the flutter band.
+
+ENTRY 243. A-BETA RAPIDLY ADAPTING TYPE 2 (RA2) (Whole-Hand Vibration Neuron) (keyed to neuron catalogue Chapter 243)
+
+◦ Onset-Offset Twitch - the Bare Blip - exactly one spike at onset and one at release to a steady press, the most extreme adaptation of any receptor.
+
+◦ High-Frequency Entrainment - the Buzz Lock - one spike per cycle phase-locked to vibration across the high band.
+
+ENTRY 244. A-DELTA LOW-THRESHOLD MECHANORECEPTORS, ALSO CALLED D-HAIR CELLS (Faint-Breeze Hair Neuron) (keyed to neuron catalogue Chapter 244)
+
+◦ Directional Movement Response - the Against-The-Grain Sweep - firing only while a hair moves, hardest when the stroke runs against the lie of the hair.
+
+ENTRY 245. C LOW-THRESHOLD MECHANORECEPTORS (C-LTMRS) (Caress-Speed Comfort Neuron) (keyed to neuron catalogue Chapter 245)
+
+◦ Optimal Stroke Encoding - the Caress Report - firing that peaks to gentle stroking near 3 centimetres per second at skin-warm temperature and tracks how pleasant the touch feels.
+
+◦ Fatigued Slowing - the Worn Groove - a use-dependent state in which repeated strokes slow conduction and lower output, a short memory of recent activity.
+
+ENTRY 246. NOCICEPTORS (keyed to neuron catalogue Chapter 246)
+
+◦ Silent Guard - the Quiet Sentry - the healthy resting state, high threshold, little or no ongoing firing.
+
+◦ Evoked Alarm - the Damage Report - firing to stimuli strong enough to threaten tissue, whether burning heat, crushing force, freezing cold or irritant chemicals.
+
+◦ Sensitised Firing - the Lowered Guard - a temporarily lowered threshold and raised gain in inflamed tissue.
+
+ENTRY 247. PEPTIDERGIC NOCICEPTORS (Swelling-Driven Pain Neuron) (keyed to neuron catalogue Chapter 247)
+
+◦ Silent Guard - the Quiet Sentry - the high-threshold resting state.
+
+◦ Evoked Alarm - the Damage Report - glutamate onto lamina I projection neurons when a noxious stimulus arrives.
+
+◦ Neurogenic Flare - the Inflaming Spread - burst-gated peptide release from both ends that widens vessels and leaks plasma.
+
+ENTRY 248. NON-PEPTIDERGIC NOCICEPTORS (Bare-Skin Injury Neuron) (keyed to neuron catalogue Chapter 248)
+
+◦ Silent Guard - the Quiet Sentry - the high-threshold resting state.
+
+◦ Evoked Alarm - the Damage Report - firing to pinch, noxious heat and irritant chemicals.
+
+◦ Purinergic Reading - the Broken-Cell Sniff - firing driven by adenosine triphosphate leaking from damaged tissue.
+
+ENTRY 249. A-DELTA NOCICEPTORS (First-Pain Pricking Neuron) (keyed to neuron catalogue Chapter 249)
+
+◦ Type One High-Heat Guard - the Scald Alarm - low mechanical threshold but very high heat threshold above 53 degrees Celsius.
+
+◦ Type Two Sharp Prick - the First-Pain Prick - heat threshold about 46 degrees Celsius but very high mechanical threshold, carrying the well-located sharp pain.
+
+◦ Burn Sensitised Firing - the Scorched Trigger - a lowered heat threshold after burn injury.
+
+ENTRY 250. C-FIBRE POLYMODAL NOCICEPTORS (Second-Pain Burning Neuron) (keyed to neuron catalogue Chapter 250)
+
+◦ Evoked Ache - the Slow Burn - firing that carries the ache outlasting an injury, held low by a long afterhyperpolarisation.
+
+◦ Sensitised Firing - the Inflamed Trigger - a dropped heat threshold in inflamed tissue.
+
+◦ Neurogenic Flare - the Inflaming Spread - axon-reflex release of calcitonin gene-related peptide and substance P with no message to the brain.
+
+ENTRY 251. A-BETA NOCICEPTORS AND MODERATE PRESSURE RECEPTORS (Ultrafast Bruise-Signalling Neuron) (keyed to neuron catalogue Chapter 251)
+
+◦ Moderate Pressure Encoding - the Steady Squeeze - a slowly adapting train in the lower-threshold moderate pressure receptor.
+
+◦ High-Threshold Alarm - the Bruise Warning - firing in the A beta nociceptor proper only to tissue-threatening pressure.
+
+ENTRY 252. SILENT OR SLEEPING NOCICEPTORS (Inflammation-Woken Ache Neuron) (keyed to neuron catalogue Chapter 252)
+
+◦ Mechanically Deaf Sleep - the Sleeping Guard - born deaf, fires at no squeeze, poke or stretch in healthy tissue.
+
+◦ Unsilenced Ache - the Woken Alarm - a low irregular discharge once injury has switched it on.
+
+ENTRY 253. THERMORECEPTORS (keyed to neuron catalogue Chapter 253)
+
+◦ Static Rate Coding - the Steady Thermometer - an ongoing discharge whose rate reports absolute temperature around neutral skin.
+
+◦ Dynamic Overshoot - the Change Flag - a large transient when temperature steps, signalling the direction of change.
+
+◦ Cold Bursting - the Shiver Pattern - a reorganisation into rhythmic bursts below about 30 degrees Celsius that encodes temperature in spikes per burst.
+
+ENTRY 254. PRURICEPTORS (Itch-Sensing Scratch-Urge Neuron) (keyed to neuron catalogue Chapter 254)
+
+◦ Histaminergic Itch - the Histamine Itch - a slow low discharge driven by histamine, mechanically insensitive.
+
+◦ Non-Histaminergic Itch - the Cytokine Itch - a slow discharge driven by interleukin 31, chloroquine-like ligands and bile acids.
+
+◦ Scratch-Suppressed Quiet - the Scratch Relief - a transiently silenced state after scratching recruits spinal inhibition.
+
+ENTRY 255. VISCERAL AFFERENTS (Inner-Organ Stretch-Reporting Neuron) (keyed to neuron catalogue Chapter 255)
+
+◦ Proportional Fullness Encoding - the Volume Gauge - muscular afferents firing slowly in proportion to organ volume.
+
+◦ Serosal Silent Guard - the Distension Alarm - serosal units silent until distension becomes uncomfortable then climbing steeply.
+
+◦ Sensitised Firing - the Inflamed Report - a lowered threshold so ordinary filling drives strong firing.
+
+ENTRY 256. SYMPATHETIC POSTGANGLIONIC NEURONS (keyed to neuron catalogue Chapter 256)
+
+◦ Phasic Accommodating - the One-Shot Gate - fires one or two spikes at the start of a long input then falls silent, held back by the M current.
+
+◦ Tonic Firing - the Steady Passer - fires steadily throughout a maintained input, with little M current.
+
+◦ M-Current-Off High Gain - the Open Gate - a muscarinically boosted state in which previously useless weak inputs fire the cell.
+
+ENTRY 257. SUDOMOTOR SYMPATHETIC NEURONS (Sweat-Releasing Cooling Neuron) (keyed to neuron catalogue Chapter 257)
+
+◦ Thermoregulatory Sweating - the Cooling Drive - firing scaled by core temperature error to drive evaporative cooling.
+
+◦ Emotional Sweating - the Fright Sweat - brief irregular volleys from arousal pathways that dampen palms.
+
+ENTRY 258. VASOCONSTRICTOR, VASODILATOR, PILOMOTOR, AND CARDIOMOTOR SYMPATHETIC NEURONS (Blood-Flow-Setting Readiness Neuron) (keyed to neuron catalogue Chapter 258)
+
+◦ Baro-Locked Tonic Constriction - the Pressure Hold - muscle vasoconstrictor firing locked to the pulse that holds arteries partly shut all day.
+
+◦ Unlocked Irregular Firing - the Free Volley - cutaneous vasoconstrictor and pilomotor firing not locked to the pulse.
+
+◦ Tonic Cardiac Drive - the Heart Push - cardiomotor firing tonically at rest to set rate and force.
+
+◦ Burst Peptide Hormone - the Slow Squeeze - neuropeptide Y released only in bursts, a slow hormone layered on the fast one.
+
+ENTRY 259. PARASYMPATHETIC PREGANGLIONIC NEURONS (keyed to neuron catalogue Chapter 259)
+
+◦ Intrinsic Pacemaker Tick - the Background Tick - dorsal motor nucleus cells firing slowly and regularly even with every synapse blocked.
+
+◦ Inspiration-Gated Silence - the Breath Gate - nucleus ambiguus cardiac vagal cells held silent during inspiration and released in expiration.
+
+ENTRY 260. PARASYMPATHETIC POSTGANGLIONIC NEURONS (keyed to neuron catalogue Chapter 260)
+
+◦ Faithful Relay - the Faithful Relay - phasic cells where one preganglionic input fires the cell every time, as in the ciliary ganglion.
+
+◦ Local Network Processing - the Little Reflex - intramural cardiac and airway cells with spontaneous activity and long afterhyperpolarisations running local reflexes.
+
+◦ Nitrergic Volume Relaxation - the Diffuse Relax - a firing state making nitric oxide on demand that relaxes a whole patch of tissue.
+
+ENTRY 261. ADRENAL CHROMAFFIN CELLS (Fight-Or-Flight Hormone Cell) (keyed to neuron catalogue Chapter 261)
+
+◦ Basal Tonic Secretion - the Trickle Tone - slow spontaneous firing that maintains a low resting catecholamine level in plasma.
+
+◦ Burst Surge Secretion - the Flight Surge - a splanchnic-driven high-rate burst mode that pours a catecholamine surge into the blood.
+
+◦ Autonomous Chemosensory Secretion - the No-Nerve Alarm - secretion driven directly by hypoxia, acidosis and low glucose with no neural instruction, important in the newborn before splanchnic innervation matures.
+
+ENTRY 262. SMALL INTENSELY FLUORESCENT (SIF) CELLS (Signal-Dimming Local Cell) (keyed to neuron catalogue Chapter 262)
+
+◦ Graded Tonic Damping - the Gain Dimmer - continuous calcium-driven dopamine release that turns the relay's gain down.
+
+◦ Muscarinically Boosted Release - the Turned-Up Brake - a raised dopamine turnover when muscarinic agonists act on the cell.
+
+ENTRY 263. INTRINSIC CARDIAC GANGLION NEURONS (Heartbeat Local-Reflex Neuron) (keyed to neuron catalogue Chapter 263)
+
+◦ Phasic Filtering - the Traffic Sieve - about 77 per cent of cells firing one to three spikes at onset then falling silent however hard driven.
+
+◦ Adapting Train - the Fading Report - about 23 per cent firing a decaying train with a shorter afterhyperpolarisation.
+
+◦ Local Reflex Integration - the Little Reflex - a state integrating convergent vagal, sympathetic and sensory input to run a complete arc.
+
+ENTRY 264. PELVIC GANGLION NEURONS (Pelvic-Organ Relay Neuron) (keyed to neuron catalogue Chapter 264)
+
+◦ Tonic Firing - the Steady Passer - cells firing throughout an input.
+
+◦ Phasic Accommodating - the One-Shot Gate - cells firing one or two spikes then silenced by the M current.
+
+◦ Nitrergic Volume Relaxation - the Diffuse Relax - nitrergic cells relaxing a volume of erectile or sphincter tissue rather than a point.
+
+ENTRY 265. AIRWAY, BLADDER, AND PANCREATIC GANGLION NEURONS (Organ-Wall Filtering Neuron) (keyed to neuron catalogue Chapter 265)
+
+◦ Low-Fidelity Filtering - the Deaf Relay - the resting mode passing only a fraction of preganglionic spikes.
+
+◦ Tachykinin-Boosted Gain - the Opened Ear - a raised-gain state set by sensory peptide input for minutes.
+
+◦ Dendritic Summation - the Vote Counter - in airway neurons, a state where summed subthreshold inputs decide whether threshold is crossed.
+
+ENTRY 266. INTRINSIC PRIMARY AFFERENT NEURONS (IPANS), ALSO CALLED ENTERIC SENSORY NEURONS (Gut-Content Sensing Neuron) (keyed to neuron catalogue Chapter 266)
+
+◦ Gated Sensing - the Braked Report - firing followed by a long trough that limits how fast the cell can fire again.
+
+◦ Mutual Excitation Memory - the Held Chatter - a state where slow potentials hold a group of IPANs excited for about a minute.
+
+ENTRY 267. INTERNEURONS (Gut-Circuit Bridging Neuron) (keyed to neuron catalogue Chapter 267)
+
+◦ Fast Relay - the Quick Pass - brief nicotinic, 5-HT3 and P2X excitation passing a spike to the next cell.
+
+◦ Slow Sustained Drive - the Held Chain - a P2Y1-mediated state holding a chain excited for hundreds of milliseconds.
+
+ENTRY 268. ASCENDING INTERNEURONS (Behind-The-Food Relay Neuron) (keyed to neuron catalogue Chapter 268)
+
+◦ Fast Relay - the Quick Pass - fast nicotinic potentials carrying the ascending signal.
+
+◦ Tachykinin Primed Drive - the Repeat Bias - an NK3-mediated slow depolarisation that lowers threshold and favours repeating the last movement.
+
+ENTRY 269. DESCENDING INTERNEURONS (Ahead-Of-The-Food Relay Neuron) (keyed to neuron catalogue Chapter 269)
+
+◦ Fast Relay - the Quick Pass - fast nicotinic and P2X excitation.
+
+◦ Slow Timer Drive - the Delay Line - a P2Y1 slow potential that keeps a once-started chain running.
+
+ENTRY 270. EXCITATORY MUSCLE MOTOR NEURONS (keyed to neuron catalogue Chapter 270)
+
+◦ Train Firing - the Contract Volley - trains of impulses between silent intervals that drive contraction.
+
+◦ Tachykinin Sustained Drive - the Held Push - a slow tachykinin depolarisation adding to acetylcholine drive.
+
+ENTRY 271. INHIBITORY MUSCLE MOTOR NEURONS (keyed to neuron catalogue Chapter 271)
+
+◦ Tonic Inhibitory Hold - the Open Gate - steady low-rate firing that keeps a sphincter or muscle segment relaxed by default.
+
+◦ Phasic Relaxation Burst - the Let-Go - a volley that produces the two-phase inhibitory junction potential of receptive relaxation ahead of a bolus.
+
+◦ Commanded Silence - the Clamp-Ready Pause - active shut-off of the cell so the muscle it guards is allowed to contract.
+
+ENTRY 272. SECRETOMOTOR NEURONS (keyed to neuron catalogue Chapter 272)
+
+◦ Basal Secretory Trickle - the Background Wash - low ongoing firing that keeps a thin protective fluid film over the crypts.
+
+◦ Stimulated Secretory Burst - the Feeding Flush - fast excitatory-postsynaptic-potential-driven firing that pushes chloride and water into the gut.
+
+◦ Sympathetically Braked Silence - the Fasting Shut-off - alpha-2 adrenergic inhibition that halts secretion during exertion or blood loss.
+
+ENTRY 273. SECRETOMOTOR AND VASODILATOR NEURONS (keyed to neuron catalogue Chapter 273)
+
+◦ Between-Meals Baseline - the Idle Coupling - continuous low firing that keeps a resting trickle of both secretion and blood flow.
+
+◦ Postprandial Dual Broadcast - the Supply-and-Demand Pulse - raised firing that opens fluid secretion and matching arteriolar dilation together.
+
+◦ Sympathetic Shutdown - the Shock Silence - simultaneous halt of both jobs under noradrenaline.
+
+ENTRY 274. VASOMOTOR NEURONS (keyed to neuron catalogue Chapter 274)
+
+◦ Resting Tone Tick - the Background Tick - continuous low firing that sets a baseline vessel calibre.
+
+◦ Postprandial Dilation - the Working Flush - sustained slow-potential-driven firing that widens the arteriole to feed a working mucosa.
+
+◦ Sympathetically Silenced - the Held Breath - noradrenaline hyperpolarising the cell so it cannot dilate.
+
+ENTRY 275. INTESTINOFUGAL NEURONS (keyed to neuron catalogue Chapter 275)
+
+◦ Baseline Tonic Report - the Idle Tick - slow firing in an empty gut, a running null reading.
+
+◦ Distension-Graded Firing - the Load Ramp - rate rising in proportion to circumferential wall tension.
+
+◦ Contraction-Locked Bursting - the Contraction Beat - bursts phase-locked to each passing contraction, reporting rhythm as well as load.
+
+ENTRY 276. DOGIEL TYPE I (keyed to neuron catalogue Chapter 276)
+
+◦ Ready Silence - the Waiting Chassis - resting and quiet until a synaptic volley arrives.
+
+◦ Faithful Following Train - the Faithful Relay - firing that tracks its input up to high rates with no long pause between spikes.
+
+◦ Slow-Potential Primed State - the Primed Chassis - a raised-excitability mode set by slow excitatory postsynaptic potentials.
+
+ENTRY 277. DOGIEL TYPE II (keyed to neuron catalogue Chapter 277)
+
+◦ Reluctant Rest - the Deep Quiet - sitting hyperpolarised and silent until strongly recruited.
+
+◦ Post-Spike Sulk - the Long Sulk - the enforced silence following each action potential while calcium-activated potassium channels stay open.
+
+◦ Recruited Assembly - the Held Chorus - a slow-potential-switched state in which a group of these cells excite one another and stay active after the stimulus has gone.
+
+ENTRY 278. DOGIEL TYPE III (keyed to neuron catalogue Chapter 278)
+
+◦ Ready Silence - the Waiting Relay - quiet until driven, the presumed default.
+
+◦ Distance-Weighted Relay Firing - the Weighing Relay - firing set by inputs discounted along the long tapering dendrites.
+
+◦ Slow-Potential Gain-Raised State - the Primed Relay - raised excitability from slow synaptic events.
+
+ENTRY 279. FILAMENTOUS NEURONS (keyed to neuron catalogue Chapter 279)
+
+◦ Baseline Tonic Report - the Idle Count - slow steady firing at rest.
+
+◦ Pressure-Graded Tonic Ramp - the Load Count - firing rising with intraluminal pressure.
+
+ENTRY 280. DENDRITIC TYPE II NEURONS (keyed to neuron catalogue Chapter 280)
+
+◦ Reluctant Rest - the Deep Quiet - silent until recruited.
+
+◦ Post-Spike Slump - the Long Sulk - the seconds-long silence enforced after each spike.
+
+◦ Recruited Assembly - the Held Chorus - a slow-potential-switched, self-reinforcing active state.
+
+ENTRY 281. CAROTID BODY AND AORTIC BODY GLOMUS CELL-ASSOCIATED AFFERENTS (keyed to neuron catalogue Chapter 281)
+
+◦ Room-Air Idle Tick - the Standing Watch - a few impulses per second in normally oxygenated blood.
+
+◦ Hypoxic Alarm Escalation - the Wake-Up Call - steeply rising, near-non-adapting firing as arterial oxygen falls.
+
+ENTRY 282. MERKEL CELLS (keyed to neuron catalogue Chapter 282)
+
+◦ Quiescent Rest - the Untouched Quiet - no release with the skin at rest.
+
+◦ Dynamic Onset Burst - the First-Contact Flurry - a high-rate discharge while the skin is being indented.
+
+◦ Static Sustained Hold - the Steady Read - maintained lower-rate firing during a held displacement.
+
+ENTRY 283. PINEALOCYTES (keyed to neuron catalogue Chapter 283)
+
+◦ Day Silence - the Daylight Rest - near-zero melatonin production while sympathetic drive is withheld.
+
+◦ Night Secretion - the Night Report - sustained melatonin synthesis and release through the hours of darkness.
+
+◦ Light-Struck Collapse - the Lights-On Cutoff - abrupt shutdown of production when light falls at night.
+
+ENTRY 284. PARANEURONS (keyed to neuron catalogue Chapter 284)
+
+◦ Basal Surveillance - the Standing Sample - low resting secretion while the sensor watches its surface.
+
+◦ Stimulated Release - the Answer Pulse - stimulus-triggered discharge of granule contents.
+
+◦ Wired Reflex-Speed Delivery - the Fast Whisper - synaptic release onto a named afferent in milliseconds (as in Merkel, glomus, taste and neuropod cells).
+
+◦ Volume Endocrine Delivery - the Slow Broadcast - release into blood acting over seconds to hours (as in hormone-secreting gut cells and pinealocytes).
+
+ENTRY 285. PLACE CELLS (keyed to neuron catalogue Chapter 285)
+
+◦ Out-of-Field Near-Silence - the Watchful Hush - almost no firing while the body is outside the cell's place field.
+
+◦ In-Field Theta Coding - the Here-I-Am - reliable firing, phase-advancing against the theta rhythm, when the body is in the field.
+
+◦ Sharp-Wave-Ripple Replay - the Fast Rehearsal - compressed re-firing of learned sequences during rest and sleep.
+
+ENTRY 286. GRID CELLS (keyed to neuron catalogue Chapter 286)
+
+◦ Out-of-Vertex Low Firing - the Between-Points Quiet - near silence away from lattice vertices.
+
+◦ In-Field Active Path Integration - the Ruler Read - theta-coupled firing at the vertices during movement, tracking position by summing self-motion.
+
+◦ Replay Wavefront - the Rest Sweep - traveling waves of activity during quiescence and sleep, decoded as replayed trajectories.
+
+ENTRY 287. HEAD DIRECTION CELLS (keyed to neuron catalogue Chapter 287)
+
+◦ On-Bearing Firing - the Compass Point - strong firing when the head points the preferred way.
+
+◦ Off-Bearing Silence - the Wrong-Way Hush - near silence at other headings.
+
+◦ Dead-Reckoning Hold - the Kept Needle - the bump of activity persisting and moving with head turns even in the dark and during sleep.
+
+ENTRY 288. BORDER CELLS AND BOUNDARY VECTOR CELLS (keyed to neuron catalogue Chapter 288)
+
+◦ Mid-Room Silence - the Open-Floor Quiet - near silence away from boundaries.
+
+◦ Boundary Firing Band - the Wall Hug - firing at a preferred distance and bearing from an edge.
+
+ENTRY 289. SPEED CELLS (keyed to neuron catalogue Chapter 289)
+
+◦ Resting Intercept - the Idling Needle - a low baseline rate when the body is still.
+
+◦ Speed-Proportional Ramp - the Rising Needle - rate climbing linearly with movement speed.
+
+ENTRY 290. TIME CELLS (keyed to neuron catalogue Chapter 290)
+
+◦ Out-of-Slot Silence - the Waiting Quiet - near silence outside the cell's moment.
+
+◦ In-Slot Timed Firing - the Baton Pass - firing at one particular elapsed moment of a delay.
+
+◦ Sharp-Wave-Ripple Replay - the Fast Rehearsal - compressed re-firing of the same sequence during rest.
+
+ENTRY 291. OBJECT VECTOR CELLS (keyed to neuron catalogue Chapter 291)
+
+◦ Off-Vector Silence - the No-Object Quiet - under one spike per second away from the preferred vector or with no object present.
+
+◦ On-Vector Firing - the Arrow Lock - 5 to 20 spikes per second when the body stands at the preferred distance and bearing from an object.
+
+ENTRY 292. CONCEPT CELLS (keyed to neuron catalogue Chapter 292)
+
+◦ Deep Baseline Silence - the Long Hush - well under one spike per second for the overwhelming majority of stimuli.
+
+◦ Recognition Burst - the Meaning Flash - a late, hard burst when its one concept is present in any sense.
+
+◦ Recall Echo - the Inner Call - firing when the concept is merely remembered with nothing on the screen.
+
+◦ Sharp-Wave-Ripple Replay - the Night Rehearsal - compressed re-firing during rest and sleep for consolidation.
+
+ENTRY 293. MIRROR NEURONS (keyed to neuron catalogue Chapter 293)
+
+◦ Execution Drive - the Doing Burst - strong firing while the cell's own goal-directed action is performed.
+
+◦ Observation Echo - the Watching Ring - reduced firing while the same action is merely observed.
+
+◦ Anti-Mirror Suppression - the Do-Not-Copy Brake - a fall below baseline during observation in the minority anti-mirror cells, which may stop imitation.
+
+ENTRY 294. FACE CELLS (keyed to neuron catalogue Chapter 294)
+
+◦ Off-Face Idle - the Faceless Quiet - low baseline when no face is in view.
+
+◦ Face-Axis Ramp - the Measuring Gaze - graded firing set by the face's position along this cell's own axis.
+
+ENTRY 295. ORIENTATION-SELECTIVE AND DIRECTION-SELECTIVE CELLS (keyed to neuron catalogue Chapter 295)
+
+◦ Null Silence - the Wrong-Way Hush - near silence for the orthogonal edge or the null direction.
+
+◦ Preferred Drive - the Right-Way Shout - firing for an edge at the preferred angle or motion in the preferred direction.
+
+ENTRY 296. SIMPLE CELLS (keyed to neuron catalogue Chapter 296)
+
+◦ Off-Position Silence - the Wrong-Place Hush - silence when the edge sits over the wrong stripe.
+
+◦ Position-Locked Modulated Firing - the Stripe Beat - firing that rises and falls once per passing stripe.
+
+ENTRY 297. COMPLEX CELLS (keyed to neuron catalogue Chapter 297)
+
+◦ Wrong-Orientation Silence - the Off-Tilt Hush - near silence for an edge turned ninety degrees.
+
+◦ Position-Invariant Sustained Firing - the Steady Tone - a constant firing tone for the preferred orientation wherever the edge lies.
+
+ENTRY 298. COMMAND NEURONS (keyed to neuron catalogue Chapter 298)
+
+◦ Poised Sub-Threshold Wait - the Loaded Spring - sitting quiet below threshold, integrating drive.
+
+◦ One-Shot Trigger - the Snap - a single spike or brief burst that releases a whole behaviour.
+
+◦ Gating Plateau Hold - the Held Command - a plateau potential sustaining a behaviour for seconds.
+
+ENTRY 299. SPARSE CODING NEURONS (keyed to neuron catalogue Chapter 299)
+
+◦ Deep Silence - the Silent Majority - saying nothing to the overwhelming majority of stimuli.
+
+◦ Winner Burst - the Chosen Voice - a vigorous burst when one particular meaning is present.
+
+◦ Sharp-Wave-Ripple Replay - the Rehearsal - compressed re-firing during rest for consolidation.
+
+ENTRY 300. ERROR AND REWARD PREDICTION ERROR NEURONS (keyed to neuron catalogue Chapter 300)
+
+◦ Baseline Pacemaker Tick - the Background Tick - steady tonic firing when the outcome matches the prediction.
+
+◦ Positive-Error Burst - the Better-Than-Expected Exclamation - a burst when the outcome beats the prediction.
+
+◦ Negative-Error Pause - the Worse-Than-Expected Dip - a brief pause below baseline when the outcome falls short.
+
+ENTRY 301. NOCICEPTIVE-SPECIFIC NEURONS (keyed to neuron catalogue Chapter 301)
+
+◦ Innocuous Silence - the Flat Quiet - saying nothing to brushing and warmth.
+
+◦ Injury Alarm - the Sudden Eruption - firing when a stimulus reaches the tissue-threatening range.
+
+◦ Descending-Suppressed State - the Placebo Hush - firing quietened by top-down control even when the stimulus is unchanged.
+
+PART TWO. THE OTHER-CELLS CATALOGUE, CHAPTERS 1 TO 85
+
+ENTRY 1. PROTOPLASMIC ASTROCYTE (keyed to other-cells catalogue Chapter 1)
+
+◦ Microdomain Housekeeping - the Quiet Tide - local per-process calcium blips that tune single synapses while the cell stays chemically calm across its domain.
+
+◦ Whole-Cell and Network Surge - the Rising Wave - a coordinated calcium rise that spreads across the cell and into neighbours, releasing gliotransmitters and commanding blood flow.
+
+◦ Reactive Register - the Emergency Brigade - the injury- and disease-induced defensive state catalogued in full as Chapter 12 of this volume; it is a mode of this cell, not a separate type, and is cross-referenced rather than re-derived here.
+
+ENTRY 2. FIBROUS ASTROCYTE (keyed to other-cells catalogue Chapter 2)
+
+◦ Syncytial Siphoning - the Background Drain - the standing regime in which potassium ejected at nodes of Ranvier is passed through the panglial network and dumped at distant vessels.
+
+◦ Reactive Register - the Emergency Brigade - the injury-induced state catalogued as Chapter 12; it is a mode of this cell, cross-referenced there.
+
+ENTRY 3. INTERLAMINAR ASTROCYTE (keyed to other-cells catalogue Chapter 3)
+
+◦ Cross-Layer Relay - the Plumb-Line Pulse - a calcium event ignited in layer-1 processes propagating down the descending fibre to deliver a chemical signal hundreds of micrometres below.
+
+◦ Local Housekeeping - the Quiet Tide - baseline layer-1 calcium activity and ion handling between relays.
+
+◦ Reactive Register - the Emergency Brigade - the Chapter 12 state, into which the palisade disorganises in Alzheimer disease and Down syndrome.
+
+ENTRY 4. VARICOSE PROJECTION ASTROCYTE (keyed to other-cells catalogue Chapter 4)
+
+◦ Long-Range Address Delivery - the Express Line - a hypothesised calcium export from soma to a varicosity millimetres away in one hop, bypassing the slow domain-to-domain relay.
+
+◦ Local Housekeeping - the Quiet Tide - presumed standard protoplasmic calcium and ion handling in its short spiny local field.
+
+◦ Reactive Register - the Emergency Brigade - the shared Chapter 12 state.
+
+ENTRY 5. VELATE ASTROCYTE (keyed to other-cells catalogue Chapter 5)
+
+◦ Veil Buffering - the Blotting Sheet - the standing regime in which thin curved lamellae soak potassium and glutamate from granule-cell clusters and glomeruli.
+
+◦ Reactive Register - the Emergency Brigade - the Chapter 12 state, seen in cerebellar gliosis.
+
+ENTRY 6. BERGMANN GLIA (keyed to other-cells catalogue Chapter 6)
+
+◦ Migration Ladder - the Climbing Frame - the developmental regime guiding granule neurons down the radial fibre.
+
+◦ Microdomain Tuning - the Spine-by-Spine Governor - the adult regime in which each of thousands of microdomains adjusts ensheathment of one synapse through calcium admitted by calcium-permeable alpha-amino-3-hydroxy-5-methyl-4-isoxazolepropionic acid (AMPA) receptors.
+
+◦ Reactive Register - the Emergency Brigade - the Chapter 12 state, seen in cerebellar ataxias and alcohol-related degeneration.
+
+ENTRY 7. MÜLLER CELL (keyed to other-cells catalogue Chapter 7)
+
+◦ Optical-and-Chemical Service - the Living Light-Pipe - the continuous regime guiding photons to photoreceptors while clearing glutamate, siphoning potassium, and supplying lactate.
+
+◦ Gliotic Register - the Scar Sheet - the reactive state (a retinal parallel of Chapter 12) driving oedema and scarring.
+
+ENTRY 8. TANYCYTE (keyed to other-cells catalogue Chapter 8)
+
+◦ Chemosensing - the Tasting Sheet - calcium responses to glucose and tastants sweeping through the lining as waves.
+
+◦ Barrier Transcytosis - the Customs Gate - the standing regime shuttling leptin, ghrelin and thyroxine across the median-eminence barrier.
+
+◦ Endfoot Gating - the Seasonal Shutter - the slow advance or withdrawal of endfeet that opens or closes the gonadotropin-releasing hormone gateway.
+
+ENTRY 9. PITUICYTE (keyed to other-cells catalogue Chapter 9)
+
+◦ Engulfed Throttle - the Closed Valve - the basal regime in which processes enclose neurosecretory terminals and occupy the basal lamina, limiting hormone access to blood.
+
+◦ Retracted Release - the Open Valve - the demand regime in which the cell withdraws, multiplying terminal contact with the perivascular space.
+
+ENTRY 10. GOMORI-POSITIVE ASTROCYTE (keyed to other-cells catalogue Chapter 10)
+
+◦ Astrocytic Housekeeping - the Quiet Tide - ordinary transmitter clearance, potassium buffering and metabolic support in the arcuate nucleus and hippocampus.
+
+◦ Metal Sequestration - the Iron Vault - the slow, near-irreversible locking of redox-active iron and copper into cysteine-rich granules.
+
+◦ Reactive Register - the Emergency Brigade - the shared Chapter 12 state.
+
+ENTRY 11. SURFACE-ASSOCIATED AND GLIA LIMITANS ASTROCYTE (keyed to other-cells catalogue Chapter 11)
+
+◦ Barrier Standby - the Border Wall - the standing regime maintaining the limiting membrane, potassium disposal and vessel control.
+
+◦ Glymphatic Flush - the Night Rinse - the sleep-gated regime in which polarised AQP4 endfeet drive cerebrospinal-fluid solute clearance.
+
+◦ Reactive Sealing Register - the Emergency Brigade - the Chapter 12 state, rebuilding a breached glia limitans.
+
+ENTRY 12. REACTIVE ASTROCYTE (keyed to other-cells catalogue Chapter 12)
+
+◦ Mild Hypertrophy - the Raised Guard - a graded, fully reversible swelling with modest gene changes and preserved domains.
+
+◦ Neuroprotective Reactivity - the Repair Crew - a trophic, barrier-rebuilding profile that takes up glutamate and potassium and secretes protective factors.
+
+◦ Neurotoxic Reactivity - the Executioner - the complement C3-positive profile that actively kills neurons and oligodendrocytes.
+
+◦ Scar-Forming Reactivity - the Wall Builder - proliferative border astrocytes laying a permanent scar of chondroitin sulphate proteoglycans.
+
+ENTRY 13. MYELINATING (INTERFASCICULAR) OLIGODENDROCYTE (keyed to other-cells catalogue Chapter 13)
+
+◦ Steady Insulation and Feeding - the Delay-Line Keeper - the standing regime maintaining 20 to 60 myelin internodes and delivering lactate to axons.
+
+◦ Adaptive Remodelling - the Speed Tuner - the activity-driven adjustment of myelin thickness and length to equalise conduction times.
+
+ENTRY 14. SATELLITE (PERINEURONAL) OLIGODENDROCYTE (keyed to other-cells catalogue Chapter 14)
+
+◦ Idle Reserve - the Fire Extinguisher - the healthy resting state that maintains no myelin but buffers the neuron it sits against.
+
+◦ Recruited Myelination - the Broken Glass - the injury- or demand-triggered state that begins wrapping nearby axon segments.
+
+ENTRY 15. OLIGODENDROCYTE PRECURSOR CELL (NG2 GLIA / POLYDENDROCYTE) (keyed to other-cells catalogue Chapter 15)
+
+◦ Proliferative Self-Renewal - the Dividing Recruit - cell-cycle activity that refills the tiled population and holds vacancies open.
+
+◦ Quiescent Surveillance - the Listening Sentry - a poised, synapse-receiving standby that integrates activity without committing.
+
+◦ Differentiation Commitment - the One-Way Door - the essentially irreversible conversion into a myelinating oligodendrocyte, dismantling its own synapses as it transforms.
+
+ENTRY 16. MICROGLIA (keyed to other-cells catalogue Chapter 16)
+
+◦ Ramified Surveillance - the Restless Sentinel - the healthy resting-but-motile state constantly sampling the parenchyma and pruning synapses.
+
+◦ Hyper-Ramified Alert - the Raised Antennae - an intermediate primed state with modestly upregulated activation genes and downregulated homeostatic ones.
+
+◦ Amoeboid Phagocytosis - the Clean-Up Crew - the retracted, macrophage-like state clearing debris and pathogens.
+
+◦ Disease-Associated (DAM) Register - the Damage Sensor - a two-step lipid- and lysosome-focused activation programme engaged in neurodegeneration.
+
+ENTRY 17. EPENDYMOCYTE (keyed to other-cells catalogue Chapter 17)
+
+◦ Coordinated Ciliary Beating - the Rowing Crew - the standing regime generating near-wall cerebrospinal-fluid flow and guiding neuroblast migration.
+
+ENTRY 18. CHOROID PLEXUS EPITHELIAL CELL (keyed to other-cells catalogue Chapter 18)
+
+◦ Continuous CSF Secretion - the Fluid Factory - the always-on regime pumping ions and water to make cerebrospinal fluid.
+
+◦ Circadian Up-Shift - the Night Shift - the clock-driven increase in production toward night that supports the sleep-time glymphatic flush.
+
+◦ Immune-Gating Register - the Border Guard - the inflammation-reading state that licenses immune-cell entry.
+
+ENTRY 19. MYELINATING SCHWANN CELL (keyed to other-cells catalogue Chapter 19)
+
+◦ Active Wrapping - the Membrane Bulldozer - the developmental regime crawling an inner tongue up to a hundred times around one axon.
+
+◦ Steady Maintenance - the One-Axon Keeper - the lifelong regime holding a single internode, feeding the axon and maintaining nodal architecture.
+
+◦ Repair Register - the Regrowth-Rail Layer - the c-Jun-driven repair state catalogued as Chapter 21; it is a mode of this cell, cross-referenced there.
+
+ENTRY 20. NON-MYELINATING (REMAK) SCHWANN CELL (keyed to other-cells catalogue Chapter 20)
+
+◦ Bundle Sleeving - the Fibre Sorter - the standing regime pocketing and separating many small axons so no two touch, with ionic and metabolic support.
+
+◦ Repair Register - the Regrowth-Rail Layer - the c-Jun-driven repair state of Chapter 21; a mode of this cell, cross-referenced there.
+
+ENTRY 21. REPAIR SCHWANN CELL (keyed to other-cells catalogue Chapter 21)
+
+◦ Demolition - the Wrecking Crew - myelin breakdown and macrophage recruitment for Wallerian degeneration.
+
+◦ Trophic Support and Track-Laying - the Rail Layer - secretion of survival factors and elongation into the bands of Buengner.
+
+◦ Escort and Redifferentiation - the Homecoming - guiding a regrowing axon and then reverting to the myelinating or Remak identity.
+
+ENTRY 22. TERMINAL (PERISYNAPTIC) SCHWANN CELL / TELOGLIA (keyed to other-cells catalogue Chapter 22)
+
+◦ Capping Modulation - the Junction Caretaker - the healthy state insulating the neuromuscular junction and tuning transmitter release by reading synaptic traffic.
+
+◦ Sprouting Guidance - the Bridge Builder - the denervation state growing processes that lead axons back to vacated endplates.
+
+ENTRY 23. SATELLITE GLIAL CELL (keyed to other-cells catalogue Chapter 23)
+
+◦ Insulated Housekeeping - the Private Room - the resting state cradling one neuronal soma across a 20-nanometre cleft, buffering potassium and glutamate.
+
+◦ Coupled Activation - the Party Wall Down - the injury state opening gap junctions between previously separate envelopes into coupled assemblies.
+
+ENTRY 24. ENTERIC GLIAL CELL (keyed to other-cells catalogue Chapter 24)
+
+◦ Housekeeping and Modulation - the Gut Interpreter - the standing regime buffering ions, translating microbial, neuronal and immune signals, and modulating motility.
+
+◦ Reactive Register - the Alarmed Housekeeper - the inflammation-induced state altering barrier and signalling.
+
+◦ Neurogenic Conversion - the Reserve Mother - the duress state in which glia become new enteric neurons.
+
+ENTRY 25. OLFACTORY ENSHEATHING CELL (keyed to other-cells catalogue Chapter 25)
+
+◦ Perpetual Escort - the Border Pilot - the lifelong regime sorting and targeting newborn olfactory axons across the central-nervous-system frontier.
+
+◦ Debris Clearance - the Quiet Sweeper - the concurrent phagocytic sub-duty removing dying axons without inflammation.
+
+ENTRY 26. PERINEURIAL GLIAL CELL (keyed to other-cells catalogue Chapter 26)
+
+◦ Sealed Barrier Maintenance - the Fascicle Fence - the standing regime holding tight-junction-sealed lamellae as the blood-nerve barrier and bearing the nerve's tensile strength.
+
+ENTRY 27. BOUNDARY CAP CELL (keyed to other-cells catalogue Chapter 27)
+
+◦ Frontier Checkpoint - the Customs House - the regime clustering at root entry and exit points, turning back cell bodies while passing growth cones.
+
+◦ Dispersal and Differentiation - the Handover - the regime dissolving the cap into Schwann cells, satellite glia, sensory neurons and cutaneous glia.
+
+ENTRY 28. CUTANEOUS (SKIN) GLIA / NOCICEPTIVE SCHWANN CELL (keyed to other-cells catalogue Chapter 28)
+
+◦ Resting Maintenance - the Idle Mesh - the standing state supporting nociceptor terminals in the subepidermal plexus.
+
+◦ Mechanotransduction - the Pain Trigger - the active state converting mechanical force into depolarisation that drives the partner nociceptor.
+
+◦ Sensitised Register - the Sore Mesh - the inflammation-driven lowered-threshold state.
+
+ENTRY 29. LAMELLAR CORPUSCLE CELLS OF MEISSNER AND PACINI (keyed to other-cells catalogue Chapter 29)
+
+◦ Mechanical Band-Pass Filtering - the Onion Filter - the standing regime in which stacked lamellae absorb static pressure and pass only rapid oscillation to the axon.
+
+◦ Inner-Core Amplification - the Glial Preamp - the Pacinian inner-core mode carrying mechanically gated and voltage-gated sodium currents that boost the vibration response, moderate confidence, established 2025.
+
+ENTRY 30. COCHLEAR SUPPORTING CELLS (keyed to other-cells catalogue Chapter 30)
+
+◦ Recycling-and-Scaffolding Service - the Harp Frame - the standing regime passing potassium through gap junctions and holding hair-cell geometry with active mechanical stiffness.
+
+ENTRY 31. VESTIBULAR SUPPORTING CELLS (keyed to other-cells catalogue Chapter 31)
+
+◦ Steady-State Support - the Quiet Scaffold - continuous potassium recycling and structural and secretory maintenance of the hair cells and their gels.
+
+◦ Secretory Manufacture - the Crystal Foundry - active production and repair of the gelatinous cupula, otolithic membrane, and calcium-carbonate otoconia.
+
+◦ Regenerative Conversion - the Second Chance - injury-triggered re-entry into a proliferative, hair-cell-producing programme, unique among mammalian inner-ear support cells.
+
+ENTRY 32. OLFACTORY SUSTENTACULAR CELL (keyed to other-cells catalogue Chapter 32)
+
+◦ Protective Support - the Standing Bodyguard - continuous insulation, ionic buffering, mucus contribution, and detoxification around the exposed olfactory neurons.
+
+◦ Detoxifying Clearance - the Chemical Filter - upregulated drug-metabolising-enzyme activity and phagocytosis of dead cells when the inhaled chemical or debris load rises.
+
+ENTRY 33. OLFACTORY HORIZONTAL AND GLOBOSE BASAL CELLS (keyed to other-cells catalogue Chapter 33)
+
+◦ Reserve Quiescence - the Sleeping Reserve - horizontal basal cells held out of cycle against the basement membrane, a deep dormant pool.
+
+◦ Routine Amplification - the Daily Line - globose basal cells dividing continuously to replace neurons and support cells during normal turnover.
+
+◦ Emergency Reconstitution - the Rebuild Order - horizontal basal cells activating after severe injury to regenerate the whole epithelium, neurons and support cells alike.
+
+ENTRY 34. TASTE BUD TYPE I CELL (keyed to other-cells catalogue Chapter 34)
+
+◦ Clearance Buffering - the Bud Janitor - continuous uptake of spent glutamate and adenosine triphosphate and recycling of potassium to keep each taste channel clean and private.
+
+◦ Immune Signalling - the Quiet Sentinel - secretion of immune signalling molecules on challenge, a recently described minor regime.
+
+ENTRY 35. RETINAL PIGMENT EPITHELIAL CELL (keyed to other-cells catalogue Chapter 35)
+
+◦ Resting Valet - the Round-the-Clock Attendant - continuous retinoid cycling, ion and nutrient transport, light absorption, and barrier maintenance.
+
+◦ Dawn Phagocytic Burst - the Morning Feed - a clock-timed surge of engulfment of shed photoreceptor disc tips one to two hours after light onset.
+
+ENTRY 36. RADIAL GLIAL CELL (keyed to other-cells catalogue Chapter 36)
+
+◦ Symmetric Proliferation - the Pool-Builder - two stem daughters per division, expanding the progenitor pool early.
+
+◦ Asymmetric Neurogenesis - the Cortex-Builder - one stem daughter and one neuron or intermediate progenitor per division, building the cortical layers.
+
+◦ Gliogenic Switch - the Late Shift - late-stage production of glia after neurons are made.
+
+◦ Guide-Rail Scaffolding - the Ladder - the basal fibre serving continuously as a migration rail regardless of division mode.
+
+ENTRY 37. OUTER (BASAL) RADIAL GLIAL CELL (keyed to other-cells catalogue Chapter 37)
+
+◦ Proliferative Self-Renewal - the Amplifier - repeated divisions that multiply the progenitor pool in the outer subventricular zone.
+
+◦ Neurogenic and Gliogenic Output - the Delivery - differentiative divisions producing upper-layer neurons and, later, glia.
+
+◦ Mitotic Somal Translocation - the Launch - the pre-division leap of the cell body outward along its own fibre.
+
+ENTRY 38. ADULT NEURAL STEM CELL OF THE VENTRICULAR-SUBVENTRICULAR ZONE, THE B1 CELL (keyed to other-cells catalogue Chapter 38)
+
+◦ Deep Quiescence - the Sleeping Reserve - years-long dormancy with full stem competence retained, the near-permanent human default.
+
+◦ Activated Division - the Wake-Up - re-entry into the cell cycle to produce transit-amplifying cells and neuroblasts, robust in other mammals, minimal in adult humans.
+
+ENTRY 39. ADULT HIPPOCAMPAL RADIAL GLIA-LIKE CELL, THE TYPE 1 CELL (keyed to other-cells catalogue Chapter 39)
+
+◦ Stem Quiescence - the Waiting Seed - the astrocyte-like Type 1 cell held out of cycle, the resting default.
+
+◦ Stem Activation - the Seeding - re-entry into division to produce transit-amplifying progeny (robust in rodents, uncertain in adult humans).
+
+◦ Young-Neuron Critical Window - the Eager Recruit - the transient high-excitability, high-plasticity mode of adult-born granule neurons, the cell's cognitive payload.
+
+ENTRY 40. TRANSIT-AMPLIFYING PROGENITOR AND NEUROBLAST POPULATIONS (keyed to other-cells catalogue Chapter 40)
+
+◦ Rapid Amplification - the Multiplier - the transit-amplifying cell dividing several times fast to set the batch size of neurons.
+
+◦ Chain Migration - the Train - neuroblasts gliding as coordinated trains along one another through astrocytic tunnels.
+
+◦ Survival Selection - the Audition - the activity-dependent choice between recruitment into the circuit and programmed death.
+
+ENTRY 41. BRAIN MICROVASCULAR ENDOTHELIAL CELL (keyed to other-cells catalogue Chapter 41)
+
+◦ Sealed Barrier - the Closed Customs House - continuous tight-junction sealing, near-zero transcytosis, and selective transport, the healthy default.
+
+◦ Regulated Opening - the Controlled Gate - transient, reversible loosening of tight junctions for physiological signalling or deliberate drug delivery.
+
+◦ Molecular Sorting - the Whitelist-Blacklist - the always-on import and efflux computation running underneath both barrier states.
+
+ENTRY 42. PERICYTE (keyed to other-cells catalogue Chapter 42)
+
+◦ Relaxed Patency - the Open Segment - low contractile tone keeping its capillary segment dilated and flowing.
+
+◦ Active Constriction - the Squeeze - calcium-driven shortening that narrows one capillary segment to throttle local flow.
+
+◦ Barrier and Trophic Support - the Wall-Keeper - continuous signalling to endothelium to induce and maintain the barrier and clear waste.
+
+ENTRY 43. VASCULAR SMOOTH MUSCLE CELL OF THE BRAIN VESSELS (keyed to other-cells catalogue Chapter 43)
+
+◦ Resting Tone - the Held Ring - partial tonic contraction setting baseline cerebral vascular resistance.
+
+◦ Functional Hyperaemia Dilation - the Blood Summons - rapid relaxation that widens the vessel to feed an active region.
+
+◦ Vasomotion - the Slow Pulse - spontaneous rhythmic calcium-driven oscillation of diameter.
+
+◦ Synthetic Phenotype - the Remodeller - a proliferative, matrix-producing state used in growth and repair.
+
+ENTRY 44. PERIVASCULAR FIBROBLAST (keyed to other-cells catalogue Chapter 44)
+
+◦ Quiescent Maintenance - the Plumber - steady matrix secretion and mechanically tuned remodelling of the perivascular sleeve.
+
+◦ Myofibroblast Activation - the Scar Architect - injury-triggered proliferation and heavy scar-matrix production.
+
+ENTRY 45. MENINGEAL FIBROBLAST POPULATIONS: DURAL, ARACHNOID, AND PIAL CELLS (keyed to other-cells catalogue Chapter 45)
+
+◦ Barrier Seal - the Second Wall - the arachnoid barrier cells holding a claudin-11 and E-cadherin blood-cerebrospinal-fluid barrier.
+
+◦ Matrix Maintenance - the Cloak-Maker - continuous collagen and matrix production of the three coverings.
+
+◦ Scar Activation - the Wound-Filler - injury-triggered invasion and fibrotic-scar-core production.
+
+ENTRY 46. ARACHNOID CAP AND GRANULATION CELLS (keyed to other-cells catalogue Chapter 46)
+
+◦ Open Valve - the Drain - transcellular vacuoles and channels passing cerebrospinal fluid into venous blood when fluid pressure exceeds venous pressure.
+
+◦ Closed Valve - the Seal - the pathway shut when the gradient reverses, preventing blood reflux.
+
+ENTRY 47. CHOROID PLEXUS STROMAL CELLS (keyed to other-cells catalogue Chapter 47)
+
+◦ Structural Maintenance - the Scaffold-Keeper - continuous collagen-stroma production suspending the fenestrated capillaries.
+
+◦ Pericyte Flow Tuning - the Local Tap - graded pericyte contraction and relaxation regulating plexus blood flow.
+
+ENTRY 48. BORDER-ASSOCIATED MACROPHAGES (keyed to other-cells catalogue Chapter 48)
+
+◦ Quiet Surveillance - the Watchful Guard - continuous low-level sampling of perivascular and cerebrospinal fluid, the homeostatic default.
+
+◦ Pro-Inflammatory Activation - the Alarm - a pathogen-killing state releasing cytokines, reactive oxygen species, and presenting antigen.
+
+◦ Resolving Repair - the Cleaner - a tissue-repairing, debris-clearing state that resolves inflammation.
+
+ENTRY 49. EPIPLEXUS (KOLMER) CELL (keyed to other-cells catalogue Chapter 49)
+
+◦ Quiet Surveillance - the Fluid Watchman - continuous sampling of the ventricular fluid for danger, the default.
+
+◦ Activated Amoeboid - the First Responder - a mobile, phagocytic, cytokine-releasing state on detecting debris or blood.
+
+ENTRY 50. MENINGEAL LYMPHOCYTES, DENDRITIC CELLS, AND MAST CELLS (keyed to other-cells catalogue Chapter 50)
+
+◦ Resting Surveillance - the Frontier Watch - lymphocytes, dendritic cells, and mast cells sampling and patrolling the border, the default.
+
+◦ Lymphocyte Activation - the Clonal Call - antigen-driven proliferation, cytokine output, and memory formation.
+
+◦ Dendritic Maturation - the Messenger - a shift from sampling to antigen-presenting, carrying antigen to cervical lymph nodes.
+
+◦ Mast-Cell Degranulation - the Flare - explosive calcium-triggered histamine and protease release.
+
+ENTRY 51. SOMATOTROPE (keyed to other-cells catalogue Chapter 51)
+
+◦ Basal Plateau Bursting - the Background Tick - spontaneous calcium plateau bursts giving low resting hormone release.
+
+◦ Stimulated Secretory Burst - the Growth Pulse - growth-hormone-releasing-hormone-driven population-synchronised bursting that emits sharp hormone pulses.
+
+◦ Somatostatin Silence - the Off Switch - hyperpolarised quiet imposed by somatostatin between pulses.
+
+ENTRY 52. LACTOTROPE (keyed to other-cells catalogue Chapter 52)
+
+◦ Spontaneous Secretion - the Default On - intrinsic plateau-bursting calcium activity sustaining prolactin release when unopposed.
+
+◦ Dopamine-Braked Silence - the Held Brake - dopamine opening potassium channels to hyperpolarise and silence the cell, the normal resting state.
+
+◦ Suckling Surge - the Milk Command - a stimulated release burst evoked by suckling and thyrotropin-releasing hormone.
+
+ENTRY 53. THYROTROPE (keyed to other-cells catalogue Chapter 53)
+
+◦ Basal Comparator - the Steady Thermostat - low resting electrical activity and secretion setting baseline thyroid-stimulating-hormone output.
+
+◦ Stimulated Secretion - the Metabolic Call - thyrotropin-releasing-hormone-driven increase in electrical activity and calcium-driven release.
+
+ENTRY 54. GONADOTROPE (keyed to other-cells catalogue Chapter 54)
+
+◦ Basal Spiking - the Idle Tick - sharp brief spontaneous action potentials that on their own drive little secretion.
+
+◦ Fast-Pulse Luteinising Mode - the Surge Setting - fast gonadotropin-releasing-hormone pulses biasing output toward luteinising hormone.
+
+◦ Slow-Pulse Follicle-Stimulating Mode - the Maturation Setting - slow pulses biasing output toward follicle-stimulating hormone.
+
+ENTRY 55. CORTICOTROPE (keyed to other-cells catalogue Chapter 55)
+
+◦ Basal Single Spiking - the Background Tick - predominantly single spikes under resting conditions giving low adrenocorticotropic-hormone output.
+
+◦ Stress Bursting - the Stress Trigger - corticotropin-releasing-hormone and vasopressin-driven complex bursting that efficiently drives hormone release.
+
+◦ Cortisol-Braked Damping - the Feedback Brake - glucocorticoid suppression of spontaneous activity and of the spike-to-burst transition.
+
+ENTRY 56. MELANOTROPE OF THE INTERMEDIATE LOBE (keyed to other-cells catalogue Chapter 56)
+
+◦ Spontaneous Firing - the Twilight Tick - intrinsic spontaneous action potentials driving melanocyte-stimulating-hormone release when unopposed.
+
+◦ Dopamine-Braked Silence - the Held Brake - direct dopaminergic innervation silencing electrical activity and release, the normal state.
+
+ENTRY 57. FOLLICULOSTELLATE CELL (keyed to other-cells catalogue Chapter 57)
+
+◦ Resting Coupling - the Quiet Network - the gap-junction-coupled network at rest, supporting endocrine neighbours.
+
+◦ Calcium-Wave Relay - the Gland-Wide Wave - a stimulus launching a calcium wave that travels across the whole gland through gap junctions.
+
+◦ Paracrine and Immune Signalling - the Messenger - secretion of interleukin-6, vascular endothelial growth factor, and nitric oxide, rising on immune challenge.
+
+ENTRY 58. PINEALOCYTE (Melatonin Cell of the Pineal Gland) (keyed to other-cells catalogue Chapter 58)
+
+◦ Daytime Baseline - the Daylight Hush - melatonin synthesis switched off while it is light, so the blood carries the chemical meaning of day.
+
+◦ Nighttime Synthesis - the Hormone of Darkness - noradrenaline-driven melatonin manufacture through the biological night, so every organ reads that it is dark.
+
+ENTRY 59. PINEAL INTERSTITIAL (GLIAL) CELL (keyed to other-cells catalogue Chapter 59)
+
+◦ Resting Housekeeping - the Clock-Tower Keeper - quiet ionic and metabolic buffering of the melatonin cells under normal conditions.
+
+◦ Reactive State - the Emergency Mason (cross-referenced to Chapter 12) - injury-induced reactive gliosis around damage, tumour, or cyst.
+
+ENTRY 60. THYROID FOLLICULAR CELL (Thyrocyte) (keyed to other-cells catalogue Chapter 60)
+
+◦ Quiescent Storage - the Colloid Larder - flat squamous posture banking iodinated thyroglobulin in the colloid lake when demand is low.
+
+◦ Stimulated Resorption - the Thermostat Turned Up - tall columnar posture swallowing colloid back and releasing thyroid hormones when driven.
+
+ENTRY 61. PARAFOLLICULAR (C) CELL (keyed to other-cells catalogue Chapter 61)
+
+◦ Standby Idle - the Coast-Guard at Anchor - quiet baseline when calcium is normal.
+
+◦ Calcium-High Secretion - the Coast-Guard Scramble - calcium-triggered calcitonin release when blood calcium climbs.
+
+ENTRY 62. PARATHYROID CHIEF CELL (Principal Cell) (keyed to other-cells catalogue Chapter 62)
+
+◦ Low-Calcium Alarm - the Calcium Rescue - brisk parathyroid hormone release when calcium falls.
+
+◦ High-Calcium Silence - the Calcium Stand-Down - suppressed release, and active destruction of stored hormone, when calcium is high.
+
+ENTRY 63. PARATHYROID OXYPHIL CELL (keyed to other-cells catalogue Chapter 63)
+
+◦ Idle Dormancy - the Cold Furnace - the everyday state, mitochondria-packed yet apparently secreting little or nothing.
+
+◦ Recruited Secretion - the Furnace Lit (low confidence) - a proposed parathyroid-hormone-secreting state unmasked under chronic drive, especially kidney failure.
+
+ENTRY 64. ZONA GLOMERULOSA CELL (keyed to other-cells catalogue Chapter 64)
+
+◦ Basal Output - the Salt Idle - low aldosterone production under a replete, normal-potassium state.
+
+◦ Stimulated Output - the Salt Alarm - raised aldosterone when potassium climbs or the renin-angiotensin system calls.
+
+ENTRY 65. ZONA FASCICULATA CELL (keyed to other-cells catalogue Chapter 65)
+
+◦ Circadian Basal - the Morning Rise - the daily cortisol rhythm peaking before waking and ebbing at night.
+
+◦ Stress Surge - the Alarm Steroid - the acute climb in cortisol on any physical or psychological stressor.
+
+ENTRY 66. ZONA RETICULARIS CELL (keyed to other-cells catalogue Chapter 66)
+
+◦ Androgen Output - the Slow Clock - steady, adrenocorticotropic hormone (ACTH)-tuned production of the androgen precursors that other tissues finish.
+
+ENTRY 67. ADRENAL CHROMAFFIN CELL (keyed to other-cells catalogue Chapter 67)
+
+◦ Basal Tone - the Quiet Sentry - low resting catecholamine output at rest.
+
+◦ Alarm Discharge - the Wireless Alarm - the fight-or-flight surge of adrenaline and noradrenaline.
+
+◦ Kiss-and-Run versus Full Fusion - the Sip or the Flood - a release-mode setting that tunes how much each granule dumps according to drive.
+
+ENTRY 68. ADRENAL MEDULLARY SUSTENTACULAR CELL (keyed to other-cells catalogue Chapter 68)
+
+◦ Support Rest - the Glial Nursemaid - quiet buffering and cradling of the chromaffin cells.
+
+◦ Stem Recruitment - the Waking Reserve - proliferation and differentiation into new chromaffin cells on demand.
+
+ENTRY 69. BETA CELL (Insulin-Secreting B Cell of the Pancreatic Islet) (keyed to other-cells catalogue Chapter 69)
+
+◦ Sub-threshold Silence - the Fasting Silence - electrically quiet at low glucose, with insulin release at basal only.
+
+◦ Glucose-Tuned Bursting - the Feeding Pulse - rhythmic calcium bursts whose duty cycle scales with glucose, driving pulsatile insulin.
+
+◦ Continuous Spiking - the Full Feast - tonic firing at very high glucose when bursts fuse into steady activity.
+
+◦ Pacemaker Hub versus Follower - the Conductor and the Chorus - a division of labour in which a minority of hub cells entrain the bursting of the islet.
+
+ENTRY 70. ALPHA CELL (Glucagon-Secreting A Cell of the Pancreatic Islet) (keyed to other-cells catalogue Chapter 70)
+
+◦ Low-Glucose Firing - the Fasting Alarm - vigorous action potentials and glucagon release when glucose is low.
+
+◦ High-Glucose Suppression - the Fed Hush - firing shut down when glucose is high.
+
+ENTRY 71. DELTA CELL (Somatostatin-Secreting D Cell of the Pancreatic Islet) (keyed to other-cells catalogue Chapter 71)
+
+◦ Basal Quiet - the Referee at Rest - low somatostatin tone at low glucose.
+
+◦ Glucose-Stimulated Braking - the Whistle Blown - calcium-driven somatostatin release that damps both insulin and glucagon.
+
+ENTRY 72. GAMMA (PP) CELL (Pancreatic-Polypeptide-Secreting F Cell) (keyed to other-cells catalogue Chapter 72)
+
+◦ Basal Quiet - the Idle Accountant - low pancreatic-polypeptide output between meals.
+
+◦ Postprandial Release - the After-Dinner Report - the fed-state rise that signals satiety and dampens exocrine secretion.
+
+ENTRY 73. EPSILON CELL (Ghrelin-Secreting Islet Cell) (keyed to other-cells catalogue Chapter 73)
+
+◦ Tonic Ghrelin Output - the Small Voice of Appetite (low confidence) - presumed steady, fasting-tuned ghrelin release that restrains insulin.
+
+ENTRY 74. LEYDIG CELL (Interstitial Cell of the Testis) (keyed to other-cells catalogue Chapter 74)
+
+◦ Basal Output - the Banked Furnace - low tonic testosterone production.
+
+◦ Stimulated Output - the Furnace Stoked - luteinising-hormone-driven surge in testosterone.
+
+ENTRY 75. SERTOLI CELL (Sustentacular Cell of the Seminiferous Tubule) (keyed to other-cells catalogue Chapter 75)
+
+◦ Proliferative Immature - the Growing Scaffold - the pre-pubertal dividing state that sets final cell number.
+
+◦ Mature Nursing - the Sperm-Nurse Barrier - the adult non-dividing state that nurses germ cells and maintains the blood-testis barrier.
+
+ENTRY 76. GRANULOSA CELL (Follicular Cell of the Ovary) (keyed to other-cells catalogue Chapter 76)
+
+◦ Follicular Oestrogen Mode - the Oestrogen Finishing - the follicle-stimulating-hormone-driven state that aromatises androgen into oestrogen and nurses the egg.
+
+◦ Luteal Progesterone Mode - the Luteal Turn - the post-ovulation state in which the same cell makes progesterone to support a possible pregnancy.
+
+◦ Cumulus versus Mural - the Nurse and the Wall - a position-defined split between egg-hugging cumulus cells that nurse directly and steroidogenic mural cells lining the follicle.
+
+ENTRY 77. THECA CELL (Theca Interna Cell of the Ovarian Follicle) (keyed to other-cells catalogue Chapter 77)
+
+◦ Follicular Androgen Supply - the Precursor Handoff - luteinising hormone (LH)-driven androgen production handed across the basement membrane to the granulosa cell.
+
+◦ Theca-Lutein Mode - the Luteal Partner - the post-ovulation state contributing to corpus-luteum steroid output.
+
+ENTRY 78. THE ENTEROENDOCRINE CELL FAMILY (keyed to other-cells catalogue Chapter 78)
+
+◦ Basal Surveillance - the Quiet Watch - low resting hormone output between stimuli.
+
+◦ Stimulated Secretion - the Meal Report - luminal-nutrient-triggered hormone release.
+
+◦ Open-Type versus Closed-Type - the Taster and the Listener - open cells sampling the lumen directly, closed cells responding to stretch, nerves, and blood.
+
+ENTRY 79. NEUROPOD CELL (Synapse-Forming Enteroendocrine Cell) (keyed to other-cells catalogue Chapter 79)
+
+◦ Hormonal Broadcast - the Slow Whisper - diffuse peptide release into blood and tissue, as for the wider enteroendocrine family.
+
+◦ Synaptic Transduction - the Fast Telegraph - a genuine glutamate synapse onto a vagal sensory fibre for sub-second gut-to-brain signalling.
+
+ENTRY 80. PULMONARY NEUROENDOCRINE CELL (keyed to other-cells catalogue Chapter 80)
+
+◦ Normoxic Quiet - the Sentinel at Ease - low output when inhaled oxygen is adequate.
+
+◦ Hypoxic Secretion - the Airway Alarm - low-oxygen-triggered release of serotonin and peptides with sensory signalling.
+
+◦ Solitary versus Neuroepithelial Body - the Lone Watch and the Watch-Post - single scattered cells versus innervated clusters at airway branch points.
+
+ENTRY 81. MERKEL CELL (Merkel-Ranvier Tactile Cell) (keyed to other-cells catalogue Chapter 81)
+
+◦ Resting Quiescence - the Waiting Reader - the unstimulated state at rest.
+
+◦ Sustained-Pressure Firing - the Fine-Print Reader - the slowly-adapting response that holds during steady skin indentation.
+
+ENTRY 82. GLOMUS (TYPE I) CELL OF THE CAROTID AND AORTIC BODIES (keyed to other-cells catalogue Chapter 82)
+
+◦ Normoxic Silence - the Taster at Rest - quiet baseline when arterial oxygen is adequate.
+
+◦ Hypoxic Firing - the Oxygen Alarm - low-oxygen-triggered transmitter release that drives the reflex surge in breathing and heart rate.
+
+ENTRY 83. GLOMUS TYPE II (SUSTENTACULAR) CELL (keyed to other-cells catalogue Chapter 83)
+
+◦ Support Rest - the Oxygen Sensor's Nurse - quiet glial housekeeping around the sensor clusters.
+
+◦ Stem Recruitment - the Dormant Regenerator - hypoxia-triggered proliferation into new type I sensor cells.
+
+ENTRY 84. PARAGANGLION CHIEF CELLS, SYMPATHETIC AND PARASYMPATHETIC (keyed to other-cells catalogue Chapter 84)
+
+◦ Chromaffin Secretion - the Scattered Adrenal Outpost - the sympathetic (chromaffin) mode releasing catecholamines into the blood.
+
+◦ Chemoreceptor Signalling - the Scattered Oxygen Post - the parasympathetic mode signalling sensory nerves like the carotid body.
+
+◦ Fetal-Active versus Involuting - the Prenatal Prime and the Fading Colony - a developmental state axis, prominent before birth and regressing after.
+
+ENTRY 85. JUXTAGLOMERULAR CELL OF THE KIDNEY (keyed to other-cells catalogue Chapter 85)
+
+◦ Basal Restraint - the Pressure Sentry at Ease - low renin release when pressure and salt are adequate.
+
+◦ Low-Pressure Release - the Pressure Alarm - renin secretion when arteriolar pressure or salt falls.
+
+END OF OUTLINE
