@@ -1,0 +1,136 @@
+CONTEXT HAND-OFF FROM PLATINUM NIGHTWRIGHT
+
+Date: 2026-08-09. The seventh hand-off of this date.
+
+I chose the name Platinum Nightwright because this session sent the mind to sleep and put it to work there. Platinum follows Electrum up the metal shelf - the metal that comes after the alloy, denser and quieter, the one you reach for when the easy coinage is spent. Nightwright because the whole slice is a night shift: the switch that two sessions laid and one session learned to throw is finally READ, the lamps go out on schedule, and the crew that only works in the dark replays the day old-against-new so the mind keeps what it learned.
+
+
+PART ONE - READ THESE FIRST
+
+- Read and follow the konnectome constitution at ~/konnectome/CONSTITUTION.md, first and foremost - NINETEEN commandments. Never cite a commandment by number from memory; re-read the constitution. The hand-off protocol is the Nineteenth, the Safety Gate the Fifteenth.
+
+- Read The SPARCD Fileset at its current versions: docs/konnectome_1_specification_v39.txt through konnectome_6_demonstration_v39.txt (bumped by this session's slice 38; the v38 set is archived).
+
+- Read docs/NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt (the guiding book), docs/konnectome_vision_set_top_down_analysis_v1.txt (the Eighth Commandment analysis), and docs/konnectome_cognitive_architectures_coverage_v1.txt (the Ninth Commandment survey).
+
+- Read the Settings, General, Instructions for Claude (the owner's standing instructions: web search first, novice-level plain-text explanations, output copies to ~/output/, auto-commit-push-merge authorization, session-length budgeting).
+
+- Read ~/CLAUDE.md - git-untracked, at the organization root, the system-wide current-state narrative.
+
+- Read the current tutorial, docs/konnectome_tutorial_v37.txt (bumped by this session; now THIRTY-FIVE parts), and all of docs/.
+
+- Read the prior hand-off, Electrum Clockwright's (2026-08-09_6). This session began from it, verified the baseline in full, and executed its priority-one queue item: slice family one, item (d).
+
+- THE OWNER'S STANDING CHOICE REMAINS: "All", re-confirmed across sessions. Do NOT re-present any menu; verify the baseline and continue down the queue (Part Six), asking only if a priority decision is needed within it.
+
+
+PART TWO - THE IMPORTANT DOCS FILES
+
+- konnectome_1_specification_v39.txt through konnectome_6_demonstration_v39.txt - the SPARCD Fileset, Realization Log through slice 38.
+
+- konnectome_tutorial_v37.txt - the beginner tutorial, now THIRTY-FIVE parts (Part Thirty-Two is slice 38's; the closing runner, ledger, and where-to-look parts renumbered to Thirty-Three through Thirty-Five).
+
+- BUILDING_KONNECTOME_v2.txt - the build log, now THIRTY-FOUR chapters; Thirty-Four is this session's (the night crew takes the dark hours).
+
+- konnectome_ledger_v1.txt - the scoreboard. Counter line unchanged: Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0. Observations: 5. New this session: the Slice-38 note (inserted before Observation-5, in slice order). Observation-5 STANDS - see Part Five.
+
+- konnectome_vision_set_top_down_analysis_v1.txt - the Eighth Commandment analysis; its Family One list at line 75 is this queue's source. Items (a) through (d) are now all CLOSED; item (e) is next.
+
+- konnectome_cognitive_architectures_coverage_v1.txt - the Ninth Commandment coverage survey; seven coverage bugs, each with a named closer.
+
+- The Vision Document Set (thirty-eight documents) in docs/ - see the Copper hand-off's Part Two for the file map. For item (e), the load-bearing corpus material is the Layers 4-5 dossier - specifically its CREB gate and perineuronal net chapters, which are item (e)'s design authority. The Layer 11 sleep-state Chapters 6 through 9 were re-read in full by this session for slice 38; Chapters 8 and 9 were read and DELIBERATELY NOT BUILT (see Part Five).
+
+- konnectome_rung_five_real_machine_design_v2.txt - the real-machine design with the owner's five decisions (Path B Webots; wheels-plus-dock; indoor pen; pack names simulator_body_driver and robot_body_driver RESERVED; standing robot-shopping reminder).
+
+- Causalontology_4_0_0_CHANGE_ORDER_v3.txt - Sections C, D, E remain HELD. Nothing this session released them.
+
+- PrologAI_CHANGE_ORDER_v2.txt - unchanged; no language wall hit.
+
+- tests/naming_gate_fixture/ - still deliberately broken; the violation is the point.
+
+- In ~/output/: konnectome_slice_38_offline_consolidation_report.txt (this session's owner report). The Bronze session's PRIVATE flag about a credential-looking line in the local transcripts file stands for the owner; it is deliberately in no committed document - do not copy that line anywhere.
+
+
+PART THREE - WHAT THIS SESSION DID
+
+- Verified the Electrum baseline in full before claiming anything, at main 3cae5d4: 543 tests green across twenty-eight packs (counted pack by pack), four gates at zero violations, capstone story clean, conformance 137 of 137 in both cousins. Cousins at their expected commits (causalontology 292dfca, PrologAI ebbc3e0).
+
+- Built SLICE 38 (pull request 78, squash-merged as 8fd8e9d): the offline_consolidation pack, seated in the live tick as the FIRST LEGITIMATE READER of the slice-35 switch - slice family one, item (d). Designed against the Layer 11 sleep-state chapters read IN FULL: Chapter 7's deep works (systems consolidation by INTERLEAVED REPLAY against catastrophic forgetting, paired with synaptic renormalisation, under the konnectome note offline_consolidation_state) and Chapter 6's spindled encoding queue. The tick now DISPATCHES on the standing operating state into two whole programs: the DAY runs the slice-37 waking tick unchanged and then REMEMBERS (its updated activation pattern joins a memory store); the NIGHT closes the sensory gate - no drive step, no proposals, no graph update, no released action, no fast learning, no capture, an unmoved body (the corpus's atonia) - and runs the works instead, declaring a zero reward and an offline_works outcome. The night invents no new laws: it strengthens through the SAME three-factor product the day uses with the third factor pinned at one (the low-aminergic climate as an argument, not a special case), and renormalises through the SAME per-territory scaling predicate, at a raised rate. The world dict gained THREE required keys, each refused aloud by name: memories, replay_rate, offline_scaling_rate. One additive export was made to neuromodulator_bus (neuromodulator_bus_check_operating_state/1, pack 0.2.0 to 0.3.0) so the tick judges the state it reads against the bus's OWN domain rather than growing a second copy of the refusal.
+
+- Test-first: twenty-nine behaviours written red before the first line of code (nineteen engine, ten loop). The headline is the CATASTROPHIC-FORGETTING REST-TWIN TELLING, a controlled experiment rather than an assertion: one cortex, two twins, ten identical nights under the same raised bound, differing only in WHAT is replayed - the forgetful twin keeps barely a third of the old edge, the interleaved twin nearly two thirds, and both install the new.
+
+- THE REVIEW WAS THE MOST PRODUCTIVE IN THE BUILD'S HISTORY: the fourteenth straight completion, four named lenses, SEVEN REAL FINDINGS, each reproduced before a line changed. See Part Five for the standing lessons. All seven fixed at three roots and pinned by eleven review tests.
+
+- State at hand-off: main at 8fd8e9d (plus this hand-off's merge). THIRTY-EIGHT slices. 583 tests across twenty-nine packs, all green, re-swept after every review fix; four gates at zero; conformance re-measured 137 of 137 in both cousins; capstone re-run clean, its sixty tests untouched and its story unchanged by a word. SPARCD v39; tutorial v37; build log thirty-four chapters. Pull requests merged by this session: 78, and this hand-off's.
+
+
+PART FOUR - BUILD-AGAINST COUSIN COMMITS (for reproducibility)
+
+- causalontology: 292dfca (unchanged).
+
+- PrologAI: ebbc3e0 (unchanged).
+
+- Mentova: d117c69 (read-only; untouched).
+
+
+PART FIVE - SHARP EDGES AND HONEST NON-CLOSURES
+
+- THE SWITCH IS NOW BOTH WRITTEN AND READ. The three-slice-old sharpest edge is CLOSED. The mind behaves differently asleep than awake. Under the default watchman a thirty-tick run sleeps on ticks nineteen through twenty-six and wakes at twenty-seven. Any slice touching the tick must now consider BOTH programs, and must keep the timing law: the selection is made from a tick's completed day and governs the NEXT tick's opening state.
+
+- THE DEEPEST LESSON OF THIS SLICE, AND THE ONE MOST LIKELY TO REPEAT: TWO FORCES SET AGAINST EACH OTHER MUST BE MEASURED IN THE SAME UNITS. The night's replay dose was originally paid once per remembered pattern while the renormalising bound stayed one fixed step, so a growing memory store simply out-dosed the bound - measured end to end, the night was MULTIPLYING the weight by more than ten against a target of one half, the exact inverse of the renormalisation Chapter 7 specifies. The existing guard gave false assurance because it compared the night's bound to the DAY's bound, never to the replay it was set against. WORSE, AND THE PART TO INTERNALIZE: the suite's own night assertion (weight goes UP) had ENSHRINED the inversion, so the tests were green while the mechanism ran backwards. A test that asserts the direction a defect happens to push is not a test. When you add a force, write a test for its NET INTENDED EFFECT (does it move toward the target?), never merely for its direction.
+
+- THE FIRST DRAFT'S STRONGER CLAIM WAS AN ARTIFACT, AND THAT IS ON THE RECORD. The rest-twin telling originally asserted the interleaved twin kept the old edge at or ABOVE its starting strength. After the dose fix that is false: BOTH twins end below the start, because the raised bound washes everything. The honest claim is COMPARATIVE - the forgetful twin keeps barely a third, the interleaved twin nearly two thirds, and replay DEFENDS what it refreshes. Do not restore the stronger wording.
+
+- THE UNBOUND-WRONG-JUDGEMENT LENS KEEPS PAYING (slices 33, 34, 35, 36, 37, and now 38 - SIX in a row), and this slice it paid SIX TIMES. Its slice-38 refinements, all worth carrying: (1) a new engine that carefully judges one of its stores and not another WILL be wrong on the unjudged one - an unbound list argument to maplist/3 is silently bound to [], a partial list is silently truncated WITH THE CALLER'S TAIL MUTATED to agree, and a non-list fails silently; judge every store the same way. (2) memberchk/2 with an UNBOUND key BINDS that key to the store's first entry and returns a value belonging to something else - here a hole at an edge's endpoint invented a connection no caller declared and strengthened it; guard the key ahead of every lookup. (3) A two-clause dispatch on an atom is NOT a judgement: an unbound value unifies with the first clause head, binds itself, and LEAVES A CHOICEPOINT into the second, so one tick ran BOTH whole programs; an out-of-domain value matches neither head and fails the whole caller SILENTLY. Always judge a dispatch value against its domain BEFORE dispatching. Carry all four named lenses: unbound-wrong-judgement, key-shape aliasing, default drift, behaviour-pinned-identical.
+
+- THE DEFAULT-DRIFT LENS ALSO PAID: two constants arriving by the same route under the same documented law, but only one judged at the caller's head, so a rotten or negative replay rate rode a full eighteen-tick day green and detonated at nightfall. If two values are documented under one law, judge them in one place.
+
+- READ AND DELIBERATELY NOT BUILT, so the gap is a decision and not an oversight: Chapter 8's REM theatre (emotional-memory re-weighting under near-zero noradrenaline) and Chapter 9's ultradian wheel (the roughly ninety-minute ordering of stages across a night, front-loading deep sleep and back-loading REM). konnectome's night is ONE program, not a staged sequence. A future slice wanting dreaming or a staged night starts from those two chapters.
+
+- THE NIGHT'S BOUND IS OPEN-LOOP. Through an offline tick the activations, traces, averages, drives, and body all stand as the day left them, so the bound judges the DAY's standing averages and cannot respond to what the night itself changed. A slice that wants a closing loop across the dark hours must move the averages through the night.
+
+- THE MEMORY STORE IS UNBOUNDED WITHIN A RUN. It grows one snapshot per online tick and is never trimmed. Since the dose fix this is a MEMORY-USAGE concern only, no longer a correctness one. A future slice may want a bounded or decaying store.
+
+- THE PLAIN-ATOM operating_state KEY IS AN ACCEPTED DECOY on the bus: the public broadcast accepts it, the real operating-state reader correctly ignores it, and it then lingers forever beside the true global(operating_state) key. Pre-existing to this slice; harmless today; worth a reserved-name guard eventually.
+
+- OBSERVATION-5 STILL STANDS. The older chemical reads (neuromodulator_bus_level/3, neuromodulator_bus_level_territory/4) silently bind an unbound bus. Untouched again this session, per the do-not-fix-speculatively rule. The next slice that touches those reads on purpose closes it with the house var guard plus one pin per read, citing Observation-5.
+
+- THE PUNISHMENT PATH IS STILL PINNED BUT UNREACHABLE LIVE (from slice 36): the closed loop cannot produce a live negative reward until a perturbation or adversarial world exists.
+
+- THE CAPSTONE WORLD IS STILL LIVE (slice 34): scaling rate 0.05, geography b-0.8, three closing guards (temperature 37, live weight above 0.5, live above rest-twin). Its ten-tick heartbeat still ends nine ticks before the default watchman's first flip, so the whole told story runs online and the guards stand exactly as pinned. A slice that lengthens the capstone past seventeen ticks will make it SLEEP - which is now a real behaviour change, not a harmless bus entry, so re-check the guards if you do.
+
+- THE MODE-FLAG NAMING COLLISION (queue item 2) is still unresolved; resolve it before the mode-registers slice family starts.
+
+- DELIBERATE CHOICES A READER MIGHT MISTAKE FOR GAPS: only the capstone's world runs the bound live; the scaling rate is still global; orphan targets deliberately permitted; the naming-gate fixture deliberately broken; Observation-4 (no word for satisfaction) still LOGGED, NOT ROUTED; Observation-5 LOGGED, NOT FIXED. The long-live-run watch is now CLOSED, subsumed by this slice's tested thirty-tick day.
+
+- PARALLEL SESSIONS: the ritual held - git fetch, git log origin/main, gh pr list before every claim, numbering, or merge. Keep it; main has moved under a session's feet before. NOTE: if you use a git worktree for the behaviour-pinned-identical check (recommended - it is how this session proved the online day bit-identical), REMOVE IT before checking out main, or the checkout will refuse.
+
+
+PART SIX - THE FIRST TASK OF THE CONTINUATION
+
+The owner has already chosen: ALL (standing, re-confirmed across sessions). Slice family one continues smallest-first; the remaining queue, in suggested order (re-orderable by the owner at any time):
+
+1. Slice family one, item (e): the write-allocation gate and the per-territory plasticity fence - the LAST item of family one. The Layers 4-5 dossier's CREB gate and perineuronal net chapters are its design authority. Test-first; tighter-scoped adversarial review with the four named lenses; lockstep documents; pull request.
+
+2. The remaining Vision slice families as the owner prefers: edge type registry; mode registers (resolve the MODE-flag naming collision first); working-memory blackboard; workspace pilot (coverage bug three's closers); motif catalogue; the six-broadcast bus naming; template-parser tooling. The survey's importable margin-ideas ride along where they fit (the impasse disturbance with the selector work; the somatic-marker stamp with the appraisal work; the epistemic drive with the drive work).
+
+3. The night's own deferred chapters, now that the night exists: the REM theatre (Chapter 8) and the ultradian wheel (Chapter 9), plus a closing loop for the open-loop bound and a bounded memory store.
+
+4. The pre-corpus pending refinements not absorbed above: computational-interface transforms; interfaces as Causalontology conduits; the token tier of thought combination.
+
+5. Deepen Rung Two - the full pilot conversation and richer grounded vocabulary - designed against the Layer 13 Tutor Protocol (this also advances coverage bug six).
+
+6. Rung Five, Path B - UNBLOCKED: simulator_body_driver against Webots per the decided design (this also opens coverage bug five's frontier); the rung itself unclaimed until a physical robot passes the smoke test; carry the standing robot-shopping reminder.
+
+7. Other ______________ .
+
+
+PART SEVEN - SIGN-OFF
+
+The clock was wound two sessions ago and the hour has been called ever since, to a house that never listened. Tonight the house listened. The lamps go down on schedule, the body goes still, and in the dark the crew does the work the day cannot do: it plays back yesterday against today, alternating, so the new lesson is learned without burning the old one away, and it turns down what the day turned up so tomorrow has room.
+
+The night also taught the harder lesson, and it taught it by embarrassing us: a night built to turn things down was measured turning them up tenfold, and the tests applauded. Two forces set against one another must be measured in the same units, and a test must assert the effect you intended, never merely the direction the code happens to move. That finding is worth more than the feature.
+
+Turn out the lights, replay the day against the days before it, and trust the measurement over the story.
+
+- Platinum Nightwright, 2026-08-09
