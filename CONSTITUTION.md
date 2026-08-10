@@ -368,20 +368,46 @@ continue in a fresh session. Second, the OWNER trigger: the owner watches the tr
 hundred thousand tokens, or above roughly sixty percent of the window - the owner asks for a hand-off.
 On either trigger, the assistant carries out the Hand-Off Protocol below, commits the result on a
 feature/ branch through a pull request (Sixteenth Commandment), and then PAUSES. A fresh session then
-re-loads state from docs/ - the ledger, the DSPARCD Fileset, the tutorial, and the latest hand-off - and
+re-loads state from docs/ - the ledger, the DSPARCD Fileset, the tutorial, and the latest hand-off,
+which since version 13 is the ONLY Context Hand-Off document in docs/ and therefore needs no working
+out - and
 continues from the known-good baseline, because all durable state lives on disk and never only in the
 conversation.
 
 THE HAND-OFF PROTOCOL. The assistant performs these steps:
 
 Step 1: Give yourself a fun, creative, original name.
-Step 2: Write to file:
-~/konnectome/docs/hand-off/[DATE]_[SERIAL NUMBER]_Context_Hand-Off_from_[NAME].txt
-(REPOINTED in version 12, by the owner's instruction of 2026-08-10. The hand-offs moved into their
-own directory and this line is where a session LEARNS WHERE TO WRITE ONE, so a stale path here would
-have every future hand-off written to the wrong place - the one pointer in this Constitution whose
-staleness compounds rather than merely misleads. The twenty-nine existing hand-offs moved with it,
-unedited. No rule changed and the naming convention below is untouched.)
+Step 2a: SWEEP BEFORE YOU WRITE. Move any Context Hand-Off document currently sitting in
+~/konnectome/docs/ into ~/konnectome/docs/hand-off/ , using git mv, in the change you are about to
+make. Move whatever you find, however many there are, and edit none of them.
+Step 2b: Write the new hand-off to file:
+~/konnectome/docs/[DATE]_[SERIAL NUMBER]_Context_Hand-Off_from_[NAME].txt
+(AMENDED in version 13, by the owner's instruction of 2026-08-10. THE CURRENT HAND-OFF LIVES IN
+/docs/ AND EVERY SUPERSEDED ONE LIVES IN /docs/hand-off/ , so that AT ANY MOMENT EXACTLY ONE
+CONTEXT HAND-OFF DOCUMENT SITS IN /docs/ AND IT IS ALWAYS THE ONE TO READ. Three reasons, and they
+are the Constitution's own rather than a preference. FIRST, IT MAKES A DISTINCTION THIS DOCUMENT
+ALREADY DRAWS INTO A FACT ON DISK: a hand-off is two things at once - a dated REPORT of a session,
+which is a historical claim, and a live INSTRUCTION to the next one, which is a reading list and a
+first-task menu. Only the newest is ever read as instruction. Putting it somewhere the others are
+not means a reader never has to work out which. SECOND, IT MAKES HAND-OFFS FOLLOW THE HOUSE RULE THE
+ELEVENTH COMMANDMENT ALREADY SETS for every other document series in this repository - only the
+current one lives outside its archive directory - rather than being the single series with a
+convention of its own. THIRD, IT REMOVES A DERIVATION THAT CAN GO WRONG SILENTLY: 'the latest
+hand-off' was previously something a fresh session had to work out by sorting filenames on date and
+serial number, and same-day hand-offs, serial numbering, and session-close markers all make that
+fallible. It is now simply the only dated file in /docs/.
+AND THE SWEEP IS A PRECONDITION RATHER THAN A POSTCONDITION, WHICH IS THE LOAD-BEARING HALF OF THIS
+AMENDMENT. The obvious phrasing - write the new one, then move the old one - reads more naturally and
+FAILS SILENTLY: a session that skips the second half leaves two hand-offs in /docs/ , and the next
+session reads whichever it happens to open, with nothing anywhere to notice. Sweeping FIRST is
+self-healing, because it moves whatever it finds however many there are, so a skipped step costs one
+session of clutter instead of a wrong read. THAT IS THE SAME RULE THE SCHEDULED AUDIT'S TRIGGER WAS
+REWRITTEN UNDER ON THE SAME DAY: prefer the form whose failure mode is VISIBLE over the form whose
+failure mode is a plausible answer.
+Version 12 had briefly put every hand-off, including the current one, in /docs/hand-off/ ; this
+amendment keeps that directory for the superseded ones and brings the current one back up. The
+twenty-eight superseded hand-offs are unedited, the naming convention below is untouched, and no
+other rule changed.)
 where [DATE] is the current date as year-month-day (for example 2026-07-20);
 [SERIAL NUMBER] is the next free number for that date,
 starting at 1 (so a second hand-off written on the same day is _2);
@@ -398,15 +424,30 @@ read konnectome_0_definition FIRST, because it is the concept the other six answ
 - A reminder to read the Settings, General, Instructions for Claude (the owner's standing instructions to the assistant).
 - A reminder to read ~/CLAUDE.md, which is git-untracked (gitignored) and holds the system-wide current-state narrative (it lives at the organization root, not inside one repository, because it belongs to the whole system).
 - A reminder to read the current /docs/konnectome_tutorial (the maintained beginner tutorial), and to read all of the documents in /docs/.
-- A list of the important /docs/ files and what each is: the ledger, the DSPARCD Fileset, the change orders, the tutorial, the thought-combination guide, the guiding-principle documents, the context documents, and the earlier hand-offs (named by the convention of Step 2).
+- A list of the important /docs/ files and what each is: the ledger, the DSPARCD Fileset, the change orders, the tutorial, the thought-combination guide, the guiding-principle documents, the context documents, and the earlier hand-offs (named by the convention of Step 2b, and living in /docs/hand-off/ - see that directory's own README.txt for how to read them and for which of them are session-close markers rather than units of work).
 - A report of what was done in the session that is ending: the slices built, the packs, the tests, the pull requests merged, the current main commit, and the current DSPARCD and tutorial versions.
 - The build-against cousin commits (causalontology, PrologAI, Mentova), for reproducibility.
 - Any other context you, the assistant, judges important for the next process: open observations, honest non-closures, sharp edges, and anything discovered that is not obvious from the code.
 - The current first-task menu of options for the continuation to present to the owner, ending with an "Other ______" option.
 - A short sign-off.
-Step 4: Commit the hand-off on a feature/ branch through a pull request. Auto-Push. Then PAUSE.
+Step 4: Commit the hand-off AND THE STEP 2a SWEEP TOGETHER, in one change, on a feature/ branch
+through a pull request. Auto-Push. Then PAUSE. The sweep and the new hand-off belong in the same
+commit because they are one act: the document that was the instruction becomes a record in the same
+moment the next one becomes the instruction, and splitting them across two changes would leave a
+commit in which /docs/ holds two hand-offs or none.
 
-VERSION HISTORY NOTE (extended in version 12). This Constitution is at VERSION 12. Version 12, by
+VERSION HISTORY NOTE (extended in version 13). This Constitution is at VERSION 13. Version 13, by
+the owner's instruction of 2026-08-10, gives the Hand-Off Protocol a TWO-LOCATION rule: the CURRENT
+hand-off lives in /docs/ and every SUPERSEDED one lives in /docs/hand-off/ , so exactly one Context
+Hand-Off document sits in /docs/ at any moment and it is always the one to read. Step 2 becomes Steps
+2a and 2b - SWEEP, THEN WRITE - and Step 4 requires both in one commit. NO COMMANDMENT WAS REMOVED,
+NO COMMANDMENT WAS RENUMBERED, no naming convention changed, and no hand-off was edited. This
+supersedes the location half of version 12 while keeping its directory; version 12's own reasoning -
+that Step 2 is an instruction to CREATE a file and so a stale path there fails silently rather than
+loudly - is what this amendment extends, by making the whole step self-healing rather than merely
+correct.
+
+Version 12, by
 the owner's instruction of 2026-08-10, records the move of the twenty-nine Context Hand-Off documents
 into docs/hand-off/ and repoints the Nineteenth Commandment's Hand-Off Protocol at the new path. NO
 COMMANDMENT WAS REMOVED, NO COMMANDMENT WAS RENUMBERED, NO RULE CHANGED, AND NO HAND-OFF WAS EDITED

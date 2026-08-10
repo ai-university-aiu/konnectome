@@ -3581,3 +3581,54 @@ THE COUNT IS UNCHANGED AT TWENTY-NINE and the audit trigger is still thirty-two.
 documents did not make any of them a unit of work, and Rhodium's warning stands: at least two of the
 twenty-nine are session-close markers rather than units of work, so the count overstates build
 progress and the session that finds the audit due should check that first.
+
+
+HAND-OFF PROTOCOL NOTE (2026-08-10, Constitution version 13). THE PROTOCOL GAINS A TWO-LOCATION RULE
+AND A SWEEP. THE CURRENT HAND-OFF LIVES IN /docs/ AND EVERY SUPERSEDED ONE LIVES IN /docs/hand-off/ ,
+so exactly one Context Hand-Off document sits in /docs/ at any moment and it is always the one to
+read. Step 2 becomes Steps 2a and 2b - SWEEP, THEN WRITE - and Step 4 requires both in one commit.
+Not a slice: no pack touched, no test written, no hand-off edited.
+
+WHY THE TWO LOCATIONS. A hand-off is TWO DOCUMENTS IN ONE FILE and this repository spent a day
+learning it: a dated REPORT of a session, which is a historical claim and must never be edited
+afterwards, and a live INSTRUCTION to the next session - a reading list, a first-task menu, and
+sometimes a command to run. ONLY THE NEWEST IS EVER READ AS INSTRUCTION. Putting it somewhere the
+others are not makes that distinction a fact on disk rather than a rule somebody has to know. It also
+makes hand-offs follow the house rule the ELEVENTH COMMANDMENT already sets for every other document
+series here - only the current one lives outside its archive directory - rather than being the single
+series with a convention of its own.
+
+AND IT REMOVES A DERIVATION THAT COULD GO WRONG SILENTLY, which is the practical half. "The latest
+hand-off" was previously something a fresh session had to WORK OUT by sorting filenames on date and
+serial number. That derivation is fallible in three ways this repository has already met: same-day
+hand-offs with serial numbers, a serial sequence that is per-date rather than global, and session-
+close markers that look exactly like units of work. It is now simply the only dated file in /docs/ .
+
+THE SWEEP IS A PRECONDITION RATHER THAN A POSTCONDITION AND THAT IS THE LOAD-BEARING HALF. The
+obvious phrasing - write the new one, then move the old one - reads more naturally and FAILS
+SILENTLY: a session that skips the second half leaves two hand-offs in /docs/ , and the next session
+reads whichever it happens to open, with nothing anywhere to notice. Sweeping FIRST is SELF-HEALING,
+because it moves whatever it finds however many there are, so a skipped step costs one session of
+clutter instead of a wrong read - and the clutter is visible at the top of /docs/ rather than buried.
+
+THAT IS THE THIRD TIME IN ONE DAY THIS REPOSITORY HAS CHOSEN THE SAME WAY, and the three together are
+now a rule worth stating on its own: PREFER THE FORM WHOSE FAILURE MODE IS VISIBLE OVER THE FORM
+WHOSE FAILURE MODE IS A PLAUSIBLE ANSWER. The fulfilment-audit trigger was rewritten from a glob to a
+recursive find, because a glob that misses returns ZERO and zero is a plausible count. The Hand-Off
+Protocol's write path was called out at version 12 as the most dangerous stale pointer in the
+repository, because Step 2 CREATES a file rather than reading one, so a stale path there succeeds in
+the wrong place forever rather than failing loudly. And now the sweep is ordered before the write for
+the same reason. THREE INSTANCES IS A PATTERN AND NOT A COINCIDENCE: the failures that survive in a
+careful repository are the ones that look like success.
+
+WHAT MOVED AND WHAT DID NOT. The current hand-off - Tungsten Nightwarden, 2026-08-10_1 - was swept
+back up into /docs/ , which is the first application of the new rule and is itself a pure rename. The
+twenty-eight superseded hand-offs stay in /docs/hand-off/ , unedited. The directory's README.txt is
+rewritten to say that the current hand-off is NOT in it and where to start instead. The Nineteenth
+Commandment's own list-of-important-files bullet now points a hand-off author at that README.
+
+AND ONE SENTENCE ELSEWHERE IN THE COMMANDMENT BECAME LITERALLY TRUE. It promises that a fresh session
+"re-loads state from docs/ - the ledger, the DSPARCD Fileset, the tutorial, and the latest hand-off".
+That was approximately true and is now exact: the latest hand-off is in docs/, is the only one there,
+and needs no working out. A rule that makes an existing promise exact is a better rule than one that
+adds a new promise.
