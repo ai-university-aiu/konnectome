@@ -2,6 +2,8 @@
 :- use_module(library(tick_engine)).
 % Load the Prolog Unit (PLUnit) testing framework.
 :- use_module(library(plunit)).
+% Load the mode register, because every construct now answers through one.
+:- use_module(library(mode_register)).
 
 % Open the test block for the tick_engine pack.
 :- begin_tests(tick_engine).
@@ -78,6 +80,18 @@ test(hold_construct_is_constant) :-
     tick_engine_run([construct(memory, hold)], [memory-7], 10, Final, _Trace),
     % After ten ticks the held value is still seven.
     assertion(Final == [memory-7]).
+
+% SLICE 39: every construct the heartbeat runs answers through its own mode register, and today
+% every one of those registers holds exactly one mode - a register of one, stated proudly.
+test(every_heartbeat_construct_kind_is_a_register_of_one) :-
+    % The three construct kinds the heartbeat knows.
+    Kinds = [clock, copy(other), hold],
+    % Each has a register of one whose current mode names the construct's own rule.
+    forall(member(Kind, Kinds),
+           % The register exists, holds one mode, and files this very kind as that mode's rule.
+           ( mode_register_of_construct_kind(Kind, Automaton),
+             mode_register_size(Automaton, 1),
+             mode_register_current_rule(Automaton, Kind) )).
 
 % Close the test block for the tick_engine pack.
 :- end_tests(tick_engine).

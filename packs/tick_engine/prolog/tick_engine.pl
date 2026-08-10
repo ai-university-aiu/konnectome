@@ -12,6 +12,8 @@
 
 % Import the list utilities used for membership tests and reversing the trace.
 :- use_module(library(lists), [member/2, memberchk/2, reverse/2]).
+% Read every construct's rule through its own mode register; a construct IS its register's current mode.
+:- use_module(library(mode_register), [mode_register_construct_rule/2]).
 
 % A state is an ordered list of Name-Value pairs; this reads one construct's value from it.
 % tick_engine_state_get(+State, +Name, -Value): unify Value with the current value of construct Name.
@@ -20,19 +22,31 @@ tick_engine_state_get(State, Name, Value) :-
     memberchk(Name-Value, State).
 
 % There are three minimal update kinds for the heartbeat; the six manuscript archetypes arrive in a later slice.
-% tick_engine_next_value(+Kind, +Name, +ReadState, -NextValue): compute one construct's next value from the read-only state.
+% EVERY CONSTRUCT NOW ANSWERS THROUGH ITS OWN MODE REGISTER. A construct kind is no longer a rule
+% the engine dispatches on directly; it is a HYBRID AUTOMATON whose register names the mode the
+% construct is in, and whose per-mode transfer function is the rule that holds while that mode holds.
+% Today every register holds exactly one mode - a register of one, stated proudly - so the rule read
+% back out is the rule that went in, and the heartbeat does not change by a single count.
+% tick_engine_next_value(+Kind, +Name, +ReadState, -NextValue): read the register, then apply the rule.
+tick_engine_next_value(Kind, Name, ReadState, NextValue) :-
+    % Read the rule that holds under this construct's current mode.
+    mode_register_construct_rule(Kind, Rule),
+    % Apply that rule to the read-only state.
+    tick_engine_apply(Rule, Name, ReadState, NextValue).
+
+% tick_engine_apply(+Rule, +Name, +ReadState, -NextValue): compute one construct's next value from the read-only state.
 % A clock construct advances by exactly one each tick, which is how the engine keeps time.
-tick_engine_next_value(clock, Name, ReadState, NextValue) :-
+tick_engine_apply(clock, Name, ReadState, NextValue) :-
     % Read this construct's own current value from the committed state.
     tick_engine_state_get(ReadState, Name, Current),
     % Add one to that current value to produce the next value.
     NextValue is Current + 1.
 % A copy construct takes the CURRENT value of another named construct, never that construct's future.
-tick_engine_next_value(copy(Other), _Name, ReadState, NextValue) :-
+tick_engine_apply(copy(Other), _Name, ReadState, NextValue) :-
     % Read the other construct's current value from the committed state.
     tick_engine_state_get(ReadState, Other, NextValue).
 % A hold construct keeps its own current value unchanged from one tick to the next.
-tick_engine_next_value(hold, Name, ReadState, NextValue) :-
+tick_engine_apply(hold, Name, ReadState, NextValue) :-
     % Read this construct's current value, which becomes its unchanged next value.
     tick_engine_state_get(ReadState, Name, NextValue).
 

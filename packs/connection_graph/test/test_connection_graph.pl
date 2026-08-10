@@ -2,6 +2,8 @@
 :- use_module(library(connection_graph)).
 % Load the Prolog Unit (PLUnit) testing framework.
 :- use_module(library(plunit)).
+% Load the mode register, because every construct now answers through one.
+:- use_module(library(mode_register)).
 % Load the neuromodulator_bus module, used to build a bus that sets relay gains.
 :- use_module(library(neuromodulator_bus)).
 
@@ -314,6 +316,28 @@ test(an_unbound_modulator_in_a_relay_is_refused, error(instantiation_error)) :-
     % A modulated relay whose modulator was left unbound must throw at the read.
     neuromodulator_bus_new(Bus),
     connection_graph_step_delayed_modulated([construct(b, relay_modulated(1, _))], [b-0], [], Bus, _, _).
+
+% SLICE 39: every construct the graph runs answers through its own mode register, and today every
+% one of those registers holds exactly one mode - which is why the wiring changed no number at all.
+test(every_graph_construct_kind_is_a_register_of_one) :-
+    % The three construct kinds the graph steps know.
+    Kinds = [source, relay(0.5), relay_modulated(2, dopamine)],
+    % Each has a register of one whose current mode names the construct's own rule.
+    forall(member(Kind, Kinds),
+           % The register exists, holds one mode, and files this very kind as that mode's rule.
+           ( mode_register_of_construct_kind(Kind, Automaton),
+             mode_register_size(Automaton, 1),
+             mode_register_current_rule(Automaton, Kind) )).
+
+% AND A KIND THE GRAPH DOES NOT RUN HAS NO REGISTER, so the step's own refusal stays the sole
+% authority on what the step accepts and still names the kind the caller wrote.
+test(an_unregistered_kind_reaches_the_step_unchanged) :-
+    % A kind konnectome does not run has no register at all.
+    assertion(\+ mode_register_of_construct_kind(mystery, _Automaton)),
+    % And the rule resolver hands it to the step untouched, so the step refuses it by that name.
+    mode_register_construct_rule(mystery, Rule),
+    % The rule is the kind itself.
+    assertion(Rule == mystery).
 
 % Close the test block for the connection_graph pack.
 :- end_tests(connection_graph).

@@ -1206,7 +1206,7 @@ thought combination. The four gates report zero violations, the naming gate pass
 self-test; conformance re-measured at 137 of 137 (specification 4.0.0) in both cousins. No new
 wall; no cousin edited, per the Second, Third, and Fourth Commandments.
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 6.
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 7.
 
 Slice-34 note (2026-08-09). The bound turned live in the told story. The slice-33 pending line
 (the bound proven per-territory in the tests but not yet in the capstone's told story) is
@@ -1940,3 +1940,121 @@ close or shrink Observation-4; or (e) a new drive is added that gives the mind a
 in a domain it is currently silent about. A session that touches any of those five and does not
 return here has left this entry stale, and a stale tracked observation is worse than an untracked
 one.
+
+
+Slice-39 note (2026-08-09). EVERY CONSTRUCT BECOMES A HYBRID AUTOMATON: THE REGISTER OF ONE, STATED
+PROUDLY. The design authority's Part Nine slice two is BUILT and CLOSED. A new pack, mode_register,
+carries the corpus's own formalism under the corpus's own name -
+hybrid_automaton(CurrentMode, Register, Transfers, Transitions, Faults) - with all FOUR of the Layer
+6 template's blocks present: the register of mode_entry(FormalName, CoinedName, Gloss) terms, three
+fields and no more; the parallel per-mode block of transfer(FormalName, Rule) terms; the transition
+table of transition(Trigger, From, To, Timescale, Agency) rows, timescale and AGENCY both mandatory
+and no guard column, because the corpus folds guards into the trigger clause and konnectome must not
+design a column the corpus cannot populate; and the fault block of
+fault(BoundarySignature, WarningCondition, Watchdog) terms, present and permanently empty until the
+supervisor channel exists, because the template forbids admitting faults as first-class modes by
+name. TWO CORPUS FIELDS ARE DECLARED OMITTED rather than forgotten: the per-mode CONFIDENCE tag,
+deferred by name in the design authority's Part Nine, and the per-mode admitted-as-fault flag with
+its rationale slot, which belongs with the supervisor channel.
+
+EVERY CONSTRUCT KIND KONNECTOME RUNS IS RE-EXPRESSED AS A REGISTER OF ONE, and both engines that
+dispatch on construct kinds - the tick engine's heartbeat and the connection graph's four steps - now
+read a construct's rule THROUGH its register before applying it. The six kinds and their single
+modes: the free-running clock (the Metronome), the committed copy (the Echo), the held value (the
+Kept Reading), the clamped input (the Clamped Window), the tonic relay (the Faithful Relay), and the
+modulated tonic relay (the Listening Relay). THE PER-MODE TRANSFER FUNCTION IS THE CONSTRUCT KIND
+TERM ITSELF, which is what makes the bit-identical promise a LAW rather than a hope, and a test
+walks all six kinds asserting exactly that round trip. AN UNREGISTERED KIND HAS NO REGISTER AND
+PASSES THROUGH THE RESOLVER UNCHANGED - the sharpest design question of the slice, decided so that
+the authority on what an engine accepts stays with that engine, since the plain step and the
+modulated step accept DIFFERENT subsets of the same registered kinds, exactly as the corpus's own
+admission rule is per construct rather than per regime.
+
+THE BEHAVIOUR-PINNED-IDENTICAL PROOF, run against a main worktree BEFORE the slice was believed: the
+whole capstone story byte-for-byte identical, every content-addressed record identifier included; and
+a 114-line engine probe - forty heartbeat runs of one to forty ticks, twenty-six plain and twenty-six
+delay-honouring graph runs over a four-interface graph carrying a negative weight, a three-tick delay
+and a computational interface, twenty bus-modulated steps down both paths, and both refusal terms -
+identical to the last digit in both trees, only the anonymous variable serials differing.
+
+AND THE PROBE FOUND A DEFECT, which is why a promise is measured rather than asserted. There is
+EXACTLY ONE path on which this slice changes behaviour, no world can reach it, and the change is an
+improvement that is DECLARED rather than buried: on main, a tick-engine construct whose KIND was
+left unbound unified with all three heartbeat clause heads in turn, so ONE construct produced THREE
+contradictory next values and the committed state silently GREW - one tick over one construct
+returning a three-entry state naming that construct three times with different values. The register's
+resolver refuses an unbound kind at the door, aloud, before any clause head can bind it. That is the
+unbound-wrong-judgement lens's third refinement, found in the oldest pack in the repository, and the
+lens has now paid in SEVEN consecutive slices.
+
+THE INDEPENDENT ADVERSARIAL REVIEW, the fifteenth straight completion, returned ONE REAL FINDING in this slice's own code, reproduced before a line changed. THE KEY-SHAPE ALIASING LENS PAID, on the one store judged in a second place: transfer-row mode names were guarded as atoms where they were read, but TRANSITION ENDPOINTS were not, so the endpoint check reached memberchk with an unguarded key and a caller writing two holes in a transition row got the row back BOUND - a transition from the register's first mode to the register's first mode, written by nobody, and not necessarily even the mode the construct stands in. Default drift's law and key-shape aliasing's mechanism as one defect: two names under one documented law, judged in two places, the second not judging. Fixed by moving the atom guard into the ONE place both routes come through (mode_register_check_declared/2), and pinned by three review tests - unbound origin, unbound destination, unbound transfer key. UNBOUND-WRONG-JUDGEMENT returned DEFENDED at the stores (all four blocks route through one shape check; unbound, partial and non-list each verified refused in every block). BEHAVIOUR-PINNED-IDENTICAL returned DEFENDED and went further than this slice's own probe: determinism and solution counts compared predicate by predicate across both trees for every construct kind, identical on both sides; every error term and context matching main exactly; and the renamed predicates confirmed to have no caller outside their own modules and to appear in no export list. The review confirmed the one declared divergence independently and asked that the claim be worded as bit-identical for every WELL-FORMED construct kind; it is so worded. Its two remaining findings are pre-existing tick_engine holes this slice deliberately does not fix, both routed to Observation-7.
+
+Thirty-six tests grew: thirty written first at the register, three at the two consumers, three review pins.
+mode_register born at 40; connection_graph 24 to 26; tick_engine 7 to 8; the repository 583 to 626
+across THIRTY packs, all green, re-swept. The four gates report zero violations, the naming gate
+passing its own self-test; conformance re-measured at 137 of 137 (specification 4.0.0) in both
+cousins. No new wall; no cousin edited, per the Second, Third, and Fourth Commandments.
+
+Naming-collision note (2026-08-09, closed by slice 39). THE MODE-FLAG NAMING COLLISION IS CLOSED AS A
+RECORDED DECISION, NOT A RENAME, because there was nothing to rename. RE-VERIFIED AT SLICE 39, as the
+Modes deep-read note required: no directed-versus-broadcast MODE flag exists in packs/*/prolog at all
+- konnectome's interface term is interface(From, To, Weight, Delay, Kind) whose Kind is transmissive
+or computational, a DIFFERENT axis - and none exists in causalontology, so the work was
+konnectome-internal and turned out to be zero. The collision was with the data model as DESCRIBED in
+the specification prose, never with anything that runs.
+
+THE DECISION, recorded as konnectome's own and binding on future slices: (1) the word MODE is
+reserved for the corpus sense - a discrete operating regime, defined against STATE - throughout
+konnectome code; (2) packs/archetype's existing gate mode vocabulary (open and closed) is already
+corpus-correct, is a genuine two-mode register, and must NOT be renamed - it is the seed of the
+design and the subject of the next slice; (3) any future directed-versus-broadcast flag enters as
+TOPOLOGY, with values directed and broadcast; (4) REGISTER is not to acquire a third sense in
+konnectome, the corpus already overloading it for both the list of modes and a single mode slot.
+STATUS: CLOSED. No wall; no cousin edited.
+
+Tutorial-version repair note (2026-08-09, sibling of the Build-log repair note). THE TUTORIAL'S
+INTERNAL VERSION STRINGS HAD DRIFTED FROM ITS FILENAME and are repaired at slice 39. The file
+docs/konnectome_tutorial_v37.txt opened with "Version 34." and closed with "End of the konnectome
+tutorial, version 36." - three and one behind the name on the file. Earlier sessions had bumped the
+filename under the Eleventh Commandment's archive discipline and not the strings inside. Both now
+read 38 in docs/konnectome_tutorial_v38.txt. THE STANDING INSTRUCTION: a session that bumps the
+tutorial bumps BOTH strings, or the document lies about itself to the reader it was written for.
+STATUS: CLOSED. No wall.
+
+Observation-7 (2026-08-09, discovered by building at slice 39, and confirmed by its review). TWO
+PRE-EXISTING HOLES IN THE HEARTBEAT, BOTH LEFT DELIBERATELY, BOTH CLOSED BY THE SAME FUTURE SLICE.
+
+FIRST HALF: THE HEARTBEAT DROPS AN UNKNOWN CONSTRUCT KIND IN SILENCE, WHERE THE CONNECTION GRAPH
+REFUSES ONE ALOUD. tick_engine_apply/4 (formerly
+tick_engine_next_value/4) has three clauses - clock, copy(Other), hold - and NO refusal clause. A
+construct whose kind is none of the three simply fails, the findall that gathers next values drops
+that construct's pair, and the committed state SHRINKS by one construct without a word. Reproduced at
+slice 39: tick_engine_run([construct(a, mystery)], [a-0], 1, Final, _) succeeds with Final == [].
+connection_graph's four steps each close the same hole by name - domain_error(plain_step_construct_kind,
+Kind) and its three siblings, each carrying its own error atom because each step accepts a different
+subset - and the tick engine, the OLDEST pack in the repository, never grew one.
+
+STATUS: LOGGED, NOT ROUTED, NOT FIXED. No wall was hit; this is konnectome-internal work under the
+Fourth Commandment. It is deliberately NOT fixed at slice 39 under the do-not-fix-speculatively rule
+and because slice 39's whole claim is behaviour-pinned identity: adding a refusal would change
+behaviour on a second path in the same change that promises none. THE CLOSER: the next slice that
+touches tick_engine's dispatch on purpose adds the refusal clause in the connection graph's own
+shape, with its own error atom (heartbeat_construct_kind is the natural name), and pins it with one
+test that an unknown kind is refused aloud and one that the state never shrinks in silence. Note that
+the SIBLING half of this hole - an UNBOUND construct kind, which used to bind itself to all three
+clause heads and grow the state with three contradictory entries - was closed by slice 39 as a side
+effect of the register's resolver, and is recorded in the Slice-39 note above.
+
+SECOND HALF: AN UNBOUND COPY TARGET IS BOUND TO WHATEVER THE STATE HAPPENS TO LIST FIRST. The copy
+construct's kind is copy(Other), and Other is not judged anywhere - not by the register, which files
+the kind term as its transfer function unchanged, and not by tick_engine_state_get/3, whose
+memberchk(Name-Value, State) BINDS an unbound Name to the state's first pair and returns that
+construct's value. Reproduced at slice 39 by the review:
+tick_engine_step([construct(d, copy(_))], [c-1, d-9], S) succeeds with S == [d-1], so d silently took
+c's value for no reason but alphabetical order. This is the key-shape aliasing lens's own mechanism,
+pre-existing and identical on main. NOT FIXED at slice 39 for the same two reasons as the first half.
+THE CLOSER, in the same slice: guard the key ahead of the lookup - either must_be(atom, Other) where
+the register files the copy kind, or a var guard at the head of tick_engine_state_get/3 - and pin it
+with one test that an unbound copy target is refused aloud rather than answered with a stranger's
+value. Both halves belong to the same pack and the same visit; a session that closes one and not the
+other has left this entry half-stale.
