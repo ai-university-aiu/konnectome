@@ -1789,6 +1789,74 @@ parts were actually summaries - and it was not run until the owner pushed back. 
 document should be verified against the document, exactly as a claim about code is verified by
 running it. No code changed and no test moved; no wall was hit and nothing routes to either cousin.
 
+SCHEDULED AUDIT note (2026-08-09, by the owner's instruction). A FULFILMENT AUDIT OF THE VISION-SET
+TOP-DOWN ANALYSIS IS SCHEDULED, ten hand-offs from now. This entry is the AUTHORITATIVE record of
+that commitment. It is written here rather than only in a hand-off because a hand-off is rewritten
+by each session and an item can be dropped by accident, whereas this ledger is not rewritten - so if
+the hand-off chain ever loses the reminder, THE OBLIGATION STILL STANDS AND IS FOUND HERE.
+
+THE TRIGGER, made mechanical so no session has to remember a count. There were TWENTY-TWO hand-off
+documents in docs/ on 2026-08-09, the last being 2026-08-09_7 (Platinum Nightwright). Ten more makes
+THIRTY-TWO. Any session may evaluate the trigger in one command:
+
+    ls docs/*Context_Hand-Off*.txt | wc -l
+
+WHEN THAT COUNT REACHES THIRTY-TWO OR MORE, THE AUDIT IS DUE and the session that finds it due
+should either run it or record explicitly that the owner deferred it. A due audit silently skipped
+is the failure this entry exists to prevent.
+
+WHAT IS BEING AUDITED: whether docs/konnectome_vision_set_top_down_analysis_v1.txt WAS FULFILLED -
+that is, whether the findings konnectome recorded when it read the corpus were actually acted upon,
+or whether they were written down and then quietly bypassed. Audit each part of that document by
+name:
+
+• PART ONE, THE VERDICT. It held that no top-level architectural decision must be reversed. Does the
+verdict still hold after the intervening slices, or has something in fact been reversed? A reversal
+that happened without the verdict being revisited is a finding.
+
+• PART TWO, THE FIVE THEMES, read under the ELEVATION that made Theme One the spine. For each: built,
+in progress, or deferred? Under the currency obligation added to the Eighth Commandment in
+constitution version 6, a theme whose corpus was deep-read should have its own design authority
+cited back into the analysis - check that the citations exist.
+
+• PART THREE, WHAT THE TOP LAYERS SETTLE. Still true?
+
+• PART FOUR, THE HONEST PRESSURES. Resolved, still pressing, or worse? The workspace's pressure on
+the ten-component discipline is the one to weigh hardest, because it is the only place the analysis
+admitted the architecture might have to change shape.
+
+• PART FIVE, WALLS AND WATCHES. No wall was routed and SIX WATCHES were recorded. Has any watch been
+claimed by building? Has any become a real wall? A watch that a slice walked straight past without
+claiming or clearing is a finding.
+
+• PART SIX, THE SIX SLICE FAMILIES. Which closed, which are open, which were re-ordered and on what
+recorded reason? Note that the modes deep read of 2026-08-09 already reversed one ordering (the edge
+type registry must precede the junction-grain mode register) and reshaped slice family one's item
+(e); the audit should confirm those reversals were honoured rather than lost.
+
+ALSO IN SCOPE, because they attach to the same document: the CURRENCY OBLIGATION itself (was the
+analysis kept current, per the Eighth Commandment as amended); the STANDING OWNER REQUEST recorded
+in Theme One (the real-time all-grain mode visualization panel at that family's Demonstration
+phase); and OBSERVATION-6's five re-answer triggers, any of which may have been tripped in the
+interval.
+
+HOW TO GRADE IT, decided in advance so the auditor does not have to invent a standard under
+pressure. A theme, watch, or family that was DELIBERATELY DEFERRED WITH A RECORDED REASON counts as
+FULFILLED - the analysis asked for a decision and a decision was made. A theme, watch, or family
+that was SILENTLY BYPASSED counts as NOT FULFILLED, and the absence of a recorded reason is itself
+the finding. Honest non-closure has always been a real result in this build; silent drift never has
+been.
+
+WHAT THE AUDIT PRODUCES: a document in the house convention, suggested name
+docs/konnectome_vision_set_fulfilment_audit_v1.txt, plus a note in this ledger recording the verdict
+and any findings. If the audit shows the analysis was NOT fulfilled in some part, that is a finding
+to record and route like any other - it is not a failure to hide, and the Fourth Commandment's own
+words hold that a wall shown to be unnecessary is recorded as honestly as one that needed building.
+
+No code changed and no test moved by this entry; no wall was hit and nothing routes to either
+cousin. This is a scheduling commitment, recorded so it survives the sessions between now and its
+due date.
+
 Observation-5 (2026-08-09, from slice 35). The neuromodulator_bus chemical reads
 (neuromodulator_bus_level/3 and neuromodulator_bus_level_territory/4) silently bind an UNBOUND
 bus argument into a partial list during lookup, against the module's own never-silently-bound
