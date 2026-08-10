@@ -1206,7 +1206,7 @@ thought combination. The four gates report zero violations, the naming gate pass
 self-test; conformance re-measured at 137 of 137 (specification 4.0.0) in both cousins. No new
 wall; no cousin edited, per the Second, Third, and Fourth Commandments.
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 5.
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 6.
 
 Slice-34 note (2026-08-09). The bound turned live in the told story. The slice-33 pending line
 (the bound proven per-territory in the tests but not yet in the capstone's told story) is
@@ -1661,3 +1661,77 @@ per the do-not-fix-speculatively rule: the pattern predates slice 35, no caller 
 unbound bus today, and the fix belongs to a slice that touches those reads on purpose - at
 which point the house var guard at each read's head, plus one pin per read, closes it. This is
 a konnectome-internal construct matter; nothing here routes to either cousin.
+
+
+Observation-6 (2026-08-09, from the owner's question). A CAPABILITY QUESTION OF UTMOST IMPORTANCE,
+so designated by the owner and recorded here to be TRACKED and RE-ANSWERED rather than answered
+once: WILL KONNECTOME BE ABLE TO DO SENTIMENT ANALYSIS? This entry records the honest answer as of
+today, the reasons behind it, the standing limits, and the named triggers at which the answer must
+be revisited. It is a capability question, not a wall; nothing here routes to either cousin.
+
+THE HONEST ANSWER TODAY, IN TWO HALVES, BECAUSE THE QUESTION SPLITS.
+
+(1) IN THE CONVENTIONAL SENSE - classifying arbitrary human text as positive, negative or neutral -
+NO, and not soon. konnectome has no language model and no sentiment lexicon. Its language stands at
+Rung Two: first grounded words, a handful of them. The Ninth Commandment survey's COVERAGE BUG SIX,
+language production beyond the word, is the standing entry that owns this gap, and nothing on the
+current queue closes it quickly.
+
+(2) IN THE DEEPER SENSE - attributing an affective stance to a situation or to another agent, and
+justifying the attribution - YES, AND IT IS ALREADY BUILT, by slices 16 and 19. situation_appraisal
+reads a situation's valence straight from the drives' own set-point error: a violated set-point is a
+threat the mind FEARS, a met or improving one is good and DESIRED, and no bespoke emotion pathway
+was invented, because the feeling machinery IS the drive machinery. empathy attributes affect to
+ANOTHER agent: modelling another's distress lowers the mind's own belonging, and the attribution is
+minted as a shareable attitude - the agent fears her connection severed - asserted at observation
+grade and RETRACTED when misattributed.
+
+THE INVERSION, WHICH IS THE ARCHITECTURALLY INTERESTING PART AND THE REASON THIS IS WORTH TRACKING.
+Conventional sentiment analysis runs text into a statistical classifier and out to a label, with no
+account of why the label is right and no mechanism for withdrawing it. konnectome runs a modelled
+situation into a drive-error appraisal and out to an ATTITUDE RECORD carrying its own provenance, an
+evidence grade, and a retraction path. It does not RECOGNIZE sentiment from surface features; it
+OCCUPIES a state and reports it, and it can hand a reader the content-addressed record that
+justifies the attribution. That is a stronger claim than a classifier can make and a far narrower
+one, and the narrowness is the trade the whole project has already chosen.
+
+THREE STANDING LIMITS, each already owned by an existing entry or gate.
+
+• THE EXPORTED VOCABULARY IS A CLOSED ENUMERATION drawn from the data structure: believes, desires,
+intends, knows, expects, fears. Six attitudes are the entire shareable palette, and widening it is a
+Causalontology change order through the Second Commandment's gate, never a konnectome-side edit.
+
+• OBSERVATION-4 ALREADY OWNS THE SHARPEST GAP IN THAT PALETTE: the guiding book names the positive
+appraisal affect SATISFACTION, and the enumeration has no word for it, so a met set-point currently
+approximates as DESIRES - an unfulfilled wanting standing in for a fulfilled state. The valence
+itself is computed exactly; only the SHARED, exported attitude approximates. See Observation-4,
+which remains LOGGED, NOT ROUTED, and which this entry does not supersede.
+
+• KONNECTOME CAN ONLY APPRAISE WHAT IT HAS DRIVES FOR. It defends temperature, belonging,
+respiration, and battery charge. Where there is no defended set-point there is no error to read, so
+there is no valence - the mind is not neutral about aesthetic preference or political affiliation,
+it is SILENT about them, which is a different and more honest thing.
+
+WHAT WOULD CLOSE THE FIRST HALF: Rung Two deepened against the Layer 13 Tutor Protocol, plus
+coverage bug six (language production beyond the word), plus in all likelihood coverage bug one
+(episodic memory and reminding). And even then a design constraint of this repository bites, and it
+should be stated in advance rather than discovered: A WORD IS SPOKEN ONLY WHERE THE MIND ACTUALLY
+LIVED THE CONDITION IT NAMES (slice 15's grounding law). A konnectome that does sentiment over
+language would therefore ground its sentiment words in states it has occupied, not in co-occurrence
+statistics over a corpus. That makes the statistical form of the task permanently unavailable to it
+and the grounded form genuinely available - which is the glass-box-over-coverage trade the First and
+Eighth Commandments already commit the project to.
+
+STATUS: LOGGED, TRACKED, NOT ROUTED. No wall was hit. This is a capability question about konnectome
+itself, and the two coverage bugs it depends on already carry named closers from the Ninth
+Commandment survey.
+
+RE-ANSWER TRIGGERS, so that tracking is mechanical rather than a hope. This observation MUST be
+revisited, and its answer rewritten in place, whenever any of the following happens: (a) Rung Two is
+deepened against the Layer 13 Tutor Protocol; (b) coverage bug six, language production beyond the
+word, is closed or partially closed; (c) coverage bug one, episodic memory and reminding, is closed;
+(d) the Causalontology attitude enumeration is widened by a future major version, which would also
+close or shrink Observation-4; or (e) a new drive is added that gives the mind a defended set-point
+in a domain it is currently silent about. A session that touches any of those five and does not
+return here has left this entry stale, and a stale tracked observation is worse than an untracked
+one.
