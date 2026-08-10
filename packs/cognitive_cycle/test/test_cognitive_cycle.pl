@@ -208,6 +208,60 @@ test(a_world_missing_a_learning_store_is_refused_aloud) :-
              Error == existence_error(cognitive_cycle_world_key, Key)
            )).
 
+% SLICE 36: the reward step beats in the live tick - the tick spends the eligibility traces the
+% moment its own drives declare a reward, and capture consumes the spent tags (the Layers 4-5
+% dossier's tag-and-capture law, Chapters 5 and 6). Twin-world tellings, so each claim is a
+% difference the wiring alone can make.
+
+% A standing trace is spent into the weight on the first rewarded tick: the wiring is live.
+test(the_live_tick_spends_a_standing_trace_when_reward_arrives) :-
+    % Two twin worlds differing only in one pre-existing eligibility trace.
+    cognitive_cycle_test_world(WorldZero0),
+    put_dict(traces, WorldZero0, [(a-b)-5], WorldTagged0),
+    % Run both twins two ticks: the first tick's reward is zero, the second tick's reward is one.
+    cognitive_cycle_run(WorldZero0, 2, WorldZero, _SummariesZero),
+    cognitive_cycle_run(WorldTagged0, 2, WorldTagged, _SummariesTagged),
+    % Read both final weights on the one learnable interface.
+    get_dict(interfaces, WorldZero, [interface(a, b, WeightZero, 1, transmissive)]),
+    get_dict(interfaces, WorldTagged, [interface(a, b, WeightTagged, 1, transmissive)]),
+    % The standing tag was spent into the weight when the reward arrived: the tagged twin learned more.
+    assertion(WeightTagged > WeightZero).
+
+% Capture consumes the spent tags: after one rewarded tick the twins' trace stores are identical.
+test(the_live_tick_consumes_the_spent_tags) :-
+    % The same two twin worlds, differing only in one pre-existing eligibility trace.
+    cognitive_cycle_test_world(WorldZero0),
+    put_dict(traces, WorldZero0, [(a-b)-5], WorldTagged0),
+    % Run both twins two ticks, through the first rewarded tick.
+    cognitive_cycle_run(WorldZero0, 2, WorldZero, _SummariesZero),
+    cognitive_cycle_run(WorldTagged0, 2, WorldTagged, _SummariesTagged),
+    % Read both final trace stores.
+    get_dict(traces, WorldZero, TracesZero),
+    get_dict(traces, WorldTagged, TracesTagged),
+    % The rewarded tick consumed both histories, so only the same fresh coincidence remains in each.
+    assertion(TracesZero == TracesTagged).
+
+% A body already at its set-point rewards nothing, ships nothing, and spends nothing: the tag stands.
+test(a_rewardless_tick_spends_no_tag) :-
+    % Two twin worlds whose body already rests at its set-point, differing only in a standing tag.
+    cognitive_cycle_test_world(Base),
+    put_dict(body, Base, [temperature-37], WorldRest0),
+    put_dict(traces, WorldRest0, [(a-b)-5], WorldRestTagged0),
+    % Run both twins two ticks: every reward is zero, so no cargo ever ships.
+    cognitive_cycle_run(WorldRest0, 2, WorldRest, _SummariesRest),
+    cognitive_cycle_run(WorldRestTagged0, 2, WorldRestTagged, _SummariesRestTagged),
+    % Read both final weights on the one learnable interface.
+    get_dict(interfaces, WorldRest, [interface(a, b, WeightRest, 1, transmissive)]),
+    get_dict(interfaces, WorldRestTagged, [interface(a, b, WeightRestTagged, 1, transmissive)]),
+    % With no reward the standing tag buys nothing: the weights are identical.
+    assertion(WeightRest =:= WeightRestTagged),
+    % And the standing tag was not consumed - it fades on its own clock, twice by the fading factor.
+    get_dict(traces, WorldRestTagged, TracesTagged),
+    TracesTagged = [(a-b)-TraceTagged],
+    get_dict(traces, WorldRest, [(a-b)-TraceZeroHistory]),
+    % The tagged twin's trace still carries its faded history above the zero-history twin's.
+    assertion(TraceTagged > TraceZeroHistory).
+
 % A negative tick count is refused aloud, never answered by a silent failure (the slice-32 review pin).
 test(a_negative_tick_count_is_refused_aloud,
      [ error(domain_error(cognitive_cycle_tick_count, -1)) ]) :-

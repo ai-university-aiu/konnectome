@@ -1345,6 +1345,47 @@ four gates report zero violations, the naming gate passing its own self-test; co
 re-measured at 137 of 137 (specification 4.0.0) in both cousins. No new wall; no cousin edited,
 per the Second, Third, and Fourth Commandments.
 
+Slice-36 note (2026-08-09). The reward learns its address: the reward step wired into the live
+tick, capture consuming the spent eligibility traces. Slice family one's item (b) is CLOSED,
+and with it the pending line every completion document carried since slice 32 (the reward step
+still waits for its caller): the tick is the caller, because the tick's own first step is the
+drive system declaring the reward and broadcasting it as dopamine. Designed against the Layers
+4-5 slow-variables dossier, Part Two (the tagging and capture machinery, Chapters 5 through 8)
+read in full: Chapter 5's synaptic tag IS the eligibility trace (the dossier's konnectome note
+says so by name), Chapter 6's cargo is captured only at tagged synapses, and the binding law is
+that capture CONSUMES - a served address must expire so it cannot capture a later, unrelated
+shipment. Realized as plasticity_engine_reward_capture_step/6 beside the untouched slice-28
+reward step: where the receiving territory's dopamine is nonzero (the slice-30/31 diffuse-field
+law unchanged - local chemistry first, global fallback), the trace is spent into the weight and
+the tag consumed to zero; where it is exactly zero, weight and tag stand bit-identical, the tag
+left to fade on the trace step's clock. In the tick, capture runs after the fast learning and
+before the trace fade, on the traces as the tick found them, so a reward one tick late finds
+the trace that earned it and no coincidence is double-counted within one tick; the scaling
+bound stays outermost. The independent adversarial review (tighter scope, named lenses,
+reproduction before fixing - the twelfth straight completion) worked the four named lenses:
+key-shape aliasing and default drift DEFENDED on reproduction; behaviour-pinned-identical
+verified bit-identical against a main worktree on a rewardless five-tick world; one REAL
+finding under the standing unbound-wrong-judgement lens (paying four slices in a row),
+reproduced before fixing: the zero-dopamine short-circuit skipped the judging arithmetic,
+passing an unbound weight, trace, or learning rate through silently on the commonest path where
+the sibling reward step throws; fixed once (the spend judged on every path, the zero answer
+kept bit-identical), pinned by three review tests, plus a fourth pinning the review's second
+finding, the previously untested punishment path (a negative third factor spends the tag
+downward and consumes it; honestly noted unreachable live, since the drives only move the body
+toward its set-points). Observation-5 STANDS: the new step guards its own door with the house
+var guard (an unbound bus refused as uninstantiated, pinned), but the older chemical reads are
+untouched, still awaiting a slice that touches them on purpose. Fifteen tests grew (eleven
+written first, four review pins): plasticity_engine seventy to eighty-two, cognitive_cycle
+thirteen to sixteen, the repository 503 to 518 across twenty-seven packs, all green, re-swept,
+the capstone's sixty untouched through the rewired tick. Remaining pending lines: the
+two-process governor (item (c), the first legitimate thrower of slice 35's switch); the offline
+works with the catastrophic-forgetting rest-twin telling (item (d), which subsumes the
+long-live-run watch); computational-interface transforms; interfaces as Causalontology
+conduits; the token tier of thought combination. The four gates report zero violations, the
+naming gate passing its own self-test; conformance re-measured at 137 of 137 (specification
+4.0.0) in both cousins. No new wall; no cousin edited, per the Second, Third, and Fourth
+Commandments.
+
 Observation-5 (2026-08-09, from slice 35). The neuromodulator_bus chemical reads
 (neuromodulator_bus_level/3 and neuromodulator_bus_level_territory/4) silently bind an UNBOUND
 bus argument into a partial list during lookup, against the module's own never-silently-bound

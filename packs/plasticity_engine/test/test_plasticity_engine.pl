@@ -592,5 +592,132 @@ test(an_unbound_smoothing_factor_is_refused, error(instantiation_error)) :-
     % The same root pattern lived in the smoothing-factor check; the same guard now holds it.
     plasticity_engine_average_step([a-1], _, [a-0], _).
 
+% SLICE 36: the reward-capture step - the corpus's tag-and-capture law made live. Capture is the
+% delivery: a nonzero third factor at the receiving territory spends the trace into the weight AND
+% consumes the tag, because a used address must expire so the synapse cannot wrongly capture a
+% later, unrelated shipment (Layers 4-5 dossier, Chapters 5 and 6). A zero third factor ships no
+% cargo: the weight stands and the tag stands, left to fade on its own clock.
+
+% Capture spends the trace into the weight and consumes the tag in the same act.
+test(capture_spends_the_trace_into_the_weight_and_consumes_the_tag) :-
+    % A bus carrying a full dopamine reward.
+    neuromodulator_bus_new(Bus0),
+    neuromodulator_bus_broadcast(Bus0, dopamine, 1, Bus),
+    % One transmissive interface with a starting weight of one half and a trace of nine tenths.
+    plasticity_engine_reward_capture_step([interface(a, b, 0.5, 1, transmissive)], [(a-b)-0.9], Bus, 0.1, Interfaces, Traces),
+    % The weight grew by the trace times the third factor times the rate: nine hundredths.
+    Interfaces = [interface(a, b, Weight, 1, transmissive)],
+    assertion(plasticity_test_close(Weight, 0.59)),
+    % The spent tag is consumed to zero, never left to be captured twice.
+    assertion(Traces == [(a-b)-0]).
+
+% Without dopamine nothing ships, so the weight stands and the tag stands.
+test(no_dopamine_ships_no_cargo_and_the_tag_stands) :-
+    % A bus with no dopamine, so the third factor reads zero.
+    neuromodulator_bus_new(Bus),
+    % One transmissive interface with a full trace.
+    plasticity_engine_reward_capture_step([interface(a, b, 0.5, 1, transmissive)], [(a-b)-1], Bus, 0.1, Interfaces, Traces),
+    % The weight is unchanged; no cargo arrived.
+    Interfaces = [interface(a, b, Weight, 1, transmissive)],
+    assertion(Weight =:= 0.5),
+    % The unspent tag survives, left to fade on its own clock.
+    assertion(Traces == [(a-b)-1]).
+
+% A computational interface carries no tag and is untouched by capture.
+test(a_computational_interface_is_untouched_by_capture) :-
+    % A bus carrying full dopamine.
+    neuromodulator_bus_new(Bus0),
+    neuromodulator_bus_broadcast(Bus0, dopamine, 1, Bus),
+    % One computational interface beside one transmissive interface with a live tag.
+    plasticity_engine_reward_capture_step([interface(a, b, 0.5, 1, computational), interface(b, c, 0.5, 1, transmissive)],
+                                          [(b-c)-1], Bus, 0.1, Interfaces, Traces),
+    % The computational weight is unchanged; the transmissive one captured.
+    Interfaces = [interface(a, b, WeightComputational, 1, computational), interface(b, c, WeightTransmissive, 1, transmissive)],
+    assertion(WeightComputational =:= 0.5),
+    assertion(plasticity_test_close(WeightTransmissive, 0.6)),
+    % Only the transmissive interface's tag exists, and it was consumed.
+    assertion(Traces == [(b-c)-0]).
+
+% Capture reads the third factor at the RECEIVING end's territory, local chemistry first.
+test(capture_reads_the_receiving_territory) :-
+    % A bus whose global dopamine is one but whose territory b holds one half.
+    neuromodulator_bus_new(Bus0),
+    neuromodulator_bus_broadcast(Bus0, dopamine, 1, Bus1),
+    neuromodulator_bus_broadcast_territory(Bus1, dopamine, b, 0.5, Bus),
+    % One transmissive interface into territory b with a full tag.
+    plasticity_engine_reward_capture_step([interface(a, b, 0.5, 1, transmissive)], [(a-b)-1], Bus, 0.1, Interfaces, Traces),
+    % The weight grew by the LOCAL half-strength dopamine, not the global one: five hundredths.
+    Interfaces = [interface(a, b, Weight, 1, transmissive)],
+    assertion(plasticity_test_close(Weight, 0.55)),
+    % The tag was spent at the local level and is consumed.
+    assertion(Traces == [(a-b)-0]).
+
+% A territory holding zero dopamine over a live global field ships nothing to its own synapses.
+test(a_zero_territory_over_a_live_global_keeps_its_tag) :-
+    % A bus whose global dopamine is one but whose territory b holds exactly zero.
+    neuromodulator_bus_new(Bus0),
+    neuromodulator_bus_broadcast(Bus0, dopamine, 1, Bus1),
+    neuromodulator_bus_broadcast_territory(Bus1, dopamine, b, 0, Bus),
+    % One transmissive interface into the silenced territory, with a full tag.
+    plasticity_engine_reward_capture_step([interface(a, b, 0.5, 1, transmissive)], [(a-b)-1], Bus, 0.1, Interfaces, Traces),
+    % The local zero wins over the global one: the weight stands.
+    Interfaces = [interface(a, b, Weight, 1, transmissive)],
+    assertion(Weight =:= 0.5),
+    % And the tag stands, unspent.
+    assertion(Traces == [(a-b)-1]).
+
+% The capture step refuses a ghost trace as loudly as its siblings do.
+test(a_ghost_trace_is_refused_by_name_at_the_capture_step, error(existence_error(plasticity_engine_trace, a-b))) :-
+    % A bus carrying dopamine.
+    neuromodulator_bus_new(Bus0),
+    neuromodulator_bus_broadcast(Bus0, dopamine, 1, Bus),
+    % The trace store is empty, so the interface's tag does not exist.
+    plasticity_engine_reward_capture_step([interface(a, b, 0.5, 1, transmissive)], [], Bus, 0.1, _, _).
+
+% The capture step refuses an unknown interface kind with the shared perimeter's voice.
+test(an_unknown_kind_is_refused_by_name_at_the_capture_step, error(domain_error(plasticity_engine_interface_kind, mystery))) :-
+    % A bus carrying dopamine.
+    neuromodulator_bus_new(Bus0),
+    neuromodulator_bus_broadcast(Bus0, dopamine, 1, Bus),
+    % A kind no slice has defined must throw at the capture step.
+    plasticity_engine_reward_capture_step([interface(a, b, 0.5, 1, mystery)], [], Bus, 0.1, _, _).
+
+% HOUSE VAR GUARD (the standing unbound-wrong-judgement lens, and Observation-5's shape): an unbound
+% bus is refused as uninstantiated, never silently bound into an invented partial bus by the reads below.
+test(an_unbound_bus_is_refused_at_the_capture_step, error(instantiation_error)) :-
+    % An unbound bus cannot be judged, and must never be silently bound by the chemical reads.
+    plasticity_engine_reward_capture_step([interface(a, b, 0.5, 1, transmissive)], [(a-b)-1], _, 0.1, _, _).
+
+% Punishment is a shipment too: a negative third factor spends the tag downward and consumes it.
+test(a_negative_third_factor_spends_the_tag_downward_and_consumes_it) :-
+    % A bus carrying a full NEGATIVE dopamine level: the error rose, the tick punishes.
+    neuromodulator_bus_new(Bus0),
+    neuromodulator_bus_broadcast(Bus0, dopamine, -1, Bus),
+    % One transmissive interface with a full tag.
+    plasticity_engine_reward_capture_step([interface(a, b, 0.5, 1, transmissive)], [(a-b)-1], Bus, 0.1, Interfaces, Traces),
+    % The weight fell by the tag times the signed third factor times the rate: to four tenths.
+    Interfaces = [interface(a, b, Weight, 1, transmissive)],
+    assertion(plasticity_test_close(Weight, 0.4)),
+    % The punished tag is just as spent as a rewarded one.
+    assertion(Traces == [(a-b)-0]).
+
+% SLICE 36 REVIEW PIN: an unbound weight is refused aloud even on a rewardless tick.
+test(an_unbound_weight_is_refused_at_the_capture_step_without_dopamine, error(instantiation_error)) :-
+    % A bus with no dopamine: the zero branch must judge as loudly as the spending branch.
+    neuromodulator_bus_new(Bus),
+    plasticity_engine_reward_capture_step([interface(a, b, _, 1, transmissive)], [(a-b)-1], Bus, 0.1, _, _).
+
+% SLICE 36 REVIEW PIN: an unbound learning rate is refused aloud even on a rewardless tick.
+test(an_unbound_learning_rate_is_refused_at_the_capture_step_without_dopamine, error(instantiation_error)) :-
+    % A bus with no dopamine: the rate is judged on every path, never only when cargo ships.
+    neuromodulator_bus_new(Bus),
+    plasticity_engine_reward_capture_step([interface(a, b, 0.5, 1, transmissive)], [(a-b)-1], Bus, _, _, _).
+
+% SLICE 36 REVIEW PIN: an unbound trace value is refused aloud even on a rewardless tick.
+test(an_unbound_trace_value_is_refused_at_the_capture_step_without_dopamine, error(instantiation_error)) :-
+    % A bus with no dopamine: an unbound tag can be neither spent nor kept, only refused.
+    neuromodulator_bus_new(Bus),
+    plasticity_engine_reward_capture_step([interface(a, b, 0.5, 1, transmissive)], [(a-b)-_], Bus, 0.1, _, _).
+
 % Close the test block for the plasticity_engine pack.
 :- end_tests(plasticity_engine).

@@ -19,6 +19,7 @@
 % Reuse the plasticity engine: the fast three-factor learning, the fading traces, the running
 % averages, and the slow homeostatic bound - the whole learning body, beating in the live tick.
 :- use_module(library(plasticity_engine), [plasticity_engine_step/5,
+                                           plasticity_engine_reward_capture_step/6,
                                            plasticity_engine_trace_step/5,
                                            plasticity_engine_average_step/4,
                                            plasticity_engine_scaling_step_territory/6]).
@@ -39,8 +40,14 @@
 % defends the global target),
 % so every tick fades and refreshes the traces, moves the averages, and applies the slow homeostatic
 % bound after the fast learning - the Section A2.5-and-A2.6 machinery live in the loop, not waiting
-% for a caller to remember it. The reward step stays with the caller, deliberately: trace lifetime
-% belongs to whoever decides a reward has arrived.
+% for a caller to remember it. Since slice 36 the reward step's caller is the tick itself: the
+% drives declare the tick's reward and broadcast it as dopamine, and the reward-capture step spends
+% the standing eligibility traces into the weights the moment that dopamine is nonzero, consuming
+% the spent tags (the Layers 4-5 tag-and-capture law) - so trace lifetime belongs to the loop that
+% decides a reward has arrived, which is exactly what the old deliberate deferral was waiting for.
+% Capture runs on the traces as they stood at the tick's start, BEFORE this tick's fresh
+% coincidence is folded in, so a reward one tick late finds the trace that earned it and this
+% tick's own coincidence is never double-counted against this tick's own reward.
 
 % cognitive_cycle_world_value(+World, +Key, -Value): read one world key, refusing a missing key aloud.
 cognitive_cycle_world_value(World, Key, Value) :-
@@ -101,13 +108,16 @@ cognitive_cycle_step(World0, World, Summary) :-
     override_controller_arbitrate(Overrides, Threshold, NormalOutcome, FinalOutcome),
     % STEP FOUR: the plasticity engine learns from the new activations and the dopamine on the bus.
     plasticity_engine_step(Interfaces0, Activations1, Bus1, LearningRate, Interfaces1),
+    % The reward the drives just declared spends the standing eligibility traces into the weights,
+    % and capture consumes the spent tags (slice 36, the Layers 4-5 tag-and-capture law made live).
+    plasticity_engine_reward_capture_step(Interfaces1, Traces0, Bus1, LearningRate, InterfacesCaptured, TracesCaptured),
     % The eligibility traces fade one step and absorb this tick's fresh coincidences (slice 28, live).
-    plasticity_engine_trace_step(Interfaces1, Activations1, FadingFactor, Traces0, Traces1),
+    plasticity_engine_trace_step(InterfacesCaptured, Activations1, FadingFactor, TracesCaptured, Traces1),
     % The running averages move one smoothing step toward this tick's activities (slice 29, live).
     plasticity_engine_average_step(Activations1, SmoothingFactor, Averages0, Averages1),
     % The slow homeostatic bound scales each region's incoming weights toward the target its own
     % territory defends, the global target as the diffuse fallback (slice 29 live, slice 33 geography).
-    plasticity_engine_scaling_step_territory(Interfaces1, Averages1, ScalingTargets, ScalingTarget, ScalingRate, Interfaces2),
+    plasticity_engine_scaling_step_territory(InterfacesCaptured, Averages1, ScalingTargets, ScalingTarget, ScalingRate, Interfaces2),
     % STEP FIVE: the body responds - the released action moves the body toward what it needs.
     drive_system_apply_action(FinalOutcome, Drives0, Body0, Body1),
     % STEP SIX: advance the tick counter.
