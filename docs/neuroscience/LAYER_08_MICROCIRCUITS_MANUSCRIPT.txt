@@ -4,7 +4,7 @@ The Microcircuits of the Human Nervous and Endocrine System
 
 A Complete, Comprehensive, and Thorough Manuscript
 
-Companion volume to the Layer 6 catalogues (302 neuron types; 85 non-neuronal cell types) and the Layer 9 manuscript (Nature's Cognitive Architecture) in the Certified_Neuroscientist corpus of D. R. Dison, Founder, Artificial Intelligence University (AIU).
+Companion volume to the Layer 6 catalogues (301 neuron types; 85 non-neuronal cell types) and the Layer 9 manuscript (Nature's Cognitive Architecture) in the Certified_Neuroscientist corpus of D. R. Dison, Founder, Artificial Intelligence University (AIU).
 
 Date of compilation: August 9, 2026.
 
@@ -29,9 +29,9 @@ This volume asks, of each motif, four systems questions that only a middle layer
 
 • Upward to Layer 9: at which named regions and glands is the motif installed, and how does its presence flavour each region that hosts it?
 
-• Outward to engineering: how would the motif be realised as a publish-subscribe module - because this volume directly informs the konnectome project, whose constitution demands whole-word module names and clean SUBSCRIBE and PUBLISH interfaces for every construct.
+• Outward to engineering: how would the motif be realised as a publish-subscribe module - because this volume directly informs the engineering programme project, whose constitution demands whole-word module names and clean SUBSCRIBE and PUBLISH interfaces for every construct.
 
-Each of the seventy-one chapters therefore runs through twenty-two fixed aspects, from WHAT IT IS AND WHAT IT COMPUTES through THE WIRING DIAGRAM, THE CELLULAR CAST AND THEIR PERSONALITIES, THE SYNAPTIC AND JUNCTIONAL FABRIC, the Layer 9 installation map, the input-output transformation, and a KONNECTOME NOTE, to WHAT MAKES IT UNMISTAKABLE.
+Each of the seventy-one chapters therefore runs through twenty-two fixed aspects, from WHAT IT IS AND WHAT IT COMPUTES through THE WIRING DIAGRAM, THE CELLULAR CAST AND THEIR PERSONALITIES, THE SYNAPTIC AND JUNCTIONAL FABRIC, the Layer 9 installation map, the input-output transformation, and a ENGINEERING NOTE, to WHAT MAKES IT UNMISTAKABLE.
 
 Where an aspect genuinely cannot apply, the chapter says so plainly and says why.
 
@@ -251,7 +251,7 @@ SYSTEMS INTERFACE:
 
 ◦ Motor neuron loss in amyotrophic lateral sclerosis; deafferentation after peripheral injury; pathological over-summation in seizure recruitment.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose a module named evidence_summation_integrator that subscribes to a variable-length list of weighted signed input messages and publishes a single scalar activation plus a fired boolean when the running weighted sum crosses a published threshold.
 
@@ -483,7 +483,7 @@ SYSTEMS INTERFACE:
 
 ◦ Dopaminergic broadcaster loss in Parkinson's disease; noradrenergic loss in Alzheimer's disease; broadcast dysregulation in addiction and schizophrenia.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose a module named broadcast_fanout_publisher that subscribes to a single source signal and publishes it to a named list of subscribers, each with its own gain, applying either a synchronous copy or a slow decaying scalar field for the neuromodulatory case.
 
@@ -707,7 +707,7 @@ SYSTEMS INTERFACE:
 
 ◦ Demyelination (multiple sclerosis, Guillain-Barre syndrome, Charcot-Marie-Tooth disease); conduction block; relay failure from axonal injury.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 This section does not apply to this microcircuit type for the reason that this motif serves a substrate or regulatory role rather than a cognitive-computational role, and is tagged (NON-COG).
 
@@ -884,7 +884,7 @@ SYSTEMS INTERFACE:
 
 ◦ Unstable working memory in schizophrenia (weak or dysregulated recurrent excitation); runaway feedback seeding focal seizures when inhibition fails.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose a module named persistent_state_latch that subscribes to a set signal and a reset signal and publishes a held activation that remains high after the set signal ends until a reset arrives, implemented as two mutually exciting units with a slow (NMDA-like) integration constant and a stability-limiting gain.
 
@@ -1111,7 +1111,7 @@ SYSTEMS INTERFACE:
 
 ◦ Loss of feedforward inhibition (parvalbumin-interneuron dysfunction) in schizophrenia and epilepsy, degrading temporal precision and change detection.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose a module named feedforward_change_detector that subscribes to a single source stream and publishes an onset-and-offset transient by comparing the source against a delayed, oppositely signed copy of itself routed through an intermediary node.
 
@@ -1341,7 +1341,7 @@ SYSTEMS INTERFACE:
 
 ◦ Epileptic seizure when inhibition fails (interneuron loss, channelopathy, failed homeostatic scaling, impaired astrocytic buffering); working-memory failure in schizophrenia when recurrent excitation is too weak or dysregulated.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose a module named recurrent_amplifier_pool that subscribes to feedforward input and publishes an amplified, optionally self-sustaining population activation, implemented as a positive-feedback pool of excitatory units wrapped in an obligatory inhibitory control loop with an explicit stability governor.
 
@@ -1598,7 +1598,7 @@ SYSTEMS INTERFACE:
 
 ◦ In schizophrenia parvalbumin-cell dysfunction widens the window and degrades gamma; in epilepsy perisomatic feedforward inhibition fails and coincidence gating collapses into runaway excitation.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the module coincidence_window_gate.
 
@@ -1805,7 +1805,7 @@ SYSTEMS INTERFACE:
 
 ◦ In temporal-lobe epilepsy the CA3 feedback brake fails and recurrent excitation runs away; loss of gamma pacing accompanies schizophrenia.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the module activity_gain_thermostat.
 
@@ -2012,7 +2012,7 @@ SYSTEMS INTERFACE:
 
 ◦ Connexin-57 or horizontal-cell dysfunction flattens contrast; dentate parvalbumin loss abolishes pattern separation, producing memory interference.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the module lateral_inhibition_sharpener.
 
@@ -2207,7 +2207,7 @@ SYSTEMS INTERFACE:
 
 ◦ Strychnine and tetanus toxin block glycinergic recurrent inhibition, producing convulsive rigidity; recurrent-inhibition changes accompany amyotrophic lateral sclerosis and spasticity.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Although non-cognitive, the module would be named motoneuron_output_governor: it would subscribe to a motor pool's output and publish an inhibition proportional to and slightly delayed from that output, flattening the pool's gain and desynchronising its units for smooth force.
 
@@ -2372,7 +2372,7 @@ SYSTEMS INTERFACE:
 
 ◦ Reduced reciprocal Ia inhibition in spasticity and stroke; abnormal reciprocal inhibition in dystonia; glycine block (strychnine, tetanus) abolishing it entirely.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Although non-cognitive in its spinal role, the module would be named mutual_exclusion_pair: it would subscribe to the drives of two opposed channels and publish outputs in which each channel is suppressed by the other, exposing a mode parameter that selects static exclusivity, oscillation (with fatigue), or hard bistability (high gain).
 
@@ -2539,9 +2539,9 @@ SYSTEMS INTERFACE:
 
 ◦ Reduced GABA-B-mediated presynaptic inhibition of proprioceptive afferents after spinal cord injury, producing spasticity and hyperreflexia; loss of afferent gating in dystonia and chronic pain.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-The konnectome module is named per_input_gain_gate, a wrapper that sits on one named input channel of a receiving module and scales that channel's message by a factor between zero and one under control of a separate gate signal, without altering the receiving module's threshold or its other channels.
+The engineering module is named per_input_gain_gate, a wrapper that sits on one named input channel of a receiving module and scales that channel's message by a factor between zero and one under control of a separate gate signal, without altering the receiving module's threshold or its other channels.
 
 It subscribes to the gated channel's outgoing messages and to a gate command (for example a movement-in-progress flag), and it publishes an attenuated copy of that one channel.
 
@@ -2706,9 +2706,9 @@ SYSTEMS INTERFACE:
 
 ◦ Parvalbumin and GAD67 reduction in perisomatic interneurons in schizophrenia, degrading gamma synchrony; PV failure as a seizure substrate; SST loss in depression and Alzheimer's disease.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-The konnectome module is named output_gain_and_input_selection_governor, wrapping a principal-cell module with two independent inhibitory controllers: an output_timing_gate on the module's spike output and an input_selection_gate on a named subset of the module's input channels.
+The engineering module is named output_gain_and_input_selection_governor, wrapping a principal-cell module with two independent inhibitory controllers: an output_timing_gate on the module's spike output and an input_selection_gate on a named subset of the module's input channels.
 
 It subscribes, for the output gate, to feedforward copies of the module's drive and, for the input gate, to feedback copies of the module's own activity and to a permission signal (from a disinhibition module); it publishes a timing-and-gain-scaled output and a per-branch input mask.
 
@@ -2920,9 +2920,9 @@ SYSTEMS INTERFACE:
 
 ◦ Impaired amygdala intercalated disinhibition in post-traumatic stress disorder and failure of fear extinction; cortical over- or under-disinhibition in autism and epilepsy.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-The konnectome module is named gate_opening_permission_broker, a three-stage inhibitory chain whose net effect is to enable, on command, a target module's ability to integrate and learn from its inputs without supplying any content itself.
+The engineering module is named gate_opening_permission_broker, a three-stage inhibitory chain whose net effect is to enable, on command, a target module's ability to integrate and learn from its inputs without supplying any content itself.
 
 It subscribes to a permission signal (a top-down attention flag, a reward or arousal signal) and publishes a release command that lowers a named inhibitory gate on the target module, specifically its dendritic-input-and-plasticity channel.
 
@@ -3128,9 +3128,9 @@ SYSTEMS INTERFACE:
 
 ◦ Disordered tonic and slow inhibition in epilepsy and absence seizures (thalamic extrasynaptic GABA-A receptors); the extrasynaptic and slow GABA systems as the target of anaesthetic and neurosteroid actions.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-The konnectome module is named slow_blanket_excitability_damper, a broadcast inhibitory module with no addressed recipients that subscribes to local activity and publishes a slowly rising, slowly decaying suppression applied to every module within a defined spatial neighbourhood.
+The engineering module is named slow_blanket_excitability_damper, a broadcast inhibitory module with no addressed recipients that subscribes to local activity and publishes a slowly rising, slowly decaying suppression applied to every module within a defined spatial neighbourhood.
 
 It publishes not to named channels but to a spatial region, and its output has a long time constant and a leaky-diffusion spatial profile, so downstream modules experience a smoothed, lagged reduction in gain rather than a targeted veto.
 
@@ -3376,7 +3376,7 @@ SYSTEMS INTERFACE:
 
 ◦ Unresolved competition in schizophrenia (parvalbumin deficit); perseverative locking in prefrontal injury; selection paralysis in Parkinson disease.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the module winner_take_all_selector, subscribing to a candidate-evidence vector topic and to a neuromodulatory gain topic, and publishing a selected-option identifier plus a confidence value derived from settling time.
 
@@ -3586,7 +3586,7 @@ SYSTEMS INTERFACE:
 
 ◦ Temporal-lobe epilepsy with mossy-fibre sprouting (lost sparseness); overgeneralisation of fear memories; pattern-separation decline in ageing and early Alzheimer disease.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the module sparse_code_pattern_separator, subscribing to a dense feature-vector topic and a sparseness set-point topic, and publishing a k-hot sparse vector plus an overlap statistic.
 
@@ -3804,7 +3804,7 @@ SYSTEMS INTERFACE:
 
 ◦ Reduced surround and cross-orientation suppression in autism spectrum condition and schizophrenia; sensory overload; saturation of codes under strong stimulation.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the module divisive_normalization_scaler, subscribing to a raw feature-activity topic and an attention-weight topic, and publishing the same vector rescaled so that each element is divided by a constant plus the weighted pool sum.
 
@@ -4013,7 +4013,7 @@ SYSTEMS INTERFACE:
 
 ◦ Attention-deficit hyperactivity disorder (catecholaminergic gain too low or unstable); delirium (cholinergic gain collapse); early Alzheimer and Parkinson disease (degenerating modulatory nuclei); stress-induced over-gain.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the module context_gain_multiplier, subscribing to a content-signal topic and a scalar-or-field gain topic (published by arousal, attention and task-relevance modules), and publishing the content multiplied element-wise by gain.
 
@@ -4209,7 +4209,7 @@ SYSTEMS INTERFACE:
 
 ◦ Congenital stationary night blindness (ON channel loss via mGluR6-TRPM1 mutations); diabetes mellitus with failed counter-regulation; post-stroke spasticity from broken reciprocal inhibition.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the module opponent_channel_splitter, subscribing to any signed scalar topic and publishing paired rectified topics (variable_increase_channel and variable_decrease_channel) plus the current pivot; downstream modules subscribe to the difference for the full signed signal or to one channel for a cheap half-range alarm.
 
@@ -4413,9 +4413,9 @@ SYSTEMS INTERFACE:
 
 ◦ Auditory neuropathy, demyelination and ageing degrade spike timing and destroy sound localisation and speech-in-noise performance.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-A konnectome module named interaural_time_difference_comparator would subscribe to two time-stamped event streams (left and right) and publish a source-angle estimate plus confidence.
+A engineering module named interaural_time_difference_comparator would subscribe to two time-stamped event streams (left and right) and publish a source-angle estimate plus confidence.
 
 The closest artificial-intelligence analogue is a cross-correlation layer or a time-delay-and-sum beamformer, and the point of difference is that the biology reaches microsecond resolution using cells whose own events last a thousand times longer, by exploiting membrane speed and precisely timed inhibition rather than a fast digital clock.
 
@@ -4604,9 +4604,9 @@ SYSTEMS INTERFACE:
 
 ◦ Weakened parvalbumin cells reduce gamma (schizophrenia); loss of inhibitory control turns synchrony into seizure (epilepsy).
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-A konnectome module named gamma_synchrony_clock would subscribe to a set of active feature or ensemble signals plus a drive level, and publish a shared phase reference (a time-stamp) plus a synchronised, rank-ordered ensemble.
+A engineering module named gamma_synchrony_clock would subscribe to a set of active feature or ensemble signals plus a drive level, and publish a shared phase reference (a time-stamp) plus a synchronised, rank-ordered ensemble.
 
 The closest artificial-intelligence analogue is a global attention or gating signal that binds a subset of features, or a recurrent oscillatory reservoir, and the point of difference is that the biological clock is not imposed from outside but generated by the same excitatory-inhibitory loop it coordinates, and it doubles as a plasticity-timing window.
 
@@ -4853,9 +4853,9 @@ SYSTEMS INTERFACE:
 
 ◦ Loss of parvalbumin-cell function or gap-junction coupling abolishes coherent fast gamma; pathological inhibitory synchrony feeds fast oscillations in epilepsy.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-A konnectome module named inhibitory_pacemaker_clock would subscribe only to a scalar drive level and publish a fast, regular phase reference, independent of any content stream.
+A engineering module named inhibitory_pacemaker_clock would subscribe only to a scalar drive level and publish a fast, regular phase reference, independent of any content stream.
 
 The closest artificial-intelligence analogue is a free-running clock or a coupled-oscillator layer whose rate is set by a single gain, and the difference from PING is that this clock needs no excitatory feedback partner, so it is more robust but carries no rate-to-phase content of its own; it is timing without message.
 
@@ -5103,9 +5103,9 @@ SYSTEMS INTERFACE:
 
 ◦ Loss of cholinergic tone or interneuron function weakens coupling (Alzheimer's disease, schizophrenia), degrading sequence memory and working memory.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-A konnectome module named theta_gamma_sequence_buffer would subscribe to a slow clock signal and a ranked set of active items and publish a repeating, time-ordered sequence of item activations, one item per gamma slot.
+A engineering module named theta_gamma_sequence_buffer would subscribe to a slow clock signal and a ranked set of active items and publish a repeating, time-ordered sequence of item activations, one item per gamma slot.
 
 The closest artificial-intelligence analogue is a positional-encoding scheme feeding a short ordered buffer, or the time-division multiplexing that lets one channel carry several ordered messages, and the point of difference is that the biological code both represents order and, through spike-timing plasticity in the same cycles, writes that order into memory, so it is a buffer and a learning rule fused into one rhythm.
 
@@ -5358,7 +5358,7 @@ SYSTEMS INTERFACE:
 
 ◦ Loss of reciprocal inhibition yields co-contraction and rigidity; loss of tonic drive (spinal injury) yields silence; corrupted glycinergic inhibition yields hyperekplexia; respiratory installation failure yields apnoea.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the module name take_turns_alternator. It would subscribe to a scalar drive channel and an optional phase-correction channel, and publish two mutually exclusive gated outputs plus a phase state. The closest artificial-intelligence analogue is a relaxation oscillator or a pair of cross-coupled inhibitory units with leaky adaptation, akin to a two-state recurrent cell forced to alternate; it differs from a software clock in that its period is not fixed but rides continuously on the input drive, and its alternation is enforced by mutual inhibition rather than by a counter.
 
@@ -5551,7 +5551,7 @@ SYSTEMS INTERFACE:
 
 ◦ Loss of drive (spinal injury) silences locomotion; pre-Bötzinger failure stops breathing (Ondine's curse, links to sudden infant death); commissural interneuron loss forces hopping; swallowing CPG damage causes dysphagia.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the module name motor_autopilot_sequencer. It would subscribe to a scalar go-and-speed channel, a regime or gait selector, and an optional sensory-entrainment channel, and publish a timed vector of per-effector activation commands. The closest artificial-intelligence analogue is a parameterised motion primitive or a recurrent policy that emits an action sequence from a single latent command - but the CPG differs by splitting timing from content into two explicit tiers, so that the rhythm and the pattern can be reprogrammed independently, and by generating its own clock rather than stepping on an external one.
 
@@ -5736,7 +5736,7 @@ SYSTEMS INTERFACE:
 
 ◦ Sub-critical coupling desynchronises the population: circadian disruption and sleep-phase disorders (loss of VIP/VPAC2), degraded pulsatile insulin and type 2 diabetes (loss of connexin-36), sick-sinus syndrome and arrhythmia (sinoatrial decoupling).
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the module name coupled_clock_synchroniser. It would subscribe to an entrainment/phase-setting channel and publish a single coherent phase-and-period signal plus a coherence measure, serving as a robust distributed clock other modules can time themselves against. The closest artificial-intelligence analogue is a population of coupled phase oscillators (a Kuramoto layer) or an ensemble whose members vote toward a consensus phase - it differs from a software clock in that its rhythm is emergent and fault-tolerant, degrading gracefully as members drop out rather than failing at a single point, and its period is genuinely produced by the population, not read from a crystal.
 
@@ -5927,7 +5927,7 @@ SYSTEMS INTERFACE:
 
 ◦ Sub-critical pool size or weak links cause packet decay and the sequence stalls (a substrate for stuttering and apraxia); loss of inhibition causes synchronous explosion (a substrate for seizure and for the hypersynchrony seen when parvalbumin control fails).
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the module name synchronous_sequence_clocker. It would subscribe to a start trigger and a reinforcement signal, and publish an ordered stream of timestamped activations that downstream modules use as a learned script and clock; internally it would hold a bank of feedforward pools with plastic links tuned by a spike-timing rule. The closest artificial-intelligence analogues are the hidden state of a recurrent neural network unrolled in time and the positional-timing structure a transformer imposes on a sequence - the biological chain differs by carrying order in the physical travelling wave of synchrony rather than in a learned position embedding, by being explicitly dropout-tolerant through convergent redundancy, and by self-organising its sequence from unstructured connectivity through local timing-dependent plasticity rather than global gradient descent.
 
@@ -6035,7 +6035,7 @@ Mathematicians call such a self-sustaining pattern an attractor, a state the sys
 
 Between them these circuits give the brain its memory of the recent past, its ability to hold a thought, its running totals, and its inner compass.
 
-They are also the motifs that most directly anticipate the recurrent networks of artificial intelligence, which is why every konnectome note in this part points at a machine that already half-exists.
+They are also the motifs that most directly anticipate the recurrent networks of artificial intelligence, which is why every engineering note in this part points at a machine that already half-exists.
 
 
 CHAPTER 29. THE AUTOASSOCIATIVE ATTRACTOR NETWORK (Recurrent Pattern-Completing Excitatory Pool) (The Cue-To-Memory Circuit) (COG)
@@ -6222,7 +6222,7 @@ SYSTEMS INTERFACE:
 
 ◦ Temporal lobe epilepsy from runaway recurrence; cueing failure in early Alzheimer's disease; storage blockade under NMDA antagonists such as ketamine.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the module name autoassociative_pattern_completer, subscribing to cue_fragment messages and a store_pattern teaching channel, and publishing completed_pattern messages with a confidence score derived from settling energy.
 
@@ -6462,7 +6462,7 @@ SYSTEMS INTERFACE:
 
 ◦ Working memory deficit of schizophrenia with layer 3 spine loss near 23 percent; distractibility of attention deficit hyperactivity disorder; stress-induced prefrontal collapse; ketamine-induced loss of delay firing.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the module name working_memory_holding_register, subscribing to item_cue, distractor_alert, and neuromodulator_state messages and publishing held_item messages continuously plus a memory_released event at switch-off.
 
@@ -6686,7 +6686,7 @@ SYSTEMS INTERFACE:
 
 ◦ Gaze-evoked nystagmus from a leaky integrator; unstable congenital nystagmus from excess gain; alcohol and antiepileptic drug intoxication as reversible chemical leaks.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the module name velocity_to_position_integrator, subscribing to velocity_command and calibration_error messages and publishing position_estimate continuously.
 
@@ -6873,7 +6873,7 @@ SYSTEMS INTERFACE:
 
 ◦ Loss of head-direction signal after anterodorsal thalamic or mammillary lesions; Wernicke-Korsakoff destruction of the mammillary core; heading disorientation after retrosplenial stroke; drift and vertigo in vestibular failure.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the module name heading_ring_attractor_compass, subscribing to angular_velocity, landmark_bearing, and motor_efference_copy messages and publishing heading_estimate messages with a drift-uncertainty field that grows in the absence of landmark corrections.
 
@@ -7135,7 +7135,7 @@ SYSTEMS INTERFACE:
 ◦ Loss of the inhibitory brake produces dense, non-sparse coding: temporal-lobe epilepsy in the dentate, degraded motor learning in the cerebellum.
 
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Name the module sparse_expansion_recoder.
 
@@ -7376,7 +7376,7 @@ SYSTEMS INTERFACE:
 ◦ CA1 loss (ischaemic amnesia), miscalibrated novelty (schizophrenia aberrant salience), early degeneration (Alzheimer's disease).
 
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Name the module predicted_versus_actual_comparator.
 
@@ -7607,7 +7607,7 @@ SYSTEMS INTERFACE:
 ◦ Purkinje-cell loss (spinocerebellar ataxia), olivary hypersynchrony (tremor), miscalibration (dysmetria, cerebellar cognitive-affective syndrome).
 
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Name the module supervised_error_correction_learner.
 
@@ -7835,7 +7835,7 @@ SYSTEMS INTERFACE:
 ◦ Orexin loss produces narcolepsy with cataplexy (state instability); imbalance produces insomnia or hypersomnia.
 
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Name the module mutual_inhibition_state_latch.
 
@@ -8104,7 +8104,7 @@ SYSTEMS INTERFACE:
 
 ◦ Focal seizure when recurrent excitation escapes inhibition; schizophrenia's working-memory and gamma deficits when basket-cell inhibition weakens; developmental miswiring of the tile in autism spectrum conditions.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the module name canonical_cortical_column_processor.
 
@@ -8378,7 +8378,7 @@ SYSTEMS INTERFACE:
 
 ◦ Psychosis under aberrant precision, with reduced mismatch negativity in schizophrenia; sensory overload profiles in autism spectrum conditions; ketamine-induced dissociation as pharmacological error blockade.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the module name predictive_coding_error_minimiser.
 
@@ -8386,7 +8386,7 @@ Each instance subscribes to an ascending_evidence topic and a descending_predict
 
 The closest artificial intelligence analogues are the variational autoencoder and diffusion-style iterative denoising, and modern predictive-coding networks provably approximate backpropagation with purely local rules; the biological motif differs in running inference and learning simultaneously and continuously, in weighting every message by learned confidence, and in cancelling some errors with muscles instead of mathematics.
 
-Konnectome should treat precision as a first-class message field, because most of the interesting failure modes live there.
+An implementation should treat precision as a first-class message field, because most of the interesting failure modes live there.
 
 ENGLISH READABLE CODE:
 
@@ -8647,7 +8647,7 @@ SYSTEMS INTERFACE:
 
 ◦ Absence epilepsy's 3 hertz spike-and-wave; spindle deficits in schizophrenia; thalamocortical dysrhythmia in central pain and tinnitus; loss of consciousness in bilateral paramedian thalamic stroke.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the module name thalamic_relay_attention_gate.
 
@@ -8655,7 +8655,7 @@ It subscribes to a driving_sense_data topic, a cortical_feedback_tuning topic an
 
 The closest artificial intelligence analogues are the attention gate and the mixture-of-experts router - learned multiplicative selection of which inputs reach the expensive processor - but the biological gate differs in being steered by its own consumer (cortex tunes its own input stream), in having a hard offline setting used nightly for consolidation, and in signalling novelty on closed channels by a distinct burst code rather than by silence.
 
-Konnectome should implement the sleep setting; an architecture that can never close its gates can never consolidate in peace.
+An implementation should implement the sleep setting; an architecture that can never close its gates can never consolidate in peace.
 
 ENGLISH READABLE CODE:
 
@@ -8924,13 +8924,13 @@ SYSTEMS INTERFACE:
 
 ◦ Addiction and obsessive-compulsive disorder: mis-taught or stuck selection.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the module name tonic_inhibition_action_selector, subscribing to candidate_action_proposals, salience_events, and reward_prediction_error, and publishing selected_action_channel plus a global_stop signal.
 
 The closest artificial intelligence analogue is an actor-critic reinforcement-learning agent whose policy head ends in a softmax, but the biological motif differs in defaulting to all-off, selecting by removing inhibition rather than adding activation, and running a separate fast stop line that can veto after the race has started - a feature most artificial agents lack and demonstrably need.
 
-The three-factor eligibility-trace rule is also more local and cheaper than backpropagation, and konnectome should implement it as such.
+The three-factor eligibility-trace rule is also more local and cheaper than backpropagation, and an implementation should adopt it as such.
 
 ENGLISH READABLE CODE:
 
@@ -9195,7 +9195,7 @@ SYSTEMS INTERFACE:
 
 ◦ Anoxic CA1 loss: pure amnesic syndrome.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the module name episodic_memory_assembly_line, subscribing to current_context_vector, theta_phase, and write_enable_neuromodulation, and publishing episode_index, pattern_completion_output, and novelty_alarm.
 
@@ -9469,13 +9469,13 @@ SYSTEMS INTERFACE:
 
 ◦ Cerebellar cognitive-affective syndrome after lateral hemisphere damage.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the module name supervised_motor_calibration_filter, subscribing to efference_copy_context, sensory_state_streams, and error_teaching_signal, and publishing predictive_correction_commands to every motor and timing module in the architecture.
 
 The closest artificial intelligence analogue is a wide two-layer perceptron trained by supervised gradient descent - Marr, Albus, and the adaptive-filter school said as much decades before deep learning - with random expansion features and a single scalar-rate error line per output unit.
 
-The biological version differs in learning through synaptic depression on a pacemaking carrier, in encoding when as richly as what through granule layer delay bases, and in needing only about one error bit per second to converge, an economy konnectome's calibration modules should imitate rather than backpropagating dense gradients.
+The biological version differs in learning through synaptic depression on a pacemaking carrier, in encoding when as richly as what through granule layer delay bases, and in needing only about one error bit per second to converge, an economy an engineered calibration module should imitate rather than backpropagating dense gradients.
 
 ENGLISH READABLE CODE:
 
@@ -9665,7 +9665,7 @@ SYSTEMS INTERFACE:
 
 ◦ Areflexia in peripheral neuropathy and tabes dorsalis; hyperreflexia and clonus in spasticity after upper motor neuron injury.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose a module named muscle_length_stabiliser: it would subscribe to a per-actuator length-and-velocity estimate and publish a corrective drive toward a commanded length, with a settable loop gain corresponding to gamma bias.
 
@@ -9832,7 +9832,7 @@ SYSTEMS INTERFACE:
 
 ◦ Central sensitisation and neuropathic pain; flexor spasms after spinal cord injury; loss of inhibitory sculpting in hyperekplexia.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose a module named protective_withdrawal_coordinator: it would subscribe to a threat-signal channel tagged with intensity and body location, and publish a two-limb motor pattern - flexion of the affected effector, extension of its mirror partner - scaled by threat magnitude.
 
@@ -9987,7 +9987,7 @@ SYSTEMS INTERFACE:
 
 ◦ Altered force regulation and clasp-knife give-way in spasticity; loss of tension feedback in large-fibre neuropathy.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose a module named muscle_force_governor: it would subscribe to a per-actuator force estimate and publish an inhibitory (or, in a locomotor state, facilitatory) adjustment to that actuator's drive, with a sign switch controlled by a behavioural-state input.
 
@@ -10148,7 +10148,7 @@ SYSTEMS INTERFACE:
 
 ◦ Oscillopsia in bilateral vestibulopathy; spontaneous nystagmus and vertigo in acute unilateral vestibular loss.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose a module named gaze_stabilisation_loop: it would subscribe to a head angular-velocity estimate and publish an equal-and-opposite eye-velocity command, with a scalar gain and a separate slow error input for calibration.
 
@@ -10305,7 +10305,7 @@ SYSTEMS INTERFACE:
 
 ◦ Baroreflex failure with volatile hypertension and syncope; reduced sensitivity in heart failure; impaired resetting in chronic hypertension.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose a module named pressure_setpoint_regulator: it would subscribe to a measured arterial-pressure signal and a set point, and publish two opposing effector commands - a fast parasympathetic brake and a slower sympathetic drive - to null the error.
 
@@ -10460,7 +10460,7 @@ SYSTEMS INTERFACE:
 
 ◦ Gastroparesis and impaired accommodation in vagal neuropathy; dumping syndrome after vagal injury; disordered satiety in obesity.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose a module named visceral_state_regulator: it would subscribe to slow interoceptive signals (organ distension, chemistry) and hormonal context, and publish a selected motor or secretory program to the local effector network, choosing between opposing (contract versus relax) outputs.
 
@@ -10611,7 +10611,7 @@ SYSTEMS INTERFACE:
 
 ◦ Autoimmune autonomic ganglionopathy; the intended failure of therapeutic sympathectomy; sympathetically maintained pain from aberrant sprouting.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose a module named command_broadcast_amplifier: it would subscribe to a small number of high-level activation lines and publish that activation, copied and gain-scaled, onto a large fan-out of effector channels, with a slow-decay component that sustains the broadcast in time.
 
@@ -10768,7 +10768,7 @@ SYSTEMS INTERFACE:
 
 ◦ Hirschsprung disease, achalasia, and chronic intestinal pseudo-obstruction from loss or dysfunction of the enteric neurons.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose a module named polarised_transport_reflex: it would subscribe to a spatially localised load signal along a one-dimensional array of actuators and publish opposite-signed motor commands on the two sides of the load (drive upstream, release downstream), re-triggering at each new load position to produce a travelling wave.
 
@@ -10948,9 +10948,9 @@ SYSTEMS INTERFACE:
 
 ◦ Retinitis pigmentosa and age-related macular degeneration degrade the mosaic; horizontal-cell or outer-retinal disease flattens contrast sensitivity; loss of the surround yields washed-out, edge-blind vision.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-A konnectome module named concentric_contrast_extractor would subscribe to a two-dimensional array of luminance samples and publish a contrast map, computing each output as a narrow positive weighting minus a broad negative weighting of its input neighbourhood.
+A engineering module named concentric_contrast_extractor would subscribe to a two-dimensional array of luminance samples and publish a contrast map, computing each output as a narrow positive weighting minus a broad negative weighting of its input neighbourhood.
 
 Its closest artificial-intelligence analogue is the difference-of-Gaussians or Laplacian-of-Gaussian filter, and the centre-surround kernels of the first layer of a convolutional neural network, which learn almost exactly this shape.
 
@@ -11109,9 +11109,9 @@ SYSTEMS INTERFACE:
 
 ◦ Complete congenital stationary night blindness (mGluR6/TRPM1 loss) silences the ON channel; loss of either channel halves the retina's response to that polarity of change.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-A konnectome module named signed_channel_splitter would subscribe to a single signed input stream and publish two positive-only streams, one carrying the rectified positive part and one the rectified negative part.
+A engineering module named signed_channel_splitter would subscribe to a single signed input stream and publish two positive-only streams, one carrying the rectified positive part and one the rectified negative part.
 
 Its closest artificial-intelligence analogue is the pair of rectified linear units applied to a signal and its negation, the standard trick for representing a signed quantity with non-negative activations.
 
@@ -11266,9 +11266,9 @@ SYSTEMS INTERFACE:
 
 ◦ Retinitis pigmentosa (rod loss) and vitamin A deficiency cause night blindness; AII or connexin-36 dysfunction disrupts scotopic signalling.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-A konnectome module named scotopic_pooling_relay would subscribe to a large array of weak, noisy detector signals and publish a single summed, high-gain output routed into an existing downstream channel with the correct sign for each branch.
+A engineering module named scotopic_pooling_relay would subscribe to a large array of weak, noisy detector signals and publish a single summed, high-gain output routed into an existing downstream channel with the correct sign for each branch.
 
 Its closest artificial-intelligence analogue is average pooling combined with automatic gain control, and the practice of summing many weak measurements to raise signal-to-noise before feeding a shared classifier.
 
@@ -11421,9 +11421,9 @@ SYSTEMS INTERFACE:
 
 ◦ Loss of tuned starburst GABA release abolishes direction selectivity and degrades the optokinetic reflex; developmental miswiring is linked to nystagmus.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-A konnectome module named motion_direction_gate would subscribe to a moving input array and publish a direction-tuned response, implementing an asymmetric spatiotemporal filter in which a delayed inhibitory tap positioned on the null side cancels excitation only for one direction of motion.
+A engineering module named motion_direction_gate would subscribe to a moving input array and publish a direction-tuned response, implementing an asymmetric spatiotemporal filter in which a delayed inhibitory tap positioned on the null side cancels excitation only for one direction of motion.
 
 Its closest artificial-intelligence analogue is a Reichardt or motion-energy detector, or a spatiotemporal convolution kernel oriented in the space-time plane, the standard building blocks of computer motion estimation.
 
@@ -11578,9 +11578,9 @@ SYSTEMS INTERFACE:
 
 ◦ Anosmia from sensory-neuron loss or bulbar degeneration; early olfactory loss in Parkinson's and Alzheimer's disease.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-A konnectome module named receptor_identity_sorter would subscribe to a large population of noisy single-label detector signals and publish one pooled, normalised channel per label, routing all inputs of a given identity to a shared summing-and-normalising node.
+A engineering module named receptor_identity_sorter would subscribe to a large population of noisy single-label detector signals and publish one pooled, normalised channel per label, routing all inputs of a given identity to a shared summing-and-normalising node.
 
 Its closest artificial-intelligence analogue is a scatter-add or embedding-pooling operation followed by divisive (softmax-like) normalisation across channels, the standard way to turn sparse labelled events into a dense normalised feature vector.
 
@@ -11729,9 +11729,9 @@ SYSTEMS INTERFACE:
 
 ◦ Loss of granule-cell inhibition blurs odour discrimination and abolishes bulbar gamma; early granule-cell loss in Parkinson's and Alzheimer's disease.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-A konnectome module named reciprocal_lateral_sharpener would subscribe to a set of channel activations and publish the same channels after subtracting a self-and-neighbour inhibition computed at the very node that carries the excitation, fusing the forward and inhibitory operations into one bidirectional edge.
+A engineering module named reciprocal_lateral_sharpener would subscribe to a set of channel activations and publish the same channels after subtracting a self-and-neighbour inhibition computed at the very node that carries the excitation, fusing the forward and inhibitory operations into one bidirectional edge.
 
 Its closest artificial-intelligence analogue is lateral inhibition or a local competitive normalisation layer, but implemented with tied, co-located forward and backward weights rather than separate layers.
 
@@ -11882,9 +11882,9 @@ SYSTEMS INTERFACE:
 
 ◦ Glycinergic dysfunction or olivary damage impairs localisation; high-frequency hearing loss removes the cue this motif reads.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-A konnectome module named interaural_level_subtractor would subscribe to two intensity streams (near and far channels) and publish their signed difference passed through a steep sigmoid, one comparison per frequency band.
+A engineering module named interaural_level_subtractor would subscribe to two intensity streams (near and far channels) and publish their signed difference passed through a steep sigmoid, one comparison per frequency band.
 
 Its closest artificial-intelligence analogue is a difference unit or a subtractive gating layer, the elementary "A minus B" comparator that underlies many contrast and disparity computations.
 
@@ -12033,9 +12033,9 @@ SYSTEMS INTERFACE:
 
 ◦ Weak efferent feedback raises vulnerability to noise damage and worsens speech-in-noise; outer-hair-cell loss removes the controlled amplifier entirely.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-A konnectome module named sensor_gain_regulator would subscribe to a running estimate of input level (and a top-down attention signal) and publish a gain-reduction command back onto the sensor's own front-end amplifier, closing a negative-feedback loop around the input stage.
+A engineering module named sensor_gain_regulator would subscribe to a running estimate of input level (and a top-down attention signal) and publish a gain-reduction command back onto the sensor's own front-end amplifier, closing a negative-feedback loop around the input stage.
 
 Its closest artificial-intelligence analogue is automatic gain control or adaptive input normalisation, and top-down attentional gating applied at the earliest sensory layer.
 
@@ -12247,7 +12247,7 @@ SYSTEMS INTERFACE:
 
 ◦ Pituitary adenoma (Cushing's disease, acromegaly, prolactinoma), hypopituitarism from stalk or portal damage, Sheehan's syndrome, and congenital combined pituitary hormone deficiency.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 The proposed module name is hypophysiotropic_cascade_amplifier.
 
@@ -12440,7 +12440,7 @@ SYSTEMS INTERFACE:
 
 ◦ Feedback loss from endocrine tumours, primary gland failure (high upstream hormone), and glucocorticoid feedback resistance in chronic stress and depression.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 The proposed module name is closed_loop_negative_feedback_regulator.
 
@@ -12623,7 +12623,7 @@ SYSTEMS INTERFACE:
 
 ◦ Congenital hypogonadotropic hypogonadism (TAC3, TAC3R, KISS1, KISS1R mutations), hypothalamic amenorrhoea, polycystic ovary syndrome, and menopausal vasomotor symptoms from disinhibited KNDy neurons.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 The proposed module name is kndy_pulse_generator.
 
@@ -12808,7 +12808,7 @@ SYSTEMS INTERFACE:
 
 ◦ Stress-induced suppression of the reflex, milk-ejection failure, and impaired lactation.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 The proposed module name is magnocellular_burst_synchronizer.
 
@@ -12991,7 +12991,7 @@ SYSTEMS INTERFACE:
 
 ◦ Circadian sleep-wake disorders, jet lag and shift-work misalignment, familial advanced sleep-phase syndrome (PER2), and rhythm fragmentation in ageing.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 The proposed module name is coupled_circadian_oscillator_network.
 
@@ -13164,9 +13164,9 @@ SYSTEMS INTERFACE:
 
 ◦ Type-2 diabetes: reduced connexin-36 coupling, fragmented calcium waves, loss of hub-cell coordination, and irregular insulin pulsatility with impaired glucose tolerance.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-A konnectome implementation would name this module the coupled_oscillator_synchroniser or the pulsatile_broadcast_coordinator.
+An engineering implementation would name this module the coupled_oscillator_synchroniser or the pulsatile_broadcast_coordinator.
 
 It would subscribe to a scalar drive signal (analogous to glucose) and to the phase of its neighbouring modules, and it would publish a synchronised pulse train plus a coherence value.
 
@@ -13329,9 +13329,9 @@ SYSTEMS INTERFACE:
 
 ◦ Diabetic hyperglucagonaemia: loss of insulin and somatostatin restraint of the alpha cell, giving inappropriate glucagon and worsened hyperglycaemia.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-A konnectome implementation would name this module the opponent_hormone_balancer or the local_mutual_regulation_triad.
+An engineering implementation would name this module the opponent_hormone_balancer or the local_mutual_regulation_triad.
 
 It would subscribe to a scalar demand signal and to the three nodes' own outputs, and it would publish a stabilised opponent-balanced value plus a shared-brake level.
 
@@ -13488,9 +13488,9 @@ SYSTEMS INTERFACE:
 
 ◦ Cytokine-induced uncoupling (tumour-necrosis-factor-alpha dephosphorylating connexin-43), fragmenting the web and desynchronising gland-wide secretion.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-A konnectome implementation would name this module the long_distance_relay_bus or the gland_spanning_coordination_web.
+An engineering implementation would name this module the long_distance_relay_bus or the gland_spanning_coordination_web.
 
 It would subscribe to local trigger events and to a coupling-strength parameter, and it would publish a propagating broadcast signal to all connected downstream modules.
 
@@ -13647,9 +13647,9 @@ SYSTEMS INTERFACE:
 
 ◦ Flattened or dysregulated cortisol pulsatility in chronic stress and depression; pathological settings in Cushing's and Addison's disease.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-A konnectome implementation would name this module the delayed_feedback_pulse_generator or the two_stage_relaxation_oscillator.
+An engineering implementation would name this module the delayed_feedback_pulse_generator or the two_stage_relaxation_oscillator.
 
 It would subscribe to a scalar drive input and to its own delayed output, and it would publish a pulse train whose frequency and amplitude encode the drive.
 
@@ -13865,9 +13865,9 @@ SYSTEMS INTERFACE:
 
 ◦ Gap-junction uncoupling in epilepsy and after stroke, GFAP mutation in Alexander disease, and spreading depolarisation in migraine and ischaemia.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-For the konnectome the natural module name is potassium_and_metabolite_buffering_grid, a background service rather than a message-passing computational node.
+The natural module name is potassium_and_metabolite_buffering_grid, a background service rather than a message-passing computational node.
 
 It would subscribe to a local_activity_load signal published by every neuronal motif in its territory and publish a stable_ionic_environment token that those motifs implicitly depend on, plus a resource_available signal gating how hard neighbours may fire.
 
@@ -14064,9 +14064,9 @@ SYSTEMS INTERFACE:
 
 ◦ D-serine deficit in schizophrenia; astrocyte dysfunction in epilepsy and Alzheimer disease; reduced coverage in depression.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-For the konnectome the module name is slow_synaptic_plasticity_supervisor.
+The module name is slow_synaptic_plasticity_supervisor.
 
 It would subscribe to a broadcast of local synaptic activity from every principal-cell module in its territory and publish a single scalar plasticity_gate value that those modules multiply into their own learning rate, updated on a seconds clock rather than a per-step clock.
 
@@ -14306,9 +14306,9 @@ SYSTEMS INTERFACE:
 
 ◦ C4-driven over-pruning in schizophrenia; C1q/C3-driven synapse loss in Alzheimer disease; mis-pruning in autism and epilepsy.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-For the konnectome the module name is activity_dependent_synapse_eliminator.
+The module name is activity_dependent_synapse_eliminator.
 
 It would subscribe to a per_connection_usage signal and a complement_tag level published by the synapses themselves, and publish a prune_connection command that permanently deletes the least-used edges of the graph, running on a slow developmental clock separate from inference.
 
@@ -14540,9 +14540,9 @@ SYSTEMS INTERFACE:
 
 ◦ Neurovascular uncoupling in Alzheimer disease and vascular cognitive impairment; blunted coupling in hypertension and diabetes; inverted response in spreading depolarisation.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-For the konnectome the module name is demand_driven_resource_allocator.
+The module name is demand_driven_resource_allocator.
 
 It would subscribe to a local_compute_load signal from every active module in a region and publish a resource_delivered token, throttling how sustainably neighbouring modules can keep running, on a seconds clock.
 
@@ -14589,9 +14589,9 @@ A region's celebrated faculty - seeing, choosing, remembering, regretting - is a
 
 That is why the framework says a region is defined by its interfaces: the internals are the same parts catalogue everywhere.
 
-Third, the engineering lesson, for konnectome: this volume is a parts library.
+Third, the engineering lesson: this volume is a parts library.
 
-Every chapter's SYSTEMS INTERFACE block is a module specification - what it subscribes to, what it publishes, its state, parameters, time constants, and failure modes - and every KONNECTOME NOTE names the module and its nearest artificial intelligence analogue.
+Every chapter's SYSTEMS INTERFACE block is a module specification - what it subscribes to, what it publishes, its state, parameters, time constants, and failure modes - and every ENGINEERING NOTE names the module and its nearest artificial intelligence analogue.
 
 The seventy-one motifs are the complete instruction set with which nature builds every faculty in the Layer 9 manuscript; a synthetic cognitive architecture that implements this library, and then wires instances of it according to the Layer 9 interface map, is following the only proven blueprint for a general intelligence.
 
@@ -14600,4 +14600,4 @@ The neurons think, the other cells make thinking possible - and the motifs are H
 
 END OF MANUSCRIPT
 
-Source basis: LAYER_08_MICROCIRCUITS_OUTLINE (the companion outline and its cited literature); the Layer 6 catalogues (neuronal_manuscript volumes 1 to 5 and LAYER_06_OTHER_CELLS_MANUSCRIPT), which supplied the cellular casts and their personalities; LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT, which supplied the Layer 9 installation addresses and the publish-subscribe interface discipline; the konnectome CONSTITUTION, which supplied the module-naming and interface conventions of the KONNECTOME NOTES; THE_FIFTEEN_LAYERS_IN_BRIEF and TFELOAOTHNAES for the framework; and the current primary and review literature verified by web search during compilation, including Carandini and Heeger on normalisation, Bastos and colleagues on canonical microcircuits for predictive coding, Douglas and Martin on the canonical cortical circuit, the network-motif literature descending from Milo and colleagues, the KNDy pulse-generator literature, the islet hub-cell literature, and the standard treatments of central pattern generators, reflex arcs, attractor networks, and expansion recoding.
+Source basis: LAYER_08_MICROCIRCUITS_OUTLINE (the companion outline and its cited literature); the Layer 6 catalogues (neuronal_manuscript volumes 1 to 5 and LAYER_06_OTHER_CELLS_MANUSCRIPT), which supplied the cellular casts and their personalities; LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT, which supplied the Layer 9 installation addresses and the publish-subscribe interface discipline; the corpus's own conventions, which supplied the module-naming and interface rules of the ENGINEERING NOTES; THE_FIFTEEN_LAYERS_IN_BRIEF and TFELOAOTHNAES for the framework; and the current primary and review literature verified by web search during compilation, including Carandini and Heeger on normalisation, Bastos and colleagues on canonical microcircuits for predictive coding, Douglas and Martin on the canonical cortical circuit, the network-motif literature descending from Milo and colleagues, the KNDy pulse-generator literature, the islet hub-cell literature, and the standard treatments of central pattern generators, reflex arcs, attractor networks, and expansion recoding.

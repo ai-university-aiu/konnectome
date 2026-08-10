@@ -120,7 +120,7 @@ Sixteen of the eighteen entries carry the (COG) tag - the highest proportion in 
 
 The two (NON-COG) entries are the power supply (12) and the open question (17).
 
-The dossier's lesson completes the corpus's memory story: the weight lives at Layer 7; the weight's PERSISTENCE lives here, in switches, tags, structure, and chromatin - and for konnectome the translation is direct: checkpointing, write-allocation policy, storage tiering from fast-volatile to slow-durable, and a renormalisation daemon are not optional conveniences but the engineering names of entries 1 through 18.
+The dossier's lesson completes the corpus's memory story: the weight lives at Layer 7; the weight's PERSISTENCE lives here, in switches, tags, structure, and chromatin - and the engineering translation is direct: checkpointing, write-allocation policy, storage tiering from fast-volatile to slow-durable, and a renormalisation daemon are not optional conveniences but the engineering names of entries 1 through 18.
 
 
 END OF OUTLINE

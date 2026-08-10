@@ -17,7 +17,7 @@ Layer 11 is the thrower - and in the corpus's own vocabulary, a global state IS 
 
 Layer 11 is therefore the MASTER MODE REGISTER of the architecture, and this outline catalogues its entries: twenty-six global states and state-machinery constructs, in six parts.
 
-For konnectome, this is the operating system layer: the scheduler, the power management, the offline maintenance cycle, and the global configuration broadcasts - the components no computer ships without.
+For an engineering realisation, this is the operating system layer: the scheduler, the power management, the offline maintenance cycle, and the global configuration broadcasts - the components no computer ships without.
 
 Every entry carries one of two tags, with the corpus's usual meaning.
 
@@ -106,7 +106,7 @@ The suprachiasmatic clock's twenty-four-hour arousal waveform, opposing and shap
 
 16. The Ascending Broadcast System (The State Announcement Service) (NON-COG).
 
-The five neuromodulatory systems plus orexin considered as one Layer 11 organ: the channels through which a state decision, once taken, is announced to every cell in every catalogue - the physical implementation of "thrown from above," and the direct ancestor of konnectome's global configuration bus.
+The five neuromodulatory systems plus orexin considered as one Layer 11 organ: the channels through which a state decision, once taken, is announced to every cell in every catalogue - the physical implementation of "thrown from above," and the direct ancestor of an engineered global configuration bus.
 
 
 PART FOUR. THE AROUSAL, STRESS, AND DEFENCE STATES
@@ -174,7 +174,7 @@ Of the twenty-six entries, six carry the (COG) tag - and they are a revealing si
 
 Everything else is machinery, protection, scheduling, and metabolism: the governors that decide WHICH cognition runs WHEN.
 
-The layer's lesson for konnectome is the one the whole corpus has been building toward.
+The layer's lesson for the engineer is the one the whole corpus has been building toward.
 
 A mind is not a computation that is always on; it is a scheduled alternation of online computation and offline consolidation, governed by a two-process controller, announced by a broadcast bus, stabilised by dedicated switch circuitry, and interruptible by emergency states - and every one of those components is now catalogued.
 

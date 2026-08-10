@@ -222,3 +222,48 @@ SUMMARY TABLE OF FINDINGS
 
 
 END OF ASSESSMENT
+
+
+ADDENDUM, SAME DAY: THE SYNCHRONISATION PASS AND THE EXTERNALISATION SCRUB
+
+The owner subsequently authorised editing every file in the directory, and clarified the intent of the audit: to start from the two cognition documents and check whether the other files are in sync with them, content-wise. The owner further established that these files are an internal Neuroscience of Cognition library, written to inform and inspire the build that reads them, and that they may have publication value in their own right.
+
+That reframing changed two things. It licensed the correctness repairs this report had recommended but declined to make, and it made the build's name a defect rather than a convention.
+
+CORRECTNESS REPAIRS MADE TO SOURCE FILES
+
+• The neuron catalogue. All five volume headers declared chapter ranges their own contents contradicted, and eight files described the catalogue as holding 302 types when it holds 301. Volume 1's own table of contents, which lists 56 chapters and matches its body against a header claiming 59, settled which side was wrong. Headers and references corrected to match delivery.
+
+• Layer 10's cognitive count. Four summary lines in the outline and manuscript asserted twenty-seven cognitive and seventeen non-cognitive systems. The delivered chapters are twenty-five and nineteen. The detailed scoreboard breakdown was already correct and sums to twenty-five, so only the headline figures were wrong. Two independent audit agents found this separately and agreed. Corrected, and the outline's supporting breakdown corrected with it, since it named eight of ten networks where seven are cognitive and omitted the action selection loops.
+
+CONTENT SYNCHRONISATION FIXES TO THE COGNITION DOCUMENTS
+
+• Oscillation bands. The cognition manuscript gave alpha as 8 to 12 hertz, beta as 12 to 30, gamma as 30 to 80. The guiding book gives 8 to 13, 13 to 30, and 30 to 100-plus, and Layer 11 independently confirms delta at 0.5 to 4. Both conventions exist in the literature, but one corpus must use one set. Aligned to the guiding book, with a sentence added explaining that the boundaries are conventions rather than natural joints.
+
+• An inverted cerebellar ratio, which was a genuine scientific error rather than a synchronisation matter. The manuscript had parallel fibres contacting hundreds of thousands of Purkinje cells. The fan-out runs the other way: a parallel fibre contacts a few hundred Purkinje cells in passing, and a single Purkinje cell receives on the order of 150,000 to 200,000 parallel fibres. The corpus had it right. Corrected, and it matters because the passage goes straight on to the expansion-recoding argument, whose force depends on that convergence number.
+
+• The interfaces doctrine. Chapter 13 called white matter the cabling that lets distant computations talk, which is the exact framing the guiding book rejects in stating that the interfaces are not the plumbing between the interesting parts but are the interesting part. A passage was added giving the corpus's argument and its conclusion, that a brain region is defined by its interfaces.
+
+THE EXTERNALISATION SCRUB
+
+The build's name appeared 396 times across twelve files, and as a structural aspect header, THE KONNECTOME NOTE, in 223 chapters of five volumes. Since the repository owns these files, naming it inside them is redundant self-reference, and since the library may be published, it is an obstacle.
+
+All 396 references were removed. No engineering content was deleted. The 223 structural notes were renamed THE ENGINEERING NOTE and their contents left untouched, because they are the corpus's own translation of biology into buildable terms and are a substantial part of its value. Recurring formulas were reworded rather than cut: Konnectome translation became Engineering translation, konnectome module became engineering module, in konnectome terms became in engineering terms, and so on. The four Layer 12 through 15 documents now describe themselves as design-facing rather than by the build's name.
+
+ONE DELIBERATE EXCEPTION, FLAGGED FOR THE OWNER
+
+SPARC was left intact in the guiding book, where it appears twenty-five times.
+
+The owner's instruction covered SPARC, SPARCD and DSPARCD. Two of those are gone: the brief SPARCD mentions in the Layer 15 document and in TFELOAOTHNAES were reworded to the corpus's six-phase design method, and DSPARCD is gone from the README.
+
+The guiding book is a different case and was not touched, for three reasons. SPARC there is not self-reference but an external methodology, explicitly credited in the text to its creator, Reuven Cohen. It is structural rather than incidental: appendices 1 through 6 of the guiding book ARE its six phases, and the text explains at length how the corpus adds Demonstration as a sixth to SPARC's five. And removing it would mean restructuring six appendices and deleting an attribution to an outside author, which is authorial work rather than a scrub.
+
+The owner should decide. If SPARC is to come out of the guiding book too, the appendices need renaming and the attribution needs a new home, and that is a separate and larger job than this pass.
+
+README
+
+The directory's organising rule was rewritten. It had stated that the criterion was authorship rather than subject, and then described the contents as biology, which the Layer 12 through 15 documents are not. The rule is now stated by subject, with a practical test: could this document be read by a neuroscientist who has never heard of the project that commissioned it. The inventory was updated to forty-one files including the cognition pair, the never-edit rule now records the correctness-repair exception, and the forwarding note's claim that no file was ever edited was qualified rather than left to mislead.
+
+VERIFICATION AFTER ALL CHANGES
+
+Every catalogue count still exact: 85, 64, 71, 44, 26, and 301 neuron chapters. Zero em-dashes anywhere in the directory. The cognition manuscript still carries all 1,325 sub-sections, all 332 sections, all 80 chapters and all 15 parts, with no adjacent non-blank lines, meaning the blank-line-between-sentences rule still holds.

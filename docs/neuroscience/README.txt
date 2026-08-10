@@ -1,23 +1,33 @@
-DOCS / NEUROSCIENCE - THE SOURCE DOCUMENTS
+DOCS / NEUROSCIENCE - THE NEUROSCIENCE OF COGNITION LIBRARY
 
-Created 2026-08-10. Constitution version 10.
+Created 2026-08-10. Revised 2026-08-10 following the corpus synchronisation audit.
 
 
 WHAT IS IN HERE, IN ONE SENTENCE
 
-Every SOURCE neuroscience document konnectome is built from - thirty-nine files that konnectome READS, CITES, and NEVER EDITS.
+The Neuroscience of Cognition library: forty-one source documents describing the human nervous and endocrine systems, written to inform and inspire the build that reads them, and written to stand on their own as science.
 
 
 WHAT IS NOT IN HERE, WHICH IS THE POINT OF THE SEPARATION
 
-konnectome's own working documents stayed in /docs/ : the DSPARCD Fileset, the ledger, the tutorial, the build log, the five design authorities, the vision-set analysis and its fidelity audit, the coverage survey, the change orders, the hand-offs, and the archive.
+The build's own working documents stayed in /docs/ : the fileset, the ledger, the tutorial, the build log, the five design authorities, the vision-set analysis and its fidelity audit, the coverage survey, the change orders, the hand-offs, and the archive.
 
-The line between the two directories is AUTHORSHIP, not subject. A file in here was written by the Certified_Neuroscientist corpus and describes the biology. A file out there was written by this build and describes konnectome. Several documents out there are ABOUT the files in here - the analysis, the audit, the four design authorities - and they belong outside, because they are konnectome's own assessment rather than the source.
+THE LINE BETWEEN THE TWO DIRECTORIES IS SUBJECT, AND THE FILES IN HERE ARE SUBJECT TO A STANDING RULE ABOUT IT.
+
+A file in here describes the biology, or the framework of fifteen encapsulated layers of abstraction through which this corpus describes the biology. A file out there describes the build.
+
+That rule is stated positively because the earlier formulation, which named authorship as the criterion, produced a directory whose own contents contradicted it: Layers 12 through 15 were written by the corpus author but described the build rather than the biology, and the word for the build appeared some four hundred times across these volumes.
+
+Those references were removed on 2026-08-10. The engineering material itself was kept, because it is the corpus's own translation of biology into buildable terms and is a large part of its value; only the naming of one particular build was taken out, since these documents are a library in their own right and may be published as one.
+
+The practical test, for anyone adding a file here: could this document be read by a neuroscientist who has never heard of the project that commissioned it? If yes, it belongs here. If no, it belongs in /docs/ .
+
+Several documents out there are ABOUT the files in here - the analysis, the audit, the design authorities, the corpus synchronisation report - and they belong outside, because they are the build's own assessment rather than the source.
 
 
-THE THIRTY-NINE FILES
+THE FORTY-ONE FILES
 
-• THE GUIDING BOOK, named by the Seventh Commandment as the source of the whole DSPARCD Fileset and by the Tenth Commandment as the target of the standing audit.
+• THE GUIDING BOOK, named by the corpus's governing rules as the source of the whole fileset and as the target of the standing audit.
 
 ◦ LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt
 
@@ -43,7 +53,7 @@ THE THIRTY-NINE FILES
 
 • LAYER 11, THE GLOBAL STATES - the 26 operating states, the scheduler, the power states, and the master mode register. Four files, LAYER_11_ prefixed.
 
-• LAYERS 12 THROUGH 15, one konnectome-facing document each.
+• LAYERS 12 THROUGH 15, one design-facing document each. These four turn from describing the biology to stating what a system built from it would have to do, and they are the reason the subject test above is worded as it is.
 
 ◦ LAYER_12_FACULTY_SPECIFICATION.txt - the acceptance tests.
 
@@ -53,10 +63,18 @@ THE THIRTY-NINE FILES
 
 ◦ LAYER_15_DESIGN_METHOD.txt - the iteration discipline.
 
+• THE COGNITION PAIR, added 2026-08-10. The corpus read the other way round: where every document above is substrate-first and catalogues what the nervous system is MADE OF, layer by layer, these two are cognition-first and catalogue what it DOES, capacity by capacity. Fifteen parts, eighty chapters, 332 sections, 1,325 sub-sections. Their Chapter 80 maps the capacities back onto the fifteen layers, and is the join between the two organisations.
+
+◦ THE_NEUROSCIENCE_OF_COGNITION_OUTLINE.txt
+
+◦ THE_NEUROSCIENCE_OF_COGNITION_MANUSCRIPT.txt
+
 
 THE FORWARDING NOTE - READ THIS IF YOU ARRIVED HERE FROM AN OLD DOCUMENT
 
-Before 2026-08-10 all of these files lived directly in /docs/ . If you are following a path of the form docs/LAYER_something or docs/neuronal_manuscript_something and it does not resolve, the file is here: insert neuroscience/ after docs/ and the path is correct. No file was renamed. No file was edited. Nothing was deleted.
+Before 2026-08-10 all of these files lived directly in /docs/ . If you are following a path of the form docs/LAYER_something or docs/neuronal_manuscript_something and it does not resolve, the file is here: insert neuroscience/ after docs/ and the path is correct. In the move itself no file was renamed, no file was edited, and nothing was deleted.
+
+Later the same day, and separately from the move, the synchronisation audit made the correctness repairs recorded at the end of this file and removed the build's name throughout. No file was renamed or deleted then either.
 
 EVERY LIVE POINTER WAS MOVED IN THE SAME CHANGE, per the rule the Constitution's version 9 note states: a pointer is not a statement, so a file that moves must have every pointer to it moved with it.
 
@@ -71,4 +89,6 @@ That is a deliberate boundary and not an oversight: a HISTORICAL CLAIM is not re
 
 THE STANDING RULE ABOUT THESE FILES, restated because it is the reason they have their own directory
 
-They are SOURCE. konnectome reads them and never edits them. Where a summary written elsewhere in this repository disagrees with a file in here, THE FILE IN HERE WINS and the summary is the thing corrected. That rule is the Eighth Commandment's, and this directory is what it looks like on disk.
+They are SOURCE. Where a summary written elsewhere in this repository disagrees with a file in here, THE FILE IN HERE WINS and the summary is the thing corrected. That rule is the Eighth Commandment's, and this directory is what it looks like on disk.
+
+The one admissible exception, exercised for the first time on 2026-08-10 under the owner's explicit authorisation, is a CORRECTNESS REPAIR: a change that makes a source file agree with what the corpus itself already delivers. The neuron catalogue's volume headers declared chapter ranges its own contents contradicted, and eight files described that catalogue as holding 302 types when it holds 301; those were repaired to match delivery. The distinction that licenses such a repair is narrow and worth stating: correcting a file to match the corpus's own delivered content is not the same act as revising what the corpus claims about the biology, and only the first is admissible without the author.

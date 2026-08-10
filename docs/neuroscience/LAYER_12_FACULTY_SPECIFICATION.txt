@@ -1,8 +1,8 @@
 LAYER 12, THE ORGANISM AND BEHAVIOUR LAYER: THE FACULTY SPECIFICATION
 
-The Faculties of the Behaving, Experiencing Person, as the Acceptance-Test Catalogue for the Konnectome Synthetic Mind
+The Faculties of the Behaving, Experiencing Person, as the Acceptance-Test Catalogue for a Synthetic Mind
 
-A konnectome-facing document of the Certified_Neuroscientist corpus of D. R. Dison, Founder, Artificial Intelligence University (AIU).
+A design-facing document of the Certified_Neuroscientist corpus of D. R. Dison, Founder, Artificial Intelligence University (AIU).
 
 Date of compilation: August 9, 2026.
 
@@ -11,7 +11,7 @@ WHAT THIS DOCUMENT IS
 
 Layer 12 is where cognition is EXPERIENCED: the layer of the behaving, experiencing person - perception, action, emotion, motivation, learning, memory, language, decision, and consciousness.
 
-The layers-needed-for-cognition sanity check assigned Layer 12 a distinct role in the konnectome programme: not a parts catalogue but the SPECIFICATION - the list of faculties the assembled machine must exhibit, against which every build is verified.
+The layers-needed-for-cognition sanity check assigned Layer 12 a distinct role in the engineering programme: not a parts catalogue but the SPECIFICATION - the list of faculties the assembled machine must exhibit, against which every build is verified.
 
 This document is that specification: fourteen faculties, each stated as a capability, mapped to the Layer 10 system or coalition that implements it, and given acceptance criteria a test harness could run.
 
@@ -137,11 +137,11 @@ An honest note, in the corpus tradition: this criterion specifies ACCESS conscio
 
 HOW TO USE THIS SPECIFICATION
 
-Each faculty is a konnectome acceptance suite: implement the Layer 10 coalition from the catalogues, schedule it under Layer 11, then test the capability against the criteria.
+Each faculty is an acceptance suite: implement the Layer 10 coalition from the catalogues, schedule it under Layer 11, then test the capability against the criteria.
 
 The build order suggested by the dependency structure: perception and motor first, then attention and working memory, then the memory pair, then valuation and executive control, then language and social cognition, with learning and the workspace criterion tested throughout.
 
-The specification is complete when a single running konnectome instance passes all fourteen suites in one continuous session including at least one full offline consolidation cycle.
+The specification is complete when a single running instance passes all fourteen suites in one continuous session including at least one full offline consolidation cycle.
 
 
 END OF SPECIFICATION

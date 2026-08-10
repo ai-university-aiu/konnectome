@@ -19,7 +19,7 @@ The answer is the SLOW VARIABLES: machinery that stores information in self-rene
 
 This is deliberately not a full catalogue of Layers 4 and 5, which remain substrate; it is the dossier of their cognitive elite, in eighteen chapters and four parts: the bistable switches, the tagging and capture machinery, the structural consolidation machinery, and the nuclear and genomic machinery.
 
-Each chapter runs a template built for storage engineering: the molecular mechanism, THE PERSISTENCE TRICK (exactly how the store outlives its molecules), the hosts above, the write, read, and erase operations, capacity and fidelity, interactions, diseases, the publish-subscribe interface, and the konnectome note - because for a synthetic mind these chapters name its checkpointing, write-allocation, storage-tiering, and renormalisation subsystems.
+Each chapter runs a template built for storage engineering: the molecular mechanism, THE PERSISTENCE TRICK (exactly how the store outlives its molecules), the hosts above, the write, read, and erase operations, capacity and fidelity, interactions, diseases, the publish-subscribe interface, and the engineering note - because for a synthetic mind these chapters name its checkpointing, write-allocation, storage-tiering, and renormalisation subsystems.
 
 Sixteen chapters are (COG) - the highest proportion in the corpus, by construction - and close with ENGLISH READABLE CODE and a runnable Python CODE SAMPLE; the two (NON-COG) chapters are the power supply and the honest open question.
 
@@ -169,9 +169,9 @@ SYSTEMS INTERFACE:
 
 ◦ Under stroke-level calcium overload the kinase drives excitotoxic damage, a memory switch turned into a death signal.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-The konnectome name is bistable_weight_latch, a per-synapse component that subscribes to a calcium-coincidence signal and publishes a held weight-gain bit.
+The engineering name is bistable_weight_latch, a per-synapse component that subscribes to a calcium-coincidence signal and publishes a held weight-gain bit.
 
 Its nearest engineering analogue is an EEPROM cell, an electrically erasable memory cell that retains its value without power, or equally a static latch refreshed by its own feedback.
 
@@ -353,9 +353,9 @@ SYSTEMS INTERFACE:
 
 ◦ If synthesis dips below threshold during a vulnerable window, the maintained value collapses and the memory is lost.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-The konnectome name is renewal_loop, a per-synapse maintenance daemon that subscribes to a potentiation-and-translation signal and publishes a sustained weight-gain value.
+The engineering name is renewal_loop, a per-synapse maintenance daemon that subscribes to a potentiation-and-translation signal and publishes a sustained weight-gain value.
 
 Its nearest engineering analogue is dynamic random-access memory refresh, the periodic rewriting that keeps a leaky memory cell from decaying.
 
@@ -531,9 +531,9 @@ SYSTEMS INTERFACE:
 
 ◦ If aggregation seeds spuriously or spreads unchecked, it borders pathological aggregation.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-The konnectome name is conformational_template_store, a per-synapse durable store that subscribes to a de-repression signal and publishes a translational-activation state that it copies onto fresh subunits by shape.
+The engineering name is conformational_template_store, a per-synapse durable store that subscribes to a de-repression signal and publishes a translational-activation state that it copies onto fresh subunits by shape.
 
 Its nearest engineering analogue is a write-once seed that thereafter self-replicates its pattern, similar to how a crystallisation seed fixes a phase.
 
@@ -705,9 +705,9 @@ SYSTEMS INTERFACE:
 
 ◦ In addiction the gate over-promotes drug-associated engrams, a persistence pathology.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-The konnectome name is write_allocation_gate, a per-neuron admission controller that subscribes to integrated activity signals and publishes both a commit-to-long-term signal and an eligibility flag for which cell records the memory.
+The engineering name is write_allocation_gate, a per-neuron admission controller that subscribes to integrated activity signals and publishes both a commit-to-long-term signal and an eligibility flag for which cell records the memory.
 
 Its nearest engineering analogue is a write-ahead-log commit gate combined with an admission-control policy that decides which transactions are durably logged and on which node.
 
@@ -890,9 +890,9 @@ SYSTEMS INTERFACE:
 
 ◦ Overlapping tags within one window cross-capture cargo, producing associative interference.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-The konnectome name is write_allocation_tag, a per-synapse decaying eligibility trace that subscribes to a local induction signal and publishes a capture-permission flag scoped to that synapse.
+The engineering name is write_allocation_tag, a per-synapse decaying eligibility trace that subscribes to a local induction signal and publishes a capture-permission flag scoped to that synapse.
 
 Its nearest engineering analogue is an eligibility trace in reinforcement learning, or a short-lived write token that authorises a later bulk delivery to a specific address.
 
@@ -1066,9 +1066,9 @@ SYSTEMS INTERFACE:
 
 ◦ In fragile X and Angelman syndromes Arc regulation is disturbed and plasticity is abnormal.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-The konnectome name is capture_cargo_broadcast, a per-neuron producer that subscribes to a commit signal and publishes a decaying pool of plasticity payloads for capture by write_allocation_tag, with an optional inter-node courier for the Arc route.
+The engineering name is capture_cargo_broadcast, a per-neuron producer that subscribes to a commit signal and publishes a decaying pool of plasticity payloads for capture by write_allocation_tag, with an optional inter-node courier for the Arc route.
 
 Its nearest engineering analogue is a publish-subscribe broadcast of shared resources with address-filtered delivery, plus a sidecar that ships payloads in self-assembling containers between nodes.
 
@@ -1304,9 +1304,9 @@ SYSTEMS INTERFACE:
 ◦ Aggregation of ribonucleic-acid-binding proteins in amyotrophic lateral sclerosis strands granules and starves distal synapses of parts.
 
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-The local translation stations map to a konnectome module named on_site_parameter_fabrication.
+The local translation stations map to a engineering module named on_site_parameter_fabrication.
 
 It subscribes to capture requests from tagged edges and publishes freshly built plasticity components without a round trip to the central store.
 
@@ -1546,9 +1546,9 @@ SYSTEMS INTERFACE:
 ◦ Loss-of-function in postsynaptic scaffold genes such as those of the discs-large family produces intellectual disability by destabilising the rack.
 
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-The slot and trafficking system maps to a konnectome module named weight_operand_registry.
+The slot and trafficking system maps to a engineering module named weight_operand_registry.
 
 It subscribes to potentiation and depression commands and publishes the current slot count that IS each edge's weight.
 
@@ -1786,9 +1786,9 @@ SYSTEMS INTERFACE:
 ◦ Amyloid-beta and chronic stress drive actin collapse and spine loss, erasing structural memory in Alzheimer disease and depression.
 
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-The spine actin skeleton maps to a konnectome module named structural_weight_casting.
+The spine actin skeleton maps to a engineering module named structural_weight_casting.
 
 It subscribes to sustained potentiation signals and publishes a geometry change that re-implements the weight in architecture.
 
@@ -2010,9 +2010,9 @@ SYSTEMS INTERFACE:
 ◦ Loss of neuroligins globally destabilises synapse organisation and can be lethal by disrupting essential circuits.
 
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-The trans-synaptic adhesion complex maps to a konnectome module named edge_registration_bolts.
+The trans-synaptic adhesion complex maps to a engineering module named edge_registration_bolts.
 
 It subscribes to partner identity signals across the cleft and publishes the mechanical and molecular registration that keeps an edge's two endpoints matched.
 
@@ -2235,9 +2235,9 @@ SYSTEMS INTERFACE:
 ◦ In addiction, over-stable nets help lock in drug-associated memories; in spinal-cord injury, net-rich inhibitory scars block regeneration.
 
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-The perineuronal net maps to a konnectome module named plasticity_freeze_fence.
+The perineuronal net maps to a engineering module named plasticity_freeze_fence.
 
 It subscribes to maturation and criticality signals and publishes a write-protection state over converged subnetworks.
 
@@ -2459,9 +2459,9 @@ SYSTEMS INTERFACE:
 ◦ In parvalbumin interneurons, mitochondrial deficits impair fast spiking and contribute to the inhibitory dysfunction of schizophrenia.
 
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-The mitochondrial provisioning system maps to a konnectome module named local_power_provisioning.
+The mitochondrial provisioning system maps to a engineering module named local_power_provisioning.
 
 It subscribes to activity and demand signals and publishes positioned energy and calcium services at the busiest edges.
 
@@ -2633,9 +2633,9 @@ SYSTEMS INTERFACE:
 
 ◦ In stroke and excitotoxicity, the same route drives cell degeneration.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-In konnectome this mechanism is the write_request_channel: it subscribes to per-synapse activation events and publishes a single routed, signed consolidation request to the nucleus module.
+In engineering terms this mechanism is the write_request_channel: it subscribes to per-synapse activation events and publishes a single routed, signed consolidation request to the nucleus module.
 
 The nearest engineering analogue is a remote procedure call carrying an authentication token across a slow, lossy link: the payload must be signed (phosphorylated), addressed (nuclear localisation signal), and may be dropped in transit.
 
@@ -2830,9 +2830,9 @@ SYSTEMS INTERFACE:
 
 ◦ In addiction, repeated drug-evoked c-Fos and a stable truncated Fos variant (delta-FosB) accumulate and entrench compulsive associations.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-In konnectome this mechanism is the activity_logger: it subscribes to nuclear activation events and publishes a fast, timestamped, decaying record of which unit was strongly driven, plus a trigger to the durable-write path.
+In engineering terms this mechanism is the activity_logger: it subscribes to nuclear activation events and publishes a fast, timestamped, decaying record of which unit was strongly driven, plus a trigger to the durable-write path.
 
 The nearest engineering analogue is a write-ahead log or an append-only event ledger: a cheap, fast record written immediately so the slower durable commit can follow.
 
@@ -3021,9 +3021,9 @@ SYSTEMS INTERFACE:
 
 ◦ In age-related decline, excess HDAC activity lowers acetylation and weakens consolidation.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-In konnectome this mechanism is the readability_gate: it subscribes to consolidation-request signals and publishes a per-gene access-permission that raises or lowers how strongly the durable-write path can express a change.
+In engineering terms this mechanism is the readability_gate: it subscribes to consolidation-request signals and publishes a per-gene access-permission that raises or lowers how strongly the durable-write path can express a change.
 
 The nearest engineering analogue is a file-permission or access-control layer that turns read access on or off without altering the file's contents.
 
@@ -3204,9 +3204,9 @@ SYSTEMS INTERFACE:
 
 ◦ In early-life adversity, aberrant glucocorticoid-receptor methylation locks in lifelong heightened stress reactivity.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-In konnectome this mechanism is the durable_configuration_store: it subscribes to durable-write requests approved by the readability gate and publishes a long-lived per-gene expression bias that survives turnover and, in principle, the cell's whole life.
+In engineering terms this mechanism is the durable_configuration_store: it subscribes to durable-write requests approved by the readability gate and publishes a long-lived per-gene expression bias that survives turnover and, in principle, the cell's whole life.
 
 The nearest engineering analogue is electrically-erasable programmable read-only memory (EEPROM) or write-once durable storage: written deliberately and rarely, read constantly, hard to erase.
 
@@ -3398,9 +3398,9 @@ SYSTEMS INTERFACE:
 
 ◦ De-repressed transposon activity is associated with genome instability in neurodegeneration and ageing, not with a memory failure.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-In konnectome this is not a store but a noted hazard: a genome_mutation_event that the durable_configuration_store's silencing is partly designed to suppress.
+In engineering terms this is not a store but a noted hazard: a genome_mutation_event that the durable_configuration_store's silencing is partly designed to suppress.
 
 The nearest engineering analogue is a rare, uncorrectable bit-flip in read-only firmware caused by a self-replicating fragment - a fault to be contained, not a feature to be used.
 
@@ -3545,9 +3545,9 @@ SYSTEMS INTERFACE:
 
 ◦ Under chronic inflammation, excess TNF-alpha can misdrive scaling and destabilise networks.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-In konnectome this mechanism is the renormalisation_daemon: it subscribes to a cell's long-window average activity and publishes one scalar gain that multiplies the whole weight vector to hold the average at target.
+In engineering terms this mechanism is the renormalisation_daemon: it subscribes to a cell's long-window average activity and publishes one scalar gain that multiplies the whole weight vector to hold the average at target.
 
 The nearest engineering analogue is automatic gain control or weight normalisation in a neural network - divide the weight vector by its norm to keep it in range - which keeps a unit's output bounded without changing the direction of its weight vector.
 
@@ -3620,7 +3620,7 @@ The weight's persistence lives here, below - in switches that outvote turnover, 
 
 And the weight's schedule lives above, at Layer 11 - because the tag-and-capture allocation of this volume and the consolidation states of that one are two halves of a single machine, meeting in the night.
 
-For konnectome: implement the bistable_weight_latch, the write_allocation_tag, the durable_configuration_store, and the renormalisation_daemon, wire them under the offline states of the scheduler - and the synthetic mind will keep what it learns the way the biological one does: not by never changing, but by re-writing itself faster than it forgets.
+For an implementation: build the bistable_weight_latch, the write_allocation_tag, the durable_configuration_store, and the renormalisation_daemon, wire them under the offline states of the scheduler - and the synthetic mind will keep what it learns the way the biological one does: not by never changing, but by re-writing itself faster than it forgets.
 
 
 END OF MANUSCRIPT

@@ -15,13 +15,13 @@ The framework defines Layer 10 in one sentence: a system is a chain of Layer 9 r
 
 This volume catalogues forty-four such wholes: the seven sensory interpreters, the five motor and action systems, the eight memory and cognitive systems, the ten large-scale networks (lifted to their proper layer address from sections 2.10 of the Layer 9 manuscript, where they lodged with an honest label), the six neuromodulatory broadcast systems, the seven hormonal axes, and the cross-system dynamics that crown the layer.
 
-Each chapter runs a template built for sequences rather than places: the chain of stations (the Layer 9 roster in functional order), the pathways and interfaces joining them, the TRANSFORMATION ALONG THE CHAIN (the volume's intellectual centrepiece: what the representation is at each stage and what each hand-off adds), the Layer 8 motifs the system runs at each station, its capacity and limits, its modulation and gating, its reconfiguration across the Layer 11 states, its endocrine coupling, its diseases, its publish-subscribe interface, and its konnectome note.
+Each chapter runs a template built for sequences rather than places: the chain of stations (the Layer 9 roster in functional order), the pathways and interfaces joining them, the TRANSFORMATION ALONG THE CHAIN (the volume's intellectual centrepiece: what the representation is at each stage and what each hand-off adds), the Layer 8 motifs the system runs at each station, its capacity and limits, its modulation and gating, its reconfiguration across the Layer 11 states, its endocrine coupling, its diseases, its publish-subscribe interface, and its engineering note.
 
 At this layer cognition becomes COOPERATIVE: no region computes attention, memory, or language alone, and the systems catalogued here are the smallest wholes of which those words are true.
 
-Two tags divide the roster as always: (COG) for the twenty-seven systems participating in cognition, each closing with ENGLISH READABLE CODE and a runnable Python CODE SAMPLE of its signature computation; (NON-COG) for the seventeen executors, relays, stabilisers, and economies.
+Two tags divide the roster as always: (COG) for the twenty-five systems participating in cognition, each closing with ENGLISH READABLE CODE and a runnable Python CODE SAMPLE of its signature computation; (NON-COG) for the nineteen executors, relays, stabilisers, and economies.
 
-For konnectome, this volume is the pipeline and bus catalogue: each chapter specifies a processing pipeline, a teaching broadcast, or a control loop, assembled from the module library of the Layer 8 catalogue and the region specifications of the Layer 9 manuscript, scheduled by the states of the Layer 11 volume.
+For an engineering realisation, this volume is the pipeline and bus catalogue: each chapter specifies a processing pipeline, a teaching broadcast, or a control loop, assembled from the module library of the Layer 8 catalogue and the region specifications of the Layer 9 manuscript, scheduled by the states of the Layer 11 volume.
 
 The plan follows the outline: Parts One through Seven, then the Cognitive Scoreboard.
 
@@ -207,9 +207,9 @@ SYSTEMS INTERFACE:
 
 ◦ Glaucoma and macular degeneration at the input; cortical blindness after V1 stroke; prosopagnosia and the agnosias for the ventral stream; optic ataxia and hemineglect for the dorsal.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-As a konnectome pack this system is the visual_interpretation_pipeline, a chain of modules from retinal_encoder through geniculate_gate and v1_edge_map to a fork of ventral_object_recogniser and dorsal_action_mapper, subscribing to the image stream and publishing object identities and action coordinates on separate topics.
+As an engineering pack this system is the visual_interpretation_pipeline, a chain of modules from retinal_encoder through geniculate_gate and v1_edge_map to a fork of ventral_object_recogniser and dorsal_action_mapper, subscribing to the image stream and publishing object identities and action coordinates on separate topics.
 
 The nearest engineering analogue is a staged image-processing pipeline feeding a classifier head and a localisation head, but the biological version differs in that every stage is also driven top-down, the feedback wires outnumber the feedforward and the pipeline is always partly hallucinating its next input.
 
@@ -452,9 +452,9 @@ SYSTEMS INTERFACE:
 
 ◦ Sensorineural deafness and presbycusis at the transducer; tinnitus as runaway central gain; auditory agnosia and pure word deafness after cortical lesions; auditory verbal hallucinations in schizophrenia.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-As a konnectome pack this system is the auditory_interpretation_pipeline, modules cochlear_analyser, brainstem_timing_bank, collicular_merger, geniculate_gate, and a cortical fork of what_stream_recogniser and where_stream_localiser, subscribing to the two-ear waveform topic and publishing identified, localised sources plus a low-latency alarm topic.
+As an engineering pack this system is the auditory_interpretation_pipeline, modules cochlear_analyser, brainstem_timing_bank, collicular_merger, geniculate_gate, and a cortical fork of what_stream_recogniser and where_stream_localiser, subscribing to the two-ear waveform topic and publishing identified, localised sources plus a low-latency alarm topic.
 
 The engineering analogue is a real-time digital signal processing front end feeding a speech recogniser, with the biological difference that the front end is itself adjustable by the recogniser all the way down to the microphone's own amplifier.
 
@@ -676,9 +676,9 @@ SYSTEMS INTERFACE:
 
 ◦ Diabetic neuropathy at the fibre; syringomyelia and B12 degeneration on the cords; thalamic pain syndrome at the gate; chronic pain and phantom limb as plasticity gone wrong.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-As a konnectome pack this system is the body_surface_reporting_system, twin pipelines discriminative_touch_line and protective_pain_line from receptor_array modules through spinal_gate and thalamic_relay to cortical_body_map, publishing a facts topic and an alarm topic with an affective side channel.
+As an engineering pack this system is the body_surface_reporting_system, twin pipelines discriminative_touch_line and protective_pain_line from receptor_array modules through spinal_gate and thalamic_relay to cortical_body_map, publishing a facts topic and an alarm topic with an affective side channel.
 
 The engineering analogue is a telemetry bus carrying both sensor data and interrupts, with the biological difference that the interrupt priority is itself a learned, hormone-tuned variable, and can be re-learned wrongly.
 
@@ -886,9 +886,9 @@ SYSTEMS INTERFACE:
 
 ◦ Post-traumatic and post-viral anosmia; prodromal loss in Parkinson and Alzheimer disease; Kallmann syndrome at the endocrine coupling.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-As a konnectome pack this system is the chemical_identification_service, modules receptor_panel, glomerular_normaliser, and piriform_pattern_store, publishing odour identities and affective tags straight onto limbic topics without the thalamic broker every other sensory pack uses.
+As an engineering pack this system is the chemical_identification_service, modules receptor_panel, glomerular_normaliser, and piriform_pattern_store, publishing odour identities and affective tags straight onto limbic topics without the thalamic broker every other sensory pack uses.
 
 The engineering analogue is a content-addressable hash lookup wired directly into the event log and alerting system, the biological difference being that the hash keys, the receptor neurons themselves, are discarded and regrown every few weeks without losing the dictionary.
 
@@ -1043,9 +1043,9 @@ SYSTEMS INTERFACE:
 
 ◦ Ageusia and dysgeusia from nerve injury, zinc deficiency, drugs, and infection; hedonic override in obesity; learned aversions in chemotherapy.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-As a konnectome pack this system is the ingestion_inspection_service, modules receptor_bud_array, solitary_reflex_arbiter, thalamic_relay, and insular_quality_map, publishing accept_reject rulings on a reflex topic and satiety-scaled values on an appetite topic.
+As an engineering pack this system is the ingestion_inspection_service, modules receptor_bud_array, solitary_reflex_arbiter, thalamic_relay, and insular_quality_map, publishing accept_reject rulings on a reflex topic and satiety-scaled values on an appetite topic.
 
 The engineering analogue is an inline quality-control station on a production intake line, the biological difference being that its pass thresholds are re-priced in real time by the warehouse, the body's metabolic state.
 
@@ -1206,9 +1206,9 @@ SYSTEMS INTERFACE:
 
 ◦ Benign paroxysmal positional vertigo, vestibular neuritis, Meniere disease, gentamicin oscillopsia, motion sickness as estimator conflict.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-As a konnectome pack this system is the inertial_stabilisation_utility, modules labyrinth_sensor_array, nuclear_estimator, cerebellar_calibrator, and reflex_output_bank, subscribing to head kinematics and efference copies and publishing stabilisation commands on latency-critical topics no cognitive module ever reads directly.
+As an engineering pack this system is the inertial_stabilisation_utility, modules labyrinth_sensor_array, nuclear_estimator, cerebellar_calibrator, and reflex_output_bank, subscribing to head kinematics and efference copies and publishing stabilisation commands on latency-critical topics no cognitive module ever reads directly.
 
 The engineering analogue is exact, an inertial measurement unit with a Kalman-style sensor-fusion estimator and auto-calibration, the biological difference being that its error signal is nausea, an output no avionics package ships.
 
@@ -1375,9 +1375,9 @@ SYSTEMS INTERFACE:
 
 ◦ Panic disorder as false alarm; diabetic autonomic neuropathy and silent ischaemia as lost signal; multiple system atrophy at the reflex core; depression's blunted body reading.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-As a konnectome pack this system is the body_state_estimation_service, modules visceral_sensor_bus, solitary_reflex_floor, parabrachial_alarm_broadcaster, and insular_feeling_integrator, subscribing to organ telemetry and blood chemistry and publishing a low-frequency feeling_state topic that the emotion, memory, and decision packs all import.
+As an engineering pack this system is the body_state_estimation_service, modules visceral_sensor_bus, solitary_reflex_floor, parabrachial_alarm_broadcaster, and insular_feeling_integrator, subscribing to organ telemetry and blood chemistry and publishing a low-frequency feeling_state topic that the emotion, memory, and decision packs all import.
 
 The engineering analogue is a health-monitoring and observability service with alerting, the biological difference being that its dashboard is not read by the system's operators, it is the operators' mood.
 
@@ -1637,9 +1637,9 @@ SYSTEMS INTERFACE:
 
 ◦ Capsular stroke gives contralateral hemiplegia; amyotrophic lateral sclerosis gives combined upper- and lower-motor-neuron loss; hereditary spastic paraplegia gives length-dependent leg spasticity.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-The corticospinal system maps to a konnectome module named motor_command_pipeline.
+The corticospinal system maps to a engineering module named motor_command_pipeline.
 
 It subscribes to selected action plans from the selection loops and publishes effector commands with predicted sensory consequences.
 
@@ -1832,9 +1832,9 @@ SYSTEMS INTERFACE:
 
 ◦ Parkinson's disease (brake too strong, movement lost); Huntington's disease (brake too weak, chorea); addiction, obsessive-compulsive disorder, and Tourette syndrome (mis-set value and selection in limbic and associative loops).
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-As a konnectome pipeline this system is the action_selection_loop_system.
+As a engineering pipeline this system is the action_selection_loop_system.
 
 It subscribes to a topic of candidate actions published by every cortical module, each candidate carrying a salience and a learned value, and it publishes a single release decision back to the originating cortical module together with a vigour parameter.
 
@@ -2077,9 +2077,9 @@ SYSTEMS INTERFACE:
 
 ◦ Ataxia and dysmetria (overshoot and undershoot); intention tremor; cerebellar cognitive-affective syndrome from newest-lobe damage.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-As a konnectome pipeline this system is the forward_model_calibration_engine.
+As a engineering pipeline this system is the forward_model_calibration_engine.
 
 It subscribes to a topic of efference copies published by every motor and planning module and to an error topic published by the inferior olive, and it publishes a predicted-consequence-and-correction signal back to the subscribing module.
 
@@ -2262,9 +2262,9 @@ SYSTEMS INTERFACE:
 
 ◦ Gaze palsy from burst-generator lesions; vertical-saccade loss in progressive supranuclear palsy; dysmetric saccades in cerebellar disease; internuclear ophthalmoplegia from brainstem lesions.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-The oculomotor system maps to a konnectome module named gaze_targeting_pipeline.
+The oculomotor system maps to a engineering module named gaze_targeting_pipeline.
 
 It subscribes to salience and target coordinates and publishes rapid pointing commands for the system's highest-bandwidth sensor.
 
@@ -2449,9 +2449,9 @@ SYSTEMS INTERFACE:
 
 ◦ Orthostatic hypotension in pure autonomic failure and multiple system atrophy; autonomic neuropathy in diabetes; hypertension and heart failure from chronic sympathetic overdrive; vasovagal syncope and panic from response dysregulation.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-The autonomic motor system maps to a konnectome module named visceral_effector_system.
+The autonomic motor system maps to a engineering module named visceral_effector_system.
 
 It subscribes to the central autonomic network's state decisions and publishes paired opponent commands on the sympathetic and parasympathetic channels.
 
@@ -2627,9 +2627,9 @@ SYSTEMS INTERFACE:
 
 ◦ Anterograde amnesia (medial temporal or diencephalic), Korsakoff confabulation, Alzheimer disease, transient global amnesia.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-As a konnectome pipeline this is the episodic_memory_recorder, subscribing to cortical event features and publishing event indices plus scheduled cortical reinstatements.
+As a engineering pipeline this is the episodic_memory_recorder, subscribing to cortical event features and publishing event indices plus scheduled cortical reinstatements.
 
 Its nearest engineering analogue is a write-ahead log with background compaction: fast one-shot writes to a small store, then slow merging into the large store.
 
@@ -2829,9 +2829,9 @@ SYSTEMS INTERFACE:
 
 ◦ Semantic dementia, transcortical sensory aphasia, category-specific agnosia, anomia.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-As a konnectome pipeline this is the semantic_meaning_distillery, subscribing to every perceptual topic and publishing a single concept_code topic consumed by language, valuation and control.
+As a engineering pipeline this is the semantic_meaning_distillery, subscribing to every perceptual topic and publishing a single concept_code topic consumed by language, valuation and control.
 
 The nearest engineering analogue is a learned embedding layer shared by many input encoders.
 
@@ -3023,9 +3023,9 @@ SYSTEMS INTERFACE:
 
 ◦ Parkinson disease, Huntington disease, cerebellar ataxia, addiction and compulsion as runaway habit.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-As a konnectome pipeline this is the procedural_habit_forge, subscribing to action-context and reward-stamp topics and publishing compiled action programs with a per-program strength.
+As a engineering pipeline this is the procedural_habit_forge, subscribing to action-context and reward-stamp topics and publishing compiled action programs with a per-program strength.
 
 The nearest engineering analogue is a just-in-time compiler with a hot-path cache: interpreted code that is executed often gets compiled and thereafter runs fast and unmonitored.
 
@@ -3216,9 +3216,9 @@ SYSTEMS INTERFACE:
 
 ◦ Schizophrenia delay-activity deficit, attention-deficit hyperactivity disorder, delirium, dysexecutive distractibility.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-As a konnectome pipeline this is the working_memory_blackboard, a small stateful module subscribing to a gated admission topic and publishing its slots to all readers.
+As a engineering pipeline this is the working_memory_blackboard, a small stateful module subscribing to a gated admission topic and publishing its slots to all readers.
 
 The nearest engineering analogue is a register file with admission control, or a bounded in-memory cache with eviction.
 
@@ -3417,9 +3417,9 @@ SYSTEMS INTERFACE:
 
 ◦ Addiction, anhedonic depression, impulse-control disorder under dopaminergic therapy, apathy after ventral pallidal lesions.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-As a konnectome pipeline this is the reward_teaching_system, subscribing to outcome and prediction topics and publishing a single broadcast error topic that every learning module consumes as its learning-rate-times-sign input.
+As a engineering pipeline this is the reward_teaching_system, subscribing to outcome and prediction topics and publishing a single broadcast error topic that every learning module consumes as its learning-rate-times-sign input.
 
 The nearest engineering analogue is the temporal-difference critic of an actor-critic reinforcement learner.
 
@@ -3613,9 +3613,9 @@ SYSTEMS INTERFACE:
 
 ◦ Broca, Wernicke and conduction aphasias, primary progressive aphasia, dyslexia, stuttering.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-As a konnectome pipeline this is the language_word_loom, subscribing to phoneme and concept topics and publishing meaning structures and articulatory scores through paired comprehension and production sub-pipelines that share one lexicon.
+As a engineering pipeline this is the language_word_loom, subscribing to phoneme and concept topics and publishing meaning structures and articulatory scores through paired comprehension and production sub-pipelines that share one lexicon.
 
 The nearest engineering analogue is a bidirectional transducer, a parser and generator compiled from one grammar.
 
@@ -3805,9 +3805,9 @@ SYSTEMS INTERFACE:
 
 ◦ Dysexecutive syndrome, attention-deficit hyperactivity disorder, perseveration, disinhibition, frontotemporal dementia.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-As a konnectome pipeline this is the executive_control_governor, subscribing to goal and telemetry topics and publishing bias, stop and gain-request messages to every other pipeline.
+As a engineering pipeline this is the executive_control_governor, subscribing to goal and telemetry topics and publishing bias, stop and gain-request messages to every other pipeline.
 
 The nearest engineering analogue is an operating-system scheduler with an interrupt controller.
 
@@ -3997,9 +3997,9 @@ SYSTEMS INTERFACE:
 
 ◦ Autism-spectrum mentalising differences, prosopagnosia, psychopathy's empathy deficit, paranoid misattribution, frontotemporal norm dissolution.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-As a konnectome pipeline this is the social_other_minds_modeller, subscribing to agent-perception and language topics and publishing per-agent belief, goal and feeling estimates as a keyed model store.
+As a engineering pipeline this is the social_other_minds_modeller, subscribing to agent-perception and language topics and publishing per-agent belief, goal and feeling estimates as a keyed model store.
 
 The nearest engineering analogue is a multi-agent state estimator, one recursive filter per tracked agent.
 
@@ -4187,7 +4187,7 @@ Condensed; the full subscribe-and-publish contract with values is the specificat
 
 ◦ Rumination lock-in in depression.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 default_mode_network is a broadcast module that publishes internally-generated content whenever the task-positive topics fall quiet, nearest analogue an idle-loop background job, differing in that its output is constructive simulation, not housekeeping.
 
@@ -4325,7 +4325,7 @@ Condensed; the full subscribe-and-publish contract with values is the specificat
 
 ◦ Misassigned salience in psychosis and anxiety.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 salience_switchboard subscribes to every sensory and interoceptive topic and publishes a single network-switch command, nearest analogue an interrupt controller, differing in that its priorities are learned and hormone-tuned.
 
@@ -4466,7 +4466,7 @@ Condensed; the full subscribe-and-publish contract with values is the specificat
 
 ◦ Hemispatial neglect after right-lateralised damage.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 dorsal_attention_spotlight subscribes to goal topics and publishes gain fields to sensory modules and gaze commands, nearest analogue a scheduler assigning priority boosts, differing in that its resource is neural gain, not processor time.
 
@@ -4603,7 +4603,7 @@ Condensed; the full subscribe-and-publish contract with values is the specificat
 
 ◦ Executive dysfunction after prefrontal injury.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 frontoparietal_governor subscribes to salience, evidence, and value topics and publishes control biases plus a default-mode suppression signal, nearest analogue a supervisory control loop, differing in that the controller itself is retuned by dopamine on an inverted-U.
 
@@ -4744,7 +4744,7 @@ Condensed; the full subscribe-and-publish contract with values is the specificat
 
 ◦ Performance lapses when tonic control fails.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 cinguloopercular_helmsman subscribes to instruction, feedback, and arousal topics and publishes a tonic set signal plus error corrections, nearest analogue a watchdog service with a persisted configuration, differing in that its configuration is a learned, hormone-tuned neural state.
 
@@ -4881,7 +4881,7 @@ Condensed; the full subscribe-and-publish contract with values is the specificat
 
 ◦ The aphasias.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 language_meaning_loom subscribes to auditory and visual word topics and publishes semantic content and articulatory programs, nearest analogue a bidirectional compiler between a serial token stream and a structured representation, differing in that both grammars are learned and probabilistic.
 
@@ -5020,7 +5020,7 @@ Condensed; the full subscribe-and-publish contract with values is the specificat
 
 ◦ Deafferentation and motor network disorders.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 sensorimotor_body_loop subscribes to plan and feedback topics and publishes motor commands with efference copies, nearest analogue a closed-loop motion controller, differing in that its plant model is learned and its gains are neuromodulated.
 
@@ -5135,7 +5135,7 @@ Condensed; the full subscribe-and-publish contract with values is the specificat
 
 ◦ Cortical visual impairment.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 visual_light_refinery subscribes to the geniculate image topic and publishes object and spatial streams, nearest analogue a staged processing pipeline, differing in that every stage also receives feedback from the stages above it.
 
@@ -5250,7 +5250,7 @@ Condensed; the full subscribe-and-publish contract with values is the specificat
 
 ◦ Central auditory processing disorders.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 auditory_sound_sifter subscribes to the geniculate spectrotemporal topic and publishes pattern streams to language and multisensory modules, nearest analogue a streaming digital signal processor, differing in that its filters are learned and attention-gated.
 
@@ -5365,7 +5365,7 @@ Condensed; the full subscribe-and-publish contract with values is the specificat
 
 ◦ Mood disorder network signatures.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 limbic_worth_weigher subscribes to sensory, mnemonic, and interoceptive topics and publishes value and affect signals to cognition and drive to the body, nearest analogue a learned utility function inside a control loop, differing in that its outputs are also felt.
 
@@ -5605,9 +5605,9 @@ SYSTEMS INTERFACE:
 ◦ Nigral cell loss produces Parkinson disease; D2 overtransmission produces the psychosis of schizophrenia; teaching-signal capture produces addiction.
 
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-As a konnectome pipeline the system is named reward_teaching_system.
+As a engineering pipeline the system is named reward_teaching_system.
 
 It subscribes to reward_outcome and reward_prediction topics and publishes a prediction_error topic plus a tonic vigour_level parameter that other pipelines read.
 
@@ -5865,9 +5865,9 @@ SYSTEMS INTERFACE:
 ◦ Chronic overactivity produces anxiety and post-traumatic stress disorder; early degeneration contributes to Alzheimer and Parkinson disease; underactivity contributes to attention-deficit hyperactivity disorder.
 
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-As a konnectome pipeline the system is named arousal_gain_broadcast.
+As a engineering pipeline the system is named arousal_gain_broadcast.
 
 It subscribes to salience, threat, and unexpected_change topics and publishes a global gain_level parameter plus a phasic network_reset event that every subscribing pipeline honours.
 
@@ -6120,9 +6120,9 @@ SYSTEMS INTERFACE:
 ◦ Hypofunction contributes to major depression, anxiety, and obsessive-compulsive disorder; developmental disturbance is implicated in autism spectrum conditions.
 
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-As a konnectome pipeline the system is named patience_mood_broadcast.
+As a engineering pipeline the system is named patience_mood_broadcast.
 
 It subscribes to aversion, context, and stress topics and publishes a discount_horizon parameter, a mood_tone parameter, and per-region plasticity_gate flags.
 
@@ -6371,9 +6371,9 @@ SYSTEMS INTERFACE:
 ◦ Basal forebrain loss produces the amnesia of Alzheimer disease; cholinergic dysfunction contributes to Lewy body and Parkinson disease dementia; muscarinic blockade produces confusion and amnesia.
 
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-As a konnectome pipeline the system is named attention_encoding_switch.
+As a engineering pipeline the system is named attention_encoding_switch.
 
 It subscribes to salience, task_demand, and wakefulness topics and publishes an attention_gain parameter, a per-region encoding_mode flag, and a thalamic relay_mode setting.
 
@@ -6600,9 +6600,9 @@ SYSTEMS INTERFACE:
 ◦ Insufficient stabilisation, downstream of orexin loss, contributes to the sleepiness of narcolepsy; H1 blockade causes sedation; enzyme mutations are linked to Tourette syndrome.
 
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-As a konnectome pipeline the system is named wakefulness_substrate.
+As a engineering pipeline the system is named wakefulness_substrate.
 
 It subscribes to a wake_command topic from the orexin pipeline and a sleep_onset topic from the preoptic pipeline, and publishes a global wake_level parameter that arousal-dependent pipelines require to run.
 
@@ -6795,9 +6795,9 @@ SYSTEMS INTERFACE:
 ◦ Orexin-neuron loss produces narcolepsy type 1 with cataplexy; orexin excess contributes to insomnia.
 
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-As a konnectome pipeline the system is named sleep_wake_stabiliser.
+As a engineering pipeline the system is named sleep_wake_stabiliser.
 
 It subscribes to metabolic_state, circadian_phase, sleep_pressure, and stress topics and publishes a state_stability parameter and an arousal_drive that the wakefulness_substrate and arousal_gain_broadcast pipelines require.
 
@@ -7002,9 +7002,9 @@ SYSTEMS INTERFACE:
 
 ◦ Cushing syndrome from excess cortisol; Addison disease from deficiency; flattened rhythm and impaired feedback in chronic stress and depression.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-As a konnectome pipeline this is stress_axis_governor, a control loop that subscribes to threat, circadian phase, and its own returning cortisol, and publishes a cortisol level to a body-wide topic every tissue can read.
+As a engineering pipeline this is stress_axis_governor, a control loop that subscribes to threat, circadian phase, and its own returning cortisol, and publishes a cortisol level to a body-wide topic every tissue can read.
 
 Its nearest engineering analogue is a proportional-integral controller with transport delay and an oscillating output, the delays being what make it pulse.
 
@@ -7175,9 +7175,9 @@ SYSTEMS INTERFACE:
 
 ◦ Kallmann syndrome and hypogonadotropic hypogonadism; polycystic ovary syndrome; hypothalamic amenorrhoea from stress or low energy.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-As a konnectome pipeline this is reproduction_pulse_axis, whose signature is that meaning lives in message rate, not amplitude.
+As a engineering pipeline this is reproduction_pulse_axis, whose signature is that meaning lives in message rate, not amplitude.
 
 Its nearest engineering analogue is a frequency-modulated transmitter feeding a frequency decoder, with a downstream stage that reads pulse rate to choose between two outputs.
 
@@ -7338,9 +7338,9 @@ SYSTEMS INTERFACE:
 
 ◦ Graves disease (hyperthyroidism); Hashimoto disease (hypothyroidism); congenital deficiency causing developmental disability; non-thyroidal illness syndrome.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-As a konnectome pipeline this is metabolic_setpoint_dial, a slow high-gain regulator that holds a target hormone level and lets each subscriber locally sharpen the active dose.
+As a engineering pipeline this is metabolic_setpoint_dial, a slow high-gain regulator that holds a target hormone level and lets each subscriber locally sharpen the active dose.
 
 Its nearest engineering analogue is a thermostat with a very long time constant plus per-room trim valves.
 
@@ -7497,9 +7497,9 @@ SYSTEMS INTERFACE:
 
 ◦ Acromegaly and gigantism from excess; growth hormone deficiency and short stature from lack; blunted pulses in obesity and sleep loss.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-As a konnectome pipeline this is growth_repair_scheduler, a pulse generator whose clock is slow-wave sleep and whose brake is somatostatin.
+As a engineering pipeline this is growth_repair_scheduler, a pulse generator whose clock is slow-wave sleep and whose brake is somatostatin.
 
 Its nearest engineering analogue is a maintenance job scheduled to run during system idle time, gated by a release-and-inhibit pair that shapes clean bursts.
 
@@ -7656,9 +7656,9 @@ SYSTEMS INTERFACE:
 
 ◦ Jet lag; shift-work disorder; delayed sleep-wake phase disorder; non-24-hour rhythm disorder in the blind.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-As a konnectome pipeline this is darkness_timestamp_broadcaster, which publishes a single time-of-night signal to a body-wide topic and also writes back to correct its own clock.
+As a engineering pipeline this is darkness_timestamp_broadcaster, which publishes a single time-of-night signal to a body-wide topic and also writes back to correct its own clock.
 
 Its nearest engineering analogue is a network time broadcast whose signal also disciplines the source oscillator.
 
@@ -7817,9 +7817,9 @@ SYSTEMS INTERFACE:
 
 ◦ Type 1 and type 2 diabetes mellitus; hypoglycaemia and hypoglycaemia unawareness; insulin resistance and metabolic syndrome.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-As a konnectome pipeline this is fuel_economy_regulator, a push-pull controller with sensors in two places and an emergency cascade for defending a low.
+As a engineering pipeline this is fuel_economy_regulator, a push-pull controller with sensors in two places and an emergency cascade for defending a low.
 
 Its nearest engineering analogue is a dual-actuator setpoint controller with a fast fail-safe branch.
 
@@ -7974,9 +7974,9 @@ SYSTEMS INTERFACE:
 
 ◦ Irritable bowel syndrome; links to mood disorders; gut-origin pathology in Parkinson disease.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-As a konnectome pipeline this is gut_brain_bidirectional_bus, a two-way channel between a semi-autonomous gut controller and the central brain, carried on nerve, hormone, and immune sub-channels at once.
+As a engineering pipeline this is gut_brain_bidirectional_bus, a two-way channel between a semi-autonomous gut controller and the central brain, carried on nerve, hormone, and immune sub-channels at once.
 
 Its nearest engineering analogue is a bidirectional bus linking two independent processors, one of which hosts a live microbial population that generates its own messages.
 
@@ -8148,9 +8148,9 @@ SYSTEMS INTERFACE:
 
 ◦ Coma and the vegetative state from broadcast failure; the attentional blink from capacity limits; hemineglect from one-sided access failure.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-As a konnectome pipeline this is global_workspace_broadcaster, which subscribes to candidate contents from every processor, runs a winner-take-all competition with a hard ignition threshold, and publishes the single winner to a brain-wide topic that all systems read.
+As a engineering pipeline this is global_workspace_broadcaster, which subscribes to candidate contents from every processor, runs a winner-take-all competition with a hard ignition threshold, and publishes the single winner to a brain-wide topic that all systems read.
 
 Its nearest engineering analogue is a shared message bus with a single arbiter that grants the bus to one publisher at a time and blocks the rest.
 
@@ -8237,7 +8237,7 @@ A brain-wide competition with no separate judge, in which one coalition's conten
 
 THE COGNITIVE SCOREBOARD
 
-Of the forty-four chapters, twenty-seven carry the (COG) tag.
+Of the forty-four chapters, twenty-five carry the (COG) tag.
 
 • The interpreting senses (Chapters 1, 2, 3, 7) think; the early relays and utilities (4, 5, 6) serve.
 
@@ -8259,7 +8259,7 @@ First, the compositional completion: every chapter in this volume is a chain of 
 
 Second, the cooperation principle: the faculties named at Layer 12 - seeing, remembering, speaking, choosing - each map to exactly one system or a small coalition here, and to nothing smaller; Layer 10 is the first layer at which the mind's own vocabulary finds its referents.
 
-Third, the engineering lesson, for konnectome: this volume is the integration blueprint - the pipelines to assemble from the module library, the broadcast buses to string above them, the axes to run beneath them, and the workspace protocol by which the assembled coalition thinks one thing at a time.
+Third, the engineering lesson: this volume is the integration blueprint - the pipelines to assemble from the module library, the broadcast buses to string above them, the axes to run beneath them, and the workspace protocol by which the assembled coalition thinks one thing at a time.
 
 The neurons think; the other cells make thinking possible; the motifs are how; the junctions are where; the regions are the parts list; the states are when - and the systems of this volume are WHAT THINKS: the smallest machines to which the mind's verbs truly apply.
 

@@ -1,8 +1,8 @@
 LAYER 15, THE EVOLUTIONARY AND SPECIES LAYER: THE DESIGN METHOD
 
-Selection as the Engineering Process, and the Iteration Discipline for the Konnectome Synthetic Mind
+Selection as the Engineering Process, and the Iteration Discipline for a Synthetic Mind
 
-A konnectome-facing document of the Certified_Neuroscientist corpus of D. R. Dison, Founder, Artificial Intelligence University (AIU).
+A design-facing document of the Certified_Neuroscientist corpus of D. R. Dison, Founder, Artificial Intelligence University (AIU).
 
 Date of compilation: August 9, 2026.
 
@@ -11,9 +11,9 @@ WHAT THIS DOCUMENT IS
 
 Layer 15 answers a different question from every other layer: not how a mechanism works, but why it exists at all.
 
-Its konnectome role, per the layers-needed-for-cognition sanity check, is the DESIGN METHOD: evolution is the process that produced every catalogue in this corpus, and its working principles translate directly into the iteration discipline by which a synthetic mind is designed, tested, and improved.
+Its engineering role, per the layers-needed-for-cognition sanity check, is the DESIGN METHOD: evolution is the process that produced every catalogue in this corpus, and its working principles translate directly into the iteration discipline by which a synthetic mind is designed, tested, and improved.
 
-This document states the principles and their konnectome translations: eight lessons.
+This document states the principles and their engineering translations: eight lessons.
 
 
 THE EIGHT LESSONS
@@ -22,49 +22,49 @@ THE EIGHT LESSONS
 
 Biology: design without a designer - generate variants, test against the environment, keep what works, repeat for a very long time.
 
-Konnectome translation: the build's outer loop is explicit variation-selection-retention: candidate architectures and parameters generated, evaluated against the Layer 12 acceptance suites, and retained or discarded - with the discipline that evaluation, not preference, decides.
+Engineering translation: the build's outer loop is explicit variation-selection-retention: candidate architectures and parameters generated, evaluated against the Layer 12 acceptance suites, and retained or discarded - with the discipline that evaluation, not preference, decides.
 
 2. SELECTION SUPPLIES THE PRIORS.
 
 Biology: an individual does not learn everything from scratch; evolution pre-installs inductive biases - face templates, fear preparedness, language readiness, the motif library itself - so that lifetime learning starts warm.
 
-Konnectome translation: the corpus's catalogues ARE the priors: the motif library, the system blueprints, and the state machinery are pre-installed structure, and the design method's first rule is to start from them rather than from a blank slate - exactly the bet the whole endeavour makes.
+Engineering translation: the corpus's catalogues ARE the priors: the motif library, the system blueprints, and the state machinery are pre-installed structure, and the design method's first rule is to start from them rather than from a blank slate - exactly the bet the whole endeavour makes.
 
 3. EVOLUTION NEVER BREAKS THE RUNNING SYSTEM.
 
 Biology: every intermediate generation must survive; redesign happens by addition, duplication, and gradual repurposing, never by teardown.
 
-Konnectome translation: the regression gate - the konnectome constitution's safety commandment that no change may break what already passes - is this lesson in force; additive change with continuous viability is the only admissible refactor style.
+Engineering translation: the regression gate - the safety commandment that no change may break what already passes - is this lesson in force; additive change with continuous viability is the only admissible refactor style.
 
 4. DUPLICATION THEN DIVERGENCE IS THE INNOVATION PATTERN.
 
 Biology: new capacities arise by copying an existing part and letting the copy specialise - gene families, cortical area proliferation, the repeated column.
 
-Konnectome translation: grow new modules by cloning proven ones and specialising the clone under its own tests - the corpus's replicated-template motifs (the column, the loops) license exactly this pattern.
+Engineering translation: grow new modules by cloning proven ones and specialising the clone under its own tests - the corpus's replicated-template motifs (the column, the loops) license exactly this pattern.
 
 5. EXAPTATION: BUILD FOR ONE JOB, HARVEST FOR ANOTHER.
 
 Biology: feathers before flight, mouth parts into mandibles, reward circuitry into abstract valuation - old machinery recruited for new work.
 
-Konnectome translation: audit existing modules for reuse before building new ones, and design interfaces general enough that harvesting is possible - the publish-subscribe discipline of the whole corpus is what makes exaptation cheap.
+Engineering translation: audit existing modules for reuse before building new ones, and design interfaces general enough that harvesting is possible - the publish-subscribe discipline of the whole corpus is what makes exaptation cheap.
 
 6. MISMATCH IS THE STANDING WARNING.
 
 Biology: traits selected for ancestral environments misfire in modern ones - reward systems tuned to scarcity meeting abundance; the framework's own example.
 
-Konnectome translation: every acceptance test carries an environment assumption, and the method requires re-validation when the deployment environment departs from the test environment - mismatch is checked for, not discovered by failure.
+Engineering translation: every acceptance test carries an environment assumption, and the method requires re-validation when the deployment environment departs from the test environment - mismatch is checked for, not discovered by failure.
 
 7. EVO-DEVO: EVOLVE THE GENERATOR, NOT THE PRODUCT.
 
 Biology: evolution mostly edits developmental programs, not adult tissue - small regulatory changes yield coordinated large phenotypic ones.
 
-Konnectome translation: iterate on the generators - the specs, templates, and build pipelines that produce modules - rather than hand-editing built artefacts; the corpus's own practice (edit the chapter spec, regenerate the chapters) is this lesson already in use.
+Engineering translation: iterate on the generators - the specs, templates, and build pipelines that produce modules - rather than hand-editing built artefacts; the corpus's own practice (edit the chapter spec, regenerate the chapters) is this lesson already in use.
 
-8. THE SPARCD METHOD IS KONNECTOME'S LAYER 15.
+8. THE SIX-PHASE DESIGN METHOD IS THIS LAYER'S PAYLOAD.
 
 Biology's loop runs variation against selection over deep time; an engineering project compresses the loop into deliberate stages.
 
-Konnectome translation: Specification, Pseudocode, Architecture, Refinement, Completion, and Demonstration - the corpus's SPARCD method - is the compressed selection cycle: each stage a selective filter, each iteration a generation, the version history the fossil record, and the constitution's ledgers the lineage documentation.
+Engineering translation: Specification, Pseudocode, Architecture, Refinement, Completion, and Demonstration - the corpus's six-phase design method - is the compressed selection cycle: each stage a selective filter, each iteration a generation, the version history the fossil record, and the constitution's ledgers the lineage documentation.
 
 
 THE METHOD IN ONE PAGE
