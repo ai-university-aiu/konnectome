@@ -796,5 +796,49 @@ The family is finished. What it produced, across nine slices, is not a feature. 
 Next: the first real caller wired to a watchdog, which is the debt slice 45 left, and which will make somebody choose a window and defend it.
 
 
-From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER FORTY-THREE, and the story goes on being true.
+CHAPTER FORTY-THREE - THE ANSWER WAS INSIDE THE REFUSAL (2026-08-09, SLICE 47)
+
+
+Two slices ago this build refused to pick a number, wrote three paragraphs explaining why, and coined a sentence for the refusal: a default with a borrowed warrant is an invented number that has learned to cite. It was the right call and it was made for the right reasons and it left a hole, which the slice named honestly as a debt somebody would have to pay.
+
+Today somebody paid it, and the answer turned out to have been sitting inside the refusal the whole time.
+
+Here is what slice 45 rejected. The corpus, describing a switch of exactly konnectome's kind, says its states last minutes to hours. Slice 45 said: that sentence is about the human sleep-wake latch, konnectome installs this same switch design in places with nothing to do with sleep, and converting minutes-to-hours into ticks gives tens of thousands - which would make the demonstration's own heartbeat permanently unmeasurable. All of that was correct, and the window went unchosen.
+
+What nobody noticed at the time is that the corpus's sentence was never really about hours. Minutes-to-hours is stated against a roughly twenty-four-hour clock. It is not a duration. It is a FRACTION OF A CYCLE. And the reason slice 45 could find no home for it was not that the number was wrong; it was that slice 45 was pointing it at the wrong construct.
+
+konnectome has two things that answer to the corpus's flip-flop entry. One is the gate archetype, a generic building block, wired into whatever a world happens to want, with no timescale of its own - and for that construct slice 45's refusal stands today exactly as it stood then. The other is the two-process governor, built at slice 37, which is that same motif installed at whole-organism scale, catalogued separately by the corpus as its own Layer 11 entry, and which has carried a day length in its own parameter block for ten slices.
+
+So the window is not a number. It is the governor's own day, read out of the governor's own settings. Give that governor a twelve-tick day instead of twenty-four and the window becomes twelve, in the same instant, with no constant anywhere to drift. There is a test that does precisely that, and it is the only test in the file that distinguishes a window that is DERIVED from a window that merely happens to equal twenty-four today.
+
+The allowances came from the same place once the question was asked properly. How many crossings may a day contain? Two. Not because two is a comfortable tolerance but because two is what a working day of this switch IS - one crossing down into sleep and one back up - and a third inside one day is the exact state intrusion the corpus's own warning condition names. How long may one pole be held? Anything short of a whole day, because a day containing only one pole is a day in which the other side never won, which is the other half of the same sentence.
+
+And then the suite did something this repository's suites had not done before: it checked that the allowance MEANS something. A test runs the real governor through a real day and asserts it actually reaches two crossings, rather than sitting safely below the line. An allowance that nothing ever approaches has never been tested by the thing it governs, and it would have passed every other test in the file while proving nothing whatever.
+
+The rest of the slice was giving the governor a register, in the discipline slice 40 established for the gate, and it produced one sentence worth carrying and one deliberate omission worth carrying more.
+
+The sentence is the corpus's, made checkable. The entry says the crossings are thrown by Process S and Process C and are NOT internal to the switch. So neither row of konnectome's transition table claims to be self-selected. The switch does not decide. It is decided for. A test asserts no row anywhere says otherwise, after first asserting the table is not empty so that it cannot pass by accident - the same guard slice 44 used when it had to prove a negative.
+
+The omission is the better finding. The corpus lists a third way this switch fails: time spent in the contested mid-band the design exists to forbid. konnectome's switch cannot spend time there. It compares two numbers and returns one of two atoms in the same tick; there is no third condition to linger in. The obvious move is to write the regime down anyway, for fidelity, and let it sit unmeasured.
+
+That would have been a quiet disaster, and naming why is the most useful paragraph in the ledger tonight. Slice 42 built the supervisor with a third outcome - not warned, not clean, but UNWATCHED - precisely so that silence could never pass for health. A fault regime nothing can ever cross would be reported unwatched forever. It would fill the one block in the system whose entire job is to make absences visible with a name that means nothing, and every reader afterwards would believe this governor has a fault nobody is checking. A fault regime that cannot be crossed is not a conservative addition. It is a permanent false negative in the one place designed to catch false negatives.
+
+Then the join ran, and the demonstration is three lines long.
+
+Run konnectome's real scheduler for one of its own days. Record which pole it stands at, every tick. Ask the supervisor how it did.
+
+Nothing warned. Nothing unwatched.
+
+Before slice 45 the second half of that was impossible. Before today the first half had only ever been tried against histories written by hand. And the numbers underneath it belong to nobody: the window is the governor's day, the allowances are the corpus's arithmetic about what a healthy day contains, and all three follow the day if the day changes.
+
+One more thing happened, and it is the sort of result that tells you a design is real rather than merely working. Slice 45's second half - that a window the history does not yet span must be reported as not-yet-measured and never as clean - reached the running machine with no code arranging for it to. Stop the run four ticks in and the report comes back with both boundaries listed unwatched, by name, with the stabiliser named as the watchdog that has not reported. Nobody wrote that. An unspanned window yields no readings, an empty reading list re-keys to an empty reading list, and the supervisor receiving nothing says what it says when it is told nothing. A property that must be re-implemented at every join is a convention. A property that falls out is a design.
+
+What is still not done is worth stating sharply, because it is exactly the kind of thing that gets blurred in the retelling. The capstone does not call any of this. Its story came out byte-for-byte identical, because the told story does not print a supervisor report and this slice did not teach it to. Every construct in the chain is production code and none of it is a fixture - but konnectome's own told story still cannot say whether its night was healthy. That is a demonstration slice. It is a small one now. This morning it was not.
+
+Three slices, three days' work, and the shape of all three was the same: a value that looked like it came from the book, examined until it was clear which page it came from. Slice 45 refused a duration. Slice 46 refused a mode name. Slice 47 found the duration a home by noticing it had been a ratio all along.
+
+Next: the told story that says out loud whether the night was healthy; and beneath it, the region-grain construct, which is what the master register's empty assignment table is waiting for.
+
+
+From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER FORTY-FOUR, and the story goes on being true.
 
