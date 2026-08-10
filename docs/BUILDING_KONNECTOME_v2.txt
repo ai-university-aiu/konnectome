@@ -670,5 +670,37 @@ As of slice 43, on the ninth of August, twenty twenty-six: forty-three slices. T
 Next: the stabiliser, which now has a unit to state its grains in - and then the first real watchdog, which now has a unit to state its window in. Which is what a queue is supposed to look like after a dependency is paid.
 
 
-From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER FORTY, and the story goes on being true.
+CHAPTER FORTY - THE FINGER ON THE SWITCH (2026-08-09, SLICE 44)
+
+
+Four slices ago this build wrote down a gap it could see and could not honestly close, and today it closed it - and the way it had to be closed is the whole chapter.
+
+The gap was the eighth observation. konnectome's gate compared one drive against one number, in both directions, so the very same push that closed an open gate opened a closed one. The corpus's gate is a latch: two self-holding states, a range of inputs over which both are stable, and which one you get depending on what came before. The pack's oldest test was called gate_resists_flipping and its comment said the gate then resists flipping back, and what it actually demonstrated was only that a push too small to matter does not flip it - true of any switch, and not hysteresis at all. A test can be green and still be describing something that is not there.
+
+The obvious repair was to put a second number inside the gate, and slice 40 refused to do it. The reason it refused is one sentence from the Layer 11 reading: this is a stabiliser, not a switch, so it has no poles of its own. The stickiness is supposed to be a SEPARATE CONSTRUCT publishing a scalar that switches read, not a constant buried in each switch. A second number inside archetype_gate/4 would have looked like a fix, would have gone green, and would have modelled the corpus wrongly. So the gap was recorded, its closer was named, and the build waited four slices for the pack that could do it properly. That patience is worth more than the code that ended it.
+
+The stabiliser is small. One scalar and the rules for handling it. The scalar is how far apart the two boundaries sit, and its units are stated out loud, because a number published to a shared channel with no stated units is an invitation to somebody reading it as something else. And it travels as a level, which cost this session no argument at all, because yesterday's decision had already settled that a bias is a level and a command is a throw. The stabiliser inherited a decision instead of relitigating one, which is the second time in three slices that has happened, and it is the clearest return this build has had on writing decisions down.
+
+Then the sharpest sentence in the pack, and it is a negative. Since slice 40 a konnectome construct is moved only by a row of its own register's table, and every row names the agency that moved it. The stabiliser appears in no row of any table anywhere. It cannot move anything. What it changes is where a boundary sits; the construct's own rule then fires, or does not, entirely by itself. There is a test whose only job is to check that the stabiliser's name is absent from every agency in the repository, and which first checks the table is not empty so that it cannot pass by accident. Proving a negative is awkward and it is the only honest way to say what a bias is.
+
+The grain question had to be decided, and it was the sharpest ambiguity the version 2 analysis found. The corpus puts the stickiness outside the switch at one scale and inside the motif at another, and both sentences are literally there. konnectome decided the published scalar governs the construct grain only, gave three reasons that are its own, and - this is the part that matters - made the decision a refusal rather than a paragraph. Ask the stabiliser to govern the motif grain and it says no, by name. The build now has three numbered decisions, and all three ended as something the code enforces rather than something a reader is trusted to remember.
+
+And then the mistake, which is the most useful thing in the slice.
+
+The first implementation read the corpus's higher-and-lower boundaries literally: turning on costs the threshold plus the bias, turning off costs the threshold minus it. It reads beautifully. It failed a test within a minute, and the failure was not a typo. konnectome's gate is pushed rather than filled - it compares a switching drive, not a level sitting between two lines - and under that rule every medium push closed the gate and no push could reopen it. The gate would settle closed and remain there forever.
+
+Which is, word for word, one of the two ways the corpus says a latch breaks. Stuck switch. It has been listed in this pack's own fault block since yesterday's slice put it there. A design for stickiness that manufactures a fault regime is not a design for stickiness, and the rule was rewritten so that leaving costs more in both directions - which yields precisely what the corpus describes, a range of drives over which either state persists and history decides. Both the chosen reading and the rejected one are written into the pack and the ledger, because the rejected one is the reading the next person will reach for first.
+
+Nothing in the running machine moved, and that was designed rather than discovered. At a bias of zero the two boundaries coincide and the new gate is the old gate exactly, pinned across every combination of mode and drive. The bus answers zero for a value nobody has published. So every switch in konnectome can consult the stabiliser, find silence, and behave as it always did. The capstone story came out byte-identical.
+
+The governor's two old constants were the last piece, and not one number changed. Sixteen and two have sat inside the sleep-wake governor's settings since it was built, which is exactly the buried arrangement the corpus objects to. They were not replaced with better numbers, because inventing numbers is the thing this build does not do. They were re-described as what they always were - a midpoint of nine and a half-width of seven - and rather than take that on trust, a test runs a full twenty-four-tick day on the old settings and on the derived ones and checks the two days match tick for tick. Identical settings are evidence. Identical behaviour is proof.
+
+One oddity is pinned rather than left lying around: the gate accepts a bias of zero and the governor refuses one, because the governor has forbidden a zero-width band since the day it was built and a zero-width band is the chattering it exists to prevent. Same scalar, two consumers, two different floors. Not a defect - just what sharing a value looks like when each construct keeps its own domain.
+
+As of slice 44, on the ninth of August, twenty twenty-six: forty-four slices. Thirty-two packs. Seven hundred and thirty-nine tests, all green. Three walls hit, three closed, a change order still held. Ten observations, of which the eighth is now closed, and three decisions. The mode-register family stands five slices in.
+
+Next: the first real watchdog, which closes the ninth observation and which yesterday's convention unblocked - konnectome has a supervisor, and still nothing feeding it. Then the master register widened past the online-offline binary, and its first downward assignment.
+
+
+From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER FORTY-ONE, and the story goes on being true.
 

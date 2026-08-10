@@ -281,8 +281,13 @@ test(gate_transitions_carry_two_agencies) :-
     forall(member(transition(_T2, _F2, _To2, _Ts2, One), Rows),
            assertion(memberchk(One, [self_selected, broadcast_thrown]))).
 
-% TEST OF THE TRIGGERS: one trigger per agency, and konnectome's SELF-SELECTED flip is still a
-% symmetric toggle rather than a hysteretic latch - the gap slice 40 declared has not been closed here.
+% TEST OF THE TRIGGERS: one trigger per agency. REWRITTEN AT SLICE 44 RATHER THAN DELETED, because
+% its old comment recorded that konnectome's self-selected flip was still a symmetric toggle and the
+% gap OBSERVATION-8 declared had not been closed. THAT IS NO LONGER TRUE, and the table is where the
+% change is easiest to misread: the two self-selected rows STILL SHARE ONE TRIGGER, because the
+% hysteresis does not live in a second trigger. IT LIVES IN THE BOUNDARY THAT TRIGGER IS MEASURED
+% AGAINST, which is now a function of the mode the gate stands in. A second trigger would have meant
+% two different CONDITIONS; what the corpus's latch actually has is one condition and two boundaries.
 test(gate_transitions_carry_one_trigger_per_agency) :-
     % Read the transition table.
     archetype_gate_transitions(Rows),
@@ -290,7 +295,8 @@ test(gate_transitions_carry_one_trigger_per_agency) :-
     findall(Trigger, member(transition(Trigger, _F, _To, _Ts, self_selected), Rows), SelfTriggers),
     % Sort them, dropping duplicates.
     sort(SelfTriggers, SelfDistinct),
-    % Both self-selected directions still fire on the one condition, at the one threshold.
+    % Both self-selected directions still fire on the one condition - the drive above the threshold
+    % IN FORCE, which since slice 44 is the mode's own boundary rather than a single shared number.
     assertion(SelfDistinct == [switch_drive_above_threshold]),
     % Collect the trigger of every broadcast-thrown row.
     findall(Thrown, member(transition(Thrown, _F2, _To2, _Ts2, broadcast_thrown), Rows), ThrownTriggers),
@@ -563,6 +569,98 @@ test(releasing_the_throw_returns_the_gate_to_self_selection) :-
     archetype_gate_throw(Thrown, open, Next),
     % The gate stands where it stood.
     assertion(Next == open).
+
+% ---------------------------------------------------------------------------
+% SLICE 44: THE HYSTERETIC GATE - OBSERVATION-8 CLOSED AT THE GATE
+% ---------------------------------------------------------------------------
+
+% THE PROOF THAT NOTHING MOVED: at a bias of zero the latch IS the symmetric toggle, in every
+% combination of mode and drive. This is the test that made the slice safe to build, because the bus
+% answers zero for a bias nobody has published.
+test(a_bias_of_zero_makes_the_latch_identical_to_the_symmetric_toggle) :-
+    % Every mode the gate declares, against drives below, at, and above the threshold.
+    forall(( member(Mode, [open, closed]),
+             member(Drive, [0, 3, 5, 5.5, 6, 9]) ),
+           % The two-boundary gate and the one-boundary gate agree exactly.
+           ( archetype_gate(Mode, Drive, 5, Symmetric),
+             archetype_gate_hysteretic(Mode, Drive, 5, 0, Hysteretic),
+             Symmetric == Hysteretic )).
+
+% THE CORPUS'S PROPERTY, NOW REAL, AND THIS IS THE TEST OBSERVATION-8 WAS WAITING FOR: over a RANGE
+% of drives BOTH MODES ARE STABLE and which one is realised depends on HISTORY. A symmetric toggle
+% cannot express that, because it has one boundary and no memory beyond the mode it is standing in.
+test(over_a_range_of_drives_both_modes_are_stable_and_history_decides) :-
+    % A threshold of five with a band half-width of two: the gate moves only above seven.
+    % A drive of six sits inside the band - above the old single boundary, below the new one.
+    archetype_gate_hysteretic(open, 6, 5, 2, FromOpen),
+    % An open gate handed that drive stays open.
+    assertion(FromOpen == open),
+    % A closed gate handed the very same drive stays closed.
+    archetype_gate_hysteretic(closed, 6, 5, 2, FromClosed),
+    % Same input, two different outputs, decided entirely by where the gate had been.
+    assertion(FromClosed == closed),
+    % And the symmetric toggle would have FLIPPED BOTH on that drive, which is the difference.
+    archetype_gate(open, 6, 5, SymmetricFromOpen),
+    assertion(SymmetricFromOpen == closed),
+    archetype_gate(closed, 6, 5, SymmetricFromClosed),
+    assertion(SymmetricFromClosed == open).
+
+% A drive that clears the raised boundary still moves the gate, so the band is a band and not a wall.
+test(a_drive_above_the_raised_boundary_still_moves_the_gate) :-
+    % Eight clears the boundary of seven from either mode.
+    forall(member(Mode-Expected, [open-closed, closed-open]),
+           % The gate leaves the mode it was standing in, by its own row.
+           ( archetype_gate_hysteretic(Mode, 8, 5, 2, Next),
+             Next == Expected )).
+
+% NEITHER MODE IS ABSORBING, and this is pinned rather than assumed because the rejected asymmetric
+% mapping would have made CLOSED absorbing over the whole band - which is the corpus's own STUCK
+% SWITCH fault signature, listed in this pack's fault block since slice 42. A hysteresis design that
+% manufactures a fault regime is not a hysteresis design.
+test(the_hysteretic_gate_makes_neither_mode_absorbing) :-
+    % Every mode can still be left, at some drive, at any bias the gate accepts.
+    forall(( member(Mode, [open, closed]), member(Bias, [0, 2, 10]) ),
+           % A drive far above the raised boundary always moves it.
+           ( Boundary is 5 + Bias + 1,
+             archetype_gate_hysteretic(Mode, Boundary, 5, Bias, Next),
+             Next \== Mode )).
+
+% The boundary is readable WITHOUT RUNNING THE GATE, which the owner's standing visualization request
+% demands of every slice in this family: a watcher holding a mode name and a bias can say where that
+% mode's boundary is before anything moves.
+test(each_modes_boundary_is_readable_without_running_the_gate) :-
+    % Leaving CLOSED costs the raised boundary.
+    archetype_gate_effective_threshold(closed, 5, 2, FromClosed),
+    % Seven: the nominal threshold plus the bias.
+    assertion(FromClosed == 7),
+    % Leaving OPEN costs the raised boundary too - written per mode, so a future asymmetry must be
+    % written down mode by mode rather than smuggled into one expression.
+    archetype_gate_effective_threshold(open, 5, 2, FromOpen),
+    % Seven again, today, and stated rather than inferred.
+    assertion(FromOpen == 7).
+
+% A NEGATIVE BIAS INVERTS THE BAND and is refused aloud, by archetype's own name, because archetype
+% does not import the stabiliser and must judge what it is handed.
+test(a_negative_stability_bias_is_refused_by_the_gate) :-
+    % Try to run the latch on an inverted band.
+    catch(archetype_gate_hysteretic(open, 4, 5, -1, _Next), Error, true),
+    % The refusal names the gate's own domain for the value.
+    assertion(Error = error(domain_error(archetype_gate_stability_bias, -1), _)).
+
+% THE UNBOUND-WRONG-JUDGEMENT LENS: a hole would be bound by the boundary arithmetic and would invent
+% a band, so it is refused before any boundary is computed.
+test(an_unbound_stability_bias_is_refused_by_the_gate) :-
+    % Run the latch with a bias nobody supplied.
+    catch(archetype_gate_hysteretic(open, 4, 5, _Unbound, _Next), Error, true),
+    % It is refused as an instantiation fault rather than answered.
+    assertion(Error = error(instantiation_error, _)).
+
+% The latch refuses a mode the register does not hold, at the door, exactly as the symmetric gate does.
+test(the_latch_refuses_an_undeclared_mode_at_the_door) :-
+    % A mode the gate's register has never held.
+    catch(archetype_gate_hysteretic(ajar, 9, 5, 2, _Next), Error, true),
+    % It is refused rather than treated as a third position.
+    assertion(nonvar(Error)).
 
 % Close the test block for the archetype pack.
 :- end_tests(archetype).

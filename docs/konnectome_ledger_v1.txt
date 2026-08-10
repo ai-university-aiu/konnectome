@@ -1206,7 +1206,7 @@ thought combination. The four gates report zero violations, the naming gate pass
 self-test; conformance re-measured at 137 of 137 (specification 4.0.0) in both cousins. No new
 wall; no cousin edited, per the Second, Third, and Fourth Commandments.
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 10.  Decisions: 2.
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 10 (8 CLOSED).  Decisions: 3.
 
 Slice-34 note (2026-08-09). The bound turned live in the told story. The slice-33 pending line
 (the bound proven per-territory in the tests but not yet in the capstone's told story) is
@@ -2710,3 +2710,138 @@ ls docs/*Context_Hand-Off*.txt | wc -l . NOTE INHERITED FROM THE RHODIUM HAND-OF
 twenty-seven are session-close markers rather than units of work, so the count slightly overstates
 build progress and the session that finds the audit due should check that before treating
 thirty-two as a measure of how much has been built.
+
+
+SLICE 44 NOTE (2026-08-09). THE STABILISER - the design authority's Part Nine slice six, THE CLOSER
+OF OBSERVATION-8, and the THIRD numbered konnectome decision.
+
+WHAT WAS BUILT. A new pack, stabiliser, at layer zero: the finger on the switch, which holds no pole
+of its own. It publishes ONE scalar - the stability bias - onto the neuromodulator bus, and it owns
+the band that two switches used to carry as constants of their own. archetype gains
+archetype_gate_hysteretic/5 and archetype_gate_effective_threshold/4, the gate as the corpus's LATCH.
+Eighteen new Prolog Unit (PLUnit) tests in the stabiliser and eight more in archetype (forty-two to
+fifty); SEVEN HUNDRED AND THIRTY-NINE tests across THIRTY-TWO packs; four gates at zero with the
+naming gate passing its own self-test; the capstone story byte-identical against a main worktree.
+
+WHY IT IS A PACK AND NOT A CONSTANT. The corpus is explicit that hysteresis is not part of the
+switch: "this is a stabiliser, not a switch, so it has no poles of its own", publishing a scalar
+stability bias onto the configuration bus. konnectome's hysteresis was two constants inside the
+two-process governor's parameter block and one symmetric threshold inside the gate - the stickiness
+buried in the switch, which is the arrangement the corpus names and rejects. OBSERVATION-8 recorded
+in slice 40 that a second threshold could NOT honestly be added inside archetype_gate/4, because that
+would have modelled the corpus wrongly while appearing to fix it. This slice is the closer that
+observation named, and it closes it from the outside, which is where the corpus put it.
+
+WHAT A STABILITY BIAS IS, AND ITS UNITS ARE STATED because a scalar without stated units is an
+invitation to misuse. IT IS HOW FAR APART THE TWO BOUNDARIES SIT: half the width of the hysteresis
+band, in the units of whatever quantity the switch it steadies compares. A gate reads it as an offset
+on its threshold; a governor reads it as the half-width of its band about a midpoint. One meaning,
+two consumers, no conversion.
+
+DECISION-1 IS APPLIED AND NOT RE-OPENED, exactly as the Iridium hand-off instructed. A hysteresis
+scalar is a BIAS, so it travels as a LEVEL under a plain-atom key on the channel konnectome has had
+since slice 4, and never as a thrown mode. The suite proves it is a level rather than asserting it:
+the published value reads back through the bus's ORDINARY level read, with nothing about it needing
+the stabiliser to interpret it.
+
+AND THE STABILISER'S AGENCY IS STATED, which the hand-off also required, because after slice 41 a
+publisher has two shapes available and they are not the same thing. ITS AGENCY IS broadcast_bias, AND
+IT IS AN AGENCY IN NO TRANSITION TABLE - pinned by a test that reads the gate's table, checks the
+table is not empty so the test cannot pass vacuously, and asserts the stabiliser's name is absent.
+THAT IS THE SHARPEST AVAILABLE STATEMENT OF WHAT A BIAS IS. Since slice 40 a construct is moved only
+by a row of its own register's table. The stabiliser moves nothing. It changes WHERE A BOUNDARY SITS,
+after which the construct's own row fires, or does not, by its own rule.
+
+DECISION-3 (2026-08-09, slice 44). WHICH GRAINS THE PUBLISHED SCALAR GOVERNS: THE CONSTRUCT GRAIN
+ONLY. THIS IS KONNECTOME'S OWN DECISION AND MUST NEVER BE PRESENTED AS THE CORPUS'S INSTRUCTION.
+
+WHY A DECISION WAS REQUIRED. The version 2 analysis named this the sharpest ambiguity of its visit:
+THE CORPUS ANSWERS THE HYSTERESIS QUESTION DIFFERENTLY AT TWO GRAINS. At the construct grain the
+Layer 11 reading puts the stickiness OUTSIDE the switch - a stabiliser with no poles of its own. At
+the motif grain, Layer 8 Chapter 16 gives winner-take-all's transfer function as a hysteretic max
+operation with an explicitly hysteretic Commitment Mode - stickiness INSIDE the motif, part of the
+transfer function itself. Both are literal and neither is a misreading.
+
+THE THREE REASONS, ALL KONNECTOME'S OWN. FIRST, THE TWO READINGS STOP CONFLICTING ONCE THE GRAIN IS
+NAMED: a scalar published to steady a whole configuration and a hysteresis written into one motif's
+transfer function are different mechanisms doing similar work at different scales, and collapsing
+them would force konnectome to pick a winner where the corpus supplies two. SECOND, A BIAS THAT
+REACHED INSIDE A TRANSFER FUNCTION WOULD MAKE A MOTIF'S OWN LAW DEPEND ON A GLOBAL VALUE, which is
+the coupling this build has spent slices avoiding: a transfer function is what a construct IS while a
+mode holds, and a global channel must not be able to rewrite it. THIRD, IT IS THE REVERSIBLE CHOICE:
+the motif catalogue is unbuilt, so a later slice can extend the roster of governed grains, whereas a
+scalar already reaching everywhere could not be withdrawn without breaking whatever depended on it.
+
+DECISION-3 IS A REFUSAL AND NOT A COMMENT. stabiliser_check_grain/1 turns the motif grain away by
+name with domain_error(stabiliser_governed_grain, motif_grain). A decision written as prose is a
+sentence people forget; written as a refusal it is one the code keeps.
+
+WHAT DECISION-3 DOES NOT DECIDE. It does not decide what the motif grain's hysteresis SHOULD be -
+that belongs to the motif catalogue family, which must decide it as konnectome's own. It does not
+decide the region or system grains, neither of which has a construct that could hold a register yet.
+And it does not decide whether a second, differently-scoped stabiliser may exist later.
+
+OBSERVATION-8 IS CLOSED, AND HOW IT WAS CLOSED IS THE INTERESTING PART. archetype_gate_hysteretic/5
+gives the gate two boundaries where it had one. AT A BIAS OF ZERO THE TWO COINCIDE AND THE LATCH IS
+THE OLD SYMMETRIC TOGGLE EXACTLY, in every combination of mode and drive, which is pinned by a test -
+and since the bus answers zero for a bias nobody has published, EVERY SWITCH IN THE REPOSITORY CAN
+CONSULT THE STABILISER WITHOUT ANY OF THEM CHANGING BEHAVIOUR. That is what made the slice safe, and
+it is why the capstone story is byte-identical.
+
+THE MAPPING KONNECTOME CHOSE, AND THE ONE IT REJECTED, WHICH IS THE MOST INSTRUCTIVE THING IN THIS
+SLICE. The corpus states hysteresis for a LEVEL comparator - a quantity rising past one boundary and
+falling past a lower one - while archetype's gate compares a SWITCHING DRIVE, which is a push rather
+than a level. The two do not map by themselves. KONNECTOME CHOSE: LEAVING A MODE COSTS THE RAISED
+BOUNDARY, WHICHEVER MODE IT IS, so over the whole range between the threshold and the threshold plus
+the bias BOTH MODES ARE STABLE AND HISTORY DECIDES WHICH IS REALISED - the corpus's own definition of
+the property, quoted almost word for word.
+
+THE REJECTED READING IS RECORDED BECAUSE IT IS THE ONE A LATER SESSION WILL REACH FOR FIRST. Making
+turn-on cost Threshold plus the bias and turn-off cost Threshold MINUS it reads exactly like the
+corpus's higher-and-lower boundaries, and it was tried. With a push-drive rather than a level it
+makes CLOSED ABSORBING over the whole middle range: every mid-sized push closes the gate and none
+reopens it. A GATE THAT SETTLES AND NEVER LEAVES IS THE CORPUS'S OWN STUCK SWITCH FAULT SIGNATURE,
+which this pack has listed in its fault block since slice 42. A HYSTERESIS DESIGN THAT MANUFACTURES A
+FAULT REGIME IS NOT A HYSTERESIS DESIGN. It was caught by a test written before the code was trusted,
+and the non-absorbing property is now pinned for every mode at every bias.
+
+THE BOUNDARY IS WRITTEN PER MODE EVEN THOUGH THE TWO CLAUSES AGREE TODAY. That is deliberate and it
+serves the owner's standing visualization request: a watcher holding nothing but a mode name and a
+bias can read that mode's boundary without running the construct, and any future asymmetry has to be
+written down mode by mode rather than smuggled into one expression.
+
+THE GOVERNOR'S TWO CONSTANTS ARE NOW DERIVED RATHER THAN DECLARED, AND NOT ONE NUMBER CHANGED. The
+sleep threshold of sixteen and the wake threshold of two are restated as what they always were: a
+band about a midpoint, a midpoint of nine and a half-width of seven. THEY WERE NOT REPLACED BY
+DIFFERENT NUMBERS, because different numbers would be konnectome inventing where it had no need to.
+The suite proves the derivation reproduces the original block field for field AND that a governor
+standing on the derived band runs an identical twenty-four-tick day, state for state - because
+identical parameters are only evidence and identical behaviour is the proof.
+
+A HONEST INTERACTION, PINNED RATHER THAN LEFT TO BE DISCOVERED: THE TWO CONSUMERS HAVE DIFFERENT
+FLOORS. A gate reads a bias of zero as "no hysteresis" and behaves as it always did. THE GOVERNOR
+CANNOT, because its own guard has refused a flat or inverted band since it was built, and a flat band
+chatters. So the same scalar is legal at zero for one consumer and refused at zero by the other, and
+a test pins the governor's refusal by its own name rather than leaving somebody to meet it as a
+surprise. This is not a defect; it is what it looks like when two constructs share a scalar and each
+keeps its own domain.
+
+TWO REFUSALS FOR ONE VALUE, DELIBERATELY NAMED SEPARATELY. stabiliser_check_bias/1 refuses a negative
+bias as domain_error(stabiliser_bias, Bias); archetype_gate_check_stability_bias/1 refuses the same
+value as domain_error(archetype_gate_stability_bias, Bias). ARCHETYPE STILL DOES NOT IMPORT THE BUS
+AND NOW ALSO DOES NOT IMPORT THE STABILISER - a rule library that reached for a global channel would
+stop being one - so it must judge what it is handed, and the two names are kept apart so neither
+refusal can hide the other in a stack trace.
+
+THE UNBOUND-WRONG-JUDGEMENT LENS PAID FOR A TWELFTH SLICE RUNNING (33 through 44), four times in this
+slice's new code: an unbound bias at the band, at the publication, at the governor derivation and at
+the gate would each have been bound by arithmetic and would each have invented a band.
+
+WHAT THIS SLICE DELIBERATELY DID NOT BUILD, so each gap is a decision. THE CORPUS GATES THE
+STABILISER BY CIRCADIAN PHASE AND HUNGER, AND NEITHER GATING IS BUILT. Hunger has no construct in
+konnectome at all, and gating by phase would require a function the corpus does not supply at this
+grain - so the scalar is published by a caller who chooses it, and the gating is deferred BY NAME
+rather than invented. No construct was rewired to consult the stabiliser: the gate and the governor
+can now be handed a bias, and joining them to the bus belongs to the caller, as every join in this
+family has since slice 41. No motif-grain hysteresis, per DECISION-3. And OBSERVATION-9 stands where
+slice 42 left it - the stabiliser is not a watchdog and counts nothing.
