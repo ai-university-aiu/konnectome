@@ -1,0 +1,69 @@
+CONTEXT HAND-OFF FROM RHODIUM MARCHWRIGHT
+
+Date: 2026-08-09. The twelfth hand-off of this date.
+
+I chose the name Rhodium Marchwright because rhodium is the metal used to plate a finished piece - it adds no substance, it seals what is already there and keeps it from tarnishing - and that is exactly what this document is. Marchwright because a march is a boundary, the line drawn at the edge of a territory to say where it ends; this hand-off draws the boundary at the end of a session rather than adding to what is inside it.
+
+
+READ THIS PART BEFORE ANY OTHER
+
+THIS IS A SESSION-CLOSE MARKER, NOT A WORK RECORD, AND IT IS DELIBERATELY SHORT. It was written on the OWNER TRIGGER of the Nineteenth Commandment - the context window stood at three hundred forty thousand tokens, well above the hundred-thousand guideline - and NOT after a unit of work.
+
+THE SUBSTANTIVE HAND-OFF FOR THIS SESSION IS THE PREVIOUS ONE:
+docs/2026-08-09_11_Context_Hand-Off_from_Iridium_Keelwright.txt
+
+READ THAT ONE. It is complete and it is current. Everything a continuation needs - the reading list, the file map, what was built, the sharp edges, the honest non-closures, and the first-task queue - is in it and is NOT repeated here, because a duplicate that drifts is worse than a pointer that does not.
+
+NOTHING HAS HAPPENED IN THE REPOSITORY SINCE IT MERGED. No slice, no code, no document, no test. The state below was RE-MEASURED for this document rather than quoted from that one, so a continuation has a freshly verified number to start from.
+
+
+THE RE-MEASURED BASELINE (measured at the writing of this document, not quoted)
+
+- main at 987f6e9, working tree clean, HEAD identical to origin/main, no open pull requests.
+
+- SEVEN HUNDRED AND SIX tests passing across THIRTY-ONE packs, counted pack by pack.
+
+- Four gates at zero violations: the layer gate, the layer-binding gate, the pack-naming gate (which also passes its own self-test), and the reality-discipline gate.
+
+- The capstone demonstration boots and runs.
+
+- FORTY-TWO slices. Constitution at VERSION 8. DSPARCD Fileset at v43, SEVEN files including konnectome_0_definition_v1. Tutorial at v42, thirty-nine parts. Build log at thirty-eight chapters. Ledger counter: Walls OPEN 0, ROUTED 0, CLOSED 3, UNNECESSARY 0; Observations 9; Decisions 1.
+
+- Cousins untouched and NOT re-measured: causalontology 292dfca, PrologAI ebbc3e0, Mentova d117c69. THE CONFORMANCE FIGURE IS NOW FOUR SESSIONS OLD. The last measured value is one hundred thirty-seven of one hundred thirty-seven in both cousins, from Tungsten Sluicewright. DO NOT QUOTE IT - a session that needs the number must re-measure it. This is the single most stale claim in the repository and it is named here so it cannot hide.
+
+
+THE ONE THING THIS DOCUMENT ADDS, AND IT IS A WARNING ABOUT ITSELF
+
+THE HAND-OFF COUNT IS A MECHANICAL AUDIT TRIGGER, AND THIS FILE MOVED IT WITHOUT ANY WORK BEING DONE.
+
+The scheduled fulfilment audit of the vision-set top-down analysis becomes DUE when the count of hand-off documents reaches THIRTY-TWO. The count is evaluated with:
+
+  ls docs/*Context_Hand-Off*.txt | wc -l
+
+It was TWENTY-SIX before this file and is TWENTY-SEVEN after it. FIVE TO GO.
+
+That is a real consequence and it is recorded honestly rather than left for someone to notice. A context-window hand-off costs one unit of a counter that was designed to measure BUILD PROGRESS, so the trigger will now fire slightly earlier than the work would have earned. THE RECOMMENDATION FOR THE SESSION THAT FINDS THE AUDIT DUE: check whether the count was inflated by session-close markers like this one before treating thirty-two as a measure of how much has been built. The audit's full scope and grading standard are in the ledger's SCHEDULED AUDIT note, which is authoritative.
+
+
+THE FIRST TASK OF THE CONTINUATION
+
+Unchanged, and stated in full in hand-off _11's Part Six. The owner's standing choice is ALL; do not re-present a menu. In brief, and only as a pointer to that document:
+
+1. CONSIDER PROMOTING THE TICKS-PER-SECOND CONVENTION AHEAD OF THE STABILISER. It has now arrived from THREE independent directions, it costs one recorded decision and one test, and it blocks work in three families. DECISION-1 is the template to copy - number it, give it reasons that are konnectome's own, and list what it does NOT decide.
+
+2. THE STABILISER, Part Nine slice six, which closes OBSERVATION-8 at the gate, must state WHICH GRAINS its scalar governs, and INHERITS DECISION-1: a hysteresis scalar is a BIAS and travels as a level on the existing channel, never as a thrown mode.
+
+3. THE FIRST REAL WATCHDOG, which closes OBSERVATION-9. It depends on item 1, because a window needs a length.
+
+Then the queue as _11 lists it.
+
+
+SIGN-OFF
+
+The session ended where the last hand-off left it, and the most useful thing this document can do is refuse to pretend otherwise.
+
+Two slices were built today and a keel was laid under a ship already forty-one slices out of harbour. That work is written down properly one file back. This one only marks where the session stopped, re-measures the numbers so the next session starts from something checked rather than something remembered, and admits that the act of writing it nudged a counter it had no business nudging.
+
+Read hand-off eleven. Start at the ticks-per-second convention. Re-measure conformance before you quote it.
+
+- Rhodium Marchwright, 2026-08-09
