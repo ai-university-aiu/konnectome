@@ -1206,7 +1206,7 @@ thought combination. The four gates report zero violations, the naming gate pass
 self-test; conformance re-measured at 137 of 137 (specification 4.0.0) in both cousins. No new
 wall; no cousin edited, per the Second, Third, and Fourth Commandments.
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 4.
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 5.
 
 Slice-34 note (2026-08-09). The bound turned live in the told story. The slice-33 pending line
 (the bound proven per-territory in the tests but not yet in the capstone's told story) is
@@ -1308,3 +1308,49 @@ is noted. Importable in-frame ideas recorded for future slices' margins: the SOA
 bus-published disturbance record; the somatic-marker stamping half done early; the epistemic
 drive with a learning-progress statistic. No code changed; no test moved; no cousin edited; the
 test-bed files untouched, per the Second, Third, Fourth, and Ninth Commandments.
+
+Slice-35 note (2026-08-09). The two-shift switchboard laid: the global operating state on the
+bus. Slice family one's item (a) - queued by the Vision-Set analysis (Theme Two), demanded
+convergently by coverage bug two of the Cognitive-Architectures survey - is CLOSED: the
+neuromodulator_bus (Component 4) now carries a GLOBAL OPERATING STATE beside its chemical
+levels, exactly two values, online and offline, and no third, defaulting to online so that a
+bus never told a state behaves exactly as every bus before this slice always did. Designed
+against the Layer 11 state machinery read in full (Chapters 11 through 16): Chapter 11 gives
+the shape (a single binary selection built to snap, no time spent halfway - realized as the
+domain check refusing any third value by name) and Chapter 16 gives the address (the ascending
+broadcast system is the state announcement service, the corpus's own named ancestor of this
+very bus - so the state was laid on the existing bus, not in a new pack; the governor that
+will throw the switch arrives later as a separate publisher, as Process S and Process C sit
+outside the flip-flop they bias). The state's key is a third key shape - the compound
+global(operating_state) - which the atom-only modulator guard and the territory/2 pair can
+never alias; the review tried and failed to collide the three shapes on purpose. BEHAVIOUR
+PINNED IDENTICAL: nothing yet reads the state, no existing predicate changed, the capstone's
+story unchanged by a word, all 494 prior tests untouched. The independent adversarial review
+(tighter scope, named lenses, reproduction before fixing - the eleventh straight completion)
+worked four lenses (unbound-wrong-judgement, key-shape aliasing, default drift,
+behaviour-pinned-identical); three DEFENDED on reproduction; one REAL finding under the
+standing unbound-wrong-judgement lens, reproduced before fixing: the state read asked about an
+UNBOUND bus silently bound it into a partial list and answered an invented, unbound state,
+against the module's own never-silently-bound law; fixed once with the house var guard at the
+read's head, pinned by a review test. OBSERVATION, recorded not fixed (do-not-fix-speculatively
+rule): the older chemical reads (neuromodulator_bus_level/3 and the territory read) share the
+same inherited silent-binding pattern on an unbound bus; left for a slice that touches them.
+Nine tests grew (eight feature and pins written first, one review pin): neuromodulator_bus
+fourteen to twenty-three, the repository 494 to 503 across twenty-seven packs, all green,
+re-swept. Remaining pending lines: the reward step still waits for its caller (item (b), next);
+the two-process governor (item (c)) and the offline works with the catastrophic-forgetting
+rest-twin telling (item (d)) behind it; the long-live-run watch; computational-interface
+transforms; interfaces as Causalontology conduits; the token tier of thought combination. The
+four gates report zero violations, the naming gate passing its own self-test; conformance
+re-measured at 137 of 137 (specification 4.0.0) in both cousins. No new wall; no cousin edited,
+per the Second, Third, and Fourth Commandments.
+
+Observation-5 (2026-08-09, from slice 35). The neuromodulator_bus chemical reads
+(neuromodulator_bus_level/3 and neuromodulator_bus_level_territory/4) silently bind an UNBOUND
+bus argument into a partial list during lookup, against the module's own never-silently-bound
+law - the same defect the slice-35 review found and fixed in the new operating-state read,
+where it was caught by the standing unbound-wrong-judgement lens and pinned. LOGGED, NOT FIXED,
+per the do-not-fix-speculatively rule: the pattern predates slice 35, no caller passes an
+unbound bus today, and the fix belongs to a slice that touches those reads on purpose - at
+which point the house var guard at each read's head, plus one pin per read, closes it. This is
+a konnectome-internal construct matter; nothing here routes to either cousin.
