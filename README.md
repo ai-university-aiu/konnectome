@@ -11,7 +11,7 @@
 
 <!-- ROW 2: THE METHOD -->
 <p align="center">
-  <img src="https://img.shields.io/badge/METHOD-SPARCD_6--PHASE_WATERFALL-F26D1F?style=for-the-badge" alt="SPARCD 6-phase waterfall">
+  <img src="https://img.shields.io/badge/METHOD-DSPARCD_7--PHASE_WATERFALL-F26D1F?style=for-the-badge" alt="DSPARCD 7-phase waterfall">
   <img src="https://img.shields.io/badge/CODE-ENGLISH_READABLE_CODE-F47223?style=for-the-badge" alt="English Readable Code">
   <img src="https://img.shields.io/badge/NAMING-WHOLE--WORD_SYSTEM-EC5F1C?style=for-the-badge" alt="Whole-Word System">
 </p>
@@ -54,7 +54,7 @@ Each badge above is a claim, and every claim deserves a plain explanation. Here 
 
 **Row 2 - The Method**
 
-- **`METHOD | SPARCD 6-PHASE WATERFALL`** - SPARCD stands for Specification, Pseudocode, Architecture, Refinement, Completion, and Demonstration: a six-step waterfall (do each phase in order, writing it down) that konnectome follows and mirrors in six versioned documents called the SPARCD Fileset.
+- **`METHOD | DSPARCD 7-PHASE WATERFALL`** - DSPARCD stands for Definition, Specification, Pseudocode, Architecture, Refinement, Completion, and Demonstration: a seven-step waterfall (do each phase in order, writing it down) that konnectome follows and mirrors in seven versioned documents called the DSPARCD Fileset. **Definition** is the newest phase and sits at the **front**: it answers the question every other phase assumes has been answered - what is this thing, and what is it **not**.
 - **`CODE | ENGLISH READABLE CODE`** - English Readable Code (ERC) is a house rule: every single line of code carries one plain-English comment on the line immediately above it, so a newcomer can read the intent without knowing the language.
 - **`NAMING | WHOLE-WORD SYSTEM`** - every name is a whole English word in snake_case (like `tick_scheduler`), never a terse abbreviation. "Loop-1", not "L1". This is for clarity, readability, and understandability.
 
@@ -107,32 +107,33 @@ konnectome is built and maintained under a written [**CONSTITUTION.md**](CONSTIT
 2. **Causalontology is the thought structure** - frozen to konnectome except through the gated change-order process.
 3. **PrologAI is the language** - the same gate applies; konnectome never edits it directly.
 4. **The ledger is the scoreboard** - every wall becomes an entry in [`docs/konnectome_ledger_v1.txt`](docs/konnectome_ledger_v1.txt) first, then is routed to exactly one place.
-5. **SPARCD is the waterfall** - the six-phase method, inspired by `docs/SPARCD_EXPLAINED.txt`.
+5. **DSPARCD is the waterfall** - the seven-phase method, inspired by [`docs/DSPARCD_EXPLAINED.txt`](docs/DSPARCD_EXPLAINED.txt).
 6. **English Readable Code** - one plain-English comment above every line of code.
-7. **The SPARCD Fileset** - six versioned documents seeded from the appendices of *Nature's Cognitive Architecture*.
+7. **The DSPARCD Fileset** - seven versioned documents; six seeded from the appendices of *Nature's Cognitive Architecture*, and [`konnectome_0_definition`](docs/konnectome_0_definition_v1.txt) written from the Constitution and the whole of `docs/`.
 8. **The audit** - every named construct is realized by a module, tracked in a re-runnable coverage list in the ledger.
 9. **The archive** - only the latest version of any document lives outside `docs/archive/`.
-10. **Mirrored changes** - any code change is mirrored in the SPARCD Fileset, with versions bumped and old versions archived.
+10. **Mirrored changes** - any code change is mirrored in the DSPARCD Fileset, with versions bumped and old versions archived.
 11. **The README** - kept current, styled like the cousin repositories, in the crimson-to-gold palette.
 12. **Whole-Word System** - whole English words, snake_case, pack-qualified, no terse prefixes.
 13. **The safety gate** - no change may regress ARC-AGI-1, ARC-AGI-2, or the 137-vector Causalontology conformance suite.
 14. **Branch and report discipline** - feature branches and pull requests; no direct pushes to main; no artificial-intelligence tool credited as author; no Roman numerals.
-15. **The tutorial** - a maintained, beginner-friendly [`docs/konnectome_tutorial`](docs/konnectome_tutorial_v37.txt), kept current and versioned under the archive discipline.
+15. **The tutorial** - a maintained, beginner-friendly [`docs/konnectome_tutorial`](docs/konnectome_tutorial_v40.txt), kept current and versioned under the archive discipline.
 16. **The build log** - every build activity is logged to [`docs/BUILDING_KONNECTOME_v2.txt`](docs/BUILDING_KONNECTOME_v2.txt), voiced with dual purpose: as a scientific paper and as a best-selling book.
 17. **Context-window management and the hand-off protocol** - when the window runs high, a durable Context Hand-Off is written and the session paused, so a fresh session reloads state from `docs/` and continues from a known-good baseline.
 
-## The SPARCD Fileset
+## The DSPARCD Fileset
 
-The six-phase waterfall is mirrored in six versioned documents, each seeded verbatim from the matching appendix of *Nature's Cognitive Architecture* (version 20):
+The seven-phase waterfall is mirrored in seven versioned documents. Six are seeded verbatim from the matching appendix of *Nature's Cognitive Architecture* (version 20). The seventh, **Definition**, has no source appendix - the phase is newer than the manuscript - so it is written from [`CONSTITUTION.md`](CONSTITUTION.md) and the whole of `docs/`, and it **leads the other six**: where the Definition and a later phase disagree, the Definition leads.
 
 | Phase | File | Seeded from |
 |---|---|---|
-| 1. Specification | [`docs/konnectome_1_specification_v35.txt`](docs/konnectome_1_specification_v35.txt) | Appendix 1 |
-| 2. Pseudocode | [`docs/konnectome_2_pseudocode_v35.txt`](docs/konnectome_2_pseudocode_v35.txt) | Appendix 2 |
-| 3. Architecture | [`docs/konnectome_3_architecture_v35.txt`](docs/konnectome_3_architecture_v35.txt) | Appendix 3 |
-| 4. Refinement | [`docs/konnectome_4_refinement_v35.txt`](docs/konnectome_4_refinement_v35.txt) | Appendix 4 |
-| 5. Completion | [`docs/konnectome_5_completion_v35.txt`](docs/konnectome_5_completion_v35.txt) | Appendix 5 |
-| 6. Demonstration | [`docs/konnectome_6_demonstration_v35.txt`](docs/konnectome_6_demonstration_v35.txt) | Appendix 6 |
+| 0. Definition | [`docs/konnectome_0_definition_v1.txt`](docs/konnectome_0_definition_v1.txt) | The Constitution and all of `docs/` |
+| 1. Specification | [`docs/konnectome_1_specification_v42.txt`](docs/konnectome_1_specification_v42.txt) | Appendix 1 |
+| 2. Pseudocode | [`docs/konnectome_2_pseudocode_v42.txt`](docs/konnectome_2_pseudocode_v42.txt) | Appendix 2 |
+| 3. Architecture | [`docs/konnectome_3_architecture_v42.txt`](docs/konnectome_3_architecture_v42.txt) | Appendix 3 |
+| 4. Refinement | [`docs/konnectome_4_refinement_v42.txt`](docs/konnectome_4_refinement_v42.txt) | Appendix 4 |
+| 5. Completion | [`docs/konnectome_5_completion_v42.txt`](docs/konnectome_5_completion_v42.txt) | Appendix 5 |
+| 6. Demonstration | [`docs/konnectome_6_demonstration_v42.txt`](docs/konnectome_6_demonstration_v42.txt) | Appendix 6 |
 
 ## The build ladder
 
@@ -183,10 +184,10 @@ konnectome/
     simulated_body/            Slice 24: the honestly-named stand-in machine - a camera, a draining battery, three actuators.
     body_interface/            Slice 24: Rung Five groundwork - the book's three body connections; the rung itself not claimed.
   docs/
-    konnectome_1..6_*_vN.txt   The SPARCD Fileset (seeded from the appendices; versioned per slice).
+    konnectome_0..6_*_vN.txt   The DSPARCD Fileset (six seeded from the appendices; versioned per slice).
     konnectome_ledger_v1.txt   The running scoreboard of findings (Fourth Commandment).
     BUILDING_KONNECTOME_v2.txt The build log (Sixteenth Commandment): the whole story from the true beginning, paper and book at once, versioned.
-    konnectome_tutorial_v37.txt A complete beginner tutorial (Fifteenth Commandment), versioned.
+    konnectome_tutorial_v40.txt A complete beginner tutorial (Fifteenth Commandment), versioned.
     PrologAI_CHANGE_ORDER_v2.txt        Additive PrologAI-language gaps (Third Commandment); Wall-3 closed by causal_core 1.1.0.
     Causalontology_4_0_0_CHANGE_ORDER_v3.txt   Data-structure gaps for the frozen ontology (Sections A and B shipped as 4.0.0; C, D, E held).
     NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt  The source book.

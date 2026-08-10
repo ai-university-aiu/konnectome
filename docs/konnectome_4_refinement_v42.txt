@@ -162,7 +162,7 @@ The scheduler test of Sections A2.9 and A4.3 is realized as the PLUnit suite tes
 
 Gates at this slice: 7 of 7 tick_engine Prolog Unit (PLUnit) tests pass; the naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited; konnectome reuses them through the library path.
 
-This log grows one entry per code slice, per the Tenth Commandment. The full SPARCD Fileset was bumped in lockstep from version 1 to version 2, and the version 1 files were archived under docs/archive/ in the same change, per the Ninth Commandment.
+This log grows one entry per code slice, per the Tenth Commandment. The full DSPARCD Fileset (the SPARCD Fileset until the Constitution's version 8) was bumped in lockstep from version 1 to version 2, and the version 1 files were archived under docs/archive/ in the same change, per the Ninth Commandment.
 
 
 KONNECTOME REALIZATION LOG - SLICE 2

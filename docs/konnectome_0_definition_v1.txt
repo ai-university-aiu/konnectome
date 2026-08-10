@@ -1,0 +1,150 @@
+KONNECTOME - PHASE ZERO: THE DEFINITION
+
+Version 1. 2026-08-09.
+
+The first file of The DSPARCD Fileset, written after forty-one slices rather than before them, and honest about that.
+
+This document answers the three questions the Definition phase exists to answer: what konnectome IS, what it is NOT, and the principles that settle every trade-off beneath it. It is deliberately SHORT. Definition is a page of concept, not a binder of blueprints; the blueprints are konnectome_3_architecture, and the requirements are konnectome_1_specification. Where a later phase disagrees with this page, THIS PAGE LEADS, and the later phase is the thing corrected - with the single exception recorded under THE ONE AUTHORITY ABOVE THIS PAGE, below.
+
+
+PART ONE - THE CONCEPT: WHAT KONNECTOME IS
+
+konnectome is a new, novel, unified synthetic human-like cognitive process: one mind, built in symbolic logic, whose every part is modelled on the only known working implementation of general intelligence - the human nervous and endocrine system, read as fifteen encapsulated layers of abstraction - and whose every claim about itself can be watched being made.
+
+That is the whole concept, and the rest of this document is its consequences.
+
+Two clauses in it carry the weight, and neither is decoration.
+
+ONE PROCESS, NOT A COLLECTION OF FACULTIES. The Eighth Commandment's fifth rule states the unifying thread plainly: each of the fifteen layers describes a different aspect of the SAME human cognitive process - one process, seen at fifteen altitudes. konnectome is therefore not a toolbox of cognitive modules that happen to share a repository. It is one process, and a part that cannot be reached from the one running loop is not yet part of konnectome, however well it tests.
+
+WATCHABLE, NOT MERELY CORRECT. konnectome must be able to show its work. One command boots the mind and prints its whole story - what it perceived, what it concluded, by which step, and on whose authority. A konnectome that produced the right answers by means nobody could inspect would have failed at the thing it exists for, because a synthetic cognitive process that cannot be watched cannot be studied, corrected, or trusted.
+
+
+PART TWO - WHAT KONNECTOME IS NOT
+
+Naming what is refused is a design act, and every line below has already been earned: each of these was a live temptation at some point in the build, and each is refused on purpose.
+
+• NOT A CHATBOT, AND NOT A LANGUAGE MODEL. konnectome does not generate text as its output and is not trained on a corpus by gradient descent. It has no weights learned from the internet. Its grounded vocabulary is small, earned by experience, and deliberately so.
+
+• NOT A BENCHMARK RUNNER. konnectome does not exist to post a score. Its cousins carry the benchmark record - PrologAI has passed the Abstract Reasoning Corpus for Artificial General Intelligence, at four hundred of four hundred and one hundred twenty of one hundred twenty, through Mentova - and konnectome's obligation to those numbers is entirely negative: IT MUST NOT BREAK THEM. That is the Safety Gate, and it is a constraint, not a goal.
+
+• NOT A LITERAL TRANSCRIPTION OF NEUROSCIENCE. konnectome does not simulate neurons, membranes, or molecules. The translation rule is stated in the Eighth Commandment's sixth rule and is repeated here because it is the most misread sentence in the project: ANALOGY OF FUNCTION, FIDELITY OF INTERFACE, FREEDOM OF IMPLEMENTATION. The corpus specifies what the biology accomplishes and through which interfaces; konnectome implements the same functions and the same interfaces in its own medium, and is free in how.
+
+• NOT A CLONE OF A PUBLISHED COGNITIVE ARCHITECTURE. The study set in the test-bed measures konnectome's coverage; it does not steer it. Where a test-bed architecture and the biological blueprint disagree, the biology leads and the disagreement is recorded. Architectures found EMERGENT in konnectome, rather than transcribed into it, are the expected and preferred outcome.
+
+• NOT A FORK OF ITS COUSINS. konnectome does not edit causalontology and does not edit PrologAI. It consumes them, and where building hits a wall one of them cannot express, it records the finding and routes it through a gated, additive change order. A konnectome that solved its problems by quietly rewriting its data structure or its language would have stopped being a test of either.
+
+• NOT EMBODIED, YET, AND IT SAYS SO. konnectome disclaims exactly one rung of its own ladder in its own telling. Reaching, navigation, and true homeostatic survival all require a real machine, and the honest-limits line keeps naming embodiment until one exists.
+
+• NOT A PRODUCT, AND NOT A PLATFORM. There is no user to please, no interface to ship, and no roadmap driven by adoption. konnectome is a research build whose customer is the next session that has to understand it.
+
+• NOT FINISHED, AND NEVER PRESENTED AS FINISHED. An honest non-closure is a real result here, recorded as carefully as a success. A wall shown to be UNNECESSARY is written down as plainly as a wall that needed building.
+
+
+PART THREE - THE GUIDING PRINCIPLES
+
+Seven, which is the outer limit the method allows, and each is invoked to settle real arguments rather than to decorate this page.
+
+ONE. THE BIOLOGY LEADS. The Vision Document Set and the guiding book are the gold standard, north star, and lighthouse. Where anything disagrees with them - a published architecture, a convenient design, a summary of the corpus, or this project's own prior belief - the corpus leads and the disagreement is recorded rather than resolved by preference. THE COROLLARY THAT COSTS SOMETHING: a summary of the corpus is not the corpus. No slice may be designed from a summary without reading the corpus beneath it.
+
+TWO. FINDINGS ARE DISCOVERED BY BUILDING, NEVER GUESSED FROM THE ARMCHAIR. A wall is claimed only when a real build hits it. This is why konnectome's change orders are short and its ledger is long.
+
+THREE. GLASS BOX, ALWAYS. Every construct's state is an ordinary value the world carries, readable without running the construct. Every conclusion is traceable to the step and the authority that produced it. This principle is the reason a live all-grain mode-visualization panel is possible at all, and it is paid for one slice at a time rather than retrofitted.
+
+FOUR. SMALLEST SLICE FIRST, AND BEHAVIOUR PINNED. Work lands as small, testable slices that close before the next begins. A slice that promises to change no behaviour proves it by measurement against the previous build rather than by assertion - and when the measurement finds a difference, the difference is declared, not buried. A build that quietly fixes what it did not promise to fix cannot be trusted when it says nothing moved.
+
+FIVE. REFUSE ALOUD; NEVER FAIL IN SILENCE. A hole, a foreign name, or an impossible request is answered by name, at the door, in the one place the routes meet. Silent failure and confident wrong answers are the two defects this project fears most, and most of its standing review lenses exist to catch them.
+
+SIX. WHOLE WORDS, PLAIN ENGLISH. Every pack, module, and predicate name is whole English words in snake case, with no terse prefixes. Every line of code carries one plain-English comment above it. A reader who does not know this codebase should be able to read it anyway.
+
+SEVEN. NOTHING PROVEN IS ALLOWED TO REGRESS. The Safety Gate stands over every other rule. A proposed change that would regress a passing gate STOPS and is reported. A red gate is a finding, never a thing to force through.
+
+
+PART FOUR - THE BOLD DEFINING DECISIONS
+
+The method asks that the few high-leverage bets be recorded on purpose, each beside the serious alternative that was rejected and why. These are konnectome's, in the order they were taken.
+
+DECISION A - THE BLUEPRINT IS BIOLOGY AT FIFTEEN ALTITUDES.
+REJECTED: designing from a published cognitive architecture, or from first principles.
+WHY: the human nervous system is the only known working implementation of general intelligence, and it is available in publish-and-subscribe detail. Designing from first principles would have meant inventing what could be read.
+THE COST, ACCEPTED KNOWINGLY: the corpus is roughly one hundred fifty thousand lines and konnectome must keep reading it forever, and reading it keeps overturning konnectome's summaries of it.
+
+DECISION B - THE MEDIUM IS SYMBOLIC LOGIC, NOT A NEURAL NETWORK.
+REJECTED: a connectionist implementation trained end to end.
+WHY: principle three. A trained network can be correct and cannot be watched, and a cognitive process nobody can inspect fails konnectome's concept even when it succeeds at the task.
+THE COST, ACCEPTED KNOWINGLY: konnectome must build by hand what a network would learn, and it gives up the pattern-recognition surface a network gets free - which is exactly the gap the coverage survey names and does not hide.
+
+DECISION C - THE THOUGHTS LIVE IN A SHARED, SIGNED, CONTENT-ADDRESSED DATA STRUCTURE.
+REJECTED: konnectome-private records.
+WHY: a thought that cannot travel between agents as evidence-graded, content-addressed record is a thought that can never be checked by anyone but its author.
+THE COST, ACCEPTED KNOWINGLY: a gate, and the discipline of proving that a thing genuinely needs to be SHARED before it may enter the data structure at all.
+
+DECISION D - THE COUSINS ARE FROZEN BEHIND ADDITIVE, GATED CHANGE ORDERS.
+REJECTED: editing causalontology and PrologAI freely as konnectome's needs arose.
+WHY: both cousins have proven records that konnectome must not break, and a consumer that can rewrite its own dependencies is no longer a test of them.
+THE COST, ACCEPTED KNOWINGLY: real walls sit held and unrouted for a long time, and konnectome sometimes builds around them.
+
+DECISION E - EVERY DOCUMENT MOVES IN LOCKSTEP WITH THE CODE.
+REJECTED: documenting at the end, or documenting selectively.
+WHY: durable state lives on disk and never only in a conversation, because the next session is always a stranger.
+THE COST, ACCEPTED KNOWINGLY: it is the largest single tax on every slice, and it is paid every time.
+
+DECISION F - WHERE THE CORPUS IS SILENT, KONNECTOME DECIDES IN ITS OWN NAME.
+REJECTED: reading a preference into the corpus, or deferring indefinitely.
+WHY: the corpus genuinely does not settle everything, and a decision presented as the corpus's instruction can never afterwards be argued with.
+HOW IT IS DONE: such a decision is numbered in the ledger, carries its reasons, and carries a list of what it does NOT decide. The first of them, DECISION-1 of slice 41, chose command over bias for a broadcast mode throw.
+
+
+PART FIVE - THE CONCEPTUAL OWNER
+
+The method requires that one mind hold the concept, because conceptual integrity is what makes a system feel as though it came from one.
+
+THE CONCEPTUAL OWNER OF KONNECTOME IS THE PARENT ORGANIZATION, ai-university-aiu, ACTING THROUGH THE OWNER. The owner disposes; the build proposes. Every design authority, deep read, and slice family in this repository is a suggestion until the owner's queue takes it, and the owner's standing choices are recorded in the hand-offs where the next session will find them.
+
+The build is executed by a succession of sessions, each of which writes a Context Hand-Off before it ends, precisely so that the succession does not become a committee. Conway's warning applies directly and was heeded before it was read: the structure of a system copies the communication structure that builds it, so a project built by many short-lived sessions must keep its concept in a file rather than in any session's memory. This document is now that file.
+
+
+PART SIX - THE WICKED-PROBLEM ACKNOWLEDGEMENT
+
+The problem konnectome is solving cannot be fully stated until it is partly solved, and the build has proved this repeatedly rather than merely believing it.
+
+Three examples, all real, all from the record:
+
+• A whole family of cognitive work turned out to stand behind a convention nobody had declared - konnectome's tick has no seconds in it and every quantity in the corpus's cognitive cluster is measured in milliseconds. It was invisible from every summary and obvious from below.
+
+• A slice family was sized at one line on the belief that konnectome already owned a mechanism for naming subgraphs. It does not; the words were in the specification prose and never in a pack. The family is six items.
+
+• A promise that a slice changed no behaviour, measured instead of trusted, has now found real defects in old code three separate times.
+
+THE STANDING CONSEQUENCE: this document is held with humility and is expected to be amended. What may NOT happen is that it be amended silently. A change of concept is a versioned change with its reason attached, under the same archive discipline as every other document here.
+
+
+PART SEVEN - THE ONE AUTHORITY ABOVE THIS PAGE
+
+Stated explicitly so no session has to infer it.
+
+CONSTITUTION.md OUTRANKS THIS DOCUMENT. The constitution is the owner's instrument and this page is the build's statement of the concept the constitution describes. Where the two disagree, the constitution leads and this document is the thing corrected.
+
+Beneath the constitution, this document leads the rest of The DSPARCD Fileset, and the Vision Document Set leads konnectome's understanding of the biology. The full ordering is kept in the ledger's Document-hierarchy note.
+
+
+PART EIGHT - THE DEFINITION REFLECTION
+
+WHY THIS CONCEPT AND NOT A NEIGHBOURING ONE. The nearest neighbour was a cognitive architecture assembled from the published literature of cognitive architectures, which would have been faster, better supported, and comparable to prior work. It was rejected because that literature describes minds that were designed, and konnectome's bet is that the mind that WORKS is worth more than the minds that were proposed. The second-nearest neighbour was a learned system, rejected for principle three.
+
+WHAT KONNECTOME IS BETTING ON. That fidelity of INTERFACE - the publish-and-subscribe seams the corpus specifies at every layer - carries more of the intelligence than fidelity of substrate does. If that bet is right, a symbolic implementation of the same interfaces should exhibit the same behaviour without simulating any of the chemistry. Every slice is a small test of it.
+
+WHAT WOULD PROVE THE CONCEPT WRONG. Three things, named in advance so they cannot be explained away later:
+
+• If the interfaces turn out not to carry the function - if faithful seams reproduce the wiring and none of the behaviour - the bet in Decision A fails, and konnectome is a very careful diagram.
+
+• If the glass-box requirement turns out to be incompatible with capabilities konnectome needs, principle three and the concept are in direct conflict, and one of them must give. The tracked capability question about sentiment analysis is the live probe of exactly this, and its honest answer already splits in two.
+
+• If the layers do not compose - if each of the fifteen is faithful and the whole is not one process - then the unifying claim of the concept's first clause is false, and konnectome is a collection of faculties sharing a repository, which is precisely what Part Two refuses to be.
+
+WHAT IS DELIBERATELY NOT BEING BUILT. Everything in Part Two, and, at the time of writing, these specifically: a REM theatre and an ultradian wheel, both read and not built; an eleventh architecture component for a global workspace, deliberately undecided and now carrying five questions the pilot must answer before it may merge; a region-grain construct; multi-rate time; ensemble objects; and a per-mode confidence field. Each is a decision with a date on it, not an oversight, and each is written where the next session will find it.
+
+AND THE HONEST NOTE THIS DOCUMENT OWES ITS OWN METHOD. Definition is meant to come FIRST, and this one arrives forty-one slices late. It is therefore not a prediction but a reading-back: the concept, the refusals, and the principles above were all recovered from the constitution, the corpus, the ledger, and the record of what the build actually did when it had to choose. That is a weaker thing than a definition written before the first line of code, and it is stated plainly rather than dressed up. Its value is what it does from here: from this version onward, every requirement in the specification, every module in the architecture, and every slice in the queue is answerable to this page - and anything that traces to neither the concept nor a principle above is either out of scope or belongs on the non-goals list.
+
+
+END OF PHASE ZERO, VERSION 1.
