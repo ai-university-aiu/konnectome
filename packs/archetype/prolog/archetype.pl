@@ -32,6 +32,10 @@
     archetype_gate_thrown_departure/2,
     % archetype_gate_throw/3: apply a standing broadcast throw to one gate instance.
     archetype_gate_throw/3,
+    % archetype_gate_hysteretic/5: the gate as the corpus's LATCH - two boundaries, not one.
+    archetype_gate_hysteretic/5,
+    % archetype_gate_effective_threshold/4: the boundary the mode a gate stands in must be pushed past.
+    archetype_gate_effective_threshold/4,
     % archetype_comparator/3: the comparator rule - report the prediction error.
     archetype_comparator/3,
     % archetype_step/3: the dispatch - read the archetype and apply the matching rule.
@@ -110,6 +114,95 @@ archetype_gate(CurrentMode, SwitchDrive, Threshold, NextMode) :-
     ( SwitchDrive > Threshold
       -> archetype_gate_departure_of(Automaton, NextMode)
       ;  NextMode = CurrentMode
+    ).
+
+% ---------------------------------------------------------------------------
+% THE HYSTERETIC GATE (konnectome build slice 44; the closer of OBSERVATION-8)
+% ---------------------------------------------------------------------------
+%
+% WHAT OBSERVATION-8 RECORDED. Slice 40 validated this gate block by block against the Layer 8 modes
+% volume's Entry 36, the mutual-inhibition flip-flop coined the Either-Or Latch, and every block
+% matched except one: the corpus's latch is HYSTERETIC - a hysteretic toggle whose modes are simply
+% its two self-holding states, turning on at one boundary and off only at a lower one - while
+% archetype_gate/4 compares one drive against ONE threshold in both directions, so its two transition
+% rows honestly share a single trigger and the same drive that closes an open gate opens a closed one.
+%
+% WHY IT COULD NOT BE FIXED WHERE IT WAS FOUND. The corpus itself locates the stickiness OUTSIDE the
+% switch: "this is a stabiliser, not a switch, so it has no poles of its own". Burying a second
+% constant in archetype_gate/4 would have modelled the corpus WRONGLY while appearing to fix it. The
+% band therefore arrives from a construct that owns it, and it arrives HERE AS AN ARGUMENT: archetype
+% still does not import the bus and still does not import the stabiliser, because a rule library that
+% reached for a global channel would stop being one. The join belongs to the caller, as since slice 41.
+%
+% THE MAPPING KONNECTOME CHOSE, AND IT IS KONNECTOME'S OWN. The corpus states hysteresis for a LEVEL
+% comparator - a quantity rising past one boundary and falling past a LOWER one - while this gate
+% compares a SWITCHING DRIVE, which is a push rather than a level. The two do not map by themselves,
+% so konnectome states the mapping rather than letting one be inferred: LEAVING A MODE COSTS THE
+% RAISED BOUNDARY, WHICHEVER MODE IT IS. A drive must exceed Threshold PLUS the bias to move the gate
+% at all, so over the whole range between Threshold and Threshold plus the bias BOTH MODES ARE
+% STABLE AND WHICH ONE IS REALISED DEPENDS ON HISTORY - which is the corpus's definition of the
+% property, quoted almost word for word, and the thing OBSERVATION-8 recorded as missing. The
+% corpus's plainer cell-grain sentence holds too: switching on takes more input than keeping it on,
+% because keeping it on costs nothing at all.
+%
+% AND THE ASYMMETRIC MAPPING WAS CONSIDERED AND REJECTED, recorded because it is the reading a later
+% session is most likely to reach for. It would have made turning ON cost Threshold plus the bias and
+% turning OFF cost Threshold MINUS it, which reads like the corpus's higher-and-lower boundaries. It
+% is wrong here, and wrong in an instructive way: with a push-drive rather than a level, that rule
+% makes CLOSED ABSORBING over the whole middle range - every mid-sized push closes the gate and none
+% reopens it - and a gate that settles and never leaves is the corpus's own STUCK SWITCH fault
+% signature, which this pack has listed in its fault block since slice 42. A hysteresis design that
+% manufactures a fault regime is not a hysteresis design. konnectome takes the symmetric-cost reading
+% and writes down why.
+%
+% THE BOUNDARY IS STILL WRITTEN PER MODE, one clause each, even though the two clauses agree today.
+% That is deliberate: a watcher holding nothing but a mode name can read that mode's boundary without
+% running the construct, which the owner's standing visualization request demands of this family, and
+% any future asymmetry has to be written down mode by mode rather than smuggled into one expression.
+%
+% AND THE DEFAULT IS TODAY. At a bias of zero the two boundaries coincide and this predicate is
+% archetype_gate/4 exactly, which is why nothing in the repository moved when it shipped: the bus
+% answers zero for a bias nobody has published, so a switch that consults the stabiliser and finds
+% silence behaves precisely as it did before the stabiliser existed.
+
+% archetype_gate_effective_threshold(+CurrentMode, +Threshold, +StabilityBias, -Effective): the
+% boundary THIS mode must be pushed past, which is the whole of the hysteresis in one predicate.
+% Leaving CLOSED costs the raised boundary: the closed mode holds itself.
+archetype_gate_effective_threshold(closed, Threshold, StabilityBias, Effective) :-
+    % The boundary sits a full bias ABOVE the gate's nominal threshold.
+    Effective is Threshold + StabilityBias.
+% Leaving OPEN costs the raised boundary too: the open mode holds itself by the same amount.
+archetype_gate_effective_threshold(open, Threshold, StabilityBias, Effective) :-
+    % The boundary sits a full bias ABOVE the gate's nominal threshold.
+    Effective is Threshold + StabilityBias.
+
+% archetype_gate_check_stability_bias(+StabilityBias): refuse a bias no gate could honour.
+archetype_gate_check_stability_bias(StabilityBias) :-
+    % A hole would be bound by the arithmetic above and would invent a band; refuse it aloud first.
+    must_be(number, StabilityBias),
+    % A NEGATIVE BIAS INVERTS THE BAND - the turn-on boundary below the turn-off boundary - which is a
+    % gate that chatters by construction. The stabiliser refuses the same value under its own name;
+    % this refusal exists because archetype does not import the stabiliser and must judge what it is
+    % handed, and the two refusals are deliberately named separately so neither can hide the other.
+    (   StabilityBias >= 0
+    ->  true
+    ;   domain_error(archetype_gate_stability_bias, StabilityBias)
+    ).
+
+% archetype_gate_hysteretic(+CurrentMode, +SwitchDrive, +Threshold, +StabilityBias, -NextMode):
+% the gate as the corpus's latch - two boundaries, and which one applies depends on where it stands.
+archetype_gate_hysteretic(CurrentMode, SwitchDrive, Threshold, StabilityBias, NextMode) :-
+    % Refuse a bias no gate could honour before any boundary is computed from it.
+    archetype_gate_check_stability_bias(StabilityBias),
+    % Build this gate instance's register, standing in the mode it says it is in; a hole or a mode the
+    % register does not hold is refused here, at the door, exactly as the symmetric gate refuses it.
+    archetype_gate_automaton(CurrentMode, Automaton),
+    % Read the boundary THIS mode must be pushed past, which is where the history lives.
+    archetype_gate_effective_threshold(CurrentMode, Threshold, StabilityBias, Effective),
+    % Fire the one transition whose trigger holds, otherwise the gate stands where it stands.
+    (   SwitchDrive > Effective
+    ->  archetype_gate_departure_of(Automaton, NextMode)
+    ;   NextMode = CurrentMode
     ).
 
 % A COMPARATOR is a scale: it reports how far the actual input departs from the expected.
