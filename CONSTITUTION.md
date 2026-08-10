@@ -278,6 +278,22 @@ A directory /home/ccaitwo/konnectome/docs/archive/ shall be created.
 And when new versions of files are written,
 the older, superseded files will be moved to the /archive/ folder for storage (using git mv, in the
 same change), so that only the latest version of any versioned document lives outside /archive/.
+(CLARIFIED in version 14, by the owner's instruction of 2026-08-10. THIS COMMANDMENT GOVERNS
+VERSIONS, NOT SERIES, AND CONTEXT HAND-OFF DOCUMENTS ARE A SERIES. A superseded hand-off is NOT a
+new version of an older one - each records a DIFFERENT session and none replaces any other - so
+hand-offs are not archived under this Commandment. They live in /docs/hand-off/ under the two-
+location rule of the Nineteenth, which borrows this Commandment's SHAPE - only the current one lives
+outside its own directory - without borrowing its DESTINATION. The clarification is written here
+rather than only there because this Commandment as originally worded could reasonably be read as
+covering them, and a later session tidying hand-offs into /archive/ would be following it.
+THE TEST THAT SEPARATES THE TWO, STATED SO IT SETTLES THE NEXT CASE AS WELL AS THIS ONE: WOULD A
+SESSION EVER BE TOLD TO READ THIS FILE? NOTHING IN THIS REPOSITORY EVER INSTRUCTS ANYONE TO READ AN
+ARCHIVED FILE - every reference to /archive/ in this Constitution is preservation language, saying
+that a superseded document is not deleted and remains readable, which is a promise about the record
+and not a reading list. A SUPERSEDED HAND-OFF IS REQUIRED READING: each one names which of its
+predecessors is the substantive one, and the current hand-off's own first part sends the next session
+to it by name. /archive/ HOLDS DEAD VERSIONS; /docs/hand-off/ HOLDS A LIVING SERIES. Apply the same
+test to any future document that is not obviously one or the other.)
 
 THE TWELFTH COMMANDMENT:
 Any and all code changes to konnectome will be accompanied by
@@ -436,7 +452,20 @@ commit because they are one act: the document that was the instruction becomes a
 moment the next one becomes the instruction, and splitting them across two changes would leave a
 commit in which /docs/ holds two hand-offs or none.
 
-VERSION HISTORY NOTE (extended in version 13). This Constitution is at VERSION 13. Version 13, by
+VERSION HISTORY NOTE (extended in version 14). This Constitution is at VERSION 14. Version 14, by
+the owner's instruction of 2026-08-10, adds one clarifying paragraph to the Eleventh Commandment
+stating that it governs VERSIONS and not SERIES, and that Context Hand-Off documents are therefore
+not archived under it. NO COMMANDMENT WAS REMOVED, NO COMMANDMENT WAS RENUMBERED, AND NO RULE
+CHANGED - nothing moves, nothing is renamed, and no existing behaviour is different. IT CLOSES A
+READING RATHER THAN A GAP: as originally worded this Commandment could reasonably be read as covering
+hand-offs, so a later session tidying them into /archive/ would have been FOLLOWING the Constitution
+rather than breaking it, and would have buried a series that is required reading among hundreds of
+superseded drafts that are not. IT ALSO CORRECTS A LOOSE SENTENCE IN VERSION 13's OWN REASONING,
+which said the two-location rule makes hand-offs follow this Commandment's house rule; they follow
+its SHAPE - only the current one lives outside its directory - and not its DESTINATION, and version
+13's argument was right about the first and imprecise about the second.
+
+Version 13, by
 the owner's instruction of 2026-08-10, gives the Hand-Off Protocol a TWO-LOCATION rule: the CURRENT
 hand-off lives in /docs/ and every SUPERSEDED one lives in /docs/hand-off/ , so exactly one Context
 Hand-Off document sits in /docs/ at any moment and it is always the one to read. Step 2 becomes Steps

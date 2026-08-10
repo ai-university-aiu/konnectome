@@ -3632,3 +3632,43 @@ AND ONE SENTENCE ELSEWHERE IN THE COMMANDMENT BECAME LITERALLY TRUE. It promises
 That was approximately true and is now exact: the latest hand-off is in docs/, is the only one there,
 and needs no working out. A rule that makes an existing promise exact is a better rule than one that
 adds a new promise.
+
+
+ELEVENTH COMMANDMENT CLARIFICATION NOTE (2026-08-10, Constitution version 14). ONE PARAGRAPH ADDED,
+NOTHING MOVED, NO RULE CHANGED. The Eleventh Commandment now states that it governs VERSIONS and not
+SERIES, and that Context Hand-Off documents are therefore not archived under it.
+
+WHY IT WAS WORTH A VERSION FOR A PARAGRAPH THAT CHANGES NO BEHAVIOUR. IT CLOSES A READING RATHER THAN
+A GAP. As originally worded the Commandment says that when new versions of files are written the
+older ones move to /archive/ , so that only the latest version of any versioned document lives
+outside it. A SESSION TIDYING THE HAND-OFFS INTO /archive/ WOULD HAVE BEEN FOLLOWING THAT SENTENCE,
+not breaking it - and would have buried twenty-eight documents that are required reading among more
+than three hundred superseded drafts that are not. A rule that can be obeyed into the wrong outcome
+is worth one paragraph.
+
+THE DISTINCTION, AND IT IS THE USEFUL PART. A SUPERSEDED HAND-OFF IS NOT A NEW VERSION OF AN OLDER
+ONE. Each records a DIFFERENT session and none replaces any other. That is the opposite of what the
+archive holds: konnectome_tutorial_v12 and konnectome_1_specification_v41 are superseded drafts of
+documents that still exist in better form, and nobody will ever read them for their content.
+
+THE TEST THAT SETTLES IT, AND IT IS WRITTEN INTO THE COMMANDMENT SO IT SETTLES THE NEXT CASE TOO:
+WOULD A SESSION EVER BE TOLD TO READ THIS FILE? NOTHING IN THIS REPOSITORY EVER INSTRUCTS ANYONE TO
+READ AN ARCHIVED FILE - every reference to /archive/ in the Constitution is PRESERVATION LANGUAGE,
+saying a superseded document is not deleted and remains readable, which is a promise about the record
+and not a reading list. A SUPERSEDED HAND-OFF IS REQUIRED READING: each names which of its
+predecessors is the substantive one, and the current hand-off's own Part One sends the next session
+to it by name. /archive/ HOLDS DEAD VERSIONS; /docs/hand-off/ HOLDS A LIVING SERIES.
+
+AND IT CORRECTS A LOOSE SENTENCE IN THIS BUILD'S OWN REASONING FROM THE DAY BEFORE, which is recorded
+rather than quietly fixed because the looseness is instructive. Version 13's argument said the
+two-location rule makes hand-offs FOLLOW THE HOUSE RULE the Eleventh Commandment sets. That was right
+about the SHAPE - only the current one lives outside its own directory - and imprecise about the
+DESTINATION, which is not the archive and should not be. BORROWING A RULE'S SHAPE IS NOT THE SAME AS
+BORROWING THE RULE, and an argument that says "follows the existing rule" when it means "has the same
+shape as the existing rule" invites exactly the tidying this clarification now forbids. The imprecise
+sentence was in a merged commit message and a merged amendment, so it is corrected here and in the
+version 14 note rather than edited out of either.
+
+NO FILE MOVED, NO FILE WAS RENAMED, NO TEST CHANGED. 811 tests across 34 packs, four gates at zero
+plus the naming gate's self-test. The hand-off directory's README.txt gains the same distinction, so
+a reader who arrives there rather than at the Constitution finds it too.
