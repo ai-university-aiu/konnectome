@@ -1481,6 +1481,55 @@ violations, the naming gate passing its own self-test; conformance re-measured a
 (specification 4.0.0) in both cousins. No new wall; no cousin edited, per the Second, Third, and
 Fourth Commandments.
 
+Build-log repair note (2026-08-09). The Eighteenth Commandment's document was found carrying a
+GAP, and the gap is recorded here because a scoreboard that only counts code is not an honest
+scoreboard. BUILDING_KONNECTOME_v2.txt ran from CHAPTER FIFTEEN (slice 21) straight to CHAPTER
+THIRTY-ONE (slice 35): the sessions that built slices 22 through 34, and the two sessions that
+received and analysed the guiding corpus, appended their work to this ledger, to the SPARCD
+Fileset, to the tutorial, and to the repository's history, but did not append their chapters to
+the build log. The commandment requires that document to carry the COMPLETE story of how
+konnectome was built, so the omission was a standing defect in a governed document, not a
+cosmetic one. Verified pre-existing at main 3cae5d4, before slice 38; discovered by slice 38's
+own session while appending CHAPTER THIRTY-FOUR, and deliberately NOT folded into that slice -
+a documentation repair of thirteen slices' standing is its own unit of work, not a rider on a
+code slice.
+
+THE REPAIR. Fifteen chapters, SIXTEEN through THIRTY, written in slice order: Sixteen through
+Twenty-Eight for slices 22 through 34, Twenty-Nine for the Vision Document Set's arrival and the
+Eighth Commandment's top-down analysis, and Thirty for the Ninth Commandment's
+Cognitive-Architectures Test-Bed and its coverage survey. Those two non-slice chapters are what
+account for a fifteen-chapter span over thirteen slices; both were substantial commandment
+executions carrying their own notes above and their own merged pull requests, and both changed no
+code, which is precisely why they are chapters and not slices. EVERY CLAIM IS SOURCED, none
+remembered: this ledger's per-slice notes (by far the richest source), the archived SPARCD
+Realization Logs, the archived tutorials, the README's per-slice entries, and the commit history.
+The asserted test-count chain was cross-checked entry by entry against this document and is
+continuous - 331, 339, 376, 384, 384, 395, 414, 438, 455, 465, 472, 486, 494. Where a session's
+account of itself was uncertain the chapters say so rather than smoothing it: the reviews of
+slices 23 and 24 were STOPPED MID-RUN by the owner, and both sessions honestly recorded the
+weaker builder's verification that replaced them, so the chapters record that too.
+
+THE HONESTY NOTE, AND THE ONE JUDGEMENT CALL. The Eighteenth Commandment calls the log
+append-only, and these chapters were INSERTED mid-document rather than appended. The judgement:
+the same commandment's stated purpose is that the log carry the complete story, and the log's own
+preamble holds that what was true when written stays written and corrections arrive as later
+text, honestly and without erasing the original. Filling a gap in slice order serves that
+purpose; letting the chapters pass as contemporaneous would not. A PERMANENT editorial note
+therefore stands ahead of CHAPTER SIXTEEN stating plainly that the fifteen chapters were written
+after the fact, why, and from which records - and it is as permanent as the chapters it
+introduces. This ledger entry is the second half of that same honesty.
+
+Merged as 843cfbe (pull request 80). The chapter sequence now runs unbroken from ONE to
+THIRTY-FOUR. NO CODE CHANGED and no test moved, so the Twelfth Commandment - re-read rather than
+assumed, and governing "any and all CODE changes" - does not require the SPARCD Fileset to be
+mirrored or bumped, and the Eleventh Commandment archives nothing because no new document version
+was created (the log stays v2). The counter line above is unmoved: no wall was hit, no
+observation minted, and nothing here routes to either cousin, per the Second, Third, and Fourth
+Commandments. RECORDED FOR FUTURE SESSIONS: the hand-off protocol and the per-slice document
+lockstep both name the ledger, the SPARCD Fileset, and the tutorial explicitly, and the build log
+is the document most easily forgotten among them - a session that appends its chapter is doing
+what thirteen consecutive sessions did not.
+
 Observation-5 (2026-08-09, from slice 35). The neuromodulator_bus chemical reads
 (neuromodulator_bus_level/3 and neuromodulator_bus_level_territory/4) silently bind an UNBOUND
 bus argument into a partial list during lookup, against the module's own never-silently-bound
