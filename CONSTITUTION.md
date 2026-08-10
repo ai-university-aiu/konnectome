@@ -3,13 +3,13 @@ The konnectome GitHub repository, hereinafter known as "konnectome",
 will be built and maintained with the principles of Artificial General Intelligence (AGI)
 and Artificial Super Intelligence (ASI) in mind,
 as specified in the following three (3) documents:
-/home/ccaitwo/konnectome/docs/THE_ROADMAP_TO_AGI_AND_ASI_MANUSCRIPT.txt
-/home/ccaitwo/konnectome/docs/AGI_FOR_EVERYONE_OUTLINE.txt
-/home/ccaitwo/konnectome/docs/AGI_FOR_EVERYONE_MANUSCRIPT_v2.txt
+/home/ccaitwo/konnectome/docs/principles/THE_ROADMAP_TO_AGI_AND_ASI_MANUSCRIPT.txt
+/home/ccaitwo/konnectome/docs/principles/AGI_FOR_EVERYONE_OUTLINE.txt
+/home/ccaitwo/konnectome/docs/principles/AGI_FOR_EVERYONE_MANUSCRIPT_v2.txt
 (AMENDED in version 9, by the owner's instruction of 2026-08-09. The third document was
 docs/AGI_FOR_EVERYONE_MANUSCRIPT.txt and is now its successor, _v2. The successor was CHECKED rather
 than assumed before the pointer moved: it carries the same five parts and the same chapter openings,
-it follows the same docs/AGI_FOR_EVERYONE_OUTLINE.txt named on the line above, and 868 of the
+it follows the same AGI_FOR_EVERYONE_OUTLINE.txt named on the line above, and 868 of the
 predecessor's 869 substantive lines appear in it VERBATIM - the single exception being the old title
 line, which the successor restyles. It is therefore a strict superset, expanded roughly four and a
 half fold and carrying an appendix the predecessor did not have. The predecessor is ARCHIVED at
@@ -473,7 +473,34 @@ commit because they are one act: the document that was the instruction becomes a
 moment the next one becomes the instruction, and splitting them across two changes would leave a
 commit in which /docs/ holds two hand-offs or none.
 
-VERSION HISTORY NOTE (extended in version 16). This Constitution is at VERSION 16. Version 16, by
+VERSION HISTORY NOTE (extended in version 17). This Constitution is at VERSION 17. Version 17, by
+the owner's instruction of 2026-08-10, records the move of the FIRST COMMANDMENT'S THREE NAMED
+DOCUMENTS into docs/principles/ , and repoints all three. NO COMMANDMENT WAS REMOVED, NO COMMANDMENT
+WAS RENUMBERED, NO RULE CHANGED, AND NO DOCUMENT WAS EDITED. Only the directory moved.
+WHY A DIRECTORY OF THEIR OWN RATHER THAN ANY EXISTING ONE. They are INHERITED - konnectome did not
+write them - which rules out the top level, now reserved for konnectome's own live working documents.
+They are LIVE GUIDANCE - this Commandment is a standing instruction to build with their principles in
+mind - which rules out docs/archive/ , holding superseded versions, and docs/provenance/ , holding a
+closed programme's record that nobody is told to read. And they are NOT NEUROSCIENCE, which rules out
+docs/neuroscience/ , whose own README states that its boundary is AUTHORSHIP AND NOT SUBJECT: these
+three pass the authorship half and fail the subject half, so putting them there would have made that
+directory's name a lie.
+THE NAME IS THIS COMMANDMENT'S OWN WORD. It says konnectome is built "with the PRINCIPLES of
+Artificial General Intelligence (AGI) and Artificial Super Intelligence (ASI) in mind". Two
+alternatives were rejected for stated reasons rather than taste: docs/agi/ would put a bare acronym
+where the FOURTEENTH Commandment requires whole words, and docs/vision/ would collide head-on with
+"the Vision Document Set", which is this Constitution's term for the NEUROSCIENCE corpus - two
+different sets under one word being exactly the naming collision the mode-register read spent a page
+resolving.
+ONE PATH IN THE VERSION 9 NOTE ABOVE WAS SHORTENED RATHER THAN REPOINTED, and the distinction is
+deliberate. That note records a CHECK performed on 2026-08-09 and said the successor "follows the
+same docs/AGI_FOR_EVERYONE_OUTLINE.txt named on the line above". Repointing it would have put a
+2026-08-10 path inside a 2026-08-09 record; leaving it would have made it disagree with the very line
+it points at. It now names the file WITHOUT a directory, which is true whatever directory holds it
+and lets "the line above" resolve to whatever the live list says. WHEN A RECORD REFERS TO A LIVE LIST,
+THE FIX IS TO DROP THE PART THAT CAN GO STALE, NOT TO UPDATE IT OR TO FREEZE IT.
+
+Version 16, by
 the owner's instruction of 2026-08-10, records the move of the FIVE INHERITED PROVENANCE DOCUMENTS
 into docs/provenance/ - the record of the ten-wave programme that PRECEDED konnectome and produced
 the foundation it was built on. NO COMMANDMENT WAS REMOVED, NO COMMANDMENT WAS RENUMBERED, NO RULE

@@ -2868,7 +2868,7 @@ the kind of claim that is easy to agree with and expensive to be wrong about whe
 in the highest-authority Commandment in the repository.
 
 WHAT THE CHECK FOUND. The two files are the SAME BOOK, not two different ones. They carry the same
-five parts and the same chapter opening titles; both follow docs/AGI_FOR_EVERYONE_OUTLINE.txt, which
+five parts and the same chapter opening titles; both follow docs/principles/AGI_FOR_EVERYONE_OUTLINE.txt, which
 the First Commandment names on the line above; both carry the HOW TO READ THIS BOOK front matter and
 BOTH glossaries. The successor is 11,175 lines against 2,000, and 714 kilobytes against 154 - roughly
 four and a half times the predecessor - and it adds an appendix, a VISION section per part, and the
@@ -3887,3 +3887,55 @@ the subject that number governs. It over-flags heavily - "the Second and Third C
 READING LIST AND NOT A VERDICT. That is the right shape for a prose check: it narrowed ninety-one
 suspects to eight real errors, and a check that had tried to decide for itself would have rewritten
 the dated records.
+
+
+PRINCIPLES REORGANISATION NOTE (2026-08-10, Constitution version 17). THE FIRST COMMANDMENT'S THREE
+NAMED DOCUMENTS MOVED TO docs/principles/ . Not a slice: no pack touched, no test written, no document
+edited. Three pure renames. This is the sixth and last reorganisation of the day, and it is the one
+that had to place a document by ELIMINATION rather than by matching an existing category.
+
+WHAT MOVED. THE_ROADMAP_TO_AGI_AND_ASI_MANUSCRIPT.txt, AGI_FOR_EVERYONE_OUTLINE.txt and
+AGI_FOR_EVERYONE_MANUSCRIPT_v2.txt - the three the First Commandment names by absolute path as the
+documents whose principles konnectome is built and maintained with in mind.
+
+THE PLACEMENT WAS DECIDED BY RULING OUT ALL FOUR EXISTING HOMES, AND EACH EXCLUSION USED A RULE THIS
+LEDGER ALREADY CARRIES. NOT docs/archive/ , which holds SUPERSEDED VERSIONS: all three are current,
+and note that the _v2's predecessor IS in the archive, correctly, and did not follow its successor
+here. NOT docs/provenance/ , which holds a CLOSED programme's record that nobody is told to read: the
+version 14 test settles this in one question - would a session ever be told to read this file? - and
+for these the answer is YES, because the First Commandment is a standing instruction. NOT
+docs/neuroscience/ , because that directory's boundary is AUTHORSHIP AND NOT SUBJECT and these three
+pass the authorship half while failing the subject half; filing them there would have made the
+directory's name a lie. And NOT the top level, now reserved for konnectome's OWN live working
+documents, because these are inherited.
+
+THE CATEGORY IS THEREFORE: INHERITED, LIVE, AND NOT NEUROSCIENCE. That combination had no home, which
+is the honest reason a sixth directory exists rather than a fifth being stretched. docs/neuroscience/
+is its nearest sibling - same class, different subject.
+
+THE NAME IS THE COMMANDMENT'S OWN WORD - konnectome is built with the PRINCIPLES of AGI and ASI in
+mind - and two alternatives were rejected for stated reasons rather than taste. docs/agi/ would put a
+bare acronym where the FOURTEENTH Commandment requires whole words. docs/vision/ would collide
+head-on with "the Vision Document Set", this Constitution's term for the NEUROSCIENCE corpus next
+door, which is precisely the naming collision the mode-register design authority spent a page
+resolving; repeating it in a directory name would have been careless in a way this build has already
+paid to learn about.
+
+AND ONE PATH WAS SHORTENED RATHER THAN REPOINTED, WHICH IS A NEW MOVE AND THE MOST TRANSFERABLE THING
+HERE. The First Commandment's version 9 amendment note records a CHECK made on 2026-08-09 and said
+the successor manuscript "follows the same docs/AGI_FOR_EVERYONE_OUTLINE.txt NAMED ON THE LINE ABOVE".
+That sentence is a dated record AND it points at a live list, so both of the usual answers were wrong:
+repointing it would have put a 2026-08-10 path inside a 2026-08-09 record, and leaving it would have
+made it disagree with the very line it points at, inside one paragraph. IT NOW NAMES THE FILE WITH NO
+DIRECTORY AT ALL, which is true whatever directory holds it and lets "the line above" resolve to
+whatever the live list currently says.
+
+WHEN A RECORD REFERS TO A LIVE LIST, THE FIX IS TO DROP THE PART THAT CAN GO STALE - NOT TO UPDATE IT,
+AND NOT TO FREEZE IT. That is a third option this repository did not have this morning, and it is the
+right one wherever a historical sentence borrows its meaning from something that is still moving.
+
+VERIFIED. Five path pointers swept, four in the Constitution and one here. Resolve-check clean. 811
+tests across 34 packs, four gates at zero plus the naming gate's self-test. docs/ top level is now
+seventeen files and SIX sub-directories - DSPARCD, neuroscience, principles, hand-off, provenance,
+archive - plus images, and every file remaining at the top level is either konnectome's own live
+working document or the current hand-off.
