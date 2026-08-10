@@ -86,7 +86,7 @@ the FRONT, and the fileset is renamed to match the method.)
 The Definition, Specification, Pseudocode, Architecture, Refinement, Completion, and Demonstration
 waterfall steps and files
 will be sourced from the Appendices of the file:
-/home/ccaitwo/konnectome/docs/NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt
+/home/ccaitwo/konnectome/docs/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt
 The versioned files will be created and named:
 /home/ccaitwo/konnectome/docs/konnectome_0_definition_v1.txt
 /home/ccaitwo/konnectome/docs/konnectome_1_specification_v1.txt
@@ -96,7 +96,7 @@ The versioned files will be created and named:
 /home/ccaitwo/konnectome/docs/konnectome_5_completion_v1.txt
 /home/ccaitwo/konnectome/docs/konnectome_6_demonstration_v1.txt
 Each file will start its contents from one entire, similarly numbered appendix from the file
-/home/ccaitwo/konnectome/docs/NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt
+/home/ccaitwo/konnectome/docs/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt
 These seven (7) files will be known as "The DSPARCD Fileset".
 konnectome_0_definition HAS NO SOURCE APPENDIX and correctly so: the Definition phase is newer than
 the manuscript the other six are sourced from, so its first version is written from THIS CONSTITUTION
@@ -122,7 +122,7 @@ catalogued layer, four files (OUTLINE, MANUSCRIPT, MODES_OUTLINE, MODES_MANUSCRI
 - Layer 7, the Synaptics (LAYER_07_...): the 64 junction types - the edge type system.
 - Layer 8, the Microcircuits (LAYER_08_...): the 71 canonical motifs - the module library.
 - Layer 9, the Regions (LAYER_09_MODES_...): the modes companion to
-  NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT, which already lives in /docs/ and needs no duplicate.
+  LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT, which already lives in /docs/ and needs no duplicate.
 - Layer 10, the Systems (LAYER_10_...): the 44 systems - the pipelines, broadcasts, and axes.
 - Layer 11, the Global States (LAYER_11_...): the 26 operating states - the scheduler, the power
   states, and the master mode register.
@@ -232,7 +232,7 @@ make sure every named construct (including the previously unnamed constructs (PU
 is represented by a code module in konnectome,
 and that those code modules serve the same functions and faculties in konnectome as they are described in,
 and with the same inputs/outputs (SUBSCRIBE/PUBLISH) interfaces as described in,
-NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt
+LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt
 The audit is not one-and-done: keep a coverage list in konnectome_ledger_v1.txt that names, for each
 construct in the manuscript, the module that realizes it, so the audit can be re-run at any time and
 a missing construct is visible at a glance.
@@ -353,7 +353,7 @@ Step 3: To this file write the following information for the next building or ma
 - A reminder to read The DSPARCD Fileset
 (docs/konnectome_0_definition through konnectome_6_demonstration, at their current versions), and to
 read konnectome_0_definition FIRST, because it is the concept the other six answer to.
-- A reminder to read docs/NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt, the guiding book for konnectome
+- A reminder to read docs/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt, the guiding book for konnectome
 - A reminder to read the Settings, General, Instructions for Claude (the owner's standing instructions to the assistant).
 - A reminder to read ~/CLAUDE.md, which is git-untracked (gitignored) and holds the system-wide current-state narrative (it lives at the organization root, not inside one repository, because it belongs to the whole system).
 - A reminder to read the current /docs/konnectome_tutorial (the maintained beginner tutorial), and to read all of the documents in /docs/.

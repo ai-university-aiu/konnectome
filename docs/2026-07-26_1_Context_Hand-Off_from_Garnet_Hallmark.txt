@@ -21,7 +21,7 @@ Before you write a single line, read and follow these.
 
 • The SPARCD Fileset. These are the six waterfall documents, now at version 14: docs/konnectome_1_specification_v14.txt, docs/konnectome_2_pseudocode_v14.txt, docs/konnectome_3_architecture_v14.txt, docs/konnectome_4_refinement_v14.txt, docs/konnectome_5_completion_v14.txt, and docs/konnectome_6_demonstration_v14.txt. Each was seeded from the matching appendix of the guiding book and grows a Realization Log at its foot, one entry per code slice. Read all six.
 
-• docs/NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt. This is the guiding book for konnectome. Everything konnectome builds is faithful to it, especially its Appendices 1 through 6, its Section A3.3 (the one-tick data flow), and Appendix 6 (the developmental ladder). Read it.
+• docs/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt. This is the guiding book for konnectome. Everything konnectome builds is faithful to it, especially its Appendices 1 through 6, its Section A3.3 (the one-tick data flow), and Appendix 6 (the developmental ladder). Read it.
 
 • The Settings, General, Instructions for Claude (the owner's standing instructions to the assistant). Among other things: a web search before answering, plain-text output presented as a downloadable text artifact with a copy written to ~/output/, no markdown formatting characters, bullet points using the bullet character followed by one space, a blank line between every sentence and every bullet, acronyms spelled out on first use, technical terms defined on first use, a space-dash-space in place of an em-dash, and standing authorization to auto-commit, open pull requests, and squash-merge. Read them and honor them.
 
