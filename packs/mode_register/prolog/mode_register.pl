@@ -18,6 +18,8 @@
     mode_register_current_rule/2,
     % mode_register_transitions/2: the transition table block.
     mode_register_transitions/2,
+    % mode_register_departure/3: where the table sends this construct, under a NAMED AGENCY.
+    mode_register_departure/3,
     % mode_register_faults/2: the fault regimes and watchdogs block.
     mode_register_faults/2,
     % mode_register_of_construct_kind/2: the canonical register for a konnectome construct kind.
@@ -323,6 +325,45 @@ mode_register_current_rule(Automaton, Rule) :-
 mode_register_transitions(Automaton, Transitions) :-
     % Open the automaton and hand back its transition table.
     mode_register_shape(Automaton, _Current, _Register, _Transfers, Transitions, _Faults).
+
+% ---------------------------------------------------------------------------
+% READING A DEPARTURE OUT OF THE TABLE, UNDER A NAMED AGENCY (slice 41)
+% ---------------------------------------------------------------------------
+%
+% AGENCY WAS ALWAYS A COLUMN; UNTIL THIS SLICE NOTHING READ IT. Slice 40 made the transition table
+% the sole authority on direction, and every row it wrote was self_selected, so a lookup that simply
+% took the first row leaving a mode could not be wrong. The moment a SECOND agency writes rows into
+% the same table - which is exactly what slice 41 does - "the first row leaving this mode" stops
+% being a question with one answer, and a lookup that does not name the agency it wants would return
+% whichever row happened to be declared first. That is the default-drift lens, caught before it paid
+% out: the departure lookup is keyed on the agency HERE, in the one place both routes come through,
+% rather than in each caller.
+%
+% AMBIGUITY IS REFUSED RATHER THAN RESOLVED. Two rows leaving one mode under one agency describe a
+% construct that does not know which machine it becomes, and the corpus never writes such a table.
+% konnectome refuses it aloud instead of quietly preferring the earlier row.
+
+% mode_register_departure(+Automaton, +Agency, -ToMode): where the table sends this construct when it
+% leaves the mode it is standing in, under the named agency.
+mode_register_departure(Automaton, Agency, ToMode) :-
+    % An unbound agency is refused: it would match the first row of ANY agency and answer confidently.
+    must_be(atom, Agency),
+    % Read the judged mode the construct is departing from; the constructor judged this slot already.
+    mode_register_current(Automaton, FromMode),
+    % Read the transition table out of the register, so the table is the one authority on direction.
+    mode_register_transitions(Automaton, Transitions),
+    % Judge the store's shape before walking it, so a hole is never walked as an empty table.
+    mode_register_check_store(Transitions),
+    % Gather every destination this agency declares from this mode; the trigger is deliberately not
+    % re-named here, so the table cannot drift out from under a lookup that spells its trigger twice.
+    findall(To, member(transition(_Trigger, FromMode, To, _Timescale, Agency), Transitions), Destinations),
+    % One destination is the answer; none and many are both refused aloud, by different names.
+    (   Destinations = [Only]
+    ->  ToMode = Only
+    ;   Destinations == []
+    ->  existence_error(mode_transition, FromMode)
+    ;   domain_error(single_mode_departure, Destinations)
+    ).
 
 % mode_register_faults(+Automaton, -Faults): the fault regimes and watchdogs block.
 mode_register_faults(Automaton, Faults) :-

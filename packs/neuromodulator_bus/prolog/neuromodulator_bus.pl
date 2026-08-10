@@ -17,7 +17,15 @@
     % neuromodulator_bus_check_operating_state/1: refuse anything but the two flip-flop positions, by name.
     % (Exported in slice 38 so the tick's day-or-night dispatch judges the state it READS against the
     % bus's OWN domain, rather than growing a second copy of the same refusal and drifting from it.)
-    neuromodulator_bus_check_operating_state/1
+    neuromodulator_bus_check_operating_state/1,
+    % neuromodulator_bus_throw_mode/4: a source throws a MODE at every construct of one kind.
+    neuromodulator_bus_throw_mode/4,
+    % neuromodulator_bus_thrown_mode/3: read the mode standing thrown at one construct kind.
+    neuromodulator_bus_thrown_mode/3,
+    % neuromodulator_bus_release_mode_throw/3: withdraw a standing throw, returning the kind to itself.
+    neuromodulator_bus_release_mode_throw/3,
+    % neuromodulator_bus_check_thrown_mode/1: refuse a hole, a compound, or the reserved silence name.
+    neuromodulator_bus_check_thrown_mode/1
 ]).
 
 % Import membership for reading a level from the bus.
@@ -40,6 +48,10 @@
 % third key shape, the compound global(operating_state), which the atom-only modulator guard and
 % the territory/2 shape can never alias; an absent entry reads as online, the waking default, so a
 % bus built before this state existed behaves exactly as it always did.
+% Per the mode-register design authority's Part Nine slice four, the bus also carries the MODE THROW:
+% a fourth key shape, mode_throw(ConstructKind), on which one write sets the mode of every construct
+% of that kind at once. That channel and the decision it embodies are documented at the foot of this
+% file, where the code for it lives.
 
 % neuromodulator_bus_check_atom(+Value, +ErrorName): refuse a name that is not a plain atom, by name.
 neuromodulator_bus_check_atom(Value, ErrorName) :-
@@ -130,3 +142,116 @@ neuromodulator_bus_broadcast_operating_state(Bus0, State, Bus) :-
     exclude(neuromodulator_bus_matches(global(operating_state)), Bus0, Without),
     % Add the new state and keep the bus in a canonical sorted order.
     keysort([global(operating_state)-State|Without], Bus).
+
+% ---------------------------------------------------------------------------
+% THE MODE THROW (konnectome build slice 41)
+% ---------------------------------------------------------------------------
+%
+% THE CORPUS'S OWN COORDINATION MECHANISM, AND IT NEEDS NO CONTROLLER. The mode-register design
+% authority's most consequential finding is that there is NO derivation function from a parent's mode
+% to a child's - the corpus denies the reduction twice - and that what does the coordinating is ONE
+% BROADCAST, WRITTEN ONCE AND READ MANY TIMES. konnectome already owned the broadcast; what it did not
+% own was a broadcast that carries a MODE rather than a level. This is that channel: one write, and
+% every construct of the named kind departs its current mode by a row its OWN table declares.
+%
+% THE KEY IS A FOURTH SHAPE AND CANNOT ALIAS THE OTHER THREE. The bus's keys are now: a plain ATOM
+% (a modulator level), territory/2 (a level in one territory), global/1 (the operating state), and
+% mode_throw/1 (a mode thrown at one construct kind). The atom guard keeps a modulator out of the
+% compound shapes, and no two compounds share a name and arity, so no read can answer with another
+% channel's value.
+%
+% THE COMMAND-VERSUS-BIAS DECISION, MADE HERE AND RECORDED AS KONNECTOME'S OWN. The design
+% authority's Part Seven item 1 records that the corpus is genuinely silent: keeps it in the Pinpoint
+% Report, set from above reads as COMMAND, and biases it toward flashing reads as BIAS, sometimes in
+% the same volume. THE CORPUS DOES NOT INSTRUCT, SO KONNECTOME CHOOSES, AND THIS IS THE CHOICE:
+%
+%   A THROWN MODE IS A COMMAND AT THE DISCRETE GRAIN. BIAS IS THE CHANNEL KONNECTOME ALREADY HAS.
+%
+% Three reasons, none of them the corpus's, all of them konnectome's:
+%
+% FIRST, IT UN-CONFLATES TWO OPERATIONS THE DESIGN AUTHORITY SAYS ARE CURRENTLY CONFLATED. Its Part
+% Eight records that continuous modulation and discrete throw are different operations on the same
+% channel and that konnectome's bus-modulated relay runs them together. konnectome ALREADY OWNS BIAS,
+% built and running: relay_modulated reads a level off this bus and scales its gain where it stands.
+% Had the throw ALSO been a bias, konnectome would own two bias mechanisms, no command mechanism, and
+% the conflation would be permanent. Choosing command is what separates them.
+%
+% SECOND, A COMMAND COSTS NO INVENTED NUMBER AND A BIAS COSTS AT LEAST ONE. A bias moves a threshold,
+% and konnectome has no threshold offset the corpus supplies - it would have to be made up, in a
+% repository whose standing rule for this family is that no number in the pack is konnectome's
+% invention. A command names a mode the target's own register already declares.
+%
+% THIRD, COMMAND IS THE REVERSIBLE CHOICE. A bias channel can later be added BESIDE this one as a
+% second agency writing rows into the same table, and nothing built on the command has to move. The
+% reverse is not true: a bias-only throw cannot be sharpened into a command without inventing the
+% threshold above.
+%
+% AND THE CONFLICT RULE THAT FOLLOWS FROM IT, ALSO KONNECTOME'S OWN (Part Seven item 2). When a
+% construct's self-selected transition and a standing throw disagree, THE THROW PREEMPTS. The corpus
+% shows preemption in one place and negotiated arbitration in another and states no general rule;
+% konnectome takes preemption because it is the rule that can be READ without running the construct,
+% which the owner's visualization addendum requires of every register slice. NEGOTIATED ARBITRATION
+% IS DEFERRED BY NAME, not denied: it is the shape a later slice would need if two sources ever throw
+% at the same kind in the same tick, and this channel deliberately holds ONE standing throw per kind
+% so that case cannot arise unnoticed - the newest throw replaces the older, exactly as every other
+% broadcast on this bus does.
+%
+% WHAT THIS CHANNEL DOES NOT DO, STATED SO THE GAP IS A DECISION. It does not address ONE construct:
+% a throw is aimed at a KIND, because a broadcast that could name an individual would be a wire, not
+% a broadcast. It does not carry a territory, because no reading has yet asked for a throw that
+% reaches some territories and not others. And it does not itself move any construct - it publishes,
+% and each construct's own transition table decides whether it has anywhere to go.
+
+% The atom a silent channel reads back. It is RESERVED: a write of this name is refused below, so a
+% register that happened to declare a mode of the same name could never be thrown by accident, and a
+% reader can never mistake silence for an instruction.
+neuromodulator_bus_no_mode_thrown(no_mode_thrown).
+
+% neuromodulator_bus_check_thrown_mode(+Mode): refuse a hole, a compound, or the reserved silence name.
+neuromodulator_bus_check_thrown_mode(Mode) :-
+    % Refuse an unbound or compound mode name exactly as a modulator name is refused.
+    neuromodulator_bus_check_atom(Mode, neuromodulator_bus_thrown_mode),
+    % Read the reserved name once, from the one place it is written.
+    neuromodulator_bus_no_mode_thrown(Reserved),
+    % Refuse the silence name aloud: throwing it would publish an instruction that reads as no instruction.
+    (  Mode == Reserved
+    -> throw(error(domain_error(neuromodulator_bus_thrown_mode, Mode), _))
+    ;  true
+    ).
+
+% neuromodulator_bus_throw_mode(+Bus0, +ConstructKind, +Mode, -Bus): a source throws a mode at a kind.
+neuromodulator_bus_throw_mode(Bus0, ConstructKind, Mode, Bus) :-
+    % Refuse an unbound or compound construct kind before touching the bus.
+    neuromodulator_bus_check_atom(ConstructKind, neuromodulator_bus_construct_kind),
+    % Refuse a hole, a compound, or the reserved silence name as the thrown mode.
+    neuromodulator_bus_check_thrown_mode(Mode),
+    % Drop any standing throw at this kind so the newest throw wins, as it does for every level.
+    exclude(neuromodulator_bus_matches(mode_throw(ConstructKind)), Bus0, Without),
+    % Add the new throw and keep the bus in a canonical sorted order.
+    keysort([mode_throw(ConstructKind)-Mode|Without], Bus).
+
+% neuromodulator_bus_thrown_mode(+Bus, +ConstructKind, -Mode): the mode standing thrown at one kind.
+neuromodulator_bus_thrown_mode(Bus, ConstructKind, Mode) :-
+    % An unbound bus is refused, never silently bound by the lookup into a partial list.
+    (  var(Bus)
+    -> throw(error(instantiation_error, _))
+    ;  true
+    ),
+    % Refuse an unbound or compound construct kind before reading.
+    neuromodulator_bus_check_atom(ConstructKind, neuromodulator_bus_construct_kind),
+    % A standing throw reads back; a channel nobody has written reads as the reserved silence name.
+    (  memberchk(mode_throw(ConstructKind)-Found, Bus)
+    -> Mode = Found
+    ;  neuromodulator_bus_no_mode_thrown(Mode)
+    ).
+
+% neuromodulator_bus_release_mode_throw(+Bus0, +ConstructKind, -Bus): withdraw a standing throw.
+% A throw that could never be withdrawn would take a kind's self-selection away permanently, which is
+% a larger claim than this slice makes: the throw preempts while it stands, and no longer.
+neuromodulator_bus_release_mode_throw(Bus0, ConstructKind, Bus) :-
+    % Refuse an unbound or compound construct kind before touching the bus.
+    neuromodulator_bus_check_atom(ConstructKind, neuromodulator_bus_construct_kind),
+    % Drop this kind's throw entry; a kind with no standing throw is left exactly as it was.
+    exclude(neuromodulator_bus_matches(mode_throw(ConstructKind)), Bus0, Without),
+    % Keep the bus in the same canonical sorted order every other write leaves it in.
+    keysort(Without, Bus).

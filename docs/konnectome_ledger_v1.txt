@@ -1206,7 +1206,7 @@ thought combination. The four gates report zero violations, the naming gate pass
 self-test; conformance re-measured at 137 of 137 (specification 4.0.0) in both cousins. No new
 wall; no cousin edited, per the Second, Third, and Fourth Commandments.
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 8.
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 8.  Decisions: 1.
 
 Slice-34 note (2026-08-09). The bound turned live in the told story. The slice-33 pending line
 (the bound proven per-territory in the tests but not yet in the capstone's told story) is
@@ -2313,3 +2313,135 @@ thirty-two hand-off documents; the count at this entry is TWENTY-FOUR. Note for 
 finds it due: this visit did a large part of the audit's PART TWO work in advance, since every theme
 now has its design authority cited back as the currency obligation requires, and the audit's other
 parts are untouched.
+
+
+SLICE 41 NOTE (2026-08-09). THE BUS THROWS A TRANSITION - and with it, THE FIRST NUMBERED KONNECTOME
+DECISION, recorded here because the corpus genuinely does not settle it and three families will
+inherit whatever this slice chose.
+
+WHAT WAS BUILT. The design authority's Part Nine slice four. neuromodulator_bus gains a FOURTH KEY
+SHAPE, mode_throw(ConstructKind), beside the plain-atom modulator key, territory/2 and
+global/1 - carrying neuromodulator_bus_throw_mode/4, neuromodulator_bus_thrown_mode/3,
+neuromodulator_bus_release_mode_throw/3 and neuromodulator_bus_check_thrown_mode/1. archetype's gate
+gains TWO TRANSITION ROWS under the trigger broadcast_mode_throw at timescale one_tick with the
+agency broadcast_thrown, and archetype_gate_throw/3 and archetype_gate_thrown_departure/2 to apply
+them. mode_register gains mode_register_departure/3, the departure lookup KEYED ON AGENCY.
+677 tests across thirty packs; four gates at zero; capstone byte-identical.
+
+DECISION-1 (2026-08-09, slice 41). COMMAND VERSUS BIAS: A THROWN MODE IS A COMMAND AT THE DISCRETE
+GRAIN, AND BIAS IS THE CHANNEL KONNECTOME ALREADY HAS. THIS IS KONNECTOME'S OWN DECISION AND MUST
+NEVER BE PRESENTED AS THE CORPUS'S INSTRUCTION.
+
+WHY A DECISION WAS REQUIRED. The mode-register design authority's Part Seven item 1 records the
+corpus as genuinely silent, with both readings appearing literally and sometimes in the same volume:
+"keeps it in the Pinpoint Report, set from above" is command-like, "biases it toward flashing" is
+bias-like. The Theme Two read raised the same fork independently at item 8 for the offline broadcast,
+and the Theme Four read raised it a third time. THE ONLY CONCRETE EVIDENCE ANY OF THE THREE FOUND is
+Layer 8 Chapter 16's "neuromodulators move the circuit between regimes by scaling recurrent gain",
+which is BIAS IN FORM - a gain scalar, not a mode name - and which arrives at a DIFFERENT GRAIN from
+the one where the decision must be made. It is therefore evidence and not an instruction, and it is
+recorded here so that a later session cannot mistake it for one.
+
+THE THREE REASONS, ALL KONNECTOME'S OWN. FIRST, IT UN-CONFLATES TWO OPERATIONS THE DESIGN AUTHORITY'S
+PART EIGHT SAYS ARE CURRENTLY CONFLATED - continuous modulation and discrete throw on one channel.
+konnectome ALREADY OWNS BIAS, built and running since slice 4: relay_modulated reads a level off this
+same bus and scales its gain where it stands. A bias-shaped throw would have left konnectome with two
+bias mechanisms, no command mechanism, and a permanent conflation. SECOND, A COMMAND COSTS NO
+INVENTED NUMBER AND A BIAS COSTS AT LEAST ONE: a bias moves a threshold BY some amount the corpus
+does not supply at this grain, and this family's standing rule is that no number in the pack is
+konnectome's invention. THIRD, COMMAND IS THE REVERSIBLE CHOICE: a bias agency can later write rows
+into the same table beside broadcast_thrown, and nothing built on the command has to move; the
+reverse would require inventing the threshold anyway.
+
+DECISION-1's COROLLARY, THE CONFLICT RULE (Part Seven item 2, also konnectome's own). THE THROW
+PREEMPTS SELF-SELECTION WHILE IT STANDS. The corpus shows preemption in one place and negotiated
+arbitration in another and states no general rule. konnectome's stated reason for preemption is not a
+claim about biology: preemption is the rule that can be READ WITHOUT RUNNING THE CONSTRUCT, which the
+owner's standing visualization request demands of every slice in this family. NEGOTIATED ARBITRATION
+IS DEFERRED BY NAME, NOT DENIED, and the channel deliberately holds exactly ONE standing throw per
+kind - newest replacing older, as every broadcast on this bus does - so the two-sources case cannot
+arise unnoticed.
+
+WHAT DECISION-1 DOES NOT DECIDE, stated so a later session does not inherit more than was chosen. It
+does not decide whether a throw may be addressed to an INDIVIDUAL construct: it may not, here,
+because a broadcast that names one construct is a wire. It does not decide whether a throw may be
+TERRITORIAL: no reading has asked for one, and the key shape would extend cleanly if one ever did. It
+does not decide overlay-versus-replacement at the global grain (Part Seven item 3), which the master
+register slice must still invent. And it does not decide anything about learnability, which the
+Theme Three read establishes is carried by the TYPE and not by a mode.
+
+THE THROW IS A ROW, NOT A DOOR - the structural consequence worth carrying. Slice 40 made the
+transition table the sole authority on direction and predicted the throw would be a row in it. It is.
+There is no override flag beside the register and no second entry point into the gate, so A CONSTRUCT
+THAT DECLARES NO THROWN ROW SIMPLY CANNOT BE COMMANDED, and it says so through its own register
+rather than through a list kept elsewhere of who may command whom. archetype STILL DOES NOT IMPORT
+THE BUS: a rule library that reached for a global channel would stop being one, so the throw arrives
+as an argument and the join belongs to the caller, with the archetype suite standing in for one.
+
+THE THREE SILENCES, AND WHY THEY ARE THREE AND NOT ONE. A channel nobody has written reads back the
+reserved atom no_mode_thrown, and the WRITE of that name is refused aloud, so a register declaring a
+mode of the same name could never be commanded by accident. A throw naming the mode already held is
+satisfied without a transition, which is what makes a standing broadcast safe to read on EVERY tick
+rather than only on the tick it was written - a property a bus with no clock of its own must have. A
+throw naming a mode the register does not declare is refused aloud. Three silences would have been a
+defect; two silences and a refusal is the design.
+
+AND A COMMAND ENDS. neuromodulator_bus_release_mode_throw/3 withdraws a standing throw and returns
+the kind to its own self-selection. Without it the first broadcast would have taken a construct's
+self-selection permanently, which is a far larger claim than this slice makes.
+
+A NEW NAMED LENS, EARNED THIS SLICE: THE DECLARATION-ORDER LENS. A LOOKUP THAT IS RIGHT BECAUSE OF
+THE ORDER THINGS WERE WRITTEN IN IS NOT RIGHT, IT IS LUCKY. Slice 40's departure lookup took the
+FIRST row leaving a mode. That was correct while every row shared one agency, and it REMAINS correct
+after this slice purely because the new rows are declared after the old ones - and it would have gone
+wrong in silence, returning a real row from the wrong governor, the first time anyone reordered the
+table. THE GENERAL RULE: the moment a second value can appear in a column the code has been ignoring
+is the moment to read that column. mode_register_departure/3 now names its agency, refuses an unbound
+agency, and REFUSES AMBIGUITY ALOUD with domain_error(single_mode_departure, Destinations) rather
+than preferring the earlier row. This lens joins the four standing ones and should be carried into
+every code review that touches a table.
+
+THE UNBOUND-WRONG-JUDGEMENT LENS HAS NOW PAID NINE SLICES RUNNING (33 through 41), three times in
+this slice's new code: an unbound AGENCY at the departure lookup would have matched the first row of
+any governor; an unbound CONSTRUCT KIND at the throw read would have been bound to whichever kind the
+bus listed first, handing back that kind's command to a caller who addressed nobody; an unbound BUS
+would have invented a bus and a command with it. KEY-SHAPE ALIASING RETURNED DEFENDED AND PINNED: the
+slice writes all four channels onto one bus with the throw deliberately aimed at a kind bearing a
+MODULATOR'S OWN NAME - the arrangement that would expose a collision if one existed - and reads all
+four back clean. BEHAVIOUR-PINNED-IDENTICAL RETURNED DEFENDED: a 387-line probe run in a main
+worktree came back 386 lines identical, and THE ONE DIVERGENCE IS THE TRANSITION TABLE THIS SLICE
+EXISTS TO GROW, named here rather than buried; the 112-line capstone story is byte-identical.
+
+THREE TESTS WERE REWRITTEN RATHER THAN DELETED, and the distinction matters. Slice 40's
+gate_transition_table_carries_four_fields_per_row, gate_transitions_carry_agency and
+gate_transitions_share_one_trigger all pinned the table's SINGLE-AGENCY shape, which is exactly the
+shape this slice exists to change. Each now pins the new shape as specifically as it pinned the old:
+that both agencies are present, that the SELF-SELECTED rows still share their one trigger, and that
+konnectome's gate is therefore STILL a symmetric toggle rather than the hysteretic latch
+OBSERVATION-8 records. A slice that deleted them would have removed the evidence that the old shape
+was ever true.
+
+WHAT THIS SLICE DELIBERATELY DID NOT BUILD, so each gap is a decision. No construct other than the
+GATE was given a thrown row: every other konnectome construct holds a register of ONE, and commanding
+them would have required inventing modes for them. No downward assignment and no master-register
+widening - those are Part Nine slices six and seven. No supervisor channel, so every fault block is
+still present and empty. No territorial throw and no per-instance throw. And Observation-7's two
+halves in tick_engine stand exactly where slice 39 left them; this slice does not touch that pack.
+
+OBSERVATION-8 IS UNCHANGED BY THIS SLICE AND ITS CLOSER IS UNMOVED. The gate remains a symmetric
+toggle; this slice invents no second threshold. NOTE FOR THE STABILISER SLICE, carried forward from
+the Osmium hand-off and now with one addition: it must state WHICH GRAINS its published scalar
+governs, because the corpus answers the hysteresis question differently at two grains - and it must
+also state its AGENCY, because after this slice a stabiliser publishing onto the bus has two shapes
+available to it and they are not the same thing. A hysteresis scalar is a BIAS, and DECISION-1 says
+bias travels as a level on the existing channel, not as a mode throw. That is not a new decision; it
+is DECISION-1 applied, and it is written here so the stabiliser slice does not re-open it by accident.
+
+FAMILY FOUR'S FIRST ITEM IS NOW CHEAPER. The bus's six named broadcast channels - moved from last to
+first by the version 2 analysis because it is the smallest item in two families - now has a fourth
+key shape to pattern itself on, and the read-with-a-named-default idiom is established three times
+over (a level defaults to zero, a state defaults to online, a throw defaults to silence).
+
+THE SCHEDULED AUDIT IS NOT YET DUE. The trigger stands at thirty-two hand-off documents; the count at
+this entry is TWENTY-FIVE. Carry the item forward with the count re-evaluated by:
+ls docs/*Context_Hand-Off*.txt | wc -l .

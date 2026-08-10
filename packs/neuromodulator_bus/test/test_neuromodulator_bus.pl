@@ -223,5 +223,154 @@ test(an_unbound_bus_is_refused_at_the_state_read, error(instantiation_error)) :-
     % A variable bus must throw; a lookup that invented a bus would invent a state with it.
     neuromodulator_bus_operating_state(_, _).
 
+% ---------------------------------------------------------------------------
+% THE MODE THROW (konnectome build slice 41)
+% ---------------------------------------------------------------------------
+
+% A channel nobody has written reads back the reserved silence name, never a mode and never a failure.
+test(an_unwritten_throw_channel_reads_as_silence) :-
+    % Make a fresh empty bus.
+    neuromodulator_bus_new(Bus),
+    % Read the throw standing at a construct kind nobody has addressed.
+    neuromodulator_bus_thrown_mode(Bus, gate, Mode),
+    % Silence has a name of its own, so a reader can never mistake it for an instruction.
+    assertion(Mode == no_mode_thrown).
+
+% A thrown mode can be read back by every construct of the kind it was thrown at.
+test(throw_then_read) :-
+    % Start from an empty bus.
+    neuromodulator_bus_new(Bus0),
+    % Throw a mode at a construct kind.
+    neuromodulator_bus_throw_mode(Bus0, gate, closed, Bus1),
+    % Read it back.
+    neuromodulator_bus_thrown_mode(Bus1, gate, Mode),
+    % The mode read is the mode thrown.
+    assertion(Mode == closed).
+
+% The newest throw replaces the older one, exactly as the newest level replaces the older level.
+test(newest_throw_wins) :-
+    % Start from an empty bus.
+    neuromodulator_bus_new(Bus0),
+    % Throw one mode.
+    neuromodulator_bus_throw_mode(Bus0, gate, closed, Bus1),
+    % Throw another at the same kind.
+    neuromodulator_bus_throw_mode(Bus1, gate, open, Bus2),
+    % Read the standing throw.
+    neuromodulator_bus_thrown_mode(Bus2, gate, Mode),
+    % Exactly one throw stands per kind, and it is the newest - so two sources cannot both be obeyed.
+    assertion(Mode == open).
+
+% A throw at one kind is invisible to every other kind: a broadcast is addressed, not universal.
+test(a_throw_reaches_only_the_kind_it_names) :-
+    % Start from an empty bus.
+    neuromodulator_bus_new(Bus0),
+    % Throw a mode at the gate kind.
+    neuromodulator_bus_throw_mode(Bus0, gate, closed, Bus1),
+    % Read the throw standing at a different kind.
+    neuromodulator_bus_thrown_mode(Bus1, relay, Mode),
+    % That kind hears silence, because nobody threw anything at it.
+    assertion(Mode == no_mode_thrown).
+
+% Withdrawing a throw returns the kind to its own self-selection.
+test(release_returns_the_channel_to_silence) :-
+    % Start from an empty bus.
+    neuromodulator_bus_new(Bus0),
+    % Throw a mode.
+    neuromodulator_bus_throw_mode(Bus0, gate, closed, Bus1),
+    % Withdraw it.
+    neuromodulator_bus_release_mode_throw(Bus1, gate, Bus2),
+    % Read the channel.
+    neuromodulator_bus_thrown_mode(Bus2, gate, Mode),
+    % It is silent again, so a command preempts while it stands and no longer.
+    assertion(Mode == no_mode_thrown).
+
+% Withdrawing a throw nobody made leaves the bus exactly as it was, rather than refusing.
+test(releasing_an_unwritten_throw_is_harmless) :-
+    % Start from an empty bus.
+    neuromodulator_bus_new(Bus0),
+    % Broadcast a level, so the bus is not empty.
+    neuromodulator_bus_broadcast(Bus0, dopamine, 0.4, Bus1),
+    % Withdraw a throw that was never made.
+    neuromodulator_bus_release_mode_throw(Bus1, gate, Bus2),
+    % Nothing else on the bus moved.
+    assertion(Bus2 == Bus1).
+
+% THE KEY-SHAPE ALIASING LENS: the throw's key is a FOURTH shape and cannot be reached by the other
+% three, nor they by it. The throw is deliberately aimed at a kind SHARING ITS NAME with a modulator
+% already on the bus, which is the arrangement that would expose a collision if one existed.
+test(the_throw_key_cannot_alias_the_other_three_channels) :-
+    % Start from an empty bus.
+    neuromodulator_bus_new(Bus0),
+    % A modulator level.
+    neuromodulator_bus_broadcast(Bus0, dopamine, 0.7, Bus1),
+    % A level in one territory.
+    neuromodulator_bus_broadcast_territory(Bus1, dopamine, striatum, 0.2, Bus2),
+    % The global operating state.
+    neuromodulator_bus_broadcast_operating_state(Bus2, offline, Bus3),
+    % And a mode thrown at a construct kind whose name is the modulator's own.
+    neuromodulator_bus_throw_mode(Bus3, dopamine, closed, Bus4),
+    % The modulator level is untouched by the throw that shares its name.
+    neuromodulator_bus_level(Bus4, dopamine, Level),
+    % And reads back exactly what was broadcast.
+    assertion(Level =:= 0.7),
+    % The territory level is untouched.
+    neuromodulator_bus_level_territory(Bus4, dopamine, striatum, Local),
+    % And reads back exactly what was broadcast there.
+    assertion(Local =:= 0.2),
+    % The operating state is untouched.
+    neuromodulator_bus_operating_state(Bus4, State),
+    % And still reads offline.
+    assertion(State == offline),
+    % And the throw reads back its own value, neither a level nor a state.
+    neuromodulator_bus_thrown_mode(Bus4, dopamine, Mode),
+    % Four channels, one bus, no collision.
+    assertion(Mode == closed).
+
+% The reserved silence name may not be THROWN, or a command would read back as no command at all.
+test(throwing_the_reserved_silence_name_is_refused,
+     error(domain_error(neuromodulator_bus_thrown_mode, no_mode_thrown))) :-
+    % Start from an empty bus.
+    neuromodulator_bus_new(Bus0),
+    % Try to throw the name that means silence.
+    neuromodulator_bus_throw_mode(Bus0, gate, no_mode_thrown, _Bus).
+
+% A compound is refused as a thrown mode, so no key shape can be smuggled in as a command.
+test(a_compound_thrown_mode_is_refused,
+     error(domain_error(neuromodulator_bus_thrown_mode, mode_throw(gate)))) :-
+    % Start from an empty bus.
+    neuromodulator_bus_new(Bus0),
+    % Try to throw the channel's own key shape as if it were a mode.
+    neuromodulator_bus_throw_mode(Bus0, gate, mode_throw(gate), _Bus).
+
+% An unbound thrown mode is refused before it can be written as a value nobody chose.
+test(an_unbound_thrown_mode_is_refused, error(instantiation_error)) :-
+    % Start from an empty bus.
+    neuromodulator_bus_new(Bus0),
+    % Try to throw a hole.
+    neuromodulator_bus_throw_mode(Bus0, gate, _Hole, _Bus).
+
+% An unbound construct kind is refused at the write, never bound into a key nobody addressed.
+test(an_unbound_construct_kind_is_refused_at_the_throw, error(instantiation_error)) :-
+    % Start from an empty bus.
+    neuromodulator_bus_new(Bus0),
+    % Try to throw at no kind at all.
+    neuromodulator_bus_throw_mode(Bus0, _Hole, closed, _Bus).
+
+% REVIEW PIN, the unbound-wrong-judgement lens: an unbound construct kind is refused at the READ too,
+% because a lookup would otherwise bind it to whichever kind the bus happens to list first and hand
+% back that kind's command to a caller who addressed nobody.
+test(an_unbound_construct_kind_is_refused_at_the_throw_read, error(instantiation_error)) :-
+    % Start from an empty bus.
+    neuromodulator_bus_new(Bus0),
+    % Write a throw, so a lookup would have something to bind an unbound kind to.
+    neuromodulator_bus_throw_mode(Bus0, gate, closed, Bus1),
+    % Try to read the throw standing at no kind at all.
+    neuromodulator_bus_thrown_mode(Bus1, _Hole, _Mode).
+
+% REVIEW PIN: an unbound bus is refused at the throw read, exactly as it is at the state read.
+test(an_unbound_bus_is_refused_at_the_throw_read, error(instantiation_error)) :-
+    % A variable bus must throw; a lookup that invented a bus would invent a command with it.
+    neuromodulator_bus_thrown_mode(_, gate, _).
+
 % Close the test block for the neuromodulator_bus pack.
 :- end_tests(neuromodulator_bus).

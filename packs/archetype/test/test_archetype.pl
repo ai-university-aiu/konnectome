@@ -2,6 +2,11 @@
 :- use_module(library(archetype)).
 % Load the mode register, so the gate's automaton is read with the corpus's own accessors.
 :- use_module(library(mode_register)).
+% Load the broadcast bus, so slice 41's throw can be tested END TO END - one write on the bus, many
+% gates moved - rather than only at the archetype's own door. The archetype MODULE deliberately does
+% not import the bus: a rule library that reached for a global channel would stop being a rule
+% library. The join belongs to the caller, and this suite stands in for one.
+:- use_module(library(neuromodulator_bus)).
 % Load the Prolog Unit (PLUnit) testing framework.
 :- use_module(library(plunit)).
 
@@ -236,8 +241,9 @@ test(gate_output_refuses_a_mode_the_register_does_not_hold) :-
 test(gate_transition_table_carries_four_fields_per_row) :-
     % Read the transition table.
     archetype_gate_transitions(Rows),
-    % The gate has exactly two departures, one from each of its two modes.
-    assertion(length(Rows, 2)),
+    % Slice 41 doubled the table: each of the two modes now carries a self-selected departure AND a
+    % broadcast-thrown one, so the gate has four rows where it had two.
+    assertion(length(Rows, 4)),
     % Every row is the corpus's four-field row: trigger, direction, timescale and agency.
     forall(member(Row, Rows),
            assertion(Row = transition(_Trigger, _From, _To, _Timescale, _Agency))).
@@ -259,24 +265,39 @@ test(gate_transitions_carry_a_timescale) :-
     forall(member(transition(_T, _F, _To, Timescale, _A), Rows),
            assertion(Timescale == one_tick)).
 
-% TEST OF AGENCY, the field the corpus says must never be omitted.
-test(gate_transitions_carry_agency) :-
+% TEST OF AGENCY, the field the corpus says must never be omitted - and the field slice 41 gave a
+% second value. Until slice 41 nothing above this gate could throw it and every row was honestly
+% self-selected; the whole point of slice 41 is that this is no longer true.
+test(gate_transitions_carry_two_agencies) :-
     % Read the transition table.
     archetype_gate_transitions(Rows),
-    % Nothing above throws this gate yet, so both departures are honestly self-selected.
-    forall(member(transition(_T, _F, _To, _Ts, Agency), Rows),
-           assertion(Agency == self_selected)).
+    % Collect the agency of every row.
+    findall(Agency, member(transition(_T, _F, _To, _Ts, Agency), Rows), Agencies),
+    % Sort them, dropping duplicates.
+    sort(Agencies, Distinct),
+    % Exactly two agencies govern this machine: the gate itself, and the broadcast above it.
+    assertion(Distinct == [broadcast_thrown, self_selected]),
+    % Every row still names one of them; the field is never omitted, which is the corpus's rule.
+    forall(member(transition(_T2, _F2, _To2, _Ts2, One), Rows),
+           assertion(memberchk(One, [self_selected, broadcast_thrown]))).
 
-% TEST OF THE SHARED TRIGGER: konnectome's gate is a symmetric toggle, not a hysteretic latch.
-test(gate_transitions_share_one_trigger) :-
+% TEST OF THE TRIGGERS: one trigger per agency, and konnectome's SELF-SELECTED flip is still a
+% symmetric toggle rather than a hysteretic latch - the gap slice 40 declared has not been closed here.
+test(gate_transitions_carry_one_trigger_per_agency) :-
     % Read the transition table.
     archetype_gate_transitions(Rows),
-    % Collect the trigger of every row.
-    findall(Trigger, member(transition(Trigger, _F, _To, _Ts, _A), Rows), Triggers),
-    % Sort the triggers, dropping duplicates.
-    sort(Triggers, Distinct),
-    % Both directions fire on the one condition, at the one threshold - the honest current shape.
-    assertion(Distinct == [switch_drive_above_threshold]).
+    % Collect the trigger of every self-selected row.
+    findall(Trigger, member(transition(Trigger, _F, _To, _Ts, self_selected), Rows), SelfTriggers),
+    % Sort them, dropping duplicates.
+    sort(SelfTriggers, SelfDistinct),
+    % Both self-selected directions still fire on the one condition, at the one threshold.
+    assertion(SelfDistinct == [switch_drive_above_threshold]),
+    % Collect the trigger of every broadcast-thrown row.
+    findall(Thrown, member(transition(Thrown, _F2, _To2, _Ts2, broadcast_thrown), Rows), ThrownTriggers),
+    % Sort them, dropping duplicates.
+    sort(ThrownTriggers, ThrownDistinct),
+    % Both thrown directions fire on the one broadcast, which is what makes it ONE write read many times.
+    assertion(ThrownDistinct == [broadcast_mode_throw]).
 
 % TEST OF THE FAULT BLOCK: faults are watched, never admitted, and konnectome has no watcher yet.
 test(gate_fault_block_is_present_and_empty) :-
@@ -375,6 +396,144 @@ test(gate_output_refuses_an_unbound_input) :-
           error(Error, _), Outcome = refused(Error)),
     % The gate refuses instead, at the door both modes come through.
     assertion(Outcome == refused(instantiation_error)).
+
+% ---------------------------------------------------------------------------
+% THE BUS THROWS A TRANSITION (konnectome build slice 41)
+% ---------------------------------------------------------------------------
+
+% BEHAVIOUR PINNED IDENTICAL: the gate's own flip is untouched by the arrival of a second agency.
+% This is the test that would have failed had the departure lookup stayed unkeyed and the new rows
+% been declared first, so it is the pin that makes the reordering hazard checkable rather than
+% remembered.
+test(self_selected_departure_is_unchanged_by_the_new_rows) :-
+    % The gate's own departure from open still lands on closed.
+    archetype_gate_departure(open, FromOpen),
+    % The gate closes, exactly as it did before slice 41.
+    assertion(FromOpen == closed),
+    % The gate's own departure from closed still lands on open.
+    archetype_gate_departure(closed, FromClosed),
+    % The gate opens, exactly as it did before slice 41.
+    assertion(FromClosed == open).
+
+% TEST THAT THE THROWN DEPARTURE IS A ROW OF THE GATE'S OWN TABLE, not a second path into the gate.
+test(thrown_departure_is_read_from_the_same_table) :-
+    % The broadcast's departure from open lands on closed.
+    archetype_gate_thrown_departure(open, FromOpen),
+    % Which is the row the table declares under the broadcast's agency.
+    assertion(FromOpen == closed),
+    % The broadcast's departure from closed lands on open.
+    archetype_gate_thrown_departure(closed, FromClosed),
+    % Which is the other row it declares.
+    assertion(FromClosed == open).
+
+% TEST OF THE COMMAND DECISION: a throw SETS the mode, and it sets it the same way from either side.
+test(a_throw_sets_the_mode) :-
+    % Throw closed at a gate standing open.
+    archetype_gate_throw(closed, open, Closed),
+    % The gate is now closed, because the throw is a command and not a nudge.
+    assertion(Closed == closed),
+    % Throw open at a gate standing closed.
+    archetype_gate_throw(open, closed, Open),
+    % The gate is now open.
+    assertion(Open == open).
+
+% TEST OF THE FIRST SILENCE: a channel nobody has written is not an instruction.
+test(silence_leaves_the_gate_where_it_stands) :-
+    % Apply the reserved silence name to an open gate.
+    archetype_gate_throw(no_mode_thrown, open, StillOpen),
+    % The gate keeps its own mode and its own agency.
+    assertion(StillOpen == open),
+    % Apply it to a closed gate.
+    archetype_gate_throw(no_mode_thrown, closed, StillClosed),
+    % The gate keeps that mode too.
+    assertion(StillClosed == closed).
+
+% TEST OF THE SECOND SILENCE: a command to be what you already are is satisfied without a transition.
+% This is what makes one standing broadcast safe to read on every tick rather than only on the tick
+% it was written - the property a bus with no clock of its own must have.
+test(a_throw_of_the_held_mode_is_idempotent) :-
+    % Throw open at a gate that is already open.
+    archetype_gate_throw(open, open, First),
+    % It stands where it is.
+    assertion(First == open),
+    % Read the same standing throw again on a later tick.
+    archetype_gate_throw(open, First, Second),
+    % And again nothing moves, so the throw does not oscillate the gate it commands.
+    assertion(Second == open).
+
+% TEST OF PREEMPTION, the conflict rule this slice decided as konnectome's own: where the gate's own
+% transition and a standing throw disagree, the THROW wins. A gate standing open would self-select
+% closed on a supra-threshold drive; the throw of open holds it open instead.
+test(a_standing_throw_preempts_self_selection) :-
+    % What the gate would do by itself, from open.
+    archetype_gate_departure(open, SelfSelected),
+    % Which is to close.
+    assertion(SelfSelected == closed),
+    % What it does under a standing throw of its held mode, on the same tick.
+    archetype_gate_throw(open, open, Thrown),
+    % The throw preempts: the gate stays open, and the two answers genuinely differ.
+    assertion(Thrown == open),
+    % Stated as the comparison it is, so the test fails if the two ever stop disagreeing.
+    assertion(Thrown \== SelfSelected).
+
+% TEST OF THE REFUSAL: a mode this register does not hold is refused aloud, never silently ignored.
+test(a_throw_of_a_foreign_mode_is_refused) :-
+    % Throw a mode the gate's register has never declared.
+    catch(( archetype_gate_throw(ajar, open, _Next), Outcome = answered ),
+          error(Error, _), Outcome = refused(Error)),
+    % The gate refuses by name, naming the register entry that does not exist.
+    assertion(Outcome == refused(existence_error(mode_entry, ajar))).
+
+% TEST OF THE HOLE: an unbound thrown mode is refused before it is used as a key.
+test(an_unbound_throw_is_refused) :-
+    % Throw a hole at an open gate.
+    catch(( archetype_gate_throw(_Hole, open, _Next), Outcome = answered ),
+          error(Error, _), Outcome = refused(Error)),
+    % The unbound-wrong-judgement lens: a hole would otherwise be bound to the first mode it met.
+    assertion(Outcome == refused(instantiation_error)).
+
+% TEST OF THE OTHER HOLE: an unbound CURRENT mode is refused by the register on the way in.
+test(a_throw_at_an_unbound_current_mode_is_refused) :-
+    % Throw closed at a gate whose current mode is a hole.
+    catch(( archetype_gate_throw(closed, _Hole, _Next), Outcome = answered ),
+          error(Error, _), Outcome = refused(Error)),
+    % The register's own current-mode guard refuses it, rather than this slice growing a second copy.
+    assertion(Outcome == refused(instantiation_error)).
+
+% THE SLICE'S HEADLINE TEST, END TO END: ONE WRITE, MANY COORDINATED TRANSITIONS. This is the
+% corpus's coordination mechanism in miniature - a broadcast written once and read many times, with
+% no controller anywhere and no derivation function from a parent's mode to a child's.
+test(one_bus_write_moves_every_gate_that_reads_it) :-
+    % Start from an empty bus.
+    neuromodulator_bus_new(Bus0),
+    % Three gates stand in a mixture of modes, as instances of one kind may.
+    Standing = [open, closed, open],
+    % One source throws closed at the gate KIND - one write, addressed to nobody in particular.
+    neuromodulator_bus_throw_mode(Bus0, gate, closed, Bus),
+    % Every gate reads the same bus for itself.
+    neuromodulator_bus_thrown_mode(Bus, gate, Thrown),
+    % And each applies it through its own register.
+    findall(Next, ( member(Mode, Standing), archetype_gate_throw(Thrown, Mode, Next) ), Moved),
+    % All three now stand in the thrown mode, having arrived there by two different routes.
+    assertion(Moved == [closed, closed, closed]).
+
+% TEST THAT WITHDRAWING THE THROW RETURNS THE KIND TO ITSELF, so a command preempts while it stands
+% and no longer - the boundary that keeps this slice from being a permanent seizure of self-selection.
+test(releasing_the_throw_returns_the_gate_to_self_selection) :-
+    % Start from an empty bus and throw closed at the gate kind.
+    neuromodulator_bus_new(Bus0),
+    % Write the throw.
+    neuromodulator_bus_throw_mode(Bus0, gate, closed, Bus1),
+    % Withdraw it again.
+    neuromodulator_bus_release_mode_throw(Bus1, gate, Bus2),
+    % The channel now reads as silent.
+    neuromodulator_bus_thrown_mode(Bus2, gate, Thrown),
+    % Which is the reserved silence name.
+    assertion(Thrown == no_mode_thrown),
+    % So an open gate reading it keeps its own mode, and its own agency with it.
+    archetype_gate_throw(Thrown, open, Next),
+    % The gate stands where it stood.
+    assertion(Next == open).
 
 % Close the test block for the archetype pack.
 :- end_tests(archetype).

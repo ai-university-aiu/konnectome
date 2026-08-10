@@ -373,5 +373,81 @@ test(the_rule_resolver_refuses_an_unbound_kind,
     % Ask for the rule of no kind at all.
     mode_register_construct_rule(_Hole, _Rule).
 
+% ---------------------------------------------------------------------------
+% THE DEPARTURE LOOKUP, KEYED ON AGENCY (konnectome build slice 41)
+% ---------------------------------------------------------------------------
+
+% A two-mode register whose table carries BOTH agencies leaving the same mode - the arrangement
+% slice 41 creates, and the one an unkeyed lookup would get wrong.
+% two_agency_automaton(+Current, -Automaton): a machine two different agencies can move.
+two_agency_automaton(Current, Automaton) :-
+    % Build a register of two, with a self-selected departure and a thrown one leaving each mode.
+    mode_register_new(Current,
+                      [mode_entry(quiet, 'the Held Breath', 'does nothing while it holds'),
+                       mode_entry(loud, 'the Raised Voice', 'does its work while it holds')],
+                      [transfer(quiet, hold), transfer(loud, relay(1))],
+                      [transition(own_drive, quiet, loud, one_tick, self_selected),
+                       transition(own_drive, loud, quiet, one_tick, self_selected),
+                       transition(broadcast_mode_throw, quiet, loud, one_tick, broadcast_thrown),
+                       transition(broadcast_mode_throw, loud, quiet, one_tick, broadcast_thrown)],
+                      [],
+                      Automaton).
+
+% The lookup returns the departure belonging to the agency it was asked for, and only that one.
+test(departure_is_read_under_the_agency_asked_for) :-
+    % A machine standing in its quiet mode.
+    two_agency_automaton(quiet, Automaton),
+    % Its own departure.
+    mode_register_departure(Automaton, self_selected, Own),
+    % Leads to loud.
+    assertion(Own == loud),
+    % And the departure a broadcast would give it.
+    mode_register_departure(Automaton, broadcast_thrown, Thrown),
+    % Leads to loud as well, by a different row that must be read separately to be trusted.
+    assertion(Thrown == loud).
+
+% An agency the table names nowhere is refused aloud rather than failing in silence.
+test(an_agency_with_no_row_is_refused,
+     throws(error(existence_error(mode_transition, quiet), _))) :-
+    % A machine standing in its quiet mode.
+    two_agency_automaton(quiet, Automaton),
+    % Ask for a departure under an agency that governs nothing here.
+    mode_register_departure(Automaton, supervisor_forced, _ToMode).
+
+% REVIEW PIN, the unbound-wrong-judgement lens: an unbound AGENCY is refused. It is the whole point
+% of this lookup that the agency is named, and a hole would match the first row of any agency and
+% answer confidently with a departure nobody asked for.
+test(an_unbound_agency_is_refused,
+     throws(error(instantiation_error, _))) :-
+    % A machine standing in its quiet mode.
+    two_agency_automaton(quiet, Automaton),
+    % Ask for a departure under no agency at all.
+    mode_register_departure(Automaton, _Hole, _ToMode).
+
+% TWO ROWS UNDER ONE AGENCY LEAVING ONE MODE ARE REFUSED, not silently resolved in favour of the
+% earlier row: a construct that does not know which machine it becomes is a table fault, and the
+% corpus writes no such table.
+test(an_ambiguous_departure_is_refused,
+     throws(error(domain_error(single_mode_departure, [loud, quiet]), _))) :-
+    % Build a machine whose table sends it two ways at once under the same agency.
+    mode_register_new(quiet,
+                      [mode_entry(quiet, 'the Held Breath', 'does nothing while it holds'),
+                       mode_entry(loud, 'the Raised Voice', 'does its work while it holds')],
+                      [transfer(quiet, hold), transfer(loud, relay(1))],
+                      [transition(own_drive, quiet, loud, one_tick, self_selected),
+                       transition(other_drive, quiet, quiet, one_tick, self_selected)],
+                      [],
+                      Automaton),
+    % Ask where it goes, and be refused rather than answered.
+    mode_register_departure(Automaton, self_selected, _ToMode).
+
+% A register of one has nowhere to go under any agency, and says so aloud.
+test(a_register_of_one_refuses_every_departure,
+     throws(error(existence_error(mode_transition, tonic_relay), _))) :-
+    % The smallest register the corpus admits, whose transition table is empty.
+    one_mode_automaton(Automaton),
+    % Ask where it goes.
+    mode_register_departure(Automaton, self_selected, _ToMode).
+
 % Close the test block for the mode_register pack.
 :- end_tests(mode_register).
