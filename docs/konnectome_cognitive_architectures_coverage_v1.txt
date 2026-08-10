@@ -7,7 +7,9 @@ Author: D. R. Dison / ai-university-aiu.
 
 WHAT THIS DOCUMENT IS, AND WHAT IT IS NOT - READ THIS BEFORE BUILDING FROM ANYTHING BELOW
 
-This document is DERIVED, and it carries no guiding authority of its own. It is konnectome's own reading of the Cognitive Architectures Test-Bed, made because the Ninth Commandment mandates the coverage survey. Its authority is borrowed from the test-bed files it cites and, above them, from the biological blueprint - the Ninth Commandment's rule three is explicit that the Vision Document Set remains the gold-standard and north-star, that the test-bed measures coverage and does not steer the ship, and that where the two disagree the biology leads.
+THIS DOCUMENT HOLDS TWO KINDS OF CONTENT, in the same way its sibling analysis does, and an earlier version of this preamble flattened them. Where it SUMMARISES the test-bed it is derived and carries no authority over the test-bed files it cites, nor over the biological blueprint above them - the Ninth Commandment's rule three is explicit that the Vision Document Set remains the gold-standard and north-star, that the test-bed measures coverage and does not steer the ship, and that where the two disagree the biology leads.
+
+But its JUDGMENTS are konnectome's own assessment and are not summaries of anything: the scoring of roughly sixty architectures against the packs that exist, the seven coverage bugs and their named closers, the recorded divergences where biology was made to lead, and above all the governing finding that THE TEST-BED DEMANDS NOTHING THE BIOLOGY HAS NOT ALREADY DEMANDED. Neither the test-bed nor the corpus can contain those, because each came from holding the two against konnectome. They are authoritative as the record of that assessment and are superseded only by a later assessment.
 
 The guiding authority this document sits beneath is stated in full in the matching preamble of docs/konnectome_vision_set_top_down_analysis_v1.txt.
 

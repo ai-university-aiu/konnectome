@@ -1736,6 +1736,51 @@ preambles and the Document-hierarchy note above are now restatements of a consti
 instead of the only place the rule lived. No code changed and no test moved; no wall was hit and
 nothing routes to either cousin.
 
+Constitution-correction note (2026-08-09). THE CONSTITUTION MOVES TO VERSION 7, correcting version 6
+of the same day. The commandment count is UNCHANGED at nineteen; nothing is renumbered. This entry
+records a MISTAKE MADE AND CORRECTED WITHIN HOURS, and it is written at length because the mistake
+was made in the constitution itself, which is the worst place to leave one.
+
+WHAT VERSION 6 GOT WRONG. Answering an owner question about document hierarchy, version 6 stated
+flatly that konnectome_vision_set_top_down_analysis_v1.txt "IS DERIVED AND CARRIES NO GUIDING
+AUTHORITY OF ITS OWN". The owner then observed, correctly, that a great deal of research had been
+distilled into that document. Checked against the document rather than against the framing: of
+roughly eighty-six content lines across its seven parts, only PART TWO - nineteen lines, the five
+refinement themes - is substantially a summary of corpus material. The other sixty-seven lines are
+konnectome's own assessment. The flat claim was therefore accurate about a fifth of the document and
+WRONG about the rest.
+
+WHY THE REST IS NOT DERIVED, WHICH IS THE SUBSTANTIVE POINT. Part One's verdict that no top-level
+architectural decision must be reversed is not in the corpus AND CANNOT BE, because the corpus knows
+nothing about konnectome; it is the product of holding thirty-eight documents against a running
+codebase. The same is true of Part Four's honest pressures, Part Five's walls-none-routed judgment
+and its six watches (which are forecasts, not summaries), and Part Six's slice families (a build
+plan). Re-read all thirty-eight documents tomorrow and none of the verdict, the watches, or the plan
+would come back - THEY CAME FROM THE COMPARISON, AND THE COMPARISON IS THE WORK. The same argument
+applies to the Ninth Commandment's coverage survey, whose governing finding - that the test-bed
+demands nothing the biology has not already demanded - could not be derived from either source alone.
+
+THE CORRECTED RULE, now in the constitution, in the preamble of both documents, and here. The
+analysis holds TWO KINDS OF CONTENT. Its SUMMARIES are derived, carry no authority over the corpus,
+and lose to the corpus on any disagreement; a theme is a summary, not a specification, and no slice
+may be designed from one without reading the corpus beneath it. Its FINDINGS are konnectome's own
+assessment, are not derived from anything, are authoritative AS THE RECORD OF THAT ASSESSMENT, and
+are superseded by a LATER ASSESSMENT, never by the corpus. The do-not-design-from-a-theme rule is
+scoped to the summaries and is explicitly NOT a licence to discard a finding.
+
+WHAT SURVIVED THE CORRECTION, because not all of version 6 was wrong: the guiding hierarchy is
+unchanged and still correct; the naming of the analysis file in the rule stands; the miscitation fix
+(the ledger is the Fourth Commandment's file, not the Fifth) stands; the currency obligation stands;
+and the do-not-design-from-a-theme rule stands, now correctly scoped. The Theme One evidence that
+justified it is untouched and still holds.
+
+THE LESSON WORTH CARRYING, and it is the same failure the build's own review lenses hunt: a
+sweeping claim was made about a whole document on the strength of one true observation about part of
+it. The check that caught it was the cheapest possible one - counting the lines and asking which
+parts were actually summaries - and it was not run until the owner pushed back. A claim about a
+document should be verified against the document, exactly as a claim about code is verified by
+running it. No code changed and no test moved; no wall was hit and nothing routes to either cousin.
+
 Observation-5 (2026-08-09, from slice 35). The neuromodulator_bus chemical reads
 (neuromodulator_bus_level/3 and neuromodulator_bus_level_territory/4) silently bind an UNBOUND
 bus argument into a partial list during lookup, against the module's own never-silently-bound

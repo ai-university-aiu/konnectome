@@ -131,19 +131,29 @@ Now the sober instructions that make the fanfare safe:
    session reading the constitution alone could not find the fulfilment of an obligation the
    constitution itself imposes; it lives at
    /home/ccaitwo/konnectome/docs/konnectome_vision_set_top_down_analysis_v1.txt. THIRD, and most
-   important, its STANDING is now stated here so that no session has to infer it:
-   THE ANALYSIS IS DERIVED AND CARRIES NO GUIDING AUTHORITY OF ITS OWN. It is the product of this
-   rule, never a source standing above it. Its authority is borrowed entirely from the Vision
-   Document Set it summarises, and where the two disagree the SET leads and the analysis is the
-   thing corrected. A THEME IN IT IS A SUMMARY, NOT A SPECIFICATION: no slice shall be designed
-   from a theme without first reading the corpus beneath that theme, and where such a reading is
-   large enough to need its own document, that document shall be written and cited back into the
-   analysis. This is not a hypothetical caution - Theme One stood as a single paragraph until a
-   deep read beneath it reversed a queue ordering and reshaped a queued slice, and a design taken
-   from the summary would have been wrong. The analysis shall be kept CURRENT as slice families
-   close and as deep reads are made beneath its themes, under the archive discipline of the
-   Eleventh Commandment. The coverage survey mandated by the Ninth Commandment is derived in
-   exactly the same way and is governed by exactly the same rule.)
+   important, its STANDING is now stated here so that no session has to infer it.
+   (CORRECTED in version 7, by the owner's instruction of 2026-08-09. Version 6 stated flatly that
+   the analysis is derived and carries no guiding authority of its own. That was accurate about its
+   summaries and WRONG about the larger part of it, and the flat claim is replaced here.)
+   THE ANALYSIS HOLDS TWO KINDS OF CONTENT AND THEY DO NOT CARRY THE SAME WEIGHT.
+   FIRST, ITS SUMMARIES OF THE VISION DOCUMENT SET ARE DERIVED and carry no authority over the
+   corpus; where a summary and the corpus disagree, the SET leads and the analysis is the thing
+   corrected. A THEME IS A SUMMARY, NOT A SPECIFICATION: no slice shall be designed from a theme
+   without first reading the corpus beneath that theme, and where such a reading is large enough to
+   need its own document, that document shall be written and cited back into the analysis. This is
+   not a hypothetical caution - Theme One stood as a single paragraph until a deep read beneath it
+   reversed a queue ordering and reshaped a queued slice, and a design taken from the summary would
+   have been wrong.
+   SECOND, ITS FINDINGS ARE KONNECTOME'S OWN ASSESSMENT AND ARE NOT DERIVED FROM ANYTHING. The
+   verdict on the top-level decisions, the honest pressures, the walls-and-watches judgment, and the
+   suggested slice families were produced by holding the corpus against a running codebase, and THE
+   CORPUS CANNOT CONTAIN THEM because the corpus knows nothing about konnectome. They are
+   authoritative as the record of that assessment, and are superseded by a LATER ASSESSMENT, never
+   by the corpus. The rule of the preceding paragraph is scoped to summaries and is not a licence to
+   discard a finding, which no amount of re-reading will regenerate.
+   The analysis shall be kept CURRENT as slice families close and as deep reads are made beneath its
+   themes, under the archive discipline of the Eleventh Commandment. The coverage survey mandated by
+   the Ninth Commandment holds the same two kinds of content and is governed by the same rule.)
 4. The FIFTEEN LAYERS are the guiding force. Each layer contributes its own abilities into the
    overall architecture: persistence from the slow variables; components from the cells; adjustable
    relations from the synaptics; computation from the microcircuits; specialised function from the
