@@ -19,6 +19,11 @@
     % cognitive_cycle_run/4: run the mind from a boot world for a number of ticks, yielding per-tick summaries.
     cognitive_cycle_run/4
 ]).
+% Reuse the two-process governor: the boot world seats the night watchman the slice-37 tick requires.
+:- use_module(library(two_process_governor), [
+    % two_process_governor_new/1: a fresh default governor, at midnight with no debt.
+    two_process_governor_new/1
+]).
 % Reuse thought combination: minting thoughts and combining them into a chain of thought.
 :- use_module(library(thought_combination), [
     % thought_combination_atomic/3: mint one atomic thought as a content-addressed occurrent.
@@ -266,6 +271,10 @@ capstone_demonstration_default_ticks(10).
 capstone_demonstration_world(World) :-
     % The story's fixed simulation start stamps every minted record.
     capstone_demonstration_simulation_start(Start),
+    % The default two-process governor watches the story's day: at one tick per hour its sixteen-point
+    % sleep threshold stands far beyond the ten-tick heartbeat, so the whole told story runs online
+    % and the slice-34 closing guards stand exactly as the capstone's live world pinned them.
+    two_process_governor_new(Governor),
     % The world starts at tick zero with a too-warm body, one temperature drive defending
     % thirty-seven, an empty bus, a source construct feeding a relay through one learnable
     % transmissive interface, the learning body's trace and average stores at zero with the
@@ -290,6 +299,7 @@ capstone_demonstration_world(World) :-
         overrides: [override(respiration, 0, 0.0, breathe)],
         override_threshold: 0.5,
         learning_rate: 0.1,
+        governor: Governor,
         simulation_start: Start
     }.
 

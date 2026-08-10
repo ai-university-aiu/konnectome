@@ -2,6 +2,8 @@
 :- use_module(library(symbol_exchange)).
 % Load the Prolog Unit (PLUnit) testing framework.
 :- use_module(library(plunit)).
+% Load the two_process_governor module, used to boot the fixture world's night watchman.
+:- use_module(library(two_process_governor), [two_process_governor_new/1]).
 % Reuse the language pack so recognition can be checked against the word bank directly.
 :- use_module(library(language), [
     % language_word_trace/3: confirm a heard word really entered the word bank.
@@ -15,6 +17,8 @@ symbol_exchange_test_simulation_start("2026-07-26T00:00:00Z").
 symbol_exchange_test_world(World) :-
     % The fixed simulation start stamps the run.
     symbol_exchange_test_simulation_start(Start),
+    % The default two-process governor: the slice-37 tick requires a watchman, who holds this short run online.
+    two_process_governor_new(Governor),
     % The same small world the capstone boots: a too-warm body, a temperature drive defending
     % thirty-seven, and the learning body's stores at zero with the scaling bound armed at rest.
     World = world{
@@ -35,6 +39,7 @@ symbol_exchange_test_world(World) :-
         overrides: [override(respiration, 0, 0.0, breathe)],
         override_threshold: 0.5,
         learning_rate: 0.1,
+        governor: Governor,
         simulation_start: Start
     }.
 

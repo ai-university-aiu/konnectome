@@ -23,6 +23,11 @@
                                            plasticity_engine_trace_step/5,
                                            plasticity_engine_average_step/4,
                                            plasticity_engine_scaling_step_territory/6]).
+% Reuse the two-process governor: the night watchman that schedules the slice-35 switch.
+:- use_module(library(two_process_governor), [two_process_governor_step/4]).
+% Reuse the bus's switch: the tick reads the standing selection and announces the governor's next one.
+:- use_module(library(neuromodulator_bus), [neuromodulator_bus_operating_state/2,
+                                            neuromodulator_bus_broadcast_operating_state/3]).
 % Reuse the observer: it records the tick as a Causalontology token_occurrence.
 :- use_module(library(observer), [observer_record_tick/3]).
 
@@ -48,6 +53,14 @@
 % Capture runs on the traces as they stood at the tick's start, BEFORE this tick's fresh
 % coincidence is folded in, so a reward one tick late finds the trace that earned it and this
 % tick's own coincidence is never double-counted against this tick's own reward.
+% Since slice 37 the tick also carries the NIGHT WATCHMAN: the world holds the two-process
+% governor (Layer 11 Chapters 11, 13, 14, 15), and at the tick's end - after the body has
+% responded, before the observer records - the governor reads the standing operating state off
+% the bus, advances the rising sleep pressure and the circadian day wave one tick, and the tick
+% announces the governor's selection back onto the bus (the Chapter 16 announcement service).
+% This is the FIRST LEGITIMATE THROWER of the slice-35 switch. Deliberately, nothing yet READS
+% the thrown state: offline behaviour first diverges in the offline-works slice, so this slice's
+% wiring is behaviour-neutral everywhere but the bus entry and the governor itself.
 
 % cognitive_cycle_world_value(+World, +Key, -Value): read one world key, refusing a missing key aloud.
 cognitive_cycle_world_value(World, Key, Value) :-
@@ -94,6 +107,8 @@ cognitive_cycle_step(World0, World, Summary) :-
     cognitive_cycle_world_value(World0, override_threshold, Threshold),
     % Read the learning rate.
     cognitive_cycle_world_value(World0, learning_rate, LearningRate),
+    % Read the two-process governor, the night watchman of the operating state.
+    cognitive_cycle_world_value(World0, governor, Governor0),
     % Read the fixed simulation start, for the observer's timestamps.
     cognitive_cycle_world_value(World0, simulation_start, SimulationStart),
     % STEP ONE (A3.3): the drives read the body, compute the reward, and broadcast it as dopamine.
@@ -120,14 +135,20 @@ cognitive_cycle_step(World0, World, Summary) :-
     plasticity_engine_scaling_step_territory(InterfacesCaptured, Averages1, ScalingTargets, ScalingTarget, ScalingRate, Interfaces2),
     % STEP FIVE: the body responds - the released action moves the body toward what it needs.
     drive_system_apply_action(FinalOutcome, Drives0, Body0, Body1),
+    % The night watchman reads the standing selection off the bus, the waking default when unset.
+    neuromodulator_bus_operating_state(Bus1, OperatingState0),
+    % Both processes move one tick and the flip-flop selects the next operating state (slice 37).
+    two_process_governor_step(Governor0, OperatingState0, Governor1, OperatingState1),
+    % The tick announces the governor's selection to every subscriber - the first legitimate thrower.
+    neuromodulator_bus_broadcast_operating_state(Bus1, OperatingState1, Bus2),
     % STEP SIX: advance the tick counter.
     NextTick is Tick0 + 1,
     % The observer records this tick as a Causalontology token_occurrence.
     observer_record_tick(SimulationStart, NextTick, Record),
     % Assemble the new world with the updated pieces committed together, including the moved body
     % and the learning body's advanced trace and average stores.
-    put_dict(_{tick: NextTick, body: Body1, drives: Drives1, bus: Bus1, activations: Activations1,
-               interfaces: Interfaces2, traces: Traces1, averages: Averages1},
+    put_dict(_{tick: NextTick, body: Body1, drives: Drives1, bus: Bus2, activations: Activations1,
+               interfaces: Interfaces2, traces: Traces1, averages: Averages1, governor: Governor1},
              World0, World),
     % The tick summary reports the tick number, the reward, the released action, and the recorded thought.
     Summary = tick_summary(NextTick, Reward, FinalOutcome, Record).
