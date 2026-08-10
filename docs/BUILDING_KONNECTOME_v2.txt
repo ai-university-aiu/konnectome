@@ -634,5 +634,41 @@ As of slice 42, on the ninth of August, twenty twenty-six: forty-two slices. Thi
 Next: the stabiliser as its own construct, publishing a modulable hysteresis scalar onto the bus and closing Observation-8 at the gate - and, by the decision this build made yesterday, doing it as a BIAS on the channel that already exists rather than as a thrown mode. Which is what a decision written down in the open is for: today's slice inherited yesterday's, and did not have to have the argument twice.
 
 
-From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER THIRTY-NINE, and the story goes on being true.
+CHAPTER THIRTY-NINE - THE NUMBER NOBODY HAD SAID (2026-08-09, SLICE 43)
+
+
+The queue said the stabiliser was next. The build did something else, and the reason it did is worth more than the slice.
+
+Three times now, from three places that have nothing to do with each other, the same small hole had opened under somebody's feet. The first was a deep read of the corpus beneath the fourth theme, where confidence turned out to be settling TIME. The second was the read beneath the fifth theme, where an entire cluster of faculties came specified down to their constants, and every constant was a wall-clock one: ignition near three hundred milliseconds, admission in the low hundreds, a memory nobody rehearses fading over seconds, a mental board wiped in under a second when the task changes. The third arrived yesterday from a completely different direction, when the supervisor was built and it emerged that a watchdog watches over a WINDOW, and konnectome had no unit in which a window could be stated.
+
+Each time the note was written down and the work moved on. Yesterday's hand-off finally said the thing out loud: an item that arrives from a third independent direction is no longer an item on a list. It is something everything else is waiting on.
+
+So today the build stopped and said the number.
+
+The problem, stated as plainly as it deserves: konnectome counts in ticks and the corpus counts in seconds. A tick is not a length. It is a round - every construct works out its next value from the current one, and then all of them change at once - and it is an ordinal in exactly the way page numbers are ordinals. The corpus, meanwhile, is describing a brain, and a brain runs in real time. Two ways of counting, no bridge, and every constant in the next several slices stranded on the far side of it.
+
+Now the part that makes this a decision rather than a lookup, and it is the same shape as yesterday's decision though it looks quite different. THE CORPUS CANNOT ANSWER THIS. Not because it is vague; because the question is not of a kind the corpus contains. A brain does not tick. The corpus has no opinion whatever about how often a synthetic mind should update itself, and it never will, because the question only exists at all as a consequence of konnectome having chosen to build a ticking machine. This is not a silence to read harder at. It is a question the source does not hold.
+
+The build has a rule for that, and the rule is the whole point of the ledger: a question the corpus does not answer gets answered by konnectome, in the open, with reasons that are konnectome's own, numbered so it cannot be quietly re-argued later. Yesterday produced the first such decision. Today produced the second.
+
+ONE HUNDRED TICKS TO THE NOMINAL SECOND. One tick is ten nominal milliseconds.
+
+Three reasons, and none of them is convenience. The first is that every constant the corpus supplies lands exactly on a tick: three hundred milliseconds is thirty, one hundred is ten, one second is a hundred, half a second is fifty. Nothing lands between two ticks, so nobody ever has to round - and that is not tidiness, it is the only way to keep a promise this build has been keeping since slice thirty-nine. konnectome does not invent numbers. The danger was never that somebody would invent one; it was that everybody would round one. A constant would leave the corpus as the corpus's, pass through an unremarkable piece of arithmetic, and arrive in a pack as konnectome's, with nobody having decided anything at any point. A rounding is an invented number wearing a small coat.
+
+The second reason is that a hundred is the COARSEST rate that achieves the first, which sounds like settling and is the honest choice. A millisecond tick would also land everything exactly, and it would quietly invite later slices to write durations far more precise than the source could carry. The corpus states these things to about a tenth of a second. Claiming more than that would be a lie told in arithmetic.
+
+The third is that the whole thing can be taken back. Nothing in the running machine moved: the tick is still an ordinal, nothing sleeps, nothing consults a clock, and the demonstration story came out identical to yesterday's, character for character. And because every duration konnectome ever states in real units has to pass through ONE conversion, a session that must restate the rate changes one line and re-reads one test.
+
+Then the half with teeth, which is the actual content of the slice. Ask konnectome how many ticks five milliseconds is, and it does not answer one. It refuses, out loud, naming the duration that caused the refusal. Five milliseconds is half a tick under this convention and there is no honest answer, so the caller is made to decide in the open where the decision can be written down. A convention that lives in a comment is a sentence people forget. A convention that refuses is one the code keeps on their behalf.
+
+And then the thing this slice broke, which is written down rather than hidden, because writing it down is the whole practice. Deep inside the build there is a recorder that stamps every tick with a timestamp so each tick has a distinct, repeatable name, and it advances that stamp by one second per tick. Under today's convention a tick is ten milliseconds, so those stamps now run a hundred times fast. Nothing is wrong today: the stamp is a name, not a duration, and no code anywhere subtracts one from another. But the first person who reads that trace as a timeline will get an answer a hundred times too large and will get it in silence. So it is logged as the tenth observation, with its price stated beside it: fixing it by restating the stamp would change the identifier of every record konnectome has ever minted, because the instant is part of what those identifiers are made of. That is a real cost, and a build that pays real costs on hunches stops being trustworthy. The cheaper closer is probably the opposite direction - say in the recorder that its stamp is an ordinal carrier that may never be read as a duration, and make that a refusal rather than a comment - and either way the choice belongs to a slice that has a reason.
+
+One more honest line. This slice does not close the ninth observation. konnectome still has a watcher and no watchdogs. What it does is remove the reason the ninth observation could not be closed: a window can now be stated. How long the window should be is still a decision somebody has to make and justify, and it is not made here, because supplying a unit and choosing a value are different acts and only one of them was earned today.
+
+As of slice 43, on the ninth of August, twenty twenty-six: forty-three slices. Thirty-one packs. Seven hundred and thirteen tests, all green. Three walls hit, three closed, a change order still held. Ten observations, two decisions. The mode-register family stands four slices in and its next slice is unblocked.
+
+Next: the stabiliser, which now has a unit to state its grains in - and then the first real watchdog, which now has a unit to state its window in. Which is what a queue is supposed to look like after a dependency is paid.
+
+
+From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER FORTY, and the story goes on being true.
 

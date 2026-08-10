@@ -93,5 +93,68 @@ test(every_heartbeat_construct_kind_is_a_register_of_one) :-
              mode_register_size(Automaton, 1),
              mode_register_current_rule(Automaton, Kind) )).
 
+% SLICE 43: THE TICKS-PER-SECOND CONVENTION, DECISION-2. These tests assert the decision, which is
+% what a recorded decision is entitled to: a mechanism answers a question, a decision closes one.
+
+% The convention is declared, it is one hundred ticks to the nominal second, and it lives in one place.
+test(the_convention_is_one_hundred_ticks_to_the_second) :-
+    % Read the convention out of its single home.
+    tick_engine_ticks_per_second(TicksPerSecond),
+    % konnectome calls one hundred ticks one second, so one tick is ten nominal milliseconds.
+    assertion(TicksPerSecond == 100).
+
+% THE REASON THE RATE IS THIS RATE: every corpus constant in the cognitive cluster lands on a whole
+% tick, so no slice built to those constants has to round, and rounding is where invented numbers enter.
+test(every_corpus_wall_clock_constant_is_a_whole_number_of_ticks) :-
+    % The corpus's own quantities, each paired with the tick count this convention gives it.
+    Constants = [300-30, 100-10, 1000-100, 500-50, 2000-200],
+    % Each converts exactly, and the conversion is the one the whole build must use.
+    forall(member(Milliseconds-ExpectedTicks, Constants),
+           % Convert the wall-clock duration and check it against the expected whole tick count.
+           ( tick_engine_ticks_from_milliseconds(Milliseconds, Ticks),
+             Ticks == ExpectedTicks )).
+
+% A duration that does not land on a tick boundary is REFUSED ALOUD and never silently rounded.
+test(a_duration_between_two_ticks_is_refused_rather_than_rounded) :-
+    % Five milliseconds is half a tick under this convention, so it has no whole-tick answer.
+    catch(tick_engine_ticks_from_milliseconds(5, _Ticks), Error, true),
+    % The refusal names the offending duration rather than guessing a tick count for it.
+    assertion(Error = error(domain_error(whole_tick_duration, 5), _)).
+
+% THE UNBOUND-WRONG-JUDGEMENT LENS: an unbound duration would invent both a duration and a tick count.
+test(an_unbound_duration_is_refused_at_the_conversion) :-
+    % Ask for the tick count of a duration nobody supplied.
+    catch(tick_engine_ticks_from_milliseconds(_Unbound, _Ticks), Error, true),
+    % It is refused as an instantiation fault rather than answered.
+    assertion(Error = error(instantiation_error, _)).
+
+% An unbound tick count is refused in the reading-back direction for exactly the same reason.
+test(an_unbound_tick_count_is_refused_at_the_inverse) :-
+    % Ask for the duration of a tick count nobody supplied.
+    catch(tick_engine_milliseconds_from_ticks(_Unbound, _Milliseconds), Error, true),
+    % It is refused rather than answered.
+    assertion(Error = error(instantiation_error, _)).
+
+% The two directions are exact inverses, which is what makes a tick count readable back as a duration.
+test(the_conversion_round_trips_exactly) :-
+    % Take a corpus-shaped duration in whole ticks.
+    tick_engine_ticks_from_milliseconds(300, Ticks),
+    % Read it back as a duration.
+    tick_engine_milliseconds_from_ticks(Ticks, Milliseconds),
+    % The duration that comes back is the duration that went in.
+    assertion(Milliseconds == 300).
+
+% WHAT DECISION-2 DOES NOT DO, pinned so a later reader cannot assume it did: THE SCHEDULER IS
+% UNCHANGED. The convention is a conversion for stating durations, not a clock the engine consults.
+test(the_convention_does_not_move_the_scheduler_by_a_single_count) :-
+    % Run the heartbeat exactly as every earlier slice ran it.
+    tick_engine_run([construct(clock, clock)], [clock-0], 5, Final, Trace),
+    % The clock still counts ticks and not milliseconds: five ticks reads five, not five hundred.
+    assertion(Final == [clock-5]),
+    % Project the trace down to its tick numbers.
+    tick_engine_trace_ticks(Trace, Numbers),
+    % The tick numbers are still ordinals, untouched by the convention.
+    assertion(Numbers == [1,2,3,4,5]).
+
 % Close the test block for the tick_engine pack.
 :- end_tests(tick_engine).
