@@ -1,5 +1,7 @@
 % Load the archetype module under test from the library path.
 :- use_module(library(archetype)).
+% Load the mode register, so the gate's automaton is read with the corpus's own accessors.
+:- use_module(library(mode_register)).
 % Load the Prolog Unit (PLUnit) testing framework.
 :- use_module(library(plunit)).
 
@@ -144,6 +146,235 @@ test(dispatch_routes_each_archetype) :-
     archetype_step(gate, _{mode: open, switch_drive: 0.7, threshold: 0.5}, GateOut),
     % Its output mode is closed.
     assertion(get_dict(mode, GateOut, closed)).
+
+% ---------------------------------------------------------------------------
+% THE GATE'S GENUINE TWO-MODE REGISTER (konnectome build slice 40)
+% ---------------------------------------------------------------------------
+
+% TEST OF THE REGISTER'S SIZE: the gate holds two modes, and two is a statement, not a placeholder.
+test(gate_register_holds_exactly_two_modes) :-
+    % Read the formal names the gate's register declares.
+    archetype_gate_modes(Modes),
+    % They are the gate's own vocabulary, in the order the register declares them.
+    assertion(Modes == [open, closed]),
+    % And the register's size is two - the corpus's commonest register length.
+    archetype_gate_size(Size),
+    % A register of two says the system trusts this construct to admit or to block, not to decide.
+    assertion(Size == 2).
+
+% TEST OF THE ENTRY SCHEMA: every entry carries the corpus's three fields and no more.
+test(gate_register_entries_carry_three_fields) :-
+    % Read the register block itself, entry by entry.
+    archetype_gate_register(Entries),
+    % There are exactly two entries.
+    assertion(length(Entries, 2)),
+    % The open entry names itself formally and coins a vivid name prefixed "the".
+    memberchk(mode_entry(open, OpenCoined, OpenGloss), Entries),
+    % Its coined name is the gate's own.
+    assertion(OpenCoined == 'the Open Sluice'),
+    % The gloss says what the gate does while open.
+    assertion(atom(OpenGloss)),
+    % The closed entry does the same.
+    memberchk(mode_entry(closed, ClosedCoined, ClosedGloss), Entries),
+    % Its coined name is the gate's own.
+    assertion(ClosedCoined == 'the Dropped Shutter'),
+    % And its gloss likewise.
+    assertion(atom(ClosedGloss)).
+
+% TEST THAT THE AUTOMATON IS THE CORPUS'S OWN TERM: four blocks and a current-mode slot.
+test(gate_automaton_is_a_hybrid_automaton) :-
+    % Build the automaton for a gate standing open.
+    archetype_gate_automaton(open, Automaton),
+    % It is the hybrid automaton of five slots, judged by the mode register's own constructor.
+    assertion(Automaton = hybrid_automaton(_, _, _, _, _)),
+    % Read its current mode back out.
+    mode_register_current(Automaton, Current),
+    % The gate is open.
+    assertion(Current == open).
+
+% TEST OF THE PER-INSTANCE CURRENT MODE: the mode belongs to the instance, not to the construct kind.
+test(gate_automaton_stands_in_the_mode_it_is_given) :-
+    % The same construct kind, standing somewhere else.
+    archetype_gate_automaton(closed, Automaton),
+    % Read the current mode back out.
+    mode_register_current(Automaton, Current),
+    % A second gate of the same kind is closed while the first is open.
+    assertion(Current == closed).
+
+% TEST THAT THE TWO MODES ARE TWO DIFFERENT MACHINES, which is the corpus's central claim.
+test(gate_modes_carry_different_transfer_functions) :-
+    % Read the rule that holds while the gate is open.
+    archetype_gate_transfer(open, OpenRule),
+    % Read the rule that holds while the gate is closed.
+    archetype_gate_transfer(closed, ClosedRule),
+    % The two rules are not the same rule; while a mode holds, the gate is a different machine.
+    assertion(OpenRule \== ClosedRule).
+
+% TEST OF THE OPEN TRANSFER FUNCTION: the open gate passes what arrives, unchanged.
+test(open_gate_passes_what_arrives) :-
+    % Four units arriving at an open gate.
+    archetype_gate_output(open, 4, Passed),
+    % All four pass.
+    assertion(Passed =:= 4).
+
+% TEST OF THE CLOSED TRANSFER FUNCTION: the closed gate passes nothing.
+test(closed_gate_passes_nothing) :-
+    % Four units arriving at a closed gate.
+    archetype_gate_output(closed, 4, Passed),
+    % Nothing passes.
+    assertion(Passed =:= 0).
+
+% TEST THAT THE TRANSFER FUNCTION IS READ THROUGH THE REGISTER, not chosen beside it.
+test(gate_output_refuses_a_mode_the_register_does_not_hold) :-
+    % A mode the register never declared is refused aloud, naming what arrived.
+    catch(( archetype_gate_output(ajar, 4, _Passed), Outcome = answered ),
+          error(Error, _), Outcome = refused(Error)),
+    % The transfer lookup refused rather than answering, and named the missing register entry.
+    assertion(Outcome == refused(existence_error(mode_entry, ajar))).
+
+% TEST OF THE TRANSITION TABLE: it is explicit, and every row carries all four corpus fields.
+test(gate_transition_table_carries_four_fields_per_row) :-
+    % Read the transition table.
+    archetype_gate_transitions(Rows),
+    % The gate has exactly two departures, one from each of its two modes.
+    assertion(length(Rows, 2)),
+    % Every row is the corpus's four-field row: trigger, direction, timescale and agency.
+    forall(member(Row, Rows),
+           assertion(Row = transition(_Trigger, _From, _To, _Timescale, _Agency))).
+
+% TEST OF THE DIRECTIONS: the table names both departures explicitly.
+test(gate_transition_table_names_both_directions) :-
+    % Read the transition table.
+    archetype_gate_transitions(Rows),
+    % Opening to closed is an explicit row.
+    assertion(memberchk(transition(switch_drive_above_threshold, open, closed, _, _), Rows)),
+    % Closing to open is an explicit row.
+    assertion(memberchk(transition(switch_drive_above_threshold, closed, open, _, _), Rows)).
+
+% TEST OF THE MANDATORY TIMESCALE: the corpus forbids a table that models transitions as timeless.
+test(gate_transitions_carry_a_timescale) :-
+    % Read the transition table.
+    archetype_gate_transitions(Rows),
+    % Every row names a timescale, and konnectome's gate flips within the tick it is asked in.
+    forall(member(transition(_T, _F, _To, Timescale, _A), Rows),
+           assertion(Timescale == one_tick)).
+
+% TEST OF AGENCY, the field the corpus says must never be omitted.
+test(gate_transitions_carry_agency) :-
+    % Read the transition table.
+    archetype_gate_transitions(Rows),
+    % Nothing above throws this gate yet, so both departures are honestly self-selected.
+    forall(member(transition(_T, _F, _To, _Ts, Agency), Rows),
+           assertion(Agency == self_selected)).
+
+% TEST OF THE SHARED TRIGGER: konnectome's gate is a symmetric toggle, not a hysteretic latch.
+test(gate_transitions_share_one_trigger) :-
+    % Read the transition table.
+    archetype_gate_transitions(Rows),
+    % Collect the trigger of every row.
+    findall(Trigger, member(transition(Trigger, _F, _To, _Ts, _A), Rows), Triggers),
+    % Sort the triggers, dropping duplicates.
+    sort(Triggers, Distinct),
+    % Both directions fire on the one condition, at the one threshold - the honest current shape.
+    assertion(Distinct == [switch_drive_above_threshold]).
+
+% TEST OF THE FAULT BLOCK: faults are watched, never admitted, and konnectome has no watcher yet.
+test(gate_fault_block_is_present_and_empty) :-
+    % Build the automaton.
+    archetype_gate_automaton(open, Automaton),
+    % Read the fault regimes and watchdogs block.
+    mode_register_faults(Automaton, Faults),
+    % The block exists and is empty, because the supervisor channel does not exist yet.
+    assertion(Faults == []).
+
+% TEST THAT THE FLIP IS READ OUT OF THE TABLE, so the table is the one authority on direction.
+test(gate_departure_is_read_from_the_transition_table) :-
+    % The departure from open lands on closed.
+    archetype_gate_departure(open, FromOpen),
+    % The gate closes.
+    assertion(FromOpen == closed),
+    % The departure from closed lands on open.
+    archetype_gate_departure(closed, FromClosed),
+    % The gate opens.
+    assertion(FromClosed == open).
+
+% TEST OF THE UNBOUND CURRENT MODE, the defect the register closes at the door.
+test(gate_refuses_an_unbound_current_mode) :-
+    % A hole where the gate's current mode belongs is refused, not filled in from the register.
+    catch(( archetype_gate(_Hole, 0.7, 0.5, _Next), Outcome = answered ),
+          error(Error, _), Outcome = refused(Error)),
+    % The gate refused rather than answering, and named the instantiation fault.
+    assertion(Outcome == refused(instantiation_error)).
+
+% TEST OF A FOREIGN CURRENT MODE: a gate cannot stand in a mode its register does not hold.
+test(gate_refuses_a_mode_outside_its_register) :-
+    % A mode the register never declared is refused aloud, even below threshold.
+    catch(( archetype_gate(ajar, 0.3, 0.5, _Next), Outcome = answered ),
+          error(Error, _), Outcome = refused(Error)),
+    % The gate refused rather than answering, and named the missing register entry.
+    assertion(Outcome == refused(existence_error(mode_entry, ajar))).
+
+% TEST THAT THE REGISTER CHANGES NO NUMBER: the gate's whole behaviour is pinned across both modes.
+test(gate_behaviour_is_pinned_identical) :-
+    % Below threshold from open, the gate holds open.
+    archetype_gate(open, 0.3, 0.5, A),
+    % It holds.
+    assertion(A == open),
+    % Above threshold from open, the gate closes.
+    archetype_gate(open, 0.7, 0.5, B),
+    % It flips.
+    assertion(B == closed),
+    % Below threshold from closed, the gate holds closed.
+    archetype_gate(closed, 0.3, 0.5, C),
+    % It holds.
+    assertion(C == closed),
+    % Above threshold from closed, the gate opens again - one threshold, both ways.
+    archetype_gate(closed, 0.7, 0.5, D),
+    % It flips back.
+    assertion(D == open),
+    % Exactly at the threshold the drive is not ABOVE it, so the gate holds.
+    archetype_gate(open, 0.5, 0.5, E),
+    % It holds.
+    assertion(E == open).
+
+% TEST OF THE DISPATCH, unchanged in shape: the gate's dict output still carries the mode alone.
+test(gate_dispatch_output_shape_is_unchanged) :-
+    % Step a gate through the archetype dispatch.
+    archetype_step(gate, _{mode: closed, switch_drive: 0.7, threshold: 0.5}, Outputs),
+    % Read the output dict's pairs.
+    dict_pairs(Outputs, _Tag, Pairs),
+    % The output dict carries the next mode and nothing else.
+    assertion(Pairs == [mode-open]).
+
+% TEST OF EXTERNAL OBSERVABILITY, which the standing owner request's visualization panel needs.
+test(gate_current_mode_is_readable_without_running_the_gate) :-
+    % A watcher holding only the gate's mode can build its register and read the mode back.
+    archetype_gate_automaton(closed, Automaton),
+    % Read the current mode as an ordinary value the world carries.
+    mode_register_current(Automaton, Current),
+    % No rule was run to learn it.
+    assertion(Current == closed),
+    % And the same watcher can read the rule that holds right now.
+    mode_register_current_rule(Automaton, Rule),
+    % Which is the closed gate's own transfer function.
+    assertion(Rule == gate_block).
+
+% TEST THAT EVERY DECLARED MODE CAN ACTUALLY RUN: the register, the transfer block and the laws
+% below them are three lists that must agree, and this walks all three rather than trusting the eye.
+test(every_declared_gate_mode_has_a_runnable_law) :-
+    % Read the formal names the register declares.
+    archetype_gate_modes(Modes),
+    % Every one of them resolves to a rule the module can actually apply to an arriving reading.
+    forall(member(Mode, Modes),
+           ( archetype_gate_output(Mode, 3, Passed), assertion(number(Passed)) )).
+
+% TEST OF THE ARRIVING READING: a hole is refused in the one place both transfer functions meet.
+test(gate_output_refuses_an_unbound_input) :-
+    % A closed gate never reads its input, so an unguarded blocking law would answer a hole with zero.
+    catch(( archetype_gate_output(closed, _Hole, _Passed), Outcome = answered ),
+          error(Error, _), Outcome = refused(Error)),
+    % The gate refuses instead, at the door both modes come through.
+    assertion(Outcome == refused(instantiation_error)).
 
 % Close the test block for the archetype pack.
 :- end_tests(archetype).
