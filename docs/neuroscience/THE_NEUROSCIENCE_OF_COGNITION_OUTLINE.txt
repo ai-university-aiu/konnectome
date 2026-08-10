@@ -1,0 +1,3684 @@
+THE NEUROSCIENCE OF COGNITION
+
+A Complete, Comprehensive, and Thorough Outline
+
+Compiled for the konnectome repository, Certified_Neuroscientist corpus, of D. R. Dison, Founder, Artificial Intelligence University (AIU).
+
+Date of compilation: August 10, 2026.
+
+
+HOW TO READ THIS OUTLINE
+
+This document has four levels.
+
+Level 1 is the PART, of which there are fifteen.
+
+Level 2 is the CHAPTER, of which there are eighty, numbered continuously from 1 to 80 across the whole work.
+
+Level 3 is the SECTION, numbered as chapter-point-section, for example 12.3.
+
+Level 4 is the SUB-SECTION, numbered as chapter-point-section-point-subsection, for example 12.3.4.
+
+The outline is organised on a single principle: cognition is what a nervous system does when it builds and uses internal models of a world it cannot touch directly.
+
+Everything before Part V is the apparatus by which that claim is made testable, and everything after Part IV is the catalogue of the capacities themselves.
+
+Cognition, for the purposes of this outline, means the set of processes by which a nervous system acquires, represents, transforms, stores, retrieves, and acts upon information.
+
+Neuroscience, for the purposes of this outline, means the empirical and theoretical study of nervous systems at every scale from the ion channel to the population of behaving organisms.
+
+The compound term, the neuroscience of cognition, therefore names the research programme that seeks mechanistic explanations of mental capacities in terms of neural structure and neural dynamics.
+
+The field is also called cognitive neuroscience, and the two names are used interchangeably here.
+
+
+SOURCES CONSULTED IN COMPILING THIS OUTLINE
+
+The structure was checked against the tables of contents of the field's canonical teaching and reference works, retrieved from publisher sources.
+
+• Gazzaniga, Ivry and Mangun, with Phelps and Bassett, Cognitive Neuroscience: The Biology of the Mind, sixth edition, W. W. Norton, 2024, fourteen chapters running from a history of the field to the consciousness problem.
+
+• Poeppel, Mangun and Gazzaniga, editors, The Cognitive Neurosciences, sixth edition, Massachusetts Institute of Technology (MIT) Press, 2020, the field's multi-author reference handbook, running to ninety-seven chapters in twelve edited sections: brain circuits over a lifetime; sensation and perception; memory; attention and working memory; neuroscience, cognition, and computation; intention, action, and control; reward and decision making; methods advances; concepts and knowledge; language; social neuroscience; and neuroscience and society. No seventh edition exists as of this compilation.
+
+• Banich and Compton, Cognitive Neuroscience, fifth edition, Cambridge University Press, 2023, in three parts: Fundamentals, Neural Bases of Mental Functions, and Broader Applications.
+
+• Purves, Cabeza, Huettel, LaBar, Platt and Woldorff, Principles of Cognitive Neuroscience, second edition, Sinauer and Oxford University Press, 2013, fifteen chapters.
+
+• Ward, The Student's Guide to Cognitive Neuroscience, fifth edition, Routledge, 2025, sixteen chapters organised as the electrophysiological, imaged, lesioned, developing, seeing, hearing, attending, acting, remembering, speaking, literate and numerate, executive, conscious, and social and emotional brain.
+
+• Baars and Gage, Cognition, Brain, and Consciousness, second edition, Academic Press, 2010.
+
+• Kandel and colleagues, Principles of Neural Science, sixth edition, McGraw Hill, 2021, for the substrate chapters.
+
+• Dayan and Abbott, Theoretical Neuroscience, MIT Press, 2001, in three parts: Neural Encoding and Decoding, Modeling Neurons and Networks, and Plasticity and Learning.
+
+• Gerstner, Kistler, Naud and Paninski, Neuronal Dynamics, Cambridge University Press, 2014, whose fourth part is titled Dynamics of Cognition.
+
+• Parr, Pezzulo and Friston, Active Inference: The Free Energy Principle in Mind, Brain, and Behavior, MIT Press, 2022.
+
+• Sutton and Barto, Reinforcement Learning: An Introduction, second edition, MIT Press, 2018, whose chapters 14 and 15 are Psychology and Neuroscience respectively.
+
+• Buzsaki, Rhythms of the Brain, 2006, and The Brain from Inside Out, 2019.
+
+• Dehaene, Consciousness and the Brain, 2014, and Sporns, Networks of the Brain, 2010.
+
+The frontier material was checked against the primary literature to 2026, including the Cogitate Consortium adversarial test of the global neuronal workspace and integrated information theories published in Nature in 2025, the 2025 systems-consolidation engram work in Nature, the 2025 neural manifold review in Nature Neuroscience, the 2025 Annual Review of Psychology treatment of cognitive control, and the 2025 and 2026 NeuroAI and brain foundation-model literature.
+
+
+A NOTE ON TAGS
+
+Each chapter carries one of three tags.
+
+• (CORE) marks chapters that state a cognitive capacity or the mechanism of one, and that a reader could not skip without leaving a hole in the account.
+
+• (APPARATUS) marks chapters that supply method, mathematics, or substrate, and that exist to make the CORE chapters checkable.
+
+• (CONTEXT) marks chapters that situate the science historically, clinically, ethically, or comparatively.
+
+
+PART ONE. FOUNDATIONS: WHAT IS BEING EXPLAINED, AND WHAT WOULD COUNT AS AN EXPLANATION
+
+
+CHAPTER 1. THE OBJECT OF STUDY: DEFINING COGNITION (CORE)
+
+1.1 The working definition and its boundaries
+
+1.1.1 Cognition as information acquisition, representation, transformation, storage, retrieval, and use
+
+1.1.2 The contested border with sensation, with reflex, and with emotion
+
+1.1.3 The contested border with consciousness: cognition without awareness
+
+1.1.4 Why every boundary drawn here is a research decision rather than a fact of nature
+
+1.2 The classical faculty list and its fate
+
+1.2.1 Perception, attention, memory, language, reasoning, action, emotion, self
+
+1.2.2 Faculties as convenient labels rather than natural kinds
+
+1.2.3 The reverse-inference problem: reading a faculty off a brain activation
+
+1.2.4 Ontologies of cognition: the Cognitive Atlas and its successors
+
+1.3 Cognition as model-building
+
+1.3.1 The internal model as the field's central theoretical object
+
+1.3.2 Generative models, forward models, and inverse models
+
+1.3.3 Prediction as the currency of cognition
+
+1.3.4 Why model-building unifies perception, memory, and planning under one description
+
+1.4 What a completed neuroscience of cognition would look like
+
+1.4.1 The mapping criterion: every capacity assigned a mechanism
+
+1.4.2 The prediction criterion: novel behaviour forecast from neural state
+
+1.4.3 The intervention criterion: capacities switched on and off at will
+
+1.4.4 The construction criterion: capacities rebuilt in an artificial substrate
+
+
+CHAPTER 2. A HISTORY OF THE NEUROSCIENCE OF COGNITION (CONTEXT)
+
+2.1 Before the brain: mind without mechanism
+
+2.1.1 Cardiocentric and encephalocentric traditions in antiquity
+
+2.1.2 Ventricular localisation in the medieval and Renaissance periods
+
+2.1.3 Cartesian dualism and the interaction problem
+
+2.1.4 British empiricism, associationism, and the seed of the learning rule
+
+2.2 The localisation century
+
+2.2.1 Gall, Spurzheim, and phrenology as a wrong answer to a right question
+
+2.2.2 Flourens and the doctrine of mass action
+
+2.2.3 Broca in 1861 and Wernicke in 1874: language localised by lesion
+
+2.2.4 Brodmann's cytoarchitectonics and the parcellation impulse
+
+2.2.5 Lashley, equipotentiality, and the search for the engram
+
+2.3 The neuron and its signal
+
+2.3.1 The reticular theory against the neuron doctrine: Golgi and Cajal
+
+2.3.2 Sherrington and the synapse
+
+2.3.3 Adrian and the rate code
+
+2.3.4 Hodgkin and Huxley and the quantitative action potential
+
+2.4 The cognitive revolution
+
+2.4.1 Behaviourism and its explanatory ceiling
+
+2.4.2 Information theory, cybernetics, and the computer metaphor
+
+2.4.3 Miller, Chomsky, Newell and Simon, and the recovery of internal states
+
+2.4.4 The naming of cognitive neuroscience by Gazzaniga and Miller in the late 1970s
+
+2.5 The instrument-driven expansions
+
+2.5.1 Single-unit recording and the receptive field: Hubel and Wiesel
+
+2.5.2 The patient literature: Henry Molaison, Phineas Gage, split-brain studies
+
+2.5.3 Positron emission tomography (PET) and then functional magnetic resonance imaging (fMRI)
+
+2.5.4 Optogenetics, high-density silicon probes, and whole-brain imaging
+
+2.5.5 Deep learning, large-scale datasets, and the foundation-model era
+
+
+CHAPTER 3. PHILOSOPHY OF MIND AND THE FORM OF EXPLANATION (CONTEXT)
+
+3.1 The mind-body problem in a laboratory-relevant form
+
+3.1.1 Substance dualism, property dualism, and their empirical costs
+
+3.1.2 Identity theory, functionalism, and multiple realisability
+
+3.1.3 Eliminativism and the fate of folk-psychological terms
+
+3.1.4 The explanatory gap and the hard problem
+
+3.2 Reduction, emergence, and mechanism
+
+3.2.1 Classical intertheoretic reduction and why it rarely fits neuroscience
+
+3.2.2 The new mechanist account: entities, activities, and organisation
+
+3.2.3 Weak and strong emergence
+
+3.2.4 Downward causation and its critics
+
+3.3 Representation as a scientific posit
+
+3.3.1 What licenses calling a neural state a representation
+
+3.3.2 Content determination: causal, informational, teleosemantic accounts
+
+3.3.3 Anti-representationalism from dynamical systems theory
+
+3.3.4 Representation talk as an instrument versus as a commitment
+
+3.4 Explanatory virtues and vices in the field
+
+3.4.1 Description mistaken for explanation
+
+3.4.2 The homunculus and how to discharge it
+
+3.4.3 Circularity in cognitive ontologies
+
+3.4.4 Neuroessentialism and seductive-detail effects
+
+
+CHAPTER 4. LEVELS OF ANALYSIS (APPARATUS)
+
+4.1 Marr's three levels
+
+4.1.1 Computational: what problem is solved and why
+
+4.1.2 Algorithmic and representational: by what procedure and over what formats
+
+4.1.3 Implementational: in what physical substrate
+
+4.1.4 The independence claim and its limits
+
+4.2 Spatial and temporal scales
+
+4.2.1 Molecule, synapse, neuron, microcircuit, area, system, whole brain, organism, group
+
+4.2.2 Millisecond, second, minute, day, year, lifespan, evolutionary time
+
+4.2.3 Scale mismatch between measurement and mechanism
+
+4.2.4 Cross-scale bridging laws and their scarcity
+
+4.3 Alternative level schemes
+
+4.3.1 Poggio's addition of learning and evolution to Marr
+
+4.3.2 The konnectome fifteen-layer scheme and its address system
+
+4.3.3 Multi-level mechanistic models in the new mechanist tradition
+
+4.3.4 Choosing a level as a strategic rather than metaphysical act
+
+4.4 Inside-out versus outside-in framing
+
+4.4.1 The stimulus-response framing and its inherited assumptions
+
+4.4.2 Buzsaki's inside-out alternative: brain-initiated activity grounded by action
+
+4.4.3 Spontaneous activity as signal rather than noise
+
+4.4.4 Consequences for experimental design
+
+
+CHAPTER 5. THE CONCEPTUAL VOCABULARY OF THE FIELD (APPARATUS)
+
+5.1 Information, code, and channel
+
+5.1.1 Shannon information, entropy, and mutual information
+
+5.1.2 What it means to say a neuron carries information about a variable
+
+5.1.3 Encoding versus decoding, and the observer's role
+
+5.1.4 The efficient coding hypothesis
+
+5.2 Computation
+
+5.2.1 Digital, analogue, and hybrid senses of computation
+
+5.2.2 Neural computation as transformation of population state
+
+5.2.3 The trivialisation objection: is everything computing
+
+5.2.4 Criteria for a substantive computational claim
+
+5.3 Dynamics
+
+5.3.1 State space, trajectory, fixed point, limit cycle, chaos
+
+5.3.2 Attractors as memory and as decision
+
+5.3.3 Bifurcation and state transition
+
+5.3.4 Timescale hierarchies across cortex
+
+5.4 Mechanism, causation, and necessity
+
+5.4.1 Necessity, sufficiency, and modulation as distinct causal claims
+
+5.4.2 Correlation, perturbation, and the ladder of causal evidence
+
+5.4.3 Degeneracy: many mechanisms for one function
+
+5.4.4 Robustness, redundancy, and compensation after damage
+
+
+PART TWO. THE SUBSTRATE: THE NEUROBIOLOGY THAT COGNITION IS MADE OF
+
+
+CHAPTER 6. CELLS: NEURONS AND GLIA (APPARATUS)
+
+6.1 The neuron as a computational element
+
+6.1.1 Soma, dendrite, axon, terminal, and the polarity of signalling
+
+6.1.2 Excitable membrane, ion channels, resting potential, action potential
+
+6.1.3 Cable properties, electrotonic length, and passive filtering
+
+6.1.4 Axonal conduction, myelination, and conduction delay as a computed quantity
+
+6.2 Neuronal diversity
+
+6.2.1 Excitatory principal cells: pyramidal, stellate, granule
+
+6.2.2 Inhibitory interneuron classes: parvalbumin, somatostatin, vasoactive intestinal peptide, and others
+
+6.2.3 Transcriptomic cell-type censuses and the Brain Initiative Cell Census Network
+
+6.2.4 Why cell type constrains the circuit hypotheses that are available
+
+6.3 Glia as participants in cognition
+
+6.3.1 Astrocytes, calcium signalling, and the tripartite synapse
+
+6.3.2 Oligodendrocytes, adaptive myelination, and learning
+
+6.3.3 Microglia and activity-dependent synaptic pruning
+
+6.3.4 The glymphatic system, sleep, and clearance
+
+6.4 What the cellular level does and does not explain
+
+6.4.1 Capacities plausibly reducible to single-cell properties
+
+6.4.2 Capacities requiring population-level description
+
+6.4.3 The multiscale gap and current attempts to close it
+
+
+CHAPTER 7. SYNAPSES, TRANSMITTERS, AND RECEPTORS (APPARATUS)
+
+7.1 Chemical transmission
+
+7.1.1 Vesicle release, quantal content, and release probability
+
+7.1.2 Ionotropic and metabotropic receptors
+
+7.1.3 Excitation and inhibition: glutamate and gamma-aminobutyric acid (GABA)
+
+7.1.4 Excitation-inhibition balance as a systems-level constraint
+
+7.2 Electrical transmission and non-synaptic signalling
+
+7.2.1 Gap junctions and interneuron synchrony
+
+7.2.2 Volume transmission and extrasynaptic receptors
+
+7.2.3 Ephaptic coupling and field effects
+
+7.3 Short-term synaptic dynamics
+
+7.3.1 Facilitation and depression
+
+7.3.2 Synaptic filtering as temporal computation
+
+7.3.3 Short-term plasticity as a substrate for activity-silent working memory
+
+7.4 The synapse as the unit of storage
+
+7.4.1 Synaptic weight as the classical memory variable
+
+7.4.2 Limits of the weight metaphor: intrinsic excitability, structural change, molecular state
+
+7.4.3 Synaptic tagging and capture
+
+7.4.4 Cascade and metaplastic models of long-lived memory
+
+
+CHAPTER 8. NEUROMODULATION AND GLOBAL STATE (APPARATUS)
+
+8.1 The broadcast systems
+
+8.1.1 Dopamine from the ventral tegmental area and substantia nigra
+
+8.1.2 Noradrenaline from the locus coeruleus
+
+8.1.3 Acetylcholine from the basal forebrain and brainstem
+
+8.1.4 Serotonin from the raphe nuclei
+
+8.1.5 Histamine, orexin, and the wake-promoting systems
+
+8.2 Computational readings of the modulators
+
+8.2.1 Dopamine as reward prediction error and as incentive salience
+
+8.2.2 Noradrenaline as unexpected uncertainty, gain, and network reset
+
+8.2.3 Acetylcholine as expected uncertainty and as the encoding-retrieval switch
+
+8.2.4 Serotonin as patience, aversive prediction, and behavioural flexibility
+
+8.3 Neuropeptides and hormones in cognition
+
+8.3.1 Oxytocin and vasopressin in social cognition
+
+8.3.2 Corticosteroids, the stress axis, and memory
+
+8.3.3 Sex hormones and cognitive variation
+
+8.3.4 Metabolic signals: insulin, leptin, ghrelin
+
+8.4 State as a cognitive variable
+
+8.4.1 Arousal, pupil-linked gain, and the Yerkes-Dodson relation
+
+8.4.2 Brain state transitions during sleep, quiet waking, and active engagement
+
+8.4.3 Neuromodulatory tone and the exploration-exploitation setting
+
+8.4.4 Why fixed-architecture models fail without a state term
+
+
+CHAPTER 9. PLASTICITY: HOW THE SUBSTRATE CHANGES (CORE)
+
+9.1 Hebbian and correlational plasticity
+
+9.1.1 The Hebb postulate and its formalisations
+
+9.1.2 Long-term potentiation and long-term depression
+
+9.1.3 N-methyl-D-aspartate (NMDA) receptor dependence and the coincidence detector
+
+9.1.4 Spike-timing-dependent plasticity and causal asymmetry
+
+9.2 Constraints that make plasticity stable
+
+9.2.1 Homeostatic synaptic scaling
+
+9.2.2 Intrinsic excitability regulation
+
+9.2.3 Metaplasticity and the Bienenstock-Cooper-Munro sliding threshold
+
+9.2.4 The stability-plasticity dilemma and catastrophic forgetting
+
+9.3 Beyond the synapse
+
+9.3.1 Structural plasticity: spine turnover, axonal sprouting
+
+9.3.2 Adult neurogenesis in the dentate gyrus and its disputed role
+
+9.3.3 Myelin plasticity and the timing of learning
+
+9.3.4 Epigenetic and transcriptional memory
+
+9.4 Credit assignment, the field's hardest substrate problem
+
+9.4.1 The spatial credit assignment problem in deep hierarchies
+
+9.4.2 The temporal credit assignment problem across delays
+
+9.4.3 Biologically plausible alternatives to backpropagation: feedback alignment, target propagation, predictive coding schemes, burst-dependent plasticity
+
+9.4.4 Three-factor rules and neuromodulated eligibility traces
+
+
+CHAPTER 10. THE SINGLE NEURON AS A COMPUTER (APPARATUS)
+
+10.1 Dendritic computation
+
+10.1.1 Passive integration and the point-neuron idealisation
+
+10.1.2 Active dendritic conductances and dendritic spikes
+
+10.1.3 The two-layer and deep-network views of a pyramidal cell
+
+10.1.4 Apical dendrites, feedback, and the coincidence of top-down and bottom-up input
+
+10.2 Spiking and coding at the cell level
+
+10.2.1 Rate codes, temporal codes, latency codes, phase codes
+
+10.2.2 Bursting as a distinct signalling channel
+
+10.2.3 Adaptation and the encoding of change
+
+10.2.4 Noise, variability, and the Poisson idealisation
+
+10.3 Formal single-neuron models
+
+10.3.1 Integrate-and-fire and its generalisations
+
+10.3.2 Hodgkin-Huxley and reduced conductance models
+
+10.3.3 Multicompartment biophysical models
+
+10.3.4 Fitting neuron models to data and the identifiability problem
+
+10.4 What single-neuron computation buys the cognitive account
+
+10.4.1 Concept cells and sparse selectivity
+
+10.4.2 Mixed selectivity and high-dimensional coding
+
+10.4.3 The single-neuron doctrine against the population doctrine
+
+
+CHAPTER 11. CORTICAL ARCHITECTURE (APPARATUS)
+
+11.1 The laminar plan
+
+11.1.1 Six layers and their canonical input, output, and association roles
+
+11.1.2 Feedforward, feedback, and lateral connections defined laminarly
+
+11.1.3 Layer 5 and layer 6 corticofugal outputs
+
+11.1.4 Laminar predictive coding proposals
+
+11.2 Columns, maps, and modules
+
+11.2.1 Orientation columns, ocular dominance, barrels
+
+11.2.2 Topographic maps and their computational rationale
+
+11.2.3 The column as a disputed unit
+
+11.2.4 Cortical areas, gradients, and the parcellation problem
+
+11.3 The canonical microcircuit
+
+11.3.1 The canonical circuit hypothesis and its evidence
+
+11.3.2 Interneuron motifs and disinhibition
+
+11.3.3 Recurrence and amplification
+
+11.3.4 Uniformity versus specialisation across cortex
+
+11.4 Hierarchy and gradients
+
+11.4.1 Anatomical hierarchy from laminar connection patterns
+
+11.4.2 The sensory-to-association gradient
+
+11.4.3 Timescale, myelination, and receptor gradients
+
+11.4.4 The principal gradient and the position of the default mode network
+
+
+CHAPTER 12. THE SUBCORTICAL ENGINES OF COGNITION (APPARATUS)
+
+12.1 The thalamus
+
+12.1.1 First-order and higher-order relays
+
+12.1.2 The pulvinar and attentional routing
+
+12.1.3 The mediodorsal nucleus and prefrontal function
+
+12.1.4 The thalamic reticular nucleus as a gate
+
+12.2 The basal ganglia
+
+12.2.1 Direct, indirect, and hyperdirect pathways
+
+12.2.2 Parallel cortico-basal-ganglia-thalamo-cortical loops: motor, oculomotor, associative, limbic
+
+12.2.3 Action selection, gating of working memory, and habit formation
+
+12.2.4 Dopaminergic learning within the striatum
+
+12.3 The cerebellum
+
+12.3.1 The uniform cerebellar microcircuit and supervised learning
+
+12.3.2 Internal models and forward prediction
+
+12.3.3 The cerebellar cognitive affective syndrome
+
+12.3.4 Cerebellar contributions to language, timing, and social cognition
+
+12.4 The medial temporal lobe and the amygdala
+
+12.4.1 Hippocampal subfields and the trisynaptic circuit
+
+12.4.2 Entorhinal, perirhinal, and parahippocampal cortices
+
+12.4.3 The amygdala nuclei and valence processing
+
+12.4.4 The extended hippocampal system and the Papez circuit
+
+12.5 The brainstem and hypothalamus
+
+12.5.1 Ascending arousal systems
+
+12.5.2 Superior colliculus and orienting
+
+12.5.3 Periaqueductal grey and defensive states
+
+12.5.4 Hypothalamic drives as the boundary condition on cognition
+
+
+CHAPTER 13. THE CONNECTOME AND LARGE-SCALE ORGANISATION (APPARATUS)
+
+13.1 Levels of connectomics
+
+13.1.1 Synaptic-resolution reconstruction: Caenorhabditis elegans, Drosophila, the MICrONS cubic-millimetre volume
+
+13.1.2 Mesoscale tracer connectomes in mouse and macaque
+
+13.1.3 Macroscale human connectomes from diffusion imaging
+
+13.1.4 Functional and effective connectomes
+
+13.2 Major white matter tracts
+
+13.2.1 Arcuate, superior longitudinal, inferior fronto-occipital, uncinate
+
+13.2.2 Cingulum, fornix, corpus callosum
+
+13.2.3 Tract-function mapping and disconnection syndromes
+
+13.2.4 Tractography's known failure modes
+
+13.3 Canonical resting-state networks
+
+13.3.1 Default mode, frontoparietal control, dorsal and ventral attention, salience
+
+13.3.2 Somatomotor, visual, auditory, limbic
+
+13.3.3 Network interaction and the triple-network model
+
+13.3.4 Individual-specific network topography and precision imaging
+
+13.4 Network architecture principles
+
+13.4.1 Small-world organisation, hubs, and the rich club
+
+13.4.2 Modularity, integration, and segregation
+
+13.4.3 Wiring cost against communication efficiency
+
+13.4.4 Controllability and the network-control framing of cognition
+
+
+CHAPTER 14. ENERGY, BLOOD, AND THE PHYSICAL COST OF THINKING (APPARATUS)
+
+14.1 Neuroenergetics
+
+14.1.1 Glucose and oxygen budgets of the human brain
+
+14.1.2 Cost of spikes, of synaptic transmission, and of maintenance
+
+14.1.3 Energy as a design constraint favouring sparse coding
+
+14.1.4 Baseline activity and the small cost of task-evoked change
+
+14.2 Neurovascular coupling
+
+14.2.1 The neurovascular unit
+
+14.2.2 The blood-oxygen-level-dependent (BOLD) signal and what it indexes
+
+14.2.3 Haemodynamic lag and its consequences for inference
+
+14.2.4 Neurovascular decoupling in disease and ageing
+
+14.3 Metabolic constraint as an explanatory resource
+
+14.3.1 Efficient coding derived from energy budgets
+
+14.3.2 Effort, cost of control, and metabolic accounts of it
+
+14.3.3 Sleep, clearance, and the restorative hypothesis
+
+
+CHAPTER 15. RHYTHMS, OSCILLATIONS, AND NEURAL TIMING (CORE)
+
+15.1 The oscillatory bands and their generators
+
+15.1.1 Delta, theta, alpha, beta, gamma, and high-frequency broadband
+
+15.1.2 Interneuron-driven gamma and the pyramidal-interneuron network model
+
+15.1.3 Hippocampal theta and the septal pacemaker
+
+15.1.4 Sleep spindles, slow oscillations, and sharp-wave ripples
+
+15.2 Cross-frequency and cross-area coordination
+
+15.2.1 Phase-amplitude coupling
+
+15.2.2 Communication through coherence and its critiques
+
+15.2.3 Travelling waves across cortex
+
+15.2.4 Feedforward gamma and feedback alpha-beta channels
+
+15.3 Oscillations as cognitive mechanism
+
+15.3.1 Theta-gamma coding of item sequences
+
+15.3.2 Alpha as functional inhibition in attention
+
+15.3.3 Beta and the maintenance of the current cognitive set
+
+15.3.4 Phase coding, spike timing, and temporal reference frames
+
+15.4 The status of the oscillation as an explanation
+
+15.4.1 Epiphenomenon or mechanism
+
+15.4.2 Aperiodic broadband activity and the exponent as a separate signal
+
+15.4.3 Criticality, scale-free dynamics, and the critical brain hypothesis
+
+15.4.4 Interventional evidence from rhythmic stimulation
+
+
+PART THREE. METHODS: HOW CLAIMS ABOUT COGNITION ARE MADE CHECKABLE
+
+
+CHAPTER 16. BEHAVIOUR, PSYCHOPHYSICS, AND TASK DESIGN (APPARATUS)
+
+16.1 Behaviour as the primary measurement
+
+16.1.1 Why no neural claim is interpretable without a behavioural anchor
+
+16.1.2 Accuracy, reaction time, and their joint modelling
+
+16.1.3 The task as an operational definition of a construct
+
+16.1.4 Task impurity and the construct validity problem
+
+16.2 Classical psychophysics
+
+16.2.1 Thresholds, psychometric functions, and adaptive staircases
+
+16.2.2 Signal detection theory: sensitivity and criterion
+
+16.2.3 Receiver operating characteristic analysis and confidence
+
+16.2.4 Weber, Fechner, and Stevens laws
+
+16.3 Canonical laboratory paradigms
+
+16.3.1 Attention: Posner cueing, visual search, attentional blink, change blindness
+
+16.3.2 Memory: free recall, recognition, paired associates, n-back, delayed match to sample
+
+16.3.3 Control: Stroop, flanker, go and no-go, stop signal, task switching
+
+16.3.4 Decision: random dot motion, two-armed bandit, intertemporal choice, gambling tasks
+
+16.4 Beyond the trial-based task
+
+16.4.1 Naturalistic viewing, narrative listening, and free behaviour
+
+16.4.2 Markerless pose tracking and computational ethology
+
+16.4.3 Ecological validity against experimental control
+
+16.4.4 Eye tracking, pupillometry, and other peripheral measures
+
+
+CHAPTER 17. RECORDING NEURONS AND POPULATIONS (APPARATUS)
+
+17.1 Electrophysiology at cellular resolution
+
+17.1.1 Sharp electrodes, patch clamp, and in vivo whole-cell recording
+
+17.1.2 Extracellular single-unit and multi-unit recording
+
+17.1.3 Spike sorting and its uncertainties
+
+17.1.4 High-density silicon probes and the Neuropixels generation
+
+17.2 Optical recording
+
+17.2.1 Genetically encoded calcium indicators and two-photon imaging
+
+17.2.2 Voltage indicators and their speed-sensitivity trade-off
+
+17.2.3 Miniature head-mounted microscopes in freely moving animals
+
+17.2.4 Light-sheet and whole-brain imaging in transparent preparations
+
+17.3 The local field potential and its relatives
+
+17.3.1 Physical origin of the local field potential
+
+17.3.2 Current source density analysis
+
+17.3.3 Laminar recording and depth profiles
+
+17.4 What recording can and cannot show
+
+17.4.1 Sampling bias toward large and active cells
+
+17.4.2 Chronic stability and cellular drift
+
+17.4.3 Correlation without causation at the population level
+
+17.4.4 Species and preparation constraints on generalisation
+
+
+CHAPTER 18. NON-INVASIVE ELECTROPHYSIOLOGY IN HUMANS (APPARATUS)
+
+18.1 Electroencephalography
+
+18.1.1 Physical basis: synchronous postsynaptic currents in aligned pyramidal cells
+
+18.1.2 Montages, references, and volume conduction
+
+18.1.3 Artefact sources and correction
+
+18.1.4 High-density and mobile electroencephalography
+
+18.2 Magnetoencephalography
+
+18.2.1 Physical basis and tangential-source sensitivity
+
+18.2.2 Superconducting quantum interference device and optically pumped magnetometer systems
+
+18.2.3 Advantages and limits relative to electroencephalography
+
+18.3 Event-related potentials and fields
+
+18.3.1 Averaging logic and its assumptions
+
+18.3.2 Sensory components: C1, P1, N1, mismatch negativity
+
+18.3.3 Cognitive components: N2pc, P300, N400, P600, error-related negativity, contingent negative variation
+
+18.3.4 Component identity as a theoretical rather than empirical matter
+
+18.4 Time-frequency and source analysis
+
+18.4.1 Wavelet, multitaper, and Hilbert methods
+
+18.4.2 Evoked against induced responses, and inter-trial phase coherence
+
+18.4.3 The inverse problem and source localisation: minimum norm, beamforming, dipole fitting
+
+18.4.4 Head models, forward models, and individual anatomy
+
+
+CHAPTER 19. INTRACRANIAL HUMAN NEUROSCIENCE (APPARATUS)
+
+19.1 The clinical setting
+
+19.1.1 Epilepsy surgery evaluation as the enabling context
+
+19.1.2 Electrocorticographic grids and stereotactic depth electrodes
+
+19.1.3 Ethical framing of research in patients
+
+19.1.4 Sampling constrained by clinical need
+
+19.2 What intracranial recording adds
+
+19.2.1 High-frequency broadband as a proxy for local population firing
+
+19.2.2 Millisecond timing with anatomical precision
+
+19.2.3 Single-neuron recording in humans and concept cells
+
+19.2.4 Long-duration recording across natural behaviour and sleep
+
+19.3 Direct electrical stimulation
+
+19.3.1 Functional mapping before resection
+
+19.3.2 Causal inference from stimulation-induced deficits and percepts
+
+19.3.3 Cortico-cortical evoked potentials and effective connectivity
+
+19.3.4 Closed-loop stimulation for memory enhancement
+
+19.4 Interpretive cautions
+
+19.4.1 The pathological brain as the sample
+
+19.4.2 Spatial coverage bias
+
+19.4.3 Generalisation to healthy populations
+
+
+CHAPTER 20. HAEMODYNAMIC AND METABOLIC IMAGING (APPARATUS)
+
+20.1 Functional magnetic resonance imaging
+
+20.1.1 Nuclear magnetic resonance basics and image formation
+
+20.1.2 The blood-oxygen-level-dependent contrast mechanism
+
+20.1.3 Echo-planar imaging, field strength, and multiband acquisition
+
+20.1.4 Laminar and columnar imaging at ultra-high field
+
+20.2 Design and modelling
+
+20.2.1 Blocked, event-related, and mixed designs
+
+20.2.2 The general linear model and the haemodynamic response function
+
+20.2.3 Preprocessing: motion correction, registration, distortion correction, smoothing
+
+20.2.4 Physiological noise, respiration, and vascular confounds
+
+20.3 Other haemodynamic and metabolic methods
+
+20.3.1 Positron emission tomography and receptor mapping
+
+20.3.2 Functional near-infrared spectroscopy and its portability
+
+20.3.3 Arterial spin labelling and quantitative perfusion
+
+20.3.4 Magnetic resonance spectroscopy for neurotransmitter concentration
+
+20.4 Persistent interpretive problems
+
+20.4.1 Spatial resolution against the scale of the underlying circuit
+
+20.4.2 Temporal resolution against the speed of cognition
+
+20.4.3 Subtraction logic and pure insertion
+
+20.4.4 Reverse inference and the base-rate problem
+
+
+CHAPTER 21. STRUCTURAL AND CONNECTIONAL IMAGING (APPARATUS)
+
+21.1 Structural magnetic resonance imaging
+
+21.1.1 Tissue contrast, segmentation, and surface reconstruction
+
+21.1.2 Voxel-based and surface-based morphometry
+
+21.1.3 Cortical thickness, surface area, and gyrification as separable measures
+
+21.1.4 Quantitative mapping of myelin and iron
+
+21.2 Diffusion imaging
+
+21.2.1 Diffusion tensor imaging and its scalar measures
+
+21.2.2 High angular resolution methods and crossing fibres
+
+21.2.3 Deterministic and probabilistic tractography
+
+21.2.4 Validation against tracer anatomy and known failure modes
+
+21.3 Structure-function relations
+
+21.3.1 Structural covariance networks
+
+21.3.2 Predicting function from structural connectivity
+
+21.3.3 Structural change with learning and experience
+
+21.4 Atlases and reference frames
+
+21.4.1 Talairach and Montreal Neurological Institute spaces
+
+21.4.2 Multimodal parcellations and the Human Connectome Project atlas
+
+21.4.3 Allen human and mouse brain atlases and gene expression maps
+
+21.4.4 Individual against group reference frames
+
+
+CHAPTER 22. CAUSAL MANIPULATION (APPARATUS)
+
+22.1 Lesion methods in humans
+
+22.1.1 The single-case tradition and dissociation logic
+
+22.1.2 Group lesion studies and voxel-based lesion-symptom mapping
+
+22.1.3 Lesion network mapping and symptom localisation to networks
+
+22.1.4 Plasticity and reorganisation as confounds on inference
+
+22.2 Non-invasive stimulation
+
+22.2.1 Transcranial magnetic stimulation: single-pulse, paired-pulse, repetitive, theta burst
+
+22.2.2 Virtual lesions, chronometry, and state dependence
+
+22.2.3 Transcranial direct and alternating current stimulation
+
+22.2.4 Transcranial focused ultrasound and deep targeting
+
+22.3 Invasive and molecular manipulation
+
+22.3.1 Deep brain stimulation and responsive neurostimulation
+
+22.3.2 Optogenetics: excitation, inhibition, and temporal precision
+
+22.3.3 Chemogenetics and designer receptors
+
+22.3.4 Pharmacological challenge in humans and animals
+
+22.4 The logic of causal claims
+
+22.4.1 Necessity and sufficiency tests and what each licenses
+
+22.4.2 Compensation, off-target effects, and network-wide consequences
+
+22.4.3 Perturbation strength against physiological plausibility
+
+22.4.4 Combining perturbation with recording
+
+
+CHAPTER 23. NATURALISTIC, LONGITUDINAL, AND LARGE-SCALE APPROACHES (APPARATUS)
+
+23.1 Naturalistic neuroscience
+
+23.1.1 Film, narrative, and free-listening paradigms
+
+23.1.2 Inter-subject correlation and inter-subject functional connectivity
+
+23.1.3 Encoding models over rich natural stimuli
+
+23.1.4 Hyperscanning and two-brain paradigms
+
+23.2 Precision and longitudinal designs
+
+23.2.1 Densely sampled individuals and the precision-imaging movement
+
+23.2.2 Test-retest reliability of cognitive-neuroscience measures
+
+23.2.3 Within-person change against between-person difference
+
+23.2.4 Ecological momentary assessment and wearable measurement
+
+23.3 Population-scale resources
+
+23.3.1 Human Connectome Project
+
+23.3.2 UK Biobank imaging
+
+23.3.3 Adolescent Brain Cognitive Development study
+
+23.3.4 Enhancing Neuro Imaging Genetics through Meta Analysis and other consortia
+
+23.4 Data sharing and standards
+
+23.4.1 Brain Imaging Data Structure and neurodata standards
+
+23.4.2 OpenNeuro, DANDI, and public repositories
+
+23.4.3 Reproducible pipelines and containerisation
+
+23.4.4 Privacy and de-identification of brain data
+
+
+PART FOUR. ANALYSIS AND THEORY: TURNING MEASUREMENT INTO UNDERSTANDING
+
+
+CHAPTER 24. EXPERIMENTAL DESIGN AND STATISTICAL INFERENCE (APPARATUS)
+
+24.1 Design logic
+
+24.1.1 Factorial designs, interactions, and what they license
+
+24.1.2 Single and double dissociation
+
+24.1.3 Within-subject and between-subject designs
+
+24.1.4 Counterbalancing, randomisation, and blinding
+
+24.2 Inference frameworks
+
+24.2.1 Null hypothesis significance testing and its discontents
+
+24.2.2 Effect size, confidence intervals, and estimation
+
+24.2.3 Bayesian inference and the Bayes factor
+
+24.2.4 Mixed-effects and hierarchical models
+
+24.3 The multiple comparisons problem in brain data
+
+24.3.1 Family-wise error and false discovery rate
+
+24.3.2 Cluster-based permutation testing and its assumptions
+
+24.3.3 Random field theory
+
+24.3.4 Circular analysis and double dipping
+
+24.4 Reliability, power, and generalisation
+
+24.4.1 Statistical power in small-sample neuroimaging
+
+24.4.2 Brain-wide association studies and the sample-size lesson
+
+24.4.3 Test-retest reliability against between-subject sensitivity
+
+24.4.4 Generalisation across stimuli, tasks, samples, and populations
+
+
+CHAPTER 25. DECODING, ENCODING, AND REPRESENTATIONAL ANALYSIS (APPARATUS)
+
+25.1 Multivariate pattern analysis
+
+25.1.1 Classification of cognitive states from distributed patterns
+
+25.1.2 Cross-classification and generalisation tests of abstraction
+
+25.1.3 Searchlight and whole-brain mapping
+
+25.1.4 What decoding accuracy does and does not tell us about use
+
+25.2 Encoding models
+
+25.2.1 Feature spaces, voxel-wise models, and predictive accuracy
+
+25.2.2 Banded ridge regression and variance partitioning
+
+25.2.3 Semantic maps and continuous stimulus spaces
+
+25.2.4 Model comparison as the real inferential move
+
+25.3 Representational similarity analysis
+
+25.3.1 The representational dissimilarity matrix as a common currency
+
+25.3.2 Comparing brains, behaviour, and models in one space
+
+25.3.3 Second-order isomorphism and its assumptions
+
+25.3.4 Extensions: weighted, kernel, and temporal generalisation methods
+
+25.4 Reconstruction and generative decoding
+
+25.4.1 Stimulus reconstruction from brain activity
+
+25.4.2 Semantic decoding of continuous language
+
+25.4.3 Mental imagery and dream decoding
+
+25.4.4 Ethical limits on mind reading
+
+
+CHAPTER 26. POPULATION DYNAMICS AND NEURAL GEOMETRY (CORE)
+
+26.1 From single neurons to population state
+
+26.1.1 The population vector and its history
+
+26.1.2 Dimensionality reduction: principal components, factor analysis, demixed methods
+
+26.1.3 Latent variable models and state-space inference
+
+26.1.4 Nonlinear embedding and geometric deep learning approaches
+
+26.2 The neural manifold
+
+26.2.1 Definition, intrinsic and extrinsic constraints, and evidence across species
+
+26.2.2 Low dimensionality as a signature of computation
+
+26.2.3 Manifold stability across time, learning, and brain-computer interface training
+
+26.2.4 Critiques: dimensionality as an artefact of task and sampling
+
+26.3 Dynamical systems accounts of cognition
+
+26.3.1 Fixed points, line attractors, ring attractors
+
+26.3.2 Rotational dynamics and dynamical motifs in motor and premotor cortex
+
+26.3.3 Recurrent network models trained on cognitive tasks
+
+26.3.4 Dynamics as an alternative to representation talk
+
+26.4 The geometry of abstraction
+
+26.4.1 Mixed selectivity and dimensionality expansion
+
+26.4.2 Abstract format, cross-condition generalisation, and the parallelism score
+
+26.4.3 Compositionality and the reuse of coding directions
+
+26.4.4 Subspace separation for input, memory, and output
+
+
+CHAPTER 27. CONNECTIVITY AND NETWORK ANALYSIS (APPARATUS)
+
+27.1 Kinds of connectivity
+
+27.1.1 Structural, functional, and effective connectivity distinguished
+
+27.1.2 Correlation, coherence, and phase-based measures
+
+27.1.3 Granger causality, transfer entropy, and their assumptions
+
+27.1.4 Dynamic causal modelling and generative connectivity
+
+27.2 Graph-theoretic description
+
+27.2.1 Nodes, edges, and the definitional choices that dominate results
+
+27.2.2 Degree, strength, centrality, hubs, and clubs
+
+27.2.3 Paths, diffusion, navigation, and communication models
+
+27.2.4 Modularity, community detection, and null models
+
+27.3 Time-varying and higher-order structure
+
+27.3.1 Dynamic functional connectivity and brain states
+
+27.3.2 Hidden Markov and switching models
+
+27.3.3 Edge-centric and hypergraph methods
+
+27.3.4 Network control theory applied to cognitive state transitions
+
+27.4 Statistical connectomics
+
+27.4.1 Network-based statistics
+
+27.4.2 Multiple comparison over edges
+
+27.4.3 Confound structure: motion, physiology, and sampling
+
+27.4.4 Reproducibility of connectomic findings
+
+
+CHAPTER 28. COMPUTATIONAL FRAMEWORKS FOR COGNITION (CORE)
+
+28.1 The Bayesian brain and predictive processing
+
+28.1.1 Bayes rule as a normative standard for inference under uncertainty
+
+28.1.2 Priors, likelihoods, precision, and cue combination
+
+28.1.3 Predictive coding: prediction, prediction error, and hierarchical message passing
+
+28.1.4 The free energy principle and active inference
+
+28.1.5 Empirical status: successes, unfalsifiability worries, and open tests
+
+28.2 Reinforcement learning as brain theory
+
+28.2.1 Markov decision processes, value, and policy
+
+28.2.2 Temporal difference learning and the dopamine reward prediction error hypothesis
+
+28.2.3 Model-free and model-based control and their arbitration
+
+28.2.4 Actor-critic architectures mapped onto basal ganglia circuits
+
+28.2.5 Distributional reinforcement learning and its neural evidence
+
+28.2.6 Hierarchical reinforcement learning, options, and subgoals
+
+28.3 Attractor and network models
+
+28.3.1 Hopfield networks and content-addressable memory
+
+28.3.2 Continuous attractors for space, head direction, and analogue memory
+
+28.3.3 Winner-take-all and decision by competition
+
+28.3.4 Balanced networks and the origin of variability
+
+28.4 Normative and rational analysis
+
+28.4.1 Ideal observer and ideal actor analysis
+
+28.4.2 Resource rationality and bounded optimality
+
+28.4.3 Efficient coding and redundancy reduction
+
+28.4.4 Why a normative account is not yet a mechanism
+
+28.5 Symbolic, hybrid, and cognitive-architecture approaches
+
+28.5.1 Production systems and the architecture tradition
+
+28.5.2 Vector symbolic architectures and hyperdimensional computing
+
+28.5.3 Neural syntax and compositional binding
+
+28.5.4 The binding problem and its candidate solutions
+
+
+CHAPTER 29. THE NEURAL CODE (CORE)
+
+29.1 Coding schemes
+
+29.1.1 Rate, temporal, population, and phase codes
+
+29.1.2 Labelled lines against combinatorial codes
+
+29.1.3 Sparse, dense, and distributed regimes
+
+29.1.4 Predictive and error codes
+
+29.2 Noise, correlation, and information
+
+29.2.1 Trial-to-trial variability and its sources
+
+29.2.2 Noise correlations and their effect on coded information
+
+29.2.3 Information-limiting correlations
+
+29.2.4 Fisher information and decoding bounds
+
+29.3 Reference frames and formats
+
+29.3.1 Egocentric, allocentric, and object-centred frames
+
+29.3.2 Coordinate transformation and gain fields
+
+29.3.3 Analogue magnitude formats and their signatures
+
+29.3.4 Format conversion as a cognitive operation
+
+29.4 Reading and writing codes
+
+29.4.1 The decoding-writing asymmetry
+
+29.4.2 Patterned stimulation and the induction of percepts and memories
+
+29.4.3 Brain-computer interfaces as a test of code understanding
+
+29.4.4 Buzsaki's criterion: a code is understood when the reader circuit is identified
+
+
+CHAPTER 30. MODELS, FALSIFIABILITY, AND THE HEALTH OF THE FIELD (CONTEXT)
+
+30.1 What models are for
+
+30.1.1 Models as data representation, as explanation, and as prediction
+
+30.1.2 The realism-abstraction trade-off
+
+30.1.3 Model identifiability and parameter recovery
+
+30.1.4 Model comparison, cross-validation, and out-of-sample prediction
+
+30.2 The replication problem
+
+30.2.1 Documented failures and their causes
+
+30.2.2 Analytic flexibility and the many-analysts findings
+
+30.2.3 Publication bias and the file drawer
+
+30.2.4 Small samples and inflated effect sizes
+
+30.3 Reform practices
+
+30.3.1 Preregistration and registered reports
+
+30.3.2 Open data, open code, and open materials
+
+30.3.3 Multi-site consortia and adversarial collaboration
+
+30.3.4 Specification curve and multiverse analysis
+
+30.4 Theory as the scarce resource
+
+30.4.1 The complaint that the field is data-rich and theory-poor
+
+30.4.2 Would a neuroscientist understand a microprocessor, and what the question exposes
+
+30.4.3 Criteria for a good theory in cognitive neuroscience
+
+30.4.4 Standing programmes competing to be the unifying theory
+
+
+PART FIVE. PERCEPTION: BUILDING THE WORLD FROM SIGNALS
+
+
+CHAPTER 31. GENERAL PRINCIPLES OF PERCEPTION (CORE)
+
+31.1 Perception as inference
+
+31.1.1 The inverse problem and the poverty of the sensory signal
+
+31.1.2 Helmholtzian unconscious inference and its modern form
+
+31.1.3 Priors, illusions, and the diagnostic value of error
+
+31.1.4 Perceptual constancies
+
+31.2 Hierarchy and abstraction in sensory systems
+
+31.2.1 Receptive fields and their enlargement along hierarchies
+
+31.2.2 Tuning, invariance, and selectivity as a trade-off
+
+31.2.3 Feedforward sweep, recurrence, and feedback
+
+31.2.4 Timescales of integration along the hierarchy
+
+31.3 Adaptation, context, and expectation
+
+31.3.1 Adaptation as efficient recoding
+
+31.3.2 Contextual modulation and surround effects
+
+31.3.3 Expectation suppression and prediction error signatures
+
+31.3.4 Attention and expectation distinguished
+
+31.4 From percept to category
+
+31.4.1 Categorical perception
+
+31.4.2 Perceptual decision as the interface with action
+
+31.4.3 Perceptual learning and its locus
+
+31.4.4 Perceptual awareness and its dissociation from performance
+
+
+CHAPTER 32. VISION (CORE)
+
+32.1 From retina to cortex
+
+32.1.1 Photoreceptors, bipolar and ganglion cells, and centre-surround organisation
+
+32.1.2 Magnocellular, parvocellular, and koniocellular channels
+
+32.1.3 The lateral geniculate nucleus as more than a relay
+
+32.1.4 Retinotopy and cortical magnification
+
+32.2 Early and intermediate visual cortex
+
+32.2.1 Simple and complex cells and orientation selectivity
+
+32.2.2 V2, V3, V4 and the emergence of form and colour
+
+32.2.3 Middle temporal area and motion processing
+
+32.2.4 Contour integration, figure-ground, and border ownership
+
+32.3 The two visual streams
+
+32.3.1 The ventral what stream to inferotemporal cortex
+
+32.3.2 The dorsal where and how stream to posterior parietal cortex
+
+32.3.3 Perception against action as the streams' functional division
+
+32.3.4 Evidence from optic ataxia and visual form agnosia
+
+32.4 High-level vision
+
+32.4.1 Object recognition, invariance, and the untangling account
+
+32.4.2 Category-selective regions: faces, bodies, places, words, tools
+
+32.4.3 Domain specificity against distributed coding
+
+32.4.4 Scene perception, gist, and spatial layout
+
+32.5 Vision as a benchmark for models
+
+32.5.1 Deep convolutional networks as models of ventral stream
+
+32.5.2 Brain-Score and quantitative model-brain comparison
+
+32.5.3 Adversarial examples and the divergence from human vision
+
+32.5.4 Recurrent processing for challenging images
+
+
+CHAPTER 33. AUDITION AND AUDITORY COGNITION (CORE)
+
+33.1 The auditory periphery and brainstem
+
+33.1.1 Cochlear mechanics and frequency decomposition
+
+33.1.2 Hair cells and transduction
+
+33.1.3 Brainstem timing nuclei and binaural cues
+
+33.1.4 Efferent control and the olivocochlear system
+
+33.2 Auditory cortex
+
+33.2.1 Tonotopy and core, belt, and parabelt organisation
+
+33.2.2 Spectrotemporal receptive fields
+
+33.2.3 Dual streams for auditory what and where
+
+33.2.4 Human auditory cortex asymmetries
+
+33.3 Auditory scene analysis
+
+33.3.1 Grouping, streaming, and the cocktail party problem
+
+33.3.2 Attentional selection of a speaker and its neural decoding
+
+33.3.3 Auditory objects and their formation
+
+33.3.4 Prediction and the mismatch negativity
+
+33.4 Music and rhythm
+
+33.4.1 Pitch, harmony, and tonal expectation
+
+33.4.2 Beat perception, entrainment, and motor coupling
+
+33.4.3 Musical training and cross-domain transfer
+
+33.4.4 Amusia and its dissociations
+
+
+CHAPTER 34. SOMATOSENSATION, PAIN, AND INTEROCEPTION (CORE)
+
+34.1 Touch and proprioception
+
+34.1.1 Mechanoreceptor classes and labelled lines
+
+34.1.2 Dorsal column-medial lemniscal pathway and somatotopy
+
+34.1.3 Active touch, tactile exploration, and haptic object recognition
+
+34.1.4 Proprioception and the body schema
+
+34.2 Pain and nociception
+
+34.2.1 Nociceptors, spinothalamic pathway, and dorsal horn gating
+
+34.2.2 Sensory-discriminative and affective-motivational dimensions
+
+34.2.3 The so-called pain matrix and its reinterpretation as salience
+
+34.2.4 Placebo, expectation, and descending modulation
+
+34.3 Interoception
+
+34.3.1 Vagal and spinal visceral afferents
+
+34.3.2 Nucleus of the solitary tract, parabrachial nucleus, and insula
+
+34.3.3 Interoceptive predictive processing and allostasis
+
+34.3.4 Interoception in emotion, self, and decision making
+
+34.4 Body representation
+
+34.4.1 Rubber hand and full-body illusions
+
+34.4.2 Sense of body ownership and its neural correlates
+
+34.4.3 Phantom limbs and cortical reorganisation
+
+34.4.4 Disorders of body representation
+
+
+CHAPTER 35. THE CHEMICAL SENSES (CORE)
+
+35.1 Olfaction
+
+35.1.1 Receptor diversity and the combinatorial odour code
+
+35.1.2 Olfactory bulb glomeruli and lateral processing
+
+35.1.3 The thalamus-bypassing pathway to piriform cortex
+
+35.1.4 Odour, memory, and emotion: the privileged limbic access
+
+35.2 Gustation
+
+35.2.1 Taste qualities and receptor mechanisms
+
+35.2.2 Central taste pathway to insular cortex
+
+35.2.3 Labelled line against across-fibre pattern debate
+
+35.2.4 Taste, reward, and value coding
+
+35.3 Flavour and chemosensory integration
+
+35.3.1 Retronasal olfaction and the construction of flavour
+
+35.3.2 Trigeminal chemesthesis
+
+35.3.3 Learned food preference and aversion
+
+35.4 Chemical senses as a test case
+
+35.4.1 High-dimensional stimulus spaces and their formalisation
+
+35.4.2 Perceptual quality spaces and the failure of simple metrics
+
+35.4.3 Olfactory loss as an early clinical marker
+
+
+CHAPTER 36. MULTISENSORY INTEGRATION AND PERCEPTUAL DECISION (CORE)
+
+36.1 Combining the senses
+
+36.1.1 Superior colliculus and the principles of multisensory enhancement
+
+36.1.2 Cortical multisensory areas and early cross-modal effects
+
+36.1.3 Optimal cue combination and reliability weighting
+
+36.1.4 Cross-modal illusions: ventriloquism, McGurk, sound-induced flash
+
+36.2 Time and the senses
+
+36.2.1 Temporal binding windows
+
+36.2.2 Simultaneity, order judgement, and recalibration
+
+36.2.3 Sensorimotor timing and prediction of self-generated input
+
+36.3 Perceptual decision making
+
+36.3.1 Evidence accumulation and the drift diffusion model
+
+36.3.2 Lateral intraparietal and premotor accumulation signals
+
+36.3.3 Speed-accuracy trade-off and boundary setting
+
+36.3.4 Urgency, collapsing bounds, and alternatives to accumulation
+
+36.4 Confidence and perceptual awareness
+
+36.4.1 Decision confidence as a computed quantity
+
+36.4.2 Metacognitive sensitivity and its measures
+
+36.4.3 Blindsight and unconscious perception
+
+36.4.4 Bistable perception as a probe of awareness
+
+
+PART SIX. ATTENTION: THE ALLOCATION OF LIMITED RESOURCES
+
+
+CHAPTER 37. THE FORMS OF SELECTION (CORE)
+
+37.1 Taxonomies of attention
+
+37.1.1 Selective, divided, and sustained attention
+
+37.1.2 Spatial, feature-based, and object-based selection
+
+37.1.3 Exogenous and endogenous control
+
+37.1.4 Overt and covert orienting
+
+37.2 Classical theoretical debates
+
+37.2.1 Early against late selection
+
+37.2.2 Load theory and the flexibility of the locus
+
+37.2.3 Attention as a spotlight, zoom lens, or gradient
+
+37.2.4 Biased competition as the integrating framework
+
+37.3 Attention in time
+
+37.3.1 Temporal orienting and rhythmic expectation
+
+37.3.2 The attentional blink and psychological refractory period
+
+37.3.3 Rhythmic sampling and discrete attention
+
+37.3.4 Temporal receptive windows
+
+37.4 The limits of attention
+
+37.4.1 Inattentional blindness and change blindness
+
+37.4.2 Capacity limits and their candidate causes
+
+37.4.3 Dual-task interference and central bottlenecks
+
+37.4.4 Attention against awareness as separable constructs
+
+
+CHAPTER 38. MECHANISMS AND NETWORKS OF ATTENTION (CORE)
+
+38.1 Neural signatures of selection
+
+38.1.1 Gain modulation of sensory responses
+
+38.1.2 Receptive field shifts and shrinkage
+
+38.1.3 Reduction of noise correlations and improved population coding
+
+38.1.4 Baseline shifts and preparatory activity
+
+38.2 Oscillatory mechanisms
+
+38.2.1 Alpha lateralisation and functional inhibition
+
+38.2.2 Gamma synchronisation and selective routing
+
+38.2.3 Theta-rhythmic sampling of attended locations
+
+38.2.4 Pulvinar and thalamic contributions to cortical coordination
+
+38.3 Attentional control networks
+
+38.3.1 The dorsal frontoparietal network and top-down control
+
+38.3.2 The ventral attention network and reorienting
+
+38.3.3 Frontal eye fields, intraparietal sulcus, and superior colliculus as source regions
+
+38.3.4 The salience network and the switching account
+
+38.4 Priority maps
+
+38.4.1 The concept of a priority or saliency map
+
+38.4.2 Candidate substrates in parietal, frontal, and collicular structures
+
+38.4.3 Value-driven and history-driven attentional capture
+
+38.4.4 Integrating bottom-up salience, top-down goals, and selection history
+
+
+CHAPTER 39. AROUSAL, VIGILANCE, AND EFFORT (CORE)
+
+39.1 Arousal and its regulation
+
+39.1.1 Ascending arousal systems and cortical state
+
+39.1.2 Pupil diameter as an index of arousal and gain
+
+39.1.3 Tonic and phasic locus coeruleus modes
+
+39.1.4 The inverted-U relation between arousal and performance
+
+39.2 Vigilance and sustained attention
+
+39.2.1 The vigilance decrement and its explanations
+
+39.2.2 Mind wandering during sustained tasks
+
+39.2.3 Local sleep in the waking brain
+
+39.2.4 Individual differences in attentional stability
+
+39.3 Effort and its costs
+
+39.3.1 Mental effort as a construct and its measurement
+
+39.3.2 Expected value of control and cost-benefit accounts
+
+39.3.3 Fatigue, glutamate accumulation, and metabolic accounts
+
+39.3.4 Motivation, incentives, and the modulation of control
+
+39.4 Attention as a system-level phenomenon
+
+39.4.1 Attention as an emergent property of competitive dynamics rather than a faculty
+
+39.4.2 Interaction with working memory and with long-term memory
+
+39.4.3 Why attention resists a single mechanistic definition
+
+
+PART SEVEN. LEARNING AND MEMORY: THE PERSISTENCE OF EXPERIENCE
+
+
+CHAPTER 40. THE TAXONOMY OF MEMORY (CORE)
+
+40.1 The classical divisions
+
+40.1.1 Sensory, short-term, and long-term stores
+
+40.1.2 Declarative and non-declarative memory
+
+40.1.3 Episodic and semantic memory
+
+40.1.4 Procedural memory, priming, conditioning, and non-associative learning
+
+40.2 The evidence for multiple systems
+
+40.2.1 Patient Henry Molaison and the medial temporal lobe
+
+40.2.2 Preserved skill learning in amnesia
+
+40.2.3 Double dissociations across patient groups
+
+40.2.4 Animal-model convergence
+
+40.3 Challenges to the systems view
+
+40.3.1 Process accounts against systems accounts
+
+40.3.2 Eichenbaum's relational memory theory
+
+40.3.3 Representational accounts of the medial temporal lobe
+
+40.3.4 Component-process and constructive-episodic-simulation views
+
+40.4 Organising dimensions
+
+40.4.1 Content, process, and timescale as orthogonal axes
+
+40.4.2 Explicitness and its confound with task demand
+
+40.4.3 Memory as reconstruction rather than retrieval of a record
+
+
+CHAPTER 41. WORKING MEMORY (CORE)
+
+41.1 Cognitive models
+
+41.1.1 The Baddeley and Hitch multicomponent model
+
+41.1.2 Phonological loop, visuospatial sketchpad, episodic buffer, central executive
+
+41.1.3 Embedded-process and activated-long-term-memory accounts
+
+41.1.4 Slot models against resource models of capacity
+
+41.2 Neural mechanisms of maintenance
+
+41.2.1 Persistent delay-period activity in prefrontal and parietal cortex
+
+41.2.2 Activity-silent maintenance in synaptic weights
+
+41.2.3 Dynamic and time-varying codes across the delay
+
+41.2.4 Bump attractors and continuous feature memory
+
+41.3 Control of working memory
+
+41.3.1 Gating: input, output, and the basal-ganglia gate
+
+41.3.2 Updating, removal, and interference resolution
+
+41.3.3 Attention within working memory and the focus of attention
+
+41.3.4 Prioritisation, cueing, and the unattended memory item
+
+41.4 Capacity and its consequences
+
+41.4.1 The magical number and its revisions
+
+41.4.2 Individual differences and their prediction of higher cognition
+
+41.4.3 Chunking, expertise, and effective capacity expansion
+
+41.4.4 Working memory training and the transfer question
+
+
+CHAPTER 42. EPISODIC MEMORY AND THE HIPPOCAMPAL FORMATION (CORE)
+
+42.1 Encoding
+
+42.1.1 Levels of processing and elaborative encoding
+
+42.1.2 Subsequent memory effects and encoding-related activity
+
+42.1.3 Binding of item and context
+
+42.1.4 Novelty, curiosity, and dopaminergic modulation of encoding
+
+42.2 Hippocampal computation
+
+42.2.1 Pattern separation in the dentate gyrus
+
+42.2.2 Pattern completion in CA3 recurrent circuitry
+
+42.2.3 CA1 as a comparator and the entorhinal loops
+
+42.2.4 The hippocampal indexing theory
+
+42.3 Retrieval
+
+42.3.1 Recollection against familiarity and the dual-process debate
+
+42.3.2 Cortical reinstatement of encoding patterns
+
+42.3.3 Retrieval cues, context reinstatement, and the encoding specificity principle
+
+42.3.4 Retrieval-induced forgetting and retrieval as a learning event
+
+42.4 The contents of episodic memory
+
+42.4.1 What, where, and when as the defining conjunction
+
+42.4.2 Event segmentation and the boundaries of an episode
+
+42.4.3 Autobiographical memory and the remote past
+
+42.4.4 Memory distortion, false memory, and the constructive account
+
+42.5 The engram
+
+42.5.1 Engram cell tagging, labelling, and reactivation
+
+42.5.2 Artificial induction and silencing of memories
+
+42.5.3 Engram allocation by excitability
+
+42.5.4 Engram reorganisation during systems consolidation
+
+
+CHAPTER 43. SEMANTIC MEMORY AND CONCEPTUAL KNOWLEDGE (CORE)
+
+43.1 The structure of conceptual knowledge
+
+43.1.1 Feature-based, prototype, and exemplar accounts
+
+43.1.2 Taxonomic and thematic organisation
+
+43.1.3 Category-specific deficits and what they imply
+
+43.1.4 Concepts as stable versus context-dependent constructions
+
+43.2 Neural organisation
+
+43.2.1 The anterior temporal lobe as a semantic hub
+
+43.2.2 The hub-and-spoke model and modality-specific spokes
+
+43.2.3 Distributed semantic maps across cortex
+
+43.2.4 The semantic control network in inferior frontal and posterior temporal cortex
+
+43.3 Grounding and abstraction
+
+43.3.1 Embodied and grounded cognition accounts of meaning
+
+43.3.2 Abstract concepts and their special difficulty
+
+43.3.3 Symbol grounding and its proposed solutions
+
+43.3.4 Language models as tests of distributional meaning
+
+43.4 Semantic dementia and other evidence
+
+43.4.1 Progressive semantic loss and graded degradation
+
+43.4.2 Semantic aphasia and the control-representation dissociation
+
+43.4.3 Development of semantic knowledge in childhood
+
+
+CHAPTER 44. PROCEDURAL MEMORY, HABIT, AND SKILL (CORE)
+
+44.1 Non-associative and associative conditioning
+
+44.1.1 Habituation and sensitisation
+
+44.1.2 Classical conditioning and the Rescorla-Wagner rule
+
+44.1.3 Instrumental conditioning and the law of effect
+
+44.1.4 Cerebellar and amygdalar conditioning circuits
+
+44.2 Habit formation
+
+44.2.1 Goal-directed against habitual control
+
+44.2.2 Devaluation tests and the transition to habit
+
+44.2.3 Dorsomedial and dorsolateral striatal contributions
+
+44.2.4 Habit in compulsion and addiction
+
+44.3 Motor skill learning
+
+44.3.1 Adaptation, sequence learning, and de novo skill acquisition
+
+44.3.2 Error-based, reinforcement-based, and use-dependent learning
+
+44.3.3 Cerebellar internal models and forward prediction
+
+44.3.4 Motor memory consolidation and interference
+
+44.4 Priming and perceptual learning
+
+44.4.1 Repetition suppression and its interpretations
+
+44.4.2 Perceptual priming and implicit memory
+
+44.4.3 Statistical learning of environmental regularities
+
+44.4.4 Expertise and the reorganisation of representation
+
+
+CHAPTER 45. CONSOLIDATION, REPLAY, SLEEP, AND FORGETTING (CORE)
+
+45.1 Cellular consolidation
+
+45.1.1 Protein synthesis dependence and the consolidation window
+
+45.1.2 Synaptic tagging and capture
+
+45.1.3 Transcriptional cascades and immediate early genes
+
+45.1.4 Modulation by arousal and emotion
+
+45.2 Systems consolidation
+
+45.2.1 The standard model of hippocampal-to-neocortical transfer
+
+45.2.2 Multiple trace and trace transformation theories
+
+45.2.3 Complementary learning systems and the reason for two systems
+
+45.2.4 Evidence from 2025 that consolidation reorganises hippocampal engram circuitry and degrades precision
+
+45.3 Replay and offline processing
+
+45.3.1 Sharp-wave ripple replay in the hippocampus
+
+45.3.2 Forward, reverse, and preplay sequences
+
+45.3.3 Ripple-spindle-slow oscillation coupling during sleep
+
+45.3.4 Awake replay, planning, and the compositional recombination of experience
+
+45.4 Sleep and memory
+
+45.4.1 Sleep stages and their differential contributions
+
+45.4.2 Targeted memory reactivation
+
+45.4.3 Synaptic homeostasis hypothesis
+
+45.4.4 Sleep deprivation and cognitive cost
+
+45.5 Reconsolidation and forgetting
+
+45.5.1 Reactivation-induced lability and the reconsolidation window
+
+45.5.2 Clinical exploitation in trauma and addiction
+
+45.5.3 Decay, interference, and retrieval failure as forgetting mechanisms
+
+45.5.4 Active forgetting, and the adaptive value of not remembering
+
+
+CHAPTER 46. LEARNING RULES AND REWARD LEARNING IN THE BRAIN (CORE)
+
+46.1 The dopaminergic prediction error
+
+46.1.1 Schultz's recordings and the temporal difference correspondence
+
+46.1.2 Positive and negative prediction errors and dopamine dip coding
+
+46.1.3 Dopamine heterogeneity: novelty, salience, threat, movement
+
+46.1.4 Distributional reinforcement learning signatures in dopamine neurons
+
+46.2 Striatal learning and action selection
+
+46.2.1 Direct and indirect pathway plasticity as go and no-go learning
+
+46.2.2 Actor-critic mapping onto dorsal and ventral striatum
+
+46.2.3 Opponent processes and the asymmetry of learning from gains and losses
+
+46.2.4 Dopamine manipulation in health and Parkinson disease
+
+46.3 Model-based control and cognitive maps
+
+46.3.1 Latent learning and the cognitive map tradition
+
+46.3.2 Successor representation as an intermediate
+
+46.3.3 Prefrontal and hippocampal contributions to model-based planning
+
+46.3.4 Arbitration between model-free and model-based control
+
+46.4 Beyond reward
+
+46.4.1 Unsupervised, self-supervised, and predictive learning objectives
+
+46.4.2 Curiosity, information seeking, and intrinsic motivation
+
+46.4.3 Social and observational learning
+
+46.4.4 Meta-learning and learning to learn
+
+
+PART EIGHT. LANGUAGE AND SYMBOLIC COGNITION
+
+
+CHAPTER 47. SPEECH PERCEPTION AND THE AUDITORY LANGUAGE INTERFACE (CORE)
+
+47.1 From acoustics to phonemes
+
+47.1.1 The lack of invariance problem in the speech signal
+
+47.1.2 Categorical perception of speech sounds
+
+47.1.3 Phonetic feature encoding in superior temporal gyrus
+
+47.1.4 Speaker normalisation and talker adaptation
+
+47.2 Temporal structure and entrainment
+
+47.2.1 Syllabic, phonemic, and prosodic timescales
+
+47.2.2 Cortical entrainment to the speech envelope
+
+47.2.3 Asymmetric sampling in time and hemispheric division
+
+47.2.4 Prediction and the pre-activation of upcoming input
+
+47.3 Speech production
+
+47.3.1 Articulatory planning and the motor cortex speech map
+
+47.3.2 Feedback and feedforward control in speech
+
+47.3.3 Efference copy and the suppression of self-generated sound
+
+47.3.4 Speech decoding neuroprostheses in paralysed patients
+
+47.4 The dual-stream architecture
+
+47.4.1 Dorsal stream for sensorimotor mapping
+
+47.4.2 Ventral stream for sound-to-meaning mapping
+
+47.4.3 The revised place of the arcuate fasciculus
+
+47.4.4 Why the classical Broca-Wernicke model is no longer adequate
+
+
+CHAPTER 48. WORDS, SYNTAX, AND MEANING (CORE)
+
+48.1 The lexicon
+
+48.1.1 Lexical access, frequency, and neighbourhood effects
+
+48.1.2 The mental lexicon as stored form plus computed meaning
+
+48.1.3 Morphology and decomposition
+
+48.1.4 Word learning across the lifespan
+
+48.2 Syntax and combination
+
+48.2.1 Hierarchical structure and its neural signatures
+
+48.2.2 The role of posterior inferior frontal gyrus and posterior temporal cortex
+
+48.2.3 Merge, dependency, and competing linguistic formalisms
+
+48.2.4 Neural tracking of abstract linguistic structure
+
+48.3 Semantic composition
+
+48.3.1 Composition beyond single-word meaning
+
+48.3.2 The N400 as an index of semantic prediction and integration
+
+48.3.3 The P600 and reanalysis or conflict
+
+48.3.4 Situation models and discourse-level representation
+
+48.4 Prediction in language
+
+48.4.1 Surprisal, entropy, and information-theoretic accounts of processing cost
+
+48.4.2 Language models as predictors of brain response
+
+48.4.3 The 2025 and 2026 evidence linking model features to cortical language responses
+
+48.4.4 What model-brain fit does and does not establish
+
+48.5 The language network
+
+48.5.1 Functional localisation of a language-selective network
+
+48.5.2 Its dissociation from the multiple-demand network and from theory of mind
+
+48.5.3 Language for communication against language for thought
+
+48.5.4 Evidence from global aphasia and from language-deprived individuals
+
+
+CHAPTER 49. READING, WRITING, AND MULTILINGUALISM (CORE)
+
+49.1 Reading as cultural recycling
+
+49.1.1 The visual word form area and its properties
+
+49.1.2 Neuronal recycling and the reuse of object-recognition circuitry
+
+49.1.3 Orthography-to-phonology mapping and dual-route models
+
+49.1.4 Cross-script and cross-orthography comparison
+
+49.2 Learning to read
+
+49.2.1 Phonological awareness as a precursor
+
+49.2.2 Changes in cortical response with literacy acquisition
+
+49.2.3 Literacy's effects on spoken language processing
+
+49.2.4 Instructional method and the neuroscience evidence
+
+49.3 Dyslexia and dysgraphia
+
+49.3.1 Phonological deficit, magnocellular, and attentional accounts
+
+49.3.2 Neural signatures and their heterogeneity
+
+49.3.3 Acquired alexias and their dissociations
+
+49.3.4 Intervention and remediation evidence
+
+49.4 Bilingualism and multilingualism
+
+49.4.1 Shared and separate substrates across languages
+
+49.4.2 Language control, switching, and inhibition
+
+49.4.3 The disputed bilingual advantage in executive function
+
+49.4.4 Age of acquisition and critical period effects
+
+
+CHAPTER 50. NUMBER, MAGNITUDE, SPACE, AND COGNITIVE MAPS (CORE)
+
+50.1 The number sense
+
+50.1.1 Approximate number system and its Weber signature
+
+50.1.2 Subitising and exact small-number representation
+
+50.1.3 Number neurons in parietal and prefrontal cortex
+
+50.1.4 Symbolic number and its grounding in the approximate system
+
+50.2 Arithmetic and mathematical cognition
+
+50.2.1 Intraparietal sulcus and magnitude comparison
+
+50.2.2 Fact retrieval against procedural calculation
+
+50.2.3 Dyscalculia and acalculia
+
+50.2.4 Advanced mathematics and the non-linguistic network for it
+
+50.3 Spatial cognition
+
+50.3.1 Egocentric and allocentric spatial frames
+
+50.3.2 Parietal spatial processing and neglect as its lesion signature
+
+50.3.3 Mental rotation and imagery of space
+
+50.3.4 Navigation strategies: route, survey, and beacon
+
+50.4 The cognitive map
+
+50.4.1 Place cells in the hippocampus
+
+50.4.2 Grid cells in the medial entorhinal cortex and their metric
+
+50.4.3 Head-direction, border, boundary vector, object vector, and speed cells
+
+50.4.4 Time cells and the temporal analogue of the map
+
+50.4.5 The generalisation of the map to non-spatial and conceptual spaces
+
+50.4.6 Successor representations and predictive maps as a unifying account
+
+
+PART NINE. ACTION, CONTROL, AND DECISION
+
+
+CHAPTER 51. MOTOR COGNITION AND THE PLANNING OF ACTION (CORE)
+
+51.1 The motor hierarchy
+
+51.1.1 Spinal circuits, central pattern generators, and reflex modulation
+
+51.1.2 Primary motor cortex and the coding of movement parameters
+
+51.1.3 Premotor and supplementary motor areas and their planning roles
+
+51.1.4 Parietal contributions to intention and affordance
+
+51.2 Internal models
+
+51.2.1 Forward models and state estimation
+
+51.2.2 Inverse models and the control problem
+
+51.2.3 Efference copy, corollary discharge, and sensory attenuation
+
+51.2.4 Optimal feedback control as a normative theory of movement
+
+51.3 Preparation, initiation, and inhibition
+
+51.3.1 Preparatory activity and the null space account
+
+51.3.2 The readiness potential and its reinterpretation
+
+51.3.3 Response inhibition and the stop-signal network
+
+51.3.4 Sequence representation and chunking of action
+
+51.4 Action understanding and imitation
+
+51.4.1 Mirror neurons and the original claims
+
+51.4.2 Critiques and the associative learning account
+
+51.4.3 Action observation networks in humans
+
+51.4.4 Imitation, emulation, and motor simulation
+
+
+CHAPTER 52. EXECUTIVE FUNCTION AND COGNITIVE CONTROL (CORE)
+
+52.1 Defining control
+
+52.1.1 Control as the biasing of processing toward goals
+
+52.1.2 The unity and diversity framework: inhibition, updating, shifting
+
+52.1.3 Task impurity and the measurement problem
+
+52.1.4 Control against automaticity
+
+52.2 Conflict, error, and monitoring
+
+52.2.1 Conflict monitoring theory and the anterior cingulate cortex
+
+52.2.2 The error-related negativity and error positivity
+
+52.2.3 Post-error slowing and adaptive adjustment
+
+52.2.4 Alternative accounts: expected value of control, foraging, surprise
+
+52.3 Inhibition and interference control
+
+52.3.1 Response inhibition and its frontal-basal ganglia circuit
+
+52.3.2 Distractor suppression and proactive filtering
+
+52.3.3 Proactive and reactive control modes
+
+52.3.4 Whether inhibition is a unitary construct at all
+
+52.4 The prefrontal cortex
+
+52.4.1 Functional subdivisions: dorsolateral, ventrolateral, frontopolar, orbital, medial
+
+52.4.2 Guided activation theory and the representation of rules
+
+52.4.3 Prefrontal patient syndromes and their dissociations
+
+52.4.4 Prefrontal cortex in comparative perspective
+
+
+CHAPTER 53. GOALS, HIERARCHY, AND COGNITIVE FLEXIBILITY (CORE)
+
+53.1 Hierarchical control
+
+53.1.1 The rostro-caudal gradient of abstraction in frontal cortex
+
+53.1.2 Dorsocaudal concrete action representation against ventrorostral abstract representation
+
+53.1.3 Policy abstraction, contextual abstraction, and temporal abstraction
+
+53.1.4 The gradual transformation of coding dimensionality along lateral prefrontal cortex
+
+53.2 Task sets and their reconfiguration
+
+53.2.1 The task set as a configured mapping from stimulus to response
+
+53.2.2 Switch costs, residual costs, and task-set inertia
+
+53.2.3 Hierarchical reconfiguration: context reconfiguration against subordinate rule updating
+
+53.2.4 The geometry and dynamics of task-tailored representations, and how practice reshapes them
+
+53.3 Goals, plans, and subgoals
+
+53.3.1 Goal representation and maintenance across delays
+
+53.3.2 Hierarchical reinforcement learning, options, and pseudo-reward
+
+53.3.3 Planning depth, tree search, and its neural correlates
+
+53.3.4 Prospective memory and intention retrieval
+
+53.4 Flexibility and stability
+
+53.4.1 The flexibility-stability dilemma and dopaminergic gating accounts
+
+53.4.2 Cognitive set, perseveration, and the Wisconsin card sorting task
+
+53.4.3 Learning to be flexible: schema, structure learning, latent causes
+
+53.4.4 Individual and clinical variation in flexibility
+
+
+CHAPTER 54. DECISION MAKING AND VALUE (CORE)
+
+54.1 Value construction
+
+54.1.1 Common currency and the comparison problem
+
+54.1.2 Orbitofrontal cortex and economic value coding
+
+54.1.3 Ventromedial prefrontal cortex and subjective value
+
+54.1.4 Attribute integration, attention, and value construction during choice
+
+54.2 Choice mechanisms
+
+54.2.1 Sequential sampling and the drift diffusion account of preferential choice
+
+54.2.2 Attentional drift diffusion and gaze-driven choice
+
+54.2.3 Divisive normalisation and context effects
+
+54.2.4 Multi-alternative choice and violations of rationality
+
+54.3 Risk, uncertainty, and time
+
+54.3.1 Risk, ambiguity, and their separable neural correlates
+
+54.3.2 Prospect theory and reference dependence
+
+54.3.3 Delay discounting and intertemporal choice
+
+54.3.4 Patience, serotonin, and self-control
+
+54.4 Foraging, exploration, and effort
+
+54.4.1 Patch leaving and the marginal value theorem
+
+54.4.2 Explore-exploit trade-off and directed against random exploration
+
+54.4.3 Effort discounting and the cost of action
+
+54.4.4 Anterior cingulate cortex in foraging and control allocation
+
+54.5 Social and strategic decision
+
+54.5.1 Game-theoretic paradigms and their neural correlates
+
+54.5.2 Trust, reciprocity, and punishment
+
+54.5.3 Learning about others as a model-based problem
+
+54.5.4 Neuroeconomics as a discipline and its critiques
+
+
+CHAPTER 55. REASONING, PROBLEM SOLVING, AND ABSTRACTION (CORE)
+
+55.1 Forms of reasoning
+
+55.1.1 Deductive, inductive, and abductive inference
+
+55.1.2 Analogical reasoning and relational mapping
+
+55.1.3 Causal reasoning and intervention
+
+55.1.4 Probabilistic reasoning and base-rate use
+
+55.2 Heuristics and biases
+
+55.2.1 The heuristics and biases programme
+
+55.2.2 Dual-process accounts and their neural evidence
+
+55.2.3 Ecological rationality and the defence of heuristics
+
+55.2.4 Resource-rational reconciliation
+
+55.3 Problem solving
+
+55.3.1 Problem space search and means-ends analysis
+
+55.3.2 Insight, restructuring, and the aha experience
+
+55.3.3 Expertise, chunking, and pattern recognition in problem solving
+
+55.3.4 Frontopolar cortex and the maintenance of pending subgoals
+
+55.4 Abstraction and generalisation
+
+55.4.1 Schemas, structure learning, and transfer
+
+55.4.2 Compositionality and systematic generalisation
+
+55.4.3 Symbol-like operations in neural populations
+
+55.4.4 The gap between human and machine generalisation
+
+
+PART TEN. EMOTION, MOTIVATION, AND SOCIAL COGNITION
+
+
+CHAPTER 56. EMOTION (CORE)
+
+56.1 Theories of emotion
+
+56.1.1 James-Lange, Cannon-Bard, and Schachter-Singer
+
+56.1.2 Basic emotion theory and its evidence
+
+56.1.3 Dimensional models: valence and arousal
+
+56.1.4 The theory of constructed emotion and the critique of essentialism
+
+56.2 Circuits of affect
+
+56.2.1 Amygdala nuclei, threat learning, and their limits as a fear centre
+
+56.2.2 Ventromedial prefrontal cortex and extinction
+
+56.2.3 Insula, interoception, and feeling
+
+56.2.4 Periaqueductal grey and defensive survival circuits
+
+56.3 Emotion and cognition interacting
+
+56.3.1 Emotional modulation of attention and perception
+
+56.3.2 Emotional memory enhancement and the amygdala-hippocampus interaction
+
+56.3.3 Mood, affective bias, and judgement
+
+56.3.4 Emotion regulation: reappraisal, suppression, distraction
+
+56.4 Measuring emotion
+
+56.4.1 Subjective report and its limits
+
+56.4.2 Peripheral physiology and its low specificity
+
+56.4.3 Multivariate neural signatures of affective states
+
+56.4.4 Animal models and the conscious feeling problem
+
+
+CHAPTER 57. MOTIVATION, REWARD, AND HOMEOSTASIS (CORE)
+
+57.1 Reward and its components
+
+57.1.1 Wanting and liking as dissociable processes
+
+57.1.2 Hedonic hotspots and opioid signalling
+
+57.1.3 Incentive salience and cue-triggered motivation
+
+57.1.4 Reward and effort as coupled quantities
+
+57.2 Homeostatic and allostatic drives
+
+57.2.1 Hunger, thirst, thermoregulation, and their neural controllers
+
+57.2.2 Drive states as modulators of perception and decision
+
+57.2.3 Allostasis and predictive regulation
+
+57.2.4 Interoceptive inference and motivated behaviour
+
+57.3 Stress and cognition
+
+57.3.1 The hypothalamic-pituitary-adrenal axis
+
+57.3.2 Acute stress effects on memory and control
+
+57.3.3 Chronic stress, structural change, and cognitive cost
+
+57.3.4 Resilience and its correlates
+
+57.4 Addiction as a disorder of motivation
+
+57.4.1 Incentive sensitisation theory
+
+57.4.2 Habit and compulsion accounts
+
+57.4.3 Prefrontal control failure and craving
+
+57.4.4 Behavioural addictions and the boundary of the concept
+
+
+CHAPTER 58. SOCIAL COGNITION (CORE)
+
+58.1 Perceiving persons
+
+58.1.1 Face perception and the fusiform face area debate
+
+58.1.2 Biological motion and the superior temporal sulcus
+
+58.1.3 Gaze following and joint attention
+
+58.1.4 Voice and person identity
+
+58.2 Mentalising
+
+58.2.1 Theory of mind and false-belief tasks
+
+58.2.2 The mentalising network: temporoparietal junction, medial prefrontal cortex, precuneus
+
+58.2.3 Implicit and explicit mentalising
+
+58.2.4 Development of theory of mind and its cross-cultural profile
+
+58.3 Empathy and shared representation
+
+58.3.1 Affective empathy, cognitive empathy, and compassion
+
+58.3.2 Shared neural representation of pain and its critiques
+
+58.3.3 Emotional contagion and its regulation
+
+58.3.4 Group membership effects on empathy
+
+58.4 Self and other
+
+58.4.1 Self-referential processing and cortical midline structures
+
+58.4.2 Self-other distinction and its failures
+
+58.4.3 Social evaluation, reputation, and social reward
+
+58.4.4 Loneliness, social isolation, and cognitive consequence
+
+58.5 Two-person and group neuroscience
+
+58.5.1 Hyperscanning and inter-brain coupling
+
+58.5.2 Communication as alignment of models
+
+58.5.3 Collective behaviour and social networks
+
+58.5.4 Cultural neuroscience and the sampling problem in the field
+
+
+CHAPTER 59. MORAL COGNITION, NORMS, AND CULTURE (CORE)
+
+59.1 Moral judgement
+
+59.1.1 Dilemma paradigms and their limitations
+
+59.1.2 Dual-process accounts of moral judgement and their critiques
+
+59.1.3 Intention, outcome, and causal role in blame
+
+59.1.4 Moral emotions: guilt, shame, disgust, indignation
+
+59.2 Norms and social learning
+
+59.2.1 Norm acquisition and enforcement
+
+59.2.2 Conformity and social influence on valuation
+
+59.2.3 Fairness, inequity aversion, and altruistic punishment
+
+59.2.4 Cooperation and its computational bases
+
+59.3 Culture and cognition
+
+59.3.1 Cultural variation in perception, attention, and self-construal
+
+59.3.2 Cumulative culture and cultural transmission
+
+59.3.3 Cultural recycling of cortical circuits, in reading and in number
+
+59.3.4 The problem of unrepresentative samples in the literature
+
+59.4 Agency, responsibility, and law
+
+59.4.1 Folk concepts of intention and free will
+
+59.4.2 The neuroscience of volition and its legal reception
+
+59.4.3 Neuroscientific evidence in the courtroom
+
+59.4.4 Responsibility without libertarian free will
+
+
+PART ELEVEN. CONSCIOUSNESS, SELF, AND THE INNER LIFE
+
+
+CHAPTER 60. THEORIES OF CONSCIOUSNESS (CORE)
+
+60.1 Framing the problem
+
+60.1.1 Phenomenal and access consciousness
+
+60.1.2 Level, content, and state distinguished
+
+60.1.3 The hard problem and the meta-problem
+
+60.1.4 What a neural correlate of consciousness would be, and what it would not be
+
+60.2 Global workspace theories
+
+60.2.1 Baars's global workspace and the broadcast metaphor
+
+60.2.2 Dehaene and Changeux's global neuronal workspace
+
+60.2.3 Ignition, late amplification, and the P3b signature
+
+60.2.4 Predictions and the criticisms of prefrontal centrality
+
+60.3 Integrated information theory
+
+60.3.1 Axioms, postulates, and the derivation of phi
+
+60.3.2 Posterior hot zone and the cause-effect structure claim
+
+60.3.3 Panpsychist implications and the charge of unfalsifiability
+
+60.3.4 The perturbational complexity index as an applied measure
+
+60.4 Other major theories
+
+60.4.1 Higher-order theories and prefrontal reality monitoring
+
+60.4.2 Recurrent processing theory
+
+60.4.3 Predictive processing and self-modelling accounts
+
+60.4.4 Attention schema theory
+
+60.4.5 Dynamic core, temporo-spatial, and other integrative proposals
+
+60.5 Comparing theories
+
+60.5.1 The criteria a theory must meet
+
+60.5.2 Where the theories agree and where they genuinely diverge
+
+60.5.3 Theory-neutral measurement as a prerequisite
+
+60.5.4 The problem of the report and no-report paradigms
+
+
+CHAPTER 61. THE EMPIRICAL SEARCH FOR NEURAL CORRELATES (CORE)
+
+61.1 Paradigms
+
+61.1.1 Binocular rivalry and continuous flash suppression
+
+61.1.2 Masking, attentional blink, and threshold stimulation
+
+61.1.3 Change and inattentional blindness
+
+61.1.4 No-report paradigms and the removal of task confounds
+
+61.2 Candidate signatures
+
+61.2.1 Posterior hot zone against frontoparietal ignition
+
+61.2.2 Late positivity, gamma synchrony, and recurrent feedback
+
+61.2.3 Content-specific decoding of conscious percepts
+
+61.2.4 Distinguishing prerequisites, substrates, and consequences of consciousness
+
+61.3 Adversarial collaboration
+
+61.3.1 The Cogitate Consortium design, preregistered with proponents of both theories
+
+61.3.2 Findings in 256 participants across functional magnetic resonance imaging, magnetoencephalography, and intracranial recording
+
+61.3.3 The challenge to integrated information theory from absent sustained posterior synchronisation
+
+61.3.4 The challenge to global neuronal workspace theory from absent offset ignition and limited prefrontal content coding
+
+61.3.5 What the exercise established about theory testing as a practice
+
+61.4 Open empirical questions
+
+61.4.1 Whether consciousness is graded or all-or-none
+
+61.4.2 Whether prefrontal cortex is necessary
+
+61.4.3 Islands of awareness and disconnected consciousness
+
+61.4.4 Machine consciousness and the assessment problem
+
+
+CHAPTER 62. STATES OF CONSCIOUSNESS (CORE)
+
+62.1 Sleep
+
+62.1.1 Sleep architecture and its measurement
+
+62.1.2 Slow-wave sleep, rapid eye movement sleep, and their cognitive roles
+
+62.1.3 Local sleep and state heterogeneity
+
+62.1.4 Dreaming, its content, and its neural correlates
+
+62.2 Anaesthesia
+
+62.2.1 Agents, mechanisms, and common endpoints
+
+62.2.2 Loss and recovery of consciousness as a state transition
+
+62.2.3 Connected and disconnected consciousness under anaesthesia
+
+62.2.4 Intraoperative awareness and its detection
+
+62.3 Disorders of consciousness
+
+62.3.1 Coma, vegetative state, unresponsive wakefulness, minimally conscious state
+
+62.3.2 Covert awareness and the mental imagery command-following paradigm
+
+62.3.3 Cognitive motor dissociation and its prevalence
+
+62.3.4 Prognostication, communication, and ethical stakes
+
+62.4 Altered states
+
+62.4.1 Psychedelics, entropic brain accounts, and receptor mechanisms
+
+62.4.2 Meditation, absorption, and contemplative states
+
+62.4.3 Hypnosis and suggestion
+
+62.4.4 Seizures, auras, and dissociative states
+
+
+CHAPTER 63. SELF, AGENCY, AND METACOGNITION (CORE)
+
+63.1 The senses of self
+
+63.1.1 Minimal self: ownership and agency
+
+63.1.2 Narrative and autobiographical self
+
+63.1.3 Bodily self and its multisensory basis
+
+63.1.4 Disorders of self: depersonalisation, alien hand, delusions of control
+
+63.2 Agency and volition
+
+63.2.1 Comparator models of the sense of agency
+
+63.2.2 Intentional binding and its interpretation
+
+63.2.3 Libet's experiments and the readiness potential controversy
+
+63.2.4 Volition as a graded and reconstructed attribution
+
+63.3 Metacognition
+
+63.3.1 Confidence, calibration, and metacognitive efficiency
+
+63.3.2 Anterior prefrontal cortex and metacognitive ability
+
+63.3.3 Domain-general and domain-specific metacognition
+
+63.3.4 Metacognition in learning, in control allocation, and in social communication
+
+63.4 Introspection as data
+
+63.4.1 The reliability of self-report
+
+63.4.2 Confabulation and the interpreter account from split-brain work
+
+63.4.3 Introspective training and micro-phenomenology
+
+63.4.4 First-person methods and neurophenomenology
+
+
+CHAPTER 64. SPONTANEOUS COGNITION, IMAGINATION, AND CREATIVITY (CORE)
+
+64.1 The default mode network
+
+64.1.1 Discovery through task-induced deactivation
+
+64.1.2 Component subsystems and their functions
+
+64.1.3 Position at the top of the principal cortical gradient
+
+64.1.4 From task-negative to a positive account of its function
+
+64.2 Mind wandering and spontaneous thought
+
+64.2.1 Taxonomies of spontaneous thought and their measurement
+
+64.2.2 Neural correlates and the executive-default interaction
+
+64.2.3 Costs to performance and benefits to planning
+
+64.2.4 Rumination as maladaptive spontaneous thought
+
+64.3 Mental simulation
+
+64.3.1 Episodic future thinking and the constructive simulation hypothesis
+
+64.3.2 Mental imagery across modalities and aphantasia
+
+64.3.3 Counterfactual thinking and regret
+
+64.3.4 Simulation shared with memory: the same machinery run forward
+
+64.4 Creativity
+
+64.4.1 Divergent and convergent thinking
+
+64.4.2 Default and control network coupling in creative production
+
+64.4.3 Incubation, insight, and unconscious processing
+
+64.4.4 Expertise, constraint, and the myth of unconstrained creativity
+
+
+PART TWELVE. CHANGE, VARIATION, AND ORIGINS
+
+
+CHAPTER 65. THE DEVELOPING BRAIN (CORE)
+
+65.1 Building the substrate
+
+65.1.1 Neural induction, proliferation, migration, and differentiation
+
+65.1.2 Axon guidance, synaptogenesis, and programmed cell death
+
+65.1.3 Activity-dependent refinement and synaptic pruning
+
+65.1.4 Myelination trajectories across childhood and adolescence
+
+65.2 Critical and sensitive periods
+
+65.2.1 Ocular dominance plasticity as the model case
+
+65.2.2 Molecular brakes on plasticity and their manipulation
+
+65.2.3 Sensitive periods for language, music, and social attachment
+
+65.2.4 Deprivation, institutionalisation, and recovery
+
+65.3 The emergence of cognition
+
+65.3.1 Infant core knowledge: objects, agents, number, space
+
+65.3.2 Development of attention, memory, and executive function
+
+65.3.3 Language acquisition and its neural trajectory
+
+65.3.4 Social cognition and theory of mind development
+
+65.4 Adolescence
+
+65.4.1 Asynchronous maturation of control and reward systems
+
+65.4.2 Risk taking, peer influence, and their neural correlates
+
+65.4.3 Puberty, hormones, and cognitive change
+
+65.4.4 Adolescence as a second sensitive period
+
+65.5 Methods and evidence in developmental cognitive neuroscience
+
+65.5.1 Infant electroencephalography, functional near-infrared spectroscopy, and awake imaging
+
+65.5.2 Longitudinal cohorts and the Adolescent Brain Cognitive Development design
+
+65.5.3 Normative modelling of developmental brain charts
+
+65.5.4 Causal inference from natural experiments
+
+
+CHAPTER 66. THE AGEING BRAIN (CORE)
+
+66.1 Normal cognitive ageing
+
+66.1.1 Fluid and crystallised abilities across the lifespan
+
+66.1.2 Processing speed, working memory, and inhibition declines
+
+66.1.3 Preserved semantic knowledge and emotional function
+
+66.1.4 Heterogeneity and successful ageing
+
+66.2 Structural and functional change
+
+66.2.1 Grey matter, white matter, and vascular change
+
+66.2.2 Dedifferentiation of neural representations
+
+66.2.3 Compensation accounts: hemispheric asymmetry reduction, posterior-anterior shift, scaffolding
+
+66.2.4 Neuromodulatory decline, particularly dopaminergic
+
+66.3 Reserve and resilience
+
+66.3.1 Brain reserve, cognitive reserve, and maintenance distinguished
+
+66.3.2 Education, occupation, bilingualism, and lifestyle correlates
+
+66.3.3 Physical exercise and cognitive outcomes
+
+66.3.4 Causal evidence against correlational evidence
+
+66.4 The boundary with pathology
+
+66.4.1 Subjective cognitive decline and mild cognitive impairment
+
+66.4.2 Biomarker-defined preclinical disease
+
+66.4.3 Distinguishing ageing from early neurodegeneration
+
+66.4.4 Prevention and modifiable risk factors
+
+
+CHAPTER 67. INDIVIDUAL DIFFERENCES AND INTELLIGENCE (CORE)
+
+67.1 The structure of cognitive ability
+
+67.1.1 The positive manifold and the general factor
+
+67.1.2 Hierarchical models of ability
+
+67.1.3 Fluid and crystallised distinctions
+
+67.1.4 Measurement, bias, and the limits of testing
+
+67.2 Neural correlates of ability
+
+67.2.1 Brain size, efficiency, and their weak relations
+
+67.2.2 The parieto-frontal integration theory
+
+67.2.3 Network integration, modularity, and ability
+
+67.2.4 Connectome-based predictive modelling of cognition
+
+67.3 Genetics and environment
+
+67.3.1 Heritability estimates and their meaning
+
+67.3.2 Genome-wide association studies and polygenic scores
+
+67.3.3 Gene-environment interplay and correlation
+
+67.3.4 The Flynn effect and its reversal
+
+67.4 Beyond general ability
+
+67.4.1 Personality, temperament, and their neural correlates
+
+67.4.2 Cognitive styles and their disputed status
+
+67.4.3 Neurodiversity as a framing
+
+67.4.4 Individual variation as signal rather than noise
+
+
+CHAPTER 68. EVOLUTION AND COMPARATIVE COGNITION (CONTEXT)
+
+68.1 Brain evolution
+
+68.1.1 Encephalisation, allometry, and neuron counts
+
+68.1.2 Cortical expansion and areal proliferation in primates
+
+68.1.3 Human-specific genetic and developmental changes
+
+68.1.4 Conserved architecture across vertebrates
+
+68.2 Comparative cognition
+
+68.2.1 Cognition in non-human primates
+
+68.2.2 Corvid and parrot cognition and convergent evolution
+
+68.2.3 Cephalopod cognition and an independent solution
+
+68.2.4 Insect cognition and minimal substrates for learning and navigation
+
+68.3 What is distinctively human
+
+68.3.1 Language, recursion, and the candidates for uniqueness
+
+68.3.2 Cumulative culture and social learning capacity
+
+68.3.3 Mental time travel and its comparative evidence
+
+68.3.4 The risk of anthropocentrism in framing the question
+
+68.4 Model organisms and translation
+
+68.4.1 Caenorhabditis elegans, Drosophila, zebrafish, mouse, rat, marmoset, macaque
+
+68.4.2 Choosing an organism for a cognitive question
+
+68.4.3 Homology and analogy in cross-species mapping
+
+68.4.4 Cross-species alignment of tasks and of neural data
+
+
+PART THIRTEEN. WHEN COGNITION FAILS, AND WHAT CAN BE DONE
+
+
+CHAPTER 69. CLASSICAL NEUROPSYCHOLOGICAL SYNDROMES (CONTEXT)
+
+69.1 Language disorders
+
+69.1.1 Broca, Wernicke, conduction, transcortical, and global aphasias
+
+69.1.2 Primary progressive aphasia variants
+
+69.1.3 Anomia and its localising value
+
+69.1.4 Recovery and the reorganisation of language
+
+69.2 Memory disorders
+
+69.2.1 Anterograde and retrograde amnesia
+
+69.2.2 Medial temporal, diencephalic, and basal forebrain amnesias
+
+69.2.3 Transient global amnesia and functional amnesia
+
+69.2.4 Confabulation and source memory failure
+
+69.3 Attention and spatial disorders
+
+69.3.1 Hemispatial neglect and its varieties
+
+69.3.2 Extinction and the competition account
+
+69.3.3 Balint syndrome and simultanagnosia
+
+69.3.4 Rehabilitation approaches and their evidence
+
+69.4 Recognition and action disorders
+
+69.4.1 Apperceptive and associative agnosias
+
+69.4.2 Prosopagnosia, acquired and developmental
+
+69.4.3 Ideomotor and ideational apraxia
+
+69.4.4 Disconnection syndromes and callosal disorders
+
+69.5 The logic of neuropsychology
+
+69.5.1 What a dissociation licenses and what it does not
+
+69.5.2 The single-case method and its defence
+
+69.5.3 Lesion network mapping as the modern successor
+
+69.5.4 Cognitive neuropsychology's continuing role in the imaging era
+
+
+CHAPTER 70. NEURODEGENERATIVE DISEASE AND COGNITION (CONTEXT)
+
+70.1 Alzheimer disease
+
+70.1.1 Amyloid, tau, and the pathological cascade
+
+70.1.2 The staging of cognitive decline
+
+70.1.3 Biomarkers: imaging, cerebrospinal fluid, and blood-based
+
+70.1.4 Disease-modifying therapy and the state of the evidence
+
+70.2 Other dementias
+
+70.2.1 Frontotemporal dementia and its behavioural and language variants
+
+70.2.2 Dementia with Lewy bodies
+
+70.2.3 Vascular cognitive impairment
+
+70.2.4 Mixed pathology as the common reality
+
+70.3 Movement disorders with cognitive features
+
+70.3.1 Parkinson disease cognition and dopaminergic overdose effects
+
+70.3.2 Huntington disease and striatal cognition
+
+70.3.3 Progressive supranuclear palsy and corticobasal syndrome
+
+70.3.4 Cerebellar cognitive affective syndrome
+
+70.4 Mechanistic themes
+
+70.4.1 Selective vulnerability of networks
+
+70.4.2 Prion-like propagation along connections
+
+70.4.3 Network degeneration as a unifying account
+
+70.4.4 Cognitive reserve modulating expression of pathology
+
+
+CHAPTER 71. PSYCHIATRIC DISORDERS AS DISORDERS OF COGNITION (CONTEXT)
+
+71.1 Schizophrenia and psychosis
+
+71.1.1 Positive, negative, and cognitive symptom domains
+
+71.1.2 Working memory and control deficits as core features
+
+71.1.3 Aberrant salience and prediction-error accounts of delusion
+
+71.1.4 Hallucination as failure of reality monitoring or over-weighted priors
+
+71.2 Mood and anxiety disorders
+
+71.2.1 Cognitive biases in attention, memory, and interpretation
+
+71.2.2 Anhedonia, reward learning deficits, and effort
+
+71.2.3 Rumination and default-network alteration
+
+71.2.4 Threat learning, extinction failure, and anxiety
+
+71.3 Compulsivity and impulsivity
+
+71.3.1 Obsessive-compulsive disorder and cortico-striatal loops
+
+71.3.2 Model-based control deficits tracking compulsivity across diagnoses
+
+71.3.3 Impulsivity as a multidimensional construct
+
+71.3.4 Addiction revisited as a cognitive disorder
+
+71.4 Computational psychiatry
+
+71.4.1 Computational assays and latent parameter estimation
+
+71.4.2 Transdiagnostic dimensions and computational factor modelling
+
+71.4.3 Normative modelling of individual deviation
+
+71.4.4 Predictive coding and precision-weighting frameworks for symptoms
+
+71.4.5 Translation barriers: reliability, generalisability, clinical utility
+
+
+CHAPTER 72. NEURODEVELOPMENTAL AND ACQUIRED CONDITIONS (CONTEXT)
+
+72.1 Autism spectrum
+
+72.1.1 Social cognition accounts and their limits
+
+72.1.2 Predictive processing and precision accounts
+
+72.1.3 Sensory differences and excitation-inhibition proposals
+
+72.1.4 Heterogeneity and the case for subtypes
+
+72.2 Attention deficit hyperactivity disorder
+
+72.2.1 Executive dysfunction and delay aversion accounts
+
+72.2.2 Catecholaminergic mechanisms and stimulant action
+
+72.2.3 Intra-individual variability as a core feature
+
+72.2.4 Developmental course and adult presentation
+
+72.3 Learning disorders
+
+72.3.1 Dyslexia, dyscalculia, and developmental language disorder
+
+72.3.2 Comorbidity and shared risk
+
+72.3.3 Intervention and its neural signatures
+
+72.4 Acquired injury and epilepsy
+
+72.4.1 Traumatic brain injury and diffuse axonal damage
+
+72.4.2 Concussion and repeated head impact
+
+72.4.3 Stroke and cognitive outcome
+
+72.4.4 Epilepsy, interictal cognition, and surgical outcomes
+
+
+CHAPTER 73. INTERVENTION, REHABILITATION, AND ENHANCEMENT (CONTEXT)
+
+73.1 Cognitive rehabilitation
+
+73.1.1 Restitution, compensation, and adaptation strategies
+
+73.1.2 Constraint-induced and intensive therapies
+
+73.1.3 Aphasia and neglect rehabilitation evidence
+
+73.1.4 Measuring meaningful outcomes rather than task gains
+
+73.2 Stimulation-based intervention
+
+73.2.1 Repetitive transcranial magnetic stimulation in depression
+
+73.2.2 Deep brain stimulation for movement and psychiatric disorders
+
+73.2.3 Closed-loop and responsive neurostimulation
+
+73.2.4 Focused ultrasound and emerging non-invasive deep targeting
+
+73.3 Behavioural and pharmacological enhancement
+
+73.3.1 Cognitive training and the transfer debate
+
+73.3.2 Exercise, sleep, and nutrition as cognitive interventions
+
+73.3.3 Stimulants and nootropics in healthy users
+
+73.3.4 Spaced practice, retrieval practice, and evidence-based learning
+
+73.4 Neuroprosthetics and brain-computer interfaces
+
+73.4.1 Motor prostheses and cursor and limb control
+
+73.4.2 Speech neuroprostheses and communication restoration
+
+73.4.3 Sensory prostheses: cochlear and visual implants
+
+73.4.4 Memory prostheses and closed-loop memory enhancement
+
+73.4.5 Bidirectional interfaces and the co-adaptation problem
+
+
+PART FOURTEEN. COGNITION AND MACHINES
+
+
+CHAPTER 74. NEUROAI: ARTIFICIAL INTELLIGENCE AS A TOOL AND AS A THEORY (CORE)
+
+74.1 The two-way exchange
+
+74.1.1 Neuroscience-inspired architectures: convolution, attention, replay, modularity
+
+74.1.2 Artificial networks as hypotheses about neural computation
+
+74.1.3 The historical cycle of borrowing between the fields
+
+74.1.4 Where the analogy has been productive and where it has misled
+
+74.2 Model-brain comparison
+
+74.2.1 Representational similarity between networks and brains
+
+74.2.2 Encoding-model benchmarks and leaderboards
+
+74.2.3 Goal-driven modelling: optimise for a task, compare the representations
+
+74.2.4 The identifiability problem: many models fit equally well
+
+74.3 Language models and the language network
+
+74.3.1 Next-word prediction as a shared objective
+
+74.3.2 Model surprisal predicting neural and behavioural responses
+
+74.3.3 Sparse feature interpretation of brain responses to language
+
+74.3.4 What the correspondence licenses about human language mechanisms
+
+74.4 Foundation models of brain and behaviour
+
+74.4.1 Multimodal foundation models predicting brain activity across vision, audition, and language
+
+74.4.2 Large-scale functional imaging pretraining and in-silico neuroscience
+
+74.4.3 Foundation models of human behaviour and cognition
+
+74.4.4 Prefrontal-centred foundational models of intelligence
+
+74.4.5 Evaluation, overfitting, and the danger of benchmark-driven science
+
+74.5 What artificial systems still lack
+
+74.5.1 Data and energy efficiency
+
+74.5.2 Continual learning without catastrophic forgetting
+
+74.5.3 Embodiment, interaction, and grounded learning
+
+74.5.4 Compositional generalisation and causal understanding
+
+74.5.5 The open question of machine consciousness and moral status
+
+
+CHAPTER 75. SIMULATION, EMULATION, AND SYNTHETIC COGNITION (CONTEXT)
+
+75.1 Large-scale brain simulation
+
+75.1.1 The ambitions and outcomes of large simulation programmes
+
+75.1.2 What a simulation must reproduce to count as explanatory
+
+75.1.3 Data requirements and parameter underdetermination
+
+75.1.4 Simulation as hypothesis generator rather than as proof
+
+75.2 Digital twins and in-silico experiments
+
+75.2.1 Individualised whole-brain models
+
+75.2.2 Virtual epileptic patient and surgical planning
+
+75.2.3 In-silico perturbation as a hypothesis-testing tool
+
+75.2.4 Validation standards for digital twin claims
+
+75.3 Organoids and reduced biological systems
+
+75.3.1 Brain organoids and assembloids
+
+75.3.2 Cultured networks trained on tasks
+
+75.3.3 What organoids can and cannot model about cognition
+
+75.3.4 The moral status question raised by neural tissue that learns
+
+75.4 Neuromorphic and alternative substrates
+
+75.4.1 Spiking neuromorphic hardware
+
+75.4.2 Energy efficiency as the design driver
+
+75.4.3 Substrate independence and its limits
+
+75.4.4 Reconstruction as the strongest test of understanding
+
+
+CHAPTER 76. THE READING AND WRITING OF MINDS (CONTEXT)
+
+76.1 Decoding capabilities as they stand
+
+76.1.1 Visual reconstruction from brain activity
+
+76.1.2 Continuous semantic decoding of imagined and heard language
+
+76.1.3 Decoding of intention, attention, and affective state
+
+76.1.4 Accuracy, cooperation requirements, and current hard limits
+
+76.2 Writing into the brain
+
+76.2.1 Patterned optogenetic and electrical stimulation to induce percepts
+
+76.2.2 Memory implantation in animal models
+
+76.2.3 Sensory substitution and augmentation
+
+76.2.4 The distance between animal demonstrations and human application
+
+76.3 Consumer and non-clinical neurotechnology
+
+76.3.1 Wearable electroencephalography and its claims
+
+76.3.2 Workplace and educational monitoring
+
+76.3.3 Marketing and neuro-branding claims
+
+76.3.4 Evidentiary standards for consumer neurotechnology
+
+76.4 Governance
+
+76.4.1 Mental privacy and neural data protection
+
+76.4.2 Proposals for neurorights
+
+76.4.3 Regulation of implanted devices and post-trial obligations
+
+76.4.4 Dual use and security considerations
+
+
+PART FIFTEEN. INTEGRATION, ETHICS, AND WHAT REMAINS UNSOLVED
+
+
+CHAPTER 77. THE OPEN PROBLEMS (CORE)
+
+77.1 Problems of code and representation
+
+77.1.1 What the neural code actually is, and whether there is one
+
+77.1.2 The binding problem in its several forms
+
+77.1.3 How symbols and compositional structure are implemented
+
+77.1.4 How abstraction is achieved and reused
+
+77.2 Problems of learning
+
+77.2.1 Biological credit assignment across depth and time
+
+77.2.2 One-shot learning and rapid generalisation
+
+77.2.3 Continual learning without interference
+
+77.2.4 The origin of inductive biases: evolution, development, or experience
+
+77.3 Problems of integration
+
+77.3.1 Bridging molecular, cellular, circuit, and systems descriptions
+
+77.3.2 Reconciling localisation with distributed and network accounts
+
+77.3.3 Reconciling representational with dynamical descriptions
+
+77.3.4 Reconciling normative theory with mechanistic detail
+
+77.4 Problems of the subject
+
+77.4.1 The hard problem and whether it will dissolve
+
+77.4.2 The relation of cognition to emotion, body, and environment
+
+77.4.3 Individual variability and the meaning of an average brain
+
+77.4.4 Whether cognition is the right unit of analysis at all
+
+
+CHAPTER 78. NEUROETHICS AND SOCIETY (CONTEXT)
+
+78.1 Research ethics
+
+78.1.1 Consent in patients, children, and impaired populations
+
+78.1.2 Incidental findings and their disclosure
+
+78.1.3 Animal research ethics and the three Rs
+
+78.1.4 Equitable participation and the diversity of samples
+
+78.2 Applied neuroethics
+
+78.2.1 Neuroscience in law and the responsibility debate
+
+78.2.2 Cognitive enhancement, fairness, and coercion
+
+78.2.3 Prediction, stigma, and the misuse of risk scores
+
+78.2.4 Neuroscience in education and the persistence of neuromyths
+
+78.3 Communication
+
+78.3.1 Overclaiming in press releases and in the literature
+
+78.3.2 The seductive allure of neuroscientific explanation
+
+78.3.3 Responsible communication of uncertain findings
+
+78.3.4 Public engagement and trust
+
+78.4 Justice and access
+
+78.4.1 Global inequity in neuroscience capacity
+
+78.4.2 Access to neurotechnology and to treatment
+
+78.4.3 Representation in datasets and its downstream effects
+
+78.4.4 Who sets the research agenda
+
+
+CHAPTER 79. THE PRACTICE OF THE FIELD (CONTEXT)
+
+79.1 How the field is organised
+
+79.1.1 Societies, journals, and conferences
+
+79.1.2 Funding structures and large initiatives
+
+79.1.3 Team science and multi-site consortia
+
+79.1.4 Careers, training, and interdisciplinary skill demands
+
+79.2 Skills a practitioner needs
+
+79.2.1 Neuroanatomy and physiology
+
+79.2.2 Programming, signal processing, and statistics
+
+79.2.3 Mathematical modelling and machine learning
+
+79.2.4 Experimental design and scientific writing
+
+79.3 Reading the literature critically
+
+79.3.1 Identifying the actual claim and the actual evidence
+
+79.3.2 Sample size, effect size, and inferential leaps
+
+79.3.3 Reverse inference and construct validity checks
+
+79.3.4 Distinguishing established from provisional findings
+
+79.4 A curated reading path
+
+79.4.1 Introductory textbooks and their differing emphases
+
+79.4.2 The reference handbooks and monographs
+
+79.4.3 The theoretical and computational canon
+
+79.4.4 Review series and the annual literature
+
+
+CHAPTER 80. THE KONNECTOME PROGRAMME: MAPPING THIS OUTLINE ONTO THE FIFTEEN LAYERS (CONTEXT)
+
+80.1 The correspondence
+
+80.1.1 Parts Two and Three of this outline against Layers 1 through 8, the substrate and microcircuit layers
+
+80.1.2 Parts Five through Ten against Layers 9 through 11, the regions, systems, and global states
+
+80.1.3 Parts Eleven and Twelve against Layer 12, the faculty specification
+
+80.1.4 Parts Thirteen through Fifteen against Layers 13 through 15, the tutor protocol, knowledge environment, and design method
+
+80.2 What this outline supplies to the corpus
+
+80.2.1 A cognition-first index over a substrate-first catalogue
+
+80.2.2 The (COG) and (NON-COG) tagging discipline extended to processes rather than structures
+
+80.2.3 Explicit placement of the computational and oscillatory layers that the standard textbooks omit
+
+80.2.4 A falsifiability checklist attached to each theoretical claim
+
+80.3 What the corpus supplies to this outline
+
+80.3.1 Layer addresses for every structure named here
+
+80.3.2 The inside-out framing already adopted in the Layer 9 and Layer 11 volumes
+
+80.3.3 The manuscript-and-companion workflow for turning outline entries into text
+
+80.4 Next steps
+
+80.4.1 Expansion of each Part into a manuscript volume
+
+80.4.2 A modes companion enumerating the operating regimes of each capacity
+
+80.4.3 Cross-reference tables between chapters here and layer entries there
+
+80.4.4 A verification pass attaching primary citations to every Level 4 entry
+
+
+END OF OUTLINE
+
+Total structure: fifteen parts, eighty chapters, three hundred and thirty-two sections, and one thousand three hundred and twenty-five sub-sections.
+
+This document is a skeleton, not a manuscript.
+
+Every Level 4 entry is a promise that something specific can be said, and the writing of the corpus is the keeping of those promises.
