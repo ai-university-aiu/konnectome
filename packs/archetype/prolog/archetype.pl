@@ -24,8 +24,12 @@
     archetype_gate_transfer/2,
     % archetype_gate_output/3: apply a mode's own transfer function to an arriving input.
     archetype_gate_output/3,
-    % archetype_gate_departure/2: where the transition table sends a gate leaving a mode.
+    % archetype_gate_departure/2: where the transition table sends a gate leaving a mode ITSELF.
     archetype_gate_departure/2,
+    % archetype_gate_thrown_departure/2: where the table sends a gate the BROADCAST throws.
+    archetype_gate_thrown_departure/2,
+    % archetype_gate_throw/3: apply a standing broadcast throw to one gate instance.
+    archetype_gate_throw/3,
     % archetype_comparator/3: the comparator rule - report the prediction error.
     archetype_comparator/3,
     % archetype_step/3: the dispatch - read the archetype and apply the matching rule.
@@ -47,7 +51,9 @@
     % mode_register_transfer/3: read the rule filed under one named mode.
     mode_register_transfer/3,
     % mode_register_current/2: read the mode a construct is standing in right now.
-    mode_register_current/2
+    mode_register_current/2,
+    % mode_register_departure/3: read a departure out of the table under a NAMED AGENCY.
+    mode_register_departure/3
 ]).
 
 % ---------------------------------------------------------------------------
@@ -252,6 +258,11 @@ archetype_gate_transition_row(switch_drive_above_threshold, open, closed, one_ti
 % The same supra-threshold switching drive, at the same one threshold, opens a closed gate.
 archetype_gate_transition_row(switch_drive_above_threshold, closed, open, one_tick, self_selected).
 
+% A mode thrown from the broadcast bus closes an open gate, wherever that gate stands (slice 41).
+archetype_gate_transition_row(broadcast_mode_throw, open, closed, one_tick, broadcast_thrown).
+% The same broadcast throw opens a closed gate, by a row the gate's own table declares.
+archetype_gate_transition_row(broadcast_mode_throw, closed, open, one_tick, broadcast_thrown).
+
 % archetype_gate_transitions(-Rows): the gate's explicit transition table.
 archetype_gate_transitions(Rows) :-
     % Gather every declared row, in declaration order.
@@ -321,17 +332,66 @@ archetype_gate_departure(FromMode, ToMode) :-
 % carrying a whole automaton rather than a bare mode name, because the constructor has already
 % judged the current-mode slot. That is the slice-39 review's rule applied to new code: when a value
 % can reach a lookup by more than one route, guard it where the routes MEET, not where each begins.
+%
+% SLICE 41 NAMES THE AGENCY THIS LOOKUP WANTS, AND THE BEHAVIOUR IS PINNED IDENTICAL BY DOING SO.
+% Until this slice every row in the table was self_selected, so "the first row leaving this mode" had
+% exactly one answer and an unkeyed memberchk could not be wrong. Slice 41 writes a SECOND agency's
+% rows into the same table, and from that moment an unkeyed lookup would answer with whichever row
+% was declared first - correct today by accident of declaration order, and silently wrong the day
+% anyone reorders the rows. The agency is therefore named here. This is the default-drift lens paid
+% out before it cost anything: the gate's SELF-SELECTED flip is the flip this predicate has always
+% described, and it is now the flip this predicate asks for.
 archetype_gate_departure_of(Automaton, ToMode) :-
-    % Read the judged mode the gate is departing from.
-    mode_register_current(Automaton, FromMode),
-    % Read the transition table out of the register, so the table is the one authority on direction.
-    mode_register_transitions(Automaton, Transitions),
-    % Find the row leaving this mode; the trigger is not re-named here, so the table cannot drift
-    % out from under a lookup that spells its trigger a second time.
-    (   memberchk(transition(_Trigger, FromMode, Found, _Timescale, _Agency), Transitions)
-    ->  ToMode = Found
-    % A mode the table gives no departure from is refused aloud rather than failing in silence.
-    ;   existence_error(mode_transition, FromMode)
+    % Read the self-selected departure out of the register, which is the one authority on direction.
+    mode_register_departure(Automaton, self_selected, ToMode).
+
+% archetype_gate_thrown_departure(+FromMode, -ToMode): where the table sends a gate the BUS throws.
+% The throw's departure is read out of the SAME table by the SAME lookup, differing only in the
+% agency it names - which is what makes a thrown transition a row of the gate's own register rather
+% than a second path into the gate.
+archetype_gate_thrown_departure(FromMode, ToMode) :-
+    % Build the register standing in the mode being left, refusing a hole or a foreign mode.
+    archetype_gate_automaton(FromMode, Automaton),
+    % Read the departure this table declares under the broadcast's agency.
+    mode_register_departure(Automaton, broadcast_thrown, ToMode).
+
+% archetype_gate_throw(+ThrownMode, +CurrentMode, -NextMode): apply a standing throw to one gate.
+%
+% THE COMMAND DECISION IS ENACTED HERE AND IS DOCUMENTED IN FULL AT THE FOOT OF neuromodulator_bus.
+% A standing throw SETS the gate's mode; it does not nudge a threshold. It preempts self-selection
+% while it stands. It is applied per instance, so ONE bus write moves every gate that reads it, and
+% each gate arrives at its answer through its own register rather than through a controller.
+%
+% THREE CASES ARE STANDING STILL, NOT MOVING, AND EACH IS A DIFFERENT SILENCE. A channel nobody has
+% written reads as the reserved silence name and leaves the gate exactly where it stood. A throw that
+% names the mode the gate is ALREADY in leaves it there too, because a command to be what you are is
+% satisfied without a transition - and this is what makes one broadcast safe to read every tick. A
+% throw naming a mode this register does not hold is neither of those: it is refused aloud.
+archetype_gate_throw(ThrownMode, CurrentMode, NextMode) :-
+    % Refuse an unbound thrown mode before anything is looked up with it as a key.
+    must_be(atom, ThrownMode),
+    % Build the register standing in this gate's current mode, which judges that mode on the way in.
+    archetype_gate_automaton(CurrentMode, _Automaton),
+    % Read the gate's own mode vocabulary, so a foreign mode is caught by the register, not by a list
+    % of names written a second time somewhere else.
+    archetype_gate_modes(Names),
+    % Work out where this gate stands after the throw.
+    (   % A silent channel is not an instruction: the gate keeps its own mode and its own agency.
+        ThrownMode == no_mode_thrown
+    ->  NextMode = CurrentMode
+    ;   % A mode this gate does not have is refused aloud, naming the mode that was thrown at it.
+        \+ memberchk(ThrownMode, Names)
+    ->  existence_error(mode_entry, ThrownMode)
+    ;   % A throw naming the mode already held is satisfied where the gate stands, with no transition.
+        ThrownMode == CurrentMode
+    ->  NextMode = CurrentMode
+    ;   % Otherwise the table must declare this departure under the broadcast's agency, or the throw
+        % is one this construct's register gives it no way to obey, and that is refused aloud too.
+        archetype_gate_thrown_departure(CurrentMode, Declared),
+        (   Declared == ThrownMode
+        ->  NextMode = ThrownMode
+        ;   existence_error(mode_transition, ThrownMode)
+        )
     ).
 
 % ---------------------------------------------------------------------------
