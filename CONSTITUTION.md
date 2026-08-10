@@ -70,7 +70,12 @@ Change orders and considerations for change orders to
 will be written to the new file:
 /home/ccaitwo/konnectome/docs/konnectome_ledger_v1.txt (A new file; create it at build start.)
 This ledger is the running scoreboard of the build, exactly as PrologAI_Requirements_Ledger_v1.txt
-was for the language. Every wall the build hits becomes an entry here first; from here it is routed
+was for the language.
+(LOCATED in version 16, by the owner's instruction of 2026-08-10. That file is inherited from the
+programme that preceded konnectome and now lives at docs/provenance/PrologAI_Requirements_Ledger_v1.txt
+with the rest of that programme's record. The path is added because this line names the MODEL this
+Commandment's ledger was built on, and a reader who wants to see the model should be able to open it;
+before this it was a bare filename that had quietly stopped resolving in /docs/ . No rule changed.) Every wall the build hits becomes an entry here first; from here it is routed
 to the causalontology change order, the PrologAI change order, or a konnectome construct. A wall
 shown to be UNNECESSARY is recorded as honestly as a wall that needed building: honest non-closure
 is a real result, not a failure.
@@ -468,7 +473,23 @@ commit because they are one act: the document that was the instruction becomes a
 moment the next one becomes the instruction, and splitting them across two changes would leave a
 commit in which /docs/ holds two hand-offs or none.
 
-VERSION HISTORY NOTE (extended in version 15). This Constitution is at VERSION 15. Version 15, by
+VERSION HISTORY NOTE (extended in version 16). This Constitution is at VERSION 16. Version 16, by
+the owner's instruction of 2026-08-10, records the move of the FIVE INHERITED PROVENANCE DOCUMENTS
+into docs/provenance/ - the record of the ten-wave programme that PRECEDED konnectome and produced
+the foundation it was built on. NO COMMANDMENT WAS REMOVED, NO COMMANDMENT WAS RENUMBERED, NO RULE
+CHANGED, AND NO INHERITED DOCUMENT WAS EDITED. The Fourth Commandment gains a LOCATED note, because
+it names PrologAI_Requirements_Ledger_v1.txt as the MODEL konnectome's own ledger was built on and
+had only ever named it as a bare filename - a reference that resolved by convention rather than by
+path, and had quietly stopped resolving in /docs/ .
+NOTE THE CLASS OF DOCUMENT THIS DIRECTORY HOLDS, because it is a third kind beside the two the
+Eleventh Commandment already distinguishes. It is not a superseded VERSION, so it does not belong in
+docs/archive/ - none of the five has a successor that replaced it. It is not a live working document
+either. IT IS INHERITED RECORD: written by a programme that closed, describing work konnectome did
+not do, kept because konnectome stands on its result. The test of version 14 applies and gives the
+answer directly - nothing instructs a session to read these, and nothing should, until somebody needs
+to know WHY the foundation is shaped as it is.
+
+Version 15, by
 the owner's instruction of 2026-08-10, records the move of THE DSPARCD FILESET and the method
 specification DSPARCD_EXPLAINED.txt into docs/DSPARCD/ . TWO LIVE POINTERS ARE REPOINTED - the Fifth
 Commandment's, at the method specification, and the Nineteenth's reading reminder, at the fileset -

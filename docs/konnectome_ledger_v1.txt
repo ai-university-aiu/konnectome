@@ -3730,3 +3730,100 @@ VERIFIED. Resolve-check over all seventy-five live files: every pointer resolves
 elsewhere as a dated citation or a deliberate historical record (fourteen), or is one of the three
 known non-pointers. 811 tests across 34 packs, four gates at zero plus the naming gate's self-test.
 docs/ top level is now twenty-five files and five sub-directories. No pack reads a docs path.
+
+
+PROVENANCE REORGANISATION NOTE (2026-08-10, Constitution version 16). THE FIVE INHERITED DOCUMENTS
+MOVED TO docs/provenance/ . Not a slice: no pack touched, no test written, no inherited document
+edited. Five pure renames. This is the fifth and last reorganisation of the day and the only one that
+had to invent a category rather than apply one.
+
+WHAT THEY ARE. The record of the TEN-WAVE PROGRAMME THAT RAN BEFORE KONNECTOME - its plan, its
+close-out quality-assurance report, its wave narrative, its actual deliverable the PrologAI
+Requirements Ledger, and the causalontology 3.0.0 review that became the 4.0.0 change order. konnectome
+did not write any of them and did not do the work they describe.
+
+THE BOUNDARY BETWEEN THAT PROGRAMME AND THIS BUILD IS STATED IN THE PROGRAMME'S OWN CLOSE-OUT REPORT
+AND IS WORTH QUOTING, because it settles a question that had never been asked in this ledger: "Wave
+10 is the last wave whose subject is PrologAI itself. When its nine stages are merged green, PrologAI
+(the language) rests on Causalontology 3.0.0 (the data structure), and the two together are the
+foundation for the next repository, konnectome (the application)." KONNECTOME IS NOT A MEMBER OF THAT
+PROGRAMME. It is what the programme was clearing the ground for.
+
+WHY A NEW DIRECTORY RATHER THAN docs/archive/ , AND THIS IS THE ONE REAL DECISION IN THE CHANGE. The
+Eleventh Commandment sends SUPERSEDED VERSIONS to the archive, and version 14 sharpened that: the
+archive holds dead versions of documents that still exist in better form, and the test is whether a
+session would ever be told to read the file. THESE FIVE FAIL BOTH HALVES IN OPPOSITE DIRECTIONS. They
+are NOT superseded - not one has a successor that replaced it, the Master Plan has no v3, the
+close-out report has no v2 - so archiving them would assert a supersession that never happened. And
+they are NOT live working documents - nothing instructs anyone to read them. THEY ARE A THIRD KIND:
+INHERITED RECORD, kept because konnectome stands on their result rather than because anyone consults
+them. THE PROGRAMME THEY BELONG TO DID NOT GET SUPERSEDED. IT FINISHED, and a finished thing and a
+replaced thing are not the same thing, though both stop changing.
+
+WHAT THE SWEEP FOUND, AND IT IS SMALL BUT IT IS THE MOST-CITED FILE OF THE FIVE. Only ONE path
+pointer needed rewriting, in the thought-combination reference. But PrologAI_Requirements_Ledger_v1.txt
+is named in the FOURTH COMMANDMENT as the MODEL this very ledger was built on - "the running
+scoreboard of the build, exactly as PrologAI_Requirements_Ledger_v1.txt was for the language" - AND IT
+WAS NAMED AS A BARE FILENAME WITH NO PATH, IN BOTH THE COMMANDMENT AND THIS LEDGER'S OWN PREAMBLE. A
+bare filename resolves by convention rather than by path, so it never appeared in any resolve-check
+and had quietly stopped resolving in /docs/ the moment the file moved. THE COMMANDMENT NOW CARRIES THE
+PATH. THE GENERAL FORM, and it is new today: A REFERENCE WITHOUT A PATH IS INVISIBLE TO A POINTER
+SCAN, AND THEREFORE BREAKS WITHOUT BEING COUNTED. Four reorganisations today were verified by a
+resolve-check that could not have seen this one.
+
+AND ONE THING WAS DISCOVERED THAT IS NOT A POINTER PROBLEM AT ALL, RECORDED HERE BECAUSE NOTHING ELSE
+RECORDS IT. EIGHT SIBLING REPOSITORIES EXIST AND KONNECTOME'S DOCUMENTATION NEVER MENTIONS THEM:
+connectome-amygdala, -arbiter, -atomic, -cerebellum, -hippocampus, -loops, -proto-agi and -strata, all
+under the same organisation. The Master Plan names SIX; three of the eight are not in its list, so the
+family grew past its own plan before it stopped. ALL EIGHT ARE DORMANT - three to eight commits each,
+every one stopping at the same commit on the same day, "Adopt Causalontology 3.0.0", 2026-07-22 -
+while konnectome has run forty-seven slices since. The Constitution names causalontology, PrologAI and
+Mentova as the cousins and is silent on these.
+
+THAT IS NOT NECESSARILY WRONG, and it is not being routed anywhere. The programme closed and konnectome
+is what replaced it. BUT AN UNRECORDED INHERITANCE IS THE KIND OF THING THAT GETS REDISCOVERED
+EXPENSIVELY, and nobody has read those eight against konnectome to see whether any of them holds a
+Ledger entry, a design decision or a measurement that konnectome has since re-derived or is about to.
+That work is named in docs/provenance/README.txt as a real gap rather than left as an absence. IT IS
+DELIBERATELY NOT PUT ON THE QUEUE: it is provenance archaeology, not a build slice, and putting it in
+Part Six of the analysis would misrepresent what it is.
+
+VERIFIED. Resolve-check over all live files clean. 811 tests across 34 packs, four gates at zero plus
+the naming gate's self-test. docs/ top level is now twenty files and six sub-directories - DSPARCD,
+neuroscience, hand-off, provenance, archive, images - and every file left at the top level is a live
+working document of konnectome's own, plus the current hand-off.
+
+THE BARE-NAME SWEEP, AND IT IS THE MOST USEFUL THING THE PROVENANCE MOVE PRODUCED. The
+PrologAI_Requirements_Ledger break above prompted a check nobody had run: a sweep for references to
+moved files that carry NO PATH. It found THIRTY-FIVE, and the triage is the point.
+
+MOST ARE HONEST CITATIONS AND WERE LEFT. The four design authorities and the fidelity audit name
+corpus files with line numbers - "LAYER_11_GLOBAL_STATES_MANUSCRIPT.txt line 4238" - which NAMES a
+document rather than POINTING at one, and a reader holding that citation knows exactly what to open.
+Naming is not linking, and a sweep that rewrote every mention would have turned scholarship into
+plumbing.
+
+THREE READER-FACING INDEXES WERE GENUINELY STALE AND ARE FIXED: the current hand-off's Part Two list
+of important files, the tutorial's closing list of documents, and THE README'S docs TREE, which still
+drew a flat directory with none of the four new sub-directories in it.
+
+AND THE README TURNED OUT TO CITE THREE COMMANDMENTS BY THE WRONG NUMBER, which the move did not cause
+and only uncovered. It called the archive the NINTH Commandment's, the tutorial the FIFTEENTH's, and
+the build log the SIXTEENTH's. They are the ELEVENTH, the SEVENTEENTH and the EIGHTEENTH. THE CAUSE IS
+THE RENUMBERING AT CONSTITUTION VERSIONS 4 AND 5, which inserted two new commandments and pushed every
+one below them down by two; the README was never swept and has been three off ever since.
+
+THAT IS THE EXACT FAILURE THE STANDING WARNING IN EVERY HAND-OFF EXISTS TO PREVENT - never cite a
+commandment by number from memory, re-read it - AND THE DOCUMENT THAT BROKE IT WAS THE README. The
+warning was written for sessions and aimed at prose that sessions write; nobody thought to point it at
+the repository's own front page. A rule that names its audience will be obeyed by that audience and by
+nobody else.
+
+THE GENERAL FORM, AND IT IS NEW TODAY AND BELONGS BESIDE THE OTHER THREE THIS DAY PRODUCED: A
+REFERENCE WITHOUT A PATH IS INVISIBLE TO A POINTER SCAN, AND THEREFORE BREAKS WITHOUT BEING COUNTED.
+Four reorganisations were verified clean by a resolve-check that could not, in principle, have seen
+this class of break. The check was not wrong; it was answering a narrower question than anyone
+reading its output believed it was answering. THAT IS THE SAME SHAPE AS THE DAY'S OTHER THREE
+FINDINGS - a glob that returns zero, a write path that succeeds in the wrong place, a sweep that
+cannot tell a version history from a live rule - and the four together say one thing: THE CHECKS THAT
+FAIL YOU ARE THE ONES WHOSE SCOPE YOU HAVE MISREMEMBERED.

@@ -1055,15 +1055,17 @@ Everything konnectome needs is inside its own docs/ folder, so you never have to
 
 • BUILDING_KONNECTOME_v2.txt - the build log: the whole story of the build from its true beginning, kept as a scientific record and a readable book at once, versioned like every other living document.
 
-• konnectome_1_specification through konnectome_6_demonstration - the six method documents (the latest versions live outside the archive).
+• docs/DSPARCD/ - the seven method documents, konnectome_0_definition through konnectome_6_demonstration, together with the specification of the method itself. Read the definition first; it is the concept the other six answer to.
 
 • konnectome_ledger_v1.txt - the running scoreboard.
 
-• LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt - the guiding book.
+• docs/neuroscience/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt - the guiding book, which lives with the rest of the source neuroscience corpus in docs/neuroscience/ .
 
-• The guiding-principle and context documents - the roadmaps, the plain-language explainers, and the history of how the family came to be.
+• docs/provenance/ - what konnectome inherited: the record of the programme that ran before it and produced the foundation it was built on.
 
-• docs/archive/ - the older, superseded versions of everything, kept for the record.
+• docs/hand-off/ - every superseded session record. The CURRENT hand-off is the single dated file at the top of docs/ , and it is always the one to read.
+
+• docs/archive/ - the older, superseded VERSIONS of documents, kept for the record. Note that it holds versions only: a hand-off is a series member rather than a version, which is why the hand-offs have their own directory.
 
 This tutorial itself is versioned. As konnectome grows a new pack or component, this file is updated and its old version moved to the archive, so it always describes the konnectome that actually exists today.
 
