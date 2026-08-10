@@ -376,7 +376,12 @@ THE HAND-OFF PROTOCOL. The assistant performs these steps:
 
 Step 1: Give yourself a fun, creative, original name.
 Step 2: Write to file:
-~/konnectome/docs/[DATE]_[SERIAL NUMBER]_Context_Hand-Off_from_[NAME].txt
+~/konnectome/docs/hand-off/[DATE]_[SERIAL NUMBER]_Context_Hand-Off_from_[NAME].txt
+(REPOINTED in version 12, by the owner's instruction of 2026-08-10. The hand-offs moved into their
+own directory and this line is where a session LEARNS WHERE TO WRITE ONE, so a stale path here would
+have every future hand-off written to the wrong place - the one pointer in this Constitution whose
+staleness compounds rather than merely misleads. The twenty-nine existing hand-offs moved with it,
+unedited. No rule changed and the naming convention below is untouched.)
 where [DATE] is the current date as year-month-day (for example 2026-07-20);
 [SERIAL NUMBER] is the next free number for that date,
 starting at 1 (so a second hand-off written on the same day is _2);
@@ -401,7 +406,16 @@ read konnectome_0_definition FIRST, because it is the concept the other six answ
 - A short sign-off.
 Step 4: Commit the hand-off on a feature/ branch through a pull request. Auto-Push. Then PAUSE.
 
-VERSION HISTORY NOTE (extended in version 11). This Constitution is at VERSION 11. Version 11, by
+VERSION HISTORY NOTE (extended in version 12). This Constitution is at VERSION 12. Version 12, by
+the owner's instruction of 2026-08-10, records the move of the twenty-nine Context Hand-Off documents
+into docs/hand-off/ and repoints the Nineteenth Commandment's Hand-Off Protocol at the new path. NO
+COMMANDMENT WAS REMOVED, NO COMMANDMENT WAS RENUMBERED, NO RULE CHANGED, AND NO HAND-OFF WAS EDITED
+except the newest, which is the live entry point rather than only a record. Only the directory moved.
+NOTE WHY THIS ONE POINTER MATTERED MORE THAN THE OTHERS REPOINTED TODAY: Step 2 of the protocol is
+not a reference to a file, it is an INSTRUCTION TO CREATE ONE, so a stale path there does not fail
+loudly - it succeeds, in the wrong directory, every time, forever.
+
+Version 11, by
 the owner's instruction of 2026-08-10, repoints the Eighth Commandment's named analysis from _v1 to
 _v3, the version current on that date. NO COMMANDMENT WAS REMOVED, NO COMMANDMENT WAS RENUMBERED,
 AND NO RULE CHANGED - only the version in a path. It is recorded as its own version rather than

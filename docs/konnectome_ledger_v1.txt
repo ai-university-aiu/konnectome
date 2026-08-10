@@ -1799,7 +1799,17 @@ THE TRIGGER, made mechanical so no session has to remember a count. There were T
 documents in docs/ on 2026-08-09, the last being 2026-08-09_7 (Platinum Nightwright). Ten more makes
 THIRTY-TWO. Any session may evaluate the trigger in one command:
 
-    ls docs/*Context_Hand-Off*.txt | wc -l
+    find docs -name '*Context_Hand-Off*.txt' | wc -l
+
+(CORRECTED 2026-08-10. This line read "ls docs/*Context_Hand-Off*.txt | wc -l" until the hand-offs
+moved into docs/hand-off/ . IT IS REWRITTEN AS A find RATHER THAN REPOINTED AS AN ls, DELIBERATELY,
+because a glob that misses FAILS SILENTLY: it returns zero, and zero is not obviously wrong for a
+count - a session would read it as "the audit is nowhere near due" and be exactly wrong. A trigger
+whose failure mode is a plausible answer is worse than no trigger. The find form searches docs
+recursively and survives the next reorganisation without anybody remembering this note. WARNING FOR
+ANYONE READING AN OLDER ENTRY: two dated slice notes further down this ledger quote the superseded
+ls form, correctly for their own date; if you run one of those it will return zero and it is not a
+count. THIS NOTE IS THE AUTHORITY ON THE TRIGGER.)
 
 WHEN THAT COUNT REACHES THIRTY-TWO OR MORE, THE AUDIT IS DUE and the session that finds it due
 should either run it or record explicitly that the owner deferred it. A due audit silently skipped
@@ -3507,3 +3517,67 @@ family that discovered it - AND A FINDING FILED UNDER THE FAMILY THAT DISCOVERED
 NOBODY CAN ADD UP. What eventually caught it was not a reading but a slice hitting the same wall from
 the opposite end of the architecture with someone holding both. A repository that records findings
 well can still be a repository that cannot total them.
+
+
+HAND-OFF REORGANISATION NOTE (2026-08-10). THE TWENTY-NINE CONTEXT HAND-OFF DOCUMENTS MOVED TO
+docs/hand-off/ . Not a slice: no pack touched, no test written, no behaviour moved, and no hand-off
+edited except the newest. All twenty-nine moves are pure renames with no content change. This is the
+second reorganisation of the same day and it followed the boundary the first one drew, which is now
+a settled rule rather than an ad hoc call.
+
+WHAT WAS FIXED, AND THE TWO FIXES ARE OF DIFFERENT KINDS, WHICH IS THE INTERESTING PART.
+
+THE FIRST IS THE NINETEENTH COMMANDMENT'S HAND-OFF PROTOCOL, STEP 2 - the line that tells a session
+WHERE TO WRITE a hand-off. The Constitution goes to VERSION 12 for it. THIS WAS THE MOST DANGEROUS
+POINTER IN THE REPOSITORY TO LEAVE STALE, and the reason generalises well beyond this change: STEP 2
+IS NOT A REFERENCE TO A FILE, IT IS AN INSTRUCTION TO CREATE ONE. Every other stale path found today
+would have failed loudly the moment somebody followed it. This one would have SUCCEEDED - writing
+each future hand-off into docs/ , correctly, forever, while the directory that was supposed to hold
+them slowly stopped being the place they were. A BROKEN READ IS NOISY; A BROKEN WRITE IS SILENT, and
+a pointer scan that only checks whether files exist cannot see the second kind at all.
+
+THE SECOND IS THE FULFILMENT-AUDIT TRIGGER, AND IT WAS NOT REPOINTED - IT WAS REWRITTEN. The
+SCHEDULED AUDIT note told a session to evaluate the trigger with "ls docs/*Context_Hand-Off*.txt |
+wc -l". After the move that glob matches nothing AND RETURNS ZERO. Zero is not obviously wrong for a
+count. A session would have run the command the ledger told it to run, read "0", concluded the audit
+was nowhere near due, and been exactly wrong - with no error, no empty output, and nothing to
+notice. THE FIX IS NOT docs/hand-off/ IN THE GLOB, because that would be correct today and would
+break again the next time anything moves. It is a recursive find over docs, which survives any future
+reorganisation without anybody remembering this note. A TRIGGER WHOSE FAILURE MODE IS A PLAUSIBLE
+ANSWER IS WORSE THAN NO TRIGGER.
+
+AND THE SAME GLOB WAS FIXED IN THE NEWEST HAND-OFF, which carried it as a live instruction in its own
+Part Five, alongside a dated forward note recording what changed after it was written.
+
+TWO DATED SLICE NOTES IN THIS LEDGER STILL QUOTE THE SUPERSEDED GLOB - the slice 41 and slice 44
+notes - correctly for their own dates, and they are LEFT AS WRITTEN under the boundary below. The
+SCHEDULED AUDIT note now carries a warning naming them, so the authority defends itself rather than
+relying on a reader noticing. THAT IS THE COMPENSATION PATTERN THIS REPOSITORY HAS NOW USED THREE
+TIMES: when a live rule and a frozen record disagree, fix the rule and have the rule SAY that older
+records disagree, rather than editing the records into agreement.
+
+THE BOUNDARY, RESTATED BECAUSE IT IS NOW A RULE RATHER THAN A JUDGMENT. A HISTORICAL CLAIM IS NOT
+REPAIRED BY MAKING IT SAY SOMETHING IT DID NOT SAY, AND A LIVE INSTRUCTION IS NOT PRESERVED BY
+LEAVING IT POINTING AT NOTHING. Twenty-eight hand-offs dated before today keep their original paths,
+including the paths by which they cite one another; they are dated records and their paths were
+correct on their dates. The newest keeps its body and had its READING LINE and its AUDIT COMMAND
+corrected, because it is not only a record - it is the live entry point the next session reads first.
+
+A HAND-OFF IS THE CLEAREST CASE THIS REPOSITORY HAS OF ONE FILE BEING BOTH KINDS AT ONCE, which is
+why the directory's own README.txt states it in full: the report of what was built is a dated claim,
+and the reading list, the first-task menu and any command it tells the next session to run are live.
+The rule is not "hand-offs are historical". It is "the parts of a hand-off that instruct are live and
+the parts that report are not", and a session repairing pointers must read the sentence around the
+path before deciding which it is holding.
+
+VERIFIED AFTER THE MOVE. A resolve-check over all seventy-four live files: every path pointer either
+resolves, or resolves in docs/archive/ as a dated citation (thirteen of those, all expected), or is
+one of three known non-pointers - this ledger narrating a file's old name inside a rename note, and
+quoting "docs/X.txt" twice as the GENERIC EXAMPLE in the very rule that governs this change. 811
+tests across 34 packs, four gates at zero plus the naming gate's self-test, capstone unaffected. No
+pack reads a docs path.
+
+THE COUNT IS UNCHANGED AT TWENTY-NINE and the audit trigger is still thirty-two. Moving the
+documents did not make any of them a unit of work, and Rhodium's warning stands: at least two of the
+twenty-nine are session-close markers rather than units of work, so the count overstates build
+progress and the session that finds the audit due should check that first.
