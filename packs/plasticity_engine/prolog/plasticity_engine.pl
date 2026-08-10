@@ -10,6 +10,8 @@
     plasticity_engine_trace_step/5,
     % plasticity_engine_reward_step/5: turn each trace into a weight change through the third factor.
     plasticity_engine_reward_step/5,
+    % plasticity_engine_reward_capture_step/6: spend each trace into its weight AND consume the spent tag.
+    plasticity_engine_reward_capture_step/6,
     % plasticity_engine_average_new/2: a fresh zero running average per named construct.
     plasticity_engine_average_new/2,
     % plasticity_engine_average_step/4: move every running average a smoothing step toward its activity.
@@ -221,6 +223,73 @@ plasticity_engine_reward_step(Interfaces0, Traces, Bus, LearningRate, Interfaces
     % Spend every interface's trace into its weight, each at its own territory's dopamine concentration.
     maplist(plasticity_engine_reward_interface(Traces, Bus, LearningRate),
             Interfaces0, Interfaces).
+
+% The reward-capture step of slice 36 is the tag-and-capture law of the Layers 4-5 dossier
+% (Chapters 5 and 6) made live: capture is the delivery, and a used tag must be spent. Where the
+% receiving territory's dopamine is nonzero, cargo arrived - the trace is spent into the weight
+% exactly as plasticity_engine_reward_step spends it, AND the tag is consumed to zero, because an
+% address once served must expire so the synapse cannot wrongly capture a later, unrelated
+% shipment. Where the territory's dopamine is exactly zero, nothing shipped - the weight stands
+% and the tag stands, left to fade on the trace step's own clock. The older reward step keeps its
+% slice-28 meaning untouched for callers who manage trace lifetime themselves.
+
+% plasticity_engine_reward_capture_interface(+Traces, +Bus, +LearningRate, +Interface0, -Interface): capture one edge.
+plasticity_engine_reward_capture_interface(Traces, Bus, LearningRate,
+                                           interface(From, To, Weight0, Delay, Kind),
+                                           interface(From, To, Weight, Delay, Kind)) :-
+    % Only a transmissive interface captures; a computational one keeps its weight.
+    % (The kinds were already judged by the shared refusal perimeter before this predicate runs.)
+    (  Kind == transmissive
+    -> % Read the interface's tag, refusing a ghost aloud.
+       plasticity_engine_trace_lookup(Traces, From, To, Trace),
+       % Read the third factor at the RECEIVING end's territory: local chemistry first, diffuse field as fallback.
+       neuromodulator_bus_level_territory(Bus, dopamine, To, ThirdFactor),
+       % Judge the spend's arithmetic on EVERY path, so an unbound weight, trace, or learning rate
+       % is refused aloud even on a rewardless tick (the slice-36 review's REAL finding, reproduced:
+       % the zero branch's short-circuit passed unbound values through where the reward step throws).
+       Spent is Weight0 + Trace * ThirdFactor * LearningRate,
+       % A zero third factor ships no cargo, and the weight stands bit-identical; a nonzero one
+       % (reward or punishment alike - the third factor is signed) spends the tag into the weight.
+       (  ThirdFactor =:= 0
+       -> Weight = Weight0
+       ;  Weight = Spent
+       )
+    ;  % A computational interface is untouched by capture.
+       Weight = Weight0
+    ).
+
+% plasticity_engine_capture_trace(+Traces, +Bus, +From, +To, -TracePair): one tag's fate under capture.
+plasticity_engine_capture_trace(Traces, Bus, From, To, (From-To)-Trace) :-
+    % Read the tag's current value, refusing a ghost aloud.
+    plasticity_engine_trace_lookup(Traces, From, To, Trace0),
+    % Read the same territory third factor the weight change read, so the two fates cannot drift apart.
+    neuromodulator_bus_level_territory(Bus, dopamine, To, ThirdFactor),
+    % An unserved tag stands to fade on its own clock; a served tag is consumed to zero.
+    (  ThirdFactor =:= 0
+    -> Trace = Trace0
+    ;  Trace = 0
+    ).
+
+% plasticity_engine_reward_capture_step(+Interfaces0, +Traces0, +Bus, +LearningRate, -Interfaces, -Traces):
+% the reward arrives, the tags spend, and the spent tags are consumed.
+plasticity_engine_reward_capture_step(Interfaces0, Traces0, Bus, LearningRate, Interfaces, Traces) :-
+    % HOUSE VAR GUARD (Observation-5's shape): an unbound bus cannot be judged, and must never be
+    % silently bound into an invented partial bus by the chemical reads below.
+    (  var(Bus)
+    -> throw(error(instantiation_error, _))
+    ;  true
+    ),
+    % Refuse every malformed interface, unknown kind, duplicate, ghost, and orphan before spending a tag.
+    plasticity_engine_check_topology(Interfaces0, Traces0),
+    % Spend every interface's tag into its weight, each at its own territory's dopamine concentration.
+    maplist(plasticity_engine_reward_capture_interface(Traces0, Bus, LearningRate),
+            Interfaces0, Interfaces),
+    % Consume exactly the served tags, keeping the unserved ones, in interface order as ever.
+    findall(TracePair,
+            ( member(interface(From, To, _, _, transmissive), Interfaces0),
+              plasticity_engine_capture_trace(Traces0, Bus, From, To, TracePair)
+            ),
+            Traces).
 
 % Homeostatic scaling is the manuscript's slow negative feedback on plasticity itself (Chapter 10 and
 % the closing line of Section A2.5): each region continuously adjusts its overall incoming connection
