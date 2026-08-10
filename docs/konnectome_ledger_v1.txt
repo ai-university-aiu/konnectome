@@ -3413,3 +3413,97 @@ were months old, one of them sat in a Commandment, and no test could ever have c
 because no pack reads a docs path. This repository gates its code four ways and gated its prose not
 at all. The scan is fifteen lines of throwaway code and it should be re-run by any session that moves
 or versions a document.
+
+
+VISION-SET ANALYSIS VERSION 3 NOTE (2026-08-10). THE TOP-DOWN ANALYSIS IS BROUGHT CURRENT, AS ITS
+OWN ACT, SIX SLICES LATE. This is not a slice: no pack was touched, no test was written, no behaviour
+moved. It is the LATER ASSESSMENT that three consecutive sessions correctly declined to fake by
+editing a status line inside version 2, and it supersedes version 2 wherever the two disagree.
+Version 2 is archived under the Eleventh Commandment.
+
+WHY IT WAS WRITTEN AS ITS OWN ACT. The analysis holds two kinds of content, and its FINDINGS are
+konnectome's own assessment, superseded only by a LATER assessment and never by the corpus. Amending
+a finding in place would turn a dated record into a rolling one, and three sessions said so and left
+it alone. Each also recorded that a session which disagreed should write version 3. NONE DID, because
+each was mid-family. THE FAILURE MODE THAT PRODUCED THE LATENESS IS RECORDED IN THE DOCUMENT ITSELF
+AND IS NOT THE ONE VERSION 2 PREDICTED: version 2 warned that the theme nobody is building goes
+stale, and THE THEME EVERYBODY WAS BUILDING WENT STALE INSTEAD, because the sessions building it were
+the ones with the least room to stop and write. A document maintained by whoever is busiest is a
+document maintained late.
+
+WHAT VERSION 3 DID AND DID NOT RE-DO. It did NOT re-read the thirty-eight documents; version 2's
+readings and the four design authorities beneath them stand, and re-reading them would not regenerate
+a finding. IT RE-MEASURED THE CODEBASE, which is the half of the comparison that moved: every claim
+the document makes about what konnectome has, does or lacks was checked against main at 8d8f97c
+rather than carried forward. Four codebase claims were re-checked and all four survived - attention,
+working memory and the workspace absent from all thirty-four packs; connection_graph still exporting
+eleven predicates none of which names or addresses a portion of the graph; no network, pathway,
+subgraph or view datum anywhere; two edge kinds and one learning rule. THAT CHECK WAS THE POINT:
+version 2's single most consequential correction was a codebase claim that had never been made.
+
+THE HEADLINE FINDING, AND IT IS WHY THIS IS A VERSION RATHER THAN A SWEEP. A GAP THIS DOCUMENT HAD
+DESCRIBED IN FOUR SEPARATE PLACES TURNS OUT TO BE ONE GAP: KONNECTOME CANNOT NAME AN INDIVIDUAL
+CONSTRUCT. It arrived four times independently. As a Theme Four correction at version 2 - no named
+subgraph views, so the motif catalogue is a build. As the mode-register design authority's deferral
+of the region-grain construct BY NAME, which had stood unexamined and was read as scoping rather than
+as evidence. As OBSERVATION-11 at slice 46, where the master register's downward assignment table
+ships empty because the corpus assigns to named individuals and konnectome has only kinds. AND A
+FOURTH TIME AT SLICE 47 WITHOUT ANYONE NOTICING, which is new in version 3: the watchdog could be
+wired to the two-process governor and not to the gate archetype, and the reason given was that the
+governor has a CYCLE - true and sufficient - while the reason underneath it was never stated, that
+THE GOVERNOR IS A SINGLETON AND THE GATE IS NOT. The window question and the naming question arrived
+together and were solved together without either being distinguished.
+
+THE FINDING SPLITS IN TWO AND THE HALVES SCHEDULE DIFFERENTLY, WHICH IS THE ACTIONABLE PART.
+
+THE CHEAP HALF NEEDS NO NEW CAPABILITY. konnectome already has named individuals and has never called
+them that: ITS SINGLETON PACKS. One bus, one governor, one master register, one offline phase, one
+supervisor channel, one observer. Each is addressable because there is exactly one of it. So THE
+FIRST DOWNWARD ASSIGNMENT DOES NOT HAVE TO WAIT FOR THE REGION-GRAIN CONSTRUCT - it has to wait for a
+SINGLETON WITH A MODE REGISTER that a global state has corpus-supported reason to assign, and the
+working-memory blackboard is exactly that: one board, a four-mode register in the corpus, and the
+corpus stating plainly that the board is erased in slow-wave sleep. Version 2 already expected that
+item to be the first downward assignment and called it almost free; VERSION 3 SUPPLIES THE REASON,
+which is what turns a lucky case into a general rule.
+
+THE EXPENSIVE HALF IS A GENUINE MISSING LAYER - addressing one instance among many of a kind - and it
+is now listed in Part Six AS ITS OWN ITEM rather than inside a family, because four families need it
+and three of them had already described it in their own vocabulary without recognising the fourth.
+
+WHAT ELSE MOVED. One of Part Four's five pressures is CLOSED: konnectome has seconds, by DECISION-2,
+so Theme Five's cluster is buildable to the corpus's numbers for the first time. Part Six is
+reordered at the top for the first time across families rather than within one, because the
+mode-register family that supplied the queue's front since slice 38 is finished and there is no
+spine; the replacement ordering is ARGUED in the document rather than inherited, so a session that
+disagrees can disagree with the argument. A NEW PART ZERO lists the six numbered decisions, because
+they are a third kind of content this document does not contain and a builder reading only the
+analysis would be wrong about six settled questions. WATCH-8 is added, the construct name. WATCH-4
+gains a third candidate answer to what a content is. And one version 2 judgment is DOWNGRADED IN
+SCOPE rather than reversed, marked in place.
+
+NO FINDING OF VERSION 1 OR VERSION 2 IS REVERSED. Part One's verdict now survives three assessments,
+four deep reads, a fidelity audit and thirteen further slices - AND, for the first time, a BUILD:
+Layer 11 was the layer most likely to demand a master controller, slice 46 built its master register,
+and the Arbitrated Federation absorbed it with no new component. A verdict confirmed by building is a
+different quality of evidence from a verdict confirmed by reading.
+
+AN HONEST LIMIT STATED IN THE DOCUMENT RATHER THAN HERE ONLY. The corrected CORPUS counts have now
+stood two versions without re-measurement. They were right at the slice-40 fidelity audit and the
+corpus has not moved since, which is an argument and not a measurement. A session needing one of them
+to be exact should re-measure rather than quote.
+
+THE CONSTITUTION GOES TO VERSION 11 in the same change, repointing the Eighth Commandment's named
+analysis from _v1 to _v3. That line exists so a session reading the Constitution alone can FIND the
+fulfilment of an obligation the Constitution imposes, so a stale version in it defeats the sentence's
+whole purpose. No commandment removed, none renumbered, no rule changed. It is a separate version
+from 10 because the two are different acts: version 10 moved files, version 11 follows a document
+that was rewritten.
+
+THE PROCESS LESSON, WHICH IS THE MOST PORTABLE THING HERE AND IS THE DOCUMENT'S OWN CLOSING. THE
+FAILURE MODE IS NOT STALENESS - this document warns about staleness twice already. IT IS
+FRAGMENTATION. The same missing capability was described in four places, in four vocabularies, across
+two versions and a design authority, every description locally correct, every one filed under the
+family that discovered it - AND A FINDING FILED UNDER THE FAMILY THAT DISCOVERED IT IS A FINDING
+NOBODY CAN ADD UP. What eventually caught it was not a reading but a slice hitting the same wall from
+the opposite end of the architecture with someone holding both. A repository that records findings
+well can still be a repository that cannot total them.
