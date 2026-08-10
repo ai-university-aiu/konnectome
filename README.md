@@ -60,7 +60,7 @@ Each badge above is a claim, and every claim deserves a plain explanation. Here 
 
 **Row 3 - The Gates It Must Keep Green**
 
-- **`ARC-AGI-1 | 400/400 INHERITED`** and **`ARC-AGI-2 | 120/120 INHERITED`** - ARC-AGI stands for the *Abstraction and Reasoning Corpus for Artificial General Intelligence*, a famous series of public reasoning tests. The reference language PrologAI already solves all 400 of 400 and all 120 of 120 public tasks, by pure readable-logic induction with no Large Language Model. konnectome did not earn these scores; it inherits them as a promise it must never break (the Thirteenth Commandment: any change konnectome asks of PrologAI is additive and must not regress these).
+- **`ARC-AGI-1 | 400/400 INHERITED`** and **`ARC-AGI-2 | 120/120 INHERITED`** - ARC-AGI stands for the *Abstraction and Reasoning Corpus for Artificial General Intelligence*, a famous series of public reasoning tests. The reference language PrologAI already solves all 400 of 400 and all 120 of 120 public tasks, by pure readable-logic induction with no Large Language Model. konnectome did not earn these scores; it inherits them as a promise it must never break (the Fifteenth Commandment, the Safety Gate: any change konnectome asks of PrologAI is additive and must not regress these).
 - **`CONFORMANCE | 137 VECTORS GREEN`** - a conformance vector is a published test case (an input and the exact result a correct implementation must produce). Causalontology 4.0.0 has 137 of them (119 from 3.0.0, plus 18 for the three new kinds), and any data-structure change konnectome proposes must keep all 137 passing.
 
 **Row 4 - The Character**
@@ -287,4 +287,4 @@ Next: **the seam waits for a real machine** - reaching, navigation, and true hom
 
 ## License and attribution
 
-konnectome follows its family's posture: attribution always, and using it without profit is never a problem. No artificial-intelligence tool is ever credited as an author or co-author, anywhere in this repository (Fourteenth Commandment).
+konnectome follows its family's posture: attribution always, and using it without profit is never a problem. No artificial-intelligence tool is ever credited as an author or co-author, anywhere in this repository (Sixteenth Commandment).

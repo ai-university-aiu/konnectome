@@ -13,7 +13,7 @@ Author: D. R. Dison / ai-university-aiu.
 Acronyms are spelled out in full on first use, with the acronym in parentheses, and the
 bare acronym thereafter. External proper names are kept verbatim (SWI-Prolog, Ed25519,
 Git, GitHub, Abstraction and Reasoning Corpus). A causal_relation_object is a
-Causalontology structure record, spelled in full per the Twelfth Commandment. konnectome
+Causalontology structure record, spelled in full per the Fourteenth Commandment. konnectome
 is a "Whole-Word System": no abbreviation series, no single-letter series - Loop-1 not
 L1, Native-1 not N1, Proto-1 not P1.
 
@@ -48,12 +48,12 @@ PART THREE - THE THREE ROUTING DESTINATIONS (route each finding to EXACTLY ONE)
 
  - DATA-STRUCTURE gap (must be SHARED across agents or repositories as a signed,
    evidence-graded, content-addressed record, not merely computed inside one konnectome
-   runtime) -> docs/Causalontology_4_0_0_CHANGE_ORDER_v3.txt. Gated by the Thirteenth
-   Commandment: must keep the conformance suite green (one hundred nineteen vectors at
+   runtime) -> docs/Causalontology_4_0_0_CHANGE_ORDER_v3.txt. Gated by the Fifteenth
+   Commandment, the Safety Gate: must keep the conformance suite green (one hundred nineteen vectors at
    3.0.0; one hundred thirty-seven since the 4.0.0 re-freeze - see Section Two).
  - LANGUAGE gap (a real, load-bearing PrologAI-language wall) ->
-   docs/PrologAI_CHANGE_ORDER_v2.txt. Additive only, gated by the Thirteenth
-   Commandment: must not regress ARC-AGI-1 (400 of 400) or ARC-AGI-2 (120 of 120)
+   docs/PrologAI_CHANGE_ORDER_v2.txt. Additive only, gated by the Fifteenth
+   Commandment, the Safety Gate: must not regress ARC-AGI-1 (400 of 400) or ARC-AGI-2 (120 of 120)
    through Mentova.
  - konnectome-SOLVABLE gap (expressible inside konnectome's own code) -> a named
    konnectome pack or module, recorded in the coverage list of Section Four.
@@ -106,13 +106,13 @@ Appendix 6 was sliced through its closing marker "END OF NATURE'S COGNITIVE
 ARCHITECTURE, VERSION 20"; the manuscript's document-level CHANGE LOG that follows it is
 versioning metadata, not appendix content, and was deliberately not carried in.
 
-Per the Tenth Commandment, every code slice bumps the SPARCD Fileset. The current
+Per the Twelfth Commandment, every code slice bumps the DSPARCD Fileset. The current
 version is v28 (bumped in lockstep by slice 27); every superseded version lives in
 docs/archive/.
 
 
 ================================================================================
-SECTION FOUR - THE EIGHTH COMMANDMENT AUDIT: CONSTRUCT COVERAGE LIST
+SECTION FOUR - THE TENTH COMMANDMENT AUDIT: CONSTRUCT COVERAGE LIST
 ================================================================================
 
 This is the re-runnable audit. It names, for each construct of Nature's Cognitive
@@ -3827,3 +3827,63 @@ reading its output believed it was answering. THAT IS THE SAME SHAPE AS THE DAY'
 FINDINGS - a glob that returns zero, a write path that succeeds in the wrong place, a sweep that
 cannot tell a version history from a live rule - and the four together say one thing: THE CHECKS THAT
 FAIL YOU ARE THE ONES WHOSE SCOPE YOU HAVE MISREMEMBERED.
+
+
+COMMANDMENT-NUMBER SWEEP NOTE (2026-08-10). EVERY CITATION OF A COMMANDMENT BY NUMBER IN EVERY LIVE
+DOCUMENT WAS CHECKED AGAINST THE CONSTITUTION, SUBJECT BY SUBJECT. Not a slice: no pack touched, no
+test written. EIGHT LIVE CITATIONS WERE WRONG AND ARE CORRECTED. Far more were wrong-looking and were
+LEFT, and that half is the more important half.
+
+WHAT CAUSED ALL OF IT, IN ONE SENTENCE. Constitution version 4 inserted a new EIGHTH Commandment and
+version 5 inserted a new NINTH, both on 2026-08-09, so EVERY COMMANDMENT FROM THE OLD EIGHTH DOWNWARD
+MOVED BY TWO. The archive rule went from Ninth to Eleventh. The mirrored-fileset rule went from Tenth
+to Twelfth. The Whole-Word System went from Twelfth to Fourteenth. The Safety Gate went from
+Thirteenth to Fifteenth. Branch-and-report went from Fourteenth to Sixteenth. The tutorial went from
+Fifteenth to Seventeenth. The build log went from Sixteenth to Eighteenth. The hand-off protocol went
+from Seventeenth to Nineteenth.
+
+WHAT WAS CORRECTED, AND ALL EIGHT SIT IN LIVE PREAMBLES THAT MAKE CURRENT CLAIMS. The README twice -
+the PrologAI regression gate cited as the Thirteenth, and the no-Artificial-Intelligence-credit rule
+cited as the Fourteenth. The PrologAI change order's own header, citing the Safety Gate as the
+Thirteenth - which is the one that mattered most, because that line states the gate the whole document
+is governed by. And this ledger five times: the Whole-Word rule as the Twelfth, both change-order
+gates as the Thirteenth, the fileset-bump rule as the Tenth, and SECTION FOUR's own heading, which
+called the construct-coverage audit THE EIGHTH COMMANDMENT AUDIT when the audit is the TENTH. Three
+further README errors were corrected the day before, in the provenance change.
+
+WHAT WAS DELIBERATELY LEFT, AND IT IS MOST OF WHAT THE SCAN FLAGGED. Every citation inside a DATED
+RECORD was correct when it was written and is left exactly as written. The build log's early chapters
+say version 1 rests in the archive "under the Ninth Commandment" - and in July it did. The DSPARCD
+phase files' slice-1 and slice-2 realization logs say the fileset is bumped "per the Tenth
+Commandment" and archived "per the Ninth" - and at slice 1 and 2 that was true. THOSE ARE NOT ERRORS.
+THEY ARE ACCURATE STATEMENTS ABOUT A CONSTITUTION THAT HAS SINCE BEEN AMENDED, and rewriting them
+would be the slice-43 fault at scale: making a historical record say something it did not say.
+
+THE RULE IS THE SAME ONE THIS REPOSITORY HAS NOW APPLIED SIX TIMES IN TWO DAYS, arriving at a new
+kind of reference. A LIVE PREAMBLE MAKES A CURRENT CLAIM AND MUST BE CORRECT TODAY. A DATED RECORD
+MAKES A PAST CLAIM AND MUST BE CORRECT FOR ITS DATE. The build log's chapters and the phase files'
+realization logs are dated records; the README's badges, the change orders' headers, and this ledger's
+Section One routing rules are live preambles. THE TEST IS NOT WHERE THE SENTENCE SITS BUT WHAT TENSE
+ITS CLAIM IS IN.
+
+SO THAT A READER OF AN OLD DOCUMENT IS NOT LEFT GUESSING, THE CONVERSION IS STATED ONCE HERE AND THIS
+NOTE IS THE AUTHORITY ON IT: A COMMANDMENT NUMBER OF EIGHT OR HIGHER, CITED IN A DOCUMENT WRITTEN
+BEFORE 2026-08-09, MEANS THE COMMANDMENT NOW TWO PLACES FURTHER DOWN. Numbers one through seven never
+moved. If an old citation and the current Constitution disagree, add two before concluding somebody
+was wrong.
+
+WHY NOBODY CAUGHT THIS FOR A DAY AND A HALF. Every hand-off since the renumbering has carried the
+warning NEVER CITE A COMMANDMENT BY NUMBER FROM MEMORY, RE-READ IT. The warning worked: no session
+misquoted one. IT WAS AIMED AT SESSIONS AND AT THE PROSE SESSIONS WRITE, AND THE DOCUMENTS THAT WERE
+WRONG WERE THE STANDING ONES NOBODY REWRITES - a README badge, a change order's header line, a
+ledger's routing table. A rule that names its audience will be obeyed by that audience and by nobody
+else, and the documents least likely to be re-read are the ones whose first paragraph everybody
+trusts.
+
+AND THE CHECK ITSELF IS WORTH KEEPING. It is about forty lines: extract every "Nth Commandment"
+citation with its surrounding context, and test whether the context contains any word belonging to
+the subject that number governs. It over-flags heavily - "the Second and Third Commandment gates" and
+"the Eighth Commandment analysis" are correct shorthands it cannot recognise - SO ITS OUTPUT IS A
+READING LIST AND NOT A VERDICT. That is the right shape for a prose check: it narrowed ninety-one
+suspects to eight real errors, and a check that had tried to decide for itself would have rewritten
+the dated records.
