@@ -183,7 +183,14 @@ Now the sober instructions that make the fanfare safe:
    error and is corrected here. SECOND, the analysis this rule mandates was never named, so a
    session reading the constitution alone could not find the fulfilment of an obligation the
    constitution itself imposes; it lives at
-   /home/ccaitwo/konnectome/docs/konnectome_vision_set_top_down_analysis_v1.txt. THIRD, and most
+   /home/ccaitwo/konnectome/docs/konnectome_vision_set_top_down_analysis_v3.txt
+   (REPOINTED in version 11, by the owner's instruction of 2026-08-10. This line named the analysis
+   at _v1 because _v1 was current when version 6 of this Constitution wrote it, and the analysis has
+   since reached _v3 with its predecessors archived under the Eleventh Commandment. The line's
+   purpose is to let a session reading the Constitution alone FIND the fulfilment of an obligation
+   this Constitution imposes, so a stale version here defeats the whole point of the sentence. The
+   superseded versions remain readable in docs/archive/ and the standing rule below is what governs
+   which one leads: a LATER assessment supersedes an earlier one. No rule changed.) THIRD, and most
    important, its STANDING is now stated here so that no session has to infer it.
    (CORRECTED in version 7, by the owner's instruction of 2026-08-09. Version 6 stated flatly that
    the analysis is derived and carries no guiding authority of its own. That was accurate about its
@@ -394,7 +401,14 @@ read konnectome_0_definition FIRST, because it is the concept the other six answ
 - A short sign-off.
 Step 4: Commit the hand-off on a feature/ branch through a pull request. Auto-Push. Then PAUSE.
 
-VERSION HISTORY NOTE (extended in version 10). This Constitution is at VERSION 10. Version 10, by
+VERSION HISTORY NOTE (extended in version 11). This Constitution is at VERSION 11. Version 11, by
+the owner's instruction of 2026-08-10, repoints the Eighth Commandment's named analysis from _v1 to
+_v3, the version current on that date. NO COMMANDMENT WAS REMOVED, NO COMMANDMENT WAS RENUMBERED,
+AND NO RULE CHANGED - only the version in a path. It is recorded as its own version rather than
+folded into version 10 because the two changes are different acts on different days' work: version
+10 moved files, version 11 follows a document that was rewritten.
+
+Version 10, by
 the owner's instruction of 2026-08-10, records the move of every SOURCE neuroscience document into
 docs/neuroscience/ : the thirty-eight-document Vision Document Set of the Eighth Commandment, and the
 guiding book named by the Seventh and Tenth Commandments. THREE COMMANDMENTS CARRIED A PATH TO A
