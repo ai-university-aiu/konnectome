@@ -1,0 +1,251 @@
+THE MODE REGISTER: THE DESIGN AUTHORITY
+
+A deep read of the guiding corpus's fourteen MODES companions plus the Layer 6 chapter template, executed as the design authority for a construct-level mode register, and resolving the MODE-flag naming collision.
+
+Date: 2026-08-09. Version 1.
+
+
+HOW THIS READ WAS MADE
+
+This read was ordered by the owner's judgment of 2026-08-09, recorded in the ledger's Owner-judgment note and in the ELEVATION OF THEME ONE at the head of Part Two of konnectome_vision_set_top_down_analysis_v1.txt: that construct MODES at every level, though inspired recently and arrived almost as an afterthought, are a CHIEF AND CRITICAL aspect of the konnectome synthetic mind rather than one refinement among five.
+
+The method is the Eighth Commandment analysis's own: parallel readers by grain, synthesized against the packs that exist. Four readers covered the fourteen MODES companions and the chapter template, roughly thirty thousand lines: Layer 6 (the cells, and the template that is the parse schema); Layer 11 (the global states, plus the downward-assignment sections of the Layer 11 states manuscript); Layers 4-5 and 7 (the slow variables and the junctions); and Layers 8, 9 and 10 (the motifs, regions and systems). Every load-bearing quotation reproduced below was independently verified against the source by the synthesizing session before it was written here.
+
+The baseline was verified green before the reading began: 583 tests across twenty-nine packs, four gates at zero violations, the capstone clean, conformance 137 of 137 in both cousins.
+
+This document is a DESIGN AUTHORITY, not a slice. No code changed and no test moved in the change that created it.
+
+
+PART ONE - THE VERDICT: THE CORPUS FIXES THE FORMALISM, AND KONNECTOME NEED NOT INVENT IT
+
+The single most important finding is that konnectome does not have to design a mode register. The corpus specifies one, in identical words, at every grain. The vocabulary is declared once and then held:
+
+    STATE is the continuous instantaneous condition; MODE is the discrete operating regime; the
+    formalism is the hybrid automaton - mode register, per-mode transfer functions, transition
+    table, fault watchdogs - under the admission rule that a regime enters the register only if
+    the healthy system uses it.
+
+That sentence, or its near-twin, appears at Layers 7, 8, 9, 10 and 11, each time citing the Layer 6 modes volume as the place the vocabulary was established. The Layer 6 template states the same four blocks as the parsed structure of every chapter, in this fixed order: THE MODE REGISTER; PER-MODE TRANSFER FUNCTIONS; THE TRANSITION TABLE; FAULT REGIMES AND WATCHDOGS.
+
+Three consequences follow immediately. First, the register is a HYBRID AUTOMATON and konnectome should name it one, because that is a well-understood formalism with known properties and the corpus chose it deliberately. Second, the four blocks are the schema, and konnectome's implementation should carry all four or declare which it omits and why. Third, and most usefully for a build that fears speculation: the corpus has already made the design decisions that would otherwise be guesses, and where it has NOT decided, Part Seven below names those gaps explicitly so konnectome's own choices are recorded as konnectome's rather than smuggled in as the corpus's.
+
+
+PART TWO - THE MODE ENTRY SCHEMA, AS THE CORPUS ACTUALLY WRITES IT
+
+A mode entry in the register carries THREE fields and no more. The line format is invariant across all 946 modes of the Layer 6 volume:
+
+    Formal Name - the Coined Name - one-clause gloss of what the construct does while in it.
+
+The formal name is the literature's term where one exists. The coined name is required to be, in the template's own words, vivid, functional, unpretentious, and is always prefixed "the": the Faithful Relay, the Wake-Up Call, the Restless Sentinel, the Rowing Crew. The gloss says what the construct does in that mode and typically under what normal condition it is used.
+
+Note what is NOT in the register. The rule is not there. The parameters are not there. Entry and exit conditions are not there. Timescale is not there. Those live in the two blocks that follow, and keeping them out of the register is what makes the register readable as a list of what a construct can BE.
+
+PER-MODE TRANSFER FUNCTIONS is a parallel block, keyed by mode name, one bullet per mode, carrying the input-to-output law that holds while that mode is current, its characteristic parameters (rates, thresholds, duty cycles, conductances, secretion rates, diffusion radii), and - this is a first-class field konnectome has no analogue for - an explicit CONFIDENCE tag. Observed values include high, moderate, moderate on exact rate bands, low, well established, and confidence deliberately low. The Layer 6 volume carries about 340 such tags. Confidence is operational, not decorative: at least one junction entry REFUSES to admit a mode on evidential grounds, recording that mammalian long-term change is not established, low confidence, so no standing potentiated mode is admitted.
+
+THE TRANSITION TABLE is explicit, separate, and present in every entry at every grain. A transition row carries four fields:
+
+    TRIGGER - DIRECTION (from mode to mode) - TIMESCALE - AGENCY.
+
+Agency is the field konnectome must not omit, because it is the corpus's answer to who governs the machine. Layer 7 standardises it as a flag on the row, "flagged as thrown from above", appearing sixteen times in that volume alone. Layer 10 formalises it further into a categorised throw-type per row: a within-system throw, a state transition, hormonal and arousal throws, a network throw, a bottom-up limit.
+
+Guards are NOT a field. Thresholds and arming conditions are folded into the trigger clause. konnectome should not design a guard column the corpus cannot populate.
+
+Timescale is mandatory and spans roughly fifteen orders of magnitude within the same catalogue, from microseconds of ephaptic coupling and three-to-eight-millisecond relays, through the hundred milliseconds it takes to arm a burst, through seconds of arousal, hours to days of priming, to one-to-two weeks then permanent, to lifelong. A register that models transitions as instantaneous edges discards the corpus's principal quantitative content.
+
+Three transition kinds exist beyond plain mode-to-mode, and all three must be representable:
+
+• WITHIN-MODE MODULATION, which the corpus explicitly marks as not a mode change: adjusts gain within a mode; lowers firing within the Idle; deepens Background Drain load but not a mode change. This matters enormously for konnectome, which already has exactly this primitive in relay(Gain) - gain is the right idea, but the corpus places it UNDER a mode rather than INSTEAD of one.
+
+• BIAS RATHER THAN SWITCH: lifts the cell out of the Held Breath and biases it toward flashing.
+
+• EXPLICIT NEGATIVE ASSERTION: there is no second cellular mode and no renewal on any adult timescale; no operating-mode transition in health, the junction is deliberately monostable.
+
+REGISTER SIZE IS ITSELF MEANING, and it is small. At the cell grain the distribution across 386 entries is hard-bounded: 19 entries of one mode, 196 of two, 149 of three, 22 of four, none of zero and none of five or more. Median two. Junctions run one to five, regions and systems up to eight. The corpus states the interpretation directly: mode-poor is as meaningful as mode-rich, a register of two says the system trusts this cell to relay or to veto, not to decide, a register of four says the cell is itself a decision-maker; and at Layer 7, the length of the register is a statement of what the system trusts the component to decide.
+
+A REGISTER OF ONE MUST THEREFORE BE FIRST-CLASS, NOT DEGENERATE. The Layer 7 volume says "A register of one, stated proudly" three separate times. Any konnectome schema that requires at least two modes, or that treats a single-mode construct as an empty or default case, contradicts the corpus's central claim about what register length means. This is good news for the build: konnectome's existing single-rule constructs are not a gap to be fixed but faithful models of mode-poor components, and they should be re-expressed as one-mode registers rather than replaced.
+
+
+PART THREE - WHO SETS THE MODE, AND THE NESTING QUESTION ANSWERED
+
+Mode setting is BOTH self-selected and purchased from above, the balance shifts upward as the grain coarsens, and the corpus states this as its headline finding rather than leaving it to be inferred.
+
+The Layer 6 template makes the annotation mandatory: where a transition is thrown from above - by brain state, neuromodulator broadcast, or hormonal axis - say so, because mode setting is largely a service purchased from Layers 10 and 11 through the volume transmission channel. The Layer 6 introduction adds that transitions are thrown from above at least as often as from within, and that each broadcast throws millions of cellular mode switches at once; the idiom appears on 255 lines of that volume. Layer 8 sharpens it into an image: a motif is a machine whose gear lever is usually held by the whole organism. Layer 9 goes furthest, calling a region's mode the framework's clearest demonstration of downward causation in ordinary operation.
+
+Self-selection is equally real and is often stated as a proud refusal: no neuromodulatory mode-switching is used, the register is proudly small; no brain-state mode-switching at the muscle, the endplate refuses to be modulated. And a third and fourth authority exist beyond self and brain-state: hormonal axes, and damage or immune signalling arriving from peers and from the body. The provenance field is therefore at least four-valued, not two.
+
+THE NESTING QUESTION IS THE MOST CONSEQUENTIAL THING IN THIS DOCUMENT, and the corpus answers it in a way that is much cheaper to build than the obvious guess.
+
+The obvious guess is a hierarchy of registers with derivation rules, where a parent's mode computes its children's modes. THE CORPUS DOES NOT SPECIFY THAT, AND TWICE POINTS THE OTHER WAY. Layer 8: a motif's modes are circuit regimes, emerging from but not reducible to the modes of its member cells and junctions. Layer 8 again, on composition: a thalamic relay cell has a burst mode at Layer 6; the relay triad has a burst-alert gating mode at Layer 8 that exists only when the cell's mode, the reticular gate's state, and the cortical context align. That is a guard on the HIGHER mode expressed in terms of the LOWER ones, which runs upward, not downward.
+
+What the corpus describes instead is COMMON-CAUSE COORDINATION BY BROADCAST. Layer 9: brain states and hormonal axes assign regional modes wholesale, and a global state is best read as one coordinated assignment of modes across every construct in this volume. Layer 9 again, and decisively: when the hippocampus is in its theta encoding mode, that one regional fact CONTAINS pyramidal cells in their spiking modes, synapses in their plasticity-permissive modes, and the theta-gamma nesting motif engaged - all coordinated, and all thrown by an arousal broadcast the hippocampus did not originate. The region's mode does not cause the cell's mode. One broadcast causes both.
+
+Layer 11 closes the recursion and grounds it: cells hold modes; junctions hold modes; motifs hold modes; regions hold modes; states assign all of them - and states themselves have sub-modes, which is where the recursion grounds, because the sub-modes of a global state are configurations of the whole organism, and there is nothing larger inside the skin to assign them.
+
+THE DESIGN THAT FOLLOWS, and it is the central recommendation of this document:
+
+1. ONE REGISTER PER CONSTRUCT, at every grain, each independently writable. No derivation function from parent mode to child mode, because the corpus supplies none and denies the reduction twice.
+
+2. A BROADCAST CHANNEL THAT MANY REGISTERS SUBSCRIBE TO, so that one global-state write produces many coordinated register transitions. The broadcast is written once and read many times. konnectome already owns this channel: the neuromodulator bus, with its global level, its per-territory level, and its diffuse-field fallback, is structurally the right carrier and needs no new component.
+
+3. AN ADMISSIBILITY GUARD PER MODE for composite constructs only, expressible over the modes of the construct's parts - the corpus's "exists only when the parts align" clause.
+
+The nesting is real, but it lives in the broadcast fan-out and in the guards, never in a derivation function.
+
+
+PART FOUR - THE ADMISSION RULE, AND FAULTS AS SUPERVISORS
+
+The admission rule is stated normatively at every grain and is the corpus's own governance of what may be coded:
+
+    a regime enters the register only if the healthy system uses it under some normal operating
+    condition; everything else is a fault regime, watched rather than coded.
+
+The Layer 6 template gives konnectome its engineering directive in the corpus's own words: these are faults, not modes - in an engineering realization they are implemented as supervisor processes publishing warnings and errors, never as first-class operating modes. konnectome has no supervisor or warning channel today. Building the register without one would put faults into the register, which the template forbids by name.
+
+A fault entry carries three fields: boundary signature, warning condition, and the watchdog mechanism that guards against it. Watchdog absence is recorded honestly where it is absent.
+
+TWO QUALIFICATIONS THAT A STRICT VALIDATOR WOULD GET WRONG:
+
+• THE RULE IS PER CONSTRUCT, NOT PER REGIME. The template is explicit: depolarization block belongs in the register of a type that uses it functionally and in the fault table of a type that only suffers it. The same named regime is a MODE in one construct and a FAULT in another. A global fault list is therefore wrong; admission is a per-construct judgement.
+
+• A TAGGED MINORITY OF FAULTS ARE ADMITTED INTO THE REGISTER ON A USAGE ARGUMENT, always with the reasoning written inline: admitted only as fault; a fault regime, admitted only because it names the failure; a used but pathological standing state, admitted here because it is reached routinely in disease and is largely reversible; admitted because rods progressively escape it to contribute in daylight, so it is a normal boundary of operation. These cluster at Layer 8 in the glial, vascular and endocrine entries. The schema therefore needs a per-mode admitted-as-fault flag and a rationale slot, not a blanket exclusion.
+
+
+PART FIVE - WHAT KONNECTOME HAS, SCORED HONESTLY
+
+konnectome has built the STATE MACHINERY of the corpus's Part Three well, and close to none of the MASTER MODE REGISTER.
+
+What exists, mapped to the corpus's own construct names: the sleep-wake toggle (Chapter 11) exists as a genuine two-threshold flip-flop that snaps and holds; the sleep-pressure accumulator (Chapter 14) exists; the circadian clock governor (Chapter 15) exists; the offline consolidation state (Chapter 7) exists, and its interleaved-replay-plus-raised-bound design is exactly what that chapter specifies; the state broadcast service (Chapter 16) exists PARTIALLY, as a level bus carrying one binary state atom. That is roughly four and a half of twenty-six Layer 11 entries, and all of the four and a half are machinery rather than states.
+
+The blunt summary a reader should carry away: THE OPERATING-SYSTEM SPECIFICATION HAS BEEN IMPLEMENTED AS A POWER-MANAGEMENT DRIVER. The foundation is sound and was built to the corpus's own design, so the register can be layered on top without rework - but the register itself is absent.
+
+What is missing, in order of severity:
+
+• THE REGISTER ITSELF. There is no enumerated set of named global states and no state identity beyond a binary. The atom online collapses the four waking chapters into one value and offline collapses the four sleep chapters into another. This is not extensible by adding atoms, because the corpus's states are not points on one axis: rapid-eye-movement sleep breaks any linear ordering, since its downward assignment is closer to waking than to deep sleep at the region and cell grains, and its broadcast blend is a chemical inversion no waking or deep-sleep state ever shows.
+
+• THE DOWNWARD ASSIGNMENT. Nothing in the tree writes a per-construct mode to any target. The offline consolidation engine READS the state atom and changes its own behaviour, which is a subscriber pulling rather than a register pushing. The corpus's centrepiece section has no implementation. In the corpus's own contrast, the hardware itself is retuned by the broadcast, every cell shifting mode, rather than merely being clocked faster; konnectome today is the clocked-faster case.
+
+• SUB-MODE REGISTERS, all sixty-three of them, including the two cheapest and most load-bearing: deep sleep's early-night versus late-night residual regimes, where the offline machinery runs weaker and briefer as the night proceeds while konnectome's raised bound is a constant; and rapid-eye-movement sleep's phasic and tonic sub-modes.
+
+• THE NESTED REM GATE and the ultradian scheduler, without which the night is one undifferentiated offline block rather than four to six cycles with deep sleep front-loaded and dreaming back-loaded, which the corpus calls the scheduling law.
+
+• THE STABILISER AS A SEPARATE CONSTRUCT. The corpus is explicit that hysteresis is not part of the switch: this is a stabiliser, not a switch, so it has no poles of its own, and it publishes a scalar stability bias onto the configuration bus, gated by circadian phase and hunger. konnectome's hysteresis is two constants inside the governor's parameter block. This is a real, small, high-value gap and a natural early slice.
+
+• A SUPERVISOR OR WATCHDOG CHANNEL, which the template requires by name.
+
+• A CONFIDENCE FIELD, which the corpus treats as operational.
+
+• MULTI-RATE TIME. Transitions span microseconds to weeks; konnectome's uniform tick has nowhere to put a days-to-weeks transition beside a sub-second one.
+
+• A REGION-GRAIN CONSTRUCT. This is the biggest missing STRUCTURE. konnectome's constructs are single-node update rules; a Layer 9 region is a territory containing many nodes and motifs, owning its own register and declaring its own scope. konnectome has territories only as a per-territory neuromodulator LEVEL - a scalar, not a named addressable construct that can hold a register. Promoting the territory from a level to a first-class named construct is the prerequisite for the region grain.
+
+WHAT KONNECTOME ALREADY HAS THAT IS RIGHT, and should be preserved rather than replaced: the gate archetype's binary flip is a genuine two-mode register in the corpus's own sense and is the natural seed of the whole design; single-rule constructs are faithful mode-poor registers of one; the neuromodulator bus with global and per-territory levels is structurally the state broadcast service the corpus describes; and named subgraph views are the right home for the motif grain.
+
+
+PART SIX - THE NAMING COLLISION, RESOLVED
+
+The collision recorded as a hazard by the Eighth Commandment analysis is real, is worse than a vocabulary clash, and is CHEAP TO FIX, so it should be fixed before the first register slice rather than worked around.
+
+THE COLLISION. konnectome's data model uses MODE on interfaces and molecules to mean directed-versus-broadcast TOPOLOGY. The corpus uses MODE to mean a discrete operating regime, defined explicitly against STATE. These are orthogonal concepts sharing a word. The clash is not abstract: at the cell grain some operating modes are distinguished PRECISELY BY OUTPUT TOPOLOGY, so the two senses meet head-on inside single register entries. The thalamic local interneuron's two modes are local dendritic release versus global spiking, differing only in output topology, with a threshold crossing between them. The magnocellular neurosecretory cell has a dendritic broadcast mode running in parallel with the others. The dopaminergic amacrine cell has a mode literally named daylight broadcast mode. A scheme that makes topology a static per-edge MODE flag cannot represent any of these cells.
+
+THE RESOLUTION: RENAME KONNECTOME'S TOPOLOGY FLAG TO TOPOLOGY, WITH VALUES DIRECTED AND BROADCAST, AND RESERVE MODE FOR THE CORPUS SENSE THROUGHOUT.
+
+The evidence for moving konnectome's term rather than the corpus's:
+
+• The corpus owns the word across 386 cell entries, 64 junction entries, 71 motif entries, 77 region entries, 44 system entries and 26 global states, in four parsed block headers, in a controlled mode-richness vocabulary (mode-rich, mode-poor, mode-moderate), and in formal literature names that cannot be renamed at all (Tonic Mode, Burst Mode, firing mode, plateau mode, pacemaker mode). The corpus vocabulary is fixed and public across the whole guiding corpus.
+
+• konnectome's flag is INTERNAL. It was verified during this read that no directed-versus-broadcast MODE flag exists in causalontology, so RESOLVING THIS COLLISION IS KONNECTOME-INTERNAL WORK AND REQUIRES NO CHANGE ORDER through the Second Commandment's gate. That verification is what makes the rename cheap, and it should be re-run before the slice in case the data model moves.
+
+• The corpus already supplies its own name for konnectome's concept: volume transmission versus wired or directed transmission, and the framework's volume transmission channel.
+
+TWO SECONDARY COLLISIONS TO HANDLE IN THE SAME SLICE:
+
+• BROADCAST is doubly used - konnectome's topology VALUE versus the corpus's announcement channel and its many mode names containing the word (waking-on broadcast, excitatory broadcast, pulsatile broadcast, dendritic broadcast, death broadcast). The neuromodulator bus already claims the announcement sense in code, so the topology value is the one that should carry a qualifier if one is needed.
+
+• REGISTER is overloaded INSIDE the corpus itself, meaning both the list of modes and a single mode slot (the Reactive Register, the Disease-Associated Register, the Immune-Gating Register). konnectome should not add a third sense.
+
+WHAT MUST NOT BE RENAMED: the gate archetype's existing mode vocabulary. Its binary flip is a genuine corpus-sense two-mode register, so archetype's current use of the word is CORRECT and becomes the seed of the design rather than a casualty of the rename.
+
+
+PART SEVEN - WHAT THE CORPUS DOES NOT SETTLE, AND KONNECTOME MUST DECIDE
+
+These are recorded so that konnectome's choices are known to be konnectome's. The corpus is genuinely silent on each; none of them may be presented later as the corpus's instruction.
+
+1. COMMAND VERSUS BIAS. Whether a transition thrown from above deterministically SETS the target's mode or merely moves its threshold. Both readings appear literally, sometimes in the same volume: keeps it in the Pinpoint Report, set from above, is command-like; biases it toward flashing is bias-like. konnectome must choose, and the choice shapes the whole broadcast semantics.
+
+2. CONFLICT RESOLUTION. What happens when a construct's self-selected transition conflicts with a broadcast throw. The corpus shows preemption in one place (an imminent threat cue preempts feeding with the defence programme) and negotiated arbitration in another (the ganglionic interneurons weigh both sources and compute a compromise), but states no general rule.
+
+3. OVERLAY VERSUS REPLACEMENT AT THE GLOBAL GRAIN. The arousal, stress, sickness and metabolic states plainly coexist with a waking or sleeping base state, and the corpus says one protocol yields temporarily to an emergency and then resumes - but it supplies no composition rule for two simultaneously active entries assigning the same construct, and no priority ordering. Any master register konnectome builds must invent this.
+
+4. WHETHER SUB-MODES CHANGE THE DOWNWARD ASSIGNMENT, or only scale its parameters. Deep sleep's two sub-modes plainly differ in delta power, yet only one downward assignment is given for the chapter.
+
+5. THE TYPE-VERSUS-MODE BOUNDARY IS ADMITTED SOFT. At least three of the 64 junction types are, by the corpus's own admission, modes of another type promoted to type status for cataloguing convenience: the silent synapse is not a separate species so much as a mode of the glutamatergic fast excitatory synapse. The corpus will not decide which side of the line these fall on.
+
+6. LAYER 10 IS OMITTED FROM ALL TWENTY-SIX DOWNWARD ASSIGNMENTS, which always run regions, motifs, junctions, cells - even though the introduction says Layer 10 delivered the pipelines and axes. Whether systems are assigned, assigned implicitly through regions, or deliberately exempt is never stated. This is the largest unresolved gap in the Layer 11 grain.
+
+7. WHETHER CONCURRENT MODES ARE A GENERAL FACILITY OR AN EXCEPTION. Modes running in parallel with the others exist at the cell grain and coexisting-by-geometry registers exist at the junction grain, but the corpus neither counts them nor marks them syntactically.
+
+8. WHETHER DEVELOPMENTAL-ONLY MODES BELONG IN A RUNTIME REGISTER. The corpus admits them on the ground that development is a used condition; a runtime system may reasonably differ.
+
+
+PART EIGHT - CONSTRAINTS AND CONTRADICTIONS ON THE CURRENT DESIGN
+
+• ONE RULE PER CONSTRUCT IS DIRECTLY CONTRADICTED. The whole Layer 6 volume is 386 assertions that a construct runs a different transfer function depending on a discrete mode variable: while a mode holds, the cell behaves like a different machine. A construct term that fixes one rule for all time cannot express this. The minimum ask is a construct holding a small tagged set of rules plus an index into it.
+
+• REGISTERS ARE NOT UNIFORMLY ONE-HOT. The thalamus engages attentional selection WITHIN tonic relay; sub-modes are marked lexically at several grains. A flat enumeration per construct will not hold this; a mode plus an optional overlay slot will.
+
+• SOME REGISTER AXES ARE NOT RUNTIME-SWITCHABLE AT ALL: coherent versus incoherent is fixed anatomically, not a fast switch. konnectome must distinguish a structural VARIANT from a runtime MODE, or it will model rewiring as a state transition.
+
+• CONTINUOUS MODULATION AND DISCRETE THROW ARE DIFFERENT OPERATIONS ON THE SAME CHANNEL, and konnectome's bus-modulated relay currently conflates them. The corpus separates them explicitly: attention modulates transfer by roughly ten to thirty percent WITHIN tonic mode, whereas the arousal throw SWITCHES burst to tonic.
+
+• MODES ARE NOT ALL ELECTRICAL. Registers include secretion rates, ciliary beating, contraction, morphology and motility, proliferation, and programmed cell death as a registered mode. A construct whose only output is an activation level cannot host these, and a mode whose exit is the destruction of the construct has no representation in konnectome at all.
+
+• SOME MODES ARE POPULATION ROLES, not node states: pacemaker hub versus follower, gap-junction synchrony, synchronised bursting. konnectome has no ensemble object to attach them to.
+
+• MODE REGISTERS NEST BY REFERENCE. A mode slot may point at another construct's register, and one such register is shared by six other types. konnectome's flat per-node rules have no such indirection.
+
+• EDGE KINDS AND EDGE RULES. Two edge kinds do not span the corpus's sixty-four junction types, and one learning rule for all edges is contradicted by a catalogue containing coincidence learning with a timing window, supervised error-gated depression with an external teacher, presynaptic potentiation stored as release probability, retrograde depression, conductance plasticity on an electrical edge, and three-factor dopamine-gated plasticity with opposite sign in two pathways. Where the weight LIVES also varies, including one type whose stored variable is conduction DELAY rather than a weight.
+
+• AN ORDERING CONSEQUENCE FOR THE QUEUE. At the junction grain, TYPE and MODE are two different axes, and the mode register is a PROPERTY OF the type - each type draws its own subset from a shared mode vocabulary, and the type is what carries whether an update rule exists at all. THEREFORE THEME THREE, THE EDGE TYPE REGISTRY, SHOULD LAND BEFORE THE JUNCTION-GRAIN MODE REGISTER. This reverses the ordering implied by the current queue and is recorded here as this read's most concrete scheduling finding.
+
+• AN IMPLICATION FOR SLICE FAMILY ONE ITEM (e). The write-allocation gate and plasticity fence are not one gate. The corpus supplies at least four distinct write-permission kinds at different scopes with different owners: a territorial structural freeze thrown by the developmental programme; a per-node allocation window that is self-set and decays; a per-edge third-party licence that can INVERT the sign of the update rule rather than merely gate it; and a broadcast permission flag. Collapsing these into a single freeze flag would lose both the sign inversion and the scope distinction. Item (e) should be designed against this finding.
+
+
+PART NINE - THE SUGGESTED SLICE FAMILY, SMALLEST FIRST
+
+The owner disposes; this is the read's suggestion, ordered so that each slice is small, testable, and closes before the next begins.
+
+1. THE NAMING RESOLUTION. Rename the topology flag to TOPOLOGY with values directed and broadcast; reserve MODE for the corpus sense; leave the gate archetype's mode vocabulary untouched. Re-verify first that no directed-versus-broadcast MODE flag has appeared in causalontology, so the work stays konnectome-internal. Behaviour pinned identical throughout.
+
+2. THE ONE-MODE REGISTER, WITH TODAY'S BEHAVIOUR UNCHANGED. Give every construct a register carrying exactly one mode, its rule as the per-mode transfer function, an empty transition table, and behaviour pinned bit-identical. This is the degenerate case the corpus insists is first-class, and it converts the whole existing repository into a valid mode-register system without changing a single number.
+
+3. THE GATE ARCHETYPE RE-EXPRESSED as its genuine two-mode register, with an explicit transition table carrying trigger, direction and timescale. Validated against corpus entries whose registers are two.
+
+4. THE BUS THROWS A TRANSITION. Let a broadcast write a construct's mode, so one write produces many coordinated transitions. This is the corpus's own mechanism, and konnectome's bus already carries the channel. The command-versus-bias decision of Part Seven must be made and recorded here.
+
+5. THE SUPERVISOR CHANNEL, so fault regimes are watched and published as warnings rather than admitted as modes, per the template's directive.
+
+6. THE STABILISER AS A SEPARATE CONSTRUCT, publishing a modulable hysteresis scalar onto the bus, replacing the two constants now sitting inside the two-process governor.
+
+7. THE MASTER REGISTER WIDENED, replacing the online-and-offline binary with a named global state plus a sub-mode, and only then the downward assignment that writes per-construct modes.
+
+Deferred deliberately and named so the gap is a decision: the region-grain construct, which requires promoting a territory from a level to a first-class named construct; multi-rate time; ensemble objects for population-role modes; and the confidence field.
+
+
+PART TEN - WALLS: NONE ROUTED
+
+No wall was hit. The Second and Third Commandment gates were applied strictly, and every construct this read examined is expressible as konnectome-internal pack work over the constructs and the bus that already exist. In particular the naming collision, which was the likeliest routing candidate, was verified to be konnectome-internal.
+
+Three WATCHES are recorded, to be claimed only if building actually hits them: the region-grain construct, if promoting a territory to a first-class named construct turns out to need a shareable identity the data structure cannot express; the confidence field, if per-mode epistemic warrant needs to travel between agents as an evidence grade; and the supervisor channel, if a published warning needs to be a shareable record rather than a konnectome-internal signal.
+
+The held sections of the causalontology change order remain HELD. Nothing in this read releases them.
+
+
+PART ELEVEN - CLOSING
+
+The corpus did not merely ask konnectome to add modes. It handed over a formalism, a schema, a governance rule for what may be coded, and a mechanism for coordinating registers without a controller - and it did so fourteen times, once beside every layer, in the same words.
+
+The most useful finding is the cheapest one: the register is small. One to four modes at the cell grain, median two, and a register of one stated proudly. konnectome does not need to scale to meet this; it needs to be expressive, and its existing single-rule constructs are already valid entries rather than a debt.
+
+The most consequential finding is the nesting answer. There is no derivation function from a parent's mode to a child's, and the corpus denies the reduction twice. There is one broadcast, written once and read many times, and a guard that lets a composite mode exist only when its parts align. konnectome already owns the broadcast.
+
+And the most honest finding is the score. The state machinery is built well and to the corpus's own design; the register is not built at all. The operating-system specification has so far been implemented as a power-management driver. What this document supplies is the specification for the rest of the operating system, read rather than guessed.

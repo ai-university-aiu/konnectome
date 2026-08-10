@@ -1577,6 +1577,81 @@ No wall was hit and nothing here routes to either cousin; this is a konnectome-i
 judgment, recorded per the Fourth Commandment because the ledger is the scoreboard of the build and a
 decision of this size belongs on it.
 
+Modes deep-read note (2026-08-09). THE MODES DEEP READ IS EXECUTED, and the design authority for
+the construct-level mode register is docs/konnectome_mode_register_design_authority_v1.txt. The
+method was the Eighth Commandment analysis's own: four parallel readers by grain over the fourteen
+MODES companions plus the Layer 6 chapter template, roughly thirty thousand lines, synthesized
+against the packs that exist, with every load-bearing quotation independently re-verified against the
+source before it was written down. Baseline verified green first: 583 tests across twenty-nine packs,
+four gates at zero, capstone clean, conformance 137 of 137 in both cousins.
+
+THE HEADLINE: KONNECTOME DOES NOT HAVE TO DESIGN A MODE REGISTER, BECAUSE THE CORPUS SPECIFIES ONE,
+in identical words, at every grain: "STATE is the continuous instantaneous condition; MODE is the
+discrete operating regime; the formalism is the hybrid automaton - mode register, per-mode transfer
+functions, transition table, fault watchdogs - under the admission rule that a regime enters the
+register only if the healthy system uses it." A mode entry carries three fields (formal name, coined
+plain-English name, one-clause gloss) and nothing else; rules, parameters and confidence live in a
+parallel transfer-function block; transitions are a separate table of trigger, direction, TIMESCALE
+and AGENCY. Guards are not a field, and konnectome must not design a column the corpus cannot fill.
+
+THE CHEAPEST FINDING: THE REGISTER IS SMALL. At the cell grain the distribution across 386 entries is
+hard-bounded - 19 entries of one mode, 196 of two, 149 of three, 22 of four, none of zero and none of
+five or more. Median two. And a register of one is FIRST-CLASS, not degenerate: "A register of one,
+stated proudly", said three times. konnectome's existing single-rule constructs are therefore valid
+mode-poor entries rather than a debt, and the whole repository can become a valid register system
+without changing a number.
+
+THE MOST CONSEQUENTIAL FINDING: THE NESTING QUESTION IS ANSWERED, AND THE ANSWER IS CHEAP. There is
+NO derivation function from a parent construct's mode to a child's, and the corpus denies the
+reduction twice ("emerging from - but not reducible to"; and a composite mode "exists only when the
+cell's mode, the reticular gate's state, and the cortical context align", which runs upward, not
+downward). What the corpus describes is common-cause coordination: one broadcast written once and
+read many times, plus an admissibility guard on composite modes. konnectome already owns the
+broadcast - the neuromodulator bus, with its global level, per-territory level and diffuse fallback,
+is structurally the corpus's own state_broadcast_service and needs no new component.
+
+THE HONEST SCORE: THE OPERATING-SYSTEM SPECIFICATION HAS BEEN IMPLEMENTED AS A POWER-MANAGEMENT
+DRIVER. The state machinery of slices 35 through 38 is built well and to the corpus's own design -
+roughly four and a half of Layer 11's twenty-six entries, and all of them machinery rather than
+states - while the register itself is absent. Nothing writes a per-construct mode to any target: the
+offline engine READS the state atom, which is a subscriber pulling rather than a register pushing,
+and the corpus's contrast is exact - "the hardware itself is retuned by the broadcast, every cell
+shifting mode, rather than merely being clocked faster". The online/offline atom is also not
+extensible by adding atoms, because rapid-eye-movement sleep breaks any linear ordering.
+
+THE NAMING COLLISION IS RESOLVED, AND IT IS KONNECTOME-INTERNAL. Rename the topology flag to
+TOPOLOGY (values directed and broadcast) and reserve MODE for the corpus sense. VERIFIED DURING THIS
+READ: no directed-versus-broadcast MODE flag exists in causalontology, so this requires NO change
+order through the Second Commandment's gate - re-verify before the slice in case the data model
+moves. The corpus owns the word across 386 cell entries, 64 junctions, 71 motifs, 77 regions, 44
+systems and 26 global states, in four parsed block headers and in unrenameable literature names. The
+gate archetype's existing mode vocabulary is CORRECT in the corpus's sense and must NOT be renamed;
+it is the seed of the design.
+
+A QUEUE-ORDERING CONSEQUENCE, recorded because it reverses the standing order: at the junction grain
+TYPE and MODE are two different axes and the mode register is a PROPERTY OF the type, so THEME THREE
+(the edge type registry) SHOULD LAND BEFORE the junction-grain mode register. And slice family one's
+item (e) is reshaped: the corpus supplies at least FOUR distinct write-permission kinds at different
+scopes with different owners - a territorial structural freeze thrown developmentally, a per-node
+allocation window that self-sets and decays, a per-edge third-party licence that can INVERT the
+update rule's sign rather than merely gate it, and a broadcast permission flag - so collapsing them
+into one freeze flag would lose both the sign inversion and the scope distinction.
+
+EIGHT THINGS THE CORPUS DOES NOT SETTLE are enumerated in Part Seven of the design authority and are
+recorded as KONNECTOME'S OWN DECISIONS, so none may later be presented as the corpus's instruction:
+command versus bias for a thrown transition; conflict between a self-selected transition and a
+broadcast throw; overlay versus replacement when two global entries assign the same construct;
+whether sub-modes change the downward assignment; the admittedly soft type-versus-mode boundary;
+the omission of Layer 10 from all twenty-six downward assignments; whether concurrent modes are a
+general facility; and whether developmental-only modes belong in a runtime register.
+
+WALLS: NONE ROUTED. The Second and Third Commandment gates were applied strictly and every construct
+examined is expressible as konnectome-internal pack work. THREE WATCHES recorded in the design
+authority (the region-grain construct's identity, the confidence field as a travelling evidence
+grade, the supervisor channel as a shareable record), each claimable only if building actually hits
+it. Sections C, D, E of the causalontology change order remain HELD. No code changed and no test
+moved; no cousin edited, per the Second, Third, and Fourth Commandments.
+
 Observation-5 (2026-08-09, from slice 35). The neuromodulator_bus chemical reads
 (neuromodulator_bus_level/3 and neuromodulator_bus_level_territory/4) silently bind an UNBOUND
 bus argument into a partial list during lookup, against the module's own never-silently-bound
