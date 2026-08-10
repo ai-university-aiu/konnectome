@@ -107,9 +107,9 @@ konnectome is built and maintained under a written [**CONSTITUTION.md**](CONSTIT
 2. **Causalontology is the thought structure** - frozen to konnectome except through the gated change-order process.
 3. **PrologAI is the language** - the same gate applies; konnectome never edits it directly.
 4. **The ledger is the scoreboard** - every wall becomes an entry in [`docs/konnectome_ledger_v1.txt`](docs/konnectome_ledger_v1.txt) first, then is routed to exactly one place.
-5. **DSPARCD is the waterfall** - the seven-phase method, inspired by [`docs/DSPARCD_EXPLAINED.txt`](docs/DSPARCD_EXPLAINED.txt).
+5. **DSPARCD is the waterfall** - the seven-phase method, inspired by [`docs/DSPARCD/DSPARCD_EXPLAINED.txt`](docs/DSPARCD/DSPARCD_EXPLAINED.txt).
 6. **English Readable Code** - one plain-English comment above every line of code.
-7. **The DSPARCD Fileset** - seven versioned documents; six seeded from the appendices of *Nature's Cognitive Architecture*, and [`konnectome_0_definition`](docs/konnectome_0_definition_v1.txt) written from the Constitution and the whole of `docs/`.
+7. **The DSPARCD Fileset** - seven versioned documents; six seeded from the appendices of *Nature's Cognitive Architecture*, and [`konnectome_0_definition`](docs/DSPARCD/konnectome_0_definition_v1.txt) written from the Constitution and the whole of `docs/`.
 8. **The audit** - every named construct is realized by a module, tracked in a re-runnable coverage list in the ledger.
 9. **The archive** - only the latest version of any document lives outside `docs/archive/`.
 10. **Mirrored changes** - any code change is mirrored in the DSPARCD Fileset, with versions bumped and old versions archived.
@@ -127,13 +127,13 @@ The seven-phase waterfall is mirrored in seven versioned documents. Six are seed
 
 | Phase | File | Seeded from |
 |---|---|---|
-| 0. Definition | [`docs/konnectome_0_definition_v1.txt`](docs/konnectome_0_definition_v1.txt) | The Constitution and all of `docs/` |
-| 1. Specification | [`docs/konnectome_1_specification_v48.txt`](docs/konnectome_1_specification_v48.txt) | Appendix 1 |
-| 2. Pseudocode | [`docs/konnectome_2_pseudocode_v48.txt`](docs/konnectome_2_pseudocode_v48.txt) | Appendix 2 |
-| 3. Architecture | [`docs/konnectome_3_architecture_v48.txt`](docs/konnectome_3_architecture_v48.txt) | Appendix 3 |
-| 4. Refinement | [`docs/konnectome_4_refinement_v48.txt`](docs/konnectome_4_refinement_v48.txt) | Appendix 4 |
-| 5. Completion | [`docs/konnectome_5_completion_v48.txt`](docs/konnectome_5_completion_v48.txt) | Appendix 5 |
-| 6. Demonstration | [`docs/konnectome_6_demonstration_v48.txt`](docs/konnectome_6_demonstration_v48.txt) | Appendix 6 |
+| 0. Definition | [`docs/DSPARCD/konnectome_0_definition_v1.txt`](docs/DSPARCD/konnectome_0_definition_v1.txt) | The Constitution and all of `docs/` |
+| 1. Specification | [`docs/DSPARCD/konnectome_1_specification_v48.txt`](docs/DSPARCD/konnectome_1_specification_v48.txt) | Appendix 1 |
+| 2. Pseudocode | [`docs/DSPARCD/konnectome_2_pseudocode_v48.txt`](docs/DSPARCD/konnectome_2_pseudocode_v48.txt) | Appendix 2 |
+| 3. Architecture | [`docs/DSPARCD/konnectome_3_architecture_v48.txt`](docs/DSPARCD/konnectome_3_architecture_v48.txt) | Appendix 3 |
+| 4. Refinement | [`docs/DSPARCD/konnectome_4_refinement_v48.txt`](docs/DSPARCD/konnectome_4_refinement_v48.txt) | Appendix 4 |
+| 5. Completion | [`docs/DSPARCD/konnectome_5_completion_v48.txt`](docs/DSPARCD/konnectome_5_completion_v48.txt) | Appendix 5 |
+| 6. Demonstration | [`docs/DSPARCD/konnectome_6_demonstration_v48.txt`](docs/DSPARCD/konnectome_6_demonstration_v48.txt) | Appendix 6 |
 
 ## The build ladder
 
