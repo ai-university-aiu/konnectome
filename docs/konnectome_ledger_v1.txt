@@ -2181,3 +2181,135 @@ than by carrying a constant, add the second trigger to the gate's transition tab
 and repair the comment on gate_resists_flipping so the test's name and its claim agree. A session
 that builds the stabiliser for the two-process governor alone and does not return to the gate has
 left this entry half-stale, in the same way Observation-7's two halves belong to one visit.
+
+Vision-set-analysis-version-2 note (2026-08-09). THE EIGHTH COMMANDMENT ANALYSIS MOVES TO VERSION 2,
+and version 1 is archived under the Eleventh Commandment. This is a LATER ASSESSMENT, which the
+Eighth Commandment's rule three makes the only thing that can supersede a finding; where version 2
+disagrees with version 1, version 2 leads. NO CODE CHANGED AND NO TEST MOVED. Baseline verified
+green before and unaffected: 648 tests across thirty packs counted pack by pack, four gates at zero
+violations. No wall was hit and nothing routes to either cousin.
+
+WHAT PROMPTED IT. The commandment's rule three requires that where a reading beneath a theme is
+large enough to need its own document, that document be written AND CITED BACK into the analysis.
+Only THEME ONE had such a reading. Four were made in this visit, three of them beneath themes that
+had never had one, plus a fidelity audit of the analysis itself. Each is merged as its own pull
+request and each is cited back into version 2's new index section.
+
+• konnectome_two_shift_design_authority_v1.txt - Theme Two. Pull request 99.
+• konnectome_edge_type_design_authority_v1.txt - Theme Three. Pull request 97.
+• konnectome_motif_and_workspace_design_authority_v1.txt - Themes Four and Five, survey depth.
+• konnectome_vision_set_analysis_fidelity_audit_v1.txt - the audit of the analysis. Pull request 98.
+
+THE HEADLINE RESULT, AND IT IS THE REASSURING ONE: NO FINDING OF VERSION 1 WAS REVERSED. Part One's
+verdict on the top-level decisions, Part Four's honest pressures, Part Five's walls-none-routed
+judgment and its six original watches all survive re-measurement. Four independent reads applied the
+Second and Third Commandment gates to the corpus beneath four themes and every one returned NONE
+ROUTED, which is a stronger warrant than the original top-down pass alone. THE SUMMARIES FARED
+WORSE THAN THE FINDINGS, consistently and in one direction: every theme was reliable about what its
+corpus is ABOUT and unreliable about every detail a builder would need.
+
+THREE DEFECTS FOUND IN THE ANALYSIS ITSELF, recorded here because the ledger is not rewritten and
+the analysis is.
+
+FIRST, AND THE MOST CONSEQUENTIAL. Theme Four asserted that "the architecture already owns the cheap
+mechanism (the named-subgraph views that hold networks and pathways)". IT DOES NOT. Named subgraph
+views live only in specification prose - FR-16 and AC-11 in konnectome_1_specification, and Component
+1's description in konnectome_3_architecture. connection_graph.pl exports eleven predicates and not
+one names, groups or addresses a portion of the graph; a graph is a flat list of interface terms. A
+repository-wide search for a network, pathway or subgraph datum returns nothing. THE MOTIF CATALOGUE
+IS THEREFORE A BUILD, NOT A RE-USE, and slice family five is resized from one line to six items. This
+is the same CLASS of error as Theme One's naming hazard - a claim about the data model as DESCRIBED
+mistaken for a claim about running code - resolving in the opposite direction: there it closed to
+zero, here it costs a family. Found independently by the Theme Four read and by the audit.
+
+SECOND. The elevation-of-Theme-One paragraph's grain-count list was WRONG IN SIX OF ITS SEVEN
+NUMBERS, and it is offered as "the measured evidence" for the document's largest structural
+judgement. Corrected to cells 386, regions 77, motifs 71, junctions 64, systems 44, global states 26,
+slow variables 18. It had contradicted the theme paragraph ten lines below it, which carried three of
+them correctly all along. The judgement it supports is unaffected. The corpus size was also
+understated by roughly five times.
+
+THIRD, A MAINTENANCE FAILURE RATHER THAN AN ERROR, AND THE ONE MOST LIKELY TO RECUR. Theme Two went
+FOUR SLICES without a status update while Theme One was maintained paragraph by paragraph, so for
+slices 35 through 38 the analysis told every reader that the corpus's most central gap was unbuilt
+while konnectome was in fact closing it. Theme Two is now the MOST-built theme, not the largest gap.
+THE STRUCTURAL LESSON, recorded because it will recur: the theme nobody is currently building is the
+theme that goes stale unwatched.
+
+FOUR DECISIONS AND FINDINGS NOW RECORDED AS KONNECTOME'S OWN, none of them the corpus's instruction.
+
+• THE TICKS-PER-SECOND CONVENTION IS UNDECLARED AND LOAD-BEARING. Every quantity in the attention,
+working-memory and workspace cluster is wall-clock, and Theme Four's settling-time-as-confidence is
+too, while konnectome's tick is dimensionless-ordinal by observer.pl's own declaration. NONE of that
+cluster is buildable to the corpus's numbers until a convention is declared. It is cheap - a recorded
+decision with one test, in the shape of slice 39's naming resolution - and it appeared in no earlier
+list. It is now Family Four item 2 and Part Four's fifth honest pressure.
+
+• A DURABLE WEIGHT TIER MUST PRECEDE THE WRITE-ALLOCATION GATE. The gate decides which events
+GRADUATE to durable weights and konnectome has nowhere to graduate into. Listed nowhere in version 1.
+Family one's item (e) also splits into three by pipeline position, orthogonal to the mode-register
+read's split of the same item into four kinds by scope and owner; a builder needs both splits.
+
+• FAMILY FOUR IS REORDERED END FOR END. The bus's six named broadcast channels move from LAST to
+FIRST: smallest item in two families, dependency of two later items in two different families,
+cannot break anything.
+
+• OBSERVATION-8 GAINS A COMPLICATION, and it is the sharpest ambiguity found in this visit. THE
+CORPUS ANSWERS THE HYSTERESIS QUESTION DIFFERENTLY AT TWO GRAINS. Observation-8 rests on the Layer 11
+reading that the stabiliser "has no poles of its own" - stickiness outside the switch. But Layer 8
+Chapter 16 gives winner-take-all's transfer function as "a hysteretic max operation" with an
+explicitly hysteretic Commitment Mode - stickiness INSIDE the motif. Both are literal. Observation-8's
+closer at the gate is UNCHANGED; what changes is that the stabiliser slice must state which grains
+its published scalar governs, and konnectome must decide the motif-grain case as its own.
+
+TWO CORRECTIONS TO EARLIER RECORDS, made here rather than by editing them.
+
+• THE ELEVATION NOTE'S CLAUSE "an edge type's fixed-or-learnable property (Theme Three) is a
+junction-grain mode" IS BACKWARDS. At the junction grain the TYPE is the fixed identity and the mode
+register is a FIELD OF the type; the type carries whether an update rule exists at all. Measured over
+all sixty-four types: register length tracks learning standing (four registers of one, fourteen of
+two, thirty-one of three, eight of four, seven of five) and all four registers of one are
+non-cognitive. THE ORDERING FINDING NOW HOLDS TWO INDEPENDENT WARRANTS - the mode-register read
+reached it from above, the edge-type read from below - and the edge type registry lands BEFORE the
+junction-grain mode register. The construct-grain remainder of the mode-register family is unaffected
+and may proceed.
+
+• PART FOUR'S EPHEMERAL-STATE PARAGRAPH SAID THE OBSERVER'S TICK TRACE "SEES EVERYTHING". IT DOES
+NOT. observer.pl records a tick as a token occurrence carrying exactly two things: the shared tick
+occurrent type identifier and an absolute instant. It records THAT a tick happened, never WHAT was in
+it. "Sees everything" describes the architecture's PASSIVE OBSERVER PRINCIPLE, not observer.pl. The
+consequence cuts in konnectome's favour - no trace exists in which a working-memory slot could appear
+even accidentally, so the ephemeral guarantee is currently free - AND IT NAMES A DECISION THAT MUST
+NOT BE TAKEN BY ACCIDENT: growing the observer to carry tick CONTENT is the moment the passive
+observer starts minting content-bearing records every tick, and it must never be smuggled in as a
+side effect of a memory slice.
+
+WATCH-7 IS NEW, THE TYPE CATALOGUE ARTIFACT (from the Theme Three read). If konnectome's edge type
+registry must ever travel between agents or repositories as one signed, evidence-graded,
+content-addressed catalogue rather than as pack data compiled into one runtime, a causalontology kind
+becomes a candidate. Today it is ordinary pack data and routes nowhere. Part Five now records SEVEN
+watches. WATCH-4 IS SHARPENED from a guess into a conditional with a named decision point: it depends
+entirely on WHAT A CONTENT IS, which is konnectome's decision and not the corpus's - if a content is
+an identifier for an existing record the watch closes without ever being claimed; if it is a
+structure with no record, the watch may become real. Decide it BEFORE the workspace pilot, not
+during it. Three further candidate watches were considered and rejected as konnectome-internal:
+motif-level state (a new state LOCATION, not a new record kind), the settling-time confidence scalar,
+and the six-channel roster. WATCH-3 and WATCH-5 were re-examined with their corpus in hand and both
+remain watches. Sections C, D and E of the causalontology change order remain HELD; none of the four
+reads releases them.
+
+THE ELEVENTH-COMPONENT QUESTION IS STILL NOT DECIDED, DELIBERATELY, and version 2 re-affirms the
+refusal while making the question answerable. Chapter 44 read in full supplies real evidence on BOTH
+sides and cannot settle it, because the corpus knows nothing of the ten components. What is new is
+FIVE QUESTIONS WITH STATED OBSERVABLES that the workspace pilot must answer in its own ledger entry,
+the cheapest tested first: is ignition simply a mode transition of the master register, in which case
+the workspace is absorbed by the mode-register family and there is no eleventh component at all. A
+STANDING INSTRUCTION FOLLOWS: the workspace pilot must not be merged without answering those five. A
+pilot that merely works while leaving the question where it found it has failed at the only job the
+analysis assigned it.
+
+THE SCHEDULED AUDIT IS NOT YET DUE and this entry does not discharge it. The trigger stands at
+thirty-two hand-off documents; the count at this entry is TWENTY-FOUR. Note for the session that
+finds it due: this visit did a large part of the audit's PART TWO work in advance, since every theme
+now has its design authority cited back as the currency obligation requires, and the audit's other
+parts are untouched.
