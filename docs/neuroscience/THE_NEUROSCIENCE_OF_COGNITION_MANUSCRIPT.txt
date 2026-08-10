@@ -4,7 +4,7 @@ A Complete, Comprehensive, and Thorough Manuscript
 
 Written for the beginner, the layperson, the learner, and the student.
 
-Compiled for the konnectome repository, Certified_Neuroscientist corpus, of D. R. Dison, Founder, Artificial Intelligence University (AIU).
+Compiled for the Certified_Neuroscientist corpus of D. R. Dison, Founder, Artificial Intelligence University (AIU).
 
 Date of compilation: August 10, 2026.
 
@@ -81,7 +81,7 @@ It should be read as an accurate report of where the field stood in 2026.
 
 HOW THIS BOOK RELATES TO THE REST OF THE CORPUS
 
-The konnectome corpus is organised into fifteen encapsulated layers of abstraction, running from the quark at Layer 1 to the species at Layer 15.
+The Certified_Neuroscientist corpus is organised into fifteen encapsulated layers of abstraction, running from the quark at Layer 1 to the species at Layer 15.
 
 That corpus is substrate-first: it catalogues what the nervous system is made of, layer by layer.
 
@@ -1142,7 +1142,7 @@ This chapter is about the tools you use to decide what kind of answer you are lo
 
 A brain can be described as a bag of chemicals, as a network of cells, as a machine running procedures, or as a person doing something for a reason, and all four descriptions can be true at the same time about the same event.
 
-The apparatus in this chapter - Marr's three levels, the ladder of spatial and temporal scales, the konnectome fifteen-layer scheme, and the inside-out versus outside-in framing - exists to keep those descriptions from being confused with one another.
+The apparatus in this chapter - Marr's three levels, the ladder of spatial and temporal scales, the fifteen-layer scheme of abstraction, and the inside-out versus outside-in framing - exists to keep those descriptions from being confused with one another.
 
 This matters because most sterile arguments in the science of cognition are not disagreements about facts.
 
@@ -1323,9 +1323,9 @@ For hard problems such as recognising an object, nobody has ever written down a 
 Poggio's revised scheme runs to roughly seven levels, adding wetware, hardware, and circuits below as well, and it explicitly rejects Marr's independence claim on the grounds that learning determines which representations and algorithms appear at all.
 
 
-4.3.2 The konnectome fifteen-layer scheme and its address system
+4.3.2 The fifteen encapsulated layers of abstraction and their address system
 
-The konnectome framework, within which this book sits, uses a fifteen-layer scheme that is a levels-of-nature ladder rather than a levels-of-question ladder, and the two should not be mixed up.
+The framework within which this book sits, D. R. Dison's fifteen encapsulated layers of abstraction of the human nervous and endocrine systems, uses a scheme that is a levels-of-nature ladder rather than a levels-of-question ladder, and the two should not be mixed up.
 
 Its layers run from Layer 1, the subatomic, through Layer 2 atomic, Layer 3 ionic and simple molecular, Layer 4 macromolecular, Layer 5 subcellular and organellar, Layer 6 cellular, Layer 7 synaptic and junctional, Layer 8 microcircuit, Layer 9 brain regions and pathways, Layer 10 neural and neuroendocrine systems, Layer 11 the whole nervous and endocrine system, Layer 12 organism and behaviour, Layer 13 dyad and small group, Layer 14 community and society, to Layer 15 the evolutionary and species layer.
 
@@ -3714,7 +3714,7 @@ The cerebellar cortex is startlingly uniform: the same small cast of cell types 
 
 Input arrives by two routes.
 
-• Mossy fibres, carrying information from the spinal cord, brainstem, and via the pontine nuclei from the entire cerebral cortex, synapse onto granule cells, which are extremely numerous and each sample only a handful of mossy fibres; their axons rise and split into parallel fibres that run for millimetres across the sheet, contacting hundreds of thousands of Purkinje cells.
+• Mossy fibres, carrying information from the spinal cord, brainstem, and via the pontine nuclei from the entire cerebral cortex, synapse onto granule cells, which are extremely numerous and each sample only a handful of mossy fibres; their axons rise and split into parallel fibres that run for millimetres across the sheet, each contacting a few hundred Purkinje cells in passing, so that a single Purkinje cell ends up receiving input from on the order of one hundred and fifty thousand to two hundred thousand parallel fibres.
 
 • Climbing fibres, arising exclusively from the inferior olive in the brainstem, wrap around a single Purkinje cell each with an overwhelmingly powerful synapse, and fire rarely, at about one spike per second.
 
@@ -4035,6 +4035,26 @@ A practical caution: functional connectivity estimates are strongly contaminated
 White matter is the tissue made of myelinated axons, so called because myelin is pale; grey matter, by contrast, is where the cell bodies and synapses sit.
 
 If grey matter is where computation happens, white matter is the cabling that lets distant computations talk.
+
+That is the usual way to put it, and it is worth saying at once that the framework this corpus is built on rejects it, in a way that repays thinking about.
+
+Its position is that the tracts are not the plumbing between the interesting parts - the tracts are the interesting part.
+
+The argument runs as follows.
+
+A microcircuit motif such as lateral inhibition is generic and recurs all over the brain, so the internals of one patch of cortex look much like the internals of another.
+
+What makes a region the region it is, then, cannot be its internal circuitry, because that is shared.
+
+It must be what the region receives and to whom it sends.
+
+The corpus states this as a flat claim: a brain region is defined by its interfaces.
+
+An interface, in the engineering sense being borrowed, is an agreed boundary at which two components meet and exchange something, with a defined origin, a defined destination, a defined cargo and a defined format - a wall socket, which neither the power station nor the lamp needs to understand beyond the agreement itself.
+
+On that reading each named tract below is a socket rather than a wire: the arcuate fasciculus, the fornix, the corticospinal tract are all interfaces with a specified cargo, and naming them is naming the architecture rather than describing its wiring loom.
+
+The reader can take the framing or leave it, but it explains why this chapter gives tracts their own treatment rather than folding them into the regions they connect.
 
 The tracts below are the ones a beginner needs by name, because damage to them produces recognisable and instructive deficits.
 
@@ -4495,7 +4515,9 @@ Each band, however, does tend to be produced by identifiable circuits, and that 
 
 15.1.1 Delta, theta, alpha, beta, gamma, and high-frequency broadband
 
-The conventional bands are delta (roughly below 4 hertz, where one hertz means one cycle per second), theta (roughly 4 to 8 hertz), alpha (roughly 8 to 12 hertz), beta (roughly 12 to 30 hertz), and gamma (roughly 30 to 80 hertz), with an additional high-gamma or high-frequency range above about 80 hertz.
+The conventional bands are delta (roughly 0.5 to 4 hertz, where one hertz means one cycle per second), theta (roughly 4 to 8 hertz), alpha (roughly 8 to 13 hertz), beta (roughly 13 to 30 hertz), and gamma (roughly 30 to 100-plus hertz), with an additional high-gamma or high-frequency broadband range above about 80 hertz.
+
+These boundaries are conventions rather than natural joints, and the literature places some of them a hertz or two either way; the values given here are those used throughout this corpus, so that a reader moving between volumes meets one set of numbers.
 
 Delta dominates deep non-rapid-eye-movement sleep and is generated largely by cortical networks alternating between an active up state and a near-silent down state.
 
@@ -23574,13 +23596,13 @@ Genuine disagreements remain live, including how large a sample brain-wide assoc
 The reading path offered here moves from an introductory textbook, through the Kandel and Gazzaniga reference handbooks, into the theoretical canon of Marr, Dayan and Abbott, and Sutton and Barto, and only then into the annual review literature.
 
 
-CHAPTER 80. THE KONNECTOME PROGRAMME: MAPPING THIS OUTLINE ONTO THE FIFTEEN LAYERS (CONTEXT)
+CHAPTER 80. MAPPING THIS OUTLINE ONTO THE FIFTEEN LAYERS (CONTEXT)
 
 This final chapter is not about the brain.
 
 It is about the filing system this book lives inside, and about what that filing system is for.
 
-The konnectome repository of the Artificial Intelligence University (AIU) holds a body of source documents called the Certified_Neuroscientist corpus, and that corpus is organised not by anatomy and not by faculty but by scale, into fifteen encapsulated layers of abstraction running from the quark to the species.
+The Certified_Neuroscientist corpus of D. R. Dison, Founder, Artificial Intelligence University (AIU), is a body of source documents organised not by anatomy and not by faculty but by scale, into fifteen encapsulated layers of abstraction running from the quark to the species.
 
 This book is organised the other way, by cognitive capacity: perception, attention, memory, language, action, emotion, consciousness.
 
@@ -23649,13 +23671,15 @@ That framing is useful and slightly uncomfortable: it treats consciousness as so
 
 Parts Thirteen, Fourteen and Fifteen of this book cover clinical failure and repair, cognition and machines, and integration and ethics.
 
-The corpus files one konnectome-facing document at each of the top three layers: LAYER_13_TUTOR_PROTOCOL for the dyad, describing the training interaction between a teacher and a learner; LAYER_14_KNOWLEDGE_ENVIRONMENT for the community, describing the corpus and tool plan that a mind is embedded in; and LAYER_15_DESIGN_METHOD for the species layer, describing the iteration discipline by which the whole thing is revised.
+The corpus files one document at each of the top three layers: LAYER_13_TUTOR_PROTOCOL for the dyad, describing the training interaction between a teacher and a learner; LAYER_14_KNOWLEDGE_ENVIRONMENT for the community, describing culture as outsourced cognition; and LAYER_15_DESIGN_METHOD for the species layer, describing selection as an engineering process and the iteration discipline that follows from it.
 
 The correspondence here is looser than at any other point in the mapping, and it should be admitted as such.
 
 Layer 13 in nature is the dyad and the small group; the corpus's Layer 13 document is about how one teaches an artificial system, which is a dyad but a very particular one.
 
 Layer 15 in nature is phylogeny and population; the corpus's Layer 15 document is about design iteration, which is evolution by another mechanism.
+
+That document draws the analogy tightly enough to name a design cycle, which it treats as the compressed form of the selection loop: each stage a selective filter, each iteration a generation, and the version history the fossil record.
 
 These are analogies doing real work, not measurements, and a reader should hold them more loosely than the substrate mappings.
 
@@ -23814,7 +23838,7 @@ It should be treated as a precondition for calling any volume finished.
 
 WHAT THIS CHAPTER ESTABLISHED
 
-This book and the konnectome corpus describe the same nervous system under two different orderings - by cognitive capacity here, by scale there - and the two can be aligned Part by Part onto the fifteen layers, tightly at the substrate end and only analogically at the social and evolutionary end.
+This book and the Certified_Neuroscientist corpus describe the same nervous system under two different orderings - by cognitive capacity here, by scale there - and the two can be aligned Part by Part onto the fifteen layers, tightly at the substrate end and only analogically at the social and evolutionary end.
 
 The corpus supplies layer addresses, a connectional definition of regional identity, an inside-out leaning at the upper layers, and a repeatable outline-manuscript-companion workflow with a machine-parseable chapter template.
 

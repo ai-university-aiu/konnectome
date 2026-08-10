@@ -5,7 +5,7 @@ Created 2026-08-10. Constitution version 10.
 
 WHAT IS IN HERE, IN ONE SENTENCE
 
-Every SOURCE neuroscience document konnectome is built from - thirty-nine files that konnectome READS, CITES, and NEVER EDITS.
+Every SOURCE neuroscience document konnectome is built from - forty-one files that konnectome READS and CITES.
 
 
 WHAT IS NOT IN HERE, WHICH IS THE POINT OF THE SEPARATION
@@ -15,7 +15,7 @@ konnectome's own working documents stayed in /docs/ : the DSPARCD Fileset, the l
 The line between the two directories is AUTHORSHIP, not subject. A file in here was written by the Certified_Neuroscientist corpus and describes the biology. A file out there was written by this build and describes konnectome. Several documents out there are ABOUT the files in here - the analysis, the audit, the four design authorities - and they belong outside, because they are konnectome's own assessment rather than the source.
 
 
-THE THIRTY-NINE FILES
+THE FORTY-ONE FILES
 
 • THE GUIDING BOOK, named by the Seventh Commandment as the source of the whole DSPARCD Fileset and by the Tenth Commandment as the target of the standing audit.
 
@@ -53,6 +53,12 @@ THE THIRTY-NINE FILES
 
 ◦ LAYER_15_DESIGN_METHOD.txt - the iteration discipline.
 
+• THE COGNITION PAIR, added 2026-08-10. The corpus read the other way round: where every document above is substrate-first and catalogues what the nervous system is MADE OF, layer by layer, these two are cognition-first and catalogue what it DOES, capacity by capacity. Fifteen parts, eighty chapters, 332 sections, 1,325 sub-sections. Their Chapter 80 maps the capacities back onto the fifteen layers, and is the join between the two organisations.
+
+◦ THE_NEUROSCIENCE_OF_COGNITION_OUTLINE.txt
+
+◦ THE_NEUROSCIENCE_OF_COGNITION_MANUSCRIPT.txt
+
 
 THE FORWARDING NOTE - READ THIS IF YOU ARRIVED HERE FROM AN OLD DOCUMENT
 
@@ -71,4 +77,6 @@ That is a deliberate boundary and not an oversight: a HISTORICAL CLAIM is not re
 
 THE STANDING RULE ABOUT THESE FILES, restated because it is the reason they have their own directory
 
-They are SOURCE. konnectome reads them and never edits them. Where a summary written elsewhere in this repository disagrees with a file in here, THE FILE IN HERE WINS and the summary is the thing corrected. That rule is the Eighth Commandment's, and this directory is what it looks like on disk.
+They are SOURCE. Where a summary written elsewhere in this repository disagrees with a file in here, THE FILE IN HERE WINS and the summary is the thing corrected. That rule is the Eighth Commandment's, and this directory is what it looks like on disk.
+
+The one admissible exception, exercised for the first time on 2026-08-10 under the owner's explicit authorisation, is a CORRECTNESS REPAIR: a change that makes a source file agree with what the corpus itself already delivers. The neuron catalogue's volume headers declared chapter ranges its own contents contradicted, and eight files described that catalogue as holding 302 types when it holds 301; those were repaired to match delivery. The distinction that licenses such a repair is narrow and worth stating: correcting a file to match the corpus's own delivered content is not the same act as revising what the corpus claims about the biology, and only the first is admissible without the author.
