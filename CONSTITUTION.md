@@ -119,10 +119,31 @@ Now the sober instructions that make the fanfare safe:
 3. Their importance to the overall system is significant, so a TOP-DOWN ANALYSIS shall be made:
    read the set from the framework documents downward, and assess whether any top-level
    architectural decisions should be revised in their light. Findings are recorded in the ledger
-   (the Fifth Commandment's file), and where a genuine wall is found, routed through the existing
+   (the Fourth Commandment's file), and where a genuine wall is found, routed through the existing
    gated change orders - with implications also possible for upgrading causalontology (the Second
    Commandment's gate) and PrologAI (the Third Commandment's gate) if the analysis shows the data
    structure or the language cannot express what a layer requires.
+   (AMENDED in version 6, by the owner's instruction of 2026-08-09. Two corrections and one
+   addition. FIRST, the ledger citation in the paragraph above formerly read "the Fifth
+   Commandment's file"; the ledger is established by the FOURTH Commandment, the Fifth governs
+   SPARCD_EXPLAINED.txt, and the Ninth Commandment cites the same ledger correctly, so this was an
+   error and is corrected here. SECOND, the analysis this rule mandates was never named, so a
+   session reading the constitution alone could not find the fulfilment of an obligation the
+   constitution itself imposes; it lives at
+   /home/ccaitwo/konnectome/docs/konnectome_vision_set_top_down_analysis_v1.txt. THIRD, and most
+   important, its STANDING is now stated here so that no session has to infer it:
+   THE ANALYSIS IS DERIVED AND CARRIES NO GUIDING AUTHORITY OF ITS OWN. It is the product of this
+   rule, never a source standing above it. Its authority is borrowed entirely from the Vision
+   Document Set it summarises, and where the two disagree the SET leads and the analysis is the
+   thing corrected. A THEME IN IT IS A SUMMARY, NOT A SPECIFICATION: no slice shall be designed
+   from a theme without first reading the corpus beneath that theme, and where such a reading is
+   large enough to need its own document, that document shall be written and cited back into the
+   analysis. This is not a hypothetical caution - Theme One stood as a single paragraph until a
+   deep read beneath it reversed a queue ordering and reshaped a queued slice, and a design taken
+   from the summary would have been wrong. The analysis shall be kept CURRENT as slice families
+   close and as deep reads are made beneath its themes, under the archive discipline of the
+   Eleventh Commandment. The coverage survey mandated by the Ninth Commandment is derived in
+   exactly the same way and is governed by exactly the same rule.)
 4. The FIFTEEN LAYERS are the guiding force. Each layer contributes its own abilities into the
    overall architecture: persistence from the slow variables; components from the cells; adjustable
    relations from the synaptics; computation from the microcircuits; specialised function from the
