@@ -372,5 +372,145 @@ test(an_unbound_bus_is_refused_at_the_throw_read, error(instantiation_error)) :-
     % A variable bus must throw; a lookup that invented a bus would invent a command with it.
     neuromodulator_bus_thrown_mode(_, gate, _).
 
+% THE ROSTER IS EXACTLY THE CORPUS'S SIX, IN CHAPTER 16'S OWN ORDER.
+test(the_roster_is_the_corpus_six_in_order) :-
+    % Collect every channel the roster carries, in declaration order.
+    findall(Channel, neuromodulator_bus_channel(Channel), Channels),
+    % Confirm the roster is Chapter 16's list, with norepinephrine carrying the noradrenaline channel.
+    assertion(Channels == [norepinephrine, serotonin, acetylcholine, histamine, dopamine, orexin]).
+
+% The roster carries six channels and not five, which is the corpus's own arithmetic: five plus orexin.
+test(the_roster_carries_six_channels) :-
+    % Count the roster.
+    findall(Channel, neuromodulator_bus_channel(Channel), Channels),
+    % Confirm the count is six.
+    length(Channels, Count),
+    % Confirm the corpus's own count.
+    assertion(Count =:= 6).
+
+% Every channel on the roster has exactly one role, one source and one cognitive tag.
+test(every_channel_has_one_role_one_source_and_one_tag) :-
+    % Walk the roster, which the first test has already proved non-empty.
+    forall(neuromodulator_bus_channel(Channel),
+           % Each of the three tables answers this channel exactly once.
+           (   findall(Role, neuromodulator_bus_channel_role(Channel, Role), Roles),
+               findall(Source, neuromodulator_bus_channel_source(Channel, Source), Sources),
+               findall(Tag, neuromodulator_bus_channel_cognitive(Channel, Tag), Tags),
+               length(Roles, 1),
+               length(Sources, 1),
+               length(Tags, 1)
+           )).
+
+% No table names a channel the roster does not carry, which is the other direction of the same check.
+test(no_table_names_a_channel_the_roster_does_not_carry) :-
+    % Every role row names a roster member.
+    forall(neuromodulator_bus_channel_role(Channel, _Role), neuromodulator_bus_channel(Channel)),
+    % Every source row names a roster member.
+    forall(neuromodulator_bus_channel_source(SourceChannel, _Source), neuromodulator_bus_channel(SourceChannel)),
+    % Every cognitive row names a roster member.
+    forall(neuromodulator_bus_channel_cognitive(TagChannel, _Tag), neuromodulator_bus_channel(TagChannel)).
+
+% The roles are the Layer 10 systems volume's own chapter subtitles.
+test(the_roles_are_the_corpus_chapter_subtitles) :-
+    % Dopamine is the Reward-Teaching Broadcast, chapter 31.
+    neuromodulator_bus_channel_role(dopamine, Reward),
+    % Norepinephrine carries chapter 32's Gain-and-Reset Broadcast.
+    neuromodulator_bus_channel_role(norepinephrine, Gain),
+    % Orexin is chapter 36's Sleep-Wake Stabiliser.
+    neuromodulator_bus_channel_role(orexin, Stabiliser),
+    % Confirm all three are the corpus's own words.
+    assertion(Reward == reward_teaching_broadcast),
+    % Confirm the second.
+    assertion(Gain == gain_and_reset_broadcast),
+    % Confirm the third.
+    assertion(Stabiliser == sleep_wake_stabiliser).
+
+% The corpus's COG and NON-COG tags are carried through unaltered: four cognitive, two not.
+test(the_cognitive_tags_are_the_corpus_four_and_two) :-
+    % Collect the channels the corpus tags cognitive.
+    findall(Channel, neuromodulator_bus_channel_cognitive(Channel, cognitive), Cognitive),
+    % Collect the two the corpus tags NON-COG.
+    findall(Other, neuromodulator_bus_channel_cognitive(Other, non_cognitive), NonCognitive),
+    % Confirm the cognitive four are the corpus's chapters 31 to 34.
+    assertion(Cognitive == [norepinephrine, serotonin, acetylcholine, dopamine]),
+    % Confirm the non-cognitive two are chapters 35 and 36.
+    assertion(NonCognitive == [histamine, orexin]).
+
+% DECISION-7, FIRST HALF: the corpus's own word resolves onto the roster's name.
+test(the_corpus_name_resolves_onto_the_running_channel) :-
+    % Resolve the corpus's spelling.
+    neuromodulator_bus_channel_named(noradrenaline, Channel),
+    % Confirm it lands on the channel the machine has broadcast since slice 19.
+    assertion(Channel == norepinephrine).
+
+% A roster name resolves to itself, so a caller may pass either word through one lookup.
+test(a_roster_name_resolves_to_itself) :-
+    % Resolve a name the roster already carries.
+    neuromodulator_bus_channel_named(acetylcholine, Channel),
+    % Confirm the resolution is the identity.
+    assertion(Channel == acetylcholine).
+
+% THE POINT OF THE RESOLUTION, PINNED: the corpus's word must never reach the bus as a second key.
+% A caller who resolves first reads the level that is really there; a caller who did not would have
+% been told, in silence, that a live channel was at zero.
+test(the_corpus_name_reaches_the_level_the_running_channel_carries) :-
+    % Start from an empty bus.
+    neuromodulator_bus_new(Bus0),
+    % Arousal broadcasts under konnectome's own name for the channel, as it has since slice 19.
+    neuromodulator_bus_broadcast(Bus0, norepinephrine, 0.4, Bus1),
+    % A caller written from the corpus resolves the corpus's word first.
+    neuromodulator_bus_channel_named(noradrenaline, Channel),
+    % Read the level under the resolved name.
+    neuromodulator_bus_level(Bus1, Channel, Resolved),
+    % Read the level the unresolved corpus word would have found.
+    neuromodulator_bus_level(Bus1, noradrenaline, Unresolved),
+    % Confirm the resolved read finds the level that is really there.
+    assertion(Resolved =:= 0.4),
+    % Confirm the unresolved read would have answered a plausible zero, which is why the lookup exists.
+    assertion(Unresolved =:= 0).
+
+% A name that is neither a roster name nor the corpus's own is refused aloud rather than resolved.
+test(an_unknown_name_is_refused_at_the_resolution, error(domain_error(neuromodulator_bus_channel, _))) :-
+    % Adrenaline is a real molecule and is not one of this bus's six channels.
+    neuromodulator_bus_channel_named(adrenaline, _Channel).
+
+% An unbound name is refused at the resolution, never bound to whichever channel is listed first.
+test(an_unbound_name_is_refused_at_the_resolution, error(instantiation_error)) :-
+    % A hole cannot be resolved; resolving it would invent a channel for a caller who named none.
+    neuromodulator_bus_channel_named(_Hole, _Channel).
+
+% The offered check accepts every roster member.
+test(the_check_accepts_every_roster_member) :-
+    % Every channel the roster carries passes its own check.
+    forall(neuromodulator_bus_channel(Channel), neuromodulator_bus_check_channel(Channel)).
+
+% The offered check refuses a name the roster does not carry, by the roster's own name.
+test(the_check_refuses_a_name_the_roster_does_not_carry, error(domain_error(neuromodulator_bus_channel, _))) :-
+    % stability_bias is a real, running bus key and is NOT a neuromodulator - see the test below.
+    neuromodulator_bus_check_channel(stability_bias).
+
+% THE FINDING THIS SLICE REFUSED TO ENFORCE, PINNED AS A TEST: THE KEYSPACE IS A NAMESPACE AND NOT A
+% ROSTER. stabiliser publishes its stability bias under an atom key on this same channel shape, and a
+% roster enforced on write would have refused a correct, running, tested caller.
+test(a_non_channel_key_still_broadcasts_and_reads) :-
+    % Start from an empty bus.
+    neuromodulator_bus_new(Bus0),
+    % Write the stabiliser's key, which is not on the roster and never was a neuromodulator.
+    neuromodulator_bus_broadcast(Bus0, stability_bias, 7, Bus1),
+    % Read it back.
+    neuromodulator_bus_level(Bus1, stability_bias, Level),
+    % Confirm the write and the read are exactly what they were before a roster existed.
+    assertion(Level =:= 7).
+
+% AND THE DECLARATION-ORDER LENS, ARRIVING AT CLAUSE SELECTION AS IT DID IN SLICE 45: a keyed read of
+% the roster must be deterministic, not merely correct on its first answer.
+test(a_keyed_roster_read_leaves_no_choice_point) :-
+    % Read one channel's role and ask whether anything was left behind.
+    neuromodulator_bus_channel_role(orexin, _Role),
+    % Confirm the read was deterministic - a second answer would mean the table can be re-entered.
+    deterministic(Deterministic),
+    % Confirm it.
+    assertion(Deterministic == true).
+
 % Close the test block for the neuromodulator_bus pack.
 :- end_tests(neuromodulator_bus).

@@ -1206,7 +1206,7 @@ thought combination. The four gates report zero violations, the naming gate pass
 self-test; conformance re-measured at 137 of 137 (specification 4.0.0) in both cousins. No new
 wall; no cousin edited, per the Second, Third, and Fourth Commandments.
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 11 (2 CLOSED: 8 and 9).  Decisions: 6.
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 12 (2 CLOSED: 8 and 9).  Decisions: 7.
 
 Slice-34 note (2026-08-09). The bound turned live in the told story. The slice-33 pending line
 (the bound proven per-territory in the tests but not yet in the capstone's told story) is
@@ -3939,3 +3939,104 @@ tests across 34 packs, four gates at zero plus the naming gate's self-test. docs
 seventeen files and SIX sub-directories - DSPARCD, neuroscience, principles, hand-off, provenance,
 archive - plus images, and every file remaining at the top level is either konnectome's own live
 working document or the current hand-off.
+
+
+SLICE 48 NOTE (2026-08-10). THE BUS'S SIX NAMED BROADCAST CHANNELS - the first item of Family Four,
+which the vision-set analysis at VERSION 3 moved to the front of the whole queue that same day, and
+the first slice built since the mode-register family closed. No new pack; six predicates on
+neuromodulator_bus; no existing call changed; the capstone story byte-identical.
+
+WHAT THE CORPUS SUPPLIED AND WHAT IT DID NOT. The roster is the Layer 11 global-states volume's
+Chapter 16, THE ASCENDING BROADCAST SYSTEM (The State Announcement Service), which is this pack's own
+chapter and which names the six in one sentence: noradrenaline from the locus coeruleus, serotonin
+from the raphe, acetylcholine from the brainstem and basal forebrain, histamine from the
+tuberomammillary nucleus, dopamine from the ventral tegmental area, plus orexin from the lateral
+hypothalamus. Each channel's ROLE is the Layer 10 systems volume's own chapter subtitle, chapters 31
+through 36, and each channel's COG or NON-COG tag is that same heading's own. NOTHING IN THE ROSTER
+IS KONNECTOME'S INVENTION, which is this family's standing rule and is rarely achievable this cleanly.
+
+DECISION-7 (2026-08-10, slice 48). THE ROSTER DECLARES AND DOES NOT GUARD, AND THE CORPUS'S NAME
+RESOLVES ONTO THE NAME THE MACHINE ALREADY BROADCASTS. Two halves, and a third clause that is a
+refusal.
+
+FIRST HALF - THE ROSTER DECLARES AND DOES NOT GUARD, AND THE REASON IS A MEASUREMENT RATHER THAN A
+PREFERENCE. THE MODULATOR KEYSPACE IS A NAMESPACE AND NOT A ROSTER. Three atom keys are in flight
+today: dopamine, written by drive_system; norepinephrine, written by arousal_regulation; and
+stability_bias, written by stabiliser since slice 44 - and the third is not a neuromodulator and
+never was. A roster enforced on neuromodulator_bus_broadcast/4 would have refused a correct,
+running, tested caller in the name of fidelity to a chapter that says nothing about it.
+neuromodulator_bus_check_channel/1 is therefore WRITTEN, EXPORTED AND APPLIED TO NOTHING: a caller
+who wants the roster's discipline asks for it by name. A test pins the stabiliser's key still
+broadcasting and reading exactly as it did before a roster existed, because the thing this slice
+promises is that it refused nothing.
+
+SECOND HALF - THE CORPUS WRITES NORADRENALINE AND THIS MACHINE HAS BROADCAST NOREPINEPHRINE SINCE
+SLICE 19, AND THE ROSTER IS DECLARED IN THE MACHINE'S WORD WITH THE CORPUS'S WORD RESOLVING ONTO IT.
+Two spellings, one molecule, and three options. Renaming the running channel to the corpus's spelling
+would have been A MIGRATION AND NOT A DECLARATION, in a slice whose entire warrant is that it changes
+nothing. Declaring the corpus's spelling BESIDE the running one would have been worse than either,
+and the reason is the sharpest thing in this slice: THIS BUS ANSWERS AN UNKNOWN KEY WITH ZERO. A
+caller written from the corpus, reading noradrenaline off a bus carrying norepinephrine, would be
+told in perfect silence that arousal is at baseline. THAT IS A PLAUSIBLE ANSWER AND NOT AN ERROR -
+the exact failure shape the 2026-08-10 docs work named three times in one day - and a second key
+would have made it permanent and undetectable. neuromodulator_bus_channel_named/2 is the one place
+the corpus's word is written down, and it RESOLVES rather than aliases: it is a lookup a caller
+passes through, not a key the bus can carry. A test broadcasts under konnectome's name, resolves the
+corpus's word, and asserts BOTH that the resolved read finds the real level AND that the unresolved
+read would have answered a plausible zero - because the zero is the reason the lookup exists, and a
+test that only proved the happy path would have proved nothing about why.
+
+AND THE REFUSAL, WHICH IS THE THIRD THING DECISION-7 SETTLES: NO PER-CHANNEL DEFAULT LEVEL IS
+DECLARED. The corpus does supply numbers that look like defaults - a noradrenaline tonic level of
+0.3, a serotonin level of 0.5, an acetylcholine level of 0.5 - and every one of them is an INITIAL
+VALUE INSIDE ONE CHAPTER'S WORKED PSEUDOCODE rather than a resting level of the broadcast, with no
+such number existing at all for histamine or orexin. What the corpus states about this organ's
+resting condition is the opposite of a per-channel scalar: "the blend, not any single chemical, names
+the mode", and the bus is "a mix of six modulators whose blend, not whose bits, encodes the state".
+A default lifted from a worked example would have been A DEFAULT WITH A BORROWED WARRANT - the rule
+slice 45 met as a number and slice 46 met as a mode name, arriving a third time as a LEVEL. The zero
+this bus has always answered with is silence and not a resting level, and it stays silence.
+
+WHAT DECISION-7 DOES NOT DECIDE, listed so no later slice inherits more than was settled. It does not
+decide the BLEND - which chemical profile belongs to each global state - though the Layer 11 modes
+volume supplies three named blends and that is the master register's grain rather than this channel's.
+It does not give any channel a MODE REGISTER, though the Layer 10 modes volume supplies one for each
+of the six. It does not decide whether the roster should EVER be enforced on write; it decides only
+that it is not enforced today and names the caller-side check that would do it. And it does not
+migrate the norepinephrine atom: a later slice may do so and delete the one translation row, which is
+the direction that stays available - the reverse, un-splitting a channel that has been silently
+written under two names, does not.
+
+OBSERVATION-12 (2026-08-10, from slice 48). THE HONEST NOTE THIS ITEM CARRIED WAS WRONG WHEN IT WAS
+WRITTEN, AND IT TRAVELLED FOR TWO DOCUMENTS AND SIX SLICES. The motif-and-workspace design authority
+wrote, of this exact queue item, "only dopamine is actually broadcast today, by drive_system_step/6",
+and the vision-set analysis carried it forward at version 3 as "only one of the six is actually
+broadcast today". TWO ARE, AND THE SECOND IS IN THE TOLD STORY. arousal_regulation has broadcast
+norepinephrine since SLICE 19 (2026-07-26), three weeks before either document was written, and the
+capstone's own arousal chapter prints it. The claim was not stale; it was never measured. THE
+GENERAL FORM, AND IT IS WHY THIS IS AN OBSERVATION RATHER THAN A CORRECTION: A CODEBASE CLAIM INSIDE
+A CORPUS DOCUMENT IS THE ONE KIND OF CLAIM ITS AUTHOR HAD NO REASON TO CHECK, because the document's
+subject is the corpus and its authority is about the corpus, and the sentence rides along inside that
+authority. Version 3 re-measured four codebase claims deliberately and all four survived; this one
+was not among them, because it sits in a design authority and not in the analysis. THE CLOSER: when
+an assessment re-measures its own codebase claims, it should re-measure the codebase claims of the
+deep reads it cites, because a finding is only as current as the sentence a builder actually reads.
+Not closed here, because closing it means a sweep of four design authorities and this slice is a
+declaration that promised to change nothing.
+
+THE FOUR CHANNELS NOBODY WRITES ARE A DECISION AND NOT AN OVERSIGHT, and it is the same shape slice
+46 left two slices earlier. serotonin, acetylcholine, histamine and orexin are named here and written
+by nobody, exactly as the master register names sleep sub-modes the machine cannot yet enter. A
+roster that named only what is already broadcast would have been a description of konnectome rather
+than of the corpus, and would have had to be re-opened by every later slice that needed one more.
+
+Gates at this slice: neuromodulator_bus grows from thirty-six Prolog Unit (PLUnit) tests to
+FIFTY-ONE (the other thirty-three packs unchanged; EIGHT HUNDRED AND TWENTY-SIX in total across
+THIRTY-FOUR packs, all green); the naming gate reports zero violations across all thirty-four packs
+and passes its own self-test; the layer, layer-binding and reality-discipline gates all report zero
+violations; the capstone story is byte-identical to main's. Nothing routes to either change order: a
+roster of channel names read inside one runtime travels to nobody and fails the consumer-versus-
+ontology test of the Second Commandment, and no language feature was missing. Nothing releases the
+held sections of the causalontology change order. Neither cousin was edited; conformance stands
+where slice 47 re-measured it, at 137 of 137 in both, with the checks-versus-vectors qualification
+this ledger already carries.

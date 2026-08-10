@@ -14,17 +14,17 @@ THE DSPARCD FILESET - THE SEVEN
 
 • konnectome_0_definition_v1.txt - DEFINITION. What konnectome IS in one sentence and what it is NOT in eight. READ THIS ONE FIRST. It is deliberately SHORT and must stay short. Where it and a later phase disagree, THE DEFINITION LEADS and the later phase is corrected; only the Constitution outranks it.
 
-• konnectome_1_specification_v48.txt - SPECIFICATION. The problem defined completely before any code is written.
+• konnectome_1_specification_v49.txt - SPECIFICATION. The problem defined completely before any code is written.
 
-• konnectome_2_pseudocode_v48.txt - PSEUDOCODE, written in English Readable Code.
+• konnectome_2_pseudocode_v49.txt - PSEUDOCODE, written in English Readable Code.
 
-• konnectome_3_architecture_v48.txt - ARCHITECTURE. Components, interfaces, data model.
+• konnectome_3_architecture_v49.txt - ARCHITECTURE. Components, interfaces, data model.
 
-• konnectome_4_refinement_v48.txt - REFINEMENT. Test-driven iteration; what the tests found.
+• konnectome_4_refinement_v49.txt - REFINEMENT. Test-driven iteration; what the tests found.
 
-• konnectome_5_completion_v48.txt - COMPLETION. The measured state of the build.
+• konnectome_5_completion_v49.txt - COMPLETION. The measured state of the build.
 
-• konnectome_6_demonstration_v48.txt - DEMONSTRATION. What can now be shown that could not be shown before.
+• konnectome_6_demonstration_v49.txt - DEMONSTRATION. What can now be shown that could not be shown before.
 
 NOTE THE VERSION NUMBERS AND WHY ONE OF THEM DIFFERS. Six of the seven are at v48 and move together, because the Twelfth Commandment requires that any code change be accompanied by mirrored changes to the whole Fileset with version numbers incremented. THE DEFINITION IS AT v1 AND HAS NEVER BEEN SUPERSEDED, because it states a concept rather than a state, and a concept that needed a new version every slice would not have been a concept.
 

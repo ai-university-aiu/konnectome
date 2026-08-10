@@ -29,7 +29,19 @@
     % neuromodulator_bus_release_mode_throw/3: withdraw a standing throw, returning the kind to itself.
     neuromodulator_bus_release_mode_throw/3,
     % neuromodulator_bus_check_thrown_mode/1: refuse a hole, a compound, or the reserved silence name.
-    neuromodulator_bus_check_thrown_mode/1
+    neuromodulator_bus_check_thrown_mode/1,
+    % neuromodulator_bus_channel/1: the corpus's roster of six named broadcast channels, enumerable.
+    neuromodulator_bus_channel/1,
+    % neuromodulator_bus_channel_role/2: the computational role the corpus assigns one channel.
+    neuromodulator_bus_channel_role/2,
+    % neuromodulator_bus_channel_source/2: the source nucleus the corpus names for one channel.
+    neuromodulator_bus_channel_source/2,
+    % neuromodulator_bus_channel_cognitive/2: the corpus's own COG or NON-COG tag for one channel.
+    neuromodulator_bus_channel_cognitive/2,
+    % neuromodulator_bus_check_channel/1: refuse a name the roster does not carry - OFFERED, never applied here.
+    neuromodulator_bus_check_channel/1,
+    % neuromodulator_bus_channel_named/2: resolve the corpus's own name for a channel onto the roster's.
+    neuromodulator_bus_channel_named/2
 ]).
 
 % Import membership for reading a level from the bus.
@@ -56,6 +68,10 @@
 % a fourth key shape, mode_throw(ConstructKind), on which one write sets the mode of every construct
 % of that kind at once. That channel and the decision it embodies are documented at the foot of this
 % file, where the code for it lives.
+% Per the Layer 11 global-states catalogue's Chapter 16, which is this pack's own chapter, the bus
+% also carries a declared ROSTER of the six named broadcast channels with the role, source nucleus
+% and cognitive tag the corpus assigns each. The roster DECLARES and does not GUARD: it is documented
+% at the foot of this file, below the mode throw, where the code for it lives.
 
 % neuromodulator_bus_check_atom(+Value, +ErrorName): refuse a name that is not a plain atom, by name.
 neuromodulator_bus_check_atom(Value, ErrorName) :-
@@ -317,3 +333,134 @@ neuromodulator_bus_release_mode_throw(Bus0, ConstructKind, Bus) :-
     exclude(neuromodulator_bus_matches(mode_throw(ConstructKind)), Bus0, Without),
     % Keep the bus in the same canonical sorted order every other write leaves it in.
     keysort(Without, Bus).
+
+% ---------------------------------------------------------------------------
+% THE SIX NAMED BROADCAST CHANNELS (konnectome build slice 48)
+% ---------------------------------------------------------------------------
+%
+% WHERE THE ROSTER COMES FROM, AND WHY IT IS THE BUS'S OWN CHAPTER. The Layer 11 global-states
+% volume's Chapter 16 is THE ASCENDING BROADCAST SYSTEM (The State Announcement Service): "the
+% noradrenaline of the locus coeruleus, the serotonin of the raphe, the acetylcholine of the
+% brainstem and basal forebrain, the histamine of the tuberomammillary nucleus, the dopamine of the
+% ventral tegmental area, plus the orexin of the lateral hypothalamus - considered as a single Layer
+% 11 organ". That chapter says "the channels are the six transmitter systems themselves" and calls
+% the organ, in its own engineering terms, "the global configuration bus itself". This pack IS that
+% organ, and until this slice it carried the channels without ever naming them.
+%
+% EACH CHANNEL'S ROLE IS THE LAYER 10 SYSTEMS VOLUME'S OWN SUBTITLE, chapters 31 through 36: the
+% Reward-Teaching Broadcast, the Gain-and-Reset Broadcast, the Patience-and-Mood Broadcast, the
+% Attention-and-Encoding Broadcast, the Wakefulness Broadcast, and the Sleep-Wake Stabiliser. The
+% COG and NON-COG tags on those same chapter headings are the corpus's own and are carried through
+% unchanged, because a later caller that wants only the cognitive channels should read that judgment
+% from the corpus rather than re-derive it.
+%
+% WHAT THIS SLICE ADDS IS A DECLARATION AND NOT A GUARD. neuromodulator_bus_broadcast/4 and
+% neuromodulator_bus_level/3 still accept any atom, exactly as they did before this file mentioned a
+% roster, AND THAT IS A FINDING RATHER THAN A COURTESY: THE MODULATOR KEYSPACE IS A NAMESPACE AND
+% NOT A ROSTER. stabiliser publishes its stability bias under the atom key stability_bias, on this
+% same channel shape, and it is not a neuromodulator and never was. A roster enforced on write would
+% have refused a correct, running, tested caller. So the check is written, exported and applied to
+% nothing here: a caller who wants the roster's discipline asks for it by name.
+%
+% KONNECTOME'S OWN DECISION, RECORDED IN THE LEDGER AS DECISION-7, IN TWO HALVES.
+%
+% FIRST HALF - THE ROSTER IS DECLARED IN THE NAME THE MACHINE ALREADY BROADCASTS, AND THE CORPUS'S
+% NAME RESOLVES ONTO IT. The corpus writes noradrenaline; konnectome has broadcast norepinephrine
+% since slice 19, from arousal_regulation, and the capstone's told story reads it. The two words name
+% one molecule. Adopting the corpus's spelling would have RENAMED A RUNNING CHANNEL, which is a
+% migration and not a declaration, and this item's whole warrant is that it changes nothing; and
+% declaring the corpus's spelling BESIDE the running one would have been worse, because THIS BUS
+% ANSWERS AN UNKNOWN KEY WITH ZERO. A caller written from the corpus and reading noradrenaline off a
+% bus carrying norepinephrine would be told, in perfect silence, that arousal is at baseline. THAT IS
+% A PLAUSIBLE ANSWER AND NOT AN ERROR, which is the failure mode this repository has now paid three
+% times to learn to prefer against. neuromodulator_bus_channel_named/2 is therefore the one place the
+% corpus's word is written down, and it RESOLVES rather than aliases: it is a lookup a caller must
+% pass through, not a second key on the bus.
+%
+% SECOND HALF - NO PER-CHANNEL DEFAULT LEVEL IS DECLARED, AND THE REFUSAL IS THE POINT. The corpus
+% does supply numbers that look like defaults: a noradrenaline tonic level of 0.3, a serotonin level
+% of 0.5, an acetylcholine level of 0.5. EVERY ONE OF THEM IS AN INITIAL VALUE INSIDE ONE CHAPTER'S
+% WORKED PSEUDOCODE, not a resting level of the broadcast, and there is no such number at all for
+% histamine or for orexin. What the corpus states about this organ's resting condition is the
+% opposite of a per-channel scalar: "the blend, not any single chemical, names the mode", and the
+% bus is "a mix of six modulators whose blend, not whose bits, encodes the state". A per-channel
+% default lifted out of a worked example would be A DEFAULT WITH A BORROWED WARRANT - an invented
+% value that has learned to cite, which is what slice 45 refused as a number and slice 46 refused as
+% a mode name. The zero this bus has always answered with is not a resting level and does not pretend
+% to be one; it is silence, and it stays silence.
+%
+% WHAT THIS SLICE DOES NOT DO, STATED SO THE GAPS ARE DECISIONS. It declares no BLEND: naming the
+% chemical profile that belongs to each global state is the master register's grain and the Layer 11
+% modes volume's three blends are the material for it, not this channel's. It gives no channel a mode
+% register, though the Layer 10 modes volume supplies one for each. And it wires nothing: four of the
+% six channels are named here and written by nobody, which is the same shape slice 46 left when the
+% register named sleep sub-modes the machine cannot yet enter, and it is recorded rather than hidden.
+
+% neuromodulator_bus_channel(?Channel): the corpus's roster of six named broadcast channels.
+% The order is Chapter 16's own, and the roster is deliberately enumerable: a roster a caller cannot
+% walk is a comment. norepinephrine carries the noradrenaline channel, per DECISION-7's first half.
+neuromodulator_bus_channel(norepinephrine).
+neuromodulator_bus_channel(serotonin).
+neuromodulator_bus_channel(acetylcholine).
+neuromodulator_bus_channel(histamine).
+neuromodulator_bus_channel(dopamine).
+neuromodulator_bus_channel(orexin).
+
+% neuromodulator_bus_channel_role(+Channel, -Role): the computational role the corpus assigns.
+% Each role is the Layer 10 systems volume's own chapter subtitle, in konnectome's whole-word form.
+neuromodulator_bus_channel_role(norepinephrine, gain_and_reset_broadcast).
+neuromodulator_bus_channel_role(serotonin, patience_and_mood_broadcast).
+neuromodulator_bus_channel_role(acetylcholine, attention_and_encoding_broadcast).
+neuromodulator_bus_channel_role(histamine, wakefulness_broadcast).
+neuromodulator_bus_channel_role(dopamine, reward_teaching_broadcast).
+neuromodulator_bus_channel_role(orexin, sleep_wake_stabiliser).
+
+% neuromodulator_bus_channel_source(+Channel, -Nucleus): the source nucleus Chapter 16 names.
+% Acetylcholine is the one channel the corpus gives two sources for, and both are named in one term
+% rather than as two rows, because a second row would make the roster's arithmetic read as seven.
+neuromodulator_bus_channel_source(norepinephrine, locus_coeruleus).
+neuromodulator_bus_channel_source(serotonin, raphe).
+neuromodulator_bus_channel_source(acetylcholine, brainstem_and_basal_forebrain).
+neuromodulator_bus_channel_source(histamine, tuberomammillary_nucleus).
+neuromodulator_bus_channel_source(dopamine, ventral_tegmental_area).
+neuromodulator_bus_channel_source(orexin, lateral_hypothalamus).
+
+% neuromodulator_bus_channel_cognitive(+Channel, -Tag): the corpus's own COG or NON-COG judgment.
+% Carried through unaltered from the Layer 10 chapter headings; konnectome judges no channel itself.
+neuromodulator_bus_channel_cognitive(norepinephrine, cognitive).
+neuromodulator_bus_channel_cognitive(serotonin, cognitive).
+neuromodulator_bus_channel_cognitive(acetylcholine, cognitive).
+neuromodulator_bus_channel_cognitive(histamine, non_cognitive).
+neuromodulator_bus_channel_cognitive(dopamine, cognitive).
+neuromodulator_bus_channel_cognitive(orexin, non_cognitive).
+
+% neuromodulator_bus_check_channel(+Channel): refuse a name the roster does not carry.
+% OFFERED AND APPLIED TO NOTHING IN THIS FILE, per the namespace-is-not-a-roster finding above.
+neuromodulator_bus_check_channel(Channel) :-
+    % Refuse an unbound or compound name exactly as every other name on this bus is refused.
+    neuromodulator_bus_check_atom(Channel, neuromodulator_bus_channel),
+    % A name the roster carries passes; anything else is refused aloud, by the roster's own name.
+    (  neuromodulator_bus_channel(Channel)
+    -> true
+    ;  throw(error(domain_error(neuromodulator_bus_channel, Channel), _))
+    ).
+
+% neuromodulator_bus_channel_named(+Name, -Channel): resolve a corpus name onto the roster's name.
+% This is the ONE place the corpus's own spelling is written down, and it is a lookup rather than a
+% second bus key, so a caller written from the corpus can never read a silent zero off a channel that
+% is carrying a level under konnectome's name for it.
+neuromodulator_bus_channel_named(Name, Channel) :-
+    % Refuse an unbound or compound name before any lookup could bind it to something plausible.
+    neuromodulator_bus_check_atom(Name, neuromodulator_bus_channel),
+    % A roster name resolves to itself; the corpus's own word resolves onto the roster's; nothing else resolves.
+    (  neuromodulator_bus_channel(Name)
+    -> Channel = Name
+    ;  neuromodulator_bus_channel_corpus_name(Name, Channel)
+    -> true
+    ;  throw(error(domain_error(neuromodulator_bus_channel, Name), _))
+    ).
+
+% neuromodulator_bus_channel_corpus_name(+CorpusName, -Channel): the corpus's word for one channel.
+% One row, and it is the whole of the divergence: the corpus writes noradrenaline where konnectome
+% has broadcast norepinephrine since slice 19. A row here is a translation and never an alias.
+neuromodulator_bus_channel_corpus_name(noradrenaline, norepinephrine).

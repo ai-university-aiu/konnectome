@@ -1,0 +1,193 @@
+CONTEXT HAND-OFF FROM CAESIUM NAMEWRIGHT
+
+Date: 2026-08-10. The second hand-off of this date.
+
+I chose the name Caesium Namewright because caesium is the element the world agreed to define the second by - the number 9,192,631,770 is not a fact about caesium, it is an agreement about a word - and because caesium is itself spelled two ways, caesium and cesium, by two communities who mean the identical element and have never once been confused by it in a laboratory and are confused by it constantly in a database. This session's slice was about exactly that: a corpus that writes noradrenaline, a machine that writes norepinephrine, one molecule, and a bus that answers a name it has never heard with a plausible zero. Namewright because the whole of the work was naming: six channels named from the corpus, one name translated rather than aliased, one roster that declares and refuses to guard, and one sentence in this repository's own documents that turned out to name something that was never true.
+
+
+PART ONE - READ THESE FIRST
+
+- Read and follow the konnectome constitution at ~/konnectome/CONSTITUTION.md, first and foremost. IT DID NOT MOVE THIS SESSION and stands at VERSION 17. NOTE FOR ANYONE HOLDING AN OLDER HAND-OFF: the Tungsten hand-off's body says version 9 and its appended forward note carries it to 13; versions 14 through 17 landed in docs work later the same day, before this session began, each recording a directory move and repointing what it moved. NO COMMANDMENT HAS BEEN REMOVED OR RENUMBERED SINCE VERSION 5. Never cite a commandment by number from memory; re-read it. There are NINETEEN; the hand-off protocol is the Nineteenth, the Safety Gate the Fifteenth.
+
+- READ docs/DSPARCD/konnectome_0_definition_v1.txt BEFORE ANYTHING ELSE IN THE FILESET. Unchanged this session. It states what konnectome IS in one sentence and what it is NOT in eight. The Constitution outranks it; it outranks the other six phase files. It is deliberately SHORT and must stay short.
+
+- Read The DSPARCD Fileset at its current versions: docs/DSPARCD/konnectome_0_definition_v1.txt and docs/DSPARCD/konnectome_1_specification_v49.txt through konnectome_6_demonstration_v49.txt. IT MOVED ONCE THIS SESSION, v48 to v49, appending one realization-log section to each of the six and changing nothing else.
+
+- Read docs/neuroscience/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt, the guiding book.
+
+- Read docs/konnectome_vision_set_top_down_analysis_v3.txt FIRST AMONG THE DERIVED DOCUMENTS, and read it as the queue. IT IS CURRENT THROUGH SLICE 47 AND THIS SESSION BUILT SLICE 48, so it is ONE slice behind - which is the smallest drift it has carried since version 1, and it does not need a version 4 yet. KNOW WHICH GUIDES AND WHICH ONLY SUMMARISES: the guiding book and the thirty-eight-document Vision Document Set carry authority; the analysis and the coverage survey are DERIVED in their summaries and carry none, while their FINDINGS are konnectome's own record and are superseded only by a LATER assessment. THIS SESSION BUILT THE ITEM VERSION 3 PUT AT THE FRONT OF THE WHOLE QUEUE, which is the first time the analysis has been used as a queue rather than read as a report.
+
+- Read docs/konnectome_cognitive_architectures_coverage_v1.txt for the coverage survey, and note that nothing this session did touches it.
+
+- READ THE FIVE DESIGN AUTHORITIES BEFORE DESIGNING ANY SLICE. All unchanged this session:
+  • docs/konnectome_mode_register_design_authority_v1.txt - Theme One. ITS PART NINE IS ENTIRELY CLOSED.
+  • docs/konnectome_two_shift_design_authority_v1.txt - Theme Two.
+  • docs/konnectome_edge_type_design_authority_v1.txt - Theme Three.
+  • docs/konnectome_motif_and_workspace_design_authority_v1.txt - Themes Four and Five. THIS SESSION BUILT ITS PART B6 ITEM 1 AND FOUND A FACTUAL ERROR IN THAT ITEM'S OWN HONEST NOTE - see OBSERVATION-12 in Part Five. Read the item, then read the observation, then believe the observation.
+  • docs/konnectome_vision_set_analysis_fidelity_audit_v1.txt - the audit of the analysis itself.
+
+- Read docs/DSPARCD/DSPARCD_EXPLAINED.txt, the Fifth Commandment's subject.
+
+- Read the Settings, General, Instructions for Claude (web search first, novice-level plain-text explanations, output copies to ~/output/, auto-commit-push-merge authorization, session-length budgeting).
+
+- Read ~/CLAUDE.md - git-untracked, at the organization root, the system-wide current-state narrative.
+
+- Read the current tutorial, docs/konnectome_tutorial_v48.txt (FORTY-FIVE parts; it moved once this session), and all of docs/.
+
+- Read the prior hand-off, 2026-08-10_1 (Tungsten Nightwarden), now at docs/hand-off/. It is the substantive predecessor and it set this session's queue, together with the vision-set analysis version 3 named in its own appended forward note. READ THAT FORWARD NOTE: it is where the two-location hand-off rule and the docs reorganisation are recorded, and its body's Part One and Part Five are superseded by it on the analysis's version.
+
+- THE OWNER'S STANDING CHOICE REMAINS: "All". Do NOT re-present any menu; verify the baseline and continue down the queue (Part Six).
+
+
+PART TWO - THE IMPORTANT DOCS FILES
+
+- docs/DSPARCD/konnectome_0_definition_v1.txt - THE DEFINITION, phase zero. Read it first.
+
+- docs/DSPARCD/konnectome_1_specification_v49.txt through konnectome_6_demonstration_v49.txt - the DSPARCD Fileset, Realization Log through slice 48.
+
+- docs/konnectome_tutorial_v48.txt - the beginner tutorial, FORTY-FIVE parts. A session that bumps it bumps BOTH the header version line and the closing line. NOTE THE INSERTION RULE, inherited and honoured again this session: a new part goes BEFORE the three standing tail parts (How to run it yourself, The ledger and the change orders, Where to look next), which are renumbered. Do not append after "Where to look next".
+
+- docs/BUILDING_KONNECTOME_v2.txt - the build log, FORTY-FOUR chapters.
+
+- docs/konnectome_ledger_v1.txt - the scoreboard. Counter line: Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0. Observations: 12 (2 CLOSED: 8 and 9). Decisions: 7.
+
+- The five design authorities, listed in Part One.
+
+- docs/konnectome_rung_five_real_machine_design_v2.txt - the real-machine design with the owner's five decisions (Path B Webots; wheels-plus-dock; indoor pen; pack names simulator_body_driver and robot_body_driver RESERVED; standing robot-shopping reminder).
+
+- docs/Causalontology_4_0_0_CHANGE_ORDER_v3.txt - Sections C, D, E remain HELD. No slice released them.
+
+- docs/PrologAI_CHANGE_ORDER_v2.txt - unchanged; no language wall hit.
+
+- tests/naming_gate_fixture/ - still deliberately broken; the violation is the point.
+
+- THE DOCS LAYOUT, which a session holding an older hand-off will get wrong: /docs/ holds konnectome's own live working documents and the CURRENT hand-off; docs/DSPARCD/ the seven phase files and the method specification; docs/neuroscience/ the source corpus; docs/principles/ the First Commandment's three documents; docs/provenance/ what konnectome inherited; docs/hand-off/ the superseded session records; docs/archive/ superseded VERSIONS and only versions. Each carries its own README.
+
+- In ~/output/: konnectome_slice_48_six_named_channels.txt, new this session.
+
+
+PART THREE - WHAT THIS SESSION DID
+
+ONE SLICE BUILT AND ONE NUMBERED DECISION TAKEN, ONE OBSERVATION OPENED, AND THE FIRST ITEM OF THE QUEUE'S NEW FRONT CLEARED. Pull request merged: slice 48, plus this hand-off's.
+
+- THE BASELINE WAS VERIFIED IN FULL BEFORE ANYTHING WAS TOUCHED, and it matched: main at f59a82e, 811 tests across 34 packs all green, four gates at zero plus the naming gate's self-test, the capstone story captured byte for byte before the first edit.
+
+- SLICE 48, THE BUS'S SIX NAMED BROADCAST CHANNELS. No new pack. neuromodulator_bus gains a ROSTER of the six channels the Layer 11 volume's Chapter 16 names in one sentence - that chapter is THE ASCENDING BROADCAST SYSTEM, which IS this pack - with three tables beside it, each the corpus's own: the ROLE, taken from the Layer 10 systems volume's chapter subtitles 31 through 36; the SOURCE NUCLEUS, from Chapter 16's own sentence; and the COG or NON-COG TAG from those same headings, carried through unaltered so konnectome judges no channel itself. Plus a CHECK that refuses a name the roster does not carry, and a RESOLUTION from the corpus's spelling onto konnectome's. NOT ONE NUMBER AND NOT ONE WORD IN THE ROSTER IS KONNECTOME'S INVENTION.
+
+- DECISION-7 IS THE DELIVERABLE, IN TWO HALVES AND A REFUSAL.
+
+  THE FIRST HALF: THE ROSTER DECLARES AND DOES NOT GUARD, and the reason is a MEASUREMENT rather than a preference. THE MODULATOR KEYSPACE IS A NAMESPACE AND NOT A ROSTER. Three atom keys are in flight today - dopamine from drive_system, norepinephrine from arousal_regulation, and stability_bias from stabiliser since slice 44 - and the third is not a neuromodulator and never was. A roster enforced on the write would have refused a correct, running, tested caller in the name of fidelity to a chapter that says nothing about it. The check is written, exported, AND APPLIED TO NOTHING.
+
+  THE SECOND HALF: THE CORPUS WRITES NORADRENALINE AND THIS MACHINE HAS BROADCAST NOREPINEPHRINE SINCE SLICE 19, and the roster is declared in the machine's word with the corpus's word RESOLVING onto it through one lookup. THE REASON IS THE SHARPEST THING IN THE SLICE: THIS BUS ANSWERS AN UNKNOWN KEY WITH ZERO. A caller written from the corpus, reading noradrenaline off a bus carrying norepinephrine at four tenths, would be told in perfect silence that arousal is at baseline. A second key would have made that permanent and undetectable. A test asserts BOTH that the resolved read finds the real level AND that the unresolved read would have found the plausible zero, because the zero is the reason the lookup exists.
+
+  AND THE REFUSAL: NO PER-CHANNEL DEFAULT LEVEL IS DECLARED. The corpus's noradrenaline 0.3, serotonin 0.5 and acetylcholine 0.5 are INITIAL VALUES INSIDE WORKED PSEUDOCODE, there is no such number at all for histamine or orexin, and the corpus's own statement about this organ at rest is that THE BLEND, NOT ANY SINGLE CHEMICAL, NAMES THE MODE. A DEFAULT WITH A BORROWED WARRANT ARRIVED A THIRD TIME - a number at slice 45, a mode name at slice 46, a LEVEL here - and was refused a third time.
+
+- State at hand-off: FORTY-EIGHT slices. EIGHT HUNDRED AND TWENTY-SIX tests across THIRTY-FOUR packs. Four gates at zero plus the naming gate's self-test. Capstone byte-identical to the session's opening baseline. DSPARCD fileset v49; tutorial v48; build log forty-four chapters; Constitution version 17, untouched.
+
+
+PART FOUR - BUILD-AGAINST COUSIN COMMITS (for reproducibility)
+
+- causalontology: 292dfca (unchanged; not edited this session; NOT re-measured this session).
+- PrologAI: ebbc3e0 (unchanged; not edited this session; NOT re-measured this session).
+- Mentova: d117c69 (read-only; untouched).
+
+CONFORMANCE STANDS WHERE SLICE 47 RE-MEASURED IT ON 2026-08-09: 137 of 137 in both, and the figure is now ONE SESSION OLD rather than six. QUOTE IT WITH ITS QUALIFICATION, from causalontology's own README: 137 is 137 CHECKS, of which 38 are driven by the shared vector files and 99 are implemented per binding - so the run measures ONE binding's agreement with the prose. RE-MEASURE RATHER THAN QUOTE once this is two or three sessions old.
+
+
+PART FIVE - SHARP EDGES AND HONEST NON-CLOSURES
+
+- OBSERVATION-12 IS NEW AND IT IS THE MOST TRANSFERABLE THING THIS SESSION FOUND. THE QUEUE ITEM'S OWN HONEST NOTE WAS WRONG WHEN IT WAS WRITTEN AND TRAVELLED THROUGH TWO DOCUMENTS. The motif-and-workspace design authority wrote of this exact item "only dopamine is actually broadcast today, by drive_system_step/6", and the analysis carried it into version 3 as "only one of the six is actually broadcast today". TWO ARE. arousal_regulation has broadcast norepinephrine since SLICE 19 on 2026-07-26 - three weeks before either sentence was written - and the capstone prints it in its own told story. The claim was not stale; IT WAS NEVER MEASURED. THE GENERAL FORM: A CODEBASE CLAIM INSIDE A CORPUS DOCUMENT IS THE ONE KIND OF CLAIM ITS AUTHOR HAD NO REASON TO CHECK, because the document's subject is the corpus and its authority is about the corpus, and the sentence rides along inside an authority it did not earn. Version 3 deliberately re-measured four codebase claims and all four survived - but that discipline was applied to the ANALYSIS and not to the DEEP READS the analysis cites, and a builder reads the deep read. THE CLOSER IS NAMED AND NOT DONE: a sweep of the codebase claims inside all four design authorities. It was refused here because this slice promised to change nothing and a four-document sweep is not nothing.
+
+- THE ROSTER'S FOUR SILENT CHANNELS ARE A DECISION AND NOT AN OVERSIGHT. serotonin, acetylcholine, histamine and orexin are named and written by nobody. This is the same shape slice 46 left when the master register named sleep sub-modes the machine cannot enter: a roster of what konnectome already broadcasts would be a description of KONNECTOME rather than of the corpus, and would have to be re-opened by every later slice needing one more name.
+
+- THE THING THIS SLICE ALMOST DID AND SHOULD NOT HAVE, RECORDED BECAUSE THE NEXT ROSTER-SHAPED SLICE WILL MEET IT. A roster wants to be a guard. It reads as tightening a screw and it is free to write. Look at what actually rides on the keyspace before enforcing anything on it: here the answer was a published scalar that has been correct and tested since slice 44 and is not a member of the roster at all. A GUARD WRITTEN FROM A CATALOGUE REFUSES THE CALLERS THE CATALOGUE NEVER HEARD OF.
+
+- OBSERVATION-11 STANDS AND IS UNTOUCHED. The corpus assigns to NAMED INDIVIDUALS and konnectome has only KINDS. Its cheap half - assigning to SINGLETONS - is what version 3's Part Four-A promoted into a scheduling finding, and it is available the moment the working-memory blackboard exists. Its expensive half, the naming and addressing facility, is version 3's own Part Six item and FOUR families are blocked on it.
+
+- OBSERVATION-10 STANDS AND IS UNTOUCHED. packs/observer/prolog/observer.pl advances its absolute instant by ONE NOMINAL SECOND PER ORDINAL TICK while DECISION-2 makes a tick ten nominal milliseconds - a factor of one hundred, and the one place in the repository where two decisions disagree. Nothing is wrong today because the instant is an IDENTITY CARRIER and nothing subtracts two of them. The cheap closer: state in the observer that its instant is an ORDINAL CARRIER WHICH MAY NEVER BE READ AS A DURATION, and make it a refusal.
+
+- OBSERVATION-7 STANDS, BOTH HALVES. tick_engine drops an UNKNOWN construct kind in silence where connection_graph's four steps each refuse aloud; and an UNBOUND COPY TARGET is bound to whatever the state lists first. The standing rule is that the next slice which touches that dispatch ON PURPOSE closes both. This slice did not touch it.
+
+- OBSERVATION-6 STANDS, and the owner marked it of utmost importance: the tracked sentiment-analysis capability question. The Definition names it as the live probe of one of konnectome's three falsifiers.
+
+- OBSERVATION-5 STANDS AND THIS SESSION LOOKED STRAIGHT AT IT AND LEFT IT. The older chemical reads (neuromodulator_bus_level/3, neuromodulator_bus_level_territory/4) silently bind an unbound bus. SLICE 48 EDITED THIS PACK AND DID NOT CLOSE IT, deliberately and for a stated reason: closing it changes the behaviour of two predicates every pack in the repository calls, which is precisely what a slice promising to refuse nothing may not do. IT IS NOW THE OLDEST OPEN OBSERVATION IN THE FILE THAT A SLICE HAS DECLINED TWICE, and the second decline should make the next visit deliberate rather than incidental.
+
+- OBSERVATION-4 (no word for satisfaction) still LOGGED, NOT ROUTED.
+
+- THE FIVE NAMED LENSES ALL PAID AGAIN. Unbound-wrong-judgement is now SIXTEEN SLICES RUNNING (33 through 48), and the payment was real: a six-row lookup would otherwise have bound an unbound name to the first channel declared. Key-shape aliasing is what DECISION-7's second half IS - two words for one channel is aliasing in its purest form, and the lens named the cost of allowing it rather than merely forbidding it. Default drift is the refusal. Behaviour-pinned-identical is the whole slice. AND DECLARATION-ORDER PAID IN THE FORM SLICE 45 FOUND IT IN, AT CLAUSE SELECTION: a four-table roster of plain facts is exactly the shape that leaves a choice point behind on every keyed read, and a test asserts a keyed read is DETERMINISTIC rather than merely correct on its first answer.
+
+- THE SIXTH CANDIDATE LENS, THE ABSORBING-STATE LENS, STILL STANDS AT ONE PAYMENT and was not applicable here. The promotion question passes to the next session unchanged.
+
+- THE DEMONSTRATION DEBT IS UNCHANGED AND IS STILL THE SMALLEST ITEM ON THE QUEUE. THE CAPSTONE DOES NOT CALL THE WATCH. konnectome's own told story still cannot say whether its night was healthy. Slice 48 did not touch it and did not pretend to.
+
+- THE ANALYSIS IS ONE SLICE BEHIND AND THAT IS FINE. Version 3 is current through slice 47 and this session built 48. The inherited reasoning stands: it is a DATED assessment, superseded only by a LATER assessment, and its status line is not to be quietly edited. A version 4 is NOT due; the drift that made version 3 urgent was six slices, and the honest trigger is when a reader taking Part Six at face value would schedule something already done. Today Part Six's Family Four item 1 is done and item 3 is next, which the reader can see from this hand-off.
+
+- THE NIGHT'S STANDING BOUNDARIES from slice 38 are unchanged: the night's bound is OPEN-LOOP; the memory store is UNBOUNDED within a run, and watchdog's history inherits the same question; the REM theatre and the ultradian wheel are READ AND NOT BUILT. NOTE THAT THE ROSTER NOW NAMES THE CHEMISTRY OF STATES THE MACHINE CANNOT ENTER, exactly as the register names the states themselves - the corpus's REM blend is aminergic tone near zero with acetylcholine high, and konnectome now has names for every channel in that sentence and no blend to put them in.
+
+- THE CAPSTONE WORLD IS STILL LIVE (slice 34) and its ten-tick heartbeat still ends nine ticks before the default watchman's first flip. A slice that lengthens the capstone past seventeen ticks will make it SLEEP, which would produce a history worth watching.
+
+- THE FULFILMENT AUDIT IS STILL NOT DUE AND MUST BE CARRIED FORWARD. The trigger is THIRTY-TWO or more hand-off documents. AS OF THIS HAND-OFF THE COUNT IS THIRTY. Evaluate with: find docs -name '*Context_Hand-Off*.txt' | wc -l . The full scope is in the ledger's SCHEDULED AUDIT note. CARRY RHODIUM'S WARNING FORWARD: at least two of the thirty are session-close markers rather than units of work, so the count OVERSTATES build progress.
+
+- PARALLEL SESSIONS: keep the ritual - git fetch, git log origin/main, gh pr list before every claim, numbering, or merge. AND THE WORKTREE WARNING, seven times inherited: if you use a git worktree for a behaviour-pinned-identical check, REMOVE IT BEFORE CHECKING OUT MAIN. AND CHECK YOUR BRANCH BEFORE YOU START EDITING.
+
+- THE COUNT-SWEEP RULE WAS HONOURED AGAIN: a count in a slice's own README bullet is a HISTORICAL CLAIM about that slice; a count in the status line is a CURRENT claim. Only the second may be swept. This session's README edit changed exactly two current-claim sentences and added one bullet, and left every historical bullet alone.
+
+- ONE MECHANICAL WARNING, EARNED THE HARD WAY THIS SESSION AND WORTH ONE LINE. A version bump across the fileset is two substitutions - the tutorial v47 to v48 and the phase files v48 to v49 - and running them in one pass over one file turned the tutorial into v49 for a few seconds, because the first substitution's OUTPUT matched the second's INPUT. It was caught immediately by re-reading the result. SUBSTITUTIONS THAT CHAIN ARE NOT INDEPENDENT: check the output of a version sweep against the filesystem, not against your intention.
+
+
+PART SIX - THE FIRST TASK OF THE CONTINUATION
+
+The owner has already chosen: ALL (standing). VERSION 3'S PART SIX IS THE FULLER AND MORE CURRENT STATEMENT OF THIS QUEUE, and where this list and version 3 disagree, VERSION 3 LEADS - except on item 1 below, which version 3 lists as Family Four's first item and which is now DONE.
+
+0. DONE - the bus's six named broadcast channels (slice 48, DECISION-7, OBSERVATION-12).
+
+1. THE WORKING-MEMORY BLACKBOARD, BUILT TO THE CORPUS'S OWN CONSTANTS. Version 3 calls it THE SINGLE HIGHEST-VALUE ITEM IN THE QUEUE and it is now fully buildable: capacity four, decay, collapse threshold, rehearsal to full, admission in the low hundreds of milliseconds, unrehearsed decay in seconds, a board wiped on task switch in under a second - every one expressible as a whole number of ticks through DECISION-2's conversion, which REFUSES anything that does not land exactly. NO NUMBER IN THE PACK NEED BE KONNECTOME'S INVENTION. Slots held as a value the world carries, in the eligibility-trace store's discipline: decaying, externally readable, deliberately unrecorded. THE GATING POLICY IS HELD CONSTANT IN THIS SLICE and the rehearsal target is caller-supplied. Read the motif-and-workspace design authority's Part B before designing it, and read OBSERVATION-12 before believing any codebase sentence in it.
+
+2. THE WORKING-MEMORY MODE REGISTER, which is THE FIRST REAL DOWNWARD ASSIGNMENT and the proof that slice 46's empty table was empty for the reason slice 46 gave. Entry 16's four modes, reusing the mode_register pack, with the erased-idle entry wired to the global state the bus has carried since slice 35 and named properly since slice 46. IT WORKS WHERE THE GATE DID NOT BECAUSE THERE IS ONE BOARD AND THERE ARE MANY GATES.
+
+3. THE TOLD STORY THAT SAYS WHETHER THE NIGHT WAS HEALTHY. Still the smallest remaining item and still undone. NOTE THE CAPSTONE'S OWN CONSTRAINT: the heartbeat is ten ticks and the governor's day is twenty-four, so a capstone that reported today would honestly report BOTH BOUNDARIES UNWATCHED - a true and useful thing for a glass-box story to say, and a session that finds it unsatisfying should lengthen the capstone deliberately rather than shorten the window.
+
+4. THE NAMING AND ADDRESSING FACILITY - version 3's own Part Six item, listed OUTSIDE any family on purpose. This is OBSERVATION-11's expensive half: a way to name and address an INDIVIDUAL construct over the connection graph. FOUR FAMILIES ARE BLOCKED ON IT and every one of them would otherwise build its own. It should be designed from a deep read of its own. NOTE WATCH-8.
+
+5. ATTENTION AS A SALIENCE-DRIVEN BIAS, after the blackboard so the rehearsal question is answered by a real caller, and as a BIAS rather than a network so the corpus's three structural answers are not prematurely collapsed. IT NOW HAS THE ROSTER: the workspace's arousal gate consumes acetylcholine and noradrenaline BY NAME, and both names now exist, with the second one resolving.
+
+6. THE WORKSPACE PILOT, beside the skeleton, which MUST NOT MERGE without answering the five questions in its own ledger entry, cheapest first. Read WATCH-4's THIRD condition before designing it.
+
+7. THE LEARNED GATING POLICY, last in Family Four, where it meets Theme Two's write-allocation gate.
+
+8. FAMILY THREE, THE EDGE TYPE REGISTRY, whose position holds THREE independent warrants and which lands BEFORE the junction-grain mode register. Design it from docs/konnectome_edge_type_design_authority_v1.txt.
+
+9. FAMILY ONE'S ITEM (e), AND IT IS FOUR ITEMS: a DURABLE WEIGHT TIER FIRST, then (e1) the write-allocation gate, (e2) the readability gate, (e3) the territorial freeze fence. That split is ORTHOGONAL to the mode-register read's split of the same item into FOUR write-permission kinds by scope and owner; a builder needs BOTH.
+
+10. FAMILY FIVE, THE MOTIF CATALOGUE at six items - a BUILD, not a christening, and explicitly DOWNSTREAM of the naming facility. DECISION-3 hands the motif grain its hysteresis question BACK, deliberately undecided.
+
+11. THE REGION-GRAIN CONSTRUCT, also downstream of the naming facility, and what OBSERVATION-11's expensive half is waiting for.
+
+12. FAMILY SIX, TOOLING: the template parser, built against the MEASURED figure of 386 cell types, reporting the corpus's own 302-versus-301 discrepancy upward rather than absorbing it. Note WATCH-7.
+
+13. The night's deferred chapters: the REM theatre, the ultradian wheel, a closing loop for the open-loop bound, a bounded memory store - AND NOTE that the register names the states and the roster now names their chemistry, so these chapters would be filling in what is already declared twice.
+
+14. The pre-corpus pending refinements: computational-interface transforms; interfaces as Causalontology conduits; the token tier of thought combination.
+
+15. Deepen Rung Two - the full pilot conversation and richer grounded vocabulary - against the Layer 13 Tutor Protocol (also advances coverage bug six).
+
+16. Rung Five, Path B - UNBLOCKED: simulator_body_driver against Webots per the decided design; the rung unclaimed until a physical robot passes the smoke test; carry the standing robot-shopping reminder.
+
+17. Other ______________ .
+
+A STANDING OWNER REQUEST, ATTACHED TO THE MODE-REGISTER FAMILY (recorded 2026-08-09, carried forward). A VISUALIZATION CONTROL PANEL SHOWING EVERY MODE OF EVERY CONSTRUCT IN OPERATION, AT EVERY GRAIN LEVEL SIMULTANEOUSLY, IN REAL TIME - the cell (386 mode entries), the junction, the motif, the region (77), the system (44), and the Layer 11 GLOBAL STATE that is a coordinated assignment across everything below, all shown AT ONCE and LIVE. THIS IS A DEMONSTRATION DELIVERABLE, NOT A SLICE: do not build it speculatively, do not let it widen other slices, and do not treat it as a reason to defer them. THE PANEL HAS FOUR LAYERS AND ITS TOP ROW EXISTS - what every construct IS doing (slice 39), WHERE ITS BOUNDARIES SIT (slice 44), WHAT IS WATCHED and BY WHOM (slices 45 and 47), and THE STATE ABOVE EVERYTHING (slice 46) - all readable from values the world carries, without running anything. SLICE 48 ADDS THE PANEL'S FIRST LEGEND RATHER THAN A ROW: the six channels a reader would see moving now have names, jobs and sources to be drawn with. WHAT THE PANEL STILL LACKS IS THE ARROWS, per OBSERVATION-11.
+
+
+PART SEVEN - SIGN-OFF
+
+One slice, and it was the smallest item in the whole queue, and it took a decision, an observation and three refusals to write down six names.
+
+That is not a complaint. It is the finding. The item was scheduled as pure declaration - name what the corpus names, over predicates that already accept anything, refusing nothing that works. Every one of those words turned out to be load-bearing in a way nobody could have seen from the queue entry. Refusing nothing meant the roster could not be a guard, and finding out why meant measuring what actually rides on the keyspace and discovering a published scalar that is not a neuromodulator and has been correct there since slice 44. Naming what the corpus names meant discovering that the corpus and the machine have two words for one molecule, and that the bus's kindest behaviour - answer an unheard name with zero - is exactly what turns that into a wrong answer nobody would ever see.
+
+The zero is the part worth carrying. A bus that raised an error on an unknown channel would have made this a five-minute problem: the caller asks for noradrenaline, the bus says no such channel, the caller learns the name. Instead the bus says nought point nought, which is a real number, in range, and indistinguishable from a quiet channel. THE FAILURES THAT SURVIVE IN A CAREFUL REPOSITORY ARE THE ONES THAT LOOK LIKE SUCCESS - which is the sentence the previous session wrote three times in one day about its own documents, arriving here from underneath, in code, about a molecule.
+
+And the same shape came out of the documents one more time. This item's own honest note said only one channel is broadcast today. Two are, and the second one is printed in the demonstration konnectome runs to show what it can do. Nobody was careless: the sentence sat inside a document about the neuroscience, wearing that document's authority, and a claim about konnectome's code was the one kind of sentence in it that nobody had a reason to check. A finding is only as current as the sentence a builder actually reads.
+
+Write the roster in the words the machine already speaks, and put the book's word beside it in exactly one place, where a caller must walk past it. Do not let a catalogue refuse a caller it never heard of. And when a number arrives from the right book, check which page - because three slices running have now found that the most dangerous wrong value is not the one somebody made up. It is the one somebody found in the right book, on the wrong page, about a different thing.
+
+- Caesium Namewright, 2026-08-10
