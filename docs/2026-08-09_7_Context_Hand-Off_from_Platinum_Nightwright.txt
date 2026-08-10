@@ -32,7 +32,7 @@ PART TWO - THE IMPORTANT DOCS FILES
 
 - BUILDING_KONNECTOME_v2.txt - the build log, now THIRTY-FOUR chapters; Thirty-Four is this session's (the night crew takes the dark hours).
 
-- konnectome_ledger_v1.txt - the scoreboard. Counter line unchanged: Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0. Observations: 5. New this session: the Slice-38 note (inserted before Observation-5, in slice order). Observation-5 STANDS - see Part Five.
+- konnectome_ledger_v1.txt - the scoreboard. Counter line MOVED this session: Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0. Observations: SIX. New this session: the Slice-38 note (inserted before Observation-5, in slice order); the Build-log repair note; the Owner-judgment note holding that the mode register is the architectural spine; the Modes deep-read note; and OBSERVATION-6, a tracked capability question the owner marked of utmost importance (see Part Five). Observation-5 STANDS.
 
 - konnectome_vision_set_top_down_analysis_v1.txt - the Eighth Commandment analysis; its Family One list at line 75 is this queue's source. Items (a) through (d) are now all CLOSED; item (e) is next. Its THEME ONE, the mode register at every grain (line 25), now carries a STANDING OWNER REQUEST for a real-time visualization control panel at that family's Demonstration phase - the request is written out in full in Part Six, item 2.
 
@@ -92,6 +92,8 @@ PART FIVE - SHARP EDGES AND HONEST NON-CLOSURES
 - THE MEMORY STORE IS UNBOUNDED WITHIN A RUN. It grows one snapshot per online tick and is never trimmed. Since the dose fix this is a MEMORY-USAGE concern only, no longer a correctness one. A future slice may want a bounded or decaying store.
 
 - THE PLAIN-ATOM operating_state KEY IS AN ACCEPTED DECOY on the bus: the public broadcast accepts it, the real operating-state reader correctly ignores it, and it then lingers forever beside the true global(operating_state) key. Pre-existing to this slice; harmless today; worth a reserved-name guard eventually.
+
+- OBSERVATION-6 IS NEW, AND THE OWNER MARKED IT OF UTMOST IMPORTANCE: a tracked CAPABILITY QUESTION - will konnectome be able to do sentiment analysis? The honest answer splits. In the conventional sense (classifying arbitrary text as positive or negative) NO, and coverage bug six owns that gap. In the deeper sense (attributing an affective stance to a situation or another agent, and justifying it with a retractable, evidence-graded record) YES, ALREADY, via situation_appraisal and empathy - konnectome does not RECOGNIZE sentiment from surface features, it OCCUPIES a state and reports it. Read the full entry before answering the question again; it carries FIVE NAMED RE-ANSWER TRIGGERS, and a session that trips one of them and does not return to rewrite the entry has left it stale. The ledger's counter line moved from five observations to six.
 
 - OBSERVATION-5 STILL STANDS. The older chemical reads (neuromodulator_bus_level/3, neuromodulator_bus_level_territory/4) silently bind an unbound bus. Untouched again this session, per the do-not-fix-speculatively rule. The next slice that touches those reads on purpose closes it with the house var guard plus one pin per read, citing Observation-5.
 
