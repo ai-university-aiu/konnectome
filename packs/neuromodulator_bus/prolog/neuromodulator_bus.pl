@@ -13,7 +13,11 @@
     % neuromodulator_bus_operating_state/2: read the global operating state, online by default.
     neuromodulator_bus_operating_state/2,
     % neuromodulator_bus_broadcast_operating_state/3: announce the global operating state to every subscriber.
-    neuromodulator_bus_broadcast_operating_state/3
+    neuromodulator_bus_broadcast_operating_state/3,
+    % neuromodulator_bus_check_operating_state/1: refuse anything but the two flip-flop positions, by name.
+    % (Exported in slice 38 so the tick's day-or-night dispatch judges the state it READS against the
+    % bus's OWN domain, rather than growing a second copy of the same refusal and drifting from it.)
+    neuromodulator_bus_check_operating_state/1
 ]).
 
 % Import membership for reading a level from the bus.

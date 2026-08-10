@@ -25,9 +25,14 @@
                                            plasticity_engine_scaling_step_territory/6]).
 % Reuse the two-process governor: the night watchman that schedules the slice-35 switch.
 :- use_module(library(two_process_governor), [two_process_governor_step/4]).
+% Reuse the offline consolidation engine: the night crew the thrown switch now commands.
+:- use_module(library(offline_consolidation), [offline_consolidation_remember/3,
+                                               offline_consolidation_night_step/8,
+                                               offline_consolidation_check_replay_rate/1]).
 % Reuse the bus's switch: the tick reads the standing selection and announces the governor's next one.
 :- use_module(library(neuromodulator_bus), [neuromodulator_bus_operating_state/2,
-                                            neuromodulator_bus_broadcast_operating_state/3]).
+                                            neuromodulator_bus_broadcast_operating_state/3,
+                                            neuromodulator_bus_check_operating_state/1]).
 % Reuse the observer: it records the tick as a Causalontology token_occurrence.
 :- use_module(library(observer), [observer_record_tick/3]).
 
@@ -58,9 +63,28 @@
 % responded, before the observer records - the governor reads the standing operating state off
 % the bus, advances the rising sleep pressure and the circadian day wave one tick, and the tick
 % announces the governor's selection back onto the bus (the Chapter 16 announcement service).
-% This is the FIRST LEGITIMATE THROWER of the slice-35 switch. Deliberately, nothing yet READS
-% the thrown state: offline behaviour first diverges in the offline-works slice, so this slice's
-% wiring is behaviour-neutral everywhere but the bus entry and the governor itself.
+% This is the FIRST LEGITIMATE THROWER of the slice-35 switch.
+% Since slice 38 the tick is also the switch's FIRST LEGITIMATE READER: the standing operating
+% state, read off the bus at the tick's opening, chooses between two whole programs. An ONLINE
+% tick runs the day exactly as slice 37 left it, and then REMEMBERS - the tick's updated
+% activation pattern is appended to the world's memory store, the hippocampal day of Layer 11
+% Chapter 6 in its simplest honest form. An OFFLINE tick closes the sensory gate: no drive step,
+% no proposals, no graph update, no action, no fast learning, no capture, and an unmoved body
+% (the atonia of sleep); instead the NIGHT WORKS run (Chapter 7): one interleaved replay round
+% over the remembered day, then the slow homeostatic bound at the world's RAISED offline scaling
+% rate - the renormalisation shift. The timing law holds as slice 37 wrote it: the selection made
+% from a tick's completed day governs the NEXT tick's opening state, so the state read at the
+% opening is the one the previous tick announced. DECLARED SIMPLIFICATIONS: through an offline
+% tick the activations, traces, averages, drives, and body all stand as the day left them (the
+% night neither writes nor spends tags, and the bound judges the day's standing averages), and
+% the memory store is unbounded within a run. The world dict gained THREE required keys, each
+% refused aloud by name when missing: memories (the day's snapshot store), replay_rate (the
+% night's strengthening dose per offline tick), and offline_scaling_rate (the raised bound). BOTH
+% night rates are judged on EVERY tick, waking or sleeping alike, so a rotten or negative one
+% cannot ride a whole day unseen and detonate at nightfall; and a night bound set BELOW the day's
+% is refused by name - a lowered night would be no renormalisation at all, the inverted-hysteresis
+% refusal's sibling. The operating state read off the bus is judged against the bus's OWN domain
+% before the dispatch, so exactly one program can ever run and no hole can run both.
 
 % cognitive_cycle_world_value(+World, +Key, -Value): read one world key, refusing a missing key aloud.
 cognitive_cycle_world_value(World, Key, Value) :-
@@ -109,8 +133,86 @@ cognitive_cycle_step(World0, World, Summary) :-
     cognitive_cycle_world_value(World0, learning_rate, LearningRate),
     % Read the two-process governor, the night watchman of the operating state.
     cognitive_cycle_world_value(World0, governor, Governor0),
+    % Read the memory store the day fills and the night replays (slice 38).
+    cognitive_cycle_world_value(World0, memories, Memories0),
+    % Read the night's replay strengthening rate.
+    cognitive_cycle_world_value(World0, replay_rate, ReplayRate),
+    % Read the night's raised scaling rate, the renormalisation shift's steeper bound.
+    cognitive_cycle_world_value(World0, offline_scaling_rate, OfflineScalingRate),
     % Read the fixed simulation start, for the observer's timestamps.
     cognitive_cycle_world_value(World0, simulation_start, SimulationStart),
+    % Refuse a night bound set below the day's, at every tick, waking or sleeping alike.
+    cognitive_cycle_check_offline_scaling_rate(OfflineScalingRate, ScalingRate),
+    % REVIEW FIX (default-drift lens): the night's two rates arrive by the same route and are
+    % documented under the same law, but only the bound was judged at the tick's head - so a rotten
+    % or NEGATIVE replay rate (the night unlearning the day) rode a full eighteen-tick day green and
+    % detonated at the first night tick. Both night rates are now judged on every tick alike.
+    offline_consolidation_check_replay_rate(ReplayRate),
+    % THE FIRST LEGITIMATE READ (slice 38): the standing selection the previous tick announced
+    % chooses this tick's whole program, the waking default when unset.
+    neuromodulator_bus_operating_state(Bus0, OperatingState0),
+    % REVIEW FIX (unbound-wrong-judgement lens, the SIXTH slice running): the bus returns whatever
+    % stands on it WITHOUT judging it, and the two program clauses judge only by head unification -
+    % so a hole on the bus used to unify with the online head, bind itself to online, and leave a
+    % choicepoint into the night clause, running BOTH whole programs and handing a backtracking
+    % caller a second, entirely different world; and an out-of-domain state matched neither head and
+    % failed the whole tick SILENTLY. The bus's own domain check refuses both aloud, before the
+    % dispatch, so exactly one program can ever run.
+    neuromodulator_bus_check_operating_state(OperatingState0),
+    % Run the day program or the night program under the standing state.
+    cognitive_cycle_program(OperatingState0, Body0, Drives0, Bus0, Constructs, Activations0,
+                            Interfaces0, Traces0, Averages0, Memories0,
+                            FadingFactor, SmoothingFactor, ScalingTarget, ScalingTargets,
+                            ScalingRate, OfflineScalingRate, ReplayRate,
+                            Overrides, Threshold, LearningRate,
+                            Body1, Drives1, Bus1, Activations1, Interfaces2, Traces1, Averages1,
+                            Memories1, Reward, FinalOutcome),
+    % Both processes move one tick and the flip-flop selects the next operating state (slice 37);
+    % the selection made from this completed day governs the NEXT tick's opening state.
+    two_process_governor_step(Governor0, OperatingState0, Governor1, OperatingState1),
+    % The tick announces the governor's selection to every subscriber - the first legitimate thrower.
+    neuromodulator_bus_broadcast_operating_state(Bus1, OperatingState1, Bus2),
+    % STEP SIX: advance the tick counter.
+    NextTick is Tick0 + 1,
+    % The observer records this tick as a Causalontology token_occurrence.
+    observer_record_tick(SimulationStart, NextTick, Record),
+    % Assemble the new world with the updated pieces committed together, including the moved body,
+    % the learning body's advanced trace and average stores, and the day's remembered patterns.
+    put_dict(_{tick: NextTick, body: Body1, drives: Drives1, bus: Bus2, activations: Activations1,
+               interfaces: Interfaces2, traces: Traces1, averages: Averages1, governor: Governor1,
+               memories: Memories1},
+             World0, World),
+    % The tick summary reports the tick number, the reward, the released action, and the recorded thought.
+    Summary = tick_summary(NextTick, Reward, FinalOutcome, Record).
+
+% cognitive_cycle_check_offline_scaling_rate(+OfflineRate, +WakingRate): refuse a lowered night bound.
+cognitive_cycle_check_offline_scaling_rate(OfflineRate, WakingRate) :-
+    % An unbound night rate cannot be judged, and must never be silently bound by the comparison.
+    (  var(OfflineRate)
+    -> throw(error(instantiation_error, _))
+    ;  true
+    ),
+    % An unbound day rate cannot be judged either, on the same standing lens.
+    (  var(WakingRate)
+    -> throw(error(instantiation_error, _))
+    ;  true
+    ),
+    % The night's bound is RAISED, at or above the day's: a lowered night is refused by name,
+    % the inverted-hysteresis refusal's sibling (both rates judged as numbers on the way).
+    (  number(OfflineRate), number(WakingRate), OfflineRate >= WakingRate
+    -> true
+    ;  throw(error(domain_error(cognitive_cycle_offline_scaling_rate, OfflineRate-WakingRate), _))
+    ).
+
+% cognitive_cycle_program(+State, ...): the day program awake, the night program asleep (slice 38).
+% THE DAY PROGRAM: the whole slice-37 waking tick, unchanged, and then the day remembers itself.
+cognitive_cycle_program(online, Body0, Drives0, Bus0, Constructs, Activations0,
+                        Interfaces0, Traces0, Averages0, Memories0,
+                        FadingFactor, SmoothingFactor, ScalingTarget, ScalingTargets,
+                        ScalingRate, _OfflineScalingRate, _ReplayRate,
+                        Overrides, Threshold, LearningRate,
+                        Body1, Drives1, Bus1, Activations1, Interfaces2, Traces1, Averages1,
+                        Memories1, Reward, FinalOutcome) :-
     % STEP ONE (A3.3): the drives read the body, compute the reward, and broadcast it as dopamine.
     drive_system_step(Drives0, Body0, Bus0, Drives1, Reward, Bus1),
     % The regions propose actions: each drive proposes to reduce itself, biased by its current error.
@@ -135,23 +237,22 @@ cognitive_cycle_step(World0, World, Summary) :-
     plasticity_engine_scaling_step_territory(InterfacesCaptured, Averages1, ScalingTargets, ScalingTarget, ScalingRate, Interfaces2),
     % STEP FIVE: the body responds - the released action moves the body toward what it needs.
     drive_system_apply_action(FinalOutcome, Drives0, Body0, Body1),
-    % The night watchman reads the standing selection off the bus, the waking default when unset.
-    neuromodulator_bus_operating_state(Bus1, OperatingState0),
-    % Both processes move one tick and the flip-flop selects the next operating state (slice 37).
-    two_process_governor_step(Governor0, OperatingState0, Governor1, OperatingState1),
-    % The tick announces the governor's selection to every subscriber - the first legitimate thrower.
-    neuromodulator_bus_broadcast_operating_state(Bus1, OperatingState1, Bus2),
-    % STEP SIX: advance the tick counter.
-    NextTick is Tick0 + 1,
-    % The observer records this tick as a Causalontology token_occurrence.
-    observer_record_tick(SimulationStart, NextTick, Record),
-    % Assemble the new world with the updated pieces committed together, including the moved body
-    % and the learning body's advanced trace and average stores.
-    put_dict(_{tick: NextTick, body: Body1, drives: Drives1, bus: Bus2, activations: Activations1,
-               interfaces: Interfaces2, traces: Traces1, averages: Averages1, governor: Governor1},
-             World0, World),
-    % The tick summary reports the tick number, the reward, the released action, and the recorded thought.
-    Summary = tick_summary(NextTick, Reward, FinalOutcome, Record).
+    % THE DAY REMEMBERS ITSELF (slice 38): the tick's updated pattern joins the hippocampal day,
+    % newest last, for the night crew to replay when the watchman calls the dark hours.
+    offline_consolidation_remember(Memories0, Activations1, Memories1).
+% THE NIGHT PROGRAM: the sensory gate closes, the body lies still, and the night works run.
+cognitive_cycle_program(offline, Body0, Drives0, Bus0, _Constructs, Activations0,
+                        Interfaces0, Traces0, Averages0, Memories0,
+                        _FadingFactor, _SmoothingFactor, ScalingTarget, ScalingTargets,
+                        _ScalingRate, OfflineScalingRate, ReplayRate,
+                        _Overrides, _Threshold, _LearningRate,
+                        Body0, Drives0, Bus0, Activations0, Interfaces2, Traces0, Averages0,
+                        Memories0, 0, offline_works) :-
+    % THE NIGHT WORKS (Chapter 7): one interleaved replay round over the remembered day, then the
+    % slow bound at the raised offline rate, judging the day's standing averages - install the new
+    % without erasing the old, and renormalise what the day potentiated.
+    offline_consolidation_night_step(Interfaces0, Memories0, ReplayRate, Averages0, ScalingTargets,
+                                     ScalingTarget, OfflineScalingRate, Interfaces2).
 
 % cognitive_cycle_check_tick_count(+NumTicks): refuse a tick count time could not run, by name.
 cognitive_cycle_check_tick_count(NumTicks) :-
