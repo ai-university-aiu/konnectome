@@ -190,7 +190,7 @@ konnectome/
     konnectome_tutorial_v40.txt A complete beginner tutorial (Fifteenth Commandment), versioned.
     PrologAI_CHANGE_ORDER_v2.txt        Additive PrologAI-language gaps (Third Commandment); Wall-3 closed by causal_core 1.1.0.
     Causalontology_4_0_0_CHANGE_ORDER_v3.txt   Data-structure gaps for the frozen ontology (Sections A and B shipped as 4.0.0; C, D, E held).
-    NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt  The source book.
+    LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt  The source book.
     (plus the guiding-principle and context documents, and the palette)
     images/                    The README banner.
     archive/                   Superseded versions live here (Ninth Commandment).

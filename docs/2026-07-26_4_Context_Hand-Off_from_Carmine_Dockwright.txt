@@ -11,7 +11,7 @@ PART ONE - READ THESE FIRST
 
 - Read The SPARCD Fileset at its current versions: docs/konnectome_1_specification_v20.txt through docs/konnectome_6_demonstration_v20.txt. (The Fileset moved v18 to v19 at slice 18 and v19 to v20 at slice 19 this session; superseded versions are in docs/archive/.)
 
-- Read docs/NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt - the guiding book. Its Rung Four section (the emotional and social rung) is now fully realized in konnectome; its Rung Three (concrete reasoning) and Rung Five (embodiment) are the unopened rungs.
+- Read docs/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt - the guiding book. Its Rung Four section (the emotional and social rung) is now fully realized in konnectome; its Rung Three (concrete reasoning) and Rung Five (embodiment) are the unopened rungs.
 
 - Read the Settings, General, Instructions for Claude - the owner's standing instructions (web search first, novice-level plain-text explanations, plain-text output with a copy to ~/output/, auto-commit-push-merge authorization, session-length budgeting).
 

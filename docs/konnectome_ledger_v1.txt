@@ -92,7 +92,7 @@ SECTION THREE - THE SPARCD FILESET PROVENANCE
 ================================================================================
 
 The six SPARCD Fileset files were seeded verbatim from the appendices of
-docs/NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt (Nature's Cognitive Architecture,
+docs/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt (Nature's Cognitive Architecture,
 version 20), per the Seventh Commandment. Source line ranges, for audit:
 
  - konnectome_1_specification   <- Appendix 1, Specification   (lines 9388-9595)
@@ -1660,7 +1660,7 @@ two guiding document after the constitution. IT IS NOT, and the constitution's o
 THE GUIDING AUTHORITY, verified against CONSTITUTION.md rather than recalled: the constitution itself;
 then the First Commandment's three Artificial General Intelligence and Artificial Super Intelligence
 documents, named there as the specification of the principles konnectome is built with; then
-NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt, the guiding book, which the SEVENTH Commandment makes
+LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt, the guiding book, which the SEVENTH Commandment makes
 the source of the entire SPARCD Fileset ("sourced from the Appendices of the file") and the TENTH
 Commandment makes the target of the standing audit; then the thirty-eight documents of the VISION
 DOCUMENT SET, which the EIGHTH Commandment's rule four calls the guiding force ("The FIFTEEN LAYERS
@@ -2500,9 +2500,39 @@ these documents RECORD: every prior Context Hand-Off, every build-log chapter al
 Realization Log entry already written, and everything already in docs/archive/. Rewriting a record to
 match a later decision would falsify it, and this repository's whole discipline rests on records that
 can be trusted. ALSO LEFT ALONE, and this one is a harder rule: THE CORPUS IS NEVER EDITED. The
-Vision Document Set, NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT, TFELOAOTHNAES and
+Vision Document Set, LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT, TFELOAOTHNAES and
 LAYER_15_DESIGN_METHOD mention SPARCD and keep their own words. konnectome does not edit its guiding
 documents to agree with itself.
 
 NO CODE BEHAVIOUR CHANGED. The two pack edits are comments. 677 tests across thirty packs remain
 green and the four gates remain at zero.
+
+
+LAYER-09 MANUSCRIPT RENAME NOTE (2026-08-09, by the owner's instruction). THE GUIDING BOOK TAKES ITS
+PLACE IN THE VISION DOCUMENT SET'S OWN NAMING.
+
+WHAT HAPPENED. docs/NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt is renamed to
+docs/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt, and every reference to it in the
+repository is re-pointed - NINETY occurrences across SEVENTY-SIX files, moved in one change so that
+no pointer is left dangling for a single commit.
+
+WHY IT IS RIGHT AND NOT MERELY TIDY. The Eighth Commandment already said this in words: Layer 9, the
+Regions, is supplied as LAYER_09_MODES_..., described as "the modes companion to
+NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT, which already lives in /docs/ and needs no duplicate". The
+guiding book WAS the Layer 9 volume all along and was the only member of the set not named like one,
+so a reader scanning docs/ for the Vision Document Set's fifteen layers found a hole at nine and a
+differently-named file elsewhere. The rename closes that, and docs/LAYER_09_* now lists the volume
+and its modes companion side by side, exactly as every other catalogued layer does.
+
+THE RULE APPLIED, AND WHY IT DIFFERS FROM THE DSPARCD RENAME MADE THE SAME DAY. The DSPARCD adoption
+note above records that historical documents and the corpus were deliberately NOT edited. This change
+edits both, and the distinction is the point rather than an exception. THE DSPARCD RENAME WAS A
+CHANGE OF MEANING - a record saying "the method is SPARCD" was true when written and stays true, so
+rewriting it would falsify it. THIS RENAME IS A CHANGE OF ADDRESS - a record saying "read
+docs/X.txt" becomes FALSE the moment X moves, and leaving it would falsify the record rather than
+preserve it. A pointer is not a statement. So every hand-off, every archived tutorial, the corpus
+volumes that cite the book (Layers 7, 8, 9-modes and 10), the analysis, the audit and the README were
+all re-pointed, and nothing else in any of them was touched.
+
+WHAT DID NOT CHANGE. Not one word of the manuscript's contents, and no code - no pack references it.
+677 tests across thirty packs remain green and the four gates remain at zero.
