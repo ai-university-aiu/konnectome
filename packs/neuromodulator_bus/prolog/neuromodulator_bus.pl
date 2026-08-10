@@ -9,7 +9,11 @@
     % neuromodulator_bus_broadcast_territory/5: a source writes a modulator's level into one territory.
     neuromodulator_bus_broadcast_territory/5,
     % neuromodulator_bus_level_territory/4: read a modulator's level in one territory, diffuse fallback.
-    neuromodulator_bus_level_territory/4
+    neuromodulator_bus_level_territory/4,
+    % neuromodulator_bus_operating_state/2: read the global operating state, online by default.
+    neuromodulator_bus_operating_state/2,
+    % neuromodulator_bus_broadcast_operating_state/3: announce the global operating state to every subscriber.
+    neuromodulator_bus_broadcast_operating_state/3
 ]).
 
 % Import membership for reading a level from the bus.
@@ -26,6 +30,12 @@
 % territory with its own level reads that level; a territory without one falls back to the global
 % broadcast, the diffuse field, exactly as a molecule released from a small nucleus diffuses to
 % every target that has no local concentration of its own; and with neither, the level is zero.
+% Per the Layer 11 global-states catalogue (Chapters 11 and 16), the bus also carries the GLOBAL
+% OPERATING STATE: a single binary selection with exactly two values, online and offline, announced
+% on the same bus every subscriber already reads - the state announcement service. Its key is the
+% third key shape, the compound global(operating_state), which the atom-only modulator guard and
+% the territory/2 shape can never alias; an absent entry reads as online, the waking default, so a
+% bus built before this state existed behaves exactly as it always did.
 
 % neuromodulator_bus_check_atom(+Value, +ErrorName): refuse a name that is not a plain atom, by name.
 neuromodulator_bus_check_atom(Value, ErrorName) :-
@@ -84,3 +94,35 @@ neuromodulator_bus_level_territory(Bus, Modulator, Territory, Level) :-
     % The global read already answers zero when the field itself is silent.
     ;  neuromodulator_bus_level(Bus, Modulator, Level)
     ).
+
+% neuromodulator_bus_check_operating_state(+State): refuse anything but the two flip-flop positions.
+neuromodulator_bus_check_operating_state(State) :-
+    % An unbound state cannot be judged, and must be refused before any wrong pretends to name it.
+    (  var(State)
+    -> throw(error(instantiation_error, _))
+    % The flip-flop has exactly two positions and spends no time halfway; both are plain atoms.
+    ;  memberchk(State, [online, offline])
+    -> true
+    % A third value is refused aloud, by the state's own name, so no halfway state can ever ride the bus.
+    ;  throw(error(domain_error(neuromodulator_bus_operating_state, State), _))
+    ).
+
+% neuromodulator_bus_operating_state(+Bus, -State): read the global operating state, online by default.
+neuromodulator_bus_operating_state(Bus, State) :-
+    % REVIEW FIX (unbound-wrong-judgement lens): an unbound bus must be refused, never silently
+    % bound by the lookup into a partial list carrying an invented, unbound state.
+    (  var(Bus)
+    -> throw(error(instantiation_error, _))
+    ;  true
+    ),
+    % An announced state reads back; a bus that never heard one operates online, the waking default.
+    ( memberchk(global(operating_state)-Found, Bus) -> State = Found ; State = online ).
+
+% neuromodulator_bus_broadcast_operating_state(+Bus0, +State, -Bus): announce the state to every subscriber.
+neuromodulator_bus_broadcast_operating_state(Bus0, State, Bus) :-
+    % Refuse an unbound state or a third value before touching the bus.
+    neuromodulator_bus_check_operating_state(State),
+    % Drop any existing state entry so the newest announcement wins, as it does for every level.
+    exclude(neuromodulator_bus_matches(global(operating_state)), Bus0, Without),
+    % Add the new state and keep the bus in a canonical sorted order.
+    keysort([global(operating_state)-State|Without], Bus).

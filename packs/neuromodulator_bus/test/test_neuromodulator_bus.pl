@@ -144,5 +144,84 @@ test(an_unbound_territory_is_refused_at_the_territory_broadcast, error(instantia
     neuromodulator_bus_new(Bus0),
     neuromodulator_bus_broadcast_territory(Bus0, dopamine, _, 0.5, _).
 
+% A fresh bus operates online: the default is today's behaviour, no broadcast needed.
+test(a_fresh_bus_operates_online) :-
+    % An empty bus, on which no state was ever broadcast.
+    neuromodulator_bus_new(Bus),
+    % Read the global operating state.
+    neuromodulator_bus_operating_state(Bus, State),
+    % The default is online - the waking state the whole build has always run in.
+    assertion(State == online).
+
+% A broadcast offline state is read back by every subscriber.
+test(a_broadcast_offline_state_is_read_back) :-
+    % Broadcast the offline state onto the bus.
+    neuromodulator_bus_new(Bus0),
+    neuromodulator_bus_broadcast_operating_state(Bus0, offline, Bus),
+    % Read the state back.
+    neuromodulator_bus_operating_state(Bus, State),
+    % The announcement arrived.
+    assertion(State == offline).
+
+% The state snaps back: a newer online broadcast replaces the older offline one.
+test(a_newer_state_broadcast_replaces_the_older) :-
+    % Throw the switch to offline and then back to online.
+    neuromodulator_bus_new(Bus0),
+    neuromodulator_bus_broadcast_operating_state(Bus0, offline, Bus1),
+    neuromodulator_bus_broadcast_operating_state(Bus1, online, Bus),
+    % Read the state.
+    neuromodulator_bus_operating_state(Bus, State),
+    % The newest broadcast won, as it does for every level on this bus.
+    assertion(State == online).
+
+% REVIEW PIN: there is no halfway - a state that is neither online nor offline is refused by name.
+test(a_halfway_state_is_refused_by_name, error(domain_error(neuromodulator_bus_operating_state, drowsy))) :-
+    % The flip-flop spends no time between its two positions; a third value must throw.
+    neuromodulator_bus_new(Bus0),
+    neuromodulator_bus_broadcast_operating_state(Bus0, drowsy, _).
+
+% REVIEW PIN: an unbound state is refused as uninstantiated, never under a wrong naming a variable.
+test(an_unbound_state_is_refused_at_the_broadcast, error(instantiation_error)) :-
+    % A variable state must throw before any judgement pretends to name it.
+    neuromodulator_bus_new(Bus0),
+    neuromodulator_bus_broadcast_operating_state(Bus0, _, _).
+
+% A state broadcast never disturbs the modulator levels beside it.
+test(a_state_broadcast_leaves_modulator_levels_untouched) :-
+    % A dopamine level, then a state broadcast on the same bus.
+    neuromodulator_bus_new(Bus0),
+    neuromodulator_bus_broadcast(Bus0, dopamine, 0.4, Bus1),
+    neuromodulator_bus_broadcast_territory(Bus1, dopamine, striatum, 0.9, Bus2),
+    neuromodulator_bus_broadcast_operating_state(Bus2, offline, Bus),
+    % The global and territory levels read exactly as before.
+    neuromodulator_bus_level(Bus, dopamine, Global),
+    neuromodulator_bus_level_territory(Bus, dopamine, striatum, Striatum),
+    % The chemical field is untouched by the state announcement.
+    assertion(Global =:= 0.4),
+    assertion(Striatum =:= 0.9).
+
+% A modulator broadcast never disturbs the operating state beside it.
+test(a_modulator_broadcast_leaves_the_operating_state_untouched) :-
+    % A state broadcast, then modulator broadcasts on the same bus.
+    neuromodulator_bus_new(Bus0),
+    neuromodulator_bus_broadcast_operating_state(Bus0, offline, Bus1),
+    neuromodulator_bus_broadcast(Bus1, dopamine, 0.4, Bus2),
+    neuromodulator_bus_broadcast_territory(Bus2, dopamine, striatum, 0.9, Bus),
+    % The state still reads offline.
+    neuromodulator_bus_operating_state(Bus, State),
+    % The announcement outlived the chemical traffic.
+    assertion(State == offline).
+
+% REVIEW PIN: a state-shaped term posing as a modulator is refused - the third key shape cannot alias.
+test(a_state_shaped_term_is_refused_as_a_modulator, error(domain_error(neuromodulator_bus_modulator, global(operating_state)))) :-
+    % The state's own key shape must throw at the modulator broadcast, never collide in silence.
+    neuromodulator_bus_new(Bus0),
+    neuromodulator_bus_broadcast(Bus0, global(operating_state), 0.1, _).
+
+% REVIEW PIN: an unbound bus is refused at the state read, never silently bound by the lookup.
+test(an_unbound_bus_is_refused_at_the_state_read, error(instantiation_error)) :-
+    % A variable bus must throw; a lookup that invented a bus would invent a state with it.
+    neuromodulator_bus_operating_state(_, _).
+
 % Close the test block for the neuromodulator_bus pack.
 :- end_tests(neuromodulator_bus).
