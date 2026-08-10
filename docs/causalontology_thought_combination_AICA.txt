@@ -288,4 +288,4 @@ Run these to self-check any construction/validation code before trusting it.
 
 14. VERSION CAVEAT
 
-This document describes spec 3.0.0. The konnectome repository contains forward-looking material: docs/Causalontology_4_0_0_CHANGE_ORDER_v3.txt and docs/CAUSALONTOLOGY_3_0_0_REVIEW_AND_4_0_0_ASSESSMENT.txt. Do not treat 4.0.0 fields as available until spec/causalontology.md declares 4.0.0 and the schemas and conformance vectors are updated. Verify the version at the start of any task.
+This document describes spec 3.0.0. The konnectome repository contains forward-looking material: docs/Causalontology_4_0_0_CHANGE_ORDER_v3.txt and docs/provenance/CAUSALONTOLOGY_3_0_0_REVIEW_AND_4_0_0_ASSESSMENT.txt. Do not treat 4.0.0 fields as available until spec/causalontology.md declares 4.0.0 and the schemas and conformance vectors are updated. Verify the version at the start of any task.

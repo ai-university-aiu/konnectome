@@ -183,17 +183,20 @@ konnectome/
     quantity_model/            Slice 22: the represented model of quantity - the conservation verdict read by re-measuring.
     simulated_body/            Slice 24: the honestly-named stand-in machine - a camera, a draining battery, three actuators.
     body_interface/            Slice 24: Rung Five groundwork - the book's three body connections; the rung itself not claimed.
-  docs/
-    konnectome_0..6_*_vN.txt   The DSPARCD Fileset (six seeded from the appendices; versioned per slice).
+  docs/                        Live working documents at the top level; everything else in a sub-directory.
     konnectome_ledger_v1.txt   The running scoreboard of findings (Fourth Commandment).
-    BUILDING_KONNECTOME_v2.txt The build log (Sixteenth Commandment): the whole story from the true beginning, paper and book at once, versioned.
-    konnectome_tutorial_v47.txt A complete beginner tutorial (Fifteenth Commandment), versioned.
+    BUILDING_KONNECTOME_v2.txt The build log (Eighteenth Commandment): the whole story from the true beginning, paper and book at once, versioned.
+    konnectome_tutorial_v47.txt A complete beginner tutorial (Seventeenth Commandment), versioned.
+    konnectome_vision_set_top_down_analysis_v3.txt  The Eighth Commandment analysis, plus its four design authorities and its fidelity audit.
     PrologAI_CHANGE_ORDER_v2.txt        Additive PrologAI-language gaps (Third Commandment); Wall-3 closed by causal_core 1.1.0.
     Causalontology_4_0_0_CHANGE_ORDER_v3.txt   Data-structure gaps for the frozen ontology (Sections A and B shipped as 4.0.0; C, D, E held).
-    LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt  The source book.
-    (plus the guiding-principle and context documents, and the palette)
+    [DATE]_N_Context_Hand-Off_from_[NAME].txt   The CURRENT hand-off, and the only one here (Nineteenth Commandment).
+    DSPARCD/                   The DSPARCD Fileset - konnectome_0_definition through _6_demonstration - plus the method spec (Fifth, Seventh).
+    neuroscience/              The thirty-eight-document Vision Document Set and the guiding book (Eighth). Source: read, never edited.
+    hand-off/                  Every SUPERSEDED session record. The current one lives one level up.
+    provenance/                What konnectome inherited: the record of the ten-wave programme that preceded it.
+    archive/                   Superseded VERSIONS live here (Eleventh Commandment) - and only versions.
     images/                    The README banner.
-    archive/                   Superseded versions live here (Ninth Commandment).
 ```
 
 ## Status
