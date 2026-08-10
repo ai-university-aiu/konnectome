@@ -1206,7 +1206,7 @@ thought combination. The four gates report zero violations, the naming gate pass
 self-test; conformance re-measured at 137 of 137 (specification 4.0.0) in both cousins. No new
 wall; no cousin edited, per the Second, Third, and Fourth Commandments.
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 8.  Decisions: 1.
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 9.  Decisions: 1.
 
 Slice-34 note (2026-08-09). The bound turned live in the told story. The slice-33 pending line
 (the bound proven per-territory in the tests but not yet in the capstone's told story) is
@@ -2536,3 +2536,70 @@ all re-pointed, and nothing else in any of them was touched.
 
 WHAT DID NOT CHANGE. Not one word of the manuscript's contents, and no code - no pack references it.
 677 tests across thirty packs remain green and the four gates remain at zero.
+
+SLICE 42 NOTE (2026-08-09). THE SUPERVISOR CHANNEL - and the closing of an IOU three slices old.
+
+WHAT WAS BUILT. The design authority's Part Nine slice five. A new pack, supervisor, at layer zero,
+exporting supervisor_channel_new/1, supervisor_faults_are_not_modes/1, supervisor_watch/3,
+supervisor_report_warnings/2, supervisor_report_unwatched/2, supervisor_publish/4 and
+supervisor_report/3. archetype's gate fault block is FILLED from the corpus's own Entry 36 latch:
+fault(oscillation, ...) and fault(stuck_switch, ...), each with its watchdog. 706 tests across
+THIRTY-ONE packs; four gates at zero; a 387-line probe IDENTICAL in both trees with no divergences.
+
+THE DIRECTIVE IS NOW A REFUSAL RATHER THAN A HABIT. The Layer 6 template forbids admitting a fault as
+a first-class mode BY NAME, and konnectome had honoured it since slice 39 by leaving every fault
+block empty. supervisor_faults_are_not_modes/1 refuses a register whose fault signature is also a
+declared mode, with domain_error(supervisor_fault_is_not_a_mode, Signature), and the refusal fires on
+the way into every watch so a malformed register can never be reported on. THE REASON, RECORDED SO IT
+IS NOT LOST: a mode has a transfer function and a fault has none and never will, so a fault admitted
+as a mode gives the system A DESIGNED BEHAVIOUR FOR BEING BROKEN, which it then runs silently and
+indefinitely. A machine with an official way to be broken never reports being broken.
+
+THE THIRD OUTCOME IS THE DESIGN. A regime is WARNED, CLEAN, or UNWATCHED, and the third is the one a
+two-outcome design would lose. An empty warning list cannot distinguish "watched and healthy" from
+"nobody looked", and the second is the dangerous one. The unwatched block makes silence name itself.
+The same reasoning governs the channel's default: a construct kind nobody has watched reads back as
+two empty blocks, which is the statement that no watch happened - never a clean bill of health.
+
+THE CHANNEL IS NOT ON THE NEUROMODULATOR BUS, deliberately, and a later slice should not merge them
+for tidiness. The bus is Component 4, the chemical broadcast field read by every construct's update
+and learning rule. A warning is not a chemical and is not addressed to the constructs at all; it is
+addressed OUTWARD. Putting it on the bus would make every construct's update rule a potential reader
+of its own failure report.
+
+WATCH-3 EXAMINED AND STILL A WATCH, NOT ROUTED. The design authority's Part Ten filed the supervisor
+channel as a routing candidate IF a published warning must be a shareable record rather than a
+konnectome-internal signal. It must not. Every warning is computed inside one runtime from readings
+that runtime was handed and travels to nobody, so it fails the consumer-versus-ontology test. The
+Second Commandment gate was applied and returned NOTHING TO ROUTE. Sections C, D and E of the
+causalontology change order remain HELD.
+
+THE DECLARATION-ORDER LENS PAID ON ITS FIRST OUTING, one slice after it was earned. The watch gathers
+readings by signature, and taking the first match would have produced a real verdict from whichever
+reading a caller happened to list first. Two readings for one boundary are refused with
+domain_error(supervisor_single_reading_per_signature, Signature). A lens earned in one slice and paid
+in the next is the strongest available argument for carrying lenses forward rather than retiring them
+once they have paid. THE UNBOUND-WRONG-JUDGEMENT LENS HAS NOW PAID TEN SLICES RUNNING (33 through
+42), five times in this slice's new code.
+
+OBSERVATION-9 (2026-08-09, from slice 42). KONNECTOME HAS A WATCHER AND NO WATCHDOGS. The supervisor
+judges readings it is HANDED and keeps no history of its own, so the process that would count a
+gate's flips over a window, or its ticks held in one mode, DOES NOT EXIST. Every fault regime in the
+repository is therefore UNWATCHED in the supervisor's own vocabulary today, and the pack reports it
+as exactly that rather than as clean - which is why the third outcome had to be built in the same
+slice as the first two. THE CLOSER IS NAMED: the slice that gives a construct a windowed history, or
+the tick engine a per-construct counter, closes this by supplying the first real watchdog. IT IS NOT
+FIXED SPECULATIVELY HERE, because a watchdog needs a window length and konnectome has no number for
+one - which is the ticks-per-second convention of Family Four item 2, arriving from a third direction.
+
+WHAT THIS SLICE DELIBERATELY DID NOT BUILD. Fault regimes for any construct other than the gate: the
+gate is the only konnectome construct whose fault regimes the corpus actually supplies, and inventing
+regimes for the rest would be the armchair guessing the Fourth Commandment forbids. Any watchdog (see
+Observation-9). Any escalation, retry or recovery policy - the supervisor watches and says, and what
+to DO about a warning is a decision no reading has asked konnectome to make yet. And the per-mode
+ADMITTED-AS-FAULT flag that slice 39 deferred by name stays deferred: nothing needed it.
+
+mode_register WAS DELIBERATELY NOT GIVEN THIS RULE. Its constructor still judges a fault entry's
+SHAPE, because shape is structural, and does NOT judge whether a fault may be a mode, because that is
+a POLICY and belongs to the process that enforces it. This keeps mode_register a formalism rather
+than a rulebook, and it is recorded here because the opposite choice would look tidier.
