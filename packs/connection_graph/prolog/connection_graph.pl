@@ -30,6 +30,8 @@
 :- use_module(library(archetype), [archetype_relay/3]).
 % Reuse the neuromodulatory bus to read the gain a modulator sets for a construct's own territory.
 :- use_module(library(neuromodulator_bus), [neuromodulator_bus_level_territory/4]).
+% Read every construct's rule through its own mode register; a construct IS its register's current mode.
+:- use_module(library(mode_register), [mode_register_construct_rule/2]).
 
 % The connection graph is the connectome as data: a list of directed, weighted, delayed
 % interfaces, each marked transmissive (it conveys a signal) or computational (it computes one).
@@ -69,26 +71,41 @@ connection_graph_total_input(Graph, To, Activations, TotalInput) :-
     % Sum each incoming interface's weighted contribution, starting from zero.
     foldl(connection_graph_accumulate(Activations), Incoming, 0, TotalInput).
 
-% connection_graph_next(+Kind, +Name, +Graph, +State, -NextActivation): one construct's next activation.
+% EVERY CONSTRUCT NOW ANSWERS THROUGH ITS OWN MODE REGISTER. A construct kind is no longer a rule
+% the engine dispatches on directly; it is a HYBRID AUTOMATON whose register names the mode the
+% construct is in, and whose per-mode transfer function is the rule that holds while that mode holds.
+% Today every register holds exactly one mode - a register of one, stated proudly, which the guiding
+% corpus insists is first-class and not degenerate - so the rule read back out is the rule that went
+% in, and not one number moves. A kind konnectome does not run has no register and passes through
+% unchanged, so the refusals below remain the sole authority on what each step accepts.
+
+% connection_graph_next(+Kind, +Name, +Graph, +State, -NextActivation): read the register, then apply.
+connection_graph_next(Kind, Name, Graph, State, NextActivation) :-
+    % Read the rule that holds under this construct's current mode.
+    mode_register_construct_rule(Kind, Rule),
+    % Apply that rule.
+    connection_graph_apply(Rule, Name, Graph, State, NextActivation).
+
+% connection_graph_apply(+Rule, +Name, +Graph, +State, -NextActivation): one construct's next activation.
 % A source construct holds its current activation, representing a clamped sensory input.
-connection_graph_next(source, Name, _Graph, State, NextActivation) :-
+connection_graph_apply(source, Name, _Graph, State, NextActivation) :-
     % Read and keep the source's current activation.
     connection_graph_state_get(State, Name, NextActivation).
 % A relay construct gathers its total weighted input and passes it, scaled by its gain.
-connection_graph_next(relay(Gain), Name, Graph, State, NextActivation) :-
+connection_graph_apply(relay(Gain), Name, Graph, State, NextActivation) :-
     % Gather the total weighted input arriving at this construct.
     connection_graph_total_input(Graph, Name, State, TotalInput),
     % Apply the relay archetype rule to that input.
     archetype_relay(TotalInput, Gain, NextActivation).
 
 % A construct of a kind the plain step does not know is refused aloud, never silently dropped.
-connection_graph_next(Kind, _Name, _Graph, _State, _NextActivation) :-
+connection_graph_apply(Rule, _Name, _Graph, _State, _NextActivation) :-
     % Only a clamped source and a fixed-gain relay belong to the plain step.
-    Kind \== source,
+    Rule \== source,
     % A relay with any gain also belongs to the plain step.
-    Kind \= relay(_),
+    Rule \= relay(_),
     % Refuse the unknown kind by name, so the state can never shrink in silence.
-    throw(error(domain_error(plain_step_construct_kind, Kind), _)).
+    throw(error(domain_error(plain_step_construct_kind, Rule), _)).
 
 % connection_graph_step(+Graph, +Constructs, +State, -NextState): one two-pass synchronous tick.
 connection_graph_step(Graph, Constructs, State, NextState) :-
@@ -102,19 +119,26 @@ connection_graph_step(Graph, Constructs, State, NextState) :-
     % Second pass: commit all next activations at once into a canonical state.
     keysort(NextPairs, NextState).
 
-% connection_graph_next_modulated(+Kind, +Name, +Graph, +State, +Bus, -NextActivation): a bus-aware update.
+% connection_graph_next_modulated(+Kind, +Name, +Graph, +State, +Bus, -NextActivation): register, then apply.
+connection_graph_next_modulated(Kind, Name, Graph, State, Bus, NextActivation) :-
+    % Read the rule that holds under this construct's current mode.
+    mode_register_construct_rule(Kind, Rule),
+    % Apply that rule.
+    connection_graph_apply_modulated(Rule, Name, Graph, State, Bus, NextActivation).
+
+% connection_graph_apply_modulated(+Rule, +Name, +Graph, +State, +Bus, -NextActivation): a bus-aware update.
 % A source construct still holds its current activation.
-connection_graph_next_modulated(source, Name, _Graph, State, _Bus, NextActivation) :-
+connection_graph_apply_modulated(source, Name, _Graph, State, _Bus, NextActivation) :-
     % Read and keep the source's current activation.
     connection_graph_state_get(State, Name, NextActivation).
 % A relay with a fixed gain behaves as before, ignoring the bus.
-connection_graph_next_modulated(relay(Gain), Name, Graph, State, _Bus, NextActivation) :-
+connection_graph_apply_modulated(relay(Gain), Name, Graph, State, _Bus, NextActivation) :-
     % Gather the total weighted input and pass it, scaled by the fixed gain.
     connection_graph_total_input(Graph, Name, State, TotalInput),
     % Apply the relay archetype rule.
     archetype_relay(TotalInput, Gain, NextActivation).
 % A modulated relay's effective gain is its base gain scaled by a modulator's level on the bus.
-connection_graph_next_modulated(relay_modulated(BaseGain, Modulator), Name, Graph, State, Bus, NextActivation) :-
+connection_graph_apply_modulated(relay_modulated(BaseGain, Modulator), Name, Graph, State, Bus, NextActivation) :-
     % Gather the total weighted input arriving at this construct.
     connection_graph_total_input(Graph, Name, State, TotalInput),
     % Read the modulator's level in this construct's OWN territory; an unset territory reads the diffuse field.
@@ -125,15 +149,15 @@ connection_graph_next_modulated(relay_modulated(BaseGain, Modulator), Name, Grap
     archetype_relay(TotalInput, EffectiveGain, NextActivation).
 
 % A construct of a kind the modulated step does not know is refused aloud, never silently dropped.
-connection_graph_next_modulated(Kind, _Name, _Graph, _State, _Bus, _NextActivation) :-
+connection_graph_apply_modulated(Rule, _Name, _Graph, _State, _Bus, _NextActivation) :-
     % Only a clamped source belongs to the modulated step among the plain kinds.
-    Kind \== source,
+    Rule \== source,
     % A relay with any fixed gain also belongs.
-    Kind \= relay(_),
+    Rule \= relay(_),
     % A relay whose gain the bus sets also belongs.
-    Kind \= relay_modulated(_, _),
+    Rule \= relay_modulated(_, _),
     % Refuse the unknown kind by name, so the state can never shrink in silence.
-    throw(error(domain_error(modulated_step_construct_kind, Kind), _)).
+    throw(error(domain_error(modulated_step_construct_kind, Rule), _)).
 
 % connection_graph_step_modulated(+Graph, +Constructs, +State, +Bus, -NextState): a bus-modulated tick.
 connection_graph_step_modulated(Graph, Constructs, State, Bus, NextState) :-
@@ -263,26 +287,33 @@ connection_graph_total_delivered(Deliveries, To, TotalInput) :-
     % Sum each arriving delivery's weighted contribution, starting from zero.
     foldl(connection_graph_accumulate_delivery, Arriving, 0, TotalInput).
 
-% connection_graph_next_delayed(+Kind, +Name, +Deliveries, +State, -NextActivation): a delayed update.
+% connection_graph_next_delayed(+Kind, +Name, +Deliveries, +State, -NextActivation): register, then apply.
+connection_graph_next_delayed(Kind, Name, Deliveries, State, NextActivation) :-
+    % Read the rule that holds under this construct's current mode.
+    mode_register_construct_rule(Kind, Rule),
+    % Apply that rule.
+    connection_graph_apply_delayed(Rule, Name, Deliveries, State, NextActivation).
+
+% connection_graph_apply_delayed(+Rule, +Name, +Deliveries, +State, -NextActivation): a delayed update.
 % A source construct holds its current activation, representing a clamped sensory input.
-connection_graph_next_delayed(source, Name, _Deliveries, State, NextActivation) :-
+connection_graph_apply_delayed(source, Name, _Deliveries, State, NextActivation) :-
     % Read and keep the source's current activation.
     connection_graph_state_get(State, Name, NextActivation).
 % A relay construct gathers its total delivered input and passes it, scaled by its gain.
-connection_graph_next_delayed(relay(Gain), Name, Deliveries, _State, NextActivation) :-
+connection_graph_apply_delayed(relay(Gain), Name, Deliveries, _State, NextActivation) :-
     % Gather the total weighted input delivered to this construct this tick.
     connection_graph_total_delivered(Deliveries, Name, TotalInput),
     % Apply the relay archetype rule to that input.
     archetype_relay(TotalInput, Gain, NextActivation).
 
 % A construct of a kind the delayed step does not know is refused aloud, never silently dropped.
-connection_graph_next_delayed(Kind, _Name, _Deliveries, _State, _NextActivation) :-
+connection_graph_apply_delayed(Rule, _Name, _Deliveries, _State, _NextActivation) :-
     % Only a clamped source belongs to the delayed step among the known kinds.
-    Kind \== source,
+    Rule \== source,
     % A relay with any fixed gain also belongs.
-    Kind \= relay(_),
+    Rule \= relay(_),
     % Refuse the unknown kind by name, so the state can never shrink in silence.
-    throw(error(domain_error(delayed_step_construct_kind, Kind), _)).
+    throw(error(domain_error(delayed_step_construct_kind, Rule), _)).
 
 % connection_graph_step_delayed(+Constructs, +State, +Lines, -NextState, -NextLines): one delayed tick.
 connection_graph_step_delayed(Constructs, State, Lines, NextState, NextLines) :-
@@ -339,19 +370,26 @@ connection_graph_loop_delayed(Tick, NumTicks, Constructs, State, Lines, Acc, Tra
     connection_graph_loop_delayed(NextTick, NumTicks, Constructs, NextState, NextLines,
                                   [tick_record(NextTick, NextState)|Acc], Trace, Final).
 
-% connection_graph_next_delayed_modulated(+Kind, +Name, +Deliveries, +State, +Bus, -Next): delayed, bus-aware.
+% connection_graph_next_delayed_modulated(+Kind, +Name, +Deliveries, +State, +Bus, -Next): register, then apply.
+connection_graph_next_delayed_modulated(Kind, Name, Deliveries, State, Bus, NextActivation) :-
+    % Read the rule that holds under this construct's current mode.
+    mode_register_construct_rule(Kind, Rule),
+    % Apply that rule.
+    connection_graph_apply_delayed_modulated(Rule, Name, Deliveries, State, Bus, NextActivation).
+
+% connection_graph_apply_delayed_modulated(+Rule, +Name, +Deliveries, +State, +Bus, -Next): delayed, bus-aware.
 % A source construct holds its current activation, representing a clamped sensory input.
-connection_graph_next_delayed_modulated(source, Name, _Deliveries, State, _Bus, NextActivation) :-
+connection_graph_apply_delayed_modulated(source, Name, _Deliveries, State, _Bus, NextActivation) :-
     % Read and keep the source's current activation.
     connection_graph_state_get(State, Name, NextActivation).
 % A relay with a fixed gain gathers its delivered input and ignores the bus, as ever.
-connection_graph_next_delayed_modulated(relay(Gain), Name, Deliveries, _State, _Bus, NextActivation) :-
+connection_graph_apply_delayed_modulated(relay(Gain), Name, Deliveries, _State, _Bus, NextActivation) :-
     % Gather the total weighted input delivered to this construct this tick.
     connection_graph_total_delivered(Deliveries, Name, TotalInput),
     % Apply the relay archetype rule to that input.
     archetype_relay(TotalInput, Gain, NextActivation).
 % A modulated relay's gain is set, at the tick of delivery, by its own territory's modulator level.
-connection_graph_next_delayed_modulated(relay_modulated(BaseGain, Modulator), Name, Deliveries, _State, Bus, NextActivation) :-
+connection_graph_apply_delayed_modulated(relay_modulated(BaseGain, Modulator), Name, Deliveries, _State, Bus, NextActivation) :-
     % Gather the total weighted input delivered to this construct this tick.
     connection_graph_total_delivered(Deliveries, Name, TotalInput),
     % Read the modulator's level in this construct's OWN territory; an unset territory reads the diffuse field.
@@ -362,15 +400,15 @@ connection_graph_next_delayed_modulated(relay_modulated(BaseGain, Modulator), Na
     archetype_relay(TotalInput, EffectiveGain, NextActivation).
 
 % A construct of a kind the delayed modulated step does not know is refused aloud, never silently dropped.
-connection_graph_next_delayed_modulated(Kind, _Name, _Deliveries, _State, _Bus, _NextActivation) :-
+connection_graph_apply_delayed_modulated(Rule, _Name, _Deliveries, _State, _Bus, _NextActivation) :-
     % Only a clamped source belongs among the plain kinds.
-    Kind \== source,
+    Rule \== source,
     % A relay with any fixed gain also belongs.
-    Kind \= relay(_),
+    Rule \= relay(_),
     % A relay whose gain the bus sets also belongs.
-    Kind \= relay_modulated(_, _),
+    Rule \= relay_modulated(_, _),
     % Refuse the unknown kind by name, so the state can never shrink in silence.
-    throw(error(domain_error(delayed_modulated_step_construct_kind, Kind), _)).
+    throw(error(domain_error(delayed_modulated_step_construct_kind, Rule), _)).
 
 % connection_graph_step_delayed_modulated(+Constructs, +State, +Lines, +Bus, -NextState, -NextLines).
 connection_graph_step_delayed_modulated(Constructs, State, Lines, Bus, NextState, NextLines) :-
