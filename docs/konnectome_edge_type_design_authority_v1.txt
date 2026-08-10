@@ -23,7 +23,7 @@ The corpus cannot contain them, because the corpus knows nothing about konnectom
 
 They are authoritative as the record of that assessment, and they are superseded by a LATER ASSESSMENT, never by the corpus.
 
-The reading was: docs/konnectome_vision_set_top_down_analysis_v1.txt in full; docs/konnectome_mode_register_design_authority_v1.txt, with attention to its Part Ten scheduling finding; docs/LAYER_07_SYNAPTICS_OUTLINE.txt in full; docs/LAYER_07_MODES_OUTLINE.txt in full; and representative chapters of docs/LAYER_07_SYNAPTICS_MANUSCRIPT.txt and docs/LAYER_07_MODES_MANUSCRIPT.txt read in full - Chapter and Entry 1 (the glutamatergic fast excitatory synapse), Chapter and Entry 4 (the GABA-A fast inhibitory synapse), Chapter and Entry 26 (the neuromuscular junction), Chapter 38 (the neuronal gap junction), Chapter 43 (the silent synapse), Chapter 53 (the tripartite synapse ensheathment), Chapter 55 (the axo-myelinic synapse), Chapter 57 (the microglia-synapse contact), and Entries 62 through 64 of the modes companion.
+The reading was: docs/konnectome_vision_set_top_down_analysis_v1.txt in full; docs/konnectome_mode_register_design_authority_v1.txt, with attention to its Part Ten scheduling finding; docs/neuroscience/LAYER_07_SYNAPTICS_OUTLINE.txt in full; docs/neuroscience/LAYER_07_MODES_OUTLINE.txt in full; and representative chapters of docs/neuroscience/LAYER_07_SYNAPTICS_MANUSCRIPT.txt and docs/neuroscience/LAYER_07_MODES_MANUSCRIPT.txt read in full - Chapter and Entry 1 (the glutamatergic fast excitatory synapse), Chapter and Entry 4 (the GABA-A fast inhibitory synapse), Chapter and Entry 26 (the neuromuscular junction), Chapter 38 (the neuronal gap junction), Chapter 43 (the silent synapse), Chapter 53 (the tripartite synapse ensheathment), Chapter 55 (the axo-myelinic synapse), Chapter 57 (the microglia-synapse contact), and Entries 62 through 64 of the modes companion.
 
 All sixty-four KONNECTOME NOTE blocks of the synaptics manuscript were read as a set, because that set IS the corpus's own proposed type registry.
 
@@ -36,11 +36,11 @@ IT IS SUBSTANTIALLY RIGHT, AND IT IS THE MOST ACCURATE OF THE FIVE THEME PARAGRA
 
 Five of its claims survive the deep read unaltered.
 
-• "The Layer 7 volume is a catalogue of sixty-four junction types organised along axes" is exactly right, and the corpus says it in its own words at docs/LAYER_07_SYNAPTICS_OUTLINE.txt line 20: "The parts of this outline are therefore AXES OF CLASSIFICATION as much as bins, and each entry is the pure type along its axis."
+• "The Layer 7 volume is a catalogue of sixty-four junction types organised along axes" is exactly right, and the corpus says it in its own words at docs/neuroscience/LAYER_07_SYNAPTICS_OUTLINE.txt line 20: "The parts of this outline are therefore AXES OF CLASSIFICATION as much as bins, and each entry is the pure type along its axis."
 
-• "every cognitive junction has an adjustable weight, every non-cognitive junction is built for fidelity and proudly refuses an update rule" is the corpus's own closing sentence, at docs/LAYER_07_SYNAPTICS_OUTLINE.txt line 347: "Every (COG) entry above is a junction whose strength is adjustable and whose adjustment IS learning; every (NON-COG) entry is a junction built for fidelity instead."
+• "every cognitive junction has an adjustable weight, every non-cognitive junction is built for fidelity and proudly refuses an update rule" is the corpus's own closing sentence, at docs/neuroscience/LAYER_07_SYNAPTICS_OUTLINE.txt line 347: "Every (COG) entry above is a junction whose strength is adjustable and whose adjustment IS learning; every (NON-COG) entry is a junction built for fidelity instead."
 
-• The count is right: twenty-seven of sixty-four carry the (COG) tag (docs/LAYER_07_SYNAPTICS_OUTLINE.txt lines 327 to 329).
+• The count is right: twenty-seven of sixty-four carry the (COG) tag (docs/neuroscience/LAYER_07_SYNAPTICS_OUTLINE.txt lines 327 to 329).
 
 • The four proposed type fields - sign discipline, fixed-or-learnable, a learning-rule identity, a time-constant profile - all correspond to real, named, per-chapter blocks of the manuscript template, and are stated in Part Two below with the corpus's own block names.
 
@@ -52,7 +52,7 @@ FIRST CORRECTION. The theme writes: "with today's edges as the default type and 
 
 The corpus permits the pinning but forbids the word DEFAULT as a description of what konnectome's current edges are.
 
-The Layer 7 modes manuscript states the interpretation of register length directly (docs/LAYER_07_MODES_MANUSCRIPT.txt, introduction, at the line beginning "The cortical spine synapse holds half a dozen regimes"): "at Layer 7, as at Layer 6, the length of the register is a statement of what the system trusts the component to decide."
+The Layer 7 modes manuscript states the interpretation of register length directly (docs/neuroscience/LAYER_07_MODES_MANUSCRIPT.txt, introduction, at the line beginning "The cortical spine synapse holds half a dozen regimes"): "at Layer 7, as at Layer 6, the length of the register is a statement of what the system trusts the component to decide."
 
 The same discipline governs TYPE.
 
@@ -70,13 +70,13 @@ The eight parts of the outline are the classification axes; the tag is a per-ent
 
 A tag that changes with the address is not a schema field of the type; it is a claim about deployment.
 
-The deepest structural split the corpus actually enforces is the one at docs/LAYER_07_SYNAPTICS_OUTLINE.txt line 12 and repeated as the volume's governing sentence: "the weight belongs to the relationship."
+The deepest structural split the corpus actually enforces is the one at docs/neuroscience/LAYER_07_SYNAPTICS_OUTLINE.txt line 12 and repeated as the volume's governing sentence: "the weight belongs to the relationship."
 
 That is what makes Layer 7 the one relation-layer, and it is the sentence that decides where konnectome may store an edge's variables.
 
 THIRD SHARPENING. The theme writes "a learning-rule identity" in the singular slot.
 
-The corpus contains at least six structurally different update laws, listed at docs/konnectome_mode_register_design_authority_v1.txt line 206, and one type whose stored, learned variable is not a weight at all: Chapter 55, the axo-myelinic synapse, whose KONNECTOME NOTE (docs/LAYER_07_SYNAPTICS_MANUSCRIPT.txt line 11156) proposes "axon_to_myelin_support_connection: an edge from an axon segment to its wrapping oligodendrocyte whose message carries a demand level and whose learned variable is the edge's own transmission DELAY."
+The corpus contains at least six structurally different update laws, listed at docs/konnectome_mode_register_design_authority_v1.txt line 206, and one type whose stored, learned variable is not a weight at all: Chapter 55, the axo-myelinic synapse, whose KONNECTOME NOTE (docs/neuroscience/LAYER_07_SYNAPTICS_MANUSCRIPT.txt line 11156) proposes "axon_to_myelin_support_connection: an edge from an axon segment to its wrapping oligodendrocyte whose message carries a demand level and whose learned variable is the edge's own transmission DELAY."
 
 So the field is not only a rule identity but a rule identity PLUS a named target variable, and konnectome must decide whether delay is learnable before it writes the field.
 
@@ -85,9 +85,9 @@ PART TWO - THE EDGE TYPE SCHEMA, AS THE CORPUS ACTUALLY WRITES IT
 
 This part is a SUMMARY and loses to the corpus.
 
-THE UNIT. A junction type is defined at docs/LAYER_07_SYNAPTICS_OUTLINE.txt line 16: "a synaptic type is a recurring junctional design - a characteristic combination of messenger, machinery, geometry, and partners - just as a Layer 8 motif is a recurring wiring diagram."
+THE UNIT. A junction type is defined at docs/neuroscience/LAYER_07_SYNAPTICS_OUTLINE.txt line 16: "a synaptic type is a recurring junctional design - a characteristic combination of messenger, machinery, geometry, and partners - just as a Layer 8 motif is a recurring wiring diagram."
 
-THE COMPOSITION RULE, which is the schema's most consequential single sentence and the one konnectome is least prepared for, is at docs/LAYER_07_SYNAPTICS_OUTLINE.txt line 18: "One physical synapse in the tissue is typically several of the entries below at once: a single cortical excitatory contact is a glutamatergic synapse (Part One) on a dendritic spine (Part Two) wrapped by an astrocyte into a tripartite ensemble (Part Seven)."
+THE COMPOSITION RULE, which is the schema's most consequential single sentence and the one konnectome is least prepared for, is at docs/neuroscience/LAYER_07_SYNAPTICS_OUTLINE.txt line 18: "One physical synapse in the tissue is typically several of the entries below at once: a single cortical excitatory contact is a glutamatergic synapse (Part One) on a dendritic spine (Part Two) wrapped by an astrocyte into a tripartite ensemble (Part Seven)."
 
 A real edge therefore carries a SET of types, one per axis, not a single type token.
 
@@ -113,7 +113,7 @@ Sixteen plus nine plus twelve plus five plus three plus seven plus five plus sev
 
 Laid ACROSS all eight axes, not as a ninth axis, is the COGNITIVE TAG: two values, (COG) and (NON-COG), twenty-seven and thirty-seven respectively.
 
-THE PER-TYPE FIELDS. Every one of the sixty-four chapters runs "twenty-three fixed aspects" (docs/LAYER_07_SYNAPTICS_MANUSCRIPT.txt, introduction, the paragraph beginning "Each chapter runs through twenty-three fixed aspects").
+THE PER-TYPE FIELDS. Every one of the sixty-four chapters runs "twenty-three fixed aspects" (docs/neuroscience/LAYER_07_SYNAPTICS_MANUSCRIPT.txt, introduction, the paragraph beginning "Each chapter runs through twenty-three fixed aspects").
 
 The blocks are, in the manuscript's own order and capitalisation: WHAT IT IS AND WHAT IT TRANSMITS; THE JUNCTIONAL ARCHITECTURE; THE MOLECULAR MACHINERY; THE PARTNERS (THE LAYER 6 CAST); SIZE AND SCALE; NUMBER AND DISTRIBUTION; THE TRANSFER FUNCTION; TEMPORAL SIGNATURE; SHORT-TERM DYNAMICS; LONG-TERM PLASTICITY; RELIABILITY AND NOISE; ENERGY BUDGET; DEVELOPMENT AND ASSEMBLY; EVOLUTIONARY PROVENANCE; SUPPORT SYSTEM; HOW IT COLOURS ITS MICROCIRCUITS; DISEASES AND DISORDERS; SYSTEMS INTERFACE; THE KONNECTOME NOTE; ENGLISH READABLE CODE; CODE SAMPLE; WHAT MAKES IT UNMISTAKABLE.
 
@@ -121,7 +121,7 @@ Of those, EIGHT are load-bearing for an edge type registry and are stated here f
 
 FIELD ONE, THE TYPE NAME. Every chapter's KONNECTOME NOTE opens by proposing a connection-type name in snake case.
 
-Chapter 1 proposes fast_excitatory_learning_connection (docs/LAYER_07_SYNAPTICS_MANUSCRIPT.txt line 256).
+Chapter 1 proposes fast_excitatory_learning_connection (docs/neuroscience/LAYER_07_SYNAPTICS_MANUSCRIPT.txt line 256).
 
 Chapter 4 proposes fast_shunting_inhibitory_connection (line 938).
 
@@ -137,7 +137,7 @@ Chapter 1: "Sign positive" (line 156).
 
 Chapter 4: "Sign negative in the adult", and then, critically, "The character is therefore DIVISIVE as much as subtractive: with little driving force the synapse adds conductance rather than current, dividing the neuron's response to simultaneous excitation - shunting inhibition - while at depolarised potentials the same synapse pulls genuinely down" (lines 840 and 842).
 
-Chapter 42, the ephaptic coupling site, is signed but sign-INVERTING with zero delay and zero storage (docs/LAYER_07_SYNAPTICS_MANUSCRIPT.txt line 8905, and docs/LAYER_07_MODES_OUTLINE.txt line 354).
+Chapter 42, the ephaptic coupling site, is signed but sign-INVERTING with zero delay and zero storage (docs/neuroscience/LAYER_07_SYNAPTICS_MANUSCRIPT.txt line 8905, and docs/neuroscience/LAYER_07_MODES_OUTLINE.txt line 354).
 
 Chapter 38, the electrical synapse, is SIGNLESS and SYMMETRIC: "a continuous scaled copy of the sender's voltage rather than a discrete event, delivered symmetrically to both parties" (line 8247).
 
@@ -153,7 +153,7 @@ Its SYSTEMS INTERFACE STATE block says: "no plastic weight - the weight is fixed
 
 Its KONNECTOME NOTE says: "a message carries a spike timestamp and the guarantee of execution, WITH NO ADJUSTABLE WEIGHT FIELD" (line 5706).
 
-FIELD FOUR, THE LEARNING RULE IDENTITY AND ITS TARGET VARIABLE. Distinct laws named in the chapters read: NMDA-receptor-dependent long-term potentiation and depression with a spike-timing window of about twenty milliseconds, pre leading post (Chapter 1, LONG-TERM PLASTICITY); presynaptic potentiation stored as RELEASE PROBABILITY rather than as a postsynaptic weight (Chapter 2, docs/LAYER_07_MODES_MANUSCRIPT.txt Entry 2, "Potentiated presynaptic maintenance - The Raised-Release Weight"); supervised error-gated depression with an external teacher (Chapter 30's supervised_error_broadcast_connection, whose note says its "delivery triggers weight updates on OTHER connections rather than adjusting its own", line 6398, paired with Chapter 31's supervised_weight_matrix_connection, "a separate supervised_error_broadcast_connection (chapter 30) is AUTHORISED to update", line 6610); retrograde depression (Chapter 15); conductance plasticity on an electrical edge, "a trainable averaging coefficient" (Chapter 38, line 8249); homeostatic inhibitory plasticity, where "inhibition learns to match local excitation" (Chapter 4, line 862); and DELAY as the learned variable (Chapter 55, line 11156).
+FIELD FOUR, THE LEARNING RULE IDENTITY AND ITS TARGET VARIABLE. Distinct laws named in the chapters read: NMDA-receptor-dependent long-term potentiation and depression with a spike-timing window of about twenty milliseconds, pre leading post (Chapter 1, LONG-TERM PLASTICITY); presynaptic potentiation stored as RELEASE PROBABILITY rather than as a postsynaptic weight (Chapter 2, docs/neuroscience/LAYER_07_MODES_MANUSCRIPT.txt Entry 2, "Potentiated presynaptic maintenance - The Raised-Release Weight"); supervised error-gated depression with an external teacher (Chapter 30's supervised_error_broadcast_connection, whose note says its "delivery triggers weight updates on OTHER connections rather than adjusting its own", line 6398, paired with Chapter 31's supervised_weight_matrix_connection, "a separate supervised_error_broadcast_connection (chapter 30) is AUTHORISED to update", line 6610); retrograde depression (Chapter 15); conductance plasticity on an electrical edge, "a trainable averaging coefficient" (Chapter 38, line 8249); homeostatic inhibitory plasticity, where "inhibition learns to match local excitation" (Chapter 4, line 862); and DELAY as the learned variable (Chapter 55, line 11156).
 
 FIELD FIVE, THE TIME-CONSTANT PROFILE. Written twice - narratively in TEMPORAL SIGNATURE and as a structured list under SYSTEMS INTERFACE, bullet TIME CONSTANTS.
 
@@ -165,7 +165,7 @@ FIELD SIX, SHORT-TERM DYNAMICS. A separate block from long-term plasticity, and 
 
 Chapter 1: "Both facilitation and depression occur, SET BY RELEASE PROBABILITY: high-probability contacts (probability around 0.5 to 0.9) depress ... while low-probability contacts (around 0.1 to 0.3) facilitate as residual calcium accumulates" (line 172).
 
-Chapter 26 rules on the boundary directly: "Depression and post-tetanic potentiation are WITHIN-MODE dynamics absorbed by the margin, not mode changes" (docs/LAYER_07_MODES_MANUSCRIPT.txt Entry 26, THE TRANSITION TABLE).
+Chapter 26 rules on the boundary directly: "Depression and post-tetanic potentiation are WITHIN-MODE dynamics absorbed by the margin, not mode changes" (docs/neuroscience/LAYER_07_MODES_MANUSCRIPT.txt Entry 26, THE TRANSITION TABLE).
 
 FIELD SEVEN, THE SYSTEMS INTERFACE, which is the corpus's own machine-readable block and the closest thing in the whole corpus to a konnectome pack declaration.
 
@@ -194,7 +194,7 @@ THE PRECISE RELATIONSHIP, IN ONE SENTENCE: at the junction grain the TYPE is the
 
 The evidence for each clause.
 
-FIRST, THE REGISTER IS A FIELD OF THE TYPE, AND IT IS KEYED TO THE TYPE. Every one of the sixty-four entries of docs/LAYER_07_MODES_OUTLINE.txt is stamped "keyed to synaptics catalogue Chapter N", and the modes manuscript introduction says each entry is "PASTE-READY: formatted exactly as a MODES AND MODE TRANSITIONS section for its source chapter ... so a future merge into the synaptics catalogue is a mechanical splice."
+FIRST, THE REGISTER IS A FIELD OF THE TYPE, AND IT IS KEYED TO THE TYPE. Every one of the sixty-four entries of docs/neuroscience/LAYER_07_MODES_OUTLINE.txt is stamped "keyed to synaptics catalogue Chapter N", and the modes manuscript introduction says each entry is "PASTE-READY: formatted exactly as a MODES AND MODE TRANSITIONS section for its source chapter ... so a future merge into the synaptics catalogue is a mechanical splice."
 
 The mode register is literally a twenty-fourth aspect block waiting to be spliced into the type's chapter.
 
@@ -202,7 +202,7 @@ SECOND, THE VOCABULARY IS SHARED AND THE SUBSET IS PER TYPE. The modes manuscrip
 
 THIRD, THE REGISTER LENGTH IS DETERMINED BY THE TYPE'S LEARNING STANDING. The modes manuscript states it outright: "the learning junctions are mode-rich and the fidelity junctions are mode-poor."
 
-The measured distribution over the sixty-four entries of docs/LAYER_07_MODES_OUTLINE.txt is: four registers of one, fourteen of two, thirty-one of three, eight of four, seven of five.
+The measured distribution over the sixty-four entries of docs/neuroscience/LAYER_07_MODES_OUTLINE.txt is: four registers of one, fourteen of two, thirty-one of three, eight of four, seven of five.
 
 None of zero, none of six or more.
 
@@ -212,7 +212,7 @@ All four are (NON-COG).
 
 FOURTH, AND THIS IS THE CLAUSE THE PARENT SESSION MOST NEEDS: THE JUNCTION REGISTER IS NOT A FLAT LIST. It is a PRODUCT OF ORTHOGONAL SUB-REGISTERS, and the corpus says so in its very first entry.
 
-docs/LAYER_07_MODES_MANUSCRIPT.txt, Entry 1: "This is the mode-richest junction in the catalogue, a learning contact that occupies several discrete operating regimes AT ONCE - a silent-versus-functional axis, a facilitating-versus-depressing short-term axis, and a potentiated-versus-baseline-versus-depressed maintenance axis."
+docs/neuroscience/LAYER_07_MODES_MANUSCRIPT.txt, Entry 1: "This is the mode-richest junction in the catalogue, a learning contact that occupies several discrete operating regimes AT ONCE - a silent-versus-functional axis, a facilitating-versus-depressing short-term axis, and a potentiated-versus-baseline-versus-depressed maintenance axis."
 
 The five listed register entries are therefore a FLATTENED PRESENTATION of a two-by-three-plus-silent structure, not five mutually exclusive states.
 
@@ -220,7 +220,7 @@ The Theme One design authority already noticed the general shape and left it ope
 
 The junction grain is where that question stops being theoretical, because Entry 1 is the FIRST entry of the volume and the type konnectome's own edges most resemble.
 
-FIFTH, THE BOUNDARY IS ADMITTED SOFT BY THE CORPUS ITSELF. docs/konnectome_mode_register_design_authority_v1.txt line 181 records it, and the deep read confirms it from the source: docs/LAYER_07_MODES_OUTLINE.txt Entry 43 says the silent synapse is a "cross-reference Chapter 1, OF WHICH THIS IS THE AMPA-LACKING MODE", and Entry 17, the axospinous synapse, lists "Silent - the Mute Room ... (catalogued fully at entry 43)."
+FIFTH, THE BOUNDARY IS ADMITTED SOFT BY THE CORPUS ITSELF. docs/konnectome_mode_register_design_authority_v1.txt line 181 records it, and the deep read confirms it from the source: docs/neuroscience/LAYER_07_MODES_OUTLINE.txt Entry 43 says the silent synapse is a "cross-reference Chapter 1, OF WHICH THIS IS THE AMPA-LACKING MODE", and Entry 17, the axospinous synapse, lists "Silent - the Mute Room ... (catalogued fully at entry 43)."
 
 So Chapter 43 is simultaneously a TYPE (Part Five, entry 43, with its own KONNECTOME NOTE proposing silent_eligible_connection) and a MODE of Chapter 1 and Chapter 17.
 

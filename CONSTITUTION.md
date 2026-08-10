@@ -33,7 +33,12 @@ data structure cannot express, that finding is recorded (see the Fourth Commandm
 it passes the consumer-versus-ontology test (the thing must need to be SHARED across agents or
 repositories as a signed, evidence-graded, content-addressed record, not merely computed inside one
 konnectome runtime), it is written to the versioned change-order file:
-/home/ccaitwo/konnectome/docs/Causalontology_4_0_0_CHANGE_ORDER_v2.txt (An existing file.)
+/home/ccaitwo/konnectome/docs/Causalontology_4_0_0_CHANGE_ORDER_v3.txt
+(REPOINTED in version 10, by the owner's instruction of 2026-08-10. This line read _v2 and the file
+had reached _v3, its predecessors archived under the Eleventh Commandment - so the Commandment that
+tells a session where to write a finding pointed at a file that was no longer there. Found by the
+same pointer scan that carried the neuroscience move. No rule changed; the destination is unmoved
+and only its version is corrected.)
 and gathered until the end of the build-out and test-out to form one complete, coordinated 4.0.0
 package to be sent to update causalontology. Findings are DISCOVERED by building, never guessed from
 the armchair.
@@ -51,8 +56,10 @@ to help build out konnectome to its fullest capability.
 The same gate applies as for causalontology: konnectome does NOT edit PrologAI directly. A
 language wall discovered while building is recorded, and a real, load-bearing PrologAI-language gap
 is written to the versioned change-order file:
-/home/ccaitwo/konnectome/docs/PrologAI_CHANGE_ORDER_v1.txt (A new file; create it empty with a
-one-line header at build start, so it exists to receive findings.)
+/home/ccaitwo/konnectome/docs/PrologAI_CHANGE_ORDER_v2.txt
+(REPOINTED in version 10, on the same scan and for the same reason: this line read _v1, which was
+correct when it instructed the build to CREATE the file empty at build start, and the file has since
+reached _v2 with its predecessor archived. No rule changed.)
 A gap that belongs to the DATA STRUCTURE, not the language, goes to the causalontology change order
 of the Second Commandment instead; a gap that konnectome can solve inside its own code goes to the
 konnectome ledger of the Fourth Commandment. Route each finding to exactly one place.
@@ -96,7 +103,7 @@ the FRONT, and the fileset is renamed to match the method.)
 The Definition, Specification, Pseudocode, Architecture, Refinement, Completion, and Demonstration
 waterfall steps and files
 will be sourced from the Appendices of the file:
-/home/ccaitwo/konnectome/docs/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt
+/home/ccaitwo/konnectome/docs/neuroscience/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt
 The versioned files will be created and named:
 /home/ccaitwo/konnectome/docs/konnectome_0_definition_v1.txt
 /home/ccaitwo/konnectome/docs/konnectome_1_specification_v1.txt
@@ -106,7 +113,7 @@ The versioned files will be created and named:
 /home/ccaitwo/konnectome/docs/konnectome_5_completion_v1.txt
 /home/ccaitwo/konnectome/docs/konnectome_6_demonstration_v1.txt
 Each file will start its contents from one entire, similarly numbered appendix from the file
-/home/ccaitwo/konnectome/docs/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt
+/home/ccaitwo/konnectome/docs/neuroscience/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt
 These seven (7) files will be known as "The DSPARCD Fileset".
 konnectome_0_definition HAS NO SOURCE APPENDIX and correctly so: the Definition phase is newer than
 the manuscript the other six are sourced from, so its first version is written from THIS CONSTITUTION
@@ -121,8 +128,19 @@ THE EIGHTH COMMANDMENT: THE VISION DOCUMENT SET:
 Commandments become the Tenth through Nineteenth.)
 Announce it with fanfare: the complete Certified_Neuroscientist corpus has arrived in /docs/ -
 thirty-eight new documents cataloguing the human nervous and endocrine system layer by layer, the
-richest infusion of guiding knowledge konnectome has ever received. The set comprises, for each
-catalogued layer, four files (OUTLINE, MANUSCRIPT, MODES_OUTLINE, MODES_MANUSCRIPT):
+richest infusion of guiding knowledge konnectome has ever received. (AMENDED in version 10, by the owner's instruction of 2026-08-10. The set's LOCATION is stated
+here, because it moved and a set nobody can find is a set nobody reads. THE WHOLE VISION DOCUMENT
+SET NOW LIVES IN /home/ccaitwo/konnectome/docs/neuroscience/ , together with the guiding book of the
+Seventh Commandment and the two framework documents named at the foot of this list - thirty-nine
+files, every one of them a SOURCE document konnectome reads and never edits. Nothing else moved into
+that directory: konnectome's own working documents - the DSPARCD Fileset, the ledger, the tutorial,
+the build log, the design authorities, the change orders and the hand-offs - all remain in /docs/,
+which is the whole point of the separation. NO RULE CHANGED IN THIS AMENDMENT AND NO DOCUMENT WAS
+EDITED; only paths moved, and every live pointer to them moved in the same change, per the rule the
+First Commandment's version 9 note states.)
+The set comprises, for each
+catalogued layer, four files (OUTLINE, MANUSCRIPT, MODES_OUTLINE, MODES_MANUSCRIPT), all of them
+under docs/neuroscience/ :
 - Layers 4 and 5, the Slow Variables (LAYER_04_05_...): the molecular memory and persistence
   machinery - where the weight is physically kept.
 - Layer 6, the Cells (LAYER_06_...): the 85 non-neuronal cell types and the modes companion to the
@@ -132,7 +150,8 @@ catalogued layer, four files (OUTLINE, MANUSCRIPT, MODES_OUTLINE, MODES_MANUSCRI
 - Layer 7, the Synaptics (LAYER_07_...): the 64 junction types - the edge type system.
 - Layer 8, the Microcircuits (LAYER_08_...): the 71 canonical motifs - the module library.
 - Layer 9, the Regions (LAYER_09_MODES_...): the modes companion to
-  LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT, which already lives in /docs/ and needs no duplicate.
+  LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT, which already lives beside it in
+  docs/neuroscience/ and needs no duplicate.
 - Layer 10, the Systems (LAYER_10_...): the 44 systems - the pipelines, broadcasts, and axes.
 - Layer 11, the Global States (LAYER_11_...): the 26 operating states - the scheduler, the power
   states, and the master mode register.
@@ -242,7 +261,7 @@ make sure every named construct (including the previously unnamed constructs (PU
 is represented by a code module in konnectome,
 and that those code modules serve the same functions and faculties in konnectome as they are described in,
 and with the same inputs/outputs (SUBSCRIBE/PUBLISH) interfaces as described in,
-LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt
+docs/neuroscience/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt
 The audit is not one-and-done: keep a coverage list in konnectome_ledger_v1.txt that names, for each
 construct in the manuscript, the module that realizes it, so the audit can be re-run at any time and
 a missing construct is visible at a glance.
@@ -363,7 +382,7 @@ Step 3: To this file write the following information for the next building or ma
 - A reminder to read The DSPARCD Fileset
 (docs/konnectome_0_definition through konnectome_6_demonstration, at their current versions), and to
 read konnectome_0_definition FIRST, because it is the concept the other six answer to.
-- A reminder to read docs/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt, the guiding book for konnectome
+- A reminder to read docs/neuroscience/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt, the guiding book for konnectome
 - A reminder to read the Settings, General, Instructions for Claude (the owner's standing instructions to the assistant).
 - A reminder to read ~/CLAUDE.md, which is git-untracked (gitignored) and holds the system-wide current-state narrative (it lives at the organization root, not inside one repository, because it belongs to the whole system).
 - A reminder to read the current /docs/konnectome_tutorial (the maintained beginner tutorial), and to read all of the documents in /docs/.
@@ -375,7 +394,20 @@ read konnectome_0_definition FIRST, because it is the concept the other six answ
 - A short sign-off.
 Step 4: Commit the hand-off on a feature/ branch through a pull request. Auto-Push. Then PAUSE.
 
-VERSION HISTORY NOTE (extended in version 9). This Constitution is at VERSION 9. Version 9, by the
+VERSION HISTORY NOTE (extended in version 10). This Constitution is at VERSION 10. Version 10, by
+the owner's instruction of 2026-08-10, records the move of every SOURCE neuroscience document into
+docs/neuroscience/ : the thirty-eight-document Vision Document Set of the Eighth Commandment, and the
+guiding book named by the Seventh and Tenth Commandments. THREE COMMANDMENTS CARRIED A PATH TO A
+MOVED FILE AND ALL THREE ARE CORRECTED HERE - the Seventh, the Tenth, and the Nineteenth's hand-off
+protocol - together with the Eighth, which now states where the set lives. NO COMMANDMENT WAS
+REMOVED, NO COMMANDMENT WAS RENUMBERED, NO RULE CHANGED, AND NO SOURCE DOCUMENT WAS EDITED. Only
+paths moved. This amendment exists because of the rule version 9 wrote down and this change is the
+first real test of it: A POINTER IS NOT A STATEMENT, SO A FILE THAT MOVES MUST HAVE EVERY POINTER TO
+IT MOVED IN THE SAME CHANGE. A session citing a commandment by number from an older hand-off will
+still land on the right one; a session following a PATH from a hand-off written before 2026-08-10
+will not, and the ledger's DOCS REORGANISATION note says so and says where to look instead.
+
+Version 9, by the
 owner's instruction of 2026-08-09, adopts AGI_FOR_EVERYONE_MANUSCRIPT_v2.txt as the third document
 of the First Commandment, in place of its predecessor, which is archived rather than deleted. NO
 COMMANDMENT WAS REMOVED, NO COMMANDMENT WAS RENUMBERED, and no rule changed: only the third of the
