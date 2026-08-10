@@ -1,0 +1,185 @@
+CONTEXT HAND-OFF FROM IRIDIUM KEELWRIGHT
+
+Date: 2026-08-09. The eleventh hand-off of this date.
+
+I chose the name Iridium Keelwright because this session did two different kinds of work and both are in the name. Iridium sits beside osmium at the top of the density shelf and is the most corrosion-resistant metal known - the right element for a session that hardened things: a decision written down so it cannot be re-argued by accident, a directive turned from a habit into a refusal, a rule about what may never be admitted. Keelwright because the DSPARCD report calls the Definition phase the KEEL - the timber along the bottom that everything else is built upon and that keeps the vessel pointed straight - and this session laid konnectome's, forty-one slices later than the method would have liked, and said so in the document itself.
+
+
+PART ONE - READ THESE FIRST
+
+- Read and follow the konnectome constitution at ~/konnectome/CONSTITUTION.md, first and foremost. IT MOVED THIS SESSION AND IS NOW AT VERSION 8. Never cite a commandment by number from memory; re-read it. NOTHING WAS REMOVED AND NOTHING WAS RENUMBERED - which was deliberate, because every hand-off in this repository cites commandments by number and a renumbering would have silently falsified all of them. There are still NINETEEN commandments; the hand-off protocol is the Nineteenth, the Safety Gate the Fifteenth.
+
+- READ docs/konnectome_0_definition_v1.txt BEFORE ANYTHING ELSE IN THE FILESET. This is new this session and it is the biggest change to how the repository is navigated since the design authorities. It states what konnectome IS in one sentence, what it is NOT in eight, seven guiding principles, six bold decisions each beside the alternative it rejected, the conceptual owner, and a reflection naming three things that would prove the concept wrong. ITS STANDING: the Constitution outranks it; it outranks the other six phase files. It is deliberately SHORT and must stay short - it is a page of concept, never a binder of blueprints.
+
+- Read The DSPARCD Fileset at its current versions: docs/konnectome_0_definition_v1.txt and docs/konnectome_1_specification_v43.txt through konnectome_6_demonstration_v43.txt. NOTE BOTH CHANGES: the fileset is renamed (it was The SPARCD Fileset) and it has SEVEN members where it had six.
+
+- Read docs/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt (the guiding book). NOTE THE NEW NAME - it was NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt until this session. It was always the Layer 9 volume and was the only member of the Vision Document Set not named like one.
+
+- Read docs/konnectome_vision_set_top_down_analysis_v2.txt, current through slice 42, and docs/konnectome_cognitive_architectures_coverage_v1.txt. KNOW WHICH GUIDES AND WHICH ONLY SUMMARISES: the guiding book and the thirty-eight-document Vision Document Set carry authority; the analysis and the survey are DERIVED in their summaries and carry none, while their FINDINGS are konnectome's own record and are superseded only by a LATER assessment.
+
+- READ THE FIVE DESIGN AUTHORITIES BEFORE DESIGNING ANY SLICE. Version 2 of the analysis carries an index section naming all five, placed before the themes. Unchanged this session:
+  • docs/konnectome_mode_register_design_authority_v1.txt - Theme One. Its Part Nine is the current queue's slice family; its Part Seven is EIGHT things the corpus does not settle, AND ITEM 1 IS NOW DECIDED - see Part Three.
+  • docs/konnectome_two_shift_design_authority_v1.txt - Theme Two.
+  • docs/konnectome_edge_type_design_authority_v1.txt - Theme Three.
+  • docs/konnectome_motif_and_workspace_design_authority_v1.txt - Themes Four and Five.
+  • docs/konnectome_vision_set_analysis_fidelity_audit_v1.txt - the audit of the analysis itself.
+
+- Read docs/DSPARCD_EXPLAINED.txt, NEW THIS SESSION, delivered by the owner. It is the Fifth Commandment's subject now. Its predecessor SPARCD_EXPLAINED.txt is ARCHIVED, not deleted.
+
+- Read the Settings, General, Instructions for Claude (the owner's standing instructions: web search first, novice-level plain-text explanations, output copies to ~/output/, auto-commit-push-merge authorization, session-length budgeting).
+
+- Read ~/CLAUDE.md - git-untracked, at the organization root, the system-wide current-state narrative.
+
+- Read the current tutorial, docs/konnectome_tutorial_v42.txt (THIRTY-NINE parts; it moved TWICE this session), and all of docs/.
+
+- Read the prior hand-off, Osmium Soundwright's (2026-08-09_10). This session began from it and verified its baseline in full before touching anything: main at bd4b4fd, 648 tests across thirty packs counted pack by pack, four gates at zero.
+
+- THE OWNER'S STANDING CHOICE REMAINS: "All". Do NOT re-present any menu; verify the baseline and continue down the queue (Part Six).
+
+
+PART TWO - THE IMPORTANT DOCS FILES
+
+- konnectome_0_definition_v1.txt - THE DEFINITION, phase zero, NEW THIS SESSION. Read it first.
+
+- konnectome_1_specification_v43.txt through konnectome_6_demonstration_v43.txt - the DSPARCD Fileset, Realization Log through slice 42.
+
+- konnectome_tutorial_v42.txt - the beginner tutorial, THIRTY-NINE parts. A session that bumps it bumps BOTH the header version line and the closing line.
+
+- BUILDING_KONNECTOME_v2.txt - the build log, THIRTY-EIGHT chapters.
+
+- konnectome_ledger_v1.txt - the scoreboard. Counter line: Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0. Observations: 9. Decisions: 1. THE COUNTER GAINED A THIRD FIELD THIS SESSION. NEW: the slice 41 note carrying DECISION-1, the DSPARCD adoption note, the Layer-09 rename note, and the slice 42 note carrying OBSERVATION-9.
+
+- DSPARCD_EXPLAINED.txt - the seven-phase method report. NEW THIS SESSION.
+
+- The four other design authorities and the audit, listed in Part One.
+
+- konnectome_rung_five_real_machine_design_v2.txt - the real-machine design with the owner's five decisions (Path B Webots; wheels-plus-dock; indoor pen; pack names simulator_body_driver and robot_body_driver RESERVED; standing robot-shopping reminder).
+
+- Causalontology_4_0_0_CHANGE_ORDER_v3.txt - Sections C, D, E remain HELD. Slice 42 applied the Second Commandment gate to WATCH-3 and did not release them.
+
+- PrologAI_CHANGE_ORDER_v2.txt - unchanged; no language wall hit.
+
+- tests/naming_gate_fixture/ - still deliberately broken; the violation is the point.
+
+- In ~/output/: konnectome_slice_41_bus_throws_a_transition.txt. The Bronze session's PRIVATE flag about a credential-looking line in the local transcripts file stands for the owner; do not copy that line anywhere.
+
+
+PART THREE - WHAT THIS SESSION DID
+
+TWO SLICES BUILT AND THREE OWNER-DIRECTED DOCUMENT CHANGES. Pull requests merged: 102 (slice 41), 103 (the DSPARCD report's arrival), 104 (the Definition phase), 105 (the Layer-09 rename), 106 (slice 42), and this hand-off's. Main at b7abd11 before the hand-off.
+
+- SLICE 41, THE BUS THROWS A TRANSITION. The design authority's Part Nine slice four. neuromodulator_bus gained a FOURTH KEY SHAPE, mode_throw(ConstructKind), beside the plain-atom modulator key, territory/2 and global/1 - a write, a read, a WITHDRAWAL, and a domain check. archetype's gate gained two transition rows under trigger broadcast_mode_throw and agency broadcast_thrown, plus archetype_gate_throw/3. mode_register gained mode_register_departure/3, keyed on AGENCY.
+
+- DECISION-1 IS THE REAL DELIVERABLE OF SLICE 41, and it is in the ledger. THE COMMAND-VERSUS-BIAS QUESTION IS DECIDED: A THROWN MODE IS A COMMAND AT THE DISCRETE GRAIN, AND BIAS IS THE CHANNEL KONNECTOME ALREADY HAS. Three reasons, none of them the corpus's: it un-conflates two operations the design authority says are conflated (the modulated relay already IS the bias, so a bias-throw would leave konnectome with two biases and no command); a command costs no invented number where a bias must invent a threshold offset; and command is the REVERSIBLE choice, since a bias agency can later write rows into the same table. THE CONFLICT RULE FOLLOWS AND IS ALSO KONNECTOME'S OWN: the throw PREEMPTS self-selection while it stands, chosen because it is the rule readable WITHOUT running the construct, which the owner's visualization request demands. Negotiated arbitration is DEFERRED BY NAME. THREE FAMILIES INHERIT THIS. The ledger note also records what DECISION-1 does NOT decide - read that list before assuming it settled something.
+
+- SLICE 42, THE SUPERVISOR CHANNEL. Part Nine slice five, and the closing of an IOU three slices old. New pack supervisor at layer zero. archetype's gate fault block FILLED from the corpus's own Entry 36 latch: oscillation and stuck_switch, each with a watchdog. THE LAYER 6 TEMPLATE'S DIRECTIVE IS NOW A REFUSAL RATHER THAN A HABIT - supervisor_faults_are_not_modes/1 refuses a register whose fault signature is also a declared mode, and it fires on the way into every watch.
+
+- THE DSPARCD ADOPTION. The owner delivered DSPARCD_EXPLAINED.txt. The Constitution went to VERSION 8: the Fifth Commandment re-pointed and naming the seventh phase, the Seventh gaining konnectome_0_definition and renaming the fileset, the Twelfth and Nineteenth following. SPARCD_EXPLAINED.txt archived.
+
+- THE DEFINITION WAS WRITTEN, from the Constitution and all of docs/. It is honest on its own face that it arrived at slice 41 rather than slice 1 and is therefore a READING-BACK of the concept the build actually held, not a prediction.
+
+- THE GUIDING BOOK WAS RENAMED to LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt - NINETY occurrences across SEVENTY-SIX files, moved in one change so no pointer dangled for a single commit.
+
+- State at hand-off: main at b7abd11 plus this hand-off. FORTY-TWO slices. SEVEN HUNDRED AND SIX tests across THIRTY-ONE packs. Four gates at zero plus the naming gate's self-test. DSPARCD fileset v43; tutorial v42; build log thirty-eight chapters; Constitution version 8; the analysis at v2 current through slice 42.
+
+
+PART FOUR - BUILD-AGAINST COUSIN COMMITS (for reproducibility)
+
+- causalontology: 292dfca (unchanged; not touched this session).
+- PrologAI: ebbc3e0 (unchanged; not touched this session).
+- Mentova: d117c69 (read-only; untouched).
+
+NOTE HONESTLY: THIS SESSION DID NOT RE-MEASURE CONFORMANCE IN EITHER COUSIN, because it changed no cousin code. Tungsten's 137 of 137 in both is still the last measured figure, now three sessions old. A SESSION THAT NEEDS THE NUMBER MUST RE-MEASURE RATHER THAN QUOTE THIS LINE. Two slices have now passed without a re-measurement; the next session that touches a cousin, or that wants to put the figure in a document, should refresh it.
+
+
+PART FIVE - SHARP EDGES AND HONEST NON-CLOSURES
+
+- OBSERVATION-9 IS NEW AND IT IS THE SHARPEST THING HERE. KONNECTOME HAS A WATCHER AND NO WATCHDOGS. The supervisor judges readings it is HANDED and keeps no history of its own, so nothing counts a gate's flips over a window or its ticks held in one mode. EVERY FAULT REGIME IN THE REPOSITORY REPORTS AS UNWATCHED TODAY - and the pack reports it as exactly that rather than as clean, which is why the third outcome had to be built in the same slice as the first two. THE CLOSER IS NAMED: the slice that gives a construct a windowed history, or the tick engine a per-construct counter. It was NOT fixed speculatively because a watchdog needs a WINDOW LENGTH and konnectome has no seconds in its tick.
+
+- THE TICKS-PER-SECOND CONVENTION HAS NOW ARRIVED FROM A THIRD INDEPENDENT DIRECTION, and that is the strongest signal in this hand-off about what to build early. It was found beneath Theme Four and Theme Five by the Osmium session; slice 42 hit it again from a completely different angle, because a watchdog cannot have a window without it. IT COSTS ONE RECORDED DECISION AND ONE TEST, in the shape DECISION-1 now demonstrates fully. It is Family Four item 2. A THIRD INDEPENDENT ARRIVAL IS USUALLY THE POINT AT WHICH A CHEAP ITEM SHOULD JUMP THE QUEUE - consider doing it before the stabiliser.
+
+- A NEW NAMED LENS WAS EARNED AND HAS ALREADY PAID: THE DECLARATION-ORDER LENS. A LOOKUP THAT IS RIGHT BECAUSE OF THE ORDER THINGS WERE WRITTEN IN IS NOT RIGHT, IT IS LUCKY. Slice 40's departure lookup took the first row leaving a mode; that stayed correct after slice 41 purely by accident of declaration order and would have broken in silence on any reordering. IT THEN PAID AGAIN IN SLICE 42, IN CODE WRITTEN THE SLICE AFTER IT WAS NAMED - the supervisor's reading gather would have produced a real verdict from whichever reading a caller listed first. THE LENSES ARE NOW FIVE: unbound-wrong-judgement, key-shape aliasing, default drift, behaviour-pinned-identical, and declaration-order. Carry all five. The unbound-wrong-judgement lens has now paid TEN SLICES RUNNING (33 through 42).
+
+- THE STABILISER SLICE INHERITS DECISION-1 AND MUST NOT RE-OPEN IT BY ACCIDENT. A hysteresis scalar is a BIAS, so by DECISION-1 it travels as a LEVEL on the existing channel and not as a mode throw. That is DECISION-1 applied, not a new decision. The slice must ALSO state WHICH GRAINS its published scalar governs, per the two-grain complication Osmium recorded under Observation-8.
+
+- OBSERVATION-8 IS UNCHANGED. The gate is still a symmetric toggle, not a hysteretic latch. Its closer is still the stabiliser slice.
+
+- WATCH-3 WAS EXAMINED PROPERLY AND REMAINS A WATCH. The design authority filed the supervisor channel as a routing candidate IF a published warning must be a shareable record. It must not: every warning is computed inside one runtime from readings that runtime was handed, and travels to nobody. The Second Commandment gate returned NOTHING TO ROUTE.
+
+- A RULE THIS SESSION HAD TO INVENT AND WHICH THE NEXT SESSION WILL NEED AGAIN: THE DIFFERENCE BETWEEN A CHANGE OF MEANING AND A CHANGE OF ADDRESS. The SPARCD-to-DSPARCD rename did NOT edit history or the corpus, because a record saying "the method is SPARCD" was true when written and stays true - rewriting it would falsify it. The Layer-09 rename DID edit both, because a record saying "read docs/X.txt" becomes FALSE the moment X moves. A POINTER IS NOT A STATEMENT. Both rules are written in the ledger beside each other on purpose.
+
+- THE CORPUS IS NEVER EDITED. The Vision Document Set, the guiding book, TFELOAOTHNAES and LAYER_15_DESIGN_METHOD still say SPARCD and keep their own words. konnectome does not edit its guiding documents to agree with itself. The one exception is a file PATH, per the rule above.
+
+- TWO STALE README LINKS WERE FOUND AND FIXED IN PASSING, and the finding matters more than the fix: the fileset table had been pointing at v35 and the tutorial link at v37 while the actual files were at v42 and v40. THE LESSON: the README's PROSE was being maintained slice by slice and its LINK TABLE was not. A session bumping a document version should grep the README for the OLD version string, not just update the sentence it remembers.
+
+- OBSERVATION-7 STANDS, BOTH HALVES, UNTOUCHED. tick_engine drops an UNKNOWN construct kind in silence where connection_graph's four steps each refuse aloud; and an UNBOUND COPY TARGET is bound to whatever the state lists first. The next slice that touches tick_engine's dispatch on purpose closes BOTH.
+
+- OBSERVATION-6 STANDS, and the owner marked it of utmost importance: the tracked sentiment-analysis capability question. NOTE THAT THE DEFINITION NOW NAMES IT as the live probe of one of konnectome's three falsifiers - if the glass-box requirement proves incompatible with a capability konnectome needs, the concept and its third principle are in conflict and one must give.
+
+- OBSERVATION-5 STILL STANDS. The older chemical reads (neuromodulator_bus_level/3, neuromodulator_bus_level_territory/4) silently bind an unbound bus. Untouched, per the do-not-fix-speculatively rule.
+
+- OBSERVATION-4 (no word for satisfaction) still LOGGED, NOT ROUTED.
+
+- THE NIGHT'S STANDING BOUNDARIES from slice 38 are unchanged: the night's bound is OPEN-LOOP; the memory store is UNBOUNDED within a run; the REM theatre and the ultradian wheel are READ AND NOT BUILT; the plain-atom operating_state key remains an accepted decoy on the bus; the punishment path is pinned but unreachable live.
+
+- THE CAPSTONE WORLD IS STILL LIVE (slice 34) and its ten-tick heartbeat still ends nine ticks before the default watchman's first flip. A slice that lengthens the capstone past seventeen ticks will make it SLEEP.
+
+- THE FULFILMENT AUDIT IS STILL NOT DUE AND MUST BE CARRIED FORWARD. The trigger is THIRTY-TWO or more hand-off documents. AS OF THIS HAND-OFF THE COUNT IS TWENTY-SIX. Evaluate with: ls docs/*Context_Hand-Off*.txt | wc -l . The full scope is in the ledger's SCHEDULED AUDIT note. NEW NOTE FOR THE SESSION THAT FINDS IT DUE: the audit asks whether konnectome FULFILLED the findings it recorded, and konnectome_0_definition now exists to be audited against as well - its three named falsifiers are the sharpest questions anyone could put to this build.
+
+- PARALLEL SESSIONS: keep the ritual - git fetch, git log origin/main, gh pr list before every claim, numbering, or merge. AND THE WORKTREE WARNING, four times inherited: if you use a git worktree for the behaviour-pinned-identical check, REMOVE IT BEFORE CHECKING OUT MAIN. A FURTHER WARNING EARNED THIS SESSION: after merging a pull request this session checked out main and then began the NEXT slice's work without branching, so slice 42's first edits were made on main. It was caught before any commit and moved onto a feature branch with git checkout -b, which carries uncommitted work across cleanly - but CHECK YOUR BRANCH BEFORE YOU START EDITING, because the Sixteenth Commandment's protection is a branch and not a habit.
+
+- A SMALL PROCESS NOTE THAT PAID OFF. An automatic git add swept an untracked file the owner had dropped in - DSPARCD_EXPLAINED.txt - into an unrelated slice commit. It was caught and removed before the push, and the file was then committed on its own branch with its own pull request. A DOCUMENT'S ARRIVAL DESERVES ITS OWN COMMIT; bundling somebody else's file into a slice hides a decision that belongs to the owner. Run git status before git add -A.
+
+
+PART SIX - THE FIRST TASK OF THE CONTINUATION
+
+The owner has already chosen: ALL (standing). The mode-register family continues smallest-first, per the owner's judgment that construct modes at every level are a CHIEF AND CRITICAL aspect of the synthetic mind. THE FAMILY NOW STANDS FOUR SLICES IN, and Part Nine slices four and five are both CLOSED.
+
+0. DONE - THE FIVE DEEP READS, and DONE this session - Part Nine slices FOUR (slice 41) and FIVE (slice 42).
+
+1. CONSIDER PROMOTING THE TICKS-PER-SECOND CONVENTION AHEAD OF THE STABILISER, and this is this session's one real scheduling suggestion. It is Family Four item 2, it is a recorded decision plus one test, it now blocks work in THREE separate families, and slice 42 hit it from a direction nobody predicted. DECISION-1 is the template: number it, give it reasons, and list what it does NOT decide.
+
+2. THE STABILISER - Part Nine slice six, and the queue's front if the convention is not promoted. A separate construct publishing a modulable hysteresis scalar onto the bus, replacing the two constants now inside the two-process governor AND CLOSING OBSERVATION-8 at the gate in the same visit. IT MUST STATE WHICH GRAINS ITS SCALAR GOVERNS. AND IT INHERITS DECISION-1: the scalar is a BIAS and travels as a level, not as a mode throw.
+
+3. THE FIRST REAL WATCHDOG, which is new to this queue and closes OBSERVATION-9. konnectome has a supervisor and nothing feeding it. A windowed per-construct history - flips in a window, ticks held in a mode - turns every fault block in the repository from UNWATCHED to actually watched. NOTE THE DEPENDENCY: a window needs a length, so item 1 comes first.
+
+4. THEN Part Nine slice seven: THE MASTER REGISTER WIDENED past the online/offline binary into a named global state plus a sub-mode, followed by the downward assignment. Family Four's item 4 offers the master register its FIRST DOWNWARD ASSIGNMENT almost free.
+
+5. Slice family one's item (e), AND IT IS FOUR ITEMS: a DURABLE WEIGHT TIER FIRST, then (e1) the write-allocation gate, (e2) the readability gate, (e3) the territorial freeze fence. That split is ORTHOGONAL to the mode-register read's split of the same item into FOUR write-permission kinds by scope and owner; a builder needs BOTH splits.
+
+6. FAMILY THREE, THE EDGE TYPE REGISTRY, whose position is confirmed by two independent warrants: it lands BEFORE the junction-grain mode register. Learnability is carried by the TYPE, not by a mode.
+
+7. FAMILY FOUR, THE COGNITIVE CLUSTER, in the reordered form: (1) the bus's six named broadcast channels - and note it is cheaper again now, because the read-with-a-named-default idiom is established FOUR times over (a level defaults to zero, a state to online, a throw to silence, a supervisor report to nothing-watched); (2) the ticks-per-second convention; (3) the working-memory blackboard to the corpus's own constants; (4) the working-memory mode register; (5) attention as a salience-driven bias - AND NOTE IT INHERITS DECISION-1 DIRECTLY, since it is explicitly a bias; (6) THE WORKSPACE PILOT, which MUST NOT MERGE without answering the five questions; (7) the learned gating policy.
+
+8. FAMILY FIVE, THE MOTIF CATALOGUE at six items - a BUILD, not a christening, because named subgraph views live only in specification prose and never in a pack. Family Five's selector deepening and Family Four's workspace pilot are THE SAME SETTLING LOOP with different bidders.
+
+9. Family six, tooling: the template parser. Note WATCH-7.
+
+10. The night's deferred chapters: the REM theatre (Chapter 8), the ultradian wheel (Chapter 9), a closing loop for the open-loop bound, a bounded memory store.
+
+11. The pre-corpus pending refinements: computational-interface transforms; interfaces as Causalontology conduits; the token tier of thought combination.
+
+12. Deepen Rung Two - the full pilot conversation and richer grounded vocabulary - against the Layer 13 Tutor Protocol (also advances coverage bug six).
+
+13. Rung Five, Path B - UNBLOCKED: simulator_body_driver against Webots per the decided design; the rung unclaimed until a physical robot passes the smoke test; carry the standing robot-shopping reminder.
+
+14. Other ______________ .
+
+A STANDING OWNER REQUEST, ATTACHED TO THE MODE-REGISTER FAMILY (recorded 2026-08-09, carried forward). A VISUALIZATION CONTROL PANEL SHOWING EVERY MODE OF EVERY CONSTRUCT IN OPERATION, AT EVERY GRAIN LEVEL SIMULTANEOUSLY, IN REAL TIME - the cell (386 mode entries), the junction, the motif, the region (77), the system (44), and the Layer 11 GLOBAL STATE that is a coordinated assignment across everything below, all shown AT ONCE and LIVE, so a watcher can see a bus-thrown transition propagate down the grains as it happens. THIS IS A DEMONSTRATION DELIVERABLE, NOT A SLICE: do not build it speculatively, do not let it widen the mode-register slices, and do not treat it as a reason to defer them. EVERY REGISTER SLICE OWES IT THE SAME TEST: a watcher holding nothing but a construct's mode name can build that construct's register and read back both the current mode and the rule in force WITHOUT RUNNING THE CONSTRUCT. SLICES 41 AND 42 BOTH MADE IT CHEAPER AND WIDER. Slice 41 made the panel's most interesting arrow - a thrown transition travelling down the grains - readable FROM BOTH ENDS, because a watcher holding only the bus can read what is being commanded of a whole construct kind. Slice 42 added a second layer for free: not only what every construct IS doing, but what is being WATCHED about it and by whom. The addendum's reach binds FOUR families - the motif grain, the selector, working memory, and the mode register itself.
+
+
+PART SEVEN - SIGN-OFF
+
+Two slices, and both of them were really about the same thing: writing down what a system is allowed to do, in a place where it cannot be quietly forgotten.
+
+Slice 41 had a question the corpus genuinely refuses to answer - when something above a part tells it to change regime, is that an order or a nudge? - and the temptation with a question like that is to pick the reading that suits the code and let the corpus seem to have said it. konnectome picked command, wrote down three reasons that are its own and not the corpus's, wrote down the conflict rule that follows, and then wrote down the list of things the decision does NOT settle, so that the next session inherits exactly what was chosen and not a inch more.
+
+Slice 42 had a rule konnectome had been keeping faithfully for three slices out of memory, and turned it into a refusal that fires. A mode has a rule; a fault has none and never will; and a system that admits a fault as a mode acquires a designed behaviour for being broken and runs it, calmly and forever, reporting nothing. A machine with an official way to be broken never reports being broken.
+
+Between them the owner delivered a seventh phase and asked for the keel to be laid, and the honest thing about konnectome_0_definition is written into its own last paragraph: it arrived forty-one slices late, so it is not a prediction but a reading-back - the concept recovered from the record of what this build actually did every time it had to choose. That is a weaker document than one written first. It is also, now, the only place where what konnectome refuses to be is written down in one list, and three of those refusals had each been argued at least once before anyone thought to write them.
+
+And the most useful thing found this session was found twice, by accident, from two directions that have nothing to do with each other. konnectome's tick still has no seconds in it. A watchdog needs a window and there is no unit to measure one in. It costs one recorded decision and one test, and it has now blocked work in three families.
+
+Write down what the thing is, and what it may never be. The code will keep both promises longer than anyone will keep remembering them.
+
+- Iridium Keelwright, 2026-08-09
