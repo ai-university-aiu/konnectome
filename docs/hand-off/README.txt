@@ -5,7 +5,11 @@ Created 2026-08-10. Constitution version 12.
 
 WHAT IS IN HERE
 
-Every Context Hand-Off document konnectome has ever written - the session records mandated by the Nineteenth Commandment. Twenty-nine of them at the time this directory was made, from 2026-07-19 to 2026-08-10.
+Every SUPERSEDED Context Hand-Off document - the session records mandated by the Nineteenth Commandment, from 2026-07-19 onward.
+
+THE CURRENT HAND-OFF IS NOT IN HERE. IT LIVES IN /docs/ , and it is the only Context Hand-Off document there, which is how you know it is the current one without working anything out.
+
+That is the Nineteenth Commandment's two-location rule, added at Constitution version 13 on 2026-08-10, and it is the whole reason this directory exists in the shape it does. Before writing a new hand-off, a session SWEEPS whatever it finds in /docs/ into here, and only then writes the new one. Sweep, then write - in that order, in one commit.
 
 
 WHAT A HAND-OFF IS, AND WHY IT IS TWO THINGS AT ONCE
@@ -23,14 +27,20 @@ THE RULE THAT FOLLOWS, and it is the rule this whole directory was organised und
 
 HOW TO READ THEM
 
-The newest hand-off is the entry point. Read it first, in full, and then read the one it names as its substantive predecessor - which is not always the one immediately before it, because SOME HAND-OFFS ARE SESSION-CLOSE MARKERS RATHER THAN UNITS OF WORK. At least two of the twenty-nine are markers. Each hand-off says which of its predecessors is the substantive one; trust that rather than the date order.
+START IN /docs/ , NOT IN HERE. The single Context Hand-Off document in /docs/ is the current one and it is the entry point. Read it first, in full.
+
+Then read the one it names as its substantive predecessor, which will be in here - AND WHICH IS NOT ALWAYS THE ONE IMMEDIATELY BEFORE IT, because SOME HAND-OFFS ARE SESSION-CLOSE MARKERS RATHER THAN UNITS OF WORK. At least two are markers. Each hand-off says which of its predecessors is the substantive one; trust that rather than the date order.
+
+WHY THE SWEEP IS A PRECONDITION AND NOT A POSTCONDITION, since it is the one part of the protocol that looks backwards at first reading. Writing the new hand-off and THEN moving the old one reads more naturally and fails silently: a session that skips the second half leaves two hand-offs in /docs/ , and the next session reads whichever it happens to open, with nothing anywhere to notice. Sweeping FIRST is self-healing, because it moves whatever it finds however many there are. A skipped step then costs one session of clutter rather than a wrong read. PREFER THE FORM WHOSE FAILURE MODE IS VISIBLE OVER THE FORM WHOSE FAILURE MODE IS A PLAUSIBLE ANSWER - the same rule the fulfilment-audit trigger was rewritten under on the same day.
 
 NAMING. Each file is [DATE]_[SERIAL]_Context_Hand-Off_from_[NAME].txt, where the serial is the next free number for that date starting at 1, and the name is one the writing session chose for itself and explained in its first paragraph. The naming convention is unchanged by the move.
 
 
 THE FORWARDING NOTE - READ THIS IF YOU ARRIVED HERE FROM AN OLD DOCUMENT
 
-Before 2026-08-10 every hand-off lived directly in /docs/ . If you are following a path of the form docs/[DATE]_..._Context_Hand-Off_from_... and it does not resolve, the file is here: insert hand-off/ after docs/ and the path is correct. No file was renamed, edited or deleted; all twenty-nine moves are pure renames.
+Before 2026-08-10 every hand-off lived directly in /docs/ . If you are following a path of the form docs/[DATE]_..._Context_Hand-Off_from_... and it does not resolve, the file is here: insert hand-off/ after docs/ and the path is correct. No file was renamed, edited or deleted.
+
+ONE EXCEPTION, AND IT IS THE RULE RATHER THAN AN ACCIDENT: the CURRENT hand-off is in /docs/ and its old-style path is therefore still correct. If a path of that form DOES resolve in /docs/ , you are holding the current one.
 
 TWO CATEGORIES OF POINTER WERE FIXED IN THE SAME CHANGE, and both were live instructions rather than records.
 
