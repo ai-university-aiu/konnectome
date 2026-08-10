@@ -1386,6 +1386,50 @@ naming gate passing its own self-test; conformance re-measured at 137 of 137 (sp
 4.0.0) in both cousins. No new wall; no cousin edited, per the Second, Third, and Fourth
 Commandments.
 
+Slice-37 note (2026-08-09). The night watchman takes the post: the two-process governor built and
+seated in the live tick, the first legitimate thrower of slice 35's switch. Slice family one's
+item (c) is CLOSED. Designed against the Layer 11 state machinery (Chapters 11 through 16) read
+in full: Chapter 14's Process S realized as a debt that rises one rate per waking tick and is
+paid down by a steeper rate per sleeping tick, floored at zero; Chapter 15's Process C realized
+as a triangle day wave - an honestly declared simplification of the corpus's smooth waveform -
+rising from silence at midnight to the full amplitude at midday, set AGAINST the debt so the
+flip-flop judges the balance, pressure less drive; Chapter 11's flip-flop realized with two
+thresholds, snapping offline at or past the sleep threshold and online at or below the wake
+threshold; and the hysteresis band between them is Chapter 13's stabiliser in its simplest form,
+an inverted band refused at build time by name. The default parameters live the corpus's day at
+one tick per hour (rise 1, discharge 2, day 24, amplitude 4, thresholds 16 and 2 - roughly
+sixteen ticks awake and eight asleep, exactly two transitions in thirty ticks, the snap proven
+by the count). The pack is a pure engine with an empty requires list, exactly as Process S and
+Process C sit outside the flip-flop they bias: the TICK owns the announcing - at the tick's end,
+after the body responds and before the observer records, it reads the standing state off the
+bus, steps the governor, and broadcasts the selection under the slice-35 third key shape. The
+world dict gains one required key, governor, refused aloud by name when missing; the fixture
+worlds of cognitive_cycle, symbol_exchange, and capstone_demonstration seat the default
+watchman, whose sixteen-point threshold stands far beyond every short run, so no behaviour
+moved. DELIBERATELY, NOTHING YET READS THE STATE: the thrown-switch twin telling pins bodies,
+weights, traces, averages, and activations identical between a fast-flipping watchman and the
+default one; item (d)'s offline works are the first legitimate reader. The independent
+adversarial review (tighter scope, named lenses, reproduction before fixing - the thirteenth
+straight completion) worked the four named lenses: key-shape aliasing and default drift
+DEFENDED on reproduction; behaviour-pinned-identical verified bit-identical against a main
+worktree on a five-tick world, every value and record identifier equal; one REAL finding under
+the standing unbound-wrong-judgement lens (paying five slices in a row, and found exactly where
+slice 36's refinement said to look - a silently-failing test): an unbound day length fell
+through integer/1 into the domain refusal carrying the hole itself; fixed with the house var
+guard ahead of the test, pinned by a review test, plus an honesty pin recording that a
+hand-built fractional phase - unreachable through any public constructor - dies aloud in mod's
+own typed refusal, relied upon rather than papered over. Observation-5 STANDS untouched, per
+the do-not-fix-speculatively rule. Twenty-two tests grew (twenty-one written first, one review
+pin plus the honesty pin): two_process_governor born at twenty, cognitive_cycle sixteen to
+twenty-one, the repository 518 to 543 across twenty-eight packs, all green, re-swept, the
+capstone's sixty untouched. Remaining pending lines: the offline works with the
+catastrophic-forgetting rest-twin telling (item (d), which subsumes the long-live-run watch);
+the write-allocation gate and per-territory plasticity fence (item (e)); computational-interface
+transforms; interfaces as Causalontology conduits; the token tier of thought combination. The
+four gates report zero violations, the naming gate passing its own self-test; conformance
+re-measured at 137 of 137 (specification 4.0.0) in both cousins. No new wall; no cousin edited,
+per the Second, Third, and Fourth Commandments.
+
 Observation-5 (2026-08-09, from slice 35). The neuromodulator_bus chemical reads
 (neuromodulator_bus_level/3 and neuromodulator_bus_level_territory/4) silently bind an UNBOUND
 bus argument into a partial list during lookup, against the module's own never-silently-bound

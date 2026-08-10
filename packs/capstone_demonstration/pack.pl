@@ -11,6 +11,6 @@ requires([cognitive_cycle, thought_combination, other_minds, prediction_loop, se
           symbol_exchange, pretend_play, empathy, drive_system, neuromodulator_bus,
           override_controller, action_selector, concrete_operations, cause_and_effect,
           category_formation, quantity_model, situation_appraisal, arousal_regulation,
-          simulated_body, body_interface]).
+          simulated_body, body_interface, two_process_governor]).
 % State the fact: layer(0) — the capstone reads its siblings through the library path and adds no update rule.
 layer(0).

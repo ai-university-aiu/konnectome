@@ -2,6 +2,8 @@
 :- use_module(library(cognitive_cycle)).
 % Load the neuromodulator_bus module, used to read the broadcast dopamine level.
 :- use_module(library(neuromodulator_bus)).
+% Load the two_process_governor module, used to boot the world's night watchman.
+:- use_module(library(two_process_governor)).
 % Load the list utilities used to gather recorded thought identifiers.
 :- use_module(library(lists), [member/2]).
 % Load the Prolog Unit (PLUnit) testing framework.
@@ -9,6 +11,8 @@
 
 % A fixed starting world, so every test is deterministic and reproducible.
 cognitive_cycle_test_world(World) :-
+    % The default two-process governor: the day's watchman, holding online through a short test run.
+    two_process_governor_new(Governor),
     % A minimal but complete world: one drive, one two-construct connection, the body away from set-point,
     % and since slice 32 the whole learning body's state - the trace store, the average store, and the
     % four constants that beat them - with the slow scaling bound armed but at rest (rate zero).
@@ -29,6 +33,7 @@ cognitive_cycle_test_world(World) :-
                    overrides: [],
                    override_threshold: 0.5,
                    learning_rate: 0.1,
+                   governor: Governor,
                    simulation_start: "2026-07-20T00:00:00Z" }.
 
 % Open the test block for the cognitive_cycle pack.
@@ -277,6 +282,99 @@ test(a_non_integer_tick_count_is_refused_aloud,
     cognitive_cycle_test_world(World0),
     % Time moves in whole ticks: the run refuses the count by name.
     cognitive_cycle_run(World0, banana, _WorldFinal, _Summaries).
+
+% SLICE 37: the two-process governor rides the live tick - the first legitimate thrower of the
+% slice-35 switch. Each tick the governor reads the switch, advances the rising sleep pressure and
+% the circadian day wave, and announces its selection back onto the bus for every subscriber.
+
+% The default governor holds the short test day online: the switch reads online after a run.
+test(the_default_governor_holds_a_short_day_online) :-
+    % Start from the fixed world.
+    cognitive_cycle_test_world(World0),
+    % Run six ticks, a short morning.
+    cognitive_cycle_run(World0, 6, WorldFinal, _Summaries),
+    % Read the switch off the final bus.
+    get_dict(bus, WorldFinal, Bus),
+    % The state the governor announced is the one every subscriber reads.
+    neuromodulator_bus_operating_state(Bus, State),
+    % Six ticks of debt cannot beat the default sixteen-point threshold: the day holds.
+    assertion(State == online).
+
+% The governor advances in the world: its pressure carries the run's whole waking debt.
+test(the_governor_advances_in_the_world) :-
+    % Start from the fixed world.
+    cognitive_cycle_test_world(World0),
+    % Run six ticks.
+    cognitive_cycle_run(World0, 6, WorldFinal, _Summaries),
+    % Read the governor out of the final world.
+    get_dict(governor, WorldFinal, Governor),
+    % Read its standing sleep pressure.
+    two_process_governor_pressure(Governor, Pressure),
+    % Six online ticks at the default rise of one leave a debt of six.
+    assertion(Pressure =:= 6).
+
+% A fast-flipping governor throws the switch in the live tick: the first legitimate thrower throws.
+test(the_tick_throws_the_switch_when_the_debt_wins) :-
+    % Build a governor whose sleep threshold falls to a three-tick day, with no circadian opposition.
+    two_process_governor_new(two_process_parameters(1, 2, 24, 0, 3, 0), FastGovernor),
+    % Start from the fixed world carrying the fast governor.
+    cognitive_cycle_test_world(Base),
+    % Swap the watchman for the fast one.
+    put_dict(governor, Base, FastGovernor, World0),
+    % Run three ticks, exactly enough debt to reach the threshold.
+    cognitive_cycle_run(World0, 3, WorldFinal, _Summaries),
+    % Read the switch off the final bus.
+    get_dict(bus, WorldFinal, Bus),
+    % The state the governor announced is the one every subscriber reads.
+    neuromodulator_bus_operating_state(Bus, State),
+    % The debt won: the switch stands offline, thrown by the governor in the live tick.
+    assertion(State == offline).
+
+% The thrown switch changes nothing else this slice: the twin runs agree on every other world piece.
+test(the_thrown_switch_moves_no_other_world_piece) :-
+    % Build the same fast-flipping governor.
+    two_process_governor_new(two_process_parameters(1, 2, 24, 0, 3, 0), FastGovernor),
+    % The default twin.
+    cognitive_cycle_test_world(WorldSlow0),
+    % The fast twin, differing only in its watchman.
+    cognitive_cycle_test_world(Base),
+    % Swap the watchman for the fast one.
+    put_dict(governor, Base, FastGovernor, WorldFast0),
+    % Run the default twin four ticks.
+    cognitive_cycle_run(WorldSlow0, 4, WorldSlow, _SummariesSlow),
+    % Run the fast twin the same four ticks, through its flip.
+    cognitive_cycle_run(WorldFast0, 4, WorldFast, _SummariesFast),
+    % Read the default twin's body.
+    get_dict(body, WorldSlow, Body),
+    % The bodies agree: nothing downstream of the switch reads it yet.
+    get_dict(body, WorldFast, Body),
+    % Read the default twin's weights.
+    get_dict(interfaces, WorldSlow, Interfaces),
+    % The weights agree.
+    get_dict(interfaces, WorldFast, Interfaces),
+    % Read the default twin's traces.
+    get_dict(traces, WorldSlow, Traces),
+    % The traces agree.
+    get_dict(traces, WorldFast, Traces),
+    % Read the default twin's averages.
+    get_dict(averages, WorldSlow, Averages),
+    % The averages agree.
+    get_dict(averages, WorldFast, Averages),
+    % Read the default twin's activations.
+    get_dict(activations, WorldSlow, Activations),
+    % The activations agree.
+    get_dict(activations, WorldFast, Activations).
+
+% A world missing its governor is refused aloud, never silently run without a watchman.
+test(a_world_missing_its_governor_is_refused_aloud) :-
+    % Start from the fixed world.
+    cognitive_cycle_test_world(World0),
+    % Remove the governor.
+    del_dict(governor, World0, _Value, WorldMissing),
+    % The tick refuses the gutted world by the missing key's name.
+    catch(cognitive_cycle_step(WorldMissing, _World, _Summary), error(Error, _), true),
+    % Confirm the refusal names the key.
+    assertion(Error == existence_error(cognitive_cycle_world_key, governor)).
 
 % Close the test block for the cognitive_cycle pack.
 :- end_tests(cognitive_cycle).
