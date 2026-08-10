@@ -2445,3 +2445,64 @@ over (a level defaults to zero, a state defaults to online, a throw defaults to 
 THE SCHEDULED AUDIT IS NOT YET DUE. The trigger stands at thirty-two hand-off documents; the count at
 this entry is TWENTY-FIVE. Carry the item forward with the count re-evaluated by:
 ls docs/*Context_Hand-Off*.txt | wc -l .
+
+
+DSPARCD ADOPTION NOTE (2026-08-09, by the owner's instruction). THE METHOD GAINS A SEVENTH PHASE AT
+THE FRONT, AND KONNECTOME GAINS ITS DEFINITION.
+
+WHAT HAPPENED. The owner delivered docs/DSPARCD_EXPLAINED.txt, an expansion of the SPARCD report
+which was itself an expansion of the original SPARC report. It adds one phase, DEFINITION, at the
+very front - Definition, Specification, Pseudocode, Architecture, Refinement, Completion,
+Demonstration - answering the question every other phase assumes has been answered: what is this
+thing, and what is it NOT. NOTHING WAS REMOVED. The six existing phases are unchanged, and the
+superseded SPARCD_EXPLAINED.txt is ARCHIVED rather than deleted, because the six phases it specifies
+are still exactly right and the commandment's history is part of the record.
+
+THE CONSTITUTION IS NOW AT VERSION 8. The Fifth Commandment is re-pointed at the new report and names
+the seventh phase; the Seventh Commandment gains konnectome_0_definition at the front of the fileset
+and renames it "The DSPARCD Fileset"; the Twelfth and Nineteenth Commandments follow the rename. NO
+COMMANDMENT WAS REMOVED AND NONE WAS RENUMBERED - which matters, because every hand-off in this
+repository cites commandments by number, and a renumbering would have silently falsified all of them.
+
+konnectome_0_definition_v1.txt IS WRITTEN and is the concept the other six files answer to. Its
+standing: CONSTITUTION.md outranks it; it outranks the other six phases; the Vision Document Set
+still leads konnectome's understanding of the biology. Recorded inside it, and repeated here so it is
+not discovered as a surprise: IT ARRIVED AT SLICE 41, NOT AT SLICE 1. It is therefore a READING-BACK
+of the concept the build actually held - recovered from the Constitution, the corpus, this ledger,
+and the record of what the build did whenever it had to choose - rather than a prediction made before
+the first line of code. That is a weaker thing than a definition written first, and the document says
+so on its own face rather than dressing it up.
+
+WHAT THE DEFINITION FIXES THAT WAS PREVIOUSLY SCATTERED. Three refusals and one rule had never been
+written in one place, and every one of them had already been argued at least once: konnectome is NOT
+a benchmark runner (its obligation to the ARC-AGI numbers is entirely NEGATIVE - it must not break
+them, which is a constraint and not a goal); konnectome is NOT a literal transcription of
+neuroscience (the translation rule is analogy of function, fidelity of interface, freedom of
+implementation, and it is the most misread sentence in the project); konnectome is NOT a clone of a
+published cognitive architecture (the test-bed measures coverage and does not steer). And the rule
+DSPARCD adds at the level of concept rather than code: EVERY REQUIREMENT, MODULE AND SLICE MUST TRACE
+TO THE CONCEPT OR TO A PRINCIPLE IN THE DEFINITION; anything tracing to neither is out of scope or
+belongs on the non-goals list.
+
+THE THREE FALSIFIERS ARE NAMED IN ADVANCE, in the Definition's own reflection, so that they cannot be
+explained away later: if faithful interfaces reproduce the wiring and none of the behaviour, the
+central bet fails; if the glass-box requirement proves incompatible with a capability konnectome
+needs, the concept and its third principle are in direct conflict and one must give (the tracked
+sentiment-analysis question is the live probe of exactly this); and if the fifteen layers do not
+compose into ONE process, the unifying claim is false and konnectome is the collection of faculties
+its own non-goals refuse to be.
+
+WHAT WAS EDITED AND WHAT WAS DELIBERATELY LEFT ALONE, because "adjust all dependencies" needed a
+boundary and this is the boundary that was drawn. EDITED, because these documents INSTRUCT:
+CONSTITUTION.md, README.md, the tutorial (v40 to v41), the six fileset files' live preamble, the
+capstone pack's two comments, and the coverage survey's forward-looking sentence. LEFT ALONE, because
+these documents RECORD: every prior Context Hand-Off, every build-log chapter already written, every
+Realization Log entry already written, and everything already in docs/archive/. Rewriting a record to
+match a later decision would falsify it, and this repository's whole discipline rests on records that
+can be trusted. ALSO LEFT ALONE, and this one is a harder rule: THE CORPUS IS NEVER EDITED. The
+Vision Document Set, NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT, TFELOAOTHNAES and
+LAYER_15_DESIGN_METHOD mention SPARCD and keep their own words. konnectome does not edit its guiding
+documents to agree with itself.
+
+NO CODE BEHAVIOUR CHANGED. The two pack edits are comments. 677 tests across thirty packs remain
+green and the four gates remain at zero.

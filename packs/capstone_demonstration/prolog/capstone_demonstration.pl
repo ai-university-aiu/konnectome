@@ -238,7 +238,7 @@
 ]).
 
 % The capstone demonstration boots the whole mind and lets its own records tell what happened.
-% It is the Demonstration phase of the SPARCD method made runnable: one deterministic story,
+% It is the Demonstration phase of the DSPARCD method made runnable: one deterministic story,
 % told in rung order - the heartbeat and the regulated body (Rung Zero), the object-permanence
 % forecast and its signed surprise (Rung One), a combined thought, the first grounded words and
 % the pretend game under quarantine (Rung Two), the concrete reasoning with every step shown

@@ -59,8 +59,20 @@ shown to be UNNECESSARY is recorded as honestly as a wall that needed building: 
 is a real result, not a failure.
 
 THE FIFTH COMMANDMENT:
-The six (6) step waterfall workflow documents are inspired by the specification file:
-/home/ccaitwo/konnectome/docs/SPARCD_EXPLAINED.txt
+(AMENDED in version 8, by the owner's instruction of 2026-08-09. The method gains a SEVENTH phase at
+the FRONT, and the commandment is re-pointed at the report that specifies it.)
+The seven (7) step waterfall workflow documents are inspired by the specification file:
+/home/ccaitwo/konnectome/docs/DSPARCD_EXPLAINED.txt
+DSPARCD is SPARCD with a DEFINITION phase in front of it: Definition, Specification, Pseudocode,
+Architecture, Refinement, Completion, Demonstration. The superseded SPARCD_EXPLAINED.txt is archived
+under the Eleventh Commandment at docs/archive/SPARCD_EXPLAINED.txt; it is not deleted, because the
+six phases it specifies are unchanged and this commandment's history is part of the record.
+DEFINITION ANSWERS THE ONE QUESTION EVERY OTHER PHASE ASSUMES HAS BEEN ANSWERED: what is this thing,
+and what is it NOT. Its deliverable is konnectome_0_definition (the Seventh Commandment), and it is
+deliberately SHORT - a page of concept, never a binder of blueprints, because designing everything up
+front is the failure this method exists to prevent. Every requirement, module, and slice must trace
+to the concept or to a principle in that file; anything tracing to neither is out of scope or belongs
+on its non-goals list.
 
 THE SIXTH COMMANDMENT:
 Pseudocode will be inspired and influenced by English Readable Code (ERC) as defined in the specification file:
@@ -69,10 +81,14 @@ Concretely: every line of code in every source file carries one plain-English co
 above it, per the ERC rule.
 
 THE SEVENTH COMMANDMENT:
-The Specification, Pseudocode, Architecture, Refinement, Completion, and Demonstration waterfall steps and files
+(AMENDED in version 8, by the owner's instruction of 2026-08-09. A SEVENTH file joins the fileset at
+the FRONT, and the fileset is renamed to match the method.)
+The Definition, Specification, Pseudocode, Architecture, Refinement, Completion, and Demonstration
+waterfall steps and files
 will be sourced from the Appendices of the file:
 /home/ccaitwo/konnectome/docs/NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt
 The versioned files will be created and named:
+/home/ccaitwo/konnectome/docs/konnectome_0_definition_v1.txt
 /home/ccaitwo/konnectome/docs/konnectome_1_specification_v1.txt
 /home/ccaitwo/konnectome/docs/konnectome_2_pseudocode_v1.txt
 /home/ccaitwo/konnectome/docs/konnectome_3_architecture_v1.txt
@@ -81,7 +97,14 @@ The versioned files will be created and named:
 /home/ccaitwo/konnectome/docs/konnectome_6_demonstration_v1.txt
 Each file will start its contents from one entire, similarly numbered appendix from the file
 /home/ccaitwo/konnectome/docs/NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt
-These six (6) files will be known as "The SPARCD Fileset".
+These seven (7) files will be known as "The DSPARCD Fileset".
+konnectome_0_definition HAS NO SOURCE APPENDIX and correctly so: the Definition phase is newer than
+the manuscript the other six are sourced from, so its first version is written from THIS CONSTITUTION
+and from the whole of /docs/, and it says so on its own face. IT ARRIVED AT SLICE 41, NOT AT SLICE 1,
+and that lateness is recorded inside it rather than hidden - it is a reading-back of the concept the
+build actually held, not a prediction made before the build began. From its first version onward it
+leads the other six: where the Definition and a later phase disagree, THE DEFINITION LEADS and the
+later phase is corrected. This Constitution outranks it in turn.
 
 THE EIGHTH COMMANDMENT: THE VISION DOCUMENT SET:
 (NEW in version 4, by the owner's instruction of 2026-08-09. The former Eighth through Eighteenth
@@ -126,7 +149,8 @@ Now the sober instructions that make the fanfare safe:
    (AMENDED in version 6, by the owner's instruction of 2026-08-09. Two corrections and one
    addition. FIRST, the ledger citation in the paragraph above formerly read "the Fifth
    Commandment's file"; the ledger is established by the FOURTH Commandment, the Fifth governs
-   SPARCD_EXPLAINED.txt, and the Ninth Commandment cites the same ledger correctly, so this was an
+   the DSPARCD report (SPARCD_EXPLAINED.txt when that note was written), and the Ninth Commandment
+   cites the same ledger correctly, so this was an
    error and is corrected here. SECOND, the analysis this rule mandates was never named, so a
    session reading the constitution alone could not find the fulfilment of an obligation the
    constitution itself imposes; it lives at
@@ -221,7 +245,7 @@ same change), so that only the latest version of any versioned document lives ou
 
 THE TWELFTH COMMANDMENT:
 Any and all code changes to konnectome will be accompanied by
-mirrored changes to "The SPARCD Fileset",
+mirrored changes to "The DSPARCD Fileset",
 with version numbers incremented,
 and older versions archived per the Eleventh Commandment.
 
@@ -308,7 +332,7 @@ continue in a fresh session. Second, the OWNER trigger: the owner watches the tr
 hundred thousand tokens, or above roughly sixty percent of the window - the owner asks for a hand-off.
 On either trigger, the assistant carries out the Hand-Off Protocol below, commits the result on a
 feature/ branch through a pull request (Sixteenth Commandment), and then PAUSES. A fresh session then
-re-loads state from docs/ - the ledger, the SPARCD Fileset, the tutorial, and the latest hand-off - and
+re-loads state from docs/ - the ledger, the DSPARCD Fileset, the tutorial, and the latest hand-off - and
 continues from the known-good baseline, because all durable state lives on disk and never only in the
 conversation.
 
@@ -326,18 +350,28 @@ Step 3: To this file write the following information for the next building or ma
 - Your chosen name and the date, and a sentence on why the name was chosen.
 - A reminder to first and foremost read and follow THE KONNECTOME CONSTITUTION AT:
 ~/konnectome/CONSTITUTION.md (all commandments).
-- A reminder to read The SPARCD Fileset
-(docs/konnectome_1_specification through konnectome_6_demonstration, at their current versions).
+- A reminder to read The DSPARCD Fileset
+(docs/konnectome_0_definition through konnectome_6_demonstration, at their current versions), and to
+read konnectome_0_definition FIRST, because it is the concept the other six answer to.
 - A reminder to read docs/NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt, the guiding book for konnectome
 - A reminder to read the Settings, General, Instructions for Claude (the owner's standing instructions to the assistant).
 - A reminder to read ~/CLAUDE.md, which is git-untracked (gitignored) and holds the system-wide current-state narrative (it lives at the organization root, not inside one repository, because it belongs to the whole system).
 - A reminder to read the current /docs/konnectome_tutorial (the maintained beginner tutorial), and to read all of the documents in /docs/.
-- A list of the important /docs/ files and what each is: the ledger, the SPARCD Fileset, the change orders, the tutorial, the thought-combination guide, the guiding-principle documents, the context documents, and the earlier hand-offs (named by the convention of Step 2).
-- A report of what was done in the session that is ending: the slices built, the packs, the tests, the pull requests merged, the current main commit, and the current SPARCD and tutorial versions.
+- A list of the important /docs/ files and what each is: the ledger, the DSPARCD Fileset, the change orders, the tutorial, the thought-combination guide, the guiding-principle documents, the context documents, and the earlier hand-offs (named by the convention of Step 2).
+- A report of what was done in the session that is ending: the slices built, the packs, the tests, the pull requests merged, the current main commit, and the current DSPARCD and tutorial versions.
 - The build-against cousin commits (causalontology, PrologAI, Mentova), for reproducibility.
 - Any other context you, the assistant, judges important for the next process: open observations, honest non-closures, sharp edges, and anything discovered that is not obvious from the code.
 - The current first-task menu of options for the continuation to present to the owner, ending with an "Other ______" option.
 - A short sign-off.
 Step 4: Commit the hand-off on a feature/ branch through a pull request. Auto-Push. Then PAUSE.
+
+VERSION HISTORY NOTE (added in version 8). This Constitution is at VERSION 8. Version 8, by the
+owner's instruction of 2026-08-09, adopts DSPARCD in place of SPARCD: the Fifth Commandment is
+re-pointed at docs/DSPARCD_EXPLAINED.txt and names the seventh phase, the Seventh Commandment gains
+konnectome_0_definition at the front and renames the fileset to "The DSPARCD Fileset", and the
+Twelfth and Nineteenth Commandments follow the rename. NO COMMANDMENT WAS REMOVED, NO COMMANDMENT WAS
+RENUMBERED, and the six existing phases are unchanged - DSPARCD adds at the front and takes nothing
+away. A session citing a commandment by number from an older hand-off will therefore still land on
+the right one.
 
 END OF CONSTITUTION.

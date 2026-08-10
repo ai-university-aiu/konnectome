@@ -2,7 +2,7 @@ APPENDIX 6. DEMONSTRATION
 
 A6.0 THE PURPOSE OF THIS PHASE
 
-Demonstration is the sixth phase, added by this work to the five of SPARC, giving the acronym SPARCD.
+Demonstration is the LAST phase, added by this work to the five of SPARC to give SPARCD, and now the SEVENTH of DSPARCD, which adds Definition at the front. Demonstration's place is unchanged by that addition: the two added phases are bookends, and they mirror each other - Definition opens the pipeline by stating the PROMISE, what this is meant to be, and Demonstration closes it by supplying the PROOF, what it turned out to be able to do. konnectome can now lay konnectome_0_definition beside this file and ask honestly whether the promise was kept.
 
 An ordinary specification may end at Completion, with a working system.
 
@@ -511,7 +511,7 @@ Ladder rung 1, the heartbeat - a stable, reproducing tick loop that keeps time -
 
 Gates at this slice: 7 of 7 tick_engine Prolog Unit (PLUnit) tests pass; the naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited; konnectome reuses them through the library path.
 
-This log grows one entry per code slice, per the Tenth Commandment. The full SPARCD Fileset was bumped in lockstep from version 1 to version 2, and the version 1 files were archived under docs/archive/ in the same change, per the Ninth Commandment.
+This log grows one entry per code slice, per the Tenth Commandment. The full DSPARCD Fileset (the SPARCD Fileset until the Constitution's version 8) was bumped in lockstep from version 1 to version 2, and the version 1 files were archived under docs/archive/ in the same change, per the Ninth Commandment.
 
 
 KONNECTOME REALIZATION LOG - SLICE 2
