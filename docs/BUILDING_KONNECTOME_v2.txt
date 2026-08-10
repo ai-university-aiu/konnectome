@@ -702,5 +702,55 @@ As of slice 44, on the ninth of August, twenty twenty-six: forty-four slices. Th
 Next: the first real watchdog, which closes the ninth observation and which yesterday's convention unblocked - konnectome has a supervisor, and still nothing feeding it. Then the master register widened past the online-offline binary, and its first downward assignment.
 
 
-From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER FORTY-ONE, and the story goes on being true.
+CHAPTER FORTY-ONE - THE SMOKE ALARM WITH NO BATTERY (2026-08-09, SLICE 45)
+
+
+Three slices ago konnectome built a supervisor, and the supervisor was built with three answers rather than two. It could say a boundary had been crossed. It could say a boundary was fine. And it could say that nobody was watching a boundary at all. The third answer was the expensive one to build and the whole reason the slice was any good, because without it the machine would have had exactly one way to express ignorance, which is silence, and silence is indistinguishable from health.
+
+That third answer was, for three slices, the only one the supervisor ever gave. It was correct every single time.
+
+Nothing in konnectome counted anything. The supervisor judged readings it was handed and kept no records of its own, so nobody was building a history of any construct, so every fault regime in the repository came back UNWATCHED, by name, with the name of the watchdog that had not reported. The build wrote that down as its ninth observation on the day it created the situation, which is a habit worth pausing on: the slice that opens a gap and names it in the same breath is not confessing, it is filing a work order. Two other slices then walked past that work order deliberately - slice 43 supplied the unit a window is measured in and closed nothing, slice 44 built the stabiliser and counted nothing - each of them saying so out loud in its own ledger note.
+
+Today the watchdog got built, and the whole of the slice turns on one question: how long is the window?
+
+The question is not academic. A watchdog does not observe a machine, it observes a machine OVER A STRETCH. Nine flips is not a fact. Nine flips in the last twenty ticks is. And a session that had just been handed a unit of time by the previous slice was obviously supposed to pick a length and defend it - the hand-off said as much, in those words: this slice still owes a number.
+
+So the slice went looking for one, and what it found is the chapter.
+
+The corpus does supply timings for this exact kind of switch. Entry 36, the mutual-inhibition flip-flop, the Either-Or Latch - the same entry slice 40 validated the gate against block by block, and the same entry slice 42 took both fault regimes from - says in plain words that transitions take seconds to minutes while the states last minutes to hours. There it is. A number, in the guiding corpus, about the very construct being watched.
+
+And it is the wrong number, and understanding why is worth more than the pack.
+
+The switch the corpus is describing is the human sleep-wake latch. That is what states-lasting-hours is a statement about. konnectome installs the same gate archetype in places that have nothing whatever to do with sleep - a gate is a gate, generically, wherever it is wired. Convert minutes-to-hours into konnectome's ticks and you get tens of thousands of them, which would mean the demonstration story's own ten-tick heartbeat could never be measured at all, ever, by any watchdog. The build would have shipped a default that made its own flagship unwatchable, and it would have shipped it carrying a footnote to a book that was not talking about the case.
+
+The sentence that got written down is: A DEFAULT WITH A BORROWED WARRANT IS AN INVENTED NUMBER THAT HAS LEARNED TO CITE. It is the cousin of the sentence slice 43 wrote two days earlier - a rounding is an invented number wearing a small coat - and the two together are one rule seen from opposite sides. Invented numbers do not enter careful systems by being invented. They enter by looking like they came from somewhere.
+
+So the window went where the allowance already was: in the hands of the caller who sets up the watchdog and has a reason. That is the fourth numbered decision this build has taken, and its first half is a refusal to decide something - which sounds like a dodge until you notice that the argument for it is three paragraphs long and the argument against it fits in a citation.
+
+The second half is where the teeth are.
+
+Ask this watchdog for flips over twenty ticks when you have only four ticks of history, and it will not answer you. It could. The true statement "one flip so far" is sitting right there, and the supervisor would compare one against an allowance of three, find it comfortably inside, and publish a clean bill of health.
+
+That is the smoke alarm with the green light and no battery, and it is worth being precise about the failure, because it is not a bug anyone would ever catch. Every component behaves correctly. The watchdog reports truthfully. The supervisor compares correctly. The verdict is arithmetically right and epistemically worthless, and it arrives wearing the exact same shape as a verdict that means something. The third answer the supervisor was so carefully given - nobody is watching this - would have been defeated from one layer underneath, by a subordinate that was only trying to be helpful.
+
+So the short history hands back nothing at all, plus a named statement carrying the window that was asked for and the span that actually exists. The supervisor, receiving no reading, says what it has said for three slices: nobody is watching this. Which is true, and which is now true for a reason the system chose rather than a reason it could not help.
+
+A SYSTEM THAT ONLY KNOWS HOW TO ANSWER WILL ANSWER WHEN IT SHOULD NOT. That sentence is now written into konnectome twice, at two layers, by two packs that were built three slices apart by people who could not consult each other.
+
+The rest of the slice is craft. Time may not run backwards, and it may not stand still either - an observation at a tick already recorded is refused as firmly as one before it, because rewriting history and double-counting a tick are the same fault wearing two faces, and both would look exactly like ordinary use while quietly poisoning every verdict downstream. That is the precise class of silent corruption this pack exists to detect in other constructs. Leaving the detector undefended against it would have been funny in the wrong way.
+
+And the tests found something the author had not: eight of them passed with a warning that they had succeeded with a choice point. The flip counter had been written with the obvious three clauses - empty list, one element, two or more - which is correct, and which leaves a decision hanging behind every reading, because Prolog's indexing looks at the shape of a term and cannot tell a one-element list from a long one. Nothing was wrong. Nothing would have been wrong until something backtracked into it, at which point the pack would have offered a second answer to a question with one answer. It got split in two so that each step decides on a single distinction: empty, or not. A WALK THAT IS DETERMINISTIC ONLY BECAUSE NOBODY ASKED IT FOR A SECOND ANSWER IS NOT DETERMINISTIC. That is slice 41's declaration-order lens - right for the wrong reason is not right - showing up in clause selection instead of in a lookup table, four slices after it was named.
+
+One more thing was recorded, and it is the least flattering paragraph in the ledger. Slice 44's counter line had been written as "Observations: 10 (8 CLOSED)", meaning observation number eight is closed. Read as a count, beside a ten, it says eight of ten are closed. One was. A field with two readings a factor of eight apart is not a scoreboard, and it survived a session because a summary line is the one thing nobody reads slowly. It now names both closed observations explicitly. A count and an identifier look identical on a page and mean opposite things, and this is the second consecutive session in which that collision has been caught in a status line rather than in code.
+
+What the build can say tonight that it could not say this morning: nothing warned, and nothing unwatched.
+
+What it still cannot say is that anything is actually being watched in the running machine, because nothing is. No caller builds a history; the demonstration story is byte-identical, deliberately, because not one existing pack was edited. The capability exists and is proved end to end against the real gate and the real supervisor in the test suite, and the join belongs to whoever comes next - who will have to choose a window, and say why, in the open, which is precisely what today's decision declined to do on their behalf.
+
+That is the second observation this build has ever closed, and it closed two days after the first. Forty-three slices with none, and then two in a row - which is what it looks like when a family finally reaches the slices its early ones were promises for.
+
+Next: the master register widened past the online-offline binary into a named global state with a sub-mode, and then the first downward assignment, which is the corpus's own definition of what a global state IS. Or the first real caller wired to a watchdog, which would make somebody choose a window at last.
+
+
+From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER FORTY-TWO, and the story goes on being true.
 

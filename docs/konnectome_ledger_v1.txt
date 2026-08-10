@@ -1206,7 +1206,7 @@ thought combination. The four gates report zero violations, the naming gate pass
 self-test; conformance re-measured at 137 of 137 (specification 4.0.0) in both cousins. No new
 wall; no cousin edited, per the Second, Third, and Fourth Commandments.
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 10 (8 CLOSED).  Decisions: 3.
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 10 (2 CLOSED: 8 and 9).  Decisions: 4.
 
 Slice-34 note (2026-08-09). The bound turned live in the told story. The slice-33 pending line
 (the bound proven per-territory in the tests but not yet in the capstone's told story) is
@@ -2895,3 +2895,169 @@ successor is correct - the First Commandment says konnectome is built with these
 principles in mind, and a bigger book is a bigger source, not a verified one. And it does not
 re-open any slice: nothing in packs/ reads any of these manuscripts, so no test, gate, or behaviour
 depends on this change, which is why it ships as its own commit rather than riding on a slice.
+
+
+SLICE 45 NOTE (2026-08-09). THE FIRST REAL WATCHDOG - and with it THE FOURTH NUMBERED KONNECTOME
+DECISION, and THE CLOSURE OF OBSERVATION-9, which is the second observation this build has ever
+closed and the second in two consecutive slices.
+
+WHAT WAS BUILT. One new pack, watchdog, at layer zero, carrying ten exported predicates and
+twenty-nine Prolog Unit (PLUnit) tests. NO EXISTING PACK WAS EDITED, no world dict key was added, no
+number was invented and no number was changed. SEVEN HUNDRED AND SIXTY-EIGHT tests across THIRTY-THREE
+packs; four gates at zero plus the naming gate's self-test; the capstone story byte-identical.
+
+WHAT A WATCHDOG IS HERE. A history is a list of observation(Tick, Mode) terms held newest first,
+threaded through the caller as A VALUE THE WORLD CARRIES, in the explicit-stateless-value discipline
+the eligibility-trace store, the running-average store and the per-territory target store already
+follow. From it the pack reads two things and only two: HOW MANY TIMES THE MODE CHANGED inside a
+trailing window, and HOW MANY TICKS THE CURRENT MODE HAS BEEN HELD inside it. Both are then offered
+under the signatures archetype's own fault block declares - oscillation and stuck_switch - as
+supervisor_reading/3 terms the supervisor built at slice 42 already knows how to judge.
+
+NEITHER BOUNDARY IS KONNECTOME'S INVENTION. Both are the corpus's, from the Layer 8 modes volume's
+Entry 36, the mutual-inhibition flip-flop coined the Either-Or Latch, which names exactly two failure
+regimes - a switch that flips too readily, and a switch biased so hard one way that transitions are
+difficult - and which is the same entry slice 40 validated the gate against block by block. archetype
+has carried both by name with their watchdogs named since slice 42. This pack is what those two names
+have been standing in for.
+
+DECISION-4 (2026-08-09, slice 45). THE WINDOW BELONGS TO THE CALLER, AND A WINDOW THE HISTORY DOES
+NOT YET SPAN IS REPORTED AS NOT-YET-MEASURED, NEVER AS CLEAN. THIS IS KONNECTOME'S OWN DECISION AND
+MUST NEVER BE PRESENTED AS THE CORPUS'S INSTRUCTION.
+
+WHY A DECISION WAS REQUIRED, AND WHY IT IS NOT THE DECISION THE HAND-OFF EXPECTED. The continuation's
+first task recorded that this slice OWED A NUMBER: DECISION-2 supplied the unit a window is stated in
+and left the length to whoever chose it. The slice looked for a warrant to choose one and reports
+what it found, because the search is the finding. THE CORPUS'S ONLY QUANTITATIVE STATEMENT ABOUT THIS
+LATCH'S TIMESCALES IS ENTRY 36'S OWN: human sleep-wake transitions take seconds to minutes while the
+states last minutes to hours, the signature of a sticky latch. That is a claim about ONE latch - the
+sleep-wake flip-flop - and konnectome installs the gate archetype in places that have nothing
+whatever to do with sleep. Adopting minutes-to-hours as a default window would put it at tens of
+thousands of ticks, which would make the capstone's own ten-tick heartbeat permanently unmeasurable,
+and it would do so WHILE WEARING A CORPUS CITATION THAT DOES NOT COVER THE CASE. THE GENERAL FORM,
+worth carrying: A DEFAULT WITH A BORROWED WARRANT IS AN INVENTED NUMBER THAT HAS LEARNED TO CITE.
+Slice 43 met the same shape from the other side and named it - a rounding is an invented number
+wearing a small coat - and the two together are one rule seen twice.
+
+THE THREE REASONS, ALL KONNECTOME'S OWN. FIRST, CONSISTENCY WITH A SHAPE ALREADY DECIDED: slice 42
+put the ALLOWANCE in the caller's hands for exactly this reason, and a pack that takes its allowance
+from the caller and its window from itself would be splitting one judgement across two owners. The
+caller that owns a watchdog owns its numbers, both of them. SECOND, THE NUMBER IS NOT ONE NUMBER: a
+window that suits the capstone's ten-tick heartbeat cannot suit a governor's twenty-four-tick day,
+and a single default would be wrong for at least one of them while looking authoritative for both.
+THIRD, IT IS REVERSIBLE AND ITS ALTERNATIVE IS NOT: a later slice with a real caller and a real
+reason can declare a default and hand it to callers who want one, whereas a default declared here
+would be inherited silently by every caller that never thought about it.
+
+THE SECOND HALF IS THE LOAD-BEARING ONE, AND IT IS WHAT MAKES THIS A DECISION WITH TEETH RATHER THAN
+A DEFERRAL. A HISTORY THAT DOES NOT YET SPAN ITS WINDOW YIELDS NO READING AT ALL. Consider what the
+alternative would have done: a history four ticks long, asked for flips over a window of twenty,
+could perfectly honestly answer "one flip so far" - and a supervisor comparing one against an
+allowance of three would then publish A CLEAN BILL OF HEALTH FOR A BOUNDARY NOBODY HAS WATCHED LONG
+ENOUGH TO JUDGE. That is precisely the failure the supervisor's THIRD OUTCOME was built to prevent,
+arriving one layer further down and defeating it from underneath. So the short history hands back
+nothing, plus a named statement per boundary carrying the window asked for and the span actually
+held, and both boundaries then flow through the supervisor's UNWATCHED block - which is where they
+belong and which is true. THE GENERAL LESSON: A SYSTEM THAT ONLY KNOWS HOW TO ANSWER WILL ANSWER WHEN
+IT SHOULD NOT, AND THE DEFENCE IS NOT A BETTER ANSWER BUT A THIRD OUTCOME - SAID TWICE NOW, AT TWO
+LAYERS, BY TWO PACKS.
+
+WHAT DECISION-4 DOES NOT DECIDE, stated so a later session does not inherit more than was chosen. IT
+DOES NOT DECIDE ANY WINDOW FOR ANY CONSTRUCT: the first slice that wires a real gate to a real
+history must choose one and justify it, and that is a slice of its own. IT DOES NOT DECIDE AN
+ESCALATION POLICY - what to DO about a warning remains exactly as undecided as slice 42 left it. IT
+DOES NOT DECIDE THAT FLIPS AND HELD-TICKS ARE THE ONLY THINGS WORTH WATCHING; they are the two the
+corpus names for this one construct, and a construct whose fault regimes the corpus does not supply
+still gets none. IT DOES NOT DECIDE HOW OFTEN A CALLER MUST OBSERVE - see the sampling note below.
+And it does not decide whether a history should ever be bounded in length, which is the same
+unbounded-store question slice 38's memory store left open and which this pack inherits unchanged.
+
+OBSERVATION-9 IS CLOSED (opened slice 42, unblocked slice 43, closed slice 45). konnectome had a
+watcher and no watchdogs; it now has one. The closure is proved at the WATCHER rather than asserted
+at the watchdog, which is the only place it could honestly be proved: two named tests build the REAL
+gate's automaton, hand the REAL supervisor readings taken from a real history, and read back the real
+report. In one, the unwatched block comes back EMPTY - a sentence this repository could not say
+before this slice. In the other, a four-tick history against a twenty-tick window leaves BOTH
+boundaries unwatched by name, with their watchdogs named, exactly as before the slice existed. The
+closure is therefore two-sided: the watchdog can watch, and it still knows when it has not.
+
+OBSERVATION-9 NAMED TWO POSSIBLE CLOSERS AND THIS SLICE CHOSE THE FIRST, WITH THE REASON RECORDED SO
+THE CHOICE IS NOT MISTAKEN FOR THE ONLY OPTION. The alternatives were a windowed per-construct
+history, or a per-construct counter inside the tick engine. The counter was rejected: it would have
+put a construct's history where only the engine could read it, and Theme One's addendum - the owner's
+standing visualization-panel constraint, binding from the first mode-register slice onward - forbids
+exactly that, requiring every such fact to be a value the world carries and readable without stepping
+the construct. The engine-counter design would have been smaller and would have foreclosed the panel.
+
+A SAMPLING PROPERTY, NAMED RATHER THAN HIDDEN, BECAUSE IT IS THE ONE PLACE THIS PACK COULD MISLEAD. A
+window is counted in TICKS, but flips are counted between consecutive OBSERVATIONS, and a history
+need not hold an observation for every tick. A construct that flips and flips back between two
+observations therefore shows NO FLIP AT ALL. This is a property of sampling and not a defect of the
+count - the watchdog measures what it was shown - but a caller that wants every flip seen must
+observe every tick, and a caller that samples is measuring a lower bound on flips while measuring
+ticks-held exactly. Both facts are pinned by tests. THE SHARP EDGE FOR A LATER SLICE: the two
+readings do NOT degrade the same way under sampling, so a caller that samples is applying two
+different standards of evidence to two allowances it probably chose together.
+
+TIME DOES NOT RUN BACKWARDS AND IT DOES NOT STAND STILL, AND BOTH ARE REFUSALS. An observation at a
+tick not strictly later than the newest one held is refused with domain_error(watchdog_advancing_tick,
+Tick). The backwards case would rewrite history; the equal case would double-count one tick in every
+reading taken afterwards. Both would look like ordinary use while corrupting every verdict
+downstream - which is the exact class of silent fault this pack exists to detect in other constructs,
+and it would have been careless to leave it undefended in the detector.
+
+THE WATCHDOG AND THE SUPERVISOR MEET AT A TERM AND NOT AT AN IMPORT. watchdog builds
+supervisor_reading/3 terms and does NOT import supervisor. Both sit at layer zero so an import would
+break no rule, but it would make the watchdog depend on the watcher when the honest direction of
+dependence is neither: they meet at a value the world carries, as every store in this repository
+does. The coupling is therefore BY SHAPE, and because a coupling by shape is exactly the kind that
+rots silently, the shape is pinned by tests in this pack that drive the real supervisor end to end.
+
+THE DECLARATION-ORDER LENS PAID IN A NEW FORM, AND THE FORM GENERALISES. The flip counter was first
+written with the obvious three clauses - empty, one element, two-or-more - which is correct and left a
+CHOICE POINT behind on every reading, because first-argument indexing sees only the principal functor
+and cannot tell a one-element list from a longer one. Eight tests passed WITH A WARNING that they had
+succeeded with a choice point, which is the test framework doing the lens's job out loud. The walk
+was split in two so each predicate decides on the SHAPE of its first argument alone. THE GENERAL
+FORM: A WALK THAT IS DETERMINISTIC ONLY BECAUSE NOBODY ASKED IT FOR A SECOND ANSWER IS NOT
+DETERMINISTIC, and the difference is invisible until something backtracks into it. That is the
+declaration-order lens - right for the wrong reason is not right - arriving at CLAUSE SELECTION
+rather than at a lookup table. THE UNBOUND-WRONG-JUDGEMENT LENS PAID FOR A THIRTEENTH SLICE RUNNING
+(33 through 45), four times in this slice's new code.
+
+THE ABSORBING-STATE LENS WAS APPLIED AND FOUND NOTHING, AND THAT IS RECORDED RATHER THAN DRESSED UP.
+Slice 44 earned it and named it a candidate that had paid ONCE against a standing bar of twice. It
+was turned here on the watchdog's own two boundaries, asking whether any history could cross both at
+once - which would have meant a construct simultaneously flipping too fast and stuck, and a pair of
+readings that could never be acted on coherently. It cannot: over any window, maximum flips forces
+minimum hold, and a test pins the extreme case. But CONFIRMING a design is not PAYING in this
+repository's sense, which is catching something a careful reader would have missed. The candidate
+therefore still stands at ONE payment and the next session inherits the same promotion question this
+one did. Recording an application that found nothing is the only way that bar stays a bar; a lens
+credited for every use would be promoted by usage rather than by value.
+
+THE COUNTER LINE'S OBSERVATION FIELD IS RESTATED, AND THE RESTATEMENT IS A CORRECTION RATHER THAN AN
+INCREMENT. Slice 44 added a CLOSED sub-count and wrote it as "Observations: 10 (8 CLOSED)", intending
+"observation number 8 is closed". Read as a count - which is how "10" beside it reads, and how the
+note introducing it described the field - it says eight of ten are closed, when one was. A field
+whose two readings differ by a factor of eight is not a scoreboard. It now reads "Observations: 10
+(2 CLOSED: 8 and 9)", which cannot be read two ways. RECORDED RATHER THAN QUIETLY FIXED because the
+failure is instructive and is the same one slice 43's README sweep produced: a COUNT and an
+IDENTIFIER look identical on the page and mean opposite things, and the place they collide is always
+a summary line that nobody reads slowly.
+
+WHAT THIS SLICE DELIBERATELY DID NOT BUILD, so each gap is a decision. No caller was wired: nothing
+in the running machine builds a history, which is why the capstone story is byte-identical and why
+this slice is an IOU of exactly the shape slice 44's stabiliser was. No fault regime for any construct
+but the gate. No escalation, retry or recovery policy. No bound on a history's length. No per-construct
+rate. And no change to the observer, per OBSERVATION-10 - although this pack is the first in the
+repository to measure a DURATION across ticks, and it does so from its own history precisely because
+the observer's instant may not be read as a duration, which is OBSERVATION-10's cheaper closer being
+honoured in practice one slice before it is honoured in code.
+
+NO WALL WAS HIT AND NOTHING ROUTES. A history threaded through one runtime and read by one supervisor
+in the same runtime travels to nobody and fails the consumer-versus-ontology test of the Second
+Commandment; no PrologAI language feature was missing. Nothing in this slice releases the held
+Sections C, D and E of the causalontology change order. Neither cousin was edited and conformance was
+NOT re-measured - the 137 of 137 figure is now SIX SESSIONS OLD and must be re-measured before it is
+quoted, not carried forward again.
