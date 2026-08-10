@@ -1206,7 +1206,7 @@ thought combination. The four gates report zero violations, the naming gate pass
 self-test; conformance re-measured at 137 of 137 (specification 4.0.0) in both cousins. No new
 wall; no cousin edited, per the Second, Third, and Fourth Commandments.
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 7.
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 8.
 
 Slice-34 note (2026-08-09). The bound turned live in the told story. The slice-33 pending line
 (the bound proven per-territory in the tests but not yet in the capstone's told story) is
@@ -2058,3 +2058,126 @@ the register files the copy kind, or a var guard at the head of tick_engine_stat
 with one test that an unbound copy target is refused aloud rather than answered with a stranger's
 value. Both halves belong to the same pack and the same visit; a session that closes one and not the
 other has left this entry half-stale.
+
+
+Slice-40 note (2026-08-09). THE GATE ARCHETYPE RE-EXPRESSED AS ITS GENUINE TWO-MODE REGISTER. The
+design authority's Part Nine slice THREE is BUILT and CLOSED. packs/archetype's gate now carries all
+four blocks of the hybrid automaton, built and judged by mode_register_new/6 so that archetype never
+becomes a second authority on what a valid register is.
+
+THE REGISTER IS TWO, in the corpus's own three-field entry schema: open - the Open Sluice - "passes
+what arrives at it onward, unchanged, for as long as the gate stands open"; and closed - the Dropped
+Shutter - "blocks what arrives at it, passing nothing onward, for as long as the gate stands closed".
+The FORMAL names are the gate's own existing vocabulary, which the design authority's Part Six
+forbids renaming and which slice 39's Naming-collision note recorded as already corpus-correct.
+
+THE PER-MODE TRANSFER FUNCTIONS ARE THE SLICE'S REAL CONTENT, and they are the thing a register of
+one could not carry. gate_pass and gate_block genuinely differ and are genuinely APPLIED:
+archetype_gate_output(open, 4, 4) and archetype_gate_output(closed, 4, 0), one predicate, one input,
+two modes, two answers. That is the corpus's central claim about components - while a mode holds, the
+construct behaves like a different machine - stated as a test rather than as prose. Slice 39's
+transfer functions were the construct kind term itself, which made bit-identity a law but also meant
+no transfer function was ever run through the register; at slice 40 they are.
+
+THE TRANSITION TABLE carries two explicit rows with all four corpus fields and no guard column:
+transition(switch_drive_above_threshold, open, closed, one_tick, self_selected) and its mirror. The
+timescale is mandatory and is konnectome's own uniform tick, since multi-rate time is deferred by
+name in the design authority's Part Nine. The AGENCY of both rows is self_selected, which is honest
+today and is exactly the field the next slice changes: nothing above the gate throws it yet.
+
+THE TABLE IS NOW THE SOLE AUTHORITY ON DIRECTION. The old two-clause flip table (open flips to
+closed, closed flips to open) is GONE; archetype_gate/4 builds its register, reads the transition
+table out of it, and takes the departure from the row. This is structural rather than cosmetic: when
+the bus throws a transition, the throw will be a row in the same table, judged by the same
+constructor and read by the same lookup, so the bus needs no second path into the gate.
+
+THE CURRENT MODE BELONGS TO THE INSTANCE, NOT TO THE KIND, and this note is where that is recorded as
+settled. The Titanium hand-off flagged it as the first thing the transition slices must revisit.
+It is revisited here: archetype_gate_automaton(+CurrentMode, -Automaton) takes the mode as an
+argument, because two gates of one kind stand in different modes at the same instant. Everything else
+- the entries, the transfer block, the table, the fault block - remains per kind and is stated once.
+mode_register_of_construct_kind/2 is deliberately NOT extended to the gate: that predicate is the
+tick engine's per-kind registry of ONE-mode constructs, and a construct whose mode can change does
+not belong in a per-kind lookup. A later slice may generalise it; this one records the reason it did
+not.
+
+THE FAULT BLOCK IS PRESENT AND EMPTY, per the template's directive and slice 39's standing decision -
+even though the validating corpus entry names two fault regimes and a watchdog. konnectome admits no
+fault to any register until the supervisor channel exists.
+
+BEHAVIOUR PINNED IDENTICAL, MEASURED IN BOTH TREES. Against a git worktree of main: a 321-line
+archetype probe (the gate across two modes by eleven drives by eleven thresholds; the dispatch across
+a coarser grid printed as its dictionary's own pairs; and the relay, integrator, oscillator across a
+whole cycle, attractor and comparator each across their own grids) came out byte for byte identical,
+and the whole capstone story - 112 lines, every content-addressed record identifier included - came
+out byte for byte identical. 648 tests across thirty packs green; four gates at zero plus the naming
+gate's self-test; conformance re-measured 137 of 137 in both cousins. No wall; no cousin edited.
+
+FOUR DECLARED DIVERGENCES, ALL ON MALFORMED CALLS NO WORLD REACHES, all found by measuring rather
+than by trusting, and all recorded here because an improvement is declared as loudly as a regression.
+On main: archetype_gate(Hole, 0.7, 0.5, Next) succeeded with Hole bound to open and Next to closed -
+a mode belonging to nobody written into the caller's blank; archetype_gate(Hole, 0.3, 0.5, Next)
+succeeded with Next ALIASED to the same unbound Hole; archetype_gate(ajar, 0.3, 0.5, Next) succeeded
+with Next == ajar, handing back a regime the gate does not have; and archetype_gate(ajar, 0.7, 0.5,
+Next) simply FAILED in silence. All four now refuse aloud - two with instantiation_error, two with
+existence_error(mode_entry, ajar) - because the register's constructor judges the current-mode slot
+at the door. Every identity claim in this slice's documents is therefore worded as identical FOR
+EVERY WELL-FORMED GATE MODE; keep that wording. THIS IS THE SECOND SLICE RUNNING in which a promise
+of no change, checked instead of trusted, found a real defect in old code.
+
+THE REVIEW WAS THE SIXTEENTH STRAIGHT COMPLETION and returned THREE findings, all in code this slice
+had just written, all reproduced before anything changed, all fixed inside the slice. FIRST, the
+departure lookup was guarded at each caller rather than where the callers meet - the exact shape of
+slice 39's review finding, one slice later, in new code; the fix moves the lookup behind an
+already-judged automaton so its key cannot be a hole by construction. This is the strongest available
+argument for carrying a lens forward rather than retiring it after it pays. SECOND, the trigger atom
+was spelled twice - once in the transition table, once in the memberchk that searched it - so
+renaming it in the table alone would have left archetype_gate/4 FAILING IN SILENCE; the lookup no
+longer names the trigger at all, and a mode the table gives no departure from is refused aloud with
+existence_error(mode_transition, From). THIRD, the closed gate's law never reads its input, so an
+unbound arriving reading would have been answered with a confident zero; must_be(number, _) now sits
+once, in archetype_gate_output/3, where both laws come through. A fourth seam was closed structurally
+rather than as a finding: a rule the register files but the module cannot run is refused with
+domain_error(archetype_gate_transfer_function, Rule) instead of failing, and a test walks every
+declared mode and applies its law, so the register block, the transfer block and the laws below them
+cannot drift apart in silence.
+
+WHAT THIS SLICE DELIBERATELY DID NOT BUILD, so each gap is a decision: the second threshold (see
+OBSERVATION-8 below); any downward assignment, so nothing above still writes a gate's mode; the
+per-mode confidence tag and admitted-as-fault flag, both still deferred by name; the supervisor
+channel; and any sub-mode slot, so the gate's register is flatly one-hot. Observation-7's two halves
+in tick_engine stand exactly as slice 39 left them - this slice does not touch that pack.
+
+OBSERVATION-8 (2026-08-09, from slice 40's validation against the corpus). KONNECTOME'S GATE IS A
+SYMMETRIC TOGGLE, NOT A HYSTERETIC LATCH, AND THE CORPUS'S IS THE LATTER.
+
+WHAT WAS FOUND. Slice 40 validated the gate's register block by block against the Layer 8 modes
+volume's Entry 36, the mutual-inhibition flip-flop, coined the Either-Or Latch and described as "a
+hysteretic toggle whose modes are simply its two self-holding states". Every block matched except
+one. The corpus's latch is HYSTERETIC: over a range of inputs the output has two stable solutions and
+which one is realised depends on history, so it turns on at one boundary and off only at a lower one.
+The Layer 6 volume states the same property in plainer words at the cell grain - "switching on takes
+more input than keeping it on, the defining hysteresis". konnectome's archetype_gate/4 compares one
+switching drive against ONE threshold in both directions, so its two transition rows honestly share a
+single trigger and the same drive that closes an open gate opens a closed one. The pack's own oldest
+test is named gate_resists_flipping and its comment says the gate "then resists flipping back", but
+what it actually demonstrates is only that a SUB-threshold drive does not flip it - which is true of
+any threshold switch and is not hysteresis.
+
+WHY IT IS NOT FIXED HERE, and this is the substance of the observation rather than an excuse. The
+corpus itself locates the stickiness OUTSIDE the switch: the Layer 11 reading is explicit that "this
+is a stabiliser, not a switch, so it has no poles of its own", and that it publishes a scalar
+stability bias onto the configuration bus, gated by circadian phase and hunger. Building a second
+threshold inside archetype_gate/4 would therefore model the corpus WRONGLY as well as breaking slice
+40's behaviour-pinned promise - it would bury in the switch the very thing the corpus insists is a
+separate construct. The design authority's Part Nine already schedules THE STABILISER AS A SEPARATE
+CONSTRUCT as its slice six, publishing a modulable hysteresis scalar onto the bus and replacing the
+two constants currently sitting inside the two-process governor's parameter block.
+
+STATUS: LOGGED, NOT ROUTED, NOT FIXED. No wall was hit; this is konnectome-internal work under the
+Fourth Commandment. THE CLOSER: the stabiliser slice (design authority Part Nine slice six). When it
+lands it should give the gate its second threshold by READING the published stability bias rather
+than by carrying a constant, add the second trigger to the gate's transition table as its own row,
+and repair the comment on gate_resists_flipping so the test's name and its claim agree. A session
+that builds the stabiliser for the two-process governor alone and does not return to the gate has
+left this entry half-stale, in the same way Observation-7's two halves belong to one visit.
