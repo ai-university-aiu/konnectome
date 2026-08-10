@@ -29,7 +29,7 @@ Each chapter answers the four questions only a relation can be asked.
 
 • What is it the fabric of - the Layer 8 motifs this junction builds, and the Layer 9 addresses where it is installed.
 
-Each chapter runs through twenty-three fixed aspects, from WHAT IT IS AND WHAT IT TRANSMITS to WHAT MAKES IT UNMISTAKABLE, including a SYSTEMS INTERFACE block in the publish-subscribe discipline and a KONNECTOME NOTE proposing the junction as a typed connection in a message-passing architecture - because in konnectome terms this volume is the catalogue of EDGE TYPES, as the Layer 6 volumes were the catalogue of nodes and the Layer 8 volume the catalogue of subgraphs.
+Each chapter runs through twenty-three fixed aspects, from WHAT IT IS AND WHAT IT TRANSMITS to WHAT MAKES IT UNMISTAKABLE, including a SYSTEMS INTERFACE block in the publish-subscribe discipline and a ENGINEERING NOTE proposing the junction as a typed connection in a message-passing architecture - because in engineering terms this volume is the catalogue of EDGE TYPES, as the Layer 6 volumes were the catalogue of nodes and the Layer 8 volume the catalogue of subgraphs.
 
 Two tags divide the roster, as throughout the corpus.
 
@@ -251,7 +251,7 @@ SYSTEMS INTERFACE:
 
 ◦ Anti-NMDA-receptor encephalitis; excitotoxic cell death in stroke; GRIN2A and GRIN2B epileptic encephalopathies; runaway potentiation as a seizure substrate.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection type fast_excitatory_learning_connection.
 
@@ -476,7 +476,7 @@ SYSTEMS INTERFACE:
 
 ◦ Temporal lobe epilepsy with mossy fibre sprouting; GRIK2-linked intellectual disability; excitotoxic CA3 injury in kainate poisoning from contaminated shellfish (domoic acid).
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection type burst_integrating_modulatory_connection.
 
@@ -700,7 +700,7 @@ SYSTEMS INTERFACE:
 
 ◦ Fragile X syndrome (FMR1 silencing, runaway mGluR5-dependent depression); anti-mGluR1 cerebellar ataxia; GRM1 spinocerebellar ataxia; mGluR5-linked addiction and dyskinesia circuits.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection type slow_gain_setting_connection.
 
@@ -933,7 +933,7 @@ SYSTEMS INTERFACE:
 
 ◦ Genetic epilepsies (GABRA1, GABRB3, GABRG2, suprachiasmatic (SCN)1A interneuron failure); stiff person syndrome (anti-GAD65); benzodiazepine dependence and withdrawal seizures; depolarising GABA after injury and in chronic pain.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection type fast_shunting_inhibitory_connection.
 
@@ -1151,7 +1151,7 @@ SYSTEMS INTERFACE:
 
 ◦ Absence epilepsy in the thalamocortical loop; GABBR1 and GABBR2 encephalopathies; anti-GABA-B-receptor limbic encephalitis; baclofen withdrawal syndrome; gamma-hydroxybutyrate overdose.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection type slow_state_inhibitory_connection.
 
@@ -1375,7 +1375,7 @@ SYSTEMS INTERFACE:
 
 ◦ Strychnine poisoning, tetanus, and hyperekplexia (alpha-1 subunit and gephyrin mutations) - all loss of the brake, all convulsive.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection type fast_inhibitory_relay_connection.
 
@@ -1554,7 +1554,7 @@ SYSTEMS INTERFACE:
 
 ◦ Myasthenia gravis, Lambert-Eaton syndrome, botulism, curare, organophosphate poisoning, congenital myasthenic syndromes.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection type fast_command_relay_connection.
 
@@ -1725,7 +1725,7 @@ SYSTEMS INTERFACE:
 
 ◦ Alzheimer's disease (cholinergic loss); antimuscarinic delirium and amnesia; organophosphate parasympathetic storm.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection type slow_mode_setting_connection.
 
@@ -1945,7 +1945,7 @@ SYSTEMS INTERFACE:
 
 ◦ Parkinson's disease, addiction, schizophrenia, attention-deficit disorder.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection type reward_error_broadcast_connection.
 
@@ -2173,7 +2173,7 @@ SYSTEMS INTERFACE:
 
 ◦ Alzheimer's and Parkinson's disease (early locus coeruleus loss); attention-deficit disorder; post-traumatic stress disorder; anxiety and depression.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection type gain_broadcast_connection.
 
@@ -2388,7 +2388,7 @@ SYSTEMS INTERFACE:
 
 ◦ Depression, anxiety, obsessive-compulsive disorder, migraine, and serotonin syndrome.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection type mood_operating_point_connection.
 
@@ -2629,7 +2629,7 @@ SYSTEMS INTERFACE:
 
 ◦ H1-receptor blockade by antihistamines causes sedation; orexin loss in narcolepsy dysregulates the system; the junction itself is not a target of the classical synaptic autoimmune diseases.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection-type name arousal_broadcast_connection.
 
@@ -2816,7 +2816,7 @@ SYSTEMS INTERFACE:
 
 ◦ Substance P in chronic pain; calcitonin-gene-related peptide in migraine; oxytocin/vasopressin dysregulation in social and osmotic disorders; corticotropin-releasing peptide in stress and anxiety.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection-type name burst_gated_broadcast_connection.
 
@@ -3003,7 +3003,7 @@ SYSTEMS INTERFACE:
 
 ◦ P2X on microglia drives neuropathic pain; adenosine dysregulation in sleep disorders; massive ATP release as a danger signal in stroke and trauma; caffeine as everyday A-receptor blockade.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection-type name metabolic_pressure_connection.
 
@@ -3190,7 +3190,7 @@ SYSTEMS INTERFACE:
 
 ◦ CB1 blockade (rimonabant) provoking depression and anxiety; exogenous cannabinoids impairing hippocampal plasticity and short-term memory; dysregulation in addiction and mood disorders.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection-type name retrograde_gain_control_connection.
 
@@ -3416,7 +3416,7 @@ SYSTEMS INTERFACE:
 
 ◦ Excess NO in excitotoxicity (stroke, neurodegeneration); nNOS dysregulation in cognitive and mood disorders; loss of NO in impaired neurovascular coupling and migraine.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection-type name diffusive_plasticity_broadcast_connection.
 
@@ -3671,7 +3671,7 @@ SYSTEMS INTERFACE:
 
 ◦ Schizophrenia, spine loss concentrated in prefrontal layer 3; Alzheimer disease, early perisynaptic spine loss; fragile X syndrome, immature spine excess; stress-related depression, reversible prefrontal spine thinning.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection-type name compartmentalised_excitatory_learning_connection.
 
@@ -3914,7 +3914,7 @@ SYSTEMS INTERFACE:
 
 ◦ Alzheimer disease, preferential early loss of large perforated hippocampal synapses; ageing-related memory decline with falling perforated counts; fragile X syndrome, failure to consolidate into the large form.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection-type name consolidated_high_weight_connection.
 
@@ -4156,7 +4156,7 @@ SYSTEMS INTERFACE:
 
 ◦ Somatostatin-interneuron loss in Alzheimer disease and major depression; interneuronopathy epilepsies such as Dravet syndrome; dendritic disinhibition as a seizure and hyperexcitability mechanism.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection-type name branch_gating_inhibitory_connection, with a sibling fast_interneuron_drive_connection for the excitatory-onto-aspiny form.
 
@@ -4392,7 +4392,7 @@ SYSTEMS INTERFACE:
 
 ◦ Schizophrenia, weakened parvalbumin basket transmission and disturbed gamma; epilepsies of perisomatic disinhibition; anxiety disorders and benzodiazepine dependence as pharmacology of this synapse's receptors.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection-type name somatic_veto_inhibitory_connection.
 
@@ -4641,7 +4641,7 @@ SYSTEMS INTERFACE:
 
 ◦ Schizophrenia, cartridge and GABA transporter deficits in prefrontal cortex; epilepsy, veto-to-trigger sign inversion under chloride collapse; autism spectrum findings of smaller cartridge boutons; ANK3-linked bipolar disorder risk at the postsynaptic scaffold.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection-type name output_veto_connection.
 
@@ -4883,7 +4883,7 @@ SYSTEMS INTERFACE:
 
 ◦ Chloride-transporter (KCC2/NKCC1) dysregulation after nerve injury, producing neuropathic allodynia; loss of presynaptic inhibition in spinal cord injury producing spasticity.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection-type name presynaptic_gain_control_connection.
 
@@ -5072,7 +5072,7 @@ SYSTEMS INTERFACE:
 
 ◦ NMDA-receptor hypofunction (encephalitis, anaesthetics) blunting feedback; loss of granule-cell neurogenesis and bulb interneuron degeneration in Parkinson's and Alzheimer's disease causing early smell loss.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection-type name reciprocal_lateral_inhibition_connection.
 
@@ -5261,7 +5261,7 @@ SYSTEMS INTERFACE:
 
 ◦ Dopaminergic varicosity loss in Parkinson's disease; monoaminergic dysfunction in depression and anxiety; autonomic varicosity failure in dysautonomia (orthostatic hypotension, neurogenic bladder).
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection-type name broadcast_volume_connection.
 
@@ -5450,7 +5450,7 @@ SYSTEMS INTERFACE:
 
 ◦ Runaway thalamocortical rhythms in absence epilepsy; thalamocortical dysrhythmia in chronic pain and tinnitus; impaired sensory gating in schizophrenia.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection-type name triadic_gated_relay_connection.
 
@@ -5701,7 +5701,7 @@ SYSTEMS INTERFACE:
 
 ◦ Myasthenia gravis and congenital myasthenic syndromes (postsynaptic), Lambert-Eaton syndrome (presynaptic), botulism (release machinery), organophosphate poisoning (cleft enzyme).
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose motor_effector_relay_connection: a message carries a spike timestamp and the guarantee of execution, with no adjustable weight field.
 
@@ -5860,7 +5860,7 @@ SYSTEMS INTERFACE:
 
 ◦ Demyelinating neuropathy of the trapezoid body axons; auditory neuropathy spectrum disorder degrading phase locking; hyperbilirubinaemic brainstem injury of the newborn damaging MNTB timing.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose giant_timing_relay_connection: a message carries a spike time stamped to tens of microseconds and nothing else.
 
@@ -6013,7 +6013,7 @@ SYSTEMS INTERFACE:
 
 ◦ Auditory neuropathy spectrum disorder; deafness-induced endbulb atrophy; demyelination of the auditory nerve delaying and jittering the input spike.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose first_relay_timing_connection: a message carries one spike time per cochlear channel with microsecond metadata, weight fixed near one.
 
@@ -6168,7 +6168,7 @@ SYSTEMS INTERFACE:
 
 ◦ Temporal lobe epilepsy with mossy fibre sprouting; zinc-mediated excitotoxicity in status epilepticus; pattern-separation decline in ageing and early Alzheimer's disease.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose conditional_detonator_connection: a message carries a spike plus the sender's recent-rate estimate, and the connection multiplies its weight by a fast function of that rate before delivery.
 
@@ -6393,7 +6393,7 @@ SYSTEMS INTERFACE:
 
 ◦ Essential tremor; palatal tremor with olivary hypertrophy; spinocerebellar ataxias and paraneoplastic degeneration with climbing fibre regression and multi-innervation.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose supervised_error_broadcast_connection: a message carries one bit of error with a small analogue confidence field and a target-strip address, and its delivery triggers weight updates on other connections rather than adjusting its own.
 
@@ -6605,7 +6605,7 @@ SYSTEMS INTERFACE:
 
 ◦ GRID2 ataxia (synapse disassembly); anti-metabotropic-glutamate-receptor-1 paraneoplastic ataxia; spinocerebellar ataxias; gluten ataxia.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose supervised_weight_matrix_connection: a message carries one context element's activity, multiplied by a small stored weight that a separate supervised_error_broadcast_connection (chapter 30) is authorised to update.
 
@@ -6888,7 +6888,7 @@ SYSTEMS INTERFACE:
 
 ◦ Ribbon and triad protein defects: photoreceptor-to-bipolar transmission failure with preserved receptors.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection type continuous_graded_release_connection.
 
@@ -7109,7 +7109,7 @@ SYSTEMS INTERFACE:
 
 ◦ Noise and ageing: cochlear synaptopathy (hidden hearing loss).
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection type timed_graded_release_connection.
 
@@ -7322,7 +7322,7 @@ SYSTEMS INTERFACE:
 
 ◦ Type I hair cell and calyx loss: age-related and aminoglycoside vestibular failure with imbalance and oscillopsia.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection type enclosed_field_coupled_connection.
 
@@ -7533,7 +7533,7 @@ SYSTEMS INTERFACE:
 
 ◦ Granule cell migration failure: cerebellar malformation and ataxia.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection type encapsulated_expansion_connection.
 
@@ -7746,7 +7746,7 @@ SYSTEMS INTERFACE:
 
 ◦ Gating deficits: proposed in schizophrenia sensory gating and disorders of attention and consciousness.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection type attention_gated_relay_connection.
 
@@ -8030,7 +8030,7 @@ SYSTEMS INTERFACE:
 
 ◦ Spinal injury and motoneuron loss: loss of this gain-control input.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection type gain_setting_modulatory_connection.
 
@@ -8242,7 +8242,7 @@ SYSTEMS INTERFACE:
 
 ◦ The related connexin 32, in Schwann cells, causes X-linked Charcot-Marie-Tooth disease - a reminder of what broken connexins do to the nervous system.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 The proposed connection type is electrical_coupling_connection, whose message is a continuous scaled copy of the sender's voltage rather than a discrete event, delivered symmetrically to both parties.
 
@@ -8459,7 +8459,7 @@ SYSTEMS INTERFACE:
 
 ◦ No dedicated human disease known; loss of the electrical component would silently slow the relay by half a millisecond - a deficit invisible except to circuits that count microseconds.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 The proposed connection type is dual_mode_relay_connection, whose message is a guaranteed instantaneous analogue tick bundled with a probabilistic weighted event.
 
@@ -8608,7 +8608,7 @@ SYSTEMS INTERFACE:
 
 ◦ Charcot-Marie-Tooth X (connexin 32), Pelizaeus-Merzbacher-like disease (connexin 47), oculodentodigital dysplasia (connexin 43), connexin-related deafness (connexin 26 and 30), and impaired buffering in epileptic foci.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 The proposed connection type is syncytial_buffer_connection, whose message is not information but load - ions, fuel, and water flowing down gradients between pooled cells.
 
@@ -8753,7 +8753,7 @@ SYSTEMS INTERFACE:
 
 ◦ Overactivity: excitotoxic amplification in stroke, seizure and migraine susceptibility, chronic pain; germline PANX1 loss: syndromic developmental disorder.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 The proposed connection type is hemichannel_broadcast_connection, whose message is a local scalar plume - an ATP concentration with no address field.
 
@@ -8900,7 +8900,7 @@ SYSTEMS INTERFACE:
 
 ◦ Episodic ataxia type 1 (KCNA1): loss of pinceau ephaptic inhibition and cerebellar incoordination; pathological gain of coupling in epileptic and demyelinated tissue.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 The proposed connection type is field_influence_connection, whose message is a continuous signed scalar imposed on the target with zero delay and zero storage.
 
@@ -9084,7 +9084,7 @@ SYSTEMS INTERFACE:
 
 ◦ Pathological unsilencing in addiction (nucleus accumbens) and chronic pain (anterior cingulate cortex); failure to unsilence in critical-period deprivation and in fragile X-type immaturity.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 The proposed connection type is silent_eligible_connection, whose message before commitment is only an eligibility event - "sender and receiver coincided" - and after commitment is a standard weighted excitatory event.
 
@@ -9304,7 +9304,7 @@ SYSTEMS INTERFACE:
 
 ◦ Fragile X syndrome: persistent immature filopodia and failed selection; developmental insults that suppress the search front produce under-connected circuits.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 The proposed connection type is candidate_edge_connection, whose message is not data but a proposal - "consider an edge here" - with an attached evidence accumulator.
 
@@ -9447,7 +9447,7 @@ SYSTEMS INTERFACE:
 
 ◦ Excess pruning: schizophrenia (C4 overexpression), Alzheimer disease (C1q-microglial synapse loss), glaucoma; deficient pruning: C1q and C3 knockout-style hyperconnectivity, persistent multi-innervation, and epilepsy-prone circuits.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 The proposed connection type is tagged_removal_connection, whose message is a demolition order attached to an edge - a mark, a countdown, and finally a deletion event.
 
@@ -9613,7 +9613,7 @@ SYSTEMS INTERFACE:
 
 ◦ Orthostatic hypotension, Hirschsprung disease, neurogenic bladder, and autonomic neuropathy of diabetes.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection type visceral_tone_broadcast_connection.
 
@@ -9760,7 +9760,7 @@ SYSTEMS INTERFACE:
 
 ◦ Pheochromocytoma, autonomic failure, ganglionic autoimmune neuropathy.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection type wire_to_hormone_connection.
 
@@ -9907,7 +9907,7 @@ SYSTEMS INTERFACE:
 
 ◦ Central diabetes insipidus, syndrome of inappropriate antidiuretic hormone secretion, hypothalamic-pituitary axis failure.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection type hormone_broadcast_connection.
 
@@ -10052,7 +10052,7 @@ SYSTEMS INTERFACE:
 
 ◦ Disordered appetite and food-reward signalling, functional gut-brain disorders.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection type gut_sensor_to_brainstem_connection.
 
@@ -10197,7 +10197,7 @@ SYSTEMS INTERFACE:
 
 ◦ Noise-induced hearing loss vulnerability, impaired hearing in noise.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection type sensor_gain_control_connection.
 
@@ -10344,7 +10344,7 @@ SYSTEMS INTERFACE:
 
 ◦ Fine-touch loss, Piezo2 deficiency syndrome, Merkel cell carcinoma.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection type sustained_touch_transducer_connection.
 
@@ -10491,7 +10491,7 @@ SYSTEMS INTERFACE:
 
 ◦ Asthma, chronic itch and pain, inflammatory bowel disease, dysregulated inflammatory reflex.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection type neuro_immune_modulation_connection.
 
@@ -10689,7 +10689,7 @@ SYSTEMS INTERFACE:
 
 ◦ Excitotoxic spillover when EAAT2 fails, as in amyotrophic lateral sclerosis; plasticity failure under D-serine deficit, modelled in schizophrenia; seizure facilitation by reactive astrocytes in epilepsy.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose glial_ensheathment_modulation_connection: a slow edge from an astrocyte node onto a synaptic edge, whose message carries a plasticity-permission scalar and a clearance guarantee rather than a spike.
 
@@ -10924,7 +10924,7 @@ SYSTEMS INTERFACE:
 
 ◦ Remyelination failure in progressive multiple sclerosis; activity-driven proliferation of glioma cells through neuron-glioma synapses; white matter injury of prematurity.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose activity_to_myelination_order_connection: an edge from a neuron node to an OPC node whose message carries a demand statistic - integrated, patterned firing - rather than content.
 
@@ -11151,7 +11151,7 @@ SYSTEMS INTERFACE:
 
 ◦ Axon degeneration behind demyelination in multiple sclerosis; excitotoxic myelin injury in white matter ischaemia; conduction-timing disorders of the dysmyelinating leukodystrophies such as Pelizaeus-Merzbacher disease.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose axon_to_myelin_support_connection: an edge from an axon segment to its wrapping oligodendrocyte whose message carries a demand level and whose learned variable is the edge's own transmission delay.
 
@@ -11362,7 +11362,7 @@ SYSTEMS INTERFACE:
 
 ◦ Failed reinnervation in amyotrophic lateral sclerosis models; endplate fragmentation in ageing; Schwann cell infection in leprosy.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose junction_maintenance_ensheathment_connection: an edge from a terminal Schwann cell node to a neuromuscular edge whose message carries a health report and a repair directive, never content.
 
@@ -11523,7 +11523,7 @@ SYSTEMS INTERFACE:
 
 ◦ Excess pruning in schizophrenia (complement component 4) and Alzheimer disease (C1q, TREM2); pathological synapse stripping in neuropathic pain; failed refinement in developmental disorders.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose synapse_inspection_pruning_connection: a transient edge from a microglial node onto any synaptic edge, whose message carries an audit score and whose rare payload is deletion of the audited edge.
 
@@ -11773,7 +11773,7 @@ SYSTEMS INTERFACE:
 
 ◦ Type 2 diabetes with loss of first-phase and pulsatile insulin secretion; GJD2 connexin-36 variants altering beta cell function.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose the connection type electrical_coupling_connection, the same type used for the neuronal electrical synapse, tagged for endocrine deployment.
 
@@ -11936,7 +11936,7 @@ SYSTEMS INTERFACE:
 
 ◦ Inflammatory uncoupling via tumour necrosis factor alpha and connexin-43 dephosphorylation; altered connexin-43 in pituitary adenomas.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose electrical_coupling_connection again, tagged for the endocrine relay role, or a more specific relay_coupling_connection to mark that the message here actively propagates rather than merely equalising two cells.
 
@@ -12103,7 +12103,7 @@ SYSTEMS INTERFACE:
 
 ◦ Connexin-37 loss causing follicle arrest, loss of meiotic competence, and infertility; disturbed follicular coupling in ovulatory disorders.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose a gated_supply_coupling_connection - an electrical-and-metabolic coupling edge whose defining feature is that it can be switched off on command to release the client.
 
@@ -12266,7 +12266,7 @@ SYSTEMS INTERFACE:
 
 ◦ Disrupted islet crosstalk in diabetes; hijacked paracrine growth factor loops in cancer.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose local_broadcast_connection - a short-range, distance-weighted edge from one node to all receptor-bearing nodes within a small radius.
 
@@ -12423,7 +12423,7 @@ SYSTEMS INTERFACE:
 
 ◦ Autocrine growth loops in cancer; dysregulated autocrine cytokine loops in inflammatory and autoimmune disease.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose self_feedback_connection - an edge from a node back to itself carrying the node's own output.
 
@@ -12582,7 +12582,7 @@ SYSTEMS INTERFACE:
 
 ◦ Notch mutations in developmental disorders and cancer; Eph-ephrin dysregulation in disordered tissue boundaries and cancer invasion.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose contact_gated_connection - an edge that exists only when two nodes are adjacent and that carries a switch-like or bidirectional instruction.
 
@@ -12757,7 +12757,7 @@ SYSTEMS INTERFACE:
 
 ◦ Type 1 diabetes and hypothyroidism (too little); hyperthyroidism and Cushing's syndrome (too much); hormone-resistance syndromes (receiver deaf).
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Propose hormone_broadcast_connection - a long-range, one-to-many edge from a gland node to every target node that carries the matching receptor, weighted by circulating concentration and receptor affinity.
 
@@ -12800,13 +12800,13 @@ First, the downward lesson: every property of every junction in this volume is a
 
 Second, the upward lesson: the Layer 8 catalogue's seventy-one motifs are wired exclusively out of the sixty-four edge types in this volume, and the division of labour is exact - the motifs say WHO connects to WHOM; this volume says WHAT A CONNECTION IS.
 
-Third, the engineering lesson, for konnectome: this volume is the type system of the connectome.
+Third, the engineering lesson: this volume is the type system of the connectome.
 
-Every KONNECTOME NOTE names a typed connection - learning edges, fidelity edges, gating edges, broadcast edges, coupling edges, virtual edges - and a synthetic cognitive architecture needs the full type system, because the deepest design fact in this volume is that biology builds SOME edges to learn and OTHER edges to never change, and knows exactly which is which.
+Every ENGINEERING NOTE names a typed connection - learning edges, fidelity edges, gating edges, broadcast edges, coupling edges, virtual edges - and a synthetic cognitive architecture needs the full type system, because the deepest design fact in this volume is that biology builds SOME edges to learn and OTHER edges to never change, and knows exactly which is which.
 
 The neurons think; the other cells make thinking possible; the motifs are how the thinking is done - and the junctions of this volume are where every one of those verbs physically happens.
 
 
 END OF MANUSCRIPT
 
-Source basis: LAYER_07_SYNAPTICS_OUTLINE (the companion outline and its cited literature); the Layer 6 catalogues, which supplied the partner casts; the Layer 8 catalogue, which supplied the motif memberships; LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT, which supplied the Layer 9 addresses and the publish-subscribe discipline; the konnectome CONSTITUTION for the connection-type conventions; THE_FIFTEEN_LAYERS_IN_BRIEF and TFELOAOTHNAES for the framework, including the relation-layer account of Layer 7; and the current primary and review literature verified by web search during compilation, including the Gray classification literature, the ribbon synapse and calyx of Held literatures, the silent synapse and complement-pruning literatures, the axo-myelinic synapse proposal, the connexin literatures of brain, islet, pituitary, and ovary, and the autonomic neuroeffector junction model of Burnstock.
+Source basis: LAYER_07_SYNAPTICS_OUTLINE (the companion outline and its cited literature); the Layer 6 catalogues, which supplied the partner casts; the Layer 8 catalogue, which supplied the motif memberships; LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT, which supplied the Layer 9 addresses and the publish-subscribe discipline; the corpus's own conventions for connection types; THE_FIFTEEN_LAYERS_IN_BRIEF and TFELOAOTHNAES for the framework, including the relation-layer account of Layer 7; and the current primary and review literature verified by web search during compilation, including the Gray classification literature, the ribbon synapse and calyx of Held literatures, the silent synapse and complement-pruning literatures, the axo-myelinic synapse proposal, the connexin literatures of brain, islet, pituitary, and ovary, and the autonomic neuroeffector junction model of Burnstock.

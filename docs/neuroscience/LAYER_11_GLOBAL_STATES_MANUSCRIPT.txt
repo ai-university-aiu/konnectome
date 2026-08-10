@@ -19,9 +19,9 @@ Layer 11's unit is the GLOBAL STATE: a coordinated operating configuration of th
 
 Layer 11 is the master mode register of the architecture, and its twenty-six chapters are that register's entries: the waking family, the sleep family, the machinery that switches and schedules them, the arousal and stress overlays, the circadian and infradian programmes, and the engineered and broken boundary states that teach by contrast.
 
-Each chapter runs a template built for states rather than structures: the whole-system signature (what a physician or a polysomnograph would measure), the throwing and holding machinery (cited to the flip-flop motifs and arousal nuclei of the Layer 8 and 9 catalogues), the DOWNWARD ASSIGNMENT (the chapter's centrepiece: what this state sets at every layer below, cited to the modes volumes), the broadcast channels that announce it, what runs in it, and its scheduling, transitions, energetics, disorders, publish-subscribe interface, and konnectome note.
+Each chapter runs a template built for states rather than structures: the whole-system signature (what a physician or a polysomnograph would measure), the throwing and holding machinery (cited to the flip-flop motifs and arousal nuclei of the Layer 8 and 9 catalogues), the DOWNWARD ASSIGNMENT (the chapter's centrepiece: what this state sets at every layer below, cited to the modes volumes), the broadcast channels that announce it, what runs in it, and its scheduling, transitions, energetics, disorders, publish-subscribe interface, and engineering note.
 
-For konnectome, this volume is the operating system specification.
+For an engineering realisation, this volume is the operating system specification.
 
 Layers 6 through 9 delivered processors, edges, circuits, and modules; Layer 10 delivered the pipelines and axes; this volume delivers the scheduler, the power states, the interrupt system, and the maintenance cycle - and its deepest claim is that a mind is not a computation that is always on, but a scheduled alternation of online computation and offline consolidation.
 
@@ -193,9 +193,9 @@ SYSTEMS INTERFACE:
 
 ◦ Delirium: acute broadcast derangement, commonly cholinergic failure, producing fluctuating inattention; affects roughly one in four older hospital inpatients.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-konnectome registers this state as online_task_state, the default foreground scheduler state: it subscribes to the two-process governor and the interrupt lines on the global configuration bus, and publishes the full waking mode assignment to every layer.
+An implementation registers this state as online_task_state, the default foreground scheduler state: it subscribes to the two-process governor and the interrupt lines on the global configuration bus, and publishes the full waking mode assignment to every layer.
 
 The nearest engineering analogue is a computer's full-power performance state with the interactive scheduler running; the biological difference is that the hardware itself is retuned by the broadcast, every cell shifting mode, rather than merely being clocked faster.
 
@@ -393,9 +393,9 @@ SYSTEMS INTERFACE:
 
 ◦ Encephalopathy: posterior rhythm slowing below 8 cycles per second, a graded marker of failing cortical function.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-konnectome registers this state as generative_idle_state: it subscribes to the task-demand line on the global configuration bus and publishes recombination products to the memory and planning services.
+An implementation registers this state as generative_idle_state: it subscribes to the task-demand line on the global configuration bus and publishes recombination products to the memory and planning services.
 
 The nearest engineering analogue is an idle process that speculatively precomputes and prefetches; the biological difference is that the idle work is not discarded on wake but is the organism's imagination, and no engineered idle loop yet owns that job.
 
@@ -591,9 +591,9 @@ SYSTEMS INTERFACE:
 
 ◦ Engineered capture: gambling and gaming devices holding users in pseudo-flow, recognised in behavioural addiction.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-konnectome registers this state as optimal_gain_lock_state, a governor overlay on online_task_state: it subscribes to the task-feedback and gain-telemetry lines on the global configuration bus, and publishes a gain clamp plus a monitor-suppression flag.
+An implementation registers this state as optimal_gain_lock_state, a governor overlay on online_task_state: it subscribes to the task-feedback and gain-telemetry lines on the global configuration bus, and publishes a gain clamp plus a monitor-suppression flag.
 
 The nearest engineering analogue is a real-time thread pinned to a core at a locked clock with logging disabled; the biological difference is that the lock cannot be commanded, only earned, because the clamp is closed by the task feedback itself.
 
@@ -781,9 +781,9 @@ SYSTEMS INTERFACE:
 
 ◦ Narcolepsy and severe apnoea: the platform appearing irresistibly and out of schedule.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-konnectome registers this state as degraded_prestandby_state: it subscribes to the two-process governor and the stimulation lines on the global configuration bus, and publishes a falling-reliability warning plus a sleep-readiness flag to the flip-flop.
+An implementation registers this state as degraded_prestandby_state: it subscribes to the two-process governor and the stimulation lines on the global configuration bus, and publishes a falling-reliability warning plus a sleep-readiness flag to the flip-flop.
 
 The nearest engineering analogue is a machine entering low-power standby while still accepting work, a design no responsible engineer ships; the biological difference is that biology must ship it, because a hair-trigger transition would be worse, and so it surrounds the platform with warning outputs instead.
 
@@ -961,7 +961,7 @@ SYSTEMS INTERFACE:
 
 ENERGY AND MAINTENANCE has been given above.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Name this scheduler construct sleep_onset_transition_state.
 
@@ -1120,7 +1120,7 @@ SYSTEMS INTERFACE:
 
 ◦ Reduced spindle density and impaired consolidation in schizophrenia and ageing; fragmentation of N2 in sleep apnoea.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Name this scheduler state spindle_gated_consolidation_state.
 
@@ -1329,7 +1329,7 @@ SYSTEMS INTERFACE:
 
 ◦ Impaired glymphatic clearance and amyloid accumulation with chronic N3 loss; sleepwalking, sleep terrors, and confusional arousals as incomplete awakenings from N3.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Name this scheduler state offline_consolidation_state.
 
@@ -1546,7 +1546,7 @@ SYSTEMS INTERFACE:
 
 ◦ Loss of atonia in REM sleep behaviour disorder as a marker of Parkinson-type neurodegeneration; failed emotional de-escalation and nightmare replay in post-traumatic stress disorder; sleep-onset REM in narcolepsy.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Name this scheduler state emotional_reprocessing_state.
 
@@ -1735,7 +1735,7 @@ SYSTEMS INTERFACE:
 
 ◦ Disordered cycling and sleep-onset REM in narcolepsy; shortened REM latency in depression; loss of early-night N3 weighting in ageing.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Name this scheduler construct two_process_scheduler paired with an ultradian_cycle_sequencer.
 
@@ -1880,7 +1880,7 @@ SYSTEMS INTERFACE:
 
 ◦ Severe prolonged inertia in idiopathic hypersomnia and disorders of arousal; inertia-driven errors in shift workers and on-call responders.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 Name this scheduler construct cold_start_penalty, a property of the wake_transition rather than a schedulable state.
 
@@ -2036,9 +2036,9 @@ SYSTEMS INTERFACE:
 
 ◦ Insomnia when the sleep side cannot win or hold; pathological sleepiness and state intrusions when the wake side cannot hold, most starkly in narcolepsy.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-In konnectome terms this is the sleep_wake_toggle_state, a two-position governor on the global configuration bus that subscribes to the two-process scheduler and publishes a single binary mode selection to every subsystem.
+In engineering terms this is the sleep_wake_toggle_state, a two-position governor on the global configuration bus that subscribes to the two-process scheduler and publishes a single binary mode selection to every subsystem.
 
 The nearest engineering analogue is a hardware power-state controller that moves a machine between on and suspend, or a bistable latch holding one of two logic levels.
 
@@ -2171,9 +2171,9 @@ SYSTEMS INTERFACE:
 
 ◦ REM sleep behaviour disorder when atonia fails; cataplexy and sleep paralysis when REM elements intrude on waking in narcolepsy.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-In konnectome terms this is the rem_gate_state, a nested two-position governor that runs only while the parent sleep_wake_toggle_state (Chapter 11) is in the sleep position, publishing a REM/not-REM flag and a motor-lockout signal on the configuration bus.
+In engineering terms this is the rem_gate_state, a nested two-position governor that runs only while the parent sleep_wake_toggle_state (Chapter 11) is in the sleep position, publishing a REM/not-REM flag and a motor-lockout signal on the configuration bus.
 
 The nearest engineering analogue is a nested state machine or an interrupt mask that engages a hardware lockout - here, motor output disabled while the processor stays busy.
 
@@ -2304,9 +2304,9 @@ SYSTEMS INTERFACE:
 
 ◦ Narcolepsy type 1 on orexin loss - state chatter, sleep attacks, cataplexy; cerebrospinal-fluid orexin below about 110 picograms per millilitre.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-In konnectome terms this is the arousal_stabiliser_governor, a process that does not select a state but raises the hysteresis of the sleep_wake_toggle_state (Chapter 11), publishing a scalar stability bias onto the configuration bus.
+In engineering terms this is the arousal_stabiliser_governor, a process that does not select a state but raises the hysteresis of the sleep_wake_toggle_state (Chapter 11), publishing a scalar stability bias onto the configuration bus.
 
 The nearest engineering analogue is a debounce circuit or a Schmitt-trigger hysteresis band that keeps a noisy switch from chattering.
 
@@ -2435,9 +2435,9 @@ SYSTEMS INTERFACE:
 
 ◦ Standing sleep debt under chronic restriction; poor discharge in insomnia and ageing.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-In konnectome terms this is the sleep_pressure_accumulator, half of the two_process_scheduler, a monotonic counter that integrates uptime and publishes a pressure value that, with Process C (Chapter 15), sets the sleep-wake flip-flop's threshold.
+In engineering terms this is the sleep_pressure_accumulator, half of the two_process_scheduler, a monotonic counter that integrates uptime and publishes a pressure value that, with Process C (Chapter 15), sets the sleep-wake flip-flop's threshold.
 
 The nearest engineering analogue is a wear-and-load counter or a battery-charge gauge that triggers a maintenance cycle once it crosses a threshold.
 
@@ -2566,9 +2566,9 @@ SYSTEMS INTERFACE:
 
 ◦ Jet lag, shift-work disorder, delayed or advanced sleep-phase disorders, free-running rhythm in blindness.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-In konnectome terms this is the circadian_clock_governor, the other half of the two_process_scheduler, a free-running oscillator phase-locked to an external light signal that publishes a time-of-day arousal drive onto the configuration bus.
+In engineering terms this is the circadian_clock_governor, the other half of the two_process_scheduler, a free-running oscillator phase-locked to an external light signal that publishes a time-of-day arousal drive onto the configuration bus.
 
 The nearest engineering analogue is a real-time clock or a cron daemon that triggers scheduled jobs by wall-clock time rather than by load.
 
@@ -2697,9 +2697,9 @@ SYSTEMS INTERFACE:
 
 ◦ Delirium from a mis-set broadcast; state blurring from channel loss in neurodegeneration; narcolepsy on orexin-channel failure.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-In konnectome terms this is the global configuration bus itself, the state_broadcast_service, the channel on which every state decision taken by the schedulers and flip-flops is published to all subscribers, and the direct ancestor of the configuration-broadcast mechanism the whole corpus has pointed toward.
+In engineering terms this is the global configuration bus itself, the state_broadcast_service, the channel on which every state decision taken by the schedulers and flip-flops is published to all subscribers, and the direct ancestor of the configuration-broadcast mechanism the whole corpus has pointed toward.
 
 The nearest engineering analogue is a system-wide message bus or a set of global configuration registers that every module reads to learn the current operating mode.
 
@@ -2715,7 +2715,7 @@ This section does not apply to this state for the reason that this state or mach
 
 WHAT MAKES IT UNMISTAKABLE:
 
-Six small nuclei whose axons touch nearly the whole brain and whose changing chemical blend is how every cell learns which global state it is in - the physical implementation of thrown from above, and the biological original of konnectome's configuration bus.
+Six small nuclei whose axons touch nearly the whole brain and whose changing chemical blend is how every cell learns which global state it is in - the physical implementation of thrown from above, and the biological original of an engineered configuration bus.
 
 
 PART FOUR. THE AROUSAL, STRESS, AND DEFENCE STATES
@@ -2728,7 +2728,7 @@ They are layered over waking rather than alternatives to it - emergency overlays
 
 All five carry the (NON-COG) tag, and that is the part's lesson: the machinery that decides whether cognition may continue, and at what aperture, is not itself cognition.
 
-For konnectome, this part specifies the interrupt controller, the emergency power plan, the degraded-operations mode, the quarantine protocol, and the battery-versus-mains duty cycle.
+For an engineering realisation, this part specifies the interrupt controller, the emergency power plan, the degraded-operations mode, the quarantine protocol, and the battery-versus-mains duty cycle.
 
 
 CHAPTER 17. PHASIC AROUSAL (The Startle Spike) (NON-COG)
@@ -2877,7 +2877,7 @@ SYSTEMS INTERFACE:
 
 ◦ Exaggerated startle and failed habituation in post-traumatic stress disorder; pathological startle in hyperekplexia; blunted phasic responses with raised tonic noise in ageing and early Alzheimer-spectrum locus coeruleus degeneration.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 The scheduler state is arousal_interrupt_state, subscribing to salience_event topics from all sensory front-ends and publishing a global network_reset plus a gain_pulse on the configuration bus, with an escalate flag consumed by the acute stress governor.
 
@@ -3042,7 +3042,7 @@ SYSTEMS INTERFACE:
 
 ◦ Panic disorder (false triggering); takotsubo cardiomyopathy and arrhythmia (surge damage); phaeochromocytoma (chemical hijack); chronic non-exit into the allostatic-load pathway of Chapter 19.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 The governor is acute_stress_governor, subscribing to threat_confirmed and safety_signal topics and publishing sympathetic_broadcast, adrenal_surge, and hpa_launch on the configuration bus while asserting a suspend flag over maintenance services.
 
@@ -3207,7 +3207,7 @@ SYSTEMS INTERFACE:
 
 ◦ Cushing's syndrome; major depression with HPA overdrive; hypertension, type 2 diabetes, and immune dysregulation as allostatic-load endpoints; hippocampal atrophy with memory impairment.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 The governor is sustained_stress_governor, subscribing to demand_appraisal and cortisol_feedback topics and publishing a standing glucocorticoid_broadcast plus maintenance_deferral orders on the configuration bus, with an allostatic_load counter exposed to the watchdog service.
 
@@ -3366,7 +3366,7 @@ SYSTEMS INTERFACE:
 
 ◦ Inflammation-associated depression; delirium and sepsis-associated encephalopathy; post-infectious fatigue syndromes; cachexia; blunted-fever, confusion-dominant presentations in the elderly.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 The governor is sickness_protocol_state, subscribing to pathogen_alarm topics on both a fast vagal_afferent channel and a slow humoral channel, and publishing set-point overrides (thermal_setpoint, appetite_gain, social_gain, sleep_pressure_bias) on the configuration bus.
 
@@ -3523,7 +3523,7 @@ SYSTEMS INTERFACE:
 
 ◦ Type 1 and type 2 diabetes; hypoglycaemic encephalopathy; obesity with leptin resistance; anorexia nervosa and cachexia; refeeding syndrome.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
 The governor is metabolic_duty_cycle_governor, subscribing to fuel_level, meal_report, and circadian_phase topics and publishing a fuel_direction flag (store versus mobilise) plus hunger_drive and plasticity_bias values on the configuration bus.
 
@@ -3675,9 +3675,9 @@ SYSTEMS INTERFACE:
 
 ◦ Circadian misalignment in shift work and jet lag; delayed and advanced sleep-phase disorders; the flattened, advanced rhythm of ageing and dementia.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-In konnectome terms this is the master_schedule_governor, or two_process_scheduler when paired with sleep pressure: it subscribes to a light-sensor input and publishes a phase signal on the global configuration bus that every other scheduler reads.
+In engineering terms this is the master_schedule_governor, or two_process_scheduler when paired with sleep pressure: it subscribes to a light-sensor input and publishes a phase signal on the global configuration bus that every other scheduler reads.
 
 The nearest engineering analogue is the system real-time clock plus cron, the always-running timekeeper that fires scheduled jobs at set hours; the biological difference is that this clock is distributed into every cell and is itself entrained by the environment rather than set once by an operator.
 
@@ -3802,9 +3802,9 @@ SYSTEMS INTERFACE:
 
 ◦ Premenstrual dysphoric disorder; luteal insomnia; disrupted cycles in polycystic ovary syndrome and in energy-deficient (functional hypothalamic) amenorrhoea.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-In konnectome terms this is the infradian_modulator_program, a slow scheduler that subscribes to a hormonal feedback loop and publishes a monthly phase bias on the global configuration bus, biasing but not overriding the daily scheduler.
+In engineering terms this is the infradian_modulator_program, a slow scheduler that subscribes to a hormonal feedback loop and publishes a monthly phase bias on the global configuration bus, biasing but not overriding the daily scheduler.
 
 The nearest engineering analogue is a slow background configuration profile that shifts default parameters on a long cycle, like a seasonal load profile; the biological difference is that the profile is generated by a self-timed endocrine feedback loop rather than read from a calendar.
 
@@ -3929,9 +3929,9 @@ SYSTEMS INTERFACE:
 
 ◦ Not defined; the principal "failure" here is of the hypothesis itself, whose independent existence in waking is not firmly established.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-In konnectome terms this would be the waking_ultradian_pacer, a low-priority background oscillator subscribing to brainstem timing and publishing a weak arousal-bias signal on the global configuration bus, flagged experimental.
+In engineering terms this would be the waking_ultradian_pacer, a low-priority background oscillator subscribing to brainstem timing and publishing a weak arousal-bias signal on the global configuration bus, flagged experimental.
 
 The nearest engineering analogue is a low-amplitude background duty-cycle or periodic micro-idle; the biological difference, and the honest caveat, is that unlike the well-instrumented sleep cycle this daytime process may not be a real, separable component at all.
 
@@ -4067,9 +4067,9 @@ SYSTEMS INTERFACE:
 
 ◦ Intraoperative awareness; over-deep anaesthesia and prolonged burst suppression associated with post-operative delirium; cardiorespiratory depression.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-In konnectome terms this is the engineered_forced_halt, an externally commanded power-down that does not go through the normal sleep-wake scheduler but clamps the hardware directly, publishing a "halted" flag on the global configuration bus.
+In engineering terms this is the engineered_forced_halt, an externally commanded power-down that does not go through the normal sleep-wake scheduler but clamps the hardware directly, publishing a "halted" flag on the global configuration bus.
 
 The nearest engineering analogue is pulling the power or forcing a low-power halt state from outside the operating system rather than via its own shutdown routine; the biological difference is that this halt is finely reversible and titratable, and the machine reboots itself, intact, when the clamp is removed.
 
@@ -4198,9 +4198,9 @@ SYSTEMS INTERFACE:
 
 ◦ The state itself is the failure of Layer 11's machinery; the clinical failure mode is misdiagnosis, missing covert awareness in an apparently unresponsive patient.
 
-THE KONNECTOME NOTE:
+THE ENGINEERING NOTE:
 
-In konnectome terms this is the fault_state_registry, the catalogue of what happens when the scheduler, the arousal watchdog, or the broadcast bus is physically damaged, publishing a degraded or dissociated status that the rest of the system cannot correct on its own.
+In engineering terms this is the fault_state_registry, the catalogue of what happens when the scheduler, the arousal watchdog, or the broadcast bus is physically damaged, publishing a degraded or dissociated status that the rest of the system cannot correct on its own.
 
 The nearest engineering analogue is a machine whose power supply runs (fans spin, lights blink) but whose main bus is severed so no coordinated computation occurs, or a watchdog timer firing over a dead kernel; the biological difference is that partial, unpredictable self-repair is possible, and detecting hidden function in a seemingly halted machine is itself an active science.
 
@@ -4233,7 +4233,7 @@ First, the downward completion: with this volume, every "thrown from above" in t
 
 Second, the two-shift principle: biology splits cognition into an online phase that acquires and an offline phase that consolidates, connected by a governed schedule - and it pays real costs (sleep inertia, vulnerability, a third of the lifespan) to keep the split, which is the strongest possible evidence that the split is load-bearing.
 
-Third, the engineering lesson, for konnectome: this volume specifies the operating system - a two-process scheduler (Chapters 14 and 15), bistable state switches with a stabiliser (11 through 13), a global configuration bus (16), power and emergency states (17 through 21), cron programmes (22 through 24), and a maintenance cycle (6 through 8) in which the system's own learning is finished.
+Third, the engineering lesson: this volume specifies the operating system - a two-process scheduler (Chapters 14 and 15), bistable state switches with a stabiliser (11 through 13), a global configuration bus (16), power and emergency states (17 through 21), cron programmes (22 through 24), and a maintenance cycle (6 through 8) in which the system's own learning is finished.
 
 A synthetic mind built from the corpus's parts but run always-on would be a brain denied sleep - and the clinical literature on that condition is not encouraging.
 
