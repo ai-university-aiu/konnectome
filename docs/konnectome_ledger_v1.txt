@@ -1206,7 +1206,7 @@ thought combination. The four gates report zero violations, the naming gate pass
 self-test; conformance re-measured at 137 of 137 (specification 4.0.0) in both cousins. No new
 wall; no cousin edited, per the Second, Third, and Fourth Commandments.
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 11 (2 CLOSED: 8 and 9).  Decisions: 5.
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 11 (2 CLOSED: 8 and 9).  Decisions: 6.
 
 Slice-34 note (2026-08-09). The bound turned live in the told story. The slice-33 pending line
 (the bound proven per-territory in the tests but not yet in the capstone's told story) is
@@ -3200,3 +3200,113 @@ NO WALL WAS HIT AND NOTHING ROUTES. A state name broadcast inside one runtime tr
 fails the consumer-versus-ontology test of the Second Commandment; no PrologAI language feature was
 missing. Nothing in this slice releases the held Sections C, D and E of the causalontology change
 order. Neither cousin was edited.
+
+
+SLICE 47 NOTE (2026-08-09). THE FIRST CALLER WIRED TO A WATCHDOG - the debt slice 45 left in the
+open, paid two slices later. With it, THE SIXTH NUMBERED KONNECTOME DECISION, and the SECOND fault
+block in the repository.
+
+WHAT WAS BUILT. Eleven new predicates on an existing pack and NO NEW PACK, which is itself the
+statement: slices 42, 44, 45 and 46 each added a pack and joined it to nothing, and this one adds no
+pack and joins four that already existed. two_process_governor grows from twenty Prolog Unit (PLUnit)
+tests to thirty-five. EIGHT HUNDRED AND ELEVEN tests across THIRTY-FOUR packs; four gates at zero
+plus the naming gate's self-test; the capstone story byte-identical.
+
+WHY THIS CONSTRUCT AND NOT THE GATE, AND IT IS THE REASON THIS SLICE COULD SUCCEED WHERE SLICE 45 WAS
+RIGHT TO REFUSE. The watchdog's two boundaries came from the Layer 8 modes volume's Entry 36, and
+konnectome has TWO constructs answering to that entry: the gate archetype, validated against it at
+slice 40, and this governor, the same motif installed at whole-organism scale and catalogued
+separately as Layer 11's Entry 11, the sleep-wake flip-flop. THE GOVERNOR HAS A CYCLE OF ITS OWN AND
+THE GATE DOES NOT. A window is a duration and a duration is only meaningful against something; the
+gate archetype is generic, installed wherever a world wants one, with no timescale to measure
+against. That is why slice 45 found no honest window for it, and it is why one exists here.
+
+THE FLIP-FLOP BECOMES A REGISTER, validated against Entry 11 block by block in the discipline slice
+40 established. Two poles carrying Entry 11's own coined names; two per-pole transfer functions,
+which are Process S's two halves; a transition table of two crossings; and a fault block that was
+never empty because Entry 11 supplies one. THE TABLE'S AGENCY COLUMN IS THE ENTRY'S SHARPEST SENTENCE
+MADE CHECKABLE: Entry 11 says the crossings are "thrown by Process S and Process C, NOT INTERNAL TO
+THE SWITCH", so NEITHER ROW carries self_selected, and a test proves it over a table it first checks
+is non-empty.
+
+ONE DIVERGENCE IS RECORDED RATHER THAN SMOOTHED OVER, AND IT COSTS A FAULT REGIME. Entry 11's
+boundary signature is "time spent in the contested mid-band the design exists to forbid". KONNECTOME'S
+FLIP-FLOP HAS NO MID-BAND TIME TO SPEND: its selection is a comparison returning one of two atoms in
+the same tick, so there is no third condition it could linger in and nothing to measure. That regime
+is NOT declared, deliberately, BECAUSE A FAULT BLOCK LISTING A BOUNDARY NOTHING CAN EVER CROSS WOULD
+REPORT IT UNWATCHED FOREVER, and would teach every reader that this governor has an unwatched fault
+when it has no such regime at all. THE GENERAL RULE THIS EARNS, and it is new: A FAULT REGIME THAT
+CANNOT BE CROSSED IS NOT A CONSERVATIVE ADDITION - IT IS A PERMANENT FALSE NEGATIVE IN THE ONE BLOCK
+WHOSE JOB IS TO MAKE ABSENCES VISIBLE. Slice 42 built the unwatched outcome precisely so that silence
+could not pass for health; declaring an uncrossable regime would poison that outcome from the other
+end, by filling it with a name that means nothing.
+
+DECISION-6 (2026-08-09, slice 47). THE WINDOW IS NOT A NUMBER - IT IS THE GOVERNOR'S OWN DAY, READ
+FROM ITS OWN PARAMETER BLOCK, AND BOTH ALLOWANCES ARE DERIVED FROM THE SAME DAY. THIS IS KONNECTOME'S
+OWN DECISION AND MUST NEVER BE PRESENTED AS THE CORPUS'S INSTRUCTION.
+
+HOW IT RESOLVES THE THING SLICE 45 REFUSED, WHICH IS THE USEFUL PART. Slice 45 searched the corpus,
+found only Entry 36's "states last minutes to hours", refused it, and coined: A DEFAULT WITH A
+BORROWED WARRANT IS AN INVENTED NUMBER THAT HAS LEARNED TO CITE. The refusal was right AND IT WAS
+ALSO POINTING AT THE ANSWER, which nobody saw at the time. The corpus's quantity is not really
+"hours". It is minutes-to-hours stated against a roughly twenty-four-hour clock - THE CORPUS'S
+TIMESCALE IS RELATIVE TO A CYCLE. konnectome's governor has a cycle. So the window IS the cycle, and
+the number belongs to nobody: change the day length and the window changes with it in the same tick,
+with no constant anywhere to fall out of step. A test pins exactly that with a twelve-tick day.
+
+THE TWO ALLOWANCES COME FROM THE SAME PLACE. THE CHATTER ALLOWANCE IS TWO CROSSINGS PER DAY, AND IT
+IS THE CORPUS'S ARITHMETIC RATHER THAN KONNECTOME'S TASTE: a healthy day of this switch contains
+exactly two crossings, one down into sleep and one back up, and a third inside one day is precisely
+the STATE INTRUSION Entry 11's warning condition names and Chapter 13 attributes to the stabiliser's
+loss. Two is not a tolerance somebody picked; it is what one day of a working flip-flop contains.
+THE LOCK ALLOWANCE IS THE DAY LESS ONE TICK, the largest hold that is not a whole day, so a pole
+occupying the entire day crosses it under the strict comparison every other allowance uses.
+
+AND THE ALLOWANCE IS TESTED FOR MEANING RATHER THAN ONLY FOR CORRECTNESS, which this suite had not
+done before: a test asserts the REAL governor's real day sits AT its allowance of two rather than
+comfortably inside it. AN ALLOWANCE NOTHING EVER APPROACHES IS A NUMBER THAT HAS NEVER BEEN TESTED BY
+THE THING IT GOVERNS, and it would have passed every other test in the file.
+
+WHAT DECISION-6 DOES NOT DECIDE. It does not supply a window for any OTHER construct: a construct
+with no cycle of its own still has no honest window, and the gate archetype is exactly such a
+construct, so DECISION-4's first half stands untouched for everything but this one caller. It does
+not decide an escalation policy - what to DO about a warning is still undecided, as it has been since
+slice 42, and this slice deliberately did not take it while it had a real warning in hand. It does
+not decide that a history must be recorded every tick, though the readings mean less if it is not -
+see the watchdog's own sampling note, which now has a real consumer that DOES record every tick and
+so gets the exact flip count rather than a lower bound. And it changes not one number in the
+governor's behaviour: nothing added here is read by the step.
+
+A STRUCTURAL RULE EARNED BY THE JOIN AND WORTH CARRYING: MECHANISMS MEET AT TERMS, CALLERS IMPORT.
+Slice 45 deliberately did NOT have the watchdog import the supervisor, because a watchdog that knew
+its watcher would be a watchdog with one watcher; they meet at a term. This governor imports all
+three, and should, because it is the CALLER, and a caller is exactly the thing allowed to know the
+parts it composes. The two slices together state the rule, and it explains both choices rather than
+excusing either.
+
+AND THE READINGS ARE RE-KEYED AT THE CALLER RATHER THAN RENAMED AT THE SOURCE. The watchdog measures
+FLIPS and TICKS HELD, which are construct-neutral quantities, and files them under the gate's
+signature names because the gate is what it was built against. This governor's boundaries are named
+differently, so its own watch re-keys them. WHAT A QUANTITY MEANS IS EACH CONSTRUCT'S OWN CLAIM; WHAT
+IT IS is the watchdog's. Renaming at the source would have made the watchdog know about its callers.
+
+A PROPERTY THAT SURVIVED COMPOSITION UNASSISTED, RECORDED BECAUSE THAT IS THE STRONGEST EVIDENCE A
+DESIGN CAN OFFER. DECISION-4's second half - an unspanned window is reported not-yet-measured, never
+clean - reaches the running machine with NO LINE OF CODE ARRANGING FOR IT TO. An unspanned window
+yields no readings; an empty reading list re-keys to an empty reading list; the supervisor receiving
+nothing reports both regimes UNWATCHED by name. A property that has to be re-implemented at every
+join is a convention. One that falls out is a design.
+
+WHAT THIS SLICE DELIBERATELY DID NOT BUILD, so each gap is a decision. THE CAPSTONE WAS NOT TOUCHED,
+which is why the story is byte-identical, and it narrows rather than eliminates slice 45's debt: the
+CONSTRUCTS in the chain are all real and none is a fixture, but konnectome's own told story still
+says nothing about whether its night was healthy. That is a DEMONSTRATION slice, and it is now a
+small one, which it was not this morning. No mid-band regime, per the divergence above. No fault
+block for any construct but the gate and this governor. No escalation policy. No window for the gate.
+And no change to the step, the day, or any parameter.
+
+NO WALL WAS HIT AND NOTHING ROUTES. A report computed inside one runtime from that runtime's own
+history travels to nobody and fails the consumer-versus-ontology test of the Second Commandment; no
+PrologAI language feature was missing. Nothing releases the held Sections C, D and E of the
+causalontology change order. Neither cousin was edited; conformance stands re-measured earlier in
+this same session at 137 of 137 in both, with the qualification recorded in the slice 46 note.

@@ -1,7 +1,21 @@
 % Load the two_process_governor module under test from the library path.
 :- use_module(library(two_process_governor)).
+% Load the watchdog, because slice 47's whole subject is this governor being WATCHED by it, and a
+% join tested against a fixture history would prove the join and not the wiring.
+:- use_module(library(watchdog)).
+% Load the supervisor, which is what the readings are ultimately judged by.
+:- use_module(library(supervisor)).
+% Load the mode register, because the governor now carries a hybrid automaton like every other
+% construct in this repository.
+:- use_module(library(mode_register)).
 % Load the Prolog Unit (PLUnit) testing framework.
 :- use_module(library(plunit)).
+% Import the apply and list utilities the slice 47 tests use to build histories by hand.
+:- use_module(library(apply), [foldl/4]).
+% Import numlist, nth1 and reverse for the constructed histories and the pinned day.
+:- use_module(library(lists), [numlist/3, nth1/3, reverse/2]).
+% Import yall so the lambda expressions in those tests resolve.
+:- use_module(library(yall)).
 
 % Open the test block for the two_process_governor pack.
 :- begin_tests(two_process_governor).
@@ -228,6 +242,233 @@ test(fractional_phase_dies_aloud, [throws(error(type_error(integer, _), _))]) :-
     two_process_governor_step(two_process_governor(0, 0.5, two_process_parameters(1, 2, 24, 4, 16, 2)), online, _Governor, _State).
 
 % Close the test block for the two_process_governor pack.
+% ---------------------------------------------------------------------------
+% SLICE 47 - THE FLIP-FLOP AS A REGISTER, AND THE FIRST CALLER WIRED TO A WATCHDOG
+% ---------------------------------------------------------------------------
+
+% two_process_governor_test_run(+Ticks, -History): run a real governor and record every pole it
+% stood at, one observation per tick, into a real watchdog history. THIS IS THE WIRING, and every
+% test below drives it rather than a fixture, so what is proved is the running machine.
+two_process_governor_test_run(Ticks, History) :-
+    % A real governor with the corpus-shaped defaults.
+    two_process_governor_new(Governor),
+    % A real, empty watchdog history.
+    watchdog_history_new(Empty),
+    % Run the day, recording as it goes, starting awake as the bus's default has since slice 35.
+    two_process_governor_test_step(1, Ticks, Governor, online, Empty, History).
+
+% two_process_governor_test_step(+Tick, +Ticks, +Governor0, +State0, +History0, -History): one tick.
+% The run ends when the last tick has been recorded.
+two_process_governor_test_step(Tick, Ticks, _Governor, _State, History, History) :-
+    % Past the end of the run, hand the history back as it stands.
+    Tick > Ticks,
+    % And commit to this clause rather than also trying the next.
+    !.
+% Each tick advances the governor and records the pole it settled at.
+two_process_governor_test_step(Tick, Ticks, Governor0, State0, History0, History) :-
+    % Advance both processes one tick and let the flip-flop select.
+    two_process_governor_step(Governor0, State0, Governor, State),
+    % Record the pole it settled at, at this tick, in the real history.
+    watchdog_observe(History0, Tick, State, History1),
+    % Advance the tick.
+    Next is Tick + 1,
+    % And run the rest of the day.
+    two_process_governor_test_step(Next, Ticks, Governor, State, History1, History).
+
+% The register is two, and the corpus's Entry 11 says it is two: exactly two stable positions, and
+% the middle forbidden.
+test(the_flip_flop_register_is_two_and_never_three) :-
+    % Read the size from the register rather than from a restated number.
+    two_process_governor_size(Size),
+    % Which is two.
+    Size == 2,
+    % And the two poles are the two the bus has carried since slice 35, unchanged.
+    two_process_governor_modes(Modes),
+    % In Entry 11's own order: the wake pole, then the sleep pole.
+    Modes == [online, offline].
+
+% NEITHER CROSSING IS SELF-SELECTED, and that is Entry 11's own sharpest sentence made checkable:
+% the crossings are thrown by Process S and Process C, NOT INTERNAL TO THE SWITCH.
+test(neither_crossing_is_self_selected) :-
+    % Read the transition table.
+    two_process_governor_transitions(Rows),
+    % It is not empty, so the check below cannot pass vacuously.
+    Rows \== [],
+    % And no row anywhere carries the self_selected agency - the switch does not decide, it is decided.
+    forall(member(transition(_T, _F, _To, _Ts, Agency), Rows), Agency \== self_selected).
+
+% The fault block is the corpus's, and it carries the stabiliser as its watchdog - which names the
+% pack konnectome built at slice 44 rather than a hope.
+test(the_fault_block_names_the_stabiliser_as_its_watchdog) :-
+    % Read the fault block.
+    two_process_governor_faults(Faults),
+    % Both regimes are watched by the construct Entry 11 and Chapter 13 name.
+    Faults == [fault(state_chatter, switch_flipping_more_often_than_a_day_allows, stabiliser),
+               fault(state_locked, pole_held_longer_than_a_whole_day, stabiliser)].
+
+% AND NEITHER SIGNATURE IS A POLE NAME, checked by the supervisor's own directive rather than by eye.
+test(the_governors_faults_are_not_its_modes) :-
+    % Build the automaton at the wake pole.
+    two_process_governor_automaton(online, Automaton),
+    % The supervisor's directive holds, so this register may be watched at all.
+    supervisor_faults_are_not_modes(Automaton).
+
+% A third pole is refused when an automaton is asked for, through the governor's own domain.
+test(an_automaton_at_a_third_pole_is_refused,
+     throws(error(domain_error(two_process_governor_operating_state, drowsing), _))) :-
+    % A position the flip-flop does not have cannot be stood at.
+    two_process_governor_automaton(drowsing, _Automaton).
+
+% DECISION-6: THE WINDOW IS THE GOVERNOR'S OWN DAY, READ FROM ITS PARAMETERS AND NOT A CONSTANT.
+test(the_window_is_the_governors_own_day) :-
+    % A governor with the corpus-shaped defaults, whose day is twenty-four ticks.
+    two_process_governor_new(Governor),
+    % The window is that day.
+    two_process_governor_watch_window(Governor, Window),
+    % Which is twenty-four.
+    Window == 24.
+
+% AND THE WINDOW MOVES WITH THE DAY, which is what makes it nobody's invented number. A governor
+% given a shorter day is watched over a shorter window, in the same tick, with no constant to drift.
+test(the_window_moves_with_the_day) :-
+    % A governor with a twelve-tick day rather than the default twenty-four.
+    two_process_governor_new(two_process_parameters(1, 2, 12, 4, 16, 2), Governor),
+    % The window follows it exactly.
+    two_process_governor_watch_window(Governor, Window),
+    % Which is twelve.
+    Window == 12,
+    % And so does the lock allowance, which is the largest hold that is not a whole day.
+    two_process_governor_watch_allowances(Governor, Chatter, Lock),
+    % The chatter allowance is two crossings, because a healthy day contains two whatever its length.
+    Chatter == 2,
+    % And the lock allowance is eleven.
+    Lock == 11.
+
+% THE SLICE'S CENTRAL TEST. A REAL governor runs a REAL day into a REAL history, and the REAL
+% supervisor reports it healthy - nothing warned, and NOTHING UNWATCHED. That last block being empty
+% is the sentence the running machine could not say before this slice.
+test(a_real_governor_running_a_real_day_is_watched_and_clean) :-
+    % Run a full day of the real scheduler, recording the pole at every tick.
+    two_process_governor_test_run(24, History),
+    % A real governor to supply the window and the allowances from its own parameters.
+    two_process_governor_new(Governor),
+    % Judge it, end to end, through the watchdog and the supervisor.
+    two_process_governor_watch(Governor, History, Report),
+    % No boundary was crossed, so nothing is warned about.
+    supervisor_report_warnings(Report, []),
+    % AND NOTHING IS UNWATCHED. The running machine is now watched.
+    supervisor_report_unwatched(Report, []).
+
+% THE HEALTHY DAY SITS AT ITS ALLOWANCE RATHER THAN COMFORTABLY INSIDE IT, and that is checked
+% because it is the difference between an allowance that means something and one that is merely
+% generous. A day of this governor contains at most two crossings, which is exactly what the corpus
+% says a healthy day contains.
+test(a_healthy_day_contains_at_most_the_allowed_two_crossings) :-
+    % Run a day and a half, so that a window ending anywhere in it is a genuine trailing window.
+    two_process_governor_test_run(36, History),
+    % Count the crossings over the trailing day.
+    watchdog_flips_in_window(History, 24, Flips),
+    % Which is at most the two a healthy day contains.
+    Flips =< 2.
+
+% AND THE HISTORY IS TOO SHORT AT FIRST, WHICH THE MACHINE REPORTS RATHER THAN GLOSSES. Four ticks
+% into its first day, the governor's boundaries are UNWATCHED by name - not clean.
+test(a_governor_four_ticks_into_its_first_day_is_unwatched_not_clean) :-
+    % Four ticks of a real run, against a twenty-four-tick window.
+    two_process_governor_test_run(4, History),
+    % A real governor.
+    two_process_governor_new(Governor),
+    % Judged end to end.
+    two_process_governor_watch(Governor, History, Report),
+    % Nothing is warned about, because nothing could honestly be measured.
+    supervisor_report_warnings(Report, []),
+    % And both regimes are reported unwatched, by name, with the stabiliser named as the watchdog
+    % that did not report - which is DECISION-4's second half reaching the running machine.
+    supervisor_report_unwatched(Report, Unwatched),
+    % Exactly the two regimes Entry 11 supplies.
+    Unwatched == [supervisor_unwatched(state_chatter, stabiliser),
+                  supervisor_unwatched(state_locked, stabiliser)].
+
+% A CHATTERING SWITCH IS WARNED ABOUT, under this governor's own boundary name. The history is
+% constructed rather than run, because a governor that chatters is one konnectome does not have -
+% which is the point: the watchdog exists to notice a fault the machine is not currently committing.
+test(a_chattering_switch_is_warned_about) :-
+    % Twenty-four ticks alternating every tick, which is twenty-three crossings in one day.
+    numlist(1, 24, Ticks),
+    % Build the history by hand, alternating poles.
+    foldl([Tick, History0, History]>>(
+              ( 0 is Tick mod 2 -> Pole = online ; Pole = offline ),
+              watchdog_observe(History0, Tick, Pole, History)
+          ), Ticks, [], History),
+    % A real governor to supply the window and the allowances.
+    two_process_governor_new(Governor),
+    % Judged end to end.
+    two_process_governor_watch(Governor, History, Report),
+    % The chatter boundary is warned about, carrying Entry 11's condition and the stabiliser's name.
+    supervisor_report_warnings(Report, Warnings),
+    % Twenty-three crossings against an allowance of two.
+    Warnings == [supervisor_warning(state_chatter,
+                                    switch_flipping_more_often_than_a_day_allows,
+                                    stabiliser,
+                                    23, 2)],
+    % And nothing is unwatched, because both regimes were read.
+    supervisor_report_unwatched(Report, []).
+
+% A LOCKED SWITCH IS WARNED ABOUT, which is the opposite failure and the one Entry 11 names in both
+% directions at once.
+test(a_locked_switch_is_warned_about) :-
+    % Twenty-four ticks all at the sleep pole, which is a whole day in which waking never won.
+    numlist(1, 24, Ticks),
+    % Build the history by hand, never leaving the pole.
+    foldl([Tick, History0, History]>>watchdog_observe(History0, Tick, offline, History),
+          Ticks, [], History),
+    % A real governor to supply the window and the allowances.
+    two_process_governor_new(Governor),
+    % Judged end to end.
+    two_process_governor_watch(Governor, History, Report),
+    % The lock boundary is warned about, carrying twenty-four ticks held against twenty-three allowed.
+    supervisor_report_warnings(Report, Warnings),
+    % Exactly one warning, because a locked switch crosses no chatter boundary.
+    Warnings == [supervisor_warning(state_locked,
+                                    pole_held_longer_than_a_whole_day,
+                                    stabiliser,
+                                    24, 23)],
+    % And nothing is unwatched.
+    supervisor_report_unwatched(Report, []).
+
+% A history standing at a pole the flip-flop does not have is refused, rather than judged.
+test(a_history_at_a_third_pole_is_refused,
+     throws(error(domain_error(two_process_governor_operating_state, drowsing), _))) :-
+    % A single observation at a position the switch cannot occupy.
+    watchdog_observe([], 1, drowsing, History),
+    % A real governor.
+    two_process_governor_new(Governor),
+    % Which cannot be judged standing nowhere.
+    two_process_governor_watch(Governor, History, _Report).
+
+% An empty history is refused rather than judged as a machine standing nowhere.
+test(an_empty_history_is_refused,
+     throws(error(domain_error(two_process_governor_watched_history, []), _))) :-
+    % A real governor.
+    two_process_governor_new(Governor),
+    % With nothing recorded about it at all.
+    two_process_governor_watch(Governor, [], _Report).
+
+% THE STEP IS UNTOUCHED, AND THIS IS THE BEHAVIOUR-PINNED-IDENTICAL PROMISE MADE CHECKABLE. Every
+% predicate this slice added is a READ; none of them is consulted by the step, and a day run today is
+% the day this governor has run since slice 37.
+test(the_watched_day_is_the_same_day_the_governor_has_always_run) :-
+    % Run a day and read back the poles in order.
+    two_process_governor_test_run(24, History),
+    % Reverse it into tick order, since a history is held newest first.
+    reverse(History, InOrder),
+    % The day is consolidated: a long waking, then a night, exactly as slice 37 built it.
+    InOrder = [observation(1, online)|_Rest],
+    % Seventeen ticks of waking before the switch snaps, unchanged by anything in this slice.
+    nth1(17, InOrder, observation(17, online)),
+    % And the eighteenth tick is the night.
+    nth1(18, InOrder, observation(18, offline)).
+
 :- end_tests(two_process_governor).
 
 % two_process_governor_walk(+Ticks, +Governor, +State, -States): walk the governor, feeding back each selection.
@@ -254,3 +495,5 @@ two_process_governor_walk_transitions([State|States], Previous, Count) :-
 
 % Import memberchk for the consolidated-day telling.
 :- use_module(library(lists), [memberchk/2]).
+
+

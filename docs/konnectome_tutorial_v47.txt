@@ -1,0 +1,1071 @@
+THE KONNECTOME TUTORIAL
+
+Version 47.
+
+A complete, top-to-bottom guide to konnectome, written for a beginner, a learner, a layperson, a newcomer, a novice. No prior knowledge is assumed. Every term is explained the first time it is used.
+
+
+PART ONE - WHAT KONNECTOME IS, IN ONE BREATH
+
+
+konnectome is a computer program that is trying to grow a mind the way nature grows one: the smallest working piece first, and each piece earning the next.
+
+The word Proto-AGI describes it. Proto means early or first. AGI stands for Artificial General Intelligence, which means a machine that can reason broadly about many kinds of problems, the way a person can, rather than being good at only one narrow task. So a Proto-AGI is an early, honest prototype on the road toward that goal. konnectome is a prototype, not a finished mind, and it says so plainly.
+
+The name konnectome comes from the word connectome. A connectome is the complete map of the connections between the parts of a brain - which piece talks to which, and how. konnectome builds a small, inspectable version of such a map in software.
+
+One more promise is built into konnectome: it is a glass box, not a black box. A black box gives you an answer but hides its reasons. A glass box lets you see every step. In konnectome, every decision can be read and explained; nothing important is hidden inside numbers no one can interpret.
+
+
+PART TWO - THE FAMILY OF REPOSITORIES
+
+
+A repository (often shortened to repo) is a folder of files, tracked over time by a tool called Git, usually stored online at a site called GitHub. konnectome is one of four related repositories, all owned by the same organization, called ai-university-aiu. Think of them as a family.
+
+• PrologAI is the language. It is written in Prolog, which is a programming language built around logic and rules rather than step-by-step instructions. PrologAI is a glass-box cognitive architecture, meaning a inspectable framework for building thinking systems. konnectome is written using PrologAI.
+
+• Causalontology is the data structure. A data structure is an agreed way of arranging information so that programs can share it. Causalontology is a shared vocabulary for describing causes and effects - what makes what happen. konnectome stores its thoughts as Causalontology records.
+
+• Mentova is the flagship application - the first full mind built on this family - and it holds the reasoning core that scores perfectly on a famous public reasoning test called the Abstraction and Reasoning Corpus for Artificial General Intelligence (ARC-AGI).
+
+• konnectome is the newest member. It uses the finished PrologAI language and the frozen Causalontology data structure to build brain-like machinery, following a book (described in Part Six).
+
+konnectome does not change its cousins by reaching into them. If konnectome ever needs something new from PrologAI or Causalontology, it writes the request down in a change order (explained in Part Sixteen) and waits; it never edits a cousin in place.
+
+
+PART THREE - THE VOCABULARY, DEFINED SIMPLY
+
+
+These are the words you will meet. Each is defined in plain language.
+
+• Slice: the unit of building. A slice is the smallest complete, tested, merged piece of work - one pull request that adds one working capability, with its tests written first, its independent review completed, and its documents updated in the same change - so that after every slice konnectome is whole, green, and honest, never half-built. This tutorial's later parts are named after the slices they tell (Part Nine tells slice 11, and so on).
+
+• Rung: one stage of the developmental ladder konnectome climbs - one broad capability of a growing mind, such as keeping time, sensing, speaking, reasoning, feeling, or inhabiting a body. The six rungs are listed in Part Seven, and a rung is claimed only when its stage's trials actually run. Rungs are climbed; slices are how.
+
+• Tick: one step of simulated time. konnectome does not use clock seconds; it counts in ordinal ticks, which just means tick one, tick two, tick three, and so on, like frames of a film.
+
+• Construct: any part of the modeled brain - a region, a connection, or a chemical. Each construct has a name and a state (its current condition, such as how active it is).
+
+• Archetype: a shape of behavior. konnectome's guiding book claims that the whole brain runs on only six basic behaviors, called archetypes, rather than a hundred special cases. They are named relay, integrator, oscillator, attractor, gate, and comparator (all explained in Part Eight).
+
+• Synchronous update: a rule for advancing time fairly. On each tick, every construct first looks at everyone's current state and figures out its own next state; only after everyone has decided does everyone change at once. This way no construct gets to peek at a neighbor's future. Doing this in two separate passes (first compute, then commit) is the safe way, and konnectome is careful to keep the two passes apart.
+
+• Ontology: an organized inventory of what exists and how the things relate. Causalontology is an ontology specialized for causes and effects.
+
+• Content-addressed identity: a way of naming a record by its own contents. A hash is a mathematical fingerprint: feed it any data and it returns a fixed-length code, and any change to the data changes the code. Causalontology names each record by the hash of its contents, so two people who write down the same fact automatically get the same name for it. The specific hash used is called the Secure Hash Algorithm 256-bit (SHA-256).
+
+• token_occurrence: the Causalontology word for a particular happening at a particular time - for example, one specific tick. konnectome records each tick as a token_occurrence.
+
+• Causal Relation Object (CRO): the Causalontology word for a reified cause-and-effect claim - the record that says these causes produce that effect. Reified means turned into a thing you can hold, name, and examine, rather than a bare arrow.
+
+• Conformance vector: a published test case - an input and the exact answer a correct program must give. Causalontology has one hundred thirty-seven of them (it had one hundred nineteen at version 3.0.0; version 4.0.0 added eighteen more for its three new kinds of record), and staying correct means passing all of them.
+
+
+PART FOUR - HOW KONNECTOME IS GOVERNED: THE CONSTITUTION
+
+
+konnectome is built under a written CONSTITUTION.md file of seventeen numbered rules called commandments. Here they are in plain language.
+
+• One: build with Artificial General Intelligence and Artificial Super Intelligence (a mind beyond human level) in mind, guided by three roadmap documents.
+
+• Two: Causalontology is the structure for konnectome's thoughts, and it is frozen - changed only through a gated request process, never edited directly.
+
+• Three: PrologAI is the language, under the same gate; konnectome never edits it directly.
+
+• Four: every wall the build hits is written first in the ledger (a running scoreboard), then routed to exactly one place.
+
+• Five: the six-step waterfall method (Part Five) guides the work.
+
+• Six: English Readable Code - every line of code carries one plain-English comment above it.
+
+• Seven: six documents, one per method phase, seeded from the guiding book's appendices.
+
+• Eight: an audit - every named brain part in the book must have a matching code piece, tracked in a coverage list.
+
+• Nine: only the latest version of any document lives in the open; older versions move to an archive folder.
+
+• Ten: any code change is mirrored into the six method documents, with versions bumped and old ones archived.
+
+• Eleven: the README (the repository's front page) is kept current and in the project's crimson-to-gold colors.
+
+• Twelve: whole words only - names are whole English words joined by underscores, never cryptic abbreviations.
+
+• Thirteen: a safety gate - no change may break the ARC-AGI scores or the Causalontology conformance vectors (one hundred nineteen at version 3.0.0, one hundred thirty-seven at version 4.0.0).
+
+• Fourteen: branch-and-report discipline - work on a side branch, open a pull request, never credit an artificial-intelligence tool as an author, and use no Roman numerals.
+
+• Fifteen: this tutorial - keep a complete, beginner-friendly tutorial, versioned and updated as the code grows.
+
+• Sixteen: the build log - every activity of the build is logged to a versioned document called BUILDING_KONNECTOME (version 2 today), written with two purposes at once: as a scientific record whose every number is exact, and as a story a general reader can enjoy.
+
+• Seventeen: context-window management - because the assistant cannot see how full the context window is, it offers a hand-off at each milestone and the owner watches the /context gauge; when the window is high, a dated hand-off document is written and the session pauses, so a fresh session can continue from the files on disk.
+
+
+PART FIVE - THE METHOD: DSPARCD, ENGLISH READABLE CODE, WHOLE WORDS
+
+
+konnectome follows a waterfall method, which means doing each phase in order and writing it down. The method is called DSPARCD, said "dee-spark-dee", one letter per phase:
+
+• D, Definition: what this thing IS, and what it is NOT.
+
+• S, Specification: what the system must do.
+
+• P, Pseudocode: the logic in plain, careful English before any real code.
+
+• A, Architecture: the major parts and how they fit.
+
+• R, Refinement: improving the design by writing tests first, then code.
+
+• C, Completion: the finished, tested build.
+
+• D, Demonstration: showing what it can actually do.
+
+SEVEN documents in the docs/ folder, one per phase, hold this method for konnectome, and each is bumped to a new version whenever code changes. Six of them were seeded from the matching appendix of the guiding book.
+
+The seventh, Definition, was added later and is different in two ways worth knowing.
+
+It has no appendix to be seeded from, because the phase is newer than the guiding book, so it was written instead from the Constitution and from everything else in the docs folder.
+
+And it goes at the FRONT rather than the end, because it answers the question that every other phase quietly assumes has already been answered: what is this thing, and what is it not? A project that never decided that is guessing in every phase afterwards, and the guess gets copied faithfully into everything.
+
+You can read it at docs/konnectome_0_definition_v1.txt, and it is deliberately short - a page of concept, not a pile of blueprints. It is also honest about arriving late: it was written after forty-one slices of building rather than before the first one, so it is a reading-back of the concept konnectome actually held, recovered from the record of what the build did whenever it had to choose. From here on, though, it leads the other six: if the Definition and a later document disagree, the Definition wins and the later document is the thing corrected. Only the Constitution outranks it.
+
+The two added phases are bookends and they mirror each other. Definition opens by stating the PROMISE - what this is meant to be. Demonstration closes by supplying the PROOF - what it turned out to be able to do. A healthy project can lay the two side by side and ask honestly whether the promise was kept.
+
+English Readable Code, abbreviated ERC, is the rule that every single line of program code has one plain-English sentence directly above it explaining that line. This lets a newcomer read the intent without knowing Prolog.
+
+Whole-Word System means every name is made of whole English words in lower case joined by underscores (for example, tick_engine and connection_graph), never short codes. This is for clarity.
+
+
+PART SIX - THE ARCHITECTURE: TEN COMPONENTS
+
+
+konnectome follows a book titled Nature's Cognitive Architecture, which describes a mind as ten cooperating components. konnectome builds them one at a time.
+
+• Component 1, the Construct Registry: the parts bin that holds every construct.
+
+• Component 2, the Scheduler (or Tick Engine): the dumb timekeeper that advances one tick at a time and runs the two-pass synchronous update. It has no opinions; it only keeps time.
+
+• Component 3, the Connection Graph: the connectome as data - the directed, weighted links between constructs.
+
+• Component 4, the Neuromodulatory Bus: a broadcast channel for brain chemicals (such as dopamine) that set the global mood and the learning signal.
+
+• Component 5, the Drive System: the homeostatic drives (needs kept near a set-point, like hunger near fullness) that create motivation and reward.
+
+• Component 6, the Action Selector: chooses exactly one action from the competing proposals and never invents one of its own.
+
+• Component 7, the Override Controller: lets old, vital needs (like breathing) override slower deliberation.
+
+• Component 8, the Plasticity Engine: changes the connection weights over time - this is learning.
+
+• Component 9, the Observer: watches and records everything at every tick, changing nothing. It is what makes konnectome a glass box.
+
+• Component 10, the Perturbation Interface: lets an experimenter poke the system (lesion a part, shift a chemical) to run experiments.
+
+
+PART SEVEN - THE BUILD LADDER
+
+
+The guiding book gives a developmental ladder, inspired by how human infants grow (the stages of the psychologist Jean Piaget) and by developmental robotics (building machines that learn in the same infant-to-adult order). The book counts the rungs from zero, the way builders often count floors from the ground, and this tutorial follows the book so the numbers here match what the capstone story prints. konnectome climbs it smallest rung first:
+
+• Rung zero: a heartbeat - a stable, repeating tick loop that keeps time.
+
+• Rung one: senses wired in, and holding a hidden object in mind.
+
+• Rung two: symbols and language - words grounded in experience, and pretend play.
+
+• Rung three: reasoning - logic and cause-and-effect trials.
+
+• Rung four: emotion and understanding other minds.
+
+• Rung five: a body - inhabiting a robot and using its senses.
+
+The build never leaps ahead; each rung must stand before the next is attempted.
+
+
+PART EIGHT - WHAT IS BUILT SO FAR
+
+
+konnectome's code lives in packs. A pack is a small, self-contained module with three files: a manifest (its name and version), the code, and a test suite. Twenty-seven packs exist so far.
+
+• tick_engine (Component 2, the heartbeat). It runs the system for a chosen number of ticks using the two-pass synchronous update. A passive observer records each tick. Its tests prove it keeps time, records each tick once, never lets a construct see a neighbor's future, and gives the exact same result every run.
+
+• archetype (the six rules). It holds the six behaviors every construct can have:
+  relay - pass the input, scaled (a pipe);
+  integrator - add up input while slowly leaking (a bucket);
+  oscillator - keep a steady rhythm (a metronome);
+  attractor - complete a remembered pattern from a fragment (a memory);
+  gate - flip a switch only when pushed hard enough, then resist flipping back (a stiff switch);
+  comparator - report the difference between expected and actual (a scale).
+  Each rule has its own test, drawn from a famous experiment.
+
+• observer (Component 9, the first thought). It records each tick as a Causalontology token_occurrence, naming it by the hash of its contents through the reused PrologAI causal_core code. This is konnectome's first durable thought, stored in the shared data structure without changing a line of it. Its tests prove the record is valid, correctly named, repeatable, and different for different ticks.
+
+• connection_graph (Component 3, the wiring). It holds the directed, weighted links between constructs, gathers the total input arriving at each construct, and lets a signal travel across a chain one hop per tick. Its main test presents a signal at one end of a three-link chain and confirms it arrives at the far end after exactly three ticks, and not one tick sooner.
+
+• neuromodulator_bus (Component 4, the broadcast bus and, as of slice 35, the state announcement service). It is the one shared channel of brain-chemical levels - dopamine, norepinephrine, and the rest. Source parts write a level onto it, and every other part reads; an absent chemical reads as zero. As of slice 35 the same bus also carries the GLOBAL OPERATING STATE - exactly two values, online and offline, defaulting to online - the switch a future two-process governor will someday throw between the day shift of computation and the night shift of consolidation; today nothing reads it yet, on purpose. Its tests prove a broadcast level can be read back, the newest broadcast wins, different chemicals are held independently, the state and the chemicals never disturb one another, and a halfway state is refused by name.
+
+• drive_system (Component 5, the reward loop). It holds homeostatic drives - needs kept near a set-point, like temperature near thirty-seven. Each tick a drive measures how far its monitored value sits from its set-point, and the reward for the whole system is the total amount by which that distance shrank across all drives. Moving closer earns a positive reward; moving away earns a negative one; the very first tick earns none. The reward is then broadcast as dopamine on the bus. Its tests prove all of these behaviors.
+
+• action_selector (Component 6, the referee). It receives candidate actions, each with a salience (a strength or urgency), and releases exactly one - the strongest - while suppressing the rest. Its one iron rule is that it never invents an action: what it releases is always one of the choices it was given. A pressing drive can raise the salience of the action that would relieve it, so what the system most needs tends to win. Its tests prove the strongest wins, exactly one is released, nothing is ever invented, ties break the same way every time, and a pressing drive can bias its action to win.
+
+• plasticity_engine (Component 8, learning). It is the three-factor learning rule that makes the map alive. For each connection, the weight change is the product of three things: how active the sending end was, how active the receiving end was, and how much dopamine (reward) was present. A connection grows stronger only when both ends fire together AND the moment was rewarded. This closes the loop of the mind: the system wants, acts, is rewarded, and learns. Its tests prove that coincident activity plus dopamine strengthens a connection, that without dopamine nothing is learned, that a silent end learns nothing, and that a computational connection does not change.
+
+• override_controller (Component 7, the safety). It enforces which drives may seize control. Old, vital drives - breathing above all - are ranked most urgent, and when such a drive is in distress it overrides slower deliberation and forces its own action. Its iron rule is that the breathing drive can never be suppressed: the system cannot deliberate itself to death. Its tests prove a calm system keeps deliberating, a vital drive in distress seizes control, the most vital drive wins when several compete, and breathing cannot be overridden.
+
+• perturbation_interface (Component 10, the experimenter's hand). It lets a researcher poke the glass box: lesion a part (silence it), cut a connection (remove it), or shift a chemical (for example, deplete dopamine to model Parkinson's disease). Its tests prove each poke works, including a trial where depleting dopamine halts learning.
+
+• cognitive_cycle (the whole mind in one loop). It wires all ten components together into a single tick, in the right order: the drives compute a reward and the bus broadcasts it as dopamine; every construct updates in the two-pass way; the action selector releases one action, which the override controller may seize; the plasticity engine learns from what just happened; and the observer records the tick as a thought. Its tests prove the whole loop runs - a reward becomes dopamine and strengthens the active connection, a vital drive overrides the normal action, each tick records its own thought, and the same start always gives the same result. It is a closed sensorimotor loop: the drives themselves propose the actions, a construct's gain is set by the bus, and the body responds to what the mind does - so acting to reduce a need actually moves the body toward its set-point, and that improvement becomes the next tick's reward.
+
+• thought_combination (combining thoughts). This is how konnectome forms new thoughts by combining old ones. An atomic thought is a Causalontology occurrent (an event or a process, a kind of verb). To combine thoughts - to say these inputs produce that output - it mints a Causal Relation Object: a reified, content-addressed, unchangeable cause-and-effect record whose causes are the input thoughts and whose effect is the new one. Because a combination points at its thoughts rather than swallowing them, one combination's effect can be reused as another's cause - that is a chain of thought, and a branching, converging set of them is a tree of thought. Its tests prove an atomic thought is a content-addressed occurrent, a combination names itself by its own content and is reproducible, only real thoughts may be combined, an empty combination is rejected, marking a combination as sufficient gives it its own identity, and effect-to-cause links form a chain of thought. It reuses PrologAI's causal_core and never touches the frozen data structure.
+
+• other_minds (modelling other minds). This is how konnectome represents another agent's mind, including a belief that is false and a belief nested inside a belief. Theory of mind means holding a picture of what someone else believes, wants, or intends, even when it differs from what you yourself know. A false belief is a belief that does not match the world: in the classic test, a girl named Sally hides a marble in a basket and leaves; someone moves it to a box; and a mind with theory of mind predicts that Sally, on her return, will look in the basket, because that is where she still believes it is. konnectome reuses PrologAI's ready-made theory_of_mind machinery and, inside its own running memory, holds Sally's false belief, predicts she looks in the basket, and even nests the model - konnectome holds a model of Sally holding a belief. At slice 11 this pack (version 0.1.0, eight tests) hit a wall: the shared Causalontology data structure had no kind of record for a belief, so the model could not be written out as a shareable record. At slice 12 the wall is CLOSED: Causalontology 4.0.0 added a belief-shaped kind of record (called an attitude), and this pack (now version 0.2.0, ten tests) mints the belief - true, false, and nested - as a real, shareable record, while still keeping the honest fact that a plain assertion names only its signer (see Part Nine for the wall, Part Ten for the closure).
+
+• prediction_loop (expecting, and being surprised). This is how konnectome expects something and then measures how wrong it was. A prediction is a guess about what will happen; a prediction error is the signed, graded gap between what was expected and what actually happened - the machine form of surprise. konnectome holds an expectation across many ticks, records what actually happened as a Causalontology token_occurrence, and each tick works out the signed error (for the hidden-object test, a signed minus-one when the screen lifts and the object is gone). At slice 11 this pack (version 0.1.0, ten tests) hit a wall: the data structure had no kind of record for an expected happening as distinct from a real one, so a forecast and a report of the same thing got the exact same fingerprint, and a prediction could not be told apart from a claim of fact. At slice 12 the wall is CLOSED: Causalontology 4.0.0 added a kind of record for a forecast (predicted_occurrence) and a kind for the surprise itself (prediction_error), and this pack (now version 0.2.0, sixteen tests) mints the forecast before arrival, the real outcome on arrival, and the signed surprise that pairs them (see Part Nine for the wall, Part Ten for the closure).
+
+• self_provenance (grading and disowning the mind's own thoughts). This is how konnectome takes responsibility for a thought instead of merely having it. Provenance means the record of where a claim comes from and how much to trust it. With this pack, konnectome makes an assertion about one of its own records - a belief it attributed, a forecast it made - and on that assertion it writes an evidence grade (how the claim was come by: by acting, by watching, by simulating, by reasoning, by a human hint, or by import, ranked strongest to weakest in that order) and a confidence (a number from zero to one). When a later tick proves a thought wrong - the screen lifts and the expected object is gone - konnectome retracts its own assertion, the honest exit; and when a forecast is confirmed it supersedes the old grade with a stronger one. Its seventeen tests prove all of this, including that the mind that HOLDS a belief and the mind that VOUCHES for it are kept distinct, and that a graded thought is a shareable record even before it is cryptographically signed. One honest limit is written down: a real signature needs a private key, which is a secret and may never live in the code, so konnectome carries its public identity and leaves the actual signing to whoever runs it. It reuses PrologAI's causal_core and never touches the frozen data structure (see Part Eleven for the whole story).
+
+• capstone_demonstration (the mind, run and told whole). This is the one pack that exists so a person can WATCH everything above happen. It boots the whole mind, runs it for a chosen number of ticks, and prints a story in plain English in which every line is carried by a real record: the heartbeat and its rewards, the learning, the regulated body, the forecast and the surprise, a chain of combined thoughts, the mind's first grounded words and its pretend game under quarantine, Sally's false belief and the empathy trial in which the mind feels another's trouble and helps, and the mind grading and - when the world disagrees - taking back its own claims. As of slice 18 the story tells Rung Two and the Rung Four deepening in its own telling, so its printed honest-limits list has shrunk by a rung; as of slice 34 the story also boots its slow homeostatic brake LIVE - one region defending its own activity mark - and shows the brake's work beside a rest twin of the same world. Its sixty tests prove the story is deterministic (told twice, it is identical), that it cannot flatter the mind (the tests re-run the same world outside the story and check the dynamics directly), that the milestones appear in ladder order, and that the story names honestly what it does not demonstrate. It comes with the repository's first runnable command, described in Part Fifteen (see Part Twelve for the whole story).
+
+• symbol_exchange (first words, grounded in experience). This is konnectome's first step into language. A word here is never a token looked up in a table: it may only be grounded in - paired with - an inner condition the mind has actually lived through a real run. The mind lives from too-warm to settled, and so earns two words: warm (grounded in the deficit it felt) and settled (grounded in the satisfaction it reached). It can then use each word in both directions - produce the word for its current condition, and recognize the word when it hears it, the hearing passing through a reused word bank so it genuinely changes the mind's state. Best of all, its replies are coloured by its drives: asked the same thing, a too-warm mind answers warm, settled (what I am, what I seek) and a settled mind answers just settled. Its nineteen tests prove all of this, including the refusals that keep it honest: a word cannot be grounded in a condition the mind never lived (see Part Thirteen for the whole story).
+
+• pretend_play (pretending, without confusing it for the real). This is how konnectome imagines a situation that is not happening and reasons inside it safely. It reuses a ready-made quarantine: facts live in named realities (observed, desired, expected, imagined, recalled), a pretend rollout is sealed automatically into the imagined reality, and nothing pretended ever touches the observed record. Moving a fact between realities takes a deliberate act called promotion - and konnectome adds one rule of its own: pretend may NEVER be promoted into the observed record, because only the world's own reveal writes what was observed. A pretend thought can still be written down and owned: it is minted as an ordinary combined thought (a generic that claims no happening) and the mind's stance on it is graded simulation, honestly below observation. Its twelve tests prove the quarantine, the refusal, and the record (see Part Thirteen for the whole story).
+
+• empathy (feeling with another, and social pain). This is how another's trouble becomes this mind's reason to help. It rests on a striking finding of social neuroscience: in the brain, social rejection activates the same circuitry as physical pain - a broken heart and a broken arm share machinery. konnectome reproduces that literally: it has a social-connection drive that defends a variable called belonging exactly the way the temperature drive defends thirty-seven, and a rejection is registered by the very same error-and-reward machinery as a too-warm body - the tests compute both pains through the same code and show the numbers equal. Empathy is then resonance: when konnectome models another agent (Ana) as being in distress, its OWN belonging falls, its own error rises, and its own drives propose the helping action - which the selector releases only if it genuinely outweighs the mind's other needs, and which is never invented. Helping restores connection, for both. Breathing still overrides everything, even kindness. And the mind owns its social read: Ana's modelled distress is minted as a shareable record (Ana FEARS her connection severed), the mind stands behind the attribution at observation grade, and - if Ana turns out to be fine - it takes the attribution back, on the record. Its seventeen tests prove all of this (see Part Fourteen for the whole story).
+
+• situation_appraisal (judging a situation good or bad for the mind's own goals). This is the appraisal pilot, the first of Rung Four's last two trials. It does not invent a new feeling; it reads one the mind already has. A situation is judged by what it does to a drive's set-point: if the situation violates a defended set-point, the mind appraises it as a threat and FEARS it; if the set-point is met, or the situation is moving the mind toward it, the mind appraises it as good and DESIRES it. The good-or-bad reading is exactly the drives' own error, read through a valence. And the mind owns the appraisal on the record - as an attitude of the standard's own vocabulary, graded at observation, and taken back honestly if a later look at the world corrects it. Its fourteen tests pin the reading in both directions, the honest retraction, and (from slice 20) that two float situations equidistant across the set-point read as a neutral no-change rather than a phantom good or bad.
+
+• arousal_regulation (bringing an aroused state back to rest). This is the regulation pilot, the second of the two. Arousal is carried the way the guiding book says it is - as norepinephrine, one of the brain chemicals on the shared neuromodulatory bus - and regulation is simply the return of that level toward its calm resting baseline over time. Each tick closes half the remaining distance to baseline, and once the level is within a hair of rest it settles exactly at baseline and stops - it never overshoots into the opposite extreme, the same discipline the drive system uses to settle a body at its set-point without going past it. Its fourteen tests fix the halving, the monotone return, the exact settle, the no-overshoot guarantee, and (from slice 20) that a non-finite arousal is refused so the return always terminates. With these two, Rung Four is finished.
+
+• concrete_operations (the logic trials of the reasoning rung). This is one half of Rung Three's opening. It reasons about concrete, grounded situations, and its rule is that you must always be able to WATCH it reason. Ask it whether a block resting on a cup resting on a table stands above the table and it does not merely answer yes - it hands back the whole derivation as a list of named steps: resting is above, resting is above, then a transitive chain joining the two. It also sorts a small collection of objects into groups by one property and then re-sorts the same objects by another (round things and square things become red things and green things on request); it puts objects in order along a dimension such as size; and it judges whether a transformation changed an amount or only changed how the amount LOOKS - water poured into a taller, thinner glass is the same water, while adding fifty really is fifty more. Its twenty-six tests pin all of that, and pin what it refuses: a support cycle, a malformed fact, an object with no value or an unbound value on the sorting property, a negative addition, a removal larger than what is there.
+
+• cause_and_effect (the causal trials of the reasoning rung). This is the other half. It answers the question a correlation can never answer: is this a real cause, or did these two things merely happen together? And it answers it BY THE RECORD - the causal records the mind minted back at slice 10. If a record (or an unbroken chain of them) links the two events, the answer is "genuine cause", and the reason given is the chain of record identifiers themselves, so you can check the mind's evidence. The rooster crows and the sun rises every morning, but no record links them, so the honest answer is "co-occurrence only". If a record points the other way, the mind says so rather than quietly flipping it. And a forged record - one shaped like a real one but never actually minted - is refused, because the mind re-derives every record's fingerprint from its own contents before trusting it. The pack also plans: given a start, a goal, and the actions it knows, it finds the SHORTEST sequence that gets there, justifies each step with the states it leaves and reaches, and commits to the plan by owning it as an intention. Its twenty-five tests pin all of that. Both new packs grade what they conclude as DERIVATION rather than observation - the mind reasoned these things out, it did not see them, and the record says so.
+
+• category_formation (the categories the mind forms for itself). This finished the first of Rung Three's two deferred halves. Show the mind a stream of experiences - a red round fruit, another red round fruit, a blue round toy, a blue square toy - and it coins its OWN categories from what the experiences share: nobody tells it "fruit" and "toy"; the groups fall out of the overlap. It then sorts objects into those self-made categories, honestly reports an object that fits none of them as outside every category, and re-sorts the whole collection by a different property on request by handing the job to the sorter it already had. Even the way it OWNS this conclusion is honest: the record can only be minted by actually running a learning episode, so a hand-written list of categories can never be passed off as something the mind learned. Its twenty-six tests pin all of that.
+
+• quantity_model (the represented model of quantity). This finished the second deferred half, and it is the pack that stops the mind being fooled by looks. An amount is represented as individuated units - unit one, unit two, unit three, unit four, unit five - plus a description of how it currently looks. Pour those five units from a short wide glass into a tall thin one and the verdict is "conserved at five", not because "pour" is on a safe list, but because the mind re-counts its units on both sides and finds the same five. The proof that this is real understanding and not a lookup: a sneaky transformation that CALLS itself a pour but spills a unit is judged "changed, five to four" - the name said appearance-only, the world said otherwise, and the model sided with the world. Its twenty-nine tests pin all of that, and the conservation verdict too can only be owned on the record by actually running the trial.
+
+• simulated_body (the honestly-named stand-in machine). The guiding book's embodied rung demands a real robot, and this pack does not pretend to be one: it is a tiny simulated machine - a camera, a battery that drains, and three actuators (steer around, recharge, hold still) - built so the seam a real robot would plug into can be built and tested today. Even its refusals are honest: steering around nothing is refused because there is nothing to steer around, and a negative drain is refused because it would charge the battery by stealth. Its sixteen tests pin the physics.
+
+• body_interface (the book's three body connections, as groundwork). The robot's sensors become the mind's senses; the robot's body state becomes the mind's homeostatic state - so a low battery is FELT AS HUNGER by the very same error predicate that feels heat and loneliness; and the mind's released actions drive the actuators. One pass of the sense-act loop closes through the simulated machine: the camera sees an obstacle, the mind's own machinery proposes and selects, and the body moves. In the survival run the battery drains every tick and the mind recharges OF ITS OWN ACCORD exactly when the hunger presses - the book's difference between a tool that is driven and an agent that is self-driven, in simulation. The rung itself is NOT claimed: the story's honest-limits line still names embodiment, with the book's own real-machine reason. Its twenty-one tests pin the loop, the rhythm, the tie, and the forgery doors.
+
+
+PART NINE - SLICE 11: OTHER MINDS, PREDICTION, AND THE FIRST TWO WALLS
+
+
+Slice 11 is a turning point in the build, because it is the first slice that hit a wall - and hitting a wall, honestly recorded, is exactly what this build method is for. Here is the whole story in plain language.
+
+First, three ideas.
+
+• Theory of mind. This is the ability to hold a picture of what is going on inside someone else's head - what they believe, want, or intend - even when it differs from what you yourself know. A child develops it in the preschool years, and it is widely thought to be a building block of real social intelligence.
+
+• A false belief. This is a belief that does not match reality. The classic test is the Sally-and-the-marble story: Sally puts a marble in a basket and leaves the room; while she is gone, someone moves the marble to a box; when Sally comes back, where will she look? A mind with theory of mind answers the basket, because that is where Sally still believes the marble is, even though we know it is really in the box. Predicting the basket - the wrong-but-honest place - is passing the false-belief test.
+
+• A prediction error. A prediction is a guess about what is about to happen. A prediction error is the gap between that guess and what actually happened, with a direction and a size - in plain words, a measured surprise. If you expect an object to still be behind a screen and the screen lifts to show nothing, your surprise is a prediction error, and konnectome computes it as a signed number.
+
+Second, the two new packs.
+
+• other_minds gives konnectome theory of mind, by reusing PrologAI's ready-made theory_of_mind machinery. Inside its own running memory, konnectome holds Sally's false belief, predicts she will search the basket, and even nests the model - konnectome holds a model of Sally holding a belief.
+
+• prediction_loop gives konnectome the expect-and-compare loop. It remembers what it expected, records what actually happened, and each tick works out the signed prediction error between them.
+
+Both packs run, and all of their tests pass. So what is the problem?
+
+Third, what a wall is, and why these two are real.
+
+• A wall, in this build method, is a moment when konnectome needs something it cannot express - not because konnectome's own code is weak, but because the shared data structure it must write its thoughts into (Causalontology, frozen at version 3.0.0) has no shape for the thing. konnectome is not allowed to quietly work around a wall; it writes the wall down in the ledger (Part Sixteen) and routes it to the right place.
+
+• Wall-1 (theory of mind). konnectome can hold Sally's false belief privately, but it cannot write that belief out as a shareable Causalontology record, because Causalontology has eighteen kinds of record and not one of them is for a belief. The closest kind records only who signed a claim, not whose mind holds it; it cannot hold something false without treating it as a fact; and it cannot nest one belief inside another. A model of someone else's mind is of little use if it can never leave your own mind to be shared - so this is a real wall.
+
+• Wall-2 (prediction). konnectome can compute a prediction and its error privately, but Causalontology has no kind for an expected happening as separate from a real one. So a forecast (what I expect at tick seven) and a report (what happened at tick seven), if they describe the same thing, get the exact same fingerprint - the prediction is indistinguishable from a claim of fact. A predictive loop that cannot be inspected or shared as a prediction is only a private number - so this too is a real wall.
+
+Both walls passed the build's key test - the thing genuinely needs to be SHARED between minds and repositories, not merely computed inside one - so both were routed to the Causalontology change order.
+
+Fourth, what happens next.
+
+The change order is the held wish-list of additions to the frozen data structure. Slice 11's two walls release two of its sections: Section B (a kind for an agent's attitude - belief, desire, intention - that can be false and can nest) and Section A (kinds for a predicted happening and a prediction error). With the owner's written go-ahead, given on the twenty-second of July twenty twenty-six, those two sections ship together as the next major version of the data structure, Causalontology 4.0.0. Once that lands, konnectome will be able to SHARE what it can already privately hold - a belief, and a prediction - and the two walls will close.
+
+
+PART TEN - SLICE 12: THE CLOSURE, AND HOW A WALL GETS CLOSED
+
+
+Slice 11 ended on a cliffhanger: two walls, honestly recorded, waiting for the shared data structure to grow. Slice 12 is where they close. This is the moment the whole build method was designed to reach, so it is worth watching closely.
+
+First, what Causalontology 4.0.0 added, and why.
+
+A wall in this build is never patched by a quiet workaround. It is written down, routed to exactly one place, and closed only when that place delivers. Wall-1 and Wall-2 were routed to the Causalontology change order - the held wish-list of additions to the shared data structure. With the owner's written go-ahead, that wish-list shipped as a new version of the data structure, Causalontology 4.0.0. It grew the list of kinds of record from eighteen to twenty-one by adding exactly the three that were missing:
+
+• attitude - a record for what a mind believes, wants, or intends. Crucially, it names the holder (whose mind this is), so a belief can be told apart from a fact, can be wrong without poisoning the shared record of what is really true, and can even point at another attitude, so one belief can sit inside another.
+
+• predicted_occurrence - a record for a forecast, a thing expected to happen, kept separate from a record of a thing that actually did happen.
+
+• prediction_error - a record for the surprise itself: what was expected, what was observed, and the signed gap between them.
+
+Because these three were added and nothing old was changed, all one hundred nineteen of the earlier test cases still pass exactly as before, and eighteen new ones were added, for one hundred thirty-seven in total. Adding without breaking is the iron rule of every change order.
+
+Second, what konnectome can now record and share. Before, konnectome could privately think these thoughts but never write them down for another mind to read. Now it can:
+
+• a belief that can be false and nested. konnectome mints Sally's true belief, her FALSE belief (which sits quietly beside the real state of the world without pretending to be it), and the nested belief (konnectome's model of Sally's belief) - each as a real, shareable, content-addressed record.
+
+• a forecast distinct from a report. The expected object-behind-the-screen is now minted as a predicted_occurrence before the screen lifts, and the real outcome as an ordinary happening - two different records, no longer sharing one fingerprint.
+
+• the surprise as a first-class record. The signed gap between the two is minted as a prediction_error record an outside auditor can read and grade, instead of a number that vanished at the end of the tick.
+
+Third - and this is the part the build is proudest of - the complete life of a wall, shown from end to end:
+
+• HIT. Building slice 11 for real, konnectome needed to share a belief and a prediction and could not, because the eighteen kinds had no shape for either. A wall is only ever discovered by building, never guessed at from an armchair.
+
+• RECORDED. Each wall was written into the ledger, the honest scoreboard, as a numbered finding with the evidence for it.
+
+• ROUTED. Each was sent to exactly one destination. A belief and a prediction must be SHARED between minds, so both went to the Causalontology change order - not to the language, and not into konnectome's own private code.
+
+• RELEASED. With the owner's written authorization, the change order shipped as Causalontology 4.0.0.
+
+• EXECUTED and CLOSED. konnectome built the export half - the two packs now mint the new kinds - and the two walls closed.
+
+There was even a third wall along the way, and it shows the method handling a surprise of its own. When konnectome went to mint the new kinds, it found that the PrologAI library it borrows had not yet learned the three new kinds either - it still knew only the old eighteen. That is a language-library gap, not a data-structure gap, so it was recorded as Wall-3 and routed to the PrologAI change order instead. It was delivered the same day, as an addition called causal_core 1.1.0, with every safety gate green. So three walls were hit and all three were closed, each routed to the one right place, and not one cousin was ever edited by reaching into it.
+
+That is the whole thesis of the build in a single slice: find what is missing by building, write it down, route it to exactly one place, and let that place deliver it through its own gate - so the growing mind rests on a foundation that is shared and honest, never on a private workaround.
+
+
+PART ELEVEN - SLICE 13: THE MIND GRADES AND DISOWNS ITS OWN THOUGHTS
+
+
+Slice 12 gave konnectome the ability to write its beliefs and its forecasts down as shareable records. But writing a thought down is not the same as standing behind it. Slice 13 adds the missing half: konnectome now takes RESPONSIBILITY for its own thoughts - it says how it came to each one, how sure it is, and, when a later tick proves it wrong, it takes the thought back, on the record.
+
+First, the idea of provenance. Provenance is the history and standing of a claim: who says it, on what grounds, and how much to trust it. In everyday life you weigh a fact you saw with your own eyes more than a rumor you were told; provenance is that weighing, written down. Causalontology, the shared data structure, has always had a provenance layer for exactly this - an assertion (a claim about a record) and a retraction (a take-back) - but until now konnectome had never used it on its own thoughts.
+
+Second, what the new pack does. The self_provenance pack lets konnectome do five things:
+
+• Assert. It makes a claim about one of its own records - for instance, that Sally really does hold the belief konnectome attributed to her, or that the object really will be behind the screen at tick six.
+
+• Grade the evidence. Every assertion carries an evidence grade from a fixed ladder, strongest to weakest: acting on the world (intervention), watching it (observation), running a model (simulation), reasoning it out (derivation), a human's hint (human_hint), and an import from elsewhere (imported). A forecast konnectome makes from its own model is honestly graded simulation - below a real observation - because that is what it is.
+
+• State a confidence. A number from zero to one, saying how sure the mind is.
+
+• Retract. When a later tick disproves a thought - the screen lifts and the expected object is gone - konnectome withdraws its own earlier assertion, giving a plain reason. This is the honest exit: a mind that can be wrong on the record and correct itself.
+
+• Supersede. When a forecast is instead confirmed, konnectome retracts the tentative simulation-graded claim and restates it, now graded observation - the stronger evidence - about the very same thing.
+
+Third, why this slice hit no wall. Slices 11 and 12 hit walls because the shared data structure lacked a shape for a belief and for a prediction. This slice needed no new shape: the provenance layer was already there, waiting, from earlier versions of Causalontology. So slice 13 simply used it, and closed a loose end slice 12 had honestly left open - that konnectome minted belief and prediction records but had not yet graded or retracted any of them. No wall was hit; a promise was kept.
+
+Fourth, the one honest limit, written down. A real cryptographic signature - the thing that lets a stranger VERIFY, not merely read, konnectome's claim - needs a private key. A private key is a secret, and konnectome's own rules forbid any secret from living in its code. So konnectome carries its public identity and mints records that are complete, named by their contents, and shareable, but leaves the actual act of signing to whoever runs the mind and holds its key. A strict reader would set the unsigned records aside until that signature arrives. The build claims exactly what it built - a mind that grades and disowns its own thoughts - and honestly does not claim the signing it deferred.
+
+
+PART TWELVE - SLICE 14: THE CAPSTONE, WHERE THE MIND RUNS AND TELLS ITS OWN STORY
+
+
+Everything before this slice could be checked, but only by reading test files. Slice 14 adds the thing a newcomer actually wants: one command that boots the mind, lets it live for a while, and prints what happened - in plain English, with every claim carried by a real record.
+
+First, what the story shows, in the ladder's own order.
+
+• The heartbeat and the body. The mind boots with its body too warm - temperature forty against a defended set-point of thirty-seven - and one drive watching that number. Tick by tick, the story prints the reward the drives computed, the dopamine broadcast that carries it, the one action released, and the record the observer minted. By the end, the body sits at thirty-seven and the learnable connection has grown stronger: wanting, acting, and learning, visible in numbers.
+
+• The forecast and the surprise. An object is hidden behind a screen; the mind holds a forecast that it still exists. The story is told twice: once kindly (the screen lifts, the object is there, the signed error is zero) and once cruelly (the screen lifts on nothing, the signed error is minus one - the machine form of surprise).
+
+• The chain of thought. Rain causes wet ground; wet ground causes a slippery path. Two combined thoughts, each a content-addressed record, and the story shows that the first one's effect really is the second one's cause - a chain a reader can check from the records alone.
+
+• The false belief. The marble is really in the box, but Sally believes it is in the basket, and the mind holds both records - the world's and Sally's - without letting the false one poison the true one. Asked where Sally will search, it answers from her belief: the basket.
+
+• The provenance layer. The mind stands behind its attribution (graded observation), stands behind its forecast more humbly (graded simulation), upgrades the grade when the world confirms it, and - in the cruel telling - retracts its own claim, on the record.
+
+Second, why you can trust the story. The story is deterministic: told twice, it is identical down to every fingerprint, because every record is named by its own contents. And the story cannot flatter the mind: the pack's tests re-run the very same world outside the narration and check directly that the body really settled and the weight really grew - and the narration itself refuses to print a claim the run did not achieve. The story even ends by saying what it does NOT show: the rungs not yet climbed, and the fact that its records are shareable but not yet cryptographically signed.
+
+Third, why this slice hit no wall. The capstone invents nothing: it only calls what the fifteen earlier packs already do, in ladder order, and formats what they return. It needed no new shape from the data structure and no new power from the language - so, like slice 13, it hit no wall and recorded no new limit. It simply made the whole build watchable.
+
+
+PART THIRTEEN - SLICE 15: FIRST WORDS AND PRETEND PLAY - RUNG TWO OPENS
+
+
+Slice 14 let you watch the mind live. Slice 15 begins the rung many readers ask about first: language. It opens Rung Two of the ladder - the rung of symbols, words, and pretend - and it opens it the honest way, at the bottom.
+
+First, what it means to ground a word. A chatbot connects words to other words. konnectome connects a word to something it has lived. Before it may use the word warm, the mind must actually have BEEN too warm - lived through ticks in which its temperature drive was in deficit - and before it may use settled, it must actually have reached its set-point. The grounding run is a real run of the whole mind, the same too-warm-to-settled world the capstone tells; and if you try to ground a word in a condition the mind never lived, it refuses, with a named error. Experience first, words second.
+
+Second, the smoke test: one symbol, both directions. Given its grounded words, the mind can produce the right word for its current condition (speaking), and, hearing a word, can say which condition it names (understanding) - and the hearing is real: the word passes into a reused word bank and leaves a trace, so listening genuinely changes the mind's state.
+
+Third, the pilot's key property: the mood colours the words. Ask the mind the same thing twice - once while its body is too warm, once while it is settled. The too-warm mind answers warm, settled: a childlike, two-word sentence meaning this is what I am, and this is what I seek. The settled mind answers simply settled. Same question, different inner weather, different words. A program that predicts likely next words cannot do this, because it has no inner weather; a mind with drives can, and that difference is the whole point of the rung. The simplicity of the speech is deliberate: a three-year-old's sentences are short, and an honest three-year-old is worth more than a fluent mask.
+
+Fourth, pretend play. The other half of the rung is imagination: representing a situation that is not happening, and reasoning inside it without ever confusing it for the real record. konnectome reuses a ready-made quarantine of five named realities - observed, desired, expected, imagined, recalled. When the mind pretends (say: the sun beats down and its settled body grows too warm again - a path it never actually lived), everything the pretence visits is sealed automatically into the imagined reality. The observed record - what really happened - is never touched. Moving a fact between realities takes a deliberate act, and konnectome forbids the one move that could ever lie: pretend may never be promoted into the observed record.
+
+Fifth, the watch that was kept. The owner asked this slice to watch honestly for the finding that would unlock a held addition to the shared data structure (a world-level reality tag, Section C of the change order). The watch's result: no such finding. The reused quarantine and the existing per-claim machinery were enough, and no need ever arose to SHARE a whole imagined world with another mind. So nothing was built from the armchair, and the section stays held - a non-finding, recorded as carefully as a finding would have been, in the ledger.
+
+
+PART FOURTEEN - SLICE 16: SOCIAL PAIN, AND FEELING WITH ANOTHER - RUNG FOUR DEEPENS
+
+
+Slice 16 climbs to the top of the emotional and social rung with the two trials the guiding book names: the social-pain test and the empathy trial.
+
+First, the social-pain test, which is a real experiment before it is a test. Social neuroscientists found that being rejected activates the same brain circuitry that registers physical pain - the evidence that the need for connection is a defended set-point, not a luxury. konnectome re-runs the experiment in miniature. It gains a social-connection drive that watches a body variable called belonging and defends a set-point, exactly as the temperature drive watches temperature. Deliver a rejection - sever belonging - and the SAME code that registers a too-warm body registers the loss: the same error computation, the same step, a reward of minus one, dopamine of minus one on the shared broadcast. The tests compute a physical thwarting and a social one of equal size through the identical machinery and assert the two numbers equal. No special emotion pathway was built, because the book says feeling is what the drive machinery already is.
+
+Second, the empathy trial. Empathy here is not a sentiment bolted on; it is resonance through the mind's own body. When konnectome models another agent - call her Ana - as being in distress, that model lowers konnectome's OWN belonging. Its own error rises; it literally feels worse because she does. And that changed inner state changes what it does: its drives propose the helping action alongside everything else it needs, and the action selector releases whichever need is greatest. The load-bearing test gives the mind a mildly pressing physical need and asks twice: with Ana fine, the mind tends its own temperature; with Ana in full distress, the resonated social pain outweighs the physical need and the mind helps - and helping restores connection for both. Three honesty rules hold throughout: the helping action is proposed by the drives and never invented by the selector; breathing still overrides everything, even kindness; and the whole trial is deterministic.
+
+Third, owning the social read. Modelling someone as distressed is a claim about them, and claims must be owned. The modelled distress is minted as a shareable record using the data structure's own vocabulary of attitudes: Ana FEARS her connection severed. konnectome stands behind that attribution with an assertion graded observation - it watched the rejection happen - and if Ana turns out to be fine, it retracts the attribution, on the record, under its own name. The mind can now be wrong about another's heart and correct itself the same honest way it corrects a wrong forecast about a hidden object.
+
+What was once said to remain on this rung is now built. As of slice 19, Rung Four is FINISHED: the appraisal trial (judging a situation as good or bad for one's own goals) and the regulation trial (bringing an aroused state back toward baseline) join the smoke test, the theory-of-mind trial, and the empathy trial. Both were built the honest konnectome way - by reusing what the mind already is, not by bolting on an emotion engine. Appraisal (the situation_appraisal pack) reads a situation's goodness straight from the drives' own set-point error: a violated set-point is a threat the mind FEARS, a met or improving one is GOOD and the mind DESIRES it, and the verdict is owned on the record as an attitude, graded, and taken back if the world later corrects it. Regulation (the arousal_regulation pack) carries an aroused state as norepinephrine on the shared neuromodulatory bus and brings it back down toward its resting baseline over ticks - halving the distance each tick and settling exactly at rest, never overshooting, the same way the drive system settles a body at its set-point. One small honesty was recorded for the owner: the shared attitude vocabulary has a word for fear but none for satisfaction, so a met goal is stored as a desire to keep it - an approximation named plainly rather than hidden. The capstone story, since slice 18, already narrates this rung's deepening and Rung Two's first words; what remained for the mind after that were the rungs it had not opened at all - Rung Three's concrete reasoning, opened in the next Part, and Rung Five's embodiment.
+
+
+PART FIFTEEN - SLICE 21: THE REASONING RUNG OPENS, AND WHAT IT HONESTLY DOES NOT YET DO
+
+
+Slice 21 opens Rung Three, the reasoning rung - the stage the psychologist Jean Piaget called concrete operational, roughly ages seven to eleven, when a child begins to reason with logic and rules about real, concrete things in front of them. The guiding book asks for one smoke test and five trials, and it attaches one condition to all of them: every inference must be a named, watchable operation, never an opaque leap. That condition is the whole point. A system that produces the right answer by means nobody can inspect has not demonstrated reasoning; it has demonstrated a correct guess.
+
+THE SMOKE TEST, PASSED IN FULL. A block rests on a cup; the cup rests on a table; therefore the block is above the table. The mind derives it - and hands back the derivation itself, as data: first, resting on something means being above it (a step named resting_is_above); again for the cup and the table; then a step named transitive_chain joins the two into the conclusion. A test reads those steps and checks each one is named and carries the facts it consumed. So the claim "you can watch it reason" is enforced by a test, not merely promised in a comment.
+
+THE THREE TRIALS THAT ARE FULLY REALIZED. Seriation: put objects in order along a dimension, so a pea, an apple, and a brick sort themselves smallest to largest. Causal reasoning: tell a genuine cause from a mere coincidence - and do it by the RECORD. If a causal record links the sun shining to the stone warming, the answer is "genuine cause", and the mind hands over the record's own identifier as its reason. If the rooster's crow and the sunrise have no record between them, the honest answer is "co-occurrence only", however many mornings they have shared. This is the thing pattern-matching systems famously get wrong, and konnectome gets it right for a structural reason: its data structure reifies causation, so a cause is a thing it can point at. Planning: given where it is, where it wants to be, and the actions it knows, the mind finds the shortest sequence that gets there and justifies every step.
+
+THE TWO TRIALS THAT ARE OPENED BUT NOT FINISHED - AND THIS IS SAID PLAINLY. Classification asks for two things: sorting a collection by a property and re-sorting it by another on request, AND that the categories be ones the mind formed from its own experience. The first half is built; the second is not. Conservation asks whether the mind models the world rather than its surface - whether it knows that water poured into a taller, thinner glass is the same water. What is built is the SHAPE of that judgement: transformations on a known list change only appearance and conserve the amount, while adding or removing really changes it. What is not built is a genuine represented model of quantity that would make the verdict follow from understanding rather than from a lookup. Both gaps were written into the code's own header, into the ledger, and here. THIS IS THE METHOD WORKING. It would have been easy to write "Rung Three: done". The rule of this build is that a claim is sized to what was actually demonstrated, and a partial rung is recorded as partial - and the next part tells how those two halves were then actually built.
+
+WHAT THE REVIEW FOUND, AND WHY THAT IS GOOD NEWS. Every slice is handed to an independent reviewer whose only instruction is to REFUTE the work, and slice 21's review returned the largest confirmed-finding count of the build so far: fourteen real defects (two further claims were checked and dropped as unreal). The sharpest was a silent wrong answer: the sorting code grouped objects by a loose kind of matching, so an object whose colour was left blank would join EVERY group and the sort would quietly return nonsense - now refused by name and matched strictly. Another was not a wrong answer but an unusable one: the check for impossible support cycles re-walked every path separately, so a shape with many routes through it took eleven seconds at sixty-eight facts and would never have finished at ninety; it now remembers what it has already proven safe and returns in milliseconds. And a third closed the gap between what the causal pack CLAIMED and what it CHECKED: it said causation is answered by the minted record, but it accepted anything shaped like one, so a hand-written fake was taken as proof; it now re-derives each record's fingerprint from its own contents and refuses a forgery by name. Every one of the fourteen is fixed at its root and pinned by a permanent test.
+
+
+PART SIXTEEN - SLICE 22: THE TWO DEFERRED HALVES, BUILT - THE REASONING RUNG'S TRIALS COMPLETE
+
+
+Part Fifteen ended with two honest gaps: the mind could re-sort objects but not form its own categories, and it could name-check a transformation but not model a quantity. Slice 22 built both halves, and with them all five of the reasoning rung's trials are realized.
+
+CATEGORIES THE MIND FORMS FOR ITSELF. The trick was already in the family's toolbox: PrologAI ships an engine called concept_formation that watches a stream of feature bundles and coins a concept for every group that shares enough. konnectome's new category_formation pack borrows that engine unmodified - the same way it has always borrowed the content-addressing core - shows it the mind's experiences, and receives back categories the mind formed itself, each carrying the defining core its members share. Sorting into one's own categories, honestly reporting the object that fits none, and the on-request re-sort by a different property (still the slice-21 sorter, reused) complete the book's classification trial in full.
+
+A QUANTITY THE MIND ACTUALLY MODELS. The new quantity_model pack represents an amount the way the world has it: as individuated units, plus a separate note of how they currently look. Transformations act on that representation - a pour carries every unit into the new glass, an addition mints new units, a removal takes real ones away - and the conservation verdict is read by RE-COUNTING the units, never by looking at what the transformation was called. The single most important test in the slice is the lossy pour: a transformation named like a pour that secretly spills one unit. A name-list would have said "conserved"; the model counts five before and four after and says "changed". That one test is the difference between modelling the world and matching its surface - the exact thing the book says this trial exists to detect.
+
+WHAT THE REVIEW FOUND THIS TIME. The independent refute-the-work review returned sixteen findings, two of them blocking, and every confirmed one was fixed at its root and pinned by a test. The sharpest was another silent wrong answer: a hand-built category whose defining core was written in the wrong order would match nothing, quietly exiling an object that genuinely belonged - the checker now insists a core be exactly the sorted, duplicate-free set the learner mints. A whole family of forgeries was shut by name: the empty core that would swallow everything, the category wearing the reserved outside-every-category name, doubled identifiers, doubled property keys, doubled unit names. And the biggest door of all: both packs would previously OWN any quoted sentence on the record as if the mind had concluded it - now the record predicates accept no text at all, but enact the learning episode or the conservation trial themselves and mint only what the enactment produced. The review also caught a naming-rule violation the automated gate cannot yet see - an unprefixed helper predicate - which is recorded in the ledger as a known gate hole, hunted by hand until the gate learns to see it.
+
+WHAT THE RUNG STILL OWED, THEN. At the end of slice 22 the trials were complete but the one-command capstone story did not yet TELL Rung Three, and Rung Four's appraisal and regulation chapters had been owed since slice 19. The next part tells how both debts were paid.
+
+
+PART SEVENTEEN - SLICE 23: THE STORY PAYS ITS DEBTS - THE CAPSTONE GROWS TO 0.3.0
+
+
+In this build a capacity only fully counts when the one-command story tells it, because the story is the single place a newcomer can watch the whole mind run. Two debts stood: the reasoning rung's trials were complete but untold, and the appraisal and regulation of the feeling rung had been finished in slice 19 but never narrated. Slice 23 taught the story both.
+
+THE REASONING CHAPTER. Between the first words and the false belief, the story now shows its work: the block-above-the-table derivation printed step by named step; the categories the mind formed for itself, with the yellow pencil honestly exiled outside every category; the re-sort by shape crossing the mind's own categories; the five units of water conserved across the pour BECAUSE the model re-counts them, and the lossy pour caught red-handed - changed, five to four; the sun-warms-the-stone cause citing its record identifier while the rooster and the sunrise stay a co-occurrence; and the three-step camp plan. Every sentence sits below a strict live check inside the chapter - if any engine ever answers differently, the story refuses to print rather than lie.
+
+THE FINISHING CHAPTER. Between the empathy trial and the provenance layer, the story now appraises and regulates in front of the reader: the too-warm body owned as a FEARS attitude, the satisfied body owned as a DESIRE to keep it - with the standard's missing word for satisfaction said aloud rather than papered over - the good and bad turns of two degrees each, the honest withdrawal when the body cools by itself, and an alarm falling from one to one half to rest, exactly at baseline, in eight halving ticks.
+
+THE DISCLAIMER SHRANK TO ONE LINE. The story's list of what is honestly not demonstrated now names only embodiment - and gives the book's own reason: that rung asks for a real machine.
+
+A NOTE ON THIS SLICE'S REVIEW, TOLD STRAIGHT. The independent refute-the-work reviewer was stopped mid-run by the owner, so the builder re-ran the review's planned reproductions itself - the byte-identical double telling (now pinned by a permanent test), the isolation of the category episode's store reset, the arithmetic behind the eight-tick landing, and a line-by-line comment walk of the new chapters. That is a weaker guarantee than an independent reviewer, and the ledger records it as exactly that.
+
+
+PART EIGHTEEN - SLICE 24: THE BODY SEAM - EMBODIMENT OPENED AS GROUNDWORK, AND SAID SO
+
+
+The last rung of the ladder is the embodied one, and the book is blunt about it: the loop must close "through a real machine". There is no robot in this repository, and slice 24 refuses to pretend otherwise. What it builds instead is the SEAM - the three connections a real robot would one day plug into - and a small, honestly-named stand-in machine to test the seam against today.
+
+THE STAND-IN. A pack called simulated_body - the word simulated in its own name - carries a camera, a draining battery, and three actuators. It is a world, not a mind: every operation is a pure, deterministic step from one body state to the next.
+
+THE THREE CONNECTIONS. A pack called body_interface builds exactly what the book names. The sensors become the senses: the camera's readings surface as the mind's percepts, unchanged. The body state becomes the homeostatic state: the battery level is handed to the drive system as-is, and an energy drive defends a full charge exactly the way the temperature drive defends thirty-seven degrees - so a low battery is FELT AS HUNGER, the book's own sentence, tested literally. And the released actions drive the actuators: when the mind's selector releases the recharge, the machine recharges.
+
+THE LOOP, CLOSED IN SIMULATION. Show the camera an obstacle and run one pass: the mind senses it, proposes steering (a reflex), releases it, and the body moves - and the camera reads clear again, because acting changed what the machine sees. Drain the battery tick by tick and the mind recharges of its own accord, exactly when the hunger presses and never before, on a rhythm so deterministic the tests pin it as an exact trace.
+
+WHAT THE REVIEW ADDED. The reviewer was interrupted again, but its two leads were both real: a missing comment line, fixed; and a sharp question - could a hand-built record be stanced as OBSERVED? It could. Now it cannot: the stance re-derives the record's fingerprint from its own contents and refuses a forgery by name, because observation is the strongest grade the mind grants itself and a pass that never ran must never earn it. The builder finished the remaining checks itself and the ledger records the whole disposition as the mixed review it was.
+
+THE BOUNDARY, KEPT. The one-command story was not touched: it still says, in its honest-limits list, that embodiment is not demonstrated, and it still gives the book's reason - a real machine. The groundwork changed what the repository can do; it changed nothing about what the story claims. That line between groundwork and rung is the whole point of this slice.
+
+
+PART NINETEEN - SLICE 25: THE STORY LEARNS THE BODY SEAM - TOLD, AND STILL NOT CLAIMED
+
+
+Slice 24 built the seam and deliberately left the story silent about it, so the line between groundwork and rung stayed visible. Slice 25 crosses that gap the only honest way there is: it teaches the story to TELL the seam while refusing, in the chapter's own words, to claim the rung.
+
+THE NEW CHAPTER. Between the finished Rung Four and the provenance layer, the one-command story now prints a chapter called THE BODY SEAM - RUNG FIVE'S GROUNDWORK, TOLD AND NOT CLAIMED. Its first sentence is the refusal: there is no real machine here, and this chapter does not pretend one. Then it tells, over live runs a reader can watch: the obstacle the camera sees surfacing as the mind's percept, unchanged; one closed pass of the loop - sense, propose, select, command, enact - releasing the steering reflex and moving the body, after which the camera reads clear, because acting changed what the machine sees; the hunger identity - a battery at half charge and a body half a degree from thirty-seven reading EQUAL through the very same error predicate, which is the book's low-battery-felt-as-hunger sentence made a number; the survival rhythm - the battery draining a quarter charge per tick, the mind holding still at a mild hunger and recharging OF ITS OWN ACCORD at the pressing one, again and again, with nothing outside the mind commanding the act; and the one deliberate tie, where a starving battery outranks a seen obstacle because the drives come before the reflexes.
+
+GUARD-THEN-TELL, AS ALWAYS. Every sentence in the chapter sits beneath a strict live check in the chapter's own code. If any of the reused engines ever answers differently - a different release, a different rhythm, a different number - the story refuses to print rather than lie. And the chapter's record is owned the strong way: the loop's outcome is minted by running the pass right inside the record predicate, and the printed stance is granted only after the record proves, by re-deriving its own content address, that it was genuinely minted.
+
+THE BOUNDARY, KEPT AGAIN. The story's honest-limits list still names embodiment, word for word, with the book's real-machine reason - and it now adds the boundary aloud: the seam chapter is GROUNDWORK, and groundwork is not the rung. The story does not promote it. Reaching, navigation, and true survival wait for a machine that is real.
+
+
+PART TWENTY - SLICE 26: THE GATE THAT LEARNED TO SEE ITS OWN BLIND SPOT
+
+
+konnectome protects itself with four standing gates - small programs that scan the whole repository before any change is merged and refuse the merge if a rule is broken. One of them enforces the naming rule: every predicate (a predicate is Prolog's word for a named piece of logic) must begin with its pack's full whole-word name.
+
+Back at slice 22, a review discovered something embarrassing and recorded it honestly: the naming gate had a blind spot. It hunted for KNOWN abbreviations, so a helper predicate with an unfamiliar unprefixed name walked straight past it. Since then, the ledger has carried a standing instruction: until the gate learns to see this, every reviewer must hunt for such helpers by hand.
+
+Slice 26 retires that instruction the only proper way - by teaching the gate. The gate now applies the rule exactly as the constitution states it: EVERY name defined in a pack's module must begin with the pack's own name (or the one sanctioned shared namespace). Not just the common ones, not just the known abbreviations - every one.
+
+And the gate is proven able to fail before it is trusted to pass. A small FIXTURE - a deliberately broken example pack, clearly labelled, stored outside the real pack directory so it is never actually loaded - carries exactly the old blind-spot shape. A new self-test command runs the gate against that fixture and passes only if the gate catches the deliberate violation by name. If anyone ever weakens the gate, the self-test fails and says so: the hole is open again.
+
+
+PART TWENTY-ONE - SLICE 27: THE DELAY LINES - A SIGNAL LEARNS TO TAKE ITS TIME
+
+
+In a real brain, a signal does not jump instantly from one region to another. It travels along a nerve fibre, and the trip takes time - more time for a longer fibre, less for one wrapped in myelin (myelin is the fatty insulation that speeds a nerve signal along). The guiding book builds this into its map: every connection between two parts of the mind carries a DELAY, the number of ticks (a tick is one beat of the mind's clock) the signal spends in transit.
+
+From the very beginning, konnectome's connection graph - the map of who talks to whom - wrote that delay down in every connection. But until now the number was only recorded, never obeyed: every signal crossed every connection in exactly one tick, and the ledger honestly listed multi-tick delays as pending. Slice 27 makes the number true.
+
+THE DELAY LINE. The idea is a small queue, like a short length of pipe. When a signal is sent down a connection with a delay of, say, three ticks, it enters the back of that connection's pipe. Each tick it moves one step forward. On the third tick it comes out the front and is delivered - scaled by the connection's weight - and not one tick sooner. The book states the test plainly, and konnectome now runs it as a real test: a signal crossing a two-tick hop and then a three-tick hop arrives at exactly tick five, with the far end provably silent at ticks one through four.
+
+NOTHING OLD BROKE. With every delay set to one tick, the new delayed machinery reproduces the old one-tick behaviour exactly - state for state, tick for tick - and a test pins that identity forever. And a value already in the pipe is safe: even if the sender changes its mind afterward, what was sent still arrives, because the pipe remembers what entered it, not what the sender feels now.
+
+REFUSALS, SAID ALOUD. This slice's independent review hunted for silent failures - places where a mistake would vanish without a word - and found real ones: a construct of an unknown kind could quietly drop out of the state, and a connection from a name the state had never heard of could quietly destroy its pipe and everything in transit. All were fixed at the root and pinned with permanent tests: the graph now refuses such mistakes by name, throwing a clear error instead of absorbing the lie in silence. A delay of zero or less is refused too, because a signal never arrives before it is sent.
+
+PART TWENTY-TWO - SLICE 28: THE ELIGIBILITY TRACE - A REWARD ONE TICK LATE STILL FINDS ITS CONNECTION
+
+
+Back in slice 8, konnectome learned the brain's learning rule: a connection between two parts of the mind strengthens when its two ends are active TOGETHER and, at that same moment, dopamine (the brain's this-mattered chemical) says the moment counted. That rule has a hidden weakness: the reward almost never arrives at the same instant as the action. You press the lever, and the food comes a moment later. If learning demanded perfect simultaneity, the reward would arrive to find the coincidence already gone, and nothing would ever be learned.
+
+The guiding book's answer, in its Chapter 10 and its Section A2.6, is the ELIGIBILITY TRACE. Slice 28 builds it.
+
+THE TRACE. Each connection keeps a small fading number - a memory of its own recent coincidence. Every tick, two things happen to it: it fades (the old number is multiplied by a fading factor slightly less than one, such as nine tenths), and the tick's fresh coincidence (the product of the two ends' activities) is added on. So a connection whose ends just fired together holds a strong trace, and the trace melts away tick by tick if nothing follows.
+
+THE BRIDGE. When the reward finally arrives, dopamine does not look for connections that are active NOW - it looks for connections whose TRACE is still warm, and strengthens each one in proportion to that trace. The book's own acceptance test is now a real, running test in konnectome: two ends fire together at tick one; at tick two everything is silent and the trace has faded to nine tenths; the reward arrives only then - and the weight still grows, by exactly the faded amount. The companion test shows the other half of the bargain: withhold the reward, and the trace just fades, nine tenths, then eighty-one hundredths, and the weight never moves. A trace is a memory, not a slow-release reward.
+
+REFUSALS, SAID ALOUD. This slice's independent review hunted the silent-failure family again and found real ones: a connection whose kind was left as an unfilled blank could be silently treated as learnable; a thing that was not a connection at all could be silently skipped, or make the machinery quietly fail with no explanation. All were fixed at one root - a single shared checkpoint that inspects the whole map before either new step touches a number - and pinned with permanent tests. The learning rule now refuses, by name, a fading factor that would never fade, a malformed connection, an unknown or unfilled kind, a duplicated connection or trace, a trace whose connection has vanished, and a connection whose trace has vanished. A wrong answer said aloud beats a plausible one said silently.
+
+PART TWENTY-THREE - SLICE 29: HOMEOSTATIC SCALING - THE BRAKE THAT KEEPS LEARNING FROM EXPLODING
+
+
+Slices 8 and 28 gave konnectome a learning rule with a hidden danger. Strengthening is a loop that feeds itself: a strong connection makes its target more active, more activity makes more coincidence, more coincidence makes the connection stronger still. Left alone, that loop runs away - in a real brain the result is a seizure; in a model it is weights climbing forever.
+
+The guiding book's answer, from its Chapter 10, is HOMEOSTATIC SCALING (homeostasis is the defending of a set-point, the way your body defends thirty-seven degrees). Each region of the mind watches its own average activity. Too loud, and ALL of its incoming connections are gently scaled down. Too quiet, and they are gently scaled up. Learning stays fast and selective; the brake is slow and even-handed; together they are stable.
+
+Slice 29 builds it in three small pieces. First, a running average per region - a number that drifts toward whatever the region's activity has recently been (old average, mostly kept; new activity, a little mixed in). Second, a scaling step: every connection INTO a region is multiplied by one small shared factor - just above one if the region is too quiet, just below one if it is too loud, exactly one if it sits at its target. Third, a floor at zero: a connection can be silenced, but scaling can never flip it to negative.
+
+THE PROOF IS A WORST CASE, RUN ON PURPOSE. For fifty ticks, a connection's two ends fire at maximum while the reward chemical is at maximum - the learning rule alone would drive the weight past five and keep climbing. With the brake applied every tick, the weight rises and then simply stops, at a fixed point just below two, and stays there. The explosion the book warns about is the thing the test proves cannot happen.
+
+REFUSALS, SAID ALOUD. This slice's independent review found the season's subtlest silent failure: one malformed entry in the average store made one step quietly fail while ANOTHER step quietly accepted the very same store - one store, two verdicts, neither of them spoken. The fix went to the single root: one shared judgement of what a well-formed store is - right shape, no unfinished ends, no duplicate names - used by every step and every constructor alike, including the slice-28 trace store, so no two parts of the learning machinery can ever again disagree in silence. Seven permanent tests pin it.
+
+PART TWENTY-FOUR - SLICE 30: LOCAL CHEMISTRY - ONE MOLECULE, MANY CONCENTRATIONS
+
+
+konnectome has long had a neuromodulatory bus - the one deliberate global value in the whole architecture, modelling brain chemicals like dopamine that are broadcast widely rather than wired point to point. But the guiding book asks for more than one number per chemical: a real molecule diffuses from its small source nucleus and reaches DIFFERENT concentrations in different territories of the brain. The book's requirement says it plainly: a broadcast field with a level per target territory.
+
+Slice 30 builds that, with one elegant simplification: every construct IS its own territory. Beside the global level, the bus can now hold local levels - dopamine at four tenths everywhere, but nine tenths in one particular region. A region with its own local level reads that; a region without one simply reads the global broadcast, the diffuse field; and if there is no chemistry at all, it reads silence. Nothing anywhere had to be rewired: a bus with no local levels behaves exactly as the old bus did, and a test pins that identity.
+
+The same slice closes an honest debt from slice 27. When the delay lines were built, the step that honours multi-tick travel times refused, by name, the relay whose gain the bus sets - time and chemistry had never met. Now they compose: a new step carries the delay lines and the bus together, and the gain is read AT THE MOMENT OF DELIVERY, never at the moment of sending. A signal that spends three ticks in transit is amplified by the chemistry of the tick it arrives on - just as a real synapse responds to the chemicals bathing it now, not to the ones present when the signal left the other end.
+
+REFUSALS, SAID ALOUD. The independent review found no real defect this time - the timing, the identity, and the compatibility all survived attack - but it found two small doors left ajar: a compound term shaped like a territory entry could pose as a chemical's name and silently overwrite a local level, and an unfilled name could be silently guessed instead of questioned. One guard closed both doors: every chemical and territory name must be a plain word, and anything else is refused by name at every entrance to the bus. Five permanent tests pin the guard.
+
+PART TWENTY-FIVE - SLICE 31: THE GEOGRAPHY OF REWARD - EACH PLACE LEARNS BY ITS OWN CHEMISTRY
+
+
+Slice 30 gave konnectome local chemistry: one molecule, different concentrations in different territories. But one construct still ignored it - the plasticity engine, the learning rule itself, still read dopamine as a single global number. A territory could have its relays amplified by its own local chemistry, yet its LEARNING was governed by the world average. Slice 30's own log recorded that honestly as the natural next step, and slice 31 takes it.
+
+The change is one idea: when a connection learns, it now asks about the chemistry of the place the signal ARRIVES. The three-factor rule keeps its shape - the sending end's activity, times the receiving end's activity, times the dopamine level, times a small learning rate - but that dopamine level is now read in the receiving construct's own territory. A territory with its own local concentration learns by that; a territory without one learns by the global broadcast, exactly as before; and a territory whose local level is explicitly zero does not learn at all, however loud the global reward. The local level wins - it does not blend.
+
+The same law governs the delayed kind of learning too. The eligibility trace of slice 28 - the fading memory that lets a reward one tick late still find the connection that earned it - is now spent at the receiving territory's concentration at the moment of spending. One global reward can therefore teach different places different amounts: full strength in one region, half in another, nothing in a silenced one. Reinforcement now has a geography.
+
+Because slice 30 decided that every construct simply IS its own territory, nothing had to be rewired: every caller passes the same bus it always passed, and on a bus with no local levels every weight comes out exactly as the old global rule produced - every earlier test still passes untouched, which is the proof.
+
+REFUSALS, SAID ALOUD. The independent review found three real defects, all with one root, each reproduced before it was fixed: the LIVE learning step - the one the cognitive cycle calls every tick - had never been given the loud refusal perimeter its three siblings (the trace step, the reward step, the scaling step) always had. A nonsense term made it silently fail; an unfilled kind was silently treated as a connection that does not learn; a duplicated connection silently learned the same lesson twice. One fix at the root gave the live step the same shared judgement the others use, and three permanent tests pin it. Ten tests grew from the slice in all: seven for the geography of reward, three for the perimeter.
+
+PART TWENTY-SIX - SLICE 32: THE LIVING LOOP CARRIES ITS WHOLE LEARNING BODY
+
+
+By slice 31, konnectome's learning had three organs beyond the basic weight change: the eligibility trace of slice 22's story (built in slice 28), a fading memory that lets a late reward still find the connection that earned it; the running average of slice 29, a slow per-region record of how active each part has recently been; and the homeostatic brake of the same slice, which uses that average to keep learning from exploding. But the cognitive cycle - the loop that actually runs the mind, tick after tick - only ever called the basic learning step. The trace and the average existed only where a test harness remembered to carry them by hand. The ledger recorded that honestly as the next smallest step, and slice 32 takes it.
+
+The change is again one idea: the world the loop carries now includes the learning body's whole state. The world is a single bundle of named values (the tick count, the body, the drives, the chemical bus, the connections, and so on), and it grows six new entries: the trace store, the average store, and the four small numbers that pace them - how fast a trace fades, how fast an average moves, what activity level each region should defend, and how strongly the brake corrects toward it. Every tick now beats the whole body in order: the fast learning step first, then the traces fade and absorb the tick's fresh coincidences, then the averages take one smoothing step toward the tick's activity, and finally the brake nudges each region's incoming connection strengths toward its target.
+
+One honest subtlety: in the worlds konnectome actually boots for its demonstrations, the brake's correction rate is set to zero - armed but at rest, exactly like the emergency-override drive that sits in the same worlds armed but calm. A test proves the rest is real: with the rate at zero, even an absurd activity target changes nothing, so every story the old worlds told is still told word for word. A twin test proves the brake is alive: turn the rate up, and a quiet region's incoming weight is pulled above what learning alone gave it. And the reward step - the spending of the traces - deliberately stays outside the loop, because deciding that a reward has arrived belongs to whoever runs the mind, not to every tick automatically.
+
+REFUSALS, SAID ALOUD. A world missing any of the six new entries is refused by the missing entry's name, never half-run. And the independent review - the eighth straight completion of the method - found one real defect, reproduced before it was fixed: the loop's own front door claimed in its comment to refuse a negative tick count, but the code just silently failed instead, and a nonsense count died with a confusing arithmetic error. One fix at the root gave the tick count a proper loud check - time moves forward in whole ticks - and two permanent tests pin it. Seven tests grew from the slice in all: five for the living loop, two for the perimeter.
+
+
+PART TWENTY-SEVEN - SLICE 33: EACH REGION DEFENDS ITS OWN SET-POINT
+
+
+Slice 32 left one plain honesty in its own record: the homeostatic brake - the slow feedback that keeps learning from exploding - used a single activity target for the whole mind. Every region, however different its job, was asked to defend the same set-point. But brains do not work that way: a region that watches for danger should idle louder than one that files memories, and the guiding book describes each region defending its own average activity. The ledger carried this as the next smallest step, and slice 33 takes it.
+
+The change borrows a law konnectome already trusts. Since slice 30, the chemical bus has followed the diffuse-field law: a territory with its own local chemical level uses that level, and a territory without one falls back to the global broadcast. Slice 33 gives the brake's target the same shape. Beside the one global target there is now a target geography - a simple list that says, for any region that wants one, the activity level that region's own territory defends. A region named in the list is corrected toward its own target; a region not named falls back to the global one. An empty list means the old behaviour exactly, and a test proves that identity term for term: the old one-target step and the new geography step, given an empty list, produce the very same answer - because under the hood the old step now simply is the new step with an empty geography. One mechanism, not two.
+
+The world the living loop carries grows one new named entry for this geography, and all three of the worlds konnectome boots for its demonstrations carry it empty - present, honest, and unmarked, the same at-rest posture as the brake's zero rate beside it. A twin test shows the geography is alive in the loop: two worlds differing only in one region's own target, run four ticks each, and the marked region's incoming connection strength is pulled harder toward its own higher set-point than the global target would have pulled it.
+
+REFUSALS, SAID ALOUD. A bad geography is refused by name before any weight moves: a malformed entry, the same region listed twice, a target no region could defend (a negative number, or something that is not a number at all), and a geography that is not really a list each throw a named error. And the independent review - the ninth straight completion of the method - found one real defect, reproduced before it was fixed: asked to judge an UNBOUND value (a variable with no value at all, which in Prolog is a legal thing to pass), the brake's number checks refused it with an error message that itself carried an unbound variable - a refusal that could not name its own wrong. The fix went in once, at the shared root of all four number checks, so an unbound target, rate, or pacing factor is now refused as uninstantiated - the plain name for that wrong - and five permanent tests pin it. Fourteen tests grew from the slice in all: nine for the geography, five for the perimeter.
+
+
+PART TWENTY-EIGHT - SLICE 34: THE BRAKE'S WORK, TOLD IN THE STORY ITSELF
+
+
+Slice 33 built the per-territory brake and proved it in the tests - but it also confessed, honestly, that every world konnectome actually boots for its demonstrations still carried the brake at rest: the rate at zero, the geography empty. The one place the whole mind tells itself to a reader - the capstone's printed story - had never once shown the brake working. Slice 34 turns the brake on in that story, and teaches the story to tell its work honestly.
+
+The change to the machinery is nothing at all, and that is the point: everything this slice tells was already built and proven by the slices before it. What changes is the capstone's starting world and the chapter that narrates it. The world's shared, fallback activity mark stays at one half; the little relay region called b now carries its OWN mark of eight tenths in the target geography; and the brake's rate rises from zero to five hundredths - live, but slow, as the guiding book says this feedback is slow. Slow enough, in fact, that everything the story already claimed still happens exactly as before: the too-warm body still cools to its defended thirty-seven, the first words still ground in the conditions the mind actually lives, and every older chapter tells the story it always told.
+
+The honest part is HOW the story tells the brake's work. A glass-box story is not allowed to simply announce that the brake helped; it has to show it. So the heartbeat chapter now runs the same world TWICE: once as booted, with the brake live, and once more as a REST TWIN - the identical world with the brake put back to rest. Then it prints both final connection strengths side by side: the live run's weight, grown by the fast learning rule and pulled further upward by the brake toward b's own higher mark, and the rest twin's weight, visibly lower. The difference between the two numbers is the brake's own work - and the story is only permitted to say so because a live check inside the telling proves the live weight really does stand above the rest one. If that ever stopped being true, the story would refuse to print rather than lie.
+
+Only the capstone's world turns the brake on. The other two boot worlds - the living loop's small test fixture and the first-words world - deliberately keep their brakes at rest, because one live world is the demonstration; three would just be repetition.
+
+REFUSALS, SAID ALOUD. The independent review - the tenth straight completion of the method - worked the very lens slice 33 left behind for it: what does a check say to an unbound value, a variable with no value at all? It found one real defect in the pack this slice touches, reproduced before it was fixed: asked for a story over an UNBOUND number of ticks, the capstone's gate refused with an error message that itself carried an unbound variable - a refusal with a hole where its subject should be. The fix is the same one-line guard the house always uses, laid once at the gate's head, and two permanent tests pin it: the unbound tick count is now refused as uninstantiated (the plain name for that wrong), and a bound-but-wrong count is still refused by its own name, exactly as before. Eight tests grew from the slice in all: six for the live bound and its telling, two for the perimeter.
+
+
+PART TWENTY-NINE - SLICE 35: THE SWITCH LAID BEFORE IT IS THROWN
+
+
+Everything konnectome has built so far runs always-on: every tick computes, every tick may learn, and the mind never rests. The guiding corpus warns plainly against leaving it that way - a mind built from these parts but run always-on would be a brain denied sleep. Real brains alternate between two shifts: an ONLINE shift, awake and computing on the world, and an OFFLINE shift, asleep, in which the day's learning is replayed, strengthened, and cleaned up. The corpus calls the machinery behind this the two-process governor and the sleep-wake flip-flop, and it says the decision, once taken, is announced to every cell in the body over the same broadcast chemistry konnectome models as its neuromodulator bus.
+
+Slice 35 takes the smallest honest step toward that night shift: it lays the switch, without yet throwing it. The neuromodulator bus - the one place the architecture permits a global value, and precisely the channel the corpus names the state announcement service - now carries a GLOBAL OPERATING STATE beside its chemical levels. The state has exactly two values, online and offline, and no third: the biological switch is built to snap, spending almost no time halfway, so a request for any other value - drowsy, say, or a number - is refused aloud by its own name. A bus that has never been told a state answers ONLINE, the waking default. That default is the slice's quiet discipline: because nothing anywhere yet reads the state, every world konnectome boots behaves exactly as it did before - all four hundred ninety-four earlier tests pass untouched, and the capstone's story does not change by a word.
+
+Why build a switch nothing reads? Because the family of slices behind it needs the switch to exist first. The next steps, in order, wire the reward step into the live tick, build the two-process governor that decides WHEN to flip (a rising tiredness counter opposed by a daily clock, exactly as in the corpus), and then build the offline works themselves - the replay and the raised-rate cleanup that defeat the forgetting an always-on mind suffers. Each will be its own slice, proven by its own tests.
+
+REFUSALS, SAID ALOUD. The independent review - the eleventh straight completion of the method - worked the standing lens once more: what does a check say to an unbound value? It found one real defect, reproduced before it was fixed: asked for the state of an UNBOUND bus - a variable where the bus should be - the read silently invented a bus around an invented, unbound state, against the module's own rule that a lookup must never silently bind. The fix is the house one-line guard at the read's head, and a permanent test pins it: an unbound bus is refused as uninstantiated. The older chemical reads share the inherited pattern; the review recorded that honestly rather than fixing it speculatively, because a slice touches what it touches.
+
+
+PART THIRTY - SLICE 36: THE REWARD LEARNS ITS ADDRESS
+
+
+Part Twenty-Two told the eligibility trace: a fading memory of recent coincidence kept beside each learnable connection, so that a reward arriving a moment after an action can still find the connection that earned it. But from the day it was built, the trace had a deliberate gap: the machinery that spends a trace into a weight - the reward step - existed and was proven, yet nothing in the living loop ever called it. Every tick faded the traces and refreshed them, and the reward the drives computed each tick flowed onto the bus as dopamine - and the two never met. The build's own scoreboard carried the honest line for four slices running: the reward step still waits for its caller.
+
+Slice 36 closes that line, and the guiding corpus says exactly how. The Layers 4-5 dossier - the volume on how biological memory physically persists - describes the tagging and capture machinery: a stimulated synapse raises a short-lived local TAG (the biological eligibility trace, and the dossier says so by name), and when the cell later commits to consolidation it ships a broadcast cargo of plasticity proteins that only tagged synapses may seize. Two laws matter. Delivery is addressed: the cargo goes everywhere, but sticks only where a tag still stands. And capture CONSUMES: a served tag expires, because an address that has already been served must never capture a later, unrelated shipment.
+
+So the tick now does what the cell does. Each tick, after the fast learning, the reward the drives just declared is paid out to the standing traces: wherever the receiving region's dopamine is not zero, each trace is spent into its connection's weight - the reward finding the connections that earned it, however many ticks ago they did - and the spent tag is consumed to zero. Wherever the dopamine is exactly zero, nothing ships: the weight stands untouched and the tag stands, left to fade on its own clock, exactly as before. The payment respects the reward's geography from Part Twenty-Five: each connection captures at its receiving region's own local chemistry, the global broadcast as fallback. And the order inside the tick is chosen so no coincidence is ever counted twice: the reward pays only the traces as the tick FOUND them, before this tick's own fresh coincidence is folded in.
+
+REFUSALS, SAID ALOUD. The independent review - the twelfth straight completion of the method - worked its four named lenses, and the standing unbound-value lens paid for the fourth slice in a row. The real defect it reproduced: on the rewardless path - the commonest path there is - the new step's shortcut skipped the arithmetic that would have judged its inputs, so an unbound weight or learning rate slipped through silently where the older reward step refuses aloud. The fix judges the arithmetic on every path while keeping the rewardless answer bit-identical, and four permanent tests pin the review's findings - among them the punishment path, untested until the review asked after it: a negative reward spends the tag downward and consumes it, punishment being a shipment too.
+
+
+PART THIRTY-ONE - SLICE 37: THE NIGHT WATCHMAN TAKES THE POST
+
+
+Part Twenty-Nine laid a switch that nothing threw: the bus carries a global operating state, online or offline, and every world konnectome boots has simply run online forever, because nothing was entitled to say otherwise. The guiding corpus is precise about what IS entitled: the decision to sleep is not taken by the switch itself but by two slow processes that lean on it, formalized in sleep science as the two-process model. Process S is the sleep pressure - a debt, written chemically in the waking brain, that climbs hour by hour of waking and is paid down only by sleep. Process C is the circadian drive - a twenty-four-hour wave of alerting drive from the brain's master clock, aimed deliberately AGAINST the rising debt, which is why you feel most awake in the evening just when you owe the most sleep. The switch flips only when the debt, less the wave opposing it, crosses a threshold - and a second, lower threshold governs the morning, so the switch snaps and holds rather than chattering at the boundary.
+
+Slice 37 builds exactly that, as a new pack called two_process_governor. The governor is a small machine carrying three things: the standing sleep pressure, the position of the day's clock, and six plainly named parameters (how fast the debt rises, how fast sleep pays it down, how long a day is, how strong the day wave is, and the two thresholds). Each tick it moves both processes one step - the debt up if awake, down if asleep, never below zero; the clock forward one tick, wrapping at the day's length, with the alerting wave rising from silence at midnight to its peak at midday - and then the flip-flop judges: an awake governor falls asleep only when the debt beats the wave by the sleep threshold, a sleeping one wakes only when the debt is paid down to the wake threshold, and between the two thresholds it simply keeps doing what it was doing. That gap between thresholds is deliberate: it is the corpus's stabiliser - the finger on the switch - in its simplest form, and a governor built with the thresholds inverted is refused out loud, because such a switch would chatter.
+
+The live tick now seats this governor the way a house seats a night watchman. At the end of every tick - after the body has responded, before the record is written - the loop reads the current state off the bus, lets the governor take its step, and announces the governor's selection back onto the bus for every subscriber. The first legitimate thrower of the switch is on post. With the default parameters - a day of twenty-four ticks, read as one tick per hour - the governor lives a properly proportioned day: roughly eighteen ticks awake, then a consolidated night, then morning, with exactly two transitions where a chattering switch would show many. And still, deliberately, nothing READS the state: the mind behaves identically online and offline this slice, proven by a twin telling in which a fast-flipping watchman and a slow one produce bit-identical bodies, weights, traces, and averages. The offline works - the replay and cleanup that will make the night mean something - are the next slice's story, and they will find the lights already being turned off on schedule.
+
+REFUSALS, SAID ALOUD. The independent review - the thirteenth straight completion of the method - worked its four named lenses, and the standing unbound-value lens paid for the fifth slice in a row. The real defect it reproduced: asked to build a governor whose day length was a hole - an unbound variable where the number of ticks should be - the check fell through a silent test into the wrong refusal, one that carried the hole itself instead of naming it uninstantiated. The fix is the house one-line guard ahead of the test, and a permanent test pins it, alongside a second pin recording an honesty: a hand-built governor with a fractional clock position - unreachable through any public door - still dies out loud in arithmetic's own voice, and that loudness is relied upon, not accidental.
+
+
+PART THIRTY-TWO - SLICE 38: THE NIGHT CREW TAKES THE DARK HOURS
+
+
+Part Thirty-One put a watchman on post who called the hour every tick - and nobody in the house listened. The lights stayed on all night. Slice 38 is the night crew arriving: the first part of konnectome that actually READS the switch the watchman throws, and does something different because of it.
+
+What does a sleeping mind do? The guiding corpus is emphatic that sleep is not idleness. The deepest stage of sleep runs what the corpus calls the flagship computation of the whole volume: it takes the memories the day collected and writes them properly into long-term storage. And it faces a famous trap while doing it, called catastrophic forgetting - the failure in which teaching a system something new erases what it already knew. The brain's solution is beautifully simple: do not replay only the new memories. Replay the old ones INTERLEAVED with the new, alternating, so that storage is retrained on a balanced mixture rather than on today's lesson alone. Alongside this, deep sleep runs a second job called renormalisation: turning down the day's accumulated connection strengths so the system does not simply grow louder forever.
+
+Slice 38 builds both, in a new pack called offline_consolidation. Through the day, every waking tick now REMEMBERS - it files away a snapshot of which parts were active - and that growing pile is the mind's record of its day. When the watchman calls the night, the tick runs a different program entirely. The sensory gate closes: no drives are read, no actions are proposed or released, nothing new is learned, and the body lies still, which is the corpus's own atonia of sleep. Instead the night crew works. It splits the day's memories into an older half and a newer half, alternates them into one interleaved batch, replays that batch across the connections, and then applies the renormalising turn-down at a raised rate. The replay comes first and the turn-down second, and that order is the mechanism, not a detail.
+
+With the default settings, the whole mind now lives a properly proportioned day: eighteen ticks awake, then eight ticks of offline works, then morning - the corpus's sixteen-and-eight, lived by the entire loop rather than by the watchman alone.
+
+THE EXPERIMENT AT THE HEART OF IT. The corpus's claim about interleaving is not asserted here; it is tested, as a controlled experiment with a twin. One small network with two connections - an old one it knew well, a new one it learned today - is given two different nights, ten times over, identical in every way except WHAT gets replayed. The twin that replays only today's memories loses the old connection almost entirely: it keeps barely a third of what it knew. The twin that replays old interleaved with new keeps nearly two thirds - well over half again as much - while BOTH twins successfully install the new learning. Read that carefully, because the honesty matters: both twins end up below where the old connection started, because the nightly turn-down affects everything. The claim is a comparison, not a promise that nothing is lost. Interleaving DEFENDS what it refreshes.
+
+WHAT THE REVIEW CAUGHT, AND WHY IT IS WORTH TELLING. The independent adversarial review - the fourteenth in a row - found seven real defects this slice, more than any before it, and one of them changed the design rather than merely patching it. Measured end to end, the night was making the connection more than TEN TIMES stronger, against a target of one half - the exact opposite of the renormalisation it was supposed to perform. The cause: the replay dose was being paid once per remembered pattern, so the longer the day, the more the night strengthened, while the turn-down remained a single fixed step. The two forces were set against each other but measured in different units, so one could never balance the other. The fix makes the replay dose belong to the night rather than to the memory count, and the multiplier fell from ten and a half to one and a sixth. Awkwardly, the first version of the experiment above had asserted the inflated result as if it were the finding; that assertion was rewritten around the honest measured numbers, and this is recorded in the ledger rather than quietly corrected. The standing unbound-value lens also paid for the sixth consecutive slice, six times over - most strikingly, a connection with a hole where one of its endpoints should be was silently having that hole FILLED IN from the first remembered pattern, inventing a connection nobody had declared and then strengthening it. All seven are fixed at their roots and pinned by eleven permanent tests, among them one that exists purely because a single tick was found to run both the day program and the night program at once.
+
+WHAT WAS DELIBERATELY NOT BUILT. The corpus also describes dreaming sleep, which re-weights emotional memories, and the roughly ninety-minute wheel that orders the sleep stages across a night. Both chapters were read and neither was built. konnectome's night is one program, not yet a sequence of stages, and saying so plainly is the house rule: a gap that is a decision is written down as a decision.
+
+
+PART THIRTY-THREE - SLICE 39: EVERY CONSTRUCT BECOMES A HYBRID AUTOMATON
+
+
+This part describes a slice that changes nothing about what konnectome DOES, and is still one of the more consequential things the build has done. It is worth understanding why.
+
+A CONSTRUCT, so far in this tutorial, has been a named part of the mind with a rule attached: this one is a clock and adds one every tick, that one is a relay and passes what it is given scaled by its gain. The guiding corpus says that is the wrong shape, and it says so about three hundred and eighty-six times - once for every cell type it catalogues. In the corpus, a component does not have A rule. It has a small list of named OPERATING REGIMES it can be in, called MODES, and while a mode holds, the component behaves like a different machine. The corpus is careful to distinguish two words that ordinary speech runs together: STATE is the continuous, instantaneous condition of a thing (how charged it is right now), while MODE is the discrete regime it is operating under (whether it is relaying steadily or firing in bursts).
+
+And the corpus does not merely describe this; it hands over an engineering formalism for it, in the same words, beside every one of its layers. The formalism is called a HYBRID AUTOMATON - a term from control engineering for a machine that has both continuous quantities and discrete modes - and it has exactly four parts. THE MODE REGISTER: the list of modes this component can be in, each named formally, given a vivid coined name, and glossed in one clause. THE PER-MODE TRANSFER FUNCTIONS: for each mode, the rule that holds while that mode is current. THE TRANSITION TABLE: the rows saying what triggers a change from one mode to another, how long it takes, and - crucially - WHO threw the switch, the component itself or something above it. THE FAULT REGIMES: the ways the component can break, which are WATCHED and warned about, never listed as modes, because a mode is something a healthy system actually uses.
+
+Slice 39 builds that term, in a new pack called mode_register, and then does something that sounds anticlimactic and is not: it gives every construct konnectome already has a register containing exactly ONE mode.
+
+WHY A REGISTER OF ONE IS NOT A CONSOLATION PRIZE. This is the heart of the slice, and the corpus states it directly, three separate times, in the phrase "a register of one, stated proudly". The corpus counts registers, and the counts are small: at the cell level, out of three hundred and eighty-six components, nineteen have one mode, a hundred and ninety-six have two, a hundred and forty-nine have three, twenty-two have four, and none have five or more. The corpus then says what the number MEANS: the length of a register is a statement of what the system trusts that component to decide. Two modes says the system trusts this part to relay or to veto, not to decide. Four says the part is itself a decision-maker. One says: this part does its one job, faithfully, and is not asked to choose. So konnectome's single-rule constructs were never a shortcoming to be fixed. They were already faithful models of the simplest kind of component - and this slice is the moment konnectome says so out loud, in the corpus's own vocabulary, instead of leaving it as an unexamined default.
+
+WHAT ACTUALLY CHANGED IN THE CODE. Each of konnectome's six construct kinds now has a register of one, and each mode carries the corpus's three fields. The clock's mode is the free-running clock, coined the Metronome. The copy's is the committed copy, the Echo. The hold's is the held value, the Kept Reading. The graph's clamped source is the clamped input, the Clamped Window; the plain relay is the tonic relay, the Faithful Relay; and the bus-modulated relay is the modulated tonic relay, the Listening Relay. The two engines that run constructs - the heartbeat and the connection graph - no longer look at a construct and apply its rule. They ask the construct's register which mode it is in, look up the rule filed under that mode, and apply THAT. Today the answer is always the same rule, so nothing moves. Tomorrow, when a mode can change, everything is already wired to notice.
+
+HOW WE KNOW NOTHING MOVED. The claim was not trusted; it was proved twice. First as a LAW inside the tests: a rule filed under a construct's mode is the construct's own rule term, checked across all six kinds, so the round trip is an identity by construction rather than by luck. Second by measurement: a copy of the previous version of konnectome was checked out side by side, and both were run. The capstone story - the whole mind booted, lived, and telling itself in its own records - came out byte for byte identical, fingerprints and all. A hundred-and-fourteen-line probe exercising forty heartbeat runs, fifty-two network runs, twenty bus-modulated steps and both of the refusal messages was run in both copies and came out identical to the last digit.
+
+THE ONE THING THAT DID CHANGE, AND WHY IT IS TOLD RATHER THAN BURIED. The probe found exactly one path where the two versions differ, and it is a path no working konnectome can reach: a construct whose KIND was left as an unfilled blank. On the old version, that blank matched all three of the heartbeat's rules in turn, so ONE construct produced THREE contradictory values and the mind's state silently grew, listing the same construct three times with three different numbers. On the new version it is refused out loud at the door, because the register's lookup refuses a blank before anything can bind it. That is a real defect, closed as a side effect - and the house rule is that a behaviour change, even an improvement, is declared and not slipped in. A second, related hole was found and deliberately NOT fixed, so that it is a decision rather than an oversight: the heartbeat still drops an UNKNOWN construct kind in silence, where the network refuses one by name. It is written in the ledger for the slice that touches that code on purpose.
+
+WHAT THE REVIEW CAUGHT. The independent adversarial review - the fifteenth in a row - found one real
+defect in the new code, and it is a neat illustration of two of the four standing lenses being the
+same lens from different angles. A mode name written into a transfer row was checked to be a real
+name before anything looked it up. A mode name written into a TRANSITION row was not. So a caller
+who left a transition's endpoints blank did not get told off; the blanks were quietly FILLED IN by
+the very check that was supposed to be validating them, with whichever mode happened to be listed
+first, producing a transition nobody had written. Two things travelling under one rule, checked in
+two different places, and only one of the places actually checking. The repair moves the check into
+the single place both routes pass through, and three permanent tests hold it there. The review also
+found two older holes in the heartbeat and neither was fixed, because a slice that promises to
+change nothing must not change two other things on the way past; both are written into the ledger
+for the slice that visits that code on purpose.
+
+A NAMING QUESTION, CLOSED. konnectome had carried a warning for several slices that its own use of the word "mode" - for whether a connection is directed or broadcast - would collide with the corpus's meaning. This slice checked, and there was nothing to rename: no such flag exists in konnectome's code, nor in the cousin data structure. So the collision was recorded as a decision instead of a rename. The word MODE now belongs to the corpus's meaning throughout konnectome, the gate archetype's existing use of it was already correct and stays, and any future directed-versus-broadcast flag will be called TOPOLOGY.
+
+WHAT COMES NEXT, so a reader knows this is a foundation and not a finished room. The gate archetype already has a genuine TWO-mode register hiding in plain sight - open and closed - and the next slice writes it out properly, with a real transition table. After that: letting a broadcast throw a transition, so one announcement changes many constructs' modes at once, which is how the corpus says coordination actually happens; a supervisor channel so faults can be watched rather than mislabelled as modes; and eventually replacing the mind's plain awake-or-asleep switch with a proper named global state that assigns modes to everything below it.
+
+
+PART THIRTY-FOUR - SLICE 40: THE GATE GETS A REAL REGISTER OF TWO
+
+
+The previous part described a slice that gave every construct a register of exactly ONE mode, and explained why that is a proud statement rather than a consolation prize. This part is what happens when a register finally has something to choose between.
+
+WHY THE GATE, AND WHY NOW. Of everything konnectome had built in thirty-nine slices, exactly one construct already behaved the way the guiding corpus says components behave: the GATE. A gate is a stiff switch. It is either open or closed, it flips only when a switching drive exceeds a threshold, and below that threshold it simply holds. Two named regimes, and a rule for moving between them. The deep read of the corpus that guides this whole family of slices calls the gate "the natural seed of the whole design" and adds a warning: do not rename its vocabulary, because the words "open" and "closed" were already right.
+
+But the gate's two modes lived only in the code that flipped between them. There was no list saying "this construct can be in these two regimes". There was no statement of what the gate DOES while open as opposed to while closed - the old gate rule computed a next mode and nothing else. And there was no table saying what triggers a flip, how long it takes, or who threw the switch. Slice 40 writes all three of those out.
+
+WHAT A REGISTER OF TWO NOW CONTAINS. The gate holds two entries, each in the corpus's own three-field format - a formal name, a vivid coined name that always begins with the word "the", and a one-clause gloss:
+
+    open - the Open Sluice - passes what arrives at it onward, unchanged, for as long as
+      the gate stands open.
+    closed - the Dropped Shutter - blocks what arrives at it, passing nothing onward, for
+      as long as the gate stands closed.
+
+Beside the register sits the block the corpus calls the PER-MODE TRANSFER FUNCTIONS: one rule for each mode, saying what the construct actually computes while that mode holds. And this is the part that a register of one could never show. With one mode, the "rule for the current mode" is just the construct's only rule, and the whole apparatus is a promise about the future. With two modes, the two rules genuinely differ, and you can watch them differ: send four units into an open gate and four come out; send four units into a closed gate and nothing comes out. Same predicate, same input, different mode, different machine. That is the corpus's central claim about components - while a mode holds, the part behaves like a different machine - and slice 40 is the first place konnectome can demonstrate it rather than describe it.
+
+THE TRANSITION TABLE, WRITTEN OUT PROPERLY. The corpus insists every transition row carry four things: what TRIGGERS it, its DIRECTION (from which mode to which), its TIMESCALE, and its AGENCY - who threw the switch. Agency is the field the corpus says must never be omitted, because it is the corpus's answer to who governs the machine. The gate's table now has two explicit rows. A supra-threshold switching drive closes an open gate. The same drive opens a closed one. Both happen within one tick. And both are marked self_selected, because nothing above konnectome's gate throws it yet - the slice that lets a broadcast throw a transition is the next one, and marking the rows honestly today is what makes that change visible tomorrow.
+
+AN HONEST DIFFERENCE FROM THE BIOLOGY, DECLARED RATHER THAN HIDDEN. The corpus's nearest relative of konnectome's gate is a motif it calls the Either-Or Latch: a switch with two self-holding states. But the biological latch is HYSTERETIC - it turns on at one boundary and turns off only at a lower one, which is what makes it sticky and hard to rattle. konnectome's gate compares one drive against ONE threshold in both directions, so its two rows honestly share a single trigger. That is a symmetric toggle, not a sticky latch. Slice 40 does NOT invent the second threshold, for two reasons: the corpus itself says the stickiness comes from a separate STABILISER construct that is "not part of the switch", and that stabiliser is already scheduled as its own later slice; and this slice promised to change no number. So the gap is written down in the ledger as a known difference rather than smoothed over in the code. A build that quietly fixes things it did not promise to fix cannot be trusted when it says nothing moved.
+
+A DISTINCTION THIS SLICE HAD TO SETTLE. When a mode never changes, it belongs to the KIND of construct: every clock in konnectome is in the free-running-clock mode, always, so you can look the mode up by kind. The moment a mode CAN change, that stops being true - two gates of the same kind stand in different modes at the same instant. So a gate's current mode now arrives as an argument, and the register is built around it. Everything else - the two entries, the two rules, the table, the fault block - still belongs to the kind and is written once.
+
+WHAT IS DELIBERATELY STILL EMPTY. The fault block. The corpus is emphatic that the ways a component BREAKS are not modes: they are watched by supervisor processes that publish warnings, never listed as regimes the component operates in. konnectome has no supervisor channel yet, so the gate's fault block is present and empty, and konnectome will not admit a fault to any register until the watcher exists. That is a decision, recorded, not an oversight.
+
+HOW WE KNOW NOTHING MOVED. The same way as last time, because it is the only way that ever finds anything. A copy of the previous konnectome was checked out side by side, and a probe was run in both: the gate over every combination of its two modes with eleven drives and eleven thresholds, the dispatch over a coarser grid, and the five archetypes this slice did not touch - relay, integrator, oscillator across a whole cycle, attractor, comparator. Three hundred and twenty-one lines, byte for byte identical. The capstone story - the whole mind booted and telling itself in its own records - came out identical too, all one hundred and twelve lines, fingerprints included.
+
+AND THE FOUR THINGS THAT DID CHANGE, TOLD RATHER THAN BURIED. The probe found four paths where the two versions differ, and all four are malformed calls no working konnectome makes. Ask the old gate what it does when the mode it is standing in is left BLANK and the drive is above threshold, and it answered as though the gate had been open, returning "closed" and writing the mode "open" into the caller's blank - a mode belonging to nobody. Ask it the same thing below threshold and it answered by pointing its answer at the same blank. Ask it about a mode called "ajar", which the gate does not have, and below threshold it cheerfully answered "ajar"; above threshold it just failed, silently. All four now refuse out loud, by name. This is the second slice running where measuring a promise of no change found a real defect that believing the promise would have missed.
+
+WHAT THE REVIEW CAUGHT, IN NEW CODE. Three findings, all in code this slice had just written, all fixed inside the slice. The lookup that reads a departure out of the transition table was guarded at each caller rather than at the lookup itself - the exact shape of the defect the previous slice's review found, one slice later, which is why a lens is carried forward rather than retired. The trigger's name was spelled twice, once in the table and once in the search over it, so renaming it in one place would have made the gate fail in silence. And the closed gate's rule never looks at its input, so a blank arriving at a closed gate would have been answered with a confident zero; the guard now sits in the one place both rules pass through.
+
+A NOTE FOR A READER WAITING ON THE PANEL. The owner has asked for a live control panel showing every mode of every construct at every level at once. That is a later deliverable and is not built here. What these slices owe it is that a construct's current mode must be an ordinary value anyone can read, never a secret inside the construct that you can only learn by running it. Slice 40 pays that debt at the gate, and there is a test named for it: a watcher holding nothing but a gate's mode name can build the gate's register and read back both the mode and the rule in force, without running the gate at all.
+
+
+PART THIRTY-FIVE - SLICE 41: THE BUS THROWS A TRANSITION
+
+
+The previous part gave the gate a real register of two modes and left a promise hanging in plain sight: every row of its transition table was marked self_selected, because nothing above the gate could throw it yet. This part is where something can.
+
+WHAT PROBLEM THIS ACTUALLY SOLVES. Imagine a mind with thousands of parts, each of which can be in one of a few operating regimes, and imagine you need all the relevant ones to change regime together - the way a body switching from resting to running does not negotiate part by part. The obvious engineering answer is a controller: something that knows every part, decides for each of them, and tells each one what to be. The guiding corpus says, twice and emphatically, that this is NOT how the biology does it. There is no formula that derives a child part's mode from its parent's. What there is instead is ONE BROADCAST, written once, read by many, with every reader deciding for itself what that broadcast means for it. konnectome already owned the broadcast - the neuromodulator bus, its one permitted global value. What it did not own was a broadcast that carries a MODE rather than a chemical level. Slice 41 is that channel.
+
+WHAT WAS ADDED, IN PLAIN TERMS. The bus already carried three kinds of thing: a chemical level for everyone, a chemical level for one territory, and the global operating state (awake or asleep). It now carries a fourth: a MODE THROWN AT A CONSTRUCT KIND. One write says, in effect, "all gates: be closed". Every gate then reads that for itself and applies it through its own register. There is no controller, no list of who may be commanded, and nothing that reaches inside a construct.
+
+THE DECISION THIS SLICE HAD TO MAKE, AND WHY IT IS WRITTEN DOWN SO CAREFULLY. When something above a part tells it to change regime, is that an ORDER or a NUDGE? Does the broadcast SET the part's mode outright - a command - or does it merely make one mode easier to fall into by shifting a threshold - a bias? This matters enormously, because everything built afterwards inherits the answer. And here is the honest situation: the guiding corpus supports BOTH readings, sometimes in the same volume. One passage keeps a component in a particular regime, set from above, which is a command. Another biases a component toward a regime, which is a nudge. The corpus does not decide.
+
+So konnectome decided, and the decision is konnectome's own and is recorded as such: A THROWN MODE IS A COMMAND. It sets the mode; it does not shift a threshold.
+
+Three reasons, in plain language. FIRST, konnectome already has a nudge. Its modulated relay reads a chemical level off this very bus and scales its gain up or down accordingly - that IS a bias, built and running for many slices now. If the mode throw had also been a bias, konnectome would own two ways to nudge and no way to command, and two genuinely different operations would stay tangled together on one channel. Choosing command is what separates them. SECOND, a command costs nothing invented and a bias costs at least one invented number: a bias has to shift a threshold BY some amount, and the corpus gives konnectome no such amount at this level, so it would have to be made up - in a family whose standing rule is that no number in the code is konnectome's invention. THIRD, command is the choice you can walk back. A bias channel can be added later alongside this one, as a second kind of row in the same table, and nothing built on the command has to move. The reverse is not true.
+
+AND WHAT HAPPENS WHEN THE PART AND THE BROADCAST DISAGREE. A gate might be about to flip itself, on its own drive, at the same moment a broadcast is telling it to stay put. Which wins? konnectome's rule: THE BROADCAST WINS while it stands. Again the corpus shows both patterns - somewhere a threat signal simply overrides a feeding programme, somewhere else two signals are weighed and a compromise computed - and states no general law. konnectome takes the override, and for a stated reason of its own: it is the rule you can READ without running the construct, and the owner has asked for a live panel showing every construct's mode at once, which is only possible if a mode can be read rather than simulated. Weighing and compromising is written down as a thing a later slice might need, not as a thing this slice denies.
+
+THE THROW IS A ROW, NOT A BACK DOOR - and this is the tidy part. The previous slice made the gate's transition table the single authority on which mode follows which. It would have been easy to bolt the broadcast on beside that: an override flag, a second path into the gate. Instead the throw is simply TWO MORE ROWS in the same table, differing from the old rows only in the AGENCY column - the corpus's own field for "who threw this switch", which until now read self_selected on every row konnectome had ever written and now reads broadcast_thrown on two of them. The pleasant consequence: A CONSTRUCT THAT DOES NOT DECLARE SUCH A ROW SIMPLY CANNOT BE COMMANDED, and it says so through its own register, rather than through a list kept somewhere else of who is allowed to boss whom.
+
+THREE KINDS OF STANDING STILL, WHICH ARE NOT THE SAME THING. A gate reading a channel nobody has written stands where it stands - and silence is given a name of its own, no_mode_thrown, so a reader can never mistake "nothing was said" for an instruction. A gate told to be the mode it is ALREADY in also stands where it stands, with no transition at all; that sounds pedantic and is not, because it is what makes a standing broadcast safe to read on EVERY tick rather than only on the tick it was written. But a gate told to be a mode its own register does not contain does not stand still: it refuses, out loud, by name. Three silences would have been a bug; two silences and a refusal is a design.
+
+AND A COMMAND ENDS. A throw can be withdrawn, and when it is, the kind gets its own self-selection back. That boundary matters: without it, the first broadcast would have taken a construct's autonomy away permanently, which is a much larger claim than this slice makes.
+
+THE ONE THING THE REVIEW CAUGHT, AND IT IS WORTH UNDERSTANDING BECAUSE IT WILL RECUR. The previous slice's code found a departure by taking the first row in the table that left the current mode. With only one kind of row that was perfectly correct. Add a second kind, and it is STILL correct - purely because the new rows happen to be written after the old ones in the file. It would silently become wrong the day anybody reordered the list. That is not correctness; that is luck. The lookup now says which agency it wants, so the gate's own flip asks for the gate's own row by name. The general lesson, worth carrying: A LOOKUP THAT IS RIGHT BECAUSE OF THE ORDER THINGS WERE WRITTEN IN IS NOT RIGHT YET, and the moment a second value appears in a column your code has been ignoring is the moment to start reading that column.
+
+HOW WE KNOW NOTHING ELSE MOVED. The same way as always. A copy of the previous konnectome was checked out beside this one and one probe run in both - the gate across every combination of two modes, eleven drives and eleven thresholds; both of its rules over a range of inputs including negative ones; the departure reader; the untouched relay, integrator and comparator over their own grids; and the rule resolver over seven kinds of construct. Three hundred and eighty-seven lines came out, and three hundred and eighty-six were identical. The single line that differs is the printed transition table itself, which now has four rows instead of two - which is the slice. The capstone story, the whole mind booted and telling itself in its own records, came out identical, all one hundred and twelve lines.
+
+A NOTE FOR A READER WAITING ON THE PANEL. The live panel showing every mode of every construct at every level at once is still a later deliverable and is still not built here. But it got easier again. Before this slice, a watcher could read what mode a construct is standing in. Now a watcher can also read, from the bus alone and without running anything, what is being COMMANDED of a whole kind of construct. The panel's most interesting arrow - a broadcast throw travelling down through the levels as it happens - is for the first time readable from both ends.
+
+
+PART THIRTY-SIX - SLICE 42: THE SUPERVISOR, AND WHY A FAULT IS NOT A MODE
+
+
+For three slices konnectome's constructs have carried a block labelled "faults" that was deliberately left empty. This part is where it gets filled, and the reason it waited is more interesting than the code.
+
+THE DISTINCTION THE WHOLE SLICE RESTS ON. A mode and a fault look almost the same from a distance. Both are named conditions a part can be in. "Open" is a mode of a gate; "stuck" is a fault of one. Why not just put them in the same list?
+
+Because of what the system is allowed to DO about each.
+
+A MODE HAS A RULE. While the gate is open, it runs the open gate's law: what arrives leaves. While it is closed, it runs the closed gate's law: nothing leaves. The behaviour is designed, deliberate, and correct.
+
+A FAULT HAS NO RULE, and never will. "Stuck" is not a way the gate is supposed to work; it is a boundary the gate was never designed to cross. There is no correct behaviour for being stuck. The only correct response is to TELL SOMEBODY WHO CAN ACT.
+
+Now the consequence, which is why the guiding corpus forbids the confusion by name. If a fault were put into the mode register as though it were a mode, the system would acquire a designed behaviour for being broken - and would then run that behaviour, quietly and forever, exactly as if nothing were wrong. A machine with an official way to be broken never reports being broken. That is the failure this rule exists to prevent.
+
+WHAT WAS BUILT. A new pack called supervisor: a watcher. It reads a construct's fault block, compares readings from watchdogs against the limits those watchdogs supply, and publishes what it finds on a channel of its own. It cannot move anything. It has no way to change a construct's mode, no row in any transition table. It watches and it says. A supervisor that could move a construct would be a controller, and konnectome has spent three slices establishing that constructs move only by rows of their own registers.
+
+AND THE RULE IS NOW A REFUSAL RATHER THAN A HABIT. Ask the supervisor to watch a register in which a fault has been named after one of the register's own modes, and it refuses, out loud, naming the offending name. For three slices konnectome honoured the corpus's directive by remembering it. Now the code enforces it.
+
+THREE ANSWERS, NOT TWO, AND THE THIRD IS THE IMPORTANT ONE. When the supervisor examines a fault regime, there are three possible outcomes, not two. WARNED: a watchdog reported, and the reading crossed the limit. CLEAN: a watchdog reported, and it did not. UNWATCHED: nobody reported at all.
+
+It would have been easy to build only the first two, and it would have been a trap. A caller receiving an empty list of warnings cannot tell the difference between "we checked, all is well" and "nobody was looking". The second is far more dangerous than any warning, and a two-answer design hides it inside the good news. So an unwatched regime is named as unwatched, with the name of the watchdog that failed to report. SILENCE HAS TO SAY WHICH KIND OF SILENCE IT IS.
+
+WHERE THE GATE'S TWO FAULTS CAME FROM. Not from imagination. The corpus's nearest relative of konnectome's gate - the Either-Or Latch, the same entry slice 40 checked the gate against piece by piece - names exactly two ways such a switch fails, and konnectome takes both and invents no third. It can fail by never settling, flipping back and forth forever: OSCILLATION. And it can fail the opposite way, by settling and then never leaving: STUCK SWITCH. Neither of those is a mode, and the supervisor checks that they are not.
+
+AND KONNECTOME STILL INVENTS NO NUMBERS. The supervisor is never told how much oscillation is too much. Each reading arrives carrying its own limit, supplied by whoever owns the watchdog. The supervisor compares and reports. This is the same discipline the whole family follows: the corpus gives konnectome no threshold here, so konnectome does not make one up.
+
+WHAT IS HONESTLY STILL MISSING, said plainly. Nobody is COUNTING the gate's flips yet. The supervisor judges readings it is handed; the process that produces those readings by watching a gate over time does not exist. So today konnectome has a watcher and no watchdogs feeding it. That is the next thing this pack needs, and it is written down rather than glossed over - which is why, if you ask the supervisor about a construct nobody has watched, it does not answer "fine". It answers "nothing was watched".
+
+HOW WE KNOW NOTHING ELSE MOVED. A copy of the previous konnectome was checked out beside this one and the same probe from the last slice was run in both, unchanged. Three hundred and eighty-seven lines came out of each, and this time all three hundred and eighty-seven were identical - a cleaner result than last slice, which had one honest divergence. The capstone story came out identical too.
+
+
+PART THIRTY-SEVEN - SLICE 43: GIVING THE TICK A NAME IN SECONDS
+
+
+This part is about a number, and about why writing one number down carefully was worth a whole slice.
+
+THE PROBLEM, IN ONE SENTENCE. konnectome counts in TICKS and the book it is built from counts in SECONDS.
+
+A tick is konnectome's heartbeat: one round in which every construct works out its next value from the current one, and then all of them change together. It has no length. It is an ORDINAL - first tick, second tick, third tick - in the same way that the pages of a book are numbered without any page being a particular number of centimetres thick.
+
+The guiding corpus, on the other hand, is describing a real brain, and a real brain runs in real time. So its numbers are all wall-clock numbers: a thought breaking through into awareness in about three hundred milliseconds; something being admitted to the mental workspace in the low hundreds; a memory nobody rehearses fading over seconds; a mental blackboard wiped in under a second when you switch tasks.
+
+Those two ways of counting cannot meet, and until they do, none of those numbers can be built. If a later slice wants to say "this fades after three hundred milliseconds", it has to know how many ticks that is - and nobody had ever said.
+
+WHY NOBODY COULD LOOK IT UP. This is the part worth understanding, because it is the shape of a whole class of problem. The corpus cannot answer this question. Not because it is vague, and not because we have not read carefully enough, but because IT IS NOT THE KIND OF QUESTION THE CORPUS CONTAINS. The corpus describes a continuous system - a brain does not tick - so it has no opinion whatever about how often a synthetic mind should update itself. The question only exists because konnectome chose to build a ticking machine.
+
+So this is konnectome's own decision, and the rule in this build is that a decision the corpus does not supply gets WRITTEN DOWN, with reasons that are konnectome's own, in the ledger, where it is numbered and cannot be quietly re-argued later. It is the second such decision, so it is DECISION-2.
+
+WHAT WAS DECIDED. ONE HUNDRED TICKS TO THE NOMINAL SECOND. One tick is ten nominal milliseconds.
+
+THE FIRST REASON: EVERY CORPUS NUMBER LANDS EXACTLY ON A TICK. Three hundred milliseconds is thirty ticks. One hundred is ten. One second is one hundred. Half a second is fifty. None of them lands between two ticks, so nobody ever has to round.
+
+That matters more than it sounds. konnectome has a standing promise that no number inside a pack is konnectome's invention - every constant has to come from the corpus. Rounding breaks that promise quietly. If someone asks for a duration and gets handed a rounded tick count without being told, then a number that was the corpus's has become konnectome's, and nobody decided anything; it just happened. A rounding is an invented number wearing a small coat.
+
+THE SECOND REASON: IT IS THE COARSEST RATE THAT DOES THAT. Which sounds like settling for less, and is actually the honest choice. The corpus states these quantities to about a tenth of a second. A tick of one millisecond would also make everything land exactly - and it would invite later slices to write durations far more precise than anything the source could justify. Do not claim accuracy you do not have.
+
+THE THIRD REASON: IT CAN BE TAKEN BACK. Nothing in the running machine moves. The tick is still an ordinal, nothing sleeps, nothing looks at a real clock, and the demonstration story came out identical to the last slice's, character for character. And because every duration in konnectome must pass through ONE piece of code to become ticks, a future session that wants a different rate changes one line and re-reads one test, instead of hunting across thirty-one packs.
+
+AND THE PART WITH TEETH: A DURATION THAT DOES NOT FIT IS REFUSED OUT LOUD. Ask konnectome how many ticks five milliseconds is, and it does not answer "one". Five milliseconds is half a tick, and there is no honest answer, so it refuses and names the duration that caused the refusal. The caller then has to decide in the open, where the decision can be recorded. This refusal is the real content of the slice. A convention written in a comment is a sentence people forget; a convention that refuses is one the code keeps for you.
+
+WHAT THIS DELIBERATELY DOES NOT MEAN, because it would be easy to over-read. konnectome is NOT now a real-time system. A tick is not ten milliseconds long. Ten milliseconds is what a tick is CALLED when somebody needs to state a duration - and there is a test whose only job is to prove the heartbeat did not change: run the clock five ticks and it still reads five, not five hundred.
+
+ONE HONEST DISAGREEMENT WAS CREATED AND WRITTEN DOWN RATHER THAN HIDDEN. Deep inside konnectome there is a recorder that stamps every tick with a timestamp, and it advances that stamp by one second per tick. Under the new convention a tick is ten milliseconds, so those stamps now run a hundred times fast. Nothing is wrong today, because that stamp is only used to give each tick a distinct, repeatable name - nothing ever subtracts one from another. But the day somebody reads that trace as a timeline they will get an answer a hundred times too big, and they will get it silently. So it is recorded as an open observation, with the cost of fixing it stated too: changing that stamp would change the identifier of every record konnectome has ever minted. That is a real price, and this slice did not pay it on a hunch.
+
+WHY THIS SLICE JUMPED THE QUEUE. It was not next in line. It moved to the front because the same missing number had turned up from three completely unrelated directions - twice while reading the corpus beneath two different themes, and once when the previous slice discovered that a watchdog cannot watch "over a window of time" in a system with no unit of time. When a small item arrives from a third independent direction, it has stopped being an item on a list and has become something everything else is waiting on.
+
+
+PART THIRTY-EIGHT - SLICE 44: THE FINGER ON THE SWITCH
+
+
+A gate is a switch, and a switch has a problem nobody notices until it starts happening.
+
+THE PROBLEM IS CALLED CHATTER. Imagine a light switch that flips whenever the push on it passes some amount. Now imagine the push hovering right around that amount, wobbling slightly. The switch flips. And flips back. And flips again, over and over, doing nothing useful and burning itself out. A real system in that state is not deciding anything; it is vibrating.
+
+THE FIX IS CALLED HYSTERESIS, and it is a word worth learning because the idea is everywhere once you see it. It means that leaving a state costs more than staying in one. Your home thermostat does this: it turns the heat on when the room drops to nineteen degrees and turns it off only at twenty-one, rather than switching at twenty exactly. The two-degree gap is what stops it clicking on and off all afternoon.
+
+The guiding corpus describes konnectome's gate this way too. It calls it a latch whose two modes are simply its two self-holding states, and says that over a range of inputs there are two stable answers and which one you get depends on what happened before. Its plainer sentence is the one to remember: switching on takes more input than keeping it on.
+
+WHAT KONNECTOME ACTUALLY HAD, and this was written down honestly four slices ago as the eighth observation. konnectome's gate compared one drive against ONE number, in both directions. The same push that closed an open gate opened a closed one. That is a plain threshold switch, not a latch, and the pack's oldest test - the one named "gate resists flipping" - only ever demonstrated that a push too small to matter does not flip it, which is true of any switch and is not hysteresis at all.
+
+WHY IT WAS NOT SIMPLY FIXED THERE AND THEN, which is the interesting part. The obvious repair is to put a second number inside the gate. The corpus says not to, in one sentence: this is a stabiliser, not a switch, so it has no poles of its own. In other words, the stickiness is supposed to be a SEPARATE THING that publishes a value the switches read - not a constant hidden inside each switch. Burying a second number in the gate would have looked like a fix and would have been a deeper mistake. So the gap was recorded and left open, with the closer named, until the separate thing could be built. This slice is that thing.
+
+WHAT THE STABILISER IS. A new pack, and the whole of it is one number and the rules for handling it. The number is called the stability bias, and in one sentence it is HOW FAR APART THE TWO BOUNDARIES SIT. Zero means one boundary and no stickiness. A larger value means a wider band in which the switch simply holds still.
+
+AND IT TRAVELS AS A LEVEL, WHICH IS A DECISION THIS BUILD MADE THREE SLICES AGO AND DID NOT HAVE TO MAKE AGAIN. konnectome's bus can carry two kinds of thing now: a level, which nudges, and a thrown mode, which commands. The previous decision said plainly that a bias is a level. A stability bias is a bias. So it goes on the bus as a level, and nobody had to reopen the argument. That is what writing decisions down is for.
+
+THE SHARPEST WAY TO SAY WHAT A BIAS IS. Since slice 40, a konnectome construct changes mode ONLY because of a row in its own table, and every row names who moved it. The stabiliser appears in no such row, in no such table, anywhere. It cannot move anything. All it does is change where a boundary sits, and then the construct's own rule fires, or does not, entirely by itself. There is a test whose whole job is to check that the stabiliser's name is absent from every table - a promise kept by proving a negative.
+
+THE QUESTION THE CORPUS ANSWERED TWICE, AND KONNECTOME HAD TO CHOOSE. At one scale the corpus puts the stickiness outside the switch, which is everything above. At another scale - inside a small circuit that picks a winner - it puts the stickiness INSIDE, as part of that circuit's own law. Both sentences are really in the book. konnectome decided that this published number governs the first scale only, wrote down three reasons of its own, and made the decision a REFUSAL: ask the stabiliser to govern the other scale and it says no, by name. A decision written as prose is a sentence people forget. Written as a refusal it is one the code keeps for you.
+
+THE MISTAKE THAT WAS MADE AND CAUGHT, recorded because it is more useful than the success. The first attempt read the corpus's "turns on at one boundary and off at a lower one" literally and made turning ON expensive and turning OFF cheap. It failed a test immediately, and the reason is worth understanding: konnectome's gate is pushed rather than filled, so under that rule every medium push closed the gate and nothing could reopen it. The gate would settle closed and stay there forever. And "settles and never leaves" is, word for word, one of the two ways the corpus says a latch BREAKS - a fault this very pack has listed since the last slice. A design for stickiness that manufactures a fault is not a design for stickiness. The rule was changed so that leaving costs more in both directions, which gives exactly what the corpus describes: a range of pushes where either state can persist and history decides.
+
+AND NOTHING IN THE RUNNING MACHINE MOVED, which is the property that made this safe. At a bias of zero the two boundaries land on top of each other and the new gate is the old gate exactly. The bus answers zero for a value nobody has published. So every switch in konnectome can now consult the stabiliser and find silence, and behave precisely as it always did. The demonstration story came out identical, character for character.
+
+THE TWO OLD CONSTANTS, AND WHY NOT ONE NUMBER CHANGED. konnectome's sleep-wake governor has carried a sleep threshold of sixteen and a wake threshold of two since it was built, sitting inside its own settings. Those are exactly the buried constants the corpus objects to. They were NOT replaced with better numbers - inventing numbers is the one thing this build refuses to do. They were re-described as what they always secretly were: a band around a midpoint, a midpoint of nine and a half-width of seven. Sixteen is nine plus seven; two is nine minus seven. And rather than take that on trust, a test runs a whole twenty-four-tick day on the old settings and on the derived ones and checks the two days match, tick for tick. Identical settings are only evidence. Identical behaviour is the proof.
+
+ONE ODDITY WORTH KNOWING, pinned by a test so nobody meets it as a surprise. The gate is happy with a bias of zero; the governor is not. The governor has refused a zero-width band since the day it was built, because a zero-width band is exactly the chattering it exists to prevent. So the same number is fine for one reader and refused by the other. That is not a bug. It is what it looks like when two constructs share a value and each keeps its own rules about what it will accept.
+
+WHAT WAS HONESTLY NOT BUILT. The corpus says the stabiliser is itself gated by the body clock and by hunger. konnectome has no hunger at all, and gating by the clock would need a formula the book does not give at this scale. So neither was built, and both are written down by name as deferred rather than guessed at.
+
+
+PART THIRTY-NINE - SLICE 45: THE FIRST REAL WATCHDOG
+
+
+Two slices ago konnectome built a supervisor - something whose job is to notice when a part of the machine has gone outside what it was designed to do, and to say so out loud. That was slice 42, and it left an embarrassing gap that the slice itself wrote down honestly at the time.
+
+THE GAP WAS THIS: THE SUPERVISOR HAD NOTHING TO LOOK AT. It was built to be HANDED a measurement and to judge it. It kept no records of its own. So there was nobody counting anything, anywhere in konnectome, and every single thing the supervisor was supposed to watch was, in its own words, UNWATCHED.
+
+AND HERE IS THE PART THAT MATTERS, because it is the reason slice 42 was a good slice and not a half-finished one. When you ask that supervisor "is this gate healthy?", it does not say YES. It says NOBODY IS WATCHING THIS. Those are completely different answers, and a system that cannot tell them apart is the more dangerous kind of system - it is the smoke alarm with no battery that still shows a green light.
+
+This slice builds the missing half: the thing that actually watches.
+
+WHY IT COULD NOT HAVE BEEN BUILT SOONER. A watchdog does not just look at a machine; it counts something OVER A STRETCH OF TIME. "This gate flipped nine times" means nothing. "This gate flipped nine times in the last twenty ticks" is a fact you can act on. That stretch of time is called a WINDOW - and until slice 43, konnectome had no way to say how long any stretch of time was. Slice 43 supplied the unit, and deliberately stopped there. This slice is the one that uses it.
+
+WHAT A HISTORY IS. Very simple: a list of notes saying "at tick five this gate was open; at tick six it was closed; at tick seven it was closed". You hand it to the watchdog and it hands you back two readings.
+
+THE FIRST READING IS FLIPS. How many times did the mode change inside the window? A gate that changes on every single tick is not deciding anything, it is vibrating - the chatter problem the previous slice's stabiliser exists to prevent.
+
+THE SECOND READING IS TICKS HELD. How long has the gate been sitting in the mode it is currently in? A gate that settles and never moves again has failed in the opposite direction: it has stopped being a switch.
+
+AND NEITHER OF THOSE TWO FAILURES IS KONNECTOME'S INVENTION. The guiding corpus, describing this exact kind of switch, names exactly two ways it breaks: it can flip too readily, and it can get stuck. konnectome has carried both of those names in its code since slice 42, along with the names of the watchdogs that were supposed to be doing the watching. This slice is what those names have been standing in for.
+
+NOW THE INTERESTING PART, WHICH IS THE DECISION THIS SLICE HAD TO MAKE.
+
+HOW LONG SHOULD THE WINDOW BE? Twenty ticks? A hundred? The hand-off from the previous session said plainly that this slice OWED a number and had to justify it.
+
+The slice went looking for a number in the corpus, and here is what it found - and why it decided NOT to use it. The corpus does give timings for this kind of switch, but the switch it is describing is the human sleep-wake latch, and it says states last minutes to hours. konnectome uses this same gate design in places that have absolutely nothing to do with sleep. Turning "minutes to hours" into ticks gives tens of thousands, which would mean the demonstration story's own ten-tick heartbeat could never be measured at all - and it would arrive wearing a footnote to a book that was not talking about it.
+
+SO THE DECISION WAS: DON'T INVENT ONE. The caller who sets up a watchdog chooses the window, just as that same caller already chooses how much oscillation is too much. The build wrote down a sentence for this: A DEFAULT WITH A BORROWED WARRANT IS AN INVENTED NUMBER THAT HAS LEARNED TO CITE. Which is a cousin of the sentence slice 43 wrote - a rounding is an invented number wearing a small coat. Both are the same rule seen from two sides: numbers get into careful systems by looking like they came from somewhere.
+
+AND THE OTHER HALF OF THE DECISION IS THE ONE WITH TEETH.
+
+Suppose you ask for flips over a window of twenty ticks, but the history is only four ticks long. The watchdog COULD answer. It could say "one flip so far", and that would even be true. And then the supervisor would compare one against an allowance of three, find it fine, and declare the gate healthy.
+
+That would be a disaster, and it is worth seeing exactly why. Nobody has watched this gate long enough to know anything about it. Answering anyway converts "we have no idea" into "all clear" - which is the precise failure the supervisor's third answer was invented to prevent, sneaking back in from underneath.
+
+SO THE WATCHDOG REFUSES TO ANSWER. If the history does not yet cover the window, it hands back no reading at all, plus a note saying which window was asked for and how much history there actually is. And the supervisor, receiving nothing, goes back to saying what it said before: NOBODY IS WATCHING THIS. Which is true.
+
+A SYSTEM THAT ONLY KNOWS HOW TO ANSWER WILL ANSWER WHEN IT SHOULD NOT. That sentence has now been written into konnectome twice, at two different layers, by two different packs.
+
+TWO SMALL THINGS THE SLICE ALSO REFUSES, both for the same reason. You cannot record an observation at a tick earlier than one already recorded - that would rewrite history. And you cannot record twice at the SAME tick - that would count one tick twice in every reading taken afterwards. Both mistakes look completely ordinary while they are happening and quietly poison every answer that comes later, which is exactly the kind of fault this pack exists to catch in others. It would have been careless to leave the detector undefended against it.
+
+ONE HONEST LIMITATION, WRITTEN DOWN RATHER THAN HIDDEN. You do not have to record every tick. If you only look every third tick, and the gate flips and flips back in between, the watchdog will not see it. It measures what it was shown. So a caller that samples is getting an accurate count of how long a mode has been held, and an UNDERCOUNT of flips. Those are two different qualities of evidence, and anyone setting both allowances at once should know they are not equally trustworthy.
+
+WHAT THIS DOES NOT DO YET, said plainly. Nothing in the running machine is watched. The demonstration story is byte-for-byte identical to before, because no existing pack was edited and nobody has been wired up to a watchdog. The capability exists and is proved in the tests; putting a real watchdog on a real gate means choosing a real window, and that is the next honest step rather than this one.
+
+AND WHAT THE SUPERVISOR CAN NOW SAY, which it could not say two days ago: nothing warned, and NOTHING UNWATCHED.
+
+
+PART FORTY - SLICE 46: THE MIND LEARNS THE NAME OF THE STATE IT IS IN
+
+
+Since slice 35, konnectome has known one thing about its own overall condition: it is either ONLINE or OFFLINE. Awake, or asleep. Two words, and a firm refusal of any third.
+
+That was correct and it was thin, and the guiding corpus says something much larger about what a state like that IS.
+
+A GLOBAL STATE IS NOT A LABEL. In the corpus's own words, a global state is a COORDINATED ASSIGNMENT OF MODES across everything below it - every cell, every junction, every small circuit, every region, all set together. The corpus catalogues twenty-six of them, and every single chapter carries a section headed THE DOWNWARD ASSIGNMENT: WHAT IT SETS AT EACH LAYER.
+
+Put plainly: being asleep is not a flag the brain sets. Being asleep IS the whole body running a different configuration, top to bottom, at once.
+
+So this slice does two things. It gives konnectome's state a real name. And it builds the machinery for the assignment - and then, honestly, does not fill it in.
+
+FIRST, THE NAME. The state is now a POLE plus a SUB-MODE.
+
+The pole is the old binary, unchanged: online or offline. It survives on purpose, and the reason is that the corpus keeps it too - the switch between waking and sleeping is its own catalogued entry, a genuine two-position switch, with a FAMILY of states on each side of it. Throwing the binary away would have discarded a real distinction and would have left konnectome's own sleep-wake governor with nothing to be a switch between.
+
+Beneath each pole sit four sub-modes, and all eight names come out of the corpus rather than out of konnectome.
+
+Awake, you can be: alert and task-engaged; relaxed, idling but ready; absorbed in flow; or drowsy on the way down.
+
+Asleep, you can be: at sleep onset; in spindled light sleep; in slow-wave sleep, which the corpus calls the deep works; or in rapid-eye-movement sleep.
+
+WHY EIGHT AND NOT TWENTY-SIX, which is a choice konnectome made and wrote down. The other eighteen catalogued entries are not operating states in the same sense. Some are MACHINERY - the switches, the two competing processes, the announcement system. Some are things that layer OVER a state rather than being one, like acute stress. One is a whole-night program rather than a state. And some are illnesses, which the corpus flags separately. Putting a governor and a disease into a register of healthy operating states would repeat an error this build already refused three slices ago.
+
+NOTHING OLD BROKE, WHICH IS THE PROPERTY THAT MADE THIS SAFE. Every piece of code written since slice 35 asks the bus one question - am I awake or asleep - and every one of them still gets exactly the old one-word answer. The widening added a field underneath that none of them reads. The demonstration story came out character for character identical.
+
+AND THE OLD ANNOUNCEMENTS STILL MEAN SOMETHING, WITHOUT KONNECTOME HAVING GUESSED. If somebody announces just "offline", with no sub-mode, which sub-mode did they mean? konnectome does not invent an answer. It reads one out of the corpus: offline means slow-wave sleep, because slow-wave sleep is the state whose downward assignment lists consolidation and renormalisation - which is precisely and only what konnectome's offline phase has actually been doing since slice 38. The default is not a preference. It is a description of what the machine was already doing, looked up afterwards.
+
+Likewise online means alert, task-engaged waking, because the corpus itself calls that the default assumption of nearly every cognitive experiment ever run.
+
+A SMALL BUT DELIBERATE PIECE OF ENGINEERING, worth explaining because it recurs. The bus - the shared channel everything reads - will refuse a state that is the wrong SHAPE, and will refuse a third pole. It will NOT refuse a sub-mode belonging to the wrong pole. That check lives in the register instead. The rule behind the split: SHAPE is structural and belongs to the channel; a ROSTER of which names go with which pole is policy, and policy belongs to the thing that owns it. There is a test that deliberately pushes a bad combination through the raw channel to prove the channel really does stay out of it, so a later tidying cannot quietly merge the two.
+
+NOW THE SECOND HALF, AND IT IS THE INTERESTING ONE.
+
+THE DOWNWARD ASSIGNMENT IS BUILT AND IT IS EMPTY. Ask any of the eight states what it sets below, and it sets nothing.
+
+Here is why, and it is a genuine discovery rather than an excuse.
+
+Every downward assignment in the corpus names SPECIFIC PARTS. The thalamus to faithful relay. The hippocampus to encoding mode with replay suppressed. Those particular reticular cells to rhythmic bursting. Those particular flip-flops latched to wake.
+
+konnectome does not have specific parts like that. It has ARCHETYPES - relay, integrator, oscillator, attractor, gate, comparator - which are KINDS of thing, used wherever a world happens to need one. konnectome has no "the thalamus". It has "gates", plural, everywhere, doing many different jobs.
+
+So the one row that looks obviously available is exactly the one that has to be refused. The corpus says the state machinery's flip-flops latch to wake. konnectome's gate was carefully validated against the corpus's flip-flop entry six slices ago. Writing "waking sets every gate to open" is one line of code and looks like faithfulness. It would set EVERY gate in the entire repository to the mode of ONE specific flip-flop, including gates doing jobs that have nothing to do with sleep at all.
+
+The sentence written down for this is a sharpened version of one from the slice before: A DEFAULT WITH A BORROWED WARRANT IS AN INVENTED VALUE THAT HAS LEARNED TO CITE. Last slice it was a number. This slice it was a mode name. Same mistake, different disguise.
+
+The fix is named and already on the queue: konnectome needs NAMED individual constructs, not just kinds. When it has them, this table gets rows.
+
+AND THE MACHINERY WAS STILL PROVED, which matters. A test that only ran the empty table would prove that nothing happens, which is worthless. So the assignment walk is tested against a made-up two-row assignment, and both rows really do arrive on the broadcast channel - and a construct kind that neither row named reads back as silence rather than as an instruction, which is the property that makes it safe to aim an assignment at a whole kind in the first place.
+
+THE FAMILY IS FINISHED. This was the seventh and last named slice of the mode-register family, which began at slice 39. Seven were planned; nine were built, because two more turned out to be needed along the way and neither had been foreseen.
+
+
+PART FORTY-ONE - SLICE 47: SOMEBODY FINALLY WATCHES SOMETHING
+
+
+Two slices ago konnectome built its first watchdog - the thing that keeps a record of what a part of the machine has been doing and reports two numbers about it: how often it changed, and how long it has sat still.
+
+And it connected that watchdog to nothing at all. It said so, plainly, in four different documents. The capability existed and was proved in tests, and no part of the actual running machine was being watched by it.
+
+It also refused to answer a question it had been asked directly: how long should the window be? A watchdog counts over a stretch of time, and somebody has to say how long that stretch is. Slice 45 looked in the corpus, found a number, decided the number was about something else, and refused to use it. That refusal was recorded with a sentence: A DEFAULT WITH A BORROWED WARRANT IS AN INVENTED NUMBER THAT HAS LEARNED TO CITE.
+
+This slice pays both debts, and the way it pays the second one is the interesting part.
+
+FIRST, WHICH PART OF THE MACHINE GETS WATCHED.
+
+konnectome has two things that are switches in the corpus's sense. One is the GATE, a generic building block used all over the place. The other is the SLEEP-WAKE GOVERNOR - the thing built at slice 37 that decides whether konnectome is awake or asleep, by weighing rising tiredness against a daily rhythm.
+
+The governor is the right one, and the reason decides it: THE GOVERNOR HAS A DAY AND THE GATE DOES NOT.
+
+Think about what a window IS. Saying "it flipped nine times in twenty ticks" only means something if twenty ticks is a meaningful amount of time for that thing. For a generic gate, wired into who-knows-what, there is no meaningful amount. For a governor that runs a twenty-four-tick day, there obviously is: one day.
+
+AND THAT IS THE ANSWER TO THE QUESTION SLICE 45 REFUSED. The window is not a number. It is THE GOVERNOR'S OWN DAY, read straight out of the governor's own settings.
+
+Look again at what slice 45 rejected. The corpus said this kind of switch holds its states for "minutes to hours". Slice 45 said: that is about human sleep, not about konnectome, and turning it into ticks would give an absurd answer. All true. But the sentence was never really about hours. It was about hours AGAINST A TWENTY-FOUR-HOUR DAY - it is a claim about a FRACTION OF A CYCLE. And konnectome's governor has a cycle.
+
+So the window belongs to nobody. Build a governor with a twelve-tick day instead of twenty-four, and the window becomes twelve automatically, in the same instant, with no constant sitting anywhere to fall out of date. There is a test that does exactly that.
+
+THE TWO ALLOWANCES COME FROM THE SAME PLACE.
+
+How many times may it flip in a day before something is wrong? TWO. Not because two seemed reasonable, but because a healthy day of this switch contains exactly two crossings: one down into sleep, one back up into waking. A third crossing inside one day is precisely the malfunction the corpus describes, where sleep intrudes into waking.
+
+How long may it sit in one state? Anything less than a whole day. A state that occupies the entire day is a state that never ended, and a day with only one state in it is a day where the other side never won - which is the corpus's other named failure.
+
+There is even a test that checks the allowance MEANS something: it runs the real governor and confirms that a healthy day actually reaches two crossings, rather than sitting comfortably below the limit. An allowance nothing ever approaches has never really been tested.
+
+SECOND, THE GOVERNOR BECOMES A PROPER REGISTER.
+
+The corpus catalogues this exact switch as its own entry, with two poles it calls The Toggle Up and The Toggle Down, and konnectome now carries both names. And the corpus's sharpest sentence about it went straight into the code: the crossings are thrown by the two processes and are NOT internal to the switch. So neither row of the switch's transition table says "decided by itself". The switch does not choose. It is chosen for. There is a test that checks no row anywhere claims otherwise.
+
+The corpus also lists how this switch breaks, and konnectome took its list rather than writing one - with one deliberate exception, which is worth knowing about.
+
+The corpus names a third failure: time spent hovering in the contested middle. konnectome's switch CANNOT hover. It compares two numbers and returns one of two answers in the same instant; there is no middle to be in. So that failure was NOT added, on purpose, and the reason matters: a listed failure that nothing can ever trigger would be reported as UNWATCHED forever. It would fill the one place designed to show you what nobody is checking with a name that means nothing.
+
+NOW THE DEMONSTRATION, WHICH IS SHORT.
+
+Run konnectome's real scheduler for one of its own days. Record which pole it stands at, every tick. Then ask the supervisor how it did.
+
+NOTHING WARNED. NOTHING UNWATCHED.
+
+Both halves of that are new. Before slice 45 the second half was impossible, because nothing counted anything. Before this slice the first half had only ever been tried on made-up histories.
+
+AND THE MACHINE STILL KNOWS WHEN TO SHUT UP. Stop four ticks in and ask again, and it reports both boundaries as unwatched - because four ticks is not a day, and a verdict taken over four ticks would be a verdict about nothing.
+
+The nicest thing about that: nobody wrote code to make it happen. It falls out. No readings, so nothing to re-label, so nothing for the supervisor to judge, so it says what it says when told nothing. A property that has to be re-implemented at every connection is a convention. A property that falls out is a design.
+
+AND BOTH FAILURES ARE DEMONSTRATED, USING HISTORIES WRITTEN BY HAND - which is itself the point. konnectome does not have a chattering governor or a stuck one. That is what a watchdog is FOR: noticing a fault the machine is not currently committing. The only way to test it is to hand it a day the machine would never produce.
+
+WHAT IS STILL NOT DONE, said plainly. The big demonstration story - the one you get by running one command - does not print any of this. Its output is byte-for-byte identical to before. Everything in the chain above is real, production code, no fakes anywhere; but konnectome's own told story still does not say out loud whether its night was healthy. That is a small slice now. This morning it was not.
+
+
+PART FORTY-TWO - HOW TO RUN IT YOURSELF
+
+
+konnectome uses a program called SWI-Prolog to run its code and tests. From the konnectome folder, these commands check the build. Each prints a clear pass-or-fail result.
+
+• Run the whole mind and read its glass-box story (the capstone of Part Twelve; the optional number is how many ticks to live):
+  bin/run_capstone_demonstration.sh
+  bin/run_capstone_demonstration.sh 20
+
+• Run one pack's tests (for example, the tick engine):
+  bin/run_pack_tests.sh tick_engine
+
+• Check that every name follows the whole-word rule:
+  bin/check_pack_naming.sh
+
+• Check that no lower layer depends on a higher one:
+  bin/check_layers.sh
+
+• Check the layer-to-stratum binding:
+  bin/check_layer_binding.sh
+
+• Check the reality discipline - that no pack but pretend_play so much as names the reused imagination machinery, by predicate, module qualifier, or import, so pretend only ever crosses toward reality through the guarded doorway (see Part Thirteen):
+  bin/check_reality_discipline.sh
+
+A layer is a numbered level of the code; the rule is simply that a lower level may not depend on a higher one, so the foundation never leans on the roof.
+
+
+PART FORTY-THREE - THE LEDGER AND THE CHANGE ORDERS
+
+
+As konnectome is built, it sometimes meets a wall - something the language or the data structure cannot yet express. Every wall is written down first in the ledger, a file named konnectome_ledger_v1.txt that is the honest scoreboard of the whole build. From the ledger, a wall is routed to exactly one of three places:
+
+• If the missing thing must be shared between programs as a signed, named record, it is a data-structure gap, and it goes to the Causalontology change order (a held file that gathers such requests).
+
+• If it is a missing feature of the language, it goes to the PrologAI change order.
+
+• If konnectome can solve it in its own code, it becomes a new pack or module.
+
+A wall that turns out to be unnecessary is recorded just as honestly as one that needed building. As of slice 12, konnectome had hit three walls and CLOSED all three. Wall-1 (theory of mind) and Wall-2 (prediction) were routed to the Causalontology change order and closed when it shipped as Causalontology 4.0.0 (the belief and the prediction kinds); Wall-3 (the closure's own wall - the borrowed PrologAI library had not yet learned the new kinds) was routed to the PrologAI change order and closed the same day by an addition called causal_core 1.1.0. Slice 13 then added the provenance pack and hit no wall at all: it closed an honest loose end from slice 12 (that konnectome minted belief and prediction records but had not yet graded or retracted any of them) and recorded one new honest limit - that a real signature needs a private key, which may never live in the code. Slice 14 then added the capstone demonstration and likewise hit no wall: it only gathered what was already built into one runnable, watchable story. Slice 15 opened Rung Two (first words and pretend play) and hit no wall either - and it kept an explicit watch for the finding that would release the held imagination section of the change order, recording honestly that no such finding arose: the reused quarantine and the per-claim machinery sufficed, so the section stays held. Slice 16 deepened Rung Four (social pain and the empathy trial) and hit no wall as well: the existing drive machinery WAS the pain pathway, and the existing attitude vocabulary already carried the modelled distress. Slice 17 turned the pretend-into-observed refusal from a discipline into a checkable fourth gate, proven able to fail before it was trusted to pass, and hit no wall. Slice 18 grew the capstone story to tell Rung Two and the Rung Four deepening in its own telling, and hit no wall - it only gathered chapters the earlier slices had already built. Slice 19 finished Rung Four with the appraisal and regulation pilots and hit no wall either: appraisal is the drive system's own error read as good or bad, and regulation is the neuromodulatory bus's own arousal level brought home to baseline - both reuse, no new machinery. Slice 20 then paid the pilots' review debt: an independent review found three latent defects (a rounding-boundary misread in appraisal and two in regulation), and each was fixed at its root and pinned with a permanent test, so the feeling rung is not just finished but proven. konnectome has also recorded four small observations for the owner (the newest: that the shared attitude vocabulary carries fear but not satisfaction), and it has still changed neither cousin by reaching into it - every change went through a gated change order.
+
+
+PART FORTY-FOUR - WHERE TO LOOK NEXT
+
+
+Everything konnectome needs is inside its own docs/ folder, so you never have to look elsewhere.
+
+• CONSTITUTION.md - the nineteen rules that govern the build.
+
+• BUILDING_KONNECTOME_v2.txt - the build log: the whole story of the build from its true beginning, kept as a scientific record and a readable book at once, versioned like every other living document.
+
+• konnectome_1_specification through konnectome_6_demonstration - the six method documents (the latest versions live outside the archive).
+
+• konnectome_ledger_v1.txt - the running scoreboard.
+
+• LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt - the guiding book.
+
+• The guiding-principle and context documents - the roadmaps, the plain-language explainers, and the history of how the family came to be.
+
+• docs/archive/ - the older, superseded versions of everything, kept for the record.
+
+This tutorial itself is versioned. As konnectome grows a new pack or component, this file is updated and its old version moved to the archive, so it always describes the konnectome that actually exists today.
+
+
+End of the konnectome tutorial, version 47.
