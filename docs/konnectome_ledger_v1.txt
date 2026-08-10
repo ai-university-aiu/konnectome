@@ -92,7 +92,7 @@ SECTION THREE - THE SPARCD FILESET PROVENANCE
 ================================================================================
 
 The six SPARCD Fileset files were seeded verbatim from the appendices of
-docs/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt (Nature's Cognitive Architecture,
+docs/neuroscience/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt (Nature's Cognitive Architecture,
 version 20), per the Seventh Commandment. Source line ranges, for audit:
 
  - konnectome_1_specification   <- Appendix 1, Specification   (lines 9388-9595)
@@ -2512,7 +2512,7 @@ LAYER-09 MANUSCRIPT RENAME NOTE (2026-08-09, by the owner's instruction). THE GU
 PLACE IN THE VISION DOCUMENT SET'S OWN NAMING.
 
 WHAT HAPPENED. docs/NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt is renamed to
-docs/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt, and every reference to it in the
+docs/neuroscience/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt, and every reference to it in the
 repository is re-pointed - NINETY occurrences across SEVENTY-SIX files, moved in one change so that
 no pointer is left dangling for a single commit.
 
@@ -3310,3 +3310,106 @@ history travels to nobody and fails the consumer-versus-ontology test of the Sec
 PrologAI language feature was missing. Nothing releases the held Sections C, D and E of the
 causalontology change order. Neither cousin was edited; conformance stands re-measured earlier in
 this same session at 137 of 137 in both, with the qualification recorded in the slice 46 note.
+
+
+DOCS REORGANISATION NOTE (2026-08-10). THE SOURCE NEUROSCIENCE DOCUMENTS MOVED TO
+docs/neuroscience/ . This is not a slice: no pack was touched, no test was written, no behaviour
+moved, and no source document was edited. It is recorded here because it changed paths that four
+Commandments and several working documents pointed at, and because the boundary it drew had to be
+DECIDED rather than assumed.
+
+WHAT MOVED. Thirty-nine files: the thirty-eight-document Vision Document Set of the Eighth
+Commandment - the Layer 4-5, 6, 7, 8, 9-modes, 10 and 11 volumes with their modes companions, the
+five-volume neuron catalogue, the Layer 6 chapter template, the Layers 12 through 15 documents, and
+the two framework documents THE_FIFTEEN_LAYERS_IN_BRIEF and TFELOAOTHNAES - plus the GUIDING BOOK,
+LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt, which the Seventh Commandment makes the
+source of the whole DSPARCD Fileset and the Tenth makes the target of the standing audit. A
+docs/neuroscience/README.txt was written as the directory's index and forwarding note.
+
+THE LINE DRAWN, AND IT IS THE ONE DECISION IN THIS CHANGE. THE BOUNDARY IS AUTHORSHIP, NOT SUBJECT.
+A file in the new directory was written by the corpus and describes the biology. A file left outside
+was written by this build and describes konnectome. That distinction decides the cases that would
+otherwise be arguable: the vision-set analysis, its fidelity audit, the four design authorities and
+the coverage survey are ALL ABOUT the moved files and ALL STAYED OUT, because they are konnectome's
+own assessment rather than the source - which is exactly the two-kinds-of-content distinction the
+Eighth Commandment's own rule three draws, arriving on disk. Also staying out, on the same rule: the
+First Commandment's three Artificial General Intelligence and Artificial Super Intelligence
+documents, which are not neuroscience, and the Sixth Commandment's English Readable Code manuscript,
+which is not either.
+
+WHAT WAS FIXED. Thirty-two path pointers across five live documents, plus four Commandments.
+CONSTITUTION.md goes to VERSION 10 - the Seventh, Tenth and Nineteenth Commandments each carried a
+path to a moved file and all three are corrected, and the Eighth now STATES WHERE THE SET LIVES,
+which it never did. NO COMMANDMENT WAS REMOVED OR RENUMBERED AND NO RULE CHANGED. The ledger, the
+two-shift design authority, the edge type design authority and the newest hand-off carried the rest.
+
+WHAT WAS DELIBERATELY NOT FIXED, AND WHY IT IS A DECISION RATHER THAN A GAP. Seventy-nine historical
+documents still carry the old paths: fifty-four superseded tutorials in docs/archive/ and
+twenty-five hand-offs dated before 2026-08-10. THE ELEVENTH COMMANDMENT EXISTS TO FREEZE THE FIRST
+GROUP, and a hand-off is a dated report whose paths were correct on its own date. Rewriting them
+would be the slice-43 README fault at scale - editing a historical record so that it says something
+it did not say. THE ONE EXCEPTION IS THE NEWEST HAND-OFF, 2026-08-10_1, WHOSE POINTERS WERE
+CORRECTED, because it is not only a record: it is the live entry point the next session reads first,
+and a reading list that does not resolve is a broken instruction rather than a preserved fact.
+
+THE RULE THIS DRAWS OUT, and it is worth carrying because the repository will meet it again: A
+HISTORICAL CLAIM IS NOT REPAIRED BY MAKING IT SAY SOMETHING IT DID NOT SAY, AND A LIVE INSTRUCTION IS
+NOT PRESERVED BY LEAVING IT POINTING AT NOTHING. The same document can be both, and the newest
+hand-off is exactly that - which is why the answer was not "fix everything" or "fix nothing" but a
+boundary drawn at the point where a record stops being read for instruction. The compensation for
+the frozen half is the forwarding note in docs/neuroscience/README.txt, which states the rewrite rule
+in one sentence: insert neuroscience/ after docs/ and the path is correct.
+
+AND THE RULE THAT MADE THE WHOLE CHANGE NECESSARY IS THE CONSTITUTION'S OWN, WRITTEN ONE VERSION
+EARLIER AND TESTED FOR THE FIRST TIME HERE: A POINTER IS NOT A STATEMENT, SO A FILE THAT MOVES MUST
+HAVE EVERY POINTER TO IT MOVED IN THE SAME CHANGE. Version 9 wrote that sentence while moving one
+file. This change moved thirty-nine and found four Commandments and five documents pointing at them.
+
+VERIFIED AFTER THE MOVE: EIGHT HUNDRED AND ELEVEN tests across THIRTY-FOUR packs, all green; four
+gates at zero violations plus the naming gate's self-test; the capstone story byte-identical. No pack
+reads a docs path, which was checked rather than assumed, so no test could have caught a broken
+pointer and the grep above is the only gate this change had.
+
+WHAT THE POINTER SCAN FOUND BESIDES THE MOVE, recorded because it was not what the scan was for and
+because three of the four had been broken for some time. A resolve-check was run over every path
+pointer in every live file - seventy-three files, one hundred and four distinct pointers, each one
+tested against the filesystem rather than read. FOUR LIVE POINTERS WERE BROKEN AND HAD NOTHING TO DO
+WITH THIS CHANGE, and all four are fixed here.
+
+• THE SECOND COMMANDMENT POINTED AT Causalontology_4_0_0_CHANGE_ORDER_v2.txt AND THE FILE HAD REACHED
+  v3, its predecessor archived under the Eleventh Commandment. This is the sharpest of the four: the
+  Commandment's entire job at that line is to tell a session WHERE TO WRITE A FINDING, and it named a
+  file that was no longer there. A gated change order whose gate points at a missing file is a gate
+  nobody can pass.
+
+• THE THIRD COMMANDMENT POINTED AT PrologAI_CHANGE_ORDER_v1.txt AND THE FILE HAD REACHED v2. Same
+  fault, same cause: the line was written to instruct the build to CREATE the file at build start and
+  was never repointed when the file was versioned forward.
+
+• THE README NAMED THE DSPARCD FILESET AT v45 AND THE TUTORIAL AT v44 - fourteen pointers, all of
+  them CURRENT claims rather than historical ones, and all of them three versions stale. NOTE THAT
+  THIS IS THE EXACT FAULT SLICE 43'S PROCESS NOTE WARNS ABOUT, ARRIVING FROM THE OTHER SIDE: that
+  note says a count in a slice's own bullet is a historical claim and must not be swept, and only the
+  status line may be. Three sessions correctly refrained from sweeping - and nobody noticed that the
+  fileset pointers in the same file were current claims that SHOULD have moved every time. A rule
+  about what not to sweep is not a rule about what to sweep, and this repository had been reading it
+  as one.
+
+• THE THOUGHT-COMBINATION REFERENCE carried the same stale change-order pointer twice.
+
+AND WHAT THE SCAN DELIBERATELY DID NOT TOUCH, so the remainder is a decision rather than a backlog.
+Sixteen further pointers do not resolve at their stated path and every one of them is correct as
+written. TWELVE ARE DATED CITATIONS whose files live in docs/archive/ exactly as the Eleventh
+Commandment requires - the Seventh and Seventeenth Commandments naming the fileset and tutorial as
+they were CREATED at v1, and the design authorities and this ledger citing the specification, the
+tutorial and the analysis at the versions they were read at. Those are not broken links; they are
+citations with a date on them, and the archive is where they resolve. THREE ARE NOT POINTERS AT ALL:
+this ledger narrating a file's OLD name inside a rename note, and quoting "docs/X.txt" twice as a
+GENERIC EXAMPLE in the very rule that governs this change. ONE IS A FUTURE DELIVERABLE, the fulfilment
+audit the scheduled-audit note commissions and which no session has yet been due to write.
+
+THE HABIT WORTH KEEPING: A POINTER SCAN IS CHEAP AND NOBODY HAD RUN ONE. Three of the four breaks
+were months old, one of them sat in a Commandment, and no test could ever have caught any of them
+because no pack reads a docs path. This repository gates its code four ways and gated its prose not
+at all. The scan is fifteen lines of throwaway code and it should be re-run by any session that moves
+or versions a document.
