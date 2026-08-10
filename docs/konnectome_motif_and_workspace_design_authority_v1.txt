@@ -1,0 +1,454 @@
+THE MOTIF CATALOGUE AND THE GLOBAL WORKSPACE: THE DESIGN AUTHORITY
+
+A survey-depth deep read of the guiding corpus beneath THEME FOUR (the motif library, and inhibition as a computation) and THEME FIVE (the absent cognitive cluster: attention, working memory, the global workspace) of docs/konnectome_vision_set_top_down_analysis_v1.txt, executed as the design authority for both.
+
+Date: 2026-08-09. Version 1.
+
+
+WHAT THIS DOCUMENT IS, AND WHAT IT IS NOT
+
+This document holds two kinds of content and they do not carry the same weight, in the same way its two siblings do.
+
+Where it SUMMARISES the corpus - Part A2, Part A3, Part B2, and every quotation and enumeration - it is DERIVED and carries no authority over the corpus. Where a summary here and the corpus disagree, THE CORPUS WINS and this document is the thing corrected.
+
+Where it FINDS - the two verdicts, the not-settled lists, the honest scoring against running code, the suggested slice families, the scheduling findings and the walls judgment - it is konnectome's OWN ASSESSMENT, produced by holding the corpus against a running codebase, and the corpus cannot contain it because the corpus knows nothing about konnectome. Those findings are authoritative as the record of this assessment and are superseded by a later assessment, never by the corpus.
+
+The guiding authority this document sits beneath is stated in full in the preamble of docs/konnectome_vision_set_top_down_analysis_v1.txt. This document is a DESIGN AUTHORITY, not a slice: no code changed and no test moved in the change that created it.
+
+THE PRECEDENT AND THE REASON. Theme One stood as a single paragraph until a deep read of the fourteen MODES companions produced docs/konnectome_mode_register_design_authority_v1.txt, and that read reversed a queue ordering, reshaped a slice item, and answered a question the paragraph never raised. The Eighth Commandment analysis forbids designing a slice from a theme. This read is the same service performed for Themes Four and Five, at SURVEY depth rather than full depth: two themes in one document, each read far enough that a pilot pack can be designed from the sections below rather than from the paragraph above them.
+
+
+HOW THIS READ WAS MADE
+
+Read in full: the top-down analysis; LAYER_08_MICROCIRCUITS_OUTLINE.txt (396 lines); LAYER_08_MODES_OUTLINE.txt (549 lines, all seventy-one registers); LAYER_10_SYSTEMS_OUTLINE.txt (219 lines); LAYER_12_FACULTY_SPECIFICATION.txt (147 lines); LAYER_10_SYSTEMS_MANUSCRIPT.txt Chapter 44, the global workspace, in full (lines 8009 to 8236) and Chapter 16, the working memory system, in full (lines 3103 to 3298); LAYER_10_MODES_OUTLINE.txt entries 16, 22, 23 and 44.
+
+Read at representative-chapter depth in LAYER_08_MICROCIRCUITS_MANUSCRIPT.txt (14603 lines): the introduction and its statement of the twenty-two fixed aspects (lines 12 to 71); Chapter 1, Convergence, in full as the schema exemplar (lines 88 to 322); Chapter 16, Winner-Take-All, in full as Theme Four's own target (lines 3213 to 3435); the Part Two headnote (lines 1421 to 1427); and the KONNECTOME NOTE of every one of the nine inhibitory chapters plus Chapters 2, 30, 34, 40 and 60.
+
+Held against running code: packs/action_selector, packs/connection_graph, packs/archetype, packs/cognitive_cycle, packs/prediction_loop, packs/drive_system, packs/neuromodulator_bus, packs/observer, packs/mode_register, packs/override_controller, packs/two_process_governor, packs/offline_consolidation, packs/arousal_regulation; docs/konnectome_1_specification_v41.txt (FR-16, AC-11); docs/konnectome_3_architecture_v41.txt (Component 1); docs/konnectome_cognitive_architectures_coverage_v1.txt (the seven coverage bugs); docs/konnectome_ledger_v1.txt.
+
+State at the time of reading: 41 slices, 648 tests across thirty packs, main at a90bfd7.
+
+
+================================================================================
+PART A - THEME FOUR: THE MOTIF LIBRARY, AND INHIBITION AS A COMPUTATION
+================================================================================
+
+
+A1 - THE VERDICT ON THEME FOUR'S PARAGRAPH
+
+THE THEME SURVIVES ITS OWN CORPUS. Theme Four's central claim is right, is right for the reason it gives, and is right in the corpus's own words: a motif is a wiring diagram plus a computation, generic wherever installed, and konnectome has no first-class representation of one. The manuscript's introduction states it at line 16 - "It is a wiring diagram plus a computation: a small, canonical arrangement of connected cells that performs one elementary operation, installed - with local casting changes - at many addresses" - and the outline closes on the same note at line 387, "the motif is generic". Konnectome's six archetypes are per-node update rules, verified: packs/archetype/prolog/archetype.pl exports archetype_relay/3, archetype_integrator/4, archetype_oscillator/5, archetype_attractor/5, archetype_gate/4 and archetype_comparator/3, and every one of them takes a scalar input and returns a scalar. Nothing in the repository names more than one construct at a time.
+
+FOUR SENTENCES THE READING CORRECTS. They are set out in descending order of consequence.
+
+FIRST, AND THIS IS A PLAIN ERROR RATHER THAN A NUANCE. The theme writes:
+
+    "though the architecture already owns the cheap mechanism (the named-subgraph views that
+    hold networks and pathways)"
+
+IT DOES NOT. The named-subgraph views exist only in specification prose. docs/konnectome_3_architecture_v41.txt line 55 says Component 1 "additionally holds the large-scale networks (Section 2.10) as named views over its regions and the cognitive systems and pathways (Section 2.11) as named subgraphs over the connection graph"; docs/konnectome_1_specification_v41.txt states the same as FR-16 and as acceptance criterion AC-11. Held against the code, packs/connection_graph/prolog/connection_graph.pl exports eleven predicates and not one of them names, groups, or addresses a portion of the graph: a graph IS a flat list of interface(From, To, Weight, Delay, Kind) terms, and every predicate that touches it either filters by destination (connection_graph_incoming/3) or folds the whole list (connection_graph_total_input/4). A repository-wide search of packs for a network, pathway or subgraph datum returns nothing. There is no naming facility, no role assignment, and no way to address a sub-portion of the graph as a unit.
+
+This is the same CLASS of error the mode-register read found in Theme One's naming hazard - a claim about the data model as DESCRIBED mistaken for a claim about running code - but it resolves in the opposite direction. There the collision was closed to zero because there was nothing to rename. Here the cost is real: THE MOTIF CATALOGUE IS A BUILD, NOT A RE-USE, and Part A6 below is sized accordingly. A slice planned on the theme's sentence would have arrived expecting a mechanism to decorate and found bare ground.
+
+SECOND. The theme writes that "the volume's Part Two insists inhibition is a distinct computational repertoire - window-cutting, thermostat, sharpening, permission, per-input tap". The five named are all genuine and correctly glossed, but PART TWO HOLDS NINE ENTRIES, not five: Chapters 7 through 15 of the manuscript, entries 7 through 15 of the outline. The four the summary silently drops are the Renshaw final-path governor (10), reciprocal push-pull inhibition (11), the perisomatic-dendritic division of labour (13), and volume or neurogliaform inhibition (15). Two of those four carry the (COG) tag - 13 and 15 - and they are precisely the two that konnectome's current grain cannot express, so dropping them makes the repertoire look easier than it is. The full enumeration is Part A3.
+
+THIRD. The theme names "winner-take-all in the selector" among the motifs konnectome "already implicitly instantiates". The corpus corrects the emphasis in its own KONNECTOME NOTE for Chapter 16, at manuscript line 3383:
+
+    "The closest artificial intelligence analogue is argmax with hysteresis, or a hard attention
+    gate; the biological motif differs in that selection is a temporal process whose duration
+    encodes difficulty, and in that the same module doubles as working memory when its loop gain
+    crosses the attractor threshold, a two-for-one that argmax does not offer."
+
+The corpus therefore names argmax as the thing its motif is NOT, and konnectome's action_selector_best/2 is an argmax with a first-candidate tie-break and no state whatever. What konnectome instantiates is the OUTPUT of winner-take-all - a one-hot verdict - with none of its wiring: no candidate populations, no shared inhibitory node, no self-excitation, no settling, no hysteresis, no confidence. "Implicitly instantiates" is defensible for the outcome and misleading for the motif, and a slice that reads the phrase as "we already have this, now name it" will under-scope by an order of magnitude. The scoring in A5 says so entry by entry.
+
+FOURTH, A SMALLER ONE, RECORDED SO IT IS NOT REDISCOVERED. The theme's count of seventy-one motifs is right and the outline's own headnote is wrong: LAYER_08_MICROCIRCUITS_OUTLINE.txt line 20 says the outline "catalogues the motifs themselves - roughly sixty-five of them" and then enumerates seventy-one, which the manuscript (seventy-one chapters) and the outline's own scoreboard ("Of the seventy-one motif types above, thirty-two carry the (COG) tag") both confirm. Two further corpus-internal miscounts sit in the Part Two headnote at manuscript lines 1421 to 1427, which says "the five chapters" and "Two of these motifs (feedforward inhibition, feedback inhibition, and lateral inhibition)" over a part that holds nine chapters and names three. These are corpus slips, recorded as read-notes; they change nothing except that a future reader should count the entries rather than trust the headnotes.
+
+WHAT THE THEME UNDERSTATES RATHER THAN GETS WRONG. The invitation to grow the selector into "a genuine winner-take-all with deliberation, commitment, and settling-time-as-confidence" is fully supported - Chapter 16's mode register is exactly Deliberation Mode (the Open Race), Commitment Mode (the One Survivor) and Rivalry Mode (the Flip-Flopper), and its SYSTEMS INTERFACE publishes "Commitment time, 100 milliseconds to 2 seconds, implicitly published as output latency". What the theme does not say is that all of it is in WALL-CLOCK TIME and konnectome's tick is dimensionless-ordinal, so settling-time-as-confidence is a tick count and the mapping is konnectome's own decision, not the corpus's. That decision recurs at Theme Five and is item B5.5.
+
+
+A2 - THE MOTIF ENTRY SCHEMA, AS THE CORPUS ACTUALLY WRITES IT
+
+THE FOUR QUESTIONS THAT DEFINE THE LAYER. The manuscript's introduction (lines 24 to 32) states that this volume asks of each motif "four systems questions that only a middle layer can be asked": downward to Layer 6, which cell types play the motif's ROLES and how each cell's algorithmic personality colours the computation; downward to Layer 7, which junctions form the motif's FABRIC, with what transmitters, weights and learning rules; upward to Layer 9, at which named regions the motif is INSTALLED; and outward to engineering, how the motif would be realised as a PUBLISH-SUBSCRIBE MODULE - because, in the corpus's own words at line 32, "this volume directly informs the konnectome project, whose constitution demands whole-word module names and clean SUBSCRIBE and PUBLISH interfaces for every construct".
+
+THE TWENTY-TWO FIXED ASPECTS, IN THE ORDER EVERY CHAPTER RUNS THEM. Verified identically in Chapter 1 (Convergence, lines 88 to 322) and Chapter 16 (Winner-Take-All, lines 3213 to 3435).
+
+• The CHAPTER TITLE line itself, which carries four things: the ordinal, the formal name, a parenthesised formal descriptor of the wiring, a parenthesised Plain-English coined name always prefixed "the" (the Evidence-Pooling Junction; the One-Survivor Circuit), and the (COG) or (NON-COG) tag.
+
+• An unheaded OPENING, two to four sentences of concrete scene, followed by a word-by-word gloss of the coined name (Chapter 16: "One names the cardinality of the outcome... Survivor names the mechanism... Circuit marks it as a wiring motif").
+
+• WHAT IT IS AND WHAT IT COMPUTES. The definition, then the computation stated as an operation. Chapter 16: "The computation is a maximum operation followed by thresholding: from a vector of graded input strengths it publishes the identity of the largest element, discarding the rest."
+
+• THE WIRING DIAGRAM. The load-bearing field, and it is written as a GRAPH, not as prose. It names node ROLES with cardinalities, the directed edges among them with SIGNS, the external entry point, and a stated DEFINING FEATURE. Chapter 16: "two node roles: N candidate nodes (excitatory principal-cell populations, N typically 2 to hundreds) and one shared inhibitory node"; each candidate has a self-excitatory edge and an edge to the shared node; the shared node returns an inhibitory edge to every candidate; "External evidence enters as one excitatory edge per candidate"; and the defining feature is "a star of inhibition superimposed on a set of self-loops". Chapter 1: "N source nodes and one sink node, with N directed edges... and no edges among the sources and no return edge from the sink", each edge carrying "a sign and a weight", defining feature "the fan-in ratio N".
+
+• THE CELLULAR CAST AND THEIR PERSONALITIES. Which Layer 6 cell type fills each role at each address, and what its dynamical personality does to the computation.
+
+• THE SYNAPTIC AND JUNCTIONAL FABRIC. Which Layer 7 junction type each edge is, with receptor kinetics, decay constants, release probability, short-term plasticity, and connection probabilities.
+
+• SCALE OF ONE INSTANCE. The physical size and the cardinality of one installation.
+
+• NUMBER AND DISTRIBUTION OF INSTANCES. How many exist, with an explicit confidence mark where the number is soft (Chapter 16: "on the order of 10 million to 100 million distinguishable competitive neighbourhoods across the neocortex alone, low confidence").
+
+• WHERE IT IS INSTALLED (THE LAYER 9 MAP). A bulleted list of named regions, each with one clause on what the motif does there.
+
+• HOW IT COLOURS ITS REGIONS. The deletion test, stated as a counterfactual: what the host region loses if the motif is removed.
+
+• THE INPUT-OUTPUT TRANSFORMATION. Plain-words statement, then the established mathematical form, then the numbers. Chapter 16: "a hysteretic max operation: for input vector x, the steady-state output approximates a one-hot vector selecting argmax(x)", with settling times.
+
+• TEMPORAL SIGNATURE. Rates, latencies, rhythms.
+
+• DYNAMIC REGIMES AND STATES. The prose source of the modes companion's register.
+
+• PLASTICITY AND LEARNING. Which edges change, under which rule, on which timescale.
+
+• VARIANTS AND SUBTYPES. Named siblings of the same diagram.
+
+• DEVELOPMENT AND ASSEMBLY. How the wiring gets built.
+
+• EVOLUTIONARY PROVENANCE. How old the diagram is and where it first appears.
+
+• SUPPORT SYSTEM. The glial and metabolic bill.
+
+• DISEASES AND DISORDERS. What the motif's failure looks like clinically.
+
+• SYSTEMS INTERFACE. Six mandatory sub-fields, and this is the field a konnectome pack maps onto directly: SUBSCRIBES (INPUTS), PUBLISHES (OUTPUTS), STATE, PARAMETERS, TIME CONSTANTS, FAILURE MODE - each carrying units and ranges.
+
+• THE KONNECTOME NOTE. A proposed whole-word module name, its subscribe and publish topics, its nearest artificial-intelligence analogue, and - the valuable half - the ways the biological motif DIFFERS from that analogue "an engineer should preserve".
+
+• ENGLISH READABLE CODE, then CODE SAMPLE. Present in full only for (COG) entries; the introduction states at line 42 that for (NON-COG) entries "its two code sections collapse to a single stated sentence".
+
+• WHAT MAKES IT UNMISTAKABLE. A one-sentence diagnostic.
+
+THE MINIMUM A MOTIF ENTRY MUST CARRY, AS THIS READ EXTRACTS IT. Of the twenty-two, exactly four are load-bearing for a konnectome motif catalogue, and the rest are biology konnectome does not implement: WHAT IT COMPUTES (the computation), THE WIRING DIAGRAM (the roles, their cardinalities, and the signed edges among them), THE SYSTEMS INTERFACE (subscribes, publishes, state, parameters, time constants, failure mode), and THE KONNECTOME NOTE (the module name and the preserved differences). Those four are the schema this document recommends a motif entry carry, and they are the corpus's own fields rather than an invention.
+
+THE MOTIF'S MODE REGISTER. LAYER_08_MODES_OUTLINE.txt gives every one of the seventy-one motifs a register in the identical three-field form the mode-register design authority established at every other grain - Formal Name, the Coined Name, one-clause gloss - and konnectome's mode_register pack, built at slice 39, already carries that shape. Three properties of the Layer 8 registers matter for design.
+
+• THE REGISTER SIZES RANGE FROM ONE TO FIVE, and one is stated proudly, exactly as the mode-register read found. Entry 43, the monosynaptic stretch reflex arc, holds a single entry glossed "the arc's single mode"; Entry 52 likewise. Entry 26 (the central pattern generator) and Entry 40 (the basal ganglia selection motif) hold five. A motif's register length is a statement about how much the system trusts that motif to decide.
+
+• FAULT REGIMES ARE MARKED IN PLACE AND EXCLUDED FROM THE REGISTER PROPER. Entry 6's Runaway Mode is annotated "admitted only as fault"; Entry 60's Broken-Loop Mode "a fault regime, admitted only because it names the failure"; Entries 68, 70 and 71 the same. This is the corpus's admission rule holding at the motif grain, and konnectome's standing decision to keep fault blocks present and empty until the supervisor channel exists applies unchanged.
+
+• THE MODE-SETTING SERVICE IS PURCHASED FROM ABOVE. Chapter 16's DYNAMIC REGIMES field states it directly: "Neuromodulators move the circuit between regimes by scaling recurrent gain, so the same wiring is a soft comparator when relaxed and a hard latch when aroused." A motif's transition trigger is therefore a bus value in the majority of entries, which is the mode-register family's bus-thrown-transition slice arriving at a second grain with a second customer.
+
+
+A3 - THE INHIBITION REPERTOIRE, ENUMERATED AS THE CORPUS ENUMERATES IT
+
+The Part Two headnote at manuscript line 1423 states the thesis: "Inhibition is not the silence between thoughts but a computation in its own right, as active and as expensive as excitation". The outline states it at line 70 with a count: "the interneurons of the Layer 6 catalogue implement at least eight distinct inhibitory wiring patterns". Nine entries follow. Each is given below with its outline number, its coined name, its computation in the corpus's terms, its (COG) tag, and the module name the corpus's own KONNECTOME NOTE proposes.
+
+• 7. FEEDFORWARD INHIBITION, the Coincidence-Window Cutter (COG). An input excites both a principal cell and an interneuron that inhibits that same principal cell; the delayed inhibition "chops the excitation into a brief window, enforcing temporal precision - the circuit that makes cortex fast". Proposed module: coincidence_window_gate, opening "a short acceptance window whose width shrinks with input magnitude". Three modes: Idle, Tight-Gate, Widened-Gate.
+
+• 8. FEEDBACK (RECURRENT) INHIBITION, the Activity Thermostat (COG). The principal cell excites an interneuron that inhibits it back: "a self-limiting thermostat that controls gain, prevents runaway excitation, and paces population rhythms". Proposed module: activity_gain_thermostat, publishing "an inhibitory signal proportional to that output, holding the population's rate near a set point and, with an imposed loop delay, generating a carrier rhythm". Three modes: Stabiliser, Oscillator, Ceiling.
+
+• 9. LATERAL INHIBITION, the Contrast-Carving Circuit (COG). Active cells inhibit their neighbours through interneurons - "the contrast-enhancer and sharpener, named in the framework volumes as the exemplary generic motif". Proposed module: lateral_inhibition_sharpener, publishing "a contrast-enhanced array, each element reduced by a weighted sum of its neighbours (a difference-of-Gaussians kernel), with a strong-mode switch to winner-take-all". Two modes: Contrast-Enhancement, Selection. The modes outline states the bridge to Part Three explicitly - "the competitive motifs are lateral inhibition turned up".
+
+• 10. RECURRENT INHIBITION OF THE RENSHAW TYPE, the Final-Path Governor (NON-COG). The output cell's own axon collateral drives an inhibitory cell feeding back onto it and its neighbours: a governor on the final common path. Proposed module: motoneuron_output_governor, "an inhibition proportional to and slightly delayed from that output, flattening the pool's gain and desynchronising its units". Three modes.
+
+• 11. RECIPROCAL INHIBITION, the Push-Pull Pair (NON-COG). Two pools inhibit each other so that when one is active the other is silenced. Proposed module: mutual_exclusion_pair, and its note carries the single most useful sentence in Part Two for konnectome: it should expose "a mode parameter that selects static exclusivity, oscillation (with fatigue), or hard bistability (high gain)", because "a single wiring pattern is reused across three operating regimes selected by adaptation and gain rather than by separate architectures". Four modes: Static-Relaxation, Oscillator, Flip-Flop, Locked.
+
+• 12. PRESYNAPTIC INHIBITION, the Input Tap (NON-COG). An inhibitory terminal synapses onto ANOTHER AXON'S TERMINAL, "turning down that input's release before it ever reaches the receiving cell - selective gating of one input line at a time". Proposed module: per_input_gain_gate, "a wrapper that sits on one named input channel of a receiving module and scales that channel's message by a factor between zero and one under control of a separate gate signal, without altering the receiving module's threshold or its other channels". Two modes: Tonic-Set, Movement-Gated.
+
+• 13. THE PERISOMATIC-DENDRITIC DIVISION OF LABOUR, the Two-Handed Governor (COG). Basket and chandelier cells inhibit the soma and axon initial segment (vetoing output and timing spikes) while Martinotti cells inhibit the distal dendrites (vetoing specific inputs) - "one motif, two control points: output gain versus input selection". Proposed module: output_gain_and_input_selection_governor, publishing "a timing-and-gain-scaled output and a per-branch input mask". Three modes: Perisomatic-Dominant, Dendritic-Clamp, Dendrite-Open (the Learning Window).
+
+• 14. DISINHIBITION, the Permission Circuit (COG). An interneuron inhibits another interneuron, releasing the principal cell from its brake - "the cortex's attention and permission signal", opening "dendritic gates for learning". Proposed module: gate_opening_permission_broker, whose release command "lowers a named inhibitory gate on the target module, specifically its dendritic-input-and-plasticity channel", and which supplies "no content itself". Three modes: Guarded, Released, Behaviour-Locked.
+
+• 15. VOLUME (NEUROGLIAFORM) INHIBITION, the Fog Brake (COG). A slow cloud of GABA that inhibits every process within reach "without addressed synapses - a local blanket damper, the microcircuit-scale echo of the framework's broadcast principle". Proposed module: slow_blanket_excitability_damper, which "publishes not to named channels but to a spatial region", with "a long time constant and a leaky-diffusion spatial profile". Two modes: Tonic-Damp, Blanket.
+
+HOW THIS CONVERGES WITH THEME THREE'S SIGN DISCIPLINE, AND WHERE IT EXCEEDS IT.
+
+Theme Three's refinement widens konnectome's edge KIND into a registry-drawn edge TYPE carrying sign discipline, fixed-or-learnable, a learning-rule identity and a time-constant profile. Part Two's nine entries confirm that a sign is necessary and prove it is nowhere near sufficient, and they do it in a way that is useful rather than merely cautionary: THE NINE DIFFER FROM EACH OTHER ALONG AXES A SIGN BIT DOES NOT HAVE. Specifically, each entry is fixed by four things beyond its sign - its TOPOLOGY (is the inhibitor driven by the input, by the output, or by a neighbour), its TARGET SITE (soma, dendrite, or another terminal), its ADDRESSING (one named channel, a set of neighbours, or an unaddressed region), and its TIMESCALE. Two entries with an identical negative sign, feedforward inhibition and feedback inhibition, compute opposite things - a time window versus a gain set point - purely by topology.
+
+Three of the nine reach past Theme Three and land on other themes, and this is the convergence worth acting on.
+
+• ENTRY 12 IS THEME THREE'S OWN HARDEST ITEM ARRIVING FROM ANOTHER DIRECTION. The input tap is literally an edge whose target is another edge, which Theme Three lists last in its own rising order of ambition ("edges whose target is another edge (the teacher lines and the glial wraps)"). Two independent readings therefore name the same construct, and it should be built once, in the edge type registry, not twice.
+
+• ENTRY 14 IS NOT AN ACTIVATION SIGNAL AT ALL BUT A WRITE PERMISSION. Disinhibition supplies no content and opens "the dendritic-input-and-plasticity channel". That is Theme Two's write-allocation gate and the readability gate seen from the microcircuit, and it means the permission motif should be built WITH the write-allocation slice of family one rather than ahead of it.
+
+• ENTRY 15 IS NOT A GRAPH EDGE AT ALL. Volume inhibition publishes to a spatial region rather than to named channels, which is the third independent vindication of Component 4 in this corpus: the Layer 7 volume vindicated it for broadcast modulators, the Layer 10 volume vindicates it for the neuromodulatory systems, and here the Layer 8 volume vindicates it at the smallest grain the corpus has. Volume inhibition belongs to the bus's named-channel slice, not to the connection graph, and the neuromodulator bus's existing territory mechanism (neuromodulator_bus_broadcast_territory/5, with the documented diffuse-field fallback) is already the right shape for it.
+
+ONE ENTRY THAT KONNECTOME CANNOT EXPRESS AT ANY GRAIN IT CURRENTLY HAS. Entry 13 requires a per-branch input mask - inhibition applied to a named SUBSET of one construct's inputs while its other inputs and its threshold are untouched. konnectome's constructs have no sub-construct addressing: connection_graph_total_input/4 folds every incoming interface into one scalar before any rule sees it, so there is no place to stand between an edge and the sum. This is recorded as a genuine expressiveness gap in the DESIGN, not a language wall - it is fixable inside a pack by gathering per-source contributions rather than a total, which is ordinary Prolog - but it is the reason Entry 13 is deliberately excluded from A6's slice family.
+
+
+A4 - WHAT THE CORPUS DOES NOT SETTLE
+
+Numbered decisions konnectome must take as its OWN, so that when they are made they are recorded as konnectome's rather than smuggled in as the corpus's.
+
+1. WHETHER A MOTIF IS DECLARED OR RECOGNISED. The corpus catalogues motif TYPES and speaks freely of their instances - it has fields called SCALE OF ONE INSTANCE and NUMBER AND DISTRIBUTION OF INSTANCES - but it supplies NO RECOGNITION PROCEDURE anywhere. It never says how you decide that a given piece of wiring is an instance of entry 9 rather than entry 16, and Chapter 16 concedes the boundary is soft ("uncountable in the strict sense because instances overlap and share interneurons"). konnectome must choose between DECLARED membership, where a motif view names its member constructs and the catalogue merely checks well-formedness against the graph, and DERIVED detection, where a matcher searches the interface list for the pattern. This document's recommendation, recorded as a recommendation and not as a corpus fact, is DECLARED: it is the cheap mechanism, it is what the corpus's silence permits, and it keeps the catalogue out of the business of inventing structure the world did not declare.
+
+2. THE ROLE VOCABULARY. Every WIRING DIAGRAM field names roles in prose - candidate node, shared inhibitory node, source node, sink node, principal cell, interneuron, teacher line - and the corpus never types them, never fixes their spelling, and never states arity rules. konnectome must decide whether roles are drawn from one shared registry across all motif kinds or declared per kind, and whether a role's cardinality (exactly one; one or more; N) is checked.
+
+3. WHETHER MOTIF VIEWS NEST. Part Six is explicit that its composites are motifs made of motifs - Entry 41, the hippocampal trisynaptic template, is "expansion recoding, entry 33... autoassociation, entry 29... comparison, entry 34... three memory motifs composed in series" - and the outline calls this a "soft boundary" with Layer 9. The corpus never says whether a composite is an entry in the same catalogue or a different kind of thing. It lists them in the same catalogue, which is evidence but not a decision. konnectome must decide whether a motif view may have another motif view as a member.
+
+4. OVERLAP AND SHARING. Chapter 16 states that instances "overlap and share interneurons". konnectome must decide whether one construct may belong to many motif views at once, and if so whether two views containing it are permitted to make incompatible claims about it. This is the decision that determines whether the catalogue is a partition or a set of lenses.
+
+5. WHERE MOTIF-LEVEL STATE LIVES. Chapter 16's SYSTEMS INTERFACE lists as STATE "attractor occupancy (which basin, if any)" - a value that belongs to the motif and to no member of it. Chapter 44's workspace does the same. This is a genuinely new state location for konnectome, whose explicit-stateless-value discipline currently attaches every value to a named construct or to a store keyed by construct. Whether a motif view may carry state of its own, in the world dict beside the eligibility-trace store, is konnectome's to settle - and Theme One's addendum constrains it if the answer is yes, because a motif's state must then be externally observable for the all-grain panel.
+
+6. THE TICK MAPPING. Every motif's identity depends on TIME CONSTANTS, and Chapter 16's whole computation is a settling over 100 to 2000 milliseconds. konnectome's tick is dimensionless-ordinal - packs/observer/prolog/observer.pl says so in its own header, calling the one-second-per-tick mapping "only a nominal, reproducible carrier". Whether a motif's settling is a within-tick iteration or a multi-tick trajectory is konnectome's decision, and it is not a small one: the second answer puts a loop with its own convergence criterion inside a component the architecture calls dumb, and the first puts motif state on the bus across ticks.
+
+7. WHETHER A MOTIF KIND IS PARAMETERISED PER INSTALLATION. "The same diagram at many addresses" implies the members are the only thing that varies. But Chapter 16 lists PARAMETERS - recurrent gain 0.8 to 1.5, inhibitory coupling, threshold - and those plainly differ between a cortical instance and a collicular one. Whether konnectome's motif kinds carry per-installation parameters, and whether those parameters are per kind or per instance, is undecided. Note that slice 40 already settled the analogous question one grain down and its answer should be presumed to carry: a thing that can CHANGE belongs to the instance, a thing that is fixed belongs to the kind.
+
+8. THE STATUS OF THE (COG) AND (NON-COG) TAG. The corpus tags every one of the seventy-one entries and closes with a scoreboard reasoning about the tags. konnectome has no such field anywhere. Whether the tag is data on a motif entry, worth carrying because it is a corpus fact about what the motif is FOR, or editorial matter that stays in the documents, is konnectome's decision. It is cheap either way and should be decided deliberately rather than by omission.
+
+9. MID-RACE OBSERVABILITY OF THE SELECTOR. The corpus publishes commitment time only "implicitly as output latency" and says nothing about whether a partially-settled competition is readable while it runs. Theme One's standing addendum - every construct's mode an externally observable value the world carries - makes this konnectome's question and gives it a default answer, but the corpus does not supply one. Deciding it late would be the exact retrofit the addendum warns against.
+
+10. WHERE THE HYSTERESIS LIVES, AT THIS GRAIN. Chapter 16's transfer function is "a hysteretic max operation" and its Commitment Mode is explicitly hysteretic. OBSERVATION-8 in the ledger already records that konnectome's gate is a symmetric toggle and that the corpus locates stickiness in a separate STABILISER, quoting the Layer 11 reading that "this is a stabiliser, not a switch, so it has no poles of its own". But that quotation is from the Layer 11 grain and Chapter 16 puts the hysteresis inside the motif's own transfer function. The corpus therefore answers this question differently at two grains, and konnectome must decide whether a winner-take-all motif reads a published stability bias (consistent with OBSERVATION-8's named closer) or carries its own (consistent with Chapter 16 read literally). This document flags it as the sharpest genuine ambiguity found in Theme Four and does not resolve it.
+
+11. THE COMMAND-VERSUS-BIAS DECISION, ARRIVING A SECOND TIME. The mode-register design authority's Part Seven records that the corpus is genuinely silent on whether a bus-thrown mode transition is a command or a bias. Chapter 16's "Neuromodulators move the circuit between regimes by scaling recurrent gain" is a BIAS in form - a gain scalar, not a mode name - which is evidence, not a decision, and it is evidence that arrives at a different grain from the one where the decision must be made. Recorded here so the mode-register family's decision is made in the knowledge that Theme Four will inherit it.
+
+
+A5 - WHAT KONNECTOME HAS, SCORED HONESTLY
+
+The scoring rule, stated before the scores so it can be argued with: a motif is INSTANTIATED only if konnectome carries both halves of the corpus's definition, the wiring diagram AND the computation. Carrying the computation with a single construct scores COMPUTATION ONLY. Carrying the output shape without the mechanism scores OUTCOME ONLY.
+
+THE HEADLINE, AND IT IS UNCOMFORTABLE. Of the seventy-one motifs, konnectome instantiates the WIRING DIAGRAM of NONE - not one, because after the correction in A1 there is no pack that can name a subgraph, assign a role, or address a portion of the connection graph as a unit. It instantiates the COMPUTATION of six, and part of the computation of five more. The theme's "starting from the motifs konnectome already implicitly instantiates" is therefore a starting point of about six half-entries, not a foundation.
+
+COMPUTATION ONLY - the six genuine ones.
+
+• CHAPTER 1, CONVERGENCE (the Evidence-Pooling Junction). packs/connection_graph/prolog/connection_graph.pl, connection_graph_total_input/4 folding connection_graph_accumulate/4 over the incoming interfaces, gathering a signed weighted sum. This is the corpus's fan-in arithmetic exactly, including the sign carried per edge. The threshold half is ABSENT: archetype_relay/3 is linear and no construct rectifies. Entry 1's three modes (Averaging, Integrating, Coincidence) all map to real konnectome behaviours held in DIFFERENT constructs - archetype_integrator/4 is Integrating Mode alone - and no single construct holds the register.
+
+• CHAPTER 2, DIVERGENCE (the One-to-Many Megaphone). packs/neuromodulator_bus/prolog/neuromodulator_bus.pl, neuromodulator_bus_broadcast/4 and neuromodulator_bus_broadcast_territory/5. The corpus's own KONNECTOME NOTE proposes broadcast_fanout_publisher applying "either a synchronous copy or a slow decaying scalar field for the neuromodulatory case", which is Entry 2's two modes - Phasic (the Global Alarm) and Tonic (the Background Hum). konnectome has both and holds them in two different packs: the phasic copy is the bus, the slow decaying field is packs/arousal_regulation/prolog/arousal_regulation.pl, arousal_regulation_settle/3. The register exists across the repository and belongs to no construct in it. This is the clearest single illustration of what a motif catalogue would buy.
+
+• CHAPTER 3, THE FEEDFORWARD CHAIN (the Signal Bucket-Brigade). connection_graph transmissive interfaces with per-interface delay lines: connection_graph_delay_lines_new/2, connection_graph_advance_line/3, connection_graph_run_delayed/6. Faithful carry after a fixed delay is Entry 3's Relaying Mode, and it is the one motif konnectome instantiates with its full declared register of one meaningful mode; the Non-Relaying burst mode is absent.
+
+• CHAPTER 34, THE COMPARATOR (the Surprise Meter). packs/archetype/prolog/archetype.pl archetype_comparator/3, used by packs/prediction_loop/prolog/prediction_loop.pl at prediction_loop_compare/5 and prediction_loop_compare_absent/4. This is the best match in the repository: Entry 34's two modes, Match (the Quiet Bell) and Mismatch (the Ringing Bell), are prediction_loop_outcome_type/2 already, by name. The wiring is nonetheless not the corpus's: the corpus's comparator has TWO named input streams converging on one population, and konnectome's has one stored expectation and one argument, so the diagram - two roles, two edges - has no representation.
+
+• CHAPTER 36, THE MUTUAL-INHIBITION FLIP-FLOP (the Either-Or Latch). packs/archetype/prolog/archetype.pl archetype_gate/4 with archetype_gate_register/1, archetype_gate_transitions/1, archetype_gate_automaton/2 and archetype_gate_transfer/2, built at slice 40 and validated block by block against this very entry, as the ledger records. Highest-scoring entry in the repository, and still computation only: there are no two mutually inhibiting populations, only one construct with two modes. OBSERVATION-8's hysteresis gap stands.
+
+• CHAPTER 60, THE CLOSED-LOOP NEGATIVE FEEDBACK MOTIF (the Set-Point Keeper). packs/drive_system/prolog/drive_system.pl, drive_system_error/3 and drive_system_update_one/4 measuring absolute distance from a set point, drive_system_toward/4 stepping toward it and, in its own comment, never past it. This is Entry 60's Homeostatic Mode precisely. An honest bonus the theme does not claim: Entry 60's ALLOSTATIC MODE, the deliberately moved set point, ALSO exists in konnectome but at a different grain - packs/plasticity_engine's scaling_step_territory/6 with the per-territory target geography of slice 33 is a moved set point in everything but name. konnectome therefore has both of this motif's modes, in two packs, at two grains, with nothing naming them as one register.
+
+PARTIAL - the five halves.
+
+• CHAPTERS 6 AND 29, RECURRENT EXCITATION AND THE AUTOASSOCIATIVE ATTRACTOR. archetype_attractor/5 moves toward the nearest stored pattern, which is Entry 29's Recall Mode (the Pattern-Completer) and nothing else. Storage Mode is absent. Replay Mode exists elsewhere - packs/offline_consolidation/prolog/offline_consolidation.pl, offline_consolidation_replay_round/4 - which is the same split as Chapter 2's.
+
+• CHAPTER 8, FEEDBACK INHIBITION (the Activity Thermostat). Instantiated at the slow grain only: homeostatic scaling holding a running average to a target IS Entry 8's Stabiliser Mode (the Gentle Governor), via plasticity_engine_average_step/4 and plasticity_engine_scaling_step_territory/6. The Oscillator and Ceiling modes are absent, and so is the fast loop.
+
+• CHAPTERS 22 AND 27, THE GAMMA OSCILLATOR AND THE PACEMAKER NETWORK. archetype_oscillator/5 advances a phase and derives receptivity - a single-node pacemaker, not the two-population PING loop, which needs two roles. two_process_governor_circadian_drive/2 computes a circadian wave, which is Chapter 63's function without any coupling.
+
+• CHAPTER 35, THE SUPERVISED ERROR-CORRECTION MODULE (the Perceptron Cell). The plasticity engine's three-factor rule with dopamine as the teaching factor is the corpus's teacher-instructed weight tuning in its neuromodulatory rather than its climbing-fibre form; the corpus's own teacher LINE - a distinct low-rate input edge - has no representation, and again it needs an edge type Theme Three owns.
+
+• CHAPTER 40, THE BASAL GANGLIA SELECTION MOTIF (the Permission Machine). packs/override_controller/prolog/override_controller.pl, override_controller_arbitrate/4 with override_controller_most_vital/2, is the corpus's hyperdirect stop line in embryo - and Layer 12's faculty 8 names exactly that criterion, "the capacity to stop (the hyperdirect veto)". What is absent is the motif's defining posture: the corpus's selector defaults to ALL CHANNELS SUPPRESSED and selects by REMOVING inhibition, which its KONNECTOME NOTE calls out as the difference "most artificial agents lack and demonstrably need". konnectome's action_selector defaults to releasing the maximum.
+
+OUTCOME ONLY - and it is the one the theme leans on.
+
+• CHAPTER 16, WINNER-TAKE-ALL (the One-Survivor Circuit). packs/action_selector/prolog/action_selector.pl: action_selector_best/2 folds the candidate list keeping the strictly greater salience, action_selector_select/2 publishes released(Name) or nothing, action_selector_bias/3 adds a drive's error to a base salience. The verdict shape matches the corpus's one-hot output and nothing else does. There is no shared inhibitory node, no self-excitation, no per-candidate state surviving a tick, no settling, no hysteresis, no confidence, no rivalry regime, and no register. Set against Entry 16's three modes, konnectome has none of the three: it does not deliberate, it does not commit (it recomputes from scratch each tick), and it cannot flip-flop.
+
+  THE ONE THING KONNECTOME HAS THAT THE CORPUS DOES NOT NAME, and it must survive every deepening: action_selector_is_candidate/2, the never-invent invariant, checkable from outside. The corpus has no equivalent because a biological circuit cannot invent a candidate that was not wired to it. This is konnectome's own constitutional property and any settling loop must be proved against it.
+
+ABSENT ENTIRELY, and worth naming because they are the ones Theme Four's "inhibition as a computation" is actually about: Chapters 5, 7, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19, 30, 33, and every composite. All of them need two or more roles.
+
+
+A6 - SUGGESTED SLICE FAMILY, SMALLEST FIRST
+
+Sized as a BUILD, per A1's correction. Each item is ordinary test-first pack work behind the usual gates; none touches a cousin. Where an item touches merged code the identity promise is stated in the item, in the form slices 39 and 40 established - measured against a worktree of main, not asserted.
+
+1. THE MOTIF VIEW, EMPTY OF COMPUTATION. A new pack holding a motif view as data: a named view over an existing graph carrying a kind and an ordered member list, with a well-formedness check that every member is a construct the graph knows and that every declared edge of the kind exists among the members as an interface term. Nothing computes; nothing subscribes; no existing predicate is called by anything new. connection_graph is NOT edited - the view reads the graph as a value, exactly as the eligibility-trace store reads and returns values. Behaviour pinned identical trivially, and provably: no merged predicate is touched, and the archetype probe and the capstone story must come out byte for byte identical against a worktree of main.
+
+2. ROLES, AND THE REFUSAL AT THE DOOR. Widen a member to a role-and-construct pair, with a per-kind role declaration carrying each role's cardinality, and refuse an unknown or wrongly-counted role ALOUD - existence_error and domain_error in the shape slice 40's register constructor established, never silent failure. Validated against two corpus diagrams read as written: Chapter 16's two roles with cardinalities N and one, and Chapter 1's two roles with cardinalities N and one and its stated prohibitions (no edges among the sources, no return edge from the sink). Still nothing computes. This item settles decision A4.2 and it should record the answer to A4.1 as a decision at the same time.
+
+3. THE FIRST FOUR KINDS, EACH A NAMING OF BEHAVIOUR THAT ALREADY RUNS. Declare convergence over connection_graph_total_input/4, divergence over the bus's broadcast, the comparator over archetype_comparator/3, and the closed-loop negative feedback motif over drive_system's set-point machinery. Each validated block by block against its chapter's WIRING DIAGRAM and SYSTEMS INTERFACE, as slice 40 validated the gate against Entry 36, and each recorded with the places the two shapes differ rather than smoothing them - the comparator's missing second stream is the known one and should be logged as an observation with its closer named. Behaviour pinned identical for every well-formed graph: this slice adds a lens, not a rule.
+
+4. THE MOTIF MODE REGISTER, REUSING SLICE 39'S PACK. Give the four declared kinds their Layer 8 registers in the corpus's three-field form, with transfer functions that genuinely differ and are genuinely applied, an explicit transition table carrying trigger, direction, timescale and agency, and the fault block present and empty per the standing decision. Convergence is the natural first because its regime selection is a bus-readable quantity in the corpus's own text. Per slice 40's settled distinction, a motif's CURRENT mode belongs to the instance and arrives as an argument; entries, transfers, table and fault block are per kind. Theme One's addendum applies from this item onward: a motif's current mode must be an externally observable value the world carries.
+
+5. THE SELECTOR'S WINNER-TAKE-ALL DEEPENING, IN TWO SLICES AND NOT ONE. This split is a finding, not a preference, and the reason is in item 5a.
+
+   5a. THE SETTLING LOOP. Candidate populations with per-candidate state, a shared inhibitory tax, rectified relaxation, and a settled verdict. The identity promise CANNOT be total and must not be written as though it were: for every candidate list with a STRICT maximum the settled verdict must be proved identical to action_selector_best/2, and for a TIE the two shapes genuinely differ - konnectome's merged code keeps the earlier candidate as a deliberate stable tie-break, and the corpus's near-tie is Rivalry Mode, an alternation. That divergence must be DECLARED, in the ledger, in the form slice 40 used for its four malformed-call divergences, and the never-invent invariant re-proved by running action_selector_is_candidate/2 against the new outcome in the test suite.
+
+   5b. SETTLING TIME AS CONFIDENCE. Publish the iteration count as a confidence value, in ticks or iterations, with the mapping decision of A4.6 recorded as konnectome's own. Depends on 5a and on nothing else.
+
+6. INHIBITION AS COMPUTATION, IN THE ORDER THE CORPUS MAKES CHEAPEST.
+
+   6a. Feedback inhibition (Chapter 8) as a motif over the homeostatic scaling machinery that already runs - the smallest, because its Stabiliser Mode is already built and this names it.
+
+   6b. Lateral inhibition (Chapter 9) as the first motif with NO existing counterpart, and therefore the first item in this whole family that adds a computation. Chosen over the other absent eight because the corpus calls it "the exemplary generic motif" and because its Selection Mode is the documented bridge to item 5 - "the competitive motifs are lateral inhibition turned up" - so the two validate each other.
+
+   6c. Disinhibition (Chapter 14), the permission circuit, built WITH Theme Two's write-allocation gate rather than before it, because A3 establishes they are the same construct seen from two grains.
+
+DELIBERATELY NOT IN THIS FAMILY, each with the family that owns it.
+
+• Presynaptic inhibition (Chapter 12) is an edge targeting an edge and belongs to Family Three, the edge type registry, where Theme Three already lists it.
+
+• Volume inhibition (Chapter 15) publishes to a region rather than a channel and belongs to Family Four's bus-naming slice; the bus's territory mechanism is already the right shape.
+
+• The perisomatic-dendritic division (Chapter 13) needs a per-branch input mask and konnectome has no sub-construct grain; it waits until one exists, and A3 records why.
+
+• Every Part Six composite waits on decision A4.3 - whether motif views nest - which item 1 or 2 should record as a decision but not build.
+
+
+================================================================================
+PART B - THEME FIVE: ATTENTION, WORKING MEMORY, THE GLOBAL WORKSPACE
+================================================================================
+
+
+B1 - THE VERDICT ON THEME FIVE'S PARAGRAPH
+
+THE THEME IS SOUND AND NO SENTENCE OF IT IS OVERTURNED. The faculty scoring matches LAYER_12_FACULTY_SPECIFICATION.txt read in full; the three-way absence is confirmed by the code and independently by the coverage survey's bug three; and the judgment that two of the three are ordinary packs in waiting while the third is under genuine architectural pressure is, if anything, understated. Three refinements follow, all of them things the paragraph leaves out rather than things it gets wrong.
+
+FIRST, THE SPECIFICATION CARRIES A BUILD ORDER THE THEME DOES NOT. Line 142 of the faculty specification reads: "The build order suggested by the dependency structure: perception and motor first, then attention and working memory, then the memory pair, then valuation and executive control, then language and social cognition, with learning and the workspace criterion tested throughout." Two consequences the theme's paragraph cannot give you. Attention and working memory come BEFORE the memory pair in the corpus's own dependency reasoning, which is an argument for Family Four ahead of the episodic work that coverage bug one names. And the workspace criterion is to be "tested THROUGHOUT" rather than built at a point - the corpus treats access consciousness as a property to be checked continuously, not a module to be delivered once, which is itself evidence bearing on B3 and is why the workspace's acceptance criterion is worded as global availability to every other faculty.
+
+SECOND, AND THIS IS THE REFINEMENT WITH DESIGN CONSEQUENCES. The theme writes that the corpus treats the three "as one connected gating economy (attention amplifies, the gate admits to working memory, ignition broadcasts)". That is right in shape and imprecise in a way that would mislead a builder: THERE ARE TWO GATES, OF DIFFERENT KINDS, IN DIFFERENT PLACES. The gate that admits to working memory is a BASAL GANGLIA gate under dopamine - Chapter 16 at line 3117 ("with a striatal-dopaminergic gate deciding what may enter"), at line 3131 ("The basal ganglia input gate, striatum and pallidum deciding, under dopamine, which items are admitted or updated"), and at line 3163 ("the basal-ganglia gate is the explicit admission control"). The gate on the workspace is ATTENTION - Chapter 44 at line 8085, "Attention is the main gate on which content is amplified, and the salience network gates hand-offs from one content to the next". Attention gates ignition; dopamine gates admission. A design that builds one admission gate serving both would be building something the corpus does not describe, and it would be building it out of the same machinery the action selector already is, which makes the mistake easy and expensive.
+
+THIRD, "TWO OF THE THREE ARE ORDINARY PACKS IN WAITING" IS TRUE OF ONE OF THEM AND GENEROUS ABOUT THE OTHER. Working memory is not a pack in waiting; it is a pack ALREADY DESIGNED, down to its constants, at LAYER_10_SYSTEMS_MANUSCRIPT.txt lines 3227 to 3293 - capacity 4, decay 0.05, collapse threshold 0.2, rehearsal restoring to 1.0, gated admission, weakest eviction - with a four-mode register in the modes outline and a full SYSTEMS INTERFACE. Attention has no such thing. The corpus gives attention as the MODES OF TWO NETWORKS (Entry 22, the salience network: Calibrated Vigilance, Damped Watch, Stress Lock; Entry 23, the dorsal attention network: Engaged-Orienting, Disengaged-Standby, Offline-Sleep) and as a bias value between 0 and 1 in the workspace's SUBSCRIBES field, and it offers at least two different structural answers at two different grains - Chapter 19's Gain Modulation motif, the Multiplier, and Chapter 39's thalamic reticular searchlight gate. There is no attention chapter with its own module proposal. So of the theme's two ordinary packs, one is specified to the constant and one is not specified at all, and the slice family in B6 orders them accordingly.
+
+
+B2 - THE WORKSPACE, AS THE CORPUS SPECIFIES IT
+
+Written at the depth a pilot pack could be designed from, so that the pilot is designed from this section rather than from the theme. Source throughout is LAYER_10_SYSTEMS_MANUSCRIPT.txt Chapter 44, lines 8009 to 8236, with the mode register from LAYER_10_MODES_OUTLINE.txt entry 44 and the acceptance criterion from LAYER_12_FACULTY_SPECIFICATION.txt faculty 14.
+
+WHAT IT IS. Not a place. Line 8025: "The global workspace dynamics is not a place but a mode of operation across the whole cortex, in which competing coalitions of neurons vie for access and the winner is amplified in an all-or-none ignition and broadcast to the rest of the brain." The chapter is the volume's capstone and follows the global neuronal workspace theory of Dehaene, Changeux and Naccache. The four words of its name are glossed individually: Global names its reach, Workspace names the shared blackboard on which the winning content is posted for all to read, Ignition names the sudden all-or-none flare by which the winner crosses threshold, Broadcast names sending the winning content to every subscribing system at once.
+
+THE CAPACITY LIMIT. Line 8075: "The workspace is severely capacity-limited: roughly one ignited content at a time, which is why conscious access is serial and why two targets close in time compete, as in the attentional blink." The PARAMETERS field states it as a parameter, "capacity of about one content at a time". Note the sharp contrast with working memory's four, which is a different faculty with a different store - Layer 12 tests them as faculties 3 and 14 separately.
+
+THE IGNITION THRESHOLD. Genuine, and the corpus insists on it twice. Line 8079: "The threshold is genuine: stimuli just below it stay unconscious, just above it ignite fully, with little middle ground." Line 8077 gives it a time: "Ignition is late and slow, emerging a few hundred milliseconds after a stimulus, near 300 milliseconds in human recordings, marked by a late electrical event and a non-linear jump in prefrontal and parietal activity." The runnable values, from the chapter's own CODE SAMPLE at lines 8203 to 8231: ignition threshold 0.6 on normalised coalition activity, recurrent self-excitation gain 1.5, mutual inhibition 0.4, twelve settling steps, with a normalisation to the peak on each step to keep the competition bounded, and rectification so no coalition goes negative. Its two printed cases are the whole specification of the behaviour: a near tie with weak drive stays unconscious, one strong bid ignites and broadcasts.
+
+THE EMERGENT ARBITER, and this is the sentence the whole eleventh-component question turns on. Line 8157: "The biological difference is that the arbiter is not a separate controller but the emergent result of recurrent competition among the publishers themselves, and the grant is all-or-none because of that recurrence, not because a scheduler decided it." The chapter's nearest engineering analogue is offered and then immediately qualified by that sentence: "a shared message bus with a single arbiter that grants the bus to one publisher at a time and blocks the rest". The motif inventory names what does the arbitrating - line 8063: "The core motif is winner-take-all competition with recurrent amplification... in which mutual inhibition between coalitions and self-excitation within the winner produce an all-or-none outcome", plus "A threshold-nonlinearity motif gives the sharp transition, and a sustained-attractor motif holds the content long enough to be used". The workspace is therefore Theme Four's Chapter 16 installed at the largest grain the corpus has, which is a real dependency between the two themes and is why this document reads them together.
+
+WHAT BROADCAST MEANS, precisely, because the word is doing three jobs. First, REACH: the winner goes "to every subscribing system at once" (8019) and, in the KONNECTOME NOTE at 8153, to "a brain-wide topic that all systems read". Second, SUPPRESSION: broadcast is not merely publication, it is publication WITH the rivals put down - line 8057, "with the winning coalition amplified and its rivals actively suppressed". Third, and most easily missed by a builder, DURATION: broadcast is a HELD STATE, not a message. Line 8071: "A workspace episode holds for hundreds of milliseconds to a few seconds before the coalition dissolves, and the stream of thought is the succession of such episodes at a rate of a few per second at most." The TIME CONSTANTS field gives ignition onset near 300 milliseconds, sustained broadcast hundreds of milliseconds to seconds, hand-off between contents a few hundred milliseconds.
+
+THE INTERFACE, as the corpus writes it. SUBSCRIBES: "Candidate contents from all sensory and specialised processors; attentional bias from the dorsal attention network 0 to 1; salience triggers; arousal level from noradrenaline and acetylcholine." PUBLISHES: "The single ignited content, broadcast to all cortical subscribers; a sustained global state available to memory, language, and action." STATE: "Activity of each competing coalition; the identity of the current winner, if any; ignited or non-ignited; arousal gate open or shut." PARAMETERS: ignition threshold, recurrent gain, mutual inhibition strength, capacity of about one. FAILURE MODE: coma and the vegetative state from broadcast failure, the attentional blink from capacity limits, hemineglect from one-sided access failure.
+
+THE GATING, which a pilot needs and the theme does not mention. Line 8083: "Arousal from the noradrenaline and acetylcholine broadcast systems sets whether ignition can occur at all, which is why it fails under anaesthesia and deep sleep." This is a PERMISSIVE gate above the competition, and konnectome already has both its halves in shape: neuromodulator_bus_level/3 for the modulator and arousal_regulation_level/2 for the arousal value.
+
+THE MODE REGISTER, four entries, and note what the fourth one already is in konnectome. Subliminal (Below the Line) - activation too weak to trigger a large-scale reverberating state, content inaccessible. Preconscious (In the Waiting Room) - activation strong enough but not yet attended, held back by the availability of top-down attention. Ignited-Conscious (Lit and Broadcast) - a single content amplified in an all-or-none surge and broadcast brain-wide. Offline-Collapsed (Broadcast Down) - the loss of ignition in slow-wave sleep and anaesthesia. THE FOURTH ENTRY IS ALREADY DETERMINED BY A VALUE KONNECTOME BROADCASTS: the global operating state of slices 35 through 38, read off the bus at each tick's opening by cognitive_cycle_step/3, is exactly the online-or-offline distinction this mode turns on. A workspace pilot inherits one of its four modes free, and the corpus corroborates the wiring at line 8111 - ignition and broadcast "largely collapse in slow-wave sleep and under general anaesthesia".
+
+THE ACCEPTANCE CRITERION, which is what the pilot is ultimately judged against. Faculty 14: "capacity-limited serial report; the subliminal-versus-reportable threshold; global availability of ignited content to every other faculty", with the corpus's own honest note that this specifies ACCESS consciousness and "takes no position on phenomenal experience, which remains beyond any acceptance test this document knows how to write".
+
+A PILOT DESIGNED FROM THE ABOVE, stated in one paragraph so the sufficiency of this section can be checked. Subscribe to a list of candidate contents each carrying an activity, to an attention bias between 0 and 1, and to an arousal gate read from the bus. If the arousal gate is shut, publish no ignition and stop. Otherwise apply the attention bias to the candidates, settle a fixed number of rectified mutual-inhibition steps with peak normalisation, take the maximum, and publish ignition of that content if and only if its settled activity is at or above the threshold, otherwise publish an explicit no-ignition. Hold the ignited content across ticks until it falls below threshold or is displaced. Every constant in that paragraph is in the corpus; every decision it does not make is in B5.
+
+
+B3 - THE ELEVENTH-COMPONENT QUESTION, REVISITED
+
+THIS DOCUMENT DOES NOT DECIDE IT, AND SAYS SO DELIBERATELY. The top-down analysis left it open on purpose and its reasoning was correct: the question is answered by what a pilot teaches, not from the armchair, and the Second Commandment forbids the alternative. What this read can add is precision about what the corpus actually supplies as evidence, and - the more useful half - a list of exactly what the pilot would have to teach for the question to become answerable, so that the pilot is built to answer it rather than merely to work.
+
+WHAT THE CORPUS SUPPLIES ON THE SIDE OF A BESIDE-THE-SKELETON CONSTRUCT.
+
+• The arbiter is emergent and is explicitly NOT a controller and NOT a scheduler - line 8157, quoted in full in B2. So the workspace does not compete for authority with Component 5, the dumb scheduler, or with Component 6, the never-invent selector. The single strongest structural worry about an eleventh component - that it would be the homunculus returning - is answered by the corpus in the corpus's own words.
+
+• It is catalogued as a SYSTEM. Chapter 44 of 44, in the same catalogue as the visual system and the hypothalamic-pituitary-adrenal axis. Every other system in that catalogue maps to a pack or a coalition of packs, not to an architecture component.
+
+• Its own KONNECTOME NOTE names it as one module with subscribes and publishes: "As a konnectome pipeline this is global_workspace_broadcaster". Pipeline and module are pack vocabulary.
+
+• The volume's closing engineering lesson at line 8262 calls Layer 10 "the integration blueprint - the pipelines to assemble from the module library, the broadcast buses to string above them, the axes to run beneath them, and the workspace PROTOCOL by which the assembled coalition thinks one thing at a time". Protocol, not organ.
+
+WHAT THE CORPUS SUPPLIES ON THE SIDE OF A COMPONENT-SCALE CHANGE.
+
+• Its output is not a value some pack consumes; it is a change in WHAT EVERY OTHER COMPONENT READS. "Every subscribing system at once"; "a brain-wide topic that all systems read". That is what Component 4 IS. The analysis's own Part One ratified Component 4 on the Layer 7 volume's evidence that broadcast is not a graph edge. A second broadcast channel carrying CONTENT rather than a scalar level is a new kind of thing on the bus, and the bus is a component.
+
+• The ignited state is HELD and gates other work while it is held, with rivals actively suppressed. A standing global value that conditions everything below it is the shape of the global operating state - and konnectome put THAT on the bus rather than inside a pack, deliberately, at slice 35.
+
+• Layer 12's acceptance criterion is "global availability of ignited content to EVERY OTHER faculty". No single pack can satisfy that alone, because satisfying it is a property of the tick order rather than of any one participant.
+
+• packs/cognitive_cycle/prolog/cognitive_cycle.pl hard-codes its tick order in cognitive_cycle_step/3. Admitting a workspace that must be read by other packs in the same tick means editing Component 9's order, and editing the order is what a component-scale change looks like from inside this repository.
+
+WHAT THE PILOT MUST TEACH. Five questions, each with a stated observable, so the pilot's ledger entry can answer them rather than merely report that tests passed. This list is the substance of this section and it is konnectome's own.
+
+1. DOES ANY EXISTING PACK NEED TO READ THE IGNITED CONTENT IN THE SAME TICK IT IS PUBLISHED? If no reader needs it same-tick, the workspace is a pack that publishes a value and the bus already carries values across ticks; nothing about the skeleton changes. If a reader does need it same-tick, the tick order must change, and that is the component-scale answer. Observable: whether the pilot can be placed anywhere in cognitive_cycle_step/3 without altering any other pack's output.
+
+2. CAN THE HELD WINNER LIVE AS AN ORDINARY WORLD VALUE? konnectome's explicit-stateless-value discipline already carries the eligibility-trace store, the running-average store, the per-territory target store and, since slice 39, the mode register. If the ignited content is one more such value, no new component is needed and Theme One's observability addendum is honoured for free. If it must instead be reachable from inside a construct's own rule mid-tick, it is bus-shaped and the question hardens. Observable: whether the pilot can be written with the winner threaded through the world dict alone.
+
+3. CAN THE COMPETITION SETTLE INSIDE ONE TICK? The corpus's own settling is twelve iterations, which is cheap; but a multi-tick race means the workspace carries state that outlives a tick AND is consulted by the selector, which begins to look like a second referee standing beside Component 6. Observable: whether a within-tick settle reproduces the corpus's two printed cases, and whether anything in konnectome actually needs the multi-tick form.
+
+4. DOES THE ARBITER STAY EMERGENT WHEN THE BIDDERS ARE PACKS? The corpus's emergence comes from the publishers' own recurrence: the coalitions compete by being what they are. konnectome's packs do not recur into each other; they publish once per turn under a dumb scheduler. If the pilot must iterate the competition ON BEHALF of the bidders, konnectome has built a broadcaster-ruler wearing emergent clothing, and the coverage survey's stated constraint - "the arbiter must be emergent winner-take-all, never a ruler" - is the thing the pilot has falsified rather than satisfied. Observable: whether the settling loop reads anything other than the bids and the parameters. This is the question this read considers most likely to be the informative one.
+
+5. IS IGNITION A MODE TRANSITION OF THE MASTER REGISTER? Theme One's elevation asserts it is - "the workspace's ignition (Theme Five) is a mode transition". If that is right, the workspace is absorbed by the mode-register family, its four-entry register hangs beneath the master register whose fourth entry konnectome already broadcasts, and there is no eleventh component at all. That is the cheapest possible answer to the whole question and the pilot should test it FIRST, because if it holds, questions 1 through 4 do not need asking.
+
+STATED PLAINLY FOR THE RECORD: the corpus cannot decide this question and no amount of further reading will make it able to, because the corpus knows nothing of the ten components. Only the pilot can, and only if it is built to answer the five above.
+
+
+B4 - THE EPHEMERAL-STATE QUESTION, REVISITED
+
+THE ANSWER IS YES, CONSISTENT WITH BOTH, AND THE CORPUS IS FAR MORE EMPHATIC THAN THE ANALYSIS'S CAUTIOUS SENTENCE SUGGESTS. Unrecordedness is not a concession konnectome would be making; it is the DEFINING PROPERTY of the faculty, stated three times in one chapter.
+
+• Line 3107, in the chapter's opening: "Nothing is written to a synapse; the memory is the activity, and when the activity stops, the number is gone."
+
+• Line 3167, under PLASTICITY AND LEARNING: "The contents are not learned at all - that is the point - but the gating policy is, by striatal reinforcement learning."
+
+• Line 3297, under WHAT MAKES IT UNMISTAKABLE: "The only memory in the book that exists as ongoing electricity rather than changed synapses, holding about four things for about ten seconds at a continuous metabolic price, and vanishing entirely the moment its neurons fall silent."
+
+An implementation whose working-memory slots persisted would therefore be WRONG against the corpus, not merely unfaithful. konnectome's discipline is that DURABLE state lives in records; working-memory contents are by construction not durable; there is no tension to manage. Three cautions follow, all of them things a slice should meet by design.
+
+FIRST, AND IT IS A CORRECTION TO THE ANALYSIS RATHER THAN A CAUTION. Part Four's ephemeral-state paragraph writes that a working-memory pack's slots would be unrecorded "save through the observer's tick trace, which sees everything". THE RUNNING OBSERVER DOES NOT SEE EVERYTHING, and does not see anything of the kind. packs/observer/prolog/observer.pl records a tick through observer_record_tick/3 and observer_build_occurrence/3 as a Causalontology token_occurrence carrying exactly two things: the shared tick occurrent type identifier and an absolute instant computed by observer_tick_instant/3. It records THAT a tick happened, never WHAT was in it. "Sees everything" describes the PASSIVE OBSERVER PRINCIPLE of the architecture, not observer.pl, and the two have been conflated in that sentence. The consequence is real and cuts in konnectome's favour: there is presently no trace in which a working-memory slot could appear even accidentally, so the ephemeral guarantee is currently free. It also names a decision that must not be taken by accident - growing the observer to carry tick CONTENT is a larger decision than the working-memory pack itself, because it is the moment the passive observer starts minting content-bearing records every tick, and it should never be smuggled in as a side effect of a memory slice.
+
+SECOND, THE PACK HAS TWO HALVES WITH OPPOSITE RECORD DISPOSITIONS AND THE SLICE SHOULD SAY SO ALOUD. The contents are ephemeral by definition; the GATING POLICY is learned, by striatal reinforcement in the corpus, and a learned policy is durable and is record-shaped. A working-memory pack therefore contains, in one module, the one thing that must never be recorded and one thing that eventually must be. B6 keeps the policy constant in the first slice for exactly this reason.
+
+THIRD, THEME ONE'S ADDENDUM APPLIES HERE AND IS EASY TO MISS. A slot must be an EXTERNALLY OBSERVABLE value the world carries, because the owner's standing all-grain visualization request depends on every grain's state being readable without running the construct. Ephemeral and observable are not in tension, and konnectome already has the exact precedent: the eligibility-trace store is a value the world carries, decaying, consumed when spent, never a record, and fully readable from outside. THE ELIGIBILITY-TRACE STORE IS THE PATTERN TO COPY, and its existence is the strongest single argument that the working-memory blackboard is an ordinary pack rather than a records question at all.
+
+CONCLUSION: consistent with the corpus, consistent with konnectome's records discipline, no wall, and one sentence of the top-down analysis in need of correction.
+
+
+B5 - WHAT THE CORPUS DOES NOT SETTLE
+
+1. WHAT A "CONTENT" IS. The workspace competes over candidate contents supplied by processors "in their native codes" and publishes "the identity of the current winning content". The corpus never says whether a content is an identifier, a record, or a structure. konnectome must decide, and the decision is not cosmetic: it determines whether the ignition claim is a relation between two existing content-addressed records or a claim about something with no record at all, which is precisely what makes WATCH-4 assessable. Decide this before the pilot, not during it.
+
+2. WHO BIDS, IN A FEDERATION WHERE NOBODY CURRENTLY BIDS. The corpus's bidders are cortical processors that compute continuously and unconsciously whether or not anyone is listening. konnectome's packs compute on the scheduler's turn and publish to named topics. Whether bidding is opt-in per pack, derived from what packs already publish, or a new obligation on every pack, is konnectome's decision, and the third option would be a constitutional change rather than a slice.
+
+3. THE RELATION BETWEEN THE TWO CAPACITY LIMITS. Working memory holds about four; the workspace ignites about one. The corpus never says whether the ignited winner must be a working-memory slot, whether ignition WRITES to working memory, or whether the two stores are independent. Layer 12 tests them as separate faculties, which is evidence for independence and not a statement of it.
+
+4. WHICH GATE IS WHICH, AND WHETHER ONE MECHANISM CAN SERVE BOTH. Per B1's second refinement: dopamine gates admission to working memory, attention gates ignition. The corpus never says whether one gate could do both jobs, and konnectome's action_selector is the machinery both descriptions point at, which makes the collapse tempting and unwarranted.
+
+5. THE TICKS-PER-SECOND CONVENTION, AND THIS IS THE LARGEST UNDECIDED THING IN THEME FIVE. Every number in the cluster is wall-clock: ignition near 300 milliseconds, a workspace episode of hundreds of milliseconds to seconds, hand-off a few hundred milliseconds, the stream of thought a few per second, working-memory admission 100 to 300 milliseconds, unrehearsed decay 2 to 20 seconds, wipe on task switch under one second. konnectome's tick is dimensionless-ordinal and observer.pl calls its one-second-per-tick mapping a nominal carrier only. NONE of the cluster is buildable to the corpus's numbers until a convention is declared, the convention is konnectome's own, and it is named nowhere in Theme Five's paragraph nor in Part Six's Family Four.
+
+6. WHETHER NO-IGNITION IS PUBLISHABLE. The corpus's own code returns "no ignition: all contents stay unconscious" as a value, so an explicit absence is at least idiomatic in the corpus. konnectome's bus precedent runs the other way - an absent key reads as a default. Which shape the workspace uses is konnectome's, and it interacts with question 1 of B3.
+
+7. WHETHER ATTENTION IS A PACK, A BUS CHANNEL, OR A PARAMETER. The corpus gives three different answers at three grains and commits to none: a bias value 0 to 1 in the workspace's SUBSCRIBES; the modes of two named networks; and, at the motif grain, both Chapter 19's Gain Modulation (the Multiplier, which "changes the slope, not the threshold... multiplying rather than adding") and Chapter 39's thalamic reticular searchlight gate. Those are genuinely different mechanisms and the corpus is content to hold all of them.
+
+8. THE EVICTION MODEL. Chapter 16 contains two accounts in one chapter. The runnable code evicts the weakest slot when the surface is full - a discrete-slot model. The prose says "precision degrades as items are added, supporting shared-resource accounts" - a continuous-resource model. konnectome must pick one and record which, and the slot model is the one the corpus's own code implements.
+
+9. WHETHER REHEARSAL IS SELF-DRIVEN OR EXTERNALLY ADDRESSED. The code takes the rehearsal target as an argument from outside; the prose calls the blackboard "written by attention, read by everything, wiped by the next task". If rehearsal genuinely comes from attention, then working memory cannot be finished before attention has a publisher - which is a dependency the corpus implies and never states, and which B6 handles by keeping the first working-memory slice's rehearsal caller-supplied.
+
+
+B6 - SUGGESTED SLICE FAMILY, SMALLEST FIRST
+
+The analysis's Family Four line was: the working-memory blackboard; the workspace pilot beside the skeleton; attention as salience-driven bias; the bus adopting the corpus's six named broadcast channels. This read reorders it and adds one item, for reasons given in Part C.
+
+1. THE BUS'S SIX NAMED BROADCAST CHANNELS. Layer 10 Part Five, Chapters 31 through 36: dopamine, noradrenaline, serotonin, acetylcholine, histamine, orexin, each with the computational role the corpus assigns it. Pure naming over neuromodulator_bus_broadcast/4 and neuromodulator_bus_level/3, which already accept any atom; the slice adds the six as a declared, checkable roster with their roles recorded, and refuses nothing that works today. Behaviour pinned identical trivially - no existing call changes - and provable by the capstone story coming out byte for byte identical against a worktree of main. THIS IS THE SMALLEST ITEM IN EITHER FAMILY and the analysis lists it LAST; it should be first, because the workspace's arousal gate (B2) and Theme Four's neuromodulatory mode transitions (A2) both consume it. Honest note for whoever builds it: only dopamine is actually broadcast today, by drive_system_step/6.
+
+2. THE TICKS-PER-SECOND CONVENTION, DECLARED AND NOT BUILT. A recorded decision with one test asserting it, in the shape of slice 39's naming-collision resolution - a decision that closes a question rather than a mechanism that answers it. observer_tick_instant/3 already assumes one nominal second per tick and calls it nominal; this slice either ratifies that or replaces it, and says which. Everything from item 3 onward needs it. It is not in the analysis's family line at all.
+
+3. THE WORKING-MEMORY BLACKBOARD, BUILT TO THE CORPUS'S CONSTANTS. Capacity 4, decay 0.05, collapse threshold 0.2, rehearsal restoring to 1.0, gated admission, weakest eviction - the corpus's own numbers from lines 3227 to 3293, so that no constant in the pack is konnectome's invention. Slots held as a value the world carries in the eligibility-trace store's discipline: decaying, externally readable, deliberately unrecorded, per B4. The gating policy is held CONSTANT in this slice and the rehearsal target is caller-supplied, per B5.9. Nothing in the tick changes yet; the pack is exercised by its own tests before it is wired.
+
+4. THE WORKING-MEMORY MODE REGISTER. Entry 16's four modes - Robust Maintenance (the Held Chalk), Gated Updating (the Fresh Slate), Erased Idle (the Wiped Board), Ungoverned Flicker (the Doodling Board) - in the three-field form, reusing the mode_register pack. Erased Idle wires to the global operating state konnectome ALREADY broadcasts, because the corpus states the board is erased in slow-wave sleep and the offline branch of cognitive_cycle_step/3 already exists; that costs almost nothing and it is the first time anything beneath the master register receives a downward assignment, which the mode-register family has been waiting for something to do.
+
+5. ATTENTION AS A SALIENCE-DRIVEN BIAS. A published value between 0 and 1, consumed first by working-memory admission and then by the workspace pilot. Built AFTER item 3 so that B5.9's rehearsal question is answered by a real caller rather than in the abstract, and built as a bias rather than as a network so that B5.7's three corpus answers are not prematurely collapsed. The decision of which of the three shapes attention takes is recorded in this slice as konnectome's own.
+
+6. THE WORKSPACE PILOT, BESIDE THE SKELETON. Built to B2: candidate contents, attention bias, arousal gate, rectified mutual-inhibition settling with peak normalisation, explicit threshold, explicit no-ignition outcome, winner held across ticks. AND IT MUST NOT BE MERGED WITHOUT ANSWERING THE FIVE QUESTIONS OF B3 IN ITS OWN LEDGER ENTRY, testing question 5 first. This is the slice that makes the eleventh-component question answerable, and a pilot that merely works while leaving the question where it found it has failed at the only job the analysis assigned it.
+
+7. THE LEARNED GATING POLICY, LAST. Where this family meets Theme Two's write-allocation gate and the episodic work of coverage bug one, and the point at which the durable half of B4's two-halves problem finally has to be faced.
+
+A DEPENDENCY WORTH STATING ONCE. Item 6 is Chapter 16's winner-take-all at the largest grain, and Part A6's item 5a is Chapter 16's winner-take-all at the selector. They are the same settling loop with different bidders. Whichever is built first should be built so the second can reuse it, and if that turns out to be impossible, the reason is a finding about the difference between arbitrating actions and arbitrating contents - which is the eleventh-component question arriving from underneath.
+
+
+
+================================================================================
+PART C - SCHEDULING FINDINGS ACROSS BOTH THEMES
+
+These are konnectome's own findings. Each says what the analysis's Part Six currently implies, what this read finds instead, and why - so that a later assessment can disagree with the reasoning rather than only with the conclusion.
+
+FINDING C1. FAMILY FOUR'S ORDER IS REVERSED END FOR END. The analysis lists Family Four as: the working-memory blackboard; the workspace pilot; attention as salience-driven bias; the bus adopting the corpus's six named broadcast channels. The bus naming is listed LAST and is by a wide margin the SMALLEST item in either family - pure declaration over predicates that already accept any atom, nothing refused, identity provable by the capstone story alone. It is also a dependency of two later items in two different families: the workspace's arousal gate consumes acetylcholine and noradrenaline by name, and Theme Four's neuromodulatory mode transitions consume the same roster. An item that is smallest, that unblocks two families, and that cannot break anything belongs first. B6 puts it first.
+
+FINDING C2. A DECISION SLICE IS MISSING FROM FAMILY FOUR ENTIRELY, AND EVERYTHING IN THE FAMILY DEPENDS ON IT. Every quantity in the attention, working-memory and workspace cluster is stated in wall-clock time - ignition near 300 milliseconds, admission 100 to 300, unrehearsed decay 2 to 20 seconds, wipe under one second - and konnectome's tick is dimensionless-ordinal by the observer's own declaration, which calls the one-second-per-tick mapping a nominal carrier only. NONE of Family Four is buildable to the corpus's numbers until a ticks-per-second convention is declared as konnectome's own. It is named nowhere in Theme Five's paragraph and nowhere in Part Six. It is item 2 of B6 and it is a recorded decision rather than a mechanism, in the shape slice 39 used for the naming-collision resolution. The same undecided convention reappears at Theme Four as A4.6, which is what makes it a scheduling finding rather than a detail of one family.
+
+FINDING C3. FAMILY FIVE IS LARGER THAN PART SIX BUDGETS FOR, AND THE REASON IS AN ERROR IN THE ANALYSIS RATHER THAN A CHANGE IN THE CORPUS. Part Six describes Family Five as "motifs as named subgraph views", which reads as a naming exercise over an existing facility. A1 establishes that the facility does not exist: named subgraph views live in specification prose at FR-16 and AC-11 and in Component 1's description, and nowhere in any of the thirty packs. The motif catalogue is a BUILD. A6 sizes it at six items with two of them split, against Part Six's one line. This finding was reached independently by this read and by the fidelity audit merged the same day, which is the strongest form of agreement available here.
+
+FINDING C4. THE SELECTOR'S DEEPENING IS TWO SLICES, NOT ONE, AND THE SPLIT IS FORCED BY A DIVERGENCE RATHER THAN CHOSEN FOR SIZE. Part Six lists "the selector's winner-take-all deepening" as a single item beside the motif catalogue. A6 item 5 splits it because the identity promise cannot be total: for a candidate list with a strict maximum the settled verdict must equal action_selector_best/2, but for a TIE konnectome's merged code keeps the earlier candidate as a deliberate stable tie-break while the corpus's near-tie is Rivalry Mode, an alternation. That is a declared divergence in the form slice 40 established for its four malformed-call divergences, and a slice that promises bit-identity across the whole input space would be promising something false. The confidence publication then depends on C2 and separates cleanly.
+
+FINDING C5. TWO FAMILIES CONVERGE ON ONE MECHANISM, AND WHICHEVER LANDS FIRST SHOULD BE BUILT FOR BOTH. A6 item 5a and B6 item 6 are the same settling loop - Chapter 16's winner-take-all - with different bidders: candidate ACTIONS at the selector, candidate CONTENTS at the workspace. Building either in ignorance of the other risks two settling loops in one repository. If the reuse proves impossible, the reason is itself the finding, because the difference between arbitrating actions and arbitrating contents is the eleventh-component question arriving from underneath rather than from above.
+
+FINDING C6. THE CORPUS'S OWN BUILD ORDER PUTS ATTENTION AND WORKING MEMORY AHEAD OF THE MEMORY PAIR. Layer 12 line 142 states the dependency order in its own words: perception and motor first, then attention and working memory, then the memory pair, then valuation and executive control, then language and social cognition, with learning and the workspace criterion tested throughout. The analysis's Part Six does not order families against each other and does not have to; recorded here because it bears on any later decision to schedule the episodic work of coverage bug one ahead of Family Four, and because "the workspace criterion tested THROUGHOUT" is evidence that the workspace is a property checked continuously rather than a module delivered once - which bears directly on B3.
+
+FINDING C7, THE HONEST NEGATIVE. NOTHING HERE REORDERS FAMILIES ONE, TWO, THREE OR SIX RELATIVE TO ONE ANOTHER. This read found no reason to move the mode-register family, the two-shift family, the edge type registry or the tooling family, and it specifically did NOT find a second instance of the ordering reversal that the mode-register read produced between Themes One and Three. Two dependencies run from this read INTO other families and neither reorders them: A6 item 6c wants disinhibition built with Theme Two's write-allocation gate rather than before it, because A3 finds them the same construct at two grains; and A6's presynaptic inhibition belongs to Family Three, where Theme Three already lists it.
+
+
+================================================================================
+PART D - WALLS: NONE ROUTED
+
+The Second and Third Commandment gates were applied strictly. A causalontology change requires a record that must be SHARED across agents or repositories as a signed, evidence-graded, content-addressed artifact, not merely computed inside one runtime; a PrologAI change requires a real language gap; and findings are discovered by building, never guessed from the armchair. NOTHING IN EITHER THEME ROUTES TO EITHER CHANGE ORDER TODAY. Every construct proposed in A6 and B6 is expressible as ordinary pack work over the graph, the bus and the world value the repository already carries. The held sections C, D and E of the causalontology change order remain HELD; nothing here releases them.
+
+WATCH-4 REASSESSED WITH THE CORPUS IN HAND, AND IT STAYS A WATCH - but it is now a sharper watch than the analysis could make it, and the sharpening is the useful part. The analysis recorded WATCH-4 as "the workspace ignition record. Content X was globally broadcast at tick T, rivals suppressed - a claim about access, not occurrence; possibly plain token occurrence plus provenance, possibly wall-shaped." The corpus does not settle it, and the reason it cannot is now precisely locatable: IT DEPENDS ENTIRELY ON DECISION B5.1, WHAT A CONTENT IS, AND THAT DECISION IS KONNECTOME'S. If a content is an identifier for a record that already exists, an ignition claim is a relation between two existing content-addressed records and the existing kinds plainly carry it - no wall, and the watch closes without ever being claimed. If a content is a structure with no record of its own, the ignition claim asserts global access to something the data structure has never held, and the watch may become real. THE OPERATIONAL CONSEQUENCE: decide B5.1 BEFORE the workspace pilot rather than during it, because the decision determines whether the watch is even assessable, and a pilot that settles it by accident will have answered a change-order question in passing. The rule stands either way: claimed only by building, never from the armchair.
+
+NO NEW WATCH IS RECORDED BY THIS READ, and that is worth stating rather than leaving as silence. Three candidates were considered and all three were rejected as konnectome-internal. Motif-level state - the attractor occupancy that belongs to a view and to no member of it - is a new state LOCATION and not a new record kind; it goes in the world value beside the eligibility-trace store. The settling-time confidence value is a computed scalar that no other agent needs. And the six-channel broadcast roster is a naming decision over predicates that already work.
+
+
+================================================================================
+CLOSING
+
+Theme Four was right about what a motif is and wrong about what konnectome already has to build one with, and the second half of that sentence costs a slice family rather than a paragraph. Theme Five was right throughout and left out the three things a builder would have needed first: that the corpus supplies its own build order, that there are two gates rather than one, and that working memory is not a pack in waiting but a pack already written down to its constants while attention is not specified at all.
+
+The largest single thing either theme is missing is not in either theme. Every number in the cognitive cluster is wall-clock and konnectome's tick has no seconds in it, so a convention nobody has declared stands between the corpus's numbers and any slice that would use them. It is a decision, not a mechanism, and it is cheap - but it is load-bearing, and it was invisible from the summary.
+
+And the eleventh-component question is left exactly where the analysis left it, deliberately, with one thing added: five questions with stated observables, so that the pilot which answers it is built to answer it. The cheapest possible answer is tested first, because if ignition is a mode transition of the master register, there is no eleventh component and the other four questions never need asking.
