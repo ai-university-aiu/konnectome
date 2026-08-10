@@ -1206,7 +1206,7 @@ thought combination. The four gates report zero violations, the naming gate pass
 self-test; conformance re-measured at 137 of 137 (specification 4.0.0) in both cousins. No new
 wall; no cousin edited, per the Second, Third, and Fourth Commandments.
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 10 (2 CLOSED: 8 and 9).  Decisions: 4.
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 11 (2 CLOSED: 8 and 9).  Decisions: 5.
 
 Slice-34 note (2026-08-09). The bound turned live in the told story. The slice-33 pending line
 (the bound proven per-territory in the tests but not yet in the capstone's told story) is
@@ -3061,3 +3061,142 @@ Commandment; no PrologAI language feature was missing. Nothing in this slice rel
 Sections C, D and E of the causalontology change order. Neither cousin was edited and conformance was
 NOT re-measured - the 137 of 137 figure is now SIX SESSIONS OLD and must be re-measured before it is
 quoted, not carried forward again.
+
+
+SLICE 46 NOTE (2026-08-09). THE MASTER REGISTER WIDENED - the mode-register design authority's Part
+Nine slice SEVEN, which is THE LAST NAMED SLICE OF THE FAMILY. With it, THE FIFTH NUMBERED KONNECTOME
+DECISION, and a NEW OBSERVATION which is the most useful thing the slice found.
+
+WHAT WAS BUILT. One new pack, master_register, at layer zero, carrying twelve exported predicates and
+twenty-eight Prolog Unit (PLUnit) tests, plus two new predicates on the neuromodulator bus's state
+channel. SEVEN HUNDRED AND NINETY-SIX tests across THIRTY-FOUR packs; four gates at zero plus the
+naming gate's self-test; behaviour pinned identical and the capstone story byte-identical.
+
+THE FAMILY IS COMPLETE. Part Nine listed seven slices and all seven are now built: the naming
+resolution (39), the one-mode register (39), the gate's two-mode register (40), the bus throwing a
+transition (41), the supervisor channel (42), the stabiliser (44), and the master register widened
+(46). Beyond the seven, slice 43 supplied the ticks-per-second convention and slice 45 the first
+watchdog, both of which the family's own slices turned out to need and neither of which the design
+authority foresaw - which is worth recording, because it is the clearest measure of what a design
+authority written from a corpus can and cannot predict about the build that consumes it.
+
+DECISION-5 (2026-08-09, slice 46). THE POLE IS PRESERVED, THE SUB-MODE IS ADDED BENEATH IT, AND THE
+DOWNWARD ASSIGNMENT IS KEYED ON THE WHOLE STATE. THIS IS KONNECTOME'S OWN DECISION AND MUST NEVER BE
+PRESENTED AS THE CORPUS'S INSTRUCTION.
+
+THE FIRST HALF. The design authority asked for "a named global state plus a sub-mode" and did not say
+whether the existing binary survives. It does, and it becomes the POLE. THREE REASONS, ALL
+KONNECTOME'S OWN. FIRST, THE CORPUS'S OWN STRUCTURE: the binary was never an approximation waiting to
+be replaced - the corpus catalogues THE SLEEP-WAKE FLIP-FLOP as its own entry, "engineered for fast,
+complete, bistable transitions", and catalogues the waking states and the sleep states as two
+FAMILIES on either side of it. Dissolving the binary into a flat list of state names would have
+discarded a distinction the corpus draws with a dedicated chapter, and would have left konnectome's
+own flip-flop - the two-process governor of slice 37 - with nothing to be a flip-flop BETWEEN.
+SECOND, IT COSTS NO EXISTING CALLER ANYTHING: every predicate written since slice 35 that asks the
+bus for the operating state means "am I awake or asleep" and keeps getting exactly that, because the
+channel's original reader hands back THE POLE ALONE and always will. THIRD, IT IS THE REVERSIBLE HALF
+OF AN IRREVERSIBLE-LOOKING CHANGE: a sub-mode roster can be extended or corrected later, whereas a
+third POLE could not be added without revisiting every construct that has read this channel since
+slice 35. Widening BENEATH the binary is additive; widening THROUGH it is not.
+
+THE SECOND HALF ANSWERS THE DESIGN AUTHORITY'S PART SEVEN ITEM 4, which records that the corpus does
+not settle whether sub-modes CHANGE the downward assignment or only SCALE its parameters. KONNECTOME
+DECIDES THAT THE ASSIGNMENT IS KEYED ON THE WHOLE STATE, POLE AND SUB-MODE TOGETHER, SO A SUB-MODE
+MAY CHANGE IT. THE REASON IS MEASURED RATHER THAN PREFERRED: the corpus's own assignments for two
+sub-modes of the same pole are not scalings of one another and cannot be made into one. N2 assigns
+the thalamus to "its rhythmic spindling mode" and opens a plasticity window for spindle-timed
+reactivation; N3 assigns the up-down slow oscillation, systems consolidation and synaptic
+renormalisation. Those are different mode names at the same grain, not one assignment at two
+strengths. Keying on the pole alone would have made every sub-mode decorative BY CONSTRUCTION. THE
+COST IS ACCEPTED OPENLY: the assignment table now grows with the roster rather than with the poles.
+
+WHAT DECISION-5 DOES NOT DECIDE. It does not decide the OVERLAY question of Part Seven item 3 - how
+two simultaneously active states compose - because konnectome holds ONE standing state and cannot yet
+reach that case; the corpus's arousal, stress and sickness states, which are the ones that plainly
+overlay a base state, are unbuilt and the composition rule is deferred WITH them rather than invented
+ahead of them. It does not decide the conflict rule between an assignment and a construct's own
+transition, because DECISION-1 already did - the throw preempts - and this slice INHERITS that rather
+than re-opening it, which is now the third time a numbered decision has been inherited instead of
+relitigated. It does not decide that four sub-modes per pole are the right four. And it does not make
+konnectome real-time: a sub-mode is a name and nothing here has a duration.
+
+THE ROSTER IS THE CORPUS'S AND THE CUT IS KONNECTOME'S, AND THE TWO ARE SEPARATED SO NEITHER IS
+MISTAKEN FOR THE OTHER. Eight entries, from the Layer 11 outline's Parts One and Two, in the
+outline's own order, each carrying the outline's own coined formal name. THE CUT FROM TWENTY-SIX TO
+EIGHT IS KONNECTOME'S: the other eighteen are state MACHINERY (the flip-flops, the two processes, the
+broadcast service), the arousal and stress states that OVERLAY a base state rather than being one,
+the ultradian wheel which the corpus itself calls "a whole-night program, not a state", and the
+engineered and pathological configurations the corpus flags separately. Taking all twenty-six would
+have put a governor and a disease into a register of operating states, which is slice 42's
+fault-is-not-a-mode error arriving one grain higher up.
+
+THE TWO DEFAULTS ARE NOT KONNECTOME'S EITHER, AND THAT IS WHY THEY ARE SAFE. Every announcement made
+anywhere in this repository before this slice names a pole and no sub-mode, and something must say
+which sub-mode it MEANT - inventing one would have made every historical announcement mean something
+konnectome chose. Waking defaults to Alert Task-Engaged Waking, which the corpus calls the default
+assumption of nearly every cognitive experiment ever run. Sleep defaults to slow-wave sleep, and that
+is MEASURED rather than obvious: it is the state whose downward assignment names systems
+consolidation and synaptic renormalisation, which is precisely and only what offline_consolidation
+has done since slice 38. The default is what konnectome's offline phase ALREADY IS, read back from
+the corpus rather than picked.
+
+THE CHANNEL JUDGES SHAPE AND THE REGISTER JUDGES POLICY. The bus refuses a term that is not a widened
+state and refuses a pole the flip-flop does not have, because both are STRUCTURAL; it does NOT judge
+whether a sub-mode belongs to its pole, because a ROSTER is policy and belongs to the construct that
+owns it. This is exactly the division slice 42 drew when mode_register was deliberately not taught
+that a fault may not be a mode, and it is PINNED FROM BOTH SIDES by tests - including one that writes
+a roster violation through the raw channel and reads it back - so a later session tempted to tidy the
+roster check down into the channel trips over a test rather than over a comment.
+
+OBSERVATION-11 (2026-08-09, from slice 46). THE CORPUS ASSIGNS TO NAMED INDIVIDUALS AND KONNECTOME
+HAS ONLY KINDS, WHICH IS WHY THE DOWNWARD ASSIGNMENT TABLE SHIPS EMPTY. Read any of the corpus's
+twenty-six downward assignments and every row addresses a NAMED CONSTRUCT: the thalamus to faithful
+relay, the hippocampus to theta-coded encoding with ripple replay suppressed, the thalamic reticular
+cells to rhythmic burst firing, the flip-flop motifs OF THE STATE MACHINERY latched to wake.
+konnectome has no named individuals at any of those grains. It has ARCHETYPES - relay, integrator,
+oscillator, attractor, gate, comparator - which are KINDS, instantiated wherever a world wants one.
+
+THE ONE ROW THAT LOOKS AVAILABLE IS EXACTLY THE ONE THAT MUST BE REFUSED, and naming it is the point
+of this observation. The corpus says the state machinery's flip-flops latch to wake, and konnectome's
+gate archetype was validated block by block at slice 40 against the corpus's own flip-flop entry - so
+"waking assigns every gate the open mode" is one line away and reads like fidelity. IT WOULD ASSIGN
+EVERY GATE IN THE REPOSITORY THE MODE OF ONE NAMED FLIP-FLOP, including gates installed in roles that
+have nothing to do with the state machinery. That is the armchair guessing the Fourth Commandment
+forbids, wearing a corpus citation - the same shape slice 45 named one slice earlier when it refused
+a window length, arriving here as a MODE rather than as a number. THE TWO TOGETHER ARE NOW A PATTERN
+AND SHOULD BE READ AS ONE: A DEFAULT WITH A BORROWED WARRANT IS AN INVENTED VALUE THAT HAS LEARNED TO
+CITE, whether the value is a number or a mode name.
+
+THE CLOSER IS NAMED AND WAS ALREADY ON THE QUEUE: THE REGION-GRAIN CONSTRUCT, which the design
+authority deferred by name in its Part Nine and which requires promoting a territory from a level to
+a first-class NAMED construct. When konnectome has named individuals, this table has rows. The
+mechanism is built and PROVED AGAINST A FIXTURE rather than against the empty table, so the emptiness
+cannot hide a broken walk. NOTE THAT THIS OBSERVATION ALSO SHARPENS PART SEVEN ITEM 6 of the design
+authority - Layer 10 being omitted from all twenty-six downward assignments - into a smaller
+question than it looked: konnectome cannot yet assign at ANY grain, so the missing Layer 10 row is
+not the binding constraint it appeared to be.
+
+CONFORMANCE WAS RE-MEASURED THIS SESSION AND THE STALEST CLAIM IN THE REPOSITORY IS RETIRED. It had
+stood SIX SESSIONS and had been named in three consecutive hand-offs. Both figures were RUN rather
+than quoted: PrologAI at commit ebbc3e0 reports 137 of 137 vectors; causalontology's Python binding
+at commit 292dfca reports 137 of 137 checks. AND THE HONEST QUALIFICATION TRAVELS WITH THE SECOND
+FIGURE, taken from causalontology's own README rather than discovered here: 137 is 137 CHECKS, of
+which 38 are driven by the shared vector files and 99 are implemented per binding. So the run
+measures ONE binding's agreement with the prose, not nineteen bindings agreeing without sharing code.
+The figure is real and it is narrower than it sounds, and a session quoting it should quote this
+sentence with it rather than the bare number.
+
+WHAT THIS SLICE DELIBERATELY DID NOT BUILD. No row in the assignment table, per OBSERVATION-11. No
+overlay composition rule. No transition table for the master register itself - what throws it is the
+two-process governor, which has thrown it since slice 37, and giving the register a second thrower
+would have been a controller, which is the one thing Part One's verdict says konnectome must not
+grow. No caller was rewired: nothing in the running machine announces a sub-mode, which is why the
+capstone is byte-identical and which is an IOU of exactly the shape slices 44 and 45 left. And the
+bus's own test count did not move while its interface did - the two new channel predicates are
+exercised from the master register's suite, which is where their meaning lives, and that choice is
+recorded here rather than left to be noticed.
+
+NO WALL WAS HIT AND NOTHING ROUTES. A state name broadcast inside one runtime travels to nobody and
+fails the consumer-versus-ontology test of the Second Commandment; no PrologAI language feature was
+missing. Nothing in this slice releases the held Sections C, D and E of the causalontology change
+order. Neither cousin was edited.
