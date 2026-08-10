@@ -116,7 +116,45 @@ The owner has already chosen: ALL (standing, re-confirmed across sessions). Slic
 
 THE QUEUE WAS RE-ORDERED ON 2026-08-09, AFTER SLICE 38, BY AN OWNER JUDGMENT RECORDED IN THE LEDGER. The owner holds that construct MODES AT EVERY LEVEL - though inspired recently and arrived almost as an afterthought - are going to be a CHIEF AND CRITICAL aspect of the konnectome synthetic mind, not one refinement among five. The evidence checked against that judgment is written out in the ledger's Owner-judgment note and in the ELEVATION OF THEME ONE at the head of Part Two of the Vision-Set analysis; the short version is that fourteen of the thirty-one Vision Set layer documents are MODES companions, the mode-register structure recurs at every grain, and all twenty-six Layer 11 chapters define a global state AS a coordinated assignment of modes across everything below - which means the operating state this session's own slice 38 wired through the tick IS the master mode register in degenerate form, with nothing yet beneath it to assign. Read the ledger note before re-planning; do not simply obey this ordering, weigh it.
 
-0. THE MODES DEEP READ (the new priority one, and ANALYSIS ONLY - no code, so it does not disturb item (e) below). Read the fourteen MODES companions plus docs/LAYER_06_CHAPTER_TEMPLATE_v3.txt (the parse schema for every chapter's mode register) at the depth and in the METHOD of the Eighth Commandment's own top-down analysis - parallel readers by grain, synthesized against the packs that exist. Produce a design-authority document for the construct-level mode register, and RESOLVE THE MODE-FLAG NAMING COLLISION within it, before any mode-register slice is designed. The reason this precedes the building rather than accompanying it: designing a register from Theme One's single paragraph, when fourteen documents specify modes in detail, is exactly the armchair reasoning the Second Commandment forbids. If this deep read is already done when you read this, its document is the design authority and item 1 below resumes.
+0. DONE - THE MODES DEEP READ WAS EXECUTED on 2026-08-09 and its output is the design authority
+docs/konnectome_mode_register_design_authority_v1.txt (251 lines, four parallel readers over the
+fourteen MODES companions plus the Layer 6 chapter template, every load-bearing quotation
+re-verified). Do not re-run it. Read it; it is the design authority for everything in item 0-A.
+
+0-A. BUILD THE MODE REGISTER - THIS IS THE PRIORITY, AND THE OWNER HAS ASKED FOR CODE, NOT MORE
+DOCUMENTS. The next session should open by building, not by reading more. The design authority's
+Part Nine lists the slice family smallest-first; two corrections to it were established after it was
+written and are recorded here so the next session does not rediscover them:
+
+   FIRST CORRECTION - SLICE ONE OF PART NINE IS NEARLY EMPTY. The naming resolution has almost
+   nothing to rename. VERIFIED 2026-08-09: the directed-versus-broadcast topology flag DOES NOT
+   EXIST in packs/*/prolog at all (the interface term is interface(From, To, Weight, Delay, Kind),
+   whose Kind is transmissive or computational - a different axis), and it does not exist in
+   causalontology either. The collision is with the DATA MODEL AS DESCRIBED IN THE SPECIFICATION,
+   not with live code. So the resolution collapses to a recorded decision: reserve the word mode for
+   the corpus sense in konnectome code, note that packs/archetype's existing gate mode vocabulary is
+   already corpus-correct and must NOT be renamed, and require any future topology flag to enter as
+   TOPOLOGY. That is a paragraph in a slice's documents, not a slice of its own.
+
+   SECOND CORRECTION - THE REAL FIRST BUILD SLICE IS PART NINE'S SLICE TWO: THE ONE-MODE REGISTER,
+   WITH TODAY'S BEHAVIOUR BIT-IDENTICAL. Give every construct a register carrying exactly one mode,
+   its current rule as the per-mode transfer function, an empty transition table, and pin behaviour
+   identical against a main worktree. The corpus insists a register of one is FIRST-CLASS, not
+   degenerate ("A register of one, stated proudly", three times), so this slice is not a scaffold -
+   it converts the whole repository into a valid mode-register system without changing a number, and
+   konnectome's existing single-rule constructs become valid mode-poor entries rather than a debt.
+   Expect it to touch the constructs, the world dict, and packs/archetype.
+
+   THEN Part Nine's slices three onward: the gate archetype re-expressed as its genuine two-mode
+   register with a real transition table; the bus throwing a transition (where the COMMAND-VERSUS-
+   BIAS decision of the design authority's Part Seven must be made and recorded as konnectome's
+   own); the supervisor channel so faults are watched rather than admitted as modes; the stabiliser
+   as a separate construct publishing a modulable hysteresis scalar; and only then the master
+   register widened past the online/offline binary.
+
+   CARRY THE FOUR NAMED LENSES into every review, and the design authority's Part Seven list of
+   EIGHT THINGS THE CORPUS DOES NOT SETTLE - those are konnectome's decisions and each must be
+   recorded as konnectome's when it is taken, never presented as the corpus's instruction.
 
 1. Slice family one, item (e): the write-allocation gate and the per-territory plasticity fence - the LAST item of family one. The Layers 4-5 dossier's CREB gate and perineuronal net chapters are its design authority. Test-first; tighter-scoped adversarial review with the four named lenses; lockstep documents; pull request. NOTE, from the modes judgment above: the freeze fence and the readability gate are themselves plausibly slow-variable MODES, so the deep read's findings may reshape this item - check them before designing it.
 
