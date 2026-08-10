@@ -18,6 +18,10 @@
     % (Exported in slice 38 so the tick's day-or-night dispatch judges the state it READS against the
     % bus's OWN domain, rather than growing a second copy of the same refusal and drifting from it.)
     neuromodulator_bus_check_operating_state/1,
+    % neuromodulator_bus_global_state/2: read the WIDENED state - a pole and a sub-mode - as one term.
+    neuromodulator_bus_global_state/2,
+    % neuromodulator_bus_broadcast_global_state/3: announce the widened state, pole and sub-mode together.
+    neuromodulator_bus_broadcast_global_state/3,
     % neuromodulator_bus_throw_mode/4: a source throws a MODE at every construct of one kind.
     neuromodulator_bus_throw_mode/4,
     % neuromodulator_bus_thrown_mode/3: read the mode standing thrown at one construct kind.
@@ -132,7 +136,65 @@ neuromodulator_bus_operating_state(Bus, State) :-
     ;  true
     ),
     % An announced state reads back; a bus that never heard one operates online, the waking default.
-    ( memberchk(global(operating_state)-Found, Bus) -> State = Found ; State = online ).
+    % SINCE SLICE 46 THE CHANNEL MAY CARRY A WIDENED TERM, and this reader still hands back THE POLE
+    % ALONE, deliberately and permanently. Every caller written before the widening asks this question
+    % and means "am I awake or asleep"; answering it with a compound would have broken all of them,
+    % and answering it with the pole keeps every one of them correct rather than merely compatible.
+    (   memberchk(global(operating_state)-Found, Bus)
+    ->  % A widened announcement carries the pole in its first field; a bare atom IS the pole.
+        (   Found = global_state(Pole, _SubMode)
+        ->  State = Pole
+        ;   State = Found
+        )
+    ;   % A bus that never heard a state operates online, the waking default.
+        State = online
+    ).
+
+% neuromodulator_bus_global_state(+Bus, -GlobalState): read the WIDENED state as one term.
+neuromodulator_bus_global_state(Bus, GlobalState) :-
+    % An unbound bus is refused, never silently bound by the lookup into a partial list.
+    (  var(Bus)
+    -> throw(error(instantiation_error, _))
+    ;  true
+    ),
+    % A widened announcement reads back whole; a bare atom is a pole whose sub-mode was never stated,
+    % and it reads back as the pole with its sub-mode UNSTATED rather than with one invented for it.
+    % Naming the sub-mode a bare announcement should carry is the MASTER REGISTER's job, not the
+    % channel's, and the channel does not guess on its behalf.
+    (   memberchk(global(operating_state)-Found, Bus)
+    ->  (   Found = global_state(_Pole, _SubMode)
+        ->  GlobalState = Found
+        ;   GlobalState = global_state(Found, unstated)
+        )
+    ;   % A silent channel reads as the waking default with its sub-mode unstated, for the same reason.
+        GlobalState = global_state(online, unstated)
+    ).
+
+% neuromodulator_bus_broadcast_global_state(+Bus0, +GlobalState, -Bus): announce pole and sub-mode.
+neuromodulator_bus_broadcast_global_state(Bus0, GlobalState, Bus) :-
+    % THE CHANNEL JUDGES SHAPE AND NOT POLICY, and that division is deliberate. It refuses a term
+    % that is not a widened state, and it refuses a pole the flip-flop does not have - both are
+    % STRUCTURAL. It does NOT judge whether a sub-mode belongs to its pole, because WHICH SUB-MODES
+    % A POLE HAS IS A ROSTER, and a roster is policy that belongs to the construct that owns it.
+    % This is the same division slice 42 drew when mode_register was deliberately not taught that a
+    % fault may not be a mode: shape is structural, policy belongs to the process that enforces it.
+    (  var(GlobalState)
+    -> throw(error(instantiation_error, _))
+    ;  true
+    ),
+    % Refuse anything that is not the widened two-field term, naming what arrived.
+    (  GlobalState = global_state(Pole, SubMode)
+    -> true
+    ;  throw(error(domain_error(neuromodulator_bus_global_state, GlobalState), _))
+    ),
+    % Refuse a pole the flip-flop does not have, through the channel's own existing domain.
+    neuromodulator_bus_check_operating_state(Pole),
+    % A sub-mode is named by a plain atom, the same key shape every other name on this bus uses.
+    neuromodulator_bus_check_atom(SubMode, neuromodulator_bus_global_sub_mode),
+    % Drop any existing state entry so the newest announcement wins, as it does for every level.
+    exclude(neuromodulator_bus_matches(global(operating_state)), Bus0, Without),
+    % Add the widened state and keep the bus in a canonical sorted order.
+    keysort([global(operating_state)-global_state(Pole, SubMode)|Without], Bus).
 
 % neuromodulator_bus_broadcast_operating_state(+Bus0, +State, -Bus): announce the state to every subscriber.
 neuromodulator_bus_broadcast_operating_state(Bus0, State, Bus) :-

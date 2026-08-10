@@ -752,5 +752,49 @@ That is the second observation this build has ever closed, and it closed two day
 Next: the master register widened past the online-offline binary into a named global state with a sub-mode, and then the first downward assignment, which is the corpus's own definition of what a global state IS. Or the first real caller wired to a watchdog, which would make somebody choose a window at last.
 
 
-From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER FORTY-TWO, and the story goes on being true.
+CHAPTER FORTY-TWO - THE STATE THAT ASSIGNS NOTHING (2026-08-09, SLICE 46)
+
+
+The mode-register family began at slice 39 with a design authority that listed seven slices, smallest first, each one small enough to close before the next began. Today the seventh landed. Nine were built, because two more turned out to be needed and neither had been foreseen, which is worth saying plainly: a design authority read out of a corpus can tell you what to build and cannot tell you what you will discover you are missing while building it.
+
+The seventh slice was the master register - Layer 11's own construct, and the one every slice below it had been implicitly answering to.
+
+Layer 11's outline says the thing in a sentence that reframes the whole family. At every layer below, the mode transitions kept being thrown FROM ABOVE - and Layer 11 is the thrower. Then it says what a global state actually is, and this is the part that matters: a global state is not a flag. It is a COORDINATED ASSIGNMENT OF MODES across every cell, junction, motif and region beneath it. Twenty-six chapters, and every one of them carries a section headed THE DOWNWARD ASSIGNMENT: WHAT IT SETS AT EACH LAYER.
+
+Being asleep is not a bit the brain sets. Being asleep IS the whole organism running a different configuration, everywhere, at once.
+
+konnectome had walked into this eleven slices earlier without naming it. The global operating state put on the bus at slice 35 - exactly two values, a third refused aloud - was the master mode register in its degenerate form, and it had spent eleven slices with nothing beneath it to assign.
+
+The widening itself went cleanly, and the interesting part is what it kept rather than what it added. The binary survives, as the POLE. It would have been easy to dissolve it into a flat list of eight state names, and it would have been wrong: the corpus catalogues the sleep-wake flip-flop as its own entry, a genuine two-position bistable switch, with a family of states on each side. Dissolving the binary would have discarded a distinction the corpus spends a chapter drawing, and would have left konnectome's own two-process governor - built at slice 37 to throw exactly that switch - with nothing to be a switch between. So the sub-modes went BENEATH the poles, four each, eight names all lifted from the Layer 11 outline in the outline's own order.
+
+And every predicate written since slice 35 kept working, unaltered, because the original reader still hands back the pole alone and always will. That was deliberate rather than lucky. Every caller in the repository that asks the bus for the operating state is asking one question - am I awake or asleep - and answering it with a compound would have made all of them compatible instead of correct.
+
+The defaults were the part that took the reading. An announcement made before this slice names a pole and no sub-mode, and something has to say which sub-mode it meant. Invent one and every historical announcement in the repository silently starts meaning something a session chose in 2026. So neither default was invented. Waking means alert, task-engaged waking, because the corpus itself calls that the default assumption of nearly every cognitive experiment ever run. And sleep means slow-wave sleep, which took a measurement rather than a preference: it is the state whose downward assignment names systems consolidation and synaptic renormalisation, and that is precisely and only what konnectome's offline phase has done since slice 38. The default is a description of what the machine was already doing, looked up afterwards. That is a very different act from choosing.
+
+Then the second half, and it did not go as planned, and the way it failed is the chapter.
+
+The downward assignment is the thing the whole family was building toward. Slice 41 had built the channel for it - the mode throw, one write moving every construct of a kind. Slice 39 had given every construct a register to be thrown into. The mechanism was ready. All that remained was to write the table.
+
+The table is empty. Every one of the eight states assigns nothing.
+
+Here is what happened. Open any of the corpus's twenty-six downward assignments and every row names a PARTICULAR THING. The thalamus to faithful relay. The hippocampus to theta-coded encoding with ripple replay suppressed. Thalamic reticular cells to rhythmic burst firing. The flip-flop motifs of the state machinery latched to wake.
+
+konnectome does not have particular things. It has ARCHETYPES - relay, integrator, oscillator, attractor, gate, comparator - which are KINDS, instantiated wherever a world happens to want one. There is no "the thalamus" in this repository. There are gates, plural, everywhere, doing unrelated jobs.
+
+And so the one row that looked obviously available turned out to be the one that had to be refused, which is a shape this build has now met twice in two days. The corpus says the state machinery's flip-flops latch to wake. konnectome's gate archetype was validated block by block at slice 40 against the corpus's own flip-flop entry. Writing "waking assigns every gate the open mode" is a single line, and it reads like fidelity, and it carries a citation. It would set every gate in the entire repository to the mode of ONE named flip-flop, including gates installed in roles with nothing whatever to do with the state machinery.
+
+Yesterday's slice refused a window length for the same reason and coined the sentence: a default with a borrowed warrant is an invented number that has learned to cite. Today it arrived as a mode name rather than a number, and the sentence was generalised in the ledger to cover both. Two slices, two grains, one failure mode. It seems worth naming as a class: the most dangerous wrong value is not the one somebody made up. It is the one somebody found in the right book, on the wrong page, about a different thing.
+
+So the table ships empty, with the reason written into the pack rather than left as an absence, and with the closer named: konnectome needs NAMED individual constructs before a state can assign anything to one. That work already sits on the queue as the region-grain construct, deferred by name in the design authority's own Part Nine, which means the gap this slice found is a gap the design authority had already located from the other side without noticing that the two were the same hole.
+
+The mechanism was proved anyway, and it had to be, because a test that ran only the empty table would have proved that nothing happens. The assignment walk was exported specifically so a fixture could drive it: two rows in, both arriving on the real broadcast channel, and a third construct kind that neither row named reading back as silence rather than as an instruction. That last check is slice 41's property doing the load-bearing work - the throw is a row, not a door - because it is the only thing that makes aiming an assignment at a whole KIND safe rather than reckless.
+
+One other debt was paid today, quietly and without a slice. The conformance figure for the two cousin repositories had been carried unmeasured for six sessions, named as the stalest claim in the repository in three consecutive hand-offs, each one saying that a session should re-measure it on its own account rather than wait for a slice that needed it. This session ran both. Both report 137 of 137. And the honest qualification went into the ledger with the number, taken from the cousin's own README rather than discovered here: 137 is 137 CHECKS, of which 38 come from shared files and 99 are written per binding, so what was measured is one binding agreeing with the prose rather than nineteen bindings agreeing without sharing code. The number is real and it is narrower than it sounds. A figure worth re-measuring is a figure worth quoting accurately.
+
+The family is finished. What it produced, across nine slices, is not a feature. It is a vocabulary: every construct now holds a register, the registers carry per-mode rules and explicit transition tables, transitions can be thrown from a broadcast without a controller existing anywhere, faults are watched and are refused admission as modes, stickiness is published rather than buried, boundaries can be measured over a window, and the state above everything has a name out of the corpus and a mechanism for reaching downward that is honest about having nothing yet to reach.
+
+Next: the first real caller wired to a watchdog, which is the debt slice 45 left, and which will make somebody choose a window and defend it.
+
+
+From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER FORTY-THREE, and the story goes on being true.
 
