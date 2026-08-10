@@ -2845,3 +2845,53 @@ rather than invented. No construct was rewired to consult the stabiliser: the ga
 can now be handed a bias, and joining them to the bus belongs to the caller, as every join in this
 family has since slice 41. No motif-grain hysteresis, per DECISION-3. And OBSERVATION-9 stands where
 slice 42 left it - the stabiliser is not a watchdog and counts nothing.
+
+
+AGI-FOR-EVERYONE VERSION 2 ADOPTION NOTE (2026-08-09, by the owner's instruction). THE FIRST
+COMMANDMENT'S THIRD DOCUMENT IS RE-POINTED AT ITS OWN SUCCESSOR, AND THE CONSTITUTION GOES TO
+VERSION 9.
+
+WHAT WAS ASKED, AND WHAT WAS DONE FIRST. The owner asked for confirmation that
+AGI_FOR_EVERYONE_MANUSCRIPT_v2.txt is better than AGI_FOR_EVERYONE_MANUSCRIPT.txt, and then for the
+old version to be archived. THE CONFIRMATION WAS MEASURED RATHER THAN ASSERTED, because "better" is
+the kind of claim that is easy to agree with and expensive to be wrong about when the document sits
+in the highest-authority Commandment in the repository.
+
+WHAT THE CHECK FOUND. The two files are the SAME BOOK, not two different ones. They carry the same
+five parts and the same chapter opening titles; both follow docs/AGI_FOR_EVERYONE_OUTLINE.txt, which
+the First Commandment names on the line above; both carry the HOW TO READ THIS BOOK front matter and
+BOTH glossaries. The successor is 11,175 lines against 2,000, and 714 kilobytes against 154 - roughly
+four and a half times the predecessor - and it adds an appendix, a VISION section per part, and the
+author's name on the title page. THE DECISIVE MEASUREMENT: of the predecessor's 869 substantive lines
+(taken as those over forty characters, to exclude headings and blanks), 868 APPEAR IN THE SUCCESSOR
+VERBATIM. The single exception is the old title line, which the successor restyles. IT IS THEREFORE A
+STRICT SUPERSET, and the succession loses nothing.
+
+ONE HONEST BLEMISH IN THE SUCCESSOR, recorded rather than glossed. It carries a small amount of page
+furniture from the document it was exported from - a page-number line and two author-link lines. It
+is two occurrences in eleven thousand lines and it is noted here so that a later session finds it
+recorded rather than surprising.
+
+WHY THE ARCHIVE COULD NOT BE DONE ALONE, and this is the rule the whole change turns on. THE FIRST
+COMMANDMENT NAMED THE PREDECESSOR BY ABSOLUTE PATH. Archiving it without touching the Constitution
+would have left the highest-authority document in the repository pointing at a file that had moved.
+THE RULE, WRITTEN INTO THIS LEDGER DURING THE LAYER-09 RENAME AND APPLIED AGAIN HERE: A POINTER IS
+NOT A STATEMENT. A record saying "the manuscript says X" stays true forever and must never be
+rewritten. A record saying "read docs/X.txt" becomes FALSE the moment X moves, and every such pointer
+must move in the SAME change as the file. So this change carries four pointer edits beside the move:
+the First Commandment, and three older hand-offs that listed the file among the guiding-principle
+documents.
+
+WHAT THE VERSION 9 AMENDMENT DOES AND DOES NOT DO. It re-points ONE of the First Commandment's three
+named documents at that document's own successor. NO COMMANDMENT WAS REMOVED, NO COMMANDMENT WAS
+RENUMBERED, and no rule changed - which matters because every hand-off in this repository cites
+commandments by number, and a renumbering would have silently falsified all of them. There are still
+NINETEEN commandments; the hand-off protocol is still the Nineteenth and the Safety Gate the
+Fifteenth.
+
+WHAT THIS DOES NOT DECIDE. It does not decide anything about the OTHER two documents the First
+Commandment names, neither of which was examined here. It does not decide that any claim in the
+successor is correct - the First Commandment says konnectome is built with these documents'
+principles in mind, and a bigger book is a bigger source, not a verified one. And it does not
+re-open any slice: nothing in packs/ reads any of these manuscripts, so no test, gate, or behaviour
+depends on this change, which is why it ships as its own commit rather than riding on a slice.

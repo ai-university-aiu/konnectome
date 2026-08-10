@@ -5,7 +5,17 @@ and Artificial Super Intelligence (ASI) in mind,
 as specified in the following three (3) documents:
 /home/ccaitwo/konnectome/docs/THE_ROADMAP_TO_AGI_AND_ASI_MANUSCRIPT.txt
 /home/ccaitwo/konnectome/docs/AGI_FOR_EVERYONE_OUTLINE.txt
-/home/ccaitwo/konnectome/docs/AGI_FOR_EVERYONE_MANUSCRIPT.txt
+/home/ccaitwo/konnectome/docs/AGI_FOR_EVERYONE_MANUSCRIPT_v2.txt
+(AMENDED in version 9, by the owner's instruction of 2026-08-09. The third document was
+docs/AGI_FOR_EVERYONE_MANUSCRIPT.txt and is now its successor, _v2. The successor was CHECKED rather
+than assumed before the pointer moved: it carries the same five parts and the same chapter openings,
+it follows the same docs/AGI_FOR_EVERYONE_OUTLINE.txt named on the line above, and 868 of the
+predecessor's 869 substantive lines appear in it VERBATIM - the single exception being the old title
+line, which the successor restyles. It is therefore a strict superset, expanded roughly four and a
+half fold and carrying an appendix the predecessor did not have. The predecessor is ARCHIVED at
+docs/archive/AGI_FOR_EVERYONE_MANUSCRIPT.txt, not deleted. NOTE THE RULE THIS FOLLOWS: a pointer is
+not a statement, so a file that moves must have every pointer to it moved in the SAME change - which
+is why this Commandment is amended here rather than left to dangle.)
 
 THE SECOND COMMANDMENT:
 causalontology will be the data structure for the "thoughts", "thought patterns", "thought process", "thought processes", "trees of thought", "chains of thought" of konnectome,
@@ -365,7 +375,15 @@ read konnectome_0_definition FIRST, because it is the concept the other six answ
 - A short sign-off.
 Step 4: Commit the hand-off on a feature/ branch through a pull request. Auto-Push. Then PAUSE.
 
-VERSION HISTORY NOTE (added in version 8). This Constitution is at VERSION 8. Version 8, by the
+VERSION HISTORY NOTE (extended in version 9). This Constitution is at VERSION 9. Version 9, by the
+owner's instruction of 2026-08-09, adopts AGI_FOR_EVERYONE_MANUSCRIPT_v2.txt as the third document
+of the First Commandment, in place of its predecessor, which is archived rather than deleted. NO
+COMMANDMENT WAS REMOVED, NO COMMANDMENT WAS RENUMBERED, and no rule changed: only the third of the
+First Commandment's three named documents was re-pointed at its own successor, after that successor
+was checked to contain the predecessor. A session citing a commandment by number from an older
+hand-off will still land on the right one.
+
+Version 8, by the
 owner's instruction of 2026-08-09, adopts DSPARCD in place of SPARCD: the Fifth Commandment is
 re-pointed at docs/DSPARCD_EXPLAINED.txt and names the seventh phase, the Seventh Commandment gains
 konnectome_0_definition at the front and renames the fileset to "The DSPARCD Fileset", and the
