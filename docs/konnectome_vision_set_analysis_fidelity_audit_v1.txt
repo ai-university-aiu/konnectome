@@ -1,0 +1,346 @@
+FIDELITY AUDIT OF THE VISION DOCUMENT SET TOP-DOWN ANALYSIS
+
+An audit of docs/konnectome_vision_set_top_down_analysis_v1.txt (123 lines), measured against the 38-document Vision Document Set in docs/ and against the konnectome codebase at slice 40, main a90bfd7.
+
+Date: 2026-08-09. Version 1.
+
+Audit method: every countable claim in the analysis was re-measured by direct grep or wc against the corpus files and the pack sources. No claim below is reported from memory or from another document's restatement; where a hand-off or specification is cited it is cited only as corroboration of a historical fact the audit could not otherwise date.
+
+A note on weight, carried over from the audited document's own preamble. The audited document distinguishes its SUMMARIES (Part Two's five themes, Part Three), which lose to the corpus, from its FINDINGS (Part One's verdict, Part Four's pressures, Part Five's walls and six watches, Part Six's slice families), which are konnectome's own assessment and are superseded only by a later assessment. This audit respects that boundary. It corrects summaries against the corpus. Where it touches a finding it corrects only the finding's checkable factual scaffolding - a count, a filename, a description of running code - and never the judgement built on it.
+
+
+PART ONE - THE CORPUS COUNTS
+
+
+CLAIM 1. "the Certified_Neuroscientist corpus of thirty-eight documents" (lines 3, 13, 15).
+
+MEASURED VALUE: 38.
+
+Command: ls LAYER_* neuronal_manuscript_* THE_FIFTEEN_LAYERS_IN_BRIEF.TXT TFELOAOTHNAES.txt | wc -l
+
+Composition, measured file by file: 31 LAYER_* files (which includes LAYER_06_CHAPTER_TEMPLATE_v3.txt), plus 5 neuronal manuscript volumes (neuronal_manuscript_vol1of5_v2.txt through vol5of5_v2.txt), plus the 2 framework documents (THE_FIFTEEN_LAYERS_IN_BRIEF.TXT and TFELOAOTHNAES.txt). 31 + 5 + 2 = 38.
+
+The 31 layer documents break down as 7 MODES manuscript-and-outline pairs (14 files), 6 catalogue manuscript-and-outline pairs (12 files: slow variables, other cells, synaptics, microcircuits, systems, global states), the chapter template (1 file), and the four thin top-layer documents (Layer 12 Faculty Specification, Layer 13 Tutor Protocol, Layer 14 Knowledge Environment, Layer 15 Design Method).
+
+VERDICT: CONFIRMED.
+
+
+CLAIM 2. "fourteen of the thirty-one Vision Document Set layer documents are MODES companions" (line 37).
+
+MEASURED VALUE: 14 of 31.
+
+Command: ls *MODES* | wc -l  and  ls LAYER_* | wc -l
+
+The 14: LAYER_04_05, LAYER_06, LAYER_07, LAYER_08, LAYER_09, LAYER_10 and LAYER_11 MODES, each in a MANUSCRIPT and an OUTLINE.
+
+VERDICT: CONFIRMED. The rhetorical gloss that follows it - "very nearly half the corpus" - is also fair against 31 layer documents, though it is under half against the full 38.
+
+
+CLAIM 3. THE MODE ENTRY COUNTS. The analysis states two different sets. Line 37 states "cells 395, regions 78, motifs 72, junctions 71, systems 44, global states 27, slow variables 21". Lines 42 and 52 state "cell (386 mode entries) ... region (77 entries) ... system (44 entries)".
+
+MEASURED VALUES, counted by ENTRY headings in each MODES outline and cross-checked against the matching MODES manuscript, which agrees entry for entry in every case.
+
+Command: grep -ciE '^ *ENTRY [0-9]+' LAYER_NN_MODES_OUTLINE.txt
+
+• Cells, Layer 6: 386. Composed of 301 neuron entries (PART ONE, THE NEURON CATALOGUE, CHAPTERS 1 TO 301) plus 85 non-neuronal entries (PART TWO, THE OTHER-CELLS CATALOGUE, CHAPTERS 1 TO 85). Last entry read: "ENTRY 85. JUXTAGLOMERULAR CELL OF THE KIDNEY (keyed to other-cells catalogue Chapter 85)".
+
+• Regions, Layer 9: 77. Entries are numbered in section style, ending "ENTRY 2.11.5. THE GLIA AS COGNITIVE PARTICIPANTS".
+
+• Motifs, Layer 8: 71. Last entry read: "ENTRY 71. THE NEUROVASCULAR COUPLING UNIT (Activity-to-Blood-Flow Signalling Ensemble) (The Demand-Driven Fuel Valve) (keyed to microcircuits catalogue Chapter 71)".
+
+• Junctions, Layer 7: 64. Last entry read: "ENTRY 64. THE HORMONE-RECEPTOR VIRTUAL SYNAPSE (Endocrine Signalling at a Distance) (keyed to synaptics catalogue Chapter 64)".
+
+• Systems, Layer 10: 44. Last entry read: "ENTRY 44. THE GLOBAL WORKSPACE DYNAMICS (The Ignition and Broadcast System) (keyed to systems catalogue Chapter 44)".
+
+• Global states, Layer 11: 26. Last entry read: "ENTRY 26. THE DISORDERS OF CONSCIOUSNESS SPECTRUM (keyed to global states catalogue Chapter 26)".
+
+• Slow variables, Layers 4 and 5: 18. Last entry read: "ENTRY 18. THE HOMEOSTATIC SET-POINT MACHINERY (keyed to slow variables catalogue Chapter 18)".
+
+VERDICT: THE CONTRADICTION IS RESOLVED IN FAVOUR OF LINES 42 AND 52. Every number in the line 37 set is wrong except systems 44. Every number in the lines 42 and 52 set is right. Specifically:
+
+• cells 395 is CORRECTED to 386. Lines 42 and 52 already say 386.
+• regions 78 is CORRECTED to 77. Lines 42 and 52 already say 77.
+• motifs 72 is CORRECTED to 71.
+• junctions 71 is CORRECTED to 64. Note the shape of the error: 71 is the true MOTIF count, so line 37 appears to have shifted one grain's count onto the neighbouring grain and then invented a replacement for the motif slot.
+• systems 44 is CONFIRMED.
+• global states 27 is CORRECTED to 26.
+• slow variables 21 is CORRECTED to 18.
+
+This matters more than a stray digit, because line 37 is the ELEVATION OF THEME ONE and the counts are the "measured evidence" it offers for elevating the mode register to the architectural spine. The elevation's CONCLUSION survives the correction untouched - the mode-register structure does recur at every single grain, with a dedicated MODES volume beside every catalogued layer - but the evidence sentence as written is not measured, and an elevation that calls its numbers "the measured evidence" must carry measured numbers.
+
+
+CLAIM 4. "sixty-four junction types" (Layer 7, line 60).
+
+MEASURED VALUE: 64.
+
+VERDICT: CONFIRMED. See Claim 3.
+
+
+CLAIM 5. "seventy-one canonical motifs" (Layer 8, line 62).
+
+MEASURED VALUE: 71.
+
+VERDICT: CONFIRMED. See Claim 3.
+
+
+CLAIM 6. EIGHTY-FIVE NON-NEURONAL CELL TYPES (Layer 6).
+
+MEASURED VALUE: 85.
+
+Command: grep -cE '^CHAPTER [0-9]+' LAYER_06_OTHER_CELLS_MANUSCRIPT.txt
+
+Corroborated by the outline's own heading in the Layer 6 modes companion: "PART TWO. THE OTHER-CELLS CATALOGUE, CHAPTERS 1 TO 85".
+
+VERDICT: CONFIRMED. Note the audited document never states 85 in its own text - it states 386 cell mode entries, of which 85 are the non-neuronal share. No correction needed.
+
+
+CLAIM 7. "the Layer 6 corpus tags eight non-neuronal types cognitive" (line 78, the astrocyte tension).
+
+MEASURED VALUE: 8.
+
+Command: grep -cE '^[0-9]+\. .*\(COG\)' LAYER_06_OTHER_CELLS_OUTLINE.txt
+
+The eight, read out in full: Protoplasmic Astrocyte, Interlaminar Astrocyte, Varicose Projection Astrocyte, Bergmann Glia, Myelinating (Interfascicular) Oligodendrocyte, Oligodendrocyte Precursor Cell (NG2 Glia / Polydendrocyte), Microglia, and the Adult Hippocampal Radial Glia-Like Cell (Type 1 Cell).
+
+VERDICT: CONFIRMED, and the companion detail is confirmed too - the protoplasmic astrocyte is the first COG entry and the outline calls it "the principal cognitive partner cell of the cortex".
+
+
+CLAIM 8. "fourteen faculties" (Layer 12, lines 64 and 69).
+
+MEASURED VALUE: 14.
+
+Corpus line counted from: LAYER_12_FACULTY_SPECIFICATION.txt line 21, "THE FOURTEEN FACULTIES", followed by a numbered list running 1. PERCEPTION through to the fourteenth.
+
+VERDICT: CONFIRMED.
+
+
+CLAIM 9. Layer 12's completion condition - "one running instance passing all fourteen suites in one continuous session including at least one full offline consolidation cycle" (line 69).
+
+Corpus line counted from: LAYER_12_FACULTY_SPECIFICATION.txt line 144, "The specification is complete when a single running konnectome instance passes all fourteen suites in one continuous session including at least one full offline consolidation cycle."
+
+VERDICT: CONFIRMED, quoted almost verbatim.
+
+
+CLAIM 10. "three hundred eighty-seven catalogued types" (line 116, family six, tooling).
+
+MEASURED VALUE: 386 by chapter count, 387 by the corpus's own stated arithmetic.
+
+The discrepancy is real and it is the corpus's, not the analysis's. LAYER_06_OTHER_CELLS_OUTLINE.txt line 4 describes "the five-volume neuronal catalogue (302 neuron types)". But the five volumes hold 301 chapters, measured: grep -hE '^CHAPTER [0-9]+' neuronal_manuscript_vol*.txt | wc -l gives 301 (56 + 63 + 60 + 60 + 62). The Layer 6 modes outline's own heading agrees with 301, not 302: "PART ONE. THE NEURON CATALOGUE, CHAPTERS 1 TO 301".
+
+So 387 = the corpus's claimed 302 neuron types plus the 85 non-neuronal types, and 386 = the measured 301 chapters plus 85, which is exactly the number of Layer 6 mode entries.
+
+VERDICT: UNVERIFIABLE AS STATED, and the analysis should say so rather than pick a side silently. The honest form is 386 catalogued cell chapters, with the corpus's own 302-versus-301 discrepancy flagged, since family six is a TOOLING family and a parser built to expect 387 chapters will not find them.
+
+
+CLAIM 11. "all twenty-six Layer 11 chapters carry a section titled THE DOWNWARD ASSIGNMENT" (line 37).
+
+MEASURED VALUE: 26 occurrences across 26 chapters.
+
+Commands: grep -c 'THE DOWNWARD ASSIGNMENT' LAYER_11_GLOBAL_STATES_MANUSCRIPT.txt gives 26; grep -cE '^CHAPTER [0-9]+' on the same file gives 26.
+
+Corroborated by the manuscript's own line 22, which names the section among the chapter template's fields: "the DOWNWARD ASSIGNMENT (the chapter's centrepiece: what this state sets at every layer below, cited to the modes volumes)".
+
+VERDICT: CONFIRMED, and it is the single strongest measured claim in the document. Note that this confirmation also settles the global-states grain at 26, which is what corrects line 37's own "global states 27" three clauses earlier - the sentence contradicts itself within itself.
+
+
+CLAIM 12. "roughly thirty thousand lines of corpus" (line 17).
+
+MEASURED VALUE: 153,749 lines total, of which 84,616 are non-blank, across 1,383,862 words.
+
+Command: wc -l LAYER_* neuronal_manuscript_* THE_FIFTEEN_LAYERS_IN_BRIEF.TXT TFELOAOTHNAES.txt
+
+VERDICT: CORRECTED, and the error is large - the corpus is roughly five times the stated size by raw lines and roughly three times by non-blank lines. The house style of a blank line between sentences means the raw and non-blank figures differ by a factor of about 1.8, so the honest statement names both. This is not a cosmetic correction: the sentence's purpose is to justify calling the analysis a "navigation index", and the true scale strengthens that argument considerably.
+
+
+CLAIM 13. Layer 10's global workspace at Chapter 44 (line 74).
+
+Corpus line counted from: LAYER_10_SYSTEMS_MANUSCRIPT.txt line 8009, "CHAPTER 44. THE GLOBAL WORKSPACE DYNAMICS (The Ignition and Broadcast System) (COG)".
+
+VERDICT: CONFIRMED, and the entry number agrees with the modes companion's Entry 44.
+
+
+CLAIM 14. "The corpus re-addresses the guiding book's ... sections 2.10 and 2.11 as Layer 10 constructs (chapters 21 through 30, and 9)" (line 80).
+
+MEASURED VALUE: chapters 21 through 30 of LAYER_10_SYSTEMS_MANUSCRIPT.txt are exactly the ten large-scale networks - Default Mode, Salience / Ventral Attention, Dorsal Attention, Frontoparietal Control, Cingulo-Opercular, Language, Sensorimotor, Visual, Auditory, and Limbic. Chapter 9 is "THE CORTICO-BASAL-GANGLIA-THALAMO-CORTICAL LOOP SYSTEM".
+
+VERDICT: CONFIRMED.
+
+
+CLAIM 15. Layer 8's Entry 36, the mutual-inhibition flip-flop, the Either-Or Latch (line 46).
+
+Corpus line counted from: LAYER_08_MODES_OUTLINE.txt line 280, "ENTRY 36. THE MUTUAL-INHIBITION FLIP-FLOP (Reciprocally Inhibiting Bistable Switch Motif) (The Either-Or Latch) (keyed to microcircuits catalogue Chapter 36)".
+
+VERDICT: CONFIRMED, name for name.
+
+
+CLAIM 16. "the microglia's four modes, the ependymocyte's proud one" (line 108).
+
+MEASURED VALUE: microglia 4, ependymocyte 1.
+
+Corpus lines counted from LAYER_06_MODES_OUTLINE.txt: ENTRY 16. MICROGLIA carries Ramified Surveillance (the Restless Sentinel), Hyper-Ramified Alert (the Raised Antennae), Amoeboid Phagocytosis (the Clean-Up Crew), and the Disease-Associated (DAM) Register (the Damage Sensor). ENTRY 17. EPENDYMOCYTE carries exactly one, Coordinated Ciliary Beating (the Rowing Crew).
+
+VERDICT: CONFIRMED, and it is a well-chosen pair - it is precisely the contrast that supports the design authority's finding, restated at line 44, that a register of one is first-class rather than degenerate.
+
+
+CLAIM 17. "the corpus's six named broadcast channels" (line 112, family four).
+
+MEASURED VALUE: 6.
+
+Corpus line counted from LAYER_11_GLOBAL_STATES_MANUSCRIPT.txt, THE BROADCAST CHANNELS section of Chapter 1: "The state is announced on all five aminergic and cholinergic channels at once ... noradrenaline from the locus coeruleus, acetylcholine from basal forebrain and brainstem, serotonin, histamine, and dopamine, with orexin as the stabilising sixth."
+
+VERDICT: CONFIRMED. Five aminergic and cholinergic plus orexin as the sixth.
+
+
+CLAIM 18. Theme Two's characterisation of the slow-variables and global-states volumes (line 58) - the write-allocation gate, the consumed tag, the freeze fence, the two-process governor, interleaved replay against catastrophic forgetting, synaptic renormalisation, and "a brain denied sleep".
+
+VERDICT: CONFIRMED IN SUBSTANCE and not itemised further here, because slices 36 through 38 were each designed against these exact chapters and each landed green, which is a stronger check than a grep. The audit found no corpus text contradicting any element of the summary.
+
+
+PART TWO - THE CODEBASE CLAIMS
+
+
+Baseline for this half, verified before checking anything: main at a90bfd7, README's status line reading "forty slices have landed (thirty packs, 648 tests, all green, four standing gates)", and ls packs | wc -l returning 30.
+
+
+CLAIM A. "the baseline was verified green before the reading began: 494 tests across twenty-seven packs, four gates at zero violations, the capstone clean, conformance 137 of 137 in both cousins" (line 24).
+
+MEASURED STATE: 494 tests across 27 packs was the true and correct baseline at the time of the reading. It is recorded independently in docs/konnectome_1_specification_v41.txt at the slice-34 entry ("four hundred ninety-four in total across twenty-seven packs, all green") and in two hand-offs that verified it pack by pack - Copper Atlaswright at main d3684a1 and Bronze Gaugewright at main 0025e36, both stating "494 tests green across twenty-seven packs (counted pack by pack)". Today the figure is 648 tests across 30 packs.
+
+VERDICT: CORRECT AS WRITTEN AND CORRECT TO LEAVE. This is a HISTORICAL RECORD of a verification act, not a description of the present, and the sentence's own tense ("was verified green before the reading began") already makes that plain. It should NOT be updated to 648, because updating it would falsify the record of what was actually verified on the day. A version 2 may add a dateline, but must not overwrite the number.
+
+
+CLAIM B. "Konnectome today runs one rule per construct, always: the gate archetype's binary flip and arousal's settle-to-baseline are the only mode-like behaviours in the repository" (line 42, Theme One).
+
+MEASURED STATE: FALSE AT SLICE 40. There is now a mode_register pack (packs/mode_register/prolog/mode_register.pl) exporting a full hybrid-automaton discipline - mode_register_new/6, mode_register_check/1, mode_register_current/2, mode_register_entries/2, mode_register_modes/2, mode_register_size/2, mode_register_transfer/3, mode_register_current_rule/2, mode_register_transitions/2, mode_register_faults/2 - with validators for entry distinctness, transfer coverage, transition rows and fault rows. Slice 39 rewired connection_graph and tick_engine to read every construct's rule THROUGH its register. Slice 40 gave the gate archetype a genuine two-mode register: packs/archetype/prolog/archetype.pl now carries archetype_gate_mode_entry/3 declaring open ('the Open Sluice') and closed ('the Dropped Shutter'), plus archetype_gate_register/1, archetype_gate_modes/1 and archetype_gate_size/1.
+
+The two named behaviours themselves are both still real. archetype_gate/4 ("flip or hold") is present in packs/archetype/prolog/archetype.pl. arousal_regulation_step/2 ("move arousal partway back toward baseline") and arousal_regulation_regulate/3 ("regulate until arousal settles exactly at baseline") are present in packs/arousal_regulation/prolog/arousal_regulation.pl.
+
+VERDICT: STALE, NOT WRONG. The sentence was true when written at slice 34 and was overtaken by slices 39 and 40. The document already knows this - lines 44 and 46 are STATUS paragraphs recording exactly these slices. What is missing is any marker ON the original sentence, so a reader who stops at line 42 carries away a false picture of the repository. The theme's other two corrected sentences ("degenerate one-mode case", the naming hazard) are explicitly named as corrected at line 44; this third one is not, and it should be.
+
+
+CLAIM C. "Konnectome's connection graph carries two edge kinds (transmissive, computational) and one learning rule for all" (line 60, Theme Three).
+
+MEASURED STATE: TRUE, unchanged at slice 40.
+
+Two edge kinds, from packs/connection_graph/prolog/connection_graph.pl: the comment at line 37 reads "interfaces, each marked transmissive (it conveys a signal) or computational (it computes one)", and line 243 defines connection_graph_transmissive(interface(_From, _To, _Weight, _Delay, transmissive)). The step predicate at line 61 branches on Kind == transmissive and nothing else.
+
+One learning rule, from packs/plasticity_engine/prolog/plasticity_engine.pl: there is exactly one weight-change predicate, plasticity_engine_weight_change/5 (Sending, Receiving, ThirdFactor, LearningRate, WeightChange), and every reward and capture path routes through it. No type-indexed or per-edge-kind rule exists.
+
+VERDICT: CONFIRMED. Theme Three is untouched by slices 35 through 40.
+
+
+CLAIM D. "Konnectome's six archetypes are per-node update rules" (line 62, Theme Four).
+
+MEASURED STATE: TRUE. packs/archetype/prolog/archetype.pl exports exactly six archetype rules - archetype_relay/3, archetype_integrator/4, archetype_oscillator/5, archetype_attractor/5, archetype_gate/4, archetype_comparator/3 - and every one takes a single construct's current condition and inputs and returns that same construct's next condition. None takes a subgraph, a role assignment, or more than one node. The remaining archetype_ predicates (average, blend, squared_difference, distance, nearest, interpolate, move_toward) are arithmetic helpers, not archetypes.
+
+VERDICT: CONFIRMED, including the "per-node" characterisation, which is the load-bearing half of the claim.
+
+
+CLAIM E. "the architecture already owns the cheap mechanism (the named-subgraph views that hold networks and pathways)" (line 62, Theme Four).
+
+MEASURED STATE: NO SUCH MECHANISM EXISTS.
+
+Commands: grep -rln "subgraph" packs/ returns nothing. grep -rn "_view\|view(" packs/*/prolog/*.pl returns nothing. grep -rn "pathway" packs/*/prolog/*.pl returns exactly two hits, both of them prose comments using the word in an unrelated sense and both of them DENIALS - packs/empathy/prolog/empathy.pl line 61, "There is no bespoke emotion pathway here", and packs/situation_appraisal/prolog/situation_appraisal.pl line 40, "It invents no emotion pathway."
+
+What the connection graph actually holds is a flat list of interface/5 terms plus a separate list of constructs, stepped as a whole by connection_graph_step/4 and connection_graph_run/6. The word "network" appears throughout that file, but always as prose for the whole graph being stepped - "one two-pass synchronous tick of a network over the graph", "for each construct in the network, taken in turn" - never as a named, addressable, re-usable subgraph. There is no naming facility, no role assignment, and no way to refer to a sub-portion of the graph as a unit.
+
+VERDICT: WRONG, AND WRONG WHEN WRITTEN - this is an ERROR, not a stale claim. Nothing between slice 34 and slice 40 removed such a mechanism, because grep finds no trace of one at any point in the current tree. This is the single most consequential defect the audit found in the codebase half, because Theme Four's whole refinement proposal ("a motif catalogue as named typed subgraph views over the connection graph") and family five's whole first item ("motifs as named subgraph views") are costed on the assumption that the view mechanism is already paid for. It is not. The motif catalogue is a BUILD, not a re-use, and family five is correspondingly larger than Part Six implies.
+
+
+CLAIM F. "attention, working memory, and the global workspace ABSENT" (line 64, Theme Five).
+
+MEASURED STATE: TRUE at slice 40. The 30 packs are: action_selector, archetype, arousal_regulation, body_interface, capstone_demonstration, category_formation, cause_and_effect, cognitive_cycle, concrete_operations, connection_graph, drive_system, empathy, mode_register, neuromodulator_bus, observer, offline_consolidation, other_minds, override_controller, perturbation_interface, plasticity_engine, prediction_loop, pretend_play, quantity_model, self_provenance, simulated_body, situation_appraisal, symbol_exchange, thought_combination, tick_engine, two_process_governor. There is no attention pack, no working-memory pack, and no workspace pack, and no predicate under any other pack supplies those functions.
+
+VERDICT: CONFIRMED, and still current. Theme Five is the one theme slices 35 through 40 left entirely alone, and family four remains wholly unstarted.
+
+
+CLAIM G. Theme Two's "Konnectome's own architecture already promises this - Component 8's text commits to a slow consolidation phase run offline - and the promise is unbuilt" (line 58).
+
+MEASURED STATE: THE PROMISE IS BUILT. Two packs that did not exist when the analysis was written now exist and are named in the pack list above: two_process_governor (new at slice 37) and offline_consolidation (new at slice 38). Per the README's own slice entries, slice 35 closed family one's item (a) - the global operating state on the bus, exactly two values online and offline, a third refused by name, defaulting to online with behaviour pinned identical. Slice 36 closed item (b) - the reward step wired into the live tick with capture consuming the spent traces. Slice 37 closed item (c) - the two-process governor riding the live tick and throwing the slice-35 switch, Process S as a rising debt and Process C as a triangle day wave. Slice 38 closed item (d) - the tick reading the switch and the offline works running, built against Layer 11 Chapter 7's interleaved replay against catastrophic forgetting paired with synaptic renormalisation.
+
+VERDICT: STALE, NOT WRONG, and stale in the most damaging way available - because unlike Theme One, Theme Two carries NO status paragraph at all. Theme One received two (lines 44 and 46) and its family in Part Six received a parenthetical STATUS (line 108). Theme Two received neither, even though four consecutive slices were built directly out of it. A reader arriving at line 58 today is told the central gap of the whole corpus is unaddressed, when in fact it is the most-built-out family in the repository. See Part Three, item 5.
+
+
+CLAIM H. The naming hazard - "the data model's existing MODE flag on interfaces and molecules means directed-versus-broadcast topology, which will collide with the operating-mode vocabulary" (line 42), and its retraction at line 44.
+
+MEASURED STATE: THE RETRACTION IS CORRECT. A search of the pack sources for any mode-named flag carrying a directed-versus-broadcast sense returns nothing. The word "mode" in packs/*/prolog now belongs entirely to the corpus sense, chiefly in mode_register and in archetype's gate vocabulary.
+
+VERDICT: THE ORIGINAL CLAIM IS WRONG; THE LINE 44 CORRECTION IS CONFIRMED. The document has already self-corrected here and needs no further change beyond what Part Three recommends about marking the original sentence.
+
+
+CLAIM I. Part Seven's "The frame the first thirty-four slices built" (line 121).
+
+MEASURED STATE: forty slices have landed.
+
+VERDICT: STALE. It was an accurate statement of the frame the analysis was measured against, but as the document's closing sentence it now reads as a claim about the present. A dateline resolves it without falsifying the record.
+
+
+PART THREE - INTERNAL CONSISTENCY AND CROSS-REFERENCES
+
+
+1. THE SELF-CONTRADICTING COUNT SET. Line 37 gives cells 395, regions 78, systems 44, global states 27. Lines 42 and 52 give cells 386, regions 77, systems 44. The document therefore states two different numbers for the cell grain and two for the region grain, roughly ten lines apart. Measurement settles it against line 37 in every case (Claim 3 above). Worse, line 37 contradicts itself INTERNALLY: it says "global states 27" in its count list and then, in the very next sentence, says "all twenty-six Layer 11 chapters carry a section titled THE DOWNWARD ASSIGNMENT". Twenty-six is correct.
+
+2. THE "DEGENERATE ONE-MODE CASE". Line 42 calls today's single-rule construct "the degenerate one-mode case". Line 44 states flatly that this "is wrong in the corpus's terms" and that a register of one is first-class and proudly stated. This is a genuine contradiction between an original paragraph and its appended STATUS, and it is one the STATUS itself declares - handled correctly, and needing only a marker on the original sentence so a reader who stops early is not misled.
+
+3. THE NAMING HAZARD. Line 42's closing sentence says a collision "must be resolved (by qualification or rename) before any mode-register slice". Line 44 says it "is CLOSED, and closed to zero ... there was nothing to rename", and line 108's STATUS repeats that. Same pattern as item 2: an appended paragraph reversing the original, correctly declared, but the original sentence stands unmarked.
+
+4. THE "ONLY MODE-LIKE BEHAVIOURS" SENTENCE. Line 42 also says the gate's flip and arousal's settle are "the only mode-like behaviours in the repository". Lines 44 and 46 describe a whole mode_register pack and a two-mode gate. This is the SAME kind of contradiction as items 2 and 3, but unlike them it is NOT declared anywhere - line 44 explicitly names "two of this theme's own sentences" as corrected, and this is a third that it does not count. That undercount is itself an internal inconsistency.
+
+5. THEME TWO IS UNMAINTAINED WHILE THEME ONE IS MAINTAINED. Theme One (line 42) carries STATUS AT SLICE 39 (line 44), STATUS AT SLICE 40 (line 46), a further settlement paragraph (line 48), a remaining-family list (line 50), an ADDENDUM (line 52) and two more paragraphs (lines 54 and 56) - seven paragraphs of upkeep. Theme Two (line 58) carries nothing at all, despite slices 35, 36, 37 and 38 all being built from it and all being CLOSED. The document's own preamble commits it to staying current ("recorded here so this theme stays current as the Eighth Commandment requires", line 44), and it has honoured that commitment for exactly one of its five themes.
+
+6. PART SIX FAMILY ONE IS UNMAINTAINED WHILE FAMILY TWO IS MAINTAINED. The same asymmetry, in the other direction. Family two (line 108) carries a parenthetical "(STATUS 2026-08-09: ...)" recording slices 39 and 40 item by item. Family one (line 106) still lists items (a) through (e) as pure suggestions, when (a), (b), (c) and (d) are all CLOSED and only (e) - the write-allocation gate and the per-territory plasticity fence - remains. Family one also still carries "which also subsumes the standing long-run-proof pending line" as a future promise; that merge happened at slice 38.
+
+7. FAMILY TWO'S VALIDATION TARGETS SHIFT. Line 108 says the gate's two-mode case will be "validated against corpus entries (the microglia's four modes, the ependymocyte's proud one)", then its own STATUS says it was "validated against the Layer 8 Either-Or Latch". Both readings are defensible - the microglia and ependymocyte pair validated the register formalism at slice 39, and the Either-Or Latch validated the two-mode gate at slice 40 - but the sentence as it stands reads as a plan that was not followed. A clause distinguishing the two validations removes the appearance of drift.
+
+8. FAMILY TWO'S "BUS-THROWN TRANSITIONS ARE THE NEXT SLICE" versus LINE 50. Line 108's STATUS calls bus-thrown transitions "the only part of this family's line still outstanding at the front of the queue", while line 50 lists FOUR outstanding items in the family: the bus throwing a transition, the supervisor channel, the stabiliser, and the master register widened. These are reconcilable - line 108 means the only outstanding item among those named in family two's own original one-line plan - but read side by side they look like two different counts of what is left. A single qualifying word fixes it.
+
+9. THE THIRTY-FOUR-SLICE CLOSING. Line 121's "the first thirty-four slices" is the document's last substantive sentence and is now six slices behind. See Claim I.
+
+10. CROSS-REFERENCES TO FILES. The document names exactly three files by path or filename: CONSTITUTION.md, docs/konnectome_mode_register_design_authority_v1.txt, and NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt. ALL THREE EXIST AT EXACTLY THOSE NAMES AND VERSIONS. It names THE_FIFTEEN_LAYERS_IN_BRIEF and TFELOAOTHNAES without extensions; both exist (THE_FIFTEEN_LAYERS_IN_BRIEF.TXT and TFELOAOTHNAES.txt). It refers to "konnectome_6_demonstration at its then-current version" without pinning a number, which is the correct way to write a forward reference and needs no update - the file is now konnectome_6_demonstration_v41.txt. It never names a SPARCD fileset version and never names a tutorial version, so the v41 fileset and the v39 tutorial create NO stale reference in this document. This is the cleanest area of the audit: zero broken cross-references, zero stale version pins.
+
+11. DOCUMENT VERSION AND DATE. The document is dated 2026-08-09 Version 1, and carries appended material from slices 38, 39 and 40 all dated 2026-08-09. Every substantive amendment now shares one dateline with the original execution, which makes the layering invisible to a reader sorting by date. Since the analysis was executed against a slice-34 baseline, the original execution date and the amendment dates cannot all be 2026-08-09 in any useful sense. A version 2 should carry a slice marker rather than only a date.
+
+
+THE CORRECTION LIST
+
+
+1. line 5: change "Date: 2026-08-09. Version 1." to "Date: 2026-08-09. Version 2. Originally executed against the slice-34 baseline; amended through slice 40. Each amendment below carries its own slice marker, because the original execution and its amendments cannot be distinguished by date alone."
+
+2. line 17: change "roughly thirty thousand lines of corpus" to "roughly one hundred fifty thousand lines of corpus (153,749 lines across the thirty-eight documents, of which 84,616 are non-blank; the house style's blank line between sentences accounts for the difference)".
+
+3. line 37: change "cells 395, regions 78, motifs 72, junctions 71, systems 44, global states 27, slow variables 21" to "cells 386, regions 77, motifs 71, junctions 64, systems 44, global states 26, slow variables 18".
+
+4. line 37: add, after the corrected count list, "(every count re-measured entry by entry against the MODES outlines and cross-checked against the matching manuscripts on 2026-08-09; an earlier version of this sentence carried six wrong numbers out of seven and contradicted its own next sentence on the global-states count)".
+
+5. line 42: change "with today's single-rule construct as the degenerate one-mode case" to "with today's single-rule construct as the first-class one-mode case" and add immediately after it "(CORRECTED AT SLICE 39 - see the STATUS paragraph below; the corpus states three times that a register of one is first-class and proudly stated, never degenerate)".
+
+6. line 42: change "Konnectome today runs one rule per construct, always: the gate archetype's binary flip and arousal's settle-to-baseline are the only mode-like behaviours in the repository." to "Konnectome AT SLICE 34 ran one rule per construct, always: the gate archetype's binary flip and arousal's settle-to-baseline were the only mode-like behaviours in the repository. (SUPERSEDED AT SLICES 39 AND 40 - the mode_register pack now gives every construct a register and the gate archetype carries a genuine two-mode one; see the STATUS paragraphs below.)"
+
+7. line 42: change the closing naming-hazard sentence "the collision must be resolved (by qualification or rename) before any mode-register slice" to "the collision must be resolved (by qualification or rename) before any mode-register slice. (CLOSED TO ZERO AT SLICE 39 - no such flag was ever in running code; see the STATUS paragraph below.)"
+
+8. line 44: change "Two of this theme's own sentences have already been corrected by that read and by the slice built from it." to "THREE of this theme's own sentences have already been corrected by that read and by the slices built from it." and add, after the SECOND item, "THIRD, the sentence naming the gate's flip and arousal's settle as the only mode-like behaviours in the repository was true at slice 34 and is false from slice 39 onward, when the mode_register pack made every construct a hybrid automaton."
+
+9. line 52: no change to the counts 386, 77 and 44, which are all confirmed correct - but add "(these three counts are measured; the elevation paragraph in Part One formerly disagreed with them and has been corrected to match)".
+
+10. line 58: add, at the end of the paragraph, "STATUS AT SLICE 38 (2026-08-09), recorded here so this theme stays current as the Eighth Commandment requires, and recorded LATE - this theme went four slices without an update while Theme One was maintained paragraph by paragraph. THE PROMISE IS NO LONGER UNBUILT. Slice 35 laid the two-shift switchboard (the global operating state on the bus, exactly two values, a third refused by name, defaulting to online with behaviour pinned identical). Slice 36 wired the reward step into the live tick with capture consuming the spent traces, closing the pending line every completion document had carried since slice 32. Slice 37 built the two_process_governor pack - Process S as a rising debt, Process C as a triangle day wave set against it - as the switch's first legitimate thrower. Slice 38 built the offline_consolidation pack and gave the switch a READER, with interleaved replay against catastrophic forgetting paired with synaptic renormalisation, designed against Layer 11 Chapter 7. Family one's items (a) through (d) are all CLOSED; only item (e), the write-allocation gate and the per-territory plasticity fence, remains. Read the sentence above as the state at slice 34, not as the state today."
+
+11. line 62: change "though the architecture already owns the cheap mechanism (the named-subgraph views that hold networks and pathways)" to "and the architecture does NOT own a cheap mechanism for it - this analysis originally claimed named-subgraph views holding networks and pathways, and that claim was an ERROR, corrected on audit: the connection graph holds a flat list of interface terms with no naming facility, no role assignment, and no way to address a sub-portion of the graph as a unit, so a motif catalogue is a BUILD and not a re-use, and family five is correspondingly larger than Part Six implies".
+
+12. line 64: add, at the end of the paragraph, "(RE-VERIFIED AT SLICE 40: attention, working memory and the global workspace remain absent from all thirty packs; Theme Five is the one theme slices 35 through 40 left entirely alone.)"
+
+13. line 106: change the family-one preamble "Family one, the two-shift machinery (Theme Two, and the merged pending line):" to "Family one, the two-shift machinery (Theme Two, and the merged pending line). (STATUS 2026-08-09: items (a), (b), (c) and (d) are all CLOSED, at slices 35, 36, 37 and 38 respectively; the two_process_governor and offline_consolidation packs both now exist; the standing long-run-proof pending line was subsumed at slice 38 as item (d) promised. Only item (e) remains outstanding.) The family as originally suggested ran:"
+
+14. line 108: change "validated against corpus entries (the microglia's four modes, the ependymocyte's proud one)" to "validated against corpus entries - the microglia's four modes and the ependymocyte's proud one for the register formalism itself, and, for the two-mode gate, the Layer 8 modes volume's Entry 36, the mutual-inhibition flip-flop, the Either-Or Latch".
+
+15. line 108: change "bus-thrown transitions are the next slice and are the only part of this family's line still outstanding at the front of the queue" to "bus-thrown transitions are the next slice and are the only part of THIS LINE'S originally-named items still outstanding; three further items named in the design authority's order remain beyond it - the supervisor channel, the stabiliser as its own construct, and the master register widened past the online-and-offline binary".
+
+16. line 116: change "turning the three hundred eighty-seven catalogued types into data" to "turning the catalogued cell types into data - 386 by measured chapter count (301 neuron chapters across the five volumes plus 85 non-neuronal chapters), though the other-cells outline's own preamble states 302 neuron types; the parser must be built against the measured 386 and the corpus's own 302-versus-301 discrepancy should be reported upward".
+
+17. line 121: change "The frame the first thirty-four slices built is the frame the corpus asks for." to "The frame the first thirty-four slices built - forty as this version is written - is the frame the corpus asks for."
+
+18. line 123: change "END OF ANALYSIS, VERSION 1" to "END OF ANALYSIS, VERSION 2. Corpus counts and codebase claims re-measured against the thirty-eight documents and against main a90bfd7 (slice 40, 648 tests across thirty packs) in docs/konnectome_vision_set_analysis_fidelity_audit_v1.txt; the findings of Parts One, Four, Five and Six survive that audit unreversed."
+
+A note on what the correction list deliberately does NOT change. Line 24's "494 tests across twenty-seven packs" stays exactly as written. It is the record of a verification act performed before the reading began, its tense already marks it as past, and overwriting it with today's 648 would falsify the record rather than update it.
+
+
+END OF FIDELITY AUDIT, VERSION 1
