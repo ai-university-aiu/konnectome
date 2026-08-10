@@ -81,7 +81,7 @@ It should be read as an accurate report of where the field stood in 2026.
 
 HOW THIS BOOK RELATES TO THE REST OF THE CORPUS
 
-The konnectome corpus is organised into fifteen layers, running from the molecular substrate up to the design method.
+The konnectome corpus is organised into fifteen encapsulated layers of abstraction, running from the quark at Layer 1 to the species at Layer 15.
 
 That corpus is substrate-first: it catalogues what the nervous system is made of, layer by layer.
 
@@ -702,7 +702,7 @@ The three presentations converged: a capacity limit, a rule system, and a workin
 
 For two decades cognitive psychology and neuroscience ran largely in parallel, the first modelling the mind without reference to tissue and the second studying tissue without much reference to cognition.
 
-The field that joins them was named, by the accounts of the participants, in the back of a New York taxi in 1976, when Michael Gazzaniga and George Miller were travelling to a dinner at the Algonquin Hotel for scientists from Rockefeller and Cornell who were combining forces to study how the brain enables the mind.
+The field that joins them was named, by the accounts of the participants, in the back of a New York taxi in the late 1970s, when Michael Gazzaniga and George Miller were travelling to a dinner at the Algonquin Hotel for scientists from Rockefeller and Cornell who were combining forces to study how the brain enables the mind.
 
 The term cognitive neuroscience came out of that ride, and Gazzaniga and Miller began using it publicly in the following years, with sources variously dating the launch to 1976 or 1978.
 
@@ -10856,7 +10856,7 @@ No-report paradigms, developed by Naotsugu Tsuchiya, Christof Koch, Melanie Wilk
 
 This has become a central battleground between the two leading theories of consciousness, since global workspace accounts assign prefrontal cortex a constitutive role while integrated information and recurrent processing accounts locate the content posteriorly.
 
-The 2023 adversarial collaboration organised by the Cogitate consortium, which tested both theories on preregistered predictions, produced results that challenged specific predictions of each and vindicated neither, which is the appropriate state of play to report.
+The adversarial collaboration organised by the Cogitate consortium, first circulated as a preprint in 2023 and published in Nature in 2025, tested both theories on preregistered predictions and produced results that challenged specific predictions of each and vindicated neither, which is the appropriate state of play to report.
 
 
 WHAT THIS CHAPTER ESTABLISHED
@@ -23627,7 +23627,7 @@ These are the capacities that live at the corpus's Layers 9, 10 and 11.
 
 Layer 9 is the layer of named anatomical structure, whose unit is the region: a discrete, anatomically bounded piece of nervous tissue, or a discrete endocrine gland, that does an identifiable job by virtue of the microcircuits it contains and the connections it makes.
 
-Layer 10 is the layer of the distributed system - the visual system, the motor system, the hypothalamic-pituitary-adrenal (HPA) axis, which is the hormonal stress circuit running from hypothalamus to pituitary gland to adrenal cortex - and the corpus catalogues forty-four such systems in seven groups, of which twenty-seven are tagged as cognitive.
+Layer 10 is the layer of the distributed system - the visual system, the motor system, the hypothalamic-pituitary-adrenal (HPA) axis, which is the hormonal stress circuit running from hypothalamus to pituitary gland to adrenal cortex - and the corpus catalogues forty-four such systems in seven groups, of which twenty-five are tagged as cognitive and nineteen as non-cognitive.
 
 Layer 11 is the whole nervous and endocrine system considered as one integrated regulatory organ, and the corpus catalogues twenty-six global states and state-machinery constructs there, including sleep, arousal and the power states, calling Layer 11 the master mode register of the architecture.
 

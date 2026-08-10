@@ -1,0 +1,224 @@
+KONNECTOME NEUROSCIENCE CORPUS: QUALITY ASSURANCE AND GAP ANALYSIS, VERSION 1
+
+An assessment of every file in docs/neuroscience/ , performed against the two cognition documents as the starting point.
+
+A konnectome working document. It is konnectome's own assessment of the source corpus, not a source document, which is why it lives here and not in docs/neuroscience/ - the rule stated in that directory's README.
+
+Date of assessment: August 10, 2026.
+
+
+WHAT WAS ASSESSED
+
+Every file in docs/neuroscience/ : forty-two files, one million eight hundred and twenty-five thousand words.
+
+That is thirty-nine source documents of the Certified_Neuroscientist corpus, plus the directory README, plus the two cognition documents added on August 10, 2026.
+
+The assessment began from THE_NEUROSCIENCE_OF_COGNITION_OUTLINE.txt and THE_NEUROSCIENCE_OF_COGNITION_MANUSCRIPT.txt and worked outward to every other file.
+
+Quality Assurance (QA) here means checking that each document is internally consistent, structurally complete, and compliant with the corpus house style.
+
+Gap Analysis (GA) here means checking what the corpus claims to contain against what it actually contains, and identifying territory the corpus does not cover.
+
+
+THE HEADLINE: THE CORPUS IS IN EXCELLENT CONDITION, WITH ONE REAL DEFECT
+
+Every catalogue count the corpus asserts about itself was verified and found exact.
+
+• Layer 6, the other-cells catalogue: 85 chapters asserted, 85 delivered.
+
+• Layer 7, the synaptics catalogue: 64 junction types asserted, 64 delivered.
+
+• Layer 8, the microcircuits catalogue: 71 canonical motifs asserted, 71 delivered.
+
+• Layer 10, the systems catalogue: 44 systems asserted, 44 delivered, in the seven parts asserted.
+
+• Layer 11, the global states catalogue: 26 operating states asserted, 26 delivered.
+
+Every modes companion was checked entry by entry against its parent catalogue, and all are complete.
+
+• LAYER_06_MODES: 386 entries, being 301 keyed to the neuron catalogue and 85 keyed to the other-cells catalogue. No parent chapter is unkeyed.
+
+• LAYER_07_MODES: 64 entries against 64 parent chapters. Complete.
+
+• LAYER_08_MODES: 71 entries against 71 parent chapters. Complete.
+
+• LAYER_10_MODES: 44 entries against 44 parent chapters. Complete.
+
+• LAYER_11_MODES: 26 entries against 26 parent chapters. Complete.
+
+• LAYER_09_MODES: 73 entries keyed by section against the 73 constructs of the guiding book's Chapter 2. Complete.
+
+Cross-reference integrity is clean. Every filename referenced inside any document resolves to a file that exists. There are no dangling pointers.
+
+House style compliance is clean. No file in the directory contains an em-dash. No file contains markdown formatting characters outside sanctioned CODE SAMPLE blocks, where Python comment characters are expected and correct.
+
+
+THE ONE REAL DEFECT: THE NEURON CATALOGUE IS DECLARED AS 302 TYPES AND DELIVERED AS 301
+
+This is the only material finding in the source corpus, and it is genuine rather than cosmetic.
+
+The five-volume neuron catalogue contains chapters numbered 1 to 301, contiguous, with no gaps and no duplicates.
+
+Chapter 302 does not exist in any volume.
+
+But the corpus refers to itself throughout as a 302-type catalogue.
+
+• Each of the five volume headers declares a chapter range, and all five declared ranges are wrong.
+
+◦ Volume 1 declares Chapters 1 to 59, and actually contains 1 to 56.
+
+◦ Volume 2 declares Chapters 60 to 119, and actually contains 57 to 116.
+
+◦ Volume 3 declares Chapters 120 to 179, and actually contains 117 to 178.
+
+◦ Volume 4 declares Chapters 180 to 239, and actually contains 179 to 238.
+
+◦ Volume 5 declares Chapters 240 to 302, and actually contains 239 to 301.
+
+• LAYER_06_MODES_MANUSCRIPT.txt, at line 7, describes itself as keyed to a neuron catalogue of 302 types.
+
+• LAYER_07_SYNAPTICS_MANUSCRIPT.txt refers to the 302-neuron catalogue twelve times.
+
+• The string also appears in LAYER_07_SYNAPTICS_OUTLINE, LAYER_08_MICROCIRCUITS_OUTLINE, LAYER_08_MICROCIRCUITS_MANUSCRIPT, LAYER_06_OTHER_CELLS_OUTLINE and LAYER_06_OTHER_CELLS_MANUSCRIPT.
+
+The pattern reads as a planning figure that was never reconciled with delivery. The declared volume boundaries sum to exactly 302 chapters, being 59 plus 60 plus 60 plus 60 plus 63. Volume 1 came in three chapters under its plan, and every downstream boundary shifted by three, leaving the catalogue one chapter short of its declared total.
+
+Independent confirmation that 301 is the delivered truth: LAYER_06_MODES_MANUSCRIPT, compiled later than the catalogue, enumerates exactly 301 neuron entries and states its own total as 386 entries, which is 301 plus 85. Had there been 302 neuron types, that companion would carry 302 entries and total 387.
+
+WHY THIS WAS NOT AUTO-FIXED
+
+The Eighth Commandment, restated in docs/neuroscience/README.txt, holds that the thirty-nine files in that directory are SOURCE: konnectome reads them, cites them, and never edits them.
+
+Git history confirms the rule is observed in practice and not merely stated. Every one of the thirty-nine source files has exactly one commit, the move that created the directory. None has ever been modified.
+
+Editing them to repair this defect would break that rule, and the repair is not mechanical in any case, because it requires a decision only the corpus owner can make.
+
+THE DECISION REQUIRED, STATED PLAINLY
+
+Two repairs are possible and they are not equivalent.
+
+1. The catalogue is complete at 301 types, and the figure 302 is a stale planning number. The repair is documentation only: correct the five volume headers and the eight files carrying the 302 references.
+
+2. The catalogue is genuinely missing its 302nd neuron type. The repair is authorial: identify the missing type, write its chapter to the Layer 6 template, and write its matching modes entry.
+
+The evidence leans toward the first, because the later-compiled modes companion independently counts 301. But the corpus's own repeated self-description says 302, and only the author knows whether a type was dropped or the plan was simply trimmed.
+
+A recommendation, offered and not acted upon: adopt reading 1, and treat the volume headers as the thing corrected.
+
+
+GAP ANALYSIS: WHAT THE CORPUS DOES NOT COVER
+
+These are absences rather than errors. Each is noted with an assessment of whether it matters.
+
+• LAYERS 1, 2 AND 3 HAVE NO DEDICATED DOCUMENT.
+
+The subatomic layer, the atomic layer, and the ionic and simple molecular layer are described in the two framework documents but have no catalogue of their own. The lowest catalogued layer is the joint Layer 4 and 5 treatment of the slow variables.
+
+Assessment: defensible and probably correct. For nearly every cognitive question the quark and the sodium ion sit below the level at which explanation pays. The new cognition manuscript says so explicitly in its Chapter 80. No action recommended.
+
+• LAYER 9 HAS NO OUTLINE FILE.
+
+Every other catalogued layer has a matching OUTLINE and MANUSCRIPT pair. Layer 9 has the guiding book and its modes companion, but no separate outline.
+
+Assessment: not a gap. The guiding book's own Chapter 2 is titled THE COMPLETE OUTLINE OF LAYER 9 CONSTRUCTS and performs that role, which is why the Layer 9 modes companion keys to sections such as 2.1.1 rather than to chapter numbers. No action recommended.
+
+• THE NEURON CATALOGUE AND THE OTHER-CELLS CATALOGUE CARRY NO NATIVE MODES SECTIONS.
+
+Neither the 301 neuron chapters nor the 85 other-cells chapters contain a MODES AND MODE TRANSITIONS section in the body of the chapter. All 386 modes treatments live in the companion volume.
+
+Assessment: not a gap, and by design. The Layer 6 chapter template version 3 states that chapters written before the modes deliberation of August 9, 2026 carry their modes in the companion, in paste-ready form keyed by chapter number, so that a future merge is a mechanical splice. The companion is complete, so the splice remains available whenever it is wanted. No action recommended, though the splice is a well-defined future task.
+
+• THE DIRECTORY README DOES NOT LIST THE TWO COGNITION DOCUMENTS.
+
+README.txt inventories thirty-nine files. That count remains correct for the source corpus, and the README excludes itself from it. But the directory now holds two further documents that the inventory does not mention.
+
+Assessment: a real staleness, deliberately not repaired here, because it is entangled with a governance question the owner should settle first. See the next section.
+
+
+A GOVERNANCE QUESTION THE OWNER SHOULD SETTLE
+
+The README states the criterion that divides docs/neuroscience/ from docs/ , and it is authorship rather than subject.
+
+A file in docs/neuroscience/ was written by the Certified_Neuroscientist corpus and describes the biology. A file in docs/ was written by this build and describes konnectome.
+
+The two cognition documents sit awkwardly across that line. They describe the biology, which argues for their present location. They were written by this build, which by the stated criterion argues for the other one.
+
+Three consistent resolutions exist.
+
+1. Treat them as corpus documents. Add them to the README inventory, and the count becomes forty-one source files. They then fall under the never-edit rule from that point forward.
+
+2. Treat them as build documents and move them to docs/ . The README then needs no change at all.
+
+3. Treat them as a third category, a build-written extension of the corpus, and say so in the README explicitly rather than leaving the reader to infer it.
+
+This assessment does not choose. Whichever is chosen, the README should be amended to record it, because at present a reader who counts the files and reads the inventory will find they disagree.
+
+
+QUALITY ASSURANCE OF THE TWO COGNITION DOCUMENTS
+
+These two files were written by this build and are therefore ones this assessment may correct. Four defects were found and all four were fixed.
+
+STRUCTURAL COMPLETENESS: verified and correct, before and after the fixes.
+
+The manuscript writes out every line item of the outline. All 15 parts, all 80 chapters, all 332 sections, and all 1,325 sub-sections are present, checked by matching every outline identifier against the manuscript. Nothing is skipped and nothing is merged.
+
+No chapter is a stub. The shortest is Chapter 19 at 2,899 words, the longest is Chapter 12 at 6,517 words, and the mean is 4,287 words across 344,272 words in total.
+
+Every chapter carries its closing WHAT THIS CHAPTER ESTABLISHED passage. Eighty of eighty.
+
+HOUSE STYLE: verified and correct.
+
+Zero em-dashes. Zero markdown characters. Zero rule lines. Zero adjacent non-blank lines, meaning the blank-line-between-sentences rule holds throughout.
+
+British spelling was checked against the house rule. Twenty-two American spellings were found and every one of them was inspected individually. All twenty-two sit inside proper nouns or published titles, where American spelling is correct and must be preserved: Skinner's Verbal Behavior, Hebb's The Organization of Behavior, the journal Behavior Research Methods, the paper Neuroscience Needs Behavior, the World Health Organization, the International Brain Research Organization, UNESCO, the Defense Advanced Research Projects Agency, and the National Center for Biotechnology Information. No change was warranted and none was made.
+
+CITATION ACCURACY: spot-checked and correct.
+
+Because the manuscript's eighty chapters were drafted independently, the highest risk was the same landmark study being dated differently in different chapters. Twenty canonical landmarks were checked across the whole text: Bliss and Lomo 1973, Scoville and Milner 1957, O'Keefe and Dostrovsky 1971, Hafting and the Mosers 2005, Baddeley and Hitch 1974, Rao and Ballard 1999, Markram 1997, Ernst and Banks 2002, Nader 2000, Kanwisher 1997, Ungerleider and Mishkin 1982, Corbetta and Shulman 2002, Miller and Cohen 2001, Schultz 1997, Libet 1983, Treisman and Gelade 1980, Desimone and Duncan 1995, Saffran 1996, Wilson and McNaughton 1994, and Tse 2007. All twenty are cited with the correct year everywhere they appear.
+
+THE FOUR DEFECTS FOUND AND FIXED
+
+1. A WRONG COUNT ABOUT THE CORPUS ITSELF. Chapter 80 stated that of the 44 systems in the Layer 10 catalogue, twenty-seven are tagged as cognitive. The true figure, counted from both LAYER_10_SYSTEMS_OUTLINE and LAYER_10_SYSTEMS_MANUSCRIPT, which agree exactly, is twenty-five cognitive and nineteen non-cognitive. Corrected, and the non-cognitive figure added so the two now sum visibly to forty-four.
+
+2. AN IMPRECISE DESCRIPTION OF THE LAYER SCHEME. The front matter described the fifteen layers as running from the molecular substrate up to the design method. Both ends were wrong: Layer 1 is the subatomic layer, not the molecular one, and the design method is Layer 15's konnectome-facing role rather than the layer itself, which is the evolutionary and species layer. Corrected to run from the quark at Layer 1 to the species at Layer 15, which is the framework document's own formulation.
+
+3. AN INTERNAL CONTRADICTION ABOUT A DATE. One passage dated the Cogitate consortium's adversarial collaboration to 2023 while six other passages dated it to 2025. Web verification confirms the study was published in Nature in April 2025, in volume 642, pages 133 to 142, having circulated as a preprint in 2023. Corrected to name both dates in their proper roles, which removes the contradiction and adds information.
+
+4. AN OVERCONFIDENT DATE. One passage asserted that cognitive neuroscience was named in a New York taxi in 1976, while a passage two sentences later correctly noted that sources variously date it to 1976 or 1978. Web verification finds the authoritative accounts, including the Cognitive Neuroscience Society's own history, say the late 1970s without pinning a year. The flat assertion was softened to the late 1970s, leaving the later sentence to carry the detail. The contradiction is gone and the claim now matches the evidence.
+
+All four fixes were verified after application. The structural checks were re-run and still pass at 1,325 of 1,325 sub-sections.
+
+
+WHAT WAS DELIBERATELY NOT DONE
+
+No file in docs/neuroscience/ other than the two cognition documents was modified.
+
+That includes README.txt, whose inventory is stale, because the staleness cannot be repaired correctly until the governance question above is settled, and because a wrong repair would be worse than an accurate report.
+
+The instruction that prompted this assessment asked for direct auto-fixing of any file. That instruction is honoured for the two documents this build wrote, and declined for the thirty-nine it did not, because the repository's own standing rule forbids it and because the one real defect in those files needs an authorial decision rather than an edit.
+
+
+SUMMARY TABLE OF FINDINGS
+
+• Catalogue counts, all layers: VERIFIED EXACT. No action.
+
+• Modes companion coverage, all six companions: VERIFIED COMPLETE. No action.
+
+• Cross-reference integrity: CLEAN. No action.
+
+• House style across all forty-two files: CLEAN. No action.
+
+• Neuron catalogue declared 302 and delivered 301, with five wrong volume headers and eight files carrying the stale figure: REAL DEFECT. Owner decision required. Not fixed.
+
+• README inventory does not list the two cognition documents: REAL STALENESS. Entangled with a governance question. Owner decision required. Not fixed.
+
+• Layers 1 to 3 uncatalogued: ABSENCE BY DESIGN. No action recommended.
+
+• Layer 9 has no separate outline: NOT A GAP. Chapter 2 of the guiding book serves that role. No action.
+
+• 386 modes treatments awaiting merge into their parent chapters: BY DESIGN, splice available whenever wanted. No action now.
+
+• Four defects in the two cognition documents: FOUND AND FIXED.
+
+
+END OF ASSESSMENT
