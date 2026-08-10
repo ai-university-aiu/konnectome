@@ -18,6 +18,8 @@
     archetype_gate_size/1,
     % archetype_gate_transitions/1: the gate's explicit transition table.
     archetype_gate_transitions/1,
+    % archetype_gate_faults/1: the gate's fault regimes and watchdogs block, no longer empty.
+    archetype_gate_faults/1,
     % archetype_gate_automaton/2: this gate instance's hybrid automaton, standing in a given mode.
     archetype_gate_automaton/2,
     % archetype_gate_transfer/2: the rule that holds while a named mode is current.
@@ -270,6 +272,37 @@ archetype_gate_transitions(Rows) :-
             archetype_gate_transition_row(Trigger, From, To, Timescale, Agency),
             Rows).
 
+% archetype_gate_fault_row(?BoundarySignature, ?WarningCondition, ?Watchdog): the fault regimes and
+% watchdogs block, in the corpus's own three-field entry schema. EMPTY UNTIL SLICE 42, AND FILLED
+% HERE, because a fault block could not honestly be filled until something existed to do the
+% watching - which is the supervisor pack, and which is why this block waited three slices.
+%
+% BOTH ENTRIES ARE THE CORPUS'S OWN, taken from the Layer 8 modes volume's Entry 36, the
+% mutual-inhibition flip-flop coined the Either-Or Latch, which is the corpus entry slice 40
+% validated this gate against block by block. That entry names exactly two fault regimes and a
+% watchdog, and konnectome takes both rather than inventing a third it has no warrant for.
+%
+% NEITHER SIGNATURE IS A MODE NAME, AND THAT IS CHECKED RATHER THAN INTENDED. open and closed are the
+% register's modes; oscillation and stuck_switch are boundaries this gate was never designed to
+% cross. The supervisor refuses a register in which a fault signature is also a declared mode, so the
+% corpus's directive is a refusal that fires rather than a sentence somebody remembers.
+%
+% AND NO THRESHOLD APPEARS HERE. A fault entry names the boundary, the warning and the watcher; the
+% ALLOWANCE belongs to the watchdog's reading and is supplied by the caller, because the corpus gives
+% konnectome no number at this grain and this family does not invent numbers.
+%
+% The corpus's latch flips between two self-holding states and can fail by never settling.
+archetype_gate_fault_row(oscillation, gate_flipping_faster_than_its_watchdog_allows, oscillation_watchdog).
+% The same latch can fail the opposite way, by settling and then never leaving.
+archetype_gate_fault_row(stuck_switch, gate_held_in_one_mode_longer_than_its_watchdog_allows, stuck_switch_watchdog).
+
+% archetype_gate_faults(-Faults): the gate's fault regimes and watchdogs block.
+archetype_gate_faults(Faults) :-
+    % Gather every declared fault entry, in declaration order.
+    findall(fault(Signature, Condition, Watchdog),
+            archetype_gate_fault_row(Signature, Condition, Watchdog),
+            Faults).
+
 % archetype_gate_automaton(+CurrentMode, -Automaton): this gate instance's hybrid automaton.
 archetype_gate_automaton(CurrentMode, Automaton) :-
     % Read the register block that every gate of this kind shares.
@@ -278,10 +311,13 @@ archetype_gate_automaton(CurrentMode, Automaton) :-
     archetype_gate_transfers(Transfers),
     % Read the transition table that every gate of this kind shares.
     archetype_gate_transitions(Rows),
-    % Build the automaton around the mode THIS instance stands in, leaving the fault block empty
-    % because faults are watched by a supervisor channel konnectome has not built yet. The
-    % constructor judges every block, so an unbound or foreign current mode is refused aloud here.
-    mode_register_new(CurrentMode, Entries, Transfers, Rows, [], Automaton).
+    % Read the fault block, which slice 42 filled from the corpus's own latch entry now that the
+    % supervisor exists to watch it. It is still not a list of modes: nothing here has a transfer
+    % function, and nothing here is a regime the gate is designed to operate in.
+    archetype_gate_faults(Faults),
+    % Build the automaton around the mode THIS instance stands in. The constructor judges every
+    % block, so an unbound or foreign current mode is refused aloud here.
+    mode_register_new(CurrentMode, Entries, Transfers, Rows, Faults, Automaton).
 
 % archetype_gate_transfer(+Mode, -Rule): the rule that holds while the named mode is current.
 archetype_gate_transfer(Mode, Rule) :-

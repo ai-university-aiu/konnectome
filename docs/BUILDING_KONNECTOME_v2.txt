@@ -592,5 +592,47 @@ Three of yesterday's tests had to be rewritten rather than kept, and they are wo
 As of slice 41, on the ninth of August, twenty twenty-six: forty-one slices. Thirty packs. Six hundred seventy-seven tests, all green. Three walls hit, three closed, a held change order still held, the standing watches carried, seven coverage bugs named with their closers. The mode-register family stands three slices in, and a decision that three families will inherit is written down in the open where it can be argued with. Next: the supervisor channel, so that fault regimes are watched and published as warnings rather than admitted as modes - which will also un-empty every fault block in the repository, including the one the gate has been carrying, present and deliberately blank, since yesterday.
 
 
-From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER THIRTY-EIGHT, and the story goes on being true.
+CHAPTER THIRTY-EIGHT - THE WATCHER, AND WHAT A MACHINE MAY NOT BE ALLOWED TO BE (2026-08-09, SLICE 42)
+
+
+There is a small empty box that has been sitting inside every konnectome construct for three slices, and today somebody finally had a reason to fill it.
+
+The box is the fault block, and it has been present and blank since slice thirty-nine on a point of principle. The guiding corpus, in the chapter template it repeats beside every layer, is unusually blunt about it: the ways a component BREAKS are not modes. They are watched by supervisor processes that publish warnings, and they are never, ever listed among the regimes the component operates in. konnectome had no supervisor, so konnectome admitted no faults, and the block stayed empty and slightly reproachful, three slices running.
+
+It is worth slowing down on why that rule exists, because from a distance it looks like bookkeeping and it is not.
+
+A mode and a fault resemble each other. Both are named conditions a part can be in. Open is a mode of a gate; stuck is a fault of one. Why keep two lists?
+
+Because of what the system is entitled to DO about each. A mode has a rule attached to it. While the gate is open it runs the open gate's law, and what arrives leaves; while it is closed it runs the closed gate's law, and nothing does. That behaviour is designed, deliberate and correct, and the whole point of the mode register is that a construct is a different machine in each of its modes on purpose.
+
+A fault has no rule and never will. Stuck is not a way the gate is supposed to work. It is a boundary the gate was never designed to cross, and there is no correct behaviour for having crossed it. The only correct response is to tell somebody who can act.
+
+And now the consequence, which is the reason the corpus forbids the confusion by name rather than leaving it to taste. Admit a fault into the mode register as though it were a mode, and the system acquires a designed behaviour for being broken. It will then run that behaviour - calmly, correctly by its own lights, and indefinitely - while reporting nothing at all, because from inside the register nothing unusual is happening. A machine with an official way to be broken never reports being broken. That sentence is the whole slice.
+
+So today konnectome built the watcher, and the boxes stopped being empty.
+
+The pack is small and its most important line is a refusal. Ask the supervisor to watch a register in which somebody has named a fault after one of that register's own modes, and it refuses, out loud, naming the offending name - and it refuses on the way IN to every watch, so a malformed register can never be reported on as though it were sound. For three slices konnectome honoured the corpus's directive by remembering it. A rule honoured by memory is a rule with a countdown on it. Now it is a rule that fires.
+
+The second design decision took longer to reach and is the one worth stealing.
+
+When the supervisor examines a fault regime, the obvious answer set has two members: it warns, or it does not. Build that, and you have a supervisor that returns a list of warnings, which reads beautifully and is a trap with a long fuse. A caller holding an empty warning list cannot tell the difference between we checked and all is well and nobody was looking. Those two situations could not be less alike, and the second is the one that ends systems, and a two-answer design files it under good news.
+
+So there are three answers. Warned. Clean. And UNWATCHED - named as such, carrying the name of the watchdog that failed to report. The same reasoning drove the channel's default: ask about a construct nobody has watched and the answer is not fine, it is nothing was watched. Silence has to say which kind of silence it is.
+
+Which leads directly to the most honest thing in the slice, and it is recorded as Observation-9 rather than glossed. KONNECTOME NOW HAS A WATCHER AND NO WATCHDOGS. The supervisor judges readings it is handed; nothing yet counts a gate's flips over a window, or its ticks held in one mode. So every fault regime in the entire repository, today, reports as unwatched - which is precisely why the third answer had to ship in the same slice as the first two. A version of this pack with two answers would have shipped a repository that quietly reported perfect health from a system where nobody was watching anything. And the reason no watchdog was built is itself a reason and not an excuse: a watchdog needs a window length, and konnectome still has no seconds in its tick. The ticks-per-second convention nobody has declared has now arrived from a third independent direction.
+
+The gate's two faults were not invented. The corpus's nearest relative of konnectome's gate - the Either-Or Latch, the same entry slice forty checked the gate against block by block - names exactly two ways such a switch fails, and konnectome takes both and adds nothing. It can fail by never settling, flipping back and forth forever. And it can fail the exact opposite way, by settling once and never leaving. No threshold appears anywhere near them: every reading arrives carrying its own allowance, supplied by whoever owns the watchdog, because the corpus gives konnectome no number here and this family does not invent numbers. Even the boundary case is written down rather than left to the next reader - a value exactly at its allowance has not crossed it.
+
+The review was the eighteenth straight completion, and it produced the most satisfying result this build has had from a lens: the DECLARATION-ORDER lens, earned only last slice, paid on its first outing, in code written the slice after it was named. The watch gathers readings by boundary signature, and the natural implementation takes the first match - which would have produced a real, confident verdict drawn from whichever reading a caller happened to list first. It refuses instead. A lens earned in one slice and paid in the next is the strongest argument anyone could ask for against retiring a lens once it has paid. The unbound-wrong-judgement lens paid for the tenth slice running, five times over in new code, including the two numeric guards that now sit in the single place every reading passes through rather than at each comparison, where a hole would have raised an arithmetic complaint naming nothing anyone could act on.
+
+One decision was taken by NOT doing something, and it is recorded because the opposite would have looked tidier. The mode register was not given this rule. Its constructor still judges a fault entry's shape - three fields, no more - because shape is structural. Whether a fault may be a mode is a POLICY, and policy belongs to the process that enforces it, not to the term that holds the data. That keeps the register a formalism rather than a rulebook, and it is the same instinct that kept the archetype from importing the bus one slice ago.
+
+And the promise was measured, as always. The claim was that nothing observable changed - the fault block went from empty to full, which is a change to a block nothing previously read, and nothing previously read it is exactly the sort of claim that deserves checking rather than believing. Last slice's probe was re-run unchanged in a worktree of the previous build. Three hundred and eighty-seven lines from each tree, and this time all three hundred and eighty-seven matched, with no divergences at all - a cleaner sheet than last slice, which had one. The capstone story was identical to the character.
+
+As of slice 42, on the ninth of August, twenty twenty-six: forty-two slices. Thirty-one packs. Seven hundred and six tests, all green. Three walls hit, three closed, a change order still held - and a fourth candidate, WATCH-3, examined properly and left standing as a watch, because a warning computed inside one runtime and travelling to nobody is not a thing the shared data structure needs to carry. Nine observations. The mode-register family stands four slices in.
+
+Next: the stabiliser as its own construct, publishing a modulable hysteresis scalar onto the bus and closing Observation-8 at the gate - and, by the decision this build made yesterday, doing it as a BIAS on the channel that already exists rather than as a thrown mode. Which is what a decision written down in the open is for: today's slice inherited yesterday's, and did not have to have the argument twice.
+
+
+From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER THIRTY-NINE, and the story goes on being true.
 

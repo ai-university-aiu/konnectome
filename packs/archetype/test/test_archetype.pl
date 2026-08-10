@@ -299,14 +299,43 @@ test(gate_transitions_carry_one_trigger_per_agency) :-
     % Both thrown directions fire on the one broadcast, which is what makes it ONE write read many times.
     assertion(ThrownDistinct == [broadcast_mode_throw]).
 
-% TEST OF THE FAULT BLOCK: faults are watched, never admitted, and konnectome has no watcher yet.
-test(gate_fault_block_is_present_and_empty) :-
+% TEST OF THE FAULT BLOCK: faults are watched, never admitted - and as of slice 42 there is a watcher,
+% so the block that was deliberately empty for three slices is deliberately full.
+test(gate_fault_block_carries_the_corpus_two_regimes) :-
     % Build the automaton.
     archetype_gate_automaton(open, Automaton),
     % Read the fault regimes and watchdogs block.
     mode_register_faults(Automaton, Faults),
-    % The block exists and is empty, because the supervisor channel does not exist yet.
-    assertion(Faults == []).
+    % The corpus's Either-Or Latch names exactly two fault regimes, and konnectome takes both.
+    assertion(length(Faults, 2)),
+    % Never settling is one of them.
+    assertion(memberchk(fault(oscillation, _, oscillation_watchdog), Faults)),
+    % Settling and never leaving is the other.
+    assertion(memberchk(fault(stuck_switch, _, stuck_switch_watchdog), Faults)),
+    % Every entry carries all three of the corpus's fields; a watchdog is never omitted, because an
+    % unwatched regime must be distinguishable from a clean one.
+    forall(member(Row, Faults),
+           assertion(Row = fault(_Signature, _Condition, _Watchdog))).
+
+% THE DIRECTIVE, PINNED AT THE GATE: not one fault signature is a mode this register declares.
+test(no_gate_fault_signature_is_a_gate_mode) :-
+    % Read the modes the register declares.
+    archetype_gate_modes(Modes),
+    % Read the fault block.
+    archetype_gate_faults(Faults),
+    % No boundary the gate was never designed to cross may also be a regime it operates in.
+    forall(member(fault(Signature, _C, _W), Faults),
+           assertion(\+ memberchk(Signature, Modes))).
+
+% AND NO FAULT HAS A TRANSFER FUNCTION, which is the structural difference between a fault and a mode.
+test(no_gate_fault_signature_has_a_transfer_function) :-
+    % Read the fault block.
+    archetype_gate_faults(Faults),
+    % Asking the register for a broken boundary's rule refuses, because a fault has no machine.
+    forall(member(fault(Signature, _C, _W), Faults),
+           ( catch(( archetype_gate_transfer(Signature, _Rule), Outcome = answered ),
+                   error(Error, _), Outcome = refused(Error)),
+             assertion(Outcome == refused(existence_error(mode_entry, Signature))) )).
 
 % TEST THAT THE FLIP IS READ OUT OF THE TABLE, so the table is the one authority on direction.
 test(gate_departure_is_read_from_the_transition_table) :-
