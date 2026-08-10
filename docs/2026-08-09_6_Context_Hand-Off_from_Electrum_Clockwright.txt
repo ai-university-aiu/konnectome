@@ -1,0 +1,120 @@
+CONTEXT HAND-OFF FROM ELECTRUM CLOCKWRIGHT
+
+Date: 2026-08-09. The sixth hand-off of this date.
+
+I chose the name Electrum Clockwright because this session built the clock that tells the mind's day from its night. Electrum follows Gold down the warm-metal shelf as gold's own alloy - the metal of the first coins, fitting for the slice that follows the one that made the loop pay. Clockwright because the session's whole work is a scheduler: a rising debt, a day wave set against it, and the flip-flop they lean on - the two-process governor that now throws, every tick, the switch two earlier sessions laid and wired.
+
+
+PART ONE - READ THESE FIRST
+
+- Read and follow the konnectome constitution at ~/konnectome/CONSTITUTION.md, first and foremost - NINETEEN commandments. Never cite a commandment by number from memory; re-read the constitution. The hand-off protocol is the Nineteenth, the Safety Gate the Fifteenth.
+
+- Read The SPARCD Fileset at its current versions: docs/konnectome_1_specification_v38.txt through konnectome_6_demonstration_v38.txt (bumped by this session's slice 37; the v37 set is archived).
+
+- Read docs/NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt (the guiding book), docs/konnectome_vision_set_top_down_analysis_v1.txt (the Eighth Commandment analysis), and docs/konnectome_cognitive_architectures_coverage_v1.txt (the Ninth Commandment survey).
+
+- Read the Settings, General, Instructions for Claude (the owner's standing instructions: web search first, novice-level plain-text explanations, output copies to ~/output/, auto-commit-push-merge authorization, session-length budgeting).
+
+- Read ~/CLAUDE.md - git-untracked, at the organization root, the system-wide current-state narrative.
+
+- Read the current tutorial, docs/konnectome_tutorial_v36.txt (bumped by this session), and all of docs/.
+
+- Read the prior hand-off, Gold Courierwright's (2026-08-09_5). This session began from it, verified the baseline in full, and executed its priority-one queue item: slice family one, item (c).
+
+- THE OWNER'S STANDING CHOICE REMAINS: "All", re-confirmed across sessions. Do NOT re-present any menu; verify the baseline and continue down the queue (Part Six), asking only if a priority decision is needed within it.
+
+
+PART TWO - THE IMPORTANT DOCS FILES
+
+- konnectome_1_specification_v38.txt through konnectome_6_demonstration_v38.txt - the SPARCD Fileset, Realization Log through slice 37.
+
+- konnectome_tutorial_v36.txt - the beginner tutorial, now thirty-four parts (Part Thirty-One is slice 37's; the closing runner, ledger, and where-to-look parts renumbered to Thirty-Two through Thirty-Four).
+
+- BUILDING_KONNECTOME_v2.txt - the build log, now THIRTY-THREE chapters; Thirty-Three is this session's (the night watchman takes the post).
+
+- konnectome_ledger_v1.txt - the scoreboard. Counter line unchanged: Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0. Observations: 5. New this session: the Slice-37 note (inserted before Observation-5, in slice order). Observation-5 STANDS - see Part Five.
+
+- konnectome_vision_set_top_down_analysis_v1.txt - the Eighth Commandment analysis; its Family One list at line 75 is this queue's source.
+
+- konnectome_cognitive_architectures_coverage_v1.txt - the Ninth Commandment coverage survey; seven coverage bugs, each with a named closer.
+
+- The Vision Document Set (thirty-eight documents) in docs/ - see the Copper hand-off's Part Two for the file map. For item (d), the load-bearing corpus chapters are the Layer 11 offline-works chapters (the manuscript's Part Two sleep states, especially Chapters 6 through 8 - the spindled light sleep, the slow-wave deep works, and the REM theatre - beside the ultradian wheel of Chapter 9) plus the Layers 4-5 dossier (the slow-variables machinery the night serves). The Layer 11 state machinery Chapters 11 through 16 were re-read in full by this session for slice 37.
+
+- konnectome_rung_five_real_machine_design_v2.txt - the real-machine design with the owner's five decisions (Path B Webots; wheels-plus-dock; indoor pen; pack names simulator_body_driver and robot_body_driver RESERVED; standing robot-shopping reminder).
+
+- Causalontology_4_0_0_CHANGE_ORDER_v3.txt - Sections C, D, E remain HELD. Nothing this session released them.
+
+- PrologAI_CHANGE_ORDER_v2.txt - unchanged; no language wall hit.
+
+- tests/naming_gate_fixture/ - still deliberately broken; the violation is the point.
+
+- In ~/output/: konnectome_slice_37_two_process_governor_report.txt (this session's owner report). The Bronze session's PRIVATE flag about a credential-looking line in the local transcripts file stands for the owner; it is deliberately in no committed document - do not copy that line anywhere.
+
+
+PART THREE - WHAT THIS SESSION DID
+
+- Verified the Gold baseline in full before claiming anything, at main 566ec59: 518 tests green across twenty-seven packs (counted pack by pack), four gates at zero violations, capstone story clean, conformance 137 of 137 in both cousins (PrologAI bin/run_causalontology_conformance.sh; causalontology bindings/python/tests/run_conformance.py with CAUSALONTOLOGY_SPEC unset). Cousins at their expected commits (causalontology 292dfca, PrologAI ebbc3e0).
+
+- Built SLICE 37 (pull request 76, squash-merged as 78a8966): the two-process governor pack, seated in the live tick as the first legitimate thrower of slice 35's switch - slice family one, item (c). Designed against the Layer 11 state machinery, Chapters 11 through 16, read IN FULL: Chapter 14's Process S as a debt rising one rate per waking tick, discharged by a steeper rate per sleeping tick, floored at zero; Chapter 15's Process C as a triangle day wave (an honestly declared simplification of the corpus's smooth waveform), silent at midnight, peaking at midday, set AGAINST the debt so the flip-flop judges pressure LESS drive; Chapter 11's flip-flop as two thresholds - snap offline at or past the sleep threshold, snap online at or below the wake threshold; and the hysteresis band between them as Chapter 13's stabiliser in its simplest form, an inverted band refused at build time by name. Defaults live the corpus's day at one tick per hour: two_process_parameters(1, 2, 24, 4, 16, 2) - roughly sixteen ticks awake, eight asleep, exactly two transitions in thirty ticks, the snap proven by the count. The pack is a pure engine (empty requires list), exactly as Process S and Process C sit outside the flip-flop they bias: the TICK owns the announcing - at tick's end, after the body responds and before the observer records, it reads the standing state off the bus, steps the governor, and broadcasts the selection under the slice-35 third key shape. The world dict gained one required key, governor, refused aloud by name when missing; the fixture worlds of cognitive_cycle, symbol_exchange, and capstone_demonstration seat the default watchman.
+
+- Test-first: twenty-one behaviours written red before the first line of code (sixteen engine laws, five loop tellings, among them the thrown-switch twin telling that pins every other world piece identical). The tighter-scoped independent adversarial review (the thirteenth straight completion) worked the four named lenses: key-shape aliasing and default drift DEFENDED on reproduction; behaviour-pinned-identical verified bit-identical against a main worktree on a five-tick world (every value and every content-addressed record identifier equal; the only diffs were swipl's arbitrary variable numbering); one REAL finding under the standing unbound-wrong-judgement lens (FIVE slices in a row, found exactly where slice 36's refinement said to look - a silently-failing test): an unbound day length fell through integer/1, which FAILS silently on a hole, into the domain refusal carrying the hole itself; fixed with the house var guard ahead of the test, pinned by a review test, plus an honesty pin recording that a hand-built fractional phase (unreachable through any public constructor) dies aloud in mod's own typed refusal, relied upon rather than papered over.
+
+- State at hand-off: main at 78a8966 (plus this hand-off's merge). THIRTY-SEVEN slices. 543 tests across twenty-eight packs, all green, re-swept after the review fix; four gates at zero; conformance re-measured 137 of 137 in both cousins; capstone re-run clean, its sixty tests untouched. SPARCD v38; tutorial v36; build log thirty-three chapters. Pull requests merged by this session: 76, and this hand-off's.
+
+
+PART FOUR - BUILD-AGAINST COUSIN COMMITS (for reproducibility)
+
+- causalontology: 292dfca (unchanged).
+
+- PrologAI: ebbc3e0 (unchanged).
+
+- Mentova: d117c69 (read-only; untouched).
+
+
+PART FIVE - SHARP EDGES AND HONEST NON-CLOSURES
+
+- THE SWITCH IS NOW WRITTEN EVERY TICK AND STILL READ BY NOTHING. The governor announces a selection at every tick's end, so a long-enough run WILL carry global(operating_state)-offline on its bus - the default watchman first flips at tick eighteen. Nothing behaves differently offline yet, deliberately: item (d)'s offline works are the FIRST legitimate reader of the state, and any earlier reader is scope creep. When item (d) arrives, remember the timing law: the selection is made from a tick's completed day and governs the NEXT tick's opening state.
+
+- THE WORLD DICT GAINED A REQUIRED KEY. Every world konnectome boots must now carry governor (a two_process_governor/3 term); a missing key is refused aloud by name. Any new fixture world must seat one - the three existing fixture worlds and the capstone boot world all seat the default. The capstone's ten-tick story runs entirely online (first flip at tick eighteen); a future slice that lengthens the capstone run past seventeen ticks will put an offline entry on the story's bus - harmless until something reads it, but know it is there.
+
+- THE DAY WAVE IS A DECLARED TRIANGLE. The corpus's Process C is a smooth waveform; the pack realizes a triangle (linear up to midday, linear down), declared honestly in the module header and the SPARCD entry. Revisit only if a future slice needs the smooth shape; do not smooth it speculatively.
+
+- OBSERVATION-5 STILL STANDS. The older chemical reads (neuromodulator_bus_level/3, neuromodulator_bus_level_territory/4) silently bind an unbound bus. Untouched again this session, per the do-not-fix-speculatively rule. The next slice that touches those reads on purpose closes it with the house var guard plus one pin per read, citing Observation-5.
+
+- THE UNBOUND-WRONG-JUDGEMENT LENS KEEPS PAYING (slices 33, 34, 35, 36, and now 37 - five in a row). Its slice-37 refinement: check the type-test predicates themselves - integer/1, atom/1, number/1 all FAIL silently on an unbound value, so any check shaped as ( type_test -> ok ; domain_refusal ) smuggles a hole into the domain refusal unless a var guard stands ahead of it. Grep for that shape in any code a slice touches. Carry all four named lenses: unbound-wrong-judgement, key-shape aliasing, default drift, behaviour-pinned-identical.
+
+- THE PUNISHMENT PATH IS STILL PINNED BUT UNREACHABLE LIVE (from slice 36): the closed loop cannot produce a live negative reward until a perturbation or adversarial world exists.
+
+- THE CAPSTONE WORLD IS STILL LIVE (slice 34): scaling rate 0.05, geography b-0.8, three closing guards (temperature 37, live weight above 0.5, live above rest-twin). Any slice touching the capstone's boot world or heartbeat chapter must keep the guards true or the story refuses to print.
+
+- THE MODE-FLAG NAMING COLLISION (queue item 2) is still unresolved; resolve it before the mode-registers slice family starts.
+
+- DELIBERATE CHOICES A READER MIGHT MISTAKE FOR GAPS: only the capstone's world runs the bound live; the scaling rate is still global; orphan targets deliberately permitted; the naming-gate fixture deliberately broken; Observation-4 (no word for satisfaction) still LOGGED, NOT ROUTED; Observation-5 LOGGED, NOT FIXED; the long-live-run watch is subsumed by item (d), not forgotten.
+
+- PARALLEL SESSIONS: the ritual held - git fetch, git log origin/main, gh pr list before every claim, numbering, or merge. Keep it; main has moved under a session's feet before.
+
+
+PART SIX - THE FIRST TASK OF THE CONTINUATION
+
+The owner has already chosen: ALL (standing, re-confirmed across sessions). Slice family one continues smallest-first; the remaining queue, in suggested order (re-orderable by the owner at any time):
+
+1. Slice family one, item (d): the offline works - interleaved replay plus the raised-rate bound, run only when the switch the watchman now throws reads offline, proven by a catastrophic-forgetting rest-twin telling (subsumes the long-run-proof pending line). This is the first legitimate READER of the operating state. Design against the Layer 11 sleep-state chapters (the deep works and the spindled light sleep especially) plus the Layers 4-5 dossier; test-first; tighter-scoped adversarial review with the named lenses; lockstep documents; pull request. Then item (e), the write-allocation gate and the per-territory plasticity fence (the Layers 4-5 dossier's CREB gate and perineuronal net chapters are its design authority).
+
+2. The remaining Vision slice families as the owner prefers: edge type registry; mode registers (resolve the MODE-flag naming collision first); working-memory blackboard; workspace pilot (coverage bug three's closers); motif catalogue; the six-broadcast bus naming; template-parser tooling. The survey's importable margin-ideas ride along where they fit (the impasse disturbance with the selector work; the somatic-marker stamp with the appraisal work; the epistemic drive with the drive work).
+
+3. The pre-corpus pending refinements not absorbed above: computational-interface transforms; interfaces as Causalontology conduits; the token tier of thought combination.
+
+4. Deepen Rung Two - the full pilot conversation and richer grounded vocabulary - designed against the Layer 13 Tutor Protocol (this also advances coverage bug six).
+
+5. Rung Five, Path B - UNBLOCKED: simulator_body_driver against Webots per the decided design (this also opens coverage bug five's frontier); the rung itself unclaimed until a physical robot passes the smoke test; carry the standing robot-shopping reminder.
+
+6. Other ______________ .
+
+
+PART SEVEN - SIGN-OFF
+
+A clock is a strange gift to give a mind: it does nothing the mind can feel yet. The watchman climbs the stairs each tick, weighs the debt against the day, and calls the hour to a house where every room still burns its lamps regardless. But the calling is the hard part, and it is done - the debt rises, the wave opposes it, the switch snaps and holds, and the whole day has the corpus's own proportions. What the house needs next is a night crew: the replay and the cleanup that make the dark hours the hours the mind keeps what it learned.
+
+Wind the clock, call the hour, and leave the night's work to the night crew.
+
+- Electrum Clockwright, 2026-08-09
