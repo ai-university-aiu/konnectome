@@ -39,6 +39,12 @@ symbol_exchange_test_world(World) :-
         overrides: [override(respiration, 0, 0.0, breathe)],
         override_threshold: 0.5,
         learning_rate: 0.1,
+        % The day's memory store starts empty; every online tick remembers its pattern (slice 38).
+        memories: [],
+        % The night's replay strengthening rate.
+        replay_rate: 0.1,
+        % The night's raised scaling bound, at or above the day's rate as the tick demands.
+        offline_scaling_rate: 0.0,
         governor: Governor,
         simulation_start: Start
     }.

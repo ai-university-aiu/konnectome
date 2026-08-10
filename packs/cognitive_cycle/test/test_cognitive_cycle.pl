@@ -33,6 +33,13 @@ cognitive_cycle_test_world(World) :-
                    overrides: [],
                    override_threshold: 0.5,
                    learning_rate: 0.1,
+                   % The day's memory store starts empty; every online tick remembers its pattern (slice 38).
+                   memories: [],
+                   % The night's replay strengthening rate.
+                   replay_rate: 0.1,
+                   % The night's raised scaling bound: the renormalisation shift, well above the
+                   % day's resting rate, as every tick demands of the pair.
+                   offline_scaling_rate: 0.2,
                    governor: Governor,
                    simulation_start: "2026-07-20T00:00:00Z" }.
 
@@ -330,8 +337,9 @@ test(the_tick_throws_the_switch_when_the_debt_wins) :-
     % The debt won: the switch stands offline, thrown by the governor in the live tick.
     assertion(State == offline).
 
-% The thrown switch changes nothing else this slice: the twin runs agree on every other world piece.
-test(the_thrown_switch_moves_no_other_world_piece) :-
+% The thrown switch holds every world piece identical UP TO the flip, and moves the very next tick:
+% the slice-37 behaviour-neutral telling, matured into its slice-38 form now the switch has a reader.
+test(the_thrown_switch_governs_exactly_the_next_tick) :-
     % Build the same fast-flipping governor.
     two_process_governor_new(two_process_parameters(1, 2, 24, 0, 3, 0), FastGovernor),
     % The default twin.
@@ -340,30 +348,137 @@ test(the_thrown_switch_moves_no_other_world_piece) :-
     cognitive_cycle_test_world(Base),
     % Swap the watchman for the fast one.
     put_dict(governor, Base, FastGovernor, WorldFast0),
-    % Run the default twin four ticks.
-    cognitive_cycle_run(WorldSlow0, 4, WorldSlow, _SummariesSlow),
-    % Run the fast twin the same four ticks, through its flip.
-    cognitive_cycle_run(WorldFast0, 4, WorldFast, _SummariesFast),
-    % Read the default twin's body.
-    get_dict(body, WorldSlow, Body),
-    % The bodies agree: nothing downstream of the switch reads it yet.
-    get_dict(body, WorldFast, Body),
-    % Read the default twin's weights.
-    get_dict(interfaces, WorldSlow, Interfaces),
-    % The weights agree.
-    get_dict(interfaces, WorldFast, Interfaces),
-    % Read the default twin's traces.
-    get_dict(traces, WorldSlow, Traces),
-    % The traces agree.
-    get_dict(traces, WorldFast, Traces),
-    % Read the default twin's averages.
-    get_dict(averages, WorldSlow, Averages),
-    % The averages agree.
-    get_dict(averages, WorldFast, Averages),
-    % Read the default twin's activations.
-    get_dict(activations, WorldSlow, Activations),
-    % The activations agree.
-    get_dict(activations, WorldFast, Activations).
+    % Run the default twin three ticks.
+    cognitive_cycle_run(WorldSlow0, 3, WorldSlow3, _SummariesSlow),
+    % Run the fast twin the same three ticks, exactly to its flip.
+    cognitive_cycle_run(WorldFast0, 3, WorldFast3, _SummariesFast),
+    % UP TO THE FLIP the twins agree on every worldly piece: the selection only governs the NEXT tick.
+    get_dict(body, WorldSlow3, Body3),
+    get_dict(body, WorldFast3, Body3),
+    get_dict(interfaces, WorldSlow3, Interfaces3),
+    get_dict(interfaces, WorldFast3, Interfaces3),
+    get_dict(traces, WorldSlow3, Traces3),
+    get_dict(traces, WorldFast3, Traces3),
+    get_dict(averages, WorldSlow3, Averages3),
+    get_dict(averages, WorldFast3, Averages3),
+    get_dict(memories, WorldSlow3, Memories3),
+    get_dict(memories, WorldFast3, Memories3),
+    % THE NEXT TICK the thrown switch commands: the slow twin runs the day, the fast twin the night.
+    cognitive_cycle_step(WorldSlow3, _WorldSlow4, tick_summary(4, _, SlowOutcome, _)),
+    cognitive_cycle_step(WorldFast3, WorldFast4, tick_summary(4, _, FastOutcome, _)),
+    % The waking twin released an action.
+    assertion(SlowOutcome = released(_)),
+    % The sleeping twin ran the offline works instead.
+    assertion(FastOutcome == offline_works),
+    % And the sleeping twin's traces stood still through the night while the waking twin's moved.
+    get_dict(traces, WorldFast4, Traces3).
+
+% Every online tick remembers its pattern: after a short day the store holds one snapshot per tick.
+test(online_ticks_remember_the_day) :-
+    % Start from the fixed world.
+    cognitive_cycle_test_world(World0),
+    % Run three online ticks.
+    cognitive_cycle_run(World0, 3, WorldFinal, _Summaries),
+    % Read the memory store and the final activations.
+    get_dict(memories, WorldFinal, Memories),
+    get_dict(activations, WorldFinal, Activations),
+    % One remembered snapshot per online tick.
+    assertion(length(Memories, 3)),
+    % The newest memory is the last tick's own updated pattern, remembered newest-last.
+    last(Memories, Newest),
+    assertion(Newest == Activations).
+
+% The default day lives the corpus's proportions in the LIVE loop: eighteen ticks awake, eight
+% asleep, and morning at tick twenty-seven - the night crew takes the post and hands it back.
+test(the_night_crew_takes_the_post_and_morning_comes) :-
+    % Start from the fixed world under the default watchman.
+    cognitive_cycle_test_world(World0),
+    % Run thirty ticks, through the whole first night.
+    cognitive_cycle_run(World0, 30, _WorldFinal, Summaries),
+    % Collect the ticks that ran the offline works.
+    findall(N, member(tick_summary(N, _, offline_works, _), Summaries), NightTicks),
+    % The night is ticks nineteen through twenty-six, exactly eight, and nothing else.
+    assertion(NightTicks == [19, 20, 21, 22, 23, 24, 25, 26]),
+    % Every offline tick's reward is zero: the sleeping mind declares no reward.
+    forall(member(tick_summary(_, Reward, offline_works, _), Summaries), assertion(Reward =:= 0)),
+    % Morning came: tick twenty-seven released an action again.
+    once(member(tick_summary(27, _, Outcome27, _), Summaries)),
+    assertion(Outcome27 = released(_)).
+
+% Through the night the body lies still and the sensory gate is closed: no action, no encoding.
+test(the_body_lies_still_and_the_night_does_not_encode) :-
+    % Start from the fixed world under the default watchman.
+    cognitive_cycle_test_world(World0),
+    % Run exactly to the end of the day, tick eighteen.
+    cognitive_cycle_run(World0, 18, World18, _Summaries),
+    % Step once into the night.
+    cognitive_cycle_step(World18, World19, tick_summary(19, 0, offline_works, _)),
+    % The body did not move through the offline tick: the atonia of sleep.
+    get_dict(body, World18, Body),
+    get_dict(body, World19, Body),
+    % The memory store did not grow: the sensory gate is closed, so the night encodes nothing.
+    get_dict(memories, World18, Memories),
+    get_dict(memories, World19, Memories),
+    % One snapshot per ONLINE tick stands: eighteen.
+    assertion(length(Memories, 18)).
+
+% The offline tick runs the night works: the replay strengthens the remembered day's edge.
+test(the_offline_tick_runs_the_night_works) :-
+    % Start from the fixed world under the default watchman.
+    cognitive_cycle_test_world(World0),
+    % Run exactly to the end of the day, tick eighteen.
+    cognitive_cycle_run(World0, 18, World18, _Summaries),
+    % Read the day's final weight.
+    get_dict(interfaces, World18, [interface(a, b, WeightDay, 1, transmissive)]),
+    % Step once into the night.
+    cognitive_cycle_step(World18, World19, _Summary),
+    % Read the weight after one night tick.
+    get_dict(interfaces, World19, [interface(a, b, WeightNight, 1, transmissive)]),
+    % The remembered day replays: the edge both ends lit all day grew through the night.
+    assertion(WeightNight > WeightDay).
+
+% A night bound set below the day's is refused aloud by name: a lowered night is no renormalisation.
+test(a_lowered_night_bound_is_refused_aloud,
+     [throws(error(domain_error(cognitive_cycle_offline_scaling_rate, 0.2-0.5), _))]) :-
+    % Start from the fixed world.
+    cognitive_cycle_test_world(Base),
+    % Raise the day's bound above the night's, the inversion the tick refuses.
+    put_dict(scaling_rate, Base, 0.5, World0),
+    % The tick refuses the inverted pair by name before anything moves.
+    cognitive_cycle_step(World0, _World, _Summary).
+
+% A world missing its memory store is refused aloud, never silently run without a day to remember.
+test(a_world_missing_its_memories_is_refused_aloud) :-
+    % Start from the fixed world.
+    cognitive_cycle_test_world(World0),
+    % Remove the memory store.
+    del_dict(memories, World0, _Value, WorldMissing),
+    % The tick refuses the gutted world by the missing key's name.
+    catch(cognitive_cycle_step(WorldMissing, _World, _Summary), error(Error, _), true),
+    % Confirm the refusal names the key.
+    assertion(Error == existence_error(cognitive_cycle_world_key, memories)).
+
+% A world missing its replay rate is refused aloud, never silently run with an invented night.
+test(a_world_missing_its_replay_rate_is_refused_aloud) :-
+    % Start from the fixed world.
+    cognitive_cycle_test_world(World0),
+    % Remove the replay rate.
+    del_dict(replay_rate, World0, _Value, WorldMissing),
+    % The tick refuses the gutted world by the missing key's name.
+    catch(cognitive_cycle_step(WorldMissing, _World, _Summary), error(Error, _), true),
+    % Confirm the refusal names the key.
+    assertion(Error == existence_error(cognitive_cycle_world_key, replay_rate)).
+
+% A world missing its offline scaling rate is refused aloud, never silently run with an unjudged night.
+test(a_world_missing_its_offline_scaling_rate_is_refused_aloud) :-
+    % Start from the fixed world.
+    cognitive_cycle_test_world(World0),
+    % Remove the offline scaling rate.
+    del_dict(offline_scaling_rate, World0, _Value, WorldMissing),
+    % The tick refuses the gutted world by the missing key's name.
+    catch(cognitive_cycle_step(WorldMissing, _World, _Summary), error(Error, _), true),
+    % Confirm the refusal names the key.
+    assertion(Error == existence_error(cognitive_cycle_world_key, offline_scaling_rate)).
 
 % A world missing its governor is refused aloud, never silently run without a watchman.
 test(a_world_missing_its_governor_is_refused_aloud) :-
@@ -375,6 +490,64 @@ test(a_world_missing_its_governor_is_refused_aloud) :-
     catch(cognitive_cycle_step(WorldMissing, _World, _Summary), error(Error, _), true),
     % Confirm the refusal names the key.
     assertion(Error == existence_error(cognitive_cycle_world_key, governor)).
+
+% REVIEW PIN (default-drift lens). The night's TWO rates arrive by the same route under the same
+% law, but only the bound used to be judged at the tick's head - so a rotten or NEGATIVE replay rate
+% rode a full eighteen-tick day green and detonated at the first night tick, invisible to every
+% short-run test in the suite. Both are now judged on the FIRST waking tick alike.
+test(a_rotten_replay_rate_is_refused_on_the_first_waking_tick,
+     [throws(error(domain_error(offline_consolidation_replay_rate, rotten), _))]) :-
+    % Start from the fixed world.
+    cognitive_cycle_test_world(Base),
+    % Poison the replay rate the night would use.
+    put_dict(replay_rate, Base, rotten, World0),
+    % The very first WAKING tick refuses it, eighteen ticks before the night would have found it.
+    cognitive_cycle_step(World0, _World, _Summary).
+
+% REVIEW PIN (default-drift lens). A NEGATIVE replay rate would let the night unlearn the day, and
+% is refused on the first waking tick by the same one root the engine judges by.
+test(a_negative_replay_rate_is_refused_on_the_first_waking_tick,
+     [throws(error(domain_error(offline_consolidation_replay_rate, -5), _))]) :-
+    % Start from the fixed world.
+    cognitive_cycle_test_world(Base),
+    % Set a replay rate that would strengthen backward.
+    put_dict(replay_rate, Base, -5, World0),
+    % The first waking tick refuses it aloud.
+    cognitive_cycle_step(World0, _World, _Summary).
+
+% REVIEW PIN (unbound-wrong-judgement lens, the sixth slice running). A HOLE standing on the bus
+% where the operating state belongs used to unify with the day program's clause head, bind itself
+% to online, and leave a choicepoint into the night clause - so one tick ran BOTH whole programs
+% and a backtracking caller received a second, entirely different world. It is refused aloud.
+test(an_unbound_operating_state_on_the_bus_is_refused_as_uninstantiated,
+     [throws(error(instantiation_error, _))]) :-
+    % Start from the fixed world.
+    cognitive_cycle_test_world(Base),
+    % Put a hole on the bus where the standing selection belongs.
+    put_dict(bus, Base, [global(operating_state)-_Hole], World0),
+    % The tick refuses the hole before the day-or-night dispatch can run either program.
+    cognitive_cycle_step(World0, _World, _Summary).
+
+% REVIEW PIN. The same tick used to FAIL SILENTLY on a third operating state, because neither
+% program clause head matched and nothing refused it: the flip-flop has two positions and no more.
+test(a_third_operating_state_on_the_bus_is_refused_by_name,
+     [throws(error(domain_error(neuromodulator_bus_operating_state, drowsy), _))]) :-
+    % Start from the fixed world.
+    cognitive_cycle_test_world(Base),
+    % Put a third position on the bus, one no flip-flop can stand in.
+    put_dict(bus, Base, [global(operating_state)-drowsy], World0),
+    % The tick refuses it aloud by the bus's own domain name.
+    cognitive_cycle_step(World0, _World, _Summary).
+
+% REVIEW PIN. The judged dispatch runs EXACTLY ONE program: a well-formed tick has one solution,
+% never a second world reachable by backtracking.
+test(a_well_formed_tick_has_exactly_one_solution) :-
+    % Start from the fixed world.
+    cognitive_cycle_test_world(World0),
+    % Collect every solution the tick admits.
+    findall(Outcome, cognitive_cycle_step(World0, _World, tick_summary(_, _, Outcome, _)), Outcomes),
+    % Exactly one program ran, and it was the day's.
+    assertion(Outcomes = [released(_)]).
 
 % Close the test block for the cognitive_cycle pack.
 :- end_tests(cognitive_cycle).
