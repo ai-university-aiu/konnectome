@@ -2460,7 +2460,7 @@ ls docs/*Context_Hand-Off*.txt | wc -l .
 DSPARCD ADOPTION NOTE (2026-08-09, by the owner's instruction). THE METHOD GAINS A SEVENTH PHASE AT
 THE FRONT, AND KONNECTOME GAINS ITS DEFINITION.
 
-WHAT HAPPENED. The owner delivered docs/DSPARCD_EXPLAINED.txt, an expansion of the SPARCD report
+WHAT HAPPENED. The owner delivered docs/DSPARCD/DSPARCD_EXPLAINED.txt, an expansion of the SPARCD report
 which was itself an expansion of the original SPARC report. It adds one phase, DEFINITION, at the
 very front - Definition, Specification, Pseudocode, Architecture, Refinement, Completion,
 Demonstration - answering the question every other phase assumes has been answered: what is this
@@ -3672,3 +3672,61 @@ version 14 note rather than edited out of either.
 NO FILE MOVED, NO FILE WAS RENAMED, NO TEST CHANGED. 811 tests across 34 packs, four gates at zero
 plus the naming gate's self-test. The hand-off directory's README.txt gains the same distinction, so
 a reader who arrives there rather than at the Constitution finds it too.
+
+
+DSPARCD REORGANISATION NOTE (2026-08-10, Constitution version 15). THE DSPARCD FILESET AND THE METHOD
+SPECIFICATION MOVED TO docs/DSPARCD/ . Not a slice: no pack touched, no test written, no phase file
+edited. Eight pure renames - the seven files the Seventh Commandment defines as "The DSPARCD Fileset",
+plus DSPARCD_EXPLAINED.txt, which the Fifth Commandment names as the specification of the method
+those seven are the phases of.
+
+WHY THE EIGHTH FILE MOVED WITH THEM, AND WHY IT IS STILL NOT A MEMBER. DSPARCD_EXPLAINED.txt sits in
+the directory because it specifies the seven phases the other files ARE, and a reader looking for the
+method should not have to look in two places. IT IS NOT PART OF "THE DSPARCD FILESET", which the
+Seventh Commandment defines as exactly seven files, and the directory's README says so explicitly. A
+DIRECTORY LISTING IS NOT A DEFINITION, and where the Constitution makes a set precise, grouping
+convenience must not be allowed to blur it.
+
+THE MOST INTERESTING THING THIS SWEEP FOUND WAS IN THE SEVENTH COMMANDMENT'S OWN LIST OF SEVEN PATHS,
+AND IT IS A CASE THE PREVIOUS THREE REORGANISATIONS DID NOT PRODUCE. That list gives the fileset at
+its _v1 names under the heading that they "will be created and named" - so each entry is a record of
+the naming convention AT CREATION rather than a pointer to a live file. SIX OF THE SEVEN ARE EXACTLY
+THAT: the specification through the demonstration are at _v48 today and their _v1 files sit correctly
+in docs/archive/ , so those six lines were LEFT POINTING THERE, because rewriting them would turn a
+creation record into a false present-tense claim. THE SEVENTH IS NOT: konnectome_0_definition IS
+STILL AT _v1, having never been superseded, so that line names a CURRENT FILE and was repointed into
+docs/DSPARCD/ with it.
+
+SO ONE LIST, WRITTEN IN ONE STYLE, ON SEVEN CONSECUTIVE LINES, HELD SIX RECORDS AND ONE POINTER. That
+is the sharpest instance yet of the distinction this repository has been drawing all day - a
+historical claim is not repaired by making it say something it did not say, and a live instruction is
+not preserved by leaving it pointing at nothing - and it is sharper because the two kinds were not in
+different documents or even different paragraphs. THE GENERAL FORM, WORTH CARRYING: A LINE THAT NAMES
+A LIVE FILE IS A POINTER; A LINE THAT NAMES A RETIRED ONE IS A RECORD; AND WHAT DECIDES WHICH IS NOT
+THE SENTENCE AROUND IT BUT WHETHER THE FILE IT NAMES IS STILL IN USE. A sweep that classifies by
+wording would have got this list wrong in one direction or the other, six times or once.
+
+THE SEVENTH COMMANDMENT ALSO NEVER NAMED A DIRECTORY, which is why it gains a LOCATED note rather
+than a repointing. It said what the files are called and never said where they live, so there was
+nothing to repoint - the location was carried entirely by the paths in a creation record. The note
+now states the live location, and states two things a session writing the next version needs: new
+versions are written into docs/DSPARCD/ , and THE SUPERSEDED ONES STILL GO TO docs/archive/ AND NOT
+TO A docs/DSPARCD/archive/ , because the Eleventh Commandment names exactly one archive and a second
+would split a rule that is currently in one place.
+
+TWO LIVE POINTERS WERE REPOINTED: the Fifth Commandment's, at the method specification, and the
+Nineteenth's reading reminder, at the fileset. Twenty-eight further pointers were swept across the
+README, the analysis, the tutorial, this ledger and the current hand-off.
+
+AND ONE POINTER WAS REVERTED AFTER THE SWEEP TOOK IT, which is recorded because the mistake is
+instructive. The version-8 HISTORY note in the Constitution says the Fifth Commandment "is re-pointed
+at docs/DSPARCD_EXPLAINED.txt" - a record of what version 8 did, at the path version 8 did it at. The
+mechanical sweep rewrote it, which would have made a history note describe an action that never
+happened. It was caught by reading the sweep's own output rather than by any check. A MECHANICAL
+SWEEP CANNOT TELL A VERSION HISTORY FROM A LIVE RULE, and this is the second time today that the
+thing needing judgment was inside the Constitution rather than outside it.
+
+VERIFIED. Resolve-check over all seventy-five live files: every pointer resolves, or resolves
+elsewhere as a dated citation or a deliberate historical record (fourteen), or is one of the three
+known non-pointers. 811 tests across 34 packs, four gates at zero plus the naming gate's self-test.
+docs/ top level is now twenty-five files and five sub-directories. No pack reads a docs path.

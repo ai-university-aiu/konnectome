@@ -79,7 +79,7 @@ THE FIFTH COMMANDMENT:
 (AMENDED in version 8, by the owner's instruction of 2026-08-09. The method gains a SEVENTH phase at
 the FRONT, and the commandment is re-pointed at the report that specifies it.)
 The seven (7) step waterfall workflow documents are inspired by the specification file:
-/home/ccaitwo/konnectome/docs/DSPARCD_EXPLAINED.txt
+/home/ccaitwo/konnectome/docs/DSPARCD/DSPARCD_EXPLAINED.txt
 DSPARCD is SPARCD with a DEFINITION phase in front of it: Definition, Specification, Pseudocode,
 Architecture, Refinement, Completion, Demonstration. The superseded SPARCD_EXPLAINED.txt is archived
 under the Eleventh Commandment at docs/archive/SPARCD_EXPLAINED.txt; it is not deleted, because the
@@ -105,7 +105,7 @@ waterfall steps and files
 will be sourced from the Appendices of the file:
 /home/ccaitwo/konnectome/docs/neuroscience/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt
 The versioned files will be created and named:
-/home/ccaitwo/konnectome/docs/konnectome_0_definition_v1.txt
+/home/ccaitwo/konnectome/docs/DSPARCD/konnectome_0_definition_v1.txt
 /home/ccaitwo/konnectome/docs/konnectome_1_specification_v1.txt
 /home/ccaitwo/konnectome/docs/konnectome_2_pseudocode_v1.txt
 /home/ccaitwo/konnectome/docs/konnectome_3_architecture_v1.txt
@@ -115,6 +115,22 @@ The versioned files will be created and named:
 Each file will start its contents from one entire, similarly numbered appendix from the file
 /home/ccaitwo/konnectome/docs/neuroscience/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt
 These seven (7) files will be known as "The DSPARCD Fileset".
+(LOCATED in version 15, by the owner's instruction of 2026-08-10. THE DSPARCD FILESET LIVES IN
+/home/ccaitwo/konnectome/docs/DSPARCD/ , together with the DSPARCD_EXPLAINED.txt of the Fifth
+Commandment, which specifies the method these seven files are the phases of. THE LIST OF SEVEN PATHS ABOVE IS NOW MIXED, AND
+DELIBERATELY SO, BECAUSE IT IS TWO DIFFERENT KINDS OF LINE THAT HAPPEN TO SHARE A SHAPE. That list
+says the files "will be created and named", so each entry is a record of the naming convention AT
+CREATION. SIX OF THE SEVEN NAME FILES THAT HAVE SINCE BEEN SUPERSEDED - the specification through the
+demonstration are at _v48 today - and their _v1 files are exactly where they should be, in
+docs/archive/ under the Eleventh Commandment, so those six lines are left pointing there and rewriting
+them would have turned a creation record into a false present-tense claim. THE SEVENTH IS DIFFERENT:
+konnectome_0_definition IS STILL AT _v1, having never been superseded, so that line names a CURRENT
+file and was repointed into docs/DSPARCD/ with it. A line that names a live file is a pointer; a line
+that names a retired one is a record; and here the same list holds both. THIS NOTE IS THE LIVE
+STATEMENT OF WHERE THE FILESET IS. A session writing a new version writes it into docs/DSPARCD/ , with the version
+number incremented per the Twelfth Commandment, and git-moves the superseded one to docs/archive/ per
+the Eleventh - THE SUPERSEDED VERSIONS DO NOT GO INTO docs/DSPARCD/archive/ , because there is no
+such directory and the Eleventh Commandment names exactly one archive.)
 konnectome_0_definition HAS NO SOURCE APPENDIX and correctly so: the Definition phase is newer than
 the manuscript the other six are sourced from, so its first version is written from THIS CONSTITUTION
 and from the whole of /docs/, and it says so on its own face. IT ARRIVED AT SLICE 41, NOT AT SLICE 1,
@@ -434,7 +450,7 @@ Step 3: To this file write the following information for the next building or ma
 - A reminder to first and foremost read and follow THE KONNECTOME CONSTITUTION AT:
 ~/konnectome/CONSTITUTION.md (all commandments).
 - A reminder to read The DSPARCD Fileset
-(docs/konnectome_0_definition through konnectome_6_demonstration, at their current versions), and to
+(docs/DSPARCD/konnectome_0_definition through konnectome_6_demonstration, at their current versions), and to
 read konnectome_0_definition FIRST, because it is the concept the other six answer to.
 - A reminder to read docs/neuroscience/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt, the guiding book for konnectome
 - A reminder to read the Settings, General, Instructions for Claude (the owner's standing instructions to the assistant).
@@ -452,7 +468,20 @@ commit because they are one act: the document that was the instruction becomes a
 moment the next one becomes the instruction, and splitting them across two changes would leave a
 commit in which /docs/ holds two hand-offs or none.
 
-VERSION HISTORY NOTE (extended in version 14). This Constitution is at VERSION 14. Version 14, by
+VERSION HISTORY NOTE (extended in version 15). This Constitution is at VERSION 15. Version 15, by
+the owner's instruction of 2026-08-10, records the move of THE DSPARCD FILESET and the method
+specification DSPARCD_EXPLAINED.txt into docs/DSPARCD/ . TWO LIVE POINTERS ARE REPOINTED - the Fifth
+Commandment's, at the method specification, and the Nineteenth's reading reminder, at the fileset -
+and the Seventh gains a LOCATED note stating where the fileset lives, because it named the files
+without ever naming their directory. NO COMMANDMENT WAS REMOVED, NO COMMANDMENT WAS RENUMBERED, NO
+RULE CHANGED, AND NO PHASE FILE WAS EDITED. Only the directory moved.
+NOTE WHAT WAS DELIBERATELY NOT REWRITTEN, because it is the same distinction version 14 drew between
+a record and an instruction: the Seventh Commandment's list of seven _v1 paths says the files "will
+be created and named", which is a record of the naming convention at creation, and every one of those
+_v1 files is correctly in docs/archive/ today. Rewriting them would have turned a creation record
+into a false present-tense claim. The LOCATED note carries the live location instead.
+
+Version 14, by
 the owner's instruction of 2026-08-10, adds one clarifying paragraph to the Eleventh Commandment
 stating that it governs VERSIONS and not SERIES, and that Context Hand-Off documents are therefore
 not archived under it. NO COMMANDMENT WAS REMOVED, NO COMMANDMENT WAS RENUMBERED, AND NO RULE

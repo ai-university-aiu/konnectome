@@ -9,9 +9,9 @@ PART ONE - READ THESE FIRST
 
 - Read and follow the konnectome constitution at ~/konnectome/CONSTITUTION.md, first and foremost. IT DID NOT MOVE THIS SESSION and stands at VERSION 9. NOTE FOR ANYONE HOLDING AN OLDER HAND-OFF: the Cobalt hand-off said version 8; the Constitution went to VERSION 9 in a commit that landed BEFORE this session began (pull request 112), adopting AGI_FOR_EVERYONE_MANUSCRIPT_v2 as the third document of the First Commandment and archiving its predecessor. No commandment was removed or renumbered. Never cite a commandment by number from memory; re-read it. There are NINETEEN; the hand-off protocol is the Nineteenth, the Safety Gate the Fifteenth.
 
-- READ docs/konnectome_0_definition_v1.txt BEFORE ANYTHING ELSE IN THE FILESET. Unchanged this session. It states what konnectome IS in one sentence and what it is NOT in eight. The Constitution outranks it; it outranks the other six phase files. It is deliberately SHORT and must stay short.
+- READ docs/DSPARCD/konnectome_0_definition_v1.txt BEFORE ANYTHING ELSE IN THE FILESET. Unchanged this session. It states what konnectome IS in one sentence and what it is NOT in eight. The Constitution outranks it; it outranks the other six phase files. It is deliberately SHORT and must stay short.
 
-- Read The DSPARCD Fileset at its current versions: docs/konnectome_0_definition_v1.txt and docs/konnectome_1_specification_v48.txt through konnectome_6_demonstration_v48.txt. IT MOVED THREE TIMES THIS SESSION, v45 to v46 to v47 to v48. Each move appended one realization-log section and changed nothing else.
+- Read The DSPARCD Fileset at its current versions: docs/DSPARCD/konnectome_0_definition_v1.txt and docs/DSPARCD/konnectome_1_specification_v48.txt through konnectome_6_demonstration_v48.txt. IT MOVED THREE TIMES THIS SESSION, v45 to v46 to v47 to v48. Each move appended one realization-log section and changed nothing else.
 
 - Read docs/neuroscience/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt, the guiding book.
 
@@ -24,7 +24,7 @@ PART ONE - READ THESE FIRST
   • docs/konnectome_motif_and_workspace_design_authority_v1.txt - Themes Four and Five.
   • docs/konnectome_vision_set_analysis_fidelity_audit_v1.txt - the audit of the analysis itself.
 
-- Read docs/DSPARCD_EXPLAINED.txt, the Fifth Commandment's subject.
+- Read docs/DSPARCD/DSPARCD_EXPLAINED.txt, the Fifth Commandment's subject.
 
 - Read the Settings, General, Instructions for Claude (web search first, novice-level plain-text explanations, output copies to ~/output/, auto-commit-push-merge authorization, session-length budgeting).
 
