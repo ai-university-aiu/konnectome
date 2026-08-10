@@ -1206,7 +1206,7 @@ thought combination. The four gates report zero violations, the naming gate pass
 self-test; conformance re-measured at 137 of 137 (specification 4.0.0) in both cousins. No new
 wall; no cousin edited, per the Second, Third, and Fourth Commandments.
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 9.  Decisions: 1.
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 10.  Decisions: 2.
 
 Slice-34 note (2026-08-09). The bound turned live in the told story. The slice-33 pending line
 (the bound proven per-territory in the tests but not yet in the capstone's told story) is
@@ -2603,3 +2603,110 @@ mode_register WAS DELIBERATELY NOT GIVEN THIS RULE. Its constructor still judges
 SHAPE, because shape is structural, and does NOT judge whether a fault may be a mode, because that is
 a POLICY and belongs to the process that enforces it. This keeps mode_register a formalism rather
 than a rulebook, and it is recorded here because the opposite choice would look tidier.
+
+
+SLICE 43 NOTE (2026-08-09). THE TICKS-PER-SECOND CONVENTION - and with it THE SECOND NUMBERED
+KONNECTOME DECISION, taken ahead of the stabiliser on the Iridium hand-off's one scheduling
+suggestion, because the item had arrived from THREE independent directions and was blocking work in
+three separate families.
+
+WHY IT JUMPED THE QUEUE, stated first because a promotion is itself a decision. The version 2
+analysis found it beneath Theme Four and Theme Five, where every quantity in the cognitive cluster is
+wall-clock. Slice 42 hit it from a direction nobody predicted: a watchdog cannot have a window
+without a unit to measure one in, which is what left OBSERVATION-9 open rather than closed. And the
+stabiliser, the queue's front, publishes a scalar whose grains must be stated - and a grain argued in
+seconds cannot be stated in a build with no seconds. THE RULE THIS APPLIES, worth carrying: A CHEAP
+ITEM THAT ARRIVES FROM A THIRD INDEPENDENT DIRECTION HAS STOPPED BEING A QUEUE ITEM AND HAS BECOME A
+DEPENDENCY. It was promoted, not re-prioritised on taste.
+
+WHAT WAS BUILT, AND IT IS DELIBERATELY SMALL. tick_engine gains three exported predicates and no new
+pack: tick_engine_ticks_per_second/1, the convention itself, stated once; and the two conversions
+tick_engine_ticks_from_milliseconds/2 and tick_engine_milliseconds_from_ticks/2. Seven Prolog Unit
+(PLUnit) tests, tick_engine growing from eight to fifteen; SEVEN HUNDRED AND THIRTEEN tests across
+THIRTY-ONE packs; four gates at zero; the capstone story byte-identical against a main worktree.
+
+DECISION-2 (2026-08-09, slice 43). THE TICKS-PER-SECOND CONVENTION: ONE HUNDRED TICKS TO THE NOMINAL
+SECOND, SO ONE TICK IS TEN NOMINAL MILLISECONDS, AND THE SCHEDULER STAYS DIMENSIONLESS. THIS IS
+KONNECTOME'S OWN DECISION AND MUST NEVER BE PRESENTED AS THE CORPUS'S INSTRUCTION.
+
+WHY A DECISION WAS REQUIRED. The corpus specifies the cognitive cluster down to its constants and
+every one of them is wall-clock - ignition near three hundred milliseconds, admission in the low
+hundreds, unrehearsed decay in seconds, a board wiped on task switch in under a second - while
+konnectome's tick is dimensionless-ordinal by the observer's own written declaration. The corpus says
+nothing whatever about how often a synthetic mind should update, because it is describing a
+continuous system and not a scheduler, so THERE IS NO READING OF THE CORPUS THAT COULD SUPPLY THIS
+NUMBER. It is not a silence to be resolved by reading harder; it is a question the source does not
+contain. That is precisely the situation the Fourth Commandment's ledger exists for.
+
+THE THREE REASONS, ALL KONNECTOME'S OWN. FIRST, IT MAKES EVERY CORPUS CONSTANT A WHOLE NUMBER OF
+TICKS: three hundred milliseconds is thirty ticks exactly, one hundred is ten, one second is one
+hundred, half a second is fifty. A rate that left a corpus constant sitting between two ticks would
+force a rounding at every site that used it, AND A ROUNDING IS AN INVENTED NUMBER WEARING A SMALL
+COAT - the constant would leave the corpus as the corpus's and arrive in the pack as konnectome's,
+with nobody having decided anything. SECOND, IT IS THE COARSEST RATE THAT ACHIEVES THE FIRST, and
+coarsest is the honest choice rather than the convenient one: the corpus states these quantities to a
+hundred-millisecond grain, so a millisecond tick would claim a precision the source does not have and
+would invite later slices to write constants finer than anything they could justify. THIRD, IT COSTS
+THE RUNNING MACHINE NOTHING AND IS THEREFORE REVERSIBLE: no existing behaviour moves by a single
+count, the capstone story is byte-identical, and every duration konnectome ever expresses in real
+units passes through ONE conversion predicate - so a session that must restate the rate has exactly
+one predicate to change and one test to re-read, rather than a search across thirty-one packs.
+
+THE REFUSAL IS THE LOAD-BEARING HALF, and it is the half that makes this a decision with teeth rather
+than a constant in a file. A DURATION THAT IS NOT A WHOLE NUMBER OF TICKS IS REFUSED ALOUD:
+domain_error(whole_tick_duration, Milliseconds), never rounded. Rounding is exactly how invented
+numbers enter a careful build - a caller asks for five milliseconds, is handed one tick without being
+told, and a number that was the corpus's has silently become konnectome's. The refusal forces that
+decision into the open, where it can be recorded. Both conversions also refuse an UNBOUND argument,
+the unbound-wrong-judgement lens paying for an ELEVENTH SLICE RUNNING (33 through 43): an unbound
+duration would have invented both a duration and a tick count for it.
+
+WHAT DECISION-2 DOES NOT DECIDE, stated so a later session does not inherit more than was chosen. IT
+DOES NOT MAKE KONNECTOME REAL-TIME: nothing sleeps, nothing measures, nothing consults a wall clock,
+and the scheduler remains a counter of two-pass synchronous updates. A tick is not ten milliseconds
+long; ten milliseconds is what a tick is CALLED when a duration must be stated. IT DOES NOT DECIDE
+THAT ANY PARTICULAR CORPUS CONSTANT IS RIGHT - each remains the corpus's claim, and a slice that
+adopts one still cites where it came from. IT DOES NOT DECIDE THE OBSERVER'S STAMP, which keeps its
+own nominal one-second-per-tick carrier and is now numerically at odds with the convention - see
+OBSERVATION-10, recorded rather than quietly fixed. IT DOES NOT DECIDE A WINDOW LENGTH for any
+watchdog: it supplies the UNIT a window can be stated in, and OBSERVATION-9's closer still has to
+choose the number and say why. And it does not decide whether any construct may have a rate of its
+own that differs from the engine's, which the corpus's several timescales will eventually raise.
+
+OBSERVATION-10 (2026-08-09, from slice 43). THE OBSERVER'S CLOCK AND THE CONVENTION NOW DISAGREE, AND
+THE DISAGREEMENT IS RECORDED RATHER THAN FIXED. packs/observer/prolog/observer.pl advances its
+absolute instant by ONE NOMINAL SECOND PER ORDINAL TICK, and says in its own comment that this is a
+nominal, reproducible carrier for a token_occurrence's mandatory absolute interval and nothing more.
+Under DECISION-2 a tick is ten nominal milliseconds, so the observer's timestamps run one hundred
+times faster than the convention's durations. NOTHING IS WRONG TODAY, because the observer's instant
+is an IDENTITY CARRIER and never a duration: no konnectome predicate subtracts two of them, and the
+record's only requirement is that each tick get a distinct, reproducible instant. THE DANGER IS
+NAMED: the first reader that treats the trace as a timeline and measures an interval across it will
+get an answer one hundred times too large, and will get it silently. THE CLOSER IS NAMED AND ITS COST
+IS NAMED WITH IT: the slice that restates the observer's stamp in the convention's units RE-MINTS
+EVERY CONTENT-ADDRESSED TOKEN OCCURRENCE IDENTIFIER IN THE REPOSITORY, because the instant is one of
+the two identity-bearing fields. That is a real cost and it is why this slice does not pay it
+speculatively. The cheaper closer, and probably the right one, is the opposite direction: state in
+the observer that its instant is an ORDINAL CARRIER WHICH MAY NEVER BE READ AS A DURATION, and make
+that a refusal rather than a comment. Either way the choice belongs to a slice that has a reason.
+
+WHAT THIS SLICE DELIBERATELY DID NOT BUILD, so each gap is a decision. No construct was given a
+duration: adopting a corpus constant is the working-memory slice's job and doing it here would have
+smuggled a faculty in under a convention. No per-construct rate. No window and no watchdog, so
+OBSERVATION-9 stands exactly where slice 42 left it - this slice removes its blocker and closes
+nothing. No change to the observer, per OBSERVATION-10. And no change to the scheduler at all, which
+is pinned by a test rather than asserted: the heartbeat still counts ticks, and five ticks still
+reads five.
+
+THE CONSTITUTION'S NUMBER RULE IS WHAT THIS SLICE IS REALLY ABOUT. konnectome's standing discipline
+is that no number in a pack is konnectome's invention. That discipline was about to be broken
+QUIETLY, not loudly: not by somebody inventing a constant, but by everybody rounding one. A
+convention declared in the open, with its reasons and its refusal, is how a build keeps a promise it
+would otherwise break by accident.
+
+THE SCHEDULED AUDIT IS NOT YET DUE. The trigger stands at thirty-two hand-off documents; the count at
+this entry is TWENTY-SEVEN. Carry the item forward with the count re-evaluated by:
+ls docs/*Context_Hand-Off*.txt | wc -l . NOTE INHERITED FROM THE RHODIUM HAND-OFF: two of the
+twenty-seven are session-close markers rather than units of work, so the count slightly overstates
+build progress and the session that finds the audit due should check that before treating
+thirty-two as a measure of how much has been built.
