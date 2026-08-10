@@ -53,6 +53,21 @@ WHAT WAS DELIBERATELY LEFT ALONE. The bodies of the twenty-eight hand-offs dated
 TWO DATED SLICE NOTES IN THE LEDGER ALSO QUOTE THE SUPERSEDED GLOB, correctly for their own dates. If you run one of those it will return zero and it is not a count. The ledger's SCHEDULED AUDIT note is the authority on the trigger and says so.
 
 
+WHY THESE ARE NOT IN /docs/archive/
+
+Because they are a SERIES and not a set of VERSIONS, and the Eleventh Commandment governs versions.
+
+A superseded hand-off is not a new version of an older one. Each records a DIFFERENT session, and none replaces any other. That is the opposite of what /archive/ is for: the archive holds konnectome_tutorial_v12 and konnectome_1_specification_v41, which are superseded drafts of documents that still exist in better form.
+
+THE TEST THAT SEPARATES THEM, added to the Eleventh Commandment at Constitution version 14: WOULD A SESSION EVER BE TOLD TO READ THIS FILE?
+
+Nothing in this repository ever instructs anyone to read an archived file. Every reference to /archive/ in the Constitution is preservation language - a superseded document is not deleted and remains readable - which is a promise about the record rather than a reading list.
+
+A SUPERSEDED HAND-OFF IS REQUIRED READING. Each one names which of its predecessors is the substantive one, and the current hand-off's own first part sends the next session to it by name.
+
+/archive/ HOLDS DEAD VERSIONS. THIS DIRECTORY HOLDS A LIVING SERIES.
+
+
 WHAT THE HAND-OFFS ARE NOT
 
 They are not a measure of build progress, and the count of them is not a count of work done. At least two are session-close markers. Any audit triggered on the number of hand-off documents should check that before treating the count as a measure of how much has been built - a warning first recorded by the Rhodium Marchwright hand-off and carried by every one since.
