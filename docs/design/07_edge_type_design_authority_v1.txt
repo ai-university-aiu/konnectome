@@ -4,7 +4,7 @@ The Eighth Commandment DEEP READ beneath Theme Three of /home/ccaitwo/konnectome
 
 Date: 2026-08-09. Version 1.
 
-Companion to docs/design/konnectome_mode_register_design_authority_v1.txt, which is the design authority for Theme One and which produced the scheduling finding this document exists to discharge.
+Companion to /home/ccaitwo/konnectome/docs/design/05_mode_register_design_authority_v1.txt, which is the design authority for Theme One and which produced the scheduling finding this document exists to discharge.
 
 
 WHAT THIS DOCUMENT IS, AND WHAT IT IS NOT
@@ -23,7 +23,7 @@ The corpus cannot contain them, because the corpus knows nothing about konnectom
 
 They are authoritative as the record of that assessment, and they are superseded by a LATER ASSESSMENT, never by the corpus.
 
-The reading was: /home/ccaitwo/konnectome/docs/archive/konnectome_vision_set_top_down_analysis_v1.txt in full; docs/design/konnectome_mode_register_design_authority_v1.txt, with attention to its Part Ten scheduling finding; docs/neuroscience/LAYER_07_SYNAPTICS_OUTLINE.txt in full; docs/neuroscience/LAYER_07_MODES_OUTLINE.txt in full; and representative chapters of docs/neuroscience/LAYER_07_SYNAPTICS_MANUSCRIPT.txt and docs/neuroscience/LAYER_07_MODES_MANUSCRIPT.txt read in full - Chapter and Entry 1 (the glutamatergic fast excitatory synapse), Chapter and Entry 4 (the GABA-A fast inhibitory synapse), Chapter and Entry 26 (the neuromuscular junction), Chapter 38 (the neuronal gap junction), Chapter 43 (the silent synapse), Chapter 53 (the tripartite synapse ensheathment), Chapter 55 (the axo-myelinic synapse), Chapter 57 (the microglia-synapse contact), and Entries 62 through 64 of the modes companion.
+The reading was: /home/ccaitwo/konnectome/docs/archive/konnectome_vision_set_top_down_analysis_v1.txt in full; /home/ccaitwo/konnectome/docs/design/05_mode_register_design_authority_v1.txt, with attention to its Part Ten scheduling finding; docs/neuroscience/LAYER_07_SYNAPTICS_OUTLINE.txt in full; docs/neuroscience/LAYER_07_MODES_OUTLINE.txt in full; and representative chapters of docs/neuroscience/LAYER_07_SYNAPTICS_MANUSCRIPT.txt and docs/neuroscience/LAYER_07_MODES_MANUSCRIPT.txt read in full - Chapter and Entry 1 (the glutamatergic fast excitatory synapse), Chapter and Entry 4 (the GABA-A fast inhibitory synapse), Chapter and Entry 26 (the neuromuscular junction), Chapter 38 (the neuronal gap junction), Chapter 43 (the silent synapse), Chapter 53 (the tripartite synapse ensheathment), Chapter 55 (the axo-myelinic synapse), Chapter 57 (the microglia-synapse contact), and Entries 62 through 64 of the modes companion.
 
 All sixty-four KONNECTOME NOTE blocks of the synaptics manuscript were read as a set, because that set IS the corpus's own proposed type registry.
 
@@ -76,7 +76,7 @@ That is what makes Layer 7 the one relation-layer, and it is the sentence that d
 
 THIRD SHARPENING. The theme writes "a learning-rule identity" in the singular slot.
 
-The corpus contains at least six structurally different update laws, listed at docs/design/konnectome_mode_register_design_authority_v1.txt line 206, and one type whose stored, learned variable is not a weight at all: Chapter 55, the axo-myelinic synapse, whose KONNECTOME NOTE (docs/neuroscience/LAYER_07_SYNAPTICS_MANUSCRIPT.txt line 11156) proposes "axon_to_myelin_support_connection: an edge from an axon segment to its wrapping oligodendrocyte whose message carries a demand level and whose learned variable is the edge's own transmission DELAY."
+The corpus contains at least six structurally different update laws, listed at /home/ccaitwo/konnectome/docs/design/05_mode_register_design_authority_v1.txt line 206, and one type whose stored, learned variable is not a weight at all: Chapter 55, the axo-myelinic synapse, whose KONNECTOME NOTE (docs/neuroscience/LAYER_07_SYNAPTICS_MANUSCRIPT.txt line 11156) proposes "axon_to_myelin_support_connection: an edge from an axon segment to its wrapping oligodendrocyte whose message carries a demand level and whose learned variable is the edge's own transmission DELAY."
 
 So the field is not only a rule identity but a rule identity PLUS a named target variable, and konnectome must decide whether delay is learnable before it writes the field.
 
@@ -216,11 +216,11 @@ docs/neuroscience/LAYER_07_MODES_MANUSCRIPT.txt, Entry 1: "This is the mode-rich
 
 The five listed register entries are therefore a FLATTENED PRESENTATION of a two-by-three-plus-silent structure, not five mutually exclusive states.
 
-The Theme One design authority already noticed the general shape and left it open as its unresolved point seven (docs/design/konnectome_mode_register_design_authority_v1.txt line 185: "WHETHER CONCURRENT MODES ARE A GENERAL FACILITY OR AN EXCEPTION ... coexisting-by-geometry registers exist at the junction grain, but the corpus neither counts them nor marks them syntactically").
+The Theme One design authority already noticed the general shape and left it open as its unresolved point seven (/home/ccaitwo/konnectome/docs/design/05_mode_register_design_authority_v1.txt line 185: "WHETHER CONCURRENT MODES ARE A GENERAL FACILITY OR AN EXCEPTION ... coexisting-by-geometry registers exist at the junction grain, but the corpus neither counts them nor marks them syntactically").
 
 The junction grain is where that question stops being theoretical, because Entry 1 is the FIRST entry of the volume and the type konnectome's own edges most resemble.
 
-FIFTH, THE BOUNDARY IS ADMITTED SOFT BY THE CORPUS ITSELF. docs/design/konnectome_mode_register_design_authority_v1.txt line 181 records it, and the deep read confirms it from the source: docs/neuroscience/LAYER_07_MODES_OUTLINE.txt Entry 43 says the silent synapse is a "cross-reference Chapter 1, OF WHICH THIS IS THE AMPA-LACKING MODE", and Entry 17, the axospinous synapse, lists "Silent - the Mute Room ... (catalogued fully at entry 43)."
+FIFTH, THE BOUNDARY IS ADMITTED SOFT BY THE CORPUS ITSELF. /home/ccaitwo/konnectome/docs/design/05_mode_register_design_authority_v1.txt line 181 records it, and the deep read confirms it from the source: docs/neuroscience/LAYER_07_MODES_OUTLINE.txt Entry 43 says the silent synapse is a "cross-reference Chapter 1, OF WHICH THIS IS THE AMPA-LACKING MODE", and Entry 17, the axospinous synapse, lists "Silent - the Mute Room ... (catalogued fully at entry 43)."
 
 So Chapter 43 is simultaneously a TYPE (Part Five, entry 43, with its own KONNECTOME NOTE proposing silent_eligible_connection) and a MODE of Chapter 1 and Chapter 17.
 

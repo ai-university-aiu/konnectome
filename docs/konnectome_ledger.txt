@@ -1299,7 +1299,7 @@ twenty-seven packs counted pack by pack, four gates at zero violations, capstone
 conformance 137 of 137 in both cousins at causalontology 292dfca and PrologAI ebbc3e0). The four
 test-bed text files were read IN FULL by four parallel reading assistants and synthesized against
 the packs, the specification, and the Vision-Set analysis; the full coverage list is
-docs/design/konnectome_cognitive_architectures_coverage_v1.txt. THE RESULT, in the commandment's own
+/home/ccaitwo/konnectome/docs/design/09_cognitive_architectures_coverage_v1.txt. THE RESULT, in the commandment's own
 terms: roughly sixty architectures, patterns, and modules judged; the motivation, emotion,
 regulation, coping, reaction, observation, social-cognition, and homeostatic-learning families
 are PERFORMABLE or EMERGENT today (PSI/MicroPsi, behavior-oriented design, procedural reasoning,
@@ -1596,7 +1596,7 @@ judgment, recorded per the Fourth Commandment because the ledger is the scoreboa
 decision of this size belongs on it.
 
 Modes deep-read note (2026-08-09). THE MODES DEEP READ IS EXECUTED, and the design authority for
-the construct-level mode register is docs/design/konnectome_mode_register_design_authority_v1.txt. The
+the construct-level mode register is /home/ccaitwo/konnectome/docs/design/05_mode_register_design_authority_v1.txt. The
 method was the Eighth Commandment analysis's own: four parallel readers by grain over the fourteen
 MODES companions plus the Layer 6 chapter template, roughly thirty thousand lines, synthesized
 against the packs that exist, with every load-bearing quotation independently re-verified against the
@@ -1689,7 +1689,7 @@ THE ANALYSIS IS DERIVED. It exists because the Eighth Commandment's rule three i
 top-down analysis SHALL BE MADE; it is the product of an instruction, not a source of authority. Its
 authority is borrowed entirely from the corpus it summarises, it is version 1, it has been amended
 twice since it was written, and it can be wrong. The same is true of
-konnectome_cognitive_architectures_coverage_v1.txt, which is konnectome's reading of the test-bed and
+09_cognitive_architectures_coverage_v1.txt, which is konnectome's reading of the test-bed and
 which the Ninth Commandment's own rule three subordinates to the biology: the test-bed measures
 coverage and does not steer the ship.
 
@@ -1699,7 +1699,7 @@ repository - the queue's source and the navigation index over roughly thirty tho
 Designing a slice from a theme is the armchair reasoning the Second Commandment forbids, and this
 document is the likeliest place in the repository to commit it. The evidence is same-day: Theme One
 stood as a single paragraph until the modes deep read of 2026-08-09 produced
-konnectome_mode_register_design_authority_v1.txt, which reversed a queue ordering, reshaped slice
+05_mode_register_design_authority_v1.txt, which reversed a queue ordering, reshaped slice
 family one's item (e) from one write-permission gate into four distinct kinds at different scopes,
 established a register size bound the paragraph never mentioned, and answered a nesting question the
 paragraph never raised. A register designed from the summary would have been wrong in at least two
@@ -2223,10 +2223,10 @@ Only THEME ONE had such a reading. Four were made in this visit, three of them b
 had never had one, plus a fidelity audit of the analysis itself. Each is merged as its own pull
 request and each is cited back into version 2's new index section.
 
-• konnectome_two_shift_design_authority_v1.txt - Theme Two. Pull request 99.
-• konnectome_edge_type_design_authority_v1.txt - Theme Three. Pull request 97.
-• konnectome_motif_and_workspace_design_authority_v1.txt - Themes Four and Five, survey depth.
-• konnectome_vision_set_analysis_fidelity_audit_v1.txt - the audit of the analysis. Pull request 98.
+• 06_two_shift_design_authority_v1.txt - Theme Two. Pull request 99.
+• 07_edge_type_design_authority_v1.txt - Theme Three. Pull request 97.
+• 08_motif_and_workspace_design_authority_v1.txt - Themes Four and Five, survey depth.
+• 03_vision_set_analysis_fidelity_audit_v1.txt - the audit of the analysis. Pull request 98.
 
 THE HEADLINE RESULT, AND IT IS THE REASSURING ONE: NO FINDING OF VERSION 1 WAS REVERSED. Part One's
 verdict on the top-level decisions, Part Four's honest pressures, Part Five's walls-none-routed
@@ -4398,7 +4398,7 @@ resolved against the file-system in the same pass; all pass.
 
 
 THE NORTH-STAR ANALYSIS RUN (2026-08-10). The Twentieth Commandment's first analysis run and gap
-analysis, delivered at docs/design/konnectome_north_star_gap_analysis_v1.txt. Four parallel deep reads over
+analysis, delivered at /home/ccaitwo/konnectome/docs/design/02_north_star_gap_analysis_v1.txt. Four parallel deep reads over
 the north-star directory: the two NEUROSCIENCE OF COGNITION documents, the konnectome-facing Layers
 12 through 15, the lower strata (Layers 4/5 through 8), and the upper strata (Layers 9 through 11).
 
@@ -4833,7 +4833,7 @@ are statements:
 
 - docs/konnectome_vision_set_fulfilment_audit_v1.txt. This one is different, and is the most
   interesting of the seven: it is not a stale pointer at all but a SUGGESTED NAME, recorded when the
-  audit was planned. The audit shipped as konnectome_vision_set_analysis_fidelity_audit_v1.txt, so
+  audit was planned. The audit shipped as 03_vision_set_analysis_fidelity_audit_v1.txt, so
   the record is a true account of what was PROPOSED and a false account of what EXISTS. It stays as
   the proposal it was.
 
