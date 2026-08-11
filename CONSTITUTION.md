@@ -533,11 +533,25 @@ THE NINETEENTH COMMANDMENT: THE BUILD LOG:
 (NEW in version 3, by the owner's instruction of 2026-07-26. The former Eighteenth Commandment, the
 Hand-Off Protocol, becomes the Nineteenth.)
 Log all activities as part of the konnectome build to the document:
-/home/ccaitwo/konnectome/docs/BUILDING_KONNECTOME_v2.txt
-(The build log is a versioned document under the Eleventh Commandment: the current version lives in
-docs/ under this name pattern, and every superseded version - including the original, unversioned
-BUILDING_KONNECTOME.txt, archived as BUILDING_KONNECTOME_v1.txt - lives in docs/archive/. Version 2,
-by the owner's instruction of 2026-07-26, starts the log from the beginning of the konnectome story.)
+/home/ccaitwo/konnectome/docs/building_konnectome.txt
+(UNVERSIONED, AND RENAMED FROM BUILDING_KONNECTOME_v2.txt, in version 22, by the owner's instruction
+of 2026-08-11. A RULE CHANGED HERE, and it is named plainly rather than buried: this parenthetical
+formerly declared the build log "a versioned document under the Eleventh Commandment", and it is no
+longer one. THE REASON IS THAT THIS COMMANDMENT CONTRADICTED ITSELF. Three lines below, it says the
+log is APPEND-ONLY and grows with the build - and an append-only document is never superseded, so it
+can never have a superseded version to archive, so the Eleventh Commandment's discipline has nothing
+to act on. A version suffix on it was a promise the document's own nature made it impossible to keep.
+Note that the history bears this out: the log has been appended to for fifty-five slices and the
+suffix never once moved, because nothing ever bumped it. The single bump it did have was not a
+version bump at all - version 2, by the owner's instruction of 2026-07-26, was a RESTART that threw
+the story away and began it again from the beginning, which is a different act from superseding.
+The two files this history produced are UNMOVED AND UNHARMED in docs/archive/ under the Eleventh
+Commandment - the original unversioned BUILDING_KONNECTOME.txt, archived as BUILDING_KONNECTOME_v1.txt
+- and they keep their names, because an archived file's name is a record of what it was called when
+it was archived and is not repointed by a later rename. Should the owner ever restart the log again,
+the same discipline applies: the standing building_konnectome.txt moves to docs/archive/ under a _vN
+name at the moment of the restart, and a fresh building_konnectome.txt begins. THE LIVE LOG CARRIES
+NO SUFFIX; only its dead restarts do.)
 Voice this log with dual purpose: as a scientific paper and as a New York Times Best-Selling Book.
 The log is append-only and grows with the build: every session of build activity appends its chapters
 in order, so the document carries the complete story of how konnectome was built - rigorous enough
@@ -795,8 +809,29 @@ commit because they are one act: the document that was the instruction becomes a
 moment the next one becomes the instruction, and splitting them across two changes would leave a
 commit in which /docs/ holds two hand-offs or none.
 
-VERSION HISTORY NOTE (extended in version 21). This Constitution is at VERSION 21, and holds
+VERSION HISTORY NOTE (extended in version 22). This Constitution is at VERSION 22, and holds
 TWENTY-TWO Commandments.
+
+Version 22, by the owner's instruction of 2026-08-11, UNVERSIONS THE BUILD LOG. The Nineteenth
+Commandment's document is renamed from BUILDING_KONNECTOME_v2.txt to building_konnectome.txt, and the
+parenthetical that declared it "a versioned document under the Eleventh Commandment" is replaced.
+NO COMMANDMENT WAS ADDED, REMOVED, OR RENUMBERED; the count stands at twenty-two.
+
+A RULE CHANGED, and this note says so rather than claiming otherwise, because every other entry in
+this history that touched a filename was a REPOINTING that changed no rule and was careful to say so.
+This one is different in kind and the difference is worth reading. The owner's observation is that the
+build log is not a versioned document at all - it is simply appended to, like a log - AND THE
+COMMANDMENT ITSELF ALREADY SAID SO, three lines below the parenthetical now removed: "The log is
+append-only and grows with the build". An append-only document is never superseded, so it never has a
+superseded version to archive, so the archive discipline it was placed under had nothing to act on.
+The Commandment held both claims at once for nineteen versions, and the rename is what it looks like
+to resolve the contradiction in favour of the half that describes what the document actually does.
+
+THE EVIDENCE WAS IN THE FILENAME THE WHOLE TIME. The suffix sat at _v2 through fifty-five slices and
+never moved, because nothing ever bumped it - which is exactly the signature of a version number on a
+document that has no versions. Its one bump was not a supersession but a RESTART, and the two files
+that restart produced keep their archived names, because an archived file's name records what it was
+called when it was archived.
 
 Version 21, by the owner's instruction of 2026-08-10, adds THE TWENTY-FIRST COMMANDMENT, THE ORDER OF
 RESORT, and corrects an over-strict reading that had grown up around versions 19 and 20. The hand-off
