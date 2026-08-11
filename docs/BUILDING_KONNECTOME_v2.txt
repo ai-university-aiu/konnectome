@@ -914,5 +914,41 @@ The contents are not recorded anywhere, and for once that took no defending. The
 Next: the working-memory mode register, which hangs Entry 16's four modes beneath the master register and wires the erased-idle one to the global state the bus has broadcast since slice 35 - the first real downward assignment, and the proof that slice 46's empty table was empty for the reason slice 46 gave.
 
 
-From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER FORTY-SIX, and the story goes on being true.
+CHAPTER FORTY-SIX - THE OBJECTION THAT DID NOT REACH (2026-08-10, SLICE 50)
+
+THE PAPER'S VOICE. Slice 50 realizes Layer 10 Entry 16's mode register over the working memory blackboard, in the hybrid-automaton formalism established at slice 39, and takes DECISION-9: a downward assignment may address a construct of which the repository holds exactly one, by its name. The mechanism built at slice 46 and deliberately left without rows acquires its first two, both transcribed from Entry 16: slow-wave sleep assigns the erased mode, rapid-eye-movement sleep the ungoverned one. No waking state acquires a row, on the corpus's own agency column. OBSERVATION-14 is opened: the chapter's transition table contains a row that describes no transition, and it is refused aloud rather than transcribed as a self-loop.
+
+THE BOOK'S VOICE. The interesting thing about slice 50 is that nothing was unblocked. No new capability arrived, no dependency was satisfied, no wall came down. What happened is that somebody re-read an objection carefully enough to notice its shape.
+
+Slice 46 had built a way for the state above to reach the constructs below, and had refused to write a single row into it, and the refusal was right, and it was written down clearly: the book assigns to named individuals and konnectome has only kinds. Four slices went past. Everybody who read that sentence read it as "konnectome cannot do downward assignment yet", and everybody was wrong in the same small way, because that is not what it says. It says a row must not be aimed at a construct that has many instances. It says nothing at all about a construct that has one.
+
+Slice 49 had built one. It had been sitting there for a day.
+
+That is a failure mode worth naming, because it has nothing to do with carelessness. A well-argued refusal is a comfortable thing to inherit. It is written by somebody who was clearly thinking, it names its own closer, and re-deriving it costs a session an hour it would rather spend building. So it gets quoted instead of re-read, and the day the world changes underneath it, nothing goes wrong - the table just stays empty, and being empty is exactly what it looked like before.
+
+And then the slice turned around and did the same thing to itself. It wrote its own doctrine - that a state register holding a list of the constructs beneath it is a homunculus arriving as a data structure - and built an indirection to honour it, and the naming gate refused the result on what looked like a spelling technicality. The gate was right, and it was right about something larger than spelling: the doctrine was armchair architecture wearing this build's own citation. An assignment publishes. It does not command. Naming a thing you have no power over is not authority, and forty-six slices of keeping the homunculus out do not entitle a forty-seventh to see one where there is none.
+
+The rule against guessing applies to your own principles. That is the chapter.
+
+
+CHAPTER FORTY-SEVEN - NOBODY HAD CALLED IT (2026-08-10, SLICE 51)
+
+THE PAPER'S VOICE. Slice 51 closes the demonstration debt carried in five consecutive hand-off documents: the capstone demonstration calls the two-process governor's watch, and reports the verdict in the shape the watch returns it. Over the story's own ten heartbeat ticks the window - the governor's own twenty-four-tick day, read under DECISION-6 - is unspanned, so DECISION-4 yields NOT-YET-MEASURED with both fault regimes named unwatched. The section then lives the same governor out to a full day and reports the verdict a spanned window permits, with the readings behind it printed. No pack was added. The capstone story is no longer byte-identical to the previous baseline, which is the deliverable rather than a regression.
+
+THE BOOK'S VOICE. konnectome built a night watchman at slice 37. It built a watchdog at slice 45. It wired the two together at slice 47. And at slice 50, its own told story - the one command that boots the whole mind and narrates everything it did - still could not say whether the mind had slept well.
+
+Fourteen slices. Every part tested. Every part correct. Nobody had called it.
+
+This is the cheapest kind of failure there is and it is nearly impossible to see from inside, because from inside there is nothing to see. No test fails. No gate fires. The capability is there, in the repository, with its own suite passing. It is only from OUTSIDE - from the position of somebody reading the story the system tells about itself - that a built-and-never-called capability and an unbuilt one are the same thing.
+
+Which is why the hand-off documents kept calling this the smallest remaining item on the queue, and why five sessions in a row did something else instead. Small items do not defend themselves. There is no pressure from a passing test.
+
+And then the payoff, which nobody scheduled: the first thing the story learned by asking was that it could not answer. Ten ticks is not a day. The watchdog will not certify a window it has not seen across, because a story that ran ten ticks and printed "the night was healthy" would be telling a reader something it has no way to know, and would look exactly like a working system while doing it.
+
+There were two ways to make the story answerable. Shorten the window until ten ticks span it - and the report means nothing, because the window was never arbitrary; it is the watched thing's own cycle. Or lengthen the telling. konnectome lengthened the telling, and now the story says both things: here is what I cannot tell you about the night I lived, and here is the same night lived long enough to be judged.
+
+A glass box that says "I do not know" is worth more than one that says "fine". The whole of this build's method is in that sentence, and it took the smallest item on the queue to put it where a reader would actually meet it.
+
+
+From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER FORTY-EIGHT, and the story goes on being true.
 
