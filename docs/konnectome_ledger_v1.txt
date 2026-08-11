@@ -4340,4 +4340,61 @@ order; nothing releases the held sections of the causalontology change order; ne
 edited, and conformance stands where slice 47 re-measured it on 2026-08-09, at 137 of 137 in both,
 with the checks-versus-vectors qualification and now THREE SESSIONS OLD.
 
+
+CONSTITUTION VERSION 18 NOTE (2026-08-10). THE TWENTIETH COMMANDMENT AND THE FIRST DELIBERATE POINTER
+AUDIT. Recorded here rather than only in the Constitution because both halves change what a future
+session must do, and because the audit produced a general finding this ledger is the right home for.
+
+THE TWENTIETH COMMANDMENT: THE NORTH STAR, by the owner's instruction. THE_NEUROSCIENCE_OF_COGNITION
+OUTLINE and MANUSCRIPT are declared the north star, north pole and light-house; docs/neuroscience/ is
+declared the north-star directory. The Commandment mandates an ANALYSIS RUN taking those two as the
+starting point and extending to every file in the directory, and a GAP ANALYSIS classifying each
+finding as a needed FUNCTION, PROCESS, ARCHITECTURE, DESIGN ELEMENT, STRUCTURE, IDEA or INSPIRATION,
+and separating ARCHITECTURAL gaps - konnectome could not express this - from CONTENT gaps - it could
+express this and has not built it. It was added at the END so that NO COMMANDMENT WAS RENUMBERED: a
+session citing a commandment by number from any earlier hand-off still lands on the right one.
+
+THE POINTER AUDIT FOUND SIX BROKEN LIVE POINTERS IN THE CONSTITUTION, ALL FIXED, and the six are
+listed in the Constitution's own version 18 note. What belongs here is the FINDING, because it is
+about how this project writes documents rather than about which files moved.
+
+EVERY ONE OF THE SIX WAS A PLACE WHERE A COMMANDMENT HAD WRITTEN DOWN A FACT THAT WAS NEVER PART OF
+THE RULE IT WAS STATING. A directory inside a naming convention. A version number inside a
+maintenance instruction. A file count inside a location statement. In each case the Commandment's
+actual claim was durable and the decoration around it was not, and the decoration is what rotted and
+what misled a reader.
+
+AND THE WORST OF THE SIX HAD ALREADY BEEN FOUND ONCE AND DELIBERATELY LEFT, WHICH IS THE PART WORTH
+CARRYING. Constitution version 15 met the Seventh Commandment's list of seven DSPARCD paths - six of
+them dead - and argued, correctly, that the list is a RECORD of the naming convention at creation
+rather than a live pointer, so rewriting it would turn a record into a false present-tense claim. It
+left the six and wrote a note explaining why. THE ARGUMENT WAS SOUND AND THE OUTCOME WAS STILL WRONG.
+A list of seven identically-shaped absolute paths, six dead and one live, with its explanation fifteen
+lines below it, IS INDISTINGUISHABLE FROM A BROKEN POINTER LIST AT THE MOMENT SOMEBODY READS IT - and
+that is exactly how the owner found it. A RECORD THAT CANNOT BE TOLD FROM A POINTER BY LOOKING AT IT
+IS NOT DOING ITS JOB AS A RECORD, however well the note beneath it defends the choice. The note had
+itself rotted meanwhile, stating the files were at _v48 when they had reached _v51.
+
+THE GENERAL RULE, WHICH VERSION 17 HAD ALREADY WRITTEN AND APPLIED TO ONE LINE: WHEN A RECORD REFERS
+TO A LIVE LIST, THE FIX IS TO DROP THE PART THAT CAN GO STALE, NOT TO UPDATE IT OR TO FREEZE IT.
+Version 15 froze it. This audit drops it, everywhere the document reaches. A COMMANDMENT SHOULD STATE
+THE RULE AND POINT AT THE DIRECTORY: a directory can be read by a machine, and a sentence can only be
+re-read by a human who remembers to look.
+
+ONE OPEN QUESTION IS RECORDED RATHER THAN SILENTLY CORRECTED. The Fifteenth Commandment describes
+causalontology's conformance suite as ONE HUNDRED AND NINETEEN VECTORS; this ledger and the README
+describe it as 137. CAUSALONTOLOGY'S OWN README CARRIES BOTH FIGURES, so the ambiguity is in the
+SOURCE and not in the Constitution's transcription of it. The Fourth Commandment's rule is that
+findings are DISCOVERED by building and never guessed from the armchair, and the Second Commandment
+forbids konnectome from editing the cousin to settle it. THE NEXT SESSION TO RE-MEASURE CONFORMANCE -
+which is already due, the figure being three sessions old - SHOULD CLOSE THIS WITH A MEASUREMENT.
+
+AND ONE FAULT OF THE SAME CLASS WAS FOUND OUTSIDE THE CONSTITUTION AND FIXED IN THE SAME CHANGE.
+README.md's summary of the Constitution listed SEVENTEEN commandments and had not been renumbered
+since the Eighth and Ninth were inserted at Constitution versions 4 and 5, which pushed everything
+beneath them down by two. So README item 13 was Constitution commandment 15, AND A CITATION BY NUMBER
+LANDED ON A DIFFERENT RULE IN THE OTHER DOCUMENT. The summary now carries the Constitution's own
+numbering, all twenty, so a citation is portable between them. Every internal link in README.md was
+resolved against the file-system in the same pass; all pass.
+
  Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 14 (2 CLOSED: 8 and 9).  Decisions: 9.
