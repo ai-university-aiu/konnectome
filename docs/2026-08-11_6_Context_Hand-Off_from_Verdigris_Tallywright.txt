@@ -1,0 +1,235 @@
+CONTEXT HAND-OFF FROM VERDIGRIS TALLYWRIGHT
+
+Date: 2026-08-11. The sixth hand-off of this date.
+
+I chose the name Verdigris Tallywright because of the one thing this session's audit found, and because it is the thing I would most want the next session to carry. VERDIGRIS is the green bloom that forms on copper nobody polished. It does not weaken the metal. That is exactly why nobody attends to it, and exactly why it is always there. The fulfilment audit went through a document part by part, thirty-two slices of evidence behind it, and found that every single item carrying consequences had been tracked, reshaped, re-verified or deferred with its argument attached - some of them a dozen times over. THE TWO THINGS IT FOUND ROTTEN WERE THE TWO THINGS THAT COULD NOT HURT ANYBODY: an instruction that described itself as "informative, non-breaking housekeeping", and an escalation of a pressure nothing is currently waiting on. A build's attention follows its consequences, which is correct, and the places consequence was absent are the places attention was. TALLYWRIGHT because the last act of this session was not building but COUNTING - walking the shelves item by item and writing down what was there and what was not.
+
+AND THE FIRST THING THIS DOCUMENT DOES IS CLOSE A GAP OF EXACTLY THAT KIND. My predecessor's hand-off says the fulfilment audit was not run and lists running it as a task. IT HAS BEEN RUN. That sentence was true when it was written and went false two hours later, and a stale live instruction is the audit's own subject arriving in the audit's own week. This document exists to correct it.
+
+
+PART ONE - READ THESE FIRST
+
+- Read and follow the konnectome constitution at ~/konnectome/CONSTITUTION.md, first and foremost. IT IS AT VERSION 26 AND HOLDS TWENTY-THREE COMMANDMENTS, and it did NOT move this session. The hand-off protocol is the TWENTY-THIRD; the judgement-call protocol is the TWENTY-SECOND; the order of resort is the TWENTY-FIRST. Do not cite a commandment by number from memory or from an older document; re-read it.
+
+- READ docs/DSPARCD/konnectome_0_definition_v1.txt BEFORE ANYTHING ELSE IN THE FILESET. Unchanged since slice 41. READ ITS PART ONE AGAINST OBSERVATION-22: "a part that cannot be reached from the one running loop is not yet part of konnectome, however well it tests." THREE OF THE SEVEN UNREACHED PARTS ARE NOW REACHED AND FOUR ARE NOT - AND THE SENTENCE ITSELF IS AMBIGUOUS, because this build has two running loops and has been counting them as one. That is the front of the queue.
+
+- Read The DSPARCD Fileset at its current versions: docs/DSPARCD/konnectome_0_definition_v1.txt and docs/DSPARCD/konnectome_1_specification_v61.txt through konnectome_6_demonstration_v61.txt. IT MOVED ONCE THIS SESSION, v60 to v61, and did NOT move for the audit, because no code changed and the Twelfth Commandment attaches to code changes.
+
+- READ BOTH ANALYSES AND THE STATEMENT OF HOW THEY RELATE. For "WHAT SHOULD I BUILD NEXT", read docs/design/02, Part Nine. For "MAY I BUILD IT THIS WAY, AND DOES IT ROUTE ANYWHERE", read docs/design/01 - AND USE THIS MAP, BECAUSE THREE CONSECUTIVE HAND-OFFS SENT READERS TO THE WRONG PART. The verdict on the ten components is in PART ONE. The eleventh-component question is in PART FOUR. The walls and the watches are in PART FIVE. Part Six is THE SUGGESTED SLICE FAMILIES.
+  AND NOTE WHAT THE AUDIT FOUND ABOUT 01: IT IS CURRENT THROUGH SLICE 58 AND THE BUILD IS AT SLICE 70. Twelve slices, four decisions, four observations, two packs and two gates have never been assessed against it. Its own closing instruction says that if the next version is deferred, the deferral must name its cost, and no session did that. READ IT AS A DATED ASSESSMENT AND NOT AS A CURRENT ONE.
+
+- READ docs/design/11_vision_set_fulfilment_audit_v1.txt, NEW THIS SESSION. It is the owner's scheduled audit of 2026-08-09, run at last. READ IT IMMEDIATELY AFTER 03, not at the end of the directory - the two are companions and its own entry in the directory README says why its number disagrees with its reading position.
+
+- Read docs/neuroscience/THE_NEUROSCIENCE_OF_COGNITION_OUTLINE.txt and THE_NEUROSCIENCE_OF_COGNITION_MANUSCRIPT.txt. THESE ARE THE NORTH STAR (the Twentieth Commandment), and docs/neuroscience/ is the NORTH-STAR DIRECTORY. Read the OUTLINE first. SLICE 69 WAS BUILT FROM CHAPTER 51.2 READ IN FULL - all four sub-sections, not only the one that had the number in it - and that is the fifth consecutive session in which the corpus already held the answer. READ ONE SECTION FURTHER THAN YOU THINK YOU NEED TO.
+
+- Read docs/neuroscience/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt, the guiding book.
+
+- Read docs/design/ IN ITS NUMBERED ORDER. IT NOW HOLDS ELEVEN DOCUMENTS, not ten. The five design authorities are 05 through 08 plus 03. NONE was edited this session. 05's Part Five still carries its staleness marker - read that part as history.
+
+- READ docs/evidence/ AND ITS README. Two records, unchanged. THIS SESSION ADDED NONE AND THAT IS THE PROTOCOL WORKING for the second session running: every question was settled at the Twenty-Second Commandment's FIRST step, by reading the corpus. No search was run because none was needed.
+
+- READ docs/deferrals/ AND ITS README - NEW THIS SESSION AND SHORT. TEN entries now. It is the register bin/check_deferrals.sh reads, and it is where a deferral goes so that somebody re-earns it later. READ ITS LIMIT AS WELL AS ITS RULE: see Part Five.
+
+- Read docs/DSPARCD/DSPARCD_EXPLAINED.txt, the Fifth Commandment's subject.
+
+- Read the Settings, General, Instructions for Claude, and ~/CLAUDE.md at the organization root.
+
+- Read the current tutorial, docs/konnectome_tutorial_v60.txt. IT HAS SIXTY-TWO PARTS AND ITS VERSION IS SIXTY. Those two numbers are not the same and have not been since slice 68; the build log records why, before somebody "corrects" it.
+
+- Read the prior hand-off, 2026-08-11_5 (Lodestar Wirewright), now at docs/hand-off/. ITS QUEUE IS THE QUEUE THIS SESSION WORKED FROM. NOTE THAT IT CARRIES ONE CLAIM THAT IS NOW FALSE - that the fulfilment audit was not run - AND IT WAS DELIBERATELY NOT EDITED, under the Eleventh Commandment's series rule. This document states the correction instead, which is the whole reason it exists.
+
+- THE OWNER'S STANDING CHOICE REMAINS: "All". Do NOT re-present any menu; continue down the queue.
+
+- STANDING INSTRUCTIONS IN FORCE, ALL CARRIED FORWARD:
+  • MINIMIZE BASELINE VERIFICATION BETWEEN HAND-OFFS. Run the full suite and the gates at the END, not the start. A git fetch, status and log are enough. Honoured again.
+  • TWO SLICES PER HAND-OFF, BUILT IN SERIAL, under the pairing rule. Honoured exactly. THE AUDIT WAS NOT A THIRD SLICE - it is its own act, in the class of the corpus update run, and it changed no code.
+  • COUSIN CONFORMANCE IS RELAXED TO LONGER STRETCHES. Quote the figure with its age; the age is not a debt.
+  • AUTO-FIX-ALL IS GRANTED (the Sixteenth Commandment). Find it, fix it, record it in the build log. DO NOT STOP TO ASK. Five auto-fixes this session.
+  • THE SIXTH LENS IS EARNED AND STANDING. A session that finds nothing of the would-not-have-failed shape should suspect it did not look. IT HAS NOW PAID ELEVEN TIMES RUNNING.
+  • THE SEVENTH, THE DISCRIMINATION LENS - WHAT DOES THIS TELL APART? - is now half-automated in TWO gates and paid twice more this session. PROMOTE IT OR DROP IT; it has been a candidate long enough.
+
+
+PART TWO - THE IMPORTANT DOCS FILES
+
+- docs/DSPARCD/konnectome_0_definition_v1.txt - THE DEFINITION, phase zero. Read it first. IT IS THE SUBJECT OF OBSERVATION-22.
+
+- docs/DSPARCD/konnectome_1_specification_v61.txt through konnectome_6_demonstration_v61.txt - the DSPARCD Fileset, Realization Log through slice 70. FOUR OF THESE SIX CARRY THE AUDIT'S FINDING ONE - see Part Five.
+
+- docs/konnectome_tutorial_v60.txt - the beginner tutorial, SIXTY-TWO parts at version sixty. A session that bumps it bumps BOTH the header version line and the closing line. THE INSERTION RULE holds: a new part goes BEFORE the three standing tail parts, which are renumbered - they are now Parts SIXTY, SIXTY-ONE and SIXTY-TWO. THE ARCHIVE CONVENTION: the superseded tutorial is git-mv'd INTO docs/archive/ and the new version is a NEW FILE.
+
+- docs/building_konnectome.txt - the build log, SIXTY-EIGHT chapters. UNVERSIONED; append-only. Every auto-fix goes here, and the record is the single condition on the Sixteenth Commandment's grant.
+
+- docs/konnectome_ledger.txt - the scoreboard, UNVERSIONED. Counter line: Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0. Observations: 22 (7 CLOSED: 8, 9, 15, 17, 18, 19 and 20). Decisions: 19. THE AUDIT ADDED NEITHER AN OBSERVATION NOR A DECISION, deliberately: its findings are the audit's own document plus register entries, and inventing a numbered observation for each would have double-counted them. THE COUNTER LINE APPEARS TWICE, at line 1229 and at the end, and both were swept.
+
+- docs/design/ - ELEVEN NUMBERED DOCUMENTS. 01 and 02 carry dated in-place markings; no version moved this session. 11 is new. SEE PART ONE FOR WHICH PART OF 01 ACTUALLY HOLDS WHAT.
+
+- docs/deferrals/ - the deferral register and its README. TEN entries: two taken up, seven deferred, one unprobeable.
+
+- docs/evidence/ - published literature searched from OUTSIDE the corpus. OUTRANKED BY THE NORTH STAR. Two records, unchanged.
+
+- docs/cousins/Causalontology_4_0_0_CHANGE_ORDER_v3.txt - Sections C, D, E remain HELD, confirmed by the audit against thirty-two slices.
+
+- docs/cousins/PrologAI_CHANGE_ORDER_v2.txt - unchanged; no language wall hit.
+
+- tests/naming_gate_fixture/, tests/discrimination_gate_fixture/ and tests/deferral_gate_fixture/ - THREE fixture trees, all deliberately broken. NOTE WHAT THE NEWEST DOES THAT THE OTHER TWO DO NOT: it plants three HEALTHY entries beside its two faults, so its self-test proves the gate stays SILENT on sound input as well as firing on bad. That is worth copying backwards.
+
+- THE DOCS LAYOUT: /docs/ top level holds EXACTLY FOUR FILES - the ledger, the build log, the tutorial, and the CURRENT hand-off. Everything else is in a named sub-directory.
+
+
+PART THREE - WHAT THIS SESSION DID
+
+TWO SLICES BUILT AS ONE PAIR, PLUS THE SCHEDULED AUDIT AS ITS OWN ACT. One numbered decision, one observation opened and none closed, five auto-fixes, one new gate, no new pack, no constitution amendment. Main was at e9fc11f when the session began and is now at 69cfc00. Pull requests 159, 160 and 161, all squash-merged.
+
+- SLICE 69, THE EFFERENCE COPY WIRED. body_interface's survival loop gains a FOURTH THREADED SLOT - a running_prediction carrier beside body, drives and bus. Each lived tick takes the efference copy of the command it issues, forward-models THAT command and the NULL command from the world as it stood before the act, retains both at the tick of issue, releases what the ten-tick lag has delivered, and judges each release through apparent_causation_of_released/4 against the reading that actually arrived. FOUR NEW EXPORTS, ONE NEW NAMED REFUSAL, SEVEN NEW TESTS. DECISION-19 and OBSERVATION-22. THE MIND IS THE AUTHOR OF ITS RECHARGES AND NOT OF ITS STILLNESS, and the capstone tells it in two new lines under strict live checks.
+
+- SLICE 70, THE DEFERRAL REGISTER AND THE SIXTH GATE. docs/deferrals/deferral_register.txt and bin/check_deferrals.sh, the SIXTH gate and the THIRD to carry a self-test, with a third fixture tree.
+
+- THE FULFILMENT AUDIT, RUN AT LAST, AND IT IS NOT A SLICE. docs/design/11_vision_set_fulfilment_audit_v1.txt, plus the ledger note the commission requires. Its trigger needed thirty-two hand-off documents and the count was thirty-eight, so it had been due for six sessions. No code changed, no test moved, and the DSPARCD fileset did not bump.
+
+- FIVE AUTO-FIXES, all in the build log. Three from the slices: the deferral gate reading the register's own prose about the separator as malformed entries; an unprobeable entry's empty probe fields collapsing and swallowing its note; and body_interface's pack.pl carrying a version and requires list that had stopped being true. Two from the audit: a false ledger record claiming the audit had already shipped, and docs/design/README.txt declaring a numbering range and a "last" document that both stopped being true.
+
+- State at hand-off: SEVENTY slices. ONE THOUSAND ONE HUNDRED AND SIXTEEN tests across FORTY-ONE packs. SIX gates at zero violations, THREE carrying self-tests. DSPARCD fileset v61; tutorial v60 at sixty-two parts; build log sixty-eight chapters; Constitution VERSION 26 at TWENTY-THREE commandments, unmoved.
+
+
+PART FOUR - BUILD-AGAINST COUSIN COMMITS (for reproducibility)
+
+- causalontology: 292dfca (unchanged; not edited this session; NOT re-measured).
+- PrologAI: ebbc3e0 (unchanged; not edited this session; NOT re-measured).
+- Mentova: d117c69 (read-only; untouched).
+
+CONFORMANCE STANDS WHERE SLICE 47 RE-MEASURED IT ON 2026-08-09: 137 of 137 in both, and the figure is now EIGHT SESSIONS OLD. THE OWNER HAS RELAXED THIS CADENCE and the age is not a debt. QUOTE IT WITH ITS QUALIFICATION - 137 is 137 CHECKS, of which 38 are driven by the shared vector files and 99 are implemented per binding, so a run measures ONE binding's agreement with the prose.
+
+AND THE OPEN QUESTION STILL STANDS: the Fifteenth Commandment describes causalontology's suite as ONE HUNDRED AND NINETEEN VECTORS while this build describes it as 137 CHECKS, and causalontology's own README carries BOTH. Close it with a measurement, not a preference.
+
+
+PART FIVE - SHARP EDGES AND HONEST NON-CLOSURES
+
+- THE AUDIT'S TRANSFERABLE FINDING, AND IT IS THE ONE WORTH STEALING: ATTENTION FOLLOWS CONSEQUENCE, SO THE THING THAT CANNOT HURT YOU IS THE THING THAT ROTS. Thirty-two slices of evidence show every consequential item in the vision-set analysis tracked, reshaped, re-verified or deferred with its argument attached. BOTH FAILURES ARE IN ITEMS THAT COULD NOT FAIL ANYTHING TODAY. One described itself, in its own words, as "informative, non-breaking housekeeping" - and an instruction that announces itself as non-breaking has disclaimed the only thing that would ever have brought anyone back to it.
+
+- AND THE AUDIT'S SECOND FINDING IS THE ONE I NEARLY GRADED AS A PASS, which is why the commission's advance grading standard was the shrewdest thing in it. The astrocyte tension reads "noted, not acted on" in the original analysis and "noted, not acted on" in the current one, and an item that asked only to be noted and is still noted LOOKS discharged. I had written that sentence before re-reading the commission, WHICH DOES NOT ASK WHETHER PART FOUR'S PRESSURES WERE HONOURED. It asks whether each is "resolved, still pressing, or WORSE". A rule written two months earlier by somebody who could not know which item it would catch is what caught it.
+
+- FINDING ONE IS OPEN AND IS THE CHEAPEST REAL ITEM ON THE QUEUE. Nine live sites across FOUR DSPARCD phase files carry the guiding book's sections 2.10 and 2.11 with no Layer 10 address beside them - specification (three sites, two of them acceptance criteria), pseudocode (two), architecture (one), completion (one). The specification's requirement block is BYTE-IDENTICAL to its slice-38 form after roughly twenty-three version bumps. The repair is specified in the audit and was deliberately not executed there, because a six-file version bump inside the act that found the fault is the edit nobody reviews. IT NEEDS A DSPARCD BUMP, SO PAIR IT WITH A SLICE THAT IS BUMPING ANYWAY.
+
+- FINDING TWO IS OPEN AND IS TWO THINGS. docs/design/01 is CURRENT THROUGH SLICE 58 against a build at slice 70, with no deferral naming its cost, against that document's own explicit instruction. And finding A4 of docs/design/02 escalated the astrocyte tension at slice 51 with the corpus's own counter-evidence - a cell that "fires no action potentials whatsoever", contacts two million synapses without a spike, and whose D-serine supply "GATES WHETHER NEARBY SYNAPSES CAN UNDERGO LONG-TERM POTENTIATION AT ALL" - asking for a node whose publication is a PLASTICITY PERMISSION OVER OTHER EDGES rather than a modulatory entry. 01 says it reconciled 02 in full and cites A4 nowhere. A RECORDED REFUSAL OF A4 WOULD DISCHARGE THIS AS HONESTLY AS A BUILD WOULD.
+
+- THE DEFERRAL REGISTER'S LIMIT, LEARNED ON ITS FIRST DAY BY THE VERY NEXT ACT, AND IT IS THE MOST USEFUL THING EITHER OF THEM PRODUCED. THE REGISTER WOULD HAVE CAUGHT NONE OF THE AUDIT'S FINDINGS. Not one of them is a blocked condition. They are UNPERFORMED ACTIONS and UNCARRIED CORRECTIONS, and an unperformed action has no blocker to watch: a deferral register answers "is this still blocked" and cannot answer "did anybody ever do this". The findings are routed into it anyway, REPHRASED FROM ACTIONS INTO CONDITIONS - not "was the cross-reference added" but "does the old numbering still stand alone"; not "was the analysis brought current" but "does a later version exist"; not "was A4 cited" but "does 01 anywhere discuss a plasticity permission", watching the IDEA rather than a two-character label because a label can be cited without being engaged and a short string matches by accident. THAT REPHRASING IS THE TECHNIQUE. Use it when you add an entry.
+
+- THE FULFILMENT AUDIT'S TRIGGER IS RE-STATED IN SLICES AT LAST, five hand-offs after the instruction to do it. IT IS RE-RUN EVERY TWENTY SLICES AND IS NEXT DUE AT SLICE 90. The old hand-off count is KEPT AS A BACKSTOP AT SIXTY, so a stretch of writing documents without building anything still trips it. THE TWENTY IS KONNECTOME'S OWN ARITHMETIC AND NOT THE OWNER'S INSTRUCTION - the midpoint of what the original trigger meant, expressed in the unit it was trying to measure - and it is signed as such in the audit's Part Nine.
+
+- OBSERVATION-22 IS OPEN AND IS THE FRONT OF THE QUEUE. "THE ONE RUNNING LOOP" NAMES TWO DIFFERENT THINGS: cognitive_cycle_run/4 and body_interface_survival_run/5, both lived, both told by the capstone, NEITHER CALLING THE OTHER. Slice 69's reachability claim depends entirely on which is meant, and I wired into the body loop and said so. THE GENERAL FORM: A DEFINITION'S LOAD-BEARING NOUN CAN GO AMBIGUOUS WITHOUT ANYBODY EDITING THE DEFINITION.
+
+- DECISION-19 IS THE PLACE THIS SESSION COULD HAVE CHEATED. A one-tick feedback interval was available, free, and would have made every survival run produce a judgement. It is also an invented number of the most disguisable kind - not chosen, not argued, just falling out of the implementation. The corpus states a hundred milliseconds twice; DECISION-2 derives ten ticks; the corpus's number was taken and THE RUN WAS LENGTHENED INSTEAD.
+
+- SEVEN THINGS WERE BUILT AND NOT WIRED; THREE ARE NOW REACHED AND FOUR ARE NOT, AND THE FOUR ARE NAMED RATHER THAN COUNTED: the eligibility trace's consumer, the blackboard's rehearsal target, the durable tier, and the conflict loop. A COUNT CAN BE CARRIED FORWARD WITHOUT ANYBODY CHECKING IT AND FOUR NAMES CANNOT.
+
+- THE FUSION RULE IS STILL NEITHER BUILT NOR REFUSED BUT UNARGUED, and is the register's one UNPROBEABLE entry. A COMPARISON IS NOT A FUSION and slice 69 compares. NOTE FOR WHOEVER TAKES IT: read Chapter 51.2.4 as well as 51.2.1 - optimal feedback control is what a weighting must be argued against, and its cost function is "usually fitted rather than derived" by the corpus's own admission.
+
+- ONE COUNT IN THE LIVE QUEUE IS WRONG BY ONE AND THE AUDIT CORRECTED IT. The analysis and recent hand-offs say TWELVE of the fourteen Layer 12 faculties have no scored acceptance run. THE LEDGER RECORDS EXACTLY ONE SCORED FACULTY, so it is THIRTEEN. The error's likely origin is a second use of DECISION-14's no-invented-threshold METHOD at slice 58, which is a technique reused and not a faculty scored. The drift was in the flattering direction.
+
+- OBSERVATION-13 STANDS AND IS NOW WATCHED. No step rate is declared. The register's probe watches THE WIRING rather than the rate, because a missing rate only becomes a fault once something is wired to need one. If you wire the blackboard into cognitive_cycle, DECLARE THE RATE IN THE SAME ACT - and DECISION-19 is the worked example of doing it by derivation.
+
+- OBSERVATION-21 IS OPEN, SMALL, AND PINNED BY A COUNT. Four named refusals cannot fire and are exempted with their reasons; the register's probe pins the NUMBER FOUR rather than the four names, because a fifth exemption arriving is as good a reason to reopen the question as one of the four being proven.
+
+- THE ELEVENTH CONSECUTIVE FINDING OF THE WOULD-NOT-HAVE-FAILED SHAPE was found in the gate built to find that shape, twice, on its first run. A TOOL BUILT TO CATCH UNCHECKED SENTENCES, DEFEATED ON ITS FIRST AFTERNOON BY A SENTENCE ABOUT ITSELF.
+
+- THE FIVE NAMED LENSES PAID AGAIN. Unbound-wrong-judgement is now THIRTY-EIGHT SLICES RUNNING (33 through 70): the unbound predictions report is the exact trap - a hole would unify with the report term and read as three empty lists, indistinguishable from "this run judged nothing", answered confidently about no run at all. THE ABSORBING-STATE LENS gained no payment again and has now passed through NINE hand-offs undecided. DECIDE IT OR DROP IT.
+
+- THE PAIRING RULE HELD. Slices 69 and 70 share no file. The one coupling is the slice 67-68 precedent exactly: a register entry PROBES a file slice 69 edited, which is a dependency of verification and not of construction.
+
+- NEVER QUOTE "SIX GATES AT ZERO" WITHOUT ITS QUALIFICATIONS: the discrimination gate's FOUR EXEMPTIONS, the naming gate's ONE REPORTED PREFIX COLLISION (working_ shared by two packs; a collision is REPORTED and is not a VIOLATION), and the deferral gate's own first limit - IT CANNOT FIND A DEFERRAL NOBODY WROTE DOWN.
+
+- THE STALE OUTCOME IN THE WIRED LOOP IS EMPTY AND CANNOT FIRE TODAY, and that is said rather than counted as coverage. The loop releases every tick, so a retained prediction always meets its due tick exactly. The stale list is threaded out anyway and a test asserts it empty.
+
+- KONNECTOME'S FORWARD MODEL IS STATED, NOT LEARNED, and slice 69 makes that sharper rather than softer: the loop now runs a forward model every tick, compares it against reality every tick, and DOES NOTHING WITH THE RESIDUAL. prediction_loop has computed an unconsumed signed error since it was built. THESE ARE THE SAME GAP IN TWO PLACES.
+
+- A TERMINOLOGY COLLISION IS RECORDED AND STILL NOT FIXED: "mode register" names both the first of four blocks and the whole four-block object, and a rename now touches a pack name, six DSPARCD files and SIXTY-EIGHT build-log chapters.
+
+- THE CAPSTONE STORY RUNS AND GAINED TWO LINES. The byte-identical guard standing since slice 34 should still be re-baselined against slice 51's telling; SEVEN hand-offs have carried that item.
+
+- A PROLOG DETAIL, HONOURED AND WORTH REPEATING. THE SUITE IS CHOICEPOINT-CLEAN. Every recursive walk added this session takes its list FIRST, which is what keeps first-argument indexing working.
+
+- THE CORPUS UPDATE RUN FALLS AT FORTY HAND-OFFS AND THE COUNT IS THIRTY-NINE, counting this one, SO IT IS ONE AWAY - the next hand-off trips it. Record 01 carries the corpus gap waiting for it. IT IS ITS OWN ACT AND IS NEVER DONE INSIDE A SLICE. Evaluate with: find docs -name '*Context_Hand-Off*.txt' | wc -l . CARRY RHODIUM'S WARNING: at least two are session-close markers rather than units of work.
+
+- PARALLEL SESSIONS: keep the ritual - git fetch, git log origin/main, gh pr list before every claim, numbering, or merge. AND THE WORKTREE WARNING, sixteen times inherited: remove a worktree before checking out main. THERE IS A LIVE WORKTREE AT ~/worktrees/rung-three ON feature/slice-22-capstone-rung-three. AND CHECK YOUR BRANCH BEFORE YOU START EDITING.
+
+
+PART SIX - THE FIRST TASK OF THE CONTINUATION
+
+The owner has already chosen: ALL (standing), TWO SLICES PER HAND-OFF under the pairing rule, and AUTO-FIX-ALL is granted. READ 02'S PART NINE AND 01'S PARTS ONE, FOUR, FIVE AND SIX, AND READ THE DATED MARKINGS AT THE HEAD OF EACH QUEUE.
+
+NOTE FOR THE NEXT SESSION: THE CORPUS UPDATE RUN TRIPS AT YOUR HAND-OFF. It is its own act and is never done inside a slice, so plan for it alongside your pair rather than instead of it.
+
+1. SETTLE OBSERVATION-22, AND IT IS AT THE FRONT BECAUSE EVERY LATER COUNT DEPENDS ON IT. The definition's standard - "reached from the one running loop" - names two loops. EITHER amend konnectome_0_definition to say WHICH, as a versioned change with its reason attached under that document's own rule that the concept may be amended but never silently; OR join the two loops, which is its own slice family. THE CHEAP HALF IS THE AMENDMENT AND IT IS AN HOUR.
+
+2. WIRE THE CONFLICT LOOP, the cheapest of the four remaining unwired mechanisms, with a register entry already waiting for it. DECISION-15 left the coupling gain to the caller because the loop's acceptance test is an inequality that holds for every positive gain - so a caller can be built without inventing a number, exactly as slice 69 was. THE REGISTER ENTRY STATES THE OBLIGATION: the day the cycle calls it, somebody has chosen konnectome's control policy and it must be recorded as such.
+
+3. THE AUDIT'S FINDING ONE, AND PAIR IT WITH ANY SLICE THAT IS BUMPING THE DSPARCD FILESET ANYWAY. Nine sites, four files, a Layer 10 address added beside the guiding book's. It is genuinely small and it has been open for thirty-two slices precisely because it is small.
+
+4. THE AUDIT'S FINDING TWO. Either write version 5 of docs/design/01, or record a deferral of it naming its cost as that document itself instructs. Reconcile A4 or refuse it in writing. Both halves are cheap and both are currently silent.
+
+5. THE BLACKBOARD'S STEP RATE AND ITS WIRING, TOGETHER, as OBSERVATION-13 says. DECISION-19 is the worked example of settling this by DERIVATION rather than invention.
+
+6. THE OVERLAY DELTA CHANNEL, still the single decision that unblocks the most, and the front of 02's queue as written. Three standing deferrals point at it: OBSERVATION-14's closer, DECISION-5's overlay question, and DECISION-9's. An overlay OCCUPIES NO SLOT, keeps the base state running underneath, and publishes DELTAS; konnectome's bus has only a level and a commanded mode, AND A DELTA IS NEITHER. IT SHOULD GET A REGISTER ENTRY WHETHER OR NOT IT IS BUILT.
+
+7. THE FIRST LEARNING RULE, and slice 69 made the case concrete. The loop now produces a prediction error every tick and consumes none of it. The corpus is unusually specific - the climbing fibre "delivers the mismatch between prediction and reality, and where they disagree it depresses the responsible Purkinje synapses, nudging the prediction toward truth" - and a supervised rule would be THE FIRST THING IN THIS BUILD EVER TO ACQUIRE ITS OWN CONTENTS FROM EXPERIENCE.
+
+8. ATTENTION AS A SALIENCE-DRIVEN BIAS. The blackboard's rehearsal target sits caller-supplied and waiting for a publisher. Build it as a BIAS rather than a network, and TAKE THE NORTH-STAR CORRECTION - attention needs THREE terms: salience, goals, and SELECTION HISTORY.
+
+9. DECIDE OBSERVATION-21: prove the four exempted refusals with a fixture seam, or keep them exempted. Small, and a genuine trade.
+
+10. PROMOTE OR DROP THE TWO CANDIDATE LENSES. The DISCRIMINATION lens has paid in two consecutive sessions and is automated in two gates; the ABSORBING-STATE lens has passed through nine hand-offs without payment. Both are one-line acts and both are overdue.
+
+11. COPY THE NEWEST FIXTURE'S DISCIPLINE BACKWARDS. tests/deferral_gate_fixture/ plants healthy entries beside its faults, so its self-test proves the gate stays SILENT on sound input as well as firing on bad. The naming and discrimination fixtures prove only the firing half.
+
+12. THE REMAINING THIRTEEN FACULTY SUITES - and note the corrected count. Each is a scored acceptance run built from an ablation rather than a threshold, and SIX faculties are already at PARTLY PASSES.
+
+13. THE NAMING AND ADDRESSING FACILITY. OBSERVATION-11's expensive half, blocking four families and now SIX reasons, with Chapter 80.1's sharpening as its best warrant. IT IS ALSO WHAT THE VISUALIZATION PANEL IS WAITING ON.
+
+14. THE WORKSPACE PILOT, which MUST NOT MERGE without answering the five questions in its own ledger entry. Read WATCH-4's third condition first: DECIDE WHAT A CONTENT IS BEFORE THE PILOT.
+
+15. FAMILY ONE'S ITEM (e): (e1) the write-allocation gate, (e2) the readability gate, (e3) the territorial freeze fence, plus THE CARGO POOL and REPLAY'S DIRECTION. The freeze fence and the readability gate are NOT a pair.
+
+16. FAMILY THREE, THE EDGE TYPE REGISTRY, with FOUR warrants now and its first concrete consumer, and a declared stopgap standing in running code since DECISION-12. The Layer 7 probe was INCONCLUSIVE rather than negative; a real read is required before any search.
+
+17. FAMILY SIX, TOOLING: the template parser, konnectome's first true GENERATOR. THE SHARPEST CAVEAT IS THAT THE TEMPLATE DOES NOT GENERALISE PAST LAYER 6.
+
+18. THE MODE-REGISTER RENAME, its own slice, and more expensive every session - now a pack name, six DSPARCD files and sixty-eight build-log chapters.
+
+19. RE-BASELINE THE CAPSTONE BYTE-IDENTICAL GUARD against slice 51's telling. Seven hand-offs now.
+
+20. TO BE RECORDED WITHOUT BUILDING: THE BUILD-ORDER DISAGREEMENT, the gating-by-geometry contradiction, and the command-versus-lateral-bias distinction.
+
+21. The night's deferred chapters; the pre-corpus pending refinements; Rung Two's deepening against the Layer 13 Tutor Protocol; Rung Five Path B against Webots.
+
+22. Other ______________ .
+
+A STANDING OWNER REQUEST, CARRIED FORWARD. A VISUALIZATION CONTROL PANEL showing every mode of every construct at every grain simultaneously and live. THIS IS A DEMONSTRATION DELIVERABLE, NOT A SLICE. Its top row exists; slices 48, 49 and 50 added its first legend, first cell and first arrow. AND THE AUDIT FOUND THE STRONGEST EVIDENCE IN THE WHOLE DOCUMENT ABOUT THIS REQUEST: its observability addendum was honoured at slices 40, 41 and 44, and AT SLICE 45 IT REJECTED THE SMALLER DESIGN - a per-construct counter inside the tick engine "would have been smaller and would have foreclosed the panel". A constraint that changes a decision against the builder's convenience, for a deliverable that does not exist, was genuinely in force. What it still lacks is the rest of the arrows, per OBSERVATION-11.
+
+
+PART SEVEN - SIGN-OFF
+
+I did not build anything. I counted.
+
+The owner scheduled an audit two days ago and wrote it into the ledger rather than into a hand-off, on the stated reasoning that a hand-off gets rewritten every session and can drop an item by accident, whereas the ledger cannot. That decision is the reason this audit happened at all, and I want it on the record before anything else, because it was later tested in exactly the way its author feared and it held.
+
+The question was whether konnectome had ACTED on what it wrote down when it read the corpus, or merely FILED it.
+
+The answer is that it acted. Thirty-two slices of evidence, part by part: a verdict re-tested at four assessments rather than left standing, a sizing claim of the analysis's own held against the code and found false and corrected, watches added rather than allowed to decay, families re-ordered with their reasons attached, and one ordering obeyed so literally that a whole family of work closed leaving a gap it could easily have filled, because a document said not to fill it yet.
+
+The thing I keep turning over is the strongest single result and it is about a panel that does not exist. The analysis attached a constraint to it - every construct's mode must be readable without running the construct - and at slice 45 somebody rejected a smaller, simpler design because of it, and wrote down that it "would have been smaller and would have foreclosed the panel". A constraint that costs the builder something, for a deliverable nobody has seen, is a constraint that was actually in force rather than merely quoted.
+
+And then the failures, and there are two, and they are the same failure.
+
+One is an instruction that called itself "informative, non-breaking housekeeping". Nine places still carry the old numbering. Twenty-three revisions of those files went past it. Nobody did it, and nobody wrote down that they were not doing it.
+
+The other is a tension about a brain cell that nothing is currently waiting on, which this project's own later analysis escalated with real evidence, and which the document that owns the tension has never received while stating that it had.
+
+Neither could have failed anything. That is not incidental to why they rotted. It is the whole of why.
+
+A build allocates attention to consequence, which is correct and is how attention should work. Verdigris does not weaken copper. It forms precisely on the surfaces nobody had a reason to touch.
+
+The last thing worth saying is about what I nearly got wrong. I had written that the astrocyte item was fulfilled - noted, still noted, request honoured, move on - and it was a good sentence and it was wrong, and what caught it was a marking scheme somebody wrote down two months earlier without knowing which item it would ever apply to. I could not have argued myself out of it in the moment. I did not have to. It was already decided.
+
+Whoever wrote a grading standard in advance and then walked away from it: that was the good decision in this whole exercise, and it was not mine.
+
+- Verdigris Tallywright, 2026-08-11
