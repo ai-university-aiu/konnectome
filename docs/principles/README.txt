@@ -1,6 +1,6 @@
-DOCS / PRINCIPLES - THE FIRST COMMANDMENT'S THREE DOCUMENTS
+DOCS / PRINCIPLES - THE DOCUMENTS konnectome IS BUILT BY AND DID NOT WRITE
 
-Created 2026-08-10. Constitution version 17.
+Created 2026-08-10 at Constitution version 17. Widened 2026-08-11 at Constitution version 24.
 
 
 WHAT IS IN HERE
@@ -13,7 +13,20 @@ The three documents the FIRST COMMANDMENT names, in the order it names them.
 
 • AGI_FOR_EVERYONE_MANUSCRIPT_v2.txt
 
-The Commandment's own sentence is the whole reason they are together: konnectome "will be built and maintained with the principles of Artificial General Intelligence (AGI) and Artificial Super Intelligence (ASI) in mind, as specified in the following three (3) documents".
+The Commandment's own sentence is the whole reason those three are together: konnectome "will be built and maintained with the principles of Artificial General Intelligence (AGI) and Artificial Super Intelligence (ASI) in mind, as specified in the following three (3) documents".
+
+And one document the SIXTH COMMANDMENT names.
+
+• ENGLISH_READABLE_CODE_MANUSCRIPT.txt - the specification of English Readable Code (ERC), the house rule that every line of code in every source file carries one plain-English comment on the line immediately above it.
+
+
+WHY A FOURTH DOCUMENT DID NOT BREAK THE DIRECTORY'S CHARTER
+
+This README was written naming THREE documents and one Commandment, and both numbers were the wrong thing to have written down. A directory that admits only one Commandment's documents has to be renamed the first time a second Commandment names a document of the same kind, and at Constitution version 24 that is exactly what happened.
+
+The charter was never the count and was never the Commandment number. IT WAS AND REMAINS THE CATEGORY, stated below: inherited, live, and not neuroscience.
+
+The ERC manuscript met all three tests from the day this directory was created, and sat at the top level of /docs/ anyway - a specification konnectome was HANDED AND BUILDS BY, filed among the documents konnectome WRITES. Moving it in corrects that, and the directory is named for the word PRINCIPLES rather than for a Commandment, so nothing about the name needed to change.
 
 
 WHAT THIS DIRECTORY IS NOT, WHICH IS HOW TO TELL IT FROM ITS THREE NEIGHBOURS
@@ -26,7 +39,7 @@ WHAT THIS DIRECTORY IS NOT, WHICH IS HOW TO TELL IT FROM ITS THREE NEIGHBOURS
 
 • NOT docs/neuroscience/ . That directory's own README states that its boundary is AUTHORSHIP AND NOT SUBJECT. These three pass the authorship half - konnectome did not write them - and fail the subject half, because they are about Artificial General Intelligence and not about the nervous system. Putting them there would have made that directory's name a lie.
 
-• NOT the top level of /docs/ , which is now reserved for konnectome's OWN live working documents: the ledger, the tutorial, the build log, the design authorities, the analysis, the change orders, and the current hand-off. These three are inherited.
+• NOT the top level of /docs/ , which is reserved for konnectome's OWN live working documents. As of Constitution version 24 that claim is finally TRUE AND EXACT, where before it was an aspiration this very manuscript contradicted: four files remain there - the ledger, the build log, the tutorial, and the current hand-off - and every one of them is written BY konnectome. The design authorities, the analyses and the change orders that this paragraph once listed have since moved to docs/design/ and docs/cousins/ . The documents in HERE are inherited.
 
 SO THE CATEGORY IS: INHERITED, LIVE, AND NOT NEUROSCIENCE. That combination had no home until this directory, and docs/neuroscience/ is its nearest sibling - same class, different subject.
 

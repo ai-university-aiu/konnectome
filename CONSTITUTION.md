@@ -118,7 +118,17 @@ on its non-goals list.
 
 THE SIXTH COMMANDMENT:
 Pseudocode will be inspired and influenced by English Readable Code (ERC) as defined in the specification file:
-/home/ccaitwo/konnectome/docs/ENGLISH_READABLE_CODE_MANUSCRIPT.txt
+/home/ccaitwo/konnectome/docs/principles/ENGLISH_READABLE_CODE_MANUSCRIPT.txt
+(REPOINTED in version 24, by the owner's instruction of 2026-08-11, and NO RULE CHANGED - the file
+moved from the top level of /docs/ into docs/principles/ , and this line follows it. The move settles
+a question this Commandment had left implicit: the ERC manuscript is a SPECIFICATION konnectome was
+HANDED AND BUILDS BY, not a document konnectome writes. That is the principles directory's exact
+category - inherited, live guidance, and not neuroscience - and the manuscript met all three tests
+while sitting outside it. Its being named by the Sixth Commandment rather than the First is no
+objection: that directory is named for the WORD PRINCIPLES, not for the number of the Commandment
+that happens to cite its contents, and a directory admitting only one Commandment's documents would
+need renaming the first time a second Commandment named a document of the same kind - which is
+exactly what happened here.)
 Concretely: every line of code in every source file carries one plain-English comment immediately
 above it, per the ERC rule.
 
@@ -823,8 +833,26 @@ commit because they are one act: the document that was the instruction becomes a
 moment the next one becomes the instruction, and splitting them across two changes would leave a
 commit in which /docs/ holds two hand-offs or none.
 
-VERSION HISTORY NOTE (extended in version 23). This Constitution is at VERSION 23, and holds
+VERSION HISTORY NOTE (extended in version 24). This Constitution is at VERSION 24, and holds
 TWENTY-TWO Commandments.
+
+Version 24, by the owner's instruction of 2026-08-11, REPOINTS THE SIXTH COMMANDMENT. The English
+Readable Code manuscript moves from the top level of /docs/ into docs/principles/ , and the
+Commandment's pointer follows it. NO COMMANDMENT WAS ADDED, REMOVED, OR RENUMBERED, and NO RULE
+CHANGED; the count stands at twenty-two.
+
+WHAT THE MOVE SETTLES. The principles directory was created at version 17 to hold the First
+Commandment's three documents, and its category was stated there as INHERITED, LIVE, AND NOT
+NEUROSCIENCE. The ERC manuscript met all three tests and was outside it anyway - a specification
+konnectome was HANDED AND BUILDS BY, sitting among the documents konnectome WRITES. That it is cited
+by the Sixth Commandment rather than the First is no objection, because the directory is named for
+the word PRINCIPLES and not for a Commandment number.
+
+AND THE TOP LEVEL OF /docs/ IS NOW EXACTLY WHAT ITS OWN README CLAIMED IT WAS. That claim -
+"reserved for konnectome's OWN live working documents" - was written at version 17 while this
+inherited manuscript sat there contradicting it. Four files remain: the ledger, the build log, the
+tutorial, and the current hand-off. Every one is written BY konnectome, and everything inherited,
+superseded, or addressed elsewhere now lives in a named sub-directory.
 
 Version 23, by the owner's instruction of 2026-08-11, UNVERSIONS THE LEDGER. The Fourth
 Commandment's document is renamed from konnectome_ledger_v1.txt to konnectome_ledger.txt, and both
