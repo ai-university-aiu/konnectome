@@ -329,15 +329,46 @@ master_register_downward_assignment(GlobalState, Assignments) :-
             master_register_assignment_row(GlobalState, ConstructKind, Mode),
             Assignments).
 
+% THE TABLE HAS ROWS FROM SLICE 50, AND WHAT CHANGED WAS NOT THE MECHANISM BUT WHAT KONNECTOME HAS
+% TO POINT AT (DECISION-9). The objection written above is about MULTIPLICITY, not about naming: a row
+% aimed at "gate" is wrong because there are many gates and the corpus meant one of them. IT DOES NOT
+% REACH A CONSTRUCT OF WHICH THERE IS EXACTLY ONE. The working memory blackboard is such a construct -
+% the corpus's own gloss is "a small erasable surface ... read by everything", singular, definite and
+% shared - so a row addressing it by name reaches exactly what the chapter was talking about and
+% nothing else. The objection does not apply here rather than being overridden, and that distinction
+% is the whole of DECISION-9. The ledger carries its argument and, as importantly, its list of what it
+% does NOT decide - beginning with the fact that konnectome has no registry of instances, so the
+% singleton claim is a claim made in prose by the pack that makes it, and not a proof.
+%
+% AND EVERY ROW STILL PUBLISHES RATHER THAN COMMANDS. Naming a construct here buys no authority over
+% it: the row travels the mode-throw channel, the throw is a row and not a door, and a construct that
+% declares no matching transition simply cannot be moved. That is why a table naming the blackboard
+% does not make this file a controller, and it is the reason the rows are written here, in one
+% readable table, rather than scattered into the packs they address.
+
 % master_register_assignment_row(+GlobalState, -ConstructKind, -Mode): one row of one state's assignment.
-% THE TABLE IS DELIBERATELY EMPTY. No clause is declared, because konnectome has construct KINDS where
-% the corpus has NAMED INDIVIDUALS, and a row aimed at a kind would assign one named construct's mode
-% to every instance of that archetype in the repository. The closer is the region-grain construct.
-% This clause head exists, unsatisfiable, so that the shape of a row is declared and readable even
-% while no row is: a watcher can see what a row WOULD look like without one having been guessed at.
-master_register_assignment_row(_GlobalState, _ConstructKind, _Mode) :-
-    % There is no row, and the failure is the statement.
-    fail.
+%
+% SLOW-WAVE SLEEP WIPES THE BOARD. Layer 10's Entry 16 gives its third mode as "slow-wave-sleep
+% erasure, delay activity being incompatible with the slow oscillation's silent states", and this
+% register's own gloss for the state is "consolidates and renormalises". Two volumes, one state, no
+% conflict - and konnectome invents nothing in between them.
+master_register_assignment_row(global_state(offline, slow_wave_sleep),
+                               working_memory_blackboard,
+                               erased_idle).
+% REM LEAVES THE BOARD UNGOVERNED, WHICH IS NOT THE SAME AS LEAVING IT EMPTY. Entry 16's fourth mode
+% is "rapid-eye-movement (REM) fragments igniting without gate control". The row says the GATE is
+% gone; the surface still carries whatever ignites on it. Assigning erasure to both sleep states
+% would have been the tidy reading and the corpus does not support it.
+master_register_assignment_row(global_state(offline, rapid_eye_movement),
+                               working_memory_blackboard,
+                               ungoverned_flicker).
+% NO OTHER STATE HAS A ROW, AND THE TWO KINDS OF ABSENCE BELOW ARE DIFFERENT AND BOTH DELIBERATE.
+% SLEEP ONSET AND SPINDLED LIGHT SLEEP have none because Entry 16 says nothing about them, and a
+% guess would be an invented mode that had learned to cite. THE FOUR WAKING STATES have none because
+% Entry 16 says something that forbids one: it gives the waking transition the agency SELF_SELECTED,
+% so a downward row for a waking state would overwrite, on every announcement, a choice the corpus
+% places with the board. The global state does not get a vote on which waking posture the blackboard
+% is in, and the silence of this table for online states is where konnectome says so.
 
 % master_register_assign_downward(+Bus0, +GlobalState, -Bus): apply a state's assignment to the bus.
 master_register_assign_downward(Bus0, GlobalState, Bus) :-

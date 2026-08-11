@@ -30,6 +30,12 @@
     neuromodulator_bus_release_mode_throw/3,
     % neuromodulator_bus_check_thrown_mode/1: refuse a hole, a compound, or the reserved silence name.
     neuromodulator_bus_check_thrown_mode/1,
+    % neuromodulator_bus_no_mode_thrown/1: the reserved name a channel nobody has written reads back as.
+    % (Exported in slice 50 on slice 38's own warrant: a caller that must tell SILENCE from an
+    % INSTRUCTION has to compare against the bus's OWN reserved name, and a caller that spelled the
+    % atom out for itself would be a second copy of it, free to drift. The name is read here, never
+    % written: throwing it is still refused by the checker above.)
+    neuromodulator_bus_no_mode_thrown/1,
     % neuromodulator_bus_channel/1: the corpus's roster of six named broadcast channels, enumerable.
     neuromodulator_bus_channel/1,
     % neuromodulator_bus_channel_role/2: the computational role the corpus assigns one channel.
