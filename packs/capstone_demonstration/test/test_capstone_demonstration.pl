@@ -39,6 +39,30 @@
     % quantity_model_record/4: re-mint the owned verdict by enacting the same trial.
     quantity_model_record/4
 ]).
+% Load the two-process governor, the watchdog and the supervisor, so the night the story now reports
+% on can be re-lived and re-judged outside the narration (slice 51).
+:- use_module(library(two_process_governor), [
+    % two_process_governor_step/4: advance both processes one tick and select the operating state.
+    two_process_governor_step/4,
+    % two_process_governor_day_length/2: the governor's own day, in ticks, from its own parameters.
+    two_process_governor_day_length/2,
+    % two_process_governor_watch_window/2: the window the governor is measured over.
+    two_process_governor_watch_window/2,
+    % two_process_governor_watch/3: the join - a history of poles judged into a supervisor's report.
+    two_process_governor_watch/3
+]).
+:- use_module(library(watchdog), [
+    % watchdog_history_new/1: an empty history, which has seen nothing and measures nothing.
+    watchdog_history_new/1,
+    % watchdog_observe/4: record what pole the governor stood in at one ordinal tick.
+    watchdog_observe/4,
+    % watchdog_window_measured/2: whether the history yet spans a window of the asked-for length.
+    watchdog_window_measured/2
+]).
+:- use_module(library(supervisor), [
+    % supervisor_report_warnings/2: the warnings a report carries.
+    supervisor_report_warnings/2
+]).
 % Load situation appraisal so the appraisals can be re-read independently.
 :- use_module(library(situation_appraisal), [
     % situation_appraisal_appraise/3: re-read the drives' own error directly.
@@ -938,5 +962,101 @@ test(bad_tick_count_still_refused_by_name,
      [error(capstone_demonstration_bad_ticks(3), _)]) :-
     % Three heartbeats cannot carry the demonstration.
     capstone_demonstration_story(3, _).
+
+% ---------------------------------------------------------------------------
+% THE NIGHT WATCH (konnectome build slice 51)
+% ---------------------------------------------------------------------------
+
+% THE DEBT IS CLOSED: the told story asks the watchman, and the section exists.
+test(the_story_asks_whether_the_night_was_healthy) :-
+    % Tell the story at the default count.
+    capstone_demonstration_default_ticks(NumTicks),
+    capstone_demonstration_story(NumTicks, Story),
+    % The question is asked in the story's own words.
+    assertion(capstone_demonstration_test_contains(Story, "WAS THE NIGHT HEALTHY?")).
+
+% THE STORY AS TOLD CANNOT ANSWER, AND SAYS SO. Its heartbeat is shorter than the governor's day, and
+% DECISION-4 forbids reporting a window the history does not span as clean.
+test(the_told_nights_verdict_is_not_yet_measured) :-
+    % Tell the story at the default count.
+    capstone_demonstration_default_ticks(NumTicks),
+    capstone_demonstration_story(NumTicks, Story),
+    % The short telling is reported as unmeasured, by name.
+    assertion(capstone_demonstration_test_contains(Story, "VERDICT: NOT YET MEASURED")),
+    % And both fault regimes come back unwatched rather than absent.
+    assertion(capstone_demonstration_test_contains(Story, "come back unwatched")),
+    % NO READINGS IS NOT THE SAME FACT AS NO FAULTS, and the story says so in as many words rather
+    % than leaving a reader to infer that an unmeasured night was a quiet one.
+    assertion(capstone_demonstration_test_contains(Story, "no readings is not the same fact as no faults")).
+
+% A CLEAN VERDICT IS NEVER PRINTED FOR THE UNSPANNED WINDOW. This is the failure the section exists to
+% prevent, asserted rather than argued: the sentence that would be the lie is checked for absence.
+test(the_short_telling_never_calls_the_night_healthy_on_its_own_ticks) :-
+    % Tell the story at the least count the demonstration accepts, which is shorter still.
+    capstone_demonstration_story(6, Story),
+    % The short telling reports how far its history reaches.
+    assertion(capstone_demonstration_test_contains(Story, "The history spans 6 ticks")),
+    % And it never claims health over those six ticks.
+    assertion(\+ capstone_demonstration_test_contains(Story, "Over 6 ticks of history")).
+
+% THE WINDOW IS THE GOVERNOR'S OWN DAY AND NOT A CONSTANT (DECISION-6), and the story names which.
+test(the_window_is_read_from_the_governors_own_parameters) :-
+    % Read the boot world's governor and its day.
+    capstone_demonstration_world(World),
+    get_dict(governor, World, Governor),
+    two_process_governor_day_length(Governor, DayLength),
+    % Tell the story.
+    capstone_demonstration_default_ticks(NumTicks),
+    capstone_demonstration_story(NumTicks, Story),
+    % The story names that same day as the window, rather than a number written into the narration.
+    format(string(Expected), "this governor's own day, ~w ticks", [DayLength]),
+    assertion(capstone_demonstration_test_contains(Story, Expected)).
+
+% THE CAPSTONE IS LENGTHENED RATHER THAN THE WINDOW SHORTENED, which is what Part Six asked for: the
+% same governor is lived out to a whole day so a verdict becomes available honestly.
+test(the_same_governor_lived_to_a_whole_day_gets_a_real_verdict) :-
+    % Tell the story at the default count.
+    capstone_demonstration_default_ticks(NumTicks),
+    capstone_demonstration_story(NumTicks, Story),
+    % The second telling spans the window and the watchman answers.
+    assertion(capstone_demonstration_test_contains(Story, "VERDICT: the night was healthy")),
+    % And the verdict is shown rather than asserted: the readings behind it are printed.
+    assertion(capstone_demonstration_test_contains(Story, "The readings behind that verdict")).
+
+% THE NIGHT REPORTED IS THE MIND'S OWN AND NOT A FIXTURE. The governor the story watches is the one
+% the boot world seats, advanced by the predicate the cognitive cycle advances it with, so the verdict
+% is re-derivable here without going through the narration at all.
+test(the_watched_governor_is_the_storys_own) :-
+    % The boot world's governor.
+    capstone_demonstration_world(World),
+    get_dict(governor, World, Governor),
+    % Lived forward independently, for the governor's own day.
+    two_process_governor_day_length(Governor, DayLength),
+    watchdog_history_new(Empty),
+    capstone_demonstration_test_live(Governor, online, 1, DayLength, Empty, History),
+    % The window really is spanned, so what follows is a verdict and not a silence.
+    two_process_governor_watch_window(Governor, Window),
+    assertion(watchdog_window_measured(History, Window)),
+    % And the watch reaches the same clean verdict the story printed.
+    two_process_governor_watch(Governor, History, Report),
+    supervisor_report_warnings(Report, Warnings),
+    assertion(Warnings == []).
+
+% A local twin of the story's own walk, so the test above re-derives the trajectory rather than
+% re-using the very predicate it is meant to be checking.
+% An exhausted count leaves the history where it stands.
+capstone_demonstration_test_live(_Governor, _State, Tick, NumTicks, History, History) :-
+    % Stop once every tick asked for has been lived.
+    Tick > NumTicks,
+    !.
+% Each remaining tick advances the scheduler and records the pole it selected.
+capstone_demonstration_test_live(Governor0, State0, Tick, NumTicks, History0, History) :-
+    % Advance both processes exactly as the cognitive cycle does.
+    two_process_governor_step(Governor0, State0, Governor1, State1),
+    % Record the selected pole under its ordinal tick.
+    watchdog_observe(History0, Tick, State1, History1),
+    % Live the next tick.
+    NextTick is Tick + 1,
+    capstone_demonstration_test_live(Governor1, State1, NextTick, NumTicks, History1, History).
 
 :- end_tests(capstone_demonstration).
