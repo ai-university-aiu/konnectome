@@ -1449,5 +1449,60 @@ One last note on the rule itself, from its first outing. It was aimed at replaci
 Forty tests in the pack. One thousand and seven in the build. Twenty-three commandments now.
 
 
-From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER SIXTY-ONE, and the story goes on being true.
+CHAPTER SIXTY-ONE - THE WORD THE WHOLE BUILD TURNS ON, AND THE DOCUMENT THAT KEPT GETTING IT WRONG (2026-08-11, SLICES 63 AND 64)
+
+The owner asked for two things: file the scientific findings properly, and make sure the word MODE is represented well across the repository.
+
+The first was quick and slightly embarrassing.
+
+The search behind slice 60 - the one that nearly gave the conflict monitor the wrong operating modes - had been run before the evidence directory existed. Its findings were argued at length inside the pack's own header and in the ledger, and its sources were nowhere a later reader could reach. That is precisely the failure the evidence directory was created to prevent, sitting one slice behind the directory that prevents it.
+
+So it is back-filled, and the record says on its face that it was written after the fact rather than pretending to a date it did not have.
+
+The record concludes that THERE IS NO CORPUS GAP, and that conclusion is filed with as much care as the gap in record 01. The reason is worth stating: a directory that only ever accumulated records finding the corpus wanting would give a false picture of how often the corpus is wanting. The answer is: much less often than not. The corpus carried the right answer in full, carried the tempting wrong answer too, and carried the clause that separates them.
+
+Then the sweep, which was meant to be housekeeping and was not.
+
+MODE is the concept this build turns on. A construct's STATE is how much of something it has; its MODE is which way it is currently behaving. State slides; mode jumps, and only by a row of a table written in advance. Four registers now exist across the build, and the corpus demands the pattern at every layer of the body it describes.
+
+The tutorial's glossary defined the construct as having a name and a state, and did not mention modes at all. That is the edit the owner asked for, and it is now there, along with two new entries the sweep showed were missing - the hybrid automaton with its four blocks, and the fault regime with the rule that keeps faults out of registers.
+
+And then the sweep found four things wrong, one of which is worth the whole exercise.
+
+THE FIRST WAS IN THE TUTORIAL ITSELF, and it is the sort of thing that only turns up when somebody reads a document end to end rather than in the section they are editing. The chapters describing slices 58 and 60 - written yesterday, in this same session - call a mode register "a short list of the STATES the thing can be in", and repeat the conflation four times.
+
+The one document whose job is to teach the difference between state and mode was contradicting itself about eight hundred lines apart. Nobody would have caught that from either end alone.
+
+THE SECOND was in the design directory's own index, which described the mode-register family as "built at slices 39 and 40". The family ran from 39 through 47. It planned seven slices and built nine, and further registers landed at 50 and 60. A reader was being told two where the answer is nine and counting.
+
+THE THIRD is the one that has been quietly doing damage for longest. docs/design/05 is the design authority for this entire concept - the deep read of fourteen corpus volumes that every other design document cites. It has never carried a date warning. Its Part Five says konnectome has no supervisor channel, that the master mode register is absent, that the stabiliser gap is open, and that the register itself is not built.
+
+Those were all true on the ninth of August. The supervisor was built at slice 42, the master register at 46, the stabiliser at 44, and the register at 39. Anyone opening the named authority for the concept today gets a picture of konnectome roughly twenty slices out of date.
+
+The fix is a staleness marker rather than a rewrite, and the distinction matters. THE READINGS IN THAT DOCUMENT DO NOT GO STALE. A deep read of a frozen corpus is as good today as the day it was made, and not one word of it is withdrawn. WHAT WENT STALE IS ITS PICTURE OF KONNECTOME, and the marker now says which half is which. This is the same lesson version 4 of the vision-set analysis wrote down two slices ago, arriving from a different document: a thing gets abandoned whole when only part of it is superseded.
+
+THE FOURTH is a marked correction rather than an edit, for the same reason. The vision-set analysis says there is no region-grain register BECAUSE THERE ARE NO REGIONS - and DECISION-16 overturned not just the count but the reason, by letting a construct adopt the register of the region whose function it realizes. The analysis is a dated assessment, so rewriting its status prose would turn a dated record into a rolling one. It gets a marked note instead.
+
+AND THEN THE FINDING THAT WAS WORTH MORE THAN ALL FOUR REPAIRS.
+
+konnectome enforces a rule it is rather proud of: A FAULT IS NOT A MODE. Faults are kept out of a construct's register and watched from outside, and the argument for it is genuinely good - a machine with an official way to be broken never reports being broken. The rule is quoted approvingly in the README, in the tutorial, and in the vision-set analysis.
+
+The design authority those documents cite says something different.
+
+Under a heading that reads, almost prophetically, TWO QUALIFICATIONS THAT A STRICT VALIDATOR WOULD GET WRONG, it says the rule is per construct and not per regime - the same named condition is a genuine mode in one cell type and a fault in another - and that a tagged minority of faults ARE admitted into registers on a usage argument, always with the reasoning written inline. It ends: the schema therefore needs a per-mode admitted-as-fault flag and a rationale slot, NOT A BLANKET EXCLUSION.
+
+konnectome built the blanket exclusion.
+
+And the interesting part is that nobody misread anything. Slice 39 read the authority correctly, noticed the missing field, and wrote a comment that is still in the source file today: the admitted-as-fault flag belongs with the supervisor channel THAT DOES NOT EXIST YET, and both enter with the slices that need them.
+
+The supervisor channel was built at slice 42. That was twenty-two slices ago. In the intervening time the blanket rule was written into three more documents as though it were the authority's own position.
+
+WHAT FAILED IS NOT COMPREHENSION. IT IS THAT NOTHING WATCHES A DEFERRAL'S CONDITION. A note that says "when X exists, revisit this" is invisible on the day X arrives, because the session building X is looking at X and not at the list of things that were waiting for it. That is the second time this session has met that family of fault, and the observation records a standing suggestion alongside it: the slice that meets a condition should be the one that checks the list.
+
+One thing was found and deliberately not fixed, which is recorded rather than glossed. This repository uses the phrase "mode register" for both the first of the four blocks AND for the whole four-block object - which is exactly the third sense of the word REGISTER that the design authority warned against adding, and it collides with a pack name too. The tutorial now states the precise usage and tells the reader to expect the loose one. The repository is not renamed, because a rename touching a pack name, six fileset documents and sixty chapters of this log is its own slice and not something to slip in at the end of another. The same goes for the ordinary English phrase "failure mode", which this build uses freely in its own prose while insisting that a fault is not a mode.
+
+No code changed in either slice. One thousand and seven tests, thirty-nine packs, unmoved.
+
+
+From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER SIXTY-TWO, and the story goes on being true.
 

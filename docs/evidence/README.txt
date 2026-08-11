@@ -65,3 +65,7 @@ Superseded versions of a record move to docs/archive/ under the Eleventh Command
 THE INVENTORY
 
 01_conflict_control_coupling_gain_v1.txt - the search behind DECISION-15 and DECISION-17. Whether the coupling constant converting measured conflict into raised control has a published value, and what the current literature says about the empirical status of the Gratton effect that konnectome uses as an acceptance test. CARRIES A RECORDED CORPUS GAP.
+
+02_conflict_monitor_mode_register_sources_v1.txt - the search behind DECISION-16 and OBSERVATION-18's closure. What the operating modes of the conflict monitor are, and the well-evidenced framework that nearly supplied the wrong ones. BACK-FILLED at slice 63 from a search run at slice 60, before this directory existed, and it says so on its own face. NO CORPUS GAP: the corpus carried the right answer in full, carried the tempting wrong answer too, and carried the clause that separates them.
+
+AND A NOTE ON WHAT THE INVENTORY SHOULD CONTAIN, because the shape of this list will mislead if it is not said. A RECORD THAT FINDS NO GAP IS AS WELCOME HERE AS ONE THAT FINDS ONE. Record 02 concludes that the corpus was sufficient and that nothing needs promoting, and it is filed with the same care as record 01. If this directory only ever accumulated records that found the corpus wanting, a later reader would draw a false picture of how often the corpus is wanting - which is: much less often than not.
