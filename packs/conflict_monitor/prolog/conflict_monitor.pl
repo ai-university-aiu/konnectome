@@ -10,6 +10,8 @@
     conflict_monitor_agency/1,
     % conflict_monitor_inviolable_rank/1: the rank the raised threshold may never reach past.
     conflict_monitor_inviolable_rank/1,
+    % conflict_monitor_confounds_excluded/1: the confounds this ablation is free of, DECISION-17.
+    conflict_monitor_confounds_excluded/1,
     % conflict_monitor_raise/4: control raised by the measured conflict and the CALLER'S gain.
     conflict_monitor_raise/4,
     % conflict_monitor_effective_threshold/3: the threshold a drive of some rank actually faces.
@@ -157,6 +159,55 @@
 % without - and IT HOLDS FOR EVERY POSITIVE GAIN. The loop's correctness is monotone in a number
 % konnectome therefore never has to choose. This is the ninth time this build has preferred a refusal
 % or a derivation to an invented default.
+
+% ---------------------------------------------------------------------------
+% DECISION-17: THE GRATTON INEQUALITY IS A TEST OF THIS MECHANISM AND NOT EVIDENCE ABOUT PEOPLE,
+% AND THE CONFOUNDS THAT MAKE THE HUMAN EFFECT CONTESTED ARE ABSENT HERE BY CONSTRUCTION
+% ---------------------------------------------------------------------------
+%
+% THE FIRST SEARCH RUN UNDER THE JUDGEMENT-CALL PROTOCOL WENT LOOKING FOR THE GAIN AND FOUND
+% SOMETHING ELSE. The full record is docs/evidence/01_conflict_control_coupling_gain_v1.txt. Two
+% findings came back and both land here.
+%
+% THE FIRST CONFIRMS DECISION-15 AND STRENGTHENS IT. The coupling constant has no published value the
+% search could reach, and Princeton's PsyNeuLink library - which carries a working reference
+% re-implementation of the Botvinick 2001 model and troubles to publish every layer's gain and bias to
+% one decimal place - DOES NOT CARRY A CONFLICT-TO-CONTROL COUPLING CONSTANT AT ALL. DECISION-15 is
+% therefore upgraded from a refusal that survived a READING to a refusal that survived a SEARCH.
+%
+% THE SECOND IS SHARPER AND IS THE REASON THIS DECISION EXISTS. James R. Schmidt, in Psychonomic
+% Bulletin and Review in 2019, reviews the evidence for conflict monitoring and concludes that
+% "conflict monitoring is merely an illusion" - that its two pillars, the proportion congruent effect
+% and the CONGRUENCY SEQUENCE EFFECT, are confounded by simpler learning and memory biases unrelated
+% to conflict or attention. The congruency sequence effect is, in that paper's own words, "also
+% sometimes referred to as the Gratton effect". IT IS THE EFFECT SLICE 58 ADOPTED AS ITS ACCEPTANCE
+% TEST. And the corpus does not know: the confound critique appears nowhere in docs/neuroscience/,
+% which is recorded as a corpus gap for the update run.
+%
+% KONNECTOME KEEPS THE TEST AND REFRAMES THE CLAIM, AND THE REASON IS SPECIFIC RATHER THAN DEFENSIVE.
+% EVERY CONFOUND SCHMIDT NAMES IS A PROPERTY OF THE HUMAN EXPERIMENTAL PARADIGM, AND NOT ONE OF THEM
+% EXISTS IN KONNECTOME'S ABLATION. konnectome runs the identical trial twice against the identical
+% drives at the identical distresses, varying exactly one thing - whether the previous turn's control
+% was carried forward on the bus. A human experiment cannot do that and a simulation can. So the
+% ablation is the CONFOUND-FREE VERSION of the paradigm, and the tests below pin each confound's
+% absence rather than asserting it.
+%
+% WHAT DECISION-17 DOES NOT DECIDE, AND THIS IS THE HALF THAT MATTERS. IT DOES NOT DECIDE THAT
+% CONFLICT MONITORING IS TRUE OF HUMAN BEINGS. konnectome's loop passing its own test is evidence
+% about konnectome's loop and about nothing else. Any document of this build implying otherwise is
+% overclaiming and should be corrected. And it does not tear the mechanism out: Schmidt's argument is
+% that the EVIDENCE is confounded, which is not a demonstration that the mechanism is absent, and a
+% build that removed a construct every time its literature was contested would have very little left.
+
+% conflict_monitor_confounds_excluded(-Confounds): the named confounds this ablation is free of.
+% Declared as a readable fact rather than as a comment, because a comment cannot be checked and this
+% is exactly the claim a later session would otherwise take on trust. Each is absent BY CONSTRUCTION
+% and each has a test beneath it: there is no stimulus to repeat because both runs are handed the
+% same term; no contingency to learn because nothing in this pack learns anything; no temporal
+% rhythm because the sequence carries a bus and not a clock; and no binding because there are no
+% features to bind.
+conflict_monitor_confounds_excluded([feature_repetition, contingency_learning, temporal_learning,
+                                     stimulus_response_binding]).
 
 % ---------------------------------------------------------------------------
 % THE SAFETY PROPERTY THIS LOOP PUTS AT RISK, AND THE REFUSAL THAT ANSWERS IT

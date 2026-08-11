@@ -7,11 +7,11 @@ I chose the name Mortise Joinwright because every slice of this session was abou
 
 PART ONE - READ THESE FIRST
 
-- Read and follow the konnectome constitution at ~/konnectome/CONSTITUTION.md, first and foremost. IT IS NOW AT VERSION 25 AND HOLDS TWENTY-TWO COMMANDMENTS. It moved ONCE this session, and the move changed NO RULE and renumbered NOTHING: version 25 drops a version number out of the Eighth Commandment's pointer at the vision-set analysis. Do not cite a commandment by number from memory or from an older document; re-read it. The version 19 renumbering map is still in the Constitution's own version 19 note and it is still the thing that catches people out.
+- Read and follow the konnectome constitution at ~/konnectome/CONSTITUTION.md, first and foremost. IT IS NOW AT VERSION 26 AND HOLDS TWENTY-THREE COMMANDMENTS. It moved TWICE this session. Version 25 dropped a version number out of the Eighth Commandment's pointer at the vision-set analysis, changing no rule. VERSION 26 ADDS A COMMANDMENT: THE TWENTY-SECOND, THE JUDGEMENT-CALL PROTOCOL, and the hand-off protocol is renumbered to the TWENTY-THIRD - so a document citing the hand-off protocol as the Twenty-Second is now one behind. READ THE NEW ONE BEFORE WORKING ANY FLAGGED QUESTION; it is the rule that governs how. Do not cite a commandment by number from memory or from an older document; re-read it. The version 19 renumbering map is still in the Constitution's own version 19 note and it is still the thing that catches people out.
 
 - READ docs/DSPARCD/konnectome_0_definition_v1.txt BEFORE ANYTHING ELSE IN THE FILESET. Unchanged this session and unchanged since slice 41. It states what konnectome IS in one sentence and what it is NOT in eight. READ ITS PART ONE AGAINST THIS SESSION'S LAST FINDING: "a part that cannot be reached from the one running loop is not yet part of konnectome, however well it tests." There are now FIVE such parts. See Part Five.
 
-- Read The DSPARCD Fileset at its current versions: docs/DSPARCD/konnectome_0_definition_v1.txt and docs/DSPARCD/konnectome_1_specification_v56.txt through konnectome_6_demonstration_v56.txt. IT MOVED TWICE THIS SESSION, v54 to v55 to v56.
+- Read The DSPARCD Fileset at its current versions: docs/DSPARCD/konnectome_0_definition_v1.txt and docs/DSPARCD/konnectome_1_specification_v56.txt through konnectome_6_demonstration_v57.txt. IT MOVED THREE TIMES THIS SESSION, v54 through v57.
 
 - READ BOTH ANALYSES, AND READ THE STATEMENT OF HOW THEY RELATE. This is the single most important change this session made to how the repository is navigated, and it is new.
   • docs/design/02_north_star_gap_analysis_v1.txt - unchanged this session. Its Part Nine is the QUEUE and is what the last six sessions have worked from.
@@ -28,7 +28,7 @@ PART ONE - READ THESE FIRST
 
 - Read the Settings, General, Instructions for Claude, and ~/CLAUDE.md at the organization root.
 
-- Read the current tutorial, docs/konnectome_tutorial_v55.txt (FIFTY-SIX parts; it gained two this session).
+- Read the current tutorial, docs/konnectome_tutorial_v56.txt (FIFTY-SEVEN parts; it gained three this session).
 
 - Read the prior hand-off, 2026-08-11_1 (Tare Ablewright), now at docs/hand-off/. Its queue is the queue this session worked from and MOST OF IT IS STILL STANDING.
 
@@ -46,15 +46,17 @@ PART TWO - THE IMPORTANT DOCS FILES
 
 - docs/DSPARCD/konnectome_0_definition_v1.txt - THE DEFINITION, phase zero. Read it first.
 
-- docs/DSPARCD/konnectome_1_specification_v56.txt through konnectome_6_demonstration_v56.txt - the DSPARCD Fileset, Realization Log through slice 60.
+- docs/DSPARCD/konnectome_1_specification_v57.txt through konnectome_6_demonstration_v57.txt - the DSPARCD Fileset, Realization Log through slice 62.
 
-- docs/konnectome_tutorial_v55.txt - the beginner tutorial, FIFTY-SIX parts. A session that bumps it bumps BOTH the header version line and the closing line. THE INSERTION RULE holds: a new part goes BEFORE the three standing tail parts, which are renumbered. Exercised twice this session and it worked as written. NOTE THE ARCHIVE CONVENTION, which is easy to get wrong and was got wrong once this session before being caught: the superseded tutorial is git-mv'd INTO docs/archive/ and the new version is a NEW FILE. It is not a rename in place.
+- docs/konnectome_tutorial_v56.txt - the beginner tutorial, FIFTY-SEVEN parts. A session that bumps it bumps BOTH the header version line and the closing line. THE INSERTION RULE holds: a new part goes BEFORE the three standing tail parts, which are renumbered. Exercised twice this session and it worked as written. NOTE THE ARCHIVE CONVENTION, which is easy to get wrong and was got wrong once this session before being caught: the superseded tutorial is git-mv'd INTO docs/archive/ and the new version is a NEW FILE. It is not a rename in place.
 
-- docs/building_konnectome.txt - the build log, FIFTY-NINE chapters. UNVERSIONED since Constitution version 22; append-only, so it has no versions. It is where the record of every auto-fix goes, and the record is the single condition on the Sixteenth Commandment's grant.
+- docs/building_konnectome.txt - the build log, SIXTY chapters. UNVERSIONED since Constitution version 22; append-only, so it has no versions. It is where the record of every auto-fix goes, and the record is the single condition on the Sixteenth Commandment's grant.
 
-- docs/konnectome_ledger.txt - the scoreboard, UNVERSIONED since Constitution version 23. Counter line: Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0. Observations: 18 (4 CLOSED: 8, 9, 15 and 18). Decisions: 16. THE COUNTER LINE APPEARS TWICE, at line 1229 and at the end, and BOTH were swept this session. Append new entries before the LAST one, and READ BACK THE LINE NUMBERS AFTERWARDS - Tare's process note, honoured and worth keeping.
+- docs/konnectome_ledger.txt - the scoreboard, UNVERSIONED since Constitution version 23. Counter line: Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0. Observations: 18 (4 CLOSED: 8, 9, 15 and 18). Decisions: 17. THE COUNTER LINE APPEARS TWICE, at line 1229 and at the end, and BOTH were swept this session. Append new entries before the LAST one, and READ BACK THE LINE NUMBERS AFTERWARDS - Tare's process note, honoured and worth keeping.
 
 - docs/design/ - TEN NUMBERED DOCUMENTS, 01 through 10, the number being reading order and fulfilment order at once. 01 IS NEW AT VERSION 4 THIS SESSION.
+
+- docs/evidence/ - NEW THIS SESSION, under the Twenty-Second Commandment. Published literature searched from OUTSIDE the corpus. IT IS OUTRANKED BY THE NORTH STAR and its README says so in its first paragraph. One record so far, 01_conflict_control_coupling_gain_v1.txt, and it CARRIES A RECORDED CORPUS GAP awaiting the update run.
 
 - docs/cousins/Causalontology_4_0_0_CHANGE_ORDER_v3.txt - Sections C, D, E remain HELD. No slice released them.
 
@@ -67,7 +69,7 @@ PART TWO - THE IMPORTANT DOCS FILES
 
 PART THREE - WHAT THIS SESSION DID
 
-THREE SLICES BUILT, TWO NUMBERED DECISIONS, ONE OBSERVATION OPENED AND CLOSED IN THE SAME SESSION, ONE AUTO-FIX, ONE CONSTITUTION AMENDMENT. The third slice was built at the owner's direct request after the pair was merged, which is why this session carries three rather than the standing two. Main was at a755c45 when this session began, exactly where the Tare hand-off said it was.
+FIVE SLICES BUILT, THREE NUMBERED DECISIONS, ONE OBSERVATION OPENED AND CLOSED IN THE SAME SESSION, ONE AUTO-FIX, TWO CONSTITUTION AMENDMENTS. Slices 60, 61 and 62 were built at the owner's direct request after the first pair had merged, which is why this session carries five rather than the standing two. THE STANDING TWO-SLICE RULE IS NOT REPEALED BY THIS; the owner extended one session, and the next should assume two again unless told otherwise. Main was at a755c45 when this session began, exactly where the Tare hand-off said it was.
 
 - SLICE 58, CLOSING THE CONFLICT LOOP. New pack conflict_monitor, from Chapter 52.2.1, joining override_controller and stabiliser into the loop the gap analysis's item B2 named as never closed. DECISION-15: THE FORM OF THE CONFLICT MEASURE IS KONNECTOME'S OWN AND SIGNED AS SUCH, AND THE GAIN IS THE CALLER'S, because the acceptance test is an inequality that holds for every positive gain. OBSERVATION-18: the join creates a route by which THE MIND CAN STOP BREATHING IN ORDER TO STOP FEELING CONFLICTED. TWENTY-THREE tests. NOTHING IS WIRED.
 
@@ -79,7 +81,11 @@ THREE SLICES BUILT, TWO NUMBERED DECISIONS, ONE OBSERVATION OPENED AND CLOSED IN
 
 - SLICE 60, THE CONFLICT MONITOR'S MODE REGISTER. conflict_monitor gains a full four-block hybrid automaton and calls supervisor_watch/3; NO NEW PACK; tests 23 to 35. DECISION-16: A REGION-GRAIN REGISTER MAY BE ADOPTED BY THE CONSTRUCT THAT REALIZES THAT REGION'S FUNCTION, provided there is exactly one of it and the borrowing is stated on the pack's face. OBSERVATION-18 CLOSED. NOT ONE MODE, TRANSFER FUNCTION, TRANSITION ROW OR FAULT SIGNATURE IS KONNECTOME'S INVENTION - all were found already written, together, under the anterior cingulate entry of LAYER_09_MODES_MANUSCRIPT.txt. STILL NOT WIRED: this slice closes the WATCHING of the loop, not the integration of it.
 
-- State at hand-off: SIXTY slices. ONE THOUSAND AND TWO tests across THIRTY-NINE packs. Four gates at zero violations plus the naming gate's self-test. DSPARCD fileset v56; tutorial v55 at fifty-six parts; build log fifty-nine chapters; Constitution VERSION 25 at TWENTY-TWO commandments.
+- SLICE 61, THE JUDGEMENT-CALL PROTOCOL. Constitution VERSION 26 adds the TWENTY-SECOND COMMANDMENT and renumbers the hand-off protocol to the TWENTY-THIRD. NO PACK CHANGED. A flagged judgement call is now WORK rather than a resting place: read the corpus, BUILD IT IN THE SAME ACT if the corpus settles it, search the literature only if the corpus is silent, file what the search finds in the NEW docs/evidence/ and never straight into the corpus, and where evidence supports nothing record that the refusal has survived a SEARCH rather than only a READING. AND THE CORPUS IS NO LONGER FROZEN FOREVER: additive, dated, sourced UPDATE RUNS every tenth hand-off, never inside a slice. THE COUNT IS 35, SO THE NEXT UPDATE RUN FALLS AT 40.
+
+- SLICE 62, DECISION-15 WORKED UNDER THE PROTOCOL. First evidence record written; DECISION-17 taken; conflict_monitor gains one declared fact and five tests, 35 to 40. THE SEARCH RETURNED A NEGATIVE RESULT THAT STRENGTHENED THE REFUSAL - Princeton's reference re-implementation of the Botvinick model publishes every other parameter and carries no coupling constant at all - AND A FINDING NOBODY ASKED FOR: Schmidt 2019 argues the evidence for conflict monitoring is confounded and the effect slice 58 used as its acceptance test is one of the two pillars under attack. DECISION-17 keeps the test and reframes the claim, because every confound named is a property of the HUMAN paradigm and none exists in konnectome's ablation. A CORPUS GAP IS RECORDED AND VERIFIED.
+
+- State at hand-off: SIXTY-TWO slices. ONE THOUSAND AND SEVEN tests across THIRTY-NINE packs. Four gates at zero violations plus the naming gate's self-test. DSPARCD fileset v57; tutorial v56 at fifty-seven parts; build log sixty chapters; Constitution VERSION 26 at TWENTY-THREE commandments.
 
 
 PART FOUR - BUILD-AGAINST COUSIN COMMITS (for reproducibility)
@@ -140,7 +146,9 @@ PART SIX - THE FIRST TASK OF THE CONTINUATION
 
 The owner has already chosen: ALL (standing), TWO SLICES PER HAND-OFF under the pairing rule, and AUTO-FIX-ALL is granted. READ 02'S PART NINE FOR THE QUEUE AND 01'S PART SIX FOR WHETHER IT ROUTES ANYWHERE.
 
-1. ATTENTION AS A SALIENCE-DRIVEN BIAS, and it is now the front of the queue ON BOTH ORDERINGS, which has not been true of anything since slice 47. Genuinely unblocked: the blackboard's rehearsal target sits caller-supplied and waiting for a publisher, which is the real caller version 3 said should answer the rehearsal question. Build it as a BIAS rather than a network, and TAKE THE NORTH-STAR CORRECTION - attention needs THREE terms: salience, goals, and SELECTION HISTORY.
+1. THE SECOND AGENCY CUE, AND IT HAS JUMPED THE QUEUE BECAUSE THE TRIAGE FOUND ITS CLOSER ALREADY WRITTEN. OBSERVATION-17 wanted Wegner's EXCLUSIVITY condition, and the corpus states all three conditions in one sentence at THE_NEUROSCIENCE_OF_COGNITION_MANUSCRIPT.txt line 18691: we infer authorship when a thought PRECEDES an action, is CONSISTENT with it, and NO OTHER CAUSE IS APPARENT. Under the Twenty-Second Commandment's second step this must be READ AND BUILT IN THE SAME ACT - no search is needed and none should be run. It is the smallest thing that would make konnectome's agency machinery non-degenerate, and OBSERVATION-17 has been open since slice 56.
+
+2. ATTENTION AS A SALIENCE-DRIVEN BIAS, and it is the front of the queue ON BOTH ORDERINGS, which has not been true of anything since slice 47. Genuinely unblocked: the blackboard's rehearsal target sits caller-supplied and waiting for a publisher, which is the real caller version 3 said should answer the rehearsal question. Build it as a BIAS rather than a network, and TAKE THE NORTH-STAR CORRECTION - attention needs THREE terms: salience, goals, and SELECTION HISTORY.
 
 2. THE OVERLAY DELTA CHANNEL, still the decision that unblocks the most, and THE TWO ANALYSES DISAGREE ABOUT WHERE IT GOES - 02 places it after the wiring slices, 01's version 4 argues it belongs beside them, because a decision three deferrals are waiting on gets more expensive the more code is built against its absence. Three standing deferrals point at it: OBSERVATION-14's closer, DECISION-5's overlay question, and DECISION-9's. An overlay OCCUPIES NO SLOT, keeps the base state running underneath, and publishes DELTAS; konnectome's bus has only a level and a commanded mode, AND A DELTA IS NEITHER. OBSERVATION-14 generalises: acute stress arrives as a NAMED DISCRETE MODE in eleven other system registers while modulating working memory CONTINUOUSLY, so one overlay announcement must carry both shapes.
 
