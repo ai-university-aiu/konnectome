@@ -1225,7 +1225,8 @@ thought combination. The four gates report zero violations, the naming gate pass
 self-test; conformance re-measured at 137 of 137 (specification 4.0.0) in both cousins. No new
 wall; no cousin edited, per the Second, Third, and Fourth Commandments.
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 16 (3 CLOSED: 8, 9 and 15).  Decisions: 12.
+
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 17 (3 CLOSED: 8, 9 and 15).  Decisions: 14.
 Slice-34 note (2026-08-09). The bound turned live in the told story. The slice-33 pending line
 (the bound proven per-territory in the tests but not yet in the capstone's told story) is
 CLOSED: the capstone's boot world arms the slow bound for real - the diffuse mark at one half,
@@ -4853,4 +4854,145 @@ what the sentence around it DOES: if it directs a reader somewhere, it is a poin
 if it reports what was once true, it is a record and must not be touched. A pointer audit that fixes
 every path it can reach will quietly destroy the build's history one true sentence at a time.
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 16 (3 CLOSED: 8, 9 and 15).  Decisions: 12.
+
+
+DECISION-13 (2026-08-11, slice 56). THE COMPARATOR PUBLISHES A CUE AND REFUSES TO PUBLISH A VERDICT
+OF AGENCY, AND THE REFUSAL IS WRITTEN INTO THE CODE.
+
+THE QUEUE ASKED FOR A COMPARATOR-BASED SENSE OF AGENCY AND IT WAS RIGHT ABOUT THE COMPARATOR. Chapter
+63.2.1 of the north star gives the mechanism whole: "When the brain issues a motor command it also
+generates an efference copy, an internal duplicate of that command, and feeds it to a forward model -
+a circuit that predicts what the sensory consequences of the movement will be. The prediction is then
+compared with the actual sensory feedback." Every part already existed in konnectome -
+archetype_comparator/3, body_interface_command/2, simulated_body_enact/3 - and the wiring is the
+whole of the build.
+
+AND THE SAME CHAPTER REFUSES THE CONCLUSION THE QUEUE DREW FROM IT, IN ITS OWN CLOSING SENTENCE: "a
+2019 analysis in Neuroscience of Consciousness argued that A MERE PREDICTION MATCH IS NOT BY ITSELF
+SUFFICIENT TO GENERATE A FELT SENSE OF AGENCY." Chapter 63.2.4 states the replacement rather than
+leaving a hole: "prediction is ONE CUE AMONG SEVERAL, weighted more heavily when it is reliable."
+konnectome holds exactly one cue and no weights, so it has nothing to judge with.
+
+SO KONNECTOME DECIDES: this pack computes the residual, attenuates the predicted part of the
+sensation, and reports how much of the sensed world its own command accounts for. IT RETURNS NO TAG.
+efference_copy_agency_judgement/2 exists, is exported, and THROWS BY NAME - the Sixteenth
+Commandment's strongest honest move, taken here because the plausible answer is one line away and
+would have passed every test in the pack.
+
+THE NUMBER THAT WOULD OTHERWISE HAVE BEEN INVENTED, NAMED SO THE HOLE IS VISIBLE: A MATCH TOLERANCE,
+the closeness at which a match becomes authorship. Nothing in the north-star directory states one.
+Under the Twenty-First Commandment this is the THIRD PROTOCOL, REFUSAL, and it is right here because
+the build proceeds honestly without it - every consumer this pack has today wants the residual.
+THIS IS THE SEVENTH REFUSAL OVER AN INVENTED DEFAULT IN THIS BUILD.
+
+WHAT DECISION-13 DOES NOT DECIDE. It does not decide the cue weights, since there is one cue. It does
+not build the second cue - Wegner's priority, consistency and exclusivity are named and unbuilt. It
+does not split Synofzik's low-level FEELING of agency from the high-level JUDGEMENT, which are one
+construct here. And IT DOES NOT CLAIM THE FORWARD MODEL IS LEARNED: LAYER_10_SYSTEMS_MANUSCRIPT says
+of sensorimotor_body_loop that "its plant model is LEARNED", and konnectome's is a transcription of
+the stand-in machine's own actuator clauses. Nothing in konnectome acquires a model of its world from
+experience, and this slice makes that absence concrete rather than abstract.
+
+AND ONE MECHANISM COST NOTHING THAT WAS FEARED. Attenuation needed no gain, because the corpus states
+the operation subtractively: LAYER_06_MODES_MANUSCRIPT's Own-Move Subtractor "subtract[s] an efference
+copy of a self-generated head turn and report[s] only what the world did." The attenuated percept IS
+the residual, so "you cannot tickle yourself" falls out of the arithmetic rather than being a case.
+
+
+OBSERVATION-17 (2026-08-11, from slice 56). THE NULL COMMAND SCORES A PERFECT MATCH, SO A
+COMPARATOR-ONLY AGENCY WOULD AWARD MAXIMUM AUTHORSHIP FOR DOING NOTHING.
+
+hold_still is a real actuator command in this build - simulated_body carries it and
+body_interface_command/2 maps the selector's "nothing" outcome onto it - and its documented effect is
+that nothing changes but the log. THE FORWARD MODEL'S PREDICTION FOR IT IS THEREFORE THE WORLD
+EXACTLY AS IT ALREADY STANDS, and in a still world that prediction is perfect on every channel.
+
+A test in the pack asserts the sharp form of this: THE CUE FROM A SUCCESSFUL, DELIBERATE STEER AROUND
+A REAL OBSTACLE AND THE CUE FROM HOLDING STILL IN A STILL WORLD ARE THE SAME TERM. The mechanism
+cannot tell them apart, and the assertion is a term equality rather than a paragraph.
+
+IT WOULD NOT HAVE FAILED, WHICH MAKES IT THE SIXTH FINDING OF THAT SHAPE IN THIS RUN - after a
+boundary that could never be crossed (47), a zero that reads as calm (48), a threshold decided by
+binary rounding (49), a table row that is not a transition (50) and a clip that annihilates (52).
+Every test would have been green and the machine would have believed something absurd, quietly.
+
+AND IT IS THE 2019 CRITIQUE ARRIVING FROM THE OTHER DIRECTION, WHICH IS WHY IT IS RECORDED RATHER
+THAN FIXED. The chapter argues from the psychology that a prediction match is not sufficient for felt
+agency. konnectome, having built the comparator faithfully, finds a case where the match is total and
+the authorship vacuous - in the ordinary operation of a command the build already ships.
+
+THE CLOSER IS NAMED AND IS NOT A REPAIR TO THIS PACK. Agency needs a cue that distinguishes "the
+world matched my prediction BECAUSE I CAUSED IT" from "the world matched my prediction because
+NOTHING WAS GOING TO HAPPEN ANYWAY". That is Wegner's EXCLUSIVITY condition and it is a second
+mechanism. OBSERVATION-17 closes when that cue exists, not before.
+
+
+Slice-56 note (2026-08-11). THE EFFERENCE COPY. New pack efference_copy, DECISION-13, OBSERVATION-17.
+NINETEEN tests. NOTHING IS WIRED: the cognitive cycle does not call it, body_interface does not call
+it, and no percept anywhere is attenuated in any run konnectome performs today - the eligibility-trace,
+blackboard and durable-tier discipline, held for the fourth time. NOT ONE NUMBER IN THE PACK IS
+KONNECTOME'S INVENTION: the forward model is a transcription of simulated_body_drive/3, and the
+attenuation has no gain because the corpus specifies a subtraction. Nothing routes to either change
+order - no data-structure gap and no language gap was hit. Neither cousin was edited.
+
+
+DECISION-14 (2026-08-11, slice 57). A COMPETENCE IS A CALLER-NAMED SET OF EDGES AND ITS SCORE IS THEIR
+SUMMED WEIGHT; AND AN ACCEPTANCE CRITERION IS MET BY COMPARISON AGAINST AN ABLATION, NEVER AGAINST A
+THRESHOLD KONNECTOME CHOSE.
+
+LAYER_12_FACULTY_SPECIFICATION.txt, Faculty 13, LEARNING ITSELF: "retention of old competence as new
+competence is added; measurable consolidation benefit from the offline phase; graceful lifetime
+accumulation." THE NORTH-STAR GAP ANALYSIS CALLED THIS THE CHEAPEST REAL WIN IN THE WHOLE ANALYSIS,
+and it was right about why: konnectome has had interleaved replay against catastrophic forgetting
+since slice 38 and had never scored it. Its tests demonstrated - one weight lower than another - and a
+demonstration is not a measurement.
+
+THE FIRST HALF OF THE DECISION FILLS A GAP NOBODY ELSE FILLS. Faculty 13 speaks of "competence";
+Chapter 7 speaks of edges refreshed or washed away; nothing joins the two vocabularies. Under the
+Sixteenth Commandment's repair-versus-decision line this is a DECISION and not a repair - no correct
+value is waiting to be put back. konnectome chooses the EDGE SET, for three stated reasons: it is the
+grain the night actually acts on; the set must be the caller's because konnectome has no naming and
+addressing facility (OBSERVATION-11's expensive half, and this is a sixth reason to want it); and the
+SUM rather than the mean, because a competence that has LOST an edge should score lower and a mean
+would divide the loss away.
+
+THE SECOND HALF IS THE TRANSFERABLE ONE AND IT IS A REFUSAL IN DISGUISE. The obvious way to make a
+faculty pass is to write down a number it must beat. LAYER_12 STATES NO THRESHOLD FOR ANY OF ITS
+FOURTEEN FACULTIES, so that number would be konnectome's own invention wearing Layer 12's citation -
+which is exactly AN INVENTED VALUE THAT HAS LEARNED TO CITE. So the criteria are read as COMPARATIVE,
+which is what their own wording says: "retention of old competence AS NEW COMPETENCE IS ADDED"
+compares against a mind that did not add one, and "measurable consolidation benefit FROM the offline
+phase" compares against the same phase not serving that competence. EACH CRITERION SUPPLIES ITS OWN
+BASELINE. Under the Twenty-First Commandment this is the SECOND PROTOCOL, DERIVATION, and it never
+reaches the fourth. THIS IS THE EIGHTH TIME THIS BUILD HAS PREFERRED A REFUSAL OR A DERIVATION TO AN
+INVENTED DEFAULT.
+
+THE MEASURED FIGURES. Interleaved, the old competence retains 0.945 of itself; replaying only the new
+day it retains 0.9; the criterion is met by the strict inequality. The offline phase's benefit to the
+newly acquired competence is 0.045, measured against the identical night with that competence absent
+from the store.
+
+AND ONE HONEST FIGURE IS PINNED BESIDE THE GOOD ONE. Measured against NO night at all, the old
+competence's score FALLS even on the night that serves it best - 0.99 against 1.0 - because
+renormalisation is the night's other job. Chapter 7 says the night's net effect is renormalisation
+WITH targeted strengthening of replayed traces, not blanket growth. THE NIGHT'S BENEFIT IS RELATIVE
+AND NEVER ABSOLUTE, and a test asserts it so nobody quotes the benefit without it.
+
+WHAT DECISION-14 DOES NOT DECIDE. It does not decide a passing score, deliberately. IT DOES NOT
+MEASURE THE THIRD CRITERION: "graceful lifetime accumulation" needs a lifetime and konnectome's
+longest run is a capstone night, so it is named as unmeasured rather than folded into the other two -
+WHICH MEANS FACULTY 13 IS NOT YET CLAIMED AS PASSING OUTRIGHT, and the gap analysis's Part Five
+should be read with that correction. And it does not make the score a CAPABILITY measure: a summed
+weight shows that the edges are standing, not that the mind can still do the thing.
+
+
+Slice-57 note (2026-08-11). FACULTY 13 SCORED. offline_consolidation gains three measurement
+predicates and grows from 32 tests to 39. DECISION-14. NO MECHANISM WAS ADDED and not one weight moves
+differently because these predicates exist - which is the point: the faculty was PARTLY PASSES purely
+for want of a measurement. NINE HUNDRED AND SIXTY-SEVEN tests across THIRTY-EIGHT packs, all green;
+four gates at zero violations plus the naming gate's self-test, with the one known non-blocking prefix
+collision unchanged; THE CAPSTONE STORY IS BYTE-IDENTICAL TO MAIN'S, verified by running both rather
+than assumed. Nothing routes to either change order. Neither cousin was edited, and conformance stands
+where slice 47 re-measured it, now five sessions old under the owner's relaxed cadence.
+
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 17 (3 CLOSED: 8, 9 and 15).  Decisions: 14.
