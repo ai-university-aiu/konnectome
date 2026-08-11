@@ -865,5 +865,54 @@ Four of the six channels are named here and written by nobody. That is deliberat
 Next: the working-memory blackboard, which version 3 calls the single highest-value item in the queue and which is now buildable to the corpus's own constants without inventing a number - and behind it the working-memory mode register, which will be the first real downward assignment, because there is one board and there are many gates.
 
 
-From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER FORTY-FIVE, and the story goes on being true.
+CHAPTER FORTY-FIVE - THE SMALL ERASABLE SURFACE (2026-08-10, SLICE 49)
+
+Hold a phone number in your head while you look for a pen, and you are running the most studied circuit in cognitive neuroscience. Prefrontal and parietal cells firing persistently, for seconds, about something that is no longer in front of you. The corpus konnectome is built against calls it the present-thought blackboard, and unpacks the name three ways: present, because it holds only the last few seconds; thought, because every reasoning step rents space in it; blackboard, because it is a small erasable surface, written by attention, read by everything, wiped by the next task.
+
+The vision-set analysis had called this the single highest-value item in the whole queue, and the design authority beneath it had said something more useful and more unusual: that working memory is not a pack in waiting but a pack ALREADY WRITTEN DOWN TO ITS CONSTANTS. Capacity four. Decay five hundredths a step. Collapse below two tenths. Rehearsal to one. Gated admission, weakest eviction. All of it sitting in one chapter, in the corpus's own runnable illustration, waiting to be typed.
+
+So the slice was scheduled as transcription. It was not transcription. It was three arguments with a chapter that disagrees with itself, and the third one was refused rather than settled.
+
+THE FIRST ARGUMENT IS WITH A NUMBER NOBODY CHOSE.
+
+Start a slot at one, take five hundredths off sixteen times, and you land on exactly two tenths. The chapter's own English says a slot is removed when its activation falls BELOW two tenths, and two tenths has not fallen below anything, so the slot lives. The chapter's own printed program disagrees, and kills it.
+
+The program is not wrong about neuroscience. It is wrong about arithmetic - or rather, the machine underneath it is. Computers hold numbers in binary, and two tenths in binary is like a third in decimal: it runs on forever and gets cut off. Subtract five hundredths from one sixteen times on any ordinary computer and you get 0.19999999999999968, which really is below two tenths, and the slot really does die one step early.
+
+One step. It is nothing. And it is decided by the way binary rounding happens to land, which means it was decided by nobody, and it was about to become konnectome's behaviour with a chapter's citation stapled to it.
+
+That is DECISION-8. konnectome holds activation in hundredths, as whole numbers: full is a hundred parts, the leak is five, the threshold is twenty, and there is no drift to inherit. A decimal that does not land exactly on a part is refused out loud rather than rounded, because a quiet rounding is how a number that was the corpus's becomes konnectome's without anybody deciding. The three reasons are word for word the three reasons of DECISION-2, which chose the tick rate six slices earlier, because it is the same question one grain down: make every corpus constant land exactly, take the coarsest grain that does, and route everything through one predicate so a later session has one thing to change.
+
+The subtle part is worth saying plainly, because it sounds at first like konnectome inventing something. A representation is not a number. Every possible carrier has a grain; floating point's grain is simply not written on its face and was not chosen by anybody. The whole of this decision is the difference between choosing a grain in the open and inheriting one by default along with its artefacts. A build that has refused invented numbers for eleven slices should not accept one from the hardware.
+
+THE SECOND ARGUMENT IS ABOUT WHICH ORDER TWO THINGS HAPPEN IN.
+
+The chapter's English removes the collapsed slots and then applies rehearsal. Its program applies rehearsal and then removes the collapsed. The two differ in exactly one case: a slot that this step's decay would kill, and that this step also rehearses. konnectome took the program's order, and the reason takes one sentence. A refresh that cannot save an item in the one case where saving it matters is not a refresh.
+
+THE THIRD ARGUMENT WAS NOT SETTLED, AND THAT IS THE CHAPTER OF THE SLICE.
+
+There is an obvious line to write, and it is one line: one maintenance step per tick. Every reader of this pack will want to write it. It is wrong.
+
+Work it out. An unrehearsed slot survives seventeen steps. konnectome's clock, by DECISION-2, runs a hundred ticks to the nominal second. Seventeen ticks is a sixth of a second. And the SAME CHAPTER, four fields further down its own page, states the unrehearsed fade as two to twenty SECONDS.
+
+Between twelve times and a hundred and eighteen times apart, in one chapter, about one quantity.
+
+Nobody is at fault, and that is what makes it dangerous. The little program is an illustration whose step has no units and never claimed any. The timings list is a set of measurements. The chapter never says the two are the same rate. But the two sit under one heading, in one document, wearing one document's authority - and a builder who wrote that one obvious line would have shipped a mind that forgets in a sixth of a second while citing a chapter that says two to twenty seconds, and the citation would have looked impeccable.
+
+So the line was not written. There is no predicate anywhere in this pack that binds a step to a tick, the absence is documented in the pack as the deliberate part, and a test asserts the discrepancy itself so the next reader meets it as something that passes rather than as a paragraph they can skim. That is OBSERVATION-13, and it is the fourth consecutive refusal of a default with a borrowed warrant - a number at slice 45, a mode name at 46, a chemical level at 48, and a rate here.
+
+It is also, and this is the part worth carrying out of konnectome altogether, a sibling of the finding the previous session made. Observation 12 said: a claim about the CODE inside a document about the CORPUS is the one claim its author had no reason to check. Observation 13 says the same thing one step further out. A chapter's runnable illustration and its measured parameter table are two different kinds of claim wearing one chapter's authority. The illustration's job is to be legible. The table's job is to be true. When a source gives you a quantity twice, find out whether the two statements are the same kind of claim before you believe either.
+
+WHAT ELSE THE BOARD DOES, BRIEFLY, BECAUSE IT DOES WORK.
+
+Four slots, oldest first. A gate somebody else opens or shuts - in the brain, a structure deep under the cortex deciding under dopamine what is worth keeping. Offer the chapter's own four digits through an open gate and all four are held; offer an advertising jingle through a shut one and the board is exactly what it was. Let it sit and everything fades together; rehearse one and it snaps back to full while its neighbours keep fading, which is precisely what you are doing when you repeat a phone number to yourself. Fill the board and offer a fifth item and the weakest slot leaves - and when four slots are equally weak, which happens constantly, the earliest-admitted is the one that goes, decided in the open and pinned by a test that checks the eviction is deterministic rather than merely correct the first time it is asked.
+
+And one small thing that is this pack answering the last one. Ask the broadcast bus for a channel it has never heard of and it hands back zero, which reads exactly like calm and is therefore the most dangerous answer a program can give - that was slice 48's whole finding. Ask this board for an item it does not hold and IT REFUSES OUT LOUD. It never answers zero. Here a zero would fuse two completely different facts into one number: the thought was never admitted, and the thought was admitted and has faded. Two tests hold it to that, one for each fact, refused identically.
+
+The contents are not recorded anywhere, and for once that took no defending. The corpus insists three times in one chapter that working memory is not written down - the memory IS the activity, and when the activity stops the number is gone - and konnectome's own discipline already had the right shape sitting in the plasticity engine, where the eligibility traces have been decaying, readable and unrecorded for twenty slices. The board is one more value the world carries. The awkward argument never arose.
+
+Next: the working-memory mode register, which hangs Entry 16's four modes beneath the master register and wires the erased-idle one to the global state the bus has broadcast since slice 35 - the first real downward assignment, and the proof that slice 46's empty table was empty for the reason slice 46 gave.
+
+
+From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER FORTY-SIX, and the story goes on being true.
 

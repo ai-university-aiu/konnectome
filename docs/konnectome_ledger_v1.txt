@@ -309,6 +309,25 @@ deepened; PENDING = not built yet.
     groundwork boundary said aloud in the epilogue itself.)
 
 
+ THE COGNITIVE CLUSTER (Layer 10 Chapter 16; Layer 12 faculty 3) - FAMILY FOUR, IN PROGRESS
+ -----------------------------------------------------------------------------------
+ The working memory blackboard   | working_memory_blackboard                   | PARTIAL
+ The striatal admission gate     | (verdict is caller-supplied; policy PENDING)| PARTIAL
+ The working-memory mode register| (Entry 16's four modes)                     | PENDING
+ Attention as a published bias   | (no publisher exists)                       | PENDING
+ The global workspace            | (the pilot beside the skeleton)             | PENDING
+   (Slice 49. The blackboard is BUILT to Chapter 16's own constants - capacity four, the
+    corpus's decay and collapse threshold, rehearsal to full, gated admission, weakest-first
+    eviction with the tie decided in the open - and is NOT WIRED into cognitive_cycle_step/3,
+    which is why its row is PARTIAL rather than REALIZED. Two of its interface's four
+    SUBSCRIBES are caller-supplied arguments rather than real publishers: the gate verdict,
+    whose policy is learned in the corpus and is deliberately not begun here, and the
+    rehearsal target, which the corpus says comes from attention and konnectome has no
+    attention to ask. The chapter's PUBLISHES field is realized for the held items and not
+    for the attentional pointers or the formatted content. And no step rate is declared - see
+    OBSERVATION-13 - so the pack cannot yet run in the mind's own time.)
+
+
 ================================================================================
 SECTION FIVE - FINDINGS AND OBSERVATIONS
 ================================================================================
@@ -1206,7 +1225,7 @@ thought combination. The four gates report zero violations, the naming gate pass
 self-test; conformance re-measured at 137 of 137 (specification 4.0.0) in both cousins. No new
 wall; no cousin edited, per the Second, Third, and Fourth Commandments.
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 12 (2 CLOSED: 8 and 9).  Decisions: 7.
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 13 (2 CLOSED: 8 and 9).  Decisions: 8.
 
 Slice-34 note (2026-08-09). The bound turned live in the told story. The slice-33 pending line
 (the bound proven per-territory in the tests but not yet in the capstone's told story) is
@@ -4040,3 +4059,126 @@ ontology test of the Second Commandment, and no language feature was missing. No
 held sections of the causalontology change order. Neither cousin was edited; conformance stands
 where slice 47 re-measured it, at 137 of 137 in both, with the checks-versus-vectors qualification
 this ledger already carries.
+
+
+DECISION-8 (2026-08-10, slice 49). THE ACTIVATION GRAIN: ONE HUNDRED PARTS TO THE UNIT ACTIVATION, SO
+THE CORPUS'S 0.05 IS FIVE PARTS AND ITS 0.2 IS TWENTY, AND A DECIMAL THAT DOES NOT LAND EXACTLY ON A
+PART IS REFUSED ALOUD RATHER THAN ROUNDED. THIS IS KONNECTOME'S OWN DECISION AND MUST NEVER BE
+PRESENTED AS THE CORPUS'S INSTRUCTION.
+
+WHY A DECISION WAS REQUIRED, AND IT IS NOT THE REASON A READER WOULD EXPECT. The corpus states
+working memory's activations as decimals - a slot is admitted at 1, leaks 0.05 a step, and collapses
+below 0.2 - and a machine must hold those somehow. The obvious carrier is binary floating point, and
+the obvious carrier is not neutral. Subtracting 0.05 from 1.0 sixteen times in IEEE doubles gives
+0.19999999999999968 rather than 0.2, so a slot standing EXACTLY on the collapse threshold is judged
+to have fallen below it and dies one step early. THE CORPUS'S OWN PRINTED PYTHON DOES EXACTLY THAT.
+THE CORPUS'S OWN PROSE SAYS THE OPPOSITE: its ENGLISH READABLE CODE removes a slot when its
+activation "falls BELOW 0.2", and at exactly two tenths an activation has not fallen below anything.
+So the two halves of one chapter disagree by one step, AND THE DISAGREEMENT IS NOT AN OPINION - it is
+an artefact of the arithmetic the illustration happened to be written in. A value nobody chose was
+about to become konnectome's behaviour, cited to a chapter that does not state it.
+
+THE THREE REASONS ARE DECISION-2'S THREE REASONS, AND DELIBERATELY SO, BECAUSE THIS IS THE SAME
+QUESTION ONE GRAIN DOWN. FIRST, IT MAKES EVERY CORPUS CONSTANT A WHOLE NUMBER OF PARTS: one is a
+hundred, five hundredths is five, two tenths is twenty, and every intermediate value a decaying slot
+passes through is a whole number too. SECOND, IT IS THE COARSEST GRAIN THAT ACHIEVES THE FIRST, and
+coarsest is the honest choice rather than the convenient one: the corpus states these quantities to a
+hundredth, so a finer grain would claim a precision the source does not have and would invite later
+slices to write activations finer than anything they could justify. THIRD, IT COSTS NOTHING AND IS
+THEREFORE REVERSIBLE: every decimal the pack reads passes through ONE conversion predicate, so a
+session that must restate the grain has exactly one predicate to change and one test to re-read.
+
+THE REFUSAL IS THE LOAD-BEARING HALF, exactly as it was for DECISION-2. A DECIMAL THAT IS NOT A WHOLE
+NUMBER OF PARTS IS REFUSED ALOUD: domain_error(whole_part_activation, Decimal), never rounded.
+Rounding is how invented numbers enter a careful build - a caller offers three thousandths, is handed
+nothing without being told, and a number that was the corpus's has quietly become konnectome's.
+
+A REPRESENTATION IS NOT A NUMBER, WHICH IS WHY THIS IS NOT AN INVENTION. Every possible carrier has a
+grain, floating point included; its grain is simply not stated on its face and not chosen by anybody.
+The distinction this decision draws is between CHOOSING a grain in the open and INHERITING one by
+default along with its artefacts. konnectome has refused invented numbers for eleven slices; it
+should not accept one from the hardware.
+
+WHAT DECISION-8 DOES NOT DECIDE, stated so a later session does not inherit more than was chosen. IT
+DOES NOT DECIDE THAT ANY CORPUS CONSTANT IS RIGHT - capacity four, decay five hundredths and the two-
+tenth threshold remain the corpus's claims, and a slice adopting one still cites where it came from.
+IT DOES NOT APPLY OUTSIDE THE WORKING-MEMORY BLACKBOARD: the neuromodulator bus, the eligibility
+traces, the running averages and the per-territory targets all carry floats today, none of them was
+touched, and whether they should share this grain is a question for the slice that finds a reason.
+IT DOES NOT MAKE THE PACK EXACT IN GENERAL: it makes the activations exact, which is where the
+threshold comparison lives. AND IT DOES NOT DECIDE THE STEP RATE, which is OBSERVATION-13's subject
+and is deliberately left open.
+
+
+OBSERVATION-13 (2026-08-10, from slice 49). CHAPTER 16 STATES THE SAME FADE TWICE AND THE TWO
+STATEMENTS DIFFER BY A FACTOR OF BETWEEN TWELVE AND ONE HUNDRED AND EIGHTEEN. KONNECTOME REPORTS IT
+UPWARD RATHER THAN ABSORBING IT, AND REFUSES TO DECLARE A STEP RATE.
+
+THE MEASUREMENT. LAYER_10_SYSTEMS_MANUSCRIPT.txt Chapter 16 carries the working-memory constants in
+its ENGLISH READABLE CODE and CODE SAMPLE: a slot admitted at 1, leaking 0.05 per step, collapsing
+below 0.2. Those constants imply, and konnectome's pack derives rather than declares, that an
+unrehearsed slot survives SEVENTEEN STEPS. The SAME CHAPTER's TIME CONSTANTS field states the same
+quantity in seconds: "unrehearsed decay 2 to 20 seconds". Under DECISION-2's hundred ticks to the
+nominal second, one step per tick makes seventeen steps ONE HUNDRED AND SEVENTY NOMINAL
+MILLISECONDS - between twelve and one hundred and eighteen times faster than the chapter's own
+measurement of the thing it is describing.
+
+NOBODY IS WRONG, WHICH IS WHAT MAKES IT DANGEROUS. The code sample is an ILLUSTRATION whose step has
+no units and never claimed any; the TIME CONSTANTS field is a set of MEASUREMENTS in seconds; and the
+chapter nowhere claims the two describe one rate. The trap is entirely on konnectome's side of the
+page: the natural wiring - one maintenance step per tick - is one line, is free, and produces a
+machine that forgets in a sixth of a second WHILE CITING A CHAPTER THAT SAYS TWO TO TWENTY SECONDS.
+The citation would have looked impeccable and the behaviour would have been konnectome's invention.
+
+WHAT SLICE 49 DID ABOUT IT. It declared NO STEP RATE. There is deliberately no predicate in
+packs/working_memory_blackboard binding a maintenance step to a tick, the omission is documented in
+the pack as the deliberate part, and a test asserts the discrepancy itself so that the next reader
+meets it as a passing assertion rather than as a paragraph they might skip. This is the FOURTH
+CONSECUTIVE REFUSAL of a default with a borrowed warrant - a NUMBER at slice 45, a MODE NAME at
+slice 46, a LEVEL at slice 48, and a RATE here.
+
+THE GENERAL FORM, WHICH IS THE TRANSFERABLE PART AND IS A SIBLING OF OBSERVATION-12'S. Observation 12
+found that a claim about konnectome's CODE inside a corpus document is the one claim its author had
+no reason to check. This one is one step further out: A CORPUS CHAPTER'S RUNNABLE ILLUSTRATION AND ITS
+MEASURED PARAMETER TABLE ARE TWO DIFFERENT KINDS OF CLAIM WEARING ONE CHAPTER'S AUTHORITY, and a
+builder reading the illustration gets numbers that are exactly as citable and not at all as
+calibrated. The illustration's job is to be legible; the table's job is to be true. WHEN A CHAPTER
+GIVES A QUANTITY TWICE, CHECK WHETHER THE TWO STATEMENTS ARE THE SAME KIND OF CLAIM BEFORE BELIEVING
+EITHER.
+
+THE CLOSER IS NAMED AND NOT DONE: the slice that wires this board into cognitive_cycle_step/3 must
+declare the step rate as a decision of konnectome's own, in DECISION-2's shape, with its reasons and
+with the list of what it does not decide. It is not closed here because this slice promised to wire
+nothing, and choosing a rate is not nothing.
+
+
+Slice-49 note (2026-08-10). THE WORKING-MEMORY BLACKBOARD, BUILT TO THE CORPUS'S OWN CONSTANTS. New
+pack working_memory_blackboard - the vision-set analysis version 3's SINGLE HIGHEST-VALUE QUEUE ITEM,
+and the motif-and-workspace design authority's Part B6 item 3. A four-slot shared surface at Chapter
+16's own capacity, admission through a caller-supplied striatal gate, slots leaking the corpus's five
+hundredths a step, collapse below its two tenths, rehearsal restoring to full, weakest-first eviction
+with the tie decided in the open, and a wipe for the next task. Not one number in the pack is
+konnectome's invention: the activation constants are the chapter's, and the chapter's four wall-clock
+TIME CONSTANTS are restated in ticks through DECISION-2's single conversion rather than written as
+tick literals. Slots are an explicit stateless value the world carries, in the eligibility-trace
+store's discipline - decaying, externally readable, deliberately unrecorded - so the corpus's thrice-
+stated ephemerality is free rather than defended. The gating policy is held CONSTANT and the
+rehearsal target is caller-supplied, per Part B5.9 and Part B4's second caution, so the pack's
+durable half is not begun by accident. NOTHING IS WIRED INTO THE TICK: cognitive_cycle_step/3 is
+untouched and the pack is exercised by its own tests, exactly as Part B6 item 3 specifies. Three
+refusals, and each is a place the chapter disagrees with itself: DECISION-8 for the collapse boundary,
+a declared order for rehearsal-before-collapse, and OBSERVATION-13's refusal to declare a step rate.
+One divergence from the chapter's printed code is recorded rather than smoothed over - re-offering a
+held item UPDATES it and evicts nothing, on the warrant of the chapter's own prose naming the gate as
+deciding which items are "admitted OR UPDATED". An absent slot is REFUSED ALOUD rather than read as
+zero, which is this pack's deliberate answer to slice 48's finding about the bus's plausible zero,
+because an absent slot and a collapsed slot are different facts. working_memory_blackboard carries
+FORTY-FIVE Prolog Unit (PLUnit) tests; EIGHT HUNDRED AND SEVENTY-ONE in total across THIRTY-FIVE
+packs, all green. The four gates report zero violations, the naming gate passing its own self-test;
+the capstone story is byte-identical to main's. Nothing routes to either change order: a decaying
+list of item names inside one runtime travels to nobody and fails the consumer-versus-ontology test
+of the Second Commandment, and no language feature was missing. Nothing releases the held sections of
+the causalontology change order. Neither cousin was edited; conformance stands where slice 47
+re-measured it, at 137 of 137 in both, with the checks-versus-vectors qualification.
+
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 13 (2 CLOSED: 8 and 9).  Decisions: 8.

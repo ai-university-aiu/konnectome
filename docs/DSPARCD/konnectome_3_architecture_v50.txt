@@ -1,0 +1,767 @@
+APPENDIX 3. ARCHITECTURE
+
+A3.0 THE PURPOSE OF THIS PHASE
+
+The Architecture phase designs the skeleton of the System so that it will be robust and extensible.
+
+It identifies the major components, the interfaces between them, the data model, and how the whole fits together.
+
+It remains language-agnostic: it says what the parts are and how they relate, not what language they are written in.
+
+In SPARC this is the deliverable named architecture.md.
+
+A3.1 ARCHITECTURAL STYLE
+
+The System adopts a REGISTRY-AND-SCHEDULER style with a BROADCAST BUS, and the choice is dictated by the science rather than by fashion.
+
+The registry holds every construct as an independent module.
+
+The scheduler advances time in ticks and drives the synchronous update.
+
+The broadcast bus carries the neuromodulators, which are not point-to-point and so cannot be edges in the connection graph.
+
+This style is chosen over the two obvious alternatives for reasons the science already established.
+
+It is not a single central controller with everything beneath it, because Chapter 12 showed there is no orchestrator and that building one would recreate the homunculus the science rejects.
+
+And it is not a flat message-passing swarm with no coordination, because Chapter 12 showed the brain has genuine arbiters and broadcast authorities.
+
+The registry-and-scheduler-with-bus style is the architectural form of the Arbitrated Federation: autonomous modules, a dumb scheduler that coordinates their timing without having preferences, and a broadcast layer that sets global state.
+
+The architecture is the thesis of Chapter 12, made buildable.
+
+A3.2 THE MAJOR COMPONENTS
+
+COMPONENT 1, THE CONSTRUCT REGISTRY. Holds every region, interface, and molecule as a module carrying its specification block. It is the System's parts bin, and it is loaded once at startup from the data of Chapters 2, 3, and 7. Adding a construct means adding an entry here and nothing else.
+
+COMPONENT 2, THE SCHEDULER, or TICK ENGINE. Advances the System one tick at a time. On each tick it invokes the two-pass synchronous update of Appendix 2, first computing every next state, then committing them. It is deliberately dumb: it holds no state of its own beyond the tick count and has no opinions about what any construct should do. It is the referee that keeps time, not a ruler.
+
+COMPONENT 3, THE CONNECTION GRAPH. Represents the interfaces of Chapters 3 and 4 as directed, weighted, delayed links between constructs, each marked transmissive or computational. This is the connectome as data. The learning rule of Appendix 2 mutates the weights here; the routing is otherwise fixed.
+
+COMPONENT 4, THE NEUROMODULATORY BUS. Represents the broadcast fields of Chapter 7 as global quantities with a level per target territory. Every construct's update rule and every learning rule reads from the bus. The bus is written by the source nuclei (the ventral tegmental area writes dopamine, the locus coeruleus writes norepinephrine, and so on) and read by everyone. It is the one place the architecture deliberately permits a global variable, exactly as the biology does.
+
+COMPONENT 5, THE DRIVE SYSTEM. Holds the homeostatic drives of Chapter 9, each monitoring a body variable against a set-point, each computing an error, and together computing the reward that the bus broadcasts as dopamine. It is the System's source of motivation and the origin of the learning signal.
+
+COMPONENT 6, THE ACTION SELECTOR. Implements the basal-ganglia arbitration of Chapter 2: it receives candidate actions proposed by the drives and cortical processes, and releases exactly one while suppressing the rest. It generates no actions of its own. It is the referee of the federation, and the architecture must enforce, as an invariant, that its output is always one of its inputs and never a fresh invention.
+
+COMPONENT 7, THE OVERRIDE CONTROLLER. Enforces the ranking of Chapter 9 and Chapter 12, allowing older and vital drives to preempt newer deliberation. It is a small, high-priority component that can seize control of the action selector, and it is the architectural home of the fact that breathing beats deliberation.
+
+COMPONENT 8, THE PLASTICITY ENGINE. Applies the three-factor learning rule and homeostatic scaling of Chapter 10 to the connection graph each tick, and runs the slow consolidation phase of Chapter 5 offline. It is the component that makes the map alive.
+
+COMPONENT 9, THE OBSERVER, or INSTRUMENT. Reads and records the full state of every component at every tick, satisfying the inspectability requirement (FR-13, NFR-1). It is passive: it changes nothing, and it sees everything. It is the microscope trained permanently on the transparent brain, and it is what makes the System a scientific instrument rather than a black box.
+
+COMPONENT 10, THE PERTURBATION INTERFACE. Permits an experimenter to lesion a construct, cut an interface, or shift a neuromodulator level, satisfying FR-14. It is how a simulated disease or drug is administered.
+
+COMPONENT 1 additionally holds the large-scale networks (Section 2.10) as named views over its regions and the cognitive systems and pathways (Section 2.11) as named subgraphs over the connection graph; adding a network or a pathway means adding a named grouping, not a new update rule. The glia are held as modulatory entries read by the plasticity engine (Component 8), not as regions with state.
+
+A3.2bis THE SYSTEM DIAGRAM
+
+The SPARC Architecture phase calls for a system diagram. The following diagram, in the text-based Mermaid notation SPARC recommends, shows the ten components and the flow of one tick. It commits to no language; it shows only shape.
+
+graph TD
+  SCH[Scheduler / Tick Engine] --> DRV[Drive System]
+  DRV -- reward --> BUS[Neuromodulatory Broadcast Bus]
+  BUS --> REG[Construct Registry: regions, interfaces, molecules, networks, systems]
+  GRAPH[Connection Graph: directed and broadcast interfaces] --> REG
+  REG -- first pass: compute next state --> REG
+  REG -- second pass: commit state --> SEL[Action Selector]
+  OVR[Override Controller] --> SEL
+  SEL --> PLAS[Plasticity Engine]
+  GLIA[Glia: tripartite synapse] --> PLAS
+  PLAS --> GRAPH
+  OBS[Observer / Instrument] -.reads everything.-> REG
+  OBS -.reads everything.-> BUS
+  OBS -.reads everything.-> GRAPH
+  PERT[Perturbation Interface] -.lesion, cut, shift.-> REG
+
+Read the solid arrows as the causal flow of a tick, top to bottom: the scheduler starts the tick, the drives set the reward, the bus broadcasts it, the registry updates every construct in two passes, the selector releases one action under the override controller, and the plasticity engine (gated by the glia) writes the new weights back to the connection graph. Read the dotted arrows as the observer and perturbation interface, which touch everything without being part of the causal flow: the observer only reads, and the perturbation interface only injects an experimenter's intervention. The diagram is the Arbitrated Federation of Chapter 12 in one picture.
+
+A3.3 HOW THE COMPONENTS INTERACT: ONE TICK
+
+The data flow of a single tick, which the architecture must realize, is as follows.
+
+The scheduler begins the tick.
+
+The drive system reads the body state and updates every drive error, and computes the reward.
+
+The neuromodulatory bus is updated: the reward becomes dopamine, arousal becomes norepinephrine, and so on.
+
+Then the scheduler runs the first pass: every construct reads its inputs from the connection graph and the bus, and computes its next state by its archetype rule.
+
+The scheduler runs the second pass: every next state is committed.
+
+The action selector receives the candidate actions and releases one, subject to the override controller.
+
+The plasticity engine updates the connection weights.
+
+The observer records everything.
+
+The scheduler ends the tick.
+
+This ordering is itself a specification, and it is not arbitrary.
+
+Drives before modulators, because the reward sets the dopamine.
+
+Modulators before construct updates, because the gain and the third factor must be current.
+
+First pass fully before second pass, because the update is synchronous.
+
+Action selection after the updates, because it selects on the new state.
+
+Plasticity after selection, because learning depends on what was done.
+
+An implementer who reorders these steps will have built a different machine, and the architecture states the order precisely for that reason.
+
+A3.4 THE DATA MODEL
+
+The System's data, expressed without commitment to any language or storage format, is the following.
+
+A CONSTRUCT has: a name; a kind (region, interface, or molecule); an archetype (one of the six, or field, for a molecule); a state (its activation, gain, adaptation, and any tuning or phase); a set of parameters; and its specification block.
+
+An INTERFACE, additionally, has: a source construct; a destination construct; a weight; a delay; a transmissive-or-computational flag; and, if computational, a reference to the transform it performs.
+
+A MOLECULE, additionally, has: a source construct or set of sources; a set of target territories; and a current level per target.
+
+A DRIVE has: a monitored body variable; a set-point; a current error; a previous error; and an override rank.
+
+The BODY STATE has: the current value of every monitored variable (temperature, glucose, oxygen, and the rest), which the drives read and which the System's actions and the passage of time change.
+
+A RECORD, produced by the observer each tick, has: the tick number; and a snapshot of every construct's state, every interface's weight, every drive's error, and every neuromodulator's level.
+
+A NETWORK has: a name; a list of member constructs; a set of subscribe-and-publish couplings among them; and a functional signature (such as its characteristic anticorrelation with another named network). A network is a VIEW over the registry, not a separate store; it owns no state its members do not.
+
+A SYSTEM or PATHWAY has: a name; an ordered list of the constructs and interfaces it traverses; and, where it is a loop (the Papez circuit, a cortico-basal-ganglia-thalamo-cortical loop), a marker that it closes on itself. It is a named SUBGRAPH over the connection graph.
+
+A GLIAL PARTICIPANT (astrocyte, microglia, oligodendrocyte) and the TRIPARTITE SYNAPSE have: a name; a target (a synapse, a region, or an axon); and a modulatory function on the plasticity engine (gating the learning third factor, pruning a connection, or setting a conduction delay). They carry no activation of their own.
+
+Every interface and every molecule additionally carries a MODE flag: DIRECTED (a send-and-receive channel with one subscriber) or BROADCAST (a publish-and-subscribe topic whose subscribers are defined by receptor), per FR-17.
+
+Note what this data model already is.
+
+It is very close to the Causalontology data structure discussed in Appendix 6: constructs are continuants, their states are token states, the interfaces are conduits, and the tick-by-tick records are token occurrences. A large-scale network is a continuant grouping of continuants; a cognitive system or pathway is a chain (or a closing loop) of causal-relation-objects over those conduits; and the send-and-receive versus publish-and-subscribe mode of an interface is exactly the difference between a directed conduit and a broadcast one.
+
+The architecture and the data standard were designed to meet, and Appendix 6 develops the meeting.
+
+A3.5 THE TECHNOLOGY STACK, DEFERRED
+
+In an ordinary SPARC project, the Architecture phase selects the technology stack, and this appendix DELIBERATELY DECLINES that one activity, the single conscious deviation from the standard SPARC Architecture phase.
+
+Here it deliberately does not, because substrate independence (NFR-3) is a first-class goal, and the whole point of Appendix 6 is that the stack is a free choice the builder makes.
+
+The architecture commits only to the SHAPE of the System, the ten components and their interactions, which any stack must realize.
+
+The candidate stacks, a Causalontology data layer, a Python Minimum Viable Product, and a PrologAI implementation, are described in Appendix 6, and the architecture is compatible with all of them by design.
+
+A3.6 SCALABILITY, ROBUSTNESS, AND FAILURE POINTS
+
+The architecture meets the scalability requirement (NFR-4) by its grain: at one hundred constructs, a tick is a hundred update calls, trivial on a personal computer, and the design permits any construct to be internally refined to finer grain without changing the scheduler, the bus, or the graph.
+
+The System scales up by refining constructs, not by rebuilding the frame.
+
+The architecture is robust by its modularity: a fault in one construct is contained to that construct, exactly as the encapsulation thesis predicts, and the observer will show precisely where a fault occurred, because nothing is hidden.
+
+The honest failure points are three.
+
+The synchronous two-pass update is the correctness-critical section, and fusing the passes is the most likely and most damaging error.
+
+The neuromodulatory bus is a global shared resource, and while the biology sanctions it, an implementation must ensure the bus is read consistently within a tick.
+
+And the action selector's invariant, that it never invents an action, must be enforced in code and tested, because a selector that begins to generate is the homunculus creeping back in, and the architecture must forbid it structurally.
+
+A3.7 REFLECTION
+
+The architecture is, almost line for line, the Arbitrated Federation of Chapter 12 rendered as components.
+
+This is the strongest possible validation that the science and the specification are one work: the answer to the book's deepest question, is there an orchestrator, became the System's top-level design without translation.
+
+There is a scheduler that keeps time but has no preferences, a bus that sets global state without knowing what is computed, a selector that arbitrates without generating, and an override controller ranked by vitality.
+
+No central controller appears, because the science forbade one, and the architecture that omits it is the architecture the science demanded.
+
+The single most important architectural decision is the passivity of the observer and the completeness of what it sees.
+
+It is what makes this System, unlike the dominant models, a scientific instrument: a mind that can be watched, at every level, at every tick, without disturbing it.
+
+That property is not a feature added to the architecture; it is the reason the architecture was worth building.
+
+
+
+KONNECTOME REALIZATION LOG
+
+Slice 1 - the heartbeat - 2026-07-20 - pack tick_engine, version 0.1.0.
+
+Component 2, the Scheduler and Tick Engine, is realized by the tick_engine pack. Component 1, the Construct Registry, and Component 9, the Observer, are realized minimally as the construct list and the recorded tick trace respectively.
+
+Gates at this slice: 7 of 7 tick_engine Prolog Unit (PLUnit) tests pass; the naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited; konnectome reuses them through the library path.
+
+This log grows one entry per code slice, per the Tenth Commandment. The full DSPARCD Fileset (the SPARCD Fileset until the Constitution's version 8) was bumped in lockstep from version 1 to version 2, and the version 1 files were archived under docs/archive/ in the same change, per the Ninth Commandment.
+
+
+KONNECTOME REALIZATION LOG - SLICE 2
+
+Slice 2 - the six archetype rules and the first Causalontology thought - 2026-07-20 - packs archetype (0.1.0) and observer (0.1.0).
+
+Component 9, the Observer, now records each tick as a Causalontology token_occurrence via the reused causal_core pack (observer pack). The six archetype rules that constructs run are realized in the archetype pack.
+
+Gates at this slice: archetype 7 of 7 and observer 6 of 6 Prolog Unit (PLUnit) tests pass; naming, layer, and layer-binding gates report zero violations; the Causalontology 119-vector conformance suite passes 119 of 119. Nothing in PrologAI or Causalontology was edited; konnectome reuses causal_core through the library path.
+
+
+KONNECTOME REALIZATION LOG - SLICE 3
+
+Slice 3 - the connection graph - 2026-07-20 - pack connection_graph (0.1.0).
+
+Component 3, the Connection Graph, is realized by the connection_graph pack: the connectome as data, directed weighted interfaces marked transmissive or computational, driving source and relay constructs.
+
+Gates at this slice: connection_graph 4 of 4 Prolog Unit (PLUnit) tests pass (tick_engine 7, archetype 7, observer 6 unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited; connection_graph reuses the archetype pack.
+
+
+KONNECTOME REALIZATION LOG - SLICE 4
+
+Slice 4 - the reward loop - 2026-07-20 - packs neuromodulator_bus (0.1.0) and drive_system (0.1.0).
+
+Component 4, the Neuromodulatory Bus, and Component 5, the Drive System, are realized by the neuromodulator_bus and drive_system packs.
+
+Gates at this slice: neuromodulator_bus 4 of 4 and drive_system 5 of 5 Prolog Unit (PLUnit) tests pass (the earlier four packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 5
+
+Slice 5 - the action selector - 2026-07-20 - pack action_selector (0.1.0).
+
+Component 6, the Action Selector, is realized by the action_selector pack, enforcing the never-invent invariant of Section A3.6.
+
+Gates at this slice: action_selector 6 of 6 Prolog Unit (PLUnit) tests pass (the earlier six packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 6
+
+Slice 6 - the plasticity engine - 2026-07-20 - pack plasticity_engine (0.1.0).
+
+Component 8, the Plasticity Engine, is realized by the plasticity_engine pack, applying the three-factor rule to the connection graph's weights.
+
+Gates at this slice: plasticity_engine 5 of 5 Prolog Unit (PLUnit) tests pass (the earlier seven packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 7
+
+Slice 7 - completing the architecture - 2026-07-20 - packs override_controller (0.1.0) and perturbation_interface (0.1.0).
+
+Component 7, the Override Controller, and Component 10, the Perturbation Interface, are realized by the override_controller and perturbation_interface packs. All ten components of Section A3.2 now have a realization.
+
+Gates at this slice: override_controller 4 of 4 and perturbation_interface 4 of 4 Prolog Unit (PLUnit) tests pass (the earlier eight packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 8
+
+Slice 8 - one running tick - 2026-07-20 - pack cognitive_cycle (0.1.0).
+
+The one-tick data flow of Section A3.3 is realized by the cognitive_cycle pack, which composes all ten components in the load-bearing order; this also completes Component 1, the Construct Registry, as the world it carries.
+
+Gates at this slice: cognitive_cycle 4 of 4 Prolog Unit (PLUnit) tests pass (the earlier ten packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 9
+
+Slice 9 - hardening the loop - 2026-07-20 - packs connection_graph (0.2.0), drive_system (0.2.0), cognitive_cycle (0.2.0).
+
+The one-tick data flow of Section A3.3 now reads the bus for gain before the construct update, generates action proposals from the drives, and lets the released action move the body.
+
+Gates at this slice: connection_graph 6 of 6, drive_system 9 of 9, and cognitive_cycle 4 of 4 Prolog Unit (PLUnit) tests pass (the other eight packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 10
+
+Slice 10 - thought combination - 2026-07-20 - pack thought_combination (0.1.0).
+
+The thought_combination pack sits beside the running mind as the way konnectome forms combined thoughts as Causalontology Causal Relation Objects; a CRO's effect reused as another's cause is a chain of thought, and a branching set is a tree of thought.
+
+Gates at this slice: thought_combination 7 of 7 Prolog Unit (PLUnit) tests pass (the earlier eleven packs unchanged); naming, layer, and layer-binding gates report zero violations; the Causalontology 119-vector conformance passes 119 of 119. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 11
+
+Slice 11 - other minds and prediction, the wall-finding build - 2026-07-22 - packs other_minds (0.1.0) and prediction_loop (0.1.0).
+
+These two packs sit beside the ten architecture components, not among them: other_minds realizes the Rung Four theory-of-mind trial by reusing PrologAI's theory_of_mind pack (over the same Causalontology causal_core), and prediction_loop realizes the Rung One expectation-and-comparator loop by reusing the comparator archetype. Both are layer-zero reuses with no konnectome dependency, exactly as the observer reused causal_core. The architecture gains a social model and a predictive loop while its ten-component skeleton, its tick ordering, and its bus are untouched; what it could not gain is a place in the shared data model of Section A3.4 for the belief or the prediction, since that model maps onto the eighteen Causalontology kinds and none of them is doxastic or predictive.
+
+Gates at this slice: other_minds 8 of 8 and prediction_loop 10 of 10 Prolog Unit (PLUnit) tests pass (the earlier twelve packs unchanged, 69 tests); naming, layer, and layer-binding gates report zero violations; the Causalontology 119-vector conformance suite is untouched and green. Two walls were hit, recorded as Wall-1 and Wall-2, and ROUTED to the Causalontology change order (Sections B and A). Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 12
+
+Slice 12 - the closure: minting the new kinds - 2026-07-22 - packs other_minds (0.2.0) and prediction_loop (0.2.0).
+
+These two packs still sit beside the ten architecture components, not among them, exactly as at slice 11 - but the shared DATA MODEL of Section A3.4, which maps konnectome's durable thoughts onto Causalontology kinds, has gained the three kinds it lacked. Slice 11 recorded that none of the eighteen kinds was doxastic or predictive, so neither the belief nor the prediction could take a place in that model. Causalontology 4.0.0 lifted the closed list to twenty-one kinds - adding a doxastic ATTITUDE kind and the PREDICTED_OCCURRENCE and PREDICTION_ERROR kinds, the token tier now seven - and PrologAI's causal_core 1.1.0 made them mintable through the same layer-zero library path the observer already used. other_minds (0.2.0) now writes the attributed belief into the data model as an attitude record - holder, attitude_type, content - including the false belief that coexists with the world's contrary state_assertion and the nested attribution; prediction_loop (0.2.0) writes the forecast, the outcome, and the signed discrepancy as predicted_occurrence, token_occurrence, and prediction_error records. The ten-component skeleton, the tick ordering, and the neuromodulatory bus are untouched; what the architecture gained is a shared, exportable home in Section A3.4 for the social and predictive state the runtimes already held. The one architectural obstacle particular to this slice - PrologAI's causal_core lagging the released standard, so the new kinds could not be minted - was Wall-3, routed to the PrologAI change order and closed the same day by causal_core 1.1.0.
+
+Gates at this slice: other_minds 10 of 10 and prediction_loop 16 of 16 Prolog Unit (PLUnit) tests pass (the earlier twelve packs unchanged); naming, layer, and layer-binding gates report zero violations; the Causalontology conformance suite is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. Wall-1, Wall-2, and Wall-3 are CLOSED. Causalontology and PrologAI were extended through their own gated change orders, never edited directly.
+
+
+KONNECTOME REALIZATION LOG - SLICE 13
+
+Slice 13 - the provenance layer: the mind grades and, when wrong, disowns its own thoughts - 2026-07-26 - pack self_provenance (0.1.0).
+
+The self_provenance pack sits beside the ten architecture components, not among them - exactly as other_minds, prediction_loop, and thought_combination do. It is a layer-zero reuse of PrologAI's library(causal_core) with no konnectome dependency, so it adds no update rule, seizes no place in the tick order of Section A3.3, and never touches the neuromodulatory bus. What it adds is a PROVENANCE layer OVER the shared data model of Section A3.4. That data model always assumed this layer - its own note reads that every claim carries its provenance as a signed assertion - but konnectome had not yet exercised it over its own records. The observer (Component 9) RECORDS what happened; slice 12 gave the belief and the forecast a home as attitude, predicted_occurrence, and prediction_error records; slice 13 now lets the mind ASSERT about those records under its own source identity, GRADE the evidence on the standard's ordered scale, and RETRACT an assertion when a later tick disconfirms it. The distinction Rule 25 draws is honoured in the architecture: the HOLDER of an attitude (a modelled agent inside the data model) and the SOURCE that signs an assertion about it (konnectome's own identity) are different things, and the tests demonstrate them differing. The assertion and retraction records are content-addressed through the same layer-zero library path the observer already used, so the provenance layer is a shared, exportable home for the mind's graded, self-corrected stances, added without disturbing the ten-component skeleton at all.
+
+The one architectural note particular to this slice is an honest deployment boundary, not a wall: a real Ed25519 signature needs a private key, which Section A5.5's no-secret rule and Specification Constraint 3 bar from the code, so konnectome carries its public source identity and defers the signing act to deployment. The signature is not identity-bearing, so the records are content-addressed and shareable without it; a strict consumer quarantines them as unsigned until the deployment key-holder signs them.
+
+Gates at this slice: self_provenance 17 of 17 Prolog Unit (PLUnit) tests pass (the earlier fourteen packs unchanged, 95 tests; 112 in total); naming, layer, and layer-binding gates report zero violations; the Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; the slice-12 honest non-closure is CLOSED. Nothing in PrologAI or Causalontology was edited; self_provenance reuses causal_core through the library path.
+
+
+KONNECTOME REALIZATION LOG - SLICE 14
+
+Slice 14 - the capstone: the mind runs, and its own records tell the story - 2026-07-26 - pack capstone_demonstration (0.1.0), and the first runnable entry point, bin/run_capstone_demonstration.sh.
+
+The capstone sits beside the ten architecture components, not among them - the same seat other_minds, prediction_loop, thought_combination, and self_provenance took - and it is the most emphatic case yet of that seat, because it touches the architecture ONLY through the front door. It reads the running mind exclusively through the cognitive cycle's world and per-tick summaries; it never reaches into the bus, never reorders the one-tick data flow of Section A3.3, and never adds an update rule. Its boot world is a declaration, not a mechanism: the body, the drive, the constructs, the learnable interface, the armed override, and the fixed simulation start are stated as data, and everything that then happens is the ten components doing what the architecture already says they do. What the slice adds to the architecture is an ENTRY POINT: bin/run_capstone_demonstration.sh, the first script in bin/ that runs the mind rather than checking it, built on the same library-path discipline as the four gates. The Rule 25 distinction the data model draws is narrated where the architecture enforces it: the story prints the modelled holder's identifier beside the signing source's identifier and states that they differ. The capstone declares layer zero and imports only its konnectome siblings through the library path, so the layer gates hold without exception.
+
+Gates at this slice: capstone_demonstration 20 of 20 Prolog Unit (PLUnit) tests pass (the earlier fifteen packs unchanged, 112 tests; 132 in total); naming, layer, and layer-binding gates report zero violations; the Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins, re-measured this slice. No new wall was hit and no new honest non-closure was recorded; the slice-13 deployment-signature non-closure stands, and the story itself narrates it. Nothing in PrologAI or Causalontology was edited; the capstone reads its siblings through the library path.
+
+
+KONNECTOME REALIZATION LOG - SLICE 15
+
+Slice 15 - Rung Two begins: words grounded in lived experience, and pretend under quarantine - 2026-07-26 - packs symbol_exchange (0.1.0) and pretend_play (0.1.0).
+
+Both packs sit beside the ten architecture components, in the reuse seat this architecture has now made a pattern: a thin konnectome wrapper importing a finished PrologAI pack through the library path, exactly as other_minds sits over theory_of_mind and self_provenance over causal_core. symbol_exchange reuses the language pack's word bank - hearing a word writes a trace into the reused store, which is precisely how an incoming word changes the mind's state - and reads the mind itself only through the front door, stepping cognitive_cycle_step tick by tick to collect lived conditions and reading the drive's distance from its set-point through drive_system_error. pretend_play reuses the imagination pack's five-reality quarantine (observed, desired, expected, imagined, recalled), whose discipline is architectural in exactly this appendix's sense: a pretend rollout auto-seals everything it visits into the imagined reality, the observed reality is never written by pretending, and the only crossing is a deliberate, auditable promotion - onto which konnectome adds one rule of its own, a guard that refuses promotion into observed outright, because in this architecture only the world's own reveal writes the observed record. Neither pack touches the neuromodulatory bus, the tick order of Section A3.3, or any update rule; neither adds a construct kind; both declare layer zero and pass the three gates. The record-level seat is equally conservative: a pretend relation is minted as an ordinary type-tier causal relation object through thought_combination - a generic that claims no happening - and the stance on it goes through self_provenance at simulation grade, so the shared data model of Section A3.4 needed nothing new.
+
+Gates at this slice: symbol_exchange 18 of 18 and pretend_play 12 of 12 Prolog Unit (PLUnit) tests pass (the earlier sixteen packs unchanged, 132 tests; 162 in total); naming, layer, and layer-binding gates report zero violations; the Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; the Section C watch was kept and its result is recorded in the ledger: the per-claim machinery sufficed, no world-level sharing need arose, and Section C remains held. Nothing in PrologAI or Causalontology was edited; the rung reuses the language and imagination packs through the library path, exactly as other_minds reuses theory_of_mind.
+
+
+KONNECTOME REALIZATION LOG - SLICE 16
+
+Slice 16 - Rung Four deepens: the social-pain test and the empathy trial - 2026-07-26 - pack empathy (0.1.0).
+
+The empathy pack sits beside the ten components in the established reuse seat, and its architectural content is a claim about which components it does NOT add: there is no eleventh component for emotion. The social-pain circuit is Components 5 and 4 doing what Section A3.2 already says they do - the Drive System registering a violated set-point and the Neuromodulatory Bus broadcasting the signed consequence - over a drive whose monitored variable happens to be social. The manuscript's own anatomy note is honoured structurally: the comparator region that fires on pain fires on social rejection, so konnectome routes the rejection through the same comparator-shaped error computation rather than a parallel path, and the tests prove the outputs identical. The empathy trial threads four components in their canonical order - the resonated body feeds the Drive System, the drives propose, the Action Selector releases exactly one candidate, the body responds - and the Override Controller keeps its place above them all: a vital drive in distress still seizes control from the helping action, so the safety architecture is indifferent to whether the pressure below it is physical or social. At the data-model seat, the modelled distress travels as an attitude record of the existing 4.0.0 enumeration (fears), the stance and retraction as the existing provenance kinds; the shared model of Section A3.4 needed nothing new, and no cousin was touched.
+
+Gates at this slice: empathy 17 of 17, drive_system 10 of 10, and symbol_exchange 19 of 19 Prolog Unit (PLUnit) tests pass (the other sixteen packs unchanged; 181 in total), the counts carrying two review-born fixes and one paid debt: drive_system (0.3.0) now caps the homeostatic step at its set-point, so a fractional distance settles exactly and help can never overshoot into harm - pinned by its own regression test; naming, layer, and layer-binding gates report zero violations; the Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; the remaining ascent of the rung (the appraisal and regulation pilots, and the capstone joining the new milestones into its telling) is recorded as pending, not hidden. Nothing in PrologAI or Causalontology was edited; empathy reads its siblings through the library path.
+
+
+KONNECTOME REALIZATION LOG - SLICE 17
+
+Slice 17 - the reality-discipline gate: the rule made checkable - 2026-07-26 - bin/check_reality_discipline.sh (no pack version moved).
+
+The wrapper seat this architecture made a pattern - a thin konnectome pack importing a finished PrologAI pack through the library path, as other_minds sits over theory_of_mind, self_provenance over causal_core, and pretend_play over imagination - had one seam the reviews exposed: the seat was exclusive by convention only. Any pack could import the reused imagination predicates and cross realities around the wrapper's refusal. This slice closes the seam architecturally, with the same instrument the strict layer rule already uses: a gate. bin/check_reality_discipline.sh joins the naming, layer, and layer-binding gates as the fourth standing check, and it makes the pretend_play seat exclusive at the level a build can check: every textual road to the reused machinery - the predicate names, the imagination module qualifier, and the library(imagination) import - is refused in every file of every other pack. A reach that constructs its module and its call at runtime leaves no textual trace, and no textual gate can see it; that residue is named in the ledger and remains a discipline - now one that ordinary code cannot break silently. The architecture's doorways are now all of one kind - named, guarded, and checkable.
+
+Gates at this slice: no pack changed and no test count moved - the suite stands at one hundred eighty-one Prolog Unit (PLUnit) tests across nineteen packs, all green. The naming, layer, and layer-binding gates report zero violations, and they are joined by a fourth: the new reality-discipline gate (bin/check_reality_discipline.sh) reports zero violations, and was proven able to fail - a deliberate violation was injected, caught, and removed before its first clean run was accepted. The Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited - the imagination pack remains exactly as reused, and the discipline that fences it is konnectome's own.
+
+
+KONNECTOME REALIZATION LOG - SLICE 18
+
+Slice 18 - the capstone speaks and feels: Rung Two's first words and Rung Four's deepening join the one runnable story - 2026-07-26 - pack capstone_demonstration (0.2.0).
+
+Architecturally this slice moves a single seat and adds nothing beneath it. The capstone_demonstration pack - the top demonstration seat, the one component that imports every other through the library path and owns no cognitive machinery of its own - rises from version 0.1.0 to 0.2.0, and the whole of that bump is two new scenes wired into its narration. No new pack is created; no new predicate is added to any mind-bearing component; the Rung Two chapter calls the symbol_exchange and pretend_play packs slice 15 built, and the Rung Four chapter calls the empathy and drive_system packs slice 16 deepened, exactly as they already sit, through the same library path by which the capstone already reached its other siblings. The seat's defining constraint is preserved and is the point of the whole design: the demonstration component is downstream of everything and upstream of nothing, so wiring two more sibling calls into it cannot change a single behaviour of the mind it narrates - it can only reveal more of what the mind already does. The safety ordering the architecture guarantees is not re-implemented for the story either; the empathy scene shows respiration's override seizing control over social helping because that override lives in the selector the capstone merely calls, not in any code the capstone owns. What the architecture does NOT gain this slice is as important as what it shows: no new seat, no new doorway between packs, and no bespoke pathway added beside the drives to carry the new feeling - the capstone remains a reader of its siblings, and the four standing gates that fence the seats it reads are untouched.
+
+Gates at this slice: capstone_demonstration thirty-six of thirty-six Prolog Unit (PLUnit) tests pass (the other eighteen packs unchanged, one hundred sixty-one tests; one hundred ninety-seven in total across nineteen packs, all green); the naming, layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited - the capstone reads its siblings through the library path.
+
+
+KONNECTOME REALIZATION LOG - SLICE 19
+
+Slice 19 - Rung Four finished: the appraisal and regulation pilots - 2026-07-26 - packs situation_appraisal (0.1.0) and arousal_regulation (0.1.0).
+
+Both packs take their seats at layer zero by reuse rather than by extension, which is the architectural point of the slice. situation_appraisal leans entirely on the drive system, reading its set-point error through drive_system_error, and records its verdict as an attitude of the standard's own closed enumeration graded by self_provenance; it stands up no eleventh architecture component for emotion and mints no new Causalontology kind, because the appraisal is assembled wholly from an attitude, a provenance, and a drive reading that all already exist. arousal_regulation takes its seat on Architecture Component Four, the neuromodulatory bus, and carries the aroused state there as norepinephrine, letting the same bus other packs already speak on hold the single scalar it regulates; it too adds no component and no kind, and it borrows the drive system's own capped-step homeostasis rather than inventing a decay of its own. Each pack reaches its siblings - the drive system, the standard, the provenance layer, the neuromodulatory bus - only across the library path, so every pack it depends on is consulted where it lives and none of them is touched: no cousin is edited, and no new wall is raised between the layers.
+
+Gates at this slice: situation_appraisal twelve of twelve and arousal_regulation twelve of twelve Prolog Unit (PLUnit) tests pass (the earlier nineteen packs unchanged; two hundred twenty-one in total across twenty-one packs, all green); the four standing gates - naming, layer, layer-binding, and reality-discipline - report zero violations; the Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins; no new wall was hit; and no cousin was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 20
+
+Slice 20 - the pilots' review debts paid: appraisal's rounding boundary and regulation's finiteness - 2026-07-26 - packs situation_appraisal (0.1.1) and arousal_regulation (0.1.1).
+
+Slice 20 pays the review debt slice 19 left on the record. The independent adversarial review of the appraisal and regulation pilots, run after they merged, confirmed three findings, and each is now fixed at its root and pinned by a permanent test. First, the appraisal pilot's change reader compared a difference of two independently-rounded set-point errors against exact zero, so two situations equidistant on opposite sides of a set-point - a mathematically neutral change - were read as a good or bad turn on a rounding residue near one part in ten thousand trillion, and, worse, minted as an owned attitude the neutral case is meant to refuse; a rounding-noise band now absorbs that residue, so an equidistant float change reads neutral and is correctly refused before it can become a false record. Second, the regulation pilot accepted a non-finite arousal level, and an infinite level never shrinks toward baseline, so the return would never terminate; the single gatekeeper now requires a finite level and refuses infinity by name. Third, the regulation pilot's whole-number tick rule had no test for its fractional-count refusal; it has one now. No demonstrated behaviour changed - every earlier claim still holds number for number, and every prior test still passes - and the two pilot packs move to patch version 0.1.1. The lesson the method keeps: a finding confirmed by an adversarial review is fixed at its root and pinned, even when the defect is latent - here reachable only by a fractional body value or a hand-built infinity that no ordinary run produces.
+
+Gates at this slice: situation_appraisal fourteen of fourteen and arousal_regulation fourteen of fourteen Prolog Unit (PLUnit) tests pass (the four new tests pin the three confirmed findings; the other nineteen packs unchanged; two hundred twenty-five in total across twenty-one packs, all green); the naming, layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 21
+
+Slice 21 - Rung Three opened: the concrete-reasoning trials - 2026-07-26 - packs concrete_operations (0.1.0) and cause_and_effect (0.1.0).
+
+WHERE THE NEW PACKS SIT, AND WHAT THEY DO NOT ADD. Both packs are layer-zero seats, and both are thin wrappers over machinery that already stood. NO ELEVENTH COMPONENT was raised for reasoning: the ten components of Appendix 3 are unchanged, and neither pack adds an update rule to the tick. NO NEW CAUSALONTOLOGY KIND was minted: the twenty-one kinds of specification 4.0.0 already carry everything reasoning needed to say. This is the same architectural discipline that finished Rung Four - a faculty is realized by REUSE, or its claim is not yet earned.
+
+WHAT EACH PACK REUSES. concrete_operations reuses other_minds for the record family that owns a derived conclusion, and self_provenance for the grading of it. cause_and_effect reuses thought_combination for the causal records that ARE its evidence, causal_core (PrologAI's Causalontology core, borrowed and never forked) to re-derive a record's content address and so tell a minted record from a forgery, other_minds for the record family that owns an intention, and self_provenance for the grading. The reasoning itself - the derivation walk, the sorting, the ordering, the conservation verdict, the chain search, the breadth-first plan search - is the only new machinery, and all of it is ordinary code over data the caller supplies, holding no state between calls.
+
+THE ARCHITECTURAL POINT OF THE CAUSAL TRIAL. The causal record was built in slice 10 for combining thoughts, and it turns out to be exactly the instrument the concrete-reasoning rung needs to tell a cause from a coincidence. The architecture did not grow to meet the rung; the rung found what the architecture already had. That is the ladder working as designed.
+
+A SEPARATION KEPT DELIBERATELY. The logic trials and the causal trials sit in two packs, not one. They share no state and no predicate; each can be read, tested, and reasoned about alone. The split follows the same rule that put appraisal and regulation in separate packs at slice 19: one pack, one faculty, so a reader can find the whole of a thing in one file.
+
+Gates at this slice: concrete_operations twenty-six of twenty-six and cause_and_effect twenty-five of twenty-five Prolog Unit (PLUnit) tests pass (the earlier twenty-one packs unchanged; two hundred seventy-six in total across twenty-three packs, all green); the naming, layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 22
+
+Slice 22 - Rung Three finished in its trials: the two deferred halves built - 2026-08-07 - packs category_formation (0.1.0) and quantity_model (0.1.0).
+
+WHERE THE NEW PACKS SIT, AND WHAT THEY DO NOT ADD. Both packs are layer-zero seats, and both are thin wrappers in the house pattern. NO ELEVENTH COMPONENT was raised for the two trial halves, and NO NEW CAUSALONTOLOGY KIND was minted: the twenty-one kinds of specification 4.0.0 already carry everything the finished trials needed to say.
+
+WHAT EACH PACK REUSES. category_formation is the first konnectome pack to reuse PrologAI's concept_formation engine - the inducer that watches a stream of feature bundles and coins a category for every group whose shared core meets a floor - borrowed unmodified through the library path, exactly as causal_core has been since slice 10. It also reuses the sibling concrete_operations classifier for the trial's flexible re-sort (the re-sort IS that classifier), and other_minds with self_provenance for the owned, graded conclusion. quantity_model reuses other_minds and self_provenance the same way; its small representation is native, and that choice is recorded honestly: PrologAI's quantity pack counts and groups a PERCEIVED collection, while this trial needs a PERSISTED representation that transformations act on - a different instrument, so nothing was forced into reuse for reuse's sake.
+
+THE TRANSLATION BOUNDARY, KEPT DELIBERATELY NARROW. The reused inducer mints terse concept identifiers (con_1, con_2, ...), which the Whole-Word System bans from konnectome's own vocabulary. The wrapper renames them to formed_category_1, formed_category_2, ... at one boundary predicate - the single place a terse name is touched - and refuses by name any identifier the boundary does not recognize, so a future change in the engine's naming scheme announces itself instead of failing quietly. The learning episode likewise OWNS the engine's store: the store is cleared at both ends of every episode, so no state leaks into an episode from a bystander and none leaks out - a bystander using the engine directly must not expect its items to survive.
+
+A SEPARATION KEPT DELIBERATELY. The two trial halves sit in two packs, not one, following the rule that put appraisal and regulation apart at slice 19 and the logic and causal trials apart at slice 21: one pack, one faculty, so a reader can find the whole of a thing in one file. concrete_operations keeps its own machinery - the re-sort half of classification and the schematic name-list verdict - with its header and manifest re-sized at version 0.1.1 to point each deferred half at the sibling that realized it, and a redirect note on the schematic verdict itself naming quantity_model as the predicate the book's trial now rests on.
+
+Gates at this slice: category_formation twenty-six of twenty-six and quantity_model twenty-nine of twenty-nine Prolog Unit (PLUnit) tests pass, and concrete_operations' twenty-six stay green under its re-sized header (the earlier packs otherwise unchanged; three hundred thirty-one in total across twenty-five packs, all green); the naming, layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 23
+
+Slice 23 - The story learns its owed chapters: Rung Three told, and Rung Four finished in the telling - 2026-08-07 - pack capstone_demonstration (0.3.0).
+
+WHERE THE GROWTH SITS, AND WHAT IT DOES NOT ADD. No new pack, no new component, no new Causalontology kind, and no new update rule: the capstone is a narrator, and a narrator grows by reusing more of what already stands. Its manifest now requires six more siblings - concrete_operations, cause_and_effect, category_formation, quantity_model, situation_appraisal, arousal_regulation - and every one of them is read through its public interface only, exactly as the earlier chapters read theirs.
+
+THE ARCHITECTURAL DISCIPLINE OF A CHAPTER. A chapter is a single predicate that runs the reused engines live, compares their output strictly against the claims it is about to make, and fails - refusing to tell the story at all - if the world and the words disagree. The narration lines that carry minted identifiers are formatted FROM the records; the narration lines that describe fixed shapes (the three derivation steps, the two formed categories) are printed as fixed English GUARDED by a strict equality over the engine's live output immediately above them, so a drifted engine silences the story rather than letting it lie. The four take-backs the story now prints - the kind world's supersession, the cruel world's retraction, the misattribution's withdrawal, and the passed threat's withdrawal - are four distinct content-addressed records, and the suite pins the count deliberately, as it has at every raise since slice 14.
+
+THE ONE BOUNDARY WORTH NAMING. The reasoning chapter's category formation resets the reused inducer's store at both ends of its episode - the same episode-owns-the-store discipline the category_formation pack declares - and no other chapter or pack reads that store, so the reset cannot reach anything a sibling relies on. The story was told twice in one process and came back byte-identical, and that determinism is now pinned by the suite.
+
+Gates at this slice: capstone_demonstration forty-four of forty-four Prolog Unit (PLUnit) tests pass (the earlier packs unchanged; three hundred thirty-nine in total across twenty-five packs, all green); the naming, layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 24
+
+Slice 24 - Rung Five opened as groundwork: the body interface, and the sense-act loop through the honestly-named simulated body, the rung itself not claimed - 2026-08-07 - packs simulated_body (0.1.0) and body_interface (0.1.0).
+
+WHERE THE NEW PACKS SIT, AND WHAT THEY DO NOT ADD. Both packs are layer-zero seats. simulated_body is deliberately a WORLD, not a mind: it imports no sibling, holds no state between calls, and every predicate is a pure map from one body term to the next - which is what makes every trial over it replay byte-identically. body_interface is the seam: it reuses the stand-in machine, the drive system's unchanged set-point machinery, the action selector's one-released-action discipline, and the record family with the provenance scale - and it adds NO update rule, only two declared mapping constants (the pressing threshold and the reflex salience) and one fixed candidate order (drives before reflexes, pinned at the tie). No eleventh component was raised for embodiment, and no new Causalontology kind was minted.
+
+THE SEAM AS THE POINT. The book's three connections are the architecture of this slice: senses, homeostasis, and action are each ONE mapping predicate over the stand-in machine's public interface, so that the day a real machine arrives, the stand-in is what gets replaced and the seam is what remains. The homeostasis mapping is the identity, made explicit rather than implicit, because the whole force of "a low battery is felt as hunger" is that the SAME drive_system_error reads it - no translation layer, no special energy pathway, one pain machinery for heat, belonging, and charge alike.
+
+THE HONESTY BOUNDARY, ARCHITECTURAL. The rung's claim boundary is enforced structurally, not just in prose: the capstone demonstration was not touched by this slice, so the one runnable story still disclaims embodiment with the book's real-machine reason; the two new pack names and headers carry the word simulated and the groundwork sizing in their own text; and the strongest self-grade the new seam grants - observation - is gated by a minted-record proof, so nothing that was not actually enacted can be owned as if it had been lived.
+
+Gates at this slice: simulated_body sixteen of sixteen and body_interface twenty-one of twenty-one Prolog Unit (PLUnit) tests pass (the earlier packs unchanged; three hundred seventy-six in total across twenty-seven packs, all green); the naming, layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 25
+
+Slice 25 - The story learns the body seam: Rung Five's groundwork told, and the rung not claimed - 2026-08-07 - pack capstone_demonstration (0.4.0).
+
+WHAT CHANGED IN THE ARCHITECTURE: NOTHING - AND THAT IS THE FINDING. No new pack, no new kind, no new update rule. The capstone remains a layer-0 narrator that reads its siblings through their public interfaces: its manifest grows by the two slice-24 packs, simulated_body and body_interface, and every value the new chapter prints is produced by those packs' own predicates - the same predicates their test suites pin - reused unmodified. The chapter's position in the story (after the finished Rung Four, before the provenance layer) mirrors the ladder's own order: the seam is the last thing built, and the provenance layer still closes the story because standing behind one's claims is the mind's final word.
+
+Gates at this slice: capstone_demonstration fifty-two of fifty-two Prolog Unit (PLUnit) tests pass (the earlier packs unchanged; three hundred eighty-four in total across twenty-seven packs, all green); the naming, layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 26
+
+Slice 26 - The naming gate learns to see: the unprefixed-helper hole closed, and the hand-hunt retired - 2026-08-07 - tooling bin/check_pack_naming.sh, with a committed fixture and a self-test.
+
+WHAT CHANGED IN THE ARCHITECTURE: NOTHING IN THE MIND - ONE INVARIANT MORE AROUND IT. No pack changed; no test count moved. What grew, exactly as at slice 17, is the set of invariants every merge must prove: the naming gate now checks the rule as written (every defined head pack-prefixed) rather than a cluster heuristic that approximated it. The gate gains a PACKS_ROOT override so the same script can scan the fixture tree, and the fixture pack lives under tests/naming_gate_fixture/ - deliberately outside packs/, so it is never on the library path, never loaded, and never counted by the sweeps.
+
+Gates at this slice: the extended naming gate reports zero violations across all twenty-seven packs AND passes its own self-test - the committed fixture's unprefixed helper is caught by name; the layer, layer-binding, and reality-discipline gates report zero violations; three hundred eighty-four Prolog Unit (PLUnit) tests across twenty-seven packs, all green and unchanged by this slice; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 27
+
+Slice 27 - The delay lines: the connectome learns to keep a signal in transit - 2026-08-07 - pack connection_graph (grown).
+
+WHAT CHANGED IN THE ARCHITECTURE: ONE PACK GREW, AND A PENDING FIELD CAME ALIVE. No new pack. The connection graph - Component 3, the connectome as data - already carried a Delay field in every interface term from slice 3; this slice makes the field load-bearing. The pack gains three public predicates (build the empty delay lines for a graph; one delayed synchronous step carrying the lines as explicit state; a delayed run) beside the plain step and run, which stand unchanged - and the delayed path with every delay at one tick is proven identical to the plain path, so callers lose nothing by the growth. The delay lines are explicit values threaded through the step, in the same stateless style as every state in the build: no globals, fully reproducible. A boundary is recorded honestly: the delayed step handles clamped sources and fixed-gain relays; the bus-modulated relay kind belongs to the modulated step and is refused by name in the delayed one - wiring the two together is a later refinement, recorded as pending, not as a wall.
+
+Gates at this slice: connection_graph seventeen of seventeen Prolog Unit (PLUnit) tests pass (the earlier packs unchanged; three hundred ninety-five in total across twenty-seven packs, all green); the naming gate reports zero violations across all twenty-seven packs and passes its own self-test; the layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 28
+
+Slice 28 - The eligibility trace: a reward one tick late still finds the connection that earned it - 2026-08-07 - pack plasticity_engine (grown).
+
+WHAT CHANGED IN THE ARCHITECTURE: ONE PACK GREW, AND THE LEARNING RULE GAINED ITS MEMORY. No new pack. The plasticity engine - Component 8, the three-factor learning rule of slice 8 - gains three public predicates: build a fresh zero trace store for a graph; one trace tick carrying the store as explicit state; and a reward step that spends the store into the weights through the dopamine third factor. The plain per-tick learning step stands unchanged beside them, so every caller keeps what it had. The traces are an explicit stateless value threaded through the steps - a list of endpoint-keyed numbers, no globals, fully reproducible - the same shape the delay lines took in slice 27, and the two steps share one refusal perimeter, one predicate judging the whole topology before either touches a number. A boundary is recorded honestly: the reward step does not consume the traces it spends - trace lifetime belongs to the caller, who fades it every tick by the trace step - and nothing yet wires the trace into the cognitive cycle's tick; carrying the store through a live loop is a natural later refinement, recorded as pending, not as a wall.
+
+Gates at this slice: plasticity_engine twenty-four of twenty-four Prolog Unit (PLUnit) tests pass (the earlier packs unchanged; four hundred fourteen in total across twenty-seven packs, all green); the naming gate reports zero violations across all twenty-seven packs and passes its own self-test; the layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 29
+
+Slice 29 - Homeostatic scaling: the bound that keeps the learning from exploding - 2026-08-07 - pack plasticity_engine (grown).
+
+WHAT CHANGED IN THE ARCHITECTURE: ONE PACK GREW, AND THE LEARNING GAINED ITS GOVERNOR. No new pack. The plasticity engine - Component 8 - gains three public predicates: build a fresh zero average store for a set of constructs; one average tick moving every running average toward its construct's current activity; and a scaling step that multiplies each region's incoming transmissive weights by a factor set by that region's distance from its activity target. The plain learning step, the trace store, and the reward step stand unchanged beside them. The averages are an explicit stateless value in the house shape - name-keyed numbers, no globals, fully reproducible - and the refusal perimeter deepens structurally: the judgement of a keyed store (shape, unbound tails, duplicate keys) is now ONE shared predicate serving the average store, the slice-28 trace store, and both constructors, closing in one stroke the review's finding that two consumers of one store could reach two different verdicts about it. A boundary is recorded honestly: the scaling target and rate are per-call parameters, one value for the whole graph - per-territory targets, like per-territory neuromodulators, belong to the refinement still queued - and the fixed-point stability proof holds the averages constant, proving the bound itself, not yet the fully coupled loop through live dynamics.
+
+Gates at this slice: plasticity_engine forty-eight of forty-eight Prolog Unit (PLUnit) tests pass (the earlier packs unchanged; four hundred thirty-eight in total across twenty-seven packs, all green); the naming gate reports zero violations across all twenty-seven packs and passes its own self-test; the layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 30
+
+Slice 30 - Per-territory neuromodulators: the field learns local concentrations, and delayed time learns the bus - 2026-08-07 - packs neuromodulator_bus and connection_graph (grown).
+
+WHAT CHANGED IN THE ARCHITECTURE: TWO PACKS GREW, AND TWO HALVES MET. Component 4, the neuromodulatory bus, gains the per-territory half FR-6 always specified: territory entries beside the global pairs, written by a territory broadcast and read by a territory read whose fallback is the diffuse field. Component 3's growth is the meeting: a delayed modulated step carrying delay lines and bus together, so the two refinements of slice 27 (multi-tick time) and the original modulated step (bus-set gains) are no longer parallel paths that cannot compose. The design decision that makes territories cost nothing to adopt: a construct's territory is its own name, so no new registry, no mapping table, and no caller changes - a bus with no territory entries behaves exactly as before, in both times, which is why the plain modulated step could switch to the territory read with observational identity pinned by test. The gain of a delayed modulated relay is read at the tick of delivery, never emission: the delay line carries the value, the bus carries the present chemistry, and they meet when the signal arrives. A boundary recorded honestly: the plasticity engine's third factor still reads the global dopamine level - a per-territory third factor for learning is the natural next use of the new read, recorded as pending, not built speculatively.
+
+Gates at this slice: neuromodulator_bus fourteen of fourteen and connection_graph twenty-four of twenty-four Prolog Unit (PLUnit) tests pass (the earlier packs unchanged; four hundred fifty-five in total across twenty-seven packs, all green); the naming gate reports zero violations across all twenty-seven packs and passes its own self-test; the layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 31
+
+Slice 31 - The per-territory third factor: each connection learns by the chemistry of the place the signal arrives - 2026-08-07 - pack plasticity_engine (grown at its root).
+
+WHAT CHANGED IN THE ARCHITECTURE: ONE PACK GREW AT ITS ROOT, AND A BOUNDARY CLOSED. Component 8, the plasticity engine, stops being the last construct that reads the bus as if slice 30 never happened: its two learning moments - the live step and the reward step - now read the third factor through Component 4's territory read, at the receiving end of each interface, so the boundary slice 30 recorded honestly is closed by the exact mechanism it predicted. The design decision that made this slice small is the same one that made slice 30 free to adopt: a construct IS its own territory, so the receiving end's name is already the territory name, and no signature changed - the cognitive cycle and every other caller pass the same bus they always passed, and a bus with no territory entries produces the same weights it always produced. The architecture gains a sentence it could not say before: one reward, broadcast globally, can strengthen one region's connections at full concentration, another's at half, and a silenced region's not at all - reinforcement with a geography. A boundary recorded honestly: the scaling target and rate are still one value for the whole graph; per-territory targets would pair naturally with this slice's read, recorded as pending, not built speculatively.
+
+Gates at this slice: plasticity_engine fifty-eight of fifty-eight Prolog Unit (PLUnit) tests pass (the earlier packs unchanged; four hundred sixty-five in total across twenty-seven packs, all green); the naming gate reports zero violations across all twenty-seven packs and passes its own self-test; the layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 32
+
+Slice 32 - The live tick carries the whole learning body: traces, averages, and the slow bound beat in the loop - 2026-08-08 - pack cognitive_cycle (grown; the boot worlds of capstone_demonstration and symbol_exchange grown to carry the stores).
+
+WHAT CHANGED IN THE ARCHITECTURE: THE LOOP LEARNED TO CARRY ITS OWN LEARNING STATE. Component 10, the cognitive cycle, stops being a caller that knows only the fast half of Component 8: the world dict - the loop's one carried value - now holds the trace store, the average store, and the four constants that beat them, and the tick advances all of it in the manuscript's own order, fast learning first, slow bound last. The design decision that kept this slice small is the same explicit-stateless-value discipline slices 28 and 29 chose: the stores were always plain values a caller threads, so threading them through the one real caller is a world-shape change, not an engine change - not one engine predicate moved, and the engine's own perimeters (the ghost, the orphan, the duplicate, the malformed store) now guard the live loop for free every tick. The boot worlds of the capstone demonstration and the symbol exchange grew the same six keys with the bound armed but at rest, the same posture as their respiration override - present, honest, and silent until a slice turns it up. A boundary recorded honestly: the scaling target and rate are still one value for the whole graph, and the reward step still waits for a caller's decision, both recorded as pending, not built speculatively.
+
+Gates at this slice: cognitive_cycle eleven of eleven Prolog Unit (PLUnit) tests pass, and the grown boot worlds of capstone_demonstration (fifty-two of fifty-two) and symbol_exchange (nineteen of nineteen) re-swept green (the earlier packs unchanged; four hundred seventy-two in total across twenty-seven packs, all green); the naming gate reports zero violations across all twenty-seven packs and passes its own self-test; the layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 33
+
+Slice 33 - The per-territory scaling target: each region defends the activity level its own territory owes - 2026-08-08 - pack plasticity_engine (grown at its root; cognitive_cycle grown to read the geography; the boot worlds of capstone_demonstration and symbol_exchange grown to carry it).
+
+WHAT CHANGED IN THE ARCHITECTURE: THE BOUND LEARNED THE GEOGRAPHY THE THIRD FACTOR ALREADY KNEW. Component 8's slow bound now reads its set-point the way its fast rule has read its chemistry since slice 31: locally first, diffusely as fallback. The design decision that kept this slice small is reuse of shape, not just of code - the target store is judged by the same shared store perimeter the trace and average stores pass through, the lookup is the diffuse-field law's exact silhouette, and the old global step was re-rooted THROUGH the new territory step rather than kept beside it, so there is one scaling root and the one-target behaviour is its empty-geography case. The world dict grows one key, scaling_targets, and the three boot worlds carry it empty - the geography present but unmarked, the same honest at-rest posture as the rate-zero bound beside it. The rate deliberately stays global: a per-territory RATE is a different claim (regions correcting at different speeds) with no manuscript line demanding it yet, recorded as a boundary, not built speculatively.
+
+Gates at this slice: plasticity_engine seventy of seventy Prolog Unit (PLUnit) tests pass and cognitive_cycle thirteen of thirteen, with the grown boot worlds of capstone_demonstration (fifty-two of fifty-two) and symbol_exchange (nineteen of nineteen) re-swept green (the earlier packs unchanged; four hundred eighty-six in total across twenty-seven packs, all green); the naming gate reports zero violations across all twenty-seven packs and passes its own self-test; the layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 34
+
+Slice 34 - The bound turned live in the told story: the capstone world carries a live rate and a small geography, and the story tells the bound's work beside a rest twin - 2026-08-09 - pack capstone_demonstration (grown; no other pack changed).
+
+WHAT CHANGED IN THE ARCHITECTURE: NOTHING NEW WAS BUILT, AND THAT IS THE POINT. The machinery this slice tells - the territory geography, the store perimeter, the slow multiplicative bound - was all built and proven by slices 29 through 33; this slice changes exactly one boot world and the chapter that narrates it, and no pack below the capstone moved. The design decision that kept it honest is the rest twin: the capstone does not read the bound's work off a formula or assert it from the armchair, it re-runs the identical world with the bound at rest inside the same telling and lets the two final weights stand beside each other, so the claimed difference is a fact a reader can re-run, in the same glass-box voice as the story's other claims. The relay's mark of eight tenths was chosen above its running average so the bound pulls the weight UP - visibly apart from the fast rule's own growth - and the rate of five hundredths is slow enough that regulation, grounding, and every older chapter tell exactly the stories they told. The cycle fixture's and the symbol exchange's boot worlds deliberately stay at rest: one world turning the bound live is the claim; three would be repetition.
+
+Gates at this slice: capstone_demonstration sixty of sixty Prolog Unit (PLUnit) tests pass (the earlier packs unchanged; four hundred ninety-four in total across twenty-seven packs, all green); the naming gate reports zero violations across all twenty-seven packs and passes its own self-test; the layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 35
+
+Slice 35 - The two-shift switchboard laid: the global operating state rides the bus, online by default, and nothing yet reads it - 2026-08-09 - pack neuromodulator_bus (grown; no other pack changed).
+
+WHAT CHANGED IN THE ARCHITECTURE: ONE VALUE, IN THE ONE PLACE THE ARCHITECTURE PERMITS A GLOBAL. The bus was already Component 4, the one broadcast channel every construct reads; the corpus's Chapter 16 konnectome note names that very channel the state announcement service, so the operating state was laid on the existing bus rather than in a new pack - the announcement belongs to the announcer, and the governor that will someday throw the switch (the two-process scheduler of the family's later slices) arrives as a separate publisher, exactly as Process S and Process C sit outside the flip-flop they bias. The design decision that keeps the bus honest is the third key shape: atom keys carry diffuse chemical levels, territory pairs carry local ones, and the compound global(operating_state) carries the state, with the existing atom-only guard refusing the state's shape at the chemical broadcasts by name - three kinds of traffic, one ordered list, no collision possible even on purpose. Defaulting the absent entry to online pins today's behaviour identically: every world konnectome boots is a waking world until some future governor says otherwise.
+
+Gates at this slice: neuromodulator_bus twenty-three of twenty-three Prolog Unit (PLUnit) tests pass (the earlier packs unchanged; five hundred three in total across twenty-seven packs, all green); the naming gate reports zero violations across all twenty-seven packs and passes its own self-test; the layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 36
+
+Slice 36 - The reward learns its address: the tick spends the eligibility traces the drives reward, and capture consumes the spent tags - 2026-08-09 - packs plasticity_engine and cognitive_cycle (grown; no other pack changed).
+
+WHAT CHANGED IN THE ARCHITECTURE: THE LOOP BECOMES THE REWARD'S CALLER. No new pack and no new state: the trace store the world dict has carried since slice 32 and the dopamine the drives have broadcast since slice 20 finally meet, inside the one loop that owns them both. The architectural decision is WHERE the meeting happens: capture runs after the fast three-factor learning and before the trace fade, on the traces as they stood at the tick's start - so the corpus's two timescales stay honest, the fast step learning this tick's coincidence at this tick's dopamine while the capture step pays this tick's dopamine out to EARLIER ticks' coincidences, and no coincidence is counted twice within one tick. The capture obeys the slice-30 diffuse-field law unchanged - each edge captures at its receiving territory's own dopamine, the global level as fallback - so learning's geography and reward's geography are one geography. And the consume-on-capture law is the dossier's own: the tag is an address, not a store; once served it expires, so the same trace can never be spent twice. The scaling bound then runs over the captured weights, keeping the slow governor outermost, exactly as slice 29 placed it.
+
+Gates at this slice: plasticity_engine eighty-two of eighty-two and cognitive_cycle sixteen of sixteen Prolog Unit (PLUnit) tests pass (the earlier packs unchanged; five hundred eighteen in total across twenty-seven packs, all green); the naming gate reports zero violations across all twenty-seven packs and passes its own self-test; the layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 37
+
+Slice 37 - The night watchman takes the post: the two-process governor rides the live tick and throws the slice-35 switch, its first legitimate thrower - 2026-08-09 - pack two_process_governor (new) and pack cognitive_cycle (grown; the fixture worlds of symbol_exchange and capstone_demonstration seat the watchman; no behaviour elsewhere changed).
+
+WHAT CHANGED IN THE ARCHITECTURE: THE SCHEDULER ARRIVES AS A SEPARATE PUBLISHER. Slice 35's architecture note promised it in advance: the governor that will someday throw the switch arrives as a separate publisher, exactly as Process S and Process C sit outside the flip-flop they bias. This slice keeps that promise to the letter. The two_process_governor pack is a pure engine with an empty requires list: it holds no bus, reads no bus, and knows nothing of the world dict - it subscribes to the standing selection through its caller's argument and publishes its next selection through an answer. The tick owns the announcing, because the tick owns the bus: at the tick's end, after the body has responded and before the observer records, the loop reads the standing state (the corpus's subscribes arrow from the announcement service into the scheduler), steps the governor, and broadcasts the selection under the slice-35 third key shape (the publishes arrow back onto the announcement service). The placement is the architecture's honesty about time: the governor's selection is made FROM this tick's completed day and GOVERNS the next tick's opening state, so the switch is always thrown between shifts, never in the middle of one. The world dict carries the governor as a required key beside the learning body's stores - the scheduler is state the loop owns, not a constant - and the flip-flop itself stays where slice 35 put it, on the bus: the pack split mirrors the biology's split between the preoptic switch (Chapter 11, the bus's two-position entry) and the drives that bias it (Chapters 14 and 15, this pack). Nothing yet reads the thrown state, deliberately: item (d)'s offline works are the first legitimate reader, and any earlier reader would be scope creep.
+
+Gates at this slice: two_process_governor twenty of twenty, cognitive_cycle twenty-one of twenty-one, symbol_exchange nineteen of nineteen, and capstone_demonstration sixty of sixty Prolog Unit (PLUnit) tests pass (the earlier packs unchanged; five hundred forty-three in total across twenty-eight packs, all green); the naming gate reports zero violations across all twenty-eight packs and passes its own self-test; the layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 38
+
+Slice 38 - The night crew takes the dark hours: the tick reads the switch the watchman throws, and the offline works run - interleaved replay against catastrophic forgetting, and the renormalisation shift - 2026-08-09 - pack offline_consolidation (new), pack cognitive_cycle (grown), and pack neuromodulator_bus (one additive export); the fixture worlds of cognitive_cycle, symbol_exchange, and capstone_demonstration seat the three new keys, and the online day is behaviour-pinned identical.
+
+WHAT CHANGED IN THE ARCHITECTURE: THE SWITCH ACQUIRES ITS FIRST READER, AND THE TICK ACQUIRES TWO PROGRAMS. For three slices the operating state has been a published fact with no consumer. This slice makes it load-bearing, and the architectural shape of that is deliberate: the tick does not sprinkle offline conditionals through its ten steps, it DISPATCHES. One judged read of the bus at the tick's opening selects one of two whole clauses - the day program and the night program - each of which returns the same complete set of world pieces. The consequence a reader should notice is that the night's stillness is not enforced by a guard; it is enforced by the night clause simply passing the day's values through, so there is no path on which a sleeping mind half-runs a waking step. The judging matters as much as the dispatch: the review proved that an unjudged state let a hole unify with the day clause's head and leave a choicepoint into the night clause, so ONE tick ran BOTH whole programs; the bus's own domain check, exported this slice so the two packs share one root rather than growing two, closes it. The offline_consolidation pack is a pure engine whose only dependency is the plasticity engine, because the night does not invent new laws: it strengthens by the SAME three-factor product the day uses (with the third factor pinned at one, the low-aminergic climate made an argument rather than a special case) and renormalises through the SAME per-territory scaling predicate the day calls, at a different rate. That reuse is the architecture's claim that sleep is a different SCHEDULE over the same machinery, not a second machine. The memory store joins the world dict beside the learning body's trace and average stores - the hippocampal day is state the loop owns - and the two rates join the world's constants beside the fading, smoothing, and scaling factors. Two orderings inside the night tick are themselves architecture. First, replay before bound, so that what renormalises is what replay just refreshed, which is exactly why interleaving defeats forgetting rather than merely delaying it. Second, and learned the hard way this slice, the replay dose is per NIGHT rather than per MEMORY: a dose that scaled with the store put the replay and the bound on different scales, so the bound could never catch a growing store - the architecture's rule is that any two forces set against each other must be measured in the same units. Deferred deliberately, and named so no reader mistakes the gap for an oversight: the REM theatre's emotional re-weighting (Chapter 8) and the ultradian wheel's ordering of stages across a night (Chapter 9) are read and NOT built - this slice realizes one night program, not a staged night.
+
+Gates at this slice: offline_consolidation twenty-seven of twenty-seven and cognitive_cycle thirty-four of thirty-four Prolog Unit (PLUnit) tests pass, with neuromodulator_bus twenty-three of twenty-three, symbol_exchange nineteen of nineteen, and capstone_demonstration sixty of sixty unchanged through the reseated worlds (the earlier packs unchanged; FIVE HUNDRED EIGHTY-THREE in total across twenty-nine packs, all green); the naming gate reports zero violations across all twenty-nine packs and passes its own self-test; the layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 39
+
+Slice 39 - Every construct becomes a hybrid automaton: the register of one, stated proudly - 2026-08-09 - pack mode_register (new), packs connection_graph and tick_engine (rewired so every construct's rule is read THROUGH its own register); no world dict key added, no number changed, and the engines pinned behaviour-identical against a main worktree for every well-formed construct kind.
+
+WHAT CHANGED IN THE ARCHITECTURE: A CONSTRUCT IS NO LONGER A RULE, IT IS A REGISTER WITH A RULE IN IT. Until this slice, konnectome's construct term named a rule and the engines dispatched on it directly. The Layer 6 volume is 386 assertions that this is the wrong shape: while a mode holds, the cell behaves like a different machine, and a construct term that fixes one rule for all time cannot express that. The design authority's minimum ask was a construct holding a small tagged set of rules plus an index into it, and that is exactly what the hybrid automaton is. The architectural move of this slice is therefore an INDIRECTION, deliberately introduced before it is needed: the engines now ask a construct what rule holds under its current mode, instead of assuming the construct is that rule. Today the answer is always the same rule, because every register holds one mode - and that is the point. The repository becomes a valid mode-register system without a single number moving, and konnectome's mode-poor constructs stop being an unstated gap and become a stated, corpus-faithful claim about what the system trusts each of them to decide.
+
+THREE DESIGN DECISIONS A READER SHOULD SEE, and where each comes from. FIRST, THE TERM IS NAMED WHAT THE CORPUS NAMES IT. hybrid_automaton is a well-understood formalism with known properties and the corpus chose it deliberately at Layers 7, 8, 9, 10 and 11 alike, each time citing the Layer 6 volume as the place the vocabulary was fixed; konnectome carries all four of the template's blocks rather than the two it needs today, and declares which fields it omits and why. SECOND, THE REGISTER IS ATTACHED TO THE CONSTRUCT KIND, NOT BOLTED BESIDE IT, and the per-mode transfer function is the kind term itself. That is what makes the bit-identical promise a LAW rather than a hope: the rule read out of a register is provably the kind that went in, and the slice's test suite pins that law across all six kinds rather than spot-checking behaviour afterwards. THIRD, AN UNREGISTERED KIND PASSES THROUGH THE RESOLVER UNCHANGED. This was the sharpest design question of the slice, because the obvious alternative - refusing an unregistered kind at the register - would have moved the authority on what an engine accepts away from that engine. It must not move: the plain step and the modulated step accept DIFFERENT subsets of the same registered kinds, so admission is per-engine, exactly as the corpus's own admission rule is per-construct rather than per-regime. Pass-through keeps each engine's domain refusal intact, naming exactly the kind the caller wrote.
+
+THE NESTING QUESTION IS ANSWERED IN ADVANCE, AND ITS ANSWER SHAPES THIS TERM. The obvious guess is a hierarchy of registers where a parent's mode computes its children's modes; the corpus does not specify that and twice points the other way, and the design authority's central recommendation is one register per construct at every grain, each independently writable, with coordination arriving through a BROADCAST many registers subscribe to. konnectome already owns that broadcast - the neuromodulator bus, with its global level, its per-territory level and its diffuse-field fallback. So the register carries no parent pointer and no derivation function, and the slice that lets the bus throw a transition will need to add no new component. The standing owner request attached to this family - a live visualization panel showing every mode of every construct at every grain at once - is a real constraint that this term already satisfies: a construct's current mode is a readable field of an ordinary term, not a hidden index inside an engine.
+
+WHAT IS DELIBERATELY ABSENT. There is still no downward assignment, no sub-mode slot, no confidence field, no supervisor channel, no multi-rate time, and no region-grain construct that could own a register over many nodes. The design authority names each of those, and this slice adds none of them. It adds the shape they will all attach to.
+
+Gates at this slice: mode_register forty of forty Prolog Unit (PLUnit) tests pass at birth, with connection_graph grown from twenty-four to twenty-six and tick_engine from seven to eight (the earlier packs unchanged; SIX HUNDRED TWENTY-SIX in total across THIRTY packs, all green); the naming gate reports zero violations across all thirty packs and passes its own self-test; the layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 40
+
+Slice 40 - The gate archetype re-expressed as its genuine two-mode register - 2026-08-09 - pack archetype (the gate given a register of TWO, per-mode transfer functions that really differ from each other, and an explicit transition table carrying trigger, direction, timescale and agency); no world dict key added, no number changed, and every well-formed gate answer pinned byte-identical against a main worktree.
+
+WHAT THE PHASE REQUIRED. Slice 39 gave every construct a register of ONE, and the design authority - docs/konnectome_mode_register_design_authority_v1.txt - named the slice after it in its Part Nine: THE GATE ARCHETYPE RE-EXPRESSED as its genuine two-mode register, with an explicit transition table, validated against corpus entries whose registers are two. The reason this is the next slice rather than a later one is the design authority's own: of everything konnectome had built in thirty-eight slices, the gate archetype's binary flip is "a genuine two-mode register in the corpus's own sense and is the natural seed of the whole design", and its existing vocabulary is corpus-correct and must not be renamed. A register of one is first-class, but it is also the one register length that cannot catch a mistake, because with a single mode the register block, the transfer block and the current-mode slot have nothing to disagree about. Two modes is where the formalism starts doing work.
+
+WHERE THIS SITS IN THE SKELETON. Nothing moves. archetype remains a layer-zero pack of pure rules with no state and no bus, and it now imports library(mode_register), which is also layer zero - a same-layer edge the strict layer rule allows and the layer gate confirms at zero violations. No component is added, no component's interface changes, and no world dictionary key is introduced. The architectural content of the slice is a DIRECTION OF DEPENDENCE: the formalism pack owns what a valid register is, and every construct family that grows a register borrows that judgement rather than re-implementing it. archetype builds its gate's four blocks and hands them to mode_register_new/6, so an invalid gate automaton cannot come into existence and archetype never becomes a second authority on register validity.
+
+THE ONE STRUCTURAL DECISION WORTH RECORDING. The gate's transition table is the SOLE authority on direction. The two-clause flip table that used to say "open flips to closed, closed flips to open" is gone, and the departure is read out of the table itself. This matters beyond tidiness: when the next slice lets a broadcast throw a transition, the throw will be a row in the same table, judged by the same constructor, read by the same lookup - so the bus will not need a second path into the gate.
+
+AND THE ONE PLACE THE ROUTES MEET. Slice 39's review left konnectome a general rule: when a value can reach a lookup by more than one route, guard it where the routes MEET, not where each route begins. Two routes reach this slice's departure lookup - the gate rule itself and the departure reader exported beside it - and both arrive carrying a whole automaton rather than a bare mode name, because the constructor has already judged the current-mode slot. The same rule is applied a second time inside the transfer application: the arriving reading is judged once, where both transfer functions come through, because the closed gate never reads its input and an unguarded blocking law would answer a hole with a confident zero.
+
+VALIDATED AGAINST A CORPUS ENTRY WHOSE REGISTER IS TWO. The Layer 8 modes volume's Entry 36, the mutual-inhibition flip-flop, coined the Either-Or Latch, is the corpus's own nearest relative of konnectome's gate: "a hysteretic toggle whose modes are simply its two self-holding states". Its register holds Mode A - the First Latch and Mode B - the Second Latch. Its per-mode transfer functions describe what holds while each state is realised. Its transition table carries a bias thrown from above on the circadian and homeostatic timescales and a supra-threshold input to the losing pool that flips it near-instantaneously. Its fault block names two regimes - instability and a stuck switch - and a watchdog. konnectome's gate was read block by block against that entry, and the one place the two shapes differ is DECLARED rather than smoothed over.
+
+THE DECLARED DIFFERENCE: KONNECTOME'S GATE IS A SYMMETRIC TOGGLE, NOT A HYSTERETIC LATCH. The corpus's latch turns on at one boundary and off only at a lower one, and the corpus is explicit that the hysteresis is supplied by a STABILISER that is "not part of the switch" and publishes a stability bias of its own. konnectome's gate compares one switching drive against ONE threshold in both directions, so its two transition rows honestly share a single trigger. This slice does NOT invent the second threshold: the design authority already files the stabiliser as its own later slice, and this slice promises to change no number. The transition table records the shared trigger, the transfer functions record what each mode actually does, and the gap is written in the ledger as an observation rather than papered over here.
+
+Gates at this slice: archetype grown from seven Prolog Unit (PLUnit) tests to twenty-nine, all passing (the other twenty-nine packs unchanged; SIX HUNDRED FORTY-EIGHT in total across THIRTY packs, all green); the naming gate reports zero violations across all thirty packs and passes its own self-test; the layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 41
+
+Slice 41 - The bus throws a transition - 2026-08-09 - packs neuromodulator_bus, archetype and mode_register (a broadcast channel that carries a MODE rather than a level, the gate's transition table given its second agency, and a departure lookup keyed on that agency); no world dict key added, no number changed, and every well-formed archetype answer pinned byte-identical against a main worktree.
+
+WHAT THE PHASE REQUIRED. The mode-register design authority - docs/konnectome_mode_register_design_authority_v1.txt - names this slice fourth in its Part Nine: THE BUS THROWS A TRANSITION, so that one write produces many coordinated register transitions. Slice 39 gave every construct a register of one; slice 40 gave the gate a genuine register of two and made its transition table the sole authority on direction, and it said in as many words that when a broadcast throws a transition the throw would be a ROW in that same table rather than a second path into the gate. This slice is where that promise is kept. It is also where the design authority's Part Seven item 1 - the COMMAND VERSUS BIAS question - had to be answered, because the whole broadcast semantics of three later families hangs on it.
+
+WHERE THIS SITS IN THE SKELETON. Less moves than a reader might expect. No component is added; no component's interface changes; no world dictionary key is introduced. neuromodulator_bus remains Architecture Component 4, a layer-zero broadcast channel, and it grows one channel on the shape it already had. archetype remains a layer-zero pack of pure rules with no state, and - THIS IS THE STRUCTURAL DECISION WORTH RECORDING - IT STILL DOES NOT IMPORT THE BUS. A rule library that reached for a global channel would stop being a rule library, and konnectome would have quietly acquired a construct that cannot be reasoned about without knowing what is being broadcast at it. The archetype's throw predicate takes the thrown mode as an argument. THE JOIN BELONGS TO THE CALLER, and the archetype test suite stands in for one, importing both packs to prove the end-to-end path that neither pack owns alone.
+
+THE SECOND STRUCTURAL DECISION: THE THROW IS A ROW, NOT A DOOR. Slice 40 made the transition table the sole authority on direction and predicted that a thrown transition would be a row in it. It is. There is no second entry point into the gate, no override flag beside the register, and no path by which a construct's mode can change without a row of that construct's own table declaring it. The consequence is worth stating plainly because it is what makes the whole family scale: A CONSTRUCT THAT DECLARES NO THROWN ROW IS SIMPLY NOT COMMANDABLE, and it says so through its own register rather than through a list kept somewhere else of who may be commanded.
+
+AND THE DIRECTION OF DEPENDENCE HOLDS. mode_register still owns what a valid register is and now also owns what a valid DEPARTURE is; archetype borrows both rather than re-implementing either. Both are layer zero, a same-layer edge the strict layer rule allows and the layer gate confirms at zero violations.
+
+THE COMMAND-VERSUS-BIAS DECISION, MADE HERE AND RECORDED AS KONNECTOME'S OWN. The design authority records that the corpus is genuinely silent: keeps it in the Pinpoint Report, set from above reads as COMMAND, and biases it toward flashing reads as BIAS, sometimes in the same volume. The Theme Two read raised the same question independently for the offline broadcast, and the Theme Four read raised it a third time; the only concrete evidence any of the three found is Layer 8 Chapter 16's "neuromodulators move the circuit between regimes by scaling recurrent gain", which is bias in FORM - a gain scalar, not a mode name - and which arrives at a different grain from the one where the decision must be made. It is therefore evidence and not an instruction. THE CORPUS DOES NOT DECIDE THIS, SO KONNECTOME DOES, AND THE DECISION IS: A THROWN MODE IS A COMMAND AT THE DISCRETE GRAIN, AND BIAS IS THE CHANNEL KONNECTOME ALREADY HAS.
+
+Three reasons, none of them the corpus's, all of them konnectome's. FIRST, IT UN-CONFLATES TWO OPERATIONS THE DESIGN AUTHORITY SAYS ARE CURRENTLY CONFLATED: its Part Eight records that continuous modulation and discrete throw are different operations on the same channel and that konnectome's bus-modulated relay runs them together. konnectome already owns bias, built and running - relay_modulated reads a level off this same bus and scales its gain where it stands. Had the throw also been a bias, konnectome would own two bias mechanisms, no command mechanism, and the conflation would be permanent. SECOND, A COMMAND COSTS NO INVENTED NUMBER AND A BIAS COSTS AT LEAST ONE: a bias moves a threshold, and the corpus supplies konnectome no threshold offset at this grain, so one would have to be made up - in a family whose standing rule is that no number in the pack is konnectome's invention. THIRD, COMMAND IS THE REVERSIBLE CHOICE: a bias channel can later be added BESIDE this one as a second agency writing rows into the same table, and nothing built on the command has to move; the reverse is not true.
+
+AND THE CONFLICT RULE THAT FOLLOWS FROM IT, ALSO KONNECTOME'S OWN. The design authority's Part Seven item 2 records that the corpus shows preemption in one place and negotiated arbitration in another and states no general rule. konnectome takes PREEMPTION: where a construct's self-selected transition and a standing throw disagree, the throw wins. The reason is konnectome's own and is not a claim about biology - preemption is the rule that can be READ without running the construct, which the owner's standing visualization request demands of every register slice in this family. NEGOTIATED ARBITRATION IS DEFERRED BY NAME rather than denied: it is the shape a later slice would need if two sources ever threw at one kind in one tick, and this channel deliberately holds exactly ONE standing throw per kind, the newest replacing the older exactly as every other broadcast on this bus does, so that case cannot arise unnoticed.
+
+THREE FAMILIES INHERIT THIS DECISION, which is why it is written at this length rather than as a line: the remainder of the mode-register family, the Theme Two offline-broadcast work, and the Theme Four cognitive cluster. A later session that wants to revisit it should revisit it as a decision, in the open, and not discover it as an assumption.
+
+Gates at this slice: mode_register grown from forty Prolog Unit (PLUnit) tests to forty-five, neuromodulator_bus from twenty-three to thirty-six, and archetype from twenty-nine to forty (the other twenty-seven packs unchanged; SIX HUNDRED SEVENTY-SEVEN in total across THIRTY packs, all green); the naming gate reports zero violations across all thirty packs and passes its own self-test; the layer, layer-binding, and reality-discipline gates all report zero violations; the capstone demonstration runs and its story is byte-identical to main's. No new wall was hit; nothing in PrologAI or Causalontology was edited. HONESTLY STATED: the Causalontology conformance suite was NOT re-measured this slice, because this slice touched neither cousin; the last measured figure is Tungsten Sluicewright's one hundred thirty-seven of one hundred thirty-seven, and a session that needs the number should re-measure rather than quote it.
+
+
+KONNECTOME REALIZATION LOG - SLICE 42
+
+Slice 42 - The supervisor channel: fault regimes watched and published as warnings, never admitted as modes - 2026-08-09 - pack supervisor (new) and pack archetype (the gate's fault block filled from the corpus's own latch entry); no world dict key added, no number invented, and every archetype answer pinned byte-identical against a main worktree.
+
+WHAT THE PHASE REQUIRED. The mode-register design authority's Part Nine slice five, and the closing of an IOU three slices old. The Layer 6 chapter template states the admission rule for a mode register directly: a regime enters the register only if the HEALTHY system uses it, and the ways a component BREAKS are watched by supervisor processes that publish WARNINGS - never listed as regimes the component operates in. konnectome has honoured that since slice 39 by leaving every fault block present and EMPTY, which was correct and was also a debt: the block could not honestly be filled until something existed to do the watching. This slice builds the watcher, and the blocks stop being empty.
+
+WHERE THIS SITS IN THE SKELETON. One pack is added and no component's interface changes. supervisor is layer zero and imports library(mode_register), also layer zero - a same-layer edge the strict layer rule allows and the layer gate confirms at zero violations. It imports NO other konnectome pack: not the bus, because a warning is not a chemical; and not the archetype, because a watcher that knew what it was watching would be a watcher of exactly one thing. It reads a fault block, and any construct that has one can be watched by it.
+
+THE DIRECTION OF DEPENDENCE IS THE SAME ONE SLICES 39 THROUGH 41 ESTABLISHED, extended by one step. mode_register owns what a valid register is; slice 41 gave it what a valid departure is; this slice does NOT give it what a valid fault is, and the choice is deliberate. The register's constructor still judges a fault entry's SHAPE - three fields, no more - because shape is structural. Whether a fault may be a mode is a POLICY, and it belongs to the process that enforces the policy rather than to the term that holds the data. That keeps mode_register a formalism and stops it becoming a rulebook.
+
+AND THE OBSERVABILITY DEBT IS PAID AGAIN, in the form this family owes it. A watcher holding a construct's register can read its fault regimes, its watchdogs, and the standing report for its kind - all without running the construct. The owner's standing visualization panel gains a second layer for free: not only what every construct IS doing, but what is being watched about it and by whom.
+
+WHY THE DISTINCTION IS WORTH A PACK RATHER THAN A CONVENTION, stated once and at length because the whole slice rests on it. A mode and a fault look alike from a distance - both are named conditions a construct can be in - and the entire difference is in what the system is entitled to DO about them. A MODE HAS A TRANSFER FUNCTION: while it holds, the construct runs a different machine, on purpose, and its behaviour in that mode is part of the design. A FAULT HAS NO TRANSFER FUNCTION AND NEVER WILL: it is a boundary the construct was not designed to cross, and the only correct response is to say so aloud to somebody who can act. If a fault were admitted as a mode, THE SYSTEM WOULD ACQUIRE A DESIGNED BEHAVIOUR FOR BEING BROKEN, and would then run it silently and indefinitely - which is exactly the failure the corpus's directive exists to prevent. Written as a convention that is a sentence people forget; written as supervisor_faults_are_not_modes/1 it is a refusal that fires, and it fires on the way into every watch so a malformed register can never be reported on as though it were well formed.
+
+THREE OUTCOMES, NOT TWO, AND THE THIRD IS THE POINT. A fault regime is WARNED (a reading crossed its allowance), CLEAN (a reading did not), or UNWATCHED (no watchdog reported at all). A two-outcome design loses the third, and losing it is precisely how a system comes to believe that silence means health. An unwatched regime is reported as unwatched, by name, carrying the watchdog that did not report, beside the warnings rather than hidden among them.
+
+KONNECTOME INVENTS NO THRESHOLD, AND THAT IS A SHAPE RATHER THAN AN OMISSION. Each reading arrives carrying its own ALLOWANCE, supplied by the caller that owns the watchdog. The supervisor compares and reports; it does not decide how much oscillation is too much, because the corpus supplies no such number at this grain and this family's standing rule is that no number in the pack is konnectome's invention. The boundary case is pinned rather than left to the next reader: a value exactly AT its allowance has not crossed it.
+
+THE GATE'S TWO FAULT REGIMES ARE THE CORPUS'S OWN. They are taken from the Layer 8 modes volume's Entry 36, the mutual-inhibition flip-flop coined the Either-Or Latch - the same entry slice 40 validated the gate against block by block, which names exactly two fault regimes and a watchdog. konnectome takes both and invents no third. OSCILLATION is the latch failing by never settling; STUCK SWITCH is the same latch failing the opposite way, by settling and never leaving. Neither signature is a mode name, and that is CHECKED rather than intended.
+
+Gates at this slice: the new supervisor pack ships TWENTY-SEVEN Prolog Unit (PLUnit) tests and archetype grows from forty to forty-two (the other twenty-nine packs unchanged; SEVEN HUNDRED AND SIX in total across THIRTY-ONE packs, all green); the naming gate reports zero violations across all thirty-one packs and passes its own self-test; the layer, layer-binding and reality-discipline gates all report zero violations; the capstone story is byte-identical to main's. WATCH-3 WAS EXAMINED AND REMAINS A WATCH: the design authority's Part Ten filed the supervisor channel as a routing candidate IF a published warning must be a shareable record rather than a konnectome-internal signal. It is not. Every warning this slice produces is computed inside one runtime from readings that runtime was handed, and travels to nobody; it fails the consumer-versus-ontology test and routes nowhere. Nothing in this slice releases the held sections of the causalontology change order. No new wall was hit; nothing in PrologAI or Causalontology was edited, and conformance was not re-measured because neither cousin was touched.
+
+
+KONNECTOME REALIZATION LOG - SLICE 43
+
+Slice 43 - The ticks-per-second convention: one hundred ticks to the nominal second, declared and refused rather than rounded - 2026-08-09 - pack tick_engine (three exported predicates, no new pack); no world dict key added, no number invented in any construct, and the capstone story pinned byte-identical against a main worktree.
+
+WHAT THE PHASE REQUIRED. Family Four item 2 of the version 2 vision-set analysis, promoted ahead of the stabiliser on the Iridium hand-off's one scheduling suggestion. KONNECTOME HAS NO SECONDS AND THE CORPUS COUNTS IN THEM. Every quantity in the cognitive cluster the corpus specifies is wall-clock - ignition near three hundred milliseconds, admission in the low hundreds, unrehearsed decay in seconds, a board wiped on task switch in under a second - and a settling time read as confidence is wall-clock too, while konnectome's tick is dimensionless-ordinal by the observer's own written declaration. None of that cluster is buildable to the corpus's numbers until a ticks-per-second convention is declared, and the convention is konnectome's own decision, not the corpus's.
+
+WHY IT JUMPED THE QUEUE, recorded because a promotion is itself a decision. The item arrived from THREE independent directions: beneath Theme Four and Theme Five in the version 2 analysis, and again from a direction nobody predicted when slice 42 found that a watchdog cannot have a window without a unit to measure one in - which is why OBSERVATION-9 was left open rather than closed. The stabiliser, the queue's front, publishes a scalar whose grains must be stated, and a grain argued in seconds cannot be stated in a build with no seconds. THE RULE THIS APPLIES: A CHEAP ITEM THAT ARRIVES FROM A THIRD INDEPENDENT DIRECTION HAS STOPPED BEING A QUEUE ITEM AND HAS BECOME A DEPENDENCY.
+
+WHAT THIS SLICE DELIVERS, AND IT IS DELIBERATELY SMALL. No new pack. tick_engine gains three exported predicates: tick_engine_ticks_per_second/1, the convention stated once and in one place, and the two conversions tick_engine_ticks_from_milliseconds/2 and tick_engine_milliseconds_from_ticks/2. This is a DECISION RECORDED WITH TESTS ASSERTING IT, in the shape of slice 39's naming-collision resolution and slice 41's DECISION-1 - a decision closes a question, where a mechanism answers one.
+
+DECISION-2: ONE HUNDRED TICKS TO THE NOMINAL SECOND, SO ONE TICK IS TEN NOMINAL MILLISECONDS, AND THE SCHEDULER STAYS DIMENSIONLESS. It is konnectome's own decision and must never be presented as the corpus's instruction. The corpus says nothing whatever about how often a synthetic mind should update, because it describes a continuous system and not a scheduler: this is not a silence to be resolved by reading harder, it is a question the source does not contain.
+
+THE THREE REASONS, ALL KONNECTOME'S OWN. FIRST, EVERY CORPUS CONSTANT BECOMES A WHOLE NUMBER OF TICKS - three hundred milliseconds is thirty ticks exactly, one hundred is ten, one second is one hundred, half a second is fifty. A rate leaving a constant between two ticks would force a rounding at every site that used it, AND A ROUNDING IS AN INVENTED NUMBER WEARING A SMALL COAT: the constant leaves the corpus as the corpus's and arrives in the pack as konnectome's, with nobody having decided anything. SECOND, IT IS THE COARSEST RATE THAT ACHIEVES THE FIRST, and coarsest is the honest choice rather than the convenient one, because the corpus states these quantities to a hundred-millisecond grain and a millisecond tick would claim a precision the source does not have. THIRD, IT COSTS THE RUNNING MACHINE NOTHING AND IS THEREFORE REVERSIBLE: no existing behaviour moves by a single count, and every duration konnectome ever expresses in real units passes through ONE conversion predicate, so a session that must restate the rate has one predicate to change and one test to re-read rather than a search across thirty-one packs.
+
+THE REFUSAL IS THE LOAD-BEARING HALF. A DURATION THAT IS NOT A WHOLE NUMBER OF TICKS IS REFUSED ALOUD with domain_error(whole_tick_duration, Milliseconds) and is NEVER ROUNDED. Rounding is exactly how invented numbers enter a careful build - a caller asks for five milliseconds, is handed one tick without being told, and a number that was the corpus's has silently become konnectome's. The refusal forces that decision into the open where it can be recorded. Both conversions also refuse an UNBOUND argument, the unbound-wrong-judgement lens paying for an ELEVENTH SLICE RUNNING (33 through 43).
+
+WHAT DECISION-2 DOES NOT DECIDE. It does not make konnectome real-time: nothing sleeps, nothing measures, nothing consults a wall clock, and a tick is not ten milliseconds long - ten milliseconds is what a tick is CALLED when a duration must be stated, which is pinned by a test asserting the heartbeat still reads five after five ticks. It does not decide that any particular corpus constant is right. It does not decide the observer's stamp, which keeps its own nominal one-second-per-tick carrier and is now numerically at odds with the convention - recorded as OBSERVATION-10 rather than quietly fixed, because restating that stamp would re-mint every content-addressed token occurrence identifier in the repository. It does not decide a window length for any watchdog: it supplies the UNIT a window can be stated in, and OBSERVATION-9's closer must still choose the number and say why. And it does not decide whether a construct may hold a rate of its own.
+
+Gates at this slice: tick_engine grows from eight Prolog Unit (PLUnit) tests to fifteen (the other thirty packs unchanged; SEVEN HUNDRED AND THIRTEEN in total across THIRTY-ONE packs, all green); the naming gate reports zero violations across all thirty-one packs and passes its own self-test; the layer, layer-binding and reality-discipline gates all report zero violations; the capstone story is byte-identical to main's. No new wall was hit, and nothing routes to either change order: a conversion between two of konnectome's own units is computed inside one runtime and travels to nobody, so it fails the consumer-versus-ontology test of the Second Commandment, and it needed no language feature PrologAI lacks. Nothing in this slice releases the held sections of the causalontology change order. Nothing in PrologAI or Causalontology was edited, and conformance was not re-measured because neither cousin was touched - the figure remains four sessions old and must be re-measured before it is quoted.
+
+
+KONNECTOME REALIZATION LOG - SLICE 44
+
+Slice 44 - The stabiliser: hysteresis published as a scalar, and the gate becomes the corpus's latch - 2026-08-09 - pack stabiliser (new) and pack archetype (the gate gains a second boundary); no world dict key added, no number invented, no number changed, and the capstone story pinned byte-identical against a main worktree.
+
+WHAT THE PHASE REQUIRED. The mode-register design authority's Part Nine slice six, and the closer OBSERVATION-8 named when it was opened. THE CORPUS IS EXPLICIT THAT HYSTERESIS IS NOT PART OF THE SWITCH: the Layer 11 reading states in one sentence that "this is a stabiliser, not a switch, so it has no poles of its own", and that it publishes a scalar stability bias onto the configuration bus. konnectome's hysteresis was two constants inside the two-process governor's parameter block and one symmetric threshold inside the gate - the stickiness buried in the switch, which is the arrangement the corpus names and rejects. Slice 40 found the gap and recorded honestly that it could NOT be fixed where it was found, because adding a second constant inside archetype_gate/4 would have modelled the corpus wrongly while appearing to fix it.
+
+WHAT THIS SLICE SPECIFIES. A NEW PACK, stabiliser, AT LAYER ZERO, and one existing rule given a second boundary.
+
+WHAT A STABILITY BIAS IS, WITH ITS UNITS STATED, because a scalar without stated units is an invitation to misuse. IT IS HOW FAR APART THE TWO BOUNDARIES SIT: half the width of the hysteresis band, expressed in the units of whatever quantity the switch it steadies compares. A gate comparing a switching drive reads it as an offset on the gate's threshold; a governor comparing a sleep-pressure balance reads it as the half-width of its band about a midpoint. One meaning, two consumers, no conversion.
+
+DECISION-1 IS APPLIED AND NOT RE-OPENED. A hysteresis scalar is a BIAS, so it travels as a LEVEL under a plain-atom key on the channel konnectome has had since slice 4, and never as a thrown mode. That is DECISION-1 applied rather than a new decision, and it is proved rather than asserted: the published value reads back through the bus's ORDINARY level read, with nothing about it needing the stabiliser to interpret it.
+
+AND THE STABILISER'S AGENCY IS STATED, because after slice 41 a publisher has two shapes available and they are not the same thing. Its agency is broadcast_bias, AND IT IS AN AGENCY IN NO TRANSITION TABLE, which is the sharpest available statement of what a bias is. Since slice 40 a construct is moved ONLY by a row of its own register's table. THE STABILISER MOVES NOTHING. It changes where a boundary sits, after which the construct's own row fires, or does not, by its own rule. A test reads the gate's table, checks it is not empty so the test cannot pass vacuously, and asserts the stabiliser's name is absent.
+
+DECISION-3: THE PUBLISHED SCALAR GOVERNS THE CONSTRUCT GRAIN ONLY. The version 2 analysis named this the sharpest ambiguity of its visit, because THE CORPUS ANSWERS THE HYSTERESIS QUESTION DIFFERENTLY AT TWO GRAINS - the Layer 11 reading puts the stickiness OUTSIDE the switch at the construct grain, while Layer 8 Chapter 16 gives winner-take-all's transfer function as a hysteretic max operation with an explicitly hysteretic Commitment Mode, stickiness INSIDE the motif. Both are literal. konnectome's three reasons are its own: the two readings stop conflicting once the grain is named; a bias reaching inside a transfer function would make a motif's own law depend on a global value, which is the coupling this build has spent slices avoiding; and it is the reversible choice, because a roster can be extended where a scalar already reaching everywhere could not be withdrawn. THE DECISION IS A REFUSAL AND NOT A COMMENT: the motif grain is turned away by name.
+
+OBSERVATION-8 IS CLOSED, AND AT A BIAS OF ZERO NOTHING MOVES. archetype_gate_hysteretic/5 gives the gate two boundaries where it had one, and at a bias of zero the two coincide and the latch is the old symmetric toggle exactly, in every combination of mode and drive. Because the bus answers zero for a bias nobody has published, every switch in the repository can consult the stabiliser without any of them changing behaviour - which is what made this slice safe to build and why the capstone story is byte-identical.
+
+THE MAPPING KONNECTOME CHOSE, AND THE ONE IT REJECTED. The corpus states hysteresis for a LEVEL comparator, and archetype's gate compares a SWITCHING DRIVE, which is a push rather than a level; the two do not map by themselves. konnectome chose: LEAVING A MODE COSTS THE RAISED BOUNDARY, WHICHEVER MODE IT IS, so over the whole range between the threshold and the threshold plus the bias both modes are stable and history decides which is realised - the corpus's own definition of the property, quoted almost word for word. THE REJECTED READING IS RECORDED because it is the one a later session will reach for first: making turn-on cost the threshold plus the bias and turn-off cost the threshold MINUS it reads exactly like the corpus's higher-and-lower boundaries, and with a push-drive it makes CLOSED ABSORBING over the whole middle range. A gate that settles and never leaves is the corpus's own STUCK SWITCH fault signature, listed in this pack's fault block since slice 42, and a hysteresis design that manufactures a fault regime is not a hysteresis design.
+
+THE GOVERNOR'S TWO CONSTANTS ARE NOW DERIVED RATHER THAN DECLARED, AND NOT ONE NUMBER CHANGED. Sixteen and two are restated as what they always were - a band about a midpoint, a midpoint of nine and a half-width of seven - because replacing them with different numbers would be konnectome inventing where it had no need to. The suite proves the derivation reproduces the original block field for field AND that a governor standing on the derived band runs an identical twenty-four-tick day, state for state, because identical parameters are only evidence and identical behaviour is the proof.
+
+AN HONEST INTERACTION, PINNED RATHER THAN LEFT TO BE DISCOVERED. The two consumers have DIFFERENT FLOORS. A gate reads a bias of zero as "no hysteresis" and behaves as it always did; the governor cannot, because its own guard has refused a flat or inverted band since it was built, and a flat band chatters. The same scalar is therefore legal at zero for one consumer and refused at zero by the other, and a test pins the governor's refusal by its own name. That is not a defect: it is what it looks like when two constructs share a scalar and each keeps its own domain.
+
+WHAT THIS SLICE DELIBERATELY DID NOT BUILD. THE CORPUS GATES THE STABILISER BY CIRCADIAN PHASE AND HUNGER, AND NEITHER GATING IS BUILT: hunger has no construct in konnectome at all, and gating by phase would require a function the corpus does not supply at this grain, so the scalar is published by a caller who chooses it and the gating is deferred BY NAME rather than invented. No construct was rewired to consult the stabiliser - the gate and the governor can now be handed a bias, and the join belongs to the caller, as every join in this family has since slice 41. No motif-grain hysteresis, per DECISION-3. And OBSERVATION-9 stands exactly where slice 42 left it: the stabiliser is not a watchdog and counts nothing.
+
+Gates at this slice: the new stabiliser pack ships EIGHTEEN Prolog Unit (PLUnit) tests and archetype grows from forty-two to fifty (the other thirty packs unchanged; SEVEN HUNDRED AND THIRTY-NINE in total across THIRTY-TWO packs, all green); the naming gate reports zero violations across all thirty-two packs and passes its own self-test; the layer, layer-binding and reality-discipline gates all report zero violations; the capstone story is byte-identical to main's. Nothing routes to either change order: a scalar published inside one runtime and read by two constructs in the same runtime travels to nobody and fails the consumer-versus-ontology test of the Second Commandment, and no language feature was missing. Nothing in this slice releases the held sections of the causalontology change order. No new wall was hit; nothing in PrologAI or Causalontology was edited, and conformance was not re-measured because neither cousin was touched.
+
+
+KONNECTOME REALIZATION LOG - SLICE 45
+
+Slice 45 - The first real watchdog: where it sits, and what it is deliberately not joined to - 2026-08-09.
+
+THE PACK AND ITS LAYER. watchdog is a new pack at LAYER ZERO, base infrastructure, because any construct at any grain may be watched and a watcher that sat above some constructs could not watch the rest. It imports two things only: the standard error library, and the tick engine's single wall-clock conversion. It edits no existing pack, which is the strongest available statement that this slice is a reader rather than a rewiring.
+
+THE WATCHDOG AND THE SUPERVISOR MEET AT A TERM, NOT AT AN IMPORT, AND THAT IS A DESIGN DECISION RATHER THAN AN OVERSIGHT. The readings this pack produces are the supervisor's own term shape, supervisor_reading/3, and this pack does NOT import the supervisor to build them. Both sit at layer zero, so an import would break no layer rule - but it would make the watchdog depend on the watcher, when the honest direction of dependence is neither. They meet at a VALUE THE WORLD CARRIES, in the same discipline as every other store in this repository. The coupling is therefore by SHAPE, and because a coupling by shape is exactly the kind that rots silently, the shape is pinned by tests in this pack that hand real readings to the real supervisor and read back the real gate's real report.
+
+THE THREE-PARTY ARRANGEMENT, STATED ONCE SO IT IS NOT REDISCOVERED. The ARCHETYPE declares what a construct's boundaries are, in its fault block, from the corpus. The WATCHDOG measures how close a construct is to them, from a history. The SUPERVISOR judges the measurement against an allowance and publishes a warning. No one of the three holds two of those jobs, and none of them decides what to DO about a warning, which remains undecided exactly where slice 42 left it.
+
+WHY THE HISTORY IS NOT A NEW WORLD DICT KEY. No key was added. A history is threaded by the caller that owns the watchdog, in the explicit-stateless-value discipline, and the reason is the one Component 4 has enforced since slice 4: the bus is the one place the architecture permits a global value, and a per-instance history is not a global value and is not a chemical. Putting it there would have made every construct's update rule a potential reader of its own surveillance record, which is a coupling nothing has asked for - the same argument slice 42 gave for keeping the supervisor channel off the bus, arriving at a different construct and reaching the same answer.
+
+WHAT IS STILL NOT JOINED, AND IT IS AN IOU OF EXACTLY THE SHAPE SLICE 44 LEFT. NOTHING IN THE RUNNING MACHINE OBSERVES A GATE YET. The capstone does not build a history; the cognitive cycle does not thread one; no caller chooses a window or an allowance. The watchdog can be HANDED a history and will read it truthfully, and the join belongs to the caller, as every join in this family has since slice 41. The first slice that wires a real gate to a real history will have to choose a window and say why, and that choice is a slice of its own - which is precisely what DECISION-4's first half declines to make on its behalf.
+
+THE OBSERVABILITY DEBT IS PAID AT A NEW CONSTRUCT. The owner's standing visualization-panel request gains its third layer here, and gains it as a readable value rather than as a promise: a panel can now show what every construct IS doing (the register, since slice 39), WHERE ITS BOUNDARIES SIT while it does it (the effective threshold, since slice 44), and WHAT IS BEING WATCHED about it and by whom (this pack) - all three readable from values the world carries, none of them requiring the construct to be stepped.
+
+
+KONNECTOME REALIZATION LOG - SLICE 46
+
+Slice 46 - The master register widened: where it sits, and the finding that kept its table empty - 2026-08-09.
+
+THE PACK AND ITS LAYER. master_register is a new pack at LAYER ZERO, beside the bus it is announced on, because Layer 11's own answer to how a state reaches everything below it is ONE BROADCAST - and konnectome has owned that broadcast since slice 4. It imports the neuromodulator bus and nothing else.
+
+THE STATE IS STILL ON THE BUS AND NOT INSIDE A PACK, which is slice 35's decision inherited rather than re-taken. What changed is the VALUE the channel carries, not where it lives.
+
+THE CHANNEL GAINED TWO PREDICATES AND LOST NONE. neuromodulator_bus_global_state/2 reads the widened term; neuromodulator_bus_broadcast_global_state/3 writes it. The ORIGINAL reader, neuromodulator_bus_operating_state/2, still hands back THE POLE ALONE and always will - deliberately and permanently, because every predicate written since slice 35 that asks this question means "am I awake or asleep", and answering it with a compound would have broken all of them.
+
+THE DIVISION BETWEEN CHANNEL AND REGISTER IS THE SLICE'S ONE STRUCTURAL DECISION, and it repeats one slice 42 already made. The channel judges SHAPE - a term that is not a widened state, and a pole the flip-flop does not have, are both refused there. The channel does NOT judge the ROSTER, because which sub-modes a pole has is POLICY, and policy belongs to the construct that enforces it. Both halves are pinned by tests, including one that deliberately writes a roster violation through the raw channel and reads it back, so that the division cannot be quietly closed by a later tidying.
+
+THE DOWNWARD ASSIGNMENT USES THE DOOR THAT ALREADY EXISTS AND OPENS NO NEW ONE. An assignment is applied through the MODE THROW channel slice 41 built, which is the corpus's own coordination mechanism and needs no controller. Slice 41's characterisation is the sentence this slice leans on entirely: THE THROW IS A ROW, NOT A DOOR. A construct that declares no thrown row for its kind cannot be commanded, and says so through its own register rather than through a list kept elsewhere of who may command whom. That property is what makes it safe to aim a downward assignment at a KIND at all.
+
+AND THE TABLE IS EMPTY, AND THE EMPTINESS IS THE SLICE'S SHARPEST FINDING RATHER THAN ITS SHORTFALL. THE CORPUS ASSIGNS TO NAMED INDIVIDUALS AND KONNECTOME HAS ONLY KINDS. Read any of the twenty-six downward assignments and every row addresses a NAMED CONSTRUCT: the thalamus to faithful relay, the hippocampus to theta-coded encoding with ripple replay suppressed, the thalamic reticular cells to rhythmic burst firing, the flip-flop motifs OF THE STATE MACHINERY latched to wake. konnectome has no named individuals at any of those grains. It has ARCHETYPES - relay, integrator, oscillator, attractor, gate, comparator - which are KINDS, instantiated wherever a world happens to want one.
+
+SO THE ONE ROW THAT LOOKS AVAILABLE IS EXACTLY THE ONE THAT HAD TO BE REFUSED. The corpus says the state machinery's flip-flops latch to wake, and konnectome's gate archetype was validated block by block at slice 40 against the corpus's own flip-flop entry - so writing "waking assigns every gate the open mode" is one line away and reads like fidelity. It would assign EVERY GATE IN THE REPOSITORY the mode of ONE NAMED FLIP-FLOP, including gates installed in roles that have nothing to do with the state machinery. That is the armchair guessing the Fourth Commandment forbids, wearing a corpus citation - the same shape slice 45 named one slice earlier when it refused a window length, arriving here as a MODE rather than as a number.
+
+THE CLOSER IS NAMED AND WAS ALREADY ON THE QUEUE: the region-grain construct, which the design authority deferred by name and which requires promoting a territory from a level to a first-class NAMED construct. When konnectome has named individuals, this table has rows.
+
+WHAT THE VISUALIZATION PANEL GAINS. The owner's standing request asks for every grain shown at once, INCLUDING the Layer 11 global state that is a coordinated assignment across everything below. That top row is now readable as a value the world carries: a watcher holding a bus can read the pole, the sub-mode, the formal name, what runs while it holds, and what it assigns downward - all without running anything. The panel's top row exists. Its arrows down to the grains below do not, and the pack says why.
+
+
+KONNECTOME REALIZATION LOG - SLICE 47
+
+Slice 47 - The first caller wired to a watchdog: what is now joined, and what still is not - 2026-08-09.
+
+NO NEW PACK, AND THAT IS THE ARCHITECTURAL STATEMENT. Slices 42, 44, 45 and 46 each added a pack and joined it to nothing. This slice adds no pack and joins four that already existed: two_process_governor now imports mode_register, watchdog and supervisor, and the four of them do one thing together.
+
+THE FOUR-PARTY ARRANGEMENT, STATED ONCE. The GOVERNOR declares what its boundaries are, from Entry 11, and supplies the window and the allowances from its own day. The WATCHDOG measures flips and holds over that window, from a history. The SUPERVISOR judges the measurements and publishes. The MODE REGISTER holds the four blocks the supervisor reads through. No one of the four holds two of those jobs, and none of them decides what to DO about a warning, which remains exactly as undecided as slice 42 left it.
+
+THE HISTORY IS STILL THE CALLER'S AND IS STILL NOT ON THE BUS. No world dict key was added. A history is threaded by whoever owns the watching, in the explicit-stateless-value discipline, for the reason slice 42 gave about the supervisor channel and slice 45 repeated: a per-instance surveillance record is not a chemical and is not addressed to the constructs.
+
+THE DEPENDENCY DIRECTION IS WORTH RECORDING BECAUSE IT IS THE OPPOSITE OF WHAT SLICE 45 CHOSE. The watchdog deliberately does NOT import the supervisor - they meet at a term - because a watchdog that knew its watcher would be a watchdog with one watcher. But the GOVERNOR imports all three, and should: it is the CALLER, and a caller is exactly the thing that is allowed to know all the parts it is composing. The rule the two slices together establish: MECHANISMS MEET AT TERMS, CALLERS IMPORT.
+
+AND THE READINGS ARE RE-KEYED AT THE CALLER RATHER THAN RENAMED AT THE SOURCE. The watchdog measures flips and ticks-held, which are construct-neutral quantities, and files them under the gate's signature names because the gate is what it was built against. This governor names its boundaries differently, so its own watch re-keys them. WHAT A QUANTITY MEANS IS EACH CONSTRUCT'S OWN CLAIM; WHAT IT IS is the watchdog's. Renaming at the source would have made the watchdog know about its callers, which is the coupling the previous paragraph exists to prevent.
+
+WHAT IS JOINED AND WHAT IS NOT, STATED PRECISELY BECAUSE THE DIFFERENCE MATTERS AND IS EASY TO OVERSTATE. THE CONSTRUCTS ARE REAL: the tests drive the real governor through a real day, into a real watchdog history, judged by the real supervisor against the real fault block - no fixture anywhere in that chain. THE CAPSTONE STILL DOES NOT CALL IT. Its story is byte-identical, because the demonstration's told story does not print a supervisor report and this slice did not add one. So the honest statement is narrower than "the running machine is watched": THE RUNNING MACHINE CAN NOW BE WATCHED, BY ITS OWN PARTS, WITH EVERY NUMBER READ FROM ITS OWN PARAMETERS - and the last step, a told story that says out loud whether the night was healthy, is a demonstration slice rather than this one.
+
+
+KONNECTOME REALIZATION LOG - SLICE 48
+
+Slice 48 - The bus's six named broadcast channels: a roster that declares and does not guard - 2026-08-10 - pack neuromodulator_bus (a roster of six channels with their roles, sources and cognitive tags); no new pack, no existing call changed, no number invented, and the capstone story byte-identical.
+
+WHERE THIS SITS IN THE ARCHITECTURE, AND WHY IT ADDS NO COMPONENT. Architecture Component 4, the neuromodulatory broadcast bus, is the Layer 11 volume's Chapter 16 organ under another name - the chapter says so itself, calling the ascending broadcast system, in its own engineering terms, "the global configuration bus itself". This slice adds no component, no key shape and no channel: the bus's four key shapes are exactly what they were after slice 41. What it adds is a DECLARATION ABOUT ONE OF THEM, and the declaration lives inside the pack that owns the shape.
+
+THE ARCHITECTURAL FINDING, AND IT IS A MEASUREMENT. THE ATOM KEYSPACE IS A NAMESPACE AND NOT A ROSTER. Three atom keys are in flight in the running machine: dopamine, written by drive_system; norepinephrine, written by arousal_regulation since slice 19 and printed in the capstone's told story; and stability_bias, written by stabiliser since slice 44 - a published scalar that is not a neuromodulator and was never claimed to be. A roster enforced on the write would have refused a correct, running, tested caller. The roster therefore describes a SUBSET of the keyspace and does not define it, and the check that would enforce it is offered to callers rather than installed in the channel.
+
+THE BOUNDARY THIS SLICE DRAWS BETWEEN THE CHANNEL AND ITS CALLERS is the same boundary slice 46 drew between shape and policy, arriving one grain lower. The channel judges SHAPE: an atom, not a compound, not a hole. The roster is a MEMBERSHIP CLAIM, which is policy, and policy belongs to the construct that enforces it. Neither of the two callers writing channels today asked for it, so neither gets it imposed.
+
+WHAT THE ARCHITECTURE STILL DOES NOT HAVE, stated so the absences are decisions. No BLEND: the corpus's Layer 11 modes volume gives this organ three named chemical blends, one per broadcast state, and says plainly that the blend and not any single chemical names the mode - which is the master register's grain, not this channel's, and is where the roster will next be consumed. No per-channel MODE REGISTER, though the Layer 10 modes volume supplies one for each of the six. And no channel-level SUBSCRIPTION: reading is still a caller pulling a level, exactly as it has been since slice 4.
+
+
+KONNECTOME REALIZATION LOG - SLICE 49
+
+Slice 49 - The working-memory blackboard, built to the corpus's own constants - 2026-08-10 - NEW PACK working_memory_blackboard; DECISION-8, the activation grain; OBSERVATION-13, a chapter that disagrees with itself about time; nothing wired into the tick, and the capstone story byte-identical.
+
+WHERE THIS SITS IN THE ARCHITECTURE, AND WHY IT ADDS NO COMPONENT. The board is an ORDINARY PACK holding an ORDINARY WORLD VALUE, and the design authority's Part B4 argued this before the pack existed: the eligibility-trace store is already a value the world carries - decaying, spent, externally readable, never a record - and the working-memory blackboard is the same shape at a different grain. Nothing in this pack asserts a clause, mints a record, or reaches the observer. The ephemeral guarantee the corpus insists on three times in one chapter is therefore FREE rather than defended.
+
+THE PACK SITS AT LAYER ZERO beside the scheduler it borrows one conversion from, and it depends on exactly one konnectome sibling - tick_engine, for DECISION-2's duration conversion. It is deliberately NOT wired into cognitive_cycle_step/3: Part B6 item 3 says the pack is exercised by its own tests before it is wired, and the tick order is Component 9's and is not edited by a pack that has not yet earned a place in it.
+
+THE ARCHITECTURAL DECISION THIS SLICE TAKES IS DECISION-8, THE ACTIVATION GRAIN: ONE HUNDRED PARTS TO THE UNIT ACTIVATION. Every activation this pack holds is a whole number of parts, and every corpus decimal enters through one conversion which REFUSES anything that does not land exactly. It is DECISION-2's shape one grain down, with DECISION-2's three reasons: it makes every corpus constant a whole number of parts; it is the coarsest grain that does so; and it costs nothing and passes through one predicate, so a session that must restate it has one place to look. The full reasoning is in the ledger's DECISION-8 note.
+
+WHY A GRAIN WAS NEEDED AT ALL, WHICH IS THE ARCHITECTURAL FINDING. Binary floating point is not a neutral carrier for the corpus's decimals. Subtracting five hundredths from one sixteen times in IEEE doubles gives 0.19999999999999968 rather than two tenths, so a slot standing EXACTLY on the collapse threshold is judged to have fallen below it and dies one step early - and the corpus's own printed Python does exactly that, while the corpus's own prose says a slot is removed when its activation "falls BELOW 0.2", which at exactly two tenths it has not. THE ONE-STEP DIFFERENCE WAS DECIDED BY BIT-LEVEL DRIFT RATHER THAN BY ANYTHING ANYBODY CHOSE. A representation is not a number, so choosing one is not invention; but choosing one by default, and inheriting its artefacts as behaviour, is exactly how a careful build acquires a value nobody decided.
+
+THE BOUNDARY BETWEEN THE TWO HALVES OF THIS PACK IS DRAWN AND STATED. The chapter says the CONTENTS are not learned - "that is the point" - while the GATING POLICY is, by striatal reinforcement. One module therefore holds the one thing that must never be recorded beside the one thing that eventually must be. This slice takes the gate verdict as an argument and learns nothing, so the durable half is not begun by accident, and the same discipline keeps the rehearsal target caller-supplied.
