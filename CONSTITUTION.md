@@ -74,7 +74,21 @@ THE FOURTH COMMANDMENT:
 Change orders and considerations for change orders to
 1. causalontology, or 2. PrologAI, or 3. konnectome itself
 will be written to the new file:
-/home/ccaitwo/konnectome/docs/konnectome_ledger_v1.txt (A new file; create it at build start.)
+/home/ccaitwo/konnectome/docs/konnectome_ledger.txt (A new file; create it at build start.)
+(RENAMED FROM konnectome_ledger_v1.txt in version 23, by the owner's instruction of 2026-08-11, and
+NO RULE CHANGED - which is the whole difference between this entry and the version 22 one beside it.
+The build log had to have a rule amended because the Nineteenth Commandment declared it "a versioned
+document under the Eleventh Commandment" in so many words. NOTHING IN THIS CONSTITUTION EVER SAID
+THAT OF THE LEDGER. The suffix was never a rule here; it was only ever part of a filename chosen at
+build start, and dropping it therefore contradicts nothing and releases nothing from any discipline.
+The ledger is the same kind of document as the build log and for the same reason: it is APPEND-ONLY -
+"Every wall the build hits becomes an entry here first" - and an append-only document is never
+superseded, so it never has a superseded version to archive. The evidence is that docs/archive/ has
+never held a konnectome_ledger at all, across fifty-five slices: the _v1 was written once, at build
+start, and stood unmoved because nothing could ever bump it. Should the ledger ever be RESTARTED
+rather than appended to, the version 22 discipline applies unchanged - the standing
+konnectome_ledger.txt moves to docs/archive/ under a _vN name in the same change, and a fresh
+konnectome_ledger.txt begins.)
 This ledger is the running scoreboard of the build, exactly as PrologAI_Requirements_Ledger_v1.txt
 was for the language.
 (LOCATED in version 16, by the owner's instruction of 2026-08-10. That file is inherited from the
@@ -332,7 +346,7 @@ and that those code modules serve the same functions and faculties in konnectome
 and with the same inputs/outputs (SUBSCRIBE/PUBLISH) interfaces as described in,
 docs/neuroscience/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt
 The audit is not one-and-done: keep a coverage list in
-/home/ccaitwo/konnectome/docs/konnectome_ledger_v1.txt
+/home/ccaitwo/konnectome/docs/konnectome_ledger.txt
 that names, for each construct in the manuscript, the module that realizes it, so the audit can be
 re-run at any time and a missing construct is visible at a glance.
 (REPOINTED in version 18, on the pointer audit of 2026-08-10. This line named the ledger as a bare
@@ -809,8 +823,32 @@ commit because they are one act: the document that was the instruction becomes a
 moment the next one becomes the instruction, and splitting them across two changes would leave a
 commit in which /docs/ holds two hand-offs or none.
 
-VERSION HISTORY NOTE (extended in version 22). This Constitution is at VERSION 22, and holds
+VERSION HISTORY NOTE (extended in version 23). This Constitution is at VERSION 23, and holds
 TWENTY-TWO Commandments.
+
+Version 23, by the owner's instruction of 2026-08-11, UNVERSIONS THE LEDGER. The Fourth
+Commandment's document is renamed from konnectome_ledger_v1.txt to konnectome_ledger.txt, and both
+of this Constitution's pointers at it - in the Fourth Commandment and in the Tenth - are repointed.
+NO COMMANDMENT WAS ADDED, REMOVED, OR RENUMBERED; the count stands at twenty-two.
+
+NO RULE CHANGED, and the contrast with version 22 immediately below is the instructive part. That
+entry HAD to change a rule, because the Nineteenth Commandment declared the build log "a versioned
+document under the Eleventh Commandment" in so many words, and the rename made that declaration
+false. This Constitution never made that declaration about the ledger. The suffix was not a rule
+here - it was only ever part of a filename chosen at build start - so dropping it contradicts nothing
+and releases nothing from any discipline.
+
+THE TWO DOCUMENTS ARE THE SAME KIND OF THING, AND NOW LOOK IT. Both are append-only: the build log
+"grows with the build", and every wall "becomes an entry here first". Neither can ever be superseded,
+so neither can ever have a superseded version to archive. The proof for the ledger is cleaner than
+the proof for the build log was: docs/archive/ has never held a konnectome_ledger at all, across
+fifty-five slices, because the _v1 was written once and nothing could ever bump it.
+
+THE RULE THIS LEAVES BEHIND, STATED ONCE AND COVERING BOTH. A version suffix belongs on a document
+that gets SUPERSEDED - written afresh so that a previous whole is replaced - and not on one that is
+merely APPENDED TO. Restart is the only event that can version an append-only document, and it is
+handled the same way in both Commandments: the standing unsuffixed file moves to docs/archive/ under
+a _vN name in the same change, and a fresh unsuffixed file begins.
 
 Version 22, by the owner's instruction of 2026-08-11, UNVERSIONS THE BUILD LOG. The Nineteenth
 Commandment's document is renamed from BUILDING_KONNECTOME_v2.txt to building_konnectome.txt, and the

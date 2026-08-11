@@ -1327,7 +1327,7 @@ A layer is a numbered level of the code; the rule is simply that a lower level m
 PART FIFTY-ONE - THE LEDGER AND THE CHANGE ORDERS
 
 
-As konnectome is built, it sometimes meets a wall - something the language or the data structure cannot yet express. Every wall is written down first in the ledger, a file named konnectome_ledger_v1.txt that is the honest scoreboard of the whole build. From the ledger, a wall is routed to exactly one of three places:
+As konnectome is built, it sometimes meets a wall - something the language or the data structure cannot yet express. Every wall is written down first in the ledger, a file named konnectome_ledger.txt that is the honest scoreboard of the whole build. From the ledger, a wall is routed to exactly one of three places:
 
 • If the missing thing must be shared between programs as a signed, named record, it is a data-structure gap, and it goes to the Causalontology change order (a held file that gathers such requests).
 
@@ -1349,7 +1349,7 @@ Everything konnectome needs is inside its own docs/ folder, so you never have to
 
 • docs/DSPARCD/ - the seven method documents, konnectome_0_definition through konnectome_6_demonstration, together with the specification of the method itself. Read the definition first; it is the concept the other six answer to.
 
-• konnectome_ledger_v1.txt - the running scoreboard.
+• konnectome_ledger.txt - the running scoreboard.
 
 • docs/neuroscience/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt - the guiding book, which lives with the rest of the source neuroscience corpus in docs/neuroscience/ .
 

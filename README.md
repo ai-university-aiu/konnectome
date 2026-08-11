@@ -106,7 +106,7 @@ konnectome is built and maintained under a written [**CONSTITUTION.md**](CONSTIT
 1. **AGI and ASI in mind** - built toward Artificial General Intelligence and Artificial Super Intelligence, guided by three roadmap documents in [`docs/principles/`](docs/principles/).
 2. **Causalontology is the thought structure** - frozen to konnectome except through the gated change-order process.
 3. **PrologAI is the language** - the same gate applies; konnectome never edits it directly.
-4. **The ledger is the scoreboard** - every wall becomes an entry in [`docs/konnectome_ledger_v1.txt`](docs/konnectome_ledger_v1.txt) first, then is routed to exactly one place.
+4. **The ledger is the scoreboard** - every wall becomes an entry in [`docs/konnectome_ledger.txt`](docs/konnectome_ledger.txt) first, then is routed to exactly one place.
 5. **DSPARCD is the waterfall** - the seven-phase method, inspired by [`docs/DSPARCD/DSPARCD_EXPLAINED.txt`](docs/DSPARCD/DSPARCD_EXPLAINED.txt).
 6. **English Readable Code** - one plain-English comment above every line of code.
 7. **The DSPARCD Fileset** - seven versioned documents in [`docs/DSPARCD/`](docs/DSPARCD/); six seeded from the appendices of *Nature's Cognitive Architecture*, and `konnectome_0_definition` written from the Constitution and the whole of `docs/`, leading the other six.
@@ -191,7 +191,7 @@ konnectome/
     simulated_body/            Slice 24: the honestly-named stand-in machine - a camera, a draining battery, three actuators.
     body_interface/            Slice 24: Rung Five groundwork - the book's three body connections; the rung itself not claimed.
   docs/                        Live working documents at the top level; everything else in a sub-directory.
-    konnectome_ledger_v1.txt   The running scoreboard of findings (Fourth Commandment).
+    konnectome_ledger.txt      The running scoreboard of findings (Fourth Commandment). Append-only, and unversioned for the same reason as the build log.
     building_konnectome.txt    The build log (Nineteenth Commandment): the whole story from the true beginning, paper and book at once. Append-only, and the one live document with no version suffix.
     konnectome_tutorial_v52.txt A complete beginner tutorial (Seventeenth Commandment), versioned.
     [DATE]_N_Context_Hand-Off_from_[NAME].txt   The CURRENT hand-off, and the only one here (Nineteenth Commandment).
