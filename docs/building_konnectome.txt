@@ -1753,4 +1753,38 @@ ONE. The ledger's pointer-audit entry claimed the scheduled fulfilment audit "sh
 TWO. docs/design/README.txt declared its numbering as "01 to 10" and described document 10 as "Last", both of which stopped being true the moment this audit was written into that directory as 11. Both are corrected, and the audit's entry carries the reason its NUMBER disagrees with its READING POSITION: it belongs beside 03, and inserting it there would renumber seven documents and require a pointer sweep across the ledger, the hand-off chain and the design documents. THE RENUMBERING IS DECLINED WITH ITS REASON RECORDED rather than overlooked, under that directory's own rule that its numbers are a judgement and not a law - which is the grading standard this audit spent a day applying, applied to the audit's own housekeeping.
 
 
-From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER SIXTY-NINE, and the story goes on being true.
+CHAPTER SIXTY-NINE - A THIRD OF THE CONSTITUTION WAS HISTORY (2026-08-11, CONSTITUTION VERSION 27)
+
+The owner's instruction was one sentence long and the measurement behind it is the whole chapter: we do not need to spend tokens reading the Constitution's version history at the start of every session.
+
+The Constitution was one thousand three hundred and thirteen lines. Three hundred and eighty-seven of them - very nearly a third - were the dated record of how it got that way. Twenty amendment entries, versions eight through twenty-six, several of them arguing at length with the entry above them.
+
+And every session read all of it before doing any work, because the hand-off protocol says to read the Constitution first and foremost, and nothing said which parts.
+
+THE TWENTY-THIRD COMMANDMENT EXISTS BECAUSE A CONTEXT WINDOW IS FINITE AND DEGRADES AS IT FILLS. Spending a third of the founding document's budget on records of acts whose entire effect is already written into the rules is spending it on the wrong third.
+
+So the history moved to CONSTITUTION_VERSION_HISTORY.md, and it is declared not required reading on a hand-off, and the Constitution is now nine hundred and forty-six lines.
+
+THE CHECK THAT HAD TO BE RUN BEFORE ANY OF THAT WAS SAFE is the interesting part, and it is not the one you would guess. The obvious worry is that the move might damage the text. It cannot: not one word of the twenty entries was altered, all twenty were verified present in the new file by name, and all twenty-three Commandments were verified present and in order in the old one.
+
+The real worry is subtler. A history entry is safe to set aside ONLY IF everything it says is also said by the rule it amended - which is what an amendment IS in this document, and which is true of nineteen of the twenty entries. The exception had to be found rather than assumed, and there is exactly one: THE VERSION 19 RENUMBERING MAP. When four Commandments were renumbered, the map from old number to new was written into the version 19 note and into no Commandment, because it describes a change to numbering rather than a rule. Nothing else carries it. A session chasing a commandment number cited from an archived hand-off needs it and would have had no way to know it existed once the file it lives in stopped being read.
+
+So it is named in the new file's head, as a standing reason to open the file, and it is named in the hand-off. THE FIX FOR A THING THAT CAN ONLY BE FOUND BY READING EVERYTHING IS TO NAME IT WHERE SOMEBODY WILL LOOK, and that is cheaper than reading everything forever.
+
+TWO SMALL DECISIONS ARE WORTH RECORDING BECAUSE THE OBVIOUS ANSWER WAS WRONG IN BOTH.
+
+The first: the VERSION and the COMMANDMENT COUNT stay in the Constitution rather than moving with the rest. They are technically part of the history note, and they are also the two facts most often quoted from the whole document - a reader needs them constantly and needs nothing else from the history. Moving them would have traded a large saving for a small daily cost paid forever.
+
+The second: this entry says A RULE CHANGED, and does not claim otherwise. Most amendments in this project's history are careful to record that no rule moved, and the temptation was to say so here too, since no Commandment's force is different. But a READING OBLIGATION changed. The Constitution was previously read whole; a third of it is now explicitly excluded. A session skipping the history today is FOLLOWING the rules rather than cutting a corner, and that is a real change and pretending otherwise would be the fault the version 22 entry named when it made the same distinction about the build log.
+
+THE POINTER RULE WAS THE LAST THING CHECKED. The First Commandment's version 9 note says a file that moves must have every pointer to it moved in the same change. The live pointers at the version history are in the ledger and the build log and read "the Constitution's own version N note" - a form that still resolves, in one hop, now that the Constitution says where the history went. Those two documents are append-only and their entries are dated records, so they were not rewritten, on the standing precedent of the version 8 note: a mechanical sweep once rewrote a history note and would have made it describe an action that never happened, and it was caught by reading the output rather than by any check.
+
+
+THE AUTO-FIX OF THIS CHANGE, RECORDED UNDER THE SIXTEENTH COMMANDMENT'S SINGLE CONDITION
+
+ONE, AND IT WAS FOUND BY LOOKING FOR POINTERS RATHER THAN BY LOOKING FOR FAULTS. README.md described the Constitution as "twenty-two commandments, currently at version 21" in two places. It has held twenty-three commandments since version 26 and had been at twenty-two versions past what the README claimed - so the Thirteenth Commandment's requirement that the README be kept up to date had been quietly unmet for six versions. Both sites are corrected to twenty-three at version 27, the new history file is added to the repository layout listing with its not-required-reading note, and the same listing's description of bin/ - which named four gates - is corrected to the six that exist. A README that undercounts the rules governing the build is the same species of fault as everything else this week: nothing broke, so nobody looked.
+
+AND ONE CORRECTION IN PLACE THAT IS NOT AN AUTO-FIX BUT A PROTOCOL ACT. The current hand-off stated the Constitution was at version 26 and had not moved. That went false an hour after it was written. It is corrected in place under the version 12 precedent - "no hand-off was edited except the newest, which is the live entry point rather than only a record" - and the correction says on its face that it is a correction and why it was permitted. Every older hand-off is untouched, as the series rule requires.
+
+
+From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER SEVENTY, and the story goes on being true.

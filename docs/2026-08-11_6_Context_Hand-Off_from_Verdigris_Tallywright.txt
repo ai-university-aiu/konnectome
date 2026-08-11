@@ -9,7 +9,8 @@ AND THE FIRST THING THIS DOCUMENT DOES IS CLOSE A GAP OF EXACTLY THAT KIND. My p
 
 PART ONE - READ THESE FIRST
 
-- Read and follow the konnectome constitution at ~/konnectome/CONSTITUTION.md, first and foremost. IT IS AT VERSION 26 AND HOLDS TWENTY-THREE COMMANDMENTS, and it did NOT move this session. The hand-off protocol is the TWENTY-THIRD; the judgement-call protocol is the TWENTY-SECOND; the order of resort is the TWENTY-FIRST. Do not cite a commandment by number from memory or from an older document; re-read it.
+- Read and follow the konnectome constitution at ~/konnectome/CONSTITUTION.md, first and foremost. IT IS AT VERSION 27 AND HOLDS TWENTY-THREE COMMANDMENTS. IT MOVED AFTER THIS HAND-OFF WAS FIRST WRITTEN, by the owner's instruction, and this line is corrected in place under the version 12 precedent that the NEWEST hand-off may be edited because it is the live entry point rather than only a record.
+  AND THE AMENDMENT IS ONE YOU BENEFIT FROM IMMEDIATELY: the Constitution's dated version history is no longer inside it. It lives at ~/konnectome/CONSTITUTION_VERSION_HISTORY.md and IS NOT REQUIRED READING WHEN YOU LOAD STATE. The Constitution is roughly a third shorter as a result. Read the history only when you need to know WHY a rule reads as it does, when you are about to amend one, or when you are chasing a commandment number cited from an older document - THE VERSION 19 RENUMBERING MAP IS IN THAT FILE AND NOWHERE ELSE. The hand-off protocol is the TWENTY-THIRD; the judgement-call protocol is the TWENTY-SECOND; the order of resort is the TWENTY-FIRST. Do not cite a commandment by number from memory or from an older document; re-read it.
 
 - READ docs/DSPARCD/konnectome_0_definition_v1.txt BEFORE ANYTHING ELSE IN THE FILESET. Unchanged since slice 41. READ ITS PART ONE AGAINST OBSERVATION-22: "a part that cannot be reached from the one running loop is not yet part of konnectome, however well it tests." THREE OF THE SEVEN UNREACHED PARTS ARE NOW REACHED AND FOUR ARE NOT - AND THE SENTENCE ITSELF IS AMBIGUOUS, because this build has two running loops and has been counting them as one. That is the front of the queue.
 
@@ -88,7 +89,7 @@ TWO SLICES BUILT AS ONE PAIR, PLUS THE SCHEDULED AUDIT AS ITS OWN ACT. One numbe
 
 - FIVE AUTO-FIXES, all in the build log. Three from the slices: the deferral gate reading the register's own prose about the separator as malformed entries; an unprobeable entry's empty probe fields collapsing and swallowing its note; and body_interface's pack.pl carrying a version and requires list that had stopped being true. Two from the audit: a false ledger record claiming the audit had already shipped, and docs/design/README.txt declaring a numbering range and a "last" document that both stopped being true.
 
-- State at hand-off: SEVENTY slices. ONE THOUSAND ONE HUNDRED AND SIXTEEN tests across FORTY-ONE packs. SIX gates at zero violations, THREE carrying self-tests. DSPARCD fileset v61; tutorial v60 at sixty-two parts; build log sixty-eight chapters; Constitution VERSION 26 at TWENTY-THREE commandments, unmoved.
+- State at hand-off: SEVENTY slices. ONE THOUSAND ONE HUNDRED AND SIXTEEN tests across FORTY-ONE packs. SIX gates at zero violations, THREE carrying self-tests. DSPARCD fileset v61; tutorial v60 at sixty-two parts; build log sixty-eight chapters; Constitution VERSION 27 at TWENTY-THREE commandments - version 26 when the slices were built, and 27 after the owner's instruction to split the version history out, which is recorded in build-log chapter sixty-nine.
 
 
 PART FOUR - BUILD-AGAINST COUSIN COMMITS (for reproducibility)

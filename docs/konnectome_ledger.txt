@@ -5951,4 +5951,55 @@ holds ten.
 
 Nothing routes to either change order. Neither cousin was edited. No code changed and no test moved.
 
+
+CONSTITUTION VERSION 27 NOTE (2026-08-11, by the owner's instruction). THE CONSTITUTION'S DATED
+VERSION HISTORY MOVES OUT OF THE CONSTITUTION AND INTO ITS OWN FILE, AND IS DECLARED NOT REQUIRED
+READING ON A HAND-OFF. It lives at /home/ccaitwo/konnectome/CONSTITUTION_VERSION_HISTORY.md . NO
+COMMANDMENT WAS ADDED, REMOVED, OR RENUMBERED; the count stands at twenty-three. No Commandment's
+text was edited and not one word of the twenty history entries was altered in the move.
+
+A RULE CHANGED AND THIS ENTRY SAYS SO. What changed is a READING OBLIGATION, not the force of any
+Commandment: the Constitution was previously read whole at the start of every session and a third of
+it is now explicitly excluded. A session that skips the history is now FOLLOWING the rules rather
+than cutting a corner. Recording that plainly is the version 22 discipline, which had to change a
+rule and said so rather than claiming otherwise.
+
+THE MEASUREMENT BEHIND THE INSTRUCTION. The Constitution was 1313 lines and 387 of them - very
+nearly a third - were the amendment history, versions 8 through 26. It is now 946. The Twenty-Third
+Commandment exists because a context window is finite and degrades as it fills, and a third of the
+founding document's budget was going to dated records of acts whose whole effect is already written
+into the rules.
+
+THE ONE CHECK THAT MATTERED, AND IT IS RECORDED BECAUSE IT COULD HAVE GONE WRONG SILENTLY. A history
+entry is safe to set aside only if everything it says is also said by the rule it amended - true of
+nineteen of the twenty entries, and false of exactly one. THE VERSION 19 RENUMBERING MAP, from old
+commandment number to new, lives in the version 19 note and in NO Commandment, because it describes
+a change to numbering rather than a rule. A session chasing a commandment number cited from an
+archived hand-off needs it. It is therefore NAMED IN THE NEW FILE'S HEAD as a standing reason to
+open the file, and named again in the current hand-off. THE FIX FOR SOMETHING THAT CAN ONLY BE FOUND
+BY READING EVERYTHING IS TO NAME IT WHERE SOMEBODY WILL LOOK.
+
+WHAT STAYED BEHIND, AND WHY THE OBVIOUS ANSWER WAS WRONG. The VERSION and the COMMANDMENT COUNT
+remain in the Constitution, in a short closing block that also carries the pointer and the
+not-required-reading rule. They are technically part of the history note and they are also the two
+facts most often quoted from the document; moving them would have traded a large one-off saving for
+a small cost paid every session.
+
+THE POINTER RULE IS HONOURED. The First Commandment's version 9 note requires every pointer to a
+moved file to move in the same change. The live pointers at this history are in this ledger and in
+the build log, and they read "the Constitution's own version N note" - a form that still resolves in
+one hop now that the Constitution says where the history went. Both documents are APPEND-ONLY and
+those entries are DATED RECORDS, so they are not rewritten, on the standing precedent of the version
+8 note recorded earlier in this ledger, where a mechanical sweep rewrote a history note and would
+have made it describe an action that never happened.
+
+ONE AUTO-FIX RODE ALONG, in the build log as the Sixteenth Commandment requires. README.md described
+the Constitution as "twenty-two commandments, currently at version 21" in two places, which had been
+wrong by one commandment and six versions - so the Thirteenth Commandment's keep-it-current
+requirement had been quietly unmet. Both are corrected, the new file is added to the layout listing,
+and that listing's count of the gates is corrected from four to six.
+
+No code changed and no test moved. Nothing routes to either change order and neither cousin was
+edited.
+
  Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 22 (7 CLOSED: 8, 9, 15, 17, 18, 19 and 20).  Decisions: 19.
