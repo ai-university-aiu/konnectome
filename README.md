@@ -101,7 +101,7 @@ konnectome does not edit its cousins in place. When a real build hits a wall the
 
 ## How konnectome is governed: the Constitution
 
-konnectome is built and maintained under a written [**CONSTITUTION.md**](CONSTITUTION.md) of **twenty-two commandments**, currently at **version 21**. The numbering below is the Constitution's own. In brief:
+konnectome is built and maintained under a written [**CONSTITUTION.md**](CONSTITUTION.md) of **twenty-three commandments**, currently at **version 27**. Its dated amendment history lives beside it in [**CONSTITUTION_VERSION_HISTORY.md**](CONSTITUTION_VERSION_HISTORY.md), which is deliberately **not** required reading when a session loads state. The numbering below is the Constitution's own. In brief:
 
 1. **AGI and ASI in mind** - built toward Artificial General Intelligence and Artificial Super Intelligence, guided by three roadmap documents in [`docs/principles/`](docs/principles/).
 2. **Causalontology is the thought structure** - frozen to konnectome except through the gated change-order process.
@@ -158,9 +158,10 @@ The build does not leap to prediction, theory of mind, or a talking mind before 
 
 ```
 konnectome/
-  CONSTITUTION.md              The twenty-two commandments that govern the build (version 21).
+  CONSTITUTION.md              The twenty-three commandments that govern the build (version 27).
+  CONSTITUTION_VERSION_HISTORY.md  The Constitution's dated amendment history - NOT required reading on a hand-off.
   README.md                    This file.
-  bin/                         Test runner, the naming / layer / binding / reality-discipline gates, and run_capstone_demonstration.sh.
+  bin/                         Test runner, the six gates (naming, layers, binding, reality discipline, discrimination, deferrals), and run_capstone_demonstration.sh.
   packs/                       konnectome's Prolog packs, each with pack.pl, prolog/, test/.
                                ILLUSTRATIVE, NOT A CURRENT LIST: the packs named below stop at slice 24
                                and thirteen more have been built since. Run `ls packs/` for the real one.
