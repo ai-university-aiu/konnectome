@@ -392,6 +392,68 @@ plasticity_engine_check_scaling_rate(ScalingRate) :-
 % has no sign field on an interface, so there is nothing to test. That half waits on the edge type
 % registry, and it is recorded in the ledger against this observation rather than left implicit.
 
+% ---------------------------------------------------------------------------
+% DECISION-12 - THE RENORMALISER'S DOMAIN IS THE EXCITATORY CONTACTS (slice 54, OBSERVATION-15)
+% ---------------------------------------------------------------------------
+%
+% THIS CLOSES THE SECOND HALF OF OBSERVATION-15, which slice 52 could not close and expected to be
+% blocked on the edge type registry. It turned out not to be blocked, and WHY it was not is the
+% finding.
+%
+% THE CORPUS GIVES THIS MECHANISM A DOMAIN AND KONNECTOME WAS IGNORING IT. LAYER_04_05_MODES_OUTLINE
+% Entry 18 states the renormaliser as "prolonged under-activity driving every EXCITATORY synapse up by
+% one shared factor". The domain is the excitatory contacts. It is not every edge the scaler can
+% reach, and the corpus never permits this mechanism to touch an inhibitory one - because in the
+% biology inhibitory homeostasis is a SEPARATE mechanism with its own machinery, not the same
+% mechanism applied more widely.
+%
+% WHY THIS WAS THOUGHT TO BE BLOCKED, AND WHY IT WAS NOT. The reasoning at slice 52 was: konnectome
+% has no polarity field on an interface, so there is nothing to test, so the fix waits for the edge
+% type registry to supply one. THE FIRST STEP OF THAT REASONING WAS TRUE AND THE CONCLUSION DID NOT
+% FOLLOW. konnectome has no DECLARED polarity, but it has had an EFFECTIVE one since slice 3, and it
+% is not a matter of interpretation: connection_graph sums its input as Weight times SourceActivation,
+% so A NEGATIVE WEIGHT SUBTRACTS FROM ITS TARGET'S INPUT. That is what an inhibitory contact IS. The
+% sign of the weight is the polarity of the edge, as a measured property of the running code rather
+% than a convention anybody chose - which is exactly the kind of undeclared fact slice 46 warned
+% about, arriving from the other direction.
+%
+% SO THE DOMAIN IS TESTABLE TODAY: an excitatory contact is one whose weight is positive.
+%
+% WHAT THIS CHANGES FOR ANY WORLD KONNECTOME ACTUALLY RUNS: NOTHING, and that was verified rather
+% than assumed. No negative weight exists anywhere in the repository - not in the capstone's boot
+% world, not in any pack's fixture, not in any test - so every scaling this build has ever performed
+% was over positive weights and is unaffected. What changes is the day a world carries an inhibitory
+% contact, which nothing prevents and which the three-factor rule can produce on its own, since
+% plasticity_engine_update_interface adds a signed change to a weight with no floor beneath it.
+%
+% AND THE CONSEQUENCE IS RECORDED RATHER THAN DISCOVERED LATER, BECAUSE IT IS REAL. Scaling every
+% weight by one factor has a property that scaling only the excitatory ones does not: it multiplies
+% the NET input by that same factor, sign and all, so the excitation-to-inhibition balance is
+% preserved exactly. Restricting the domain gives that up. A loud construct's excitatory drive now
+% shrinks while its inhibition stands still, so the balance MOVES, and a construct can be driven net
+% negative by the bound where before it could not.
+%
+% THAT IS NOT A REGRESSION; IT IS THE MECHANISM. Downscaling a too-active cell's excitatory synapses
+% and letting the inhibition stand is what the biology does, and the balance moving is the point of
+% doing it. But it means konnectome now has HALF of a homeostatic system where it used to have a
+% mathematically tidy whole, and the other half - inhibitory homeostasis, which the corpus carries as
+% its own machinery - IS UNBUILT AND IS NAMED HERE so that nobody reads the asymmetry as an oversight.
+%
+% WHAT DECISION-12 DOES NOT DECIDE. It does not declare a polarity FIELD: the sign of the weight is
+% read as polarity because that is what the propagation already makes it, and a first-class polarity
+% belongs to the edge type registry exactly as slice 52 said. It does not decide what a weight of
+% EXACTLY ZERO is - it is left unscaled, because zero times any factor is zero and the question is
+% therefore empty, which is a better reason than picking a side. And it does not build inhibitory
+% homeostasis, which is a system and not a line.
+
+% plasticity_engine_excitatory(+Weight): an excitatory contact is one that ADDS to its target's input.
+plasticity_engine_excitatory(Weight) :-
+    % Read as polarity, because connection_graph sums Weight times SourceActivation: a positive weight
+    % drives its target and a negative one opposes it. A weight of exactly zero drives nothing and is
+    % left alone, since scaling it could not change it.
+    number(Weight),
+    Weight > 0.
+
 % plasticity_engine_check_scaling_factor(+Factor, +Receiver): refuse a factor that would invert or
 % annihilate a weight, naming the receiving construct whose bound could not be met.
 plasticity_engine_check_scaling_factor(Factor, Receiver) :-
@@ -498,9 +560,13 @@ plasticity_engine_target_lookup(Targets, Name, GlobalTarget, Target) :-
 plasticity_engine_scale_interface(Averages, Targets, GlobalTarget, ScalingRate,
                                   interface(From, To, Weight0, Delay, Kind),
                                   interface(From, To, Weight, Delay, Kind)) :-
-    % Only a transmissive interface is scaled; a computational one keeps its weight.
+    % Only a transmissive interface with an EXCITATORY weight is scaled (DECISION-12). A computational
+    % interface keeps its weight because the bound is not about it; an INHIBITORY contact keeps its
+    % weight because the corpus gives this renormaliser a domain that excludes it, and konnectome now
+    % says so rather than quietly scaling everything it can reach.
     % (The kinds were already judged by the shared refusal perimeter before this predicate runs.)
-    (  Kind == transmissive
+    (  Kind == transmissive,
+       plasticity_engine_excitatory(Weight0)
     -> % Read the receiving region's running average, refusing a ghost aloud.
        plasticity_engine_average_lookup(Averages, To, Average),
        % Read the target the RECEIVING end's territory defends: its own if it has one, the global one if not.

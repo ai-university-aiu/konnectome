@@ -374,6 +374,70 @@ test(a_weight_shrunk_by_scaling_can_grow_back) :-
     Regrown = [interface(a, b, WeightRegrown, 1, transmissive)],
     assertion(WeightRegrown > WeightShrunk).
 
+% ---------------------------------------------------------------------------
+% DECISION-12 - THE RENORMALISER'S DOMAIN IS THE EXCITATORY CONTACTS (slice 54)
+% ---------------------------------------------------------------------------
+
+% AN INHIBITORY CONTACT IS LEFT ALONE, which is the corpus's own domain: "every EXCITATORY synapse".
+test(an_inhibitory_contact_is_not_scaled) :-
+    % One excitatory and one inhibitory input to an over-active region.
+    Interfaces0 = [interface(a, b, 0.8, 1, transmissive), interface(c, b, -0.6, 1, transmissive)],
+    plasticity_engine_scaling_step(Interfaces0, [a-1, c-1, b-1.5], 0.5, 0.5, Interfaces),
+    Interfaces = [interface(a, b, Excitatory, 1, transmissive),
+                  interface(c, b, Inhibitory, 1, transmissive)],
+    % The excitatory drive is scaled down, because the region is loud.
+    assertion(Excitatory < 0.8),
+    % The inhibitory contact stands exactly where it was.
+    assertion(Inhibitory =:= -0.6).
+
+% A WEIGHT OF EXACTLY ZERO IS LEFT ALONE, and the reason is that the question is empty rather than
+% that konnectome picked a side: zero times any factor is zero.
+test(a_zero_weight_is_left_alone) :-
+    Interfaces0 = [interface(a, b, 0, 1, transmissive)],
+    plasticity_engine_scaling_step(Interfaces0, [a-1, b-1.5], 0.5, 0.5, Interfaces),
+    Interfaces = [interface(a, b, Weight, 1, transmissive)],
+    assertion(Weight =:= 0).
+
+% THE CONSEQUENCE, ASSERTED RATHER THAN DISCOVERED LATER. Scaling every weight by one factor
+% multiplies the NET input by that factor and preserves the excitation-to-inhibition balance exactly.
+% Restricting the domain gives that up on purpose: the excitatory drive shrinks while the inhibition
+% stands, so the balance MOVES. This test exists so that the asymmetry is a pinned property of the
+% build rather than something a later session meets as a surprise and "corrects".
+test(restricting_the_domain_moves_the_excitation_inhibition_balance) :-
+    % Net input before is eight tenths less six tenths, which is two tenths.
+    Interfaces0 = [interface(a, b, 0.8, 1, transmissive), interface(c, b, -0.6, 1, transmissive)],
+    plasticity_engine_scaling_step(Interfaces0, [a-1, c-1, b-1.5], 0.5, 0.5, Interfaces),
+    Interfaces = [interface(a, b, Excitatory, 1, transmissive),
+                  interface(c, b, Inhibitory, 1, transmissive)],
+    Net is Excitatory + Inhibitory,
+    % The bound has driven this construct NET NEGATIVE, which uniform scaling could never do.
+    assertion(Net < 0),
+    % And that is the mechanism rather than a fault: the excitatory half really was scaled.
+    assertion(Excitatory > 0),
+    assertion(Inhibitory =:= -0.6).
+
+% AN ALL-EXCITATORY GRAPH SCALES EXACTLY AS IT ALWAYS DID, which is why no world konnectome runs
+% today changes behaviour. Every weight in the repository is positive.
+test(an_all_excitatory_graph_is_unaffected_by_the_domain_rule) :-
+    Interfaces0 = [interface(a, b, 0.8, 1, transmissive), interface(c, b, 0.4, 1, transmissive)],
+    plasticity_engine_scaling_step(Interfaces0, [a-1, c-1, b-1.5], 0.5, 0.5, Interfaces),
+    Interfaces = [interface(a, b, WeightA, 1, transmissive),
+                  interface(c, b, WeightC, 1, transmissive)],
+    % Both scaled, and the ratio between them preserved, exactly as before this decision.
+    assertion(WeightA < 0.8),
+    assertion(WeightC < 0.4),
+    assertion(plasticity_test_close(WeightA, 2 * WeightC)).
+
+% AND AN INHIBITORY CONTACT CANNOT TRIGGER THE DECISION-10 REFUSAL, because it is never given a
+% factor at all. A graph that would refuse on its excitatory edge still refuses; one whose only
+% out-of-range edge is inhibitory passes untouched.
+test(an_inhibitory_contact_alone_never_reaches_the_factor_refusal) :-
+    % A region loud enough that a factor would be non-positive, but with only an inhibitory input.
+    Interfaces0 = [interface(c, b, -0.6, 1, transmissive)],
+    plasticity_engine_scaling_step(Interfaces0, [c-1, b-100], 0.5, 0.5, Interfaces),
+    % No refusal, and the contact is unchanged.
+    assertion(Interfaces == [interface(c, b, -0.6, 1, transmissive)]).
+
 % A computational interface is untouched by homeostatic scaling.
 test(a_computational_interface_is_untouched_by_scaling) :-
     % One computational interface into an overactive region.
