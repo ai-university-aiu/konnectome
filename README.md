@@ -199,6 +199,7 @@ konnectome/
     cousins/                   Documents aimed at the two cousin projects rather than at konnectome: the PrologAI and Causalontology change orders (Third Commandment).
     DSPARCD/                   The DSPARCD Fileset - konnectome_0_definition through _6_demonstration - plus the method spec (Fifth, Seventh).
     neuroscience/              The thirty-eight-document Vision Document Set and the guiding book (Eighth). Source: read, never edited.
+    principles/                What konnectome is built BY and did not write: the First Commandment's three AGI/ASI documents, and the English Readable Code specification (Sixth).
     hand-off/                  Every SUPERSEDED session record. The current one lives one level up.
     provenance/                What konnectome inherited: the record of the ten-wave programme that preceded it.
     archive/                   Superseded VERSIONS live here (Eleventh Commandment) - and only versions.
