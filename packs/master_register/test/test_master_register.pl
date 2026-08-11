@@ -232,17 +232,56 @@ test(the_channel_refuses_a_term_that_is_not_a_widened_state,
 % THE DOWNWARD ASSIGNMENT
 % ---------------------------------------------------------------------------
 
-% THE TABLE IS EMPTY, AND IT IS EMPTY FOR EVERY STATE, and this test exists so that the emptiness is
-% a PINNED FACT rather than an oversight nobody noticed. The reason is written in the pack: konnectome
-% has construct KINDS where the corpus has NAMED INDIVIDUALS, and a row aimed at a kind would assign
-% one named construct's mode to every instance of that archetype in the repository.
-test(the_downward_assignment_table_is_deliberately_empty_for_every_state) :-
+% THE TABLE IS NO LONGER EMPTY, AND THE TEST THAT SAID IT WAS HAS BEEN REPLACED RATHER THAN DELETED.
+% Until slice 50 this suite pinned the emptiness of every state's assignment, and the pin was correct:
+% konnectome had construct KINDS where the corpus has NAMED INDIVIDUALS. DECISION-9 did not overturn
+% that reasoning; it found the case the reasoning does not reach - a construct of which there is
+% exactly one - and the working memory blackboard is the first of them. So the two rows below are the
+% pinned fact now, and the emptiness that remains is pinned separately and for its own stated reason.
+test(the_two_sleep_states_the_corpus_speaks_about_carry_their_rows) :-
+    % Slow-wave sleep wipes the board.
+    master_register_downward_assignment(global_state(offline, slow_wave_sleep), Deep),
+    assertion(Deep == [assign(working_memory_blackboard, erased_idle)]),
+    % REM removes the gate rather than the surface - a different mode, not a stronger one.
+    master_register_downward_assignment(global_state(offline, rapid_eye_movement), Rem),
+    assertion(Rem == [assign(working_memory_blackboard, ungoverned_flicker)]).
+
+% NO WAKING STATE ASSIGNS ANYTHING, AND THIS EMPTINESS IS A REFUSAL RATHER THAN A GAP WAITING TO BE
+% FILLED. Entry 16 gives the waking transition the agency SELF_SELECTED, so a row here would overwrite
+% a choice the corpus places with the board itself, on every single announcement.
+test(no_waking_state_assigns_anything_and_that_is_the_refusal) :-
+    % Every waking sub-mode the register holds.
+    master_register_sub_modes(online, WakingSubModes),
+    % Assigns nothing, and the check runs over all four rather than over a chosen one.
+    forall(member(SubMode, WakingSubModes),
+           (   master_register_downward_assignment(global_state(online, SubMode), Assignments),
+               Assignments == []
+           )).
+
+% THE TWO SLEEP STATES THE CORPUS IS SILENT ABOUT ALSO ASSIGN NOTHING, and this is a THIRD kind of
+% emptiness, kept apart from the other two on purpose: not "no individual to address" and not "the
+% construct's own choice", but simply a state no chapter has spoken about yet.
+test(the_unspoken_sleep_states_assign_nothing) :-
+    % Sleep onset is in the register and in no chapter's mode table.
+    master_register_downward_assignment(global_state(offline, sleep_onset), Onset),
+    assertion(Onset == []),
+    % So is spindled light sleep.
+    master_register_downward_assignment(global_state(offline, spindled_light_sleep), Spindled),
+    assertion(Spindled == []).
+
+% WHATEVER ROWS EXIST ARE WELL FORMED, and this check runs over all eight states rather than a chosen
+% one.
+test(every_row_of_every_state_is_well_formed) :-
     % Every entry the register holds.
     master_register_entries(Entries),
-    % Assigns nothing today, and the check runs over all eight rather than over a chosen one.
+    % Every row it assigns names an atom construct and an atom mode, and nothing else.
     forall(member(mode_entry(GlobalState, _Formal, _Does), Entries),
            (   master_register_downward_assignment(GlobalState, Assignments),
-               Assignments == []
+               forall(member(Row, Assignments),
+                      (   Row = assign(Kind, Mode),
+                          atom(Kind),
+                          atom(Mode)
+                      ))
            )).
 
 % An assignment cannot be read for a state the register does not hold, so a state nobody holds can
@@ -253,14 +292,19 @@ test(an_assignment_cannot_be_read_for_a_state_the_register_does_not_hold,
     % handing back an empty one.
     master_register_downward_assignment(global_state(online, sleep_onset), _Assignments).
 
-% Applying an empty assignment leaves the bus exactly as it found it, which is what empty MEANS.
-test(applying_an_empty_assignment_changes_nothing) :-
+% Applying an assignment with no rows leaves the bus exactly as it found it, which is what having no
+% rows MEANS. THE STATE CHOSEN HERE IS A WAKING ONE ON PURPOSE, and the reason is DECISION-9's own
+% refusal rather than today's load list: the chapter gives the waking transition to the construct's
+% OWN agency, so a waking state is the one kind of state this register has argued must never carry a
+% downward row. A test written against a sleep state would have been correct until slice 50 and
+% quietly wrong afterwards.
+test(applying_an_assignment_with_no_rows_changes_nothing) :-
     % A bus carrying a level, so that "unchanged" is a real claim and not a claim about nothing.
     neuromodulator_bus_new(Empty),
     % Put something on it.
     neuromodulator_bus_broadcast(Empty, dopamine, 3, Bus0),
-    % Apply the state's downward assignment, which today has no rows.
-    master_register_assign_downward(Bus0, global_state(offline, slow_wave_sleep), Bus),
+    % Apply a waking state's downward assignment, which carries no rows and is argued never to.
+    master_register_assign_downward(Bus0, global_state(online, alert_task_engaged), Bus),
     % The bus is unchanged, term for term.
     Bus == Bus0.
 
