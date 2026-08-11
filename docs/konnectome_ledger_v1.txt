@@ -1225,7 +1225,7 @@ thought combination. The four gates report zero violations, the naming gate pass
 self-test; conformance re-measured at 137 of 137 (specification 4.0.0) in both cousins. No new
 wall; no cousin edited, per the Second, Third, and Fourth Commandments.
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 14 (2 CLOSED: 8 and 9).  Decisions: 9.
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 15 (2 CLOSED: 8 and 9).  Decisions: 9.
 
 Slice-34 note (2026-08-09). The bound turned live in the told story. The slice-33 pending line
 (the bound proven per-territory in the tests but not yet in the capstone's told story) is
@@ -4397,4 +4397,96 @@ LANDED ON A DIFFERENT RULE IN THE OTHER DOCUMENT. The summary now carries the Co
 numbering, all twenty, so a citation is portable between them. Every internal link in README.md was
 resolved against the file-system in the same pass; all pass.
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 14 (2 CLOSED: 8 and 9).  Decisions: 9.
+
+THE NORTH-STAR ANALYSIS RUN (2026-08-10). The Twentieth Commandment's first analysis run and gap
+analysis, delivered at docs/konnectome_north_star_gap_analysis_v1.txt. Four parallel deep reads over
+the north-star directory: the two NEUROSCIENCE OF COGNITION documents, the konnectome-facing Layers
+12 through 15, the lower strata (Layers 4/5 through 8), and the upper strata (Layers 9 through 11).
+
+THE HEADLINE. konnectome's top-level architecture SURVIVES the reading and gains its strongest
+corpus-side confirmations yet - five of them, listed in the analysis's Part Seven, including Chapter
+80.3.3 naming konnectome's Theme One deliverable in the corpus's own words, and the Layer 10 modes
+volume showing that a downward assignment lives in the TARGET'S OWN TABLE, which is DECISION-9 and
+which slice 50 built without having read that volume. What does NOT survive is the assumption that
+konnectome's remaining work is a queue of slices: EIGHT FINDINGS ARE ARCHITECTURAL, meaning
+konnectome could not express the thing today without changing its shape.
+
+THE SINGLE MOST CONSEQUENTIAL FINDING IS THAT A QUEUED ITEM IS ABOUT TO BE BUILT WRONG. The durable
+weight tier sits on the queue as "a second, slower number", and the slow-variables volume spends
+eighteen chapters arguing that a stored number is precisely what durable memory is NOT: "the stored
+value is defined by an ongoing process, and cutting the loop for even a short window collapses the
+value permanently." READ THE ANALYSIS'S A1 AND A2 BEFORE DESIGNING THAT TIER.
+
+THE ANALYSIS ALSO NAMES A CONSEQUENCE NOTHING IN THIS REPOSITORY HAD ASKED: if durability is a
+refresh daemon, it must run in BOTH shifts of the two-process governor, and an offline shift that
+suspends it would ERASE the durable tier rather than consolidate it. That is a cross-stratum claim
+assembled at synthesis time and the analysis flags it as such; check it before building on it.
+
+
+OBSERVATION-15 (2026-08-10, from the north-star analysis run). THE HOMEOSTATIC SCALER CLIPS, AND THE
+CLIP IS AN IRREVERSIBLE ANNIHILATION OF THE RELATIVE CODE IT EXISTS TO PROTECT.
+
+THIS IS THE FIRST OBSERVATION IN THIS LEDGER ESTABLISHED BY RUNNING THE CODE RATHER THAN BY READING
+IT, and it is therefore the only one a reader may treat as measured rather than argued.
+
+THE CORPUS STATES THE RULE AS AN IMPERATIVE. LAYER_04_05_SLOW_VARIABLES_MANUSCRIPT.txt line 3454:
+"multiply the whole weight vector by one scalar chosen to hit a target, NEVER ADD OR CLIP INDIVIDUAL
+WEIGHTS, because multiplication alone leaves the relative code untouched." Line 3428: scaling
+"stabilises the cell without erasing what learning wrote."
+
+THE CODE, in plasticity_engine_scale_interface/6:
+
+    RawFactor is 1 + ScalingRate * (Target - Average),
+    % The factor floors at zero: a weight can be silenced but never sign-flipped.
+    Factor is max(0, RawFactor),
+    Weight is Weight0 * Factor
+
+THE COMMENT DESCRIBES THE INTENT CORRECTLY AND THE CODE DOES SOMETHING STRONGER AND WORSE THAN THE
+INTENT. A factor of exactly zero sets the weight to exactly zero, and because the rule is
+multiplicative, NO LATER STEP CAN EVER LIFT IT OFF ZERO AGAIN.
+
+REPRODUCED, at a scaling rate the pack's own guard expressly permits:
+
+    ?- plasticity_engine_scaling_step(
+           [interface(a,b,0.8,1,transmissive), interface(c,b,0.4,1,transmissive)],
+           [b-3.0], 0.5, 0.9, Out).
+    Out = [interface(a,b,0.0,1,transmissive), interface(c,b,0.0,1,transmissive)].
+
+    ?- plasticity_engine_scaling_step(Out, [b-0.0], 0.5, 0.9, Out2).
+    Out2 = [interface(a,b,0.0,1,transmissive), interface(c,b,0.0,1,transmissive)].
+
+The second query is a QUIET region that should regrow its inputs and cannot. The relative code between
+a-to-b and c-to-b - eight tenths against four tenths - is not preserved. It is destroyed.
+
+NEITHER GUARD PREVENTS IT. plasticity_engine_check_scaling_rate/1 bounds the rate to [0,1) and
+plasticity_engine_check_activity_target/1 refuses a negative target. The factor goes non-positive
+whenever a receiving region's average exceeds its target by more than the reciprocal of the rate,
+which at rate 0.9 is an excess of about 1.11.
+
+WHY 911 GREEN TESTS DID NOT CATCH IT, AND WHY THAT IS THE FAMILIAR SHAPE. The capstone runs at rate
+0.05 with activations near one, so its factor never approaches zero. THE DEFECT IS UNREACHABLE IN
+EVERY CONFIGURATION KONNECTOME EXERCISES AND REACHABLE IN CONFIGURATIONS IT EXPRESSLY PERMITS. That
+is the fifth consecutive finding of the same shape: slice 47's boundary that could never be crossed,
+slice 48's zero that reads as calm, slice 49's threshold decided by rounding, slice 50's table row
+that is not a transition, and now a clip that annihilates. NONE OF THE FIVE WOULD HAVE FAILED.
+
+A SECOND FAULT IN THE SAME PREDICATE, READ RATHER THAN RUN, AND RECORDED WITH IT. The scaler runs
+over every transmissive interface REGARDLESS OF SIGN, because konnectome has no sign field.
+LAYER_04_05_MODES_OUTLINE.txt Entry 18 gives the renormaliser's domain as "every EXCITATORY synapse";
+the corpus never permits it to touch inhibitory contacts. The edge-type design authority found the
+missing sign field and reasoned about the fold and the learning rule - IT DID NOT NOTICE THAT THE
+SCALER IS A SECOND CONSUMER OF THE SIGN IT DOES NOT HAVE.
+
+ROUTING. konnectome construct fault. NOT routed to either change order: no data-structure gap and no
+language gap: the fix is arithmetic inside one predicate.
+
+DELIBERATELY NOT PATCHED IN THE CHANGE THAT RECORDS IT, and the reason is the Twentieth Commandment's
+own fifth clause - the analysis informs, it does not break. The fix needs an argument rather than a
+keystroke. THE CORPUS-FAITHFUL CLOSER IS PROBABLY A REFUSAL RATHER THAN A DIFFERENT FLOOR: a rate and
+target combination that would drive the factor non-positive describes a bound nobody could defend,
+and konnectome's established idiom is to refuse such a combination aloud rather than to clip its way
+out of it. That would be a numbered decision in the shape of the four refusals among the existing
+nine. A session that takes it should also decide whether the sign fault is closed in the same slice
+or waits for the edge type registry, since the second fault cannot be fixed without a sign field.
+
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 15 (2 CLOSED: 8 and 9).  Decisions: 9.

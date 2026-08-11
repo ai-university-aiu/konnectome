@@ -1,0 +1,280 @@
+KONNECTOME - THE NORTH-STAR GAP ANALYSIS, VERSION 1
+
+The deliverable of the TWENTIETH COMMANDMENT's analysis run. Written 2026-08-10, at fifty-one slices, against main at 9685ba7 plus the Constitution version 18 change that mandated it.
+
+
+WHAT THIS DOCUMENT IS, AND WHAT IT IS NOT - READ THIS BEFORE BUILDING FROM ANYTHING BELOW
+
+It holds the same TWO KINDS OF CONTENT the Eighth Commandment's analysis holds, and the Twentieth Commandment restates the rule for this document specifically.
+
+FIRST KIND - THE SUMMARIES. Where this document summarises a north-star file, it is DERIVED and carries no authority over it. Where a summary here and the source disagree, THE SOURCE WINS and this document is the thing corrected. NO SLICE SHALL BE DESIGNED FROM A SUMMARY IN THIS DOCUMENT. Read the cited chapter first.
+
+SECOND KIND - THE FINDINGS. Where this document says konnectome LACKS something, or that a north-star document CONTRADICTS konnectome, that is konnectome's own assessment, produced by holding the corpus against a running codebase. The corpus cannot contain it, because the corpus knows nothing about konnectome. Those findings are superseded by a LATER assessment, never by the corpus.
+
+A THIRD THING IS TRUE OF THIS DOCUMENT AND WAS NOT TRUE OF ITS PREDECESSORS, AND IT IS THE HONEST LIMIT TO STATE FIRST. THIS ANALYSIS WAS RUN AS FOUR PARALLEL DEEP READS, EACH OVER ITS OWN PART OF THE NORTH-STAR DIRECTORY, AND NO SINGLE READER HELD THE WHOLE CORPUS AT ONCE. Every finding below carries a citation so it can be checked. But a reader should know that the CROSS-STRATUM claims - the places where this document says two layers agree, or that three deferrals point at one thing - were assembled at synthesis time rather than discovered by one continuous reading, and are the claims most likely to be wrong. Where this document draws a conclusion from two strata at once, it says so.
+
+AND ONE CLAIM IN HERE WAS VERIFIED BY RUNNING CODE RATHER THAN BY READING, which is a stronger warrant than anything else in the document. It is marked where it appears.
+
+
+WHAT THE NORTH-STAR DOCUMENTS ARE
+
+THE_NEUROSCIENCE_OF_COGNITION_OUTLINE.txt is 3,684 lines: a four-level map of cognitive neuroscience - fifteen PARTS, eighty CHAPTERS numbered continuously, then SECTIONS and SUB-SECTIONS. Compiled 2026-08-10 against the field's canonical reference works and primary literature. EACH CHAPTER IS TAGGED (CORE), (APPARATUS) OR (CONTEXT), so the outline itself declares which chapters are load-bearing - a machine-readable statement of what matters, which no other document in the corpus supplies.
+
+THE_NEUROSCIENCE_OF_COGNITION_MANUSCRIPT.txt is 23,862 lines: the full prose of that skeleton. Every chapter closes with a WHAT THIS CHAPTER ESTABLISHED block, and CONTESTED CLAIMS ARE MARKED CONTESTED - so the manuscript carries authority about what is NOT yet settled as well as about what is. That is unusual and it matters: it lets konnectome tell a firm instruction from a live argument, which is precisely the distinction four consecutive slices have been burned by failing to make.
+
+Chapter 80 speaks directly about the corpus konnectome is already built from - the fifteen layers, the adjacency rule, the mode-register deliverable, the Layer 12 acceptance tests. THE NORTH STAR AND THE VISION DOCUMENT SET ARE THEREFORE NOT TWO CORPORA BUT ONE, SEEN FROM ABOVE.
+
+THE REST OF THE NORTH-STAR DIRECTORY was read as the Twentieth Commandment requires: the fifteen-layer corpus in full at outline depth, the manuscripts sampled strategically, the four konnectome-facing documents of Layers 12 through 15 read completely, and the chapter template measured rather than estimated.
+
+
+PART ONE - THE HEADLINE, IN FIVE SENTENCES
+
+konnectome's TOP-LEVEL ARCHITECTURE SURVIVES THIS READING, and gains its strongest corpus-side confirmations yet - the interface definition of a region, the mode-register deliverable named in the corpus's own words, the layer-skipping justification for the graph-and-bus split, and the homunculus discharged exactly as konnectome discharges it.
+
+WHAT DOES NOT SURVIVE IS THE ASSUMPTION THAT KONNECTOME'S REMAINING WORK IS A QUEUE OF SLICES. Four of the findings below are ARCHITECTURAL: konnectome could not express the thing today without changing its shape.
+
+THE SINGLE MOST CONSEQUENTIAL FINDING IS THAT A QUEUED ITEM IS LIKELY TO BE BUILT WRONG. The durable weight tier, sitting on the queue as "a second, slower number", is the exact anti-pattern eighteen chapters of the slow-variables volume were assembled to refute.
+
+ONE FINDING IS A DEFECT IN MERGED, GREEN, RUNNING CODE, reproduced and verified during this analysis.
+
+AND THE ACCEPTANCE TESTS KONNECTOME HAS NEVER RUN ALREADY EXIST, written, in the north-star directory, at Layer 12 - fourteen faculties with stated criteria, of which konnectome passes NONE outright, partly passes six, and cannot yet do eight.
+
+
+PART TWO - THE ONE VERIFIED DEFECT
+
+THIS IS THE ONLY FINDING IN THIS DOCUMENT ESTABLISHED BY RUNNING THE CODE RATHER THAN BY READING IT, and it is therefore the only one a reader may treat as measured rather than argued.
+
+THE HOMEOSTATIC SCALER CLIPS, AND THE CLIP IS AN IRREVERSIBLE ANNIHILATION.
+
+The corpus states the rule as an imperative. LAYER_04_05_SLOW_VARIABLES_MANUSCRIPT.txt line 3454: "multiply the whole weight vector by one scalar chosen to hit a target, NEVER ADD OR CLIP INDIVIDUAL WEIGHTS, because multiplication alone leaves the relative code untouched." Line 3428: scaling "stabilises the cell without erasing what learning wrote."
+
+packs/plasticity_engine/prolog/plasticity_engine.pl, in plasticity_engine_scale_interface/6:
+
+    RawFactor is 1 + ScalingRate * (Target - Average),
+    % The factor floors at zero: a weight can be silenced but never sign-flipped.
+    Factor is max(0, RawFactor),
+    Weight is Weight0 * Factor
+
+THE COMMENT DESCRIBES THE INTENT CORRECTLY AND THE CODE DOES SOMETHING STRONGER AND WORSE THAN THE INTENT. A factor of exactly zero sets the weight to exactly zero, and because the rule is multiplicative, no later step can ever lift it off zero again. The relative code that the multiplicative form exists to protect is not preserved; it is destroyed.
+
+REPRODUCED, at a scaling rate the pack's own guard expressly permits:
+
+    ?- plasticity_engine_scaling_step(
+           [interface(a,b,0.8,1,transmissive), interface(c,b,0.4,1,transmissive)],
+           [b-3.0], 0.5, 0.9, Out).
+    Out = [interface(a,b,0.0,1,transmissive), interface(c,b,0.0,1,transmissive)].
+
+    % and a subsequent QUIET step, which should regrow them, cannot:
+    ?- plasticity_engine_scaling_step(Out, [b-0.0], 0.5, 0.9, Out2).
+    Out2 = [interface(a,b,0.0,1,transmissive), interface(c,b,0.0,1,transmissive)].
+
+plasticity_engine_check_scaling_rate/1 bounds the rate to [0,1) and plasticity_engine_check_activity_target/1 refuses a negative target. NEITHER GUARD PREVENTS THIS. The factor goes non-positive whenever the receiving region's average exceeds its target by more than the reciprocal of the rate, which at rate 0.9 is an excess of about 1.11.
+
+WHY 911 GREEN TESTS DID NOT CATCH IT. The capstone runs at rate 0.05 with activations near one, so its factor never approaches zero. The defect is unreachable in every configuration konnectome actually exercises and reachable in configurations it expressly permits. THAT IS THE SAME SHAPE AS THE LAST FOUR SLICES' FINDINGS AND IT IS THE FIFTH IN A ROW: IT WOULD NOT HAVE FAILED.
+
+A SECOND FAULT IN THE SAME PREDICATE, READ RATHER THAN RUN. The scaler runs over every transmissive interface regardless of sign, because konnectome has no sign field. LAYER_04_05_MODES_OUTLINE.txt Entry 18 gives the renormaliser's domain as "every EXCITATORY synapse". The corpus never permits it to touch inhibitory contacts. The edge-type design authority found the missing sign field and reasoned about the fold and the learning rule; IT DID NOT NOTICE THAT THE SCALER IS A SECOND CONSUMER OF THE SIGN IT DOES NOT HAVE.
+
+ROUTING. This is a konnectome construct fault. It goes to the ledger as OBSERVATION-15 and to a konnectome slice, NOT to either change order - no data structure and no language feature is missing. IT IS DELIBERATELY NOT PATCHED IN THE CHANGE THAT WRITES THIS DOCUMENT, because the fix needs an argument rather than a keystroke: the corpus-faithful answer is probably that a rate-and-target combination which would drive the factor non-positive should be REFUSED ALOUD in konnectome's established idiom rather than clipped, and a refusal is a numbered decision. THE TWENTIETH COMMANDMENT'S OWN RULE APPLIES: the analysis informs, it does not break.
+
+
+PART THREE - THE ARCHITECTURAL GAPS
+
+konnectome COULD NOT EXPRESS THESE TODAY. Each is a wall in the Fourth Commandment's sense and none of them routes to a cousin: every one is konnectome's own shape.
+
+A1. DURABLE MEMORY IS A PROCESS, NOT A PLACE - AND THE QUEUED DURABLE WEIGHT TIER IS ABOUT TO BE BUILT AS A PLACE.
+
+This is the most consequential finding in the document.
+
+The slow-variables volume states its thesis at line 18: durable memory is made of "switches that RE-MARK THEMSELVES faster than turnover erases them". Line 44: "the wheel keeps re-stamping every fresh arm as it arrives, so the setting outlives every molecule that ever carried it." Line 178, on the bistable weight latch: it "keeps no physical part at all." Line 264, on the PKM-zeta loop: "the stored value is defined by an ongoing process, and CUTTING THE LOOP FOR EVEN A SHORT WINDOW COLLAPSES THE VALUE PERMANENTLY." Line 362: the renewal loop "has no separately stored value to read: the value is the running process itself, so interrupting the refresh does not merely risk a bit, IT DESTROYS THE ONLY COPY." The volume closes at line 3623: memory persists "not by never changing, but by re-writing itself faster than it forgets."
+
+konnectome's queue describes the durable tier as a slower second weight. A SECOND WRITTEN-ONCE NUMBER IS PRECISELY WHAT EIGHTEEN CHAPTERS ARGUE DURABLE MEMORY IS NOT.
+
+AND THE CONSEQUENCE THAT NOTHING IN THE REPOSITORY HAS ASKED: IF DURABILITY IS A REFRESH DAEMON, IT MUST RUN IN BOTH SHIFTS OF THE TWO-PROCESS GOVERNOR. An offline shift that suspends it would ERASE the durable tier rather than consolidate it. offline_consolidation exports remember, interleave, replay_round and night_step - replay and a raised bound, and nothing that refreshes. This is a cross-stratum claim assembled at synthesis time and it should be checked before it is built on.
+
+A2. THE WEIGHT IS NOT A FLOAT, AND THE CORPUS ARGUES THE POINT EXPLICITLY.
+
+Slow variables line 1418: the receptor count is "the physical operand of the synaptic weight". Line 1461: "synaptic strengths span at least an order of magnitude and cluster into a handful of reliably distinguishable levels, implying ROUGHLY TWO TO FIVE BITS." Line 54: what the CaMKII switch stores is "one bit at one synapse". Line 56: "the physical engram unit, the atom of a stored memory."
+
+konnectome's Weight in interface(From, To, Weight, Delay, Kind) is an unquantised real with no separate maintainer. The corpus specifies a quantised operand, PLUS a distinct durable bit, PLUS a maintainer that keeps the operand from decaying - three fields where konnectome has one. Neither design authority asked what a weight IS; the edge-type authority scored eight fields of the junction type and never reached this one.
+
+A3. THE GRAPH CANNOT BE BORN, PRUNED, OR DISBANDED - SO KONNECTOME HAS NO FORGETTING MECHANISM AT ALL.
+
+Three layers converge on this. LAYER_07_SYNAPTICS_OUTLINE.txt entry 44, the nascent filopodial contact: "a provisional contact that will either mature into a spine synapse or withdraw"; entry 45, the tagged retracting synapse, "the disassembly-in-progress type". LAYER_06_OTHER_CELLS_MANUSCRIPT.txt line 2442: "perhaps half the synapses you ever made went down their throats, and that eating is why your circuits work"; line 2446: microglial pruning is "THE LICENSED REMOVAL OF WEAK SYNAPSES, WHICH IS HALF OF LEARNING"; line 2520: engulfment "drives forgetting of established memories". LAYER_08_MICROCIRCUITS_OUTLINE.txt entry 70 tags the microglial pruning loop (COG).
+
+konnectome's connection graph is a fixed list of interface/5 terms threaded through the tick; every engine returns a list of the same length. THERE IS NO OPERATOR THAT REMOVES AN EDGE, ADDS ONE, OR CREATES A CONSTRUCT. By the corpus's own accounting, half of learning is unrepresentable.
+
+And the corpus hands over the decision procedure, not merely the requirement. Line 2538: "weak or asynchronous synapses are tagged with complement proteins, active synapses shield themselves with punishment-withholding signals, and the microglial process, reading tags against shields, delivers a binary verdict with teeth." Line 2496: the auditor lingers "longer at more active synapses", so THE AUDIT SCHEDULE IS ITSELF ACTIVITY-WEIGHTED.
+
+A4. A STATEFUL NODE WHOSE OUTPUT IS A PERMISSION, NOT AN ACTIVATION.
+
+Recorded as a tension in the version 3 analysis at line 187 ("the architecture holds glia as modulatory entries carrying no activation of their own"), never as a contradiction, and never with the corpus's counter-evidence attached.
+
+LAYER_06_OTHER_CELLS_MANUSCRIPT.txt line 143: the astrocyte "fires no action potentials whatsoever". Line 282: "the only cell in the brain that holds a private, non-overlapping territory of up to two million synapses and governs them all without firing a single spike." AND YET lines 227 to 252 give it a runnable leaky-integrator model with a threshold at 0.40 and a reset, and line 177: "its D-serine supply GATES WHETHER NEARBY SYNAPSES CAN UNDERGO LONG-TERM POTENTIATION AT ALL."
+
+konnectome's archetype dispatch has six rules and every one returns an activation. The corpus demands a node with genuine continuous state, a genuine threshold and a genuine mode register whose publication is a PLASTICITY PERMISSION over other edges. Nothing in konnectome and nothing in either design authority provides for it.
+
+A5. NO OPTIONS - NOTHING CAN OWN THE NEXT N TICKS.
+
+THE_NEUROSCIENCE_OF_COGNITION Chapter 53.3.2: "temporally extended sub-policies with their own termination conditions ... pseudo-reward ... pseudo-reward prediction errors."
+
+cognitive_cycle_step/3 evaluates everything once per tick and action_selector releases exactly one action per tick. Nothing in konnectome can commit to a multi-tick sub-policy or own its own termination condition. This is absent from Part Six's queue entirely and is the largest genuinely new architectural addition the north star names.
+
+A6. THE OVERLAY IS A THIRD CHANNEL SHAPE, AND KONNECTOME'S BUS HAS TWO.
+
+This finding CONFIRMS a konnectome decision and then names the gap beneath it.
+
+The Layer 11 volume's overlay doctrine, retrieved in full: an overlay OCCUPIES NO SLOT, keeps the base state running underneath as "the parent state", and publishes DELTAS on the same bus - suspend flags, maintenance-deferral orders, set-point overrides, gain clamps, "biasing but not overriding". Phasic arousal fires "ON TOP OF a tonic waking rate", which is the only quantitative composition rule in the volume.
+
+VERDICT ON THE MASTER REGISTER'S EIGHT-ENTRY CUT: IT IS STILL RIGHT, AND BETTER WARRANTED THAN WHEN IT WAS MADE. An overlay is not a pole plus a sub-mode, so admitting one into the register would have been a category error, exactly as slice 46 suspected.
+
+BUT KONNECTOME'S BUS HAS ONLY TWO CHANNEL SHAPES - A LEVEL AND A COMMANDED MODE - AND A DELTA IS NEITHER. That is the architectural gap the three deferrals (OBSERVATION-14's closer, DECISION-5's overlay question, DECISION-9's) have been pointing at without naming.
+
+AND OBSERVATION-14 GENERALISES, WHICH FORBIDS THE TWO OBVIOUS DESIGNS. Acute stress arrives as a NAMED DISCRETE MODE in eleven other system registers - "Stress Lock", "Devolved Emergency Rule", "The Caretaker Cabinet" - while modulating working memory CONTINUOUSLY. One overlay announcement must therefore carry both shapes at once. A design that made overlays purely continuous, or purely discrete, is ruled out before it is attempted.
+
+A7. GATING BY GEOMETRY RATHER THAN BY SWITCH - A DIRECT CONTRADICTION.
+
+Chapter 26.4.4: "the brain routes and gates information BY GEOMETRY ... rather than by switching connections on and off." Chapter 26.3.3, on the Mante result: "context ROTATES the relevant input onto that line ... NOTHING IS GATED OUT."
+
+konnectome built the opposite: archetype_gate/4 plus mode_register_transfer/3 is a discrete flag that swaps the transfer function. THE CORPUS SAYS THE BIOLOGY DOES NOT DO THIS.
+
+This is stated as a contradiction rather than a defect, and it is NOT a build item. konnectome has no joint state space, therefore no manifold, therefore no way to express a rotation - and no way to run the tests that would adjudicate the disagreement. It is recorded so that a later session does not rediscover it one layer at a time.
+
+AND IT SITS BESIDE ITS OWN OPPOSITE. Chapter 80.3.3 names konnectome's Theme One deliverable in the corpus's own words - "its mode register, its per-mode transfer function, its transition table, and its fault regimes" - which is a full vindication of the nine-slice mode-register elevation. BOTH ARE TRUE. konnectome is on the corpus's side of a disagreement THE CORPUS DOES NOT FLAG AS ONE, and that is worth knowing before either side is built on further.
+
+A8. COMMAND VERSUS LATERAL BIAS - DECISION-1 IS RIGHT FOR ONE CASE AND IS BEING APPLIED TO TWO.
+
+Layer 10 Chapter 19: the executive governor "CANNOT PRE-EMPT BY FIAT: it can only bias competitions it does not own." The guiding book's own section 12.9: "Coordinate by broadcast state, not by instruction."
+
+DECISION-1 chose command, with ONE channel for all cases. The corpus distinguishes a DOWNWARD THROW - which is a command, and for which DECISION-1 is correct and confirmed - from a LATERAL PEER BIAS, which is expressly not a command. konnectome does not draw that line.
+
+THE NEAR-TERM RISK IS CONCRETE. Executive control is the natural supplier of the task-set rules working_memory_mode_register already depends on, and a builder reading DECISION-1 would build the dictator the guiding book forbids WHILE CORRECTLY CITING KONNECTOME.
+
+
+PART FOUR - THE CONTENT GAPS WORTH BUILDING FIRST
+
+konnectome COULD express these today and has not built them. They are slices, not walls. They are ordered by value per unit of effort, and the first three are wiring rather than invention.
+
+B1. THE EFFERENCE COPY. Highest value per unit effort in the entire analysis.
+
+Chapter 63.2.1 makes the comparator-based sense of agency turn on a copy of one's own motor command. konnectome ALREADY HAS EVERY PIECE: archetype_comparator/3, prediction_loop_compare/5, body_interface_command/2, and self_provenance for the record. ONLY THE WIRING IS MISSING - the body loop retains no copy of its own command.
+
+B2. CLOSE THE CONFLICT LOOP.
+
+Chapter 52.2.1's conflict-monitoring loop and 52.2.4's expected value of control. override_controller, supervisor and stabiliser are three pieces of a loop that HAS NEVER BEEN CLOSED. Again wiring, not invention.
+
+B3. ONE REAL ACCEPTANCE TEST, AND THE STANDARD IS ALREADY WRITTEN.
+
+Chapter 75.1.2 gives konnectome a pass/fail standard with three legs: reproduce phenomena NOT FITTED TO; fail as the real system fails when damaged; and say which components are load-bearing. konnectome scores very well on legs two and three - thirty-six documented packs and a lesion pack that already exists. LEG ONE IS ENTIRELY MISSING: nothing in konnectome reproduces a phenomenon it was not built to reproduce.
+
+B4. NO FORWARD MODEL, NO SUPERVISED LEARNING RULE ANYWHERE.
+
+Verified by search across all thirty-six packs. Layer 10 Chapter 10 is the corpus's supervised learner with a dedicated error teacher. IT IS THE ONE ABSENT SYSTEM THAT MAKES EXISTING PACKS INCOMPLETE RATHER THAN MERELY LONELY: prediction_loop computes a signed error that NOTHING CONSUMES.
+
+B5. THE CARGO POOL - THE MISSING HALF OF A MECHANISM KONNECTOME ALREADY HALF-BUILT.
+
+konnectome has plasticity_engine_reward_capture_step/6, and the north star confirms the naming: Chapter 45.1.2 uses the corpus's own words for synaptic tagging and capture. konnectome built the TAG. It did not build the CARGO.
+
+Slow variables line 1071 specifies it: a per-cell "decaying pool of plasticity payloads for capture". Line 1013: "the cargo carries no addressing information of its own; its fidelity comes entirely from the tag, so CAPACITY IS SET BY how many tagged synapses one product wave can supply before it is degraded." In konnectome the third factor is an INEXHAUSTIBLE bus level: any number of traces may spend against it and none competes. In the corpus the payload is finite, decaying and per-cell, AND THAT FINITENESS IS WHAT MAKES CONSOLIDATION SELECTIVE.
+
+The tag also has three exits, not one - consumed by cargo, decayed uncaptured, or actively cleared by a depotentiating stimulus. konnectome has the first only, and reaches it on a reward signal rather than on a payload arrival.
+
+B6. REPLAY HAS A DIRECTION AND A SCHEDULING RULE. Reverse replay after reward for credit assignment, forward replay before action for planning. konnectome's replay has neither. Cheap, and it makes offline_consolidation normative rather than merely mechanical.
+
+B7. METACOGNITION HAS NO CONSUMER. Chapter 63.3: "low confidence is the trigger for allocating more effort." self_provenance's six ordered evidence grades ARE confidence in all but name, and NOTHING CONSUMES THEM AS A CONTROL SIGNAL. Not queued anywhere.
+
+B8. NO SPONTANEOUS ACTIVITY. Outline 4.4 and Chapter 80.3.2: the brain "generates activity on its own account", and Chapter 28.3.4 adds that responsiveness comes FROM being always near threshold. konnectome adopted the corpus's Layer 11 self-generated-state register in a machine that generates nothing on its own account. Rumination is directly expressible in supervisor's existing fault vocabulary today.
+
+B9. WORKING MEMORY - THREE ADDITIONS THE QUEUE MISSES. The north star CONFIRMS Family Four's "no number need be konnectome's invention" rule for this system. It adds three things slices 49 and 50 did not have: there are TWO gates, input and output, not one; the gate TRAINS ITSELF on reward prediction error "without a homunculus"; and REMOVAL IS NOT ERASURE - Chapter 41.3.2 says break the item-context binding, where working_memory_blackboard_wipe/2 erases, with two testable consequences that distinguish them.
+
+
+PART FIVE - THE LAYER 12 FACULTY AUDIT
+
+THE ACCEPTANCE TESTS KONNECTOME HAS NEVER RUN ALREADY EXIST, WRITTEN, IN THE NORTH-STAR DIRECTORY. LAYER_12_FACULTY_SPECIFICATION.txt names fourteen faculties, each with stated acceptance criteria. Audited item by item against the running packs:
+
+PASSES OUTRIGHT: none of the fourteen.
+
+PARTLY PASSES, six: working memory (span and selective overwrite pass; manipulation-in-place absent), semantic memory (generalisation passes; graded typicality and cross-modal access absent), decision and valuation (THE HYPERDIRECT VETO PASSES CLEANLY AND BY DESIGN in override_controller; discounting and exploration absent), emotion (decay and regulation pass, interoception passes, appraisal-congruent reallocation blocked on two other faculties), social cognition (false belief passes outright; gaze following blocked on perception), learning (interleaving and homeostatic bound both exist).
+
+CANNOT YET, eight: perception, attention, episodic memory, procedural skill, language, motor control, executive control, access consciousness.
+
+THE CHEAPEST REAL WIN IN THE WHOLE ANALYSIS IS FACULTY 13, LEARNING. It is PARTLY PASSES purely for want of a MEASUREMENT: interleaving and homeostatic scaling both exist and neither is scored. No new mechanism is required. TWO TESTS - add a second competence and show the first survives; score a before-and-after consolidation benefit - MOVE A FACULTY FROM PARTLY TO PASSES.
+
+THE COMPLETION CONDITION KONNECTOME HAS NOT REGISTERED. LAYER_12's own section: "the specification is complete when a single running instance passes all fourteen suites IN ONE CONTINUOUS SESSION including at least one full offline consolidation cycle." konnectome already owns the vehicle - bin/run_capstone_demonstration.sh boots the mind and tells one continuous story, and since slice 51 it reports on its own night. BUT THE CAPSTONE IS A NARRATIVE, NOT AN ACCEPTANCE HARNESS. Turning it into a fourteen-suite scored run is a DESIGN ELEMENT the north star supplies and konnectome does not have.
+
+
+PART SIX - THE BUILD-ORDER DISAGREEMENT
+
+STATED SEPARATELY BECAUSE IT IS THE ONE FINDING THAT WOULD CHANGE THE QUEUE'S SHAPE RATHER THAN ITS CONTENTS, AND BECAUSE IT SHOULD BE DECIDED RATHER THAN INHERITED.
+
+LAYER_12 states a build order: "perception and motor FIRST, then attention and working memory, then the memory pair, then valuation and executive control, THEN LANGUAGE AND SOCIAL COGNITION, with learning and the workspace criterion tested throughout."
+
+konnectome's ladder runs: Rung Zero heartbeat, Rung One senses, Rung Two symbols and language, Rung Three reasoning, Rung Four emotion and theory of mind, Rung Five embodiment.
+
+THESE ARE CLOSE TO REVERSED AT BOTH ENDS. Layer 12 puts perception and motor first; konnectome puts embodiment last and the README explicitly "disclaims exactly one rung: embodiment". Layer 12 puts language and social cognition second to last; konnectome built them at Rungs Two and Four, before a perceptual channel existed to ground them.
+
+THE DISAGREEMENT BITES FOUR TIMES INDEPENDENTLY, WHICH IS WHY IT IS HERE RATHER THAN IN A FOOTNOTE. Cross-modal binding (Faculty 1), cross-modal concept access (Faculty 5), gaze following (Faculty 11) and joint attention (Layer 13 principle 5) are EACH blocked by the same single thin perceptual channel. That is the FRAGMENTATION failure the version 3 analysis warned about, occurring again: one missing capability described in four vocabularies.
+
+IT DOES NOT INVALIDATE THE LADDER. konnectome's ladder comes from Appendix 6 of the guiding book and carries its own warrant. But two north-star authorities disagree, and the disagreement should be RECORDED AS A NUMBERED DECISION rather than left for a future session to rediscover.
+
+
+PART SEVEN - THE CONFIRMATIONS, WHICH ARE REAL RESULTS
+
+The Twentieth Commandment's analysis is not only a hunt for absences. Five confirmations, each of which strengthens a standing decision:
+
+D1. A REGION IS DEFINED BY ITS INTERFACES. Chapter 13.2: "a brain region is defined by its interfaces ... a defined origin, a defined destination, a defined cargo and a defined format." THE STRONGEST WARRANT KONNECTOME HAS. It licenses the pack boundary and the typed edge. NOTE PRECISELY WHAT IT DOES NOT LICENSE: the uniform tick, and the per-mode transfer function.
+
+D2. THE MODE-REGISTER DELIVERABLE, NAMED IN THE CORPUS'S OWN WORDS. Chapter 80.3.3 lists "its mode register, its per-mode transfer function, its transition table, and its fault regimes". Full vindication of the nine-slice elevation of Theme One.
+
+D3. LAYER-SKIPPING JUSTIFIES THE GRAPH-AND-BUS SPLIT. Chapter 80.1: "biology pays the cost of layer-by-layer relay WHEN A MESSAGE NEEDS AN ADDRESS, and refuses to pay it when the message is a broadcast." This also sharpens the queued naming facility: THE ADDRESS IS WHAT THE EXPENSIVE PATH IS FOR.
+
+D4. THE HOMUNCULUS, DISCHARGED THE WAY KONNECTOME DISCHARGES IT. Outline 3.4.2, "The homunculus and how to discharge it", with Chapter 52.1.1: "control is not a separate machine ... IT IS A BIAS SIGNAL." That is an exact description of action_selector_bias/3 and the never-invent invariant.
+
+D5. THE DOWNWARD ASSIGNMENT LIVES IN THE TARGET'S OWN TABLE - WHICH IS DECISION-9. The Layer 10 modes volume answers the mode-register design authority's Part Seven item 6, which konnectome had called "the largest unresolved gap in the Layer 11 grain". Systems are NOT omitted from the twenty-six downward assignments: all forty-four system registers carry modes whose NAMES ARE THE ASSIGNING STATE - "slow-wave-sleep erasure", "REM fragments igniting without gate control", "stress posture". SLICE 50 BUILT THE CORPUS'S OWN ARRANGEMENT WITHOUT HAVING READ THIS VOLUME.
+
+AND TWO NEGATIVE RESULTS, which are findings too. NOTHING IN THE NORTH STAR CONTRADICTS DECISION-2, the ticks-per-second convention - the manuscript is dense with constants that become whole tick counts under it. And NOTHING SUPPORTS A CLEAN REM-VERSUS-SLOW-WAVE DUAL PROCESS: Chapter 45.4.1 warns that "the clean dissociation is no longer regarded as secure", which bears directly on the deferred REM-theatre item.
+
+
+PART EIGHT - WHAT THE ANALYSIS FOUND ABOUT THE CORPUS ITSELF
+
+THE TEMPLATE PARSER IS FAR MORE FEASIBLE THAN THE QUEUE ASSUMES, AND THIS WAS MEASURED RATHER THAN ESTIMATED.
+
+386 chapters across the Layer 6 files - 85 non-neuronal plus 301 neuronal - which INDEPENDENTLY CONFIRMS the measured figure Part Six tells the builder to build against. For every Layer 6 file, the count of each aspect header equals the file's chapter count EXACTLY: not one missing header, not one duplicate. Of the 386 chapter title lines, ZERO fail to carry the (COG) or (NON-COG) tag. The modes companion holds 386 blocks with all four sub-elements uniformly present, keyed back by chapter number in machine-matchable prose. THE CORPUS'S OWN CLAIM THAT "A FUTURE MERGE IS A MECHANICAL SPLICE" IS TRUE AND VERIFIABLE.
+
+FOUR CAVEATS A BUILDER MUST BE TOLD, each of which would otherwise be discovered late:
+
+- The modes aspect is ABSENT from every source chapter and lives entirely in the companion. A parser written naively against the version 3 template finds it missing 386 times out of 386. The splice is not optional; it is the whole job.
+- THE TEMPLATE DOES NOT GENERALISE PAST LAYER 6, and the directory README slightly oversells it. Layers 7 and 8 carry a COMMON TAIL of four aspects and none of the Layer-6-specific head. A parser must be a common core plus per-layer schemas. Writing it the other way is the single most likely way to get this wrong.
+- The SUBSCRIBES and PUBLISHES blocks are NOT in the Layer 6 template at all - they live in six other files, and in Layer 6 the equivalent information sits under a different heading. The publish-subscribe schema and the cell-chapter schema are two different parse targets, and the Family Six queue entry conflates them.
+- The 302-versus-301 discrepancy Part Six instructs the builder to report upward APPEARS ALREADY RESOLVED IN THE SOURCE. Re-measure rather than assume it is still live.
+
+AND THE PARSER IS UNDERVALUED IN THE QUEUE, for three reasons the queue does not record. It would be konnectome's FIRST TRUE GENERATOR, which is Layer 15's evo-devo lesson and the one thing konnectome's practice lacks - today the DSPARCD mirror runs artefact-then-spec, which is a mirror and not a generator. It is the delivery vehicle for Layer 14's curated-inheritance provision, since 386 fact files would be the first ingested material self_provenance's six evidence grades could ever be applied to. And it converts the corpus's mode registers into data at exactly the moment Families Three and Five need per-type registers, which today would be hand-transcribed.
+
+
+PART NINE - THE QUEUE, RE-ORDERED BY THIS ANALYSIS
+
+THE ANALYSIS SUGGESTS - THE OWNER DISPOSES. This is a recommendation and not an instruction, and it does not supersede the Eighth Commandment's analysis, which remains the queue of record until its version 4 is written.
+
+FIRST, AND OUT OF BAND: OBSERVATION-15, the scaling clip. It is a defect in running code and it should be decided before more is built on plasticity_engine.
+
+THEN THE THREE WIRING SLICES, which need no invention and are cheap: the efference copy (B1), closing the conflict loop (B2), and the two learning-retention tests that move Faculty 13 from partly-passes to passes.
+
+THEN THE DECISION THAT UNBLOCKS THE MOST: THE OVERLAY DELTA CHANNEL (A6). Three standing deferrals point at it, and it is the shape konnectome's bus lacks rather than a system konnectome has not built.
+
+THEN, BEFORE THE DURABLE WEIGHT TIER IS DESIGNED AT ALL: read A1 and A2 and decide whether the tier is a number or a process. Building it as a number is the one mistake this analysis most expects konnectome to make.
+
+AND RECORD, WITHOUT BUILDING: the build-order disagreement of Part Six, the gating-by-geometry contradiction (A7), and the command-versus-lateral-bias distinction (A8). None is a slice. All three are things a later session would otherwise rediscover one layer at a time, which is the failure this whole exercise exists to prevent.
+
+
+PART TEN - THE SUPPORTING RUNS
+
+This analysis was assembled from four parallel deep reads. Two of them wrote their full findings to disk and those files hold detail this synthesis compresses:
+
+- /home/ccaitwo/output/konnectome_north_star_gap_analysis.txt - the run over the two north-star documents themselves, with full chapter citations.
+- /home/ccaitwo/output/konnectome_upper_strata_gap_analysis.txt - the run over Layers 9, 10 and 11, including the overlay doctrine in full and the corpus's snake_case name for every unbuilt pack.
+
+The other two runs - the lower strata, and the Layers 12 to 15 konnectome-facing documents - are summarised here in full and their findings appear throughout Parts Two through Eight.
+
+A LATER ASSESSMENT SUPERSEDES THIS ONE. Under the Twentieth Commandment this analysis is re-run as the build grows and as the north-star directory receives new documents, and a document added to that directory HAS NOT BEEN READ UNTIL THE ANALYSIS SAYS SO.
+
+
+- konnectome north-star gap analysis version 1, 2026-08-10
