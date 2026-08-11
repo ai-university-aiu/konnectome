@@ -12,7 +12,7 @@ THE DSPARCD FILESET - THE SEVEN
 
 "The DSPARCD Fileset" is a term the Seventh Commandment defines, and it means exactly these seven files and no others. Each one is a phase of the waterfall, and each is a living document that grows as konnectome is built.
 
-• konnectome_0_definition_v1.txt - DEFINITION. What konnectome IS in one sentence and what it is NOT in eight. READ THIS ONE FIRST. It is deliberately SHORT and must stay short. Where it and a later phase disagree, THE DEFINITION LEADS and the later phase is corrected; only the Constitution outranks it.
+• konnectome_0_definition_v2.txt - DEFINITION. What konnectome IS in one sentence and what it is NOT in eight. READ THIS ONE FIRST. It is deliberately SHORT and must stay short. Where it and a later phase disagree, THE DEFINITION LEADS and the later phase is corrected; only the Constitution outranks it. (BUMPED to v2 at slice 71: Part One's "the one running loop" is named explicitly as the two live loops - cognitive_cycle_run/4 and body_interface_survival_run/5 - settling OBSERVATION-22 without silently narrowing what already counts as reached.)
 
 • konnectome_1_specification - SPECIFICATION. The problem defined completely before any code is written.
 
@@ -30,7 +30,7 @@ NOTE THAT SIX OF THE SEVEN ARE NAMED HERE WITHOUT A VERSION, AND THE THIRD TIME 
 
 THIS PARAGRAPH HAS NOW ROTTED THREE TIMES AND THE THIRD REPAIR IS A DIFFERENT KIND FROM THE FIRST TWO. Twice the figure was simply chased - it said v48 while the files were at v54, and the slice-59 repair updated it and recorded that a DEEPER FIX had been declined, on the grounds that the paragraph was comparing two version numbers and could not make its point without them. IT CAN. Its point is that six files share a number and one does not, and the point survives with the numbers removed, which is the version 18 pointer audit's own rule applied where it had not reached: WHEN A RECORD REFERS TO A LIVE LIST, DROP THE PART THAT CAN GO STALE RATHER THAN UPDATING IT.
 
-THE DEFINITION IS AT v1 AND HAS NEVER BEEN SUPERSEDED, and its version IS written above, because that is a durable fact about the document rather than a moving figure: it states a concept rather than a state, and a concept that needed a new version every slice would not have been a concept.
+THE DEFINITION'S VERSION IS WRITTEN ABOVE, UNLIKE THE OTHER SIX, because that is a durable fact worth stating rather than a moving figure: it states a concept rather than a state, and a concept that needed a new version every slice would not have been a concept. IT MOVED ONCE, TO v2 AT SLICE 71, when OBSERVATION-22 was settled - and moving once in seventy-one slices is exactly what "the concept may be amended but never silently" looks like in practice: rare, versioned, and reasoned on its own face, never a moving figure chased for its own sake.
 
 
 THE EIGHTH FILE, WHICH IS NOT A MEMBER OF THE FILESET
@@ -60,4 +60,4 @@ THE FORWARDING NOTE - READ THIS IF YOU ARRIVED HERE FROM AN OLD DOCUMENT
 
 Before 2026-08-10 these eight files lived directly in /docs/ . If you are following a path that begins docs/konnectome_ and names one of the seven phases, or a path naming the method specification, and it does not resolve, the file is here: insert DSPARCD/ after docs/ and the path is correct. No file was renamed, edited or deleted; all eight moves are pure renames.
 
-ONE THING THAT LOOKS LIKE A BROKEN POINTER AND IS NOT. The Seventh Commandment lists the seven files at their _v1 names, because that list says they "will be created and named" and is therefore a record of the naming convention AT CREATION. Six of those seven _v1 files are in docs/archive/ , correctly, and those six lines are left pointing there. The seventh, the Definition, is still at v1 and so its line names a CURRENT file and moved here with it. A LINE THAT NAMES A LIVE FILE IS A POINTER; A LINE THAT NAMES A RETIRED ONE IS A RECORD - and that one list holds both.
+ONE THING THAT LOOKS LIKE A BROKEN POINTER AND IS NOT. The Seventh Commandment lists the seven files at their _v1 names, because that list says they "will be created and named" and is therefore a record of the naming convention AT CREATION. All seven of those _v1 files are now in docs/archive/ , correctly, including the Definition's own since slice 71 bumped it to v2 - so every line of that list is now a RECORD of a retired name rather than a pointer at a live one, and none of them should be repointed; the list is what it always said it was, a naming convention read back from the moment of creation.
