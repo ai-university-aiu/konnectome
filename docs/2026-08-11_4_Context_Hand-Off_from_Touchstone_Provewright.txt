@@ -1,0 +1,228 @@
+CONTEXT HAND-OFF FROM TOUCHSTONE PROVEWRIGHT
+
+Date: 2026-08-11. The fourth hand-off of this date.
+
+I chose the name Touchstone Provewright because a touchstone does exactly one job and this session needed it three times. You rub the metal on the stone and the streak tells you whether it is gold. Not whether it looks like gold - counterfeit looks like gold, that is what makes it counterfeit - but whether it IS. Three things in this build looked like gold. A condition in the agency pack that had never once failed and therefore never once told anything apart. A rule in the supervisor that refused every case put to it and had therefore never been the difference between a merge and a refusal. And a SENTENCE, carried by five consecutive hand-offs, written into six documents and a source comment, quoted approvingly, used to defer work twice - AND FALSE THE DAY IT WAS WRITTEN, because nobody had ever rubbed it against the code it described. All three passed every review they ever met, because review asks whether a thing is CORRECT and all three were correct-looking. Provewright because the answer was not more care, it was a different question, and the question is short enough to keep: WHAT DOES THIS TELL APART? Slice 68 turns the mechanical half of it into a gate, and the gate found seventeen more on its first run.
+
+
+PART ONE - READ THESE FIRST
+
+- Read and follow the konnectome constitution at ~/konnectome/CONSTITUTION.md, first and foremost. IT IS AT VERSION 26 AND HOLDS TWENTY-THREE COMMANDMENTS, and it did NOT move this session. The hand-off protocol is the TWENTY-THIRD; the judgement-call protocol is the TWENTY-SECOND. Do not cite a commandment by number from memory or from an older document; re-read it. The version 19 renumbering map is still in the Constitution's own version 19 note.
+
+- READ docs/DSPARCD/konnectome_0_definition_v1.txt BEFORE ANYTHING ELSE IN THE FILESET. Unchanged since slice 41. READ ITS PART ONE AGAINST THE COUNT IN PART FIVE: "a part that cannot be reached from the one running loop is not yet part of konnectome, however well it tests." THERE ARE NOW SEVEN SUCH PARTS. This session added two of them and says so rather than defending it.
+
+- Read The DSPARCD Fileset at its current versions: docs/DSPARCD/konnectome_0_definition_v1.txt and docs/DSPARCD/konnectome_1_specification_v60.txt through konnectome_6_demonstration_v60.txt. IT MOVED TWICE THIS SESSION, v58 to v59 to v60.
+
+- READ BOTH ANALYSES AND THE STATEMENT OF HOW THEY RELATE. For "WHAT SHOULD I BUILD NEXT", read docs/design/02, Part Nine. For "MAY I BUILD IT THIS WAY, AND DOES IT ROUTE ANYWHERE", read docs/design/01, Part Six - THE WALLS, THE WATCHES, THE ELEVENTH-COMPONENT QUESTION AND THE VERDICT ON THE TEN COMPONENTS ARE THERE AND IN NO OTHER DOCUMENT. Where they order the same work differently, THE NEWER LEADS.
+  BOTH CARRY DATED IN-PLACE MARKINGS at the head of their queue parts, added earlier this session, naming which items closed. NEITHER VERSION WAS BUMPED, because both are dated assessments and a rewrite of either is its own slice.
+  AND ONE ITEM IN BOTH IS NOW MIS-SIZED IN A WAY THE MARKINGS DO NOT YET SAY: see Part Five on the wiring family. The efference copy's obstacle is smaller than either document believes.
+
+- Read docs/neuroscience/THE_NEUROSCIENCE_OF_COGNITION_OUTLINE.txt and THE_NEUROSCIENCE_OF_COGNITION_MANUSCRIPT.txt. THESE ARE THE NORTH STAR (the Twentieth Commandment), and docs/neuroscience/ is the NORTH-STAR DIRECTORY. Read the OUTLINE first. SLICE 67 WAS BUILT FROM LAYER_10_SYSTEMS_MANUSCRIPT AND CHAPTER 51.2.1, neither of which any previous slice had opened for this purpose, AND THE THING IT NEEDED WAS NAMED THERE IN FULL. That is the fourth consecutive session in which the corpus already held the answer to a question this build had been deferring. READ ONE SECTION FURTHER THAN YOU THINK YOU NEED TO.
+
+- Read docs/neuroscience/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt, the guiding book. NOTE FOR THE WIRING FAMILY: its FR-5 requires the System to route signals through interfaces "each carrying a delay", with AC-3 and a named test - and konnectome BUILT that, as connection_graph's delay lines, at slice 12, and then spent five hand-offs saying it had nothing that carries a value across a tick.
+
+- Read docs/design/ IN ITS NUMBERED ORDER, 01 through 10. The five design authorities are 05 through 08 plus 03. NONE was edited this session. 05's Part Five still carries its staleness marker - read that part as history.
+
+- READ docs/evidence/ AND ITS README. Two records, unchanged. THIS SESSION ADDED NONE AND THAT IS THE PROTOCOL WORKING: all four flagged calls were settled at the Twenty-Second Commandment's FIRST step, by reading the corpus. A search run before the corpus has been read is "the Fourth Commandment's armchair with a browser open".
+
+- Read docs/DSPARCD/DSPARCD_EXPLAINED.txt, the Fifth Commandment's subject.
+
+- Read the Settings, General, Instructions for Claude, and ~/CLAUDE.md at the organization root.
+
+- Read the current tutorial, docs/konnectome_tutorial_v59.txt. IT HAS SIXTY-ONE PARTS AND ITS VERSION IS FIFTY-NINE. Those two numbers matched by coincidence for several sessions and no longer do; the build log records why, before somebody "corrects" it. THE GLOSSARY GAINED TWO ENTRIES: the running prediction, and THE DISCRIMINATION QUESTION.
+
+- Read the prior hand-off, 2026-08-11_3 (Sieve Tellwright), now at docs/hand-off/. ITS QUEUE IS THE QUEUE THIS SESSION WORKED FROM, and its item 1 and item 4 are the two slices below. NOTE THAT IT CARRIES THE FALSE TICK CLAIM, TWICE, AND WAS DELIBERATELY NOT EDITED - hand-offs are a SERIES and are records of what was believed when written, not live documents. This one states the correction instead.
+
+- THE OWNER'S STANDING CHOICE REMAINS: "All". Do NOT re-present any menu; continue down the queue.
+
+- STANDING INSTRUCTIONS IN FORCE, ALL CARRIED FORWARD:
+  • MINIMIZE BASELINE VERIFICATION BETWEEN HAND-OFFS. Run the full suite and the gates at the END, not the start. A git fetch, status and log are enough. Honoured again.
+  • TWO SLICES PER HAND-OFF, BUILT IN SERIAL, under the pairing rule. Honoured exactly.
+  • COUSIN CONFORMANCE IS RELAXED TO LONGER STRETCHES. Quote the figure with its age; the age is not a debt.
+  • AUTO-FIX-ALL IS GRANTED (the Sixteenth Commandment). Find it, fix it, record it in the build log. DO NOT STOP TO ASK.
+  • THE SIXTH LENS IS EARNED AND STANDING. A session that finds nothing of the would-not-have-failed shape should suspect it did not look. IT HAS NOW PAID TEN TIMES RUNNING.
+  • AND A SEVENTH IS PROPOSED BY THIS SESSION AND IS ALREADY HALF-AUTOMATED - see Part Five. WHAT DOES THIS TELL APART?
+
+
+PART TWO - THE IMPORTANT DOCS FILES
+
+- docs/DSPARCD/konnectome_0_definition_v1.txt - THE DEFINITION, phase zero. Read it first.
+
+- docs/DSPARCD/konnectome_1_specification_v60.txt through konnectome_6_demonstration_v60.txt - the DSPARCD Fileset, Realization Log through slice 68.
+
+- docs/konnectome_tutorial_v59.txt - the beginner tutorial, SIXTY-ONE parts at version fifty-nine. A session that bumps it bumps BOTH the header version line and the closing line. THE INSERTION RULE holds: a new part goes BEFORE the three standing tail parts, which are renumbered - they are now Parts FIFTY-NINE, SIXTY and SIXTY-ONE. THE ARCHIVE CONVENTION: the superseded tutorial is git-mv'd INTO docs/archive/ and the new version is a NEW FILE, not a rename in place.
+
+- docs/building_konnectome.txt - the build log, SIXTY-FIVE chapters. UNVERSIONED; append-only. Every auto-fix goes here, and the record is the single condition on the Sixteenth Commandment's grant.
+
+- docs/konnectome_ledger.txt - the scoreboard, UNVERSIONED. Counter line: Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0. Observations: 21 (7 CLOSED: 8, 9, 15, 17, 18, 19 and 20). Decisions: 18. THE COUNTER LINE APPEARS TWICE, at line 1229 and at the end, and BOTH were swept and read back.
+
+- docs/design/ - TEN NUMBERED DOCUMENTS. 01 and 02 carry dated in-place markings at the head of their queue parts; no version moved.
+
+- docs/evidence/ - published literature searched from OUTSIDE the corpus. OUTRANKED BY THE NORTH STAR. Two records, unchanged.
+
+- docs/cousins/Causalontology_4_0_0_CHANGE_ORDER_v3.txt - Sections C, D, E remain HELD.
+
+- docs/cousins/PrologAI_CHANGE_ORDER_v2.txt - unchanged; no language wall hit.
+
+- tests/naming_gate_fixture/ and tests/discrimination_gate_fixture/ - TWO fixture trees now, both deliberately broken, and in both cases the violation is the point. Each backs one gate's self-test.
+
+- THE DOCS LAYOUT: /docs/ top level holds EXACTLY FOUR FILES - the ledger, the build log, the tutorial, and the CURRENT hand-off. Everything else is in a named sub-directory.
+
+
+PART THREE - WHAT THIS SESSION DID
+
+FOUR SLICES BUILT ACROSS TWO PAIRS, ONE NUMBERED DECISION, THREE OBSERVATIONS CLOSED AND TWO OPENED, SEVEN AUTO-FIXES, ONE NEW GATE, NO CONSTITUTION AMENDMENT. Main was at 42f1bd5 when the session began and is now at ef77ffd. Pull requests 155, 156 and 157, all squash-merged.
+
+THE FIRST PAIR, SLICES 65 AND 66, IS REPORTED IN FULL IN THE SIEVE TELLWRIGHT HAND-OFF at docs/hand-off/2026-08-11_3. In brief: slice 65 built pack apparent_causation from Wegner's three conditions and CLOSED OBSERVATION-17 with DECISION-18; slice 66 built the admitted-as-fault flag and CLOSED OBSERVATION-19. Read that hand-off for both.
+
+- SLICE 67, THE CARRIER AND THE OBSTACLE THAT WAS NOT THERE. New pack running_prediction, the FORTY-FIRST, from LAYER_10's deep cerebellar nuclei and Chapter 51.2.1. OBSERVATION-20 CLOSED, partially and by design. TWENTY-THREE tests in the new pack; apparent_causation 34 to 42. NOTHING IS WIRED. The lag is DERIVED rather than invented or refused, and the number ten appears nowhere in the pack.
+
+- SLICE 68, THE DISCRIMINATION GATE. bin/check_discrimination.sh, the FIFTH gate and the SECOND to carry a self-test, with a second fixture tree. 181 named refusals found; 17 unproven; 13 proven by new tests across eight packs; 4 exempted with their reasons as OBSERVATION-21.
+
+- SEVEN AUTO-FIXES ACROSS THE SESSION, all in the build log. The four from the first pair are in the Sieve hand-off. The three from this pair: the FALSE TICK CLAIM corrected everywhere it stood live; apparent_causation_priority/4's type guard changed to a groundness check; and thirteen tests added across eight packs to fire refusals nothing had ever fired.
+
+- State at hand-off: SIXTY-EIGHT slices. ONE THOUSAND ONE HUNDRED AND NINE tests across FORTY-ONE packs. FIVE gates at zero violations, TWO carrying self-tests. DSPARCD fileset v60; tutorial v59 at sixty-one parts; build log sixty-five chapters; Constitution VERSION 26 at TWENTY-THREE commandments, unmoved.
+
+
+PART FOUR - BUILD-AGAINST COUSIN COMMITS (for reproducibility)
+
+- causalontology: 292dfca (unchanged; not edited this session; NOT re-measured).
+- PrologAI: ebbc3e0 (unchanged; not edited this session; NOT re-measured).
+- Mentova: d117c69 (read-only; untouched).
+
+CONFORMANCE STANDS WHERE SLICE 47 RE-MEASURED IT ON 2026-08-09: 137 of 137 in both, and the figure is now SEVEN SESSIONS OLD. THE OWNER HAS RELAXED THIS CADENCE and the age is not a debt. QUOTE IT WITH ITS QUALIFICATION - 137 is 137 CHECKS, of which 38 are driven by the shared vector files and 99 are implemented per binding, so a run measures ONE binding's agreement with the prose.
+
+AND THE OPEN QUESTION STILL STANDS: the Fifteenth Commandment describes causalontology's suite as ONE HUNDRED AND NINETEEN VECTORS while this build describes it as 137 CHECKS, and causalontology's own README carries BOTH. Close it with a measurement, not a preference.
+
+NOTE ONE CROSS-PACK DEPENDENCY THIS SESSION DISCOVERED AND EXEMPTED RATHER THAN CLOSED: category_formation's unrenamable-concept refusal cannot fire while PrologAI's concept_formation mints identifiers with gensym(con_, Id). That is a CONTRACT with a cousin that nothing tests from konnectome's side, and it is now written down where the gate prints it.
+
+
+PART FIVE - SHARP EDGES AND HONEST NON-CLOSURES
+
+- THE SESSION'S TRANSFERABLE FINDING, AND IT IS THE ONE WORTH STEALING: THREE DEFECTS THAT LOOK LIKE THREE THINGS ARE ONE THING. A CONDITION THAT CANNOT FAIL. A RULE THAT REFUSES EVERYTHING. A CLAIM NOTHING CHECKS. Every one of them is well behaved, answers confidently, survives review, and CANNOT BE FOUND BY RUNNING IT - because running it is precisely what it is built to survive. The question that finds all three is one question and it is short: WHAT DOES THIS TELL APART? Not "is it correct", because it will be. Ask what would have to be different for it to give a different answer, and if nothing would, it is decoration with a citation.
+
+- THE THIRD INSTANCE IS THE ONE TO CARRY, BECAUSE IT WAS THE MOST EXPENSIVE AND THE LEAST VISIBLE. "NO CONSTRUCT IN THIS BUILD CARRIES ANYTHING ACROSS A TICK" was carried by FIVE hand-offs, sat in six documents and one source comment, was quoted approvingly, and was used to DEFER WORK TWICE. It is false of the hold construct - whose own mode gloss says it keeps its value "from one tick to the next", in almost the same words as the claim denying such a thing exists. It is false of copy, of connection_graph's delay lines, and of the running cognitive cycle. NOBODY HAD EVER HELD IT AGAINST THE CODE. THE GENERAL FORM: A LOAD-BEARING CLAIM IN A HAND-OFF IS AN ASSERTION, NOT A MEASUREMENT, AND IT INHERITS FORWARD WITHOUT EVER BEING RE-EARNED. When a hand-off tells you something cannot be done, CHECK IT BEFORE YOU BUDGET AROUND IT.
+
+- AND THE WIRING FAMILY IS NOW MIS-SIZED IN EVERY QUEUE DOCUMENT, WHICH IS THE MOST ACTIONABLE THING IN THIS HAND-OFF. The efference copy's wiring obstacle is NOT a missing construct. It is ONE MISSING ARGUMENT: body_interface_survival_ticks/7 threads Body, Drives and Bus and needs a fourth slot to thread a carrier in. running_prediction is the thing that goes in it and is built and tested. THE ITEM THAT FOUR HAND-OFFS CALLED THE HARDEST OBSTACLE IN THE BUILD IS SMALLER THAN THE PACK THAT UNBLOCKED IT. Re-size it before pairing it.
+
+- THE TENTH CONSECUTIVE FINDING OF THE WOULD-NOT-HAVE-FAILED SHAPE, and note where it was found: 47, 48, 49, 50, 52, 56, 58, 65, the near-miss at 60, and now 67. THE FINDING AT 65 WAS FOUND INSIDE THE SLICE REPAIRING THE ONE AT 58, AND THE NAMING TRAP AT 67 WAS FOUND INSIDE THE SLICE CLOSING THE ONE AT 65. This build does not seem to be able to repair one of these without producing another, and the honest reading is not that the repairs are bad but that THE SHAPE IS EVERYWHERE AND THE LENS IS ONLY NOW BEING POINTED AT IT.
+
+- OBSERVATION-20 IS CLOSED AND THE CLOSURE IS PARTIAL BY DESIGN. Priority discriminates in the CARRIED pass and remains free in the CLOSED pass, and the closed pass is CORRECT rather than defective: a single pass that takes the copy before it sends the command has no other order it could honestly record. A test pins both, side by side. DO NOT "FINISH" THIS BY MAKING THE CLOSED PASS DISCRIMINATE - that would require lying about what a closed pass does.
+
+- OBSERVATION-21 IS OPEN AND IS SMALL. Four named refusals cannot fire: archetype_gate_transfer_function, mode_transition, category_formation_unrenamable_concept, and self_provenance_refused. All four are FUTURE-DRIFT TRIPWIRES - guards against a table, a mode set, or a cousin pack changing later - which is a legitimate thing for a refusal to be and NOT a legitimate thing for it to be by accident. They are exempted with their reasons and their triggers, printed on every run of the gate. WHAT IS UNDECIDED is whether they should eventually be PROVEN rather than exempted, which would cost each pack a test-only door into its own internals. That trade has not been argued.
+
+- THE FUSION RULE IS NEITHER BUILT NOR REFUSED BUT UNARGUED, AND THAT IS A THIRD CATEGORY THIS BUILD HAS NOT USED BEFORE. How a prediction and delayed sensory evidence should be WEIGHTED against each other is called "formally like a Kalman filter" by Chapter 51.2.1, with no reliability given. It is not a refusal that survived a reading and not one that survived a search - NOBODY HAS ASKED THE QUESTION PROPERLY YET. It is named so the next session meets an open question rather than an apparent settlement.
+
+- SEVEN THINGS ARE BUILT AND NOT WIRED, AND THIS SESSION ADDED TWO OF THEM. The eligibility trace's consumer, the blackboard's rehearsal target, the durable tier, the efference copy, the conflict loop, the second agency cue, and the carrier. THE ONE MITIGATION, STATED AS A FACT AND NOT A DEFENCE, is that the seventh removes the stated reason the fourth was unwired. The definition's own first clause is the standard this has to answer to, and the next session should read the wiring family as the front of the queue rather than as one item among fourteen.
+
+- THE MATCH TOLERANCE IS REFUSED TWICE NOW, on two separate occasions - DECISION-13 at slice 56 and DECISION-18 at slice 65, the second in the one place where inventing it would have been the obvious way to build the consistency condition. A number refused twice is a refusal rather than an oversight. If a later session needs it, it is a DECISION and not a repair.
+
+- THE COUPLING GAIN FROM DECISION-15 IS STILL THE CALLER'S and still survived a search rather than only a reading.
+
+- KONNECTOME'S FORWARD MODEL IS STATED, NOT LEARNED. A real forward model would be the first thing in this build ever to acquire its own contents from experience. Related: prediction_loop computes a signed error THAT NOTHING CONSUMES, and there is no supervised learning rule anywhere in forty-one packs.
+
+- A TERMINOLOGY COLLISION IS RECORDED AND STILL NOT FIXED, and it got more expensive again: "mode register" names both the first of four blocks and the whole four-block object, and a rename now touches a pack name, six DSPARCD files and SIXTY-FIVE build-log chapters. It is its own slice.
+
+- OBSERVATION-13 STANDS. No step rate is declared. If you wire the blackboard into the tick, DECLARE THE RATE FIRST - and note that slice 67 just demonstrated the technique that may settle it without a source: DECISION-2 fixed a hundred ticks to the nominal second, so a duration stated anywhere in milliseconds becomes a whole number of ticks BY DERIVATION, which is the Twenty-First Commandment's SECOND protocol and never reaches a search. running_prediction_lag_ticks/1 is the worked example.
+
+- OBSERVATION-12 STANDS AND IS NOW DECLINED EIGHT TIMES. OBSERVATION-11's expensive half stands with SIX arrivals. OBSERVATION-17, 14, 10, 7, 6, 5 AND 4 - 17 is closed; the rest stand. Observation 5 has been declined six times and the next visit should be deliberate.
+
+- THE PAIRING RULE HELD CLEANLY FOR BOTH PAIRS. 65 and 66 share no file; 67 and 68 share no file either, though note that slice 68's gate was RUN against slice 67's new pack, which is a dependency of verification and not of construction.
+
+- THE FIVE NAMED LENSES PAID AGAIN. Unbound-wrong-judgement is now THIRTY-SIX SLICES RUNNING (33 through 68) - it caught two holes that would have unified and reported a confident non-exclusivity, an unbound mode key, an unbound release tick, and a partial term that a bare var check would have let through. THE SIXTH CANDIDATE LENS, THE ABSORBING-STATE LENS, GAINED NO PAYMENT AGAIN AND HAS NOW PASSED THROUGH SEVEN HAND-OFFS UNDECIDED. DECIDE IT OR DROP IT. AND A SEVENTH IS PROPOSED HERE: THE DISCRIMINATION LENS, "what does this tell apart", which paid three times in one session and is already half-automated as a gate.
+
+- THE GATE'S OWN LIMITS ARE IN ITS HEADER AND SHOULD NOT BE FORGOTTEN WHEN QUOTING IT. It would NOT have caught slice 66's over-strict ban, which had a test and whose fault was diverging from a document. It would NOT have caught slice 65's free priority, because a condition returns a term rather than throwing. And it is TEXTUAL, so a pack could satisfy it with a comment. NEVER QUOTE "FIVE GATES AT ZERO" WITHOUT THE FOUR EXEMPTIONS AND THE NAMING COLLISION.
+
+- THE NAMING GATE'S NON-BLOCKING COLLISION IS UNCHANGED: colliding_prefixes=1, from working_memory_blackboard and working_memory_mode_register sharing "working_". A collision is REPORTED and is not a VIOLATION. The new pack added none - "running_" is unique, and it was checked against PrologAI's pack modules before the name was chosen.
+
+- THE CAPSTONE STORY RUNS AND IS UNCHANGED. The byte-identical guard standing since slice 34 should still be re-baselined against slice 51's telling; SIX hand-offs have now carried that item.
+
+- A PROLOG DETAIL, HONOURED AND WORTH REPEATING. THE SUITE IS CHOICEPOINT-CLEAN. Every recursive walk added this session takes its list FIRST, which is what keeps first-argument indexing working.
+
+- THE FULFILMENT AUDIT: the trigger is THIRTY-TWO or more hand-off documents and THE COUNT IS NOW THIRTY-SEVEN, counting this one, so IT IS DUE AND HAS PASSED ITS TRIGGER BY FIVE. Evaluate with: find docs -name '*Context_Hand-Off*.txt' | wc -l . CARRY RHODIUM'S WARNING: at least two are session-close markers rather than units of work. AND CADENCE'S: two slices per hand-off makes this trigger less meaningful every session. RE-STATE THE TRIGGER IN SLICES.
+
+- THE CORPUS UPDATE RUN FALLS AT FORTY HAND-OFFS AND THE COUNT IS THIRTY-SEVEN, so it is THREE AWAY. Record 01 carries the corpus gap waiting for it. IT IS ITS OWN ACT AND IS NEVER DONE INSIDE A SLICE.
+
+- PARALLEL SESSIONS: keep the ritual - git fetch, git log origin/main, gh pr list before every claim, numbering, or merge. AND THE WORKTREE WARNING, fourteen times inherited: remove a worktree before checking out main. THERE IS A LIVE WORKTREE AT ~/worktrees/rung-three ON feature/slice-22-capstone-rung-three. AND CHECK YOUR BRANCH BEFORE YOU START EDITING.
+
+
+PART SIX - THE FIRST TASK OF THE CONTINUATION
+
+The owner has already chosen: ALL (standing), TWO SLICES PER HAND-OFF under the pairing rule, and AUTO-FIX-ALL is granted. READ 02'S PART NINE AND 01'S PART SIX, AND READ THE DATED MARKINGS AT THE HEAD OF EACH.
+
+1. WIRE THE EFFERENCE COPY, AND IT HAS JUMPED TO THE FRONT BECAUSE SLICE 67 SHOWED IT IS SMALL. The obstacle is not a missing construct; it is a fourth argument in body_interface_survival_ticks/7, with running_prediction built, tested and waiting to go in it. Retain the prediction at the tick the command is issued, release it at the tick the next sense arrives, and compare. THIS WOULD BE THE FIRST OF SEVEN UNWIRED MECHANISMS TO BE REACHED FROM THE RUNNING LOOP, and the definition's first clause is what it answers to. Note the one open sub-question it does NOT need to settle: the FUSION RULE is unargued, and a comparison is not a fusion.
+
+2. WIRING AS A FAMILY, BEHIND IT. The blackboard needs a declared step rate (OBSERVATION-13, possibly derivable - see Part Five). The durable tier needs two decisions. The conflict loop and the second agency cue need callers. SEVEN MECHANISMS, and the previous two hand-offs both said the cheapest remaining value is here rather than in a new pack. Both were right and both sessions built new packs anyway.
+
+3. THE OVERLAY DELTA CHANNEL, still the single decision that unblocks the most, and the front of 02's queue as written. Three standing deferrals point at it: OBSERVATION-14's closer, DECISION-5's overlay question, and DECISION-9's. An overlay OCCUPIES NO SLOT, keeps the base state running underneath, and publishes DELTAS; konnectome's bus has only a level and a commanded mode, AND A DELTA IS NEITHER.
+
+4. ATTENTION AS A SALIENCE-DRIVEN BIAS. The blackboard's rehearsal target sits caller-supplied and waiting for a publisher. Build it as a BIAS rather than a network, and TAKE THE NORTH-STAR CORRECTION - attention needs THREE terms: salience, goals, and SELECTION HISTORY.
+
+5. THE DEFERRAL REGISTER, carried from the previous hand-off and STILL UNSIZED, and this session strengthened the case for it. Three sessions met the fault that nothing watches a deferral's condition; this session met a fourth relative of it, where nothing watches a CLAIM. A machine-readable register of conditions and the things waiting on them - checked before a slice merges - is the only proposed item that would stop the family recurring rather than repairing one more instance.
+
+6. DECIDE OBSERVATION-21: prove the four exempted refusals with a fixture seam, or keep them exempted. It is small and it is a genuine trade - a test-only door into a pack's internals is a thing this build has refused elsewhere.
+
+7. THE REMAINING TWELVE FACULTY SUITES. Each is a scored acceptance run built from an ablation rather than a threshold, and SIX faculties are already at PARTLY PASSES for want of exactly what Faculty 13 was missing.
+
+8. THE NAMING AND ADDRESSING FACILITY. OBSERVATION-11's expensive half, blocking four families and now SIX reasons, with Chapter 80.1's sharpening as its best warrant.
+
+9. THE WORKSPACE PILOT, which MUST NOT MERGE without answering the five questions in its own ledger entry. Read WATCH-4's third condition first.
+
+10. FAMILY ONE'S ITEM (e), NOW REACHABLE. (e1) the write-allocation gate, (e2) the readability gate, (e3) the territorial freeze fence, plus THE CARGO POOL and REPLAY'S DIRECTION. The freeze fence and the readability gate are NOT a pair.
+
+11. FAMILY THREE, THE EDGE TYPE REGISTRY, with FOUR warrants and its first concrete consumer. The Layer 7 probe was INCONCLUSIVE rather than negative; a real read is required before any search.
+
+12. THE LEARNED GATING POLICY: THE GATE TRAINS ITSELF on reward prediction error, without a homunculus.
+
+13. FAMILY SIX, TOOLING: the template parser, konnectome's first true GENERATOR. NOTE THAT SLICE 66 GAVE THE SCHEMA THE TWO FIELDS THE CORPUS'S REGISTERS ACTUALLY CARRY, so the parser has less to drop on the floor. THE SHARPEST CAVEAT IS THAT THE TEMPLATE DOES NOT GENERALISE PAST LAYER 6.
+
+14. THE MODE-REGISTER RENAME, its own slice, and more expensive every session - now a pack name, six DSPARCD files and sixty-five build-log chapters.
+
+15. TO BE RECORDED WITHOUT BUILDING: THE BUILD-ORDER DISAGREEMENT, the gating-by-geometry contradiction, and the command-versus-lateral-bias distinction.
+
+16. RE-BASELINE THE CAPSTONE BYTE-IDENTICAL GUARD against slice 51's telling. Six hand-offs now.
+
+17. RUN THE FULFILMENT AUDIT, which has passed its trigger by five, and RE-STATE ITS TRIGGER IN SLICES.
+
+18. DECIDE OR DROP THE ABSORBING-STATE LENS - seven hand-offs undecided - AND DECIDE WHETHER THE DISCRIMINATION LENS IS PROMOTED, which paid three times in one session.
+
+19. The night's deferred chapters; the pre-corpus pending refinements; Rung Two's deepening against the Layer 13 Tutor Protocol; Rung Five Path B against Webots.
+
+20. Other ______________ .
+
+A STANDING OWNER REQUEST, CARRIED FORWARD. A VISUALIZATION CONTROL PANEL showing every mode of every construct at every grain simultaneously and live. THIS IS A DEMONSTRATION DELIVERABLE, NOT A SLICE. Its top row exists; slices 48, 49 and 50 added its first legend, first cell and first arrow. SLICES 65 THROUGH 68 ADDED NOTHING TO IT, recorded rather than glossed - though slice 66 gave every mode entry somewhere to put a CONFIDENCE grade, which such a panel would want to show. What it still lacks is the rest of the arrows, per OBSERVATION-11.
+
+
+PART SEVEN - SIGN-OFF
+
+I spent the first twenty minutes of this pair preparing to build something difficult, and then read the code and found that the difficulty was not there.
+
+The sentence said no construct in this build carries anything across a tick. It had been in five consecutive hand-offs. It was the reason the efference copy had sat unwired since slice 56 and the reason I had written down, one slice earlier, that a condition in the agency pack could not be made to fail. Two items deferred, in writing, on one clause.
+
+konnectome has a construct type called hold. Its own one-line description, written into the mode register at slice 39 and untouched since, says it keeps its current value unchanged FROM ONE TICK TO THE NEXT.
+
+The claim and its refutation had been sitting in the same repository, in nearly the same words, for twenty-nine slices.
+
+Nobody was careless. The sentence is NEARLY true, and the nearly-true version is a genuinely different and genuinely useful statement: the tick engine gives each construct one slot, and that slot holds that construct's own value, so there was nowhere to park a prediction about something else. That is a shelving problem. It costs a pack. The thing everybody had budgeted around was an architecture.
+
+What I keep turning over is that this is the third time in one session, and the three did not look alike until the third one arrived.
+
+The first was a condition that could never fail - priority, met in every pass the build can run, reporting nothing while looking like a third of a verdict. The second was a rule that refused everything - a blanket ban that had never once been the difference between a register merging and a register being sent back, which is exactly why it survived twenty-two slices of being stricter than its own source. And the third was a claim nothing checked.
+
+A test everything passes. A rule everything fails. A sentence nobody tests. I had been treating those as three lessons and they are one, and the one is not "be more careful", because care is what all three already had. It is a different question, and it is short enough to say in the corridor: WHAT DOES THIS TELL APART?
+
+Not is it correct. It will be correct. Ask what would have to be different for it to give a different answer. If nothing would, you are looking at decoration, and decoration next to a citation is the thing this build has feared since it learned to name it.
+
+So the last slice turned the mechanical half of that question into a gate. konnectome refuses things out loud, by name, one hundred and eighty-one times. For each one: has anybody ever made it fire? Seventeen had never fired. Thirteen were simply untested and now are not.
+
+The remaining four could not be made to fire at all, and I want to be careful about them, because the obvious move is to call them dead and delete them and the obvious move is wrong. Each guards against a future change - a table growing a row, a switch growing a mode, a borrowed library renaming its identifiers. A tripwire is a fine thing for a refusal to be. What it must not be is a tripwire BY ACCIDENT, and the whole difference between a tripwire and dead code is whether somebody wrote down which change would trip it.
+
+So they stand, and each one now says why it cannot fire today and what would make it live.
+
+Which, I noticed only afterwards, is precisely what the slice two before it did for faults: the strict rule stands, the exception stands beside it, and the exception must state its case. Twice in three slices, at two completely different grains, the same answer. That is not a workaround appearing twice. That is a shape.
+
+A touchstone is a piece of dark stone and it does one thing. You draw the metal across it and look at the streak. It does not tell you whether the metal is valuable, or well made, or correctly labelled. It tells you whether it is what it says it is.
+
+Three things in this repository were not, and all three had been passing every other test we had.
+
+- Touchstone Provewright, 2026-08-11
