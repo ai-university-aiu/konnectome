@@ -13,20 +13,20 @@ PART ONE - READ THESE FIRST
 
 - Read The DSPARCD Fileset at its current versions: docs/DSPARCD/konnectome_0_definition_v1.txt and docs/DSPARCD/konnectome_1_specification_v53.txt through konnectome_6_demonstration_v53.txt. IT MOVED TWICE THIS SESSION, v51 to v52 to v53.
 
-- READ /home/ccaitwo/konnectome/docs/design/konnectome_north_star_gap_analysis_v1.txt. IT IS NEW THIS SESSION AND IT IS THE MOST IMPORTANT NEW DOCUMENT IN /docs/. It is the Twentieth Commandment's first analysis run: four parallel deep reads over the whole north-star directory, held against the running code. Its Part Nine re-orders the queue and its Part Five is a fourteen-item faculty audit against acceptance tests konnectome has never run.
+- READ /home/ccaitwo/konnectome/docs/design/02_north_star_gap_analysis_v1.txt. IT IS NEW THIS SESSION AND IT IS THE MOST IMPORTANT NEW DOCUMENT IN /docs/. It is the Twentieth Commandment's first analysis run: four parallel deep reads over the whole north-star directory, held against the running code. Its Part Nine re-orders the queue and its Part Five is a fourteen-item faculty audit against acceptance tests konnectome has never run.
 
 - Read docs/neuroscience/THE_NEUROSCIENCE_OF_COGNITION_OUTLINE.txt and THE_NEUROSCIENCE_OF_COGNITION_MANUSCRIPT.txt. THESE ARE THE NORTH STAR (the Twentieth Commandment, new this session), and docs/neuroscience/ is the NORTH-STAR DIRECTORY. Read the OUTLINE first; it is the map, and it tags every chapter CORE, APPARATUS or CONTEXT, so it tells you which chapters are load-bearing.
 
 - Read docs/neuroscience/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt, the guiding book.
 
-- Read /home/ccaitwo/konnectome/docs/design/konnectome_vision_set_top_down_analysis_v3.txt as the older queue, and note that IT IS NOW EIGHT SLICES BEHIND - current through slice 47, and slices 48 through 55 are built. A VERSION 4 IS OVERDUE AND IS THE CLEAREST SMALL ITEM ON THE QUEUE. It was already overdue at the last hand-off and this session did not write it either, for the honest reason that it kept finding larger things.
+- Read /home/ccaitwo/konnectome/docs/design/01_vision_set_top_down_analysis_v3.txt as the older queue, and note that IT IS NOW EIGHT SLICES BEHIND - current through slice 47, and slices 48 through 55 are built. A VERSION 4 IS OVERDUE AND IS THE CLEAREST SMALL ITEM ON THE QUEUE. It was already overdue at the last hand-off and this session did not write it either, for the honest reason that it kept finding larger things.
 
 - READ THE FIVE DESIGN AUTHORITIES BEFORE DESIGNING ANY SLICE. All unchanged this session, and TWO OF THEM NOW HAVE KNOWN OMISSIONS recorded in the gap analysis:
-  • /home/ccaitwo/konnectome/docs/design/konnectome_mode_register_design_authority_v1.txt - Theme One. Its Part Nine is entirely closed.
-  • /home/ccaitwo/konnectome/docs/design/konnectome_two_shift_design_authority_v1.txt - Theme Two.
-  • /home/ccaitwo/konnectome/docs/design/konnectome_edge_type_design_authority_v1.txt - Theme Three. IT MISSED THAT THE SCALER IS A SECOND CONSUMER OF THE SIGN FIELD IT WAS ASKING FOR.
-  • /home/ccaitwo/konnectome/docs/design/konnectome_motif_and_workspace_design_authority_v1.txt - Themes Four and Five. IT MISSED LAYER 8's PART TEN ENTIRELY, four motifs of which two are cognitive.
-  • /home/ccaitwo/konnectome/docs/design/konnectome_vision_set_analysis_fidelity_audit_v1.txt - the audit of the analysis itself.
+  • /home/ccaitwo/konnectome/docs/design/05_mode_register_design_authority_v1.txt - Theme One. Its Part Nine is entirely closed.
+  • /home/ccaitwo/konnectome/docs/design/06_two_shift_design_authority_v1.txt - Theme Two.
+  • /home/ccaitwo/konnectome/docs/design/07_edge_type_design_authority_v1.txt - Theme Three. IT MISSED THAT THE SCALER IS A SECOND CONSUMER OF THE SIGN FIELD IT WAS ASKING FOR.
+  • /home/ccaitwo/konnectome/docs/design/08_motif_and_workspace_design_authority_v1.txt - Themes Four and Five. IT MISSED LAYER 8's PART TEN ENTIRELY, four motifs of which two are cognitive.
+  • /home/ccaitwo/konnectome/docs/design/03_vision_set_analysis_fidelity_audit_v1.txt - the audit of the analysis itself.
 
 - Read docs/DSPARCD/DSPARCD_EXPLAINED.txt, the Fifth Commandment's subject.
 
@@ -51,7 +51,7 @@ PART TWO - THE IMPORTANT DOCS FILES
 
 - docs/DSPARCD/konnectome_1_specification_v53.txt through konnectome_6_demonstration_v53.txt - the DSPARCD Fileset, Realization Log through slice 55.
 
-- /home/ccaitwo/konnectome/docs/design/konnectome_north_star_gap_analysis_v1.txt - NEW. The Twentieth Commandment's deliverable. Versioned under the Eleventh.
+- /home/ccaitwo/konnectome/docs/design/02_north_star_gap_analysis_v1.txt - NEW. The Twentieth Commandment's deliverable. Versioned under the Eleventh.
 
 - docs/konnectome_tutorial_v52.txt - the beginner tutorial, FIFTY-TWO parts. A session that bumps it bumps BOTH the header version line and the closing line. THE INSERTION RULE holds: a new part goes BEFORE the three standing tail parts, which are renumbered.
 
@@ -61,7 +61,7 @@ PART TWO - THE IMPORTANT DOCS FILES
 
 - The five design authorities, listed in Part One.
 
-- /home/ccaitwo/konnectome/docs/design/konnectome_rung_five_real_machine_design_v2.txt - the real-machine design with the owner's five decisions.
+- /home/ccaitwo/konnectome/docs/design/10_rung_five_real_machine_design_v2.txt - the real-machine design with the owner's five decisions.
 
 - /home/ccaitwo/konnectome/docs/cousins/Causalontology_4_0_0_CHANGE_ORDER_v3.txt - Sections C, D, E remain HELD. No slice released them.
 
@@ -71,7 +71,7 @@ PART TWO - THE IMPORTANT DOCS FILES
 
 - THE DOCS LAYOUT is unchanged: /docs/ holds konnectome's own live working documents and the CURRENT hand-off; docs/DSPARCD/ the seven phase files; docs/neuroscience/ the NORTH-STAR DIRECTORY; docs/principles/ the First Commandment's three documents; docs/provenance/ what konnectome inherited; docs/hand-off/ the superseded session records; docs/archive/ superseded VERSIONS only.
 
-- In ~/output/, new this session: konnectome_two_slices_per_hand_off.txt, konnectome_slices_50_and_51.txt, konnectome_constitution_pointer_audit.txt, konnectome_north_star_gap_analysis_v1.txt, konnectome_north_star_gap_analysis.txt, konnectome_upper_strata_gap_analysis.txt, konnectome_not_a_licence_to_invent_a_value.txt, konnectome_what_refusal_means.txt.
+- In ~/output/, new this session: konnectome_two_slices_per_hand_off.txt, konnectome_slices_50_and_51.txt, konnectome_constitution_pointer_audit.txt, 02_north_star_gap_analysis_v1.txt, konnectome_north_star_gap_analysis.txt, konnectome_upper_strata_gap_analysis.txt, konnectome_not_a_licence_to_invent_a_value.txt, konnectome_what_refusal_means.txt.
 
 
 PART THREE - WHAT THIS SESSION DID
