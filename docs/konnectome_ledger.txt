@@ -1226,7 +1226,7 @@ self-test; conformance re-measured at 137 of 137 (specification 4.0.0) in both c
 wall; no cousin edited, per the Second, Third, and Fourth Commandments.
 
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 18 (3 CLOSED: 8, 9 and 15).  Decisions: 15.
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 18 (4 CLOSED: 8, 9, 15 and 18).  Decisions: 16.
 Slice-34 note (2026-08-09). The bound turned live in the told story. The slice-33 pending line
 (the bound proven per-territory in the tests but not yet in the capstone's told story) is
 CLOSED: the capstone's boot world arms the slow bound for real - the diffuse mark at one half,
@@ -5146,4 +5146,106 @@ GENERAL FORM: a pointer at a document required to be maintained must identify it
 maintenance does not change.
 
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 18 (3 CLOSED: 8, 9 and 15).  Decisions: 15.
+DECISION-16 (2026-08-11, slice 60). A REGION-GRAIN REGISTER MAY BE ADOPTED BY THE CONSTRUCT THAT
+REALIZES THAT REGION'S FUNCTION, PROVIDED THERE IS EXACTLY ONE OF IT AND THE BORROWING IS STATED ON
+THE PACK'S FACE.
+
+OBSERVATION-18 NAMED ITS CLOSER AS A CORPUS READ RATHER THAN A PATCH, AND THE READ FOUND EVERYTHING
+ALREADY WRITTEN. All four of the blocks Chapter 80.3.3 requires - the mode register, the per-mode
+transfer functions, the transition table and the fault regimes - sit together, in the corpus's own
+words, under the anterior cingulate cortex entry of LAYER_09_MODES_MANUSCRIPT.txt. Its framing
+sentence is "the anterior cingulate cortex is a comparator that notices when something is going
+wrong, so its modes are monitoring, alarm, and effort mobilisation". NOTHING NEEDED INVENTING, which
+is the outcome slice 58's refusal was holding the door open for.
+
+THE NEAR-MISS IS RECORDED FIRST, BECAUSE IT IS THE PART A LATER SESSION WOULD REPEAT. A search of the
+current literature for this construct's modes converges immediately on Braver's dual mechanisms
+framework - PROACTIVE control against REACTIVE control - and konnectome's own corpus carries it at
+Chapter 52.3.3 and calls them "two temporal modes". THEY ARE THE WRONG REGISTER. Proactive and
+reactive are postures of the LATERAL PREFRONTAL CORTEX, the region that RECEIVES the conflict signal
+and holds the goal; Chapter 52.2.1 says in as many words that the cingulate "does not exert control
+at all". They belong to this construct's CONSUMER. A register built from them would have been wrong
+in a way that survived review, and the refusal is pinned by a test: asking for proactive_control's
+transfer function raises an existence error naming it.
+
+WHAT THE DECISION IS FOR. The register that was found is a REGION'S, and konnectome has no regions -
+the region grain is exactly what OBSERVATION-11's expensive half is still missing. So adopting the
+block is a question the corpus does not settle, and it is taken as a decision rather than slipped in
+as a transcription. konnectome adopts it on the Eighth Commandment's own translation rule, ANALOGY OF
+FUNCTION, FIDELITY OF INTERFACE, FREEDOM OF IMPLEMENTATION: the block is a statement about the
+FUNCTION the corpus attributes to that region, and this pack realizes that function. Refusing it
+until a region-grain construct exists would have left a construct whose modes are known sitting
+modeless for the sake of a grain distinction the corpus does not make when it writes the block.
+
+THE TEST IS NARROW AND IT IS DECISION-9 ARRIVING FROM A SECOND DIRECTION. A construct may adopt a
+region's register when it realizes that region's stated function AND THERE IS EXACTLY ONE OF IT.
+There is one conflict monitor. That is the same singleton rule that made the first downward
+assignment possible at slice 50, and its appearing twice, in two unrelated slices, is the best
+evidence yet that singularity rather than grain is what actually licenses addressing something.
+
+WHAT DECISION-16 DOES NOT DECIDE. It does not promote this pack to a region. It does not create a
+region grain. It does not license reading Layer 9 registers into packs generally - four other Layer 9
+entries name constructs konnectome has, and none of them is covered by this. AND IT DOES NOT CLOSE
+DECISION-15: the corpus states "rising response conflict" as the transition's trigger and supplies no
+threshold at which it rises, so the gain remains the caller's and the register does not pretend
+otherwise.
+
+THE BORROWING IS DECLARED AS A FACT AND NOT AS A COMMENT. conflict_monitor_register_source/1 returns
+anterior_cingulate_cortex, and a test holds konnectome to it, because a comment is not readable by a
+test and this is precisely the claim a later reader would otherwise lose - a borrowed register
+mistaken for one konnectome derived from its own construct.
+
+
+OBSERVATION-18 IS CLOSED (opened slice 58, closed slice 60). THE THIRD PIECE OF THE CONFLICT LOOP IS
+JOINED AND THE SUPERVISOR NOW JUDGES THE CONSTRUCT.
+
+HOW IT CLOSED IS THE INTERESTING PART, AND IT VINDICATES THE REFUSAL RATHER THAN MERELY ENDING IT.
+Slice 58 could have written four modes of its own invention in an afternoon and called supervisor_watch/3
+the same day. It refused, recorded exactly what reading would close the gap, and the reading turned
+out to supply all four blocks verbatim. A REFUSAL THAT NAMES ITS OWN CLOSER IS CHEAPER THAN THE
+INVENTION IT DECLINED, and this is the first time in this build that the interval between the two has
+been short enough to prove it.
+
+THE FAULT ROWS ARE REPOINTED, AND THAT IS A REPAIR RATHER THAN A DECISION. Slice 58 declared
+control_without_relief and control_ratchet, both konnectome's own naming, derived from the loop's
+logic. The corpus names the same shapes in its own vocabulary - error_related_hyperactivity and
+cingulate_seizure as boundary signatures, with the single warning condition "chronically elevated
+conflict or pain-affect signalling" and the watchdog pair of dopaminergic and noradrenergic tone. Under
+DECISION-7 the corpus's name is the one that is used, so the rows now carry the corpus's. Under the
+Sixteenth Commandment's repair-versus-decision line this is a repair: a source says what the answer
+should be and the code said something else.
+
+AND THE INDEPENDENT AGREEMENT IS RECORDED RATHER THAN OVERWRITTEN. Slice 58 reasoned from the loop
+that its characteristic failure is control raised without conflict falling. The corpus, writing from
+clinical observation of obsessive-compulsive checking, says chronically elevated conflict. THE SAME
+CLAIM REACHED FROM TWO DIRECTIONS, and that agreement is the reason to trust the repointing rather
+than to argue with it.
+
+THE HONEST HALF, AND IT IS A REAL RESULT RATHER THAN A SHORTFALL. konnectome can measure ONE of the
+two boundary signatures and not the other: it knows whether conflict fell after control was raised,
+and it has nothing whatever that could detect a cingulate seizure. Under DECISION-4 an unmeasured
+regime is reported NOT AS CLEAN BUT AS UNWATCHED. So the watch returns one judged regime and one
+named unwatched, and a test pins it. THIS IS THE FIRST TIME THE SUPERVISOR'S CLEAN-VERSUS-UNWATCHED
+DISTINCTION HAS SEPARATED TWO REGIMES OF THE SAME CONSTRUCT, which is what slice 45 built it for and
+what nothing had yet exercised.
+
+WHAT REMAINS OPEN AND IS NOT THIS OBSERVATION'S. The loop is STILL NOT WIRED into the cognitive
+cycle. This slice closes the supervisor leg, which is the watching of the loop, and not the
+integration of it - and the five-built-and-unwired list in the vision-set analysis's Part Six is
+unchanged by it.
+
+
+Slice-60 note (2026-08-11). THE CONFLICT MONITOR'S MODE REGISTER. conflict_monitor gains a full
+four-block hybrid automaton and calls supervisor_watch/3; NO NEW PACK. DECISION-16, and OBSERVATION-18
+CLOSED. Tests 23 to 35; ONE THOUSAND AND TWO across THIRTY-NINE packs. NOT ONE MODE, TRANSFER
+FUNCTION, TRANSITION ROW, FAULT SIGNATURE, WARNING CONDITION OR WATCHDOG IN THIS SLICE IS KONNECTOME'S
+INVENTION - all of them are transcribed from the Layer 9 modes companion, and the only konnectome
+judgements are the decision to adopt a region's block, the expansion of three class-of-departure rows
+into the rows they name, and the exclusion of the alarm's self-arrival. The corpus's FOUR transition
+rows expand to NINE and a test pins the count so it cannot quietly grow. THE PER-MODE CONFIDENCE
+GRADES ARE CARRIED IN COMMENTS AND NOT IN DATA, because mode_entry has no field for them and slice 39
+deferred that field by name - recorded rather than silently dropped. Capstone byte-identical to
+main's, verified by running both. Nothing routes to either change order. Neither cousin was edited.
+
+
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 18 (4 CLOSED: 8, 9, 15 and 18).  Decisions: 16.

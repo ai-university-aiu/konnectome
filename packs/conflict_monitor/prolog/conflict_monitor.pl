@@ -20,12 +20,32 @@
     conflict_monitor_step/7,
     % conflict_monitor_sequence/6: a run of trials, carrying control forward the way the Gratton effect needs.
     conflict_monitor_sequence/6,
-    % conflict_monitor_fault_row/3: the loop's own fault regimes, declared for the supervisor to watch.
-    conflict_monitor_fault_row/3,
-    % conflict_monitor_faults/1: the fault block, gathered in declaration order.
+    % conflict_monitor_fault_row/2: the corpus's own boundary signatures, for the supervisor to watch.
+    conflict_monitor_fault_row/2,
+    % conflict_monitor_faults/1: the fault block, gathered in the corpus's declaration order.
     conflict_monitor_faults/1,
+    % conflict_monitor_watchdogs/1: the watchdogs the corpus offers to both signatures together.
+    conflict_monitor_watchdogs/1,
     % conflict_monitor_readings/4: the loop's readings, in the supervisor's own reading shape.
-    conflict_monitor_readings/4
+    conflict_monitor_readings/4,
+    % conflict_monitor_register_source/1: the region whose register block this pack borrows, DECISION-16.
+    conflict_monitor_register_source/1,
+    % conflict_monitor_entries/1: the register block - the corpus's four modes for this construct.
+    conflict_monitor_entries/1,
+    % conflict_monitor_rule/2: the per-mode transfer function, one row per register entry.
+    conflict_monitor_rule/2,
+    % conflict_monitor_transfers/1: the transfer block, parallel to the register.
+    conflict_monitor_transfers/1,
+    % conflict_monitor_transfer/2: the rule that holds while a mode is current, looked up THROUGH the automaton.
+    conflict_monitor_transfer/2,
+    % conflict_monitor_transition/5: one row of the corpus's transition table.
+    conflict_monitor_transition/5,
+    % conflict_monitor_transitions/1: the transition table block.
+    conflict_monitor_transitions/1,
+    % conflict_monitor_automaton/1: the whole hybrid automaton, judged as it is built.
+    conflict_monitor_automaton/1,
+    % conflict_monitor_watch/2: the supervisor judges this construct's fault block. OBSERVATION-18's closer.
+    conflict_monitor_watch/2
 ]).
 
 % Import the type checker that refuses a hole or a wrong shape aloud.
@@ -38,6 +58,18 @@
     override_controller_active/3,
     % override_controller_most_vital/2: the most vital (lowest-rank) drive among a set.
     override_controller_most_vital/2
+]).
+% Import the register constructor, which judges all four blocks before an automaton exists.
+:- use_module(library(mode_register), [
+    % mode_register_new/6: build the hybrid automaton and judge every block of it.
+    mode_register_new/6,
+    % mode_register_transfer/3: the rule that holds while a mode is current.
+    mode_register_transfer/3
+]).
+% Import the supervisor, which is the loop's THIRD PIECE and the one slice 58 could not reach.
+:- use_module(library(supervisor), [
+    % supervisor_watch/3: judge a fault block against the watchdogs' readings.
+    supervisor_watch/3
 ]).
 % Import the stabiliser, because CONTROL IS A BOUNDARY OFFSET and that is precisely what it carries.
 :- use_module(library(stabiliser), [
@@ -304,37 +336,282 @@ conflict_monitor_sequence(Bus0, [Overrides | Rest], Base, Gain, [Conflict | More
     conflict_monitor_sequence(Bus1, Rest, Base, Gain, More, Bus).
 
 % ---------------------------------------------------------------------------
-% THE THIRD PIECE, DECLARED AND NOT WATCHED - OBSERVATION-18
+% THE MODE REGISTER - OBSERVATION-18'S CLOSER, AND IT WAS A READ RATHER THAN AN INVENTION
 % ---------------------------------------------------------------------------
 %
-% THE GAP ANALYSIS NAMES THREE PIECES AND THIS SLICE JOINS TWO. override_controller and stabiliser are
-% now a closed loop. The supervisor is the third, and its job here is the one a watchdog always has:
-% to notice when the loop FAILS. Two regimes are declared below in the supervisor's own fault shape,
-% and readings are built in its own reading shape.
+% SLICE 58 DECLARED TWO FAULT REGIMES OF ITS OWN NAMING AND REFUSED TO CALL THE SUPERVISOR, because
+% supervisor_watch/3 judges a MODE REGISTER's fault block and this construct had none. Writing one
+% then would have meant inventing this construct's modes, its per-mode transfer function and its
+% transition table, and a register invented to make a call compile is the shape this build refuses.
+% OBSERVATION-18 named its closer as a corpus read. THE READ IS DONE AND NOTHING NEEDED INVENTING:
+% all four of the blocks Chapter 80.3.3 requires are stated, together, in the corpus's own words.
 %
-% WHAT IS NOT BUILT, AND WHY IT IS A REFUSAL RATHER THAN AN OMISSION. supervisor_watch/3 judges a
-% MODE REGISTER's fault block, and conflict_monitor has no mode register. Writing one would mean
-% inventing this construct's modes, its per-mode transfer function and its transition table - the four
-% blocks Chapter 80.3.3 names - and NONE OF THEM HAS BEEN READ FROM THE CORPUS. A register invented to
-% make a watch call compile is exactly the shape this build refuses. The regimes are therefore declared
-% so the supervisor can consume them the moment that register is read, and the gap is recorded as
-% OBSERVATION-18 rather than papered over.
+% THEY ARE IN LAYER_09_MODES_MANUSCRIPT.txt UNDER THE ANTERIOR CINGULATE CORTEX, whose framing
+% sentence is: "The anterior cingulate cortex is a comparator that notices when something is going
+% wrong, so its modes are monitoring, alarm, and effort mobilisation, and with the anterior insula it
+% anchors the salience network." Four register entries, four transfer functions, four transition
+% rows and a fault block follow it.
+%
+% AND THE SEARCH THAT WOULD HAVE GOT THIS WRONG IS RECORDED, BECAUSE IT WAS THE OBVIOUS MOVE. The
+% current literature on cognitive control converges immediately on Braver's dual mechanisms
+% framework - PROACTIVE control, anticipatory and sustained, against REACTIVE control, transient and
+% stimulus-driven - and konnectome's own corpus carries it at Chapter 52.3.3, which calls them "two
+% temporal modes". A builder looking for this construct's modes finds those two first, and they are
+% the WRONG REGISTER: proactive and reactive are postures of the LATERAL PREFRONTAL CORTEX, the
+% region that RECEIVES the conflict signal and holds the goal. Chapter 52.2.1 is explicit that the
+% cingulate "does not exert control at all". THOSE TWO MODES BELONG TO THIS CONSTRUCT'S CONSUMER AND
+% NOT TO THIS CONSTRUCT, and a register built from them would have looked entirely defensible.
 
-% conflict_monitor_fault_row(-Signature, -Condition, -Watchdog): one declared fault regime.
-% The loop's characteristic failure, and the one the chapter's own elegance claim would deny: control
-% was raised and the conflict it was raised against did not fall.
-conflict_monitor_fault_row(control_without_relief, conflict_not_falling_after_control_was_raised,
-                           conflict_monitor).
-% And the runaway in the other direction: control that keeps rising because it never resolves anything.
-conflict_monitor_fault_row(control_ratchet, control_rising_across_trials_without_conflict_falling,
-                           stabiliser).
+% ---------------------------------------------------------------------------
+% DECISION-16: A REGION-GRAIN REGISTER MAY BE ADOPTED BY THE CONSTRUCT THAT REALIZES THAT REGION'S
+% FUNCTION, AND THE BORROWING IS STATED ON THE PACK'S FACE
+% ---------------------------------------------------------------------------
+%
+% THE REGISTER READ ABOVE IS A REGION'S AND KONNECTOME HAS NO REGIONS. Layer 9's registers describe
+% seventy-seven named anatomical individuals; konnectome has packs, and the region grain is exactly
+% what OBSERVATION-11's expensive half is still missing. So adopting this block is a real question
+% the corpus does not settle, and it is taken here as a decision rather than slipped in as a
+% transcription.
+%
+% KONNECTOME ADOPTS IT, FOR THE EIGHTH COMMANDMENT'S OWN STATED REASON: ANALOGY OF FUNCTION, FIDELITY
+% OF INTERFACE, FREEDOM OF IMPLEMENTATION. This pack realizes the function the corpus attributes to
+% that region - it is a comparator that notices when something is going wrong - and the register is
+% a statement about that FUNCTION rather than about the tissue. Refusing it until a region-grain
+% construct exists would have left a construct whose modes are known sitting modeless for the sake
+% of a grain distinction the corpus itself does not make when it writes the block.
+%
+% WHAT THE DECISION DOES NOT DECIDE, AND THE LIMIT IS THE POINT. It does not promote this pack to a
+% region, it does not create a region grain, and it does not license reading Layer 9 registers into
+% packs generally. THE TEST IT SETS IS NARROW: a construct may adopt a region's register when the
+% construct realizes that region's stated function AND THERE IS EXACTLY ONE OF IT - which is
+% DECISION-9's singleton rule arriving from a second direction. There is one conflict monitor.
+%
+% AND THE BORROWING IS DECLARED RATHER THAN GLOSSED, which is the condition attached to the grant:
+% conflict_monitor_register_source/1 below names the region whose block this is, so no later reader
+% can mistake a borrowed register for one konnectome derived from its own construct.
 
-% conflict_monitor_faults(-Faults): the fault block, gathered in declaration order.
+% conflict_monitor_register_source(-Region): the region whose register block this pack borrows.
+% Named as a fact rather than as a comment, because a comment is not readable by a test and this
+% claim is exactly the one a later session would otherwise lose.
+conflict_monitor_register_source(anterior_cingulate_cortex).
+
+% ---------------------------------------------------------------------------
+% THE REGISTER BLOCK - FOUR MODES, ALL FOUR THE CORPUS'S OWN
+% ---------------------------------------------------------------------------
+%
+% THE CORPUS SUPPLIES BOTH A FORMAL NAME AND A COINED NAME FOR EVERY ENTRY, which is precisely the
+% three-field shape slice 39's mode_entry already carries. Nothing is renamed and nothing is dropped.
+% Two of the four are modes THIS MACHINE CANNOT YET ENTER, and they are declared anyway, on slice 46's
+% precedent: that register names all four sleep sub-modes though the machine can reach only one,
+% because a register is a statement of what the construct HAS, not of what today's caller uses.
+
+% The Watchtower. Ongoing surveillance for response conflict and error.
+conflict_monitor_entry(conflict_monitoring, 'The Watchtower',
+                       'ongoing surveillance for response conflict and error').
+% The Struck Bell. Phasic firing on error, physical pain, and social rejection.
+conflict_monitor_entry(error_and_pain_alarm, 'The Struck Bell',
+                       'phasic firing on error, physical pain, and social rejection').
+% The Taskmaster. Recruitment of executive control and adjustment of effort after conflict.
+conflict_monitor_entry(effort_allocation, 'The Taskmaster',
+                       'recruitment of executive control and adjustment of effort after conflict').
+% The Quiet Post. Disengaged rest with reduced monitoring load.
+conflict_monitor_entry(task_negative_idle, 'The Quiet Post',
+                       'disengaged rest with reduced monitoring load').
+
+% conflict_monitor_entries(-Entries): the register block, in the corpus's own order.
+conflict_monitor_entries(Entries) :-
+    % Gather the four entries in declaration order, which is the corpus's order.
+    findall(mode_entry(Formal, Coined, Gloss),
+            conflict_monitor_entry(Formal, Coined, Gloss),
+            Entries).
+
+% ---------------------------------------------------------------------------
+% THE PER-MODE TRANSFER FUNCTIONS
+% ---------------------------------------------------------------------------
+%
+% EACH POSTURE CARRIES TWO FIELDS - WHAT THE CONSTRUCT IS DOING, AND WHAT IT PUTS OUT - because that
+% is the distinction the corpus's four sentences actually draw. Note that the corpus tags each of
+% them with a CONFIDENCE grade, and that mode_entry has no field for one: slice 39 deferred the
+% per-mode confidence tag by name and it is still deferred, so the grades are recorded in the
+% comments below and are NOT silently dropped without saying so.
+
+% "Tracks the degree of response conflict and feeds a graded control-demand signal to the
+% dorsolateral prefrontal cortex" - high confidence. THIS IS THE MODE SLICE 58 BUILT.
+conflict_monitor_rule(conflict_monitoring, conflict_monitor_posture(measuring, graded_control_demand)).
+% "Fires on errors and on the affective dimension of pain, the same circuitry activated by social
+% rejection" - high confidence.
+conflict_monitor_rule(error_and_pain_alarm, conflict_monitor_posture(phasic_firing, alarm_signal)).
+% "Allocates effort and biases premotor and supplementary-motor responses, norepinephrine raising
+% urgency" - moderate to high confidence.
+conflict_monitor_rule(effort_allocation, conflict_monitor_posture(allocating, response_bias)).
+% "Monitoring output falls at rest" - moderate confidence.
+conflict_monitor_rule(task_negative_idle, conflict_monitor_posture(resting, reduced_output)).
+
+% conflict_monitor_transfers(-Transfers): the transfer block, parallel to the register.
+conflict_monitor_transfers(Transfers) :-
+    % Gather one row per mode, in the register's own order, so the two blocks cannot drift apart.
+    findall(transfer(Formal, Rule),
+            conflict_monitor_rule(Formal, Rule),
+            Transfers).
+
+% conflict_monitor_transfer(+Mode, -Rule): the rule that holds while Mode is current.
+conflict_monitor_transfer(Mode, Rule) :-
+    % Look the rule up THROUGH the built automaton rather than off the clause above, so this lookup
+    % inherits mode_register's refusals - an unbound key and an undeclared mode are both refused there.
+    conflict_monitor_automaton(Automaton),
+    % Look the mode up under the shared checker.
+    mode_register_transfer(Automaton, Mode, Rule).
+
+% ---------------------------------------------------------------------------
+% THE TRANSITION TABLE - AND THE ROW THAT NAMES NO DEPARTURE
+% ---------------------------------------------------------------------------
+%
+% THE CORPUS GIVES FOUR ROWS AND KONNECTOME'S TABLE HOLDS NINE, AND THE EXPANSION IS STATED HERE
+% RATHER THAN LEFT TO BE NOTICED. Three of the corpus's four rows name a class of departure rather
+% than one mode - "to Struck Bell" with no departure at all, "idle to monitoring OR alarm", and
+% "active modes to Quiet Post". A four-field row cannot hold a class, so each is written out as the
+% rows it names.
+%
+% AND THIS IS THE MIRROR OF OBSERVATION-14 RATHER THAN A REPEAT OF IT, WHICH IS WHY THE ANSWER IS
+% DIFFERENT. Slice 50 met a row that named NO DESTINATION and refused to write it, because inventing
+% a destination - a self-loop - would have answered "a transition happened and landed home" to a
+% question whose true answer is that no transition happens. These rows name a DESTINATION and leave
+% the DEPARTURE open, which is the opposite case: the arrival is stated and the expansion adds no
+% claim the corpus did not make. Writing "from each of the others" is transcription; writing "to the
+% mode you are already in" would have been invention.
+%
+% ONE ROW IS DELIBERATELY EXCLUDED FROM THE EXPANSION. The alarm's departure set does NOT include the
+% alarm itself, because "to Struck Bell" describes an arrival and a construct already in that mode
+% does not arrive at it. That exclusion is the same reasoning as slice 50's refusal, applied to keep
+% the expansion honest rather than complete.
+%
+% AND ONE AGENCY NAMES A PUBLISHER KONNECTOME DOES NOT HAVE. The idle-to-active rows are driven by
+% the anterior insula, which konnectome has not built. The rows are declared with their agency filled
+% and NOTHING FIRES THEM, which is the register saying what the construct has rather than what
+% today's machine can reach - and it is preferable to quietly re-attributing the trigger to something
+% konnectome does happen to own.
+
+% Row one, and it is the loop slice 58 already built without knowing it had a register.
+conflict_monitor_transition(rising_response_conflict, conflict_monitoring, effort_allocation,
+                            hundreds_of_milliseconds, self_selected).
+% Rows two, three and four: "committed error or pain or rejection - to Struck Bell", from each of the
+% three modes that can arrive there.
+conflict_monitor_transition(committed_error_or_pain_or_rejection, conflict_monitoring,
+                            error_and_pain_alarm, hundreds_of_milliseconds, thrown_from_above).
+% The same arrival, departing the effort mode.
+conflict_monitor_transition(committed_error_or_pain_or_rejection, effort_allocation,
+                            error_and_pain_alarm, hundreds_of_milliseconds, thrown_from_above).
+% The same arrival, departing rest.
+conflict_monitor_transition(committed_error_or_pain_or_rejection, task_negative_idle,
+                            error_and_pain_alarm, hundreds_of_milliseconds, thrown_from_above).
+% Rows five and six: "salience detection by anterior insula - idle to monitoring or alarm - seconds".
+conflict_monitor_transition(salience_detection_by_anterior_insula, task_negative_idle,
+                            conflict_monitoring, seconds, thrown_from_above).
+% The other arrival the same trigger may reach.
+conflict_monitor_transition(salience_detection_by_anterior_insula, task_negative_idle,
+                            error_and_pain_alarm, seconds, thrown_from_above).
+% Rows seven, eight and nine: "task offset - active modes to Quiet Post - seconds", one per active mode.
+conflict_monitor_transition(task_offset, conflict_monitoring, task_negative_idle, seconds,
+                            self_selected).
+% The same departure from the alarm.
+conflict_monitor_transition(task_offset, error_and_pain_alarm, task_negative_idle, seconds,
+                            self_selected).
+% And from the effort mode.
+conflict_monitor_transition(task_offset, effort_allocation, task_negative_idle, seconds,
+                            self_selected).
+
+% conflict_monitor_transitions(-Transitions): the transition table block.
+conflict_monitor_transitions(Transitions) :-
+    % Gather the rows in declaration order, which is the corpus's order.
+    findall(transition(Trigger, From, To, Timescale, Agency),
+            conflict_monitor_transition(Trigger, From, To, Timescale, Agency),
+            Transitions).
+
+% ---------------------------------------------------------------------------
+% THE FAULT BLOCK - AND THE CORRECTION IT FORCES ON SLICE 58
+% ---------------------------------------------------------------------------
+%
+% SLICE 58 DECLARED TWO FAULT REGIMES OF KONNECTOME'S OWN NAMING - control_without_relief and
+% control_ratchet - derived from the loop's logic rather than from any source. THE CORPUS NAMES THE
+% SAME TWO SHAPES IN ITS OWN VOCABULARY, and under DECISION-7 the corpus's name is the one that is
+% used, so the rows are REPOINTED here. That is a repair and not a decision: a source says what the
+% answer should be and the code said something else.
+%
+% THE INDEPENDENT AGREEMENT IS WORTH RECORDING RATHER THAN QUIETLY OVERWRITING. Slice 58 reasoned
+% from the loop that its characteristic failure is control raised without conflict falling. The
+% corpus's warning condition, written from clinical observation, is "chronically elevated conflict".
+% Those are the same claim reached from two directions, and the agreement is the reason to trust the
+% repointing rather than to argue with it.
+%
+% THE CORPUS OFFERS ONE WARNING CONDITION AND ONE WATCHDOG LIST TO BOTH SIGNATURES TOGETHER, and they
+% are not paired off. This follows slice 50's handling of exactly the same shape: both rows carry the
+% same warning and the same list, because splitting them would be konnectome deciding which watchdog
+% catches which fault, and the corpus does not decide that.
+
+% conflict_monitor_watchdogs(-Watchdogs): "dopaminergic and noradrenergic tone calibrate the alarm
+% threshold", offered to both signatures together.
+conflict_monitor_watchdogs([dopaminergic_tone, noradrenergic_tone]).
+
+% conflict_monitor_warning(-Condition): the one warning condition the corpus states, in its words.
+conflict_monitor_warning(chronically_elevated_conflict_or_pain_affect_signalling).
+
+% conflict_monitor_fault_row(-Signature, -Gloss): the corpus's boundary signatures.
+% The first: "pathological error-related hyperactivity (as in obsessive-compulsive checking)".
+conflict_monitor_fault_row(error_related_hyperactivity, obsessive_compulsive_checking).
+% The second: "or cingulate seizure leaves the admitted set".
+conflict_monitor_fault_row(cingulate_seizure, departure_from_the_admitted_set).
+
+% conflict_monitor_faults(-Faults): the fault regimes and watchdogs block.
 conflict_monitor_faults(Faults) :-
-    % Gather both declared regimes, in the shape the supervisor judges.
-    findall(fault(Signature, Condition, Watchdog),
-            conflict_monitor_fault_row(Signature, Condition, Watchdog),
+    % Read the watchdog list once, from the one place it is written.
+    conflict_monitor_watchdogs(Watchdogs),
+    % And the single warning condition the corpus offers to both.
+    conflict_monitor_warning(Warning),
+    % Build one three-field fault entry per boundary signature, both carrying the shared pair.
+    findall(fault(Signature, Warning, Watchdogs),
+            conflict_monitor_fault_row(Signature, _Gloss),
             Faults).
+
+% ---------------------------------------------------------------------------
+% THE AUTOMATON
+% ---------------------------------------------------------------------------
+%
+% THE CURRENT MODE IS THE WATCHTOWER, AND IT IS A STARTING POSITION RATHER THAN A DEFAULT. slice 39's
+% checker refuses an automaton whose current mode is not in its register, so the slot cannot be
+% omitted and something has to be written. The corpus states no resting mode for this construct - it
+% states an IDLE mode, which is a different claim, being where the construct goes at task offset
+% rather than where it starts. What is written here is the corpus's FIRST ENTRY, which is where the
+% block starts reading, and that is a weaker warrant than a stated default and is recorded as weaker.
+% It is also checkable rather than asserted: NOTHING IN THIS PACK READS THE SLOT.
+
+% conflict_monitor_automaton(-Automaton): the whole hybrid automaton, judged as it is built.
+conflict_monitor_automaton(Automaton) :-
+    % Read the four blocks from the four places they are written.
+    conflict_monitor_entries(Entries),
+    % The per-mode transfer functions.
+    conflict_monitor_transfers(Transfers),
+    % The transition table.
+    conflict_monitor_transitions(Transitions),
+    % And the fault block.
+    conflict_monitor_faults(Faults),
+    % Build it through slice 39's constructor, which judges every block before handing the term back.
+    mode_register_new(conflict_monitoring, Entries, Transfers, Transitions, Faults, Automaton).
+
+% ---------------------------------------------------------------------------
+% THE THIRD PIECE, NOW JOINED - OBSERVATION-18 CLOSED
+% ---------------------------------------------------------------------------
+%
+% THE GAP ANALYSIS NAMED THREE PIECES AND SLICE 58 JOINED TWO. The supervisor is the third, and its
+% job is the one a watchdog always has: to notice when the loop FAILS. It can now be called, because
+% the register it judges against exists.
+%
+% AND THE HONEST HALF IS WHAT THE WATCH REPORTS UNWATCHED. konnectome can measure one of the two
+% boundary signatures and not the other: it knows whether conflict fell after control was raised, and
+% it has nothing whatever that could detect a cingulate seizure. Under DECISION-4 an unmeasured
+% regime is reported NOT AS CLEAN BUT AS UNWATCHED, so a caller supplying only the reading konnectome
+% can take gets back one judged regime and one named as unwatched. THAT IS THE CORRECT ANSWER AND NOT
+% A SHORTFALL, and it is the first time in this build that the supervisor's clean-versus-unwatched
+% distinction has separated two regimes of the SAME construct.
 
 % conflict_monitor_readings(+Before, +After, +Allowance, -Readings): the loop's readings.
 conflict_monitor_readings(Before, After, Allowance, Readings) :-
@@ -344,8 +621,14 @@ conflict_monitor_readings(Before, After, Allowance, Readings) :-
     must_be(number, After),
     % THE ALLOWANCE IS THE CALLER'S, exactly as the supervisor requires and never invents.
     must_be(number, Allowance),
-    % The relief regime reads the conflict remaining; the ratchet regime reads how far control has run.
-    Ratchet is After - Before,
-    % Both readings are filed under this construct's own signature names.
-    Readings = [supervisor_reading(control_without_relief, After, Allowance),
-                supervisor_reading(control_ratchet, Ratchet, Allowance)].
+    % Only ONE regime is measurable here, and it is filed under the CORPUS'S signature name rather
+    % than under slice 58's. The seizure regime gets no reading, so the supervisor reports it
+    % unwatched rather than clean - which is true, and is the point.
+    Readings = [supervisor_reading(error_related_hyperactivity, After, Allowance)].
+
+% conflict_monitor_watch(+Readings, -Report): the supervisor judges this construct's fault block.
+conflict_monitor_watch(Readings, Report) :-
+    % Build the automaton, so the supervisor judges the REAL fault block rather than a fixture.
+    conflict_monitor_automaton(Automaton),
+    % And the supervisor publishes warnings, clean regimes and unwatched ones apart.
+    supervisor_watch(Automaton, Readings, Report).
