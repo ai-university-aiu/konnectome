@@ -1319,5 +1319,72 @@ The Constitution stands at version twenty-five, twenty-two commandments, none ad
 And version 4 closes with the one thing it would say to whoever writes version 5. It was named as a small item four times and it was not small - reconciling two analyses of equal standing across eleven slices, nine decisions and two observations is most of a session. The three sessions that declined it were not being lazy. They were judging its size correctly and judging the cost of deferral to be zero, and that second judgment was the wrong one. If the next version is deferred, it should be deferred with that cost named out loud.
 
 
-From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER FIFTY-NINE, and the story goes on being true.
+CHAPTER FIFTY-NINE - THE MODES WERE ALREADY WRITTEN DOWN (2026-08-11, SLICE 60)
+
+Two days ago a slice refused to do something, wrote down exactly what would have to be read before it could be done, and stopped. This chapter is what happened when somebody did the reading.
+
+The refusal was slice 58's. It had closed a loop between two packs and wanted to hand the result to the supervisor - the construct whose job is to notice when something goes wrong. The supervisor would not take it. It judges a mode register's fault block, and the new construct had no mode register.
+
+Writing one looked like twenty minutes of work. A mode register is four blocks: a list of the operating modes a construct can be in, what it does in each, a table of what moves it between them, and the ways it can go wrong. Anybody who had just spent a day inside this construct could have written four plausible modes.
+
+Slice 58 declined, on the grounds that a mode register invented to make a function call compile is not a mode register, and logged the gap as an observation with its closer named: read the corpus for this construct's own modes.
+
+The reading took about ten minutes, and everything was already there.
+
+Not paraphrased, not implied, not scattered across three chapters. All four blocks, in order, under one heading, in the corpus's own words. Four modes with both a formal name and a coined one. Four transfer functions, one per mode, each with a confidence grade attached. A transition table. A fault block with boundary signatures, a warning condition and its watchdogs.
+
+The framing sentence is a single line: the anterior cingulate cortex is a comparator that notices when something is going wrong, so its modes are monitoring, alarm, and effort mobilisation.
+
+There is a lesson in the interval, and it is not the one about patience. A REFUSAL THAT NAMES ITS OWN CLOSER TURNED OUT TO BE CHEAPER THAN THE INVENTION IT DECLINED. Slice 58 could have spent an afternoon inventing four modes and this slice would then have spent a day discovering they disagreed with the corpus and unpicking them. Instead slice 58 spent five minutes writing down what to read, and this slice spent ten minutes reading it. This build has argued for refusals on principle for a long time. This is the first time the interval between refusal and closure has been short enough to show the arithmetic.
+
+But the part worth the chapter is the wrong answer that was sitting right on top of the right one.
+
+Ask the current literature what the modes of cognitive control are and it answers, immediately and with great confidence, PROACTIVE and REACTIVE. It is Todd Braver's dual mechanisms framework, it is from 2012, it has a large multi-site replication project behind it, and konnectome's own corpus carries it - Chapter 52.3.3, which calls them, in as many words, two temporal modes.
+
+Two modes. Named in the corpus. Called modes by the corpus. For a construct that does cognitive control.
+
+It is the wrong register, and the reason is one clause in a chapter fifteen hundred lines earlier. The 2001 proposal this whole construct is built from is deflationary about the cingulate: it does not exert control at all. It DETECTS. It notices conflict and passes the signal to the lateral prefrontal cortex, which is the part that does something about it.
+
+Proactive and reactive describe how the part that does something about it goes about doing it. They are the postures of the region that HOLDS THE GOAL, not of the region that RANG THE BELL. They belong to this construct's consumer.
+
+A register built out of them would have passed review. It would have cited a real framework, from the right corpus, about the right cognitive function, using the corpus's own word for what it was supplying. Nothing in the code would have failed. It would simply have described a different piece of the brain than the one the pack implements.
+
+What separated them was not cleverness. It was the standing rule that a summary is not a specification and that no slice may be designed without reading the corpus beneath the finding. The search was correct about the field and wrong about the construct, and only the reading told the two apart. There is now a test that pins the refusal: ask this construct for the transfer function of proactive control and it raises an error naming it as a mode this register does not declare.
+
+The four modes it does declare are the Watchtower, the Struck Bell, the Taskmaster and the Quiet Post - surveillance, alarm, effort, and rest. The corpus supplies those names and konnectome keeps them, because the house rule is that the corpus's name is the one that is used.
+
+Two of the four are modes this machine cannot currently enter. The Struck Bell fires on error, on physical pain, and on social rejection - the corpus notes, in one of its better sentences, that a broken heart and a broken arm share tissue - and konnectome has nothing wired to it. They are declared anyway, on the precedent set at slice 46, where a register names all four sleep sub-modes although the machine can reach exactly one. A register states what the construct HAS. It is not an inventory of what today's caller happens to use.
+
+The transition table needed one real judgement. The corpus writes four rows and konnectome's table holds nine, because three of the corpus's rows name a CLASS of departure rather than a single mode: to the Struck Bell, from nowhere in particular; idle to monitoring or alarm; active modes to the Quiet Post. A four-field row cannot hold a class, so each was written out as the rows it names.
+
+That is uncomfortably close to something this build refused ten slices ago. Slice 50 met a row in a different chapter that named no DESTINATION, and refused to write it, because supplying one - a self-loop, from a mode back to itself - would have answered "a transition happened and landed home" to a question whose true answer is that no transition happens at all.
+
+The cases are mirror images and the answers are opposite for a stated reason. Slice 50's row was missing its arrival, and inventing an arrival adds a claim. These rows are missing their departure and their arrival is stated, so writing out the departures adds nothing the corpus did not say. One row is deliberately left out of the expansion: the alarm does not arrive at itself, because a construct already ringing does not start ringing. There is a test for that exclusion, because the honesty of the expansion is the entire argument for permitting it.
+
+One of the nine rows has an agency konnectome cannot supply. Two transitions out of rest are driven by the anterior insula, which this build has not got. The rows are written with their trigger and agency filled in, and nothing fires them. The alternative would have been to quietly re-attribute the trigger to something konnectome does own, which is how a register stops being a record of the corpus and starts being a record of the implementation.
+
+Then the fault block produced a small correction with a large moral.
+
+Slice 58, reasoning purely from the logic of the loop, had declared that its characteristic failure is control raised without conflict falling, and named it accordingly. That naming was konnectome's own invention - reasonable, undisguised, and unsourced.
+
+The corpus's warning condition, written from clinical observation of obsessive-compulsive checking, is chronically elevated conflict.
+
+Same claim. Two directions. One from a machine's control theory, one from a clinic. So the rows are repointed to the corpus's names, which is a repair rather than a decision - a source says what the answer should be and the code said something else - and the agreement is recorded rather than quietly overwritten, because the agreement is the reason to trust the repointing instead of arguing with it.
+
+And the watch, when it finally ran, did the most useful thing it has ever done: it admitted what it cannot see.
+
+The corpus gives two boundary signatures. konnectome can measure one of them - it knows perfectly well whether conflict fell after control was raised. It cannot measure the other, because it has nothing that could possibly detect a cingulate seizure.
+
+So the report comes back with one regime judged and one regime reported UNWATCHED. Not clean. Not passing. Unwatched, by name, with the watchdog that would have to exist named beside it.
+
+That distinction was built at slice 45 and has been sitting there since, correct and unexercised, because until now every construct being watched was watched completely or not at all. This is the first time the supervisor has had to separate two regimes of the SAME construct into one it can judge and one nobody is looking at. The thing it protects against is the most ordinary failure in monitoring: a green light that means nobody checked.
+
+Nothing in this slice is konnectome's invention except three judgements, and all three are recorded where a reader will meet them - the decision to let a construct borrow the register of the region whose function it realizes, the expansion of three rows into nine, and the exclusion of the alarm's self-arrival. Every mode, every transfer function, every trigger, every timescale, every fault signature, every warning condition and both watchdogs are transcribed.
+
+The loop is still not wired into the cognitive cycle. This slice closed the watching of the loop, not the running of it, and the list of five things built and deliberately unplugged is exactly as long as it was this morning.
+
+Thirty-five tests in the pack. One thousand and two in the build. Thirty-nine packs, no new one.
+
+
+From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER SIXTY, and the story goes on being true.
 

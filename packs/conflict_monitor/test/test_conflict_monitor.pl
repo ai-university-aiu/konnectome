@@ -238,34 +238,149 @@ test(a_positive_gain_is_accepted) :-
     assertion(true).
 
 % ---------------------------------------------------------------------------
-% THE THIRD PIECE - declared for the supervisor, and honestly not yet watched
+% THE MODE REGISTER - four modes, all four the corpus's own
 % ---------------------------------------------------------------------------
 
-% The loop declares its own fault regimes in the supervisor's own fault shape.
-test(the_loop_declares_its_fault_regimes) :-
+% The register carries the corpus's four modes, in the corpus's own order, with both of its names.
+test(the_register_holds_the_corpus_four_modes) :-
+    % Gather the register block.
+    conflict_monitor_entries(Entries),
+    % Four entries, formal name and coined name and gloss, exactly as the corpus writes them.
+    assertion(Entries = [mode_entry(conflict_monitoring, 'The Watchtower', _),
+                         mode_entry(error_and_pain_alarm, 'The Struck Bell', _),
+                         mode_entry(effort_allocation, 'The Taskmaster', _),
+                         mode_entry(task_negative_idle, 'The Quiet Post', _)]).
+
+% THE BORROWING IS DECLARED AS A FACT RATHER THAN AS A COMMENT, so a test can hold konnectome to it.
+test(the_register_says_whose_register_it_borrowed) :-
+    % Read the declared source.
+    conflict_monitor_register_source(Region),
+    % It is the region whose function this pack realizes, named so no reader mistakes it for konnectome's own.
+    assertion(Region == anterior_cingulate_cortex).
+
+% The automaton is built and judged by slice 39's constructor, so every block agrees with every other.
+test(the_automaton_is_built_and_judged) :-
+    % Build it. mode_register_new/6 refuses any block that has drifted out of step.
+    conflict_monitor_automaton(Automaton),
+    % It is the corpus's own hybrid automaton term, standing at the register's first entry.
+    assertion(Automaton = hybrid_automaton(conflict_monitoring, _R, _T, _Tr, _F)).
+
+% Every mode has a transfer function, looked up THROUGH the automaton so it inherits the refusals.
+test(every_mode_carries_its_transfer_function) :-
+    % The monitoring mode feeds a graded control demand, which is the mode slice 58 built.
+    conflict_monitor_transfer(conflict_monitoring, Watching),
+    % The idle mode's output falls away.
+    conflict_monitor_transfer(task_negative_idle, Resting),
+    % What the construct is doing, and what it puts out.
+    assertion(Watching == conflict_monitor_posture(measuring, graded_control_demand)),
+    % At rest it is doing neither.
+    assertion(Resting == conflict_monitor_posture(resting, reduced_output)).
+
+% A mode the register does not declare is refused by the shared checker, not answered.
+test(an_undeclared_mode_has_no_transfer_function) :-
+    % Ask for the transfer function of a mode that belongs to a different construct entirely.
+    catch(conflict_monitor_transfer(proactive_control, _Rule), Error, true),
+    % Refused by name. Proactive control is the lateral prefrontal cortex's posture, not this one's.
+    assertion(Error = error(existence_error(mode_entry, proactive_control), _)).
+
+% THE CORPUS'S FIRST TRANSITION ROW IS THE LOOP SLICE 58 ALREADY BUILT.
+test(the_conflict_loop_is_a_row_in_the_transition_table) :-
+    % Gather the table.
+    conflict_monitor_transitions(Transitions),
+    % Rising conflict moves the construct from watching to allocating effort, and it is self-selected.
+    assertion(memberchk(transition(rising_response_conflict, conflict_monitoring, effort_allocation,
+                                   hundreds_of_milliseconds, self_selected), Transitions)).
+
+% The corpus's four rows expand to nine, because three of them name a CLASS of departure.
+test(the_transition_table_expands_three_rows_and_no_more) :-
+    % Gather the table.
+    conflict_monitor_transitions(Transitions),
+    % Nine rows: one, plus three alarm arrivals, plus two out of idle, plus three into idle.
+    length(Transitions, Count),
+    % The expansion is stated and pinned, so a later session cannot quietly grow it.
+    assertion(Count =:= 9).
+
+% AND THE EXCLUDED ROW IS PINNED, because the expansion's honesty is the whole argument for it.
+test(the_alarm_does_not_arrive_at_itself) :-
+    % Gather the table.
+    conflict_monitor_transitions(Transitions),
+    % No row departs the alarm and arrives at the alarm: a construct already there does not arrive.
+    assertion(\+ memberchk(transition(committed_error_or_pain_or_rejection, error_and_pain_alarm,
+                                      error_and_pain_alarm, _Timescale, _Agency), Transitions)).
+
+% ---------------------------------------------------------------------------
+% THE THIRD PIECE - now joined, and honest about what it cannot see
+% ---------------------------------------------------------------------------
+
+% The fault block carries the corpus's boundary signatures, not slice 58's invented ones.
+test(the_fault_block_is_the_corpus_own) :-
     % Gather the fault block.
     conflict_monitor_faults(Faults),
-    % Both declared regimes are present, in the shape the supervisor judges.
-    assertion(Faults == [fault(control_without_relief,
-                               conflict_not_falling_after_control_was_raised, conflict_monitor),
-                         fault(control_ratchet,
-                               control_rising_across_trials_without_conflict_falling, stabiliser)]).
+    % Both boundary signatures, both carrying the shared warning and the shared watchdog list.
+    assertion(Faults == [fault(error_related_hyperactivity,
+                               chronically_elevated_conflict_or_pain_affect_signalling,
+                               [dopaminergic_tone, noradrenergic_tone]),
+                         fault(cingulate_seizure,
+                               chronically_elevated_conflict_or_pain_affect_signalling,
+                               [dopaminergic_tone, noradrenergic_tone])]).
 
-% The readings are built in the supervisor's own reading shape, with the allowance the CALLER supplies.
+% Faults are WATCHED and never admitted as modes, which is slice 42's rule and this block obeys it.
+test(no_fault_signature_is_admitted_as_a_mode) :-
+    % Read the register's formal names.
+    conflict_monitor_entries(Entries),
+    % And the fault block's signatures.
+    conflict_monitor_faults(Faults),
+    % No boundary signature appears among the register's modes.
+    forall(member(fault(Signature, _W, _D), Faults),
+           % The register does not admit it.
+           \+ memberchk(mode_entry(Signature, _C, _G), Entries)).
+
+% THE SUPERVISOR NOW JUDGES THIS CONSTRUCT, which is what slice 58 could not do.
+test(the_supervisor_judges_a_conflict_that_did_not_fall) :-
+    % Conflict was 1.91 before the raise and is 1.90 after it, against an allowance of 0.5.
+    conflict_monitor_readings(1.91, 1.90, 0.5, Readings),
+    % The supervisor judges the real fault block.
+    conflict_monitor_watch(Readings, Report),
+    % Destructure outside the assertion, because assertion/1 undoes what its goal binds.
+    Report = supervisor_report(Warnings, _Unwatched),
+    % Control was raised and conflict did not fall, so the regime warns.
+    assertion(Warnings = [supervisor_warning(error_related_hyperactivity, _C, _D, _V, _A)]).
+
+% A conflict that DID fall raises no warning, so the test above is not warning about everything.
+test(the_supervisor_is_quiet_when_the_loop_worked) :-
+    % Conflict fell from 1.91 to 0.2, comfortably inside the caller's allowance.
+    conflict_monitor_readings(1.91, 0.2, 0.5, Readings),
+    % Judge it.
+    conflict_monitor_watch(Readings, Report),
+    % Destructure outside the assertion.
+    Report = supervisor_report(Warnings, _Unwatched),
+    % The loop did its job, so nothing warns.
+    assertion(Warnings == []).
+
+% AND THE REGIME KONNECTOME CANNOT MEASURE IS REPORTED UNWATCHED, NEVER CLEAN. DECISION-4's rule.
+test(the_unmeasurable_regime_is_reported_unwatched_and_not_clean) :-
+    % Supply the one reading konnectome can actually take.
+    conflict_monitor_readings(1.91, 0.2, 0.5, Readings),
+    % Judge it.
+    conflict_monitor_watch(Readings, Report),
+    % Destructure outside the assertion.
+    Report = supervisor_report(_Warnings, Unwatched),
+    % konnectome has nothing that could detect a cingulate seizure, and the report SAYS SO
+    % rather than reporting the regime clean because nobody looked.
+    assertion(Unwatched = [supervisor_unwatched(cingulate_seizure, _Watchdog)]).
+
+% The readings carry the allowance the CALLER supplies, filed under the corpus's signature name.
 test(the_readings_carry_the_callers_allowance) :-
     % Conflict fell from a high value to a lower one, against an allowance nobody in this pack chose.
     conflict_monitor_readings(1.91, 0.72, 0.5, Readings),
     % Destructure OUTSIDE the assertion, because assertion/1 undoes whatever its goal binds.
-    Readings = [supervisor_reading(control_without_relief, Standing, ReliefAllowance),
-                supervisor_reading(control_ratchet, Ratchet, RatchetAllowance)],
-    % The relief regime reads the conflict still standing after the raise.
+    Readings = [supervisor_reading(Signature, Standing, Allowance)],
+    % Filed under the corpus's name, repointed from slice 58's own naming under DECISION-7.
+    assertion(Signature == error_related_hyperactivity),
+    % The reading is the conflict still standing after the raise.
     assertion(Standing =:= 0.72),
-    % And the ratchet regime reads how far conflict moved, which is negative when the loop worked.
-    assertion(Ratchet < 0),
-    % Both readings carry the caller's allowance, which this pack never invents.
-    assertion(ReliefAllowance =:= 0.5),
-    % The same allowance reaches the second regime unchanged.
-    assertion(RatchetAllowance =:= 0.5).
+    % And the allowance is the caller's, which this pack never invents.
+    assertion(Allowance =:= 0.5).
 
 % An allowance the caller did not supply is refused, exactly as the supervisor requires.
 test(a_missing_allowance_is_refused) :-

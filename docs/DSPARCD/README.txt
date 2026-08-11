@@ -14,19 +14,19 @@ THE DSPARCD FILESET - THE SEVEN
 
 • konnectome_0_definition_v1.txt - DEFINITION. What konnectome IS in one sentence and what it is NOT in eight. READ THIS ONE FIRST. It is deliberately SHORT and must stay short. Where it and a later phase disagree, THE DEFINITION LEADS and the later phase is corrected; only the Constitution outranks it.
 
-• konnectome_1_specification_v55.txt - SPECIFICATION. The problem defined completely before any code is written.
+• konnectome_1_specification_v56.txt - SPECIFICATION. The problem defined completely before any code is written.
 
-• konnectome_2_pseudocode_v55.txt - PSEUDOCODE, written in English Readable Code.
+• konnectome_2_pseudocode_v56.txt - PSEUDOCODE, written in English Readable Code.
 
-• konnectome_3_architecture_v55.txt - ARCHITECTURE. Components, interfaces, data model.
+• konnectome_3_architecture_v56.txt - ARCHITECTURE. Components, interfaces, data model.
 
-• konnectome_4_refinement_v55.txt - REFINEMENT. Test-driven iteration; what the tests found.
+• konnectome_4_refinement_v56.txt - REFINEMENT. Test-driven iteration; what the tests found.
 
-• konnectome_5_completion_v55.txt - COMPLETION. The measured state of the build.
+• konnectome_5_completion_v56.txt - COMPLETION. The measured state of the build.
 
-• konnectome_6_demonstration_v55.txt - DEMONSTRATION. What can now be shown that could not be shown before.
+• konnectome_6_demonstration_v56.txt - DEMONSTRATION. What can now be shown that could not be shown before.
 
-NOTE THE VERSION NUMBERS AND WHY ONE OF THEM DIFFERS. Six of the seven are at v55 and move together, because the Twelfth Commandment requires that any code change be accompanied by mirrored changes to the whole Fileset with version numbers incremented. THE DEFINITION IS AT v1 AND HAS NEVER BEEN SUPERSEDED, because it states a concept rather than a state, and a concept that needed a new version every slice would not have been a concept.
+NOTE THE VERSION NUMBERS AND WHY ONE OF THEM DIFFERS. Six of the seven are at v56 and move together, because the Twelfth Commandment requires that any code change be accompanied by mirrored changes to the whole Fileset with version numbers incremented. THE DEFINITION IS AT v1 AND HAS NEVER BEEN SUPERSEDED, because it states a concept rather than a state, and a concept that needed a new version every slice would not have been a concept.
 
 
 THE EIGHTH FILE, WHICH IS NOT A MEMBER OF THE FILESET

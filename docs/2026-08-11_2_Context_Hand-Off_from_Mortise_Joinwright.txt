@@ -2,7 +2,7 @@ CONTEXT HAND-OFF FROM MORTISE JOINWRIGHT
 
 Date: 2026-08-11. The second hand-off of this date.
 
-I chose the name Mortise Joinwright because both slices of this session were about a JOIN, and in both cases the trouble was in the join and not in either of the pieces. A mortise is the void cut into one piece so that another can enter it - it belongs to neither piece and is the whole reason they hold. Slice 58 joined two packs that were each correct and produced a hazard that existed in neither: a mind that could stop breathing in order to stop feeling conflicted. Slice 59 joined two analyses of equal standing and found that the older one had been abandoned WHOLE, because a newer document took over the visible half of its job and the invisible half went with it. Joinwright because the lesson is the same at both grains: A SURVEY THAT ONLY EVER ASKS WHETHER EACH PIECE IS RIGHT WILL NEVER FIND THE THING THAT LIVES BETWEEN THEM.
+I chose the name Mortise Joinwright because every slice of this session was about a JOIN, and in each case the interesting part was in the join and not in either of the pieces. A mortise is the void cut into one piece so that another can enter it - it belongs to neither piece and is the whole reason they hold. Slice 58 joined two packs that were each correct and produced a hazard that existed in neither: a mind that could stop breathing in order to stop feeling conflicted. Slice 59 joined two analyses of equal standing and found that the older one had been abandoned WHOLE, because a newer document took over the visible half of its job and the invisible half went with it. Slice 60 then joined the third piece of the first slice's loop, and found that the corpus had written the whole joint down two days before anybody looked. Joinwright because the lesson is the same at every grain: A SURVEY THAT ONLY EVER ASKS WHETHER EACH PIECE IS RIGHT WILL NEVER FIND THE THING THAT LIVES BETWEEN THEM.
 
 
 PART ONE - READ THESE FIRST
@@ -11,7 +11,7 @@ PART ONE - READ THESE FIRST
 
 - READ docs/DSPARCD/konnectome_0_definition_v1.txt BEFORE ANYTHING ELSE IN THE FILESET. Unchanged this session and unchanged since slice 41. It states what konnectome IS in one sentence and what it is NOT in eight. READ ITS PART ONE AGAINST THIS SESSION'S LAST FINDING: "a part that cannot be reached from the one running loop is not yet part of konnectome, however well it tests." There are now FIVE such parts. See Part Five.
 
-- Read The DSPARCD Fileset at its current versions: docs/DSPARCD/konnectome_0_definition_v1.txt and docs/DSPARCD/konnectome_1_specification_v55.txt through konnectome_6_demonstration_v55.txt. IT MOVED ONCE THIS SESSION, v54 to v55.
+- Read The DSPARCD Fileset at its current versions: docs/DSPARCD/konnectome_0_definition_v1.txt and docs/DSPARCD/konnectome_1_specification_v56.txt through konnectome_6_demonstration_v56.txt. IT MOVED TWICE THIS SESSION, v54 to v55 to v56.
 
 - READ BOTH ANALYSES, AND READ THE STATEMENT OF HOW THEY RELATE. This is the single most important change this session made to how the repository is navigated, and it is new.
   • docs/design/02_north_star_gap_analysis_v1.txt - unchanged this session. Its Part Nine is the QUEUE and is what the last six sessions have worked from.
@@ -28,7 +28,7 @@ PART ONE - READ THESE FIRST
 
 - Read the Settings, General, Instructions for Claude, and ~/CLAUDE.md at the organization root.
 
-- Read the current tutorial, docs/konnectome_tutorial_v54.txt (FIFTY-FIVE parts; it gained one this session).
+- Read the current tutorial, docs/konnectome_tutorial_v55.txt (FIFTY-SIX parts; it gained two this session).
 
 - Read the prior hand-off, 2026-08-11_1 (Tare Ablewright), now at docs/hand-off/. Its queue is the queue this session worked from and MOST OF IT IS STILL STANDING.
 
@@ -46,13 +46,13 @@ PART TWO - THE IMPORTANT DOCS FILES
 
 - docs/DSPARCD/konnectome_0_definition_v1.txt - THE DEFINITION, phase zero. Read it first.
 
-- docs/DSPARCD/konnectome_1_specification_v55.txt through konnectome_6_demonstration_v55.txt - the DSPARCD Fileset, Realization Log through slice 58.
+- docs/DSPARCD/konnectome_1_specification_v56.txt through konnectome_6_demonstration_v56.txt - the DSPARCD Fileset, Realization Log through slice 60.
 
-- docs/konnectome_tutorial_v54.txt - the beginner tutorial, FIFTY-FIVE parts. A session that bumps it bumps BOTH the header version line and the closing line. THE INSERTION RULE holds: a new part goes BEFORE the three standing tail parts, which are renumbered. Exercised once this session and it worked as written. NOTE THE ARCHIVE CONVENTION, which is easy to get wrong and was got wrong once this session before being caught: the superseded tutorial is git-mv'd INTO docs/archive/ and the new version is a NEW FILE. It is not a rename in place.
+- docs/konnectome_tutorial_v55.txt - the beginner tutorial, FIFTY-SIX parts. A session that bumps it bumps BOTH the header version line and the closing line. THE INSERTION RULE holds: a new part goes BEFORE the three standing tail parts, which are renumbered. Exercised twice this session and it worked as written. NOTE THE ARCHIVE CONVENTION, which is easy to get wrong and was got wrong once this session before being caught: the superseded tutorial is git-mv'd INTO docs/archive/ and the new version is a NEW FILE. It is not a rename in place.
 
-- docs/building_konnectome.txt - the build log, FIFTY-EIGHT chapters. UNVERSIONED since Constitution version 22; append-only, so it has no versions. It is where the record of every auto-fix goes, and the record is the single condition on the Sixteenth Commandment's grant.
+- docs/building_konnectome.txt - the build log, FIFTY-NINE chapters. UNVERSIONED since Constitution version 22; append-only, so it has no versions. It is where the record of every auto-fix goes, and the record is the single condition on the Sixteenth Commandment's grant.
 
-- docs/konnectome_ledger.txt - the scoreboard, UNVERSIONED since Constitution version 23. Counter line: Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0. Observations: 18 (3 CLOSED: 8, 9 and 15). Decisions: 15. THE COUNTER LINE APPEARS TWICE, at line 1229 and at the end, and BOTH were swept this session. Append new entries before the LAST one, and READ BACK THE LINE NUMBERS AFTERWARDS - Tare's process note, honoured and worth keeping.
+- docs/konnectome_ledger.txt - the scoreboard, UNVERSIONED since Constitution version 23. Counter line: Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0. Observations: 18 (4 CLOSED: 8, 9, 15 and 18). Decisions: 16. THE COUNTER LINE APPEARS TWICE, at line 1229 and at the end, and BOTH were swept this session. Append new entries before the LAST one, and READ BACK THE LINE NUMBERS AFTERWARDS - Tare's process note, honoured and worth keeping.
 
 - docs/design/ - TEN NUMBERED DOCUMENTS, 01 through 10, the number being reading order and fulfilment order at once. 01 IS NEW AT VERSION 4 THIS SESSION.
 
@@ -67,7 +67,7 @@ PART TWO - THE IMPORTANT DOCS FILES
 
 PART THREE - WHAT THIS SESSION DID
 
-TWO SLICES BUILT, ONE NUMBERED DECISION, ONE OBSERVATION OPENED, ONE AUTO-FIX, ONE CONSTITUTION AMENDMENT. Main was at a755c45 when this session began, exactly where the Tare hand-off said it was.
+THREE SLICES BUILT, TWO NUMBERED DECISIONS, ONE OBSERVATION OPENED AND CLOSED IN THE SAME SESSION, ONE AUTO-FIX, ONE CONSTITUTION AMENDMENT. The third slice was built at the owner's direct request after the pair was merged, which is why this session carries three rather than the standing two. Main was at a755c45 when this session began, exactly where the Tare hand-off said it was.
 
 - SLICE 58, CLOSING THE CONFLICT LOOP. New pack conflict_monitor, from Chapter 52.2.1, joining override_controller and stabiliser into the loop the gap analysis's item B2 named as never closed. DECISION-15: THE FORM OF THE CONFLICT MEASURE IS KONNECTOME'S OWN AND SIGNED AS SUCH, AND THE GAIN IS THE CALLER'S, because the acceptance test is an inequality that holds for every positive gain. OBSERVATION-18: the join creates a route by which THE MIND CAN STOP BREATHING IN ORDER TO STOP FEELING CONFLICTED. TWENTY-THREE tests. NOTHING IS WIRED.
 
@@ -77,7 +77,9 @@ TWO SLICES BUILT, ONE NUMBERED DECISION, ONE OBSERVATION OPENED, ONE AUTO-FIX, O
 
 - ONE CONSTITUTION AMENDMENT, VERSION 25, changing no rule and renumbering nothing. The Eighth Commandment's pointer at the vision-set analysis had already been repointed once, at version 11, and went stale again at the very next write of the document it points at. It now names the DIRECTORY and the document's NUMBER rather than a version. THE GENERAL FORM, WHICH TWO COMMANDMENTS HAVE NOW NEEDED: A POINTER AT A DOCUMENT THAT IS REQUIRED TO BE MAINTAINED MUST IDENTIFY IT BY SOMETHING THAT MAINTENANCE DOES NOT CHANGE.
 
-- State at hand-off: FIFTY-NINE slices. NINE HUNDRED AND NINETY tests across THIRTY-NINE packs. Four gates at zero violations plus the naming gate's self-test. DSPARCD fileset v55; tutorial v54 at fifty-five parts; build log fifty-eight chapters; Constitution VERSION 25 at TWENTY-TWO commandments.
+- SLICE 60, THE CONFLICT MONITOR'S MODE REGISTER. conflict_monitor gains a full four-block hybrid automaton and calls supervisor_watch/3; NO NEW PACK; tests 23 to 35. DECISION-16: A REGION-GRAIN REGISTER MAY BE ADOPTED BY THE CONSTRUCT THAT REALIZES THAT REGION'S FUNCTION, provided there is exactly one of it and the borrowing is stated on the pack's face. OBSERVATION-18 CLOSED. NOT ONE MODE, TRANSFER FUNCTION, TRANSITION ROW OR FAULT SIGNATURE IS KONNECTOME'S INVENTION - all were found already written, together, under the anterior cingulate entry of LAYER_09_MODES_MANUSCRIPT.txt. STILL NOT WIRED: this slice closes the WATCHING of the loop, not the integration of it.
+
+- State at hand-off: SIXTY slices. ONE THOUSAND AND TWO tests across THIRTY-NINE packs. Four gates at zero violations plus the naming gate's self-test. DSPARCD fileset v56; tutorial v55 at fifty-six parts; build log fifty-nine chapters; Constitution VERSION 25 at TWENTY-TWO commandments.
 
 
 PART FOUR - BUILD-AGAINST COUSIN COMMITS (for reproducibility)
@@ -97,7 +99,9 @@ PART FIVE - SHARP EDGES AND HONEST NON-CLOSURES
 
 - THE EIGHTH CONSECUTIVE FINDING OF THE SHAPE THAT WOULD NOT HAVE FAILED, and it should now be treated as a standing instruction rather than an observation. A boundary that could never be crossed (47), a zero that reads as calm (48), a threshold decided by binary rounding (49), a table row that is not a transition (50), a clip that annihilates (52), a match that is perfect because nothing happened (56), and now A SAFETY PROPERTY DEFEATED BY A LOOP THAT NEVER TOUCHES IT (58). Filament's advice has paid eight times running.
 
-- OBSERVATION-18 IS OPEN AND ITS CLOSER IS A CORPUS READ, NOT A PATCH. The gap analysis named THREE pieces to the conflict loop and slice 58 joined TWO. The supervisor is the third: its fault regimes are declared in its own shape and its readings are built, BUT supervisor_watch/3 IS NOT CALLED, because it judges a MODE REGISTER and conflict_monitor has none. Writing one means reading Chapter 52's own account of the cingulate as a construct with modes, a per-mode transfer function and a transition table. A register invented to make a call compile is the shape this build refuses.
+- OBSERVATION-18 WAS OPENED AND CLOSED IN THE SAME SESSION, AND HOW IT CLOSED IS THE MOST TRANSFERABLE THING HERE. Slice 58 refused to call the supervisor because it judges a MODE REGISTER's fault block and conflict_monitor had none, and it wrote down exactly what would have to be READ. Slice 60 did the reading and found ALL FOUR BLOCKS ALREADY WRITTEN, together, in the corpus's own words, under the anterior cingulate entry of LAYER_09_MODES_MANUSCRIPT.txt. A REFUSAL THAT NAMES ITS OWN CLOSER TURNED OUT CHEAPER THAN THE INVENTION IT DECLINED, and this is the first time the interval between the two has been short enough to prove the arithmetic rather than assert it.
+
+- AND THE NEAR-MISS FROM SLICE 60 IS THE WARNING TO CARRY, because it was the obvious move and it would have survived review. Searching for this construct's modes lands immediately on Braver's PROACTIVE versus REACTIVE control, which the corpus itself carries at Chapter 52.3.3 and calls "two temporal modes". THEY ARE THE WRONG REGISTER: they are postures of the LATERAL PREFRONTAL CORTEX, the region that RECEIVES the conflict signal, and Chapter 52.2.1 says the cingulate "does not exert control at all". They belong to this construct's CONSUMER. A register built from them would have cited a real framework, from the right corpus, about the right function, and described a different piece of the brain. THE RULE THAT CAUGHT IT WAS THE STANDING ONE: a summary is not a specification, and the corpus beneath the finding must be read.
 
 - FIVE THINGS ARE BUILT AND NOT WIRED, AND VERSION 4 OF THE ANALYSIS LISTS THEM TOGETHER FOR THE FIRST TIME BECAUSE THE PATTERN NOW MATTERS MORE THAN THE INSTANCES. The eligibility trace, the working-memory blackboard's rehearsal target, the durable tier, the efference copy and the conflict loop are each complete, tested and called by nothing. EACH WAS LEFT UNWIRED DELIBERATELY AND FOR A GOOD REASON. But five is no longer a sequence of individually-justified choices; it is a habit, and the honest reading is that this build finds construction cheaper than integration. THE DEFINITION'S OWN FIRST CLAUSE IS THE STANDARD THIS HAS TO ANSWER TO. A session that wants a high-value slice should consider that the cheapest remaining value may now be in wiring rather than in building.
 
@@ -144,7 +148,7 @@ The owner has already chosen: ALL (standing), TWO SLICES PER HAND-OFF under the 
 
 4. THE SECOND AGENCY CUE, which is OBSERVATION-17's closer. Wegner's EXCLUSIVITY condition - no other cause apparent. The smallest thing that would make konnectome's agency machinery non-degenerate, and a mechanism rather than a patch.
 
-5. THE CONFLICT LOOP'S THIRD PIECE, which is OBSERVATION-18's closer and is new. Read Chapter 52 for the cingulate's own modes, write conflict_monitor's mode register from that reading, and the supervisor leg closes against fault rows that are already standing.
+5. DONE AT SLICE 60 - the conflict loop's third piece, OBSERVATION-18's closer.
 
 6. THE REMAINING TWELVE FACULTY SUITES, and this is worth more than it looks now that the method has been shown TWICE and has transferred across two different corpora. Each is a scored acceptance run built from an ablation rather than a threshold, and SIX faculties are already at PARTLY PASSES for want of exactly what Faculty 13 was missing.
 
@@ -198,5 +202,17 @@ The second slice found the same shape one level up. Two analyses, each good, eac
 So the thing to carry forward is not "be careful". It is narrower: WHEN TWO CORRECT THINGS ARE PUT TOGETHER, ASK WHAT BECAME POSSIBLE THAT WAS NOT POSSIBLE IN EITHER. That question would have found the breathing hazard before the code did, and it would have found the abandoned half of a document before eleven slices did.
 
 A mortise is not part of either piece. It is the shape of their meeting, and it is the only part of a joint that can be cut wrong while both boards measure perfectly.
+
+A third slice was added after the pair had merged, at the owner's direct request, and it turned out to be the session's best argument for its own method.
+
+Slice 58 had refused to give the new construct a mode register, because it would have had to invent one, and had written down in the ledger exactly what a later session would need to READ instead. That is the sort of note this build makes often and rarely gets to collect on, because the closer is usually a slice away or a family away.
+
+This one was ten minutes away. All four blocks - the modes, what the construct does in each, what moves it between them, and how it breaks - were sitting together under one heading in a corpus document nobody had opened, written in the corpus's own words, complete. The refusal cost five minutes and saved the afternoon of invention plus the later day of unpicking it.
+
+And the reading nearly went wrong in a way worth carrying. Search for this construct's modes and the literature answers instantly: proactive control and reactive control. Real framework, well evidenced, in konnectome's own corpus, described there as two temporal modes, about exactly this cognitive function. It is the wrong register - those are the postures of the region that RECEIVES the conflict signal, and this construct is the one that SENDS it. Building them in would have cited a genuine source, about the right subject, and described a different piece of the brain.
+
+Nothing in the code would have caught that. What caught it was the standing rule that a summary is not a specification and that the corpus beneath a finding has to be read before a slice is designed from it.
+
+So the join held a third time, and the seam was again the only place anything could have gone wrong.
 
 - Mortise Joinwright, 2026-08-11
