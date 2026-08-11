@@ -1,0 +1,112 @@
+EVIDENCE RECORD 01 - THE CONFLICT-TO-CONTROL COUPLING GAIN
+
+Version 1. Searched and written 2026-08-11, at slice 62.
+
+The first record written under the Twenty-Second Commandment, THE JUDGEMENT-CALL PROTOCOL.
+
+
+THE FLAGGED JUDGEMENT CALL THIS BELONGS TO
+
+DECISION-15 (slice 58). konnectome closed Chapter 52.2.1's conflict-monitoring loop between override_controller and stabiliser, and REFUSED to choose the coefficient that converts a unit of measured conflict into a unit of raised control. The gain was made the caller's.
+
+The refusal was argued from two things. The chapter states the loop's direction and no coupling. And Chapter 52.2.4 reports that three serious rivals to conflict monitoring exist and that "none has won", one of them - the expected value of control - making the allocation a cost-benefit calculation over quantities konnectome does not have. A gain written into the pack would have been konnectome picking a winner in a live dispute while wearing Chapter 52's citation.
+
+THE QUESTION FOR THIS SEARCH: does the published literature supply that coupling gain, so that the refusal can be replaced by a cited value and built?
+
+
+STEP ONE, WHICH CAME FIRST: WHAT THE CORPUS SAYS
+
+The protocol requires the corpus before the search, and this is what it holds.
+
+THE_NEUROSCIENCE_OF_COGNITION_MANUSCRIPT.txt, Chapter 52.2.1, gives the loop and no arithmetic: the anterior cingulate "detects response conflict, the simultaneous activation of incompatible responses, and passes that signal to the lateral prefrontal cortex, which then raises control", and "the elegance is that this closes a loop: conflict signals that control is insufficient, control is increased, conflict falls."
+
+The same chapter gives the acceptance test konnectome used: "it predicts, and finds, the Gratton effect - interference on an incongruent trial is smaller when the previous trial was also incongruent, because conflict on trial n recruited control that is still in place on trial n plus 1."
+
+Chapter 52.2.4 gives the three rivals and the honest summary: "the dorsal ACC responds to conflict, errors, effort, surprise, volatility and foraging value, and the field has not yet agreed which of these is the primitive and which are consequences."
+
+NO COUPLING CONSTANT APPEARS ANYWHERE IN THE CORPUS. That was verified at slice 58 and re-verified here.
+
+
+STEP TWO: THE QUERIES RUN, IN THE WORDS THEY WERE RUN IN
+
+Run 2026-08-11.
+
+1. "Botvinick 2001 conflict monitoring computational model parameters control adjustment gain lambda simulation"
+
+2. "\"conflict monitoring\" Botvinick trial-to-trial control adjustment equation lambda \"C(t+1)\" OR \"control signal\" energy Hopfield formula Gratton simulation"
+
+3. "Schmidt \"Evidence against conflict monitoring and adaptation\" 2019 review confounds feature repetition contingency learning Gratton"
+
+A fourth fetch was made against the Princeton PsyNeuLink documentation page for the Botvinick model, asking specifically for the coupling constant, the conflict formula, the control time constant and the bias values.
+
+
+STEP THREE: WHAT WAS FOUND, AND THE HEADLINE IS A NEGATIVE RESULT
+
+THE COUPLING GAIN WAS NOT FOUND, AND THE MANNER OF NOT FINDING IT IS STRONGER THAN THE ABSENCE ALONE.
+
+Princeton University's PsyNeuLink library carries a working re-implementation of the Botvinick et al. 2001 conflict monitoring model, published as reference documentation. Asked directly for the constant that converts conflict into a control-signal adjustment, that page does not carry one. It specifies the model's other parameters in full and precise detail - the colour and word hidden layers each take a logistic function with gain 1.0 and bias 4.0, the task-demand and response layers take gain 1.0 and bias 0.0, and every recurrent layer takes an integration rate of 0.01 - and it states that "conflict is computed on the output_port of the RESPONSE LAYER" WITHOUT GIVING THE FORMULA.
+
+SO A CAREFUL REFERENCE RE-IMPLEMENTATION OF THE EXACT MODEL, WHICH TROUBLES TO PUBLISH ITS BIASES TO ONE DECIMAL PLACE, DOES NOT PUBLISH A CONFLICT-TO-CONTROL COUPLING CONSTANT. That is a considerably better warrant for DECISION-15 than "konnectome looked and could not find one". It is the field's own reference implementation declining to state the number in the same breath as stating every other number.
+
+The original 2001 paper does contain a trial-to-trial control adjustment equation, and its parameters sit behind the paper rather than in any accessible secondary source found by these queries. Note what that would be worth even if retrieved: A PARAMETER OF ONE SIMULATION OF ONE MODEL, fitted to reproduce Stroop reaction times, and not a measured property of a nervous system. Adopting it would be adopting Botvinick's parameterisation, which is a real choice and would itself need declaring.
+
+DECISION-15 THEREFORE STANDS, AND IS UPGRADED FROM A REFUSAL THAT HAS SURVIVED A READING TO A REFUSAL THAT HAS SURVIVED A SEARCH.
+
+
+AND THE SEARCH FOUND SOMETHING IT WAS NOT LOOKING FOR, WHICH IS THE MORE IMPORTANT HALF
+
+James R. Schmidt, "Evidence against conflict monitoring and adaptation: An updated review", Psychonomic Bulletin and Review, 2019, volume 26 issue 3, pages 753 to 771. Published online 3 December 2018.
+
+Its abstract, quoted rather than summarised:
+
+"One of the most influential ideas in recent decades in the cognitive psychology literature is conflict monitoring theory. According to this account, each time we experience a conflict ... attentional control is upregulated to minimize distraction on subsequent trials. Though influential, evidence purported to support this theoretical model (primarily, proportion congruent and congruency sequence effects) has been frequently criticized. Furious debate has centered on whether or not conflict monitoring does or does not occur and, if so, under which conditions. ... The author argues that new findings of the latter sort are still not compelling, several of which have already-demonstrated confounds and others which are plausibly confounded. Further progress has, to a greater extent than not, provided even stronger support for the position that conflict monitoring is merely an illusion. Instead, the net results can be more coherently understood in terms of (relatively) simpler learning/memory biases unrelated to conflict or attention that confound the key paradigms."
+
+The paper's own keywords name the confounds: CONTINGENCY LEARNING, TEMPORAL LEARNING, BINDING, and it treats FEATURE REPETITION throughout.
+
+THE PART THAT BEARS DIRECTLY ON KONNECTOME. The congruency sequence effect - which the paper says is "also sometimes referred to as the Gratton effect" - is one of the two pillars of evidence under attack. It is the effect konnectome adopted, from Chapter 52.2.1, as slice 58's acceptance test.
+
+The competing explanation is that when trial n and trial n plus 1 are both incongruent, the participant is frequently also repeating a stimulus feature, or exploiting a learned contingency between the distractor word and the response, or riding a temporal rhythm in the trial sequence - and that any of these produces the observed speed-up without any control adjustment happening at all.
+
+
+WHAT THIS SETTLES
+
+• The coupling gain has no published value that these queries can reach, and the field's own reference implementation of the model does not carry one. DECISION-15's refusal stands and is strengthened.
+
+• konnectome's use of the Gratton inequality needs REFRAMING but not withdrawal, and the reason is specific rather than defensive. Every confound Schmidt names is a property of the HUMAN EXPERIMENTAL PARADIGM, and NOT ONE OF THEM EXISTS IN KONNECTOME'S ABLATION. konnectome runs the identical trial twice, against the identical drives, with the identical distresses, varying exactly one thing: whether the previous turn's control was carried forward on the bus. There is no stimulus to repeat, because the stimulus is the same object. There is no contingency to learn, because nothing in the pack learns. There is no temporal rhythm, because there is no timing.
+
+• So konnectome's test is the CONFOUND-FREE VERSION of the paradigm, which is a thing a human experiment cannot run and a simulation can. That is a real advantage and it should be claimed precisely and no more widely than it holds.
+
+WHAT THIS DOES NOT SETTLE
+
+• It does not settle whether conflict monitoring is true of human beings. konnectome's loop passing its own test is evidence about konnectome's loop and about nothing else, and any document of this build that implies otherwise is overclaiming.
+
+• It does not tell konnectome to remove the loop. Schmidt's argument is that the EVIDENCE for conflict monitoring is confounded, which is not the same as showing the mechanism absent - and the corpus's own Chapter 52.2.4 already records that the field is unsettled. A build that tore out a mechanism every time its literature was contested would have very little left.
+
+• It does not supply an alternative coupling, a threshold, or a rate.
+
+
+THE CORPUS GAP, RECORDED FOR THE UPDATE RUN
+
+THIS IS A REAL GAP AND IT WAS VERIFIED RATHER THAN ASSUMED. The strings "contingency learning", "congruency sequence", "feature repetition", "conflict adaptation" and "proportion congruent" return NOTHING anywhere in docs/neuroscience/ . The one document that cites a Schmidt cites two different ones, on monkey inferotemporal cortex and on norm psychology.
+
+So the corpus presents the Gratton effect at Chapter 52.2.1 as a successful prediction of conflict monitoring theory - "it predicts, and finds" - and it does not carry the line of argument that the effect's empirical base is confounded. Chapter 52.2.4 tells the reader the theory has rivals. It does not tell the reader that the theory's principal evidence is disputed at the level of the paradigm.
+
+THE GAP, STATED FOR PROMOTION: Chapter 52.2 lacks any mention of the confound critique of the congruency sequence and proportion congruent effects. A block added beneath 52.2.4, carrying Schmidt 2019 with its confound list and its verdict, and marked as konnectome's addition, would close it.
+
+NOTE THAT THE CORPUS IS NOT WRONG. Everything it says about the Gratton effect is accurate: the theory does predict it, and the effect is found. What is missing is a live dispute about what finding it means. That is the ordinary way a corpus with a date on it goes out of date, and it is exactly what the update run exists for.
+
+
+SOURCES
+
+• James R. Schmidt, "Evidence against conflict monitoring and adaptation: An updated review", Psychonomic Bulletin and Review 26(3), 753-771, 2019. https://doi.org/10.3758/s13423-018-1520-z - read directly, pages 753 and 754.
+
+• Open-access copy consulted: https://lead.ube.fr/wp-content/uploads/2023/09/Schmidt_2019.pdf
+
+• Conflict Monitoring and Cognitive Control (Botvinick et al., 2001), PsyNeuLink 0.18.0.0 reference documentation, Princeton University. https://princetonuniversity.github.io/PsyNeuLink/BotvinickConflictMonitoringModel.html
+
+• Todd Braver, "The variable nature of cognitive control: a dual mechanisms framework", Trends in Cognitive Sciences, 2012. https://pmc.ncbi.nlm.nih.gov/articles/PMC3289517/ - consulted at slice 60 and recorded here because it is the framework that nearly supplied the wrong mode register.
+
+• Shenhav, Botvinick and Cohen, "The Expected Value of Control: An Integrative Theory of Anterior Cingulate Cortex Function", Neuron, 2013. https://www.sciencedirect.com/science/article/pii/S0896627313006077
+
+
+END OF EVIDENCE RECORD 01, VERSION 1.

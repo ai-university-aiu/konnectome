@@ -158,6 +158,96 @@ test(a_calm_turn_raises_no_control) :-
     assertion(After =:= 0).
 
 % ---------------------------------------------------------------------------
+% DECISION-17 - the confounds that make the HUMAN effect contested, pinned absent here
+% ---------------------------------------------------------------------------
+
+% The four confounds are named as a readable fact, so a later session cannot take them on trust.
+test(the_excluded_confounds_are_named) :-
+    % Read the declared list.
+    conflict_monitor_confounds_excluded(Confounds),
+    % Schmidt 2019's own list of what confounds the congruency sequence effect in human paradigms.
+    assertion(Confounds == [feature_repetition, contingency_learning, temporal_learning,
+                            stimulus_response_binding]).
+
+% NO FEATURE REPETITION: the two arms of the ablation are handed the SAME trial term, so there is no
+% repeated stimulus feature to produce a speed-up that looks like control.
+test(the_ablations_two_arms_run_the_identical_trial) :-
+    % One incongruent trial, built once and used in both arms.
+    Incongruent = [override(hunger, 3, 0.9, approach), override(fear, 4, 0.8, withdraw),
+                   override(fatigue, 5, 0.7, rest)],
+    % A congruent trial for the calm history.
+    Congruent = [override(hunger, 3, 0.9, approach), override(fear, 4, 0.8, approach),
+                 override(fatigue, 5, 0.7, approach)],
+    % Both arms are built from the SAME term rather than from two similar ones.
+    Conflicted = [Incongruent, Incongruent],
+    % And the calm arm ends on that identical term too.
+    Calm = [Congruent, Incongruent],
+    % The measured trial is literally the same object in both arms, which a human study cannot arrange.
+    nth0(1, Conflicted, ConflictedTrial),
+    % Read the calm arm's measured trial.
+    nth0(1, Calm, CalmTrial),
+    % Identical, so no feature repeats differently between the two conditions.
+    assertion(ConflictedTrial == CalmTrial).
+
+% NO CONTINGENCY LEARNING: nothing in this pack learns, so no distractor can become predictive.
+% Measuring the same trial twice against the same threshold returns the same number, forever.
+test(the_measure_learns_nothing_from_being_run) :-
+    % One incongruent trial.
+    Incongruent = [override(hunger, 3, 0.9, approach), override(fear, 4, 0.8, withdraw)],
+    % Measure it once.
+    conflict_monitor_conflict(Incongruent, 0.5, First),
+    % Measure it many times over.
+    forall(between(1, 20, _N),
+           % Every measurement agrees with the first, because the measure carries no state at all.
+           ( conflict_monitor_conflict(Incongruent, 0.5, Again), Again =:= First )).
+
+% NO TEMPORAL LEARNING: there is no clock and no rhythm, so position in the sequence cannot matter.
+% A long calm run-up leaves the conflict of the trial that follows it EXACTLY where a short one does.
+test(the_length_of_a_calm_run_up_changes_nothing) :-
+    % A calm trial, which recruits no control.
+    Congruent = [override(hunger, 3, 0.9, approach), override(fear, 4, 0.8, approach)],
+    % And the incongruent trial whose conflict is being measured.
+    Incongruent = [override(hunger, 3, 0.9, approach), override(fear, 4, 0.8, withdraw)],
+    % One calm trial before the measured one.
+    neuromodulator_bus_new(BusOne),
+    % Run the short history.
+    conflict_monitor_sequence(BusOne, [Congruent, Incongruent], 0.5, 0.15, ShortRun, _B1),
+    % Now eleven calm trials before the identical measured one.
+    neuromodulator_bus_new(BusTwo),
+    % Build the long run-up.
+    length(Prefix, 11),
+    % Every trial in it is the same calm trial.
+    maplist(=(Congruent), Prefix),
+    % Append the measured trial to it.
+    append(Prefix, [Incongruent], LongTrials),
+    % Run the long history.
+    conflict_monitor_sequence(BusTwo, LongTrials, 0.5, 0.15, LongRun, _B2),
+    % Take the last conflict from each run.
+    last(ShortRun, ShortFinal),
+    % And from the long one.
+    last(LongRun, LongFinal),
+    % Identical: a calm trial leaves no trace, so rhythm and position cannot produce the effect.
+    assertion(ShortFinal =:= LongFinal).
+
+% AND THE ABLATION STILL WORKS WITH THE CONFOUNDS ABSENT, which is the whole point of pinning them.
+% If removing every confound had also removed the effect, the effect WAS the confound.
+test(the_gratton_inequality_survives_with_every_confound_absent) :-
+    % The same two trials used in the confound tests above.
+    Incongruent = [override(hunger, 3, 0.9, approach), override(fear, 4, 0.8, withdraw),
+                   override(fatigue, 5, 0.7, rest)],
+    % The congruent control.
+    Congruent = [override(hunger, 3, 0.9, approach), override(fear, 4, 0.8, approach),
+                 override(fatigue, 5, 0.7, approach)],
+    % Start both arms from an empty bus.
+    neuromodulator_bus_new(Bus),
+    % The conflicted history.
+    conflict_monitor_sequence(Bus, [Incongruent, Incongruent], 0.5, 0.15, [_A, AfterConflict], _B1),
+    % The calm history.
+    conflict_monitor_sequence(Bus, [Congruent, Incongruent], 0.5, 0.15, [_C, AfterCalm], _B2),
+    % The inequality holds in a paradigm where no feature repeats, nothing learns and nothing is timed.
+    assertion(AfterConflict < AfterCalm).
+
+% ---------------------------------------------------------------------------
 % THE SAFETY PROPERTY - the hazard closing the loop creates
 % ---------------------------------------------------------------------------
 

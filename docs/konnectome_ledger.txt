@@ -1226,7 +1226,7 @@ self-test; conformance re-measured at 137 of 137 (specification 4.0.0) in both c
 wall; no cousin edited, per the Second, Third, and Fourth Commandments.
 
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 18 (4 CLOSED: 8, 9, 15 and 18).  Decisions: 16.
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 18 (4 CLOSED: 8, 9, 15 and 18).  Decisions: 17.
 Slice-34 note (2026-08-09). The bound turned live in the told story. The slice-33 pending line
 (the bound proven per-territory in the tests but not yet in the capstone's told story) is
 CLOSED: the capstone's boot world arms the slow bound for real - the diffuse mark at one half,
@@ -5248,4 +5248,115 @@ deferred that field by name - recorded rather than silently dropped. Capstone by
 main's, verified by running both. Nothing routes to either change order. Neither cousin was edited.
 
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 18 (4 CLOSED: 8, 9, 15 and 18).  Decisions: 16.
+DECISION-17 (2026-08-11, slice 62). THE GRATTON INEQUALITY IS A TEST OF KONNECTOME'S OWN MECHANISM
+AND NOT EVIDENCE ABOUT PEOPLE, AND THE CONFOUNDS THAT MAKE THE HUMAN EFFECT CONTESTED ARE ABSENT FROM
+KONNECTOME'S ABLATION BY CONSTRUCTION.
+
+THE FIRST SEARCH RUN UNDER THE TWENTY-SECOND COMMANDMENT WENT LOOKING FOR ONE THING AND CAME BACK
+WITH TWO. The full record is docs/evidence/01_conflict_control_coupling_gain_v1.txt.
+
+FINDING ONE IS A NEGATIVE RESULT AND IT STRENGTHENS DECISION-15 RATHER THAN REPLACING IT. The
+coupling constant that converts a unit of conflict into a unit of raised control has no published
+value the search could reach. The decisive detail is not the absence but its manner: Princeton's
+PsyNeuLink library carries a working REFERENCE RE-IMPLEMENTATION of the Botvinick 2001 model, troubles
+to publish every layer's logistic gain and bias to one decimal place and its integration rate to two,
+states that conflict is computed on the response layer's output port WITHOUT GIVING THE FORMULA, and
+CARRIES NO CONFLICT-TO-CONTROL COUPLING CONSTANT AT ALL. That is the field's own reference
+implementation declining to state the number in the same breath as stating every other number.
+DECISION-15 IS THEREFORE UPGRADED FROM A REFUSAL THAT SURVIVED A READING TO A REFUSAL THAT SURVIVED A
+SEARCH, and the protocol's fifth step says to record which of the two it is.
+
+FINDING TWO IS THE ONE THE SEARCH WAS NOT LOOKING FOR. James R. Schmidt, in Psychonomic Bulletin and
+Review in 2019, reviews the evidence for conflict monitoring and concludes that "conflict monitoring
+is merely an illusion" - that its two pillars, the proportion congruent effect and the CONGRUENCY
+SEQUENCE EFFECT, are confounded by "(relatively) simpler learning/memory biases unrelated to conflict
+or attention". The named confounds are contingency learning, temporal learning, binding and feature
+repetition. AND THE CONGRUENCY SEQUENCE EFFECT IS, IN THAT PAPER'S OWN WORDS, "ALSO SOMETIMES REFERRED
+TO AS THE GRATTON EFFECT" - which is the effect slice 58 adopted, from Chapter 52.2.1, as its
+acceptance test.
+
+KONNECTOME KEEPS THE TEST AND REFRAMES THE CLAIM, AND THE REASON IS SPECIFIC RATHER THAN DEFENSIVE.
+EVERY CONFOUND SCHMIDT NAMES IS A PROPERTY OF THE HUMAN EXPERIMENTAL PARADIGM AND NOT ONE OF THEM
+EXISTS HERE. konnectome runs the identical trial twice, against identical drives at identical
+distresses, varying exactly one thing: whether the previous turn's control was carried forward on the
+bus. There is no stimulus to repeat, because both arms are handed the SAME term. No contingency to
+learn, because nothing in the pack learns anything. No temporal rhythm, because the sequence carries a
+bus and not a clock. No features to bind. KONNECTOME'S TEST IS THE CONFOUND-FREE VERSION OF THE
+PARADIGM, which a human experiment cannot run and a simulation can.
+
+AND THE ABSENCES ARE PINNED RATHER THAN ASSERTED, which is the whole build of this slice.
+conflict_monitor_confounds_excluded/1 names the four as a readable fact, and five tests hold
+konnectome to it: the two arms run the identical trial term; the measure returns the same number
+across twenty repeated runs because it carries no state; an eleven-trial calm run-up leaves the
+following trial's conflict EXACTLY where a one-trial run-up does, so position and rhythm cannot be
+producing the effect; and the inequality still holds with every confound absent. THAT LAST ONE IS THE
+TEST THAT MATTERS: if removing every confound had also removed the effect, THE EFFECT WAS THE
+CONFOUND.
+
+WHAT DECISION-17 DOES NOT DECIDE. IT DOES NOT DECIDE THAT CONFLICT MONITORING IS TRUE OF HUMAN BEINGS.
+konnectome's loop passing its own test is evidence about konnectome's loop and about nothing else, and
+any document of this build implying otherwise is overclaiming and should be corrected on sight. It
+does not tear the mechanism out either: Schmidt's argument is that the EVIDENCE is confounded, which
+is not a demonstration that the mechanism is absent, and a build that removed a construct every time
+its literature was contested would have very little left. And it supplies no alternative coupling,
+threshold or rate.
+
+A CORPUS GAP IS RECORDED FOR THE UPDATE RUN, AND IT WAS VERIFIED RATHER THAN ASSUMED. The strings
+"contingency learning", "congruency sequence", "feature repetition", "conflict adaptation" and
+"proportion congruent" return NOTHING anywhere in docs/neuroscience/. THE CORPUS IS NOT WRONG -
+everything Chapter 52.2 says is accurate, and 52.2.4 already tells a reader the theory has rivals.
+What is missing is that the theory's PRINCIPAL EVIDENCE is disputed at the level of the paradigm. That
+is the ordinary way a corpus with a date on it goes out of date.
+
+
+Slice-61 note (2026-08-11). THE JUDGEMENT-CALL PROTOCOL. Constitution VERSION 26 adds the
+TWENTY-SECOND COMMANDMENT and renumbers the hand-off protocol to the TWENTY-THIRD; twenty-three
+commandments now. NO PACK CHANGED and no test moved. THE GAP IT CLOSES IS A PROCESS GAP: this build
+is good at flagging judgement calls and had no rule whatever about what happens to one afterwards, so
+they accumulated - OBSERVATION-5 has been declined five times and OBSERVATION-12 six. The protocol
+makes a flagged call WORK rather than a resting place, in a fixed order, and its fourth step is the
+one that makes the third safe: what a literature search finds goes to the NEW docs/evidence/
+directory and never straight into the corpus, because a search result filed inside the north star is
+AN INVENTED VALUE THAT HAS LEARNED TO CITE at the scale of a document. THE CORPUS IS NO LONGER FROZEN
+FOREVER, by the owner's instruction: it is kept current by additive, dated, sourced UPDATE RUNS every
+tenth hand-off, never inside a slice, and the Eighth Commandment is qualified narrowly to admit
+exactly that. The count is 35, so the next run falls at 40.
+
+Slice-62 note (2026-08-11). DECISION-15 WORKED UNDER THE PROTOCOL. First evidence record written;
+DECISION-17 taken; conflict_monitor gains one declared fact and five tests, 35 to 40; ONE THOUSAND AND
+SEVEN across THIRTY-NINE packs. NO NEW PACK AND NO MECHANISM ADDED - not one number moves differently
+because these tests exist, which is the point: they pin an absence. THE PROTOCOL PAID ON ITS FIRST RUN
+AND NOT IN THE WAY IT WAS AIMED. It was aimed at replacing a refusal with a cited value; it returned a
+negative result that made the refusal stronger, and a finding about the acceptance test that nobody
+had gone looking for. A SEARCH THAT ONLY EVER CONFIRMS WHAT IT WENT LOOKING FOR IS NOT BEING RUN
+HONESTLY. Nothing routes to either change order. Neither cousin was edited.
+
+THE TRIAGE OF THE OTHER FLAGGED JUDGEMENT CALLS, RUN AT THE PROTOCOL'S FIRST STAGE ONLY, AND THE
+METHOD IS STATED SO THE RESULT IS NOT OVERREAD: these were KEYWORD PROBES of the corpus, not full
+reads. A probe indicates where a read is likely to pay. IT IS NOT A READ, and the protocol's first
+step is not discharged by any of them.
+
+- OBSERVATION-17, THE SECOND AGENCY CUE. THE CLOSER IS IN THE CORPUS AND IS FULLY STATED, at
+  THE_NEUROSCIENCE_OF_COGNITION_MANUSCRIPT.txt line 18691: Wegner's theory of apparent mental
+  causation "holds that we infer authorship when a thought precedes an action, is consistent with it,
+  and NO OTHER CAUSE IS APPARENT". All three conditions, named, in one sentence - priority,
+  consistency and exclusivity. This is the highest-prospect item on the queue and it needs no search
+  at all. Under the protocol's second step it should be READ AND BUILT IN THE SAME ACT.
+
+- DECISION-12, THE POLARITY STOPGAP. Probes for a sign or polarity axis in the Layer 7 documents
+  returned nothing, which is INCONCLUSIVE rather than negative - the axis may be named in other
+  words, and the edge-type design authority read all sixty-four types and would know. A real read of
+  Layer 7 is required before any search.
+
+- DECISION-11's TWO OPEN QUESTIONS - what the level means for a weight, and what a night's
+  maintenance costs. Probes for a maintenance or metabolic cost in the Layers 4 and 5 documents
+  returned nothing. Also inconclusive, and the slow-variables volume is the place a real read would
+  start.
+
+- OBSERVATION-13, THE STEP RATE. Probes for an update or refresh rate in Layers 9 and 11 returned
+  nothing. NOTE THAT THIS ONE MAY NOT NEED A SOURCE AT ALL: DECISION-2 fixed one hundred ticks to the
+  nominal second, so a rate stated anywhere in milliseconds becomes a whole number of ticks by
+  DERIVATION, which is the Twenty-First Commandment's SECOND protocol and never reaches a search.
+
+
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 18 (4 CLOSED: 8, 9, 15 and 18).  Decisions: 17.

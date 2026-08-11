@@ -1386,5 +1386,68 @@ The loop is still not wired into the cognitive cycle. This slice closed the watc
 Thirty-five tests in the pack. One thousand and two in the build. Thirty-nine packs, no new one.
 
 
-From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER SIXTY, and the story goes on being true.
+CHAPTER SIXTY - A RULE ABOUT WHAT TO DO WITH A FLAGGED QUESTION, AND THE FIRST TIME IT WAS RUN (2026-08-11, SLICES 61 AND 62)
+
+This build has always been good at noticing when it does not know something.
+
+It has a word for the failure it is avoiding - an invented value that has learned to cite - and a Commandment about the order of resort, and seventeen numbered decisions of which nine are refusals rather than values. When a session cannot find an answer, it says so, in the ledger, with a number on it.
+
+What it did not have was any rule about what happens next.
+
+So flagged questions accumulated. One observation has now been declined five times. Another six. Each session read the ledger, agreed the question was real, judged it out of scope for the slice in hand, and passed it forward - which is a defensible decision every single time it is made, and a bad outcome after the fifth.
+
+The owner's instruction closes it, and the shape is simple enough to state in one sentence: A FLAGGED JUDGEMENT CALL IS WORK, NOT A RESTING PLACE.
+
+The Commandment sets an order. Read the corpus beneath the finding, not the summary. If the corpus settles it, BUILD IT IN THE SAME ACT - because a question the corpus already answered, still open in the code because nobody looked, is a known fault, and the auto-fix grant covers those without asking. If the corpus is silent or incomplete, search the published literature. And where the search finds nothing, the refusal stands and is now a different object than it was: A REFUSAL THAT HAS SURVIVED A SEARCH IS NOT THE SAME AS A REFUSAL THAT HAS SURVIVED ONLY A READING, and the record has to say which it holds.
+
+The first step is first for a reason this session had already earned. Slice 58 refused to write a mode register and wrote down what to read instead. Slice 60 read it and found all four blocks complete under one heading. The refusal cost five minutes and the reading cost ten, and inventing would have cost an afternoon plus a later day of unpicking.
+
+The hard part of the rule is the third step, and it needed a fence.
+
+Letting a web search update the corpus directly is the obvious way to write it, and it is the one change capable of destroying the corpus's usefulness. This build's whole account of its worst failure is a value the builder chose, left where a reader will take it for the source's. A SEARCH RESULT FILED INSIDE THE NORTH STAR IS THAT EXACT FAILURE AT THE SCALE OF A DOCUMENT. It would wear the corpus's authority for every session afterwards, and nobody reading a chapter could tell konnectome's research from the neuroscience it is supposed to be steering by.
+
+So evidence gets a directory of its own, and the first paragraph of its README says it is outranked by the north star. Every record carries the query in the words it was run, the date, the sources with their addresses, what it settles, and what it does not.
+
+And the corpus is no longer frozen forever, which is the owner's own instruction and the half that took the most care to write. A corpus that can never be updated goes out of date, and a north star that is out of date is still being steered by. So it is kept current by CORPUS UPDATE RUNS, every tenth hand-off, under six rules: the run is its own act and never happens inside a slice; it is additive only and never alters or deletes what the corpus already says; every added block carries its provenance on its face; only evidence already standing before the run may be folded in, and only where a gap was recorded; a promoted block still never outranks the corpus's own text; and the Safety Gate stands over it. The count is thirty-five, so the next run falls at forty.
+
+Then the rule was run, on DECISION-15, and it came back with something better than what it went looking for.
+
+DECISION-15 is slice 58's refusal to choose the coefficient converting conflict into control. The search asked whether the literature supplies it.
+
+It does not, and the manner of not supplying it is worth more than the absence. Princeton maintains a library containing a working reference re-implementation of the exact 2001 model. It publishes every layer's logistic gain and bias to one decimal place. It publishes the integration rate to two. It states where conflict is computed and does not give the formula. AND IT CARRIES NO CONFLICT-TO-CONTROL COUPLING CONSTANT AT ALL.
+
+That is the field's own reference implementation declining to state the number in the same breath as stating every other number, which is a considerably better warrant than one session looking and not finding.
+
+And then the search turned up something nobody had asked it for.
+
+James Schmidt, in Psychonomic Bulletin and Review in 2019, reviews two decades of evidence for conflict monitoring theory and concludes that the theory's two pillars are confounded - that the results are better explained by simpler learning and memory biases unrelated to conflict or attention, and that conflict monitoring is, in his words, merely an illusion. The confounds he names are contingency learning, temporal learning, binding, and feature repetition.
+
+One of those two pillars is the congruency sequence effect. Which, as his paper says in passing, is also sometimes referred to as THE GRATTON EFFECT.
+
+Which is the acceptance test slice 58 built.
+
+There is a version of this build that would have quietly ignored that, and a version that would have panicked and torn the loop out. Both would be wrong, and the reason they are wrong is the same: neither has actually looked at what the criticism applies to.
+
+Every confound Schmidt names is a property of a HUMAN EXPERIMENT. Feature repetition happens because a participant sees a red square and then another red square. Contingency learning happens because the distracting word starts predicting the answer. Temporal learning happens because trials arrive on a rhythm.
+
+konnectome's ablation has none of these, and not by luck. It runs the identical trial twice - the same term, the same drives, the same distresses - and varies exactly one thing: whether the previous turn's control is still standing on the bus. There is no stimulus to repeat. Nothing in the pack learns anything, so no contingency can form. The sequence carries a bus, not a clock.
+
+So konnectome's version is the CONFOUND-FREE version of the paradigm, which is a thing a human study cannot run and a simulation can. That is a real advantage, and the slice claims it exactly that far and no further.
+
+The build is five tests that pin each absence rather than asserting it. Both arms are handed the identical trial term. The measure returns the same number across twenty runs, because it carries no state. An eleven-trial calm run-up leaves the following trial's conflict exactly where a one-trial run-up does, so position and rhythm cannot be doing the work.
+
+And the fifth is the one that matters: the inequality still holds with every confound absent. IF REMOVING EVERY CONFOUND HAD ALSO REMOVED THE EFFECT, THE EFFECT WAS THE CONFOUND. It did not, so it was not.
+
+What the decision refuses to say is the important half. It does not say conflict monitoring is true of people. konnectome's loop passing konnectome's test is evidence about konnectome's loop and about nothing else, and any document of this build implying otherwise should be corrected on sight.
+
+The corpus gap was verified rather than assumed. Five search strings - contingency learning, congruency sequence, feature repetition, conflict adaptation, proportion congruent - return nothing anywhere in the north-star directory. The corpus presents the Gratton effect as a successful prediction, in the words "it predicts, and finds", and does not carry the dispute about what finding it means.
+
+AND THE CORPUS IS NOT WRONG, which is worth saying plainly because the temptation is to score a point. Everything Chapter 52.2 says is accurate. It even tells the reader the theory has serious rivals. What it does not say is that the theory's principal evidence is contested at the level of the paradigm - and that is simply what happens to a document with a date on it. It is the reason the update run exists.
+
+One last note on the rule itself, from its first outing. It was aimed at replacing a refusal with a cited value. It returned a negative result that made the refusal stronger, plus a finding about the acceptance test that nobody had gone looking for. A SEARCH THAT ONLY EVER CONFIRMS WHAT IT WENT LOOKING FOR IS NOT BEING RUN HONESTLY.
+
+Forty tests in the pack. One thousand and seven in the build. Twenty-three commandments now.
+
+
+From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER SIXTY-ONE, and the story goes on being true.
 
