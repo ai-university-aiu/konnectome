@@ -299,8 +299,10 @@ plasticity_engine_reward_capture_step(Interfaces0, Traces0, Bus, LearningRate, I
 % list of Name-Average pairs, built at zero by plasticity_engine_average_new, moved each tick by
 % plasticity_engine_average_step (an exponential moving average under a smoothing factor), and spent
 % by plasticity_engine_scaling_step, which multiplies each incoming transmissive weight by one plus
-% the scaling rate times the target-minus-average error of its RECEIVING end, flooring the factor at
-% zero so a weight can be silenced but never sign-flipped. Since slice 33 the target has a GEOGRAPHY,
+% the scaling rate times the target-minus-average error of its RECEIVING end, REFUSING ALOUD any
+% factor that is not strictly positive rather than clipping it (DECISION-10, slice 52: the old floor
+% at zero annihilated the relative code that multiplicative scaling exists to protect, because a
+% weight multiplied to zero can never be lifted off it). Since slice 33 the target has a GEOGRAPHY,
 % in the slice-30 diffuse-field law's exact shape: a per-territory target store (a list of Name-Target
 % pairs) rides beside the global target, a territory with its own target defends that target, and a
 % territory without one defends the global target, so the old one-target behaviour is the exact
@@ -331,6 +333,74 @@ plasticity_engine_check_scaling_rate(ScalingRate) :-
     -> true
     % Anything else is refused aloud, never silently accepted.
     ;  throw(error(domain_error(plasticity_engine_scaling_rate, ScalingRate), _))
+    ).
+
+% ---------------------------------------------------------------------------
+% DECISION-10 - A SCALING FACTOR THAT IS NOT STRICTLY POSITIVE IS REFUSED (slice 52, OBSERVATION-15)
+% ---------------------------------------------------------------------------
+%
+% THE CORPUS STATES THIS AS AN IMPERATIVE AND THIS PACK USED TO BREAK IT. Layer 4/5's slow-variables
+% volume: "multiply the whole weight vector by one scalar chosen to hit a target, NEVER ADD OR CLIP
+% INDIVIDUAL WEIGHTS, because multiplication alone leaves the relative code untouched", and scaling
+% "stabilises the cell without erasing what learning wrote".
+%
+% WHAT THE OLD CODE DID, AND WHY THE COMMENT ABOVE IT WAS THE GIVEAWAY. The factor was floored at
+% zero, under a comment reading "a weight can be silenced but never sign-flipped". The comment
+% described the INTENT correctly and the code did something strictly stronger and worse: a factor of
+% exactly zero sets a weight to exactly zero, and because the rule is MULTIPLICATIVE, no later step
+% can ever lift it off zero again. Every incoming weight of an over-active construct went to zero
+% together and stayed there, so the relative code the multiplicative form exists to protect was not
+% preserved - it was destroyed, permanently, in the one operation whose whole purpose is to stabilise
+% without erasing. A clip is not a gentler multiplication. It is a different operation wearing the
+% same sign.
+%
+% WHY A REFUSAL RATHER THAN A DIFFERENT FLOOR, WHICH IS THE WHOLE OF THE DECISION. A small positive
+% floor - a thousandth, say - would keep the arithmetic reversible and would have been the cheap fix.
+% It is refused for three reasons.
+%
+% FIRST, ANY FLOOR IS A NUMBER KONNECTOME WOULD HAVE INVENTED. The corpus supplies no minimum factor,
+% because in the biology the question does not arise: the renormaliser is a slow daemon that never
+% approaches an inversion. A floor lifted out of nowhere is exactly the default-with-a-borrowed-
+% warrant this build has now refused five times - a number at slice 45, a mode name at 46, a level at
+% 48, a rate at 49, and a floor here.
+%
+% SECOND, A NON-POSITIVE FACTOR MEANS THE CALLER ASKED FOR SOMETHING NO REGION COULD DEFEND. It says
+% the receiving construct's activity exceeds its target by more than the reciprocal of the scaling
+% rate - that the "slow" bound was asked to erase more than the entire weight vector in ONE step.
+% That is not a hard case to be handled gracefully; it is a mis-configured bound, and the honest
+% answer is to say so by name rather than to silently do the nearest representable thing.
+%
+% THIRD, AND THE REASON THIS IS A DECISION AND NOT A PATCH: THE ARITHMETIC WAS NEVER THE FAULT. The
+% fault was that an out-of-range condition had a plausible-looking answer available, so nothing ever
+% had to notice it. That is the fifth consecutive finding of one shape in this build - a boundary that
+% could never be crossed (slice 47), a zero that reads as calm (48), a threshold decided by rounding
+% (49), a table row that is not a transition (50), and a clip that annihilates (52). NONE OF THE FIVE
+% WOULD HAVE FAILED. A refusal is the only fix that removes the plausible answer.
+%
+% WHAT DECISION-10 DOES NOT DECIDE.
+%
+% IT DOES NOT DECIDE WHAT A CALLER SHOULD DO WITH THE REFUSAL. Lowering the rate, raising the target,
+% or running the bound more often are all legitimate and the pack does not choose among them.
+%
+% IT DOES NOT SET A MINIMUM WEIGHT. A weight may still approach zero asymptotically under repeated
+% legal scalings, which is what the corpus describes; what it may no longer do is ARRIVE there in one
+% step and be trapped.
+%
+% AND IT DOES NOT CLOSE OBSERVATION-15'S SECOND HALF, which cannot be closed here. The scaler runs
+% over every transmissive interface REGARDLESS OF SIGN, while the corpus gives the renormaliser's
+% domain as "every EXCITATORY synapse" and never permits it to touch inhibitory contacts. konnectome
+% has no sign field on an interface, so there is nothing to test. That half waits on the edge type
+% registry, and it is recorded in the ledger against this observation rather than left implicit.
+
+% plasticity_engine_check_scaling_factor(+Factor, +Receiver): refuse a factor that would invert or
+% annihilate a weight, naming the receiving construct whose bound could not be met.
+plasticity_engine_check_scaling_factor(Factor, Receiver) :-
+    % A factor at or below zero would zero the weight vector or flip its sign, and multiplicative
+    % scaling can never undo either. Refuse it aloud, naming the construct, so a caller learns WHICH
+    % region's bound was impossible rather than merely that one was.
+    (  Factor > 0
+    -> true
+    ;  throw(error(domain_error(plasticity_engine_scaling_factor(Receiver), Factor), _))
     ).
 
 % plasticity_engine_check_activity_target(+Target): refuse a negative activity target by name.
@@ -436,10 +506,12 @@ plasticity_engine_scale_interface(Averages, Targets, GlobalTarget, ScalingRate,
        % Read the target the RECEIVING end's territory defends: its own if it has one, the global one if not.
        plasticity_engine_target_lookup(Targets, To, GlobalTarget, Target),
        % The raw factor grows a quiet region's inputs and shrinks a loud one's.
-       RawFactor is 1 + ScalingRate * (Target - Average),
-       % The factor floors at zero: a weight can be silenced but never sign-flipped.
-       Factor is max(0, RawFactor),
-       % Scaling is multiplicative, as synaptic scaling is.
+       Factor is 1 + ScalingRate * (Target - Average),
+       % A FACTOR THAT IS NOT STRICTLY POSITIVE IS REFUSED ALOUD, NEVER CLIPPED (DECISION-10). The
+       % refusal sits HERE, where the factor is computed, rather than in the callers' guards, so no
+       % caller can route around it and no second copy of the rule can drift from this one.
+       plasticity_engine_check_scaling_factor(Factor, To),
+       % Scaling is multiplicative, as synaptic scaling is - and now it is ONLY multiplicative.
        Weight is Weight0 * Factor
     ;  % A computational interface is untouched by the bound.
        Weight = Weight0

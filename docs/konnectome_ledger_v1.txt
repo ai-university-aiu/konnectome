@@ -1225,7 +1225,7 @@ thought combination. The four gates report zero violations, the naming gate pass
 self-test; conformance re-measured at 137 of 137 (specification 4.0.0) in both cousins. No new
 wall; no cousin edited, per the Second, Third, and Fourth Commandments.
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 15 (2 CLOSED: 8 and 9).  Decisions: 9.
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 16 (2 CLOSED: 8 and 9; 15 HALF-CLOSED).  Decisions: 11.
 
 Slice-34 note (2026-08-09). The bound turned live in the told story. The slice-33 pending line
 (the bound proven per-territory in the tests but not yet in the capstone's told story) is
@@ -4489,4 +4489,169 @@ out of it. That would be a numbered decision in the shape of the four refusals a
 nine. A session that takes it should also decide whether the sign fault is closed in the same slice
 or waits for the edge type registry, since the second fault cannot be fixed without a sign field.
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 15 (2 CLOSED: 8 and 9).  Decisions: 9.
+
+DECISION-10 (2026-08-10, slice 52). A SCALING FACTOR THAT IS NOT STRICTLY POSITIVE IS REFUSED ALOUD,
+NEVER CLIPPED. This closes the first half of OBSERVATION-15, by the owner's instruction to patch and
+fix.
+
+THE CORPUS STATES IT AS AN IMPERATIVE: "multiply the whole weight vector by one scalar chosen to hit
+a target, NEVER ADD OR CLIP INDIVIDUAL WEIGHTS, because multiplication alone leaves the relative code
+untouched." The old code floored the factor at zero under a comment reading "a weight can be silenced
+but never sign-flipped" - THE COMMENT DESCRIBED THE INTENT CORRECTLY AND THE CODE DID SOMETHING
+STRICTLY STRONGER AND WORSE, because a weight multiplied to zero can never be lifted off zero by any
+later multiplication. The operation whose whole purpose is to stabilise without erasing was erasing.
+
+WHY A REFUSAL RATHER THAN A SMALL POSITIVE FLOOR, WHICH WAS THE CHEAP FIX. Three reasons.
+
+FIRST, ANY FLOOR IS A NUMBER KONNECTOME WOULD HAVE INVENTED. The corpus supplies no minimum factor,
+because in the biology the question does not arise. A floor lifted out of nowhere is the default-
+with-a-borrowed-warrant this build has now refused five times - a window at 45, a mode name at 46, a
+level at 48, a rate at 49, and a floor here.
+
+SECOND, A NON-POSITIVE FACTOR MEANS THE CALLER ASKED FOR SOMETHING NO REGION COULD DEFEND: that the
+SLOW bound erase more than the entire weight vector in ONE step. That is a mis-configured bound, not
+a hard case to be handled gracefully.
+
+THIRD, THE ARITHMETIC WAS NEVER THE FAULT. The fault was that an out-of-range condition had a
+PLAUSIBLE-LOOKING ANSWER AVAILABLE, so nothing ever had to notice it. A refusal is the only fix that
+removes the plausible answer.
+
+WHERE THE REFUSAL SITS, AND IT MATTERS: at the point the factor is COMPUTED, not in the callers'
+guards, so no caller can route around it and no second copy of the rule can drift from this one. It
+names the RECEIVING CONSTRUCT, so a caller learns which region's bound was impossible rather than
+merely that one was.
+
+WHAT DECISION-10 DOES NOT DECIDE. It does not decide what a caller should do with the refusal -
+lowering the rate, raising the target and running the bound more often are all legitimate. It does
+not set a minimum weight: a weight may still approach zero asymptotically under repeated legal
+scalings, which is what the corpus describes; what it may no longer do is ARRIVE there in one step
+and be trapped.
+
+AND A TEST THAT ASSERTED THE DEFECT WAS REPLACED RATHER THAN DELETED. test(the_scaling_factor_floors_
+at_zero) drove an overactive region to a negative raw factor and asserted the resulting weight was
+exactly zero - "silenced, not inverted". IT PASSED FOR NINETEEN SLICES, testing faithfully and in
+detail a behaviour the corpus forbids in as many words. A TEST THAT PINS A DEFECT IS WORSE THAN NO
+TEST, because it converts the defect into a promise and makes the fix look like the regression. Five
+tests stand in its place, including one asserting that two weights into one loud region KEEP THEIR
+RATIO through a legal scaling - the property the corpus says multiplication exists for and the one
+the old floor destroyed.
+
+OBSERVATION-15 IS THEREFORE HALF-CLOSED, NOT CLOSED. Its second half stands untouched: the scaler
+runs over every transmissive interface REGARDLESS OF SIGN, while the corpus gives the renormaliser's
+domain as "every EXCITATORY synapse". konnectome has no sign field on an interface, so there is
+nothing to test and nothing to fix. THAT HALF WAITS ON THE EDGE TYPE REGISTRY and is the first
+concrete consumer that family has acquired outside its own design authority.
+
+
+DECISION-11 (2026-08-10, slice 53). THE DURABLE WEIGHT TIER IS A MAINTAINED PROCESS, NOT A STORED
+NUMBER. Taken by the owner's instruction after the north-star gap analysis found the queued item
+about to be built in the shape the corpus was assembled to refute.
+
+WHAT THE QUEUE SAID AND WHY IT WAS WRONG. Family One's item (e) has carried "a DURABLE WEIGHT TIER
+FIRST" for several assessments, and every reading of it treated the tier as a second, slower number
+beside the fast one. The slow-variables volume opens by asking "what is the weight made of, given
+that every protein at a synapse turns over in hours to weeks while memories last for decades?" and
+answers: "machinery that stores information in self-renewing arrangements of molecules - SWITCHES
+THAT RE-MARK THEMSELVES FASTER THAN TURNOVER ERASES THEM". Its closing line: memory persists "not by
+never changing, but by RE-WRITING ITSELF FASTER THAN IT FORGETS."
+
+AND IT DRAWS THE ENGINEERING DISTINCTION EXPLICITLY, AGAINST BOTH ANALOGUES A BUILDER REACHES FOR.
+Of the CaMKII ring: "the EEPROM cell keeps the same physical charge trap, whereas bistable_weight_
+latch KEEPS NO PHYSICAL PART AT ALL." Of the PKM-zeta loop: "dynamic memory refresh copies a stored
+value IT READS OUT FIRST, whereas renewal_loop HAS NO SEPARATELY STORED VALUE TO READ: the value is
+the running process itself, so interrupting the refresh does not merely risk a bit, IT DESTROYS THE
+ONLY COPY."
+
+SO A DURABLE MARK IS THE STATE OF A LOOP THAT MUST BE RUN TO PERSIST. No second weight field, no
+write-once number, no consolidated flag: a level that decays every step and a synthesis that replaces
+it, with the memory being the fact that the second currently beats the first.
+
+BUILT AS THE PACK renewal_loop, WHICH IS THE CORPUS'S OWN ENGINEERING NAME for the mechanism, taken
+rather than invented. Chapter 2 was chosen over Chapter 1's CaMKII ring for a stated reason: IT IS
+FULLY DETERMINISTIC, so a glass-box build needs no random source and no seed. The ring remains
+unbuilt and the omission is recorded rather than silent.
+
+THREE PROPERTIES, EACH A TEST RATHER THAN A CLAIM. The mark OUTLIVES ITS OWN MATERIAL - three tenths
+of the level is destroyed every step, and after twenty steps under a hundredth of a per cent of the
+original remains and the memory is still held. CUTTING THE LOOP DESTROYS IT PERMANENTLY, and the
+permanence FALLS OUT OF THE ARITHMETIC rather than being enforced: below the threshold only the small
+seed is synthesised, and the seed settles at a fixed point far beneath the threshold, so a loop that
+once falls below never returns. Nothing in the pack forbids recovery. A FRESH LOOP NEVER STARTS
+ITSELF, which is the same fact from the other end.
+
+THE GRAIN, AND IT IS DECISION-8'S PRINCIPLE HONOURED BY A DIFFERENT MEANS. DECISION-8 chose one
+hundred parts for activation and it worked because every activation constant landed on a hundredth.
+HERE THAT IS FALSE IMMEDIATELY: the recurrence multiplies by ninety-eight hundredths per step and the
+second step already lands on 192.08 hundredths. No fixed decimal grain survives. Since this pack's
+whole subject is A THRESHOLD CROSSING, and slice 49 paid to learn that a threshold decided by drift
+is a threshold nobody chose, THE LEVEL IS HELD AS AN EXACT RATIONAL. No grain, no rounding, no drift;
+the sub-threshold fixed point is exactly seven sixtieths rather than approximately so.
+
+THE CONSEQUENCE THE QUEUE DID NOT KNOW IT WAS BUYING, AND IT IS THE NAMED CLOSER OF THIS SLICE: A
+DURABLE TIER OF THIS SHAPE MUST BE MAINTAINED IN BOTH SHIFTS OF THE TWO-PROCESS GOVERNOR. An offline
+shift that suspends the refresh does not preserve the durable tier - IT ERASES IT, permanently, by
+exactly the mechanism above. offline_consolidation replays and raises a bound and refreshes nothing.
+NOTHING IS WIRED IN THIS SLICE precisely because that is now a decision with a consequence rather
+than a detail.
+
+WHAT DECISION-11 DOES NOT DECIDE. What sets the loop running - the corpus's trigger is a
+potentiation-and-translation signal and konnectome has no publisher for one, so establishment is the
+caller's act. What the level MEANS for a weight - the corpus says the loop "publishes a sustained
+weight-gain value" and whether konnectome's weight is multiplied, offset or gated by it is the wiring
+slice's decision. And whether a construct may hold many loops, which waits on the naming and
+addressing facility as everything at that grain does.
+
+
+OBSERVATION-16 (2026-08-10, from slice 53). THE CHAPTER STATES ITS GAIN TWICE AND THE TWO ARE NOT TWO
+PRECISIONS OF ONE VALUE - THEY ARE TWO DIFFERENT MACHINES, AND THE CHAPTER'S OWN PRINTED PROGRAM
+DOES NOT DEMONSTRATE THE CLAIM PRINTED ABOVE IT.
+
+Layer 4/5 Chapter 2's ENGLISH READABLE CODE: "Create a number variable called synthesis gain with
+initial value 0.4." Its CODE SAMPLE, eight lines later: "THRESH, GAIN, DEGRADE, SEED = 1.0, 0.6, 0.3,
+0.05".
+
+MEASURED, BY RUNNING BOTH. At four tenths the per-step multiplier is ninety-eight hundredths, just
+below one: an established level decays slowly, the chapter's own six-step block drives it under the
+threshold, and it settles at seven sixtieths and never returns. THE CHAPTER'S CLAIM HOLDS. At six
+tenths the multiplier is one hundred and twelve hundredths, above one: the level GROWS WITHOUT BOUND,
+reaching roughly one hundred and seven after sixty steps, and the block staged to demonstrate
+fragility DOES NOT COLLAPSE ANYTHING - the level falls to about two and a quarter, still above the
+threshold, and resumes growing. The chapter's stated claim is "a brief block collapses it for good",
+and its own printed program refutes it.
+
+konnectome takes FOUR TENTHS on three grounds. It is the only one of the two under which the
+chapter's stated claim is true. A maintenance loop is a LATCH and not an amplifier - the chapter's
+own words are "keeps itself topped up", and a value that grows to a hundred and seven has diverged
+rather than been topped up. And the corpus elsewhere insists this machinery is metabolically bounded.
+
+AND NOTE WHICH WAY ROUND THIS ONE FELL, BECAUSE IT IS THE REVERSE OF OBSERVATION-13'S. At slice 49
+the chapter's runnable illustration was the legible-but-uncalibrated half and the measured prose was
+right. HERE THE PRINTED CODE IS THE WRONG ONE AND THE ENGLISH PROSE IS RIGHT. So the rule that
+generalises is NOT "trust the prose over the code" - it is OBSERVATION-13'S ACTUAL RULE, WHICH
+SURVIVES INTACT: when a source gives a quantity twice, find out whether the two statements are the
+same kind of claim, and check both against what the source says the ANSWER is. Here that check was
+cheap and decisive: run both and see which one does what the chapter says happens.
+
+THE REJECTED VALUE IS EXPORTED RATHER THAN DELETED, as renewal_loop_code_sample_gain/1, so a test
+asserts the discrepancy and the next reader meets it as something that passes rather than a paragraph
+to skim. This is the second discrepancy this build has agreed to REPORT rather than absorb, and the
+third counting the corpus's own 302-versus-301 cell count.
+
+
+Slice-52 note (2026-08-10). THE SCALER REFUSES RATHER THAN CLIPS. DECISION-10; OBSERVATION-15 half-
+closed. One predicate changed in plasticity_engine and one guard added; no behaviour changed for any
+configuration konnectome actually runs, which was verified by the capstone story being unaffected.
+plasticity_engine grows from 82 tests to 86, one of which - the test that pinned the defect - was
+replaced rather than deleted.
+
+Slice-53 note (2026-08-10). THE DURABLE TIER, BUILT AS A PROCESS. New pack renewal_loop, DECISION-11,
+OBSERVATION-16. SIXTEEN tests. NOTHING IS WIRED: plasticity_engine does not consult it, no interface
+carries a durable mark, and the tick is untouched, in the eligibility-trace and blackboard discipline.
+NOT ONE CONSTANT IN THE PACK IS KONNECTOME'S INVENTION - threshold, degrade rate, seed and established
+level are the chapter's own, and the one place the chapter contradicts itself is refused in the open
+under OBSERVATION-16. NINE HUNDRED AND THIRTY-ONE tests across THIRTY-SEVEN packs, all green; four
+gates at zero violations plus the naming gate's self-test, with the one known non-blocking prefix
+collision unchanged. Nothing routes to either change order: no data-structure gap and no language gap
+was hit, and exact rational arithmetic is SWI-Prolog's own. Neither cousin was edited.
+
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 16 (2 CLOSED: 8 and 9; 15 HALF-CLOSED).  Decisions: 11.
