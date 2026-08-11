@@ -14,19 +14,23 @@ THE DSPARCD FILESET - THE SEVEN
 
 • konnectome_0_definition_v1.txt - DEFINITION. What konnectome IS in one sentence and what it is NOT in eight. READ THIS ONE FIRST. It is deliberately SHORT and must stay short. Where it and a later phase disagree, THE DEFINITION LEADS and the later phase is corrected; only the Constitution outranks it.
 
-• konnectome_1_specification_v58.txt - SPECIFICATION. The problem defined completely before any code is written.
+• konnectome_1_specification - SPECIFICATION. The problem defined completely before any code is written.
 
-• konnectome_2_pseudocode_v58.txt - PSEUDOCODE, written in English Readable Code.
+• konnectome_2_pseudocode - PSEUDOCODE, written in English Readable Code.
 
-• konnectome_3_architecture_v58.txt - ARCHITECTURE. Components, interfaces, data model.
+• konnectome_3_architecture - ARCHITECTURE. Components, interfaces, data model.
 
-• konnectome_4_refinement_v58.txt - REFINEMENT. Test-driven iteration; what the tests found.
+• konnectome_4_refinement - REFINEMENT. Test-driven iteration; what the tests found.
 
-• konnectome_5_completion_v58.txt - COMPLETION. The measured state of the build.
+• konnectome_5_completion - COMPLETION. The measured state of the build.
 
-• konnectome_6_demonstration_v58.txt - DEMONSTRATION. What can now be shown that could not be shown before.
+• konnectome_6_demonstration - DEMONSTRATION. What can now be shown that could not be shown before.
 
-NOTE THE VERSION NUMBERS AND WHY ONE OF THEM DIFFERS. Six of the seven are at v58 and move together, because the Twelfth Commandment requires that any code change be accompanied by mirrored changes to the whole Fileset with version numbers incremented. THE DEFINITION IS AT v1 AND HAS NEVER BEEN SUPERSEDED, because it states a concept rather than a state, and a concept that needed a new version every slice would not have been a concept.
+NOTE THAT SIX OF THE SEVEN ARE NAMED HERE WITHOUT A VERSION, AND THE THIRD TIME OF ASKING IS WHY. Those six MOVE TOGETHER and their number is whatever it has reached: the Twelfth Commandment requires that any code change be accompanied by mirrored changes to the whole Fileset with version numbers incremented, so any figure written here is guaranteed to be wrong by the next slice. READ THE DIRECTORY FOR THE LIVE NUMBER; there is exactly one file per phase in it, which is what identifies the current version.
+
+THIS PARAGRAPH HAS NOW ROTTED THREE TIMES AND THE THIRD REPAIR IS A DIFFERENT KIND FROM THE FIRST TWO. Twice the figure was simply chased - it said v48 while the files were at v54, and the slice-59 repair updated it and recorded that a DEEPER FIX had been declined, on the grounds that the paragraph was comparing two version numbers and could not make its point without them. IT CAN. Its point is that six files share a number and one does not, and the point survives with the numbers removed, which is the version 18 pointer audit's own rule applied where it had not reached: WHEN A RECORD REFERS TO A LIVE LIST, DROP THE PART THAT CAN GO STALE RATHER THAN UPDATING IT.
+
+THE DEFINITION IS AT v1 AND HAS NEVER BEEN SUPERSEDED, and its version IS written above, because that is a durable fact about the document rather than a moving figure: it states a concept rather than a state, and a concept that needed a new version every slice would not have been a concept.
 
 
 THE EIGHTH FILE, WHICH IS NOT A MEMBER OF THE FILESET

@@ -388,5 +388,92 @@ test(a_warning_moves_neither_the_mode_nor_the_rule) :-
     % Unchanged, because a fault has no transfer function and a warning is not a transition.
     assertion(RuleAfter == RuleBefore).
 
+% ---------------------------------------------------------------------------
+% THE RULE CONSULTS THE FLAG (slice 66, OBSERVATION-19's closer)
+% ---------------------------------------------------------------------------
+
+% A helper: a machine that admits one of its modes as a fault, in the corpus's own manner.
+% admitting_automaton(-Automaton): a construct that says which of its modes is a way of being broken.
+admitting_automaton(Automaton) :-
+    % The admitted mode is BOTH a declared mode and a declared fault signature, which the blanket ban
+    % refused outright and which the design authority says a tagged minority may be.
+    mode_register_new(quiet,
+                      [mode_entry(quiet, 'the Held Breath', 'does nothing while it holds'),
+                       mode_entry(runaway, 'the Runaway', 'flips as fast as its input changes',
+                                  [admitted_as_fault('a fault regime, admitted only because it names the failure')])],
+                      [transfer(quiet, hold), transfer(runaway, relay(1))],
+                      [transition(own_drive, quiet, runaway, one_tick, self_selected)],
+                      [fault(runaway, flips_too_fast, oscillation_watchdog)],
+                      Automaton).
+
+% THE BLANKET BAN IS SOFTENED EXACTLY WHERE THE AUTHORITY SAYS IT SHOULD BE AND NOWHERE ELSE. A mode
+% that is also a fault signature passes the directive when, and only when, its own entry admits it.
+test(an_admitted_fault_may_stand_in_the_register) :-
+    admitting_automaton(Automaton),
+    % The directive holds, so the register may be watched.
+    supervisor_faults_are_not_modes(Automaton).
+
+% AND THE UNADMITTED CASE IS REFUSED EXACTLY AS IT ALWAYS WAS, which is what makes this a softening
+% rather than a repeal. The same register without the tag is the register the ban was written for.
+test(the_same_register_without_the_tag_is_still_refused,
+     throws(error(domain_error(supervisor_fault_is_not_a_mode, runaway), _))) :-
+    mode_register_new(quiet,
+                      [mode_entry(quiet, 'the Held Breath', 'does nothing while it holds'),
+                       mode_entry(runaway, 'the Runaway', 'flips as fast as its input changes')],
+                      [transfer(quiet, hold), transfer(runaway, relay(1))],
+                      [transition(own_drive, quiet, runaway, one_tick, self_selected)],
+                      [fault(runaway, flips_too_fast, oscillation_watchdog)],
+                      Automaton),
+    supervisor_faults_are_not_modes(Automaton).
+
+% AN ADMISSION IS PER MODE AND NOT PER REGISTER, which is the design authority's FIRST qualification -
+% the rule is per construct, not per regime - carried down to the entry. A register holding one
+% admitted mode does not thereby admit a second, untagged one.
+test(one_admitted_mode_does_not_admit_a_second_untagged_one,
+     throws(error(domain_error(supervisor_fault_is_not_a_mode, overheating), _))) :-
+    mode_register_new(quiet,
+                      [mode_entry(quiet, 'the Held Breath', 'does nothing while it holds'),
+                       mode_entry(runaway, 'the Runaway', 'flips as fast as its input changes',
+                                  [admitted_as_fault('admitted only because it names the failure')]),
+                       mode_entry(overheating, 'the Overheated One', 'runs too hot while it holds')],
+                      [transfer(quiet, hold), transfer(runaway, relay(1)),
+                       transfer(overheating, relay(2))],
+                      [],
+                      [fault(runaway, flips_too_fast, oscillation_watchdog),
+                       fault(overheating, runs_too_hot, thermal_watchdog)],
+                      Automaton),
+    supervisor_faults_are_not_modes(Automaton).
+
+% THE DEPARTURE FROM THE STRICT RULE IS READABLE, WHICH IS THE HALF THAT KEEPS IT FROM BEING A HOLE.
+% Asking a construct what it has been allowed to be broken in returns an argument, not a shrug.
+test(the_admissions_are_readable_with_their_reasons) :-
+    admitting_automaton(Automaton),
+    supervisor_admissions(Automaton, Admissions),
+    assertion(Admissions == [mode_register_admission(runaway,
+                                'a fault regime, admitted only because it names the failure')]).
+
+% A register that admits nothing says so as an empty list, so "nothing is admitted here" is a readable
+% answer rather than a failure a caller has to interpret.
+test(a_register_that_admits_nothing_says_so) :-
+    watched_automaton(Automaton),
+    supervisor_admissions(Automaton, Admissions),
+    assertion(Admissions == []).
+
+% AND AN ADMITTED FAULT IS STILL WATCHED. Admission changes what the register may declare, not what
+% the supervisor does about it: the boundary is compared against its allowance exactly as before.
+test(an_admitted_fault_is_still_watched_and_still_warned_about) :-
+    admitting_automaton(Automaton),
+    supervisor_watch(Automaton, [supervisor_reading(runaway, 12, 3)], Report),
+    supervisor_report_warnings(Report, Warnings),
+    assertion(Warnings == [supervisor_warning(runaway, flips_too_fast, oscillation_watchdog, 12, 3)]).
+
+% An admitted fault nobody watches is reported unwatched, not clean - the third outcome survives the
+% softening untouched.
+test(an_admitted_fault_nobody_watches_is_reported_unwatched) :-
+    admitting_automaton(Automaton),
+    supervisor_watch(Automaton, [], Report),
+    supervisor_report_unwatched(Report, Unwatched),
+    assertion(Unwatched == [supervisor_unwatched(runaway, oscillation_watchdog)]).
+
 % Close the test block for the supervisor pack.
 :- end_tests(supervisor).

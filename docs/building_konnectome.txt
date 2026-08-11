@@ -1504,5 +1504,76 @@ One thing was found and deliberately not fixed, which is recorded rather than gl
 No code changed in either slice. One thousand and seven tests, thirty-nine packs, unmoved.
 
 
-From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER SIXTY-TWO, and the story goes on being true.
+CHAPTER SIXTY-TWO - THE MACHINE THAT CONGRATULATED ITSELF FOR HOLDING STILL (2026-08-11, SLICE 65)
+
+Nine slices ago konnectome built a comparator for the sense of agency, and it built it honestly. The machine takes an internal duplicate of every command it issues, feeds it to a forward model, predicts what the world will look like afterwards, and compares that prediction with what the world actually reports. Match: that was me. Mismatch: something else did that.
+
+The slice that built it also found the hole in it, which is the part worth remembering. HOLD STILL is a real command in this build. The action selector issues it whenever the answer is to do nothing, and its documented effect is that nothing changes but the log. So the forward model's prediction for it is the world exactly as it already stands - and in a quiet world that prediction is perfect on every channel.
+
+The machine therefore earns its highest possible score for doing nothing at all, and earns exactly the same score it earns for a deliberate, difficult, successful act. Slice 56 pinned that in the sharpest available form: a test asserting that the two cues are THE SAME TERM. Not similar. Identical. And it named its own closer rather than inventing one - agency needs a cue that tells "the world matched my prediction BECAUSE I CAUSED IT" from "the world matched because NOTHING WAS GOING TO HAPPEN ANYWAY", which is Wegner's exclusivity condition, and it is a second mechanism.
+
+Under the Twenty-Second Commandment, written one session ago, that recorded refusal is not a resting place. It is work, and the first step of the work is to read the corpus beneath the finding.
+
+The corpus had the answer in a single sentence, and it took one paragraph more than anybody had read. Chapter 63.2.4: we infer authorship when a thought PRECEDES an action, is CONSISTENT with it, and NO OTHER CAUSE IS APPARENT. Three conditions, named, in one sentence. The comparator had built the second one and the build had been calling it agency.
+
+The interesting condition is the third, and the interesting thing about it is that it does not mean what it sounds like it means. "No other cause is apparent" sounds like somebody else in the room. In konnectome's degenerate case the other cause is simpler and much harder to see: IT IS THE WORLD SIMPLY CARRYING ON. If you predict the room will stay as it is, and it stays as it is, you have not done anything - the room was going to do that, the standing world is a completely sufficient explanation, and it is apparent because the mind is looking straight at it.
+
+So konnectome reads exclusivity as a question about DIFFERENCE-MAKING: does the command's forward model predict anything that the NULL command's forward model does not? That reading is konnectome's own translation of the corpus's phrase into a running machine's vocabulary, and it is signed as DECISION-18 rather than left to look like the chapter's. It needs no number. There is not one number in the entire pack - no threshold, no weight, no tolerance, no gain - and the order of resort never reaches past its first protocol.
+
+The arithmetic falls out. HOLD STILL's forward model IS the world as it stands, by transcription of the machine's own clause, so hold_still can never be exclusive in any world there is. Steering around a real obstacle predicts a clear path the standing world does not show, so it is. The two cases slice 56 proved identical are now two different terms, and the closure is asserted as a term inequality rather than as a paragraph - with the old equality test kept, untouched and still passing, standing beside it. Nothing was weakened to make the new thing work.
+
+Then the rule caught something nobody had asked it to catch, and that is the moment this stopped being a fix and started being evidence.
+
+Try steering around an obstacle when there is no obstacle. It is not the null command, it has a real name and real machinery, and it would walk straight past any rule that banned hold_still by name. The difference rule refuses it too, correctly, because it also predicts the world that is already there. And when the test for it was written it failed - not on the verdict, but on the enactment, because simulated_body_enact/3 THROWS when told to steer around nothing, and has done since the machine was written, by somebody thinking about actuators and not about agency at all.
+
+Two independent refusals, written slices apart from two entirely different directions, agreeing about the same case. A rule fitted to its own example cannot do that.
+
+And then the honest half, which is now a numbered observation of its own. The FIRST condition is free. Inside one comparator pass the copy is taken before the command reaches the actuator - structurally, because that is what an efference copy is - so priority is met in every pass this build can currently run. A CONDITION THAT CANNOT FAIL CARRIES NO INFORMATION, and the truthful reading is that a three-condition verdict currently rests on two with a third standing beside them looking like a third. That is OBSERVATION-20, and it is the ninth consecutive finding of the shape that would not have failed. Every test would have been green.
+
+Priority becomes real the day a thought can arrive from somewhere other than the command path - one tick's thought against another tick's action - and no construct in this build carries anything across a tick. Which is the same obstacle the efference copy's own wiring has been carrying since slice 56, met from a new direction. So the condition is built as a general predicate over a recorded order, and exercised against orders that DO have a choice in them, so its failing branches are known to work on the day something real can use them.
+
+The pack is apparent_causation, the fortieth. Thirty-four tests. Nothing calls it. It is the sixth complete, tested mechanism in this build that nothing else in this build uses, and the hand-off that set this session's queue had already called five of them a habit rather than five justified choices. This chapter does not argue with that.
+
+
+CHAPTER SIXTY-THREE - A RULE STRICTER THAN THE BOOK IT CAME FROM, AND A CONDITION THAT HAD BEEN MET FOR TWENTY-TWO SLICES (2026-08-11, SLICE 66)
+
+The previous session closed with a finding it had no time to build: konnectome's fault-exclusion rule is stricter than its own design authority says it should be. This chapter is that slice, and the code is small. The lesson is not.
+
+A FAULT IS NOT A MODE has been one of this build's better slogans since slice 39. Ways of working go into the mode register; ways of breaking go into a separate fault block and are watched from outside by a supervisor. The argument for it is genuinely good and is not withdrawn anywhere in this chapter: a machine with an official way to be broken never reports being broken.
+
+What the design authority actually says is not that. Its Part Four carries a heading reading, almost prophetically, "TWO QUALIFICATIONS THAT A STRICT VALIDATOR WOULD GET WRONG". The second of them: a tagged minority of faults ARE admitted into registers on a usage argument, always with the reasoning written inline, and the schema therefore needs a per-mode admitted-as-fault flag and a rationale slot - "NOT A BLANKET EXCLUSION".
+
+konnectome built the blanket exclusion.
+
+And nobody misread anything, which is why this is a finding rather than a typo. Slice 39 read that qualification, understood it, and wrote a comment into mode_register.pl that is still there today, recording the two fields it was leaving out and the exact condition for adding them: the admitted-as-fault flag "belongs with the supervisor channel that does not exist yet". The supervisor channel was built at slice 42. Three slices later. Twenty-two slices before anybody noticed, during which the too-strict rule was written into the README, the tutorial and the vision-set analysis as though it were the authority's own position.
+
+NOTHING WATCHES A DEFERRAL'S CONDITION. A note saying "when X exists, revisit this" is invisible on the day X arrives, because the session that builds X is looking at X rather than at the list of things that were waiting for it. That is the sentence worth taking out of this chapter, and it is a bigger object than the two fields it held up.
+
+What was built is exactly what the observation that opened it had sized. A mode entry may now carry TAGS. Most do not: the authority's own phrase is "a tagged minority", so the three-field entry is unchanged and is the untagged MAJORITY rather than a legacy shape awaiting migration - which is why the schema admits two arities instead of rewriting fifty-odd entries to carry an empty list that says nothing. Both shapes are opened in exactly one predicate, so they can never be judged by two different rules.
+
+A tagged entry may say admitted_as_fault, and when it does IT MUST SUPPLY A RATIONALE. Not a hole, not a placeholder, and not an empty atom - an empty rationale is refused by name, because a blank slot passes every shape check and says nothing, which is precisely the silent admission the rule exists to prevent. This is where the old ban's argument survives whole. The strictness was protecting against a machine acquiring an unremarked designed way of being broken; it still is. What replaces the ban is not permissiveness but a price: a fault may stand in a register only where the register says so on its own face and says why.
+
+The supervisor's refusal consults the flag instead of banning outright, and the departure is readable - supervisor_admissions/2 hands back every admitted mode with the reasoning that admitted it, forwarding to the register rather than re-deriving it, so a construct cannot be admitted in one component's reading and refused in another's. A softened rule whose exceptions cannot be listed is a hole. A softened rule whose exceptions each carry their argument is a design.
+
+The per-mode CONFIDENCE tag came with it, deferred in the same slice-39 sentence and met again at slice 60 when the corpus's four transfer functions each arrived carrying a confidence grade and mode_entry had nowhere to put them. Its grades are the five the authority observed in the corpus, normalised into snake_case, with anything else refused - so a sixth grade must be added by somebody who can name the entry it came from. AND AN ENTRY WITHOUT THE TAG ANSWERS confidence_not_stated, BY NAME, AND NEVER A GRADE. A silent default in the one field whose purpose is to record how much a source will claim would be this build's own recurring failure wearing a new hat.
+
+Not one register in konnectome uses the flag. Every existing one - the construct registers of one, the working-memory register, the master register, the conflict monitor's four-block automaton - passes untouched, which was checked rather than assumed. That is exactly why the over-strictness survived: IT HAD NEVER COST ANYTHING, and a rule that costs nothing is a rule nobody re-reads. A test now pins the unadmitted case still being refused, so the softening can never be mistaken for a repeal.
+
+So nothing the machine does today is different. What changed is what it is allowed to say about itself, and whether the difference between konnectome's rule and its source's rule is recorded anywhere. It is now.
+
+
+THE AUTO-FIXES OF THIS SESSION, RECORDED UNDER THE SIXTEENTH COMMANDMENT'S SINGLE CONDITION
+
+ONE, AND IT IS THE THIRD ATTEMPT AT THE SAME PARAGRAPH, WHICH IS WHY THE REPAIR IS A DIFFERENT KIND THIS TIME. docs/DSPARCD/README.txt carried a note explaining why six of the seven phase files share a version number, and it stated the figure. It said v48 when they were at v54; slice 59 chased it to v54 and recorded that a DEEPER fix had been declined, on the ground that the paragraph was comparing two version numbers and could not make its point without them - adding, correctly, that if it rotted a third time the right repair was to rewrite the comparison rather than chase the figure again. It has rotted a third time. The comparison is rewritten: the six are now named WITHOUT versions in the file list, the note states the RULE that they move together and tells the reader to read the directory for the live number, and only the Definition's v1 is written down, because that is a durable fact rather than a moving figure. The paragraph's point survives with the numbers removed, which is the version 18 pointer audit's own rule applied where it had not reached.
+
+TWO. The mode_register and supervisor source comments both stated the blanket ban as the rule - "Faults are WATCHED, never admitted as modes" - and both are corrected to state the rule the code now enforces, each pointing at the site where the softening is argued. A comment that describes a refusal the code no longer makes is a fault a later session meets as the truth.
+
+THREE. The tutorial's Part Three glossary described konnectome's over-strictness as an open observation "recorded rather than left for a reader to trip over". It is closed, so the entry now describes the rule as built, and three new glossary entries join it: the admitted-as-fault tag, apparent causation, and exclusivity.
+
+FOUR. The queue documents are MARKED IN PLACE where these two slices overtook them - docs/design/01's Part Six and docs/design/02's Part Nine each gain a dated line naming which of their items is now closed and by which slice. Neither document is rewritten and neither version is bumped, because both are dated assessments and a rewrite of either is its own slice; what is repaired is the failure the previous session named, where a finding that is not moved to the place the work happens does not move at all. A queue that still lists a closed item is a queue somebody will work twice.
+
+AND ONE COINCIDENCE IS RECORDED BEFORE SOMEBODY MISTAKES IT FOR A RULE. The tutorial's version number and its part count have happened to match for several sessions - version 57 carried fifty-seven parts. They do not match any more: version 58 carries FIFTY-NINE parts, because this session added two parts to a document whose version increments by one. Nothing is wrong. The version counts writings of the document and the part count counts its sections, and the two were never the same quantity.
+
+
+From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER SIXTY-FOUR, and the story goes on being true.
 

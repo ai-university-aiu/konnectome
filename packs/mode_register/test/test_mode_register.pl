@@ -449,5 +449,179 @@ test(a_register_of_one_refuses_every_departure,
     % Ask where it goes.
     mode_register_departure(Automaton, self_selected, _ToMode).
 
+% ---------------------------------------------------------------------------
+% THE TWO DEFERRED FIELDS (slice 66, OBSERVATION-19's closer)
+% ---------------------------------------------------------------------------
+
+% A helper: a two-mode machine one of whose modes is admitted as a fault, with its reason.
+% admitting_automaton(-Automaton): a construct that says which of its modes is a way of being broken.
+admitting_automaton(Automaton) :-
+    % The admitted mode carries the corpus's own manner of rationale, written inline on the entry.
+    mode_register_new(quiet,
+                      [mode_entry(quiet, 'the Held Breath', 'does nothing while it holds'),
+                       mode_entry(runaway, 'the Runaway', 'flips as fast as its input changes',
+                                  [admitted_as_fault('admitted only because it names the failure'),
+                                   confidence(moderate)])],
+                      [transfer(quiet, hold), transfer(runaway, relay(1))],
+                      [transition(own_drive, quiet, runaway, one_tick, self_selected)],
+                      [fault(runaway, flips_too_fast, oscillation_watchdog)],
+                      Automaton).
+
+% THE UNTAGGED ENTRY IS UNCHANGED AND MEANS WHAT IT ALWAYS MEANT. The corpus's tagged entries are a
+% minority, so the three-field entry is the majority form and not a legacy shape awaiting migration.
+test(an_untagged_entry_carries_no_tags) :-
+    one_mode_automaton(Automaton),
+    mode_register_modes(Automaton, [Mode]),
+    mode_register_tags(Automaton, Mode, Tags),
+    assertion(Tags == []).
+
+% AN ENTRY WITHOUT A CONFIDENCE TAG IS NOT A CONFIDENT ENTRY. It answers by name rather than with a
+% grade konnectome chose, which is this build's own recurring failure - a zero that reads as calm -
+% in the one field whose purpose is to record how much the source is prepared to claim.
+test(an_entry_without_a_confidence_tag_states_that_rather_than_a_grade) :-
+    one_mode_automaton(Automaton),
+    mode_register_modes(Automaton, [Mode]),
+    mode_register_confidence(Automaton, Mode, Confidence),
+    assertion(Confidence == confidence_not_stated).
+
+% A tagged entry hands back the grade it declares.
+test(a_tagged_entry_hands_back_the_grade_it_declares) :-
+    admitting_automaton(Automaton),
+    mode_register_confidence(Automaton, runaway, Confidence),
+    assertion(Confidence == confidence(moderate)).
+
+% And the admissions are readable, each carrying the reasoning that admitted it.
+test(an_admitted_mode_is_listed_with_the_reason_that_admitted_it) :-
+    admitting_automaton(Automaton),
+    mode_register_admissions(Automaton, Admissions),
+    assertion(Admissions == [mode_register_admission(runaway,
+                                'admitted only because it names the failure')]).
+
+% A register with nothing admitted admits nothing, and says so as an empty list rather than by failing.
+test(a_register_with_nothing_admitted_lists_no_admissions) :-
+    one_mode_automaton(Automaton),
+    mode_register_admissions(Automaton, Admissions),
+    assertion(Admissions == []).
+
+% THE RATIONALE IS THE LOAD-BEARING HALF, so an admission without one is not a mode entry at all.
+test(an_admission_without_a_rationale_is_refused,
+     throws(error(domain_error(mode_entry_tag, admitted_as_fault), _))) :-
+    mode_register_new(broken,
+                      [mode_entry(broken, 'the Broken One', 'is broken while it holds',
+                                  [admitted_as_fault])],
+                      [transfer(broken, hold)],
+                      [],
+                      [],
+                      _Automaton).
+
+% AND AN EMPTY RATIONALE IS NOT A RATIONALE. A blank slot passes a shape check and says nothing, which
+% is precisely the silent admission this rule exists to prevent.
+test(an_empty_rationale_is_refused,
+     throws(error(domain_error(mode_register_admission_rationale, ''), _))) :-
+    mode_register_new(broken,
+                      [mode_entry(broken, 'the Broken One', 'is broken while it holds',
+                                  [admitted_as_fault('')])],
+                      [transfer(broken, hold)],
+                      [],
+                      [],
+                      _Automaton).
+
+% A rationale that is a hole is refused before it can be admitted silently.
+test(a_rationale_that_is_a_hole_is_refused,
+     throws(error(instantiation_error, _))) :-
+    mode_register_new(broken,
+                      [mode_entry(broken, 'the Broken One', 'is broken while it holds',
+                                  [admitted_as_fault(_Reason)])],
+                      [transfer(broken, hold)],
+                      [],
+                      [],
+                      _Automaton).
+
+% A confidence grade outside the transcribed list is refused, so a sixth grade must be added
+% deliberately by somebody who can say which corpus entry it came from.
+test(a_confidence_grade_outside_the_transcribed_list_is_refused,
+     throws(error(domain_error(mode_register_confidence_grade, extremely_high), _))) :-
+    mode_register_new(quiet,
+                      [mode_entry(quiet, 'the Held Breath', 'does nothing while it holds',
+                                  [confidence(extremely_high)])],
+                      [transfer(quiet, hold)],
+                      [],
+                      [],
+                      _Automaton).
+
+% The transcribed grades are the five the design authority recorded, normalised into snake_case.
+test(the_confidence_grades_are_the_five_the_authority_recorded) :-
+    mode_register_confidence_grades(Grades),
+    assertion(Grades == [high, moderate, low, well_established, deliberately_low]).
+
+% TWO CONFIDENCE GRADES ON ONE MODE IS TWO CLAIMS ABOUT HOW WELL ESTABLISHED IT IS, and the register
+% refuses rather than preferring whichever was written first.
+test(two_tags_of_one_kind_on_one_mode_are_refused,
+     throws(error(domain_error(distinct_mode_tags, _Tags), _))) :-
+    mode_register_new(quiet,
+                      [mode_entry(quiet, 'the Held Breath', 'does nothing while it holds',
+                                  [confidence(high), confidence(low)])],
+                      [transfer(quiet, hold)],
+                      [],
+                      [],
+                      _Automaton).
+
+% AN UNRECOGNISED TAG IS REFUSED RATHER THAN IGNORED. A misspelt admission silently dropped would read
+% as an ordinary mode, which is the whole failure the flag exists to make visible.
+test(an_unrecognised_tag_is_refused,
+     throws(error(domain_error(mode_entry_tag, admited_as_fault(oops)), _))) :-
+    mode_register_new(quiet,
+                      [mode_entry(quiet, 'the Held Breath', 'does nothing while it holds',
+                                  [admited_as_fault(oops)])],
+                      [transfer(quiet, hold)],
+                      [],
+                      [],
+                      _Automaton).
+
+% A tag block that is a hole is refused rather than read as an untagged entry.
+test(a_tag_block_that_is_a_hole_is_refused,
+     throws(error(instantiation_error, _))) :-
+    mode_register_new(quiet,
+                      [mode_entry(quiet, 'the Held Breath', 'does nothing while it holds', _Tags)],
+                      [transfer(quiet, hold)],
+                      [],
+                      [],
+                      _Automaton).
+
+% A tag block that is not a list is refused rather than walked.
+test(a_tag_block_that_is_not_a_list_is_refused,
+     throws(error(type_error(list, admitted_as_fault(because)), _))) :-
+    mode_register_new(quiet,
+                      [mode_entry(quiet, 'the Held Breath', 'does nothing while it holds',
+                                  admitted_as_fault(because))],
+                      [transfer(quiet, hold)],
+                      [],
+                      [],
+                      _Automaton).
+
+% A tagged mode is a mode like any other: it needs a transfer function, and it is refused without one.
+test(a_tagged_mode_still_needs_a_transfer_function,
+     throws(error(existence_error(transfer_function, runaway), _))) :-
+    mode_register_new(quiet,
+                      [mode_entry(quiet, 'the Held Breath', 'does nothing while it holds'),
+                       mode_entry(runaway, 'the Runaway', 'flips as fast as its input changes',
+                                  [admitted_as_fault('admitted only because it names the failure')])],
+                      [transfer(quiet, hold)],
+                      [],
+                      [],
+                      _Automaton).
+
+% Asking a register for the tags of a mode it does not hold is refused aloud by name.
+test(the_tags_of_a_mode_the_register_does_not_hold_are_refused,
+     throws(error(existence_error(mode_entry, absent), _))) :-
+    one_mode_automaton(Automaton),
+    mode_register_tags(Automaton, absent, _Tags).
+
+% An unbound mode key is refused, because the lookup would bind it and hand back another mode's tags.
+test(an_unbound_mode_key_is_refused_by_the_tag_lookup,
+     throws(error(instantiation_error, _))) :-
+    admitting_automaton(Automaton),
+    mode_register_tags(Automaton, _Mode, _Tags).
+
 % Close the test block for the mode_register pack.
 :- end_tests(mode_register).
