@@ -1226,7 +1226,7 @@ self-test; conformance re-measured at 137 of 137 (specification 4.0.0) in both c
 wall; no cousin edited, per the Second, Third, and Fourth Commandments.
 
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 17 (3 CLOSED: 8, 9 and 15).  Decisions: 14.
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 18 (3 CLOSED: 8, 9 and 15).  Decisions: 15.
 Slice-34 note (2026-08-09). The bound turned live in the told story. The slice-33 pending line
 (the bound proven per-territory in the tests but not yet in the capstone's told story) is
 CLOSED: the capstone's boot world arms the slow bound for real - the diffuse mark at one half,
@@ -4995,4 +4995,155 @@ collision unchanged; THE CAPSTONE STORY IS BYTE-IDENTICAL TO MAIN'S, verified by
 than assumed. Nothing routes to either change order. Neither cousin was edited, and conformance stands
 where slice 47 re-measured it, now five sessions old under the owner's relaxed cadence.
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 17 (3 CLOSED: 8, 9 and 15).  Decisions: 14.
+DECISION-15 (2026-08-11, slice 58). THE FORM OF THE CONFLICT MEASURE IS KONNECTOME'S OWN; AND THE
+GAIN THAT COUPLES CONFLICT TO CONTROL IS THE CALLER'S, BECAUSE THE LOOP'S ACCEPTANCE TEST IS AN
+INEQUALITY THAT HOLDS FOR EVERY POSITIVE GAIN.
+
+THE NORTH-STAR GAP ANALYSIS'S ITEM B2 CALLED THIS WIRING RATHER THAN INVENTION, and it was right
+about the pieces and wrong about the cost. Chapter 52.2.1 states the loop in one sentence - the
+anterior cingulate "detects response conflict, the simultaneous activation of incompatible responses,
+and passes that signal to the lateral prefrontal cortex, which then raises control" - and names the
+property that makes it worth building: "this closes a loop: conflict signals that control is
+insufficient, control is increased, conflict falls." konnectome has owned both ends since slice 44
+and joined neither. override_controller holds the competition; stabiliser holds control. What was
+missing was the wire, and TWO NUMBERS THE CHAPTER DOES NOT SUPPLY were standing in the way of it.
+
+THE JOIN ITSELF NEEDED NO INVENTION AND IS RECORDED FIRST, because it is the part that was genuinely
+cheap. The stabiliser's own header already says a consumer may read its bias as "an offset on the
+gate's threshold". An override drive faces exactly such a threshold: it seizes control when its
+distress exceeds it. SO RAISING CONTROL IS RAISING THAT BOUNDARY, and the scalar that raises it
+already exists, already travels on the bus as a level, and already has stated units. No second
+control channel was created and DECISION-1 is inherited rather than re-opened.
+
+THE FIRST HALF: THE MEASURE'S FORM. The chapter supplies the DEFINITION and not a formula, and the
+north-star corpus was searched for one before this was written. konnectome operationalises "the
+simultaneous activation of incompatible responses" as the sum, over every unordered PAIR of
+simultaneously active drives proposing DIFFERENT actions, of the product of their two distresses.
+Three properties earn it and a simpler count would lose two of them: it is ZERO below two active
+drives, because one response alone is not a competition; it is ZERO when every active drive proposes
+the same action, because agreement is not incompatibility; and it RISES with both the number of
+competitors and the strength of each, because activation is a quantity in the definition and not a
+flag. THE FORM IS SIGNED AS KONNECTOME'S ON THE FACE OF THE CODE, under the Twenty-First Commandment,
+and is not left where a reader would take it for the corpus's.
+
+THE SECOND HALF IS THE TRANSFERABLE ONE. How much control a unit of conflict buys is a number nothing
+states. Worse than merely absent: Chapter 52.2.4 reports that three serious rivals to conflict
+monitoring now exist and "none has won", and the expected-value-of-control account makes the
+allocation a cost-benefit calculation over the payoff of control and "the intrinsic cost of cognitive
+effort" - neither of which konnectome has. A GAIN CHOSEN HERE WOULD BE PICKING A WINNER IN A LIVE
+SCIENTIFIC DISPUTE, wearing Chapter 52's citation. So the gain is the caller's, which follows the
+house precedent exactly: the supervisor never invents an allowance, DECISION-4 gave the window to the
+caller, and DECISION-14 made a competence a caller-named set of edges.
+
+AND THE LOOP IS FULLY TESTABLE WITHOUT IT, WHICH IS WHY THE REFUSAL COSTS NOTHING. The chapter
+supplies its own acceptance test and it is a COMPARISON rather than a level: the Gratton effect,
+where "interference on an incongruent trial is smaller when the previous trial was also incongruent,
+because conflict on trial n recruited control that is still in place on trial n plus 1". That is an
+ABLATION - the identical trial run twice, once with the previous trial's control carried forward and
+once without - and IT HOLDS FOR EVERY POSITIVE GAIN. A test pins it at four gains spanning two orders
+of magnitude. THE LOOP'S CORRECTNESS IS MONOTONE IN A NUMBER KONNECTOME THEREFORE NEVER HAS TO
+CHOOSE. This is the ninth time this build has preferred a refusal or a derivation to an invented
+default, and it is the second consecutive slice found by asking Tare Ablewright's question: BEFORE
+CHOOSING A NUMBER, CHECK WHETHER WHAT IS ACTUALLY NEEDED IS A COMPARISON.
+
+THE MEASURED FIGURES. With a base threshold of 0.5 and a gain of 0.15, an incongruent trial of three
+mutually incompatible drives - distresses 0.9, 0.8 and 0.7 - scores a conflict of 1.91. Run again
+after a CONGRUENT trial, which recruited no control, the same trial scores 1.91 once more. Run after
+an INCONGRUENT one it scores 0.72. The criterion is met by the strict inequality and nobody chose a
+passing number. Note that the fall is PARTIAL rather than to zero, which was arranged on purpose: a
+conflict that fell to exactly nothing would be the slice 56 shape again, a perfect score earned by
+nothing happening, and it would not distinguish a working loop from a loop that muted every drive.
+
+WHAT DECISION-15 DOES NOT DECIDE. It does not decide the gain, and a caller who supplies one is
+making konnectome's control policy rather than reading it off the corpus - that is a real decision
+and it is left where a reader can see it being made. It does not decide WHICH of the four accounts in
+Chapter 52.2.4 is right; the pack implements the conflict-monitoring loop because that is the account
+the chapter states in structural detail, and the other three are recorded as unsettled rather than
+refuted. And it does not make the conflict measure a measure of DIFFICULTY: a mind with one
+overwhelming drive scores zero conflict and may still be in serious trouble.
+
+
+OBSERVATION-18 (2026-08-11, from slice 58). CLOSING THE CONFLICT LOOP CREATES A ROUTE BY WHICH THE
+MIND CAN STOP BREATHING IN ORDER TO STOP FEELING CONFLICTED, AND EVERY TEST WOULD HAVE STAYED GREEN.
+
+THIS IS THE SEVENTH CONSECUTIVE FINDING OF THE SHAPE THAT WOULD NOT HAVE FAILED, and it is the first
+of them created by a JOIN rather than found inside a construct. Neither piece had this hazard alone.
+override_controller's header states konnectome's "one inviolable safety property": breathing beats
+deliberation, respiration sits at rank zero, and it can never be suppressed. The stabiliser raises
+boundaries. THE LOOP'S ENTIRE BUSINESS IS RAISING THE THRESHOLD A DRIVE MUST EXCEED - and run far
+enough on a sufficiently conflicted mind, the raised boundary passes above respiration's distress.
+At that point the arbitrator correctly reports that no drive is in distress, the conflict measure
+correctly reports zero, the loop correctly reports that control succeeded, and the mind is not
+breathing. Every one of those reports is true. The composition of them is a catastrophe.
+
+THE ANSWER IS A REFUSAL IN THE CODE AND NOT A CAUTION IN A COMMENT, per the Fifteenth Commandment's
+own spirit and the Fifth Principle. A drive at or beneath the inviolable rank faces the BASE
+threshold always, however high control has been raised; every other drive faces the raised one. The
+rank rule lives in exactly one predicate, because a safety property stated in two places is a safety
+property that can come apart in one of them. Two tests pin it, AND THE SECOND IS THE ONE THAT MATTERS:
+the same drive at the same distress under an ORDINARY rank IS muted by the identical raise, so the
+safety test is not passing vacuously.
+
+AND KONNECTOME DEPARTS FROM THE CHAPTER HERE, DELIBERATELY AND ON THE RECORD. Botvinick's loop has no
+such exemption, and it does not need one: a laboratory conflict task contains nothing that can kill
+the participant. konnectome's does. Under the First Principle the disagreement is RECORDED rather
+than resolved by preference, and it is worth stating which way it runs - this is not the corpus being
+wrong, it is the corpus being silent about a hazard that only appears once its loop is embedded in a
+machine with a homeostatic floor.
+
+WHAT IS OPEN, AND IT IS THE HALF THIS SLICE DID NOT BUILD. The gap analysis names THREE pieces and
+this slice joined TWO. The supervisor is the third, and its job here is the one a watchdog always
+has: to notice when the loop fails. Two fault regimes are declared in the supervisor's own fault
+shape - control_without_relief, and control_ratchet - and readings are built in its own reading
+shape with the caller's allowance. THE WATCH ITSELF IS NOT CALLED, because supervisor_watch/3 judges
+a MODE REGISTER's fault block and conflict_monitor has no mode register. Writing one would mean
+inventing this construct's modes, its per-mode transfer function and its transition table - the four
+blocks Chapter 80.3.3 names - and NOT ONE OF THEM HAS BEEN READ FROM THE CORPUS. A register invented
+to make a watch call compile is precisely the shape this build refuses, so the regimes are declared
+for the moment that reading happens and the gap is recorded here rather than papered over.
+
+ITS CLOSER IS A CORPUS READ AND NOT A PATCH: read Chapter 52's own account of the cingulate as a
+construct with modes, write conflict_monitor's mode register from it, and the supervisor leg closes
+with the fault rows that are already standing.
+
+
+Slice-58 note (2026-08-11). CLOSING THE CONFLICT LOOP. New pack conflict_monitor, DECISION-15,
+OBSERVATION-18. TWENTY-THREE tests. The loop of Chapter 52.2.1 is closed between override_controller
+and stabiliser and pinned by the chapter's own Gratton inequality, which is an ablation and not a
+threshold. NOT ONE NUMBER IN THE PACK IS KONNECTOME'S INVENTION: the gain is the caller's, the
+inviolable rank is override_controller's zero, and the only thing konnectome chose is the FORM of the
+conflict measure, which is signed as konnectome's on the face of the code and which the acceptance
+test does not depend on. NOTHING IS WIRED: the cognitive cycle does not call the loop and no run
+konnectome performs today turns it - the fifth deliberate build-without-wiring, after the eligibility
+trace, the blackboard, the durable tier and the efference copy. Nothing routes to either change order
+- no data-structure gap and no language gap was hit. Neither cousin was edited.
+
+Slice-59 note (2026-08-11). VERSION 4 OF THE VISION-SET TOP-DOWN ANALYSIS. docs/design/01 is brought
+current from slice 47 to slice 58 - eleven slices, nine numbered decisions and two observations - and
+version 3 is archived under the Eleventh Commandment. NO CODE CHANGED and no test moved. THE WRITE'S
+OWN FINDING IS ABOUT MAINTENANCE AND IS RECORDED HERE BECAUSE IT WILL RECUR: when a newer document
+supersedes PART of an older one, the older one gets abandoned WHOLE. The north-star gap analysis took
+over this document's queue at slice 51 and every session since correctly said so - but the walls-and-
+watches judgment, the eleventh-component question and the verdict on the ten components live in this
+document and in no other, so the only live statement of what routes to a frozen cousin was eleven
+slices out of date while nobody had made a decision that it should be. Version 4 now states the
+relationship between the two analyses in both directions, at each point where they differ.
+FOUR RESULTS WORTH THE LEDGER. Version 3's central prediction CAME TRUE and was confirmed by a build:
+it argued the first downward assignment needed a SINGLETON WITH A REGISTER rather than the region
+grain, named the working-memory board, and slice 50 succeeded for exactly that reason - which became
+DECISION-9. PART FIVE GAINED NO NEW WATCH, and a falling rate of wall-candidates against a steady rate
+of building is the signature of an architecture that is adequate rather than straining. TWO CODEBASE
+CLAIMS NO LONGER HOLD - working memory is no longer absent - which is the first time a re-measurement
+has overturned one. And PART FOUR-A'S CHEAP HALF IS CLOSED while its expensive half has gone from four
+independent arrivals to SIX. Nothing routes to either change order. Neither cousin was edited. Sections
+C, D and E remain HELD.
+AND ONE CONSTITUTION AMENDMENT WENT WITH IT, VERSION 25, changing no rule and renumbering nothing. The
+Eighth Commandment's pointer at this analysis had been repointed once already, at version 11, and went
+stale again at the very next write - because a version number written into a pointer at a document the
+Constitution REQUIRES TO BE KEPT CURRENT is guaranteed to rot on a schedule the Constitution sets. The
+pointer now names the directory and the document's NUMBER, 01, with the uniqueness rule beside it. THE
+GENERAL FORM: a pointer at a document required to be maintained must identify it by something that
+maintenance does not change.
+
+
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 18 (3 CLOSED: 8, 9 and 15).  Decisions: 15.

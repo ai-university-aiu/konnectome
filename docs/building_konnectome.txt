@@ -1207,5 +1207,117 @@ No defect in running code was found by either slice. The one thing that could ha
 Nine hundred and sixty-seven tests across thirty-eight packs, all green. Four gates at zero violations plus the naming gate's self-test, with the one known non-blocking prefix collision unchanged. And the capstone tells a story byte-identical to the one main tells, which was verified by running both rather than assumed - because the comparator is unwired by design and a measurement moves nothing.
 
 
-From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER FIFTY-SEVEN, and the story goes on being true.
+CHAPTER FIFTY-SEVEN - THE MIND THAT STOPPED BREATHING TO STOP FEELING CONFLICTED (2026-08-11, SLICE 58)
+
+There is a sentence in the north star that has been sitting there like a loaded instruction for two days, and it reads: this closes a loop.
+
+The chapter is 52.2.1, and it is describing what Matthew Botvinick, Todd Braver, Cameron Carter, Deanna Barch and Jonathan Cohen proposed in 2001 about a piece of the brain called the anterior cingulate cortex. Their claim was a deflationary one, and that is what makes it useful. The cingulate, they said, does not exert control at all. It detects conflict - the simultaneous activation of incompatible responses - and passes that signal along to the lateral prefrontal cortex, which is the part that actually does something about it. And then the sentence that made this a slice: conflict signals that control is insufficient, control is increased, conflict falls.
+
+That is a thermostat. A thermostat for indecision.
+
+The north-star gap analysis had already noticed that konnectome owned all the parts of one and had never assembled it. There is a pack called override_controller, built long ago, which holds a set of competing drives - each with a name, a vitality ranking, a distress level, and an action it wants performed - and resolves them against a threshold. There is a pack called stabiliser, built at slice 44, whose entire job is to publish a scalar that says how far apart two boundaries should sit. The analysis listed these as two of three pieces of a loop nobody had closed, called the work wiring rather than invention, and moved on.
+
+It was right about the pieces. It was wrong about the cost, in the way these estimates are usually wrong: the wiring was an afternoon, and the two numbers standing in front of the wiring were the slice.
+
+Here is the first one. What, exactly, is conflict?
+
+The chapter says "the simultaneous activation of incompatible responses" and then, having said it, moves on to talk about what the loop predicts. It gives no equation. The corpus was searched for one and does not contain it. So somebody has to decide what a number called conflict is computed from, and that somebody is konnectome, and under the Twenty-First Commandment the requirement is not that it refrain but that it sign its name.
+
+The form chosen is the sum, over every pair of simultaneously active drives that want DIFFERENT things done, of the product of their two distresses. It earns its place by three properties, each of which the definition demands and a simpler count would throw away. One active drive is not a conflict, because a response with nothing opposing it is just a decision. Three active drives that all want the same thing are not a conflict either, because agreement is not incompatibility - and this is the property that a naive "how many drives are shouting" measure gets wrong. And conflict has to rise both with the number of competitors and with how strongly each is competing, because "activation" is a quantity in the chapter's own sentence and not a flag.
+
+That form is konnectome's, it says so on the face of the code, and it is the only thing in this slice that is.
+
+Now the second number, which is worse.
+
+Suppose you have measured conflict. The loop says control goes up. Up by how much? A unit of conflict buys how much control? There is a coefficient there, and the chapter does not supply it, and the temptation is enormous, because any small number would work. Nought point one. Nought point five. The tests would go green, the loop would run, and the number would sit in the source file one line beneath a citation of a real 2001 paper in Psychological Review, looking for all the world like something Botvinick had measured.
+
+And it is worse than merely unsupported, which is the part that settled it. The very next section of the same chapter, 52.2.4, is titled with the word "alternatives", and it reports that three serious rivals to conflict monitoring now exist and that none has won. One of them - Shenhav, Botvinick and Cohen's expected value of control - says the allocation is a cost-benefit calculation weighing the payoff of a controlled process against the amount of control needed and the intrinsic cost of cognitive effort. konnectome has no representation of the payoff and none of the cost. To write a coupling constant into this pack would not just be inventing a number. It would be quietly picking a winner in a dispute the field has not settled, and then citing the field.
+
+So the gain belongs to the caller, and the pack refuses to have an opinion about it.
+
+Which would be an unsatisfying place to stop - a loop with a hole where its most important number goes is not obviously a closed loop - except that the previous slice had left behind a method for exactly this, and it worked a second time on the first try.
+
+The rule Tare wrote down was: before you choose a number, check whether what you actually need is a comparison. And it turns out this chapter, like the faculty specification before it, supplies its own acceptance test in comparative form and has been supplying it for twenty-five years. It is called the Gratton effect. Interference on a conflicted trial is SMALLER when the previous trial was also conflicted, because the conflict on the earlier trial recruited control that is still in place when the next one arrives.
+
+That is an ablation. Run the identical trial twice: once following a conflicted trial, so that control has been raised and carried forward, and once following a calm one, so that it has not. Compare. The loop is working if the first is less than the second.
+
+And here is the property that makes the refusal free rather than merely principled: THAT INEQUALITY HOLDS FOR EVERY POSITIVE GAIN. Any coefficient greater than zero raises control, any raised control mutes some competitors, any muted competitor lowers the measure. The direction of the result does not depend on the size of the coupling - only on its sign, which the chapter does state. There is a test in the suite that runs the comparison at four different gains spanning two orders of magnitude, and it passes at all four, and that test exists to pin the claim that the number was never needed.
+
+With a base threshold of nought point five and a gain of nought point one five, a trial of three mutually incompatible drives scores a conflict of 1.91. Run it after a calm trial and it scores 1.91 again. Run it after a conflicted one and it scores 0.72. Nobody chose a passing mark. The criterion is the inequality.
+
+One detail there was deliberate and is worth flagging, because it is a lesson this build learned two days ago at some cost. The fall is partial - 1.91 down to 0.72, not down to zero. It would have been easy to pick a larger gain and produce a beautiful demonstration in which conflict vanished entirely, and that demonstration would have been worthless, because a conflict of zero is also what you get when the loop has simply muted every drive in the machine. Slice 56 was the slice that learned to distrust a perfect score. A partial fall distinguishes a working loop from a silenced one. A total fall does not.
+
+And then, one line before the end, the slice found the thing it will be remembered for.
+
+The loop's whole business is raising a threshold. Drives must exceed a boundary to seize control, and every turn of the loop pushes that boundary up. Now go and read the header comment on override_controller, which has been sitting in this repository unchanged since it was written, and which states in plain English that the pack exists to enforce one thing above all others: breathing beats deliberation. Respiration is rank zero. It can never be suppressed. That comment calls it the System's one inviolable safety property.
+
+Put the two together. Take a mind in serious conflict. The loop measures it, raises the boundary, measures again, raises again. And at some point the boundary passes above the distress level of the respiration drive.
+
+At that moment the arbitrator reports, correctly, that no drive is in distress. The conflict measure reports, correctly, that conflict is zero. The loop reports, correctly, that control has succeeded and may now rest. Every one of those three statements is true. The machine is not breathing.
+
+Nothing would have failed. There is no test in nine hundred and ninety that would have gone red, because each component was doing exactly what it was built to do and the catastrophe lived only in their composition. This is the seventh consecutive slice to find a defect of this shape, and the first to find one that did not exist in either part beforehand - it was manufactured by the join.
+
+The fix is four lines and it is a refusal rather than a warning: a drive at or beneath the inviolable rank faces the base threshold always, no matter how high control has climbed. The rule lives in exactly one predicate, because a safety property written down in two places is a safety property that can come apart in one of them. There are two tests. The first shows respiration still seizing control after the threshold has been raised to two hundred times its distress. The second is the one that matters - it takes the same drive with the same distress, gives it an ordinary rank instead of the protected one, and shows that the identical raise DOES mute it. Without that second test the first proves nothing, because a test that would pass even if the feature were absent is not evidence of anything.
+
+It should be said plainly that konnectome is departing from the chapter here, on purpose. Botvinick's loop contains no such exemption and does not need one. A laboratory conflict task, where a volunteer presses arrow keys in response to arrows, has nothing in it that can kill the participant if control gets too high. konnectome's machine has a homeostatic floor underneath it, and that changes what the same loop means. The corpus is not wrong. The corpus is silent about a hazard that only comes into existence when its loop is embedded in something that has to keep breathing, and that silence is now recorded rather than discovered again later.
+
+Three pieces were named and two were joined. The supervisor is the third, and its part in this is the part a watchdog always plays: to notice when the loop fails to do what it promises. Two fault regimes were declared in the supervisor's own vocabulary - control raised without relief, and control ratcheting upward while conflict stays put - along with readings in the supervisor's own reading shape, carrying an allowance the caller supplies and this pack never invents.
+
+But the watch is not called, and the reason is a refusal rather than an oversight. The supervisor judges a mode register's fault block, and this construct has no mode register. Building one would mean writing down the construct's modes, its per-mode transfer function and its transition table, and not one of those three has been read out of the corpus yet. A mode register invented so that a function call would compile is precisely the thing this build spent nine slices learning not to do. So the regimes stand declared and ready, the gap is written into the ledger as an observation with its closer named, and the loop is two-thirds joined and honest about the third.
+
+The pack is not wired into anything. The cognitive cycle does not call it. No run konnectome performs today turns this loop even once. That is the fifth time this build has deliberately constructed a mechanism and left it unattached, after the eligibility trace, the blackboard, the durable tier and the efference copy - and it remains the right call, because wiring is a decision about when a thing should run, and that decision deserves its own slice rather than being smuggled in at the end of somebody else's.
+
+THE RECORD OF WHAT WAS FIXED, WHICH THE SIXTEENTH COMMANDMENT MAKES THIS DOCUMENT'S JOB. One auto-fix, in docs/DSPARCD/README.txt, and it is the same species this build keeps finding: A COUNT WRITTEN INTO A SENTENCE THAT EXPLAINS WHY THE COUNT IS WHAT IT IS.
+
+The paragraph in question exists to tell a reader why six of the seven phase files share a version number and the seventh does not, which is a durable and correct point. It made that point by saying "Six of the seven are at v48". They were at v54 when this session opened them and are at v55 now, so the sentence had been wrong for seven slices while the argument around it stayed right. It now reads v55, which buys correctness until the next bump and no further - and the honest note is that the deeper fix is the one the Constitution's own version 18 audit wrote down: a sentence that states a rule should not decorate itself with a fact the directory already carries. The number is left in this time because the paragraph is genuinely comparing two version numbers and cannot make its point without them; if it rots again, the right repair is to rewrite the comparison rather than to chase the figure a third time.
+
+No defect in running code was found by the slice's own work, and the one hazard it did find is not a repair at all. A mind that could raise its own attention threshold above its need to breathe is not a fault in any existing pack - both packs were correct - so it went to the ledger as an observation with a refusal built into the new code, which is where the repair-versus-decision line puts it.
+
+Twenty-three tests. Thirty-nine packs. Nine hundred and ninety.
+
+
+CHAPTER FIFTY-EIGHT - THE DOCUMENT THAT WAS ABANDONED BECAUSE SOMETHING ELSE TOOK OVER THE VISIBLE HALF OF ITS JOB (2026-08-11, SLICE 59)
+
+The second slice of the pair is a document, and the reason it is worth a chapter is that four consecutive sessions declined to write it and every one of them gave a good reason.
+
+The document is the Eighth Commandment analysis - the top-down reading of the thirty-eight-document neuroscience corpus against the konnectome that actually exists. Version 3 was written at slice 47. Slices 48 through 58 were built without it being touched. Each hand-off since has named version 4 as the clearest small item on the queue, and each session has looked at it, agreed, and built something else.
+
+Their stated reason was the same every time and it was true: the wiring slices were cheaper, and the north-star gap analysis led anyway.
+
+That last clause is the interesting one, and it took writing version 4 to see what was wrong with it.
+
+On 2026-08-10 the Constitution gained a Twentieth Commandment declaring two documents the north star and requiring an analysis run of their own. That run produced a second analysis, and its Part Nine is a queue ordered by value per unit of effort. It is a good queue. Eleven slices came out of it, including both of this session's. Every session that said the newer analysis led the queue was correct.
+
+But the older document does not only hold a queue.
+
+It holds the walls-and-watches judgment - the eight standing candidates for a change order against a frozen cousin, each with the condition that would make it real. It holds the eleventh-component question, deliberately undecided since version 1. It holds the verdict on the ten architectural components and the record of how many assessments that verdict has survived. THE NEWER ANALYSIS CARRIES NONE OF THOSE. Nothing in it re-examines the ten components, and nothing in it touches the change-order gates.
+
+So for eleven slices the only live statement of what routes to causalontology, and of which top-level decisions had survived what, was a document nobody was updating - not because anyone decided the walls judgment could go stale, but because it shared a file with a queue that had been replaced.
+
+THE FAILURE MODE HAS A SHAPE AND IT IS WORTH A NAME: WHEN A NEWER DOCUMENT SUPERSEDES PART OF AN OLDER ONE, THE OLDER ONE GETS ABANDONED WHOLE. The half that was superseded is visible, because somebody is reading the replacement every day. The half that was not superseded is invisible, precisely because nothing replaced it and so nothing draws attention to its absence.
+
+Version 4 therefore does something no previous version had to do: it states the relationship between the two analyses explicitly, in both directions. For what should I build next, read the newer one - it is newer, it is ordered by value, and it is what the last five sessions actually used. For may I build it this way and does it route anywhere, read this one, because the walls and the watches and the verdict are here and are not duplicated there. Where the two order the same work differently, the newer leads, and version 4 marks each point of difference rather than pretending there are none.
+
+The rest of the write is arithmetic of a slow kind. Six numbered decisions became fifteen. Four codebase claims were re-checked and two no longer held - working memory is no longer absent, it is two packs. Family Four's front is built: items one, three and four done at slices 48, 49 and 50. Theme Two's blocking prerequisite is built, which unblocks three items that have been waiting since version 2. Part Five gained no new watch at all, which is itself a finding worth having: eleven slices, nine decisions and an entire second analysis produced not one new candidate for either change order, and a falling rate of wall candidates against a steady rate of building is what an adequate architecture looks like from the inside.
+
+Two results are worth pulling out of the arithmetic.
+
+The first is that version 3 made a prediction and the prediction came true. It argued that the first real downward assignment did not need the region-grain construct that had been blocking it - it needed a singleton with a mode register - and it named the working-memory board as the thing that would satisfy that, because there is one board and there are many gates. Slice 50 built it, it worked for exactly that reason, and the reason was promoted into a numbered decision. A document that predicts which slice will succeed, on a stated mechanism, and is then right, has earned something a document that merely describes the past has not.
+
+The second is less comfortable and is about the document itself. Version 3's closing named fragmentation as the real maintenance failure - a finding filed under the family that discovered it is a finding nobody can add up - and warned that staleness was the lesser problem. Both then happened again. Fragmentation recurred, with four separate faculties turning out to be blocked by one thin perceptual channel described in four vocabularies, and it was the OTHER analysis that noticed. And staleness recurred worse than before, eleven slices against six.
+
+So writing a warning into a document does not cause anyone to act on it. What actually fixed Theme Five's staleness was not the warning version 2 wrote about it; it was version 3 moving that family to the front of Part Six, where the next session had to walk past it. A finding has to be moved to where the work happens, or it does not move at all.
+
+One repair went into the Constitution alongside the write, and it is the same species of fault seen from a different angle. The Eighth Commandment carries a pointer at this analysis so that a session reading the Constitution alone can find the fulfilment of an obligation the Constitution imposes. Version 6 wrote that pointer as v1. Version 11 found it stale and chased it to v3, changing no rule and explaining carefully why the chase mattered. And it went stale again at the very next write of the document it points at - which was not bad luck. A version number written into a pointer at a document this Constitution REQUIRES TO BE KEPT CURRENT is guaranteed to rot, on a schedule the Constitution itself sets.
+
+The Constitution's own version 18 audit had already written the fix and this line simply was not reached by it: when a record refers to a live document, drop the part that can go stale rather than updating it. The pointer now names the directory and the document's NUMBER - docs/design/ was numbered 01 through 10 in reading and fulfilment order last week, and 01 is this analysis whatever version it reaches - together with the uniqueness rule that identifies the current one. That is the same technique the Eighteenth Commandment already uses to name the current tutorial without naming a version.
+
+The general form is worth keeping, because two Commandments have now needed it. A POINTER AT A DOCUMENT THAT IS REQUIRED TO BE MAINTAINED MUST IDENTIFY IT BY SOMETHING THAT MAINTENANCE DOES NOT CHANGE. A directory survives maintenance. A number survives maintenance. A uniqueness rule survives maintenance. A version suffix is the one part of a filename that maintenance is certain to alter, and it is the part that kept being written down.
+
+The Constitution stands at version twenty-five, twenty-two commandments, none added, none renumbered, no rule changed.
+
+And version 4 closes with the one thing it would say to whoever writes version 5. It was named as a small item four times and it was not small - reconciling two analyses of equal standing across eleven slices, nine decisions and two observations is most of a session. The three sessions that declined it were not being lazy. They were judging its size correctly and judging the cost of deferral to be zero, and that second judgment was the wrong one. If the next version is deferred, it should be deferred with that cost named out loud.
+
+
+From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER FIFTY-NINE, and the story goes on being true.
 

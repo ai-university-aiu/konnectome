@@ -269,14 +269,26 @@ Now the sober instructions that make the fanfare safe:
    error and is corrected here. SECOND, the analysis this rule mandates was never named, so a
    session reading the constitution alone could not find the fulfilment of an obligation the
    constitution itself imposes; it lives at
-   /home/ccaitwo/konnectome/docs/design/01_vision_set_top_down_analysis_v3.txt
-   (REPOINTED in version 11, by the owner's instruction of 2026-08-10. This line named the analysis
-   at _v1 because _v1 was current when version 6 of this Constitution wrote it, and the analysis has
-   since reached _v3 with its predecessors archived under the Eleventh Commandment. The line's
-   purpose is to let a session reading the Constitution alone FIND the fulfilment of an obligation
-   this Constitution imposes, so a stale version here defeats the whole point of the sentence. The
-   superseded versions remain readable in docs/archive/ and the standing rule below is what governs
-   which one leads: a LATER assessment supersedes an earlier one. No rule changed.) THIRD, and most
+   /home/ccaitwo/konnectome/docs/design/ , as the document numbered 01 - and the CURRENT version of
+   it is the only 01_vision_set_top_down_analysis file in that directory, every superseded one being
+   in docs/archive/ under the Eleventh Commandment.
+   (REPOINTED in version 11, by the owner's instruction of 2026-08-10; AND THE VERSION DROPPED
+   ALTOGETHER IN VERSION 25, on the writing of the analysis's version 4. The history of this one line
+   is the argument for what it now says. Version 6 wrote it as _v1. Version 11 found it stale and
+   chased it to _v3, noting correctly that the line's purpose is to let a session reading the
+   Constitution alone FIND the fulfilment of an obligation this Constitution imposes, so a stale
+   version here defeats the whole point of the sentence. IT WENT STALE AGAIN THE NEXT TIME THE
+   ANALYSIS WAS WRITTEN, which is exactly what version 11 had guaranteed by writing a version number
+   into a pointer at a document this Constitution requires to be kept CURRENT.
+   SO THIS AMENDMENT APPLIES THE RULE THE VERSION 18 POINTER AUDIT WROTE DOWN AND THIS LINE ESCAPED:
+   WHEN A RECORD REFERS TO A LIVE DOCUMENT, THE FIX IS TO DROP THE PART THAT CAN GO STALE, NOT TO
+   UPDATE IT. The line now names the DIRECTORY and the document's NUMBER, and the number is durable
+   in a way the version is not - docs/design/ was numbered 01 through 10 in reading and fulfilment
+   order, and 01 is this analysis whatever version it has reached. The uniqueness rule is stated
+   alongside it, which is the same technique the Eighteenth Commandment uses to identify the current
+   tutorial without naming a version. The superseded versions remain readable in docs/archive/ and
+   the standing rule below is what governs which one leads: a LATER assessment supersedes an earlier
+   one. No rule changed.) THIRD, and most
    important, its STANDING is now stated here so that no session has to infer it.
    (CORRECTED in version 7, by the owner's instruction of 2026-08-09. Version 6 stated flatly that
    the analysis is derived and carries no guiding authority of its own. That was accurate about its
@@ -833,8 +845,30 @@ commit because they are one act: the document that was the instruction becomes a
 moment the next one becomes the instruction, and splitting them across two changes would leave a
 commit in which /docs/ holds two hand-offs or none.
 
-VERSION HISTORY NOTE (extended in version 24). This Constitution is at VERSION 24, and holds
+VERSION HISTORY NOTE (extended in version 25). This Constitution is at VERSION 25, and holds
 TWENTY-TWO Commandments.
+
+Version 25, on the writing of the vision-set analysis's version 4 at slice 58, DROPS A VERSION NUMBER
+FROM THE EIGHTH COMMANDMENT'S POINTER at that analysis. NO COMMANDMENT WAS ADDED, REMOVED, OR
+RENUMBERED, and NO RULE CHANGED; the count stands at twenty-two.
+
+WHY THIS IS A REPAIR AND NOT A REPOINTING, WHICH IS THE WHOLE INTEREST OF IT. Version 11 repointed
+this same line from _v1 to _v3 and changed no rule. That was correct and it was insufficient, and the
+proof is that the line went stale again at the very next write of the document it points at. A
+version number written into a pointer at a document THIS CONSTITUTION REQUIRES TO BE KEPT CURRENT is
+not merely at risk of rotting - it is guaranteed to rot, on a schedule this Constitution itself sets.
+
+THE FIX IS THE ONE THE VERSION 18 AUDIT ALREADY WROTE DOWN AND THIS LINE WAS NOT REACHED BY: WHEN A
+RECORD REFERS TO A LIVE DOCUMENT, DROP THE PART THAT CAN GO STALE RATHER THAN UPDATING IT. The line
+now names docs/design/ and the document's NUMBER, 01, together with the uniqueness rule that
+identifies the current version - the same technique the Eighteenth Commandment uses for the tutorial.
+The number is durable where the version is not: docs/design/ was numbered 01 through 10 in reading
+and fulfilment order, and 01 is this analysis whatever version it reaches.
+
+AND THE GENERAL FORM IS WORTH STATING ONCE, because two Commandments have now needed it: A POINTER AT
+A DOCUMENT THAT IS REQUIRED TO BE MAINTAINED MUST IDENTIFY IT BY SOMETHING THAT MAINTENANCE DOES NOT
+CHANGE. A directory, a number, or a uniqueness rule survives maintenance. A version suffix is the one
+part of a filename that maintenance is certain to alter.
 
 Version 24, by the owner's instruction of 2026-08-11, REPOINTS THE SIXTH COMMANDMENT. The English
 Readable Code manuscript moves from the top level of /docs/ into docs/principles/ , and the

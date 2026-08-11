@@ -1,0 +1,318 @@
+THE VISION DOCUMENT SET, READ TOP-DOWN
+
+The Eighth Commandment analysis: the Certified_Neuroscientist corpus of thirty-eight documents, read from the framework downward, assessed against the konnectome that exists.
+
+Date: 2026-08-11. Version 4. Originally executed against the slice-34 baseline; amended through slice 41 and re-measured in full at slice 40 for version 2; re-assessed in full at slice 47 for version 3; RE-ASSESSED AT SLICE 58 FOR THIS VERSION, against main at bb4b77b, 990 tests across 39 packs, four gates at zero violations plus the naming gate's self-test, capstone clean and byte-identical, conformance 137 of 137 STANDING WHERE SLICE 47 MEASURED IT AND NOT RE-MEASURED HERE.
+
+
+WHAT CHANGED IN VERSION 4, STATED FIRST SO NOBODY HAS TO DIFF IT
+
+SIX THINGS, in descending order of consequence.
+
+FIRST, AND IT IS THE REASON THIS VERSION IS DIFFICULT RATHER THAN MERELY LATE: THIS DOCUMENT IS NO LONGER THE QUEUE OF RECORD, AND SAYING SO IS THE MOST USEFUL THING IT CAN DO. On 2026-08-10 the Constitution gained a TWENTIETH COMMANDMENT declaring two documents the north star and mandating an analysis run of their own. That run produced docs/design/02_north_star_gap_analysis_v1.txt, and its Part Nine has been the working queue for eleven slices. Version 3 could not have known this was coming. A reader who opens this document expecting the live queue will be reading an eleven-slice-old ordering that a newer authority has already superseded in part. THE RELATIONSHIP BETWEEN THE TWO IS NOW STATED EXPLICITLY BELOW, and it is not "the new one wins".
+
+SECOND, VERSION 3'S CENTRAL PREDICTION CAME TRUE AND WAS VERIFIED BY BUILDING, which is the strongest single result in this version. Part Four-A argued that the first real downward assignment did not need the region-grain construct - it needed A SINGLETON WITH A MODE REGISTER - and that the working-memory board would be exactly that because there is one board and there are many gates. Slice 50 built it and it worked for precisely that reason. A document that predicts which slice will succeed, on a stated mechanism, and is then right, has earned a different kind of confidence than one that describes what already happened.
+
+THIRD, FAMILY FOUR'S FRONT IS BUILT. Version 3 moved the cognitive cluster to the front of Part Six and argued the ordering rather than inheriting it. Items 1, 3 and 4 are done, at slices 48, 49 and 50. Item 5, attention, is next and is genuinely unblocked. THE ORDERING ARGUMENT WAS ACTED ON AND HELD.
+
+FOURTH, THE NUMBERED DECISIONS HAVE GONE FROM SIX TO FIFTEEN, and the pattern version 3 identified has strengthened rather than merely continued: NINE OF THE FIFTEEN ARE REFUSALS OR DERIVATIONS RATHER THAN CHOSEN VALUES. Part Zero is rebuilt below. Two new OBSERVATIONS also bear directly on this document's own findings and are noted where they land.
+
+FIFTH, NO FINDING OF VERSIONS 1, 2 OR 3 IS REVERSED. Part One's verdict now survives four assessments, five deep reads, a fidelity audit, a north-star gap analysis and twenty-four further slices. Three findings are SHARPENED and one is CLOSED - Part Four-A's cheap half is discharged by slice 50 and is recorded as closed rather than deleted.
+
+SIXTH, THE FRAGMENTATION FAILURE VERSION 3 NAMED HAS HAPPENED AGAIN, IN A DIFFERENT VOCABULARY, AND WAS CAUGHT BY THE NEWER ANALYSIS RATHER THAN BY THIS ONE. Version 3's closing said the failure mode is not staleness but FRAGMENTATION - a finding filed under the family that discovered it is a finding nobody can add up. The north-star run then found four faculties independently blocked by ONE thin perceptual channel, described in four vocabularies. The warning was correct, was written down, and did not prevent the next instance. That is recorded in Part Seven rather than glossed.
+
+
+WHAT THIS DOCUMENT IS, AND WHAT IT IS NOT - READ THIS BEFORE BUILDING FROM ANYTHING BELOW
+
+THIS DOCUMENT HOLDS TWO KINDS OF CONTENT, AND THEY DO NOT CARRY THE SAME WEIGHT. The distinction was drawn in version 1's preamble, corrected on 2026-08-09, restated in versions 2 and 3, and is unchanged here.
+
+FIRST KIND - THE SUMMARIES. Where this document summarises the Vision Document Set, it is DERIVED and carries no authority over the corpus. Part Two, the five refinement themes, is almost entirely of this kind. Where a summary here and the corpus disagree, THE CORPUS WINS and this document is the thing corrected.
+
+SECOND KIND - THE FINDINGS, and they are the larger part. Part One's verdict, Part Four's pressures, Part Five's walls-and-watches judgment and Part Six's slice families are NOT summaries of anything. They are konnectome's OWN ASSESSMENT, produced by holding thirty-eight documents against a running codebase, and THE CORPUS CANNOT CONTAIN THEM because the corpus knows nothing about konnectome. They are superseded by a LATER ASSESSMENT, never by the corpus. THIS VERSION IS SUCH A LATER ASSESSMENT; version 3 is archived under the Eleventh Commandment rather than deleted.
+
+THE THIRD KIND, NAMED IN VERSION 3 AND UNCHANGED: THE LEDGER'S NUMBERED DECISIONS outrank this document on the questions they settle, because a decision is a CLOSED question and a finding is an OPEN assessment. Fifteen exist. Where this document appears to leave something open that a decision has closed, the decision leads and this document is the thing corrected.
+
+AND A FOURTH KIND, NEW IN VERSION 4, WHICH IS THE ONE THAT NEEDS THE MOST CARE: A SECOND ANALYSIS OF EQUAL STANDING.
+
+docs/design/02_north_star_gap_analysis_v1.txt is the Twentieth Commandment's deliverable. It is not this document's subordinate and it is not this document's replacement, and getting that relationship wrong in either direction would be expensive.
+
+WHY IT IS NOT SUBORDINATE. It was produced by the same method against a DIFFERENT SOURCE - the two Neuroscience of Cognition documents and the whole north-star directory, rather than the thirty-eight-document Vision Document Set - under a Commandment of its own. Its findings are konnectome's own assessment exactly as this document's are, and they are superseded only by a later assessment. It found things this document never could, because it was reading text this document never read.
+
+WHY IT IS NOT A REPLACEMENT. It is a GAP ANALYSIS and this is a TOP-DOWN ARCHITECTURAL ASSESSMENT, and those answer different questions. Its Part Nine orders work by value per unit effort against the north star; this document's Part Six orders families against the architecture and carries the walls-and-watches judgment, the eleventh-component question, and the record of which top-level decisions have survived how many assessments. NOTHING IN THE NORTH-STAR ANALYSIS RE-EXAMINES THE TEN COMPONENTS, and nothing in it carries the change-order gates.
+
+THE PRACTICAL RULE, STATED SO NO SESSION HAS TO INFER IT. FOR "WHAT SHOULD I BUILD NEXT", READ 02 FIRST - it is newer, it is ordered by value, and it is the queue the last five sessions actually worked from. FOR "MAY I BUILD IT THIS WAY, AND DOES IT ROUTE ANYWHERE", READ 01 - the walls, the watches, the pressures and the verdict live here and are not duplicated there. Where the two order the same work differently, THE NEWER ORDERING LEADS AND THIS DOCUMENT SAYS SO IN PART SIX at each point of difference.
+
+A THEME BELOW IS A SUMMARY, NOT A SPECIFICATION. DO NOT DESIGN A SLICE FROM A THEME. Read the corpus underneath it first. This rule is now doubly warranted: the Twentieth Commandment's sixth rule states it independently for the north-star analysis, and slice 56 is a worked example of why - a slice built from Chapter 63.2.1 was corrected, one line before it merged, by Chapter 63.2.4 sitting three sections below it.
+
+THE GUIDING AUTHORITY, which this document sits beneath rather than within, runs: CONSTITUTION.md (NOW AT VERSION 24, HOLDING TWENTY-TWO COMMANDMENTS - version 3 said version 10, and seven Commandments have been added since); then docs/DSPARCD/konnectome_0_definition (which did not exist when version 3 was written and which now leads the rest of the DSPARCD Fileset); then the First Commandment's three Artificial General Intelligence and Artificial Super Intelligence documents in docs/principles/; then the two north-star documents of the Twentieth Commandment; then docs/neuroscience/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt, the guiding book; then the thirty-eight documents of the VISION DOCUMENT SET itself.
+
+A NOTE ON PATHS, UPDATED IN VERSION 4. Version 3 recorded the move of every source neuroscience document into docs/neuroscience/. Since then konnectome's own design documents have been gathered into docs/design/ AND NUMBERED 01 THROUGH 10, where THE NUMBER IS THE READING ORDER AND THE FULFILMENT ORDER AT ONCE. This document is 01. Every path in this version is written post-numbering, and a path quoted from version 3 or earlier will not resolve.
+
+
+PART ZERO - THE FIFTEEN NUMBERED DECISIONS
+
+These are konnectome's own, they are CLOSED, and none may ever be presented as the corpus's instruction. They are summarised here for navigation only; the ledger carries each one's reasons and its list of what it does NOT decide. READ THE LEDGER ENTRY BEFORE ASSUMING A DECISION SETTLED SOMETHING.
+
+DECISION-1 (slice 41). A THROWN MODE IS A COMMAND AT THE DISCRETE GRAIN, AND BIAS IS THE CHANNEL KONNECTOME ALREADY HAS, with preemption as the conflict rule. Now inherited by five families.
+
+DECISION-2 (slice 43). ONE HUNDRED TICKS TO THE NOMINAL SECOND. A duration that is not a whole number of ticks is REFUSED, never rounded.
+
+DECISION-3 (slice 44). THE PUBLISHED STABILITY BIAS GOVERNS THE CONSTRUCT GRAIN ONLY, with the motif grain refused by name.
+
+DECISION-4 (slice 45). A WATCHDOG'S WINDOW BELONGS TO THE CALLER, and a window the history does not yet span is reported as NOT-YET-MEASURED, never as clean.
+
+DECISION-5 (slice 46). THE ONLINE-OFFLINE BINARY IS PRESERVED AS THE POLE with a sub-mode beneath it, and the downward assignment is keyed on the WHOLE STATE.
+
+DECISION-6 (slice 47). A WATCHDOG'S WINDOW FOR A CONSTRUCT THAT HAS A CYCLE IS THAT CONSTRUCT'S OWN CYCLE, read from its own parameters.
+
+DECISION-7 (slice 48). THE ROSTER DECLARES AND DOES NOT GUARD, and the corpus's name is the one that is used.
+
+DECISION-8 (slice 49). THE ACTIVATION GRAIN: ONE HUNDRED PARTS TO THE UNIT ACTIVATION, so a decay that does not land exactly is refused rather than rounded - the same shape as DECISION-2, one grain down.
+
+DECISION-9 (slice 50). A DOWNWARD ASSIGNMENT MAY ADDRESS A CONSTRUCT OF WHICH THERE IS EXACTLY ONE. This is Part Four-A's cheap half, taken as a decision.
+
+DECISION-10 (slice 52). A SCALING FACTOR THAT IS NOT STRICTLY POSITIVE IS REFUSED ALOUD rather than clipped, because a clip annihilates.
+
+DECISION-11 (slice 53). THE DURABLE WEIGHT TIER IS A MAINTAINED PROCESS, NOT A STORED NUMBER - which is exactly the mistake the north-star analysis said it most expected konnectome to make, avoided.
+
+DECISION-12 (slice 54). THE RENORMALISER'S DOMAIN IS THE EXCITATORY CONTACTS, and until an edge carries a declared polarity field the SIGN OF ITS WEIGHT IS ITS POLARITY.
+
+DECISION-13 (slice 56). THE COMPARATOR PUBLISHES A CUE AND REFUSES TO PUBLISH A VERDICT OF AGENCY, enforced by a predicate that throws.
+
+DECISION-14 (slice 57). A COMPETENCE IS A CALLER-NAMED SET OF EDGES AND ITS SCORE IS THEIR SUMMED WEIGHT; AND AN ACCEPTANCE CRITERION IS MET BY COMPARISON AGAINST AN ABLATION, never against a threshold konnectome chose.
+
+DECISION-15 (slice 58). THE FORM OF THE CONFLICT MEASURE IS KONNECTOME'S OWN AND SIGNED AS SUCH; THE GAIN THAT COUPLES CONFLICT TO CONTROL IS THE CALLER'S, because the loop's acceptance test is an inequality that holds for every positive gain.
+
+THE PATTERN ACROSS THE FIFTEEN, WHICH IS STRONGER THAN IT WAS AT SIX. Version 3 found four of six were refusals rather than values and called that the mechanism producing enforcement rather than configuration. NINE OF FIFTEEN ARE NOW REFUSALS OR DERIVATIONS. And a sharper sub-pattern has appeared in the last two: DECISION-14 AND DECISION-15 ARE THE SAME MOVE. Each met a place where a threshold seemed required, and each found that the requirement dissolved into a COMPARISON the source had already stated. The rule those two produced is the most portable thing this build currently owns: A TEST THAT NEEDS A THRESHOLD HAS USUALLY NOT YET FOUND ITS ABLATION.
+
+AND ONE CORRECTION TO VERSION 3'S OWN FRAMING OF THIS, REQUIRED BY THE CONSTITUTION. Version 3 was written before the TWENTY-FIRST COMMANDMENT, the Order of Resort, which states that konnectome MAY invent a value as the protocol of last resort provided it declares what was chosen, why, what else was tried, and that the choice is konnectome's. Version 3's admiration for refusals should not be read as a prohibition on choosing. THE SIN WAS NEVER INVENTING; THE SIN IS DISGUISING. DECISION-15's first half is an invention properly declared, and it belongs in this list beside the refusals rather than being quietly counted as one.
+
+
+THE DEEP READS - THE DESIGN AUTHORITIES BENEATH THE THEMES
+
+Read the authority, not the theme. Each holds the same two kinds of content as this document. All five are unchanged since version 3 and all five are now numbered.
+
+THEME ONE, the mode register: docs/design/05_mode_register_design_authority_v1.txt. ITS PART NINE IS ENTIRELY CLOSED. Its Part Seven's eight undecided items are now three: items 1, 4 and 6 are answered as DECISION-1, DECISION-5 and DECISION-9, and item 3 is re-scoped in Part Four below.
+
+THEME TWO, the two-shift principle: docs/design/06_two_shift_design_authority_v1.txt. Live. Item (e)'s PREREQUISITE IS NOW BUILT - see Part Two.
+
+THEME THREE, the edge type system: docs/design/07_edge_type_design_authority_v1.txt. Live and entirely unbuilt. IT HAS A KNOWN OMISSION recorded in the north-star analysis: it missed that the homeostatic scaler is a SECOND CONSUMER of the sign field it was asking for, which DECISION-12 has since had to settle as a stopgap.
+
+THEMES FOUR AND FIVE: docs/design/08_motif_and_workspace_design_authority_v1.txt. Live and entirely unbuilt. IT ALSO HAS A KNOWN OMISSION: it missed Layer 8's Part Ten entirely.
+
+AND THE AUDIT OF THIS DOCUMENT ITSELF: docs/design/03_vision_set_analysis_fidelity_audit_v1.txt. ITS FINDINGS CARRY FORWARD UNCHANGED and version 4 did not re-run it. THE NOTE VERSION 3 ATTACHED NOW NEEDS SHARPENING RATHER THAN REPEATING: the corrected corpus counts have now stood THREE versions without re-measurement. Version 3 said that was an argument and not a measurement, and it is a weaker argument at eighteen slices than it was at seven. A session that needs one of them to be exact must re-measure. NOTE HOWEVER that the north-star analysis independently re-counted the Layer 6 chapters at 386 and CONFIRMED the figure this document carries, which is the first outside corroboration any of these counts has had.
+
+TWO FURTHER DESIGN DOCUMENTS EXIST THAT VERSION 3 DID NOT LIST, because the numbering that gathers them is newer than version 3: docs/design/04_neuroscience_corpus_qa_gap_analysis_v1.txt, docs/design/09_cognitive_architectures_coverage_v1.txt, and docs/design/10_rung_five_real_machine_design_v2.txt. The coverage survey is the Ninth Commandment's, and it holds the same two kinds of content as this document and is governed by the same rule.
+
+
+HOW VERSION 4 WAS MADE
+
+Version 3 was written at slice 47 and recorded, as a finding, that it was six slices late. THIS VERSION IS WRITTEN AT SLICE 58 AND IS ELEVEN SLICES LATE, WHICH IS WORSE, AND THE REASON IS DIFFERENT FROM LAST TIME.
+
+Version 3's lateness had a stated cause: three consecutive sessions each judged the write too large to do properly alongside a slice, and each was mid-family. THIS TIME THE CAUSE IS THAT A NEWER DOCUMENT WAS DOING THE JOB. The north-star gap analysis arrived at slice 51 with a Part Nine ordered by value per unit effort, and every session since has worked from it and said so. Three consecutive hand-offs listed "write version 4" as the clearest small item on the queue and three consecutive sessions declined it, each recording the same honest reason: the wiring slices were cheaper and the north-star analysis led anyway.
+
+THAT REASON WAS CORRECT ABOUT THE QUEUE AND WRONG ABOUT THE DOCUMENT, AND THE DISTINCTION IS THIS VERSION'S CONTRIBUTION TO ITS OWN MAINTENANCE PROBLEM. The north-star analysis genuinely did lead the queue, and following it produced eleven good slices. But this document does not only hold a queue. IT HOLDS THE WALLS-AND-WATCHES JUDGMENT, THE ELEVENTH-COMPONENT QUESTION, AND THE VERDICT ON THE TEN COMPONENTS, AND THE NEWER ANALYSIS CARRIES NONE OF THOSE. For eleven slices the only live statement of what routes to a change order, and of which architectural decisions had survived how many assessments, was a document nobody was updating because a different document had taken over the part of it that was easiest to see.
+
+THE GENERAL LESSON, WRITTEN DOWN BECAUSE IT WILL RECUR: WHEN A NEWER DOCUMENT SUPERSEDES PART OF AN OLDER ONE, THE OLDER ONE GETS ABANDONED WHOLE. Nobody decided that the walls judgment should go unmaintained. It went unmaintained because it shared a file with a queue that had been replaced.
+
+WHAT THIS VERSION DID. It did not re-read the thirty-eight documents; the readings of versions 1 through 3 and the five design authorities beneath them stand, and re-reading them would not have regenerated a single finding. IT RE-MEASURED THE CODEBASE, which is the half of the comparison that moved, and IT READ THE NORTH-STAR ANALYSIS IN FULL and reconciled its findings against this document's, which is new work version 3 did not have to do.
+
+FOUR CODEBASE CLAIMS WERE RE-CHECKED AND TWO NO LONGER HOLD, WHICH IS THE FIRST TIME THAT HAS HAPPENED. Attention and the global workspace remain ABSENT from all thirty-nine packs, and that stands. WORKING MEMORY IS NO LONGER ABSENT - it is two packs, built at slices 49 and 50. A repository-wide search for a naming, addressing or subgraph facility still returns nothing, and that stands. And connection_graph's two edge kinds with one learning rule are still exactly what is there, though DECISION-12 has now had to read polarity out of a weight's sign as a stopgap, which is the first time the absence of an edge type has COST something rather than merely been noted.
+
+
+PART ONE - THE VERDICT ON THE TOP-LEVEL DECISIONS
+
+NO TOP-LEVEL ARCHITECTURAL DECISION MUST BE REVERSED. This survives version 4 unchanged, and it now survives four assessments, five deep reads, a fidelity audit, a north-star gap analysis, and the twenty-four slices since version 2.
+
+The registry-and-scheduler-with-broadcast-bus style survives. The ten components survive. The one-tick data flow and its ordering survive. The dumb scheduler, the no-orchestrator thesis, the never-invent action selector, the passive observer, the vitality-ranked override - all survive.
+
+AND VERSION 4 ADDS AN INDEPENDENT CONFIRMATION FROM OUTSIDE THIS DOCUMENT'S OWN METHOD, WHICH IS THE FIRST TIME THE VERDICT HAS HAD ONE. The north-star gap analysis read a different corpus with a different mandate and produced five CONFIRMATIONS of standing decisions rather than reversals. Two bear directly here. Chapter 13.2 - "a brain region is defined by its interfaces ... a defined origin, a defined destination, a defined cargo and a defined format" - is called by that analysis the strongest warrant konnectome has, and it licenses the pack boundary and the typed edge. And Chapter 52.1.1 - "control is not a separate machine ... IT IS A BIAS SIGNAL" - is an exact description of action_selector_bias/3 and of the never-invent invariant, which is to say THE NO-ORCHESTRATOR THESIS WAS CONFIRMED BY THE ONE CHAPTER MOST LIKELY TO HAVE DEMANDED AN ORCHESTRATOR.
+
+NOTE PRECISELY WHAT THAT SAME CONFIRMATION DOES NOT LICENSE, because the north-star analysis was careful about it and this document should not be less so: it does not license the UNIFORM TICK, and it does not license the PER-MODE TRANSFER FUNCTION. Those two remain konnectome's own and unconfirmed.
+
+AND ONE PIECE OF EVIDENCE RUNS THE OTHER WAY AND IS RECORDED RATHER THAN BURIED. Slice 58 closed the conflict loop and, in doing so, produced a hazard that existed in NEITHER of the two components it joined: a loop that raises a threshold can raise it above the respiration drive's, at which point every component correctly reports success and the mind is not breathing. THE VERDICT IS ABOUT THE COMPONENTS AND THIS IS ABOUT THE COMPOSITION. Nothing here reverses the verdict - the fix was four lines inside the new pack and no component changed - but a survey that only ever asks whether each component is right will not find this class of thing, and four assessments have now asked exactly that question.
+
+
+PART TWO - THE FIVE REFINEMENT THEMES
+
+The themes below are SUMMARIES. Earlier corrections stand and are not repeated at length; what follows is each theme's statement in brief and ITS STATUS AT SLICE 58, which is the part version 4 rewrites.
+
+THEME ONE. THE MODE REGISTER, AT EVERY GRAIN. Every layer's modes companion specifies its constructs as hybrid automata - a register of discrete operating modes, continuous state within the current mode, per-mode transfer functions, an explicit transition table, and fault regimes excluded from the register and watched by supervisor processes instead.
+
+STATUS AT SLICE 58 - BUILT AT THREE GRAINS NOW, AND THE FAMILY REMAINS CLOSED. Version 3 recorded two grains, the construct and the global. Slice 50 added the working-memory board's register and, with it, THE FIRST DOWNWARD ASSIGNMENT THAT ACTUALLY ADDRESSES SOMETHING - the mechanism slice 46 built and could not populate. The three still-missing grains are missing for the reason version 3 gave and it is unchanged: there is no junction-grain register because Theme Three has not landed, no motif-grain register because there are no motifs, and no region-grain register because there are no regions. THE FORMALISM IS FINISHED AND THE THINGS TO APPLY IT TO ARE WHAT IS MISSING.
+
+ONE ADDITION VERSION 3 COULD NOT MAKE. The north-star analysis found Chapter 80.3.3 listing "its mode register, its per-mode transfer function, its transition table, and its fault regimes" - THE DELIVERABLE NAMED IN THE CORPUS'S OWN WORDS, from a document outside the Vision Document Set. The nine-slice elevation of Theme One is now vindicated by a source that had no part in the decision to elevate it.
+
+AND ONE THING THIS THEME HAS NEWLY FAILED TO SUPPLY, RECORDED AS A DEBT. Slice 58 wanted to hand a new construct to the supervisor and could not, because supervisor_watch/3 judges a mode register and the new construct has none. The slice declared its fault regimes and refused to invent a register to make the call compile. THAT IS THIS THEME'S FORMALISM BEING WANTED BY A CONSTRUCT OUTSIDE ITS FAMILY, which is the first time it has happened, and it is a better argument for the formalism's generality than anything in version 3.
+
+THEME TWO. THE TWO-SHIFT PRINCIPLE - THE OFFLINE CONSOLIDATION CYCLE. Fast change and durable commitment must be separable: a write-allocation gate decides which events graduate to durable weights, a decaying per-connection tag entitles capture and is consumed when spent, and write-permission over learning is itself a slow stored variable.
+
+STATUS AT SLICE 58 - ITS BLOCKING PREREQUISITE IS BUILT, AND THIS IS THE LARGEST STATUS CHANGE IN PART TWO. Version 3 said item (e) required a durable weight tier first, because "a gate built without a tier beneath it would be a gate onto nothing", and that konnectome had nowhere to graduate INTO. SLICE 53 BUILT THE TIER, and DECISION-11 built it the right way round: THE DURABLE TIER IS A MAINTAINED PROCESS, NOT A STORED NUMBER. The north-star analysis had named building it as a number "the one mistake this analysis most expects konnectome to make", and the slice that built it made the other choice for stated reasons.
+
+SLICE 55 THEN FOUND THE OBLIGATION THAT DISCOVERY CREATES, and it is now a specified requirement rather than a hope: A NIGHT THAT DOES NOT REFRESH THE DURABLE MARKS DOES NOT PRESERVE THEM, IT DESTROYS THEM. A tier that is a process must be maintained across the offline shift, and that maintenance is an obligation of any wiring slice.
+
+WHAT REMAINS OF ITEM (e) IS THEREFORE (e1) THE WRITE-ALLOCATION GATE, (e2) THE READABILITY GATE, AND (e3) THE TERRITORIAL FREEZE FENCE, all three now genuinely reachable for the first time. Version 3's warning stands: the freeze fence and the readability gate are NOT a pair and must not be built as one.
+
+AND THE NORTH-STAR ANALYSIS ADDS TWO ITEMS THIS THEME'S OWN READ MISSED, both cheap. THE CARGO POOL: konnectome built the synaptic TAG and never the CARGO, and the corpus makes the payload finite, decaying and per-cell, WHICH IS WHAT MAKES CONSOLIDATION SELECTIVE - in konnectome the third factor is an inexhaustible bus level against which any number of traces may spend without competing. And REPLAY HAS A DIRECTION AND A SCHEDULING RULE - reverse after reward for credit assignment, forward before action for planning - and konnectome's replay has neither.
+
+THEME THREE. THE EDGE TYPE SYSTEM. Sixty-four junction types along eight axes; konnectome carries two edge kinds and one learning rule for all.
+
+STATUS AT SLICE 58 - ENTIRELY UNBUILT, RE-VERIFIED, AND ITS ORDERING FINDING NOW HOLDS FOUR WARRANTS. The first three are version 3's: the Theme One read from above, the Theme Three read from below, and the observation that the mode-register family closed without producing a junction-grain register because there was nothing at that grain to give one to. THE FOURTH IS NEW AND IT IS THE FIRST THAT COSTS SOMETHING. DECISION-12, at slice 54, had to specify the renormaliser's domain as the excitatory contacts and had no polarity field to read, so it reads THE SIGN OF THE WEIGHT as a declared stopgap. That is Family Three's first concrete consumer outside its own design authority, and it is a stopgap standing in running code rather than an argument in a document.
+
+THEME FOUR. THE MOTIF LIBRARY, AND INHIBITION AS A COMPUTATION. Seventy-one canonical motifs; a motif is a wiring diagram plus a computation - a typed subgraph with roles, generic wherever it is installed.
+
+STATUS AT SLICE 58 - ENTIRELY UNBUILT, AND UNCHANGED FROM VERSION 3 IN EVERY PARTICULAR. Its blocking correction remains promoted out of this theme into Part Four-A, whose EXPENSIVE half is still unbuilt and now has six independent reasons wanting it.
+
+THEME FIVE. THE ABSENT COGNITIVE CLUSTER - ATTENTION, WORKING MEMORY, THE WORKSPACE.
+
+STATUS AT SLICE 58 - NO LONGER FULLY ABSENT, AND THIS IS THE THEME THAT MOVED. Version 3 recorded all three absent across thirty-four packs and called this the largest genuinely-unbuilt theme by a wide margin, and noted with some exasperation that naming it as the theme going stale unwatched had not caused anybody to watch it. NAMING IT AND THEN MOVING IT TO THE FRONT OF PART SIX DID. Working memory is two packs. Attention and the workspace remain absent.
+
+AND THE NORTH-STAR ANALYSIS ADDS THREE THINGS TO THIS THEME THAT SLICES 49 AND 50 DID NOT HAVE, each of which a builder of the remainder needs. There are TWO gates, input and output, not one. THE GATE TRAINS ITSELF on reward prediction error, "without a homunculus". And REMOVAL IS NOT ERASURE - Chapter 41.3.2 says break the item-context binding, where konnectome's board wipes, with two testable consequences that distinguish them. THE THIRD IS A CORRECTION TO RUNNING CODE rather than an addition to a queue, and it should be read as such.
+
+IT ALSO CONFIRMS THIS FAMILY'S STANDING RULE from an independent source: NO NUMBER IN THE PACK NEED BE KONNECTOME'S INVENTION. That rule held through slices 48, 49 and 50 and has now held through 53, 54, 56, 57 and 58 as well.
+
+
+PART THREE - WHAT THE TOP LAYERS SETTLE
+
+Unchanged in substance. Layer 12 is the acceptance-test catalogue: fourteen faculties, and a stated completion condition - one running instance passing all fourteen suites in one continuous session INCLUDING at least one full offline consolidation cycle. Layer 13 makes the training interaction a first-class architectural component. Layer 14 specifies the knowledge environment. Layer 15 blesses the method itself.
+
+WHAT VERSION 4 ADDS IS THAT LAYER 12 HAS BEEN ACTED ON FOR THE FIRST TIME, and the way it was acted on is worth more than the result. The north-star analysis audited all fourteen faculties against the running packs and found NONE passing outright, six partly passing and eight out of reach. Slice 57 then scored Faculty 13, Learning Itself, which was partly passing purely for want of a MEASUREMENT.
+
+THE METHOD THAT SLICE FOUND IS THE PART THAT GENERALISES, AND IT NOW HAS TWO INSTANCES. Layer 12 states fourteen faculties with acceptance criteria AND NOT ONE PASSING NUMBER. A threshold written into a suite would be konnectome's own invention wearing Layer 12's citation. The escape was in the criteria's own grammar - "retention of old competence AS NEW COMPETENCE IS ADDED" is a comparison and not a level - so the night runs twice and the criterion is met by an inequality. Slice 58 then met the identical shape in a different corpus entirely and escaped it the same way. TWELVE MORE FACULTY SUITES ARE WAITING AND EVERY ONE WILL PRESENT THE SAME TEMPTATION.
+
+AND ONE CORRECTION TO THE NORTH-STAR ANALYSIS IS CARRIED HERE, because that analysis has not yet been amended to hold it. Its Part Five says two tests move Faculty 13 from partly-passes to passes. THEY DO NOT, QUITE: they score two of the faculty's three criteria, and the third, "graceful lifetime accumulation", needs a lifetime konnectome has never run. It is recorded as unmeasured rather than folded into the other two.
+
+THE BUILD-ORDER DISAGREEMENT REMAINS UNRECORDED AS A DECISION, AND THAT IS NOW OVERDUE. Layer 12 states a build order - perception and motor FIRST, language and social cognition nearly LAST - and konnectome's ladder is close to reversed at both ends. The north-star analysis found the disagreement bites FOUR TIMES INDEPENDENTLY: cross-modal binding, cross-modal concept access, gaze following and joint attention are each blocked by the same single thin perceptual channel. That is version 3's FRAGMENTATION failure occurring again in a new vocabulary. It should be RECORDED as a numbered decision rather than built, and three hand-offs have now carried it.
+
+
+PART FOUR-A - THE FIRST PRESSURE: KONNECTOME CANNOT NAME AN INDIVIDUAL
+
+VERSION 3 EXISTED FOR THIS FINDING. VERSION 4 REPORTS THAT HALF OF IT IS CLOSED AND THAT THE OTHER HALF HAS GROWN.
+
+THE CLAIM IS UNCHANGED. konnectome has CONSTRUCT KINDS and no general way to name a CONSTRUCT INDIVIDUAL. Its graph is a flat list of interface terms with no facility to name, group, or address a portion of itself, and a repository-wide search for such a facility still returns nothing at thirty-nine packs.
+
+THE CHEAP HALF IS CLOSED, AND IT CLOSED EXACTLY AS PREDICTED. Version 3 argued that assigning to SINGLETONS needs no new capability, that it is a property of a slice already high in the queue rather than a slice of its own, and that konnectome would have exactly what it needed the moment the working-memory board existed - because there is one board, it has a four-mode register in the corpus, and the corpus states plainly that the board is erased in slow-wave sleep. SLICE 50 BUILT IT AND IT WORKED FOR THAT REASON, and the reason was promoted into DECISION-9: A DOWNWARD ASSIGNMENT MAY ADDRESS A CONSTRUCT OF WHICH THERE IS EXACTLY ONE.
+
+THAT IS THE FIRST TIME THIS DOCUMENT HAS PREDICTED A MECHANISM AND HAD THE PREDICTION CONFIRMED BY A BUILD, and it is recorded because it bears on how much weight the EXPENSIVE half should carry. The same reasoning produced both halves.
+
+THE EXPENSIVE HALF IS UNBUILT AND HAS GONE FROM FOUR ARRIVALS TO SIX. Version 3's four were Theme Four's named-subgraph absence, the mode-register authority's region-grain deferral, OBSERVATION-11 at slice 46, and the watchdog's singleton-versus-kind wiring at slice 47. TWO MORE HAVE ARRIVED SINCE, both from slices that were not looking for it. DECISION-14 at slice 57 wanted to look up "the competence called such-and-such" and could not, so a competence is a caller-supplied set of edges. And the north-star analysis, reading Chapter 80.1, supplied the sharpest statement any of the six has produced: biology pays the cost of layer-by-layer relay WHEN A MESSAGE NEEDS AN ADDRESS, and refuses to pay it when the message is a broadcast. THE ADDRESS IS WHAT THE EXPENSIVE PATH IS FOR.
+
+WHAT THAT SIXTH ARRIVAL CHANGES. The first five said konnectome lacks a naming facility. The sixth says WHY A SYSTEM WOULD PAY FOR ONE, which is the argument this item has always been missing when it came to be scheduled against cheaper work. A naming facility is not a convenience; it is the thing that distinguishes an addressed message from a broadcast, and konnectome currently has only the second.
+
+WHAT THIS PRESSURE STILL DOES NOT CLAIM, unchanged: it does not claim the architecture is wrong, it does not claim a causalontology wall - see WATCH-8 - and it does not decide the SHAPE of the facility, which is a design authority's job and not this document's.
+
+
+PART FOUR - HONEST PRESSURES AND NON-CLOSURES
+
+THE ELEVENTH-COMPONENT QUESTION. Whether the global workspace is an eleventh-component-scale change or another beside-the-skeleton construct remains deliberately NOT decided, and the recommended path remains a pilot pack beside the skeleton whose five questions must be answered in its own ledger entry before it may merge. Version 3 added evidence leaning toward beside-the-skeleton; version 4 adds none and re-affirms the decision not to decide.
+
+THE OVERLAY DELTA CHANNEL - THE NEW PRESSURE, AND THE NORTH-STAR ANALYSIS CALLS IT THE DECISION THAT UNBLOCKS THE MOST. An overlay OCCUPIES NO SLOT, keeps the base state running underneath, and publishes DELTAS. konnectome's bus offers a LEVEL and a COMMANDED MODE, AND A DELTA IS NEITHER. Three standing deferrals point at it: OBSERVATION-14's closer, DECISION-5's overlay question, and DECISION-9's.
+
+AND OBSERVATION-14 GENERALISES IN A WAY THAT SHAPES THE ANSWER, so a builder should not design for the simple case: acute stress arrives as a NAMED DISCRETE MODE in eleven other system registers while modulating working memory CONTINUOUSLY. ONE OVERLAY ANNOUNCEMENT MUST THEREFORE CARRY BOTH SHAPES. This is the mode-register authority's Part Seven item 3, which version 3 recorded as deferred until the arousal, stress and sickness states exist, and it is now reachable from the other direction.
+
+THE EPHEMERAL-STATE QUESTION. Unchanged and now partly paid: unrecordedness is the DEFINING PROPERTY of working memory, and slice 49 built the board that way. GROWING THE OBSERVER TO CARRY TICK CONTENT REMAINS A LARGER DECISION THAN THE WORKING-MEMORY PACK ITSELF and must never be smuggled in as a side effect of a memory slice. OBSERVATION-10's disagreement between the observer's instant and DECISION-2 STANDS UNTOUCHED at eleven slices.
+
+THE FORWARD MODEL IS STATED, NOT LEARNED - NEW IN VERSION 4 AND THE NON-CLOSURE MOST LIKELY TO BE FORGOTTEN. Slice 56 built an efference copy with a forward model, and that model is a transcription of simulated_body_drive/3. It therefore CANNOT BE WRONG about the plant it was copied from, and CANNOT IMPROVE. LAYER_10_SYSTEMS_MANUSCRIPT says of the corpus's equivalent that "its plant model is LEARNED and its gains are neuromodulated". A REAL FORWARD MODEL WOULD BE THE FIRST THING IN THIS BUILD EVER TO ACQUIRE ITS OWN CONTENTS FROM EXPERIENCE, which is a larger idea than a slice and is related to the north-star analysis's B4: prediction_loop computes a signed error THAT NOTHING CONSUMES, and there is no supervised learning rule anywhere in thirty-nine packs.
+
+THE ASTROCYTE TENSION. A tension, not a contradiction - noted, not acted on, at slice 58 as at slices 40 and 47.
+
+THE NUMBERING CROSS-REFERENCE. Housekeeping, non-breaking, and still touching the same two sections as Part Four-A.
+
+THE FIFTH PRESSURE REMAINS CLOSED. DECISION-2 discharged it at slice 43 and the pattern remains the reusable part: a quantity the corpus states everywhere and the architecture has no unit for is a DECISION, not a gap, and it will not be found by reading a theme. DECISION-8 repeated the pattern one grain down at slice 49, which is the first time a closed pressure has generated a second instance of itself.
+
+
+PART FIVE - WALLS: NONE ROUTED, EIGHT WATCHES CARRIED, NONE ADDED
+
+Applying the Second and Third Commandment gates strictly, the analysis routes NOTHING to either change order today. THAT JUDGMENT NOW SURVIVES FOUR ASSESSMENTS, FIVE DEEP READS, A NORTH-STAR GAP ANALYSIS AND TWENTY-FOUR FURTHER SLICES, eleven of which built new packs, and not one of which came near a wall.
+
+VERSION 4 STRENGTHENS THE JUDGMENT THE SAME WAY VERSION 3 DID AND WITH MORE OF IT. The eleven slices since version 3 added a channel roster, a working-memory board and its register, a durable weight tier, a renormaliser domain, an efference copy, a faculty measurement and a conflict loop, and EVERY ONE OF THEM ROUTED NOWHERE FOR THE SAME REASON - a value computed inside one runtime and read inside the same runtime travels to nobody and fails the consumer-versus-ontology test. That test has now been applied by eleven further sessions and returned the same answer each time.
+
+WATCH-1, the mode kind. STANDS, and is now unclaimed after registers were built at THREE grains.
+
+WATCH-2, the episodic event index. STANDS, untouched. Still the likeliest genuine wall among the memory slices, to be claimed only when retrieval-by-fragment is actually built and actually cannot express it.
+
+WATCH-3, consolidation provenance. STANDS. Slices 53 and 55 worked the consolidation machinery hard - a durable tier and the night's maintenance obligation - and neither came near it.
+
+WATCH-4, the workspace ignition record, with the three candidate answers version 3 named. STANDS UNCHANGED. DECIDE WHAT A CONTENT IS BEFORE THE PILOT.
+
+WATCH-5, the weight checkpoint. STANDS, and it is worth noting that DECISION-11 made the durable tier a PROCESS rather than a stored number, which pushes this watch further away rather than closer: a maintained process has less of a checkpoint to share than a stored number would have had.
+
+WATCH-6, the language pack's second half. STANDS. Rung Two's deepening has still not been attempted.
+
+WATCH-7, the type catalogue artifact. STANDS. Family Three is still unbuilt, so this watch has still never been tested.
+
+WATCH-8, the construct name. STANDS, and its decision point is unmoved and worth restating because two more arrivals have accumulated behind it: THE MOMENT A CONSTRUCT NAME IS REQUIRED TO BE STABLE ACROSS RUNS is the moment this watch becomes assessable, and a naming facility could easily acquire that requirement without anyone choosing it.
+
+NO WATCH IS ADDED IN VERSION 4, and that is itself the finding worth recording. Eleven slices, nine numbered decisions, two observations and a whole second analysis produced NOT ONE new candidate for either change order. Version 3 added one watch; version 2 added several. THE RATE OF NEW WALL CANDIDATES IS FALLING WHILE THE RATE OF BUILDING IS NOT, which is what one would expect if the architecture is genuinely adequate to the corpus and is not what one would expect if it were quietly straining.
+
+Sections C, D, and E of the causalontology change order remain HELD. Nothing in this analysis, in any of the five deep reads, in the north-star gap analysis, or in any of the twenty-four slices since version 2 releases them.
+
+
+PART SIX - THE SUGGESTED SLICE FAMILIES
+
+The analysis suggests - the owner disposes. Each family is ordinary test-first pack work behind the usual gates; none touches a cousin.
+
+AND VERSION 4 MUST SAY SOMETHING VERSION 3 DID NOT HAVE TO. THIS IS NO LONGER THE ONLY ORDERING. docs/design/02_north_star_gap_analysis_v1.txt Part Nine is newer, is ordered by value per unit effort, and is the queue the last five sessions actually worked from. WHERE THE TWO DISAGREE, THE NEWER LEADS. What follows is this document's ordering, updated, with the points of difference marked - because the two agree far more than they differ, and where they agree the agreement is worth having from two independent methods.
+
+FAMILY FOUR, THE COGNITIVE CLUSTER (Theme Five), REMAINS AT THE FRONT AND IS NOW HALF BUILT.
+
+1. DONE - THE BUS'S SIX NAMED BROADCAST CHANNELS, at slice 48, as DECISION-7.
+
+2. DONE - THE TICKS-PER-SECOND CONVENTION, at slice 43, as DECISION-2.
+
+3. DONE - THE WORKING-MEMORY BLACKBOARD, at slice 49, as DECISION-8, built to the corpus's own constants with no number konnectome's invention.
+
+4. DONE - THE WORKING-MEMORY MODE REGISTER AND THE FIRST DOWNWARD ASSIGNMENT, at slice 50, as DECISION-9. Version 3 predicted this would be the first assignment to work and predicted why. It was and it did.
+
+5. ATTENTION AS A SALIENCE-DRIVEN BIAS. NOW THE FRONT OF THE QUEUE ON BOTH ORDERINGS, and genuinely unblocked: the blackboard's rehearsal target sits caller-supplied and waiting for a publisher, which is the real caller version 3 said should answer the rehearsal question. Build it as a BIAS rather than as a network so the corpus's three different structural answers are not prematurely collapsed. AND TAKE THE NORTH-STAR CORRECTION: attention needs THREE terms - salience, goals, AND SELECTION HISTORY - and a two-term design would have to be reopened.
+
+6. THE WORKSPACE PILOT, BESIDE THE SKELETON, which MUST NOT BE MERGED without answering Part Four's five questions in its own ledger entry, cheapest first. Read WATCH-4's third condition before designing it.
+
+7. THE LEARNED GATING POLICY, LAST - and the north-star analysis sharpens it: THE GATE TRAINS ITSELF on reward prediction error, without a homunculus, which is a stronger statement of what this item is than version 3 had.
+
+THE OVERLAY DELTA CHANNEL - NEW IN VERSION 4 AND PLACED HIGH DELIBERATELY. This is Part Four's new pressure and the north-star analysis calls it the decision that unblocks the most. It is a DECISION about the shape of the bus rather than a system to build, three standing deferrals point at it, and one overlay announcement must carry both a discrete mode and a continuous modulation. THIS IS THE CLEAREST POINT OF DIFFERENCE BETWEEN THE TWO ORDERINGS: the north-star Part Nine places it after the three wiring slices, and this document would place it beside them, because a decision that three deferrals are waiting on gets more expensive the more code is built against its absence.
+
+THE NAMING AND ADDRESSING FACILITY. Part Four-A's expensive half, now with SIX independent reasons and a corpus-supplied argument for why a system pays for one at all. FOUR FAMILIES ARE BLOCKED ON IT. It should be designed from a deep read of its own. Unchanged in position and stronger in warrant.
+
+THE REMAINING FACULTY SUITES - NEW IN VERSION 4 AND WORTH MORE THAN IT LOOKS. Twelve of the fourteen Layer 12 faculties have no scored acceptance run, and SIX ARE ALREADY AT PARTLY-PASSES for want of exactly what Faculty 13 was missing. Slice 57 has now shown the method and slice 58 has shown it transfers: each suite is a scored run built from an ablation rather than a threshold. This is cheap, it is repeatable, and it is the only item in this queue that measures konnectome against a standard the corpus wrote rather than against konnectome's own judgment.
+
+FAMILY THREE, THE EDGE TYPE REGISTRY (Theme Three). Position unchanged, now holding FOUR warrants, and it has acquired its first concrete consumer outside its own design authority: DECISION-12 reads polarity from a weight's sign as a stopgap. Design it from docs/design/07_edge_type_design_authority_v1.txt, AND NOTE THAT AUTHORITY'S KNOWN OMISSION - it missed that the homeostatic scaler is a second consumer of the sign field it was asking for.
+
+FAMILY ONE'S ITEM (e), THE TWO-SHIFT MACHINERY'S REMAINDER. ITS PREREQUISITE IS BUILT: the durable weight tier landed at slice 53 as a maintained PROCESS. What remains is (e1) the write-allocation gate, (e2) the readability gate, (e3) the territorial freeze fence, plus the two items the north-star analysis added - THE CARGO POOL and REPLAY'S DIRECTION AND SCHEDULING RULE. The freeze fence and the readability gate are NOT a pair. AND WIRING THE TIER CARRIES TWO OPEN DECISIONS: what the level means for a weight, and what a night's maintenance costs.
+
+FAMILY FIVE, THE MOTIF CATALOGUE (Theme Four), at six items - a BUILD, not a christening, and explicitly downstream of the naming facility. Unchanged. DECISION-3 still hands this family its hysteresis question back, undecided.
+
+THE REGION-GRAIN CONSTRUCT, also downstream of the naming facility. Unchanged.
+
+FAMILY SIX, TOOLING: THE TEMPLATE PARSER, AND VERSION 4 UPGRADES IT ON MEASURED EVIDENCE. The north-star analysis measured the corpus rather than estimating it and found the mechanical-splice claim TRUE AND VERIFIABLE - 386 chapters, every aspect header present, zero chapters missing their tag. It also found the parser UNDERVALUED for three reasons this queue never recorded: it would be konnectome's FIRST TRUE GENERATOR, it is the delivery vehicle for Layer 14's curated-inheritance provision, and it converts the corpus's mode registers into data exactly when Families Three and Five need them. FOUR CAVEATS ARE IN THAT ANALYSIS AND THE SHARPEST IS THAT THE TEMPLATE DOES NOT GENERALISE PAST LAYER 6 - a parser must be a common core plus per-layer schemas, and writing it the other way is the single most likely way to get this wrong.
+
+THE RESIDUE OF FAMILY TWO, THE MODE REGISTER, which is no longer a family. Unchanged except that the OVERLAY COMPOSITION RULE has been promoted out of it into Part Four and Part Six above, because it is now reachable from the overlay-delta direction rather than only from the arousal-states direction.
+
+TO BE RECORDED WITHOUT BUILDING, and all three are carried from the north-star analysis because this document is where recorded-not-built findings live: THE BUILD-ORDER DISAGREEMENT of Part Three above; the gating-by-geometry contradiction; and the command-versus-lateral-bias distinction. None is a slice. All three are things a later session would otherwise rediscover one layer at a time.
+
+AND THE STANDING ITEMS, unchanged: the night's deferred chapters; the pre-corpus pending refinements; Rung Two's deepening against the Layer 13 Tutor Protocol; Rung Five Path B against Webots (see docs/design/10_rung_five_real_machine_design_v2.txt).
+
+A DEPENDENCY BETWEEN FAMILIES FOUR AND FIVE, WORTH RESTATING. Family Five's selector deepening and Family Four's workspace pilot are THE SAME SETTLING LOOP with different bidders. Whichever is built first should be built so the second can reuse it.
+
+THE DEMONSTRATION ITEM VERSION 3 LISTED IS DONE, at slice 51: the told story now asks its own night watchman whether its night was healthy. THE STANDING OWNER REQUEST THAT REPLACES IT is the live all-grain VISUALIZATION CONTROL PANEL, which is a demonstration deliverable and not a slice. Its top row exists, slice 48 added its first legend, slice 49 the first cell with contents and slice 50 the first arrow. What it lacks is the rest of the arrows, per Part Four-A.
+
+FIVE THINGS ARE BUILT AND NOT WIRED, AND VERSION 4 LISTS THEM TOGETHER BECAUSE NO EARLIER VERSION DID. The eligibility trace, the working-memory blackboard's rehearsal target, the durable tier, the efference copy and the conflict loop are each complete, tested and called by nothing. EACH WAS LEFT UNWIRED DELIBERATELY AND FOR A GOOD REASON - wiring is a decision about when a thing should run and deserves its own slice. BUT FIVE IS NO LONGER A SEQUENCE OF INDIVIDUALLY-JUSTIFIED CHOICES; IT IS A PATTERN, and the honest reading is that this build finds construction cheaper than integration and has been choosing accordingly. The Definition's own first clause is the standard this has to answer to: a part that cannot be reached from the one running loop is not yet part of konnectome, however well it tests.
+
+
+PART SEVEN - CLOSING
+
+The Vision Document Set arrived with fanfare and survives four soberings. It does not break the konnectome that exists; it explains it, and then it points at three things: give the constructs modes, give the mind a night shift, and give thought a stage to ignite on.
+
+THE FIRST IS DONE AND WAS DONE AT VERSION 3. THE SECOND IS NOW MOSTLY DONE - the night exists, it has a governor, a register, a watchdog, a durable tier, a maintenance obligation and a scored faculty. THE THIRD IS UNTOUCHED, and the workspace remains the largest single absence in the build.
+
+VERSION 4 CLOSES WITH TWO OBSERVATIONS, ONE UNCOMFORTABLE AND ONE ENCOURAGING, WHICH IS THE FORM VERSION 3 CHOSE AND WHICH IS WORTH KEEPING.
+
+THE UNCOMFORTABLE ONE, AND IT IS ABOUT THIS DOCUMENT RATHER THAN ABOUT THE BUILD. Version 3's closing identified FRAGMENTATION as the real failure mode - a finding filed under the family that discovered it is a finding nobody can add up - and warned that staleness was the lesser problem. BOTH THEN HAPPENED AGAIN, AND NEITHER WAS CAUGHT BY THE WARNING. Fragmentation recurred: four faculties turned out to be blocked by one thin perceptual channel described in four vocabularies, and it was the NORTH-STAR analysis that noticed, not this one. And staleness recurred worse than before: eleven slices rather than six, because a newer document took over the visible half of this one's job and the invisible half - the walls, the watches, the verdict - went unmaintained with it. WRITING A WARNING INTO A DOCUMENT DOES NOT CAUSE ANYBODY TO ACT ON IT. What actually closed Theme Five's staleness was not the warning version 2 wrote; it was version 3 moving the family to the front of Part Six, where the next session had to read it. A finding must be moved to where the work happens, or it does not move at all.
+
+THE ENCOURAGING ONE. Fifteen numbered decisions now exist and NINE are refusals or derivations rather than chosen values, and the two most recent are the same move found independently in two different corpora: WHERE A THRESHOLD SEEMED REQUIRED, THE REQUIREMENT DISSOLVED INTO A COMPARISON THE SOURCE HAD ALREADY STATED. That is a method rather than a habit, it transferred on its first attempt, and twelve faculty suites are waiting to use it. Version 3 said a decision written as a refusal cannot be forgotten because the code stops a later session. Version 4 adds the complement: A CRITERION WRITTEN AS A COMPARISON CANNOT BE FAKED, because there is no number in it to choose wrongly.
+
+AND ONE THING VERSION 4 WOULD SAY TO ITS OWN SUCCESSOR. This version was written because a hand-off named it as the clearest small item on the queue for the fourth time. It was not small. Reconciling two analyses of equal standing, eleven slices, nine decisions and two observations is most of a session's work, and the three sessions that declined it were not being lazy - they were correctly judging its size and incorrectly judging that the cost of deferral was zero. IT IS NOT ZERO: the walls judgment, which is the only thing in this repository that decides what routes to a frozen cousin, was eleven slices out of date. IF THE NEXT VERSION IS DEFERRED, DEFER IT WITH THAT COST NAMED.
+
+The frame stands. The vocabulary exists. Working memory is built, the night is nearly complete, and what is missing is better named than it has ever been: a way to say THIS one rather than these, a stage for thought to ignite on, a channel shaped like a delta, and twelve faculties the corpus has already written the tests for.
+
+END OF ANALYSIS, VERSION 4, CURRENT THROUGH SLICE 58. Codebase claims re-measured against main at bb4b77b; corpus counts carried forward from the fidelity audit at slice 40 and NOT re-measured here, with the single exception of the Layer 6 chapter count, independently confirmed at 386 by the north-star analysis. The findings of Parts One, Four, Five and Six of versions 1, 2 and 3 survive this assessment unreversed; three are sharpened and one - Part Four-A's cheap half - is CLOSED and recorded as closed rather than deleted. Version 3 is archived under the Eleventh Commandment at docs/archive/01_vision_set_top_down_analysis_v3.txt.
