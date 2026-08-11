@@ -1276,5 +1276,48 @@ No defect in running code was found by the slice's own work, and the one hazard 
 Twenty-three tests. Thirty-nine packs. Nine hundred and ninety.
 
 
-From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER FIFTY-SEVEN, and the story goes on being true.
+CHAPTER FIFTY-EIGHT - THE DOCUMENT THAT WAS ABANDONED BECAUSE SOMETHING ELSE TOOK OVER THE VISIBLE HALF OF ITS JOB (2026-08-11, SLICE 59)
+
+The second slice of the pair is a document, and the reason it is worth a chapter is that four consecutive sessions declined to write it and every one of them gave a good reason.
+
+The document is the Eighth Commandment analysis - the top-down reading of the thirty-eight-document neuroscience corpus against the konnectome that actually exists. Version 3 was written at slice 47. Slices 48 through 58 were built without it being touched. Each hand-off since has named version 4 as the clearest small item on the queue, and each session has looked at it, agreed, and built something else.
+
+Their stated reason was the same every time and it was true: the wiring slices were cheaper, and the north-star gap analysis led anyway.
+
+That last clause is the interesting one, and it took writing version 4 to see what was wrong with it.
+
+On 2026-08-10 the Constitution gained a Twentieth Commandment declaring two documents the north star and requiring an analysis run of their own. That run produced a second analysis, and its Part Nine is a queue ordered by value per unit of effort. It is a good queue. Eleven slices came out of it, including both of this session's. Every session that said the newer analysis led the queue was correct.
+
+But the older document does not only hold a queue.
+
+It holds the walls-and-watches judgment - the eight standing candidates for a change order against a frozen cousin, each with the condition that would make it real. It holds the eleventh-component question, deliberately undecided since version 1. It holds the verdict on the ten architectural components and the record of how many assessments that verdict has survived. THE NEWER ANALYSIS CARRIES NONE OF THOSE. Nothing in it re-examines the ten components, and nothing in it touches the change-order gates.
+
+So for eleven slices the only live statement of what routes to causalontology, and of which top-level decisions had survived what, was a document nobody was updating - not because anyone decided the walls judgment could go stale, but because it shared a file with a queue that had been replaced.
+
+THE FAILURE MODE HAS A SHAPE AND IT IS WORTH A NAME: WHEN A NEWER DOCUMENT SUPERSEDES PART OF AN OLDER ONE, THE OLDER ONE GETS ABANDONED WHOLE. The half that was superseded is visible, because somebody is reading the replacement every day. The half that was not superseded is invisible, precisely because nothing replaced it and so nothing draws attention to its absence.
+
+Version 4 therefore does something no previous version had to do: it states the relationship between the two analyses explicitly, in both directions. For what should I build next, read the newer one - it is newer, it is ordered by value, and it is what the last five sessions actually used. For may I build it this way and does it route anywhere, read this one, because the walls and the watches and the verdict are here and are not duplicated there. Where the two order the same work differently, the newer leads, and version 4 marks each point of difference rather than pretending there are none.
+
+The rest of the write is arithmetic of a slow kind. Six numbered decisions became fifteen. Four codebase claims were re-checked and two no longer held - working memory is no longer absent, it is two packs. Family Four's front is built: items one, three and four done at slices 48, 49 and 50. Theme Two's blocking prerequisite is built, which unblocks three items that have been waiting since version 2. Part Five gained no new watch at all, which is itself a finding worth having: eleven slices, nine decisions and an entire second analysis produced not one new candidate for either change order, and a falling rate of wall candidates against a steady rate of building is what an adequate architecture looks like from the inside.
+
+Two results are worth pulling out of the arithmetic.
+
+The first is that version 3 made a prediction and the prediction came true. It argued that the first real downward assignment did not need the region-grain construct that had been blocking it - it needed a singleton with a mode register - and it named the working-memory board as the thing that would satisfy that, because there is one board and there are many gates. Slice 50 built it, it worked for exactly that reason, and the reason was promoted into a numbered decision. A document that predicts which slice will succeed, on a stated mechanism, and is then right, has earned something a document that merely describes the past has not.
+
+The second is less comfortable and is about the document itself. Version 3's closing named fragmentation as the real maintenance failure - a finding filed under the family that discovered it is a finding nobody can add up - and warned that staleness was the lesser problem. Both then happened again. Fragmentation recurred, with four separate faculties turning out to be blocked by one thin perceptual channel described in four vocabularies, and it was the OTHER analysis that noticed. And staleness recurred worse than before, eleven slices against six.
+
+So writing a warning into a document does not cause anyone to act on it. What actually fixed Theme Five's staleness was not the warning version 2 wrote about it; it was version 3 moving that family to the front of Part Six, where the next session had to walk past it. A finding has to be moved to where the work happens, or it does not move at all.
+
+One repair went into the Constitution alongside the write, and it is the same species of fault seen from a different angle. The Eighth Commandment carries a pointer at this analysis so that a session reading the Constitution alone can find the fulfilment of an obligation the Constitution imposes. Version 6 wrote that pointer as v1. Version 11 found it stale and chased it to v3, changing no rule and explaining carefully why the chase mattered. And it went stale again at the very next write of the document it points at - which was not bad luck. A version number written into a pointer at a document this Constitution REQUIRES TO BE KEPT CURRENT is guaranteed to rot, on a schedule the Constitution itself sets.
+
+The Constitution's own version 18 audit had already written the fix and this line simply was not reached by it: when a record refers to a live document, drop the part that can go stale rather than updating it. The pointer now names the directory and the document's NUMBER - docs/design/ was numbered 01 through 10 in reading and fulfilment order last week, and 01 is this analysis whatever version it reaches - together with the uniqueness rule that identifies the current one. That is the same technique the Eighteenth Commandment already uses to name the current tutorial without naming a version.
+
+The general form is worth keeping, because two Commandments have now needed it. A POINTER AT A DOCUMENT THAT IS REQUIRED TO BE MAINTAINED MUST IDENTIFY IT BY SOMETHING THAT MAINTENANCE DOES NOT CHANGE. A directory survives maintenance. A number survives maintenance. A uniqueness rule survives maintenance. A version suffix is the one part of a filename that maintenance is certain to alter, and it is the part that kept being written down.
+
+The Constitution stands at version twenty-five, twenty-two commandments, none added, none renumbered, no rule changed.
+
+And version 4 closes with the one thing it would say to whoever writes version 5. It was named as a small item four times and it was not small - reconciling two analyses of equal standing across eleven slices, nine decisions and two observations is most of a session. The three sessions that declined it were not being lazy. They were judging its size correctly and judging the cost of deferral to be zero, and that second judgment was the wrong one. If the next version is deferred, it should be deferred with that cost named out loud.
+
+
+From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER FIFTY-NINE, and the story goes on being true.
 
