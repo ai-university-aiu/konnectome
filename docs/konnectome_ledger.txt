@@ -1226,7 +1226,7 @@ self-test; conformance re-measured at 137 of 137 (specification 4.0.0) in both c
 wall; no cousin edited, per the Second, Third, and Fourth Commandments.
 
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 22 (7 CLOSED: 8, 9, 15, 17, 18, 19 and 20).  Decisions: 19.
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 22 (8 CLOSED: 8, 9, 15, 17, 18, 19, 20 and 22).  Decisions: 21.
 Slice-34 note (2026-08-09). The bound turned live in the told story. The slice-33 pending line
 (the bound proven per-territory in the tests but not yet in the capstone's told story) is
 CLOSED: the capstone's boot world arms the slow bound for real - the diffuse mark at one half,
@@ -6002,4 +6002,104 @@ and that listing's count of the gates is corrected from four to six.
 No code changed and no test moved. Nothing routes to either change order and neither cousin was
 edited.
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 22 (7 CLOSED: 8, 9, 15, 17, 18, 19 and 20).  Decisions: 19.
+DECISION-20 (2026-08-11, slice 71). "THE ONE RUNNING LOOP" IS RETIRED AS A PHRASE; BOTH OF
+KONNECTOME'S LIVE LOOPS ARE NAMED, AND NEITHER IS PREFERRED OVER THE OTHER.
+
+OBSERVATION-22 recorded that konnectome_0_definition's reachability standard - "a part that cannot be
+reached from the one running loop is not yet part of konnectome" - named a single loop while the build
+had grown two: cognitive_cycle_run/4, the ten-component tick of Section A3.3, and
+body_interface_survival_run/5, the embodied Rung Five run slice 69 wired the efference copy through.
+Neither calls the other.
+
+THE CHOICE CONSIDERED AND REJECTED: naming only cognitive_cycle_run/4 as the definition's loop. It is
+the older and more central of the two, and it would have been the cheaper sentence to write. IT WAS
+REJECTED BECAUSE IT IS NOT A REPAIR, IT IS A DECISION, under the Sixteenth Commandment's own line
+between the two: nothing in the corpus or the existing record says which loop the definition means,
+so narrowing to one would be inventing a preference and dressing it as a clarification. Concretely, it
+would have retroactively read slice 69's efference-copy wiring - reached solely through
+body_interface_survival_run/5, tested, and told by the capstone under a live check - back out of
+konnectome by a sentence nobody meant to re-litigate.
+
+THE RESOLUTION. konnectome_0_definition is amended to version 2 (docs/DSPARCD/konnectome_0_definition_v2.txt,
+superseding _v1 in docs/archive/, with the amendment's full reasoning on its own face per the document's
+own rule that the concept may be amended but never silently). Part One now names BOTH loops explicitly:
+a part reached from EITHER cognitive_cycle_run/4 or body_interface_survival_run/5 satisfies the
+reachability standard today. This is the smallest change that removes the ambiguity: the sentence used
+to be silently untestable (which loop?) and is now explicitly testable (either of these two, by name).
+
+WHAT THIS DECISION DOES NOT DECIDE. It does not decide that konnectome should have two loops forever;
+joining them is its own slice family, queued and unbuilt. It does not change what is or is not reached
+today - THREE of the seven previously-unwired mechanisms were already counted as reached through
+body_interface_survival_run/5 before this decision, and this decision only makes the standard that
+counted them explicit rather than assumed.
+
+OBSERVATION-22 IS NOW CLOSED. The ambiguity it named is settled by DECISION-20 above; the underlying
+fact that konnectome runs two unjoined loops remains true and is carried forward in the hand-off queue
+as its own item, not as an open observation.
+
+No test moved and no gate changed shape; this is a documentation-only change to the DSPARCD Fileset's
+Definition phase, and the Twelfth Commandment's version-bump rule attaches to CODE changes, none of
+which occurred here. Nothing routes to either change order and neither cousin was edited.
+
+
+DECISION-21 (2026-08-11, slice 72). THE CONFLICT LOOP IS WIRED INTO cognitive_cycle, AND THE GAIN IS
+THE WORLD'S TO SUPPLY, NOT THIS FILE'S TO INVENT.
+
+cognitive_cycle.pl gains a caller for conflict_monitor_step/7. STEP THREE of the day program now runs
+it immediately after the action selector releases its candidate: the loop measures response conflict
+among whichever override drives are active, raises the stabiliser's distress threshold by a gain read
+out of the world dict's new required key, conflict_gain, publishes the raise onto the bus as a
+stability bias, and arbitrates at the raised threshold with the inviolable rank exempt (the same
+exemption OBSERVATION-18 already required of plain override arbitration). The raised control then
+stands on the bus for the next tick to read, which is precisely what the Gratton-effect acceptance
+test in packs/conflict_monitor/test/test_conflict_monitor.pl already measures.
+
+THE CHOICE CONSIDERED AND REJECTED: an optional argument that defaults to leaving the loop uncalled,
+so every existing world dict keeps working untouched. IT WAS REJECTED because DECISION-15's own
+warning is precisely about a SILENT default: "the day the cycle calls it, somebody has chosen
+konnectome's control policy and it must be recorded as such rather than passed in silently." A
+default-off optional argument is exactly a silent choice wearing the name "no choice" - the loop would
+be reachable from the running cycle in the sense OBSERVATION-22 and the deferral register's probe both
+grep for, while every world that did not know to pass the new argument would silently keep running
+without it, which is the ambiguity this decision exists to remove rather than relocate.
+
+THE RESOLUTION INSTEAD: conflict_gain is a REQUIRED world key, read through the same
+cognitive_cycle_world_value/3 that already refuses every other missing key aloud, by name, with no
+default. NO NUMBER IS CHOSEN HERE - not 0, not 1, not any of DECISION-15's four Gratton test gains.
+Every caller that assembles a world - the cognitive-cycle tests, symbol_exchange's tests, and
+capstone_demonstration's world builder - now states its own gain explicitly on the world dict, at the
+same place it already states override_threshold, and the shared fixture value chosen for the existing
+suites (0.15) is carried over from the loop's own acceptance test in
+packs/conflict_monitor/test/test_conflict_monitor.pl precisely because that value is already the
+one this build's own tests have used to prove the loop closes, not a fresh invention.
+
+THIS SATISFIES THE DEFERRAL REGISTER'S OWN PROBE (docs/deferrals/deferral_register.txt,
+the_conflict_loop_has_no_caller), which now finds "conflict_monitor" inside
+packs/cognitive_cycle/prolog/cognitive_cycle.pl; the entry's status is flipped from deferred to
+taken_up rather than deleted, per this register's own rule that a taken-up entry stays and stays
+probed as a standing regression guard.
+
+WHAT THIS DECISION DOES NOT DECIDE. It does not choose konnectome's coupling gain - that remains
+whatever number each assembler of a world dict supplies, exactly as DECISION-15 left it, and the fact
+that today's three assemblers all happen to supply the same figure is a coincidence of convenience
+and not a policy. It does not change conflict_monitor's own arbitration rule, only reaches it. And it
+does not join the two running loops OBSERVATION-22 and DECISION-20 discuss - body_interface_survival_run/5
+does not call cognitive_cycle_step/3 and gains no conflict loop by this change.
+
+TESTS. packs/cognitive_cycle/test/test_cognitive_cycle.pl gains conflict_gain on its shared fixture
+world and three new tests: one regression pin proving that with no overrides standing the wiring
+leaves the normal action and the stabiliser's bias exactly as they stood before slice 72; one proving
+two incompatible overrides raise the stabiliser's bias strictly above zero, reading the loop's own
+effect back through the bus rather than through the pack directly; and one carrying a world across
+three ticks to reproduce the Gratton shape - a cold tick with no conflict standing, then two
+incongruent ticks in a row, showing control raised on the first and carried into the second - through
+the whole running cycle rather than through conflict_monitor_sequence/6 alone. Every other assembler
+of a cognitive_cycle world (symbol_exchange's tests, capstone_demonstration's world builder) also
+gains the required conflict_gain key. Full suite run before and after: same pass count plus the new
+tests, nothing regressed.
+
+Nothing routes to either change order. Neither cousin was edited. No PrologAI or causalontology gap
+found.
+
+
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 22 (8 CLOSED: 8, 9, 15, 17, 18, 19, 20 and 22).  Decisions: 21.

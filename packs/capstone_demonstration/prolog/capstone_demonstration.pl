@@ -355,6 +355,11 @@ capstone_demonstration_world(World) :-
         scaling_rate: 0.05,
         overrides: [override(respiration, 0, 0.0, breathe)],
         override_threshold: 0.5,
+        % SLICE 72: the conflict loop's caller-supplied coupling gain (DECISION-15's own worked
+        % figure; the loop's acceptance test holds for every positive gain and picks none of them).
+        % With one override standing and never two simultaneously active, the loop measures zero
+        % conflict throughout this story and the told capstone changes not one byte.
+        conflict_gain: 0.15,
         learning_rate: 0.1,
         % The day's memory store starts empty; every online tick remembers its pattern (slice 38).
         memories: [],

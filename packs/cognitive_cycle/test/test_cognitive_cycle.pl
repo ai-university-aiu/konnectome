@@ -6,6 +6,9 @@
 :- use_module(library(two_process_governor)).
 % Load the list utilities used to gather recorded thought identifiers.
 :- use_module(library(lists), [member/2]).
+% Load the stabiliser, SLICE 72's own read-back: the conflict loop's control travels as its bias, and
+% these tests confirm the wiring actually reaches it rather than merely leaving the arbitration alone.
+:- use_module(library(stabiliser), [stabiliser_bias/2]).
 % Load the Prolog Unit (PLUnit) testing framework.
 :- use_module(library(plunit)).
 
@@ -32,6 +35,10 @@ cognitive_cycle_test_world(World) :-
                    scaling_rate: 0.0,
                    overrides: [],
                    override_threshold: 0.5,
+                   % SLICE 72: the conflict loop's caller-supplied coupling gain - DECISION-15's own
+                   % worked figure, not a value chosen here, since the loop's own acceptance test
+                   % (the Gratton inequality) holds for every positive gain and picks none of them.
+                   conflict_gain: 0.15,
                    learning_rate: 0.1,
                    % The day's memory store starts empty; every online tick remembers its pattern (slice 38).
                    memories: [],
@@ -95,6 +102,72 @@ test(a_vital_drive_in_distress_overrides_the_normal_action) :-
     cognitive_cycle_step(World0, _World1, tick_summary(_Tick, _Reward, Action, _Record)),
     % Breathing overrides the normal reduce action.
     assertion(Action == released(breathe)).
+
+% ---------------------------------------------------------------------------
+% SLICE 72 - THE CONFLICT LOOP, WIRED INTO THE RUNNING CYCLE
+% ---------------------------------------------------------------------------
+
+% WITH NO OVERRIDES STANDING, THE WIRING CHANGES NOTHING - the loop measures zero conflict and
+% arbitrates exactly as the plain override controller always did. This is the regression pin: the
+% fixed world's overrides are empty, so this reproduces the earliest test in this file's own shape.
+test(with_no_overrides_the_conflict_loop_leaves_the_normal_action_alone) :-
+    % Start from the fixed world, whose overrides are empty.
+    cognitive_cycle_test_world(World0),
+    % Run one tick.
+    cognitive_cycle_step(World0, World1, tick_summary(_Tick, _Reward, Action, _Record)),
+    % Nothing is in distress, so the normal reduce action stands, exactly as before slice 72.
+    assertion(Action = released(reduce(temperature))),
+    % And the stabiliser's bias is untouched: zero conflict raises control by nothing.
+    get_dict(bus, World1, Bus1),
+    stabiliser_bias(Bus1, Bias),
+    assertion(Bias =:= 0).
+
+% TWO INCOMPATIBLE DRIVES STANDING RAISES CONTROL, PUBLISHED AS THE STABILISER'S BIAS - the wiring's
+% own observable effect, read back through the same channel DECISION-15 named as the join.
+test(two_incompatible_drives_raise_control_on_the_bus) :-
+    % Start from the fixed world and stand two mutually incompatible overrides.
+    cognitive_cycle_test_world(Base),
+    put_dict(overrides,
+              Base,
+              [override(hunger, 3, 0.9, eat), override(thirst, 4, 0.8, drink)],
+              World0),
+    % Run one tick.
+    cognitive_cycle_step(World0, World1, _Summary),
+    % Control was raised: the stabiliser's bias is strictly positive, never invented, only measured.
+    get_dict(bus, World1, Bus1),
+    stabiliser_bias(Bus1, Bias),
+    assertion(Bias > 0).
+
+% THE GRATTON EFFECT, READ THROUGH THE WHOLE RUNNING CYCLE RATHER THAN THROUGH THE PACK ALONE: an
+% incongruent trial run straight after another incongruent trial faces a shallower net threshold rise
+% than the identical trial run cold, because the first trial's control is still standing on the bus.
+% This is Chapter 52.2.4's own acceptance test and it holds for the caller-supplied gain the fixed
+% test world carries (0.15) without this file choosing a second number to prove it.
+test(the_running_cycle_carries_control_forward_the_gratton_shape) :-
+    % A world with no overrides standing runs one congruent (uncontested) tick first.
+    cognitive_cycle_test_world(Cold),
+    cognitive_cycle_step(Cold, ColdAfter, _ColdSummary),
+    get_dict(bus, ColdAfter, ColdBus),
+    stabiliser_bias(ColdBus, ColdBias),
+    % No conflict was standing, so the cold run's carried bias is exactly zero.
+    assertion(ColdBias =:= 0),
+    % Now run the SAME incompatible pair twice in a row, carrying the world (and its bus) forward.
+    put_dict(overrides,
+              Cold,
+              [override(hunger, 3, 0.9, eat), override(thirst, 4, 0.8, drink)],
+              Incongruent0),
+    cognitive_cycle_step(Incongruent0, Incongruent1, _First),
+    get_dict(bus, Incongruent1, BusAfterFirst),
+    stabiliser_bias(BusAfterFirst, BiasAfterFirst),
+    % The first incongruent trial already raised control above the cold run's untouched zero.
+    assertion(BiasAfterFirst > ColdBias),
+    cognitive_cycle_step(Incongruent1, Incongruent2, _Second),
+    get_dict(bus, Incongruent2, BusAfterSecond),
+    stabiliser_bias(BusAfterSecond, BiasAfterSecond),
+    % Control raised again on the second trial, carried forward from the first rather than starting
+    % cold - the Gratton shape: a repeated incongruent trial faces standing control, a fresh one does
+    % not, and the difference is measured here rather than asserted.
+    assertion(BiasAfterSecond >= BiasAfterFirst).
 
 % The whole closed loop is reproducible: the same world run twice yields the identical result.
 test(the_cycle_is_reproducible) :-

@@ -133,13 +133,13 @@ The seven-phase waterfall is mirrored in seven versioned documents. Six are seed
 
 | Phase | File | Seeded from |
 |---|---|---|
-| 0. Definition | [`docs/DSPARCD/konnectome_0_definition_v1.txt`](docs/DSPARCD/konnectome_0_definition_v1.txt) | The Constitution and all of `docs/` |
-| 1. Specification | [`docs/DSPARCD/konnectome_1_specification_v54.txt`](docs/DSPARCD/konnectome_1_specification_v54.txt) | Appendix 1 |
-| 2. Pseudocode | [`docs/DSPARCD/konnectome_2_pseudocode_v54.txt`](docs/DSPARCD/konnectome_2_pseudocode_v54.txt) | Appendix 2 |
-| 3. Architecture | [`docs/DSPARCD/konnectome_3_architecture_v54.txt`](docs/DSPARCD/konnectome_3_architecture_v54.txt) | Appendix 3 |
-| 4. Refinement | [`docs/DSPARCD/konnectome_4_refinement_v54.txt`](docs/DSPARCD/konnectome_4_refinement_v54.txt) | Appendix 4 |
-| 5. Completion | [`docs/DSPARCD/konnectome_5_completion_v54.txt`](docs/DSPARCD/konnectome_5_completion_v54.txt) | Appendix 5 |
-| 6. Demonstration | [`docs/DSPARCD/konnectome_6_demonstration_v54.txt`](docs/DSPARCD/konnectome_6_demonstration_v54.txt) | Appendix 6 |
+| 0. Definition | [`docs/DSPARCD/konnectome_0_definition_v2.txt`](docs/DSPARCD/konnectome_0_definition_v2.txt) | The Constitution and all of `docs/` |
+| 1. Specification | [`docs/DSPARCD/konnectome_1_specification_v62.txt`](docs/DSPARCD/konnectome_1_specification_v62.txt) | Appendix 1 |
+| 2. Pseudocode | [`docs/DSPARCD/konnectome_2_pseudocode_v62.txt`](docs/DSPARCD/konnectome_2_pseudocode_v62.txt) | Appendix 2 |
+| 3. Architecture | [`docs/DSPARCD/konnectome_3_architecture_v62.txt`](docs/DSPARCD/konnectome_3_architecture_v62.txt) | Appendix 3 |
+| 4. Refinement | [`docs/DSPARCD/konnectome_4_refinement_v62.txt`](docs/DSPARCD/konnectome_4_refinement_v62.txt) | Appendix 4 |
+| 5. Completion | [`docs/DSPARCD/konnectome_5_completion_v62.txt`](docs/DSPARCD/konnectome_5_completion_v62.txt) | Appendix 5 |
+| 6. Demonstration | [`docs/DSPARCD/konnectome_6_demonstration_v62.txt`](docs/DSPARCD/konnectome_6_demonstration_v62.txt) | Appendix 6 |
 
 ## The build ladder
 

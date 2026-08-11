@@ -16,6 +16,14 @@
 :- use_module(library(action_selector), [action_selector_select/2]).
 % Reuse the override controller: a vital drive in distress may seize control.
 :- use_module(library(override_controller), [override_controller_arbitrate/4]).
+% Reuse the conflict monitor: SLICE 72, THE CONFLICT LOOP WIRED. Chapter 52.2.1's loop - conflict
+% raises control, control lowers conflict - was closed between override_controller and stabiliser at
+% slice 58 (DECISION-15) and left unwired ever since. It measures response conflict among the same
+% overrides the arbitration step already reads, raises the distress threshold by the CALLER'S gain
+% (DECISION-15 refused to invent one; the loop's own acceptance test is an inequality that holds for
+% every positive gain), publishes the raise as a stability bias on the bus, and arbitrates at the
+% raised threshold with the inviolable rank (respiration) exempt, per OBSERVATION-18's safety refusal.
+:- use_module(library(conflict_monitor), [conflict_monitor_step/7]).
 % Reuse the plasticity engine: the fast three-factor learning, the fading traces, the running
 % averages, and the slow homeostatic bound - the whole learning body, beating in the live tick.
 :- use_module(library(plasticity_engine), [plasticity_engine_step/5,
@@ -129,6 +137,11 @@ cognitive_cycle_step(World0, World, Summary) :-
     cognitive_cycle_world_value(World0, overrides, Overrides),
     % Read the override distress threshold.
     cognitive_cycle_world_value(World0, override_threshold, Threshold),
+    % Read the conflict loop's coupling gain - the CALLER'S choice (DECISION-15), never konnectome's
+    % invention: the loop's acceptance test (the Gratton inequality) holds for every positive gain, so
+    % nothing here picks a number, and a caller supplying one is making konnectome's control policy in
+    % the open, exactly where a reader can see it being made.
+    cognitive_cycle_world_value(World0, conflict_gain, ConflictGain),
     % Read the learning rate.
     cognitive_cycle_world_value(World0, learning_rate, LearningRate),
     % Read the two-process governor, the night watchman of the operating state.
@@ -164,7 +177,7 @@ cognitive_cycle_step(World0, World, Summary) :-
                             Interfaces0, Traces0, Averages0, Memories0,
                             FadingFactor, SmoothingFactor, ScalingTarget, ScalingTargets,
                             ScalingRate, OfflineScalingRate, ReplayRate,
-                            Overrides, Threshold, LearningRate,
+                            Overrides, Threshold, ConflictGain, LearningRate,
                             Body1, Drives1, Bus1, Activations1, Interfaces2, Traces1, Averages1,
                             Memories1, Reward, FinalOutcome),
     % Both processes move one tick and the flip-flop selects the next operating state (slice 37);
@@ -210,8 +223,8 @@ cognitive_cycle_program(online, Body0, Drives0, Bus0, Constructs, Activations0,
                         Interfaces0, Traces0, Averages0, Memories0,
                         FadingFactor, SmoothingFactor, ScalingTarget, ScalingTargets,
                         ScalingRate, _OfflineScalingRate, _ReplayRate,
-                        Overrides, Threshold, LearningRate,
-                        Body1, Drives1, Bus1, Activations1, Interfaces2, Traces1, Averages1,
+                        Overrides, Threshold, ConflictGain, LearningRate,
+                        Body1, Drives1, BusOut, Activations1, Interfaces2, Traces1, Averages1,
                         Memories1, Reward, FinalOutcome) :-
     % STEP ONE (A3.3): the drives read the body, compute the reward, and broadcast it as dopamine.
     drive_system_step(Drives0, Body0, Bus0, Drives1, Reward, Bus1),
@@ -219,15 +232,20 @@ cognitive_cycle_program(online, Body0, Drives0, Bus0, Constructs, Activations0,
     drive_system_proposals(Drives0, Body0, Candidates),
     % STEP TWO: the two-pass synchronous update advances every construct, with relay gains set by the bus.
     connection_graph_step_modulated(Interfaces0, Constructs, Activations0, Bus1, Activations1),
-    % STEP THREE: the action selector releases one proposed action, then the override controller may seize control.
+    % STEP THREE: the action selector releases one proposed action, then the conflict loop resolves
+    % control (SLICE 72). Chapter 52.2.1's loop: the response conflict among the overrides raises the
+    % distress threshold by the caller's gain, the raise is published as a stability bias on the bus,
+    % and arbitration runs at the raised threshold with the inviolable rank exempt (OBSERVATION-18).
+    % With no overrides standing this measures zero conflict and arbitrates exactly as the plain
+    % override controller always did - the wiring changes nothing until a caller supplies overrides.
     action_selector_select(Candidates, NormalOutcome),
-    % The override controller resolves control, letting a vital drive in distress preempt.
-    override_controller_arbitrate(Overrides, Threshold, NormalOutcome, FinalOutcome),
+    conflict_monitor_step(Bus1, Overrides, Threshold, ConflictGain, NormalOutcome, _Conflict,
+                          result(BusOut, _RaisedThreshold, FinalOutcome)),
     % STEP FOUR: the plasticity engine learns from the new activations and the dopamine on the bus.
-    plasticity_engine_step(Interfaces0, Activations1, Bus1, LearningRate, Interfaces1),
+    plasticity_engine_step(Interfaces0, Activations1, BusOut, LearningRate, Interfaces1),
     % The reward the drives just declared spends the standing eligibility traces into the weights,
     % and capture consumes the spent tags (slice 36, the Layers 4-5 tag-and-capture law made live).
-    plasticity_engine_reward_capture_step(Interfaces1, Traces0, Bus1, LearningRate, InterfacesCaptured, TracesCaptured),
+    plasticity_engine_reward_capture_step(Interfaces1, Traces0, BusOut, LearningRate, InterfacesCaptured, TracesCaptured),
     % The eligibility traces fade one step and absorb this tick's fresh coincidences (slice 28, live).
     plasticity_engine_trace_step(InterfacesCaptured, Activations1, FadingFactor, TracesCaptured, Traces1),
     % The running averages move one smoothing step toward this tick's activities (slice 29, live).
@@ -245,7 +263,7 @@ cognitive_cycle_program(offline, Body0, Drives0, Bus0, _Constructs, Activations0
                         Interfaces0, Traces0, Averages0, Memories0,
                         _FadingFactor, _SmoothingFactor, ScalingTarget, ScalingTargets,
                         _ScalingRate, OfflineScalingRate, ReplayRate,
-                        _Overrides, _Threshold, _LearningRate,
+                        _Overrides, _Threshold, _ConflictGain, _LearningRate,
                         Body0, Drives0, Bus0, Activations0, Interfaces2, Traces0, Averages0,
                         Memories0, 0, offline_works) :-
     % THE NIGHT WORKS (Chapter 7): one interleaved replay round over the remembered day, then the

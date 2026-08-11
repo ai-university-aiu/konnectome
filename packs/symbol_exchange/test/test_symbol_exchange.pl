@@ -38,6 +38,9 @@ symbol_exchange_test_world(World) :-
         scaling_rate: 0.0,
         overrides: [override(respiration, 0, 0.0, breathe)],
         override_threshold: 0.5,
+        % SLICE 72: the conflict loop's caller-supplied coupling gain (DECISION-15's own worked
+        % figure; the loop's acceptance test holds for every positive gain and picks none of them).
+        conflict_gain: 0.15,
         learning_rate: 0.1,
         % The day's memory store starts empty; every online tick remembers its pattern (slice 38).
         memories: [],
