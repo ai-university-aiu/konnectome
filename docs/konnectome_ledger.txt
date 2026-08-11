@@ -1261,7 +1261,7 @@ thirty-eight-document Certified_Neuroscientist corpus was read from the framewor
 downward (framework and Layers 12 through 15 in full; Layers 4-5, 6, 7, 8, 9-modes, 10, and 11
 at full outline-and-modes depth with representative-chapter sampling of the manuscripts), against
 a baseline verified green first (494 tests, four gates at zero, capstone clean, conformance 137
-of 137 in both cousins). The full analysis is docs/konnectome_vision_set_top_down_analysis_v1.txt.
+of 137 in both cousins). The full analysis is /home/ccaitwo/konnectome/docs/archive/konnectome_vision_set_top_down_analysis_v1.txt.
 VERDICT: no top-level architectural decision must be reversed - the registry-and-scheduler-with-
 bus style, the ten components, the tick order, the dumb scheduler, the never-invent selector, and
 the passive observer all survive, several confirmed independently by the corpus (the Layer 11
@@ -1833,7 +1833,7 @@ WHEN THAT COUNT REACHES THIRTY-TWO OR MORE, THE AUDIT IS DUE and the session tha
 should either run it or record explicitly that the owner deferred it. A due audit silently skipped
 is the failure this entry exists to prevent.
 
-WHAT IS BEING AUDITED: whether docs/konnectome_vision_set_top_down_analysis_v1.txt WAS FULFILLED -
+WHAT IS BEING AUDITED: whether /home/ccaitwo/konnectome/docs/archive/konnectome_vision_set_top_down_analysis_v1.txt WAS FULFILLED -
 that is, whether the findings konnectome recorded when it read the corpus were actually acted upon,
 or whether they were written down and then quietly bypassed. Audit each part of that document by
 name:
@@ -2042,10 +2042,10 @@ STATUS: CLOSED. No wall; no cousin edited.
 
 Tutorial-version repair note (2026-08-09, sibling of the Build-log repair note). THE TUTORIAL'S
 INTERNAL VERSION STRINGS HAD DRIFTED FROM ITS FILENAME and are repaired at slice 39. The file
-docs/konnectome_tutorial_v37.txt opened with "Version 34." and closed with "End of the konnectome
+/home/ccaitwo/konnectome/docs/archive/konnectome_tutorial_v37.txt opened with "Version 34." and closed with "End of the konnectome
 tutorial, version 36." - three and one behind the name on the file. Earlier sessions had bumped the
 filename under the Eleventh Commandment's archive discipline and not the strings inside. Both now
-read 38 in docs/konnectome_tutorial_v38.txt. THE STANDING INSTRUCTION: a session that bumps the
+read 38 in /home/ccaitwo/konnectome/docs/archive/konnectome_tutorial_v38.txt. THE STANDING INSTRUCTION: a session that bumps the
 tutorial bumps BOTH strings, or the document lies about itself to the reader it was written for.
 STATUS: CLOSED. No wall.
 
@@ -4797,5 +4797,60 @@ AND THE OPEN QUESTION FROM THE VERSION 18 AUDIT STANDS UNCHANGED: the Fifteenth 
 causalontology's suite as one hundred and nineteen vectors while this ledger describes it as 137
 checks, and causalontology's own README carries both figures. It is still to be closed by a
 measurement rather than a preference - now with no particular urgency.
+
+
+POINTER AUDIT NOTE (2026-08-11). THE DOCS REORGANIZATION, AND THE SEVEN POINTERS THAT MUST STAY
+BROKEN. This entry exists so that the next session running a pointer audit does not re-open a
+question that has been closed deliberately.
+
+WHAT WAS DONE. Five changes reorganized /docs/ : docs/design/ and docs/cousins/ were created and
+filled; the build log and this ledger were unversioned (Constitution versions 22 and 23); and the
+English Readable Code manuscript moved into docs/principles/ (version 24). A full pointer audit
+followed - every relative and every absolute path in the live tree extracted and tested against the
+filesystem - and twenty stale pointers were repointed at the end of it.
+
+THE TWENTY WERE ALL ONE KIND: a live pointer naming a document that had been archived under the
+Eleventh Commandment, still at its pre-archive path. They are repointed AT THE ARCHIVE AND AT THE
+SAME VERSION - docs/archive/konnectome_vision_set_top_down_analysis_v1.txt, not the live _v3 - and
+the version is preserved deliberately, because most of them cite specific LINE NUMBERS in _v1 and
+repointing them at _v3 would have swapped a broken pointer for a confidently wrong one. That is the
+worse failure of the two, and it is the trap this kind of audit sets for itself.
+
+SEVEN POINTERS ARE LEFT BROKEN ON PURPOSE, BY THIS LEDGER'S OWN RULE: A POINTER IS NOT A STATEMENT.
+The rule was written during the Layer-09 rename and it cuts both ways - a pointer must be repointed
+when its file moves, and a STATEMENT must never be rewritten even when it contains a path. All seven
+are statements:
+
+- docs/X.txt, twice. It is the GENERIC EXAMPLE inside the rule itself, and names no file at all. An
+  automated audit will flag it every time and must every time be told no.
+
+- docs/AGI_FOR_EVERYONE_MANUSCRIPT.txt, docs/AGI_FOR_EVERYONE_OUTLINE.txt,
+  docs/konnectome_tutorial_v1.txt, docs/DSPARCD_EXPLAINED.txt, and
+  docs/NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt. Each sits inside a rename or repoint note that
+  QUOTES the old text, or names the path a past version acted at. Version 10 already settled one of
+  these explicitly, refusing to put a 2026-08-10 path inside a 2026-08-09 record, and the same
+  reasoning governs the rest.
+
+- docs/konnectome_vision_set_fulfilment_audit_v1.txt. This one is different, and is the most
+  interesting of the seven: it is not a stale pointer at all but a SUGGESTED NAME, recorded when the
+  audit was planned. The audit shipped as konnectome_vision_set_analysis_fidelity_audit_v1.txt, so
+  the record is a true account of what was PROPOSED and a false account of what EXISTS. It stays as
+  the proposal it was.
+
+AN OPEN QUESTION THIS AUDIT RAISES AND DOES NOT CLOSE. The five reorganization changes deliberately
+did not repoint anything inside docs/archive/ or docs/hand-off/ , on the reasoning that those are
+closed records. THE LAYER-09 RENAME DID THE OPPOSITE - it repointed every hand-off and every archived
+tutorial, on the reasoning that an address change falsifies a record by leaving it. Both readings
+appeal to the same rule and reach opposite answers, and roughly ninety-five historical files now hold
+pointers at the pre-reorganization paths. THE DISTINCTION THAT WOULD SETTLE IT, offered here rather
+than decided: the Layer-09 case moved a file a reader is still INSTRUCTED to go and read, whereas a
+superseded hand-off's file list is a description of a directory as it stood on a past date. If that
+distinction holds, both changes were right and neither rule bent. It is recorded as an open question
+because the owner has not ruled on it.
+
+THE STANDING GUIDANCE FOR THE NEXT AUDIT. A path-shaped string is not automatically a pointer. Ask
+what the sentence around it DOES: if it directs a reader somewhere, it is a pointer and must resolve;
+if it reports what was once true, it is a record and must not be touched. A pointer audit that fixes
+every path it can reach will quietly destroy the build's history one true sentence at a time.
 
  Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 16 (3 CLOSED: 8, 9 and 15).  Decisions: 12.
