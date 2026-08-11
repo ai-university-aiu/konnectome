@@ -4744,4 +4744,58 @@ prefix collision unchanged. Capstone unaffected, verified rather than assumed. N
 either change order. Neither cousin was edited, and conformance is now FOUR SESSIONS OLD and overdue
 for re-measurement.
 
+
+CONSTITUTION VERSION 19 NOTE (2026-08-10). THREE OWNER INSTRUCTIONS, RECORDED HERE BECAUSE TWO OF THEM
+CHANGE WHAT A SESSION MAY DO AND THE THIRD CHANGES WHAT IT MUST CHECK.
+
+FIRST, THE SIXTEENTH COMMANDMENT: AUTO-FIX-ALL. The owner grants the assistant authority to auto-fix
+any problem or issue found, on the single condition that what was done and why is recorded in the
+build log. It is placed immediately after the Safety Gate so the grant and its one inviolable limit
+are read together, and it carries three further limits written into it: it is not a licence to edit a
+cousin repository, not a licence to settle a design question the corpus leaves open, and not a licence
+to invent a value.
+
+WHY IT MATTERS TO THIS LEDGER SPECIFICALLY. This run left known faults standing four times, each time
+defensibly - slice 52 recorded a defect in merged code and did not patch it, slice 53 found a queued
+item about to be built wrong and left the queue alone, slice 55 built a fix for the night and did not
+wire it. THE COMMANDMENT'S OWN SENTENCE IS THE ONE TO CARRY: WAITING FOR PERMISSION TO FIX A KNOWN
+FAULT IS ITSELF A FAULT, because a fault that is known and unrepaired is not neutral - it is actively
+misleading, since everything around it goes on being green.
+
+SECOND, THE HAND-OFF PROTOCOL MOVES TO LAST and is renumbered from the Nineteenth to the Twenty-First,
+with a standing rule that it REMAINS last and that a new Commandment is inserted BEFORE it. The reason
+is the one the Commandment exists to serve: it is read when the context window is full, which is
+exactly when a session can no longer be trusted to search patiently, so it should be found by going to
+the end. Three Commandments displaced by the new Sixteenth are renumbered - branch-and-report 16 to
+17, the tutorial 17 to 18, the build log 18 to 19 - and the North Star keeps 20.
+
+AND THE FINDING BENEATH THAT RENUMBERING, WHICH IS THIS ENTRY'S REAL CONTENT. Every version note from
+version 5 onward ended by promising that no Commandment had been renumbered, so that a number cited
+from an older hand-off still landed on the right rule. The owner removed the promise in one sentence:
+OLD HAND-OFFS DO NOT MATTER, ONLY THE CURRENT HAND-OFF MATTERS - which is true by the Constitution's
+own design, since the amendment that put superseded hand-offs in their own directory exists precisely
+so nobody reads the wrong one. THE INVARIANT WAS PROTECTING A READING NOBODY PERFORMS, and it had
+been constraining every amendment for fourteen versions.
+
+NOTE HOW THAT HAPPENED, BECAUSE IT IS A LEDGER-SHAPED LESSON RATHER THAN A CONSTITUTIONAL ONE. Version
+5 renumbered, felt the cost, and wrote down a promise not to do it again. Every later version
+inherited it, honoured it, and repeated it - and each repetition made it read as more load-bearing,
+because a rule stated six times looks six times as important. Nobody re-derived it. THE CHEAPEST THING
+IN THIS PROJECT TO INHERIT IS A WELL-ARGUED CONSTRAINT, AND THE MOST EXPENSIVE THING TO NOTICE IS THAT
+ITS ARGUMENT HAS STOPPED APPLYING. That is the same shape as slice 54's finding one week apart in
+subject and identical in structure: a conclusion that followed from its premises, held long after the
+premises did.
+
+THIRD, COUSIN CONFORMANCE IS RELAXED TO LONGER STRETCHES. Earlier hand-offs set a re-measure trigger of
+three or four sessions and the figure is now four sessions old. The owner has relaxed it: it need not
+be re-measured on a short cycle. THE FIFTEENTH COMMANDMENT IS UNTOUCHED BY THIS - a conformance suite
+that is RUN must still be green and a red gate is still a finding to report. What changed is how often
+it is run, not what a run means. A session should therefore quote the figure WITH ITS AGE rather than
+treat the age as a debt.
+
+AND THE OPEN QUESTION FROM THE VERSION 18 AUDIT STANDS UNCHANGED: the Fifteenth Commandment describes
+causalontology's suite as one hundred and nineteen vectors while this ledger describes it as 137
+checks, and causalontology's own README carries both figures. It is still to be closed by a
+measurement rather than a preference - now with no particular urgency.
+
  Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 16 (3 CLOSED: 8, 9 and 15).  Decisions: 12.

@@ -344,7 +344,7 @@ same change), so that only the latest version of any versioned document lives ou
 VERSIONS, NOT SERIES, AND CONTEXT HAND-OFF DOCUMENTS ARE A SERIES. A superseded hand-off is NOT a
 new version of an older one - each records a DIFFERENT session and none replaces any other - so
 hand-offs are not archived under this Commandment. They live in /docs/hand-off/ under the two-
-location rule of the Nineteenth, which borrows this Commandment's SHAPE - only the current one lives
+location rule of the Twenty-First, which borrows this Commandment's SHAPE - only the current one lives
 outside its own directory - without borrowing its DESTINATION. The clarification is written here
 rather than only there because this Commandment as originally worded could reasonably be read as
 covering them, and a later session tidying hand-offs into /archive/ would be following it.
@@ -404,13 +404,59 @@ it STOPS and is reported, not merged. The same spirit applies to causalontology'
 nineteen-vector conformance suite: a proposed data-structure change must keep it green. A red gate is
 a finding to report, never a thing to force through.
 
-THE SIXTEENTH COMMANDMENT: BRANCH AND REPORT DISCIPLINE:
+THE SIXTEENTH COMMANDMENT: AUTO-FIX-ALL:
+(NEW in version 19, by the owner's instruction of 2026-08-10.)
+The founder, creator, owner and user of konnectome, D. R. Dison, has granted the assistant the
+AUTHORITY and the POWER to auto-fix any problem found and to auto-fix any issue found.
+AUTO-FIX-ALL IS GRANTED.
+The single condition is a record: KEEP A RECORD OF WHAT WAS DONE, AND THE REASONS WHY IT WAS DONE,
+IN THE BUILD LOG of the Nineteenth Commandment.
+
+WHY THIS COMMANDMENT SITS HERE, IMMEDIATELY AFTER THE SAFETY GATE. The Fifteenth Commandment is the
+one inviolable limit on what may be changed, and this Commandment is a broad grant of authority to
+change things. THEY MUST BE READ TOGETHER OR THE SECOND IS MISREAD. The grant runs up to the gate and
+stops: a fix that would regress ARC-AGI-1, ARC-AGI-2, or causalontology's conformance suite STOPS AND
+IS REPORTED, and is never forced through on this Commandment's authority. A red gate is still a
+finding, exactly as the Fifteenth says.
+
+WHAT THE GRANT COVERS. A defect found while building, a stale pointer, a wrong count, a document that
+contradicts itself, a test that pins a mistake, a gap between what a file says and what the code does.
+The assistant does not need to ask before repairing any of these. WAITING FOR PERMISSION TO FIX A
+KNOWN FAULT IS ITSELF A FAULT, because a fault that is known and unrepaired is one a later session
+will meet as though it were the truth.
+
+WHAT THE GRANT DOES NOT COVER, AND EACH OF THESE IS A LIMIT RATHER THAN A HESITATION.
+
+IT IS NOT A LICENCE TO EDIT A COUSIN. The Second and Third Commandments stand unchanged: konnectome
+does not edit causalontology or PrologAI directly, and a fault found in either is routed through the
+gated change order rather than fixed in place. The authority granted here is over konnectome's own
+repository.
+
+IT IS NOT A LICENCE TO DECIDE A QUESTION THE CORPUS LEAVES OPEN. Fixing a fault and settling an
+undecided design question are different acts. The first is granted here; the second is a numbered
+decision in the ledger of the Fourth Commandment, argued in the open, with its own statement of what
+it does NOT decide.
+
+IT IS NOT A LICENCE TO INVENT A VALUE. The Fourth Commandment's rule holds: findings are DISCOVERED
+by building and never guessed from the armchair. Where a fix would require a number the corpus does
+not supply, the honest repair is a refusal that says so aloud - which this build has now preferred
+over an invented default six times running.
+
+AND IT IS NOT A LICENCE TO SKIP THE RECORD, which is the one condition attached to the grant. A fix
+made without a record is indistinguishable, one session later, from a fault nobody noticed - and this
+build has now met that shape often enough to know what it costs. THE RECORD GOES IN THE BUILD LOG,
+and where the fix carries a finding worth routing it goes in the ledger too.
+
+THE STANDING FORM OF THIS AUTHORITY. Find it, fix it, write down what you did and why. Do not stop to
+ask. Do not leave a known fault standing because repairing it was not what the session was for.
+
+THE SEVENTEENTH COMMANDMENT: BRANCH AND REPORT DISCIPLINE:
 (NEW in version 2.) Work on a feature/ branch and open a pull request; do not push directly to main.
 No Artificial-Intelligence tool is credited as author or co-author anywhere. No Roman numerals in
 any document or identifier. These match the house rules of the cousin repositories, so konnectome
 reads as one of the family.
  ...
-THE SEVENTEENTH COMMANDMENT: THE TUTORIAL:
+THE EIGHTEENTH COMMANDMENT: THE TUTORIAL:
 Add the following to /docs/:
 konnectome_tutorial_v1.txt
 Once this file is created,
@@ -432,12 +478,12 @@ creates for itself: an instruction to MAINTAIN A VERSIONED FILE that names a spe
 guaranteed to go stale the first time it is obeyed. Writing _v50 here would have bought fifty-one
 slices of correctness and the identical fault afterwards. It now names the DIRECTORY and the
 UNIQUENESS RULE instead, which is what actually identifies the file and cannot rot - the same
-technique the version 17 note used on the First Commandment and the Nineteenth Commandment's version
+technique the version 17 note used on the First Commandment and the Hand-Off Protocol's own version
 13 amendment used on the hand-offs. The creation line above it - "Add the following to /docs/:
 konnectome_tutorial_v1.txt" - is a RECORD of the file's creation and is deliberately left alone.
 No rule changed.)
  ...
-THE EIGHTEENTH COMMANDMENT: THE BUILD LOG:
+THE NINETEENTH COMMANDMENT: THE BUILD LOG:
 (NEW in version 3, by the owner's instruction of 2026-07-26. The former Eighteenth Commandment, the
 Hand-Off Protocol, becomes the Nineteenth.)
 Log all activities as part of the konnectome build to the document:
@@ -451,84 +497,6 @@ The log is append-only and grows with the build: every session of build activity
 in order, so the document carries the complete story of how konnectome was built - rigorous enough
 to cite, alive enough to read.
  ...
-THE NINETEENTH COMMANDMENT: CONTEXT-WINDOW MANAGEMENT AND THE HAND-OFF PROTOCOL:
-A long session degrades (context rot, and the lost-in-the-middle effect), and the assistant cannot see
-the context window's fill level from its own side, so the trigger must never rely on the assistant
-watching a token count. Two triggers govern the hand-off. First, the MILESTONE trigger: after each
-merged slice or unit of work, the assistant proactively offers to write a Context Hand-Off and to
-continue in a fresh session. Second, the OWNER trigger: the owner watches the true gauge with the
-/context command (and /usage for plan limits), and when the window is high - as a guideline, above one
-hundred thousand tokens, or above roughly sixty percent of the window - the owner asks for a hand-off.
-On either trigger, the assistant carries out the Hand-Off Protocol below, commits the result on a
-feature/ branch through a pull request (Sixteenth Commandment), and then PAUSES. A fresh session then
-re-loads state from docs/ - the ledger, the DSPARCD Fileset, the tutorial, and the latest hand-off,
-which since version 13 is the ONLY Context Hand-Off document in docs/ and therefore needs no working
-out - and
-continues from the known-good baseline, because all durable state lives on disk and never only in the
-conversation.
-
-THE HAND-OFF PROTOCOL. The assistant performs these steps:
-
-Step 1: Give yourself a fun, creative, original name.
-Step 2a: SWEEP BEFORE YOU WRITE. Move any Context Hand-Off document currently sitting in
-~/konnectome/docs/ into ~/konnectome/docs/hand-off/ , using git mv, in the change you are about to
-make. Move whatever you find, however many there are, and edit none of them.
-Step 2b: Write the new hand-off to file:
-~/konnectome/docs/[DATE]_[SERIAL NUMBER]_Context_Hand-Off_from_[NAME].txt
-(AMENDED in version 13, by the owner's instruction of 2026-08-10. THE CURRENT HAND-OFF LIVES IN
-/docs/ AND EVERY SUPERSEDED ONE LIVES IN /docs/hand-off/ , so that AT ANY MOMENT EXACTLY ONE
-CONTEXT HAND-OFF DOCUMENT SITS IN /docs/ AND IT IS ALWAYS THE ONE TO READ. Three reasons, and they
-are the Constitution's own rather than a preference. FIRST, IT MAKES A DISTINCTION THIS DOCUMENT
-ALREADY DRAWS INTO A FACT ON DISK: a hand-off is two things at once - a dated REPORT of a session,
-which is a historical claim, and a live INSTRUCTION to the next one, which is a reading list and a
-first-task menu. Only the newest is ever read as instruction. Putting it somewhere the others are
-not means a reader never has to work out which. SECOND, IT MAKES HAND-OFFS FOLLOW THE HOUSE RULE THE
-ELEVENTH COMMANDMENT ALREADY SETS for every other document series in this repository - only the
-current one lives outside its archive directory - rather than being the single series with a
-convention of its own. THIRD, IT REMOVES A DERIVATION THAT CAN GO WRONG SILENTLY: 'the latest
-hand-off' was previously something a fresh session had to work out by sorting filenames on date and
-serial number, and same-day hand-offs, serial numbering, and session-close markers all make that
-fallible. It is now simply the only dated file in /docs/.
-AND THE SWEEP IS A PRECONDITION RATHER THAN A POSTCONDITION, WHICH IS THE LOAD-BEARING HALF OF THIS
-AMENDMENT. The obvious phrasing - write the new one, then move the old one - reads more naturally and
-FAILS SILENTLY: a session that skips the second half leaves two hand-offs in /docs/ , and the next
-session reads whichever it happens to open, with nothing anywhere to notice. Sweeping FIRST is
-self-healing, because it moves whatever it finds however many there are, so a skipped step costs one
-session of clutter instead of a wrong read. THAT IS THE SAME RULE THE SCHEDULED AUDIT'S TRIGGER WAS
-REWRITTEN UNDER ON THE SAME DAY: prefer the form whose failure mode is VISIBLE over the form whose
-failure mode is a plausible answer.
-Version 12 had briefly put every hand-off, including the current one, in /docs/hand-off/ ; this
-amendment keeps that directory for the superseded ones and brings the current one back up. The
-twenty-eight superseded hand-offs are unedited, the naming convention below is untouched, and no
-other rule changed.)
-where [DATE] is the current date as year-month-day (for example 2026-07-20);
-[SERIAL NUMBER] is the next free number for that date,
-starting at 1 (so a second hand-off written on the same day is _2);
-and [NAME] is the name chosen in Step 1 - for example,
-2026-07-20_1_Context_Hand-Off_from_Ember_Loomwright.txt .
-Step 3: To this file write the following information for the next building or maintenance process to read:
-- Your chosen name and the date, and a sentence on why the name was chosen.
-- A reminder to first and foremost read and follow THE KONNECTOME CONSTITUTION AT:
-~/konnectome/CONSTITUTION.md (all commandments).
-- A reminder to read The DSPARCD Fileset
-(docs/DSPARCD/konnectome_0_definition through konnectome_6_demonstration, at their current versions), and to
-read konnectome_0_definition FIRST, because it is the concept the other six answer to.
-- A reminder to read docs/neuroscience/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt, the guiding book for konnectome
-- A reminder that docs/neuroscience/ is THE NORTH-STAR DIRECTORY (the Twentieth Commandment), and that its two north-star documents - THE_NEUROSCIENCE_OF_COGNITION_OUTLINE.txt and THE_NEUROSCIENCE_OF_COGNITION_MANUSCRIPT.txt - are what this build steers by; together with the current state of their gap analysis, and which of its findings are still open.
-- A reminder to read the Settings, General, Instructions for Claude (the owner's standing instructions to the assistant).
-- A reminder to read ~/CLAUDE.md, which is git-untracked (gitignored) and holds the system-wide current-state narrative (it lives at the organization root, not inside one repository, because it belongs to the whole system).
-- A reminder to read the current /docs/konnectome_tutorial (the maintained beginner tutorial), and to read all of the documents in /docs/.
-- A list of the important /docs/ files and what each is: the ledger, the DSPARCD Fileset, the change orders, the tutorial, the thought-combination guide, the guiding-principle documents, the context documents, and the earlier hand-offs (named by the convention of Step 2b, and living in /docs/hand-off/ - see /home/ccaitwo/konnectome/docs/hand-off/README.txt for how to read them and for which of them are session-close markers rather than units of work).
-- A report of what was done in the session that is ending: the slices built, the packs, the tests, the pull requests merged, the current main commit, and the current DSPARCD and tutorial versions.
-- The build-against cousin commits (causalontology, PrologAI, Mentova), for reproducibility.
-- Any other context you, the assistant, judges important for the next process: open observations, honest non-closures, sharp edges, and anything discovered that is not obvious from the code.
-- The current first-task menu of options for the continuation to present to the owner, ending with an "Other ______" option.
-- A short sign-off.
-Step 4: Commit the hand-off AND THE STEP 2a SWEEP TOGETHER, in one change, on a feature/ branch
-through a pull request. Auto-Push. Then PAUSE. The sweep and the new hand-off belong in the same
-commit because they are one act: the document that was the instruction becomes a record in the same
-moment the next one becomes the instruction, and splitting them across two changes would leave a
-commit in which /docs/ holds two hand-offs or none.
 
 THE TWENTIETH COMMANDMENT: THE NORTH STAR:
 (NEW in version 18, by the owner's instruction of 2026-08-10. NO COMMANDMENT WAS REMOVED AND NO
@@ -603,7 +571,143 @@ book, then the rest of the north-star directory.
    discipline of the Eleventh Commandment. A gap that was real at one slice count may be closed at
    another, and a document added to the directory has not been read until the analysis says so.
 
-VERSION HISTORY NOTE (extended in version 18). This Constitution is at VERSION 18. Version 18, by the
+THE TWENTY-FIRST COMMANDMENT: CONTEXT-WINDOW MANAGEMENT AND THE HAND-OFF PROTOCOL:
+(MOVED TO LAST AND RENUMBERED from the Nineteenth in version 19, by the owner's instruction of
+2026-08-10.
+THIS COMMANDMENT IS THE LAST COMMANDMENT AND IS TO REMAIN THE LAST COMMANDMENT. A NEW COMMANDMENT
+IS INSERTED BEFORE IT, NEVER AFTER IT, AND A SESSION ADDING ONE RENUMBERS THIS ONE UPWARD IN THE
+SAME CHANGE. That is a standing rule and not a preference about this amendment.
+THE REASON IS THE ONE THIS COMMANDMENT EXISTS TO SERVE. It is the protocol a session runs when its
+context window is full - which is precisely when it can no longer be trusted to read carefully, to
+search patiently, or to hold the middle of a long document. It is the last thing a session does,
+and it should therefore be the last thing written down, findable by going to the end rather than by
+hunting. Every other Commandment is read while there is room to read; this one is read when there
+is not.
+A long session degrades (context rot, and the lost-in-the-middle effect), and the assistant cannot see
+the context window's fill level from its own side, so the trigger must never rely on the assistant
+watching a token count. Two triggers govern the hand-off. First, the MILESTONE trigger: after each
+merged slice or unit of work, the assistant proactively offers to write a Context Hand-Off and to
+continue in a fresh session. Second, the OWNER trigger: the owner watches the true gauge with the
+/context command (and /usage for plan limits), and when the window is high - as a guideline, above one
+hundred thousand tokens, or above roughly sixty percent of the window - the owner asks for a hand-off.
+On either trigger, the assistant carries out the Hand-Off Protocol below, commits the result on a
+feature/ branch through a pull request (the Seventeenth Commandment), and then PAUSES. A fresh session then
+re-loads state from docs/ - the ledger, the DSPARCD Fileset, the tutorial, and the latest hand-off,
+which since version 13 is the ONLY Context Hand-Off document in docs/ and therefore needs no working
+out - and
+continues from the known-good baseline, because all durable state lives on disk and never only in the
+conversation.
+
+THE HAND-OFF PROTOCOL. The assistant performs these steps:
+
+Step 1: Give yourself a fun, creative, original name.
+Step 2a: SWEEP BEFORE YOU WRITE. Move any Context Hand-Off document currently sitting in
+~/konnectome/docs/ into ~/konnectome/docs/hand-off/ , using git mv, in the change you are about to
+make. Move whatever you find, however many there are, and edit none of them.
+Step 2b: Write the new hand-off to file:
+~/konnectome/docs/[DATE]_[SERIAL NUMBER]_Context_Hand-Off_from_[NAME].txt
+(AMENDED in version 13, by the owner's instruction of 2026-08-10. THE CURRENT HAND-OFF LIVES IN
+/docs/ AND EVERY SUPERSEDED ONE LIVES IN /docs/hand-off/ , so that AT ANY MOMENT EXACTLY ONE
+CONTEXT HAND-OFF DOCUMENT SITS IN /docs/ AND IT IS ALWAYS THE ONE TO READ. Three reasons, and they
+are the Constitution's own rather than a preference. FIRST, IT MAKES A DISTINCTION THIS DOCUMENT
+ALREADY DRAWS INTO A FACT ON DISK: a hand-off is two things at once - a dated REPORT of a session,
+which is a historical claim, and a live INSTRUCTION to the next one, which is a reading list and a
+first-task menu. Only the newest is ever read as instruction. Putting it somewhere the others are
+not means a reader never has to work out which. SECOND, IT MAKES HAND-OFFS FOLLOW THE HOUSE RULE THE
+ELEVENTH COMMANDMENT ALREADY SETS for every other document series in this repository - only the
+current one lives outside its archive directory - rather than being the single series with a
+convention of its own. THIRD, IT REMOVES A DERIVATION THAT CAN GO WRONG SILENTLY: 'the latest
+hand-off' was previously something a fresh session had to work out by sorting filenames on date and
+serial number, and same-day hand-offs, serial numbering, and session-close markers all make that
+fallible. It is now simply the only dated file in /docs/.
+AND THE SWEEP IS A PRECONDITION RATHER THAN A POSTCONDITION, WHICH IS THE LOAD-BEARING HALF OF THIS
+AMENDMENT. The obvious phrasing - write the new one, then move the old one - reads more naturally and
+FAILS SILENTLY: a session that skips the second half leaves two hand-offs in /docs/ , and the next
+session reads whichever it happens to open, with nothing anywhere to notice. Sweeping FIRST is
+self-healing, because it moves whatever it finds however many there are, so a skipped step costs one
+session of clutter instead of a wrong read. THAT IS THE SAME RULE THE SCHEDULED AUDIT'S TRIGGER WAS
+REWRITTEN UNDER ON THE SAME DAY: prefer the form whose failure mode is VISIBLE over the form whose
+failure mode is a plausible answer.
+Version 12 had briefly put every hand-off, including the current one, in /docs/hand-off/ ; this
+amendment keeps that directory for the superseded ones and brings the current one back up. The
+twenty-eight superseded hand-offs are unedited, the naming convention below is untouched, and no
+other rule changed.)
+where [DATE] is the current date as year-month-day (for example 2026-07-20);
+[SERIAL NUMBER] is the next free number for that date,
+starting at 1 (so a second hand-off written on the same day is _2);
+and [NAME] is the name chosen in Step 1 - for example,
+2026-07-20_1_Context_Hand-Off_from_Ember_Loomwright.txt .
+Step 3: To this file write the following information for the next building or maintenance process to read:
+- Your chosen name and the date, and a sentence on why the name was chosen.
+- A reminder to first and foremost read and follow THE KONNECTOME CONSTITUTION AT:
+~/konnectome/CONSTITUTION.md (all commandments).
+- A reminder to read The DSPARCD Fileset
+(docs/DSPARCD/konnectome_0_definition through konnectome_6_demonstration, at their current versions), and to
+read konnectome_0_definition FIRST, because it is the concept the other six answer to.
+- A reminder to read docs/neuroscience/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt, the guiding book for konnectome
+- A reminder that docs/neuroscience/ is THE NORTH-STAR DIRECTORY (the Twentieth Commandment), and that its two north-star documents - THE_NEUROSCIENCE_OF_COGNITION_OUTLINE.txt and THE_NEUROSCIENCE_OF_COGNITION_MANUSCRIPT.txt - are what this build steers by; together with the current state of their gap analysis, and which of its findings are still open.
+- A reminder to read the Settings, General, Instructions for Claude (the owner's standing instructions to the assistant).
+- A reminder to read ~/CLAUDE.md, which is git-untracked (gitignored) and holds the system-wide current-state narrative (it lives at the organization root, not inside one repository, because it belongs to the whole system).
+- A reminder to read the current /docs/konnectome_tutorial (the maintained beginner tutorial), and to read all of the documents in /docs/.
+- A list of the important /docs/ files and what each is: the ledger, the DSPARCD Fileset, the change orders, the tutorial, the thought-combination guide, the guiding-principle documents, the context documents, and the earlier hand-offs (named by the convention of Step 2b, and living in /docs/hand-off/ - see /home/ccaitwo/konnectome/docs/hand-off/README.txt for how to read them and for which of them are session-close markers rather than units of work).
+- A report of what was done in the session that is ending: the slices built, the packs, the tests, the pull requests merged, the current main commit, and the current DSPARCD and tutorial versions.
+- The build-against cousin commits (causalontology, PrologAI, Mentova), for reproducibility.
+- Any other context you, the assistant, judges important for the next process: open observations, honest non-closures, sharp edges, and anything discovered that is not obvious from the code.
+- The current first-task menu of options for the continuation to present to the owner, ending with an "Other ______" option.
+- A short sign-off.
+Step 4: Commit the hand-off AND THE STEP 2a SWEEP TOGETHER, in one change, on a feature/ branch
+through a pull request. Auto-Push. Then PAUSE. The sweep and the new hand-off belong in the same
+commit because they are one act: the document that was the instruction becomes a record in the same
+moment the next one becomes the instruction, and splitting them across two changes would leave a
+commit in which /docs/ holds two hand-offs or none.
+
+VERSION HISTORY NOTE (extended in version 19). This Constitution is at VERSION 19, and holds
+TWENTY-ONE Commandments.
+
+Version 19, by the owner's instruction of 2026-08-10, does three things. IT ADDS THE SIXTEENTH
+COMMANDMENT, AUTO-FIX-ALL, granting the assistant the authority to repair any problem it finds on the
+single condition that the repair is recorded in the build log. IT MOVES THE HAND-OFF PROTOCOL TO THE
+END, where it is renumbered from the Nineteenth to the Twenty-First, with a standing rule that it
+remains last and that a new Commandment is inserted BEFORE it. And it therefore RENUMBERS THREE
+COMMANDMENTS displaced by the insertion. NO COMMANDMENT WAS REMOVED AND NO RULE CHANGED.
+
+THIS IS THE FIRST AMENDMENT SINCE VERSION 5 TO RENUMBER ANYTHING, and every version note between
+those two has proudly said so. The reason it is safe now is the owner's own: OLD HAND-OFFS DO NOT
+MATTER, ONLY THE CURRENT HAND-OFF MATTERS. The property those notes were protecting - that a
+commandment number cited from an archived hand-off still lands on the right rule - was protecting a
+reading nobody performs. The current hand-off is the only one read as instruction, and it is rewritten
+every session.
+
+THE MAP, FOR THE ONE HAND-OFF THAT MATTERS AND FOR ANY LIVE DOCUMENT STILL CARRYING AN OLD NUMBER:
+
+    OLD 16, Branch and report discipline  ->  NEW 17
+    OLD 17, The tutorial                  ->  NEW 18
+    OLD 18, The build log                 ->  NEW 19
+    OLD 19, The hand-off protocol         ->  NEW 21   (moved to last)
+    OLD 20, The north star                ->  NEW 20   (unchanged)
+    Commandments 1 through 15 are unchanged.
+
+WHY AUTO-FIX-ALL WAS PLACED AT SIXTEEN RATHER THAN APPENDED. It is a broad grant of authority to
+change things, and the Fifteenth Commandment is the one inviolable limit on what may be changed.
+Placing the grant immediately after the limit means the two are read in one breath and the grant
+cannot be quoted without it. Appending it at the end would have separated a power from its
+constraint by six Commandments, which is exactly how a power gets misread.
+
+WHY THE HAND-OFF PROTOCOL BELONGS LAST, STATED AS A RULE AND NOT A PREFERENCE. It is the protocol a
+session runs when its context window is full - which is precisely the moment it can no longer be
+trusted to read carefully, to search patiently, or to hold the middle of a long document. Every other
+Commandment is read while there is room to read. This one is read when there is not, so it should be
+found by going to the end rather than by hunting. A session adding a twenty-second Commandment inserts
+it before this one and renumbers this one upward in the same change.
+
+AND ONE CADENCE IS RELAXED BY THE SAME INSTRUCTION, recorded here because a future session would
+otherwise reinstate it from an old hand-off. COUSIN CONFORMANCE NEED NOT BE RE-MEASURED ON A SHORT
+CYCLE. Earlier hand-offs set a trigger of three or four sessions and the figure is now four sessions
+old; the owner has relaxed it to longer stretches. The Fifteenth Commandment is untouched by this: a
+conformance suite that is RUN must still be green, and a red gate is still a finding to report. What
+changed is how often it is run, not what a run means.
+
+Version 18, by the
 owner's instruction of 2026-08-10, does two things: it adds THE TWENTIETH COMMANDMENT, declaring the
 two NEUROSCIENCE OF COGNITION documents the north star and mandating their analysis run and gap
 analysis; and it carries out A FULL POINTER AUDIT of this document, the first one run as an audit
