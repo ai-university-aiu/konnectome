@@ -19,10 +19,42 @@
     % cognitive_cycle_run/4: run the mind from a boot world for a number of ticks, yielding per-tick summaries.
     cognitive_cycle_run/4
 ]).
-% Reuse the two-process governor: the boot world seats the night watchman the slice-37 tick requires.
+% Reuse the two-process governor: the boot world seats the night watchman the slice-37 tick requires,
+% and from slice 51 the story also ASKS THAT WATCHMAN HOW ITS NIGHT WENT.
 :- use_module(library(two_process_governor), [
     % two_process_governor_new/1: a fresh default governor, at midnight with no debt.
-    two_process_governor_new/1
+    two_process_governor_new/1,
+    % two_process_governor_step/4: advance both processes one tick and select the operating state.
+    two_process_governor_step/4,
+    % two_process_governor_day_length/2: the governor's own day, in ticks, read from its own parameters.
+    two_process_governor_day_length/2,
+    % two_process_governor_watch_window/2: the window a watchdog measures this governor over (DECISION-6).
+    two_process_governor_watch_window/2,
+    % two_process_governor_watch/3: the join - a history of poles judged into a supervisor's report.
+    two_process_governor_watch/3
+]).
+% Reuse the watchdog: the pack that turns a history of poles into readings, and that refuses to
+% report a window the history does not yet span (DECISION-4).
+:- use_module(library(watchdog), [
+    % watchdog_history_new/1: an empty history, which has seen nothing and measures nothing.
+    watchdog_history_new/1,
+    % watchdog_observe/4: record what pole the governor stood in at one ordinal tick.
+    watchdog_observe/4,
+    % watchdog_history_span/2: how many ticks the history covers, first to last inclusive.
+    watchdog_history_span/2,
+    % watchdog_window_measured/2: whether the history yet spans a window of the asked-for length.
+    watchdog_window_measured/2,
+    % watchdog_flips_in_window/3: how many times the pole changed inside the trailing window.
+    watchdog_flips_in_window/3,
+    % watchdog_history_current/3: the newest tick and the pole standing at it.
+    watchdog_history_current/3
+]).
+% Reuse the supervisor: the judge that keeps warnings, clean regimes and UNWATCHED ones apart.
+:- use_module(library(supervisor), [
+    % supervisor_report_warnings/2: the warnings a report carries.
+    supervisor_report_warnings/2,
+    % supervisor_report_unwatched/2: the fault regimes no watchdog reported on.
+    supervisor_report_unwatched/2
 ]).
 % Reuse thought combination: minting thoughts and combining them into a chain of thought.
 :- use_module(library(thought_combination), [
@@ -257,6 +289,13 @@
 % its own activity mark of 0.8 above the diffuse 0.5, and the rung's closing lines tell the
 % bound's work beside a rest twin - the same ticks re-lived at rate zero - so the difference is
 % shown, never merely asserted.
+% Since slice 51 Rung Zero also CLOSES: the story asks its own night watchman whether the night was
+% healthy, which it had never done although the watchman, the watchdog and the wiring between them
+% had all existed for six slices. The answer comes in two tellings, in the same twin idiom. The night
+% the story actually told is reported NOT-YET-MEASURED, because ten heartbeat ticks do not span the
+% governor's own day and a watchdog that cannot see a whole window will not call one clean; and then
+% the same governor is lived out to a full day so the reader sees the verdict the watch gives when it
+% has the history to give one, with the crossings it counted printed beside it.
 % The story claims only what is shown: the rung not yet
 % demonstrated is named as such, and the records are declared unsigned, because the signing key
 % is a secret this code may never hold.
@@ -321,6 +360,8 @@ capstone_demonstration_story(NumTicks, Story) :-
     capstone_demonstration_title_lines(Title),
     % Rung Zero: the heartbeat, the reward, the learning, and the regulated body.
     capstone_demonstration_heartbeat_lines(NumTicks, WorldFinal, Summaries, Heartbeat),
+    % Rung Zero, closed: the night watchman is asked how the night went, and answers honestly.
+    capstone_demonstration_night_watch_lines(NumTicks, World0, NightWatch),
     % Rung One: the object-permanence forecast, confirmed and surprised.
     capstone_demonstration_prediction_lines(Prediction),
     % The combined thought: a chain of thought as content-addressed records.
@@ -342,7 +383,7 @@ capstone_demonstration_story(NumTicks, Story) :-
     % The honest limits: what this story does not claim.
     capstone_demonstration_epilogue_lines(Epilogue),
     % The story is the sections joined in rung order.
-    append([Title, Heartbeat, Prediction, Thought, FirstWords, Reasoning, Social, Empathy, Feeling, BodySeam, Provenance, Epilogue], Story).
+    append([Title, Heartbeat, NightWatch, Prediction, Thought, FirstWords, Reasoning, Social, Empathy, Feeling, BodySeam, Provenance, Epilogue], Story).
 
 % capstone_demonstration_check_ticks(+NumTicks): the tick count must be an integer of at least six.
 % An unbound count cannot be judged, and must never be refused under a wrong it cannot name
@@ -365,6 +406,142 @@ capstone_demonstration_check_ticks(NumTicks) :-
     % Refuse with a named, inspectable error.
     throw(error(capstone_demonstration_bad_ticks(NumTicks),
                 context(capstone_demonstration_story/2, "the tick count must be an integer of at least six"))).
+
+% ---------------------------------------------------------------------------
+% THE NIGHT WATCH (konnectome build slice 51)
+% ---------------------------------------------------------------------------
+%
+% THE DEMONSTRATION DEBT THIS CLOSES, IN ONE SENTENCE: konnectome has had a watchman since slice 37,
+% a watchdog since slice 45 and a governor wired to it since slice 47, and its own told story could
+% not say whether its night was healthy. The machinery was all built. Nobody had called it.
+%
+% AND THE FIRST THING THE STORY LEARNED BY CALLING IT IS THAT IT CANNOT ANSWER, WHICH IS THE POINT.
+% The capstone's heartbeat is ten ticks. The governor's day - read from the governor's own parameters
+% under DECISION-6, never written here as a number - is longer than that. A watchdog whose history
+% does not span its window reports NOT-YET-MEASURED and never reports CLEAN, which is DECISION-4, and
+% it is the whole reason this section is worth having: a story that ran ten ticks and printed "the
+% night was healthy" would have been telling a reader something it had no way to know.
+%
+% SO THE SECTION TELLS BOTH, IN THE REST-TWIN IDIOM THIS CAPSTONE ALREADY USES FOR THE SLOW BOUND.
+% First the honest verdict on the night the story actually lived, which is that it is unmeasured and
+% why. Then the same governor DELIBERATELY LIVED OUT TO A FULL DAY, so the reader sees the verdict the
+% watch gives when it has enough history to give one. Lengthening the telling is the change Part Six
+% asked for; shortening the window to make the short story answerable was the alternative and it is
+% exactly the thing DECISION-4 exists to forbid.
+%
+% THE NIGHT LIVED HERE IS THE STORY'S OWN NIGHT AND NOT A FIXTURE. The governor stepped below is the
+% one the boot world seats, advanced by the same two_process_governor_step/4 the cognitive cycle
+% advances it with, from the same starting pole. A separately-parameterised governor would have been
+% easier to write and would have demonstrated nothing about this mind.
+
+% capstone_demonstration_governor_history(+Governor0, +State0, +Tick, +NumTicks, +History0, -Governor,
+% -History): live the governor forward, recording the pole it stood in at each ordinal tick.
+% An exhausted count leaves the governor and the history where they stand.
+capstone_demonstration_governor_history(Governor, _State, Tick, NumTicks, History, Governor, History) :-
+    % The walk stops the moment it has lived every tick it was asked for.
+    Tick > NumTicks,
+    % Committing here rather than falling through keeps the recursion from re-entering at the end.
+    !.
+% Each remaining tick advances both processes, selects a pole, and records it under its ordinal.
+capstone_demonstration_governor_history(Governor0, State0, Tick, NumTicks, History0, Governor, History) :-
+    % Advance the whole scheduler exactly as the cognitive cycle advances it.
+    two_process_governor_step(Governor0, State0, Governor1, State1),
+    % Record the pole the governor stands in at this ordinal tick; the watchdog refuses a tick that
+    % does not run strictly forwards, so this walk cannot silently double-count or rewrite a tick.
+    watchdog_observe(History0, Tick, State1, History1),
+    % Live the next tick.
+    NextTick is Tick + 1,
+    capstone_demonstration_governor_history(Governor1, State1, NextTick, NumTicks, History1, Governor, History).
+
+% capstone_demonstration_night_verdict_lines(+History, +Window, +Governor, -Lines): the watch's own
+% words about one stretch of night, whichever way the verdict falls.
+capstone_demonstration_night_verdict_lines(History, Window, Governor, Lines) :-
+    % How much night this history actually covers.
+    watchdog_history_span(History, Span),
+    % Ask the watchman. The report keeps warnings, clean regimes and unwatched ones apart, and an
+    % unspanned window yields no readings at all, so BOTH regimes come back unwatched.
+    two_process_governor_watch(Governor, History, Report),
+    % The warnings the report carries, if any.
+    supervisor_report_warnings(Report, Warnings),
+    % The regimes no watchdog reported on.
+    supervisor_report_unwatched(Report, Unwatched),
+    % Tell the verdict in the shape the watch gave it, never in a shape the story preferred.
+    (   watchdog_window_measured(History, Window)
+    ->  % The history reaches all the way back across the window, so a verdict is available.
+        (   Warnings == []
+        ->  format(string(VerdictLine),
+                   "VERDICT: the night was healthy. Over ~w ticks of history against a ~w-tick window, the watchman raised no warning: the switch neither chattered nor locked.",
+                   [Span, Window])
+        ;   format(string(VerdictLine),
+                   "VERDICT: the night was NOT healthy. Over ~w ticks of history against a ~w-tick window, the watchman raised: ~w.",
+                   [Span, Window, Warnings])
+        ),
+        % Name what remains unwatched even in a measured window, rather than letting silence imply none.
+        format(string(UnwatchedLine),
+               "Fault regimes still unwatched in this telling: ~w.", [Unwatched])
+    ;   % The history is shorter than the window, so DECISION-4 forbids a clean verdict.
+        format(string(VerdictLine),
+               "VERDICT: NOT YET MEASURED. The history spans ~w ticks and the window is the governor's own ~w-tick day, so the watchman has not seen a whole day and will not call one clean.",
+               [Span, Window]),
+        % And it names both regimes as unwatched rather than reporting nothing at all.
+        format(string(UnwatchedLine),
+               "Both fault regimes come back unwatched, by name: ~w. An unspanned window yields no readings, and no readings is not the same fact as no faults.",
+               [Unwatched])
+    ),
+    % SHOW THE READINGS THE VERDICT WAS MADE FROM, so "healthy" is a thing a reader can check rather
+    % than a thing this story asserts. The two quantities the watchman actually judged are the number
+    % of crossings inside the window and the pole the switch ended on.
+    watchdog_flips_in_window(History, Window, Flips),
+    watchdog_history_current(History, LastTick, LastPole),
+    format(string(ReadingLine),
+           "The readings behind that verdict: ~w crossing(s) of the sleep-wake switch inside the window, and at tick ~w the switch stands ~w.",
+           [Flips, LastTick, LastPole]),
+    % The three lines, in the order a reader wants them.
+    Lines = [VerdictLine, ReadingLine, UnwatchedLine].
+
+% capstone_demonstration_night_watch_lines(+NumTicks, +World0, -Lines): Rung Zero's night, watched.
+capstone_demonstration_night_watch_lines(NumTicks, World0, Lines) :-
+    % Read the story's own night watchman out of the boot world.
+    get_dict(governor, World0, Governor),
+    % Read the window this governor is measured over - its own day, from its own parameters. This is
+    % DECISION-6 and it is why no number appears in this section's source.
+    two_process_governor_watch_window(Governor, Window),
+    % Read the same day again under its plain name, so the prose and the window cannot disagree.
+    two_process_governor_day_length(Governor, DayLength),
+    % An empty history, which has seen nothing and measures nothing.
+    watchdog_history_new(Empty),
+    % LIVE THE NIGHT THE STORY ACTUALLY TOLD: the boot governor, from the waking pole the bus starts
+    % at, for exactly the heartbeat the reader just watched.
+    capstone_demonstration_governor_history(Governor, online, 1, NumTicks, Empty, _ToldGovernor, ToldHistory),
+    % The watch's verdict on it.
+    capstone_demonstration_night_verdict_lines(ToldHistory, Window, Governor, ToldVerdict),
+    % AND LIVE IT OUT TO A WHOLE DAY, deliberately, so the reader also sees a verdict the watch can
+    % actually give. The length is the governor's day and not a number chosen to make this work.
+    capstone_demonstration_governor_history(Governor, online, 1, DayLength, Empty, _FullGovernor, FullHistory),
+    % The watch's verdict on that.
+    capstone_demonstration_night_verdict_lines(FullHistory, Window, Governor, FullVerdict),
+    % The heading and the two tellings.
+    format(string(WindowLine),
+           "The watchman's window is not a constant: it is this governor's own day, ~w ticks, read from the governor's own parameters.",
+           [Window]),
+    format(string(ToldLine),
+           "FIRST, THE NIGHT THIS STORY TOLD - the ~w heartbeat ticks above, asked of the watchman.",
+           [NumTicks]),
+    format(string(FullLine),
+           "SECOND, THE SAME GOVERNOR LIVED OUT TO A WHOLE DAY - ~w ticks, so the window is spanned and the watchman can answer.",
+           [DayLength]),
+    % Assemble the section.
+    append([["",
+             "RUNG ZERO, CLOSED: WAS THE NIGHT HEALTHY?",
+             "The mind has had a night watchman since the tick learned to sleep, and a watchdog to judge it. Until now this story never asked either one.",
+             WindowLine,
+             "",
+             ToldLine],
+            ToldVerdict,
+            ["",
+             FullLine],
+            FullVerdict],
+           Lines).
 
 % capstone_demonstration_title_lines(-Lines): the story's title.
 capstone_demonstration_title_lines(Lines) :-
