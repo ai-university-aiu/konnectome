@@ -245,7 +245,7 @@ Now the sober instructions that make the fanfare safe:
    error and is corrected here. SECOND, the analysis this rule mandates was never named, so a
    session reading the constitution alone could not find the fulfilment of an obligation the
    constitution itself imposes; it lives at
-   /home/ccaitwo/konnectome/docs/konnectome_vision_set_top_down_analysis_v3.txt
+   /home/ccaitwo/konnectome/docs/design/konnectome_vision_set_top_down_analysis_v3.txt
    (REPOINTED in version 11, by the owner's instruction of 2026-08-10. This line named the analysis
    at _v1 because _v1 was current when version 6 of this Constitution wrote it, and the analysis has
    since reached _v3 with its predecessors archived under the Eleventh Commandment. The line's
@@ -381,7 +381,7 @@ https://github.com/ai-university-aiu/Mentova
 /home/ccaitwo/Mentova/README.md
 (Which are based on the most popular README.md files in all of GitHub - Feel free to double check.)
 And will use the color scheme of the file at,
-/home/ccaitwo/konnectome/docs/CRIMSON_TO_GOLD_PALETTE.png
+/home/ccaitwo/konnectome/docs/images/CRIMSON_TO_GOLD_PALETTE.png
 Namely the colors,
 BACKGROUND: #3a0000, #590000, #7c0300, #c02b18,
 FOREGROUND: #e04217, #f26d1f, #ff933a, #ffce59 .
@@ -585,7 +585,7 @@ book, then the rest of the north-star directory.
    any needed IDEAS, and any needed INSPIRATION that these documents provide and konnectome lacks.
    Each finding is classified as one of those seven, so that a reader can tell a missing predicate
    from a missing idea. THE FIRST SUCH ANALYSIS LIVES AT
-   /home/ccaitwo/konnectome/docs/konnectome_north_star_gap_analysis_v1.txt
+   /home/ccaitwo/konnectome/docs/design/konnectome_north_star_gap_analysis_v1.txt
    and is versioned under the Eleventh Commandment.
 
 3. THE TWO KINDS OF GAP, AND THE DISTINCTION IS THE POINT OF THE EXERCISE. An ARCHITECTURAL gap means
