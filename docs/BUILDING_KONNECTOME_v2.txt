@@ -1106,5 +1106,34 @@ Fix what is wrong. Do not fill in what is unknown.
 And a small thing worth logging beside the large one: this amendment was made under the authority the Sixteenth Commandment grants, on an invitation rather than an instruction, without a second round of approval - and its record is this chapter. The Commandment's first use was on the Commandment itself.
 
 
-From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER FIFTY-FOUR, and the story goes on being true.
+CHAPTER FIFTY-FOUR - EDISON AT THE BENCH (2026-08-10, CONSTITUTION VERSION 21)
+
+THE PAPER'S VOICE. Constitution version 21 adds the Twenty-First Commandment, THE ORDER OF RESORT, stating the sequence in which konnectome determines a value: logic and reason, then the neuroscience and principles libraries, then derivation, then refusal, and only then DECLARED INVENTION as the protocol of last resort. The Fourth Commandment gains a clarifying note distinguishing an armchair guess from a bench determination. The Sixteenth Commandment's limit is rephrased to match. The hand-off protocol renumbers from Twenty-First to Twenty-Second, which is version 19's standing rule working as written. No rule was weakened.
+
+THE BOOK'S VOICE. The correction in this chapter is one I needed, and it was aimed at me rather than at the document.
+
+Version 20 had put the owner's word into the Sixteenth Commandment - inventing a value is cheating - and I then explained that word at length, with examples, in a way that drew the line in the wrong place. The explanation was internally consistent and it was too strict. Read literally, it said konnectome may never choose a number at all.
+
+The owner corrected it in a paragraph, and the correction is sharper than the thing it corrects: sometimes we will have to invent numbers to make the system go green and work, and there is absolutely nothing wrong with that as long as we document what we did, why we did it, and why it worked.
+
+What makes this more than a loosening is that the evidence for it was already sitting in the build, in a phrase this project coined and had been reading half-wrong for six slices. AN INVENTED VALUE THAT HAS LEARNED TO CITE. Every time it was quoted, the emphasis fell on INVENTED. The offence is in the second half. A number konnectome chose, standing openly as a number konnectome chose, is honest engineering. The same number wearing a citation it did not earn is the fault, because it makes a builder's decision look like a source's statement and no later reader can tell the difference.
+
+THE SIN WAS NEVER INVENTING. THE SIN IS DISGUISING. Six slices of refusals were right about the cases they refused - none of those numbers was needed, and refusing was cheaper and more honest than choosing. But the rule extracted from them had quietly grown a clause nobody had argued for.
+
+The owner's two examples do the work of a page each.
+
+Edison tested thousands of filaments. Each one was a number plugged into an equation nobody could yet solve from first principles, and the trying was not a lapse in method - it WAS the method, applied exactly where theory ran out. A build that refused ever to try a value would not be more rigorous than Edison. It would have no light bulb. And the Fourth Commandment turns out to have said this all along, if you notice where the armchair is: Edison was at the BENCH. An armchair guess is a value asserted without trial and without record. A bench determination is a value found by trying, kept because it worked, and written down with its evidence. The Commandment forbids the first and describes the second, and I had been reading the prohibition onto both.
+
+The second example is the one that changes what the record is FOR. When the builders of the periodic table met a hole they could not fill, they did not paper over it and they did not stop. They wrote down that something must go here, and described what it would have to be like - and those declared holes were later filled by real elements, because the declaration was what made finding them possible.
+
+konnectome is modelling a mind from a corpus that does not state every quantity such a thing requires. That is not a defect in the corpus; no corpus states everything. But it means that a value konnectome must choose MARKS A HOLE IN THE SCIENCE AS MUCH AS A HOLE IN THE BUILD, and a number that makes an otherwise faithful model actually work is evidence about what the real mechanism has to do.
+
+Recorded properly, konnectome's invented numbers are candidate contributions back to the science of the mind. Recorded improperly they are worth nothing to anyone, including konnectome. And the project had already reached this conclusion once, about a different thing: the Ninth Commandment says a kludge is "not an embarrassment to hide but a candidate discovery to publish". The new Commandment says the same of a number. It is the second time this build has arrived at the same idea from a different direction, which is usually a sign the idea is right.
+
+So the order is now written down, and last resort means last. Logic first. The two libraries next, and they are exhausted before anything below them is reached. Then what can be derived. Then an honest refusal where the value is not truly needed. And then, if the system genuinely will not run without a number, choose one - try as many as it takes - and sign your name to it.
+
+Fix what is wrong. And where you must fill in what is unknown, say plainly that it was you.
+
+
+From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER FIFTY-FIVE, and the story goes on being true.
 

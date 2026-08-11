@@ -101,7 +101,7 @@ konnectome does not edit its cousins in place. When a real build hits a wall the
 
 ## How konnectome is governed: the Constitution
 
-konnectome is built and maintained under a written [**CONSTITUTION.md**](CONSTITUTION.md) of **twenty-one commandments**, currently at **version 20**. The numbering below is the Constitution's own. In brief:
+konnectome is built and maintained under a written [**CONSTITUTION.md**](CONSTITUTION.md) of **twenty-two commandments**, currently at **version 21**. The numbering below is the Constitution's own. In brief:
 
 1. **AGI and ASI in mind** - built toward Artificial General Intelligence and Artificial Super Intelligence, guided by three roadmap documents in [`docs/principles/`](docs/principles/).
 2. **Causalontology is the thought structure** - frozen to konnectome except through the gated change-order process.
@@ -118,12 +118,13 @@ konnectome is built and maintained under a written [**CONSTITUTION.md**](CONSTIT
 13. **The README** - kept current, styled like the cousin repositories, in the crimson-to-gold palette.
 14. **Whole-Word System** - whole English words, snake_case, pack-qualified, no terse prefixes.
 15. **The safety gate** - no change may regress ARC-AGI-1, ARC-AGI-2, or the Causalontology conformance suite. A red gate is a finding to report, never a thing to force through.
-16. **Auto-Fix-All** - the owner grants the authority to auto-fix any problem or issue found, on the single condition that what was done and why is recorded in the build log. It sits immediately after the safety gate so the grant and its one inviolable limit are read together: a fix that would redden a gate **stops and is reported**. It is not a licence to edit a cousin, to settle an open design question, or **to invent a value - to cheat**. The test is repair versus decision: if a source says what the answer should be and the code disagrees, that is a repair and it is granted; if nothing says what the answer should be, choosing one is a decision and belongs in the ledger. *Fix what is wrong; do not fill in what is unknown.*
+16. **Auto-Fix-All** - the owner grants the authority to auto-fix any problem or issue found, on the single condition that what was done and why is recorded in the build log. It sits immediately after the safety gate so the grant and its one inviolable limit are read together: a fix that would redden a gate **stops and is reported**. It is not a licence to edit a cousin, to settle an open design question, or **to cheat** - which is not the same as never choosing a number. See commandment 21. *The sin is not inventing; the sin is disguising.*
 17. **Branch and report discipline** - feature branches and pull requests; no direct pushes to main; no artificial-intelligence tool credited as author; no Roman numerals.
 18. **The tutorial** - a maintained, beginner-friendly [`docs/konnectome_tutorial`](docs/konnectome_tutorial_v52.txt), kept current and versioned under the archive discipline.
 19. **The build log** - every build activity is logged to [`docs/BUILDING_KONNECTOME_v2.txt`](docs/BUILDING_KONNECTOME_v2.txt), voiced with dual purpose: as a scientific paper and as a best-selling book.
 20. **The North Star** - [`THE_NEUROSCIENCE_OF_COGNITION_OUTLINE`](docs/neuroscience/THE_NEUROSCIENCE_OF_COGNITION_OUTLINE.txt) and [`THE_NEUROSCIENCE_OF_COGNITION_MANUSCRIPT`](docs/neuroscience/THE_NEUROSCIENCE_OF_COGNITION_MANUSCRIPT.txt) are the north star, north pole and light-house; [`docs/neuroscience/`](docs/neuroscience/) is the north-star directory. They earn an analysis run of their own and a **gap analysis** that separates what konnectome *could not express* from what it simply *has not built*.
-21. **Context-window management and the hand-off protocol** - when the window runs high, a durable Context Hand-Off is written and the session paused, so a fresh session reloads state from `docs/` and continues from a known-good baseline. **This is the last commandment and remains the last**: a new one is inserted *before* it, never after. It is the protocol a session runs when its context window is full - precisely when it can no longer be trusted to search patiently - so it should be found by going to the end.
+21. **The order of resort** - the order in which konnectome determines a value: logic and reason, then the [neuroscience library](docs/neuroscience/) and the [principles library](docs/principles/), then derivation, then refusal - and only then **declared invention**, as the protocol of *last* resort. Inventing a number to make the system work is permitted and is not a failure: **Edison tested thousands of filaments**, and that search was the method where theory ran out. What makes it legitimate is the declaration - what was tried, why it was chosen, why it worked, and konnectome's authorship on its face in the code. A value the corpus cannot supply marks a hole in the science as much as in the build, and recorded properly it is a candidate contribution *back* to the science of the mind - the way the periodic table's builders wrote down that *something must go here*.
+22. **Context-window management and the hand-off protocol** - when the window runs high, a durable Context Hand-Off is written and the session paused, so a fresh session reloads state from `docs/` and continues from a known-good baseline. **This is the last commandment and remains the last**: a new one is inserted *before* it, never after. It is the protocol a session runs when its context window is full - precisely when it can no longer be trusted to search patiently - so it should be found by going to the end.
 
 ## The DSPARCD Fileset
 
@@ -156,7 +157,7 @@ The build does not leap to prediction, theory of mind, or a talking mind before 
 
 ```
 konnectome/
-  CONSTITUTION.md              The twenty-one commandments that govern the build (version 20).
+  CONSTITUTION.md              The twenty-two commandments that govern the build (version 21).
   README.md                    This file.
   bin/                         Test runner, the naming / layer / binding / reality-discipline gates, and run_capstone_demonstration.sh.
   packs/                       konnectome's Prolog packs, each with pack.pl, prolog/, test/.
