@@ -1,6 +1,6 @@
 FIDELITY AUDIT OF THE VISION DOCUMENT SET TOP-DOWN ANALYSIS
 
-An audit of docs/konnectome_vision_set_top_down_analysis_v1.txt (123 lines), measured against the 38-document Vision Document Set in docs/ and against the konnectome codebase at slice 40, main a90bfd7.
+An audit of /home/ccaitwo/konnectome/docs/archive/konnectome_vision_set_top_down_analysis_v1.txt (123 lines), measured against the 38-document Vision Document Set in docs/ and against the konnectome codebase at slice 40, main a90bfd7.
 
 Date: 2026-08-09. Version 1.
 
@@ -204,7 +204,7 @@ Baseline for this half, verified before checking anything: main at a90bfd7, READ
 
 CLAIM A. "the baseline was verified green before the reading began: 494 tests across twenty-seven packs, four gates at zero violations, the capstone clean, conformance 137 of 137 in both cousins" (line 24).
 
-MEASURED STATE: 494 tests across 27 packs was the true and correct baseline at the time of the reading. It is recorded independently in docs/konnectome_1_specification_v41.txt at the slice-34 entry ("four hundred ninety-four in total across twenty-seven packs, all green") and in two hand-offs that verified it pack by pack - Copper Atlaswright at main d3684a1 and Bronze Gaugewright at main 0025e36, both stating "494 tests green across twenty-seven packs (counted pack by pack)". Today the figure is 648 tests across 30 packs.
+MEASURED STATE: 494 tests across 27 packs was the true and correct baseline at the time of the reading. It is recorded independently in /home/ccaitwo/konnectome/docs/archive/konnectome_1_specification_v41.txt at the slice-34 entry ("four hundred ninety-four in total across twenty-seven packs, all green") and in two hand-offs that verified it pack by pack - Copper Atlaswright at main d3684a1 and Bronze Gaugewright at main 0025e36, both stating "494 tests green across twenty-seven packs (counted pack by pack)". Today the figure is 648 tests across 30 packs.
 
 VERDICT: CORRECT AS WRITTEN AND CORRECT TO LEAVE. This is a HISTORICAL RECORD of a verification act, not a description of the present, and the sentence's own tense ("was verified green before the reading began") already makes that plain. It should NOT be updated to 648, because updating it would falsify the record of what was actually verified on the day. A version 2 may add a dateline, but must not overwrite the number.
 

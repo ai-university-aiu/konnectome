@@ -11,7 +11,7 @@ THIS DOCUMENT HOLDS TWO KINDS OF CONTENT, in the same way its sibling analysis d
 
 But its JUDGMENTS are konnectome's own assessment and are not summaries of anything: the scoring of roughly sixty architectures against the packs that exist, the seven coverage bugs and their named closers, the recorded divergences where biology was made to lead, and above all the governing finding that THE TEST-BED DEMANDS NOTHING THE BIOLOGY HAS NOT ALREADY DEMANDED. Neither the test-bed nor the corpus can contain those, because each came from holding the two against konnectome. They are authoritative as the record of that assessment and are superseded only by a later assessment.
 
-The guiding authority this document sits beneath is stated in full in the matching preamble of docs/konnectome_vision_set_top_down_analysis_v1.txt.
+The guiding authority this document sits beneath is stated in full in the matching preamble of /home/ccaitwo/konnectome/docs/archive/konnectome_vision_set_top_down_analysis_v1.txt.
 
 A COVERAGE BUG BELOW IS A FINDING, NOT A SPECIFICATION. Each names a closer, but none of them is a design. Before building a closer, read the corpus material that owns it, and record that reading. The same warning applies here as to the sibling analysis: designing from a summary is the armchair reasoning the Second Commandment forbids.
 
