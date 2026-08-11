@@ -1226,7 +1226,7 @@ self-test; conformance re-measured at 137 of 137 (specification 4.0.0) in both c
 wall; no cousin edited, per the Second, Third, and Fourth Commandments.
 
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 21 (7 CLOSED: 8, 9, 15, 17, 18, 19 and 20).  Decisions: 18.
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 22 (7 CLOSED: 8, 9, 15, 17, 18, 19 and 20).  Decisions: 19.
 Slice-34 note (2026-08-09). The bound turned live in the told story. The slice-33 pending line
 (the bound proven per-territory in the tests but not yet in the capstone's told story) is
 CLOSED: the capstone's boot world arms the slow bound for real - the diffuse mark at one half,
@@ -5745,4 +5745,112 @@ grains. All are well behaved, all answer confidently, and none can be found by r
 QUESTION THAT FINDS THEM IS: WHAT DOES THIS TELL APART? Nothing routes to either change order; neither
 cousin was edited.
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 21 (7 CLOSED: 8, 9, 15, 17, 18, 19 and 20).  Decisions: 18.
+
+DECISION-19 (2026-08-11, slice 69). THE BODY LOOP'S FEEDBACK INTERVAL IS THE CORPUS'S HUNDRED
+MILLISECONDS AND NOT THE NEXT TICK, SO A PREDICTION MADE INSIDE THE SURVIVAL RUN IS JUDGED TEN TICKS
+LATER AGAINST A WORLD THAT HAS MOVED ON.
+
+WHY A DECISION WAS REQUIRED, AND IT IS NARROWER THAN IT FIRST LOOKS. The lag itself is a DERIVATION
+and needed no decision: the corpus states 100 milliseconds twice - Chapter 51.2.1's "sensory feedback
+from the hand takes on the order of 100 milliseconds to become usable", and the cerebellar chapter's
+"its forward model runs ahead of real sensory feedback, which lags by around 100 milliseconds" - and
+DECISION-2 turns that into ten ticks through one conversion. WHAT NEEDED DECIDING WAS WHETHER THAT LAG
+APPLIES HERE AT ALL. The corpus's hundred milliseconds is measured on a REACHING HAND. konnectome's
+survival run senses a camera and a battery, and inside that loop the next reading arrives on the very
+next tick, so a one-tick interval was available, free, and would have made every run of every length
+produce a judgement.
+
+AND A ONE-TICK INTERVAL IS THE INVENTED NUMBER, WHICH IS THE WHOLE ARGUMENT. It is not stated by the
+corpus, it is not derived from anything, and it is not refused - it is simply the number that falls out
+of the implementation, which is the most disguisable kind of choice there is. Choosing it would have
+been konnectome setting a sensorimotor feedback interval and leaving it where a reader would take it
+for the loop's nature rather than for a builder's convenience. THE CORPUS'S OWN NUMBER IS AVAILABLE AND
+IS TAKEN, and the cost of taking it is paid openly below.
+
+THE COST IS PAID AND IS NOT HIDDEN: A RUN SHORTER THAN THE LAG JUDGES NOTHING. The capstone's standing
+six-tick survival telling issues six predictions and collects none of them. That was the one real
+pressure toward the shorter interval, and it was answered by lengthening THE RUN rather than by
+shortening the corpus's lag - the story now runs a second, judged pass of ten plus four ticks - and by
+a test that pins the short case so it reports six predictions still held rather than an empty list a
+reader could mistake for a wiring that does nothing.
+
+WHAT DECISION-19 DOES NOT DECIDE, stated so a later session does not inherit more than was chosen. IT
+DOES NOT DECLARE A STEP RATE FOR THE BODY LOOP, which is OBSERVATION-13's question one construct over
+and is still open: this decision fixes how long a prediction WAITS, not how often the loop RUNS. IT
+DOES NOT CLAIM A SURVIVAL TICK IS TEN MILLISECONDS OF ANYTHING - DECISION-2's convention is what a tick
+is CALLED when a duration must be stated, and the battery's quarter-charge-per-tick drain is
+simulated_body's declared physics and answers to nothing here. IT DOES NOT DECIDE THE FUSION RULE: the
+released prediction is COMPARED with the reading that arrived and is not weighted against it, because
+Chapter 51.2.1 calls that combination "formally like a Kalman filter" and states no reliability for
+either side. AND IT DOES NOT CLAIM THE COMPARISON IS CLEAN. Ten ticks of battery drain stand between
+the prediction and the reading, and what makes the judgement survive that is not the lag being small
+but EXCLUSIVITY being a comparison between two predictions taken from ONE starting world - the drain
+falls on both alike, so the difference between them is still the command's.
+
+OBSERVATION-22 (2026-08-11, from slice 69). THREE OF THE SEVEN UNWIRED MECHANISMS ARE NOW REACHED, AND
+THE PHRASE "THE ONE RUNNING LOOP" TURNS OUT TO NAME TWO DIFFERENT THINGS.
+
+THE MEASUREMENT. konnectome_0_definition's first clause is the standard: "a part that cannot be reached
+from the one running loop is not yet part of konnectome, however well it tests." Slice 69 wires the
+comparator, the carrier and Wegner's three conditions into body_interface's survival loop, and the
+capstone's one command reaches that loop. SO THREE OF THE SEVEN ARE REACHED. But
+cognitive_cycle_step/3 - the predicate this build has always meant when it said "the cognitive cycle" -
+CALLS NONE OF THEM, and a grep confirms it names none of the three.
+
+SO KONNECTOME HAS TWO LOOPS AND HAS BEEN COUNTING THEM AS ONE. cognitive_cycle_run/4 threads a world
+dictionary through eleven steps a day and one at night; body_interface_survival_run/5 threads a body,
+drives, a bus and now a carrier through its own tick. Both are lived, both are told by the capstone,
+NEITHER CALLS THE OTHER. The definition's sentence was written when that was a distinction nobody had
+had to draw, and this slice is the first work whose claim of reachability depends entirely on which of
+the two is meant.
+
+WHY THIS IS RECORDED RATHER THAN FIXED, AND THE RESTRAINT IS THE POINT. Merging the two loops is not a
+repair, it is an architecture, and the Sixteenth Commandment's grant explicitly stops short of settling
+a question the corpus leaves open. What this entry does is make the ambiguity visible so that the NEXT
+count of unwired mechanisms is made against a stated standard rather than against whichever loop makes
+the number look better. THIS BUILD HAS ALREADY BEEN BITTEN ONCE BY A SENTENCE NOBODY HELD AGAINST THE
+CODE, in the same family of work, three slices ago.
+
+THE GENERAL FORM, WHICH IS THE TRANSFERABLE PART. A DEFINITION'S LOAD-BEARING NOUN CAN GO AMBIGUOUS
+WITHOUT ANYBODY EDITING THE DEFINITION. Nothing about "the one running loop" changed; the build grew a
+second loop underneath it, and the phrase silently began denoting two things while continuing to be
+quoted as though it denoted one. It is the naming collision the mode register already suffers, one
+altitude up, and it costs more because the word is in the concept rather than in a pack.
+
+WHAT WOULD CLOSE IT. Either the definition is amended to name WHICH loop is the standard - a versioned
+change to konnectome_0_definition with its reason attached, under Part Six's own rule that the concept
+may be amended but never silently - or the two loops are joined, which is its own slice family and
+would settle it by making the question empty. FOUR MECHANISMS REMAIN UNWIRED ON EITHER READING: the
+eligibility trace's consumer, the blackboard's rehearsal target, the durable tier, and the conflict
+loop.
+
+Slice-69 note (2026-08-11). The efference copy wired, and the deferral it was waiting on paid off.
+body_interface's survival loop gains a fourth threaded slot - a running_prediction carrier beside body,
+drives and bus - and per lived tick it takes the copy of the command it issues, forward-models that
+command AND the null command from the world as it stood before the act, retains both at the tick of
+issue, releases what the lag has delivered, and judges each release through apparent_causation_of_
+released/4 against the reading that actually arrived. FOUR NEW EXPORTS, ONE NEW NAMED REFUSAL, SEVEN
+NEW TESTS, NO NEW PACK, NO NEW NUMBER. body_interface_survival_run/5 keeps its signature and delegates
+to the judged loop, and a test measures rather than asserts that both produce the same trace and the
+same final body. THE DISCRIMINATION: a hold-still tick scores a perfect prediction match and is denied
+authorship because exclusivity fails, and a recharge tick is granted it - the mind is the author of its
+recharges and not of its stillness, which is OBSERVATION-17's degenerate case being caught in the
+running loop by the condition slice 65 built to catch it. DECISION-19 above; OBSERVATION-22 above. No
+wall; no cousin edited.
+
+Slice-70 note (2026-08-11). The deferral register, and the sixth gate. docs/deferrals/deferral_
+register.txt records every condition this build is waiting on, and bin/check_deferrals.sh re-earns each
+one on every run: an entry hands over TWO PROBES, one that succeeds while the block stands and one that
+succeeds once it has lifted, and A PAIR WHOSE HALVES ANSWER THE SAME WAY IS ITSELF A VIOLATION, because
+it cannot tell a standing block from a lifted one. Three statuses - deferred, taken_up, unprobeable -
+and a taken-up entry STAYS PROBED, so it is a standing regression guard rather than a tombstone. The
+third fixture tree, at tests/deferral_gate_fixture/, backs the gate's self-test; it plants one lifted
+block and one undiscriminating pair and three healthy entries, so the self-test proves the gate fires
+on the faults AND stays silent on the sound ones. SEVEN ENTRIES SEEDED: two taken up, four deferred,
+one unprobeable. THE HISTORICAL PROOF WAS MEASURED: the tick-claim entry's probe was run against the
+repository as it stood at the commit of slice 56 - the slice that deferred the efference copy's wiring
+on that claim - and the refutation was already there, having entered mode_register at slice 39. THE
+GATE WOULD HAVE TURNED THAT DEFERRAL RED ON THE DAY IT WAS WRITTEN. Its largest limit is on its own
+face: it cannot find a deferral nobody wrote down. No wall; no cousin edited.
+
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 22 (7 CLOSED: 8, 9, 15, 17, 18, 19 and 20).  Decisions: 19.

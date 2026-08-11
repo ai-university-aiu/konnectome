@@ -257,7 +257,25 @@
     % body_interface_record/4: own the loop's outcome by enacting the loop.
     body_interface_record/4,
     % body_interface_stance/3: the mind's observation-graded stance on its own enacted loop.
-    body_interface_stance/3
+    body_interface_stance/3,
+    % body_interface_survival_run_judged/6: the same run, with predictions carried across the lag.
+    body_interface_survival_run_judged/6,
+    % body_interface_predictions_judged/2: the authorship judgements the run's releases produced.
+    body_interface_predictions_judged/2,
+    % body_interface_predictions_stale/2: predictions whose moment passed unconsumed.
+    body_interface_predictions_stale/2
+]).
+% Reuse the carrier, so the story's run is sized from the corpus's lag rather than from a typed number.
+:- use_module(library(running_prediction), [
+    % running_prediction_lag_milliseconds/1: the corpus's own feedback lag, in the corpus's own unit.
+    running_prediction_lag_milliseconds/1,
+    % running_prediction_lag_ticks/1: that same lag DERIVED into ticks, never written down as ticks.
+    running_prediction_lag_ticks/1
+]).
+% Reuse Wegner's three conditions, so the story reads the verdict from the pack that computes it.
+:- use_module(library(apparent_causation), [
+    % apparent_causation_judgement_verdict/2: read the authorship verdict out of a judgement.
+    apparent_causation_judgement_verdict/2
 ]).
 % Reuse the list library for membership checks over body state.
 :- use_module(library(lists), [
@@ -1268,6 +1286,49 @@ capstone_demonstration_body_seam_lines(Lines) :-
           ForgeryRefused = true),
     % The story only claims the refusal that really fired: the forgery earns no grade.
     ForgeryRefused == true,
+    % THE WIRING, SLICE 69: the same survival loop, run long enough to outlive the corpus's sensory
+    % feedback lag, so every command's prediction is carried across it and judged when its reading
+    % arrives. THE RUN IS SIZED FROM THE LAG AND NOT FROM A NUMBER TYPED HERE.
+    running_prediction_lag_ticks(FeedbackLag),
+    % Four ticks past the lag, so both halves of the two-tick rhythm come due inside the run.
+    JudgedTicks is FeedbackLag + 4,
+    % Live the judged run over a freshly booted machine.
+    simulated_body_boot(JudgedStart),
+    % The run carries its predictions across the lag and hands back what it judged.
+    body_interface_survival_run_judged(JudgedStart, [EnergyDrive], JudgedTicks,
+                                       _JudgedTrace, Predictions, _JudgedFinal),
+    % Read the authorship judgements the releases produced.
+    body_interface_predictions_judged(Predictions, Judgements),
+    % The first tick held still, and its reading arrives one full lag later.
+    StillDue is 1 + FeedbackLag,
+    % The story only claims the judgement the run really made about the still tick.
+    memberchk(body_interface_judged(1, StillDue, StillJudgement), Judgements),
+    % Read the still tick's verdict.
+    apparent_causation_judgement_verdict(StillJudgement, StillVerdict),
+    % The story only claims the refusal: a perfect prediction match, and no authorship inferred.
+    StillVerdict = authorship_not_inferred([exclusivity(not_met(_StillReason))]),
+    % The second tick recharged, and its reading arrives one full lag after that.
+    RechargeDue is 2 + FeedbackLag,
+    % The story only claims the judgement the run really made about the recharge tick.
+    memberchk(body_interface_judged(2, RechargeDue, RechargeJudgement), Judgements),
+    % Read the recharge tick's verdict.
+    apparent_causation_judgement_verdict(RechargeJudgement, RechargeVerdict),
+    % The story only claims the inference: all three of the corpus's conditions held.
+    RechargeVerdict == authorship_inferred,
+    % Nothing the run retained was lost: the third outcome is read rather than assumed empty.
+    body_interface_predictions_stale(Predictions, StalePredictions),
+    % The story only claims the emptiness it checked.
+    StalePredictions == [],
+    % The corpus's own lag, in the corpus's own unit, so neither statement of it is hidden.
+    running_prediction_lag_milliseconds(FeedbackMilliseconds),
+    % The carried-prediction line.
+    format(string(CarriedLine),
+           "Sensory feedback takes ~w milliseconds to become usable, which under this build's hundred-ticks-to-the-second convention is ~w ticks exactly - so every command the mind issues is COPIED, its predicted consequences RETAINED, and judged ~w ticks later against the reading that actually arrived.",
+           [FeedbackMilliseconds, FeedbackLag, FeedbackLag]),
+    % The judgement line, which carries the discrimination itself.
+    format(string(AuthorshipLine),
+           "And the mind is the author of its recharges and NOT of its stillness: the hold-still command it issued on tick 1 had its prediction matched perfectly by the reading on tick ~w - and authorship is refused anyway, because doing nothing predicts exactly what nothing predicts, and a world that was going to stand there regardless is an apparent other cause. The recharge issued on tick 2 predicted a full battery where doing nothing predicted a drained one, the reading on tick ~w matched it, and authorship IS inferred.",
+           [StillDue, RechargeDue]),
     % The hunger equivalence's line.
     format(string(HungerLine),
            "A battery at half charge and a body half a degree from thirty-seven read the same through the identical predicate: error ~w equals error ~w - a low battery is FELT AS HUNGER by the same drive_system_error every other pain passes through.",
@@ -1291,6 +1352,8 @@ capstone_demonstration_body_seam_lines(Lines) :-
         HungerLine,
         "Left alone with a battery draining a quarter charge per tick, the mind holds still at a mild hunger of 0.25 and recharges OF ITS OWN ACCORD at the pressing 0.5 - hold at 0.75, recharge to full, and the same two-tick rhythm again and again, with nothing outside the mind commanding the act.",
         "At an exact salience tie a starving battery outranks a seen obstacle - released(reduce(energy)) - because the drives come before the reflexes, deliberately and deterministically.",
+        CarriedLine,
+        AuthorshipLine,
         RecordLine,
         StanceLine,
         "All of this is groundwork: the seam is built, tested, and told - and the rung is NOT claimed. Reaching, navigation, and true survival wait for a machine that is real."

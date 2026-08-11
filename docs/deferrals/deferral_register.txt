@@ -1,0 +1,83 @@
+THE DEFERRAL REGISTER
+=====================
+
+A machine-readable record of every condition this build is WAITING ON, and of the work each
+condition is holding up. It is read by bin/check_deferrals.sh on every run of that gate.
+
+WHY IT EXISTS. Three sessions in a row met a fault whose whole shape is that NOTHING WATCHES A
+DEFERRAL'S CONDITION. A slice records that it cannot proceed because some blocker stands, the next
+session inherits the sentence rather than the check, and the sentence is still being quoted long
+after the blocker has gone - or, worse, was never there. Slice 67's finding is the extreme case: the
+claim "no construct in this build carries anything across a tick" was carried by five hand-offs, sat
+in six documents and a source comment, deferred two items in writing, AND WAS FALSE THE DAY IT WAS
+WRITTEN. Nobody had ever held it against the code. A LOAD-BEARING CLAIM IN A HAND-OFF IS AN
+ASSERTION, NOT A MEASUREMENT, AND IT INHERITS FORWARD WITHOUT EVER BEING RE-EARNED.
+
+WHAT THIS REGISTER DOES ABOUT IT. Every deferral written here must name a condition and hand over
+TWO PROBES: one that succeeds while the block still stands, and one that succeeds once it has
+lifted. The gate runs both. A pair in which both answer the same way is REFUSED, because a pair that
+cannot disagree tells nothing apart - which is this build's own standing question, WHAT DOES THIS
+TELL APART, applied to the register's own shape rather than to the code it watches.
+
+
+THE RECORD FORMAT
+-----------------
+
+One entry per line. Fields are separated by a double colon, :: , and every field is required.
+
+    identifier :: status :: subject :: stands-probe :: lifts-probe :: note
+
+  identifier   snake_case, unique, naming the condition rather than the work waiting on it.
+
+  status       one of:
+               deferred    - the work has not been done and the block is believed to stand.
+                             THE GATE REQUIRES: stands-probe succeeds AND lifts-probe fails.
+               taken_up    - the work has been done, or the block turned out not to be there.
+                             THE GATE REQUIRES: lifts-probe succeeds AND stands-probe fails.
+                             A taken_up entry stays here and stays probed, so it is a standing
+                             regression guard on the thing that unblocked it rather than a
+                             tombstone.
+               unprobeable - the condition is real and cannot be mechanically checked. Both probe
+                             fields carry the word none. The gate runs no probe and PRINTS THE
+                             ENTRY ON EVERY RUN, and REFUSES an unprobeable entry whose note is
+                             empty. An unprobeable deferral nobody reads is the same silence this
+                             register exists to break.
+
+  subject      the work the condition is holding up, in one clause.
+
+  stands-probe a shell command, run from the repository root, that SUCCEEDS while the block stands.
+
+  lifts-probe  a shell command, run from the repository root, that SUCCEEDS once the block is gone.
+
+  note         why the probes are the right ones, or - for an unprobeable entry - why no probe can
+               be written. Never empty.
+
+THE PROBES ARE RUN AS SHELL COMMANDS AND MAY CONTAIN PIPES; they may not contain the separator.
+A probe is judged by its exit status alone and its output is discarded, so a probe must not need to
+be read by a human to be understood - the note is where the reasoning goes.
+
+AN ENTRY IS RECOGNISED BY BEGINNING WITH ITS IDENTIFIER IN COLUMN ONE, which is why nothing in this
+prose is ever read as an entry however many separators it contains.
+
+AN ABSENT PROBE IS WRITTEN AS THE WORD none AND NEVER AS AN EMPTY FIELD. An empty field is invisible
+to a reader and ambiguous to a field splitter, and the first version of this gate lost an entry's
+note to exactly that - which is this register's own subject arriving in its own format on its first
+day.
+
+
+THE ENTRIES
+-----------
+
+no_construct_carries_a_value_across_a_tick :: taken_up :: The efference copy's wiring, and priority's ability to discriminate, both deferred on this claim from slice 56 to slice 67 :: ! grep -qi "from one tick to the next" packs/mode_register/prolog/mode_register.pl :: grep -qi "from one tick to the next" packs/mode_register/prolog/mode_register.pl :: THE REGISTER'S WORKED EXAMPLE AND THE REASON IT EXISTS. The claim and its refutation sat in one repository, in nearly the same words, for twenty-nine slices: the hold construct's own mode gloss says it keeps its value from one tick to the next. This one-line probe would have turned the deferral red on the day it was written. It stays here as a live regression guard rather than as history - the day that gloss is reworded, somebody has to come back and look at what was concluded from it.
+
+the_efference_copy_is_not_reached_from_the_running_loop :: taken_up :: The comparator, the carrier and Wegner's three conditions, built at slices 56, 67 and 65 and called by nothing until slice 69 :: ! grep -q "body_interface_survival_run_judged" packs/capstone_demonstration/prolog/capstone_demonstration.pl :: grep -q "body_interface_survival_run_judged" packs/capstone_demonstration/prolog/capstone_demonstration.pl :: The definition's first clause is the standard: a part that cannot be reached from the one running loop is not yet part of konnectome, however well it tests. The probe asks whether the ONE COMMAND THAT BOOTS THE MIND reaches the judged run, which is the narrowest honest reading of reachable. NOTE WHAT IT DOES NOT CLAIM: cognitive_cycle_step/3 still does not call any of the three, and the entry below says so separately.
+
+the_blackboard_has_no_declared_step_rate :: deferred :: Wiring working_memory_blackboard into the cognitive cycle, held since slice 49 as OBSERVATION-13 :: ! grep -q "working_memory_blackboard" packs/cognitive_cycle/prolog/cognitive_cycle.pl :: grep -q "working_memory_blackboard" packs/cognitive_cycle/prolog/cognitive_cycle.pl :: OBSERVATION-13 names its own closer exactly: the slice that wires this board into cognitive_cycle_step/3 must declare the step rate as a decision of konnectome's own. The probe therefore watches THE WIRING rather than the rate, because the wiring is the event that makes the missing rate a fault. A board wired without a declared rate would forget in a sixth of a second while citing a chapter that says two to twenty seconds.
+
+the_conflict_loop_has_no_caller :: deferred :: Reaching conflict_monitor from the running loop, one of the seven mechanisms built and not wired :: ! grep -q "conflict_monitor" packs/cognitive_cycle/prolog/cognitive_cycle.pl :: grep -q "conflict_monitor" packs/cognitive_cycle/prolog/cognitive_cycle.pl :: DECISION-15 left the coupling gain to the caller because the loop's acceptance test is an inequality that holds for every positive gain. That refusal is only honest while there is no caller inside the cycle; the day the cycle calls it, somebody has chosen konnectome's control policy and it must be recorded as such rather than passed in silently.
+
+the_corpus_states_no_match_tolerance :: deferred :: A verdict of agency from the prediction match alone, refused twice as DECISION-13 and again inside DECISION-18 :: ! grep -rqi "match tolerance" docs/neuroscience/ :: grep -rqi "match tolerance" docs/neuroscience/ :: A number refused twice is a refusal rather than an oversight, and the refusal rests entirely on the north-star directory being silent. THE PROBE WATCHES THE SILENCE ITSELF, so the day the corpus update run of the Twenty-Second Commandment adds a block that states one, the two refusals stop being warranted and somebody is told.
+
+the_four_exempted_refusals_cannot_fire :: deferred :: OBSERVATION-21's open question - whether the four should be proven by a fixture seam rather than exempted :: bin/check_discrimination.sh 2>&1 | grep -q "Exempted refusals: 4" :: ! bin/check_discrimination.sh 2>&1 | grep -q "Exempted refusals: 4" :: The trade has not been argued, and the entry is here so that it is argued deliberately rather than drifted into. THE PROBE PINS THE COUNT AND NOT THE NAMES, on purpose: a fifth exemption arriving is exactly as much a reason to reopen the question as one of the four being proven, and both move this number.
+
+the_fusion_rule_is_unargued :: unprobeable :: How a prediction and delayed sensory evidence should be WEIGHTED against each other, named at slice 67 and still unargued at slice 70 :: none :: none :: NO PROBE CAN BE WRITTEN AND THE REASON IS THE POINT. This is neither a refusal that survived a reading nor one that survived a search - NOBODY HAS ASKED THE QUESTION PROPERLY YET, which is a third category this build had not used before. Chapter 51.2.1 calls the combination "formally like a Kalman filter" and states no reliability for either side. A probe would have to detect the ABSENCE OF AN ARGUMENT, and an argument is not a grep. It is recorded here so the next session meets an open question rather than an apparent settlement, and it is printed on every run of the gate for the same reason the discrimination gate prints its exemptions.

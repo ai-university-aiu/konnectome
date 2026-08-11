@@ -2,6 +2,18 @@
 :- use_module(library(body_interface)).
 % Load the Prolog Unit test framework.
 :- use_module(library(plunit)).
+% Load the carrier, so the sensory feedback lag is READ from where it is derived, never written here.
+:- use_module(library(running_prediction), [
+    % running_prediction_lag_ticks/1: the corpus's hundred milliseconds, derived into ticks.
+    running_prediction_lag_ticks/1
+]).
+% Load Wegner's three conditions so a judgement can be opened independently of the loop that made it.
+:- use_module(library(apparent_causation), [
+    % apparent_causation_judgement_conditions/2: read the three conditions out of a judgement.
+    apparent_causation_judgement_conditions/2,
+    % apparent_causation_judgement_verdict/2: read the authorship verdict out of a judgement.
+    apparent_causation_judgement_verdict/2
+]).
 % Load the simulated body so trials can build and inspect the stand-in machine directly.
 :- use_module(library(simulated_body), [
     % simulated_body_boot/1: boot the stand-in machine.
@@ -358,6 +370,164 @@ test(bad_tick_count_refused, throws(error(body_interface_bad_ticks(0), _))) :-
     body_interface_energy_drive(Drive),
     % A run of zero ticks is no run.
     body_interface_survival_run(Body, [Drive], 0, _Trace, _Final).
+
+% ---------------------------------------------------------------------------
+% SLICE 69 - THE WIRING, AND WHAT IT TELLS APART
+% ---------------------------------------------------------------------------
+
+% body_interface_test_lag(-Lag): the sensory feedback lag, read from the carrier that derives it
+% rather than written down here. A test that wrote ten would pin this suite to a convention it does
+% not own, and would go quietly wrong the day DECISION-2's tick rate is restated.
+body_interface_test_lag(Lag) :-
+    % The carrier derives the corpus's hundred milliseconds through the scheduler's one conversion.
+    running_prediction_lag_ticks(Lag).
+
+% THE SLICE'S OWN PROMISE, MEASURED RATHER THAN ASSERTED: the judged run and the plain run produce
+% the SAME TRACE. Principle Four - a slice that promises to change no behaviour proves it against
+% the previous build, and when the measurement finds a difference the difference is declared.
+test(wiring_the_carrier_in_leaves_the_survival_trace_exactly_as_it_was) :-
+    % Boot the machine.
+    simulated_body_boot(Body0),
+    % The energy drive.
+    body_interface_energy_drive(Drive),
+    % A run long enough to outlive the lag, so the comparison is not made over an idle carrier.
+    body_interface_test_lag(Lag),
+    % Four ticks past the lag, so both halves of the two-tick rhythm come due.
+    NumTicks is Lag + 4,
+    % The plain run, which is the predicate every existing caller uses.
+    body_interface_survival_run(Body0, [Drive], NumTicks, PlainTrace, PlainFinal),
+    % The judged run, which threads the carrier through the identical loop.
+    body_interface_survival_run_judged(Body0, [Drive], NumTicks, JudgedTrace, _Predictions, JudgedFinal),
+    % The traces are the same term, entry for entry.
+    assertion(PlainTrace == JudgedTrace),
+    % And the body the run leaves behind is the same body.
+    assertion(PlainFinal == JudgedFinal).
+
+% A RUN SHORTER THAN THE LAG JUDGES NOTHING, AND SAYS SO RATHER THAN LOOKING IDLE. The corpus's
+% hundred-millisecond feedback lag is real, so a six-tick run has issued six predictions and had none
+% of their readings arrive - and it reports six still waiting rather than an empty judgement list a
+% reader could mistake for a wiring that does nothing.
+test(a_run_shorter_than_the_lag_judges_nothing_and_is_still_holding_everything) :-
+    % Boot the machine.
+    simulated_body_boot(Body0),
+    % The energy drive.
+    body_interface_energy_drive(Drive),
+    % Six ticks, which is fewer than the lag.
+    body_interface_survival_run_judged(Body0, [Drive], 6, _Trace, Predictions, _BodyFinal),
+    % The lag, so this test states the RELATION and not the numbers.
+    body_interface_test_lag(Lag),
+    % The premise of the test, checked rather than assumed.
+    assertion(6 < Lag),
+    % Nothing has come due, so nothing has been judged.
+    body_interface_predictions_judged(Predictions, Judged),
+    % No judgement at all.
+    assertion(Judged == []),
+    % And every one of the six is still held, named rather than silently absent.
+    body_interface_predictions_waiting(Predictions, Waiting),
+    % One retained prediction per lived tick.
+    assertion(length(Waiting, 6)).
+
+% THE DISCRIMINATION, AND IT IS THE WHOLE POINT OF THE SLICE. The mind holds still at mild hunger and
+% recharges at pressing hunger, and the two get DIFFERENT VERDICTS. A wiring that returned the same
+% verdict for both would have told nothing apart, however green its tests.
+test(the_mind_is_the_author_of_its_recharges_and_not_of_its_stillness) :-
+    % Boot the machine.
+    simulated_body_boot(Body0),
+    % The energy drive.
+    body_interface_energy_drive(Drive),
+    % The lag, from which both due ticks below are derived.
+    body_interface_test_lag(Lag),
+    % Four ticks past the lag, so the first two issues both come due inside the run.
+    NumTicks is Lag + 4,
+    % Live the judged run.
+    body_interface_survival_run_judged(Body0, [Drive], NumTicks, _Trace, Predictions, _BodyFinal),
+    % The judgements the run's releases produced.
+    body_interface_predictions_judged(Predictions, Judged),
+    % TICK ONE HELD STILL: its command predicted the world exactly as it already stood.
+    FirstDue is 1 + Lag,
+    % The judgement of the still tick, found by the tick it was issued at.
+    memberchk(body_interface_judged(1, FirstDue, StillVerdict), Judged),
+    % Read its three conditions.
+    apparent_causation_judgement_conditions(StillVerdict, StillConditions),
+    % THE PREDICTION MATCHED PERFECTLY - which is OBSERVATION-17's degenerate case, alive in the loop.
+    assertion(memberchk(consistency(met), StillConditions)),
+    % AND EXCLUSIVITY REFUSED IT ANYWAY, because doing nothing predicts what nothing predicts.
+    assertion(memberchk(exclusivity(not_met(_Reason)), StillConditions)),
+    % So no authorship is inferred: a perfect match, correctly denied the credit.
+    apparent_causation_judgement_verdict(StillVerdict, StillOutcome),
+    % The verdict names the condition that failed rather than merely saying no.
+    assertion(StillOutcome = authorship_not_inferred([exclusivity(not_met(_))])),
+    % TICK TWO RECHARGED: its command predicted a full battery where doing nothing predicted a drained one.
+    SecondDue is 2 + Lag,
+    % The judgement of the recharge tick.
+    memberchk(body_interface_judged(2, SecondDue, RechargeVerdict), Judged),
+    % Read its three conditions.
+    apparent_causation_judgement_conditions(RechargeVerdict, RechargeConditions),
+    % All three hold: the thought preceded the act, the reading matched it, and it made a difference.
+    assertion(RechargeConditions == [priority(met), consistency(met), exclusivity(met)]),
+    % So authorship IS inferred, which is the other half of the discrimination.
+    apparent_causation_judgement_verdict(RechargeVerdict, RechargeOutcome),
+    % The corpus's conjunction over three conditions that all held.
+    assertion(RechargeOutcome == authorship_inferred).
+
+% PRIORITY IS MET ACROSS A REAL GAP HERE, WHICH IS WHAT OBSERVATION-20's CLOSURE WAS FOR. In the
+% closed pass the thought's tick and the action's tick are the same fact; in the carried pass they are
+% two facts a full lag apart, and this test reads that lag off the judgement itself.
+test(the_thought_and_the_judgement_stand_one_full_lag_apart) :-
+    % Boot the machine.
+    simulated_body_boot(Body0),
+    % The energy drive.
+    body_interface_energy_drive(Drive),
+    % The lag.
+    body_interface_test_lag(Lag),
+    % A run that outlives it.
+    NumTicks is Lag + 4,
+    % Live the judged run.
+    body_interface_survival_run_judged(Body0, [Drive], NumTicks, _Trace, Predictions, _BodyFinal),
+    % The judgements, oldest first.
+    body_interface_predictions_judged(Predictions, [First|_Rest]),
+    % Every judgement carries both ends of the lag.
+    assertion(First = body_interface_judged(_IssuedAt, _JudgedAt, _Verdict)),
+    % Read the two ticks out of it.
+    First = body_interface_judged(IssuedAt, JudgedAt, _Judgement),
+    % The reading arrived one full lag after the command went out.
+    assertion(JudgedAt - IssuedAt =:= Lag).
+
+% NOTHING GOES STALE IN A LOOP THAT RELEASES EVERY TICK, AND THE EMPTY LIST IS ASSERTED RATHER THAN
+% ASSUMED. The third outcome is threaded out on purpose: the day a caller drives this loop with a
+% clock that skips a tick, a prediction will miss its due tick and be REPORTED rather than dropped.
+test(a_loop_that_releases_every_tick_stales_nothing) :-
+    % Boot the machine.
+    simulated_body_boot(Body0),
+    % The energy drive.
+    body_interface_energy_drive(Drive),
+    % The lag.
+    body_interface_test_lag(Lag),
+    % A run well past it, so plenty of predictions have come due and gone.
+    NumTicks is Lag + 4,
+    % Live the judged run.
+    body_interface_survival_run_judged(Body0, [Drive], NumTicks, _Trace, Predictions, _BodyFinal),
+    % No prediction missed its moment.
+    body_interface_predictions_stale(Predictions, Stale),
+    % The third outcome is empty, and is checked rather than left unread.
+    assertion(Stale == []),
+    % And nothing was lost either: the four that came due were judged and the rest are still held.
+    body_interface_predictions_waiting(Predictions, Waiting),
+    % A run of the lag plus four has judged four and is still holding exactly the lag's worth.
+    assertion(length(Waiting, Lag)).
+
+% A term that is not a judged run's predictions report is refused aloud, naming what arrived.
+test(a_term_that_is_not_a_predictions_report_is_refused,
+     throws(error(body_interface_not_a_predictions_report(some_other_thing), _))) :-
+    % Read judgements out of something that is not a predictions report.
+    body_interface_predictions_judged(some_other_thing, _Judged).
+
+% An unbound predictions report would unify with the report term and read as three empty lists -
+% which is exactly the shape of "this run judged nothing", answered confidently about no run at all.
+test(an_unbound_predictions_report_is_refused,
+     throws(error(instantiation_error, _))) :-
+    % Read judgements out of a hole.
+    body_interface_predictions_judged(_Predictions, _Judged).
 
 % Close the body_interface test block.
 :- end_tests(body_interface).

@@ -1,0 +1,29 @@
+THE DEFERRAL GATE'S FIXTURE REGISTER
+====================================
+
+THIS REGISTER IS DELIBERATELY BROKEN AND THE BREAKAGE IS THE POINT. It is not a
+record of anything konnectome is actually waiting on; it exists so that
+bin/check_deferrals.sh --self-test can prove the gate is able to FAIL. A gate
+nobody has ever seen say no has never told anything apart, which is the lesson
+slice 68 wrote into a script and this one inherits.
+
+It plants exactly two faults, one of each kind the gate is built to find, plus
+two entries that must pass cleanly - so the self-test can also prove the gate
+does NOT fire on a healthy entry, which is the half a fixture with only failures
+would leave unproven.
+
+The format is the standing one, documented in docs/deferrals/deferral_register.txt.
+
+
+THE ENTRIES
+-----------
+
+fixture_block_that_has_lifted :: deferred :: THE FIRST PLANTED FAULT - work still recorded as deferred on a condition that no longer holds :: false :: true :: The stands-probe fails and the lifts-probe succeeds, which is precisely the state of a deferral whose blocker has gone while the sentence deferring the work stayed behind. The gate must report this one RIPE.
+
+fixture_probe_pair_that_cannot_disagree :: deferred :: THE SECOND PLANTED FAULT - a deferral watched by two probes that always answer the same way :: true :: true :: Both probes succeed, so the pair can never distinguish a standing block from a lifted one. It is the register's own version of a test everything passes, and the gate must report it UNDISCRIMINATING rather than quietly reading it as still deferred.
+
+fixture_block_that_still_stands :: deferred :: A HEALTHY DEFERRED ENTRY, planted so the self-test proves the gate stays silent about a warranted deferral :: true :: false :: The block stands and has not lifted, which is what a live deferral looks like. The gate must report this one DEFERRED and must not count it as a violation.
+
+fixture_work_that_was_taken_up :: taken_up :: A HEALTHY TAKEN-UP ENTRY, planted so the self-test proves a standing regression guard passes :: false :: true :: The block is gone and the thing that removed it is still there, which is what a taken-up entry looks like for as long as it stays taken up. The gate must report this one TAKEN UP and must not count it as a violation.
+
+fixture_condition_no_probe_can_reach :: unprobeable :: A HEALTHY UNPROBEABLE ENTRY, planted so the self-test proves an admitted gap is printed rather than counted :: none :: none :: An unprobeable entry carries no probes and carries a reason instead, and this is that reason. The gate must print it on every run and must not count it as a violation.
