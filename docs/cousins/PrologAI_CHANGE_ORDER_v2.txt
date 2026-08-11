@@ -1,6 +1,6 @@
 konnectome to PrologAI Change Order, version 2 - additive PrologAI-language gaps discovered while building konnectome; gated by the Fifteenth Commandment, the Safety Gate (a proposed change that would regress ARC-AGI-1 or ARC-AGI-2 through Mentova STOPS and is reported, never merged); nothing is released until the user authorizes it.
 
-STATUS AT BUILD START: empty. No language gaps discovered yet. Findings are DISCOVERED by building, never guessed from the armchair. Each finding is first recorded as an entry in konnectome_ledger_v1.txt and only a real, load-bearing PrologAI-language gap is routed here.
+STATUS AT BUILD START: empty. No language gaps discovered yet. Findings are DISCOVERED by building, never guessed from the armchair. Each finding is first recorded as an entry in konnectome_ledger.txt and only a real, load-bearing PrologAI-language gap is routed here.
 
 
 WHAT CHANGED IN VERSION 2
@@ -10,7 +10,7 @@ Version 2 records the first, and so far only, entry ever routed to this change o
 
 ENTRY ONE - WALL-3: causal_core could not yet mint the three new Causalontology 4.0.0 kinds
 
-DISCOVERED: 2026-07-22, at the start of konnectome build slice 12 (the closure slice), recorded first as Wall-3 in konnectome_ledger_v1.txt.
+DISCOVERED: 2026-07-22, at the start of konnectome build slice 12 (the closure slice), recorded first as Wall-3 in konnectome_ledger.txt.
 
 THE FINDING. Causalontology 4.0.0 had just been released - its closed kind list grown from eighteen to twenty-one, now carrying three new kinds: attitude (holder, attitude_type, content), predicted_occurrence (instantiates, interval, predictor, strength), and prediction_error (predicted, observed, discrepancy); its conformance suite re-frozen at 137 vectors, with every 3.0.0 identifier preserved byte-for-byte. konnectome's closure slice needed to MINT records of those three kinds - the attributed belief as an attitude, the forecast as a predicted_occurrence, the signed surprise as a prediction_error - through its reused PrologAI library, and could not. PrologAI's causal_core 1.0.0 implemented only the eighteen 3.0.0 kinds: the predicate causal_core_identity_fields/2 carried no rows for attitude, predicted_occurrence, or prediction_error, so causal_core_identify failed outright on a record of any of the three, whether the kind was passed explicitly or inferred from the record's own type field.
 
