@@ -1225,7 +1225,7 @@ thought combination. The four gates report zero violations, the naming gate pass
 self-test; conformance re-measured at 137 of 137 (specification 4.0.0) in both cousins. No new
 wall; no cousin edited, per the Second, Third, and Fourth Commandments.
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 13 (2 CLOSED: 8 and 9).  Decisions: 8.
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 14 (2 CLOSED: 8 and 9).  Decisions: 9.
 
 Slice-34 note (2026-08-09). The bound turned live in the told story. The slice-33 pending line
 (the bound proven per-territory in the tests but not yet in the capstone's told story) is
@@ -4181,4 +4181,163 @@ of the Second Commandment, and no language feature was missing. Nothing releases
 the causalontology change order. Neither cousin was edited; conformance stands where slice 47
 re-measured it, at 137 of 137 in both, with the checks-versus-vectors qualification.
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 13 (2 CLOSED: 8 and 9).  Decisions: 8.
+
+DECISION-9 (2026-08-10, slice 50). A DOWNWARD ASSIGNMENT MAY ADDRESS A CONSTRUCT OF WHICH THE
+REPOSITORY HOLDS EXACTLY ONE, BY ITS NAME. This opens the table slice 46 built and deliberately left
+empty, and it opens it without overturning a word of slice 46's reasoning.
+
+THE ARGUMENT. Slice 46 refused every row on the ground that the corpus assigns to NAMED INDIVIDUALS
+and konnectome has only KINDS: a row saying "waking assigns every gate the open mode" would hand one
+named flip-flop's mode to every gate in the repository, including gates installed in roles that have
+nothing to do with the state machinery. THAT OBJECTION IS ABOUT MULTIPLICITY AND NOT ABOUT NAMING,
+and it therefore does not reach a construct of which there is exactly one. The working memory
+blackboard is the first such construct konnectome has. The corpus's own gloss is "a small erasable
+surface, written by attention, read by everything, wiped by the next task" - singular, definite, and
+shared precisely because there is not one per reader. So the row "slow-wave sleep wipes the
+blackboard" reaches exactly what Chapter 16 is talking about and nothing else. The objection does not
+apply here rather than being overridden, and that distinction is the whole of this decision.
+
+THE TWO ROWS IT LICENSES, both straight transcriptions of Layer 10 Entry 16: slow-wave sleep assigns
+erased_idle, and rapid-eye-movement sleep assigns ungoverned_flicker. They are DIFFERENT modes and
+not two strengths of one: REM removes the gate and leaves the surface, and assigning erasure to both
+would have been the tidier reading and is not what the chapter says.
+
+THE ROWS LIVE IN master_register.pl, BESIDE THE MECHANISM, AND A REJECTED ALTERNATIVE IS RECORDED
+RATHER THAN DELETED. A first draft of slice 50 put them in the addressed pack behind a multifile
+declaration, arguing that a state register holding a list of the constructs below it is a homunculus
+arriving as a data structure. THAT ARGUMENT WAS WRONG, and the reasoning that killed it is slice 46's
+own: AN ASSIGNMENT PUBLISHES, IT DOES NOT COMMAND. The throw is a row and not a door; a construct that
+declares no matching transition simply cannot be moved and says so through its own register. A table
+that names a construct therefore acquires no authority over it, so the indirection would have bought
+nothing and cost a reader the ability to read the whole table in one file. It is recorded here because
+the failure mode is worth naming: KONNECTOME'S OWN DOCTRINES ARE SUBJECT TO THE FOURTH COMMANDMENT
+TOO, and "no orchestrator" applied without measuring what the mechanism actually does is armchair
+architecture wearing this build's own citation.
+
+WHAT DECISION-9 DOES NOT DECIDE.
+
+It does not decide HOW KONNECTOME KNOWS A CONSTRUCT IS A SINGLETON. There is no registry of instances
+and this slice does not build one. The singleton claim is made in prose by the pack that makes it,
+from the corpus's own definite article - IT IS A CLAIM AND NOT A PROOF - and a second pack that
+started building blackboards would falsify it silently. The honest closer is the naming and addressing
+facility already on the queue, which is where instance identity belongs. A test in the register's own
+suite asserts that EVERY row in the whole table addresses the one declared singleton, so a later slice
+adding a row aimed at a kind meets slice 46's objection again rather than inheriting it by accident.
+
+It does not widen what a row may SAY. A row still travels the mode-throw channel and still publishes.
+
+It does not decide the OVERLAY question of two simultaneously active states, which slice 46 deferred
+and which is deferred still.
+
+AND IT DOES NOT LICENSE A ROW FOR A WAKING STATE, WHICH IS A REFUSAL AND NOT A GAP. Entry 16 gives
+the waking transition the agency SELF_SELECTED - "task context or reward prediction signals open the
+gate" - so a downward row for any of the four waking sub-modes would overwrite, on every single
+announcement, a choice the corpus places with the board itself. THE GLOBAL STATE DOES NOT GET A VOTE
+ON WHICH WAKING POSTURE THE BLACKBOARD IS IN. The silence of the table for online states is where
+konnectome says so, and it is a THIRD kind of emptiness, kept apart in the tests from the two others:
+not "no individual to address", and not "no chapter has spoken", but "the corpus assigned this
+elsewhere".
+
+
+OBSERVATION-14 (2026-08-10, from slice 50). A CHAPTER'S TRANSITION TABLE CONTAINS A ROW THAT IS NOT A
+TRANSITION, AND THE NATURAL TRANSCRIPTION OF IT IS A CONFIDENT LIE.
+
+Layer 10 Entry 16's transition table has four rows. Three name a departure and an arrival. The fourth
+reads in full: "Any mode under acute stress: excess catecholamines push D1 tone off the inverted-U,
+the gate loosens, and capacity effectively drops, within minutes; the same curve explains why
+Parkinson medication can impair this system."
+
+THAT ROW NAMES NO DESTINATION MODE, AND IT IS NOT AN OMISSION. The first three rows are DISCRETE mode
+changes; this one is a CONTINUOUS shift of the parameters the current mode runs on. The board does not
+become a different machine under stress. It stays the machine it was and that machine gets worse.
+
+THE DANGEROUS PART IS WHAT A CAREFUL BUILDER WOULD DO NEXT. konnectome's four-field row cannot hold a
+transition with no destination, so a builder wanting the corpus's table to arrive complete writes a
+SELF-LOOP - one row per mode, from that mode to itself, trigger acute_stress, agency thrown-from-above.
+IT WOULD PASS mode_register_check/1. IT WOULD LOOK LIKE FIDELITY. And it would make
+mode_register_departure/3 answer a caller asking where acute stress sends the board with "to the mode
+you are already in" - A TRANSITION HAPPENED AND LANDED HOME - when the true answer is that no
+transition happens at all. A test asserts that NO MODE IN THIS REGISTER HAS AN EDGE TO ITSELF, so the
+next reader meets the refusal as something that passes rather than a paragraph to skim.
+
+THIS IS SLICE 42'S RULE ARRIVING FROM A NEW DIRECTION. A FAULT IS NOT A MODE became, here, A
+MODULATION IS NOT A TRANSITION. Both are cases of a chapter putting two different kinds of claim under
+one heading, and both are invisible to any checker that judges shape.
+
+AND IT IS THE FOURTH CONSECUTIVE SLICE TO FIND THE SAME SHAPE. Slice 47 found a boundary that could
+never be crossed; slice 48 a zero that reads as calm; slice 49 a threshold decided by binary rounding,
+and then a chapter stating one quantity twice in two incompatible ways; slice 50 a table row that is
+not a row of that table. NONE OF THE FIVE WOULD HAVE FAILED ANY TEST ANYBODY THOUGHT TO WRITE.
+
+ITS CLOSER IS NAMED AND NOT DONE, AND IT IS NOT A KONNECTOME GAP. konnectome has no D1 tone, no
+inverted-U and no catecholamine curve, so there is nothing here for the row to modulate. When the
+arousal and stress states of the Layer 11 volume's Part Four are built - the ones the master register
+deliberately left out because they OVERLAY a base state rather than being one - this row is theirs,
+and it should arrive as an overlay on a transfer function rather than as an edge in a table. NOTE THAT
+THIS MAKES THE OVERLAY QUESTION, WHICH DECISION-5 AND DECISION-9 BOTH DEFERRED, THE CLOSER OF A THIRD
+THING AS WELL. Three deferrals now point at one unbuilt facility, which is usually the sign that the
+facility is closer to the front of the queue than its position suggests.
+
+
+Slice-50 note (2026-08-10). THE WORKING-MEMORY MODE REGISTER, AND THE FIRST DOWNWARD ASSIGNMENT THAT
+ADDRESSES AN INDIVIDUAL. New pack working_memory_mode_register - Part Six item 1 and the vision-set
+analysis version 3's Family Four item 4, which version 3 promoted from cheap to important. Layer 10
+Entry 16's four modes in the three-field form, written into slice 39's hybrid-automaton formalism and
+judged by slice 39's own checker rather than beside it: Robust Maintenance (the Held Chalk), Gated
+Updating (the Fresh Slate), Erased Idle (the Wiped Board), Ungoverned Flicker (the Doodling Board).
+The per-mode rule is a two-field POSTURE - what the surface is doing and what the gate is doing -
+read off the chapter's own transfer prose, and NO CONSTANT IS RESTATED: capacity, decay, collapse and
+the admission window stay one pack down where slice 49 put them, and a test asserts that every rule in
+the register is a posture rather than a number. Refused and ungoverned are held apart as different
+facts, because a gate held shut and NO GATE AT ALL are the chapter's two different claims and a
+register that collapsed them would say the dream board is a well-maintained board - slice 49's absent-
+versus-collapsed refusal, one grain up. THIS IS THE FIRST REAL DOWNWARD ASSIGNMENT (DECISION-9): the
+table slice 46 built and left empty now carries two rows, and slice 46's empty table is thereby proved
+to have been empty for the reason slice 46 gave. It is a register over a construct and NOT a wiring of
+the board into the tick, so OBSERVATION-13's refusal stands untouched and no step rate is declared.
+The automaton's current-mode slot is written down as a STARTING POSITION and not a default, and the
+distinction is checkable rather than asserted: nothing in the pack reads it, a silent bus answers
+SELF-GOVERNED rather than answering with it, and a test pins the two apart so a later slice cannot
+quietly promote the slot into a default. The mode-throw channel's reserved silence name is exported
+from neuromodulator_bus on slice 38's own warrant, so a caller telling silence from an instruction
+compares against the bus's name rather than a second copy of it. master_register's suite grows from
+28 to 31 tests, its emptiness test REPLACED rather than deleted and its three different kinds of
+emptiness pinned separately. working_memory_mode_register carries THIRTY-ONE tests. Nothing routes to
+either change order and neither cousin was edited.
+
+Slice-51 note (2026-08-10). THE TOLD STORY THAT SAYS WHETHER THE NIGHT WAS HEALTHY. Part Six item 2,
+the demonstration debt named in five consecutive hand-offs and called the smallest remaining item in
+every one of them. THE MACHINERY WAS ALL BUILT AND NOBODY HAD CALLED IT: a night watchman since slice
+37, a watchdog since slice 45, and a governor wired to that watchdog since slice 47, and konnectome's
+own capstone still could not say whether its night was healthy. THE FIRST THING THE STORY LEARNED BY
+ASKING IS THAT IT CANNOT ANSWER, and that is the finding. The heartbeat is ten ticks and the window is
+the governor's own twenty-four-tick day, read from the governor's own parameters under DECISION-6 and
+never written into the narration, so DECISION-4 forbids a clean verdict and both fault regimes come
+back UNWATCHED BY NAME. The story says, in as many words, that no readings is not the same fact as no
+faults. Then the section tells the night a SECOND time in the rest-twin idiom the capstone already
+uses for the slow homeostatic bound: the same governor deliberately lived out to a full day, so the
+reader sees the verdict the watch gives when it has the history to give one. THE CAPSTONE WAS
+LENGTHENED RATHER THAN THE WINDOW SHORTENED, which is what Part Six asked for and what DECISION-4
+exists to enforce. The verdict is shown rather than asserted - the crossings counted and the pole the
+switch ended on are printed beside it, and over a whole day the switch crosses once and the mind ends
+asleep. The governor watched is the one the boot world seats, advanced by the same predicate the
+cognitive cycle advances it with, so the night reported is this mind's own; the test re-derives the
+trajectory independently rather than re-using the story's own walk. THE CAPSTONE STORY IS NO LONGER
+BYTE-IDENTICAL TO MAIN'S, and that is this slice's deliverable rather than a regression: the guard
+that has pinned it since slice 34 should be re-baselined against this telling. capstone_demonstration
+grows from 60 to 66 tests.
+
+STATE AT THE CLOSE OF THIS SESSION. FIFTY-ONE slices. NINE HUNDRED AND ELEVEN Prolog Unit (PLUnit)
+tests across THIRTY-SIX packs, all green. The four gates report zero violations and the naming gate
+passes its own self-test. ONE NEW NON-BLOCKING GATE REPORT, recorded rather than hidden: the naming
+gate now reports colliding_prefixes=1, because working_memory_blackboard and
+working_memory_mode_register share the prefix cluster "working_". A collision is REPORTED AND NOT A
+VIOLATION - the gate's own exit code turns on violations alone - and the collision is true rather than
+accidental, since the two packs really are one family. It was left standing rather than dissolved by
+renaming a pack away from the name the queue and the design authority both use for it, and it is
+recorded here so that "four gates at zero" is never quoted without it. Nothing routes to either change
+order; nothing releases the held sections of the causalontology change order; neither cousin was
+edited, and conformance stands where slice 47 re-measured it on 2026-08-09, at 137 of 137 in both,
+with the checks-versus-vectors qualification and now THREE SESSIONS OLD.
+
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 14 (2 CLOSED: 8 and 9).  Decisions: 9.
