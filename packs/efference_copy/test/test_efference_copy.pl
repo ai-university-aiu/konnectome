@@ -206,5 +206,15 @@ test(a_term_that_is_not_a_report_is_refused,
      throws(error(domain_error(efference_copy_report, some_other_thing), _))) :-
     efference_copy_report_cue(some_other_thing, _Cue).
 
+% A declared sensory channel the body does not report is refused aloud, naming the missing channel.
+% This matters because a gap filled silently would let the comparator agree with a prediction it never
+% actually checked, which is exactly the false sense of agency this pack exists to refuse.
+test(a_declared_channel_the_body_does_not_report_is_refused,
+     throws(error(domain_error(efference_copy_channel, path_ahead), _))) :-
+    % A body whose camera sees nothing at all, so the declared path_ahead channel is simply absent.
+    Body = simulated_body(camera([]), physical([battery_charge-1.0]), actuators([])),
+    % Sensing that body must refuse the gap rather than report a shorter reading set.
+    efference_copy_actual(Body, _Readings).
+
 % Close the test block for the efference_copy pack.
 :- end_tests(efference_copy).

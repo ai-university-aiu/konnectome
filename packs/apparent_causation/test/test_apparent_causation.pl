@@ -4,6 +4,8 @@
 :- use_module(library(efference_copy)).
 % Load the stand-in machine that supplies the worlds these passes are run in.
 :- use_module(library(simulated_body)).
+% Load the carrier, because the carried pass is where priority stops being free.
+:- use_module(library(running_prediction)).
 % Load the Prolog Unit (PLUnit) testing framework.
 :- use_module(library(plunit)).
 % Load list utilities used to inspect condition sets.
@@ -291,6 +293,117 @@ test(an_unrecognised_command_is_refused_by_the_comparator_own_guard,
      throws(error(domain_error(efference_copy_command, teleport), _))) :-
     simulated_body_boot(Body0),
     apparent_causation_of_step(Body0, teleport, still, _Judgement).
+
+% ---------------------------------------------------------------------------
+% THE CARRIED PASS, WHERE PRIORITY CAN FAIL (slice 67, OBSERVATION-20)
+% ---------------------------------------------------------------------------
+
+% A helper: a carrier holding one steer around a real obstacle, issued at the given tick.
+% carried_release(+IssuedAt, +Now, -Released): retain a steer and release it when its reading arrives.
+carried_release(IssuedAt, Now, Released) :-
+    running_prediction_test_world(Copy, Predicted, NullPredicted),
+    running_prediction_new(Empty),
+    running_prediction_retain(Empty, IssuedAt, Copy, Predicted, NullPredicted, Carrier),
+    running_prediction_release(Carrier, Now, [Released], _Stale, _Left).
+
+% A helper: the two predictions a steer around a real obstacle produces at the moment of issue.
+% running_prediction_test_world(-Copy, -Predicted, -NullPredicted): what the carrier is handed.
+running_prediction_test_world(Copy, Predicted, NullPredicted) :-
+    apparent_causation_test_blocked_body(Body0),
+    efference_copy_of(steer_around, Copy),
+    efference_copy_forward_model(Copy, Body0, Predicted),
+    apparent_causation_null_command(Null),
+    efference_copy_of(Null, NullCopy),
+    efference_copy_forward_model(NullCopy, Body0, NullPredicted).
+
+% THE CARRIED PASS INFERS AUTHORSHIP WHEN THE READING MATCHES WHAT WAS PREDICTED A LAG AGO. The thought
+% was issued at tick 0, the reading arrived at tick 10, and the world did what the steer predicted.
+test(a_carried_steer_whose_reading_matches_infers_authorship) :-
+    running_prediction_lag_ticks(Lag),
+    carried_release(0, Lag, Released),
+    % The reading that arrived: the path is clear, and the battery is where it was.
+    apparent_causation_of_released(Released, Lag,
+                                   [path_ahead-clear, battery_charge-1.0], Judgement),
+    apparent_causation_judgement_verdict(Judgement, Verdict),
+    assertion(Verdict == authorship_inferred).
+
+% AND THIS IS THE WHOLE OF OBSERVATION-20'S CLOSER: PRIORITY CAN NOW FAIL. A caller that presents a
+% thought issued AFTER the action it is supposed to have caused gets a refusal, and the refusal names
+% both ticks. In the closed pass this case cannot be constructed at all.
+test(a_thought_issued_after_its_action_fails_priority_in_the_carried_pass) :-
+    running_prediction_lag_ticks(Lag),
+    % Build the release by hand at a later issue tick than the action tick it will be judged against.
+    running_prediction_test_world(Copy, Predicted, NullPredicted),
+    running_prediction_new(Empty),
+    running_prediction_retain(Empty, 12, Copy, Predicted, NullPredicted, Carrier),
+    Due is 12 + Lag,
+    running_prediction_release(Carrier, Due, [Released], _Stale, _Left),
+    % Judge it against an action tick EARLIER than the thought that is supposed to have caused it.
+    apparent_causation_of_released(Released, 4, [path_ahead-clear, battery_charge-1.0], Judgement),
+    apparent_causation_judgement_conditions(Judgement, Conditions),
+    assertion(memberchk(priority(not_met(thought_did_not_precede_action(_T, _A))), Conditions)),
+    apparent_causation_judgement_verdict(Judgement, Verdict),
+    assertion(Verdict = authorship_not_inferred([priority(not_met(_Why))])).
+
+% A THOUGHT SIMULTANEOUS WITH ITS ACTION IS NOT PRIORITY EITHER. The two event names collapse to one
+% term and nothing precedes itself - which is the honest answer under a condition called PRIORITY.
+test(a_thought_simultaneous_with_its_action_fails_priority) :-
+    running_prediction_lag_ticks(Lag),
+    carried_release(0, Lag, Released),
+    apparent_causation_of_released(Released, 0, [path_ahead-clear, battery_charge-1.0], Judgement),
+    apparent_causation_judgement_conditions(Judgement, Conditions),
+    assertion(memberchk(priority(not_met(thought_did_not_precede_action(_T, _A))), Conditions)).
+
+% THE CLOSED PASS'S PRIORITY IS STILL FREE AND THAT IS CORRECT RATHER THAN BROKEN, so this test pins
+% the distinction: the same three conditions, judged two ways, and only one of them can discriminate on
+% priority. A single closed pass takes the copy before it sends the command; there is no other order it
+% could honestly record.
+test(the_closed_pass_priority_is_still_free_by_design) :-
+    apparent_causation_test_blocked_body(Body0),
+    apparent_causation_of_step(Body0, steer_around, still, Judgement),
+    apparent_causation_judgement_conditions(Judgement, Conditions),
+    assertion(memberchk(priority(met), Conditions)).
+
+% The carried pass still refuses authorship for a command that made no difference, exactly as the
+% closed pass does - the exclusivity rule is one rule, read through one predicate.
+test(a_carried_null_command_still_fails_exclusivity) :-
+    running_prediction_lag_ticks(Lag),
+    apparent_causation_test_blocked_body(Body0),
+    apparent_causation_null_command(Null),
+    efference_copy_of(Null, Copy),
+    efference_copy_forward_model(Copy, Body0, Predicted),
+    running_prediction_new(Empty),
+    running_prediction_retain(Empty, 0, Copy, Predicted, Predicted, Carrier),
+    running_prediction_release(Carrier, Lag, [Released], _Stale, _Left),
+    apparent_causation_of_released(Released, Lag,
+                                   [path_ahead-obstacle, battery_charge-1.0], Judgement),
+    apparent_causation_judgement_verdict(Judgement, Verdict),
+    assertion(Verdict = authorship_not_inferred([exclusivity(not_met(_Why))])).
+
+% A reading that departs from what was predicted a lag ago breaks consistency, in the carried pass as
+% in the closed one.
+test(a_carried_reading_that_departs_breaks_consistency) :-
+    running_prediction_lag_ticks(Lag),
+    carried_release(0, Lag, Released),
+    % The world put the obstacle back while the prediction was in flight.
+    apparent_causation_of_released(Released, Lag,
+                                   [path_ahead-obstacle, battery_charge-1.0], Judgement),
+    apparent_causation_judgement_conditions(Judgement, Conditions),
+    assertion(memberchk(consistency(not_met(channels_departed(1))), Conditions)).
+
+% A term that is not a release is refused by the carrier's own guard, so this pack never becomes a
+% second authority on what a release is.
+test(a_carried_pass_over_something_that_is_not_a_release_is_refused,
+     throws(error(domain_error(running_prediction_released, some_other_thing), _))) :-
+    apparent_causation_of_released(some_other_thing, 0, [], _Judgement).
+
+% An unbound action tick would compare confidently against the thought's tick.
+test(an_unbound_action_tick_is_refused_in_the_carried_pass,
+     throws(error(instantiation_error, _))) :-
+    running_prediction_lag_ticks(Lag),
+    carried_release(0, Lag, Released),
+    apparent_causation_of_released(Released, _ActionTick, [path_ahead-clear, battery_charge-1.0],
+                                   _Judgement).
 
 % Close the test block for the apparent_causation pack.
 :- end_tests(apparent_causation).

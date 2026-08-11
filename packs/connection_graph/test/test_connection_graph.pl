@@ -339,5 +339,14 @@ test(an_unregistered_kind_reaches_the_step_unchanged) :-
     % The rule is the kind itself.
     assertion(Rule == mystery).
 
+% An unknown construct kind is refused by name in the undelayed modulated step too, so the bus-aware
+% path can never quietly drop a construct from the state the way a silent failure inside findall would.
+test(an_unknown_kind_is_refused_in_the_modulated_step,
+     error(domain_error(modulated_step_construct_kind, mystery))) :-
+    % A bus with nothing set on it, so the refusal is about the kind and nothing else.
+    neuromodulator_bus_new(Bus),
+    % A kind no step has defined must throw rather than vanish from the next state.
+    connection_graph_step_modulated([], [construct(a, mystery)], [a-1], Bus, _Next).
+
 % Close the test block for the connection_graph pack.
 :- end_tests(connection_graph).

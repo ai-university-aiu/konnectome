@@ -14,6 +14,8 @@
     apparent_causation_authorship/2,
     % apparent_causation_of_step/4: one closed pass over an efference copy step.
     apparent_causation_of_step/4,
+    % apparent_causation_of_released/4: the carried form, in which PRIORITY can actually fail.
+    apparent_causation_of_released/4,
     % apparent_causation_judgement_conditions/2: read the three conditions out of a judgement.
     apparent_causation_judgement_conditions/2,
     % apparent_causation_judgement_verdict/2: read the authorship verdict out of a judgement.
@@ -29,7 +31,17 @@
     % efference_copy_step/5: one closed comparator pass.
     efference_copy_step/5,
     % efference_copy_report_cue/2: read the graded match cue out of a step's report.
-    efference_copy_report_cue/2
+    efference_copy_report_cue/2,
+    % efference_copy_match_cue/3: the graded cue, computed from a prediction and a reading directly.
+    efference_copy_match_cue/3
+]).
+% Import the carrier that holds a prediction across the sensory lag, which is what makes the carried
+% form below possible - and which is what OBSERVATION-20 said priority was waiting for.
+:- use_module(library(running_prediction), [
+    % running_prediction_released_issued_at/2: the tick a released prediction was issued at.
+    running_prediction_released_issued_at/2,
+    % running_prediction_released_predictions/3: the command's prediction and the null command's.
+    running_prediction_released_predictions/3
 ]).
 % Import the list utilities used to walk a recorded order of events.
 :- use_module(library(lists), [memberchk/2]).
@@ -144,12 +156,25 @@
 %
 % WHAT WOULD MAKE PRIORITY REAL, NAMED SO THE HOLE IS VISIBLE. Priority becomes informative the moment
 % a thought can arrive from somewhere OTHER than the command path - a thought formed on one tick and an
-% action issued on another, or a thought supplied by a construct that is not the actuator's own copy.
-% konnectome cannot do either today, and the reason is the standing obstacle the efference copy's own
-% wiring already carries: NO CONSTRUCT IN THIS BUILD CARRIES ANYTHING ACROSS A TICK. Priority is
-% therefore built and exported as a general predicate over a recorded order, so that it is ready on the
-% day an order with a real choice in it exists, and it is exercised in this pack's tests against orders
-% that DO have a choice in them - which is the only place its failing branch can be shown to work.
+% action issued on another. Priority is therefore built and exported as a GENERAL predicate over a
+% recorded order rather than as a constant, so that it is ready on the day an order with a real choice
+% in it exists, and it is exercised in this pack's tests against orders that DO have a choice in them.
+%
+% AND THAT DAY WAS SLICE 67, ONE SLICE LATER, BECAUSE THE OBSTACLE TURNED OUT NOT TO BE THERE. This
+% comment used to end by citing the standing obstacle - "no construct in this build carries anything
+% across a tick" - as the reason priority could not be made real. THAT SENTENCE WAS FALSE and had been
+% false for the whole of its life: the hold construct's own mode gloss says it keeps its value "from one
+% tick to the next", the copy construct is a one-tick delay by construction, connection_graph's delay
+% lines are a purpose-built tick-crossing buffer, and the running cognitive cycle threads eligibility
+% traces and reads the governor's selection on the tick after it was written. Five hand-offs carried the
+% claim and nothing ever checked it.
+%
+% SO OBSERVATION-20 IS CLOSED FOR THE CARRIED FORM AND STANDS FOR THIS ONE. apparent_causation_of_step/4,
+% below, is a SINGLE CLOSED PASS and its priority still cannot fail, structurally, for the reason given
+% above - that is correct behaviour for a single pass and is not a defect to repair. What was missing was
+% a SECOND entry point, over a prediction retained across the lag, where the thought's tick and the
+% action's tick are two different facts that a caller can get wrong. That is
+% apparent_causation_of_released/4, and in it priority discriminates.
 
 % ---------------------------------------------------------------------------
 % THE THREE CONDITIONS, NAMED
@@ -172,10 +197,13 @@ apparent_causation_null_command(hold_still).
 apparent_causation_priority(Order, Thought, Action, Condition) :-
     % Judge the recorded order's shape, so a hole is never walked as an empty history.
     must_be(list, Order),
-    % An unbound thought would be bound by the position lookup to whichever event was recorded first.
-    must_be(atom, Thought),
-    % And an unbound action would be bound to that same first event, agreeing with itself.
-    must_be(atom, Action),
+    % AN EVENT NAME NEED NOT BE AN ATOM AND THE GUARD IS THEREFORE ABOUT HOLES RATHER THAN ABOUT TYPE.
+    % What must be refused is an UNBOUND event, which the position lookup would bind to whichever event
+    % was recorded first, answering confidently about a thought nobody named. A compound event name is
+    % legitimate and is what the carried pass uses, so that two events on one tick are one term.
+    apparent_causation_check_event(Thought),
+    % The action is judged in the same breath and for the same reason.
+    apparent_causation_check_event(Action),
     % Find where the thought stands in the record, refusing a thought nobody recorded.
     apparent_causation_position(Order, Thought, ThoughtAt),
     % Find where the action stands in the record, refusing an action nobody recorded.
@@ -184,6 +212,15 @@ apparent_causation_priority(Order, Thought, Action, Condition) :-
     (   ThoughtAt < ActionAt
     ->  Condition = priority(met)
     ;   Condition = priority(not_met(thought_did_not_precede_action(Thought, Action)))
+    ).
+
+% apparent_causation_check_event(+Event): refuse a hole where an event name belongs.
+apparent_causation_check_event(Event) :-
+    % A PARTIAL TERM IS A HOLE TOO, which is why this is a groundness check and not a var check: an
+    % event named thought_at(_) would unify with any thought_at whatever and report a confident order.
+    (   ground(Event)
+    ->  true
+    ;   throw(error(instantiation_error, _))
     ).
 
 % apparent_causation_position(+Order, +Event, -Position): where a recorded event stands, from zero.
@@ -326,6 +363,10 @@ apparent_causation_unmet([Condition|Rest], Unmet) :-
 % THE CLOSED PASS
 % ---------------------------------------------------------------------------
 %
+% PRIORITY IS FREE IN THIS PREDICATE BY DESIGN AND THAT IS NOT THE DEFECT - see the carried pass below,
+% which is where priority discriminates. A single closed pass takes the copy before it sends the
+% command; there is no other order it could record without lying about what it did.
+%
 % THE ORDER OF EVENTS THIS PASS RECORDS IS KONNECTOME'S OWN STEP ORDER AND NOT A CLAIM ABOUT MINDS.
 % efference_copy_step/5 takes the copy, predicts, enacts, lets the world act, and senses - in that
 % order, in that predicate, checkable by reading it. The record below states that order and nothing
@@ -360,6 +401,71 @@ apparent_causation_of_step(Body0, Command, WorldEvent, Judgement) :-
     apparent_causation_authorship(Conditions, Verdict),
     % One glass-box judgement per pass, carrying the conditions beside the verdict they produced.
     Judgement = apparent_causation_judgement(Conditions, Verdict).
+
+% ---------------------------------------------------------------------------
+% THE CARRIED PASS, IN WHICH PRIORITY CAN FAIL (slice 67)
+% ---------------------------------------------------------------------------
+%
+% THE DIFFERENCE BETWEEN THIS AND THE CLOSED PASS IS ENTIRELY IN WHERE THE TWO TICKS COME FROM. In a
+% closed pass the copy is taken and the command sent inside one predicate, so the ordering is
+% structural and priority is free. Here the thought was retained by running_prediction at the tick it
+% was ISSUED, and the action is being judged at the tick the reading ARRIVED - two facts, held apart by
+% the sensory lag, and a caller that has lost track of its own clock can present them in the wrong
+% order. PRIORITY IS THE CONDITION THAT CATCHES THAT, and it is the only place in this build where it
+% catches anything.
+%
+% THE ACTUAL READING IS THE CALLER'S ARGUMENT, in the same discipline the comparator uses for the
+% world's own act. This pack does not sense.
+
+% apparent_causation_of_released(+Released, +ActionTick, +Actual, -Judgement): the carried pass.
+apparent_causation_of_released(Released, ActionTick, Actual, Judgement) :-
+    % Read the tick the thought was issued at, refusing a hole or an impostor release.
+    running_prediction_released_issued_at(Released, ThoughtTick),
+    % Read both predictions the carrier held from the moment of issue.
+    running_prediction_released_predictions(Released, Predicted, NullPredicted),
+    % The tick the reading arrived at is judged as strictly as the one the carrier supplied.
+    must_be(nonneg, ActionTick),
+    % PRIORITY, AND HERE IT IS A FACT RATHER THAN A STRUCTURE. The recorded order is built from the two
+    % ticks, so a thought that did not precede its action produces a failing condition and not a
+    % contradiction in terms.
+    apparent_causation_carried_order(ThoughtTick, ActionTick, Order, Thought, Action),
+    % Judge it through the same general predicate the closed pass uses; there is one priority rule.
+    apparent_causation_priority(Order, Thought, Action, Priority),
+    % CONSISTENCY, against the reading that actually arrived, through the comparator's own cue.
+    efference_copy_match_cue(Predicted, Actual, MatchCue),
+    % Judge it through the same general predicate the closed pass uses.
+    apparent_causation_consistency(MatchCue, Consistency),
+    % EXCLUSIVITY, against the world that was going to stand there anyway - both predictions having been
+    % computed at the moment of issue, which is why the carrier holds both rather than recomputing one.
+    apparent_causation_exclusivity(Predicted, NullPredicted, Exclusivity),
+    % The three conditions, in the corpus's own order.
+    Conditions = [Priority, Consistency, Exclusivity],
+    % And the corpus's conjunction over them.
+    apparent_causation_authorship(Conditions, Verdict),
+    % One glass-box judgement, the same shape the closed pass produces.
+    Judgement = apparent_causation_judgement(Conditions, Verdict).
+
+% apparent_causation_carried_order(+ThoughtTick, +ActionTick, -Order, -Thought, -Action): build a
+% recorded order from two ticks, naming each event for the tick it happened on.
+apparent_causation_carried_order(ThoughtTick, ActionTick, Order, Thought, Action) :-
+    % EACH EVENT IS NAMED FOR ITS TICK AND FOR NOTHING ELSE, which is the load-bearing choice here.
+    % Naming them thought_at(T) and action_at(T) would have been the obvious move and would have been
+    % wrong: two such names are distinct terms even when the ticks are equal, so a thought simultaneous
+    % with its action would have read as preceding it. Naming both by the tick alone makes two events on
+    % ONE tick the SAME term, and "nothing precedes itself" then does real work rather than being a
+    % curiosity carried over from the closed pass.
+    Thought =.. [tick, ThoughtTick],
+    % The action's event name is built the same way, from its own tick.
+    Action =.. [tick, ActionTick],
+    % The record runs earliest first, which is what an order IS; the two ticks decide which that is.
+    % NOTE WHAT HAPPENS WHEN THE TWO TICKS ARE EQUAL. The two event names become the same term, the
+    % record holds it twice, and priority fails on the rule that nothing precedes itself - which is the
+    % honest answer, because a thought simultaneous with its action is not evidence of authorship under
+    % a condition whose whole name is PRIORITY.
+    (   ThoughtTick =< ActionTick
+    ->  Order = [Thought, Action]
+    ;   Order = [Action, Thought]
+    ).
 
 % ---------------------------------------------------------------------------
 % READING A JUDGEMENT

@@ -469,6 +469,13 @@ test(the_watched_day_is_the_same_day_the_governor_has_always_run) :-
     % And the eighteenth tick is the night.
     nth1(18, InOrder, observation(18, offline)).
 
+% A parameter block of the wrong shape entirely is refused by the governor's own name, because the six
+% parameters are read out of fixed places and a term of another shape would have no places to read.
+test(a_parameter_block_of_the_wrong_shape_is_refused,
+     [throws(error(domain_error(two_process_governor_parameters, mystery), _))]) :-
+    % Build a governor on a bare atom where the six-field parameter block must stand.
+    two_process_governor_new(mystery, _Governor).
+
 :- end_tests(two_process_governor).
 
 % two_process_governor_walk(+Ticks, +Governor, +State, -States): walk the governor, feeding back each selection.

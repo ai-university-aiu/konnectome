@@ -378,5 +378,31 @@ test(an_assertion_is_content_addressed_without_a_signature) :-
     % The second identifier equals the first.
     assertion(get_dict(id, Again, AssertionId)).
 
+% ---------------------------------------------------------------------------
+% PART SIX - THE NAMED REFUSALS, each shown able to fire through the exported interface
+% ---------------------------------------------------------------------------
+
+% A retraction refuses a record that carries no identifier, because a retraction whose 'retracts' field
+% pointed at nothing would be an honest exit from nothing - a record that looks like a correction and is not.
+test(retraction_refuses_a_record_without_an_identifier,
+     throws(error(self_provenance_bad_assertion(_Offending), _))) :-
+    % A fixed instant.
+    self_provenance_test_instant(Instant),
+    % A dict shaped like an assertion but lacking the identifier a retraction must point at.
+    self_provenance_retraction(_{type: "assertion"}, "withdrawn on review", Instant, _Record).
+
+% An evidenced assertion refuses an empty evidence citation, because claiming to cite evidence and then
+% citing none is worse than citing none at all - the standard's advice is to omit the field entirely.
+test(evidenced_assertion_refuses_an_empty_citation,
+     throws(error(self_provenance_bad_evidence(_Cited), _))) :-
+    % Mint a forecast for the assertion to be about, so the subject itself is beyond reproach.
+    self_provenance_test_forecast(ForecastRecord),
+    % Read its identifier.
+    get_dict(id, ForecastRecord, ForecastId),
+    % A fixed instant.
+    self_provenance_test_instant(Instant),
+    % The citation is an empty list, which cites nothing while claiming to cite something.
+    self_provenance_assertion_evidenced(ForecastId, "observation", 0.9, [], Instant, _Record).
+
 % Close the test block for the self_provenance pack.
 :- end_tests(self_provenance).

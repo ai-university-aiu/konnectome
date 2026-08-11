@@ -512,5 +512,14 @@ test(a_keyed_roster_read_leaves_no_choice_point) :-
     % Confirm it.
     assertion(Deterministic == true).
 
+% A bare pole may not be announced on the widened channel, because the widened announcement promises
+% a sub-mode as well, and a reader of the widened state would otherwise get a term of the wrong shape.
+test(a_bare_pole_is_refused_as_a_widened_global_state,
+     error(domain_error(neuromodulator_bus_global_state, online))) :-
+    % A fresh bus.
+    neuromodulator_bus_new(Bus0),
+    % Announcing the pole alone on the widened channel must be refused by name.
+    neuromodulator_bus_broadcast_global_state(Bus0, online, _Bus).
+
 % Close the test block for the neuromodulator_bus pack.
 :- end_tests(neuromodulator_bus).
