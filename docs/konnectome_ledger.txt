@@ -1226,7 +1226,7 @@ self-test; conformance re-measured at 137 of 137 (specification 4.0.0) in both c
 wall; no cousin edited, per the Second, Third, and Fourth Commandments.
 
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 20 (6 CLOSED: 8, 9, 15, 17, 18 and 19).  Decisions: 18.
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 21 (7 CLOSED: 8, 9, 15, 17, 18, 19 and 20).  Decisions: 18.
 Slice-34 note (2026-08-09). The bound turned live in the told story. The slice-33 pending line
 (the bound proven per-territory in the tests but not yet in the capstone's told story) is
 CLOSED: the capstone's boot world arms the slow bound for real - the diffuse mark at one half,
@@ -5583,7 +5583,7 @@ WHAT WOULD CLOSE IT, AND IT IS BLOCKED BY THE OBSTACLE THIS BUILD ALREADY CARRIE
 informative the moment a thought can arrive from somewhere OTHER than the command path - a thought
 formed on one tick against an action issued on another, or a thought supplied by a construct that is
 not the actuator's own copy. NO CONSTRUCT IN THIS BUILD CARRIES ANYTHING ACROSS A TICK, which is the
-same named obstacle standing in front of the efference copy's wiring since slice 56. THE TWO CLOSE
+same named obstacle standing in front of the efference copy's wiring since slice 56. [CORRECTED AT SLICE 67: THIS CLAIM WAS FALSE, AND IT WAS FALSE FOR THE WHOLE OF ITS LIFE. It is false of the hold construct, whose own mode gloss reads "keeps its own current value unchanged from one tick to the next"; of the copy construct, a one-tick delay by construction; of connection_graph's delay lines, a purpose-built tick-crossing buffer built and tested since slice 12; and of the RUNNING LOOP, which threads eligibility traces every tick and reads the governor's selection on the tick after it was written. Five hand-offs carried the claim and nothing ever checked it. THE TRUE OBSTACLE IS NARROWER: the tick engine gives each construct one slot per tick holding that construct's own committed value, so the build could carry a READING and had nowhere to park a PREDICTION ABOUT A DIFFERENT QUANTITY - a storage shape rather than a temporal limit, and the thing running_prediction supplies.] THE TWO CLOSE
 TOGETHER OR NOT AT ALL, and that is worth knowing when the wiring family is sized.
 
 WHAT WAS DONE ABOUT IT RATHER THAN ONLY RECORDED. apparent_causation_priority/4 is built as a GENERAL
@@ -5626,4 +5626,123 @@ one component's reading and refused in another's. Nothing routes to either chang
 was edited.
 
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 20 (6 CLOSED: 8, 9, 15, 17, 18 and 19).  Decisions: 18.
+
+OBSERVATION-20 CLOSED (2026-08-11, at slice 67, opened at slice 65). PRIORITY DISCRIMINATES IN THE
+CARRIED PASS, AND THE CLOSURE IS PARTIAL BY DESIGN AND SAYS SO.
+
+WHAT CLOSED IT WAS NOT WHAT THE OBSERVATION SAID WOULD CLOSE IT, AND THAT IS THE ENTRY'S WHOLE
+INTEREST. The observation named its blocker as the standing obstacle: "NO CONSTRUCT IN THIS BUILD
+CARRIES ANYTHING ACROSS A TICK". THAT SENTENCE WAS FALSE and had been false for the whole of its life -
+see the slice-67 note below. There was no obstacle to remove; there was a claim to check.
+
+THE CLOSURE. apparent_causation gains a SECOND ENTRY POINT over a prediction released from the new
+carrier, sharing every rule with the first. In it the thought's tick and the action's tick are two
+separate facts a caller can get wrong, so PRIORITY FAILS when a thought did not precede its action, and
+fails when the two are simultaneous. Three tests pin it.
+
+AND WHAT IS NOT CLOSED IS STATED RATHER THAN QUIETLY DROPPED. The CLOSED pass's priority is still free
+and always will be: a single pass that takes the copy before it sends the command has no other order it
+could honestly record. THAT IS CORRECT BEHAVIOUR AND NOT A DEFECT, and a test pins it beside the carried
+case so the two forms are read together. An observation that closed by making both forms discriminate
+would have been the tidy answer and would have required lying about what a closed pass does.
+
+THE EVENT-NAMING TRAP, RECORDED BECAUSE IT WOULD HAVE PASSED REVIEW. The carried order's events were
+first named thought_at(Tick) and action_at(Tick). Two such terms DIFFER EVEN WHEN THE TICKS ARE EQUAL,
+so a thought simultaneous with its action would have scored as preceding it. Events are now named FOR
+THEIR TICK ALONE, so two events on one tick are one term and "nothing precedes itself" does real work.
+
+
+OBSERVATION-21 (2026-08-11, from slice 68's first gate run). FOUR OF THIS BUILD'S NAMED REFUSALS
+CANNOT FIRE, AND ALL FOUR ARE FUTURE-DRIFT TRIPWIRES RATHER THAN DEAD CODE.
+
+THE DISCRIMINATION GATE FOUND SEVENTEEN NAMED REFUSALS, OUT OF 181, THAT NOTHING HAD EVER MADE FIRE.
+Thirteen were simply untested and now have tests that fire them through the pack's own exported
+interface. FOUR COULD NOT BE FIRED AT ALL and are recorded here.
+
+- archetype_gate_transfer_function. Cannot fire while the gate's transfer table has exactly two closed
+  rows and archetype_gate_law/3 covers both. Becomes live the day a row is added without a law.
+- mode_transition (in archetype). Cannot fire while the gate has two modes, because the thrown rows are
+  a complete bijection on them. Becomes live the day a third mode arrives without a matching row.
+- category_formation_unrenamable_concept. Cannot fire while PrologAI's concept_formation mints every
+  identifier with gensym(con_, Id). A CROSS-PACK CONTRACT tripwire; becomes live if that engine renames.
+- self_provenance_refused. Cannot fire while causal_core defines semantic errors for four kinds and
+  neither assertion nor retraction is among them. A PARITY HOOK; becomes live if causal_core grows one.
+
+WHAT THIS DOES NOT CLAIM. It does not claim the four are wrong or should be deleted. A tripwire against
+a future change in a table, a mode set, or a reused cousin is a legitimate thing for a refusal to be.
+WHAT IS WRONG IS FOR A REFUSAL TO BE ONE BY ACCIDENT, and the difference between a tripwire and dead
+code is entirely whether anybody wrote down which change would trip it.
+
+SO THE ANSWER IS SLICE 66'S ANSWER, TWO SLICES LATER AND AT A DIFFERENT GRAIN, AND THE REPETITION IS THE
+FINDING. The strict rule stands; an exception may stand beside it where it NAMES ITSELF AND STATES ITS
+CASE; the case is mandatory and an empty one is refused before any pack is scanned; and every exemption
+is PRINTED ON EVERY RUN, because an exemption nobody reads is the silence the gate exists to break. A
+build that reaches one shape twice in three slices has found a pattern rather than a workaround.
+
+WHAT REMAINS OPEN. Whether the four should eventually be PROVEN rather than exempted - by a fixture
+seam that can inject a bad table row - is not decided here. It would cost each pack a test-only door
+into its own internals, which this build has refused elsewhere, and the trade has not been argued.
+
+
+Slice-67 note (2026-08-11). THE CARRIER, AND THE OBSTACLE THAT WAS NOT THERE. New pack
+running_prediction, the FORTY-FIRST, from LAYER_10's deep cerebellar nuclei and Chapter 51.2.1.
+OBSERVATION-20 CLOSED. TWENTY-THREE tests in the new pack; apparent_causation 34 to 42. NOTHING IS
+WIRED - it is the SEVENTH such mechanism, and this session has added two of them.
+
+THE FINDING IS WORTH MORE THAN THE PACK. "No construct in this build carries anything across a tick" was
+carried by FIVE HAND-OFFS, written into six documents and one source comment, quoted approvingly, and
+used to defer work twice - AND IT IS FALSE. It is false of the hold construct, whose own mode gloss says
+it keeps its value "from one tick to the next". It is false of the copy construct, a one-tick delay by
+construction. It is false of connection_graph's DELAY LINES, built and tested since slice 12 and
+answering the corpus's own FR-5. And it is false of the RUNNING LOOP, which threads eligibility traces
+every tick so "a reward one tick late finds the trace that earned it" and reads the two-process
+governor's selection on the tick after it was written. NOTHING HAD EVER HELD IT AGAINST THE CODE.
+
+THE TRUE OBSTACLE, NARROW ENOUGH TO CHECK. The tick engine gives each construct ONE SLOT PER TICK
+holding that construct's own committed value, and an intermediate not returned as somebody's next value
+is discarded when the pass closes. The build could carry a READING and had nowhere to park a PREDICTION
+ABOUT A DIFFERENT QUANTITY. THAT IS A STORAGE SHAPE AND NOT A TEMPORAL LIMIT, and it costs a pack rather
+than an architecture.
+
+AND IT RESIZES A QUEUE ITEM THAT FIVE HAND-OFFS HAVE MIS-SIZED. The obstacle in front of the efference
+copy's wiring is now ONE MISSING ARGUMENT in body_interface_survival_ticks/7, which threads Body, Drives
+and Bus and needs a fourth slot. It is not a missing construct. The wiring family should be re-sized.
+
+NOT ONE NUMBER IN THE PACK IS INVENTED AND THE LAG IS NOT EVEN REFUSED - IT IS DERIVED. The corpus
+states 100 milliseconds in two documents; DECISION-2 fixed a hundred ticks to the nominal second; the
+pack writes the corpus's milliseconds and COMPUTES the tick count through the scheduler's single
+conversion, which refuses a duration that does not land on a tick boundary rather than rounding. THE
+NUMBER TEN APPEARS NOWHERE IN THE PACK. Twenty-First Commandment, SECOND protocol.
+
+THE CARRIER HOLDS BOTH PREDICTIONS because both are facts about the moment of issue; recomputing the
+null prediction at release would compute it from a world the command has already changed and would
+answer a different question, plausibly. IT ANSWERS THREE WAYS, on the supervisor's precedent: RELEASED,
+STILL WAITING, or STALE. AND IT DOES NOT JUDGE - the FUSION RULE, how a prediction and delayed evidence
+should be weighted, is called "formally like a Kalman filter" by the corpus with no reliability given.
+THAT IS NEITHER BUILT NOR REFUSED BUT UNARGUED, which is a third thing and is named as such so the next
+session meets an open question rather than an apparent settlement. Nothing routes to either change
+order; neither cousin was edited.
+
+
+Slice-68 note (2026-08-11). THE DISCRIMINATION GATE. No new pack; bin/check_discrimination.sh, a second
+fixture tree at tests/discrimination_gate_fixture/, and THIRTEEN tests added across EIGHT packs.
+OBSERVATION-21 opened. THE FIFTH GATE, and the SECOND to carry a self-test.
+
+THE RULE: EVERY NAMED REFUSAL MUST BE PROVEN ABLE TO FIRE. A refusal is a claim that something is not
+allowed, and a claim nobody has ever made fire is a claim nobody has tested. 181 named refusals; 17
+unproven on the first run; 13 proven by new tests; 4 exempted with their reasons under OBSERVATION-21.
+
+THE GATE STATES ITS OWN LIMITS ON ITS OWN FACE AND THAT IS A CONDITION RATHER THAN MODESTY. It would
+NOT have caught slice 66's over-strict ban, which had a test and whose fault was diverging from a
+document. It would NOT have caught slice 65's free priority, which returns a term rather than throwing,
+and generalising to every branch of every judgement is not textually decidable. And it is TEXTUAL, so a
+pack could satisfy it with a comment - the same residue the reality-discipline gate states about itself.
+A GATE THAT OVERSTATED ITS REACH WOULD BE AN INSTANCE OF THE FAULT IT POLICES.
+
+WHAT THE SESSION'S THREE FINDINGS HAVE IN COMMON, WHICH IS WHY THIS GATE EXISTS. A condition that cannot
+fail (65), a rule that refuses everything (66), and a claim nothing checks (67) are one defect at three
+grains. All are well behaved, all answer confidently, and none can be found by running them. THE
+QUESTION THAT FINDS THEM IS: WHAT DOES THIS TELL APART? Nothing routes to either change order; neither
+cousin was edited.
+
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 21 (7 CLOSED: 8, 9, 15, 17, 18, 19 and 20).  Decisions: 18.

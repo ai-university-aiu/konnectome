@@ -214,5 +214,32 @@ test(reply_is_deterministic) :-
     % The two replies are identical.
     assertion(First == Second).
 
+% ---------------------------------------------------------------------------
+% The named refusals, each shown able to fire.
+% ---------------------------------------------------------------------------
+
+% Reading a condition refuses a mind with no drives at all, because a condition is read from a drive,
+% and a mind with none has nothing to be in deficit or satisfied about - silence there would be a lie.
+test(condition_refuses_a_mind_with_no_drives,
+     throws(error(symbol_exchange_no_drive, _))) :-
+    % An empty drive list has no first drive to read a condition from.
+    symbol_exchange_condition([], [temperature-40], _Condition).
+
+% Grounding refuses a word that is not a plain atom, because a word is the thing the mind will later
+% say and hear, and a compound or a number cannot travel through the word bank as a word.
+test(grounding_refuses_a_word_that_is_not_an_atom,
+     throws(error(symbol_exchange_bad_word(_Offending), _))) :-
+    % A number is not a word this mind can say.
+    symbol_exchange_ground(7, in_deficit, [in_deficit, satisfied], _Grounding).
+
+% Living a run refuses a tick count that is not a whole non-negative number of ticks, because a run of
+% minus one ticks is not a shorter run - it is a request the loop cannot honour and must not pretend to.
+test(experienced_refuses_a_negative_tick_count,
+     throws(error(symbol_exchange_bad_ticks(_Count), _))) :-
+    % The fixture boot world.
+    symbol_exchange_test_world(World),
+    % Minus one tick is not a number of ticks anything can be lived through.
+    symbol_exchange_experienced(World, -1, _Conditions).
+
 % Close the test block for the symbol_exchange pack.
 :- end_tests(symbol_exchange).

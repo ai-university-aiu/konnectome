@@ -255,5 +255,32 @@ test(misattribution_is_retracted) :-
     % Rule 10: the same source takes it back.
     assertion(Retracts == StanceIdentifier).
 
+% ---------------------------------------------------------------------------
+% The named refusals, each shown able to fire.
+% ---------------------------------------------------------------------------
+
+% Rejection refuses a body that carries no belonging variable, because severing a connection the body
+% never had would be a silent no-op, and a mind that reports social pain it did not undergo is lying.
+test(rejection_refuses_a_body_without_belonging,
+     throws(error(empathy_missing_belonging(_Offending), _))) :-
+    % A body carrying only temperature has no belonging for the rejection to sever.
+    empathy_rejection([temperature-37], _Body).
+
+% Resonance refuses a body whose belonging is not a number, because arithmetic on a symbol would either
+% crash far from the boundary or, worse, be caught somewhere that turned it into a quiet failure.
+test(resonance_refuses_a_non_numeric_belonging,
+     throws(error(empathy_bad_body_value(_Pair), _))) :-
+    % Ana is modelled in full distress, so the resonance genuinely reaches the body value.
+    empathy_modelled_distress(ana, 1, Distress),
+    % The mind's own belonging is recorded as a word rather than a number.
+    empathy_resonance(Distress, [belonging-connected], _Body).
+
+% The modelled distress refuses an agent who is not named by a plain atom, because the identity of the
+% other mind is what the whole attribution hangs on - a compound or a number there is not an agent.
+test(modelled_distress_refuses_a_nameless_agent,
+     throws(error(empathy_bad_agent(_Agent), _))) :-
+    % A number is not the name of another mind.
+    empathy_modelled_distress(42, 0.5, _Distress).
+
 % Close the test block for the empathy pack.
 :- end_tests(empathy).

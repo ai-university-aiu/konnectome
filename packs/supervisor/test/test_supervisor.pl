@@ -475,5 +475,14 @@ test(an_admitted_fault_nobody_watches_is_reported_unwatched) :-
     supervisor_report_unwatched(Report, Unwatched),
     assertion(Unwatched == [supervisor_unwatched(runaway, oscillation_watchdog)]).
 
+% A construct kind that is not a plain atom may not be published, because the channel is keyed by kind
+% and a compound key would be written under a term no later reader could name to read it back.
+test(publishing_under_a_compound_construct_kind_is_refused,
+     throws(error(domain_error(supervisor_construct_kind, kind(gate)), _))) :-
+    % A fresh channel.
+    supervisor_channel_new(Channel0),
+    % Try to publish a perfectly good report under a compound key.
+    supervisor_publish(Channel0, kind(gate), supervisor_report([], []), _Channel).
+
 % Close the test block for the supervisor pack.
 :- end_tests(supervisor).

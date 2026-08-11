@@ -1530,7 +1530,7 @@ Two independent refusals, written slices apart from two entirely different direc
 
 And then the honest half, which is now a numbered observation of its own. The FIRST condition is free. Inside one comparator pass the copy is taken before the command reaches the actuator - structurally, because that is what an efference copy is - so priority is met in every pass this build can currently run. A CONDITION THAT CANNOT FAIL CARRIES NO INFORMATION, and the truthful reading is that a three-condition verdict currently rests on two with a third standing beside them looking like a third. That is OBSERVATION-20, and it is the ninth consecutive finding of the shape that would not have failed. Every test would have been green.
 
-Priority becomes real the day a thought can arrive from somewhere other than the command path - one tick's thought against another tick's action - and no construct in this build carries anything across a tick. Which is the same obstacle the efference copy's own wiring has been carrying since slice 56, met from a new direction. So the condition is built as a general predicate over a recorded order, and exercised against orders that DO have a choice in them, so its failing branches are known to work on the day something real can use them.
+Priority becomes real the day a thought can arrive from somewhere other than the command path - one tick's thought against another tick's action - and no construct in this build carries anything across a tick. [CORRECTED AT SLICE 67: THIS CLAIM WAS FALSE, AND IT WAS FALSE FOR THE WHOLE OF ITS LIFE. It is false of the hold construct, whose own mode gloss reads "keeps its own current value unchanged from one tick to the next"; of the copy construct, a one-tick delay by construction; of connection_graph's delay lines, a purpose-built tick-crossing buffer built and tested since slice 12; and of the RUNNING LOOP, which threads eligibility traces every tick and reads the governor's selection on the tick after it was written. Five hand-offs carried the claim and nothing ever checked it. THE TRUE OBSTACLE IS NARROWER: the tick engine gives each construct one slot per tick holding that construct's own committed value, so the build could carry a READING and had nowhere to park a PREDICTION ABOUT A DIFFERENT QUANTITY - a storage shape rather than a temporal limit, and the thing running_prediction supplies.] Which is the same obstacle the efference copy's own wiring has been carrying since slice 56, met from a new direction. So the condition is built as a general predicate over a recorded order, and exercised against orders that DO have a choice in them, so its failing branches are known to work on the day something real can use them.
 
 The pack is apparent_causation, the fortieth. Thirty-four tests. Nothing calls it. It is the sixth complete, tested mechanism in this build that nothing else in this build uses, and the hand-off that set this session's queue had already called five of them a habit rather than five justified choices. This chapter does not argue with that.
 
@@ -1575,5 +1575,78 @@ FOUR. The queue documents are MARKED IN PLACE where these two slices overtook th
 AND ONE COINCIDENCE IS RECORDED BEFORE SOMEBODY MISTAKES IT FOR A RULE. The tutorial's version number and its part count have happened to match for several sessions - version 57 carried fifty-seven parts. They do not match any more: version 58 carries FIFTY-NINE parts, because this session added two parts to a document whose version increments by one. Nothing is wrong. The version counts writings of the document and the part count counts its sections, and the two were never the same quantity.
 
 
-From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER SIXTY-FOUR, and the story goes on being true.
+CHAPTER SIXTY-FOUR - THE OBSTACLE THAT WAS NOT THERE (2026-08-11, SLICE 67)
+
+This slice was scoped as the hard one and it was budgeted as the hard one. It became a reading exercise in the first twenty minutes, and what the reading found is worth more than the pack that came out of it.
+
+Five hand-offs in a row carried a sentence, and the sentence was load-bearing: NO CONSTRUCT IN THIS BUILD CARRIES ANYTHING ACROSS A TICK. It was the stated reason the efference copy could not be wired. It was the stated reason OBSERVATION-20's priority condition could not be made to fail. It sat in six documents and in one source comment, it was quoted approvingly, and it was used to defer work twice.
+
+It is false, and it was false the day it was first written.
+
+konnectome carries a construct kind called hold whose own mode gloss reads "keeps its own current value unchanged FROM ONE TICK TO THE NEXT" - a thing carrying a value across a tick, saying so, in almost the same words as the claim denying it exists. It carries a construct kind called copy, which reads another construct's previous value and is therefore a one-tick delay by construction. It carries DELAY LINES in connection_graph, a purpose-built first-in-first-out buffer of values in transit, built and tested since slice 12 and answering to the corpus's own FR-5. And the running cognitive cycle does it every single beat: the eligibility trace exists so that "a reward one tick late finds the trace that earned it", and the two-process governor's selection is made on one tick and read as the opening state of the next.
+
+So how did a build this careful about its own claims carry that one for five sessions? Because it is NEARLY right, and the nearly-right version is a genuinely different sentence.
+
+The tick engine gives each construct exactly one slot per tick, and that slot holds that construct's own committed value. An intermediate computed during a pass and not returned as somebody's next value is discarded when the pass closes. So the build could always carry a READING; what it had nowhere to put was a PREDICTION ABOUT A DIFFERENT QUANTITY - a note that says "I expect the path to read clear shortly", which is not any construct's own value.
+
+That is a shelving problem and not a time problem, and a shelving problem costs a pack rather than an architecture.
+
+Which makes this the session's own finding arriving a third time, at a third grain. Slice 65 found a condition that cannot fail. Slice 66 found a rule that refuses everything. And this is A CLAIM NOTHING CHECKS. All three are well behaved, all three answer confidently, and none of them can be found by running it, because running it is exactly what they survive.
+
+What was built is the corpus's, not konnectome's. LAYER_10 names the carrier and gives it a home - the deep cerebellar nuclei "are the sole output and HOLD THE RUNNING PREDICTION" - which is where the pack's name comes from. Chapter 51.2.3 supplies the verb: when a command goes out "an internal copy is RETAINED". Chapter 51.2.1 supplies the purpose: "Its purpose is to DEFEAT DELAY: sensory feedback from the hand takes on the order of 100 milliseconds to become usable, which is an eternity for a fast reach, so the controller works from A PREDICTED PRESENT RATHER THAN A REPORTED PAST."
+
+And the one quantity is neither invented nor refused. It is DERIVED. The corpus states a hundred milliseconds in two documents; DECISION-2 fixed a hundred ticks to the nominal second; the pack writes down the corpus's milliseconds and computes the tick count through the scheduler's single conversion, which refuses a duration that does not land on a tick boundary rather than rounding it. The number ten appears nowhere in the pack. That is the Twenty-First Commandment's SECOND protocol, and it means a later session restating the tick rate moves this lag with it or hears about it.
+
+The carrier holds BOTH predictions - what the command predicted and what the mind would have predicted had it done nothing - because both are facts about the moment of issue. Recomputing the null prediction at release time would compute it from a world the command has already changed, which would answer a different question, plausibly. And it answers three ways rather than two, on the supervisor's precedent: RELEASED, STILL WAITING, or STALE. A carrier that silently dropped an uncollected prediction would leave the build believing it had never been holding one.
+
+Then the payoff, which is OBSERVATION-20's closer. With a carrier, a thought is retained at one tick and judged at another, and those are two separate facts a caller can get wrong. apparent_causation gains a second entry point over a released prediction, sharing every rule with the first - one priority predicate, one consistency predicate, one exclusivity predicate, one conjunction - and in it PRIORITY DISCRIMINATES. Present a thought issued after the action it supposedly caused, and priority fails by name.
+
+One naming choice in that second entry point would have passed review and was wrong. The events were first named thought_at(Tick) and action_at(Tick), which reads perfectly and quietly breaks the simultaneous case: two such terms differ even when the ticks are equal, so a thought at the same instant as its action would have scored as preceding it. Events are now named FOR THEIR TICK ALONE, so two events on one tick are one term and "nothing precedes itself" does real work. The test that caught it exists because the session was hunting conditions that cannot fail - the lens paying inside the slice that would later build a gate for it.
+
+The closed pass keeps its free priority and a test pins that too, side by side with the carried one. A single pass that takes the copy before it sends the command has no other order it could honestly record. That is correct rather than defective, and showing the two forms together is the honest picture rather than the tidy one.
+
+Nothing calls the carrier. It is the seventh complete, tested mechanism this build has that nothing else in it uses. What changed is the size of the item that would fix that: the obstacle in front of the efference copy's wiring is now one missing argument in body_interface_survival_ticks/7, which threads three things and needs a fourth - not a missing construct in the build.
+
+
+CHAPTER SIXTY-FIVE - HAS THIS RULE EVER SAID NO? (2026-08-11, SLICE 68)
+
+Three times in one session the same defect turned up wearing three costumes, and the third time it turned up it earned a tool.
+
+A condition that cannot fail. A rule that refuses everything. A claim nothing checks. Each of them correct-looking, each answering confidently whenever asked, and not one of them findable by running it - because running it is the thing they are built to survive. The question that finds this family is not "is this right", which it usually is. It is WHAT DOES THIS TELL APART.
+
+Most of that question is not automatable. One slice of it is.
+
+konnectome refuses aloud, by name, everywhere: domain_error with a complaint atom, existence_error with a complaint atom, a thrown term of the pack's own. There are 181 such named refusals across forty-one packs, and each one is a claim that some particular thing is not allowed. So the mechanical form of the question is: HAS ANYBODY EVER MADE THIS REFUSAL FIRE? If no test in the pack has ever triggered it, nobody knows whether it can, and it has certainly never separated anything from anything.
+
+The gate checks that, and on its first run seventeen of the 181 came back never having said no.
+
+Thirteen were simply untested, and thirteen tests now make each of them throw - through the pack's own exported interface, with a real input, not by reaching for an internal predicate. That is thirteen refusals this build now knows are real rather than assumed.
+
+The other four could not be fired at all, and they are the reason the slice was worth running.
+
+One guards a transfer table of two closed rows against a value outside those two rows, when the laws cover both. One guards a two-mode switch against a transition its table does not name, when with exactly two modes the only departure is the one the table declares. One guards against a reused PrologAI engine changing the prefix it mints identifiers with. One guards against causal_core growing a semantic rule for a kind it currently has none for.
+
+Every one of them is a tripwire for a FUTURE change - to a table, to a mode set, to a cousin pack - and not a guard against any input a caller can supply today. That is an entirely legitimate thing for a refusal to be. It is not a legitimate thing for a refusal to be by accident, and the difference between a tripwire and dead code is whether anybody wrote down which change would trip it.
+
+So they are exempted rather than deleted, and each exemption carries its reason and its trigger, printed on every single run of the gate. An exemption nobody reads is the same silence the gate exists to break.
+
+And note what that is: it is slice 66's answer, two slices later, at a different grain. The strict rule stands; an exception may stand beside it where it names itself and states its case; the case is mandatory and an empty one is refused. When a build reaches the same shape twice in three slices it has found a pattern rather than a workaround, and this log says so rather than leaving it to be noticed.
+
+The gate's own header states three things it does not catch, and the statement is not modesty. It would not have caught slice 66's over-strict ban, which HAD a test proving it fires and whose fault was diverging from a document that no textual tool can read. It would not have caught slice 65's free priority, which returns a term rather than throwing, and generalising to every branch of every judgement is not textually decidable. And it is a text search, so a pack could in principle satisfy it with a comment - a residue stated plainly, exactly as the reality-discipline gate states its own. A gate that overstated its reach would be an instance of the fault it polices.
+
+It has a self-test, against a second committed fixture tree, and for this gate that is not a formality. The fixture carries two refusals, exactly one of them proven by its own test, and the self-test succeeds only if the gate catches the unproven one by name and nothing else. A gate whose whole subject is checks that have never discriminated is the last gate in this repository that should be trusted without watching it discriminate.
+
+Five gates now, two of them carrying self-tests, 1,109 tests across forty-one packs.
+
+
+THE AUTO-FIXES OF THESE TWO SLICES, RECORDED UNDER THE SIXTEENTH COMMANDMENT'S SINGLE CONDITION
+
+ONE, AND IT IS THE LARGEST SINGLE REPAIR THIS BUILD HAS MADE TO ITS OWN RECORD. The false tick-crossing claim is corrected everywhere it stood live: in the ledger, in this log, in the DSPARCD refinement phase file, in the README, and in the apparent_causation source comment that carried it. THE APPEND-ONLY DOCUMENTS ARE ANNOTATED IN PLACE RATHER THAN REWRITTEN - the ledger and this log each carry a dated bracketed correction beside the original sentence, because an append-only document records what was believed when it was written and rewriting it would put today's knowledge inside yesterday's entry. The live documents are corrected outright. The hand-offs are NOT edited, under the Eleventh Commandment's series rule; the next hand-off states the correction instead.
+
+TWO. apparent_causation_priority/4 required its event names to be ATOMS, which was right when every order was a list of atoms and became wrong the moment the carried pass named events by their tick. The guard's actual job was never about type - an unbound event would be bound by the position walk to whichever event was recorded first - so it is now a GROUNDNESS check, which additionally catches a partial term like tick(_) that a bare var check would have let through and that would have unified with any tick whatever.
+
+THREE. Thirteen tests added across eight packs, each making a named refusal fire that nothing had ever fired. connection_graph 26 to 27, efference_copy 19 to 20, empathy 17 to 20, neuromodulator_bus 51 to 52, self_provenance 17 to 19, supervisor 34 to 35, symbol_exchange 19 to 22, two_process_governor 35 to 36.
+
+
+From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER SIXTY-SIX, and the story goes on being true.
 
