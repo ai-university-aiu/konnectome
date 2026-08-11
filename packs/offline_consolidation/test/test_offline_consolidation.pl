@@ -335,6 +335,108 @@ test(a_malformed_durable_store_is_refused,
      throws(error(domain_error(renewal_loop, not_a_loop), _))) :-
     offline_consolidation_maintain_durable([not_a_loop], _Loops).
 
+% ---------------------------------------------------------------------------
+% FACULTY 13, LEARNING ITSELF - THE SCORED ACCEPTANCE TESTS (slice 57)
+% ---------------------------------------------------------------------------
+%
+% LAYER_12_FACULTY_SPECIFICATION.txt, Faculty 13: "retention of old competence as new competence is
+% added; measurable consolidation benefit from the offline phase; graceful lifetime accumulation."
+% The first two are scored here against their own ablations, so NO PASSING THRESHOLD IS INVENTED.
+
+% THE FIRST CRITERION, SCORED. The mind learns a new competence. The old one is retained BETTER when
+% the night interleaves it than when the night replays only the new - which is catastrophic
+% forgetting measured rather than demonstrated.
+test(faculty_thirteen_old_competence_is_retained_better_when_the_night_interleaves_it) :-
+    % The cortex before either night: an established old competence and a fresh new one.
+    offline_consolidation_test_interfaces(Before),
+    offline_consolidation_test_averages(Averages),
+    % THE SERVED RUN: the night remembers the old day and the new day, and interleaves them.
+    offline_consolidation_night_step(Before, [[a-1, b-1], [c-1, d-1]], 0.1, Averages, [], 0.5, 0.2,
+                                     Interleaved),
+    % THE ABLATED RUN: the identical night, remembering only the new day.
+    offline_consolidation_night_step(Before, [[c-1, d-1]], 0.1, Averages, [], 0.5, 0.2, NewOnly),
+    % Score how much of the OLD competence each night left standing.
+    offline_consolidation_retention(Before, Interleaved, [a-b], InterleavedRetention),
+    offline_consolidation_retention(Before, NewOnly, [a-b], AblatedRetention),
+    % THE CRITERION, AND IT NEEDS NO THRESHOLD: interleaving retains strictly more of the old.
+    assertion(InterleavedRetention > AblatedRetention),
+    % The exact figures, so the test is glass-box rather than merely comparative. A two-pattern batch
+    % pays half the dose to each, so the old edge is replayed from 1.0 to 1.05 and the bound scales
+    % it by 0.9 to 0.945. Unreplayed, it is only scaled: 0.9.
+    assertion(abs(InterleavedRetention - 0.945) < 1.0e-9),
+    assertion(abs(AblatedRetention - 0.9) < 1.0e-9),
+    % AND THE NEW COMPETENCE IS REALLY INSTALLED IN BOTH, so the retention above is not bought by
+    % failing to learn the new thing at all - which is the way this test would otherwise pass wrongly.
+    offline_consolidation_competence_score(Before, [c-d], NewBefore),
+    offline_consolidation_competence_score(Interleaved, [c-d], NewAfter),
+    assertion(NewAfter > NewBefore).
+
+% THE SECOND CRITERION, SCORED. The offline phase's benefit to a competence is measured against the
+% same night with that competence absent from the store - the ablation the criterion's own wording
+% asks for, since "benefit FROM the offline phase" is a comparison and not a level.
+test(faculty_thirteen_the_offline_phase_delivers_a_measurable_benefit) :-
+    % The cortex before either night.
+    offline_consolidation_test_interfaces(Before),
+    offline_consolidation_test_averages(Averages),
+    % THE SERVED RUN: the night remembers the new competence's day among the others.
+    offline_consolidation_night_step(Before, [[a-1, b-1], [c-1, d-1]], 0.1, Averages, [], 0.5, 0.2,
+                                     Served),
+    % THE ABLATED RUN: the identical night, which never replays the new competence.
+    offline_consolidation_night_step(Before, [[a-1, b-1]], 0.1, Averages, [], 0.5, 0.2, Unserved),
+    % Score what the offline phase added to the new competence.
+    offline_consolidation_benefit(Unserved, Served, [c-d], Benefit),
+    % THE CRITERION: the benefit is positive, and it is measurable rather than asserted.
+    assertion(Benefit > 0),
+    % The exact figure: replayed from 0.1 to 0.15 and bounded to 0.135, against 0.1 bounded to 0.09.
+    assertion(abs(Benefit - 0.045) < 1.0e-9).
+
+% AND THE HONEST HALF OF THE SECOND CRITERION, PINNED SO NOBODY QUOTES THE BENEFIT WITHOUT IT. The
+% night's benefit is RELATIVE and not absolute: measured against no night at all, the old competence's
+% score FALLS, because renormalisation is the night's other job. Chapter 7 says exactly this - the
+% night's net effect is renormalisation WITH targeted strengthening of the replayed traces, not
+% blanket growth - so a benefit reported as an absolute gain would be reporting a machine konnectome
+% does not have.
+test(faculty_thirteen_the_nights_benefit_is_relative_and_never_absolute) :-
+    offline_consolidation_test_interfaces(Before),
+    offline_consolidation_test_averages(Averages),
+    % A night that serves the old competence as well as it can be served.
+    offline_consolidation_night_step(Before, [[a-1, b-1]], 0.1, Averages, [], 0.5, 0.2, After),
+    % Against no night at all, the old competence still ends the night lower than it began.
+    offline_consolidation_retention(Before, After, [a-b], Retention),
+    assertion(Retention < 1.0),
+    % Replayed at the full dose to 1.1 and bounded by 0.9, which is 0.99.
+    assertion(abs(Retention - 0.99) < 1.0e-9).
+
+% ---------------------------------------------------------------------------
+% THE MEASUREMENT'S OWN REFUSALS (slice 57)
+% ---------------------------------------------------------------------------
+
+% A competence naming an edge the cortex does not carry is refused rather than scored as zero, which
+% is the guard that keeps a typing slip from reporting perfect catastrophic forgetting.
+test(a_competence_naming_an_absent_edge_is_refused,
+     throws(error(offline_consolidation_no_such_edge(x-y), _))) :-
+    offline_consolidation_test_interfaces(Interfaces),
+    offline_consolidation_competence_score(Interfaces, [x-y], _Score).
+
+% A competence that scored nothing has no retention to measure, and the division is refused rather
+% than dressed up as a total loss.
+test(a_competence_with_no_score_has_no_retention,
+     throws(error(offline_consolidation_no_competence_to_retain(_Competence), _))) :-
+    Empty = [interface(a, b, 0, 1, transmissive)],
+    offline_consolidation_retention(Empty, Empty, [a-b], _Retention).
+
+% An unbound competence is a hole, and a hole scored as zero would report a total loss.
+test(an_unbound_competence_is_refused,
+     throws(error(instantiation_error, _))) :-
+    offline_consolidation_test_interfaces(Interfaces),
+    offline_consolidation_competence_score(Interfaces, _Hole, _Score).
+
+% A competence that is not a list of edge names is refused by name rather than scored as empty.
+test(a_malformed_competence_is_refused,
+     throws(error(offline_consolidation_malformed_competence(_What), _))) :-
+    offline_consolidation_test_interfaces(Interfaces),
+    offline_consolidation_competence_score(Interfaces, [not_an_edge_name], _Score).
+
 :- end_tests(offline_consolidation).
 
 % offline_consolidation_test_nights(+Count, +Interfaces0, +Memories, +Averages, -Interfaces): run Count night ticks.

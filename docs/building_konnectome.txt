@@ -1135,5 +1135,77 @@ So the order is now written down, and last resort means last. Logic first. The t
 Fix what is wrong. And where you must fill in what is unknown, say plainly that it was you.
 
 
-From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER FIFTY-FIVE, and the story goes on being true.
+CHAPTER FIFTY-FIVE - WHY YOU CANNOT TICKLE YOURSELF (2026-08-11, SLICE 56)
+
+Reach out and press your own ribs. Now have somebody else do it. The second one tickles and the first one does not, and the reason has been known since the late 1990s: your brain saw the first one coming.
+
+When it issues a command to a muscle it keeps a copy of that command for itself - an efference copy, "efference" meaning outgoing - and hands the copy to a circuit that predicts what the sensation ought to feel like. When the real sensation arrives, the two are compared. A match means the movement was yours, and the sensation is turned down, because a sensation you generated carries no news. A mismatch means something else did it, and the sensation comes through at full strength, because that is exactly what a body needs to know about.
+
+The queue had this down as a wiring slice, and it was right. Every piece was already in the repository. archetype_comparator computes a signed error and has since slice 3. body_interface_command issues the three commands the stand-in machine carries. simulated_body enacts them and, in its own clauses, states precisely what each one does to the world: steering clears the path, recharging fills the battery, holding still changes nothing but the log. The forward model is a transcription of those clauses and not one line of it is a guess.
+
+The pack was built and the demonstration is the tickle result running. Steer around a real obstacle in a still world and the mind receives nothing at all - not a small signal, an empty list. Recharge the battery while a quarter of a charge quietly drains away, and the mind is told exactly one thing: minus a quarter on the battery. It never hears about the recharge it ordered. It hears only about the drain nobody ordered.
+
+The attenuation cost nothing that had been feared, either. There is no gain to choose, because the corpus asks for a subtraction rather than a scaling: the Own-Move Subtractor in the Layer 6 modes volume "subtracts an efference copy of a self-generated head turn and reports only what the world did". The attenuated percept IS the residual, so the inability to tickle oneself is arithmetic here rather than a special case somebody wrote.
+
+AND THEN THE SLICE WALKED INTO THE THING IT WAS ACTUALLY FOR.
+
+The obvious next line is the one the queue had written down for eight assessments: when the prediction matches, tag the movement as self-produced and let the mind feel that it was the author. That is the sense of agency, and it is what the comparator model exists to explain.
+
+The chapter that supplies the comparator refuses that conclusion in its own last sentence. A 2019 analysis in Neuroscience of Consciousness argued that a mere prediction match is not by itself sufficient to generate a felt sense of agency, and two sections later the manuscript states what replaced the idea: authorship is a judgement assembled from several cues of differing reliability, and prediction is one cue among several, weighted more heavily when it is reliable. konnectome has one cue and no weights.
+
+That alone would have been enough. What made it worth a whole finding is that konnectome then reproduced the critique from the other side, out of its own running code.
+
+One of the three commands is hold_still. What does a forward model predict for holding still? That the world stays exactly as it is. And in a quiet world, that prediction is perfect - every channel, every time, the highest score the mechanism can produce.
+
+So a mind that granted itself authorship whenever its predictions came true would be MOST certain it was the author of the world at precisely the moments it had done nothing whatever. The test that pins it does not measure anything: it runs a successful, deliberate steer around a real obstacle and it runs the null command in a still world, and asserts that the two cues are the SAME TERM. The comparator cannot tell a decisive act from an absence of one.
+
+Nothing would have failed. That is the sixth finding of exactly this shape in this run - after a boundary that could never be crossed, a zero that reads as calm, a threshold decided by binary rounding, a table row that was not a transition, and a clip that annihilated - and it is now unreasonable to treat the pattern as coincidence. Every one of them was a plausible, green, working-looking build that was wrong.
+
+So the comparator publishes its measurement and stops. And the refusal is not left in a comment. Ask the code for a verdict of agency and it throws, by name, citing the chapter. The one-line answer a later session would eventually be tempted to write is not merely absent; the place it would go is occupied by the reason not to write it. A refusal in prose can be skimmed. A refusal in code stops the person skimming.
+
+What is missing was named rather than papered over. Agency needs a second cue that can tell "the world matched my prediction because I caused it" from "the world matched my prediction because nothing was going to happen anyway" - Wegner's exclusivity condition, no other cause apparent. That is a mechanism and not a patch, and it is written down as a declared hole in the periodic-table sense the Twenty-First Commandment reached for two days ago.
+
+One honest limit is recorded with it, because the architecture is where it will bite. konnectome's forward model is STATED, not LEARNED. The Layer 10 systems volume says of the sensorimotor body loop that it differs from an ordinary closed-loop controller in that its plant model is learned. konnectome's was copied from the plant, so it cannot be wrong about it and it cannot improve. A real forward model would be the first thing in this build ever to acquire its own contents from experience, and that is a larger idea than this slice.
+
+Nothing is wired. The cognitive cycle does not call the comparator, the body interface does not call it, and no percept in any run konnectome performs today is attenuated. That is the fourth time this build has taken that discipline - after the eligibility trace, the blackboard and the durable tier - and it is the same reason each time: build the mechanism, prove it against the corpus's own account, and leave the wiring to the slice that has argued for it.
+
+
+CHAPTER FIFTY-SIX - THE NUMBER NOBODY HAD TO CHOOSE (2026-08-11, SLICE 57)
+
+The second slice of the pair is small, and its subject is the difference between showing something and measuring it.
+
+One of the north-star directory's fourteen-item documents lists the faculties a mind must have, each with the evidence that would count. Thirteenth is LEARNING ITSELF: improve at all the others from experience, without catastrophic forgetting, using both online acquisition and offline consolidation. Its acceptance criteria are retention of old competence as new competence is added, a measurable consolidation benefit from the offline phase, and graceful lifetime accumulation.
+
+The north-star gap analysis audited all fourteen against the running packs and found none passing outright, six partly passing and eight out of reach - and singled this one out as the cheapest real win in the whole analysis, because it is partly passing purely for want of a measurement. Interleaved replay against catastrophic forgetting has been in offline_consolidation since slice 38. Homeostatic scaling has been in plasticity_engine since slice 29. Neither was ever scored.
+
+The existing tests said things like "this weight ended up lower than that one". True, and useful, and not a score. Nobody could say how much of the old competence survived, so nobody could say whether the criterion was met.
+
+So the slice added the measurement and added no mechanism at all. Not one weight moves differently because these three predicates exist. A competence is a caller-named set of edges and its score is the sum of their weights - the sum and not the mean, because a competence that has LOST an edge should score lower and a mean would divide the loss away. Retention is the score after over the score before. Benefit is the difference between two runs.
+
+Then the interesting question, which is where the real work was.
+
+The obvious way to make a faculty pass is to write down a number it must beat. Retention above ninety per cent. And that number would be a pure invention - the specification states no threshold, for this faculty or for any of the other thirteen. Written into a test suite, sitting beside a genuine citation of a genuine document, it would look exactly like something the science had supplied. This build already has the name for that failure: an invented value that has learned to cite.
+
+The way out was in the criteria's own wording, which nobody had read closely enough. "Retention of old competence AS NEW COMPETENCE IS ADDED" is a comparison, not a level - it compares a mind that added something new against one that did not. "Measurable consolidation benefit FROM the offline phase" is a comparison too. Each criterion carries its own baseline, and a test that runs both sides of it needs no threshold.
+
+So the night is run twice. Once interleaving the old competence with the new day, once - identically in every other respect - replaying only the new. Interleaved, the old competence retains 0.945 of itself. Ablated, 0.9. The criterion is met by the fact that the first exceeds the second, and no number was chosen by anybody. The offline phase's benefit to the newly acquired competence comes out at 0.045 on the same construction.
+
+That trick is the most portable thing in either slice, and it is worth stating as a rule: A TEST THAT NEEDS A THRESHOLD HAS USUALLY NOT YET FOUND ITS ABLATION. There are twelve more faculties waiting for suites, and every one of them will present the same temptation.
+
+One honest figure is pinned beside the good one. Measured against not sleeping at all, the old competence's score FALLS even on the night that serves it best - 0.99 against a starting 1.0 - because renormalisation is the night's other job and Chapter 7 says so in as many words: the night's net effect is renormalisation with targeted strengthening of the replayed traces, not blanket growth. The night's benefit is relative and never absolute, and a test asserts that so that nobody ever quotes the benefit without it.
+
+And the faculty is not claimed as passing outright, which is the last honest thing in the pair. Two criteria are scored. The third, graceful lifetime accumulation, needs a lifetime, and konnectome's longest run is a single capstone night. It is recorded as unmeasured rather than quietly folded into the other two, and the gap analysis's fourteen-item audit should be read with that correction.
+
+THE RECORD OF WHAT WAS FIXED, WHICH THE SIXTEENTH COMMANDMENT MAKES THIS DOCUMENT'S JOB. Two auto-fixes, both in README.md, and both of one kind: A CITATION BY NUMBER THAT NOW LANDS ON A DIFFERENT RULE.
+
+The README's docs-layout listing described the tutorial as the Seventeenth Commandment's document and the current hand-off as the Nineteenth's. Both were correct when written and both were falsified by the version 19 renumbering, which moved the tutorial to Eighteen and carried the hand-off protocol to the end, where it is now the Twenty-Second. A reader following either number today lands on branch-and-report discipline and on the build log respectively. They are repointed, and the build log's own citation of the Nineteenth was checked rather than assumed and is correct.
+
+This is the same fault the constitution pointer audit found in this file two days ago, in the commandment summary further down the page, and it is worth noting that the audit did not catch these: it was reading the summary list, and these two sit in a directory listing where the commandment number is an aside rather than the subject. A NUMBER CITED IN PASSING IS STILL A POINTER.
+
+No defect in running code was found by either slice. The one thing that could have been mistaken for one - that the queue asked for a sense of agency and the build refused to supply it - is a decision and not a repair, and it went to the ledger with a number, as the Commandment's own repair-versus-decision line requires.
+
+Nine hundred and sixty-seven tests across thirty-eight packs, all green. Four gates at zero violations plus the naming gate's self-test, with the one known non-blocking prefix collision unchanged. And the capstone tells a story byte-identical to the one main tells, which was verified by running both rather than assumed - because the comparator is unwired by design and a measurement moves nothing.
+
+
+From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER FIFTY-SEVEN, and the story goes on being true.
 

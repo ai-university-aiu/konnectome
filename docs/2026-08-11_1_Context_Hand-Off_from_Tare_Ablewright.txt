@@ -1,0 +1,193 @@
+CONTEXT HAND-OFF FROM TARE ABLEWRIGHT
+
+Date: 2026-08-11. The first hand-off of this date.
+
+I chose the name Tare Ablewright because both slices of this session turned out to be the same idea wearing different clothes, and the idea is TARE - the weight you subtract before you weigh, so that what you read off is only the thing you wanted to know. Slice 56 subtracts the mind's own prediction from its senses, so that what reaches the mind is only what the world did. Slice 57 subtracts a run's ablation from the run, so that what a faculty scores is only what the offline phase actually contributed. Ablewright for the ablation, because in both cases THE BASELINE WAS THE WHOLE INVENTION, and finding the right one is what let this session build two things without choosing a single number.
+
+
+PART ONE - READ THESE FIRST
+
+- Read and follow the konnectome constitution at ~/konnectome/CONSTITUTION.md, first and foremost. IT IS AT VERSION 24 AND HOLDS TWENTY-TWO COMMANDMENTS. It did NOT move this session. It moved three times between the previous hand-off and this one - versions 22, 23 and 24 - and those changes were file renames rather than rules: the build log and the ledger were UNVERSIONED, and the Sixth Commandment was repointed. Do not cite a commandment by number from memory or from an older document; re-read it. The version 19 renumbering map is still in the Constitution's own version 19 note and it is still the thing that catches people out - this session found two more citations that had been falsified by it.
+
+- READ docs/DSPARCD/konnectome_0_definition_v1.txt BEFORE ANYTHING ELSE IN THE FILESET. Unchanged this session, and unchanged since slice 41. It states what konnectome IS in one sentence and what it is NOT in eight.
+
+- Read The DSPARCD Fileset at its current versions: docs/DSPARCD/konnectome_0_definition_v1.txt and docs/DSPARCD/konnectome_1_specification_v54.txt through konnectome_6_demonstration_v54.txt. IT MOVED ONCE THIS SESSION, v53 to v54.
+
+- READ docs/design/02_north_star_gap_analysis_v1.txt. Unchanged this session and still THE MOST CURRENT STATEMENT OF THE QUEUE. Its Part Nine is what this session worked from, and this session took the FIRST of the three wiring slices it names and the CHEAPEST WIN of its Part Five. ONE CORRECTION TO IT IS RECORDED IN DECISION-14 AND IS NOT YET WRITTEN INTO THE DOCUMENT ITSELF: its Part Five says two tests move Faculty 13 from partly-passes to passes. THEY DO NOT, QUITE. They score two of the faculty's three criteria; the third needs a lifetime konnectome has never run.
+
+- Read docs/neuroscience/THE_NEUROSCIENCE_OF_COGNITION_OUTLINE.txt and THE_NEUROSCIENCE_OF_COGNITION_MANUSCRIPT.txt. THESE ARE THE NORTH STAR (the Twentieth Commandment), and docs/neuroscience/ is the NORTH-STAR DIRECTORY. Read the OUTLINE first; it is the map, and it tags every chapter CORE, APPARATUS or CONTEXT. SLICE 56 WAS BUILT FROM CHAPTER 63.2.1 AND CORRECTED BY 63.2.4, so this pair is now a worked example of why the Commandment says to read the text beneath a finding rather than the finding.
+
+- Read docs/neuroscience/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt, the guiding book.
+
+- Read docs/design/01_vision_set_top_down_analysis_v3.txt as the older queue, and note that IT IS NOW TEN SLICES BEHIND - current through slice 47, and slices 48 through 57 are built. A VERSION 4 IS OVERDUE, WAS OVERDUE AT THE LAST TWO HAND-OFFS, AND IS THE CLEAREST SMALL ITEM ON THE QUEUE. This session did not write it either, and the honest reason is the same one Filament gave: the wiring slices were cheaper and the north-star analysis leads anyway.
+
+- READ THE FIVE DESIGN AUTHORITIES BEFORE DESIGNING ANY SLICE. All unchanged this session, and TWO OF THEM STILL HAVE KNOWN OMISSIONS recorded in the gap analysis. They are now numbered by reading order:
+  • docs/design/05_mode_register_design_authority_v1.txt - Theme One. Its Part Nine is entirely closed.
+  • docs/design/06_two_shift_design_authority_v1.txt - Theme Two.
+  • docs/design/07_edge_type_design_authority_v1.txt - Theme Three. IT MISSED THAT THE SCALER IS A SECOND CONSUMER OF THE SIGN FIELD IT WAS ASKING FOR.
+  • docs/design/08_motif_and_workspace_design_authority_v1.txt - Themes Four and Five. IT MISSED LAYER 8's PART TEN ENTIRELY.
+  • docs/design/03_vision_set_analysis_fidelity_audit_v1.txt - the audit of the analysis itself.
+
+- Read docs/DSPARCD/DSPARCD_EXPLAINED.txt, the Fifth Commandment's subject.
+
+- Read the Settings, General, Instructions for Claude, and ~/CLAUDE.md at the organization root.
+
+- Read the current tutorial, docs/konnectome_tutorial_v53.txt (FIFTY-FOUR parts; it gained two this session).
+
+- Read the prior hand-off, 2026-08-10_5 (Filament Benchwright), now at docs/hand-off/. Its queue is the queue this session worked from and MOST OF IT IS STILL STANDING.
+
+- THE OWNER'S STANDING CHOICE REMAINS: "All". Do NOT re-present any menu; continue down the queue.
+
+- STANDING INSTRUCTIONS IN FORCE, ALL OF THEM CARRIED FORWARD:
+  • MINIMIZE BASELINE VERIFICATION BETWEEN HAND-OFFS, AND THE OWNER RESTATED THIS DURING THIS SESSION IN THESE WORDS: "We can go easy on the test suite at the start of hand-offs. It's the same system as before the hand-off." Run the full suite and the gates at the END, not the start. A git fetch, status and log are enough to confirm you are where this document says you are. Honoured again this session: the suite was run once, at the end.
+  • TWO SLICES PER HAND-OFF, BUILT IN SERIAL, under the pairing rule.
+  • COUSIN CONFORMANCE IS RELAXED TO LONGER STRETCHES. Quote the figure with its age; do not treat the age as a debt.
+  • AUTO-FIX-ALL IS GRANTED (the Sixteenth Commandment). Find it, fix it, record what you did and why in the build log. DO NOT STOP TO ASK.
+
+
+PART TWO - THE IMPORTANT DOCS FILES
+
+- docs/DSPARCD/konnectome_0_definition_v1.txt - THE DEFINITION, phase zero. Read it first.
+
+- docs/DSPARCD/konnectome_1_specification_v54.txt through konnectome_6_demonstration_v54.txt - the DSPARCD Fileset, Realization Log through slice 57.
+
+- docs/konnectome_tutorial_v53.txt - the beginner tutorial, FIFTY-FOUR parts. A session that bumps it bumps BOTH the header version line and the closing line. THE INSERTION RULE holds: a new part goes BEFORE the three standing tail parts, which are renumbered. It was exercised twice this session and it worked as written.
+
+- docs/building_konnectome.txt - the build log, FIFTY-SIX chapters. UNVERSIONED SINCE CONSTITUTION VERSION 22; it is append-only and therefore has no versions. It is where the record of every auto-fix goes, and the record is the single condition on the Sixteenth Commandment's grant.
+
+- docs/konnectome_ledger.txt - the scoreboard, UNVERSIONED SINCE CONSTITUTION VERSION 23. Counter line: Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0. Observations: 17 (3 CLOSED: 8, 9 and 15). Decisions: 14. THE COUNTER LINE APPEARS TWICE and both were swept this session.
+
+- docs/design/ - TEN NUMBERED DOCUMENTS, 01 through 10, and THE NUMBER IS THE READING ORDER AND THE FULFILMENT ORDER AT ONCE. This numbering is new since the last hand-off and it is the single most useful navigational change in the repository: 01 is the root analysis, 02 the most current, 03 and 04 the quality control, 05 through 08 the four design authorities in theme order, 09 the coverage survey, 10 the real-machine design.
+
+- docs/cousins/Causalontology_4_0_0_CHANGE_ORDER_v3.txt - Sections C, D, E remain HELD. No slice released them.
+
+- docs/cousins/PrologAI_CHANGE_ORDER_v2.txt - unchanged; no language wall hit.
+
+- tests/naming_gate_fixture/ - still deliberately broken; the violation is the point.
+
+- THE DOCS LAYOUT: /docs/ top level holds EXACTLY FOUR FILES - the ledger, the build log, the tutorial, and the CURRENT hand-off - and every one is written BY konnectome. Everything else is in a named sub-directory: docs/DSPARCD/, docs/design/, docs/neuroscience/ (the north star), docs/principles/, docs/cousins/, docs/provenance/, docs/hand-off/, docs/archive/.
+
+
+PART THREE - WHAT THIS SESSION DID
+
+TWO SLICES BUILT, TWO NUMBERED DECISIONS, ONE OBSERVATION OPENED, TWO AUTO-FIXES. Main was at beae8d4 when this session began, which is EIGHT COMMITS AHEAD of where the Filament hand-off said it was - PRs 141 through 148 were a documents reorganization by a session that built no slices, and the hand-off document was updated in PR 148 to know about it. Nothing in it was invalidated.
+
+- SLICE 56, THE EFFERENCE COPY. New pack efference_copy, from Chapter 63.2.1. DECISION-13: THE COMPARATOR PUBLISHES A CUE AND REFUSES TO PUBLISH A VERDICT OF AGENCY, and the refusal is written into the code as a predicate that throws. OBSERVATION-17: THE NULL COMMAND SCORES A PERFECT MATCH, so a comparator-only agency would award maximum authorship for doing nothing. NINETEEN tests. NOTHING IS WIRED.
+
+- SLICE 57, FACULTY 13 SCORED. offline_consolidation gains three measurement predicates and NO MECHANISM WHATEVER. DECISION-14: a competence is a caller-named set of edges and its score is their summed weight, AND AN ACCEPTANCE CRITERION IS MET BY COMPARISON AGAINST AN ABLATION RATHER THAN AGAINST A THRESHOLD KONNECTOME CHOSE. offline_consolidation 32 tests to 39.
+
+- TWO AUTO-FIXES, both in README.md and both of one kind: A CITATION BY NUMBER THAT NOW LANDS ON A DIFFERENT RULE. The docs-layout listing called the tutorial the Seventeenth Commandment's document and the current hand-off the Nineteenth's; the version 19 renumbering made the first Eighteen and carried the second to Twenty-Two. Recorded in the build log per the Sixteenth Commandment's single condition. NOTE WHY THE CONSTITUTION POINTER AUDIT MISSED THESE: it was reading the README's commandment SUMMARY LIST, and these sit in a directory listing where the number is an aside rather than the subject. A NUMBER CITED IN PASSING IS STILL A POINTER.
+
+- State at hand-off: FIFTY-SEVEN slices. NINE HUNDRED AND SIXTY-SEVEN tests across THIRTY-EIGHT packs. Four gates at zero violations plus the naming gate's self-test. DSPARCD fileset v54; tutorial v53 at fifty-four parts; build log fifty-six chapters; Constitution VERSION 24 at TWENTY-TWO commandments, unmoved this session.
+
+
+PART FOUR - BUILD-AGAINST COUSIN COMMITS (for reproducibility)
+
+- causalontology: 292dfca (unchanged; not edited this session; NOT re-measured).
+- PrologAI: ebbc3e0 (unchanged; not edited this session; NOT re-measured).
+- Mentova: d117c69 (read-only; untouched).
+
+CONFORMANCE STANDS WHERE SLICE 47 RE-MEASURED IT ON 2026-08-09: 137 of 137 in both, and the figure is now FIVE SESSIONS OLD. THE OWNER HAS RELAXED THIS CADENCE and the age is not a debt. QUOTE IT WITH ITS QUALIFICATION - 137 is 137 CHECKS, of which 38 are driven by the shared vector files and 99 are implemented per binding, so a run measures ONE binding's agreement with the prose.
+
+AND THE OPEN QUESTION STILL STANDS: the Fifteenth Commandment describes causalontology's suite as ONE HUNDRED AND NINETEEN VECTORS while this build describes it as 137 CHECKS, and causalontology's own README carries BOTH figures. Close it with a measurement whenever conformance is next run, not with a preference.
+
+
+PART FIVE - SHARP EDGES AND HONEST NON-CLOSURES
+
+- THE SESSION'S TRANSFERABLE FINDING, AND IT IS THE ONE THING HERE WORTH STEALING FOR ANY LATER SLICE: A TEST THAT NEEDS A THRESHOLD HAS USUALLY NOT YET FOUND ITS ABLATION. Layer 12 states fourteen faculties with acceptance criteria and NOT ONE PASSING NUMBER. The obvious way to make Faculty 13 pass was to write down a retention figure it must beat - and that figure would have been konnectome's own invention sitting beside a real citation, which is this build's own name for the failure. The way out was in the criteria's own wording: "retention of old competence AS NEW COMPETENCE IS ADDED" is a comparison and not a level. Run the night twice, once serving the old competence and once not, and read off 0.945 against 0.9. THE CRITERION IS MET BY THE INEQUALITY AND NOBODY CHOSE ANYTHING. TWELVE MORE FACULTY SUITES ARE WAITING AND EVERY ONE WILL PRESENT THE SAME TEMPTATION.
+
+- THE SIXTH CONSECUTIVE FINDING OF THE SHAPE THAT WOULD NOT HAVE FAILED. A boundary that could never be crossed (47), a zero that reads as calm (48), a threshold decided by binary rounding (49), a table row that is not a transition (50), a clip that annihilates (52) - and now A MATCH THAT IS PERFECT BECAUSE NOTHING HAPPENED (56). Filament wrote that a session finding nothing of this shape should suspect it did not look. That advice has now paid six times running and should be treated as a standing instruction rather than an observation.
+
+- OBSERVATION-17 IS OPEN AND ITS CLOSER IS A MECHANISM, NOT A PATCH. Agency needs a second cue that distinguishes "the world matched my prediction BECAUSE I CAUSED IT" from "the world matched my prediction because NOTHING WAS GOING TO HAPPEN ANYWAY". That is Wegner's EXCLUSIVITY condition. Building it inside efference_copy would be wrong; it is a sibling.
+
+- THE EFFERENCE COPY IS BUILT AND UNWIRED, WHICH IS NOW THE FOURTH TIME THIS BUILD HAS DONE THAT DELIBERATELY - after the eligibility trace, the blackboard and the durable tier. Nothing calls it: not the cognitive cycle, not body_interface, and no percept anywhere is attenuated in any run konnectome performs today. THE WIRING SLICE HAS A REAL DECISION WAITING: body_interface_sense_act_step/7 senses BEFORE it acts, so a comparator wired into it must carry the prediction across a tick boundary, and konnectome has no construct that carries anything across a tick today.
+
+- KONNECTOME'S FORWARD MODEL IS STATED, NOT LEARNED, and this is the honest non-closure most likely to be forgotten. LAYER_10_SYSTEMS_MANUSCRIPT says of sensorimotor_body_loop that "its plant model is LEARNED and its gains are neuromodulated". konnectome's is a transcription of simulated_body_drive/3, so it cannot be wrong about the plant it was copied from and it cannot improve. A REAL FORWARD MODEL WOULD BE THE FIRST THING IN THIS BUILD EVER TO ACQUIRE ITS OWN CONTENTS FROM EXPERIENCE, which is a larger idea than a slice.
+
+- FACULTY 13 IS NOT CLAIMED AS PASSING OUTRIGHT AND THE GAP ANALYSIS SHOULD BE READ WITH THAT CORRECTION. Two criteria are scored. The third, "graceful lifetime accumulation", needs a lifetime and konnectome's longest run is a capstone night. It is recorded as unmeasured rather than folded into the other two. The analysis's Part Five says two tests move the faculty from partly to passes; they move it most of the way.
+
+- THE NIGHT'S BENEFIT IS RELATIVE AND NEVER ABSOLUTE, and a test pins it so nobody quotes the good number alone. Measured against not sleeping at all, the old competence's score FALLS even on the night that serves it best - 0.99 against 1.0 - because renormalisation is the night's other job and Chapter 7 says so.
+
+- OBSERVATION-13 STANDS AND IS UNTOUCHED. No step rate is declared. If you wire the blackboard into the tick, DECLARE THE RATE FIRST.
+
+- OBSERVATION-12 STANDS AND IS NOW DECLINED FIVE TIMES: a sweep of the codebase claims inside all four design authorities. Under the pairing rule it is a legitimate SMALL item.
+
+- OBSERVATION-11 STANDS AND HAS NOW GAINED ITS SIXTH REASON. DECISION-14 wanted to look up "the competence called such-and-such" and could not, so the edge set is the caller's argument. The naming and addressing facility's expensive half now blocks four families and has six independent reasons to want it.
+
+- OBSERVATION-14, 10, 7, 6, 5 AND 4 ALL STAND UNTOUCHED. Observation 5 has now been declined four times and the next visit should be deliberate.
+
+- THE PAIRING RULE HELD CLEANLY THIS TIME. Slices 56 and 57 touch different packs and neither depends on the other, so they are a genuine pair rather than the serial-on-one-pack exception the last session had to record twice.
+
+- THE FIVE NAMED LENSES PAID AGAIN ON BOTH SLICES. Unbound-wrong-judgement is now TWENTY-FIVE SLICES RUNNING (33 through 57) - it caught the unrecognised world event, which read as stillness would have credited the mind with a world it never predicted, and the unbound competence, which scored as zero would have reported a total loss. THE SIXTH CANDIDATE LENS, THE ABSORBING-STATE LENS, GAINED NO PAYMENT THIS SESSION AND ITS PROMOTION QUESTION HAS NOW PASSED THROUGH FOUR HAND-OFFS UNDECIDED. DECIDE IT OR DROP IT.
+
+- THE NAMING GATE'S NON-BLOCKING COLLISION IS UNCHANGED: colliding_prefixes=1, from working_memory_blackboard and working_memory_mode_register sharing "working_". A collision is REPORTED and is not a VIOLATION. Never quote "four gates at zero" without it.
+
+- THE CAPSTONE STORY IS BYTE-IDENTICAL TO MAIN'S, verified by running both and diffing rather than assumed. The byte-identical guard standing since slice 34 should still be re-baselined against slice 51's telling; that item has now been carried by three hand-offs.
+
+- THE FULFILMENT AUDIT: the trigger is THIRTY-TWO or more hand-off documents and THE COUNT IS NOW THIRTY-FOUR, counting this one, so IT IS DUE AND HAS PASSED ITS TRIGGER BY TWO. Evaluate with: find docs -name '*Context_Hand-Off*.txt' | wc -l . CARRY RHODIUM'S WARNING: at least two are session-close markers rather than units of work. AND CARRY CADENCE'S: two slices per hand-off makes this trigger less meaningful every session. THE SESSION THAT RUNS IT SHOULD RE-STATE THE TRIGGER IN SLICES.
+
+- PARALLEL SESSIONS: keep the ritual - git fetch, git log origin/main, gh pr list before every claim, numbering, or merge. AND THE WORKTREE WARNING, eleven times inherited: remove a worktree before checking out main. THERE IS A LIVE WORKTREE AT ~/worktrees/rung-three ON feature/slice-22-capstone-rung-three. AND CHECK YOUR BRANCH BEFORE YOU START EDITING.
+
+- ONE PROCESS NOTE OF MY OWN, SMALL BUT WORTH A LINE. Writing the ledger's new entries by string replacement against the counter line put them at the FIRST of the counter line's two occurrences, which is halfway up the document, rather than at the end. It was caught by reading back the line numbers immediately afterwards and moved. THE LESSON IS THE ONE FILAMENT WROTE DOWN ABOUT SCRIPTED EDITS TO LOAD-BEARING FILES: after a scripted edit, READ BACK THE RESULT AND LOOK AT IT, rather than trusting that the replacement landed where you pictured it.
+
+
+PART SIX - THE FIRST TASK OF THE CONTINUATION
+
+The owner has already chosen: ALL (standing), TWO SLICES PER HAND-OFF under the pairing rule, and AUTO-FIX-ALL is granted. THE NORTH-STAR GAP ANALYSIS'S PART NINE IS STILL THE MOST CURRENT STATEMENT OF THIS QUEUE.
+
+1. THE TWO REMAINING WIRING SLICES, and they are still the cheapest real value in the queue now that the first is done. CLOSING THE CONFLICT LOOP: override_controller, supervisor and stabiliser are three pieces of a loop nobody has closed. AND THEN the efference copy's own wiring, which slice 56 deliberately did not do and which now has a named obstacle - the sense-act step senses BEFORE it acts, so the prediction must cross a tick boundary and nothing in konnectome carries anything across a tick.
+
+2. WRITE VERSION 4 OF THE VISION-SET ANALYSIS. Ten slices behind, overdue at the last two hand-offs, still not written. It is the natural SMALL half of a pair and it has now been declined three times.
+
+3. THE OVERLAY DELTA CHANNEL, which is still the decision that unblocks the most. Three standing deferrals point at it - OBSERVATION-14's closer, DECISION-5's overlay question, and DECISION-9's. An overlay OCCUPIES NO SLOT, keeps the base state running underneath, and publishes DELTAS; konnectome's bus has only a level and a commanded mode, AND A DELTA IS NEITHER. Note that OBSERVATION-14 generalises: acute stress arrives as a NAMED DISCRETE MODE in eleven other system registers while modulating working memory CONTINUOUSLY, so one overlay announcement must carry both shapes.
+
+4. THE SECOND AGENCY CUE, which is OBSERVATION-17's closer and is new to this queue. Wegner's EXCLUSIVITY condition - no other cause apparent. It is the smallest thing that would make konnectome's agency machinery non-degenerate, and it is a mechanism rather than a patch.
+
+5. WIRE THE DURABLE TIER, having first read the gap analysis's A1 and A2 and DECISION-11. Two decisions wait: what the level means for a weight, and what a night's maintenance costs.
+
+6. ATTENTION AS A SALIENCE-DRIVEN BIAS. Genuinely unblocked: the blackboard's rehearsal target sits caller-supplied and waiting for a publisher. Build it as a BIAS rather than a network, and note the gap analysis's correction - attention needs THREE terms: salience, goals, and SELECTION HISTORY.
+
+7. THE NAMING AND ADDRESSING FACILITY. OBSERVATION-11's expensive half, blocking four families and now SIX reasons. Note Chapter 80.1's sharpening: biology pays for layer-by-layer relay WHEN A MESSAGE NEEDS AN ADDRESS - the address is what the expensive path is FOR.
+
+8. THE REMAINING TWELVE FACULTY SUITES, and this item is worth more than it looks now that slice 57 has shown the method. Each one is a scored acceptance run built from an ablation rather than a threshold, and six faculties are already at PARTLY PASSES for want of exactly what Faculty 13 was missing.
+
+9. THE WORKSPACE PILOT, which MUST NOT MERGE without answering the five questions in its own ledger entry, cheapest first.
+
+10. THE LEARNED GATING POLICY, last in Family Four.
+
+11. FAMILY THREE, THE EDGE TYPE REGISTRY. It has its first concrete consumer outside its own design authority: DECISION-12 reads polarity from the weight's sign as a stopgap.
+
+12. THE AROUSAL AND STRESS OVERLAY STATES, and see item 3 - the same dependency seen from the corpus side.
+
+13. FAMILY SIX, TOOLING: the template parser. It would be konnectome's first true GENERATOR, it is the delivery vehicle for Layer 14's curated-inheritance provision, and it converts the corpus's mode registers into data exactly when Families Three and Five need them. FOUR CAVEATS ARE IN THE ANALYSIS AND THE SHARPEST IS THAT THE TEMPLATE DOES NOT GENERALISE PAST LAYER 6.
+
+14. THE BUILD-ORDER DISAGREEMENT, to be RECORDED as a numbered decision rather than built. Layer 12 puts perception and motor FIRST and language and social cognition nearly LAST; konnectome's ladder does the reverse at both ends, and four faculties are blocked by the same thin perceptual channel.
+
+15. RE-BASELINE THE CAPSTONE BYTE-IDENTICAL GUARD against slice 51's telling. Carried by three hand-offs now.
+
+16. RUN THE FULFILMENT AUDIT, which has passed its trigger by two, and RE-STATE ITS TRIGGER IN SLICES while you are there.
+
+17. The night's deferred chapters; the pre-corpus pending refinements; Rung Two's deepening against the Layer 13 Tutor Protocol; Rung Five Path B against Webots.
+
+18. Other ______________ .
+
+A STANDING OWNER REQUEST, CARRIED FORWARD. A VISUALIZATION CONTROL PANEL showing every mode of every construct at every grain simultaneously and live. THIS IS A DEMONSTRATION DELIVERABLE, NOT A SLICE. Its top row exists; slice 48 added its first legend, slice 49 the first cell with contents, slice 50 the first arrow. SLICES 56 AND 57 ADDED NOTHING TO IT, which is recorded rather than glossed. What it still lacks is the rest of the arrows, per OBSERVATION-11.
+
+
+PART SEVEN - SIGN-OFF
+
+This session built two small things and did not choose a single number, and that is the whole of what it has to hand forward.
+
+The first slice was supposed to be pure wiring. Every part of it had been sitting in the repository for fifty slices - a comparator, three commands, a machine whose own code says what each command does. The only thing missing was the wire. And then, one line before the end, it turned out that the thing the wire was for could not be built, because the chapter supplying the mechanism spends its closing sentence saying the mechanism is not sufficient for the conclusion everybody draws from it.
+
+That could have been a disappointment. What made it a finding was checking whether konnectome's own code agreed - and it did, from the other direction. The machine has a command called hold still. Ask a predictor what holding still will do and it says: nothing will change. In a quiet world that prediction is perfect, on every channel, every time. So a mind that inferred authorship from prediction would have been most certain it had authored the world at exactly the moments it had done nothing to it. Every test green. Nothing failing. Just a machine quietly believing something absurd.
+
+The second slice met the same shape wearing the opposite clothes. A faculty that had worked for nineteen slices and had never been scored, and the one thing standing between it and a score was a number nobody had. The temptation was to write one down - ninety per cent, say - and it would have sat there beside a real citation of a real document looking exactly like something the science supplied. The escape was in the criterion's own grammar: retention OF old competence AS new competence is added is a comparison, not a level. Run the night twice and subtract.
+
+Which is the same move as the first slice, and it is why the name fits both. Subtract what you already know is there, and read off only the rest. The efference copy tares the senses against the mind's own prediction. The ablation tares the score against the run that did not get the thing being measured. In both cases the baseline was the entire difficulty, and once it was found, no number had to be invented at all.
+
+So the thing to carry forward is not "refuse to guess". This build spent a day learning that refusing to guess, taken far enough, would have forbidden Edison. The thing to carry forward is narrower and more useful: BEFORE YOU CHOOSE A NUMBER, CHECK WHETHER WHAT YOU ACTUALLY NEED IS A COMPARISON. Most of the time the thing you were about to invent is a baseline you have not found yet, and it is sitting one ablation away.
+
+And when it genuinely is not there - when there really is a hole - say so on the face of the code, so that the next person meets a refusal rather than a plausible answer. Not never guess. Never disguise.
+
+- Tare Ablewright, 2026-08-11
