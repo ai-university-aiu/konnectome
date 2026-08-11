@@ -6,7 +6,7 @@ Target reader: an Artificial Intelligence (AI) Coding Agent that must construct,
 
 Source of truth: /home/ccaitwo/causalontology (spec/, spec/schema/, bindings/, and Causalontology_Standalone_Design_v22.txt). This document is a derived implementation contract, not the normative spec. On any disagreement, the files under spec/ win, and Causalontology_Standalone_Design_v22.txt wins over spec/causalontology.md.
 
-Spec version assumed: 3.0.0 (eighteen kinds). A 4.0.0 change order exists at /home/ccaitwo/konnectome/docs/Causalontology_4_0_0_CHANGE_ORDER_v3.txt but is NOT yet normative. Before relying on any field, read spec/causalontology.md and confirm the version.
+Spec version assumed: 3.0.0 (eighteen kinds). A 4.0.0 change order exists at /home/ccaitwo/konnectome/docs/cousins/Causalontology_4_0_0_CHANGE_ORDER_v3.txt but is NOT yet normative. Before relying on any field, read spec/causalontology.md and confirm the version.
 
 
 0. IMPERATIVE SUMMARY
@@ -288,4 +288,4 @@ Run these to self-check any construction/validation code before trusting it.
 
 14. VERSION CAVEAT
 
-This document describes spec 3.0.0. The konnectome repository contains forward-looking material: docs/Causalontology_4_0_0_CHANGE_ORDER_v3.txt and docs/provenance/CAUSALONTOLOGY_3_0_0_REVIEW_AND_4_0_0_ASSESSMENT.txt. Do not treat 4.0.0 fields as available until spec/causalontology.md declares 4.0.0 and the schemas and conformance vectors are updated. Verify the version at the start of any task.
+This document describes spec 3.0.0. The konnectome repository contains forward-looking material: /home/ccaitwo/konnectome/docs/cousins/Causalontology_4_0_0_CHANGE_ORDER_v3.txt and docs/provenance/CAUSALONTOLOGY_3_0_0_REVIEW_AND_4_0_0_ASSESSMENT.txt. Do not treat 4.0.0 fields as available until spec/causalontology.md declares 4.0.0 and the schemas and conformance vectors are updated. Verify the version at the start of any task.

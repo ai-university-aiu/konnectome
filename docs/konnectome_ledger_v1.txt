@@ -48,11 +48,11 @@ PART THREE - THE THREE ROUTING DESTINATIONS (route each finding to EXACTLY ONE)
 
  - DATA-STRUCTURE gap (must be SHARED across agents or repositories as a signed,
    evidence-graded, content-addressed record, not merely computed inside one konnectome
-   runtime) -> docs/Causalontology_4_0_0_CHANGE_ORDER_v3.txt. Gated by the Fifteenth
+   runtime) -> /home/ccaitwo/konnectome/docs/cousins/Causalontology_4_0_0_CHANGE_ORDER_v3.txt. Gated by the Fifteenth
    Commandment, the Safety Gate: must keep the conformance suite green (one hundred nineteen vectors at
    3.0.0; one hundred thirty-seven since the 4.0.0 re-freeze - see Section Two).
  - LANGUAGE gap (a real, load-bearing PrologAI-language wall) ->
-   docs/PrologAI_CHANGE_ORDER_v2.txt. Additive only, gated by the Fifteenth
+   /home/ccaitwo/konnectome/docs/cousins/PrologAI_CHANGE_ORDER_v2.txt. Additive only, gated by the Fifteenth
    Commandment, the Safety Gate: must not regress ARC-AGI-1 (400 of 400) or ARC-AGI-2 (120 of 120)
    through Mentova.
  - konnectome-SOLVABLE gap (expressible inside konnectome's own code) -> a named
@@ -347,7 +347,7 @@ PrologAI library had not yet caught up to the released standard - so it routed t
 order rather than the Causalontology one. It is the third routing destination the Ledger names, used
 for the first time. CONSUMER-VERSUS-ONTOLOGY TEST: not applicable - the ontology already carried the
 kinds; the gap was purely the language library's additive lag behind a shipped standard. STATUS:
-OPEN (2026-07-22) -> ROUTED (2026-07-22) to docs/PrologAI_CHANGE_ORDER_v2.txt, additive only, gated
+OPEN (2026-07-22) -> ROUTED (2026-07-22) to /home/ccaitwo/konnectome/docs/cousins/PrologAI_CHANGE_ORDER_v2.txt, additive only, gated
 by the Thirteenth Commandment -> CLOSED (2026-07-22) by causal_core 1.1.0 (PrologAI pull request 595,
 merge commit cd74f86), which added the three causal_core_identity_fields/2 rows additively, kept the
 vendored conformance suite green at 137 of 137, and passed its honest mini regression - ARC-AGI-1 40

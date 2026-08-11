@@ -194,16 +194,15 @@ konnectome/
     konnectome_ledger_v1.txt   The running scoreboard of findings (Fourth Commandment).
     BUILDING_KONNECTOME_v2.txt The build log (Eighteenth Commandment): the whole story from the true beginning, paper and book at once, versioned.
     konnectome_tutorial_v52.txt A complete beginner tutorial (Seventeenth Commandment), versioned.
-    konnectome_vision_set_top_down_analysis_v3.txt  The Eighth Commandment analysis, plus its four design authorities and its fidelity audit.
-    PrologAI_CHANGE_ORDER_v2.txt        Additive PrologAI-language gaps (Third Commandment); Wall-3 closed by causal_core 1.1.0.
-    Causalontology_4_0_0_CHANGE_ORDER_v3.txt   Data-structure gaps for the frozen ontology (Sections A and B shipped as 4.0.0; C, D, E held).
     [DATE]_N_Context_Hand-Off_from_[NAME].txt   The CURRENT hand-off, and the only one here (Nineteenth Commandment).
+    design/                    What konnectome SHOULD be, and how far it falls short: the Eighth Commandment analysis, the four design authorities, the gap analyses, the fidelity audit.
+    cousins/                   Documents aimed at the two cousin projects rather than at konnectome: the PrologAI and Causalontology change orders (Third Commandment).
     DSPARCD/                   The DSPARCD Fileset - konnectome_0_definition through _6_demonstration - plus the method spec (Fifth, Seventh).
     neuroscience/              The thirty-eight-document Vision Document Set and the guiding book (Eighth). Source: read, never edited.
     hand-off/                  Every SUPERSEDED session record. The current one lives one level up.
     provenance/                What konnectome inherited: the record of the ten-wave programme that preceded it.
     archive/                   Superseded VERSIONS live here (Eleventh Commandment) - and only versions.
-    images/                    The README banner.
+    images/                    The README banner, and the palette the cousin READMEs are coloured from.
 ```
 
 ## Status
