@@ -2,7 +2,7 @@ CONTEXT HAND-OFF FROM MORTISE JOINWRIGHT
 
 Date: 2026-08-11. The second hand-off of this date.
 
-I chose the name Mortise Joinwright because every slice of this session was about a JOIN, and in each case the interesting part was in the join and not in either of the pieces. A mortise is the void cut into one piece so that another can enter it - it belongs to neither piece and is the whole reason they hold. Slice 58 joined two packs that were each correct and produced a hazard that existed in neither: a mind that could stop breathing in order to stop feeling conflicted. Slice 59 joined two analyses of equal standing and found that the older one had been abandoned WHOLE, because a newer document took over the visible half of its job and the invisible half went with it. Slice 60 then joined the third piece of the first slice's loop, and found that the corpus had written the whole joint down two days before anybody looked. Joinwright because the lesson is the same at every grain: A SURVEY THAT ONLY EVER ASKS WHETHER EACH PIECE IS RIGHT WILL NEVER FIND THE THING THAT LIVES BETWEEN THEM.
+I chose the name Mortise Joinwright because every slice of this session was about a JOIN, and in each case the interesting part was in the join and not in either of the pieces. A mortise is the void cut into one piece so that another can enter it - it belongs to neither piece and is the whole reason they hold. Slice 58 joined two packs that were each correct and produced a hazard that existed in neither: a mind that could stop breathing in order to stop feeling conflicted. Slice 59 joined two analyses of equal standing and found that the older one had been abandoned WHOLE, because a newer document took over the visible half of its job and the invisible half went with it. Slice 60 then joined the third piece of the first slice's loop, and found that the corpus had written the whole joint down two days before anybody looked. Slices 61 and 62 joined a search to a corpus, and had to build a fence between them so that konnectome's own research could never be mistaken for the north star it steers by. Slices 63 and 64 joined a glossary to the chapters that used it, and found the tutorial contradicting its own definition four times. Joinwright because the lesson is the same at every grain: A SURVEY THAT ONLY EVER ASKS WHETHER EACH PIECE IS RIGHT WILL NEVER FIND THE THING THAT LIVES BETWEEN THEM.
 
 
 PART ONE - READ THESE FIRST
@@ -22,7 +22,9 @@ PART ONE - READ THESE FIRST
 
 - Read docs/neuroscience/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt, the guiding book.
 
-- Read docs/design/ IN ITS NUMBERED ORDER, 01 through 10, WHICH IS THE READING ORDER AND THE FULFILMENT ORDER AT ONCE. The five design authorities are 05 through 08 plus 03, all unchanged this session, and TWO OF THEM STILL HAVE KNOWN OMISSIONS recorded in 02 and now also in 01: the edge-type authority (07) missed that the scaler is a SECOND CONSUMER of the sign field it was asking for, and the motif-and-workspace authority (08) missed Layer 8's Part Ten entirely.
+- Read docs/design/ IN ITS NUMBERED ORDER, 01 through 10, WHICH IS THE READING ORDER AND THE FULFILMENT ORDER AT ONCE. The five design authorities are 05 through 08 plus 03. FOUR ARE UNCHANGED THIS SESSION AND 05 IS NOT: it gained a STALENESS MARKER at slice 64, changing not one word of its read. THE DISTINCTION IS THE POINT AND IT GENERALISES TO EVERY DEEP READ HERE - a reading of a frozen corpus does not go stale and none of 05's is withdrawn, but its PART FIVE is a status report of 2026-08-09 that describes a konnectome twenty slices younger than today's, and it had carried no date warning at all. Read its Part Five as history. TWO OF THE FIVE ALSO HAVE KNOWN OMISSIONS recorded in 02 and now also in 01: the edge-type authority (07) missed that the scaler is a SECOND CONSUMER of the sign field it was asking for, and the motif-and-workspace authority (08) missed Layer 8's Part Ten entirely.
+
+- READ docs/evidence/ AND ITS README, NEW THIS SESSION AND NEW AS A DOCUMENT CLASS. It holds published literature searched from OUTSIDE the corpus, under the Twenty-Second Commandment. ITS FIRST PARAGRAPH STATES ITS OWN RANK: it is OUTRANKED BY THE NORTH STAR, and where a record and a corpus document disagree the CORPUS LEADS and the record is the thing annotated. Two records so far. Record 01 CARRIES A CORPUS GAP awaiting the update run; record 02 finds NO gap, and the README says why a no-gap record is filed with the same care - a directory that only ever found the corpus wanting would misrepresent how often it is wanting.
 
 - Read docs/DSPARCD/DSPARCD_EXPLAINED.txt, the Fifth Commandment's subject.
 
@@ -69,7 +71,7 @@ PART TWO - THE IMPORTANT DOCS FILES
 
 PART THREE - WHAT THIS SESSION DID
 
-FIVE SLICES BUILT, THREE NUMBERED DECISIONS, ONE OBSERVATION OPENED AND CLOSED IN THE SAME SESSION, ONE AUTO-FIX, TWO CONSTITUTION AMENDMENTS. Slices 60, 61 and 62 were built at the owner's direct request after the first pair had merged, which is why this session carries five rather than the standing two. THE STANDING TWO-SLICE RULE IS NOT REPEALED BY THIS; the owner extended one session, and the next should assume two again unless told otherwise. Main was at a755c45 when this session began, exactly where the Tare hand-off said it was.
+SEVEN SLICES BUILT, THREE NUMBERED DECISIONS, ONE OBSERVATION OPENED AND CLOSED IN THE SAME SESSION AND ONE MORE LEFT OPEN, FIVE AUTO-FIXES, TWO CONSTITUTION AMENDMENTS. Slices 60 through 64 were built at the owner's direct request after the first pair had merged, which is why this session carries seven rather than the standing two. THE STANDING TWO-SLICE RULE IS NOT REPEALED BY THIS; the owner extended one session repeatedly, and the next should assume two again unless told otherwise. Main was at a755c45 when this session began, exactly where the Tare hand-off said it was.
 
 - SLICE 58, CLOSING THE CONFLICT LOOP. New pack conflict_monitor, from Chapter 52.2.1, joining override_controller and stabiliser into the loop the gap analysis's item B2 named as never closed. DECISION-15: THE FORM OF THE CONFLICT MEASURE IS KONNECTOME'S OWN AND SIGNED AS SUCH, AND THE GAIN IS THE CALLER'S, because the acceptance test is an inequality that holds for every positive gain. OBSERVATION-18: the join creates a route by which THE MIND CAN STOP BREATHING IN ORDER TO STOP FEELING CONFLICTED. TWENTY-THREE tests. NOTHING IS WIRED.
 
@@ -158,39 +160,39 @@ The owner has already chosen: ALL (standing), TWO SLICES PER HAND-OFF under the 
 
 2. ATTENTION AS A SALIENCE-DRIVEN BIAS, and it is the front of the queue ON BOTH ORDERINGS, which has not been true of anything since slice 47. Genuinely unblocked: the blackboard's rehearsal target sits caller-supplied and waiting for a publisher, which is the real caller version 3 said should answer the rehearsal question. Build it as a BIAS rather than a network, and TAKE THE NORTH-STAR CORRECTION - attention needs THREE terms: salience, goals, and SELECTION HISTORY.
 
-2. THE OVERLAY DELTA CHANNEL, still the decision that unblocks the most, and THE TWO ANALYSES DISAGREE ABOUT WHERE IT GOES - 02 places it after the wiring slices, 01's version 4 argues it belongs beside them, because a decision three deferrals are waiting on gets more expensive the more code is built against its absence. Three standing deferrals point at it: OBSERVATION-14's closer, DECISION-5's overlay question, and DECISION-9's. An overlay OCCUPIES NO SLOT, keeps the base state running underneath, and publishes DELTAS; konnectome's bus has only a level and a commanded mode, AND A DELTA IS NEITHER. OBSERVATION-14 generalises: acute stress arrives as a NAMED DISCRETE MODE in eleven other system registers while modulating working memory CONTINUOUSLY, so one overlay announcement must carry both shapes.
+3. THE OVERLAY DELTA CHANNEL, still the decision that unblocks the most, and THE TWO ANALYSES DISAGREE ABOUT WHERE IT GOES - 02 places it after the wiring slices, 01's version 4 argues it belongs beside them, because a decision three deferrals are waiting on gets more expensive the more code is built against its absence. Three standing deferrals point at it: OBSERVATION-14's closer, DECISION-5's overlay question, and DECISION-9's. An overlay OCCUPIES NO SLOT, keeps the base state running underneath, and publishes DELTAS; konnectome's bus has only a level and a commanded mode, AND A DELTA IS NEITHER. OBSERVATION-14 generalises: acute stress arrives as a NAMED DISCRETE MODE in eleven other system registers while modulating working memory CONTINUOUSLY, so one overlay announcement must carry both shapes.
 
-3. WIRING, TAKEN AS A FAMILY RATHER THAN ONE SLICE AT A TIME, and this is new to the queue and is argued in 01's Part Six. Five mechanisms are built and unwired. The three named obstacles are: the efference copy needs something to carry a prediction across a tick; the blackboard needs a declared step rate (OBSERVATION-13); the durable tier needs two decisions - what the level means for a weight, and what a night's maintenance costs. A session that closed even one of those would unblock more than a new pack would add.
+4. WIRING, TAKEN AS A FAMILY RATHER THAN ONE SLICE AT A TIME, and this is new to the queue and is argued in 01's Part Six. Five mechanisms are built and unwired. The three named obstacles are: the efference copy needs something to carry a prediction across a tick; the blackboard needs a declared step rate (OBSERVATION-13); the durable tier needs two decisions - what the level means for a weight, and what a night's maintenance costs. A session that closed even one of those would unblock more than a new pack would add.
 
-4. THE SECOND AGENCY CUE, which is OBSERVATION-17's closer. Wegner's EXCLUSIVITY condition - no other cause apparent. The smallest thing that would make konnectome's agency machinery non-degenerate, and a mechanism rather than a patch.
+5. OBSERVATION-19'S CLOSER, THE ADMITTED-AS-FAULT FLAG, AND IT IS SMALL AND WELL-SIZED. konnectome's fault-exclusion rule is stricter than docs/design/05 says it should be, and the schema field that would soften it was deferred at slice 39 pending a supervisor channel that arrived at slice 42. Add the per-mode admitted-as-fault flag AND ITS RATIONALE SLOT to the mode entry schema, make the supervisor's refusal consult the flag rather than banning outright, and require the rationale whenever the flag is set - so an admitted fault must SAY WHY and cannot be admitted silently. THE RATIONALE SLOT IS THE LOAD-BEARING HALF; without it the softened rule is just a hole. It also touches the per-mode CONFIDENCE tag deferred in the same slice-39 sentence, which slice 60 met again. TWO DEFERRED FIELDS, ONE SCHEMA, BOTH NOW WITH A CALLER.
 
-5. DONE AT SLICE 60 - the conflict loop's third piece, OBSERVATION-18's closer.
+6. DONE AT SLICE 60 - the conflict loop's third piece, OBSERVATION-18's closer.
 
-6. THE REMAINING TWELVE FACULTY SUITES, and this is worth more than it looks now that the method has been shown TWICE and has transferred across two different corpora. Each is a scored acceptance run built from an ablation rather than a threshold, and SIX faculties are already at PARTLY PASSES for want of exactly what Faculty 13 was missing.
+7. THE REMAINING TWELVE FACULTY SUITES, and this is worth more than it looks now that the method has been shown TWICE and has transferred across two different corpora. Each is a scored acceptance run built from an ablation rather than a threshold, and SIX faculties are already at PARTLY PASSES for want of exactly what Faculty 13 was missing.
 
-7. THE NAMING AND ADDRESSING FACILITY. OBSERVATION-11's expensive half, blocking four families and now SIX reasons, with Chapter 80.1's sharpening as its best warrant.
+8. THE NAMING AND ADDRESSING FACILITY. OBSERVATION-11's expensive half, blocking four families and now SIX reasons, with Chapter 80.1's sharpening as its best warrant.
 
-8. THE WORKSPACE PILOT, which MUST NOT MERGE without answering the five questions in its own ledger entry, cheapest first. Read WATCH-4's third condition first.
+9. THE WORKSPACE PILOT, which MUST NOT MERGE without answering the five questions in its own ledger entry, cheapest first. Read WATCH-4's third condition first.
 
-9. FAMILY ONE'S ITEM (e), NOW REACHABLE - the durable tier landed at slice 53. (e1) the write-allocation gate, (e2) the readability gate, (e3) the territorial freeze fence, plus the two the north star added: THE CARGO POOL and REPLAY'S DIRECTION. The freeze fence and the readability gate are NOT a pair.
+10. FAMILY ONE'S ITEM (e), NOW REACHABLE - the durable tier landed at slice 53. (e1) the write-allocation gate, (e2) the readability gate, (e3) the territorial freeze fence, plus the two the north star added: THE CARGO POOL and REPLAY'S DIRECTION. The freeze fence and the readability gate are NOT a pair.
 
-10. FAMILY THREE, THE EDGE TYPE REGISTRY, now with FOUR warrants and its first concrete consumer: DECISION-12 reads polarity from the weight's sign as a stopgap in running code.
+11. FAMILY THREE, THE EDGE TYPE REGISTRY, now with FOUR warrants and its first concrete consumer: DECISION-12 reads polarity from the weight's sign as a stopgap in running code.
 
-11. THE LEARNED GATING POLICY, last in Family Four, and the north star sharpens it: THE GATE TRAINS ITSELF on reward prediction error, without a homunculus.
+12. THE LEARNED GATING POLICY, last in Family Four, and the north star sharpens it: THE GATE TRAINS ITSELF on reward prediction error, without a homunculus.
 
-12. FAMILY SIX, TOOLING: the template parser, upgraded on MEASURED evidence. konnectome's first true GENERATOR, the delivery vehicle for Layer 14's curated inheritance, and the thing that converts the corpus's mode registers into data exactly when Families Three and Five need them. FOUR CAVEATS ARE IN 02 AND THE SHARPEST IS THAT THE TEMPLATE DOES NOT GENERALISE PAST LAYER 6.
+13. FAMILY SIX, TOOLING: the template parser, upgraded on MEASURED evidence. konnectome's first true GENERATOR, the delivery vehicle for Layer 14's curated inheritance, and the thing that converts the corpus's mode registers into data exactly when Families Three and Five need them. FOUR CAVEATS ARE IN 02 AND THE SHARPEST IS THAT THE TEMPLATE DOES NOT GENERALISE PAST LAYER 6.
 
-13. TO BE RECORDED WITHOUT BUILDING, all three carried and all three now listed in 01's Part Six: THE BUILD-ORDER DISAGREEMENT (four faculties blocked by one thin perceptual channel), the gating-by-geometry contradiction, and the command-versus-lateral-bias distinction.
+14. TO BE RECORDED WITHOUT BUILDING, all three carried and all three now listed in 01's Part Six: THE BUILD-ORDER DISAGREEMENT (four faculties blocked by one thin perceptual channel), the gating-by-geometry contradiction, and the command-versus-lateral-bias distinction.
 
-14. RE-BASELINE THE CAPSTONE BYTE-IDENTICAL GUARD against slice 51's telling. Carried by four hand-offs now.
+15. RE-BASELINE THE CAPSTONE BYTE-IDENTICAL GUARD against slice 51's telling. Carried by four hand-offs now.
 
-15. RUN THE FULFILMENT AUDIT, which has passed its trigger by three, and RE-STATE ITS TRIGGER IN SLICES while you are there.
+16. RUN THE FULFILMENT AUDIT, which has passed its trigger by three, and RE-STATE ITS TRIGGER IN SLICES while you are there.
 
-16. DECIDE OR DROP THE ABSORBING-STATE LENS. Five hand-offs undecided.
+17. DECIDE OR DROP THE ABSORBING-STATE LENS. Five hand-offs undecided.
 
-17. The night's deferred chapters; the pre-corpus pending refinements; Rung Two's deepening against the Layer 13 Tutor Protocol; Rung Five Path B against Webots.
+18. The night's deferred chapters; the pre-corpus pending refinements; Rung Two's deepening against the Layer 13 Tutor Protocol; Rung Five Path B against Webots.
 
-18. Other ______________ .
+19. Other ______________ .
 
 A STANDING OWNER REQUEST, CARRIED FORWARD. A VISUALIZATION CONTROL PANEL showing every mode of every construct at every grain simultaneously and live. THIS IS A DEMONSTRATION DELIVERABLE, NOT A SLICE. Its top row exists; slice 48 added its first legend, slice 49 the first cell with contents, slice 50 the first arrow. SLICES 58 AND 59 ADDED NOTHING TO IT, which is recorded rather than glossed. What it still lacks is the rest of the arrows, per OBSERVATION-11.
 
