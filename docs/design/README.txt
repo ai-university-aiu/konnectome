@@ -18,7 +18,7 @@ THE NUMBERS, AND WHAT THEY MEAN
 
 The word konnectome is dropped from every filename - it was pure repetition inside konnectome's own repository, and it pushed the part that actually distinguishes one document from another off to the right where filenames are hardest to scan.
 
-In its place each file carries a two-digit number, 01 to 10, and THE NUMBER IS THE READING ORDER AND THE FULFILMENT ORDER AT ONCE. A session that opens this directory cold should read downward and find each document's authority already established by the one above it.
+In its place each file carries a two-digit number, 01 to 11, and THE NUMBER IS THE READING ORDER AND THE FULFILMENT ORDER AT ONCE - with one recorded exception, 11, whose reading position is beside 03 and whose entry says why. A session that opens this directory cold should read downward and find each document's authority already established by the one above it.
 
 01 THE VISION-SET TOP-DOWN ANALYSIS. First because it is the ROOT. It is the Eighth Commandment's analysis, and it divides the corpus into the numbered THEMES that four of the design authorities below are each a deep read beneath. Nothing else here can be judged without it.
 
@@ -32,7 +32,11 @@ In its place each file carries a two-digit number, 01 to 10, and THE NUMBER IS T
 
 09 THE COGNITIVE-ARCHITECTURES COVERAGE SURVEY. Ninth because it INFORMS without GATING. It is the Ninth Commandment's survey of published architectures outside this build - valuable comparison, but no slice waits on it.
 
-10 THE RUNG-FIVE REAL MACHINE DESIGN. Last because it is the LAST RUNG OF THE LADDER, and because it is the only document here that waits on the owner rather than on the build: it names decisions about real hardware and authorizes no purchase, claim, or slice by itself.
+10 THE RUNG-FIVE REAL MACHINE DESIGN. Last of the build-facing documents because it is the LAST RUNG OF THE LADDER, and because it is the only document here that waits on the owner rather than on the build: it names decisions about real hardware and authorizes no purchase, claim, or slice by itself.
+
+11 THE FULFILMENT AUDIT. Added 2026-08-11 at slice 70. READ IT IMMEDIATELY AFTER 03, NOT AT THE END - it is the second quality control on 01 and the companion of the fidelity audit, and the two ask different questions of the same document. 03 asks whether 01's CLAIMS ARE TRUE, by re-measuring every countable one. 11 asks whether 01's FINDINGS WERE ACTED ON, by tracing each part of it through thirty-two slices of ledger and build log. It is the owner's scheduled audit of 2026-08-09, commissioned in the ledger's SCHEDULED AUDIT note, and it was run once its trigger had passed by six hand-offs.
+
+ITS NUMBER DISAGREES WITH ITS READING POSITION AND THAT IS DELIBERATE AND RECORDED. Inserting it at 04 would renumber seven documents and require a pointer sweep across the ledger, the hand-off chain and the design documents themselves - a larger act than the audit itself, performed in passing, which is exactly what the audit found this build good at avoiding. The renumbering is DECLINED rather than overlooked, under this directory's own rule that the numbers are a judgement and not a law: the queue has not turned, a document has merely been added. A session that renumbers this directory for any other reason should move it to 04 in the same change.
 
 THE NUMBERS ARE A JUDGEMENT AND NOT A LAW. They record how the build reads today. Renumbering costs nothing but the rename and a pointer sweep, and if the queue turns, they should be renumbered rather than quietly left to lie.
 
