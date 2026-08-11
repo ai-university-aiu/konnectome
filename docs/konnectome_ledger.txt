@@ -4836,7 +4836,19 @@ are statements:
   interesting of the seven: it is not a stale pointer at all but a SUGGESTED NAME, recorded when the
   audit was planned. The audit shipped as 03_vision_set_analysis_fidelity_audit_v1.txt, so
   the record is a true account of what was PROPOSED and a false account of what EXISTS. It stays as
-  the proposal it was.
+  the proposal it was. [CORRECTED AT SLICE 70, ON THE FIRST RUN OF THE AUDIT ITSELF: THE SENTENCE
+  ABOVE IS WRONG, AND IT IS WRONG IN THE ONE DIRECTION THAT RETIRES AN OBLIGATION. The fulfilment
+  audit had NOT shipped. Document 03 is a FIDELITY audit, dated 2026-08-09, whose stated method is
+  that "every countable claim in the analysis was re-measured by direct grep or wc" - it asks whether
+  the analysis's NUMBERS ARE TRUE. The scheduled audit asks whether the analysis's FINDINGS WERE
+  ACTED ON, under a grading standard about records and silence that has no counterpart anywhere in
+  document 03. The two share a subject and are different instruments, and the pointer audit conflated
+  them. A session reading the original sentence would have concluded a standing owner commitment was
+  discharged; it survived six sessions and did no damage only because the SCHEDULED AUDIT note above
+  is authoritative and every hand-off kept carrying the item - WHICH IS THE REDUNDANCY THAT NOTE WAS
+  DESIGNED WITH, working exactly as its author said it would. The fulfilment audit was run at slice
+  70 and shipped as docs/design/11_vision_set_fulfilment_audit_v1.txt. This correction is annotated
+  in place rather than rewritten, in this ledger's standing convention for an append-only document.]
 
 AN OPEN QUESTION THIS AUDIT RAISES AND DOES NOT CLOSE. The five reorganization changes deliberately
 did not repoint anything inside docs/archive/ or docs/hand-off/ , on the reasoning that those are
@@ -5852,5 +5864,91 @@ repository as it stood at the commit of slice 56 - the slice that deferred the e
 on that claim - and the refutation was already there, having entered mode_register at slice 39. THE
 GATE WOULD HAVE TURNED THAT DEFERRAL RED ON THE DAY IT WAS WRITTEN. Its largest limit is on its own
 face: it cannot find a deferral nobody wrote down. No wall; no cousin edited.
+
+
+SCHEDULED AUDIT DISCHARGED (2026-08-11, at slice 70). THE FULFILMENT AUDIT OF THE VISION-SET
+TOP-DOWN ANALYSIS WAS RUN, ITS FIRST AND ONLY RUN, AND IT SHIPPED AS
+docs/design/11_vision_set_fulfilment_audit_v1.txt. This entry records the verdict and the findings,
+which is the second half of what the SCHEDULED AUDIT note above says the audit produces.
+
+THE TRIGGER HAD PASSED BY SIX. Thirty-two hand-off documents were required and the count was
+thirty-eight, checked for double-counting before it was trusted - thirty-eight paths carrying
+thirty-eight distinct filenames, thirty-seven in docs/hand-off/ and one at the docs root, with none
+in docs/archive/. Rhodium's warning and Cadence's are both applied in the audit's Part Zero: at
+least two documents are session-close markers, and two slices per hand-off has broken the
+correspondence between a document and a unit of work, so the count is treated as a clock that went
+off and not as a measure of anything built.
+
+THE VERDICT: THE ANALYSIS WAS FULFILLED IN FIVE OF ITS SIX PARTS AND IN THREE QUARTERS OF THE SIXTH.
+Part One's verdict holds on every item it names and was re-tested at four assessments. All five
+themes of Part Two are built, in progress, or deferred with recorded reasons, and every design
+authority is cited back into the analysis by name - verified by direct search rather than taken from
+the previous session's claim of it. Part Three's four claims survive and its load-bearing
+consequence visibly changed the build order. All six watches of Part Five are accounted for by name,
+NONE WAS WALKED PAST, and the list has grown to eight while the rate of new candidates falls. All
+six families of Part Six are built, open, or re-ordered on recorded reasons, and BOTH REVERSALS THE
+COMMISSION ASKED ABOUT WERE HONOURED - the mode-register family closed at slice 47 leaving a
+junction-grain gap it could easily have filled, because an ordering said not to, which is an
+ordering obeyed rather than filed. Not one of OBSERVATION-6's five re-answer triggers has been
+tripped, so nothing was owed there.
+
+AND THE STANDING OWNER REQUEST IS THE STRONGEST SINGLE RESULT IN THE AUDIT. Theme One's addendum -
+that every construct's mode be readable without running the construct, because the visualization
+panel depends on it - was honoured at slices 40, 41 and 44, AND AT SLICE 45 IT REJECTED THE SMALLER
+DESIGN: a per-construct counter inside the tick engine "would have been smaller and would have
+foreclosed the panel". A constraint that changes a decision against the builder's convenience, for a
+deliverable that does not exist yet, was genuinely in force.
+
+FINDING ONE, NOT FULFILLED. THE NUMBERING CROSS-REFERENCE OF PART FOUR WAS SILENTLY BYPASSED. Nine
+live sites across four DSPARCD phase files still carry the guiding book's sections 2.10 and 2.11
+with no Layer 10 address beside them; the specification's FR-15 block is BYTE-IDENTICAL to its
+slice-38 form after roughly twenty-three version bumps; and no ledger entry, build-log line or
+analysis note records a decision not to do it. Under the grading standard the absence of a recorded
+reason IS the finding. THE SHAPE IS THE TRANSFERABLE PART: this is the ONLY item in the whole
+analysis that described itself as costless, and it is the only one nobody did and nobody recorded
+not doing. AN INSTRUCTION THAT ANNOUNCES ITSELF AS NON-BREAKING HAS DISCLAIMED THE ONLY THING THAT
+WOULD HAVE MADE ANYONE COME BACK TO IT.
+
+FINDING TWO, NOT FULFILLED. THE CURRENCY OBLIGATION IS BREACHED IN TWO MEASURABLE PLACES. First, the
+astrocyte tension is WORSE rather than merely still pressing: finding A4 of the north-star gap
+analysis escalated it at slice 51 with the corpus's own counter-evidence - a cell that "fires no
+action potentials whatsoever", contacts two million synapses without a spike, and whose D-serine
+supply "GATES WHETHER NEARBY SYNAPSES CAN UNDERGO LONG-TERM POTENTIATION AT ALL", asking for a node
+whose publication is a PLASTICITY PERMISSION OVER OTHER EDGES - and the analysis that owns the
+pressure states it "reconciled its findings against this document's" while citing A4 nowhere and
+restating its astrocyte paragraph unchanged. Second, that analysis is CURRENT THROUGH SLICE 58 on
+its own face with the build at slice 70, and its own closing instruction - "IF THE NEXT VERSION IS
+DEFERRED, DEFER IT WITH THAT COST NAMED" - was not followed. Lateness WITH a record is fulfilment
+and versions 2, 3 and 4 each recorded their own; lateness WITHOUT one is not.
+
+FINDING THREE, AND IT IS FIXED IN THIS SAME CHANGE. The pointer-audit entry above claimed this audit
+had already shipped as document 03. It had not; 03 is a fidelity audit and a different instrument.
+The correction is annotated in place at that entry.
+
+FINDING FOUR. Cadence Pairwright's instruction to RE-STATE THE TRIGGER IN SLICES was carried by five
+consecutive hand-offs and never executed, with no reason recorded. It is executed in the audit's
+Part Nine: THE AUDIT IS RE-RUN EVERY TWENTY SLICES, next due at SLICE 90, with the hand-off count
+retained as a backstop at sixty. THE TWENTY IS KONNECTOME'S OWN ARITHMETIC AND NOT THE OWNER'S
+INSTRUCTION - the owner set a cadence in hand-offs and an instruction to restate it in slices; the
+midpoint of what the original trigger meant is the auditor's, and it is signed as such.
+
+TWO CORRECTIONS OF FACT, NEITHER A FINDING BECAUSE NOTHING WAS DEFERRED OR BYPASSED. The live queue
+says TWELVE of the fourteen Layer 12 faculties have no scored acceptance run; the ledger records
+exactly one scored faculty, so it is THIRTEEN - a count drifted, in the direction that flatters. And
+version 1's "SPARCD cycle" went false when constitution version 8 adopted DSPARCD, and versions 3
+and 4 DELETED the enumeration rather than correcting it, leaving no trace that anything had been
+wrong.
+
+WHAT THE AUDIT LEARNED ABOUT THE INSTRUMENT BUILT ONE SLICE EARLIER, AND IT IS THE MOST USEFUL
+THING IN IT. The deferral register of slice 70 WOULD HAVE CAUGHT NONE OF THESE FINDINGS, because
+not one of them is a blocked condition - they are UNPERFORMED ACTIONS and UNCARRIED CORRECTIONS,
+which have no blocker to watch. A deferral register answers "is this still blocked"; it does not
+answer "did anybody ever do this". All four findings are nonetheless routed into it, as conditions
+DELIBERATELY REPHRASED - not "was the cross-reference added" but "does the old numbering still
+stand alone" - and that rephrasing is the technique worth carrying, because it is what turns an
+unperformed action into something a probe can see. Three entries were added and the register now
+holds ten.
+
+Nothing routes to either change order. Neither cousin was edited. No code changed and no test moved.
 
  Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 22 (7 CLOSED: 8, 9, 15, 17, 18, 19 and 20).  Decisions: 19.
