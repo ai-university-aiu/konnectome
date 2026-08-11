@@ -1,0 +1,205 @@
+CONTEXT HAND-OFF FROM HUNDREDTH PARTWRIGHT
+
+Date: 2026-08-10. The third hand-off of this date.
+
+I chose the name Hundredth Partwright because this session's whole deliverable was a unit that nobody had chosen. The corpus said five hundredths and two tenths, and a machine holding those in binary floating point kills a slot one step early - not because anyone decided it should, but because two tenths in binary runs on forever and gets cut off. The slice's real work was to notice that a number was arriving from the hardware rather than from the book, and to declare a hundredth as the part a working-memory activation is made of, so that every constant the corpus states lands exactly and every one that does not is refused aloud. Partwright because the whole of the work was choosing a unit in the open: a grain for activation, a refusal of a grain for time, and a chapter that turned out to state one quantity twice in two incompatible ways.
+
+
+PART ONE - READ THESE FIRST
+
+- Read and follow the konnectome constitution at ~/konnectome/CONSTITUTION.md, first and foremost. IT DID NOT MOVE THIS SESSION and stands at VERSION 17. NO COMMANDMENT HAS BEEN REMOVED OR RENUMBERED SINCE VERSION 5. Never cite a commandment by number from memory; re-read it. There are NINETEEN; the hand-off protocol is the Nineteenth, the Safety Gate the Fifteenth.
+
+- READ docs/DSPARCD/konnectome_0_definition_v1.txt BEFORE ANYTHING ELSE IN THE FILESET. Unchanged this session. It states what konnectome IS in one sentence and what it is NOT in eight. The Constitution outranks it; it outranks the other six phase files. It is deliberately SHORT and must stay short.
+
+- Read The DSPARCD Fileset at its current versions: docs/DSPARCD/konnectome_0_definition_v1.txt and docs/DSPARCD/konnectome_1_specification_v50.txt through konnectome_6_demonstration_v50.txt. IT MOVED ONCE THIS SESSION, v49 to v50, appending one realization-log section to each of the six and changing nothing else.
+
+- Read docs/neuroscience/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt, the guiding book.
+
+- Read docs/konnectome_vision_set_top_down_analysis_v3.txt as the queue, and note that IT IS NOW TWO SLICES BEHIND - current through slice 47, and slices 48 and 49 are built. KNOW WHICH GUIDES AND WHICH ONLY SUMMARISES: the guiding book and the thirty-eight-document Vision Document Set carry authority; the analysis and the coverage survey are DERIVED in their summaries and carry none, while their FINDINGS are konnectome's own record and are superseded only by a LATER assessment. A VERSION 4 IS STILL NOT DUE - the honest trigger inherited from the previous session is when a reader taking Part Six at face value would schedule something already done, and both done items are named in Part Six below.
+
+- Read docs/konnectome_cognitive_architectures_coverage_v1.txt for the coverage survey; nothing this session did touches it.
+
+- READ THE FIVE DESIGN AUTHORITIES BEFORE DESIGNING ANY SLICE. All unchanged this session:
+  • docs/konnectome_mode_register_design_authority_v1.txt - Theme One. ITS PART NINE IS ENTIRELY CLOSED.
+  • docs/konnectome_two_shift_design_authority_v1.txt - Theme Two.
+  • docs/konnectome_edge_type_design_authority_v1.txt - Theme Three.
+  • docs/konnectome_motif_and_workspace_design_authority_v1.txt - Themes Four and Five. THIS SESSION BUILT ITS PART B6 ITEM 3, and Part B is the document to read before the next item too. NOTE OBSERVATION-12 FROM THE PREVIOUS SESSION before believing any codebase sentence in it.
+  • docs/konnectome_vision_set_analysis_fidelity_audit_v1.txt - the audit of the analysis itself.
+
+- Read docs/DSPARCD/DSPARCD_EXPLAINED.txt, the Fifth Commandment's subject.
+
+- Read the Settings, General, Instructions for Claude (web search first, novice-level plain-text explanations, output copies to ~/output/, auto-commit-push-merge authorization, session-length budgeting).
+
+- Read ~/CLAUDE.md - git-untracked, at the organization root, the system-wide current-state narrative.
+
+- Read the current tutorial, docs/konnectome_tutorial_v49.txt (FORTY-SIX parts; it moved once this session), and all of docs/.
+
+- Read the prior hand-off, 2026-08-10_2 (Caesium Namewright), now at docs/hand-off/. It is the substantive predecessor and it set this session's queue.
+
+- THE OWNER'S STANDING CHOICE REMAINS: "All". Do NOT re-present any menu; verify the baseline and continue down the queue (Part Six).
+
+- ONE OWNER INSTRUCTION RECEIVED THIS SESSION AND WORTH CARRYING: MINIMIZE BASELINE VERIFICATION BETWEEN HAND-OFFS. It is the same system a few moments later. Run the full suite and the gates when you have finished changing things, not before you start. This session ran the full baseline once at the top and the owner asked for it not to be repeated; a git status, a git log and a fetch are enough to confirm you are where the hand-off says you are.
+
+
+PART TWO - THE IMPORTANT DOCS FILES
+
+- docs/DSPARCD/konnectome_0_definition_v1.txt - THE DEFINITION, phase zero. Read it first.
+
+- docs/DSPARCD/konnectome_1_specification_v50.txt through konnectome_6_demonstration_v50.txt - the DSPARCD Fileset, Realization Log through slice 49.
+
+- docs/konnectome_tutorial_v49.txt - the beginner tutorial, FORTY-SIX parts. A session that bumps it bumps BOTH the header version line and the closing line. NOTE THE INSERTION RULE, inherited and honoured again this session: a new part goes BEFORE the three standing tail parts (How to run it yourself, The ledger and the change orders, Where to look next), which are renumbered. Do not append after "Where to look next".
+
+- docs/BUILDING_KONNECTOME_v2.txt - the build log, FORTY-FIVE chapters.
+
+- docs/konnectome_ledger_v1.txt - the scoreboard. Counter line: Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0. Observations: 13 (2 CLOSED: 8 and 9). Decisions: 8. THE COUNTER LINE APPEARS TWICE IN THAT FILE - once in the running record and once at the very end - and both were swept this session; a session that sweeps only one will leave the file disagreeing with itself.
+
+- The five design authorities, listed in Part One.
+
+- docs/konnectome_rung_five_real_machine_design_v2.txt - the real-machine design with the owner's five decisions (Path B Webots; wheels-plus-dock; indoor pen; pack names simulator_body_driver and robot_body_driver RESERVED; standing robot-shopping reminder).
+
+- docs/Causalontology_4_0_0_CHANGE_ORDER_v3.txt - Sections C, D, E remain HELD. No slice released them.
+
+- docs/PrologAI_CHANGE_ORDER_v2.txt - unchanged; no language wall hit.
+
+- tests/naming_gate_fixture/ - still deliberately broken; the violation is the point.
+
+- THE DOCS LAYOUT: /docs/ holds konnectome's own live working documents and the CURRENT hand-off; docs/DSPARCD/ the seven phase files and the method specification; docs/neuroscience/ the source corpus; docs/principles/ the First Commandment's three documents; docs/provenance/ what konnectome inherited; docs/hand-off/ the superseded session records; docs/archive/ superseded VERSIONS and only versions. Each carries its own README.
+
+- In ~/output/: konnectome_slice_49_working_memory_blackboard.txt, new this session.
+
+
+PART THREE - WHAT THIS SESSION DID
+
+ONE SLICE BUILT, ONE NUMBERED DECISION TAKEN, ONE OBSERVATION OPENED, AND THE QUEUE'S HIGHEST-VALUE ITEM CLEARED. Pull request 131 merged; main at dab932c.
+
+- THE BASELINE WAS VERIFIED IN FULL BEFORE ANYTHING WAS TOUCHED, and it matched the previous hand-off exactly: main at e34242d, 826 tests across 34 packs all green, four gates at zero plus the naming gate's self-test, the capstone story captured before the first edit. The owner then asked that this not be repeated every session - see Part One's last bullet.
+
+- SLICE 49, THE WORKING-MEMORY BLACKBOARD. New pack working_memory_blackboard, built to Layer 10 Chapter 16's own constants: a four-slot shared surface, admission through a caller-supplied striatal gate, slots leaking five hundredths a step, collapse below two tenths, rehearsal restoring to full, weakest-first eviction with the tie decided in the open, and a wipe for the next task. NOT ONE NUMBER IN THE PACK IS KONNECTOME'S INVENTION, and the chapter's four wall-clock TIME CONSTANTS are restated in ticks through DECISION-2's single conversion rather than written as tick literals. Slots are an explicit stateless value the world carries, in the eligibility-trace store's discipline, so the corpus's thrice-stated ephemerality is FREE rather than defended. NOTHING IS WIRED INTO THE TICK.
+
+- THE SLICE WAS SCHEDULED AS TRANSCRIPTION AND BECAME THREE ARGUMENTS WITH A CHAPTER THAT DISAGREES WITH ITSELF. That is the finding, and it is the transferable half of the session.
+
+  THE FIRST: DECISION-8, THE ACTIVATION GRAIN, ONE HUNDRED PARTS TO THE UNIT. Subtracting 0.05 from 1.0 sixteen times in IEEE doubles gives 0.19999999999999968, so a slot standing EXACTLY on the collapse threshold is judged to have fallen below it and dies one step early. The corpus's printed Python does exactly that; the corpus's own prose says a slot goes when it falls BELOW two tenths, and two tenths has not fallen below anything. THE ONE-STEP DIFFERENCE WAS DECIDED BY BIT-LEVEL DRIFT RATHER THAN BY ANYTHING ANYBODY CHOSE. A decimal that does not land on a part is refused aloud, never rounded - DECISION-2's shape one grain down, with DECISION-2's three reasons. The argument that makes this a decision rather than an invention: A REPRESENTATION IS NOT A NUMBER, every carrier has a grain, and the only question is whether the grain is chosen in the open or inherited by default with its artefacts.
+
+  THE SECOND: THE ORDER OF REHEARSAL AND COLLAPSE. The chapter's prose removes the collapsed and then rehearses; its code rehearses and then removes. konnectome takes the code's order, because a refresh that cannot save an item in the one case where saving it matters is not a refresh, and because under the other order a caller naming a demonstrably present slot could be refused for a removal it could not have foreseen.
+
+  THE THIRD: OBSERVATION-13, AND IT IS REFUSED RATHER THAN SETTLED. An unrehearsed slot survives SEVENTEEN steps. At one step per tick that is 170 nominal milliseconds, while THE SAME CHAPTER states the unrehearsed fade as TWO TO TWENTY SECONDS - a factor of twelve to one hundred and eighteen. There is deliberately NO PREDICATE binding a step to a tick, the absence is documented in the pack as the deliberate part, and a test asserts the discrepancy itself so the next reader meets it as something that passes rather than a paragraph to skim.
+
+- AN ABSENT SLOT IS REFUSED ALOUD RATHER THAN READ AS ZERO, and this is the pack's deliberate answer to slice 48's finding one day earlier. An absent slot and a collapsed slot are DIFFERENT FACTS - never admitted, versus admitted and faded - and a zero would make them one answer. Two tests, one for each fact, refused identically.
+
+- ONE DIVERGENCE FROM THE CHAPTER'S PRINTED CODE IS RECORDED RATHER THAN SMOOTHED OVER. Re-offering an item the board already holds UPDATES it to full and evicts nothing, where the chapter's Python would evict a rival to make room for an item already present. The warrant is the chapter's own prose: the gate decides which items are "admitted OR UPDATED".
+
+- State at hand-off: FORTY-NINE slices. EIGHT HUNDRED AND SEVENTY-ONE tests across THIRTY-FIVE packs. Four gates at zero plus the naming gate's self-test. Capstone byte-identical to the session's opening baseline. DSPARCD fileset v50; tutorial v49; build log forty-five chapters; Constitution version 17, untouched.
+
+
+PART FOUR - BUILD-AGAINST COUSIN COMMITS (for reproducibility)
+
+- causalontology: 292dfca (unchanged; not edited this session; NOT re-measured this session).
+- PrologAI: ebbc3e0 (unchanged; not edited this session; NOT re-measured this session).
+- Mentova: d117c69 (read-only; untouched).
+
+CONFORMANCE STANDS WHERE SLICE 47 RE-MEASURED IT ON 2026-08-09: 137 of 137 in both, and the figure is now TWO SESSIONS OLD. QUOTE IT WITH ITS QUALIFICATION, from causalontology's own README: 137 is 137 CHECKS, of which 38 are driven by the shared vector files and 99 are implemented per binding - so the run measures ONE binding's agreement with the prose. RE-MEASURE RATHER THAN QUOTE if this reaches three or four sessions old.
+
+
+PART FIVE - SHARP EDGES AND HONEST NON-CLOSURES
+
+- OBSERVATION-13 IS NEW AND IT IS THE MOST TRANSFERABLE THING THIS SESSION FOUND, AND IT IS A SIBLING OF OBSERVATION-12. Observation 12 said a claim about konnectome's CODE inside a document about the CORPUS is the one claim its author had no reason to check. Observation 13 says the same thing one step further out and entirely inside the corpus: A CHAPTER'S RUNNABLE ILLUSTRATION AND ITS MEASURED PARAMETER TABLE ARE TWO DIFFERENT KINDS OF CLAIM WEARING ONE CHAPTER'S AUTHORITY. The illustration's job is to be legible; the table's job is to be true; and a builder reading the illustration gets numbers that are exactly as citable and not at all as calibrated. WHEN A SOURCE GIVES A QUANTITY TWICE, FIND OUT WHETHER THE TWO STATEMENTS ARE THE SAME KIND OF CLAIM BEFORE BELIEVING EITHER. Its closer is named and not done: the slice that wires this board into the tick must declare the step rate as konnectome's own decision, in DECISION-2's shape.
+
+- THE ONE LINE THE NEXT SESSION WILL WANT TO WRITE, AND MUST NOT WRITE WITHOUT DECIDING IT. One maintenance step per tick. It is free, it is obvious, it is the natural wiring, and it produces a mind that forgets in a sixth of a second while citing a chapter that says two to twenty seconds. If you wire the board, DECLARE THE RATE FIRST and record it.
+
+- OBSERVATION-12 STANDS AND ITS CLOSER IS STILL NOT DONE: a sweep of the codebase claims inside all four design authorities. This session did not do it either, for the same reason - a four-document sweep is its own unit of work. IT IS NOW DECLINED TWICE.
+
+- OBSERVATION-11 STANDS AND IS UNTOUCHED. The corpus assigns to NAMED INDIVIDUALS and konnectome has only KINDS. Its cheap half - assigning to SINGLETONS - IS NOW UNBLOCKED IN PRACTICE AS WELL AS IN PRINCIPLE, because the working-memory blackboard exists and is exactly the singleton the version 3 analysis's Part Four-A named. Its expensive half, the naming and addressing facility, is version 3's own Part Six item and FOUR families are blocked on it.
+
+- OBSERVATION-10 STANDS AND IS UNTOUCHED. observer.pl advances its absolute instant by ONE NOMINAL SECOND PER ORDINAL TICK while DECISION-2 makes a tick ten nominal milliseconds. NOTE THAT OBSERVATION-13 IS THE SECOND TIME A TIME-UNIT DISAGREEMENT HAS BEEN RECORDED RATHER THAN FIXED, and the two are unrelated in cause and identical in shape: a quantity that is fine while nobody subtracts two of them, and wrong by two orders of magnitude the moment somebody does. A session that closes one should look at the other in the same sitting.
+
+- OBSERVATION-7 STANDS, BOTH HALVES. tick_engine drops an UNKNOWN construct kind in silence where connection_graph's four steps each refuse aloud; and an UNBOUND COPY TARGET is bound to whatever the state lists first. The standing rule is that the next slice which touches that dispatch ON PURPOSE closes both. This slice did not touch it.
+
+- OBSERVATION-6 STANDS, and the owner marked it of utmost importance: the tracked sentiment-analysis capability question.
+
+- OBSERVATION-5 STANDS AND WAS NOT VISITED THIS SESSION. The older chemical reads on the neuromodulator bus silently bind an unbound bus. It has now been DECLINED TWICE by slices that edited that pack, and the next visit should be deliberate.
+
+- OBSERVATION-4 (no word for satisfaction) still LOGGED, NOT ROUTED.
+
+- THE FIVE NAMED LENSES ALL PAID AGAIN. Unbound-wrong-judgement is now SEVENTEEN SLICES RUNNING (33 through 49) and it paid FOUR TIMES IN ONE PACK - an unbound board would have unified with the empty board and reported a blank surface, an unbound item read would have answered with the first slot, an unbound gate verdict would have OPENED THE GATE, and an unbound rehearsal target would have refreshed the first slot and told nobody. Declaration-order paid at eviction: four slots at equal activation is a four-way tie, a minimum over a list answers it with whichever row is first, and that answer would have been right BY ACCIDENT; the pack decides the tie in the open and a test asserts the eviction is DETERMINISTIC. Key-shape aliasing decided the absence word - the rehearsal target's "nothing" is the atom none rather than an unbound argument, and admitting an item called none is refused, because a word cannot mean absence and name a slot on the same surface. Default drift is OBSERVATION-13. Behaviour-pinned-identical was free and was checked anyway.
+
+- THE SIXTH CANDIDATE LENS, THE ABSORBING-STATE LENS, STILL STANDS AT ONE PAYMENT. The empty board looks absorbing and is not - an admission through an open gate leaves it at once. The promotion question passes to the next session unchanged.
+
+- THE README'S DIRECTORY TREE IS PARTIAL AND WAS DELIBERATELY NOT SWEPT. The packs/ tree in README.md lists packs up to slice 24 and names none of the eleven built since, including this session's. It was left alone rather than half-corrected, because adding one of eleven missing entries would have made a partial illustration look like a current list. IT IS A REAL SMALL DEBT: either complete the tree in one pass or say on its face that it is illustrative. Recorded here rather than in the ledger because it is a documentation tidy, not a finding.
+
+- THE COUNT-SWEEP RULE WAS HONOURED AGAIN: a count in a slice's own README bullet is a HISTORICAL CLAIM about that slice; a count in the status line is a CURRENT claim. Only the second may be swept. Two current-claim sentences were changed and one bullet added; every historical bullet was left alone.
+
+- THE VERSION-BUMP MECHANICS, AND A CORRECTION TO THE INHERITED WARNING. The previous session warned that a version sweep across the fileset is two chaining substitutions and can turn the tutorial into the phase files' new number. THIS SESSION AVOIDED IT BY A DIFFERENT ROUTE AND THE ROUTE IS THE BETTER ADVICE: do not substitute inside the versioned files at all. COPY each file to its new version number, git checkout the originals to undo any edit, and git mv the originals into docs/archive/. The realization-log section is appended to the COPY. Then the only substitutions left are in the POINTERS - README.md and docs/DSPARCD/README.txt - which are different files and cannot chain.
+
+- THE DEMONSTRATION DEBT IS UNCHANGED AND IS STILL THE SMALLEST ITEM ON THE QUEUE. THE CAPSTONE DOES NOT CALL THE WATCH. konnectome's own told story still cannot say whether its night was healthy.
+
+- THE ANALYSIS IS NOW TWO SLICES BEHIND AND A VERSION 4 IS STILL NOT DUE, on the inherited trigger: it becomes due when a reader taking Part Six at face value would schedule something already done. Family Four items 1 and 3 of the design authority's B6 are both done and both are named as done in Part Six below, so a reader of THIS hand-off cannot be misled. The next session should re-evaluate rather than inherit that judgment.
+
+- THE NIGHT'S STANDING BOUNDARIES from slice 38 are unchanged: the night's bound is OPEN-LOOP; the memory store is UNBOUNDED within a run; the REM theatre and the ultradian wheel are READ AND NOT BUILT. NOTE THAT THE BOARD NOW EXISTS FOR THE NIGHT TO ERASE - the corpus says the blackboard is wiped in slow-wave sleep and that fragments ignite without gate control in REM - so two of those deferred chapters now have a real thing to act on.
+
+- THE CAPSTONE WORLD IS STILL LIVE (slice 34) and its ten-tick heartbeat still ends nine ticks before the default watchman's first flip.
+
+- THE FULFILMENT AUDIT IS STILL NOT DUE AND MUST BE CARRIED FORWARD. The trigger is THIRTY-TWO or more hand-off documents. AS OF THIS HAND-OFF THE COUNT IS THIRTY-ONE. Evaluate with: find docs -name '*Context_Hand-Off*.txt' | wc -l . CARRY RHODIUM'S WARNING FORWARD: at least two of them are session-close markers rather than units of work, so the count OVERSTATES build progress.
+
+- PARALLEL SESSIONS: keep the ritual - git fetch, git log origin/main, gh pr list before every claim, numbering, or merge. AND THE WORKTREE WARNING, eight times inherited: if you use a git worktree for a behaviour-pinned-identical check, REMOVE IT BEFORE CHECKING OUT MAIN. AND CHECK YOUR BRANCH BEFORE YOU START EDITING.
+
+
+PART SIX - THE FIRST TASK OF THE CONTINUATION
+
+The owner has already chosen: ALL (standing). VERSION 3'S PART SIX IS THE FULLER AND MORE CURRENT STATEMENT OF THIS QUEUE, and where this list and version 3 disagree, VERSION 3 LEADS - except on the two items marked DONE below, which version 3 still lists as pending.
+
+0. DONE - the bus's six named broadcast channels (slice 48, DECISION-7, OBSERVATION-12).
+
+0b. DONE - the working-memory blackboard (slice 49, DECISION-8, OBSERVATION-13). Version 3 calls this the single highest-value item in the queue and it is built, unwired, and unrated.
+
+1. THE WORKING-MEMORY MODE REGISTER, which is THE FIRST REAL DOWNWARD ASSIGNMENT and the proof that slice 46's empty table was empty for the reason slice 46 gave. Entry 16's four modes - Robust Maintenance (the Held Chalk), Gated Updating (the Fresh Slate), Erased Idle (the Wiped Board), Ungoverned Flicker (the Doodling Board) - in the three-field form, reusing the mode_register pack, with the erased-idle entry wired to the global state the bus has carried since slice 35 and named properly since slice 46. IT WORKS WHERE THE GATE DID NOT BECAUSE THERE IS ONE BOARD AND THERE ARE MANY GATES. It is now fully buildable, because the board it describes exists. NOTE THE SIZE HONESTLY: this is a register over a construct, not a wiring of the board into the tick, so it can be built without touching OBSERVATION-13's refusal.
+
+2. THE TOLD STORY THAT SAYS WHETHER THE NIGHT WAS HEALTHY. Still the smallest remaining item and still undone. NOTE THE CAPSTONE'S OWN CONSTRAINT: the heartbeat is ten ticks and the governor's day is twenty-four, so a capstone that reported today would honestly report BOTH BOUNDARIES UNWATCHED - a true and useful thing for a glass-box story to say, and a session that finds it unsatisfying should lengthen the capstone deliberately rather than shorten the window.
+
+3. THE NAMING AND ADDRESSING FACILITY - version 3's own Part Six item, listed OUTSIDE any family on purpose. This is OBSERVATION-11's expensive half. FOUR FAMILIES ARE BLOCKED ON IT. It should be designed from a deep read of its own. NOTE WATCH-8.
+
+4. ATTENTION AS A SALIENCE-DRIVEN BIAS, which is now genuinely unblocked in the way its own design authority intended: it was to be built AFTER the blackboard so that the rehearsal question is answered by a real caller, and the blackboard now has a rehearsal target sitting caller-supplied and waiting for a publisher. Build it as a BIAS rather than a network so the corpus's three structural answers are not prematurely collapsed. IT HAS THE ROSTER TOO: the workspace's arousal gate consumes acetylcholine and noradrenaline by name, and both names exist since slice 48.
+
+5. THE WORKSPACE PILOT, beside the skeleton, which MUST NOT MERGE without answering the five questions in its own ledger entry, cheapest first (test question 5 first - whether ignition is a mode transition of the master register - because if it holds, the other four never need asking). Read WATCH-4's THIRD condition before designing it, and DECIDE B5.1 - WHAT A CONTENT IS - BEFORE the pilot rather than during it.
+
+6. THE LEARNED GATING POLICY, last in Family Four, where it meets Theme Two's write-allocation gate. THIS IS THE DURABLE HALF SLICE 49 DELIBERATELY DID NOT BEGIN, and the session that takes it is the session that faces B4's two-halves problem.
+
+7. FAMILY THREE, THE EDGE TYPE REGISTRY, whose position holds THREE independent warrants and which lands BEFORE the junction-grain mode register. Design it from docs/konnectome_edge_type_design_authority_v1.txt.
+
+8. FAMILY ONE'S ITEM (e), AND IT IS FOUR ITEMS: a DURABLE WEIGHT TIER FIRST, then (e1) the write-allocation gate, (e2) the readability gate, (e3) the territorial freeze fence. That split is ORTHOGONAL to the mode-register read's split of the same item into FOUR write-permission kinds by scope and owner; a builder needs BOTH.
+
+9. FAMILY FIVE, THE MOTIF CATALOGUE at six items - a BUILD, not a christening, and explicitly DOWNSTREAM of the naming facility. DECISION-3 hands the motif grain its hysteresis question BACK, deliberately undecided.
+
+10. THE REGION-GRAIN CONSTRUCT, also downstream of the naming facility, and what OBSERVATION-11's expensive half is waiting for.
+
+11. FAMILY SIX, TOOLING: the template parser, built against the MEASURED figure of 386 cell types, reporting the corpus's own 302-versus-301 discrepancy upward rather than absorbing it. Note WATCH-7. NOTE ALSO THAT OBSERVATION-13 IS THE SECOND DISCREPANCY THIS BUILD HAS AGREED TO REPORT RATHER THAN ABSORB, and the two should be handled the same way.
+
+12. The night's deferred chapters: the REM theatre, the ultradian wheel, a closing loop for the open-loop bound, a bounded memory store - AND NOTE that the board now exists for the night to erase.
+
+13. The pre-corpus pending refinements: computational-interface transforms; interfaces as Causalontology conduits; the token tier of thought combination.
+
+14. Deepen Rung Two - the full pilot conversation and richer grounded vocabulary - against the Layer 13 Tutor Protocol (also advances coverage bug six).
+
+15. Rung Five, Path B - UNBLOCKED: simulator_body_driver against Webots per the decided design; the rung unclaimed until a physical robot passes the smoke test; carry the standing robot-shopping reminder.
+
+16. A SMALL DOCUMENTATION DEBT NAMED IN PART FIVE: README.md's packs/ tree stops at slice 24 and names none of the eleven packs built since. Complete it in one pass or mark it illustrative.
+
+17. Other ______________ .
+
+A STANDING OWNER REQUEST, ATTACHED TO THE MODE-REGISTER FAMILY (recorded 2026-08-09, carried forward). A VISUALIZATION CONTROL PANEL SHOWING EVERY MODE OF EVERY CONSTRUCT IN OPERATION, AT EVERY GRAIN LEVEL SIMULTANEOUSLY, IN REAL TIME - the cell (386 mode entries), the junction, the motif, the region (77), the system (44), and the Layer 11 GLOBAL STATE that is a coordinated assignment across everything below, all shown AT ONCE and LIVE. THIS IS A DEMONSTRATION DELIVERABLE, NOT A SLICE: do not build it speculatively, do not let it widen other slices, and do not treat it as a reason to defer them. THE PANEL HAS FOUR LAYERS AND ITS TOP ROW EXISTS - what every construct IS doing (slice 39), WHERE ITS BOUNDARIES SIT (slice 44), WHAT IS WATCHED and BY WHOM (slices 45 and 47), and THE STATE ABOVE EVERYTHING (slice 46). Slice 48 added the panel's first LEGEND. SLICE 49 ADDS THE FIRST THING ON THE PANEL WITH CONTENTS RATHER THAN A MODE: four named slots with strengths, readable without running anything, which is the first cell in that panel that would actually change while you watched it. WHAT THE PANEL STILL LACKS IS THE ARROWS, per OBSERVATION-11.
+
+
+PART SEVEN - SIGN-OFF
+
+The queue said this was the highest-value item and the design authority said it was already written down to its constants, so the honest expectation was a morning's typing. It was not.
+
+The constants were all there. What was not there was any way to hold them. Two tenths does not exist in binary, and the machine's nearest neighbour to it is a hair below, and a hair below is enough to kill a slot one step early, forever, in a pack that would have passed every test anyone thought to write. Nobody would have found it. The corpus's own author did not find it, and the corpus's own program has it.
+
+That is the third time in three sessions this build has met the same shape from a new direction. Slice 47 found a boundary that could never be crossed. Slice 48 found a zero that reads as calm. Slice 49 found a threshold decided by rounding. NONE OF THE THREE WOULD HAVE FAILED. All three would have looked exactly like a build that was working.
+
+And then the chapter did it again, one field further down its own page. The little program says an item fades in seventeen steps and the measurement table says two to twenty seconds, and the two sit under one heading wearing one document's authority, and nobody is lying and nobody is careless. The illustration is doing its job, which is to be readable. The table is doing its job, which is to be true. They were never the same claim, and only somebody trying to build from both at once would ever have to notice.
+
+So the line did not get written. It is one line. It would have worked. It would have been cited. And the mind would have forgotten a phone number in a sixth of a second while pointing at a chapter that says ten.
+
+Choose your units in the open. Refuse the ones that do not land. And when a source hands you a number twice, ask which of the two it was actually measuring - because this build has now spent four slices learning that the dangerous number is never the invented one. It is the one that came from the right book, on the wrong page, about a different thing.
+
+- Hundredth Partwright, 2026-08-10
