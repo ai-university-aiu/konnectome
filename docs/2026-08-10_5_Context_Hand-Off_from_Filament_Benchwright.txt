@@ -21,7 +21,7 @@ PART ONE - READ THESE FIRST
 
 - Read /home/ccaitwo/konnectome/docs/design/01_vision_set_top_down_analysis_v3.txt as the older queue, and note that IT IS NOW EIGHT SLICES BEHIND - current through slice 47, and slices 48 through 55 are built. A VERSION 4 IS OVERDUE AND IS THE CLEAREST SMALL ITEM ON THE QUEUE. It was already overdue at the last hand-off and this session did not write it either, for the honest reason that it kept finding larger things.
 
-- READ THE FIVE DESIGN AUTHORITIES BEFORE DESIGNING ANY SLICE. All unchanged this session, and TWO OF THEM NOW HAVE KNOWN OMISSIONS recorded in the gap analysis:
+- READ THE FIVE DESIGN AUTHORITIES BEFORE DESIGNING ANY SLICE. THEY NOW LIVE IN docs/design/ , NUMBERED, and the five below are listed in the order this hand-off needed them rather than in numeric order - read docs/design/README.txt for what the numbering means. All unchanged this session, and TWO OF THEM NOW HAVE KNOWN OMISSIONS recorded in the gap analysis:
   • /home/ccaitwo/konnectome/docs/design/05_mode_register_design_authority_v1.txt - Theme One. Its Part Nine is entirely closed.
   • /home/ccaitwo/konnectome/docs/design/06_two_shift_design_authority_v1.txt - Theme Two.
   • /home/ccaitwo/konnectome/docs/design/07_edge_type_design_authority_v1.txt - Theme Three. IT MISSED THAT THE SCALER IS A SECOND CONSUMER OF THE SIGN FIELD IT WAS ASKING FOR.
@@ -59,7 +59,7 @@ PART TWO - THE IMPORTANT DOCS FILES
 
 - /home/ccaitwo/konnectome/docs/konnectome_ledger.txt - the scoreboard. Counter line: Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0. Observations: 16 (3 CLOSED: 8, 9 and 15). Decisions: 12. THE COUNTER LINE APPEARS TWICE and both were swept this session.
 
-- The five design authorities, listed in Part One.
+- The five design authorities, listed in Part One. THEY ALL MOVED on 2026-08-11 to docs/design/ and were RENUMBERED - see the DOCS LAYOUT entry below for the full ordering.
 
 - /home/ccaitwo/konnectome/docs/design/10_rung_five_real_machine_design_v2.txt - the real-machine design with the owner's five decisions.
 
@@ -69,9 +69,32 @@ PART TWO - THE IMPORTANT DOCS FILES
 
 - tests/naming_gate_fixture/ - still deliberately broken; the violation is the point.
 
-- THE DOCS LAYOUT is unchanged: /docs/ holds konnectome's own live working documents and the CURRENT hand-off; docs/DSPARCD/ the seven phase files; docs/neuroscience/ the NORTH-STAR DIRECTORY; docs/principles/ the First Commandment's three documents; docs/provenance/ what konnectome inherited; docs/hand-off/ the superseded session records; docs/archive/ superseded VERSIONS only.
+- THE DOCS LAYOUT CHANGED AFTER THIS HAND-OFF WAS WRITTEN, ON 2026-08-11, BY THE OWNER'S INSTRUCTION, IN SEVEN MERGED CHANGES (pull requests 141 to 147). THIS PARAGRAPH IS APPENDED TO THE RECORD RATHER THAN REPLACING IT, BECAUSE THE HAND-OFF IS THE ONE RECORD THAT IS ALSO A LIVE INSTRUCTION, AND AN INSTRUCTION THAT POINTS AT THE WRONG DIRECTORY IS WORSE THAN NO INSTRUCTION. Read the layout below as current; the sentence it replaced described the tree as it stood on 2026-08-10.
 
-- In ~/output/, new this session: konnectome_two_slices_per_hand_off.txt, konnectome_slices_50_and_51.txt, konnectome_constitution_pointer_audit.txt, 02_north_star_gap_analysis_v1.txt, konnectome_north_star_gap_analysis.txt, konnectome_upper_strata_gap_analysis.txt, konnectome_not_a_licence_to_invent_a_value.txt, konnectome_what_refusal_means.txt.
+  /docs/ NOW HOLDS EXACTLY FOUR FILES, and every one of them is written BY konnectome: konnectome_ledger.txt, building_konnectome.txt, the current tutorial, and the CURRENT hand-off. Note the first two names - THE LEDGER AND THE BUILD LOG ARE NO LONGER VERSIONED. They are append-only, so they can never be superseded, so a version suffix on them was a promise their own nature made impossible to keep. Constitution versions 22 and 23 settle it, and version 22 is the ONLY change in the series where a rule genuinely changed.
+
+  docs/design/ IS NEW AND IS WHERE EVERY DESIGN AUTHORITY, GAP ANALYSIS AND DIRECTION DOCUMENT NOW LIVES - ten files, ALL RENAMED. The word konnectome is dropped from each, and each carries a two-digit number, 01 to 10, WHICH IS THE READING ORDER AND THE FULFILMENT ORDER AT ONCE:
+
+    01 vision_set_top_down_analysis_v3        - the ROOT: the Eighth Commandment analysis, whose THEMES 05 to 08 each sit beneath
+    02 north_star_gap_analysis_v1             - the most CURRENT: its Part Nine is the standing queue
+    03 vision_set_analysis_fidelity_audit_v1  - the quality control ON 01
+    04 neuroscience_corpus_qa_gap_analysis_v1 - the quality control on the SOURCE 01 and 02 read from
+    05 mode_register_design_authority_v1      - Theme One (slices 39-40; the companion the others cite)
+    06 two_shift_design_authority_v1          - Theme Two (slices 37-38)
+    07 edge_type_design_authority_v1          - Theme Three (Family Three in the queue)
+    08 motif_and_workspace_design_authority_v1 - Themes Four and Five (furthest out)
+    09 cognitive_architectures_coverage_v1    - INFORMS without GATING; no slice waits on it
+    10 rung_five_real_machine_design_v2       - the LAST RUNG; waits on the OWNER, not on the build
+
+  THE NUMBERS ARE A JUDGEMENT AND NOT A LAW. They record how the build read on 2026-08-11. If the queue turns, RENUMBER THEM rather than leave them to lie - it costs one rename and one pointer sweep, and docs/design/README.txt states the reason for every position so a successor can argue with it.
+
+  docs/cousins/ IS ALSO NEW: the two change orders and the stale thought-combination reference - the documents konnectome WRITES but does not act on itself. docs/principles/ has GAINED a fourth document, ENGLISH_READABLE_CODE_MANUSCRIPT.txt, the Sixth Commandment's specification, which had been sitting at the top level.
+
+  UNCHANGED: docs/DSPARCD/ the seven phase files; docs/neuroscience/ the NORTH-STAR DIRECTORY; docs/provenance/ what konnectome inherited; docs/hand-off/ the superseded session records; docs/archive/ superseded VERSIONS only. EVERY sub-directory now carries a README stating its charter - read the destination's README before moving a file into it, because two of them held claims that the move itself falsified.
+
+- A POINTER RULE THE NEXT SESSION SHOULD KNOW, recorded in full in the ledger's POINTER AUDIT NOTE (2026-08-11): A POINTER IS NOT A STATEMENT. It cuts both ways. A pointer must be repointed the moment its file moves; a STATEMENT must never be rewritten even when it contains a path. SEVEN PATHS IN THE LIVE TREE ARE DELIBERATELY LEFT BROKEN under that rule - quotations, rename notes, one generic example, and one suggested name that was never used. They are named in the ledger. DO NOT "FIX" THEM. Every other pointer in the live tree resolves.
+
+- In ~/output/, new this session: konnectome_two_slices_per_hand_off.txt, konnectome_slices_50_and_51.txt, konnectome_constitution_pointer_audit.txt, konnectome_north_star_gap_analysis_v1.txt, konnectome_north_star_gap_analysis.txt, konnectome_upper_strata_gap_analysis.txt, konnectome_not_a_licence_to_invent_a_value.txt, konnectome_what_refusal_means.txt.
 
 
 PART THREE - WHAT THIS SESSION DID
