@@ -13,7 +13,9 @@
     % supervisor_publish/4: a supervisor writes one construct kind's report onto the channel.
     supervisor_publish/4,
     % supervisor_report/3: read the report standing for one construct kind, unwatched by default.
-    supervisor_report/3
+    supervisor_report/3,
+    % supervisor_admissions/2: the modes this register admits as faults, with the reason for each.
+    supervisor_admissions/2
 ]).
 
 % Import the list utilities used for membership and gathering.
@@ -28,7 +30,9 @@
     % mode_register_faults/2: read an automaton's fault regimes and watchdogs block.
     mode_register_faults/2,
     % mode_register_modes/2: read the formal names of every mode the register declares.
-    mode_register_modes/2
+    mode_register_modes/2,
+    % mode_register_admissions/2: the modes a register admits as faults, each with its rationale.
+    mode_register_admissions/2
 ]).
 
 % ---------------------------------------------------------------------------
@@ -58,7 +62,9 @@
 % THE THREE THINGS A FAULT ENTRY CARRIES, which are the corpus's own three fields:
 %   fault(BoundarySignature, WarningCondition, Watchdog)
 % BoundarySignature - the named boundary the construct is not designed to cross. It is NOT a mode
-%                     name, and supervisor_faults_are_not_modes/1 refuses a register in which it is.
+%                     name, and supervisor_faults_are_not_modes/1 refuses a register in which it is -
+%                     UNLESS the register's own entry admits it as a fault and says why, which slice
+%                     66 added and which is set out at that refusal's own site below.
 % WarningCondition  - what the supervisor says when the boundary is crossed.
 % Watchdog          - who is watching. Naming the watcher is what makes an unwatched fault visible as
 %                     an unwatched fault rather than as a clean one.
@@ -167,20 +173,48 @@ supervisor_report_unwatched(Report, Unwatched) :-
 % THE DIRECTIVE, AS A REFUSAL
 % ---------------------------------------------------------------------------
 
-% supervisor_faults_are_not_modes(+Automaton): refuse a register that admits a fault as a mode.
+% ---------------------------------------------------------------------------
+% SLICE 66 - THE RULE CONSULTS THE FLAG INSTEAD OF BANNING OUTRIGHT (OBSERVATION-19)
+% ---------------------------------------------------------------------------
+%
+% THE BAN WAS STRICTER THAN THE DESIGN AUTHORITY IT WAS ENFORCING, AND NOTHING RECORDED THE DEPARTURE.
+% docs/design/05 Part Four, under a heading reading "TWO QUALIFICATIONS THAT A STRICT VALIDATOR WOULD
+% GET WRONG": "A TAGGED MINORITY OF FAULTS ARE ADMITTED INTO THE REGISTER ON A USAGE ARGUMENT, always
+% with the reasoning written inline ... The schema therefore needs a per-mode admitted-as-fault flag
+% and a rationale slot, NOT A BLANKET EXCLUSION." konnectome built the blanket exclusion, and in the
+% twenty-two slices before anybody noticed it was quoted approvingly in three more documents as though
+% it were the authority's own position.
+%
+% THE ARGUMENT FOR THE BAN IS NOT WITHDRAWN AND IS NOT WEAKENED. A construct with a designed behaviour
+% for being broken runs it silently and forever, and that is exactly what the strictness was
+% protecting against. WHAT REPLACES THE BAN IS NOT PERMISSIVENESS BUT A HIGHER PRICE: a fault may
+% stand in a register only where the register SAYS SO ON ITS OWN FACE and SAYS WHY. The schema makes
+% the rationale slot mandatory, so silence is still refused - it is refused at the register rather
+% than at the supervisor, which is where the corpus puts it.
+%
+% AND THE ADMISSIONS ARE READABLE, WHICH IS THE HALF THAT KEEPS THIS FROM BEING A HOLE.
+% supervisor_admissions/2 lists every mode a register admits as a fault together with the reasoning
+% that admitted it, so a reader can ask any construct what it has been allowed to be broken in and get
+% an argument back rather than a shrug.
+
+% supervisor_faults_are_not_modes(+Automaton): refuse a register that admits a fault as a mode without
+% saying so and saying why.
 supervisor_faults_are_not_modes(Automaton) :-
     % Read the register's declared mode names through the register's own accessor.
     mode_register_modes(Automaton, Names),
     % Read the fault block through the register's own accessor, so there is one authority on both.
     mode_register_faults(Automaton, Faults),
+    % Read the modes this register admits as faults, with the rationale each carries.
+    mode_register_admissions(Automaton, Admissions),
     % Judge every fault entry's boundary signature against the modes the register declares.
-    supervisor_check_signatures(Faults, Names).
+    supervisor_check_signatures(Faults, Names, Admissions).
 
-% supervisor_check_signatures(+Faults, +Names): judge each fault entry's signature in turn.
+% supervisor_check_signatures(+Faults, +Names, +Admissions): judge each fault entry's signature.
 % An exhausted fault block admits nothing and is clean.
-supervisor_check_signatures([], _Names).
-% Each entry's boundary signature must be a name the register does NOT declare as a mode.
-supervisor_check_signatures([Entry|Rest], Names) :-
+supervisor_check_signatures([], _Names, _Admissions).
+% Each entry's boundary signature must be a name the register does NOT declare as a mode - unless the
+% register declares it as a mode AND admits it, in the corpus's own manner, with its reason.
+supervisor_check_signatures([Entry|Rest], Names, Admissions) :-
     % Refuse anything that is not the corpus's three-field fault entry, naming what arrived.
     (   Entry = fault(Signature, _Condition, _Watchdog)
     ->  true
@@ -188,14 +222,24 @@ supervisor_check_signatures([Entry|Rest], Names) :-
     ),
     % A boundary signature is named by an atom, the same key shape a mode name uses.
     must_be(atom, Signature),
-    % THE DIRECTIVE ITSELF: a signature that is also a declared mode is refused aloud, because a
-    % construct with a designed behaviour for being broken will run it silently and forever.
-    (   memberchk(Signature, Names)
-    ->  domain_error(supervisor_fault_is_not_a_mode, Signature)
-    ;   true
+    % THE DIRECTIVE, NOW CONSULTING THE FLAG. A signature that is not a declared mode is clean, as it
+    % always was. A signature that IS a declared mode is refused aloud UNLESS that mode's own entry
+    % carries an admitted-as-fault tag - which the register would not have accepted without a
+    % rationale, so an admission always arrives with its argument attached.
+    (   \+ memberchk(Signature, Names)
+    ->  true
+    ;   memberchk(mode_register_admission(Signature, _Rationale), Admissions)
+    ->  true
+    ;   domain_error(supervisor_fault_is_not_a_mode, Signature)
     ),
     % Judge the remaining entries.
-    supervisor_check_signatures(Rest, Names).
+    supervisor_check_signatures(Rest, Names, Admissions).
+
+% supervisor_admissions(+Automaton, -Admissions): the modes this register admits as faults, each with
+% the reasoning that admitted it. THE DEPARTURE FROM THE STRICT RULE IS READABLE OR IT IS NOT A DESIGN.
+supervisor_admissions(Automaton, Admissions) :-
+    % Read them through the register's own accessor, so there is one authority on what is admitted.
+    mode_register_admissions(Automaton, Admissions).
 
 % ---------------------------------------------------------------------------
 % THE WATCH

@@ -25,7 +25,15 @@
     % mode_register_of_construct_kind/2: the canonical register for a konnectome construct kind.
     mode_register_of_construct_kind/2,
     % mode_register_construct_rule/2: the rule an engine should apply, read through the register.
-    mode_register_construct_rule/2
+    mode_register_construct_rule/2,
+    % mode_register_confidence_grades/1: the confidence grades the corpus was observed to use.
+    mode_register_confidence_grades/1,
+    % mode_register_tags/3: the tags one mode entry carries, which for most entries is none.
+    mode_register_tags/3,
+    % mode_register_confidence/3: the confidence grade a mode carries, or the refusal to invent one.
+    mode_register_confidence/3,
+    % mode_register_admissions/2: every mode admitted as a fault, with the rationale that admitted it.
+    mode_register_admissions/2
 ]).
 
 % Import the list utilities used for membership, sorting and length checks.
@@ -58,7 +66,8 @@
 %                is the corpus's answer to who governs the machine and is never omitted. Guards are
 %                deliberately not a column; the corpus folds them into the trigger clause.
 % Faults       - the block of fault(BoundarySignature, WarningCondition, Watchdog) terms. Faults are
-%                WATCHED, never admitted as modes.
+%                WATCHED, and are admitted as modes only where the entry says so and says why - which
+%                is slice 66's repair and is set out below.
 %
 % A REGISTER OF ONE IS FIRST-CLASS, NOT DEGENERATE. The corpus says so in as many words, three
 % separate times, and states the interpretation directly: the length of a register is a statement of
@@ -66,10 +75,91 @@
 % therefore not a debt to be repaid but faithful models of mode-poor components, and this slice
 % re-expresses them as registers of one WITHOUT CHANGING A SINGLE NUMBER.
 %
-% Two fields the corpus carries and this slice does NOT, declared here so the gap is a decision and
-% not an oversight: the per-mode CONFIDENCE tag, which the design authority's Part Nine defers by
-% name, and the per-mode ADMITTED-AS-FAULT flag, which belongs with the supervisor channel that does
-% not exist yet. Both enter with the slices that need them.
+% Two fields the corpus carries and slice 39 did NOT build, declared there so the gap would be a
+% decision and not an oversight: the per-mode CONFIDENCE tag, which the design authority's Part Nine
+% defers by name, and the per-mode ADMITTED-AS-FAULT flag, which "belongs with the supervisor channel
+% that does not exist yet". BOTH ENTER HERE, AT SLICE 66, AND THE LATENESS IS THE POINT - see the
+% next section.
+
+% ---------------------------------------------------------------------------
+% THE TWO DEFERRED FIELDS, AND WHY THEY ARRIVE TWENTY-SEVEN SLICES LATE (slice 66, OBSERVATION-19)
+% ---------------------------------------------------------------------------
+%
+% THE SUPERVISOR CHANNEL WAS BUILT AT SLICE 42. The deferral written four lines above named its own
+% unblocking condition - "the supervisor channel that does not exist yet" - and that condition was
+% met three slices later, twenty-two slices before anybody noticed. NOBODY MISREAD ANYTHING: slice 39
+% read the design authority correctly, recorded the omission correctly, and stated exactly what would
+% release it. WHAT FAILED IS THAT NOTHING WATCHES A DEFERRAL'S CONDITION - a note saying "when X
+% exists, revisit this" is invisible on the day X arrives, because the session that builds X is
+% looking at X and not at the list of things that were waiting for it. That is OBSERVATION-19 and it
+% is worth more than the fields it unblocked.
+%
+% AND IN THOSE TWENTY-TWO SLICES THE OMISSION HARDENED INTO A RULE THE SOURCE NEVER STATED. The
+% supervisor's blanket ban - a declared fault signature may never be a declared mode - was written
+% into the README, the tutorial and the vision-set analysis as though it were the design authority's
+% own position. IT IS NOT. docs/design/05 Part Four, under a heading reading "TWO QUALIFICATIONS THAT
+% A STRICT VALIDATOR WOULD GET WRONG", says the opposite in as many words: "A TAGGED MINORITY OF
+% FAULTS ARE ADMITTED INTO THE REGISTER ON A USAGE ARGUMENT, always with the reasoning written inline
+% ... The schema therefore needs a per-mode admitted-as-fault flag and a rationale slot, NOT A BLANKET
+% EXCLUSION."
+%
+% WHAT IS BEING REPAIRED IS THE UNRECORDED DEPARTURE, NOT THE STRICTNESS. The argument for the ban -
+% that a machine with an official way to be broken will run it silently and forever - is a good
+% argument and is not withdrawn; it survives below as the requirement that an admission must SAY WHY.
+% What was wrong is that konnectome enforced a stricter rule than its source states with nothing
+% anywhere recording the departure, which is the one thing that must not happen.
+%
+% THE SCHEMA, AND WHY IT ADMITS TWO SHAPES RATHER THAN ONE.
+%
+%     mode_entry(FormalName, CoinedName, Gloss)          - an untagged entry, and most entries are.
+%     mode_entry(FormalName, CoinedName, Gloss, Tags)    - a tagged entry, and the corpus's tagged
+%                                                          entries are A MINORITY, in its own words.
+%
+% THE AUTHORITY'S OWN PHRASE IS "A TAGGED MINORITY", so a schema in which every entry must carry a
+% tag block would misdescribe the corpus it is transcribing, and rewriting fifty-odd existing entries
+% to carry an empty list would have been a large change that said nothing. The three-field entry is
+% not a legacy form to be migrated: it is the untagged majority, and it means what it has always
+% meant.
+%
+% Tags is a list, each element one of:
+%
+%     admitted_as_fault(Rationale) - this mode names a way the construct BREAKS and is in the register
+%                                    anyway, on a usage argument. THE RATIONALE IS REQUIRED AND IS THE
+%                                    LOAD-BEARING HALF: without it the softened rule is just a hole.
+%                                    An admitted fault must say why it is admitted, in the corpus's own
+%                                    manner, and cannot be admitted silently. The corpus's four
+%                                    rationales, quoted by the authority, are the model: "admitted only
+%                                    as fault"; "a fault regime, admitted only because it names the
+%                                    failure"; "a used but pathological standing state, admitted here
+%                                    because it is reached routinely in disease and is largely
+%                                    reversible"; "admitted because rods progressively escape it to
+%                                    contribute in daylight, so it is a normal boundary of operation".
+%     confidence(Grade)            - how well established this mode is. The authority: "Confidence is
+%                                    operational, not decorative: at least one junction entry REFUSES
+%                                    to admit a mode on evidential grounds". The Layer 6 volume carries
+%                                    about 340 such tags.
+%
+% AND AN ENTRY WITHOUT A CONFIDENCE TAG IS NOT A CONFIDENT ENTRY. mode_register_confidence/3 answers
+% confidence_not_stated, by name, and never a grade konnectome chose. A silent default here would be
+% this build's own recurring failure - a zero that reads as calm - in a field whose whole purpose is
+% to record how much the source is prepared to claim.
+
+% ---------------------------------------------------------------------------
+% THE CONFIDENCE GRADES
+% ---------------------------------------------------------------------------
+%
+% THE LIST IS A TRANSCRIPTION OF WHAT THE AUTHORITY OBSERVED IN THE CORPUS, NORMALISED INTO THIS
+% BUILD'S SNAKE_CASE, AND THAT NORMALISATION IS KONNECTOME'S OWN AND IS SIGNED HERE. The authority
+% records the observed values as "high, moderate, moderate on exact rate bands, low, well established,
+% and confidence deliberately low". konnectome takes the five distinct GRADES and drops the qualifying
+% clause of the second, because "moderate on exact rate bands" is a moderate with a scope note and the
+% scope belongs to the mode rather than to the grade.
+%
+% ANYTHING OUTSIDE THE LIST IS REFUSED ALOUD rather than accepted as a sixth grade, so a new grade has
+% to be added here deliberately, by somebody who has read the corpus and can say where it came from.
+
+% mode_register_confidence_grades(-Grades): the confidence grades a mode entry may declare.
+mode_register_confidence_grades([high, moderate, low, well_established, deliberately_low]).
 
 % ---------------------------------------------------------------------------
 % THE SHAPE GUARD
@@ -136,17 +226,79 @@ mode_register_check_register(Register, Names) :-
 % mode_register_entry_names(+Register, -Names): the formal name of every entry, judged as it is read.
 % An exhausted register yields no more names.
 mode_register_entry_names([], []).
-% Each entry must be a mode entry of three fields whose formal name is an atom.
+% Each entry must be a mode entry - untagged or tagged - whose formal name is an atom.
 mode_register_entry_names([Entry|Rest], [Name|Names]) :-
-    % Refuse anything that is not the corpus's three-field entry, naming what arrived.
-    (   Entry = mode_entry(Name, _Coined, _Gloss)
+    % Open the entry, refusing anything that is neither shape and judging any tags it carries.
+    mode_register_open_entry(Entry, Name, _Coined, _Gloss, _Tags),
+    % Read the names out of the remaining entries.
+    mode_register_entry_names(Rest, Names).
+
+% mode_register_open_entry(+Entry, -Name, -Coined, -Gloss, -Tags): open either shape of mode entry.
+% THE UNTAGGED ENTRY IS THE MAJORITY FORM AND ITS TAG BLOCK IS EMPTY, which is a statement that it
+% carries no tags and NOT a statement that it was checked and found ordinary.
+mode_register_open_entry(Entry, Name, Coined, Gloss, Tags) :-
+    % Refuse anything that is neither the three-field nor the four-field entry, naming what arrived.
+    (   Entry = mode_entry(Name, Coined, Gloss)
+    ->  Tags = []
+    ;   Entry = mode_entry(Name, Coined, Gloss, Tags)
     ->  true
     ;   domain_error(mode_entry, Entry)
     ),
     % A mode is named by an atom, so a register can never be keyed on a number or a compound.
     must_be(atom, Name),
-    % Read the names out of the remaining entries.
-    mode_register_entry_names(Rest, Names).
+    % Judge whatever tags the entry declares, here, in the one place every entry is opened.
+    mode_register_check_tags(Tags).
+
+% mode_register_check_tags(+Tags): judge a mode entry's tag block.
+mode_register_check_tags(Tags) :-
+    % Judge the store's shape first, so a hole can never be read as an untagged entry.
+    mode_register_check_store(Tags),
+    % Read the name of every tag, refusing any tag this schema does not carry.
+    mode_register_tag_names(Tags, Names),
+    % ONE TAG OF EACH KIND. Two confidence grades on one mode is a mode with two claims about how well
+    % established it is, and two admissions is two rationales where the reader needs one.
+    mode_register_check_distinct(Names, distinct_mode_tags).
+
+% mode_register_tag_names(+Tags, -Names): the name of every tag, judged as it is read.
+% An exhausted tag block yields no more names.
+mode_register_tag_names([], []).
+% An ADMITTED-AS-FAULT tag carries the rationale that admitted it, and the rationale is required.
+mode_register_tag_names([Tag|Rest], [admitted_as_fault|Names]) :-
+    % Commit once the tag's name matches, before the rationale is judged, so the complaint names the tag.
+    Tag = admitted_as_fault(Rationale),
+    % Commit to this reading of the tag.
+    !,
+    % THE RATIONALE IS THE LOAD-BEARING HALF and a hole in it would admit a fault silently.
+    must_be(atom, Rationale),
+    % AND AN EMPTY RATIONALE IS NOT A RATIONALE. A blank slot passes a shape check and says nothing,
+    % which is exactly the admission this rule exists to prevent.
+    (   Rationale == ''
+    ->  domain_error(mode_register_admission_rationale, Rationale)
+    ;   true
+    ),
+    % Read the names out of the remaining tags.
+    mode_register_tag_names(Rest, Names).
+% A CONFIDENCE tag carries one of the grades the corpus was observed to use, and no other.
+mode_register_tag_names([Tag|Rest], [confidence|Names]) :-
+    % Commit once the tag's name matches.
+    Tag = confidence(Grade),
+    % Commit to this reading of the tag.
+    !,
+    % A grade is named by an atom, the same key shape a mode name uses.
+    must_be(atom, Grade),
+    % A grade outside the transcribed list is refused, so a sixth grade must be added deliberately.
+    mode_register_confidence_grades(Grades),
+    % Refuse an unknown grade aloud, naming the grade that arrived.
+    (   memberchk(Grade, Grades)
+    ->  true
+    ;   domain_error(mode_register_confidence_grade, Grade)
+    ),
+    % Read the names out of the remaining tags.
+    mode_register_tag_names(Rest, Names).
+% Anything else is refused rather than carried along as a tag nobody can read back.
+mode_register_tag_names([Tag|_Rest], _Names) :-
+    % An unrecognised tag silently ignored would let a misspelt admission read as an ordinary mode.
+    domain_error(mode_entry_tag, Tag).
 
 % mode_register_check_distinct(+Names, +Complaint): refuse a repeated name under the given complaint.
 mode_register_check_distinct(Names, Complaint) :-
@@ -364,6 +516,74 @@ mode_register_departure(Automaton, Agency, ToMode) :-
     ->  existence_error(mode_transition, FromMode)
     ;   domain_error(single_mode_departure, Destinations)
     ).
+
+% ---------------------------------------------------------------------------
+% READING THE TWO TAGGED FIELDS (slice 66)
+% ---------------------------------------------------------------------------
+
+% mode_register_tags(+Automaton, +Mode, -Tags): the tags one mode entry carries.
+mode_register_tags(Automaton, Mode, Tags) :-
+    % An unbound key is refused: a lookup would bind it and hand back another mode's tags.
+    must_be(atom, Mode),
+    % Read the register block through the automaton's own accessor.
+    mode_register_entries(Automaton, Register),
+    % Judge the store's shape before searching it, so a hole is never searched as an empty register.
+    mode_register_check_store(Register),
+    % Find the named entry, judging it as it is opened, and refuse a mode the register does not hold.
+    (   mode_register_find_entry(Register, Mode, Found)
+    ->  Tags = Found
+    ;   existence_error(mode_entry, Mode)
+    ).
+
+% mode_register_find_entry(+Register, +Mode, -Tags): the named entry's tags, judged as they are read.
+% The entry at the front of what remains is either the one wanted or one to step past.
+mode_register_find_entry([Entry|Rest], Mode, Tags) :-
+    % Open this entry, which judges its shape and its tag block whether or not it is the one wanted.
+    mode_register_open_entry(Entry, Name, _Coined, _Gloss, Found),
+    % Take this entry's tags when its name matches, and otherwise search the remaining entries.
+    (   Name == Mode
+    ->  Tags = Found
+    ;   mode_register_find_entry(Rest, Mode, Tags)
+    ).
+
+% mode_register_confidence(+Automaton, +Mode, -Confidence): the confidence a mode declares.
+% AN ENTRY WITHOUT A CONFIDENCE TAG ANSWERS confidence_not_stated, BY NAME, AND NEVER A GRADE. The
+% corpus's own confidence field is operational rather than decorative, so a silent default here would
+% put a claim in konnectome's mouth that no source made.
+mode_register_confidence(Automaton, Mode, Confidence) :-
+    % Read the mode's tags, which refuses a hole, an impostor entry and a mode the register lacks.
+    mode_register_tags(Automaton, Mode, Tags),
+    % Take the declared grade where there is one, and say so plainly where there is not.
+    (   memberchk(confidence(Grade), Tags)
+    ->  Confidence = confidence(Grade)
+    ;   Confidence = confidence_not_stated
+    ).
+
+% mode_register_admissions(+Automaton, -Admissions): every mode admitted as a fault, with its reason.
+% THIS IS WHAT MAKES THE DEPARTURE FROM THE BLANKET RULE READABLE. A softened rule whose exceptions
+% cannot be listed is a hole; a softened rule whose exceptions each carry their argument is a design.
+mode_register_admissions(Automaton, Admissions) :-
+    % Read the register block through the automaton's own accessor.
+    mode_register_entries(Automaton, Register),
+    % Judge the store's shape before walking it.
+    mode_register_check_store(Register),
+    % Gather the admitted modes, judging every entry on the way past.
+    mode_register_gather_admissions(Register, Admissions).
+
+% mode_register_gather_admissions(+Register, -Admissions): the admitted entries, entry by entry.
+% An exhausted register admits nothing.
+mode_register_gather_admissions([], []).
+% Each entry is admitted or is not, and either way it is judged as it is opened.
+mode_register_gather_admissions([Entry|Rest], Admissions) :-
+    % Open the entry, which judges its shape and its tag block.
+    mode_register_open_entry(Entry, Name, _Coined, _Gloss, Tags),
+    % An admitted entry joins the list carrying the rationale that admitted it; anything else passes.
+    (   memberchk(admitted_as_fault(Rationale), Tags)
+    ->  Admissions = [mode_register_admission(Name, Rationale)|MoreAdmissions]
+    ;   Admissions = MoreAdmissions
+    ),
+    % Gather the remaining entries.
+    mode_register_gather_admissions(Rest, MoreAdmissions).
 
 % mode_register_faults(+Automaton, -Faults): the fault regimes and watchdogs block.
 mode_register_faults(Automaton, Faults) :-

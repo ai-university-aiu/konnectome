@@ -1226,7 +1226,7 @@ self-test; conformance re-measured at 137 of 137 (specification 4.0.0) in both c
 wall; no cousin edited, per the Second, Third, and Fourth Commandments.
 
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 19 (4 CLOSED: 8, 9, 15 and 18).  Decisions: 17.
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 20 (6 CLOSED: 8, 9, 15, 17, 18 and 19).  Decisions: 18.
 Slice-34 note (2026-08-09). The bound turned live in the told story. The slice-33 pending line
 (the bound proven per-territory in the tests but not yet in the capstone's told story) is
 CLOSED: the capstone's boot world arms the slow bound for real - the diffuse mark at one half,
@@ -5469,4 +5469,161 @@ chapters is its own slice and not a tail-end tidy. ALSO NOTED AND NOT ACTED ON: 
 ordinary English idiom "failure mode" freely in its own prose, in a repository whose central rule is
 that a fault is not a mode. Nothing routes to either change order. Neither cousin was edited.
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 19 (4 CLOSED: 8, 9, 15 and 18).  Decisions: 17.
+
+DECISION-18 (2026-08-11, slice 65). WEGNER'S THREE CONDITIONS ARE READ INTO KONNECTOME'S OWN TERMS,
+AND EXCLUSIVITY IS READ AS DIFFERENCE-MAKING AGAINST THE NULL COMMAND.
+
+THE_NEUROSCIENCE_OF_COGNITION_MANUSCRIPT.txt, Chapter 63.2.4, line 18691: Wegner's theory of apparent
+mental causation "holds that we infer authorship when a thought precedes an action, is consistent with
+it, and no other cause is apparent". Three conditions, named, in one sentence - PRIORITY, CONSISTENCY,
+EXCLUSIVITY. THE CORPUS SETTLED IT AND NO SEARCH WAS RUN OR NEEDED, which is the Twenty-Second
+Commandment's second step taken exactly as written.
+
+WHAT IS DECIDED IS THE TRANSLATION AND NOT THE CONDITIONS. The corpus states them in the vocabulary of
+a person; a running machine needs them in the vocabulary of terms it holds. That reading is
+konnectome's own and is signed as such rather than left where a reader would take it for the chapter's.
+
+PRIORITY is a STRICT ORDER OVER RECORDED EVENTS. A thought or an action nobody recorded is REFUSED
+ALOUD rather than treated as absent-and-therefore-later; a repeated event is read at its earliest
+position; nothing precedes itself.
+
+CONSISTENCY is the comparator's own cue WITH NO DEPARTURES. The zero is the ABSENCE of departure and
+not a threshold - how much departure is still consistent is the match TOLERANCE that DECISION-13
+refused to invent, and this decision refuses it a second time, on the same grounds, in the one place
+where inventing it would have been the obvious move.
+
+EXCLUSIVITY is DIFFERENCE-MAKING AGAINST THE NULL COMMAND, and it is the load-bearing half. The rival
+cause in konnectome's degenerate case is THE WORLD'S OWN PERSISTENCE: where the command's forward model
+predicts exactly the world that already stands, the standing world is a fully sufficient explanation,
+it is apparent because the mind is looking straight at it, and the command explains nothing that was
+not going to happen anyway. So exclusivity holds when the command's prediction DIFFERS from the null
+command's, taken from the same starting world.
+
+THE VERDICT IS THE CORPUS'S OWN CONJUNCTION AND NOT A WEIGHTING. The sentence joins its three
+conditions with "and", so konnectome joins them with a conjunction. Authorship is inferred when all
+three hold; otherwise the verdict carries WHICH failed and WHY.
+
+NOT ONE NUMBER IS INVOLVED. No threshold, no weight, no tolerance, no gain. Every condition is a
+comparison between two things the build already holds, and the Twenty-First Commandment's order of
+resort never reaches past its FIRST protocol.
+
+WHAT DECISION-18 DOES NOT DECIDE. It does not weigh the cues - Chapter 63.2.4 says prediction is "one
+cue among several, weighted more heavily when it is reliable" and states no weight, and a weighted
+mixture is a different construct needing numbers nothing has supplied. It does not split Synofzik's
+FEELING from his JUDGEMENT; they remain one construct. It does not withdraw DECISION-13, whose refusal
+still throws by name - what changed is that a verdict is now reachable from three conditions rather
+than from the match alone, which is the thing the chapter said the match alone could not support. And
+it does not claim the world's contribution is observable from inside: the world event stays the
+caller's argument, and every condition is computed from what the mind itself holds.
+
+
+OBSERVATION-17 CLOSED (2026-08-11, at slice 65, opened at slice 56). THE SECOND AGENCY CUE EXISTS.
+
+The observation's own closing condition was exact: "Agency needs a cue that distinguishes 'the world
+matched my prediction BECAUSE I CAUSED IT' from 'the world matched my prediction because NOTHING WAS
+GOING TO HAPPEN ANYWAY'. That is Wegner's EXCLUSIVITY condition and it is a second mechanism.
+OBSERVATION-17 closes when that cue exists, not before." It exists, as pack apparent_causation, and it
+is a second pack rather than a repair to efference_copy, exactly as the observation specified.
+
+THE CLOSURE IS PROVED AS A TERM INEQUALITY, WHICH IS THE FORM THE OBSERVATION WAS PINNED IN. Slice 56
+left a test asserting that the deliberate steer's cue and the null command's cue are THE SAME TERM.
+That test is untouched and still passes - the comparator is not weakened. A new test one level up
+asserts that the JUDGEMENTS built over those identical cues are NOT the same term.
+
+AND THIS IS THE SECOND CONSECUTIVE SESSION IN WHICH A REFUSAL THAT NAMED ITS OWN CLOSER PROVED CHEAPER
+THAN THE INVENTION IT DECLINED. OBSERVATION-18 closed that way one session ago and the arithmetic was
+called short enough to prove rather than assert. It has now happened twice, and both times the closer
+was a sentence already sitting in the corpus that nobody had read one paragraph further to find.
+
+
+OBSERVATION-19 CLOSED (2026-08-11, at slice 66, opened at slice 64). THE SHORTEST-LIVED OBSERVATION
+THIS BUILD HAS RECORDED, AND ITS CLOSER WAS CORRECT AS WRITTEN.
+
+The entry that opened it named and sized the closer: add the per-mode admitted-as-fault flag and its
+rationale slot to the mode entry schema, make the supervisor's refusal consult the flag rather than
+banning outright, and require the rationale whenever the flag is set. That is what slice 66 built and
+it built nothing else. The per-mode CONFIDENCE tag, deferred in the same slice-39 sentence and met
+again at slice 60, came with it - two deferred fields, one schema, both now with a caller.
+
+THE SCHEMA ADMITS TWO ARITIES AND THE REASON IS THE AUTHORITY'S OWN PHRASE. mode_entry/3 is unchanged
+and is the untagged MAJORITY; mode_entry/4 carries a tag block. docs/design/05 says "A TAGGED MINORITY
+OF FAULTS ARE ADMITTED", so a schema requiring every entry to carry a tag block would have
+misdescribed the corpus it transcribes and would have meant rewriting fifty-odd entries to say nothing.
+Both shapes are opened in exactly one predicate so they can never be judged by two rules.
+
+THE RATIONALE IS MANDATORY AND AN EMPTY ONE IS REFUSED BY NAME, which is where the old ban's argument
+survives whole. The strictness was protecting against a machine acquiring an unremarked designed way of
+being broken; it still is. What replaces the ban is not permissiveness but a price.
+
+WHAT DID NOT CHANGE, AND IT WAS CHECKED RATHER THAN ASSUMED. No register konnectome runs uses the flag,
+and every one passes untouched - which is exactly why the over-strictness survived twenty-two slices:
+IT HAD NEVER COST ANYTHING. A test pins the unadmitted case still being refused, so the softening can
+never be read as a repeal.
+
+AND THE GENERAL FAULT BEHIND IT IS NOT CLOSED BY THIS AND IS CARRIED FORWARD: NOTHING WATCHES A
+DEFERRAL'S CONDITION. The Twenty-Second Commandment makes a flagged call work rather than rest; nothing
+yet makes a MET CONDITION ANNOUNCE ITSELF. The standing suggestion recorded when the observation opened
+still stands - the slice that meets a condition should be the one that checks the list.
+
+
+OBSERVATION-20 (2026-08-11, from slice 65). PRIORITY CANNOT FAIL IN ANY PASS THIS BUILD CAN RUN, SO A
+THREE-CONDITION VERDICT RESTS ON TWO.
+
+Inside one efference copy pass the copy is taken BEFORE the command reaches the actuator. That ordering
+is structural - it is what an efference copy IS - so apparent_causation_of_step/4 records an order in
+which the thought always precedes the action, and priority is met every time.
+
+A CONDITION THAT CANNOT FAIL CARRIES NO INFORMATION. The honest reading is that konnectome's authorship
+verdict currently rests on two conditions with a third standing beside them looking like a third. This
+is the same family as slice 47's boundary that could never be crossed, and it is the NINTH consecutive
+finding of the would-not-have-failed shape - after 47, 48, 49, 50, 52, 56, 58 and the near-miss at 60.
+Every test would have been green.
+
+WHAT WOULD CLOSE IT, AND IT IS BLOCKED BY THE OBSTACLE THIS BUILD ALREADY CARRIES. Priority becomes
+informative the moment a thought can arrive from somewhere OTHER than the command path - a thought
+formed on one tick against an action issued on another, or a thought supplied by a construct that is
+not the actuator's own copy. NO CONSTRUCT IN THIS BUILD CARRIES ANYTHING ACROSS A TICK, which is the
+same named obstacle standing in front of the efference copy's wiring since slice 56. THE TWO CLOSE
+TOGETHER OR NOT AT ALL, and that is worth knowing when the wiring family is sized.
+
+WHAT WAS DONE ABOUT IT RATHER THAN ONLY RECORDED. apparent_causation_priority/4 is built as a GENERAL
+predicate over a recorded order, not as a constant, and its failing branches are exercised against
+orders that DO have a choice in them - so the condition is known to work on the day something real can
+use it, rather than being written on that day against no evidence.
+
+
+Slice-65 note (2026-08-11). THE SECOND AGENCY CUE. New pack apparent_causation, the fortieth, from
+Chapter 63.2.4. DECISION-18. OBSERVATION-17 CLOSED. OBSERVATION-20 opened. THIRTY-FOUR tests. NOTHING
+IS WIRED: no cognitive cycle calls it and no percept anywhere is judged for authorship in any run
+konnectome performs today. It is the SIXTH complete, tested mechanism this build has that nothing else
+in this build uses, and the previous hand-off had already called five of them a habit rather than five
+justified choices - that is recorded here rather than defended.
+
+NOT ONE NUMBER IN THE PACK IS KONNECTOME'S INVENTION BECAUSE THE PACK CONTAINS NO NUMBERS AT ALL. The
+null command is READ OUT OF THE BUILD - simulated_body carries hold_still, body_interface_command/2
+maps the selector's "nothing" outcome onto it - rather than named here, so this pack never becomes a
+second authority on what the actuators carry.
+
+AND THE RULE CAUGHT A CASE NOBODY BUILT IT FOR, WHICH IS THE EVIDENCE THAT IT IS NOT FITTED TO ITS OWN
+EXAMPLE. A steer_around issued at an ALREADY CLEAR path is not the null command and would pass any rule
+that banned hold_still by name. It is non-exclusive too, on the same arithmetic - and the test written
+for it FAILED, because simulated_body_enact/3 has refused that command by name since the machine was
+written. Two independent refusals, slices apart, from two different directions, agreeing about one
+case. Nothing routes to either change order; no data-structure gap and no language gap was hit; neither
+cousin was edited.
+
+
+Slice-66 note (2026-08-11). THE ADMITTED-AS-FAULT FLAG AND THE CONFIDENCE TAG. No new pack;
+mode_register and supervisor amended. OBSERVATION-19 CLOSED. SEVENTEEN tests added to mode_register
+(45 to 62) and SEVEN to supervisor (27 to 34). The nine refusals the tag block carries are each pinned
+by name - an admission with no rationale, an EMPTY rationale, a rationale that is a hole, an unknown
+confidence grade, two tags of one kind, a misspelt tag name, a tag block that is a hole, a tag block
+that is not a list, and a tagged mode with no transfer function.
+
+THE AUTHORITY ON WHAT IS ADMITTED IS THE REGISTER AND NOT THE SUPERVISOR. supervisor_admissions/2
+forwards to mode_register_admissions/2 rather than re-deriving it, so a construct cannot be admitted in
+one component's reading and refused in another's. Nothing routes to either change order; neither cousin
+was edited.
+
+
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 20 (6 CLOSED: 8, 9, 15, 17, 18 and 19).  Decisions: 18.
