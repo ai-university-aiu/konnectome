@@ -1501,7 +1501,7 @@ Fourth Commandments.
 
 Build-log repair note (2026-08-09). The Eighteenth Commandment's document was found carrying a
 GAP, and the gap is recorded here because a scoreboard that only counts code is not an honest
-scoreboard. BUILDING_KONNECTOME_v2.txt ran from CHAPTER FIFTEEN (slice 21) straight to CHAPTER
+scoreboard. The build log (then named BUILDING_KONNECTOME_v2.txt) ran from CHAPTER FIFTEEN (slice 21) straight to CHAPTER
 THIRTY-ONE (slice 35): the sessions that built slices 22 through 34, and the two sessions that
 received and analysed the guiding corpus, appended their work to this ledger, to the SPARCD
 Fileset, to the tutorial, and to the repository's history, but did not append their chapters to

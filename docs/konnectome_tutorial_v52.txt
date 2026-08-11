@@ -96,7 +96,7 @@ konnectome is built under a written CONSTITUTION.md file of seventeen numbered r
 
 • Fifteen: this tutorial - keep a complete, beginner-friendly tutorial, versioned and updated as the code grows.
 
-• Sixteen: the build log - every activity of the build is logged to a versioned document called BUILDING_KONNECTOME (version 2 today), written with two purposes at once: as a scientific record whose every number is exact, and as a story a general reader can enjoy.
+• Sixteen: the build log - every activity of the build is logged to an APPEND-ONLY document called building_konnectome.txt, written with two purposes at once: as a scientific record whose every number is exact, and as a story a general reader can enjoy.
 
 • Seventeen: context-window management - because the assistant cannot see how full the context window is, it offers a hand-off at each milestone and the owner watches the /context gauge; when the window is high, a dated hand-off document is written and the session pauses, so a fresh session can continue from the files on disk.
 
@@ -1345,7 +1345,7 @@ Everything konnectome needs is inside its own docs/ folder, so you never have to
 
 • CONSTITUTION.md - the nineteen rules that govern the build.
 
-• BUILDING_KONNECTOME_v2.txt - the build log: the whole story of the build from its true beginning, kept as a scientific record and a readable book at once, versioned like every other living document.
+• building_konnectome.txt - the build log: the whole story of the build from its true beginning, kept as a scientific record and a readable book at once. It is the one living document here that carries NO version suffix, because it is never superseded - it is only appended to.
 
 • docs/DSPARCD/ - the seven method documents, konnectome_0_definition through konnectome_6_demonstration, together with the specification of the method itself. Read the definition first; it is the concept the other six answer to.
 
