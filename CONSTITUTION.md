@@ -33,7 +33,7 @@ data structure cannot express, that finding is recorded (see the Fourth Commandm
 it passes the consumer-versus-ontology test (the thing must need to be SHARED across agents or
 repositories as a signed, evidence-graded, content-addressed record, not merely computed inside one
 konnectome runtime), it is written to the versioned change-order file:
-/home/ccaitwo/konnectome/docs/Causalontology_4_0_0_CHANGE_ORDER_v3.txt
+/home/ccaitwo/konnectome/docs/cousins/Causalontology_4_0_0_CHANGE_ORDER_v3.txt
 (REPOINTED in version 10, by the owner's instruction of 2026-08-10. This line read _v2 and the file
 had reached _v3, its predecessors archived under the Eleventh Commandment - so the Commandment that
 tells a session where to write a finding pointed at a file that was no longer there. Found by the
@@ -62,7 +62,7 @@ to help build out konnectome to its fullest capability.
 The same gate applies as for causalontology: konnectome does NOT edit PrologAI directly. A
 language wall discovered while building is recorded, and a real, load-bearing PrologAI-language gap
 is written to the versioned change-order file:
-/home/ccaitwo/konnectome/docs/PrologAI_CHANGE_ORDER_v2.txt
+/home/ccaitwo/konnectome/docs/cousins/PrologAI_CHANGE_ORDER_v2.txt
 (REPOINTED in version 10, on the same scan and for the same reason: this line read _v1, which was
 correct when it instructed the build to CREATE the file empty at build start, and the file has since
 reached _v2 with its predecessor archived. No rule changed.)

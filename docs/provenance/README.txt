@@ -42,7 +42,7 @@ THE FIVE DOCUMENTS
 
 • PrologAI_Requirements_Ledger_v1.txt - THE PROGRAMME'S ACTUAL DELIVERABLE, and the most consequential file in here. THE FOURTH COMMANDMENT NAMES IT BY NAME as the model konnectome's own ledger was built on: konnectome's ledger is "the running scoreboard of the build, exactly as PrologAI_Requirements_Ledger_v1.txt was for the language". If you want to know why konnectome records every wall it hits before routing it anywhere, this is the document that taught it to.
 
-• CAUSALONTOLOGY_3_0_0_REVIEW_AND_4_0_0_ASSESSMENT.txt - the review of the data structure at 3.0.0 and the assessment that became the 4.0.0 change order. Cited by docs/Causalontology_4_0_0_CHANGE_ORDER_v3.txt as the source of its four candidate gaps, which makes it the one document in here with a live descendant still in use.
+• CAUSALONTOLOGY_3_0_0_REVIEW_AND_4_0_0_ASSESSMENT.txt - the review of the data structure at 3.0.0 and the assessment that became the 4.0.0 change order. Cited by /home/ccaitwo/konnectome/docs/cousins/Causalontology_4_0_0_CHANGE_ORDER_v3.txt as the source of its four candidate gaps, which makes it the one document in here with a live descendant still in use.
 
 
 THE DORMANT SIBLING REPOSITORIES - RECORDED HERE BECAUSE NOTHING ELSE RECORDS THEM
