@@ -101,25 +101,30 @@ konnectome does not edit its cousins in place. When a real build hits a wall the
 
 ## How konnectome is governed: the Constitution
 
-konnectome is built and maintained under a written [**CONSTITUTION.md**](CONSTITUTION.md) of seventeen commandments. In brief:
+konnectome is built and maintained under a written [**CONSTITUTION.md**](CONSTITUTION.md) of **twenty commandments**, currently at **version 18**. The numbering below is the Constitution's own - a citation by number lands on the same rule in both documents. In brief:
 
-1. **AGI and ASI in mind** - built toward Artificial General Intelligence and Artificial Super Intelligence, guided by three roadmap documents in `docs/`.
+1. **AGI and ASI in mind** - built toward Artificial General Intelligence and Artificial Super Intelligence, guided by three roadmap documents in [`docs/principles/`](docs/principles/).
 2. **Causalontology is the thought structure** - frozen to konnectome except through the gated change-order process.
 3. **PrologAI is the language** - the same gate applies; konnectome never edits it directly.
 4. **The ledger is the scoreboard** - every wall becomes an entry in [`docs/konnectome_ledger_v1.txt`](docs/konnectome_ledger_v1.txt) first, then is routed to exactly one place.
 5. **DSPARCD is the waterfall** - the seven-phase method, inspired by [`docs/DSPARCD/DSPARCD_EXPLAINED.txt`](docs/DSPARCD/DSPARCD_EXPLAINED.txt).
 6. **English Readable Code** - one plain-English comment above every line of code.
-7. **The DSPARCD Fileset** - seven versioned documents; six seeded from the appendices of *Nature's Cognitive Architecture*, and [`konnectome_0_definition`](docs/DSPARCD/konnectome_0_definition_v1.txt) written from the Constitution and the whole of `docs/`.
-8. **The audit** - every named construct is realized by a module, tracked in a re-runnable coverage list in the ledger.
-9. **The archive** - only the latest version of any document lives outside `docs/archive/`.
-10. **Mirrored changes** - any code change is mirrored in the DSPARCD Fileset, with versions bumped and old versions archived.
-11. **The README** - kept current, styled like the cousin repositories, in the crimson-to-gold palette.
-12. **Whole-Word System** - whole English words, snake_case, pack-qualified, no terse prefixes.
-13. **The safety gate** - no change may regress ARC-AGI-1, ARC-AGI-2, or the 137-vector Causalontology conformance suite.
-14. **Branch and report discipline** - feature branches and pull requests; no direct pushes to main; no artificial-intelligence tool credited as author; no Roman numerals.
-15. **The tutorial** - a maintained, beginner-friendly [`docs/konnectome_tutorial`](docs/konnectome_tutorial_v50.txt), kept current and versioned under the archive discipline.
-16. **The build log** - every build activity is logged to [`docs/BUILDING_KONNECTOME_v2.txt`](docs/BUILDING_KONNECTOME_v2.txt), voiced with dual purpose: as a scientific paper and as a best-selling book.
-17. **Context-window management and the hand-off protocol** - when the window runs high, a durable Context Hand-Off is written and the session paused, so a fresh session reloads state from `docs/` and continues from a known-good baseline.
+7. **The DSPARCD Fileset** - seven versioned documents in [`docs/DSPARCD/`](docs/DSPARCD/); six seeded from the appendices of *Nature's Cognitive Architecture*, and `konnectome_0_definition` written from the Constitution and the whole of `docs/`, leading the other six.
+8. **The Vision Document Set** - the thirty-eight-document neuroscience corpus in [`docs/neuroscience/`](docs/neuroscience/), read top-down, informing the project and never breaking it.
+9. **The cognitive-architectures test-bed** - a local, read-only study set konnectome should be able to perform the functions of; unachievable means bug, and a kludge is a documented discovery.
+10. **The audit** - every named construct is realized by a module, tracked in a re-runnable coverage list in the ledger.
+11. **The archive** - only the latest version of any document lives outside [`docs/archive/`](docs/archive/). It governs versions, not series.
+12. **Mirrored changes** - any code change is mirrored in the DSPARCD Fileset, with versions bumped and old versions archived.
+13. **The README** - kept current, styled like the cousin repositories, in the crimson-to-gold palette.
+14. **Whole-Word System** - whole English words, snake_case, pack-qualified, no terse prefixes.
+15. **The safety gate** - no change may regress ARC-AGI-1, ARC-AGI-2, or the Causalontology conformance suite. A red gate is a finding to report, never a thing to force through.
+16. **Branch and report discipline** - feature branches and pull requests; no direct pushes to main; no artificial-intelligence tool credited as author; no Roman numerals.
+17. **The tutorial** - a maintained, beginner-friendly [`docs/konnectome_tutorial`](docs/konnectome_tutorial_v50.txt), kept current and versioned under the archive discipline.
+18. **The build log** - every build activity is logged to [`docs/BUILDING_KONNECTOME_v2.txt`](docs/BUILDING_KONNECTOME_v2.txt), voiced with dual purpose: as a scientific paper and as a best-selling book.
+19. **Context-window management and the hand-off protocol** - when the window runs high, a durable Context Hand-Off is written and the session paused, so a fresh session reloads state from `docs/` and continues from a known-good baseline.
+20. **The North Star** - [`THE_NEUROSCIENCE_OF_COGNITION_OUTLINE`](docs/neuroscience/THE_NEUROSCIENCE_OF_COGNITION_OUTLINE.txt) and [`THE_NEUROSCIENCE_OF_COGNITION_MANUSCRIPT`](docs/neuroscience/THE_NEUROSCIENCE_OF_COGNITION_MANUSCRIPT.txt) are the north star, north pole and light-house; [`docs/neuroscience/`](docs/neuroscience/) is the north-star directory. They earn an analysis run of their own and a **gap analysis** that separates what konnectome *could not express* from what it simply *has not built*.
+
+> **A note on this list, added 2026-08-10.** It formerly ran to seventeen items and had done so since before the Eighth and Ninth Commandments were inserted, which renumbered everything beneath them. So README item 13 was Constitution commandment 15, and a reader citing a number from here landed on the wrong rule in there. The list is now the Constitution's own numbering, and a citation is portable between the two documents.
 
 ## The DSPARCD Fileset
 
@@ -152,7 +157,7 @@ The build does not leap to prediction, theory of mind, or a talking mind before 
 
 ```
 konnectome/
-  CONSTITUTION.md              The seventeen commandments that govern the build.
+  CONSTITUTION.md              The twenty commandments that govern the build (version 18).
   README.md                    This file.
   bin/                         Test runner, the naming / layer / binding / reality-discipline gates, and run_capstone_demonstration.sh.
   packs/                       konnectome's Prolog packs, each with pack.pl, prolog/, test/.
