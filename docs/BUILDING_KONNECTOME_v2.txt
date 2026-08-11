@@ -1050,5 +1050,34 @@ Nothing in konnectome does that second thing today. That test is not guarding be
 That is the lesson of Chapter Forty-Seven applied one slice before the error instead of fourteen slices after it, and it is the first time this build has managed that.
 
 
-From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER FIFTY-TWO, and the story goes on being true.
+CHAPTER FIFTY-TWO - THE PERMISSION AND THE PLACE (2026-08-10, CONSTITUTION VERSION 19)
+
+THE PAPER'S VOICE. Constitution version 19, by the owner's instruction. It adds THE SIXTEENTH COMMANDMENT, AUTO-FIX-ALL, granting the assistant authority to repair any problem found on the single condition that the repair is recorded in this log. It MOVES THE HAND-OFF PROTOCOL TO LAST, renumbering it from the Nineteenth to the Twenty-First, with a standing rule that it remains last and that new Commandments are inserted before it. Three Commandments displaced by the insertion are renumbered: branch-and-report 16 to 17, the tutorial 17 to 18, the build log 18 to 19. The North Star keeps 20. No Commandment was removed and no rule changed. The cousin-conformance cadence is relaxed by the same instruction. This chapter is itself the record the new Sixteenth Commandment requires.
+
+THE BOOK'S VOICE. Two of these are housekeeping and one is a change in what the assistant is.
+
+Start with the housekeeping, because it is the more interesting of the two. Every version note in this Constitution from version 5 onward ends with some form of the same boast: no commandment was renumbered, so a session citing a commandment by number from an older hand-off still lands on the right rule. It is repeated so often it reads like a load-bearing invariant of the whole document.
+
+The owner removed it in one sentence: old hand-offs do not matter, only the current hand-off matters.
+
+And that is obviously true the moment somebody says it. The current hand-off is the only one ever read as instruction - the Constitution says so itself, in the amendment that put every superseded hand-off in its own directory precisely so nobody would read the wrong one. So the property being protected all those versions was the portability of citations out of documents that are, by the Constitution's own design, not consulted. It was a guarantee about a reading nobody performs, and it had been quietly constraining every amendment since.
+
+It is worth noticing how that happens, because it was not carelessness. Version 5 renumbered, felt the cost, and wrote down a promise not to do it again. Every later version inherited the promise, honoured it, and repeated it - and each repetition made it look more load-bearing than the last, because a rule stated six times reads as a rule six times as important. Nobody re-derived it. The cheapest thing in this project to inherit is a well-argued constraint, and the most expensive thing to notice is that its argument stopped applying.
+
+Then the place. The hand-off protocol moves to the end, and the reason is better than tidiness. It is the one Commandment a session reads when its context window is full - which is exactly the state in which it can no longer be trusted to search patiently, or to hold the middle of a long document, or to notice that it skimmed something. Every other Commandment is read while there is room to read. This one is read when there is not. So it goes where a tired reader finds it by going to the end, and the rule that it stays there is written into the Commandment itself rather than left as an arrangement somebody might tidy away.
+
+And then the change in what the assistant is. AUTO-FIX-ALL: find it, fix it, write down what you did and why. Do not stop to ask.
+
+The temptation is to read that as a convenience - fewer interruptions, faster sessions. It is not. It closes a specific failure this run met four separate times. Slice 52 found a defect in merged code and deliberately left it, correctly, under the rule that an analysis informs and does not break. Slice 53 found a queued item about to be built wrong and left the queue alone. Slice 55 found a trap in the night and did not wire the fix. Each of those was a defensible pause, and each of them left a known fault standing in a repository where the next session would meet it as though it were the truth.
+
+The Commandment's own sentence for this is the sharpest thing in it: waiting for permission to fix a known fault is itself a fault. A fault that is known and unrepaired is not neutral. It is actively misleading, because everything around it goes on being green.
+
+But a grant of authority is only as good as its limits, which is why it was placed where it was. It sits immediately after the Safety Gate - the one inviolable rule about what may never be broken - so the two are read in one breath and the grant cannot be quoted without its constraint. Appending it at the end, which would have been the obvious place for a new Commandment, would have put six Commandments between a power and the thing that bounds it. That is how a power gets misread.
+
+The other three limits are written into it for the same reason. It is not a licence to edit a cousin repository, because the change-order gates are not about permission, they are about not breaking things this build does not own. It is not a licence to settle a question the corpus leaves open, because fixing a fault and deciding a design are different acts and only the first is granted. And it is not a licence to invent a value, because the fastest way to make a problem go away is to fill the hole with a number nobody chose - which this build has now refused to do six times running, and would refuse a seventh.
+
+What is left after those limits is exactly the thing the run kept wanting and could not have: the standing to repair what it finds, in the moment it finds it, and to be trusted because it wrote down what it did.
+
+
+From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER FIFTY-THREE, and the story goes on being true.
 
