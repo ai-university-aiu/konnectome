@@ -950,5 +950,55 @@ There were two ways to make the story answerable. Shorten the window until ten t
 A glass box that says "I do not know" is worth more than one that says "fine". The whole of this build's method is in that sentence, and it took the smallest item on the queue to put it where a reader would actually meet it.
 
 
-From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER FORTY-EIGHT, and the story goes on being true.
+CHAPTER FORTY-EIGHT - THE TEST THAT GUARDED THE MISTAKE (2026-08-10, SLICE 52)
+
+THE PAPER'S VOICE. Slice 52 closes the first half of OBSERVATION-15 and takes DECISION-10: a homeostatic scaling factor that is not strictly positive is refused aloud, naming the receiving construct, rather than clipped at zero. The refusal is sited at the point of computation rather than in the callers' guards. The test that pinned the previous behaviour is replaced by five, one of which asserts ratio preservation across a legal scaling. No configuration konnectome exercises changes behaviour; the capstone story is unaffected.
+
+THE BOOK'S VOICE. The defect was four lines long and it had a comment above it that was correct.
+
+That is the whole chapter, really. The comment said a weight could be silenced but never sign-flipped, and it was right that sign-flipping would be wrong. What nobody noticed, for nineteen slices, is that the code did not silence anything. Multiplying by zero is not a quiet version of multiplying by a small number. It is a different operation with a different result: the weight does not go quiet, it goes away, and because the mechanism only ever multiplies, it never comes back. The one operation in konnectome whose stated purpose is to calm a construct without erasing what it learned was, in exactly the circumstance it was written for, erasing what it learned.
+
+And there was a test. It drove a construct to be wildly over-active, checked the weight came out at exactly zero, and called that correct. It had never failed. It had never had any reason to fail. It was a good test of the wrong thing.
+
+That is worth sitting with, because the instinct on finding it is to say the test was bad and it was not. It was precise, it was well-named, it explained itself, and it pinned down real behaviour in a real edge case - which is everything a test is supposed to be. Its only fault was that the behaviour it pinned was forbidden by the source the mechanism came from, and a test cannot check that. A test compares the code to somebody's belief about the code. If the belief is wrong, the test guards the error, and it guards it harder every year, because now the error has a passing test in front of it and anybody who fixes it watches something go red.
+
+A TEST THAT PINS A DEFECT IS WORSE THAN NO TEST. Not because it fails to catch the bug - no test caught it - but because it converts the bug into a promise, and makes the repair arrive wearing the costume of a regression.
+
+Then the fix, which was the interesting decision. The obvious repair is a small positive floor. One keystroke, arithmetic stays reversible, everything else unchanged. konnectome refused it, and the reasoning is the same reasoning this build has now used five times: any floor is a number nobody chose. The corpus gives no minimum, because in the biology the situation never arises - the renormaliser is a slow daemon that never approaches an inversion. A floor invented here would be a value with a borrowed citation.
+
+But the deeper reason is better. A negative factor is not a hard case needing graceful handling. It MEANS something: somebody asked a bound explicitly named "slow" to erase more than an entire weight vector in a single step. That is a mis-configured bound, and the useful response is to say so, by name, naming the construct whose limit could not be met.
+
+The arithmetic was never really the fault. The fault was that a wrong situation had a plausible-looking answer sitting ready, so nothing ever had to notice. Five slices in a row have now found that same shape, and this is the first one where the plausible answer had a test defending it.
+
+
+CHAPTER FORTY-NINE - A MEMORY MADE OUT OF NOT STOPPING (2026-08-10, SLICE 53)
+
+THE PAPER'S VOICE. Slice 53 realizes Layer 4/5 Chapter 2, the PKM-zeta loop, as the pack renewal_loop, under the corpus's own engineering name, and takes DECISION-11: the durable weight tier is a maintained process and not a stored number. The level is held as an exact rational rather than on any decimal grain, because the recurrence lands on no grain and the pack's subject is a threshold crossing. OBSERVATION-16 is opened: the chapter states its synthesis gain twice, at four tenths and six tenths, and the two are qualitatively different machines, only one of which produces the outcome the chapter claims. Nothing is wired.
+
+THE BOOK'S VOICE. The queue said "a durable weight tier" and had said it for months, and everybody who read it - every session, every analysis, every hand-off - understood the same thing by it: a second number, changing more slowly than the first. A long-term store beneath the short-term one. It is the obvious design. It is what an engineer means by durable.
+
+It is the one design the source material exists to rule out.
+
+The volume opens by asking how a memory lasts decades when every protein it is made of is replaced within weeks, and it does not answer "there must be a stabler molecule somewhere". It answers that there is no stable part at all - that the memory is a process re-writing itself onto its own replacements faster than they are thrown away. It says this against the two analogues an engineer reaches for, by name: a memory chip that holds its charge keeps the same physical trap, and this keeps no physical part; refresh circuitry copies a value it reads out first, and this has no stored value to read, because the value is the running.
+
+So the queue was not merely incomplete. It was pointing at the wrong shape, in a way that would have produced working, tested, green code implementing precisely the thing eighteen chapters were assembled to refute. And it would have looked right. That is the fifth time in six slices that this build has met an error whose defining feature is that it would not have failed.
+
+The slice happened now, and not in its queue position, for that reason alone: the analysis found it about to be built wrong, and the cheapest moment to fix a design is before it exists.
+
+What went in is small and does almost nothing, which is correct. A level. Three tenths of it destroyed every step, always. A synthesis that, while the level is above a line, makes more in proportion to what is already there. The memory is not stored anywhere. The memory is the fact that, at this moment, the making is beating the destroying.
+
+Everything interesting follows from that and is not enforced anywhere. Run it and the level's entire contents turn over many times while the memory holds - the riddle, answered in one query. Block it for six steps and it sinks under the line, and then run it unblocked for five hundred more and it never returns, because below the line the loop makes only a trickle and the trickle settles far beneath where it would need to be to restart itself. No rule says "once collapsed, stay collapsed". There is nowhere in the code to look for that rule. It is just what the arithmetic does.
+
+Then the chapter contradicted itself, which by now is less a surprise than a schedule. It states its self-feeding strength twice - four tenths in prose, six tenths in its printed program - and those are not two roundings of one value, they are a latch and an amplifier. At four tenths the loop loses ground slowly and a brief block sinks it, which is what the chapter says happens. At six tenths it grows without limit, and the block the chapter stages specifically to demonstrate fragility does not collapse it at all.
+
+The chapter's own program does not do what the paragraph above it claims. And the check that established this took sixty lines of arithmetic and about a minute - which is the part worth carrying, because slice 49 met this same shape and reasoned its way to an answer from the structure of the two claims. This time the answer came from running both and seeing which one behaved as advertised. That is cheaper and more certain, and it should have been the first move.
+
+Note also which way it fell. At slice 49 the little program was the loose one and the measured prose was right. Here the program is wrong and the prose is right. So the rule is not "trust the prose", which would have been a comfortable thing to learn and a false one. The rule is what it always was: when a source hands you a number twice, find out whether the two are the same kind of claim, and then check both against what the source says the answer is.
+
+And the design carries a bill, which is written down and not paid. If a memory exists only while something runs it, something has to run it while the mind sleeps. konnectome's night replays the day and raises a limit and refreshes nothing. Wire this to a real weight without solving that, and the phase built to consolidate memory would erase it every night, permanently, by the exact mechanism this slice spent its whole length demonstrating.
+
+So nothing is wired. The loop stands on its own, proved against the corpus's numbers, with the bill nailed to it where the next builder will walk into it.
+
+
+From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER FIFTY, and the story goes on being true.
 

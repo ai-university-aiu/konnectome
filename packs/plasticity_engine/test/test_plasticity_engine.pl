@@ -304,14 +304,75 @@ test(a_region_at_target_leaves_its_inputs_untouched) :-
     Interfaces = [interface(a, b, Weight, 1, transmissive)],
     assertion(plasticity_test_close(Weight, 0.8)).
 
-% Scaling is multiplicative and floors at zero: a weight can be silenced but never sign-flipped.
-test(the_scaling_factor_floors_at_zero) :-
-    % A wildly overactive region under a strong scaling rate would compute a negative factor.
+% ---------------------------------------------------------------------------
+% DECISION-10 - THE SCALING FACTOR IS REFUSED, NEVER CLIPPED (slice 52, OBSERVATION-15)
+% ---------------------------------------------------------------------------
+%
+% THE TEST THIS REPLACES ASSERTED THE DEFECT, AND THAT IS THE MOST IMPORTANT THING IN THIS BLOCK.
+% It was called the_scaling_factor_floors_at_zero, it drove an overactive region to a negative raw
+% factor, and it asserted that the resulting weight was exactly zero - "silenced, not inverted". It
+% passed for nineteen slices. It was testing, faithfully and in detail, a behaviour the corpus
+% forbids in as many words: "NEVER ADD OR CLIP INDIVIDUAL WEIGHTS, because multiplication alone
+% leaves the relative code untouched."
+%
+% A TEST THAT PINS A DEFECT IS WORSE THAN NO TEST, because it converts the defect into a promise and
+% makes the fix look like the regression. It is replaced rather than deleted, and this note stands in
+% its place so the next reader knows the behaviour changed on purpose.
+
+% A factor that is not strictly positive is refused aloud, naming the construct whose bound failed.
+test(a_non_positive_scaling_factor_is_refused,
+     throws(error(domain_error(plasticity_engine_scaling_factor(b), _), _))) :-
+    % A wildly overactive region under a strong scaling rate computes a negative factor.
     Interfaces0 = [interface(a, b, 0.8, 1, transmissive)],
-    plasticity_engine_scaling_step(Interfaces0, [a-1, b-100], 0.5, 0.5, Interfaces),
-    % The factor is floored at zero, so the weight is silenced, not inverted.
-    Interfaces = [interface(a, b, Weight, 1, transmissive)],
-    assertion(Weight =:= 0).
+    % The old code clipped this to zero and carried on; it is now a named refusal.
+    plasticity_engine_scaling_step(Interfaces0, [a-1, b-100], 0.5, 0.5, _Interfaces).
+
+% THE REFUSAL NAMES THE RECEIVING CONSTRUCT, so a caller learns WHICH region's bound was impossible
+% rather than merely that one was. With two loud regions the error names the one actually reached.
+test(the_refusal_names_the_region_whose_bound_could_not_be_met,
+     throws(error(domain_error(plasticity_engine_scaling_factor(c), _), _))) :-
+    % b is comfortably within its bound; c is not.
+    Interfaces0 = [interface(a, b, 0.8, 1, transmissive), interface(a, c, 0.8, 1, transmissive)],
+    plasticity_engine_scaling_step(Interfaces0, [a-1, b-0.5, c-100], 0.5, 0.5, _Interfaces).
+
+% A FACTOR OF EXACTLY ZERO IS REFUSED TOO, and this is the boundary the old floor sat exactly on.
+% Zero was the one value the old code produced deliberately, and it is the value that does the damage:
+% a weight multiplied by zero can never be lifted off zero by any later multiplication.
+test(a_factor_of_exactly_zero_is_refused,
+     throws(error(domain_error(plasticity_engine_scaling_factor(b), _), _))) :-
+    % Rate 0.5, target 0.5, average 2.5 gives 1 + 0.5 * (0.5 - 2.5), which is exactly zero.
+    Interfaces0 = [interface(a, b, 0.8, 1, transmissive)],
+    plasticity_engine_scaling_step(Interfaces0, [a-1, b-2.5], 0.5, 0.5, _Interfaces).
+
+% THE RELATIVE CODE IS PRESERVED, WHICH IS THE PROPERTY THE CORPUS SAYS MULTIPLICATION EXISTS FOR.
+% Two weights into one loud region keep their ratio through a legal scaling. Under the old floor,
+% a strong enough step set BOTH to zero and the ratio was destroyed for good.
+test(a_legal_scaling_preserves_the_ratio_between_two_weights) :-
+    % Two inputs to one over-active region, in a two-to-one ratio.
+    Interfaces0 = [interface(a, b, 0.8, 1, transmissive), interface(c, b, 0.4, 1, transmissive)],
+    % A legal step: the region is loud, but the factor stays strictly positive.
+    plasticity_engine_scaling_step(Interfaces0, [a-1, c-1, b-1.5], 0.5, 0.5, Interfaces),
+    % Both weights shrank.
+    Interfaces = [interface(a, b, WeightA, 1, transmissive), interface(c, b, WeightC, 1, transmissive)],
+    assertion(WeightA < 0.8),
+    assertion(WeightC < 0.4),
+    % And the two-to-one ratio survived, which is the whole point of scaling multiplicatively.
+    assertion(plasticity_test_close(WeightA, 2 * WeightC)).
+
+% AND A SCALED WEIGHT REMAINS RECOVERABLE, which the old behaviour made false. A quiet spell after a
+% loud one grows the weights back; a weight trapped at zero never would.
+test(a_weight_shrunk_by_scaling_can_grow_back) :-
+    % One input to a loud region.
+    Interfaces0 = [interface(a, b, 0.8, 1, transmissive)],
+    % A loud step shrinks it.
+    plasticity_engine_scaling_step(Interfaces0, [a-1, b-1.5], 0.5, 0.5, Shrunk),
+    Shrunk = [interface(a, b, WeightShrunk, 1, transmissive)],
+    assertion(WeightShrunk < 0.8),
+    assertion(WeightShrunk > 0),
+    % A quiet step grows it again, because it never reached the absorbing point.
+    plasticity_engine_scaling_step(Shrunk, [a-1, b-0.0], 0.5, 0.5, Regrown),
+    Regrown = [interface(a, b, WeightRegrown, 1, transmissive)],
+    assertion(WeightRegrown > WeightShrunk).
 
 % A computational interface is untouched by homeostatic scaling.
 test(a_computational_interface_is_untouched_by_scaling) :-
