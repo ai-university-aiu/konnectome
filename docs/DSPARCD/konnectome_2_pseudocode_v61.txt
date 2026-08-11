@@ -1309,3 +1309,71 @@ THE DISCRIMINATION GATE, IN ENGLISH READABLE CODE.
       Succeed only if the gate catches exactly the unproven one, by name, and nothing else.
       A gate whose whole subject is checks that have never said no is the last gate that should be
         trusted without watching it say no.
+
+KONNECTOME REALIZATION LOG - SLICES 69 AND 70
+
+Slices 69 and 70 - The efference copy wired, and the deferral register - 2026-08-11 - three built-and-unwired mechanisms reached from the running loop; the sixth gate.
+
+WHAT CHANGED IN THE ALGORITHM IS NOT A NEW MECHANISM BUT AN ORDER OF OPERATIONS, because the comparator of slice 56, the three conditions of slice 65 and the carrier of slice 67 were all built, all tested, and called by nothing; five hand-offs deferred the wiring on the sentence that no construct carries anything across a tick, which slice 67 had already refuted, and the real obstacle was one missing argument - the survival loop threaded body, drives and bus and had no fourth slot to thread a prediction through.
+
+THE LIVED TICK, IN ENGLISH READABLE CODE.
+
+    To live one tick judged, given a body, drives, a bus, a carrier and the tick now:
+      Drain the body by the tick's own draining, exactly as the unjudged loop always did.
+      Run the sense-and-act pass, which chooses and issues ONE command.
+      Record the trace entry for this tick, so the trace is written before anything new is computed
+        from it and cannot be shaped by the judging.
+      Take the efference copy of the command THIS tick issued, by reading it back through the body
+        interface's own command accessor - never by guessing what the pass must have chosen.
+      Forward-model TWO predictions from the world as it stood BEFORE the act: what the issued command
+        predicts, and what the NULL command - hold still - would have predicted.
+      Retain both in the carrier AT THE TICK OF ISSUE, under the copy they belong to.
+      Release whatever the lag has now delivered, and take with each release the tick it was issued at
+        and both predictions it was holding.
+      Read the reading that actually arrived on this tick.
+      Judge each release against that reading through the three conditions, and thread the verdicts,
+        the stale list and the still-waiting list out alongside the body.
+
+BOTH PREDICTIONS ARE COMPUTED AT ISSUE AND NEITHER IS RECOMPUTED AT RELEASE, and the reason is a question of what is being asked rather than a question of cost: the null prediction asks what the world was going to look like anyway if the mind had done nothing, and by the time the release comes due the command has already changed that world, so a null model run then would be run over a world the act built, and it would answer plausibly and wrongly - a counterfactual measured after the fact is not a counterfactual, and the carrier exists precisely so the moment of issue can be asked its own question ten ticks later.
+
+THE LAG IS DERIVED IN THE STEPS AND NEVER WRITTEN INTO THEM, since chapter 51.2.1 and the cerebellar chapter of LAYER_10 both put usable sensory feedback on the order of one hundred milliseconds and DECISION-2 fixes one hundred ticks to the nominal second, so the loop asks the scheduler's one conversion for the tick count and gets ten; a run shorter than the lag therefore judges NOTHING and must report what it is still holding, because a loop that returns an empty verdict list looks identical to a wiring that does nothing at all.
+
+THE DISCRIMINATION IS WHAT THE ORDER BUYS, and it appears over a draining run in which the mind alternates - holding still at mild hunger and recharging at pressing hunger - and the two get different verdicts: the hold-still tick predicts the world exactly as it already stands, which is word for word what the null command predicts, so its prediction is matched perfectly by the reading ten ticks later and EXCLUSIVITY IS NOT MET, and authorship is not inferred; the recharge tick predicts a full battery where the null predicts the drained one, the two predictions differ, the reading matches the command's, all three conditions hold, and AUTHORSHIP IS INFERRED. The mind is the author of its recharges and not of its stillness.
+
+PRIORITY NOW HAS A REAL GAP TO JUDGE, because in the carried form the thought's tick and the action's tick stand one full lag apart and are two separate facts a caller can get wrong, rather than one structural ordering that could never have come out otherwise.
+
+THE THIRD OUTCOME IS THREADED THOUGH IT IS EMPTY, since the release step names RELEASED, WAITING and STALE, and this loop releases on every tick so nothing can go stale in it today; the stale list is carried out anyway and asserted empty by a test, so that a clock which ever skips breaks the silence with a list rather than with nobody noticing.
+
+ONE LOOP IS CALLED TWO WAYS AND THAT IS A DELIBERATE STEP-ORDER DECISION, because the old survival run keeps its signature and simply delegates to the judged loop and discards the predictions; a test runs both forms over the same start and asserts the traces and the final bodies are the SAME TERM, where writing a second loop would have let the two orders of operation drift apart silently.
+
+WHAT IS HONESTLY NOT CLAIMED ABOUT THE ORDER: the cognitive cycle's own step still calls NONE of the three, and the reachability claimed here runs through the body interface's survival loop from the capstone story, which is the narrowest honest reading of reached from the one running loop; of seven mechanisms built and unwired, THREE are now reached and FOUR are not - the eligibility trace's consumer, the blackboard's rehearsal target, the durable tier and the conflict loop.
+
+WHAT IS DELIBERATELY NOT BUILT IS THE FUSION RULE, because chapter 51.2.1 calls the combination of prediction and delayed evidence formally like a Kalman filter and states no reliability for either side; a comparison is not a fusion, and every step above compares.
+
+THE SIXTH GATE, IN ENGLISH READABLE CODE.
+
+    To check every deferral, given a register and a repository:
+      For each line, recognise an entry ONLY when it begins with its identifier in column one, so the
+        register's own prose about the separator is never read as an instance of the rule it states.
+      Split the line on the separator into identifier, status, subject, stands-probe, lifts-probe and
+        note.
+      Refuse a missing subject or a missing note as MALFORMED, and refuse an empty field rather than
+        letting the splitter swallow it - an absent probe is the word none and never a blank.
+      When the status is unprobeable: require the reason, print the entry on EVERY run, and check
+        nothing further about it.
+      Otherwise run BOTH probes against the repository as it stands now.
+      JUDGE THE PAIR BEFORE JUDGING THE DEFERRAL: if both probes answered the same way, stop and
+        report UNDISCRIMINATING - both succeeding means the pair contradicts itself, both failing means
+        it has rotted and describes nothing, and which way they agreed does not rescue it.
+      Only then judge the status: deferred wants the stands-probe to succeed and the lifts-probe to
+        fail, and is RIPE when the block has lifted while the work is still deferred; taken_up wants
+        the lifts-probe to succeed and the stands-probe to fail, and is BROKEN when the thing that
+        unblocked it is gone.
+      A taken-up entry STAYS in the register and stays probed, so it is a standing regression guard
+        rather than a tombstone.
+
+THE PAIR IS JUDGED BEFORE THE DEFERRAL AND THE ORDER IS THE WHOLE POINT, because a pair that cannot disagree with itself will still hand back a verdict of deferred or taken up if it is asked, and that verdict would be decoration of exactly the kind slice 68 learned to name; checking the instrument before reading it is the only order in which the reading means anything.
+
+THE GATE'S LIMITS ARE STATED ON ITS OWN FACE and none of them are fixed by ordering the steps better: it cannot find a deferral nobody wrote down, since the register is populated by hand and that is the largest residue it carries; it can prove two probes disagree but not that they disagree ABOUT THE RIGHT THING, which only reading the note finds; and an unprobeable entry is checked for nothing but its reason.
+
+THE GATE'S FIRST RUN CAUGHT THE GATE, in two faults recorded as auto-fixes - it read the register's own prose about the separator as three malformed entries, which is a parser that could not tell a rule from an instance of the rule, and it lost an entry's note to an empty field invisible to the field splitter, which is this register's own subject arriving in its own format on its first day; the historical probe then went further and was run against the repository as it stood at the commit of slice 56, the very slice that deferred the efference copy's wiring on the tick claim, and the refutation was already sitting there, so the gate would have turned that deferral red on the day it was written.
