@@ -1,0 +1,1388 @@
+APPENDIX 6. DEMONSTRATION
+
+A6.0 THE PURPOSE OF THIS PHASE
+
+Demonstration is the LAST phase, added by this work to the five of SPARC to give SPARCD, and now the SEVENTH of DSPARCD, which adds Definition at the front. Demonstration's place is unchanged by that addition: the two added phases are bookends, and they mirror each other - Definition opens the pipeline by stating the PROMISE, what this is meant to be, and Demonstration closes it by supplying the PROOF, what it turned out to be able to do. konnectome can now lay konnectome_0_definition beside this file and ask honestly whether the promise was kept.
+
+An ordinary specification may end at Completion, with a working system.
+
+A specification of a mind owes more.
+
+This appendix demonstrates three things: that the System as specified is programming-language-agnostic and data-structure-agnostic, so that anyone may build it in any language on any substrate; that concrete implementations are planned and how they relate; and, with full honesty, what this System might and might not become, including the largest and most consequential question a specification of a cognitive architecture can raise, the question of Artificial General Intelligence.
+
+A6.1 THE FIRST DEMONSTRATION: IT IS PROGRAMMING-LANGUAGE-AGNOSTIC
+
+Read back through Appendices 1 through 5 and notice what is absent: there is no programming language anywhere in them.
+
+The requirements are stated in English.
+
+The logic is stated in English Readable Code.
+
+The architecture is stated as ten components and a tick ordering.
+
+The tests are stated as experiments.
+
+Not one line commits to Python, or to PrologAI, or to any language.
+
+This is not an oversight; it is the demonstration.
+
+The System is a set of rules, and rules are substrate-independent.
+
+The six archetype update rules are arithmetic and comparison.
+
+The drive loop is subtraction and accumulation.
+
+The learning rule is multiplication and a bound.
+
+There is nothing in the entire specification that any general-purpose programming language cannot express.
+
+A builder in Python, in PrologAI, in Rust, in Java, in a spreadsheet, in principle even by hand with pencil and paper for a small enough System, can implement this specification, and if two builders implement it faithfully in two different languages, their Systems will produce the same trajectory from the same seed, because they are running the same rules.
+
+This is why the English Readable Code of Appendix 2 was the right choice for the Pseudocode phase, and it is why substrate independence was made a first-class requirement (NFR-3) rather than left to chance.
+
+The specification is the invariant; the language is the free choice.
+
+A6.2 THE SECOND DEMONSTRATION: IT IS DATA-STRUCTURE-AGNOSTIC
+
+The same is true of the data.
+
+Appendix 3 gave the data model as a set of entities and their fields, a construct with a state, an interface with a weight and a delay, a drive with a set-point, without committing to how those are stored.
+
+They could be objects, records, rows in a table, terms in a logic program, or nodes in a graph.
+
+The System does not care, so long as the fields are present and the update rules can read and write them.
+
+So up to this point, the reader who has followed the specification can build their own digital brain at home, in the language they know and the data structure they prefer, and it will be a faithful realization of this book.
+
+That is the demonstration, and it is deliberate: a science that matters should be reproducible by anyone with patience and a computer, not only by its author.
+
+The barrier to building a cognitive architecture has been, until now, the absence of a complete and buildable specification.
+
+This book removes that barrier.
+
+A6.3 THE PLANNED IMPLEMENTATIONS
+
+While the specification is agnostic, the author has three concrete implementations planned, offered here so that a reader may join, adopt, or learn from them.
+
+They are complementary, not competing: each demonstrates the specification on a different substrate.
+
+THE CAUSALONTOLOGY 2.0.0 DATA LAYER.
+
+The data model of Appendix 3 is, by design, close to a general standard for representing causation called Causalontology, whose repository is at https://github.com/ai-university-aiu/causalontology.
+
+In that standard, the System's constructs are continuants, their tick-by-tick states are token states, the interfaces are conduits, and the records the observer produces are token occurrences and token causal claims.
+
+A change order for the next version of that standard, Causalontology 2.0.0, was written specifically to hold the multi-scale, stateful, causal structure this System requires, and a small reference implementation has already been built and shown to run.
+
+The Causalontology layer is the System's memory and its causal record: the substrate in which the digital brain remembers what happened to it and why.
+
+It is the data-structure demonstration made concrete.
+
+THE PYTHON MINIMUM VIABLE PRODUCT.
+
+A Minimum Viable Product, abbreviated MVP, is the smallest version of a system that demonstrates its core value.
+
+A Python MVP of the System, implementing the tick loop, the six archetypes, the drive loop, and the learning rule of Appendix 2 directly, is planned as the reference realization that a student can read, run, and modify on a personal computer.
+
+Python is chosen for the MVP for its readability and its ubiquity, not because the System requires it.
+
+This MVP is the language demonstration made concrete, and it is the one an implementer will most easily pick up first.
+
+A small proof-of-concept has already been run for the data layer; the full cognitive MVP is the natural next step, deliberately not rushed ahead of the specification that governs it.
+
+THE PROLOGAI IMPLEMENTATION.
+
+PrologAI is a cognitive-architecture programming language and substrate, built on Prolog, in which every reasoning step is a named, inspectable rule and every answer comes with a readable justification.
+
+It is a natural home for this System, because the System's glass-box requirement and PrologAI's justification-tree philosophy are the same commitment, made in different places.
+
+Where the Python MVP demonstrates the System on a conventional imperative substrate, the PrologAI implementation demonstrates it on a symbolic, self-explaining one.
+
+And it carries a second purpose.
+
+This System is a demanding test of PrologAI: if building the System reveals that PrologAI lacks some needed capability, for instance a clean way to close the reentrant loops the brain is full of, then that discovered gap becomes a change order for PrologAI itself, exactly as the System's needs became a change order for Causalontology.
+
+PrologAI remains a living language, and this System is one of the forcing functions that will grow it.
+
+The relationship among the three is simple.
+
+Causalontology is where the System remembers.
+
+Python is where a newcomer first builds it.
+
+PrologAI is where it reasons transparently and where the substrate itself may grow to meet it.
+
+All three realize the one specification, and none is privileged by it.
+
+A6.3a WHAT IT CAN ACTUALLY DO: THE LADDER OF DEMONSTRABLE MILESTONES
+
+The demonstrations above answer a builder's question - can I build this, in my language, on my data structure - and the answer is yes.
+
+But a reader is entitled to a second, blunter question: so what can it actually do, and how would I ever see it doing anything at all?
+
+A map to a distant summit is worth little if it does not also mark the first few steps you can take today and check underfoot.
+
+This section supplies exactly that: a concrete, ordered ladder of milestones, from the smallest sign of life to a body moving in the world, each one a thing you can run and watch, each one earning the right to attempt the next.
+
+The ladder borrows its shape from the one place in the universe where general intelligence is known to assemble itself from parts - the developing human child.
+
+A child does not begin by reasoning about justice or driving a car.
+
+A child begins by noticing that a hidden toy still exists, by reaching and grasping, by babbling before speaking, and only much later by planning, arguing, and empathising.
+
+The Swiss psychologist Jean Piaget named four broad stages in that ascent - the sensorimotor stage from birth to about two years, the preoperational stage from about two to seven, the concrete operational stage from about seven to eleven, and the formal operational stage from about eleven onward - and the young field of developmental robotics, which builds robots that learn in the same infant-to-adult order rather than being programmed complete, has shown that this same staged ladder is a practical engineering plan for a machine, not merely a description of children.
+
+This appendix adopts that plan.
+
+The milestones below are grouped into six rungs, and each rung is a stage a child passes through, translated into a test a System can be made to pass.
+
+A note before the rungs, on the two kinds of test the software world already names, because the ladder uses both.
+
+A smoke test, named for the hardware engineer's practice of powering on a new board and checking that no smoke rises, is the very first and cheapest check: does the thing switch on and run at all without falling over.
+
+A pilot test is a small, real, end-to-end trial of the whole system on a genuine task, run before any full-scale deployment, to see whether the parts work together in the world rather than only on the bench.
+
+Every rung below opens with a smoke test - the cheapest possible sign that the rung is alive - and closes with a pilot test - a small but real end-to-end task that shows the rung genuinely working.
+
+
+RUNG ZERO: THE SMOKE TESTS - IS IT ALIVE AT ALL
+
+Before the System can be said to do anything, it must first simply run, and the smoke tests establish that with the least possible ceremony.
+
+Smoke test one, the heartbeat: start the System with no input and let the tick loop run, and confirm that the clock advances, that every construct holds a state, and that nothing crashes or drifts to infinity.
+
+A System that can idle stably for a million ticks without exploding or freezing has passed its first and most basic sign of life, exactly as a newborn's steady heartbeat is the first thing a delivery room checks.
+
+Smoke test two, the reflex: deliver a single sharp input - a spike on one sensory construct - and confirm that it propagates along the specified interfaces, changes the states it should change, and settles back down.
+
+This is the machine equivalent of the knee-jerk reflex, and it proves that the bus, the scheduler, and the graph are wired and conducting.
+
+Smoke test three, the drive pulse: let one drive fall below its set-point and confirm that the drive loop registers the deficit, raises the corresponding urge, and quiets it again when the deficit is met.
+
+This proves the System has an inside - a state it prefers - which is the seed of everything the higher rungs build on.
+
+The pilot test for Rung Zero is the determinism check already required by the specification: run the System twice from the same seed with the same input, and confirm the two trajectories are identical tick for tick, because a mind you cannot reproduce is a mind you cannot study.
+
+Passing Rung Zero does not make the System intelligent; it makes it a stable, inspectable, reproducible organism ready to learn, which is the sensorimotor infant at the moment of birth.
+
+
+RUNG ONE: THE SENSORIMOTOR STAGE - PERCEIVING, ACTING, AND THE FIRST CONCEPTS
+
+Piaget's sensorimotor stage, birth to about two years, is where a child learns that the world is made of persistent objects, that its own actions cause effects, and that a thing hidden is not a thing gone - the milestone called object permanence.
+
+This is the System's first real rung, and it is where perception is wired in, because until now the System has only received abstract spikes and must now be connected to the actual world.
+
+Here the appendix answers several of the plain questions a reader will have about what the System can take in.
+
+Can it take text input?
+
+Yes, and this is the simplest sensory front-end of all: text arrives as a stream of tokens, each token published onto a language-sensory construct exactly as a retinal spike is published onto a visual one, and the System's job is to let that stream drive its internal state.
+
+Text is the easiest modality to wire because it is already symbolic, and so it is the first sense the System is given.
+
+Can it see objects, or name what is in front of it?
+
+Yes, by a design choice this book makes openly: the System does not need to re-solve the enormous problem of raw vision from scratch, because that problem is already solved well by existing vision models.
+
+A vision-language model - a large neural network, abbreviated VLM, that looks at an image and returns a description in words, such as a cup, on a table, to the left - is used as the System's eye, a sensory organ bolted on at the front.
+
+The VLM converts pixels into named objects and relations, and those named objects are published onto the System's perceptual constructs, so the System perceives a world of things and relationships rather than a wash of colour.
+
+This is precisely how developmental-robotics laboratories now build embodied agents: the heavy perceptual lifting is done by a pre-trained vision model acting as the retina and early visual cortex, and the cognitive architecture reasons over the clean, named output.
+
+The System is glass-box where it matters - in its drives, its learning, its reasoning - and it is free to use an opaque, off-the-shelf organ for the one job, raw sensory transduction, that biology also delegates to specialised, hard-wired hardware.
+
+Can it hear through a microphone?
+
+Yes, by the same strategy applied to sound.
+
+A microphone captures audio, and a speech-to-text model - an automatic speech recognition system, abbreviated ASR, that turns spoken sound into written words - acts as the System's ear and auditory cortex, converting the pressure waves into a token stream that enters exactly where typed text enters.
+
+So the System hears by having a specialised organ transcribe the world's speech into the symbolic input it already knows how to receive, and if a text-to-speech model, abbreviated TTS, is added on the output side, the System can also answer aloud, closing a natural spoken loop.
+
+The smoke test for Rung One is the naming test: place an object in front of the camera and confirm that the correct named object appears on the System's perceptual construct, or speak a word into the microphone and confirm the correct token arrives - the sense organs are connected and reporting.
+
+The central pilot test for Rung One is object permanence, the defining sensorimotor milestone: show the System an object, hide it behind a screen, and confirm that the System's internal representation of the object persists while it is out of view, so that the System is surprised - registers a prediction error - if the screen is lifted and the object is gone.
+
+A System that maintains a hidden object has crossed the threshold every human infant crosses near its first birthday, and it is the first milestone that is unmistakably cognitive rather than merely mechanical.
+
+A second Rung One pilot test is simple cause and effect: let the System discover, through its own reward-gated learning, that one of its actions reliably produces a pleasant change in the world - the machine equivalent of an infant learning that shaking a rattle makes a sound - which demonstrates goal-directed action, the other great sensorimotor achievement.
+
+
+RUNG TWO: THE PREOPERATIONAL STAGE - SYMBOLS, LANGUAGE, AND CHATTING
+
+Piaget's preoperational stage, roughly ages two to seven, is the age of symbols and language: the child now uses words and images to stand for things that are not present, talks, asks endless questions, and pretends.
+
+This rung answers the question many readers ask first: will the System be able to chat, like a chatbot?
+
+The honest answer is yes, but in a way worth being precise about, because it differs from how a chatbot chats.
+
+A conventional chatbot is a large language model that produces fluent replies by predicting likely next words, with no inner state, no goals, and no memory of caring about anything.
+
+The System, at this rung, chats from the inside out: words arrive through the text or speech front-end of Rung One, they change its internal state, that state is shaped by its drives and its memories, and its reply is the outward expression of that changed inner state.
+
+Early in the rung the System's language will be simple, even childlike, because its symbolic machinery is still forming, exactly as a three-year-old's speech is simple - and that simplicity is a feature of an honest developmental account, not a defect to be hidden by bolting a fluent language model over the top.
+
+The smoke test for Rung Two is the single-symbol exchange: give the System a word it has grounded through experience and confirm it can produce that word to refer to the thing, and recognise the word when it hears it - symbol use in both directions.
+
+The pilot test for Rung Two is a short grounded conversation: a back-and-forth exchange, by text or by voice, in which the System's replies are demonstrably driven by its internal state and its history rather than by next-word prediction alone - for instance, it answers differently when a drive is satisfied than when the same drive is in deficit, so that its mood colours its words.
+
+A chatbot that has no inner weather cannot do this; a System with drives can, and that difference is the whole point.
+
+A second Rung Two milestone is pretend, or imagination: using the System's reality-quarantine machinery to run a small imagined scenario - to represent a situation that is not happening and reason within it without confusing it for the real record - which is the preoperational child's leap into symbolic play.
+
+
+RUNG THREE: THE CONCRETE OPERATIONAL STAGE - LOGIC, REASONING, AND RULES
+
+Piaget's concrete operational stage, roughly ages seven to eleven, is where thought becomes logical about concrete things: the child can classify, order, reason about cause and consequence, and grasp that quantities are conserved when their appearance changes.
+
+This rung is where the reader's questions about logic and reasoning tests are answered, and it is a natural strength of this System because its foundation is a causal model of the world.
+
+The smoke test for Rung Three is a single valid inference: give the System two grounded facts from which a third follows - if the block is on the cup and the cup is on the table, then the block is above the table - and confirm it derives the conclusion and can show the steps.
+
+Because the System is transparent, this test also checks something a black box cannot offer: that the reasoning is inspectable, each step a named, watchable operation rather than an opaque leap.
+
+The pilot tests for Rung Three are a graded battery of concrete reasoning trials, each drawn from the developmental literature so that success has a clear human referent.
+
+A classification trial: sort a set of perceived objects into categories the System has formed from experience, and re-sort them by a different property on request, demonstrating flexible categorisation.
+
+A seriation trial: arrange objects in order along a dimension, such as size, demonstrating ordered comparison.
+
+A conservation trial: confirm that the System understands a quantity is unchanged when only its appearance changes - the same water in a taller, thinner glass is still the same amount - which is the concrete-operational child's signature achievement and a direct test of whether the System models the world rather than its mere surface.
+
+A causal-reasoning trial: present a small chain of events and ask the System which event brought about which, using the Causalontology causal record, and confirm it distinguishes a genuine cause from a mere co-occurrence - the very thing the dominant correlational models famously cannot reliably do.
+
+A planning trial: give the System a goal state and a set of available actions, and confirm it can compose a short sequence of actions that reaches the goal, demonstrating means-end reasoning.
+
+Passing this rung shows the System reasoning logically and causally over concrete, grounded situations, with every inference open to inspection, which is exactly the capability the reigning paradigm is weakest at and this architecture is built to be strong at.
+
+
+RUNG FOUR: THE EMOTIONAL AND SOCIAL RUNG - FEELING, AND MODELLING OTHER MINDS
+
+Human development is not only cold cognition; alongside Piaget's ladder runs an emotional and social one, and a specification of a mind that reproduces the brain's drive, affect, and social systems owes an account of how those are demonstrated too.
+
+The reader asks about emotional tests, and the System can be given them because it has, by construction, the machinery of emotion: drives that can be satisfied or thwarted, and neuromodulatory states that colour its whole cognition the way feelings colour ours.
+
+The smoke test for Rung Four is an affective-response check: thwart a drive and confirm the System enters a measurably different global state - a negative affect - that changes how it perceives, learns, and acts, and confirm the opposite state arises when the drive is satisfied.
+
+This shows the System has something it is like to be in - an inner valence - which is the raw material of emotion.
+
+The pilot tests for Rung Four cover both feeling and the reading of others.
+
+An appraisal trial: present a situation and confirm the System appraises it as good or bad for its own goals, producing an appropriate emotional state - fear at a threat to a set-point, something like satisfaction at a met one.
+
+A regulation trial: confirm the System can bring an aroused emotional state back toward baseline over time, demonstrating the beginnings of emotional regulation rather than being permanently captured by every jolt.
+
+A theory-of-mind trial, the great social milestone: confirm that the System can attribute to another agent a mental state different from its own - and, at the harder level, a false belief, the classic test in which a child must predict that a person will look for an object where that person last saw it, not where the child knows it now is.
+
+Modelling another mind, and especially another mind that believes something false, is widely held to be a prerequisite for genuine social intelligence, and it is one of the four data-structure capabilities this program has already identified as a candidate for the next major version of the Causalontology layer, so this rung is also where the architecture's own growth is stress-tested.
+
+An empathy trial, at the top of the rung: confirm that another agent's modelled distress can move the System's own affective state and shape its behaviour toward help, which is the seed of pro-social action.
+
+Passing Rung Four shows a System that not only thinks but feels its situation and reads the situations of others, which is the part of intelligence a purely logical account leaves out and a faithful model of the brain cannot.
+
+
+RUNG FIVE: THE EMBODIED RUNG - A ROBOT BODY, AND ACTING IN THE REAL WORLD
+
+The highest rung on this ladder returns the System to where a child's intelligence is forged: a body, in a world, with real stakes.
+
+The reader asks whether the System will be able to inhabit a robot body and use the robot's sensors, and the answer is that this is not an afterthought but the destination the whole architecture is aimed at, because its cognition is grounded in the regulation of a body state and a body is what closes the loop.
+
+Inhabiting a robot means three connections, each of which the rungs below have already prepared.
+
+The robot's sensors - its cameras, microphones, touch and joint sensors - become the System's senses, feeding the perceptual constructs through the same vision, speech, and touch front-ends that Rung One installed, so the System perceives the robot's world.
+
+The robot's body state - its battery level, its temperature, its balance, its physical integrity - becomes the System's homeostatic state, the set-points its drives defend, so that a low battery is felt as hunger and a risk of falling as something like fear, giving the System real skin in the game.
+
+The robot's actuators - its wheels, arms, grippers, and voice - become the System's means of acting, driven by the same goal-directed, reward-gated machinery that Rung One first exercised on a rattle, so that the System moves its body to meet its needs.
+
+The smoke test for Rung Five is the sense-act loop: confirm that a change the robot's camera sees produces, through the System, a movement of the robot's body - perception in, action out, the loop closed through a real machine.
+
+The pilot tests for Rung Five are graded embodied tasks, each a small, real, end-to-end trial in a body.
+
+A reaching-and-grasping trial: confirm the System can guide the robot's arm to pick up a named object it perceives, the embodied form of the infant milestone of coordinated reaching.
+
+A navigation trial: confirm the System can move the robot toward a goal location while avoiding obstacles, using its persistent model of a world that continues to exist outside the current view - object permanence, now load-bearing.
+
+A homeostatic-survival trial, the one that most fully exercises the whole architecture: place the robot in an environment where it must act to defend its own body state - seeking a charging station as its battery drive falls, avoiding a hazard that threatens its integrity - and confirm it does so of its own accord, because it wants to, which is the difference between a tool that is driven and an agent that is self-driven.
+
+And what about driving a car, the reader's most striking question?
+
+Driving is not a separate magic capability; it is the navigation trial scaled up - a demanding embodied task requiring fast perception, a strong world model, real-time planning, and stakes measured in safety - and so it sits near the very top of this rung, reachable in principle by the same sense-model-plan-act loop that guides the robot arm, but demanding the mature, well-trained, heavily scaled System that the higher camps of the mountain describe, and demanding, above all, the safety discipline that the safety chapters of this work insist upon before any such System is trusted with a life.
+
+This book neither promises a self-driving System tomorrow nor pretends it is out of reach; it places driving exactly where it belongs on the honest ladder - a hard, high, embodied navigation task, continuous with the rungs below it and gated by scale and by safety.
+
+
+HOW THE LADDER MAPS TO THE MOUNTAIN
+
+The ladder of milestones and the map to the summit given later in this appendix are the same climb seen at two scales, and they fit together cleanly.
+
+Rung Zero and Rung One - a stable, reproducing System with its senses wired in, holding a hidden object in mind - are the first camp, the faithful small System of Completion version one, reachable today on a personal computer.
+
+Rungs Two and Three - grounded language, and logical, causal, inspectable reasoning over concrete situations - are the second camp, the scaling of grain and connectivity, needing engineering and moderate compute.
+
+Rungs Four and Five - feeling, modelling other minds, and inhabiting a body with real stakes over long stretches of continuous experience - are the third camp, the scale of experience, where serious compute and a partner join the expedition.
+
+And the general, flexible competence that emerges from a System that has climbed all five rungs, embodied and continuously learning, is the fourth camp: the summit.
+
+Each rung is a thing you can build and watch, each earns the next, and the earliest rungs are reachable now - which is what turns a distant summit into a climb with its boots already on the trail.
+
+The value of stating the milestones this concretely is not only that a partner can see what their compute would buy, but that a skeptic can hold the System to account: here are the exact tests, in order, and here is what passing each one would look like, so that progress can be measured rather than merely asserted.
+
+A cognitive architecture that named no milestones could hide behind its own grandeur; this one names them, from the heartbeat to the moving body, and invites the reader to check each rung underfoot.
+
+
+A6.4 WHY THIS MAY MATTER TO RESEARCHERS AND SCIENTISTS
+
+Beyond the individual builder, the System has value to the working scientist, and the value follows directly from its defining virtue, transparency.
+
+A neuroscientist can use the System as a computational testbed: form a hypothesis about what a region does or how a circuit learns, encode it as a change to the relevant construct, run the affected famous-experiment test, and see whether the hypothesis reproduces the known result or breaks it.
+
+The System turns a theory of a brain region into a runnable, falsifiable claim.
+
+A clinician-researcher can use it to study disease mechanistically: the System already reproduces Parkinsonian freezing from dopamine depletion, and the same method extends to modeling the multi-region cascades of Alzheimer's disease, depression, and epilepsy that the science chapters described, testing candidate interventions in a transparent model before proposing them in a living one.
+
+An artificial-intelligence researcher can use it as a different kind of intelligence to study: a mechanistic, inspectable, biologically grounded architecture, unlike the statistical black boxes that dominate the field, and therefore a source of ideas the dominant paradigm cannot easily reach, about drives, about neuromodulation as global control, about learning gated by reward rather than by gradient descent over labeled data.
+
+This last point is the bridge to the largest question, and the appendix now turns to it, with care.
+
+A6.5 THE AGI QUESTION: THE ARCHITECTURE, THE ROUTE, AND THE WORK AHEAD
+
+Artificial General Intelligence, abbreviated AGI, means an artificial system with the broad, flexible, general competence of a human mind, as opposed to the narrow competence of a system good at one task.
+
+The question this appendix must address, because a specification of a cognitive architecture cannot avoid it, is whether the System, scaled and fed, is a path toward AGI.
+
+The answer this book gives is yes: not a proof of arrival, which no honest engineer offers before the building stands, but a well-founded conviction, grounded in the architecture itself and in a clear-eyed reading of where the dominant paradigm is faltering.
+
+The route is real, the early ground is already under our feet, and the work that remains is engineering and scale rather than mystery.
+
+This section states the case with confidence and states the remaining work with precision, because the two together are what a serious claim looks like.
+
+THE CASE FOR PROMISE.
+
+The System has several properties that the dominant paradigm, the large language model, conspicuously lacks, and that many researchers believe a general intelligence will require.
+
+It has DRIVES.
+
+It wants things, and it evaluates the world by whether its wants are met.
+
+A large language model wants nothing; it predicts the next token.
+
+A system with genuine goals of its own is, in this respect, more like a mind.
+
+It has EMBODIED HOMEOSTASIS.
+
+Its cognition is grounded in the regulation of a body state, which a growing body of thought holds is not incidental to intelligence but constitutive of it.
+
+Meaning, on this view, is grounded in mattering, and things matter to the System because they bear on its set-points.
+
+It LEARNS FROM REWARD AND SURPRISE, continuously, by a local rule gated by neuromodulators, rather than by a massive offline optimization over a fixed dataset.
+
+This is closer to how animals learn, and it does not require the enormous labeled corpora the dominant paradigm consumes.
+
+It is TRANSPARENT.
+
+Every state and every weight is inspectable and tied to a named construct.
+
+If it reasons, one can watch it reason.
+
+This is a property no large language model has, and it is exactly the property their critics most wish they had.
+
+And it is CAUSAL by construction, built to represent and reason over cause and effect through the Causalontology layer, where the dominant models are correlational, capturing what tends to follow what without a model of what brings what about.
+
+Many hold that genuine understanding requires causal models, and this System has one at its foundation.
+
+Where large language models are widely observed to fall short, in genuine understanding, in causal reasoning, in goal-directedness, in transparency, in learning efficiently from little, this System is designed, from first principles, to be strong.
+
+That is the case for promise, and it is decisive: the System is strong in precisely the places the reigning paradigm is weak, and those places are the ones the field increasingly agrees stand between it and general intelligence.
+
+THE WORK THAT REMAINS, STATED WITH EQUAL PRECISION.
+
+Confidence is not the absence of hard work ahead; it is a clear account of exactly what that work is.
+
+Four tasks stand between the System as specified and the System as a general intelligence, and each is a known engineering problem, not an unknown.
+
+GRAIN.
+
+Where the regional grain proves too coarse for a given competence, the construct at issue is refined to finer detail.
+
+The architecture was built for exactly this: any construct can be internally deepened without touching the scheduler, the bus, or the graph.
+
+Grain is a dial the builder turns where the work demands it, not a wall.
+
+ARCHETYPES. Where a construct's behaviour exceeds the six update rules, the archetype set is extended, in the same disciplined way the science itself was extended when the evidence required it. The six cover the brain as we understand it today; the seventh, if a construct earns it, is added, and the method for adding it is already in place.
+
+SCALE AND COMPUTE.
+
+The architecture is designed to reward scale, because it learns continuously from experience rather than saturating on a fixed corpus, and because its modular grain parallelizes cleanly across as much compute as it is given.
+
+What it has not yet had is the compute, for the plain reason that its author is one person.
+
+This is not a doubt about the architecture; it is a resource this book is written to attract.
+
+Given serious compute, the System scales, and scaling it is the next step, not a leap of faith.
+
+EMERGENCE.
+
+General competence will emerge from the scaled, embodied, continuously learning System because the System is built out of the very components from which it emerges in nature: drives that make things matter, a body whose regulation grounds meaning, reward-gated learning that compounds with experience, and a causal model of the world.
+
+Assemble the parts that produce a mind, supply them with a world and the time to learn it, and mind is what they produce.
+
+That is not a hope pinned to luck; it is the working hypothesis of the entire science of the brain, and this System is the first complete, transparent, buildable test of it.
+
+So the answer is yes, held as a serious researcher holds a yes before the result is in: with the architecture in hand, the route mapped, the early ground taken, and the remaining work named and tractable.
+
+THE MAP TO THE TOP OF THE MOUNTAIN.
+
+The path is coherent, each camp follows from the last, and the early camps are already reached, which is more than can be said for any other map to that summit.
+
+The first camp is the faithful small System of Completion, version one: buildable now, on a personal computer, reproducing the landmark experiments.
+
+This is reached, today.
+
+The second camp is scale of grain and connectivity: refining the constructs toward finer detail where it matters, and enriching the connectome toward the density the real brain has.
+
+This needs engineering and moderate compute, both in reach.
+
+The third camp is scale of experience: connecting the System to rich, continuous, embodied input, a simulated or real body in a simulated or real world, and letting its reward-gated learning run over very long durations.
+
+This is where serious compute and a serious budget do the work, and where a partner joins the climb.
+
+The fourth camp is the emergence of general, flexible competence from the scaled, embodied, continuously learning System.
+
+This is the summit, and the route to it is continuous with the camps below: no gap, no miracle, no missing mechanism, only scale, embodiment, and time applied to an architecture already proven in the small.
+
+The summit is in sight from the ground we already hold.
+
+THE PARTNERSHIP THAT TAKES IT TO THE TOP.
+
+The author is one independent, open-source researcher, and this book is a demonstration of what one such person can specify: a complete, transparent, buildable cognitive architecture, grounded in neuroscience, carried through a full engineering specification, and given away.
+
+The higher camps, the scale of experience and the arrival at the summit, are a matter of compute and budget, and they call for a partner.
+
+This appendix is that invitation, stated plainly and without hedging: the architecture is sound, the route is mapped, the early camps are taken, and what the climb needs now is scale.
+
+A partner with serious compute and a serious budget joins not a gamble but a well-founded expedition with its base camps already established.
+
+The specification is complete and free.
+
+Bring the scale, and we reach the top.
+
+A6.6 REFLECTION, AND THE CLOSE OF THE SPECIFICATION
+
+The Demonstration phase exists because a specification of a mind carries an obligation an ordinary specification does not: to say, at the end, exactly what has been built and exactly what the path forward is.
+
+What has been built, and given away, is a complete, transparent, language-agnostic, data-structure-agnostic specification of the human cognitive architecture at the regional grain, buildable at home by anyone, reproducing landmark neuroscience from first principles, with three concrete implementations planned and one already proven in the small.
+
+That is real, and it is finished.
+
+What lies ahead is the scaling of this architecture, embodied and fed, into a general intelligence.
+
+That is not a hope pinned to luck but a route, mapped camp by camp, with its early camps already reached and its remaining work named and tractable: refine the grain where needed, extend the archetypes where earned, supply the scale, and let experience compound.
+
+The summit is continuous with the ground we already hold.
+
+This is the discipline the whole book has kept, from the first chapter's care to separate what the brain is from what we set out to build, through the science chapters' habit of marking every modeling choice as a choice, to the change order's refusal to pretend a commitment was a fact.
+
+That same discipline is what lets this specification end in confidence rather than in caution: it has earned its claim by building the early camps in full view, and it names precisely what the climb still requires.
+
+A framework that overclaimed would be worth little; a framework that underclaimed what it has plainly achieved would be worth no more.
+
+This one states exactly what it is, and what it is is the first buildable route to the summit.
+
+The map is drawn.
+
+The early camps are reached.
+
+The summit is in sight.
+
+Let us go forth to the peak: AGI.
+
+END OF THE SPECIFICATION
+
+END OF NATURE'S COGNITIVE ARCHITECTURE, VERSION 20
+
+
+KONNECTOME REALIZATION LOG
+
+Slice 1 - the heartbeat - 2026-07-20 - pack tick_engine, version 0.1.0.
+
+Ladder rung 1, the heartbeat - a stable, reproducing tick loop that keeps time - is demonstrated by the clock_keeps_time and run_is_reproducible tests. Rung 2 (senses, and holding a hidden object in mind, where each tick record becomes a Causalontology token_occurrence via the reused causal_core pack) is the next slice.
+
+Gates at this slice: 7 of 7 tick_engine Prolog Unit (PLUnit) tests pass; the naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited; konnectome reuses them through the library path.
+
+This log grows one entry per code slice, per the Tenth Commandment. The full DSPARCD Fileset (the SPARCD Fileset until the Constitution's version 8) was bumped in lockstep from version 1 to version 2, and the version 1 files were archived under docs/archive/ in the same change, per the Ninth Commandment.
+
+
+KONNECTOME REALIZATION LOG - SLICE 2
+
+Slice 2 - the six archetype rules and the first Causalontology thought - 2026-07-20 - packs archetype (0.1.0) and observer (0.1.0).
+
+Ladder rung 2 advances: konnectome now holds its first durable thought - each tick recorded as a Causalontology token_occurrence - and carries the six archetype rules that give constructs their dynamics. Wiring the archetypes into the scheduler through the connection graph (Component 3) is the next slice.
+
+Gates at this slice: archetype 7 of 7 and observer 6 of 6 Prolog Unit (PLUnit) tests pass; naming, layer, and layer-binding gates report zero violations; the Causalontology 119-vector conformance suite passes 119 of 119. Nothing in PrologAI or Causalontology was edited; konnectome reuses causal_core through the library path.
+
+
+KONNECTOME REALIZATION LOG - SLICE 3
+
+Slice 3 - the connection graph - 2026-07-20 - pack connection_graph (0.1.0).
+
+Constructs now feed one another tick to tick across the connection graph, and the signal front advances one hop per tick. Full multi-tick delay lines, and wiring every archetype through the graph, continue in later slices.
+
+Gates at this slice: connection_graph 4 of 4 Prolog Unit (PLUnit) tests pass (tick_engine 7, archetype 7, observer 6 unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited; connection_graph reuses the archetype pack.
+
+
+KONNECTOME REALIZATION LOG - SLICE 4
+
+Slice 4 - the reward loop - 2026-07-20 - packs neuromodulator_bus (0.1.0) and drive_system (0.1.0).
+
+konnectome now has the origin of motivation: drives that want their set-points, a reward that is the total relief of that wanting, and dopamine that carries the reward to the rest of the mind. The action selector (Component 6) that acts on it is a later slice.
+
+Gates at this slice: neuromodulator_bus 4 of 4 and drive_system 5 of 5 Prolog Unit (PLUnit) tests pass (the earlier four packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 5
+
+Slice 5 - the action selector - 2026-07-20 - pack action_selector (0.1.0).
+
+konnectome can now act: it weighs competing urges and releases exactly one, biased by what its drives most need, and it never invents an urge of its own. The override controller (Component 7) and the plasticity engine (Component 8) are later slices.
+
+Gates at this slice: action_selector 6 of 6 Prolog Unit (PLUnit) tests pass (the earlier six packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 6
+
+Slice 6 - the plasticity engine - 2026-07-20 - pack plasticity_engine (0.1.0).
+
+The loop of the mind is closed: konnectome wants (drives), acts (the action selector), is rewarded (dopamine), and now learns (the plasticity engine strengthens the connections that earned the reward). Homeostatic scaling and the eligibility trace are later refinements.
+
+Gates at this slice: plasticity_engine 5 of 5 Prolog Unit (PLUnit) tests pass (the earlier seven packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 7
+
+Slice 7 - completing the architecture - 2026-07-20 - packs override_controller (0.1.0) and perturbation_interface (0.1.0).
+
+The ten-component architecture of the manuscript now stands in konnectome: a scheduler, a connection graph, a bus, drives, an action selector, an override controller, a plasticity engine, an observer, a perturbation interface, and a construct registry. The mind can keep time, want, act, be overridden by what is vital, learn, and be experimented upon - all as a glass box.
+
+Gates at this slice: override_controller 4 of 4 and perturbation_interface 4 of 4 Prolog Unit (PLUnit) tests pass (the earlier eight packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 8
+
+Slice 8 - one running tick - 2026-07-20 - pack cognitive_cycle (0.1.0).
+
+The loop of the mind runs as one system: konnectome wants, updates, acts under its safety override, learns, and records each tick as a Causalontology thought - reproducibly, and as a glass box. The next mountain is the developmental ladder: senses, language, and reasoning.
+
+Gates at this slice: cognitive_cycle 4 of 4 Prolog Unit (PLUnit) tests pass (the earlier ten packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 9
+
+Slice 9 - hardening the loop - 2026-07-20 - packs connection_graph (0.2.0), drive_system (0.2.0), cognitive_cycle (0.2.0).
+
+konnectome now closes the loop on its own body: it wants, proposes what would help, acts with its gain set by its own chemistry, learns from the result, and moves its body toward what it needs - and the body's improvement feeds back as the next reward. The three honest non-closures of slice 8 are closed.
+
+Gates at this slice: connection_graph 6 of 6, drive_system 9 of 9, and cognitive_cycle 4 of 4 Prolog Unit (PLUnit) tests pass (the other eight packs unchanged); naming, layer, and layer-binding gates report zero violations. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 10
+
+Slice 10 - thought combination - 2026-07-20 - pack thought_combination (0.1.0).
+
+konnectome can now combine thoughts: it mints a reified, content-addressed cause-and-effect relation from input thoughts, links them into chains and trees of thought, and does so without touching the frozen ontology - the substrate reasoning will stand on.
+
+Gates at this slice: thought_combination 7 of 7 Prolog Unit (PLUnit) tests pass (the earlier eleven packs unchanged); naming, layer, and layer-binding gates report zero violations; the Causalontology 119-vector conformance passes 119 of 119. Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 11
+
+Slice 11 - other minds and prediction, the wall-finding build - 2026-07-22 - packs other_minds (0.1.0) and prediction_loop (0.1.0).
+
+Two rungs of the ladder become demonstrable at runtime. Rung Four, the emotional and social rung: konnectome attributes to Sally a belief different from its own - a FALSE belief - and predicts that Sally searches the basket where she last saw the marble, not the box where it now is, and it nests that model (konnectome models Sally believing the basket). Rung One, the sensorimotor rung: konnectome expects an object behind a screen and registers a signed SURPRISE - a prediction error - when the screen lifts and the object is gone. Both trials run and pass. But the demonstration is honest about the ceiling this slice found: konnectome can privately hold the false belief and privately feel the surprise, yet it cannot yet SHARE either as a Causalontology record another mind could read, because the frozen 3.0.0 substrate has no kind for a belief or a prediction. Those two walls are routed to the change order, whose release as Causalontology 4.0.0 is what lifts the ceiling.
+
+Gates at this slice: other_minds 8 of 8 and prediction_loop 10 of 10 Prolog Unit (PLUnit) tests pass (the earlier twelve packs unchanged, 69 tests); naming, layer, and layer-binding gates report zero violations; the Causalontology 119-vector conformance suite is untouched and green. Two walls were hit, recorded as Wall-1 and Wall-2, and ROUTED to the Causalontology change order (Sections B and A). Nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 12
+
+Slice 12 - the closure: minting the new kinds - 2026-07-22 - packs other_minds (0.2.0) and prediction_loop (0.2.0).
+
+The story that slice 11 left at a cliffhanger now finishes. At slice 11 konnectome could privately attribute to Sally a FALSE belief - predicting she searches the basket where she last saw the marble, not the box where it now is - and even nest that model, and it could privately feel a signed SURPRISE when the object-permanence screen lifted on nothing; but it could SHARE neither, because the frozen 3.0.0 substrate had no kind for a belief or a prediction. Slice 12 lifts that ceiling. Causalontology 4.0.0 shipped the three missing kinds, and konnectome now writes the belief out as a shareable ATTITUDE record another mind can read - true, false, and nested alike, the false one living quietly beside the world's own contrary record without poisoning it - and writes the surprise out as a PREDICTED_OCCURRENCE paired with a real outcome into a PREDICTION_ERROR record. And the demonstration this slice is proudest of is the wall lifecycle itself, shown end to end: a wall was HIT by building (the eighteen kinds had no belief and no prediction), RECORDED honestly in the ledger, ROUTED to exactly one destination, RELEASED as Causalontology 4.0.0 with the owner's written go-ahead, and EXECUTED as the two export packs - and when the closure met one more wall of its own (the language library had not yet caught up to the new standard, so the kinds could not be minted), that third wall was routed to the PrologAI change order and CLOSED the same day by causal_core 1.1.0. Three walls hit, three walls closed, nothing smuggled and no cousin edited in place: the method demonstrating itself.
+
+Gates at this slice: other_minds 10 of 10 and prediction_loop 16 of 16 Prolog Unit (PLUnit) tests pass (the earlier twelve packs unchanged); naming, layer, and layer-binding gates report zero violations; the Causalontology conformance suite is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. Wall-1, Wall-2, and Wall-3 are CLOSED. Causalontology and PrologAI were extended through their own gated change orders, never edited directly.
+
+
+KONNECTOME REALIZATION LOG - SLICE 13
+
+Slice 13 - the provenance layer: the mind grades and, when wrong, disowns its own thoughts - 2026-07-26 - pack self_provenance (0.1.0).
+
+This appendix asks what the System is, what it is not, and what it might become, and it reads the developmental ladder as the map toward general intelligence. Provenance is a rung on that map that the roadmap names as a prerequisite for TRUSTWORTHY general intelligence: a mind that can state how sure it is, ground its confidence in graded evidence, and correct itself on the record when the world proves it wrong. Slice 13 demonstrates konnectome doing exactly this over the milestones the previous slices reached. It asserts the attributed belief of the false-belief trial (the social milestone, Rung Four) on observation evidence, distinguishing the modelled agent who HOLDS the belief from konnectome the SOURCE who vouches for the attribution. It asserts its object-permanence forecast (the predictive milestone, Rung One) on simulation evidence - honestly ranking a model-based forecast below a direct observation - and, when the screen lifts and the object is gone, it RETRACTS that forecast, the honest exit; when the object is present, it SUPERSEDES the forecast to the stronger observation grade. This is the glass-box thesis carried to the metacognitive rung: not only can an observer watch the mind think, the observer can watch the mind grade its own thoughts and disown them when they fail, all as shareable, content-addressed records rather than a private change of heart.
+
+What is honestly NOT yet demonstrated, and is recorded as such: the cryptographic signature that would let a third party VERIFY, not merely read, konnectome's assertions. That signature needs a private key, a secret this System's own rules bar from its code, so it is a deployment-time act; the demonstration shows the graded, self-corrected records the mind produces, and leaves the signing to the key-holder who runs the mind. The System claims the metacognitive capability it built and does not claim the cryptographic authentication it deferred - the discipline of claiming only what is shown.
+
+Gates at this slice: self_provenance 17 of 17 Prolog Unit (PLUnit) tests pass (the earlier fourteen packs unchanged, 95 tests; 112 in total); naming, layer, and layer-binding gates report zero violations; the Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; the slice-12 honest non-closure is CLOSED. Nothing in PrologAI or Causalontology was edited; self_provenance reuses causal_core through the library path.
+
+
+KONNECTOME REALIZATION LOG - SLICE 14
+
+Slice 14 - the capstone: the mind runs, and its own records tell the story - 2026-07-26 - pack capstone_demonstration (0.1.0), and the first runnable entry point, bin/run_capstone_demonstration.sh.
+
+This slice is this appendix made runnable. The Demonstration phase has, until now, lived in prose - each Realization Log entry telling what its slice showed - while the showing itself stayed scattered across fifteen test suites. The capstone gathers it: one script boots the mind and walks the ladder in rung order, exactly as Section A6.3a's discipline demands, and the order is not a stylistic choice but a TESTED property - the suite asserts that Rung Zero's narration precedes Rung One's, Rung One's precedes Rung Four's, and the provenance layer closes the telling. Rung Zero is shown as a lived heartbeat: ten ticks of reward, dopamine, one released action each tick, and an observer record per tick, ending with the body at its defended set-point and the interface weight grown by the three-factor rule. Rung One is shown twice, kindly and cruelly: the same forecast confirmed (signed error zero) and surprised (signed error minus one), because a demonstration of prediction that never shows the surprise is only half a demonstration. The combined thought is shown as a chain whose linkage is checkable from the records alone. Rung Four is shown as the false belief held in quarantine beside the world's contrary record, nested one level, exported as a shareable attitude. And the provenance layer closes the story with the mind standing behind, upgrading, and - in the cruel world - disowning its own stances. The demonstration's deepest claim is reproducibility: the story told twice is the same story, and a reader can re-mint any identifier it prints. What is honestly not demonstrated is printed by the demonstration itself: Rungs Two, Three, and Five, and the deployment signature - the claim-only-what-is-shown discipline, now enforced by the artifact rather than merely promised beside it.
+
+Gates at this slice: capstone_demonstration 20 of 20 Prolog Unit (PLUnit) tests pass (the earlier fifteen packs unchanged, 112 tests; 132 in total); naming, layer, and layer-binding gates report zero violations; the Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins, re-measured this slice. No new wall was hit and no new honest non-closure was recorded; the slice-13 deployment-signature non-closure stands, and the story itself narrates it. Nothing in PrologAI or Causalontology was edited; the capstone reads its siblings through the library path.
+
+
+KONNECTOME REALIZATION LOG - SLICE 15
+
+Slice 15 - Rung Two begins: words grounded in lived experience, and pretend under quarantine - 2026-07-26 - packs symbol_exchange (0.1.0) and pretend_play (0.1.0).
+
+Rung Two of this appendix's ladder is now OPEN, and what is demonstrable is exactly what the rung's smoke test and pilot discriminator name. Demonstrable today: give the mind the word warm - a word grounded in a deficit it actually lived, tick by tick, through the same world the capstone boots - and it recognises the word as naming that deficit, the hearing itself leaving a trace in the reused word bank; ask it for the word for its current condition and it produces warm or settled from its own drive state; and ask it the same question in two worlds and its mood colours its words - the too-warm mind answers warm, settled (what I am, what I seek) and the settled mind answers settled, a two-word childlike difference that is the entire point, because a stateless chatbot cannot produce it. Demonstrable alongside: the mind pretends - a beating sun carrying its settled body back to too warm, a path it never lived - reasons within the pretence, and the pretence never touches the observed record; promoting pretend into expectation is a deliberate act, and promoting it into the observed record is refused outright. What this appendix records as NOT demonstrated, in its claim-only-what-is-shown discipline: the full pilot conversation is not yet held, the capstone story does not yet narrate Rung Two (its honest-limits section still lists the rung, and stays truthful until a bumped capstone joins these milestones into the telling), and no cryptographic signature authenticates any of it - the deployment boundary stands. The rung is opened the way the ladder orders rungs opened: smoke first, honestly, with the pilot's core property proven and the pilot's full breadth still ahead.
+
+Gates at this slice: symbol_exchange 18 of 18 and pretend_play 12 of 12 Prolog Unit (PLUnit) tests pass (the earlier sixteen packs unchanged, 132 tests; 162 in total); naming, layer, and layer-binding gates report zero violations; the Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; the Section C watch was kept and its result is recorded in the ledger: the per-claim machinery sufficed, no world-level sharing need arose, and Section C remains held. Nothing in PrologAI or Causalontology was edited; the rung reuses the language and imagination packs through the library path, exactly as other_minds reuses theory_of_mind.
+
+
+KONNECTOME REALIZATION LOG - SLICE 16
+
+Slice 16 - Rung Four deepens: the social-pain test and the empathy trial - 2026-07-26 - pack empathy (0.1.0).
+
+This appendix's Rung Four asked for feeling and the reading of others, and after this slice both of its chosen trials are demonstrable as runnable fact. Demonstrable today: sever the mind's belonging and watch the social-pain finding reproduce itself in miniature - the same error predicate that registers a too-warm body registers the rejection, the same step turns it into a reward of minus one, the same bus broadcasts it as dopamine - so the striking claim of the social neuroscience the book cites, that a broken heart and a broken arm share circuitry, is not narrated but computed, twice, and shown equal. Demonstrable alongside: the empathy trial at the top of the rung. Model Ana in distress and the mind FEELS it - its own belonging falls, its own error rises - and, given a mildly pressing physical need and Ana in full distress, the selection flips: the mind that would have tended its own temperature releases the helping action instead, and helping restores connection for both. The trial's honesty is structural: the help is proposed by the drives and released by the selector, never invented; and breath still overrides everything, because a mind that could empathize itself out of breathing would be broken, not kind. The attribution is owned on the record: Ana FEARS her connection severed - an attitude of the standard's own enumeration, deterministically minted - asserted at observation grade, and, when Ana proves fine, retracted, the honest exit now exercised over a SOCIAL record. Not demonstrated, and said so: the appraisal and regulation pilots, and the capstone story does not yet tell this rung's deepening - the claim-only-what-is-shown discipline holds.
+
+Gates at this slice: empathy 17 of 17, drive_system 10 of 10, and symbol_exchange 19 of 19 Prolog Unit (PLUnit) tests pass (the other sixteen packs unchanged; 181 in total), the counts carrying two review-born fixes and one paid debt: drive_system (0.3.0) now caps the homeostatic step at its set-point, so a fractional distance settles exactly and help can never overshoot into harm - pinned by its own regression test; naming, layer, and layer-binding gates report zero violations; the Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; the remaining ascent of the rung (the appraisal and regulation pilots, and the capstone joining the new milestones into its telling) is recorded as pending, not hidden. Nothing in PrologAI or Causalontology was edited; empathy reads its siblings through the library path.
+
+
+KONNECTOME REALIZATION LOG - SLICE 17
+
+Slice 17 - the reality-discipline gate: the rule made checkable - 2026-07-26 - bin/check_reality_discipline.sh (no pack version moved).
+
+What is demonstrable this slice is a rule holding. Run bin/check_reality_discipline.sh and watch the build prove, in one command, that the only doorway between pretence and the observed record is the guarded one - and if a doubter wants the stronger demonstration, add the forbidden line anywhere outside pretend_play and watch the gate name it and refuse. The review debt of slice 15 is now fully paid, and paid in the method's own coin: one mark (the silently failing malformed drive term) was closed by slice 16 with a named refusal and a permanent test; the other (the wrapper-only promotion refusal) is closed by this slice with a standing gate, proven able to fail before it was trusted to pass. The claim-only-what-is-shown discipline gains its sharpest form yet: every textual road to the crossing - predicate name, module qualifier, import - is now a property of every merge the repository will ever accept, and the one residue no text betrays, a call constructed entirely at runtime, is named in the ledger for exactly what it is.
+
+Gates at this slice: no pack changed and no test count moved - the suite stands at one hundred eighty-one Prolog Unit (PLUnit) tests across nineteen packs, all green. The naming, layer, and layer-binding gates report zero violations, and they are joined by a fourth: the new reality-discipline gate (bin/check_reality_discipline.sh) reports zero violations, and was proven able to fail - a deliberate violation was injected, caught, and removed before its first clean run was accepted. The Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited - the imagination pack remains exactly as reused, and the discipline that fences it is konnectome's own.
+
+
+KONNECTOME REALIZATION LOG - SLICE 18
+
+Slice 18 - the capstone speaks and feels: Rung Two's first words and Rung Four's deepening join the one runnable story - 2026-07-26 - pack capstone_demonstration (0.2.0).
+
+What a reader can now run and watch is the same single command, telling a longer and truer story. Run bin/run_capstone_demonstration.sh and, past the heartbeat and the regulated body and the object-permanence forecast the earlier capstone already showed, the mind now speaks: it says warm because it lived too-warm, and a moment later, settled, because it reached its set-point - and asked the same question in each state it answers with different words, so a reader hears the inner weather change. It then pretends, imagining a sun that carries its settled body back to too-warm inside the sealed imagination reality, and a reader watches the attempt to smuggle that pretence into the observed record refused by name. Further down, the mind is rejected and a reader sees belonging break with the identical error, step, and minus-one reward that a broken body would show, the two pains printed side by side as equal; and when another agent's distress is modelled, a reader watches the mind's own belonging fall, the selection flip from self-tending to a released help, the help land belonging exactly at its set-point, and breath still take precedence over kindness when both press at once. The story closes, as it always has, on the list of what it does NOT show - and the reader who ran slice 14's version will notice the one difference that matters most: Rung Two has left that list. Because every printed line is checked by an independent test that re-runs the siblings and re-mints the identifiers, and because the whole story is deterministic to the byte, a skeptic can run it twice and get the same words - the demonstration is an experiment, not a performance.
+
+Gates at this slice: capstone_demonstration thirty-six of thirty-six Prolog Unit (PLUnit) tests pass (the other eighteen packs unchanged, one hundred sixty-one tests; one hundred ninety-seven in total across nineteen packs, all green); the naming, layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited - the capstone reads its siblings through the library path.
+
+
+KONNECTOME REALIZATION LOG - SLICE 19
+
+Slice 19 - Rung Four finished: the appraisal and regulation pilots - 2026-07-26 - packs situation_appraisal (0.1.0) and arousal_regulation (0.1.0).
+
+A reader can now load the two packs across the library path and watch Rung Four's last two behaviours run. Drive one of the mind's set-points into violation and ask situation_appraisal for its verdict, and the record answers with a threat the mind fears, owned as an attitude of the standard's closed enumeration and stamped with self_provenance at observation; let the same drive be met or improving and ask again, and the verdict turns to good, something the mind desires; correct the world once more and the earlier appraisal is retracted under Rule 10 before your eyes. Set the norepinephrine level on the neuromodulatory bus above its tonic baseline and step arousal_regulation tick by tick, and you can watch each tick close a fixed half of the remaining distance, the level march monotonically down toward rest, and, within a hair of baseline, settle exactly at baseline with no overshoot. The twelve tests in each pack can be run to see every one of these claims checked, and the whole repository's two hundred twenty-one tests to see the rung finished with nothing else disturbed.
+
+Gates at this slice: situation_appraisal twelve of twelve and arousal_regulation twelve of twelve Prolog Unit (PLUnit) tests pass (the earlier nineteen packs unchanged; two hundred twenty-one in total across twenty-one packs, all green); the four standing gates - naming, layer, layer-binding, and reality-discipline - report zero violations; the Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins; no new wall was hit; and no cousin was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 20
+
+Slice 20 - the pilots' review debts paid: appraisal's rounding boundary and regulation's finiteness - 2026-07-26 - packs situation_appraisal (0.1.1) and arousal_regulation (0.1.1).
+
+Slice 20 pays the review debt slice 19 left on the record. The independent adversarial review of the appraisal and regulation pilots, run after they merged, confirmed three findings, and each is now fixed at its root and pinned by a permanent test. First, the appraisal pilot's change reader compared a difference of two independently-rounded set-point errors against exact zero, so two situations equidistant on opposite sides of a set-point - a mathematically neutral change - were read as a good or bad turn on a rounding residue near one part in ten thousand trillion, and, worse, minted as an owned attitude the neutral case is meant to refuse; a rounding-noise band now absorbs that residue, so an equidistant float change reads neutral and is correctly refused before it can become a false record. Second, the regulation pilot accepted a non-finite arousal level, and an infinite level never shrinks toward baseline, so the return would never terminate; the single gatekeeper now requires a finite level and refuses infinity by name. Third, the regulation pilot's whole-number tick rule had no test for its fractional-count refusal; it has one now. No demonstrated behaviour changed - every earlier claim still holds number for number, and every prior test still passes - and the two pilot packs move to patch version 0.1.1. The lesson the method keeps: a finding confirmed by an adversarial review is fixed at its root and pinned, even when the defect is latent - here reachable only by a fractional body value or a hand-built infinity that no ordinary run produces.
+
+Gates at this slice: situation_appraisal fourteen of fourteen and arousal_regulation fourteen of fourteen Prolog Unit (PLUnit) tests pass (the four new tests pin the three confirmed findings; the other nineteen packs unchanged; two hundred twenty-five in total across twenty-one packs, all green); the naming, layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite is untouched and green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 21
+
+Slice 21 - Rung Three opened: the concrete-reasoning trials - 2026-07-26 - packs concrete_operations (0.1.0) and cause_and_effect (0.1.0).
+
+HOW A READER WATCHES THIS SLICE. Both packs are watched the way every konnectome faculty is watched - by running their tests and reading what the tests assert, since the assertions ARE the demonstration:
+
+    bin/run_pack_tests.sh concrete_operations
+    bin/run_pack_tests.sh cause_and_effect
+
+THE SMOKE TEST, WATCHED. The clearest thing to look at first is the test named block_above_table_is_derived_with_steps_shown. It asks the mind to derive that a block resting on a cup resting on a table stands above the table, and it does not check the conclusion alone - it checks the WHOLE derivation, step by step, against an exact expected list: the block rests on the cup, so the block is above the cup (a step named resting_is_above); the cup rests on the table, so the cup is above the table (the same named step); and those two facts join to conclude the block is above the table (a step named transitive_chain). A reader can see the mind's entire reasoning as data, with nothing hidden between premise and conclusion. A companion test walks every step of a longer derivation and asserts that each one carries a name and the facts it consumed - so the "every step is a named, watchable operation" claim is enforced by test, not merely stated in a comment.
+
+THE CAUSAL TRIAL, WATCHED. Read direct_cause_is_found_with_its_record_as_reason and then co_occurrence_without_a_record_is_not_causation side by side. In the first, the sun shines and the stone warms, a causal record links them, and the mind answers "genuine cause" - giving that record's own identifier as its reason. In the second, the rooster crows and the sun rises, with no record between them, and the mind answers "co-occurrence only". The pair is the whole trial in two tests: the mind's answer changes because the EVIDENCE changed, not because the events changed. Then read forged_causal_record_is_refused, where a dictionary shaped exactly like a causal record, carrying real events but an invented identifier, is refused by name - the mind will not accept a look-alike as proof.
+
+THE PLANNING TRIAL, WATCHED. multi_step_plan_chains_means_to_end takes a bare camp to a fed camp through gathering wood, lighting the fire, and cooking the meal, and asserts the exact three-step sequence with each step's from-state and to-state. shortest_plan_is_chosen puts a one-step ferry beside a two-step bridge detour and asserts the ferry wins. goal_already_reached_plans_nothing asserts the empty plan when there is nothing to do - the honest answer, not a busy one.
+
+THE REFUSALS, WATCHED. Roughly a third of the fifty-one tests watch the mind REFUSE something: a support cycle, a malformed fact, an object with no value on the sorting property, an object whose value is unbound, a collection that is not a list, a negative addition, a removal larger than what is present, an unknown transformation, a forged record, an unbound start state, a plan step with no justification. Each refusal is a named error, and each named error has a test that watches it fire. A reader who wants to know what this mind will NOT do can read those tests alone.
+
+WHAT IS NOT YET DEMONSTRATED, AND SAID SO. The one runnable capstone story (bin/run_capstone_demonstration.sh) does not yet narrate Rung Three - this slice's trials live in the test suites, where the evidence is rigorous but visible only to a reader who runs a harness. That is recorded as this slice's own open edge, in the same words earlier slices used when they owed the story a chapter. The capstone's printed honest-limits list still names Rung Three, correctly, and will until the rung's two deferred halves are built and the story is taught to tell it.
+
+Gates at this slice: concrete_operations twenty-six of twenty-six and cause_and_effect twenty-five of twenty-five Prolog Unit (PLUnit) tests pass (the earlier twenty-one packs unchanged; two hundred seventy-six in total across twenty-three packs, all green); the naming, layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 22
+
+Slice 22 - Rung Three finished in its trials: the two deferred halves built - 2026-08-07 - packs category_formation (0.1.0) and quantity_model (0.1.0).
+
+HOW A READER WATCHES THIS SLICE. Both packs are watched the way every konnectome faculty is watched - by running their tests and reading what the tests assert, since the assertions ARE the demonstration:
+
+    bin/run_pack_tests.sh category_formation
+    bin/run_pack_tests.sh quantity_model
+
+THE FORMED CATEGORIES, WATCHED. Start with categories_are_formed_from_experience: four experiences - a red round fruit, another red round fruit, a blue round toy, a blue square toy - go in, and two categories come out, each named, each carrying the defining core its members share and the members that earned it. Nothing handed the mind those categories; the test asserts the exact induced pair. Then defining_core_is_truly_shared verifies the claim independently, walking the raw experiences and confirming every member carries every core pair - the test does not trust the wrapper's own answer. Then resort_by_a_different_property_on_request re-sorts the same four objects by shape and asserts a DIFFERENT partition - the round group mixes a fruit and a toy - which is the book's flexible categorisation, demonstrated on one collection.
+
+THE TALLER, THINNER GLASS, WATCHED. the_taller_thinner_glass_conserves is the book's own example told literally: five units of water in a short wide glass, poured into a tall thin one; the appearance is asserted to have really changed, and the verdict is asserted conserved at five - because measurement counted the same five units on both sides. a_pour_carries_every_unit shows WHY: the identical unit list, one by one.
+
+THE LOSSY POUR, WATCHED - THE CENTRAL TEST. a_lossy_pour_is_judged_by_the_model_not_the_name is the single test that separates modelling the world from matching its surface. A transformation that CALLS itself a pour spills one unit on the way to the taller glass. Its name looks appearance-only; the world lost a unit; the verdict is asserted changed, five to four. The closed name-list of slice 21 would have been fooled here - this test is the receipt that the model is not.
+
+THE OWNED RECORDS, WATCHED. conservation_stance_is_graded_derivation runs the record predicate, which enacts the pour trial ITSELF, then independently re-runs the same trial and asserts the record's content is the measured verdict byte for byte - the record cannot say what the trial did not measure. record_refuses_what_the_trial_refuses and record_refuses_what_learning_refuses watch the enactment's own refusals guard the record path.
+
+THE REFUSALS, WATCHED. Over a third of the fifty-five tests watch a refusal fire by name: an unsorted or empty hand-built core, the reserved sentinel name, a doubled category identifier, a doubled experience name, a doubled property key, a doubled unit name, a half-built appearance, an unbound transformation, a negative spill, a lossy pour that lost nothing, a removal larger than what is present. Each named error has the test that watches it.
+
+WHAT IS NOT YET DEMONSTRATED, AND SAID SO. The one runnable capstone story does not yet narrate Rung Three - the finished trials live in the test suites. The capstone's printed honest-limits list still names Rung Three, correctly, and will until the story is taught to tell it.
+
+Gates at this slice: category_formation twenty-six of twenty-six and quantity_model twenty-nine of twenty-nine Prolog Unit (PLUnit) tests pass, and concrete_operations' twenty-six stay green under its re-sized header (the earlier packs otherwise unchanged; three hundred thirty-one in total across twenty-five packs, all green); the naming, layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 23
+
+Slice 23 - The story learns its owed chapters: Rung Three told, and Rung Four finished in the telling - 2026-08-07 - pack capstone_demonstration (0.3.0).
+
+HOW A READER WATCHES THIS SLICE. This slice IS the watching. One command boots the mind and prints the whole grown story:
+
+    bin/run_capstone_demonstration.sh
+
+THE REASONING CHAPTER, WATCHED. After the first words and before the false belief, the story now prints RUNG THREE - THE CONCRETE REASONING, EVERY STEP SHOWN. The derivation appears as three printed steps naming what each consumed and produced; the formed categories appear with their defining cores and members and the plain sentence that nobody handed them down; the yellow pencil is exiled outside every category by name; the shape re-sort crosses the formed partition in one line; the pour conserves at five WITH ITS REASON - the model re-counts the same five units - and the lossy pour is judged changed five to four with the name-versus-world moral said aloud; the sun-and-stone cause cites its record identifier while the rooster and the sunrise stay co-occurrence only; and the camp plan chains its three justified steps. Every one of those sentences sits below a strict live check in the chapter's own code: if any reused engine ever answers differently, the story refuses to print rather than lie.
+
+THE FINISHING CHAPTER, WATCHED. Between the empathy trial and the provenance layer, RUNG FOUR, FINISHED - THE APPRAISAL AND THE REGULATION prints the threat at distance three owned as a FEARS attitude with its minted identifier, the satisfaction owned as a DESIRE to keep with the enumeration's missing word declared (ledger Observation-4, told to the reader, not hidden in a file), the good and bad turns of two degrees each, the threat's withdrawal when the body cools on its own, and the alarm falling one to one half to rest, EXACTLY at baseline, in eight ticks.
+
+THE SHRUNKEN DISCLAIMER, WATCHED. The epilogue now names one rung: Rung Five (embodiment) is not yet demonstrated - the guiding book's own text asks for a real machine - and this story does not claim it. The unsigned-records declaration and the closing promise - nothing above is claimed that a reader cannot re-mint, re-run, and check - stand unchanged.
+
+Gates at this slice: capstone_demonstration forty-four of forty-four Prolog Unit (PLUnit) tests pass (the earlier packs unchanged; three hundred thirty-nine in total across twenty-five packs, all green); the naming, layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 24
+
+Slice 24 - Rung Five opened as groundwork: the body interface, and the sense-act loop through the honestly-named simulated body, the rung itself not claimed - 2026-08-07 - packs simulated_body (0.1.0) and body_interface (0.1.0).
+
+HOW A READER WATCHES THIS SLICE. The groundwork is watched the way every faculty is watched - by running the suites and reading what they assert:
+
+    bin/run_pack_tests.sh simulated_body
+    bin/run_pack_tests.sh body_interface
+
+THE SMOKE LOOP, WATCHED. Read the_sense_act_loop_closes_through_the_simulated_body. The world shows the camera an obstacle; one pass of the loop runs sense, drive step, proposal, selection, command, enactment; and the test asserts three things in order: the mind released the steering action, the actuator log carries the movement - the body really moved - and the camera reads clear again, because the movement changed what the machine will see next. Perception in, action out, the loop closed - through the honestly-named stand-in, as groundwork, with the rung not claimed in the test's own comment.
+
+THE SURVIVAL GROUNDWORK, WATCHED. Read the_mind_defends_its_own_battery_of_its_own_accord. Four ticks of draining life come back as an exact trace: the battery falls to three quarters and the mind holds still, because a mild hunger is not yet pressing; it falls to one half and the mind recharges to full, because now it presses; and the rhythm repeats. Nothing outside the mind commands the recharge - the drive proposes it, the selector releases it, the actuator enacts it. The companion test extends the same rhythm to six ticks unchanged.
+
+THE HONESTY, WATCHED. Read forged_record_cannot_be_stanced_as_observed and foreign_record_cannot_borrow_the_loop_stance: a hand-built look-alike and a tampered designator are both refused by name before the observation grade is granted. Read at_a_tie_the_drives_outrank_the_reflexes: the one tie in the seam, made deliberate and pinned. And read the capstone's own suite, untouched this slice: the story still disclaims embodiment with the book's real-machine reason - the groundwork changed what the REPOSITORY can do, and changed nothing about what the STORY claims, which is exactly the boundary between groundwork and a rung.
+
+Gates at this slice: simulated_body sixteen of sixteen and body_interface twenty-one of twenty-one Prolog Unit (PLUnit) tests pass (the earlier packs unchanged; three hundred seventy-six in total across twenty-seven packs, all green); the naming, layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 25
+
+Slice 25 - The story learns the body seam: Rung Five's groundwork told, and the rung not claimed - 2026-08-07 - pack capstone_demonstration (0.4.0).
+
+HOW A READER WATCHES THIS SLICE. This slice IS the watching. One command boots the mind and prints the whole grown story:
+
+    bin/run_capstone_demonstration.sh
+
+THE SEAM CHAPTER, WATCHED. Between RUNG FOUR, FINISHED and THE PROVENANCE LAYER the story now prints THE BODY SEAM - RUNG FIVE'S GROUNDWORK, TOLD AND NOT CLAIMED. It opens with the refusal - there is no real machine here, and this chapter does not pretend one - and then tells what can be told honestly: the obstacle surfacing as the mind's percept unchanged; the closed pass that releases the steering reflex, moves the body, and leaves the camera reading clear - acting changed what the machine will see next; the hunger identity, error 0.5 equalling error 0.5 through the one predicate every pain passes through; the survival rhythm - hold at 0.75, recharge OF ITS OWN ACCORD at the pressing 0.5, again and again, with nothing outside the mind commanding the act; the deliberate tie where a starving battery outranks a seen obstacle; the loop record minted by ENACTING the pass with its identifier printed; and the observation-graded stance granted only after the record proved it was genuinely minted. The chapter closes the way it opened: the rung is NOT claimed - reaching, navigation, and true survival wait for a machine that is real.
+
+THE EPILOGUE, WATCHED. The honest-limits list still names Rung Five with the book's real-machine reason, byte for byte, and now adds the boundary aloud: the body-seam chapter above is that rung's GROUNDWORK - and groundwork is not the rung: this story does not promote it.
+
+Gates at this slice: capstone_demonstration fifty-two of fifty-two Prolog Unit (PLUnit) tests pass (the earlier packs unchanged; three hundred eighty-four in total across twenty-seven packs, all green); the naming, layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 26
+
+Slice 26 - The naming gate learns to see: the unprefixed-helper hole closed, and the hand-hunt retired - 2026-08-07 - tooling bin/check_pack_naming.sh, with a committed fixture and a self-test.
+
+HOW A READER WATCHES THIS SLICE. Two commands, both self-reporting:
+
+    bin/check_pack_naming.sh
+    bin/check_pack_naming.sh --self-test
+
+THE GATE, WATCHED. The first command scans all twenty-seven packs under the six checks and reports zero violations. The second is the demonstration that matters: it runs the same gate against the committed fixture pack - a module whose one deliberate flaw is an unprefixed helper bearing no known terse stem, the exact shape slice 22 proved invisible - and prints SELF-TEST PASS only because the gate now catches that helper by name. A reader who wants to see the gate fail can open tests/naming_gate_fixture/unprefixed_helper_fixture/prolog/unprefixed_helper_fixture.pl, read the violation and its comment declaring itself deliberate, and run the fixture scan directly with PACKS_ROOT=tests/naming_gate_fixture.
+
+Gates at this slice: the extended naming gate reports zero violations across all twenty-seven packs AND passes its own self-test - the committed fixture's unprefixed helper is caught by name; the layer, layer-binding, and reality-discipline gates report zero violations; three hundred eighty-four Prolog Unit (PLUnit) tests across twenty-seven packs, all green and unchanged by this slice; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 27
+
+Slice 27 - The delay lines: the connectome learns to keep a signal in transit - 2026-08-07 - pack connection_graph (grown).
+
+HOW A READER WATCHES THIS SLICE. One command:
+
+    bin/run_pack_tests.sh connection_graph
+
+THE PROPAGATION, WATCHED. The test named chained_delays_arrive_at_the_summed_tick is the book's own TEST OF PROPAGATION made runnable: a chain whose first hop takes two ticks and whose second takes three, with the far target asserted silent at ticks one, two, three, and four, and carrying the signal at tick five - after exactly the number of ticks the delays dictate, and nowhere sooner. A reader who wants to see the refusals can read the four tests that expect thrown errors by name: the zero-tick delay, the negative delay on a computational interface, the unknown construct kind, and the ghost source - each a lie the graph now answers aloud instead of absorbing in silence.
+
+Gates at this slice: connection_graph seventeen of seventeen Prolog Unit (PLUnit) tests pass (the earlier packs unchanged; three hundred ninety-five in total across twenty-seven packs, all green); the naming gate reports zero violations across all twenty-seven packs and passes its own self-test; the layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 28
+
+Slice 28 - The eligibility trace: a reward one tick late still finds the connection that earned it - 2026-08-07 - pack plasticity_engine (grown).
+
+HOW A READER WATCHES THIS SLICE. One command:
+
+    bin/run_pack_tests.sh plasticity_engine
+
+THE BRIDGE, WATCHED. The test named a_reward_one_tick_late_still_strengthens_the_weight is the manuscript's acceptance for Section A2.6 made runnable: both ends of a connection fire together at tick one; at tick two they are silent and the trace has faded to nine tenths; the reward arrives only then - and the weight still grows, by exactly the faded trace times the dopamine times the learning rate, to fifty-nine hundredths. Its companion, the_trace_fades_without_coincidence, shows the other half of the bargain: withhold the reward and the memory decays geometrically, nine tenths, then eighty-one hundredths, toward silence. A reader who wants to see the refusals can read the nine tests that expect thrown errors by name: the fading factor at one and below zero, the ghost trace and the orphan trace, the unbound and the unknown kind, the malformed interface at both steps, and the duplicated interface and trace key - each a lie the learning rule now answers aloud instead of absorbing in silence.
+
+Gates at this slice: plasticity_engine twenty-four of twenty-four Prolog Unit (PLUnit) tests pass (the earlier packs unchanged; four hundred fourteen in total across twenty-seven packs, all green); the naming gate reports zero violations across all twenty-seven packs and passes its own self-test; the layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 29
+
+Slice 29 - Homeostatic scaling: the bound that keeps the learning from exploding - 2026-08-07 - pack plasticity_engine (grown).
+
+HOW A READER WATCHES THIS SLICE. One command:
+
+    bin/run_pack_tests.sh plasticity_engine
+
+THE BOUND, WATCHED. The test named homeostatic_scaling_bounds_a_relentlessly_rewarded_weight is the manuscript's stability promise made runnable, and it is built as a worst case on purpose: for fifty ticks, both ends of a connection fire at maximum while the bus carries full dopamine every single tick - the learning rule alone would drive the weight in an unbounded climb past five - and the slow bound, scaling the overactive receiver's inputs down every tick, holds the weight at a finite fixed point just below one and nine tenths. Its companions show the mechanism plainly: an overactive region's input weight shrinks, an underactive region's grows, a region exactly at its target does not move, and a factor that would go negative floors at zero - silenced, never sign-flipped. A reader who wants to see the refusals can read the fourteen tests that expect thrown errors by name: the smoothing factors that would freeze or overshoot, the scaling rates that would overcorrect or amplify, the negative target, the ghost average, the malformed interface, the malformed and duplicate store entries at every step and constructor, and the unbound store - each a lie the governor now answers aloud instead of absorbing in silence.
+
+Gates at this slice: plasticity_engine forty-eight of forty-eight Prolog Unit (PLUnit) tests pass (the earlier packs unchanged; four hundred thirty-eight in total across twenty-seven packs, all green); the naming gate reports zero violations across all twenty-seven packs and passes its own self-test; the layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 30
+
+Slice 30 - Per-territory neuromodulators: the field learns local concentrations, and delayed time learns the bus - 2026-08-07 - packs neuromodulator_bus and connection_graph (grown).
+
+HOW A READER WATCHES THIS SLICE. Two commands:
+
+    bin/run_pack_tests.sh neuromodulator_bus
+    bin/run_pack_tests.sh connection_graph
+
+THE LOCAL FIELD, WATCHED. The test named a_modulated_relay_reads_its_own_territory_level is the picture: one source feeds two identical bus-modulated relays; dopamine stands at four tenths everywhere but at nine tenths in one relay's own territory; one tick later the favoured relay carries nine tenths and its twin carries the diffuse four tenths - one molecule, two concentrations, exactly as FR-6 specifies. The test named a_delayed_signal_is_modulated_at_delivery shows when chemistry acts: a signal spends a tick in transit under silent dopamine and arrives just as the level rises - and it is the risen level that gains it, because a synapse is modulated by the chemistry of the moment of arrival, not of departure. The identity test all_delays_one_makes_the_delayed_modulated_step_the_modulated_step pins that nothing old moved. A reader who wants the refusals can read the seven tests that expect thrown errors by name: the unknown kind and the ghost source in delayed modulated time, and the unbound or compound modulator and territory names the bus now refuses at every door.
+
+Gates at this slice: neuromodulator_bus fourteen of fourteen and connection_graph twenty-four of twenty-four Prolog Unit (PLUnit) tests pass (the earlier packs unchanged; four hundred fifty-five in total across twenty-seven packs, all green); the naming gate reports zero violations across all twenty-seven packs and passes its own self-test; the layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 31
+
+Slice 31 - The per-territory third factor: each connection learns by the chemistry of the place the signal arrives - 2026-08-07 - pack plasticity_engine (grown at its root).
+
+HOW A READER WATCHES THIS SLICE. One command:
+
+    bin/run_pack_tests.sh plasticity_engine
+
+THE GEOGRAPHY OF REWARD, WATCHED. The test named a_territory_without_a_level_learns_by_the_diffuse_field is the picture: one sender feeds two identical connections, dopamine stands at one everywhere but at a quarter in one receiver's own territory; one learning tick later the unmarked receiver's weight grew by the full diffuse field and the marked receiver's by its own quarter - one reward, two lessons, sized by local chemistry. The test named a_silent_territory_does_not_learn_under_a_global_reward shows the sharp edge of locality: a territory explicitly silenced at zero does not learn at all, however loud the global broadcast - the local level wins, it does not blend. The reward-step twin a_silent_territory_spends_its_trace_into_nothing shows the same law at the delayed moment: however strong the eligibility trace, a silenced territory spends it into nothing. A reader who wants the refusals can read the five tests that expect thrown errors by name: the compound receiving name refused by the bus's guard at both steps, and the three review pins that gave the live step the perimeter its siblings always had - the malformed term, the unbound kind, and the duplicate interface, each refused aloud instead of silently mislearned.
+
+Gates at this slice: plasticity_engine fifty-eight of fifty-eight Prolog Unit (PLUnit) tests pass (the earlier packs unchanged; four hundred sixty-five in total across twenty-seven packs, all green); the naming gate reports zero violations across all twenty-seven packs and passes its own self-test; the layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 32
+
+Slice 32 - The live tick carries the whole learning body: traces, averages, and the slow bound beat in the loop - 2026-08-08 - pack cognitive_cycle (grown; the boot worlds of capstone_demonstration and symbol_exchange grown to carry the stores).
+
+HOW A READER WATCHES THIS SLICE. One command:
+
+    bin/run_pack_tests.sh cognitive_cycle
+
+THE LEARNING BODY, WATCHED BEATING. The test named the_live_tick_advances_the_trace_store is the heartbeat made visible: boot the small world, run two ticks, and the one trace that began at zero carries a positive fading fingerprint of the coincidence the loop itself produced. The test named the_live_tick_moves_the_running_averages shows the slow clock: three ticks in, the steady source's average has climbed above zero and has not overshot one. The pair named scaling_at_rest_leaves_the_weights_to_learning_alone and a_live_scaling_rate_bends_the_weights is the before-and-after picture: at rate zero an absurd target changes nothing, and at a live rate the quiet relay's incoming weight is pulled above what learning alone gave it. A reader who wants the refusals can read the three tests that expect thrown errors by name: the gutted world refused key by key through a_world_missing_a_learning_store_is_refused_aloud, and the two review pins that gave the run its perimeter - the negative and the non-integer tick count, each refused aloud instead of silently failed.
+
+Gates at this slice: cognitive_cycle eleven of eleven Prolog Unit (PLUnit) tests pass, and the grown boot worlds of capstone_demonstration (fifty-two of fifty-two) and symbol_exchange (nineteen of nineteen) re-swept green (the earlier packs unchanged; four hundred seventy-two in total across twenty-seven packs, all green); the naming gate reports zero violations across all twenty-seven packs and passes its own self-test; the layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 33
+
+Slice 33 - The per-territory scaling target: each region defends the activity level its own territory owes - 2026-08-08 - pack plasticity_engine (grown at its root; cognitive_cycle grown to read the geography; the boot worlds of capstone_demonstration and symbol_exchange grown to carry it).
+
+HOW A READER WATCHES THIS SLICE. Two commands:
+
+    bin/run_pack_tests.sh plasticity_engine
+    bin/run_pack_tests.sh cognitive_cycle
+
+THE GEOGRAPHY OF SET-POINTS, WATCHED. The test named a_region_with_its_own_target_is_scaled_toward_it is the picture: one connection into a region whose geography says defend zero while the world says defend a half - the weight shrinks by the LOCAL law, to seventy-two hundredths where the global law would have left seventy-six. The test named a_region_without_its_own_target_defends_the_global shows both laws in one graph: the unmarked region scaled by the global target while its marked neighbour, sitting exactly at its own, is not scaled at all. The identity a reader should trust most is an_empty_target_store_is_the_exact_global_behaviour: the old step and the new step under an empty geography, term for term the same answer. In the live loop, a_territory_target_bends_its_own_region is the twin-run: two worlds differing only in one region's own target, four ticks each, and the marked region's incoming weight pulled harder toward its higher set-point. A reader who wants the refusals can read the nine tests that expect thrown errors by name: the malformed pair, the duplicate key, the negative target, the unbound store, and the five review pins that taught the four constant checks to refuse the unbound as uninstantiated instead of under a domain wrong carrying a variable no reader could name.
+
+Gates at this slice: plasticity_engine seventy of seventy Prolog Unit (PLUnit) tests pass and cognitive_cycle thirteen of thirteen, with the grown boot worlds of capstone_demonstration (fifty-two of fifty-two) and symbol_exchange (nineteen of nineteen) re-swept green (the earlier packs unchanged; four hundred eighty-six in total across twenty-seven packs, all green); the naming gate reports zero violations across all twenty-seven packs and passes its own self-test; the layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 34
+
+Slice 34 - The bound turned live in the told story: the capstone world carries a live rate and a small geography, and the story tells the bound's work beside a rest twin - 2026-08-09 - pack capstone_demonstration (grown; no other pack changed).
+
+HOW A READER WATCHES THIS SLICE. Two commands:
+
+    bin/run_pack_tests.sh capstone_demonstration
+    bin/run_capstone_demonstration.sh
+
+THE BOUND'S WORK, TOLD IN THE STORY ITSELF. This slice's demonstration is the capstone's own Rung Zero chapter: the boot lines now say the slow homeostatic bound runs LIVE - the diffuse mark at one half, the relay b defending its own mark of eight tenths, the slow rate at five hundredths - and the closing lines tell three facts the run must earn before it may say them: the temperature at its defended thirty-seven, the live weight grown from one half by the fast rule and pulled further by the bound, and the rest twin - the same ticks re-lived with the bound at rest - landing visibly lower, the difference claimed as the bound's own work and checkable by re-running both worlds. The test named live_bound_pulls_weight_above_rest_twin is the same claim outside the narration; live_bound_leaves_regulation_untouched is the untouched-regulation law at the six-tick minimum; story_tells_at_the_minimum_count_with_the_live_bound proves the telling holds at the least count the gate accepts. A reader who wants the refusals can read the two review pins: the unbound tick count refused as uninstantiated instead of under a wrong carrying a variable no reader could name, and the bound-but-wrong count still refused by its own name.
+
+Gates at this slice: capstone_demonstration sixty of sixty Prolog Unit (PLUnit) tests pass (the earlier packs unchanged; four hundred ninety-four in total across twenty-seven packs, all green); the naming gate reports zero violations across all twenty-seven packs and passes its own self-test; the layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 35
+
+Slice 35 - The two-shift switchboard laid: the global operating state rides the bus, online by default, and nothing yet reads it - 2026-08-09 - pack neuromodulator_bus (grown; no other pack changed).
+
+HOW A READER WATCHES THIS SLICE. One command:
+
+    bin/run_pack_tests.sh neuromodulator_bus
+
+THE SWITCH, SHOWN BEFORE IT IS THROWN. This slice's demonstration is deliberately quiet: a fresh bus answers online without ever being told, the test named a_fresh_bus_operates_online; an announced offline reads back and a newer announcement replaces it, the flip-flop's newest-wins discipline; the test a_halfway_state_is_refused_by_name shows the snap - a drowsy value thrown out by the state's own name, because the corpus's switch spends no time between its two positions; and the two untouched tests show the state and the chemical field riding the same bus without disturbing one another. A reader who wants the perimeter can read the three review pins: the unbound state refused as uninstantiated, the state's own key shape refused at the modulator broadcast so the third key shape can never alias, and - the review's one REAL finding, fixed and pinned - the unbound bus refused at the state read instead of being silently bound around an invented state. The capstone story does not change by a word: nothing yet reads the state, and that pinned silence is the demonstration.
+
+Gates at this slice: neuromodulator_bus twenty-three of twenty-three Prolog Unit (PLUnit) tests pass (the earlier packs unchanged; five hundred three in total across twenty-seven packs, all green); the naming gate reports zero violations across all twenty-seven packs and passes its own self-test; the layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 36
+
+Slice 36 - The reward learns its address: the tick spends the eligibility traces the drives reward, and capture consumes the spent tags - 2026-08-09 - packs plasticity_engine and cognitive_cycle (grown; no other pack changed).
+
+HOW A READER WATCHES THIS SLICE. Two commands:
+
+    bin/run_pack_tests.sh plasticity_engine
+    bin/run_pack_tests.sh cognitive_cycle
+
+THE REWARD FINDING ITS ADDRESS. The engine-level tests show the law in miniature: capture_spends_the_trace_into_the_weight_and_consumes_the_tag is the whole dossier in one name, and a_zero_territory_over_a_live_global_keeps_its_tag shows the geography holding - a territory whose own chemistry says nothing shipped keeps its tag even under a live global field. The loop-level tests are twin-world tellings, so each claim is a difference the wiring alone can make: two worlds identical but for one standing trace diverge in weight the moment the first reward arrives (the tag was spent), yet their trace stores come out identical (the histories were consumed), and two worlds whose body already rests at its set-point never diverge at all (no reward, no shipment, the tag left to fade on its own clock). A reader who wants the perimeter can read the four review pins: the unbound weight, learning rate, and tag each refused aloud on the rewardless path the review caught being judged too gently, and the punishment path pinned - a negative third factor spends the tag downward and consumes it. The capstone story runs unchanged through the rewired tick, its sixty tests untouched: the story's rewards were already real, and now they pay their own histories.
+
+Gates at this slice: plasticity_engine eighty-two of eighty-two and cognitive_cycle sixteen of sixteen Prolog Unit (PLUnit) tests pass (the earlier packs unchanged; five hundred eighteen in total across twenty-seven packs, all green); the naming gate reports zero violations across all twenty-seven packs and passes its own self-test; the layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 37
+
+Slice 37 - The night watchman takes the post: the two-process governor rides the live tick and throws the slice-35 switch, its first legitimate thrower - 2026-08-09 - pack two_process_governor (new) and pack cognitive_cycle (grown; the fixture worlds of symbol_exchange and capstone_demonstration seat the watchman; no behaviour elsewhere changed).
+
+HOW A READER WATCHES THIS SLICE. Two commands:
+
+    bin/run_pack_tests.sh two_process_governor
+    bin/run_pack_tests.sh cognitive_cycle
+
+THE WATCHMAN AT HIS POST. The engine-level tests tell the corpus's day in miniature: default_governor_lives_a_consolidated_day walks the default parameters thirty ticks, feeding each selection back, and counts exactly two transitions - one fall into night around the eighteenth tick, one morning eight ticks later, the corpus's sixteen-and-eight lived at one tick per hour, and the snap proven by the COUNT, because a chattering switch would transition more. day_wave_opposes_the_same_debt is Chapter 15's cleanest law made a twin telling: the same debt that flips a night-silenced twin offline is held online by the day wave standing against it - alertness high exactly when the debt is greatest. hysteresis_band_holds_the_current_state shows Chapter 13's stabiliser: the same numbers, two answers, one memory. The loop-level tests show the throwing: a fast-flipping watchman seated in the fixture world throws the slice-35 switch in the live tick - the first legitimate thrower throwing - while the_thrown_switch_moves_no_other_world_piece runs default and fast twins four ticks and proves every store the tick owns comes out identical, the thrown switch alone differing. A reader who wants the perimeter can read the review pin - an unbound day length refused as uninstantiated, never as a domain refusal carrying the hole - and the honesty pin beside it. The capstone story does not change by a word: its boot world seats the default watchman, whose sixteen-point threshold stands far beyond the ten-tick heartbeat, so the whole told story runs online and the slice-34 closing guards stand exactly as pinned. The story will first CHANGE when the offline works arrive - and now there is a watchman to decide when.
+
+Gates at this slice: two_process_governor twenty of twenty, cognitive_cycle twenty-one of twenty-one, symbol_exchange nineteen of nineteen, and capstone_demonstration sixty of sixty Prolog Unit (PLUnit) tests pass (the earlier packs unchanged; five hundred forty-three in total across twenty-eight packs, all green); the naming gate reports zero violations across all twenty-eight packs and passes its own self-test; the layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 38
+
+Slice 38 - The night crew takes the dark hours: the tick reads the switch the watchman throws, and the offline works run - interleaved replay against catastrophic forgetting, and the renormalisation shift - 2026-08-09 - pack offline_consolidation (new), pack cognitive_cycle (grown), and pack neuromodulator_bus (one additive export); the fixture worlds of cognitive_cycle, symbol_exchange, and capstone_demonstration seat the three new keys, and the online day is behaviour-pinned identical.
+
+HOW A READER WATCHES THIS SLICE. Two commands:
+
+    bin/run_pack_tests.sh offline_consolidation
+    bin/run_pack_tests.sh cognitive_cycle
+
+THE NIGHT CREW AT WORK. The test a reader should open first is interleaved_replay_defeats_catastrophic_forgetting, because it is the corpus's flagship claim run as a controlled experiment rather than asserted. One cortex, two learnable edges - an old one the mind knew at strength one, a new one it learned today at a tenth - and two twins given the same ten nights under the same raised renormalising bound, differing in one thing only: WHAT the night replays. The forgetful twin replays today's memories alone, and keeps barely a third of the old edge. The interleaved twin replays old against new, alternating, and keeps nearly two thirds - well over half again as much - while both twins install the new edge above where it started. Read the assertions closely: both twins END BELOW the old edge's starting strength, because the raised bound washes everything each night, and the claim is comparative - interleaving DEFENDS what it refreshes. That is the honest telling, and it replaced a stronger-looking one that the review proved was an artifact of a defect.
+
+Beside it, night_step_replays_first_then_renormalises pins the mechanism by arithmetic a reversed order could not produce: a weight of one replayed to 1.1 and then scaled by 0.9 lands on 0.99, not on the reverse order's answer. the_replay_dose_does_not_grow_with_the_memory_store is the pin a future tuner must not break - the same pattern remembered four times over moves the weight exactly as remembering it once does - and an_unreplayed_edge_is_renormalised_downward shows the bound actually bounding.
+
+At the loop level, the_night_crew_takes_the_post_and_morning_comes runs the fixture world thirty ticks under the DEFAULT watchman and reads the day off the summaries: ticks one through eighteen release actions, ticks NINETEEN THROUGH TWENTY-SIX report offline_works and exactly those eight, and tick twenty-seven releases an action again. The corpus's sixteen-and-eight day, lived by the whole mind rather than by the governor alone. the_body_lies_still_and_the_night_does_not_encode shows the closed sensory gate - the body unmoved and the memory store not growing through an offline tick - and the_thrown_switch_governs_exactly_the_next_tick shows the timing law: two twins identical in every world piece up to the flip, and diverging into day and night on the very next tick. A reader who wants the perimeter can read eleven review pins, among them a_well_formed_tick_has_exactly_one_solution, which exists because the review found a tick that had two.
+
+The capstone story does not change by a word: its ten-tick heartbeat still ends nine ticks before the default watchman's first flip, so the slice-34 closing guards stand exactly as pinned - and a reader who wants to watch the mind sleep need only run the capstone longer than seventeen ticks.
+
+Gates at this slice: offline_consolidation twenty-seven of twenty-seven and cognitive_cycle thirty-four of thirty-four Prolog Unit (PLUnit) tests pass, with neuromodulator_bus twenty-three of twenty-three, symbol_exchange nineteen of nineteen, and capstone_demonstration sixty of sixty unchanged through the reseated worlds (the earlier packs unchanged; FIVE HUNDRED EIGHTY-THREE in total across twenty-nine packs, all green); the naming gate reports zero violations across all twenty-nine packs and passes its own self-test; the layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 39
+
+Slice 39 - Every construct becomes a hybrid automaton: the register of one, stated proudly - 2026-08-09 - pack mode_register (new), packs connection_graph and tick_engine (rewired so every construct's rule is read THROUGH its own register); no world dict key added, no number changed, and the engines pinned behaviour-identical against a main worktree for every well-formed construct kind.
+
+HOW A READER WATCHES THIS SLICE. Three commands:
+
+    bin/run_pack_tests.sh mode_register
+    bin/run_pack_tests.sh connection_graph
+    bin/run_pack_tests.sh tick_engine
+
+WHAT TO OPEN FIRST. Read packs/mode_register/prolog/mode_register.pl from the top: the commented block above the code is the formalism itself, written out in the corpus's own vocabulary, and it names the two fields konnectome deliberately does not yet carry. Then open the test named a_register_of_one_is_first_class, because it is the whole slice in six lines - a construct with exactly one mode, and a register that reports its size as one and calls that an answer rather than an absence.
+
+THE TEST THAT IS THE PROMISE. the_transfer_of_the_current_mode_is_the_construct_kind_itself walks all six construct kinds konnectome runs - the free-running clock, the committed copy, the held value, the clamped input, the tonic relay and the modulated tonic relay - and asserts that the rule read back out of each register is the very kind that went in. That is the bit-identical claim stated as a law rather than as a hope, and it is why no number moved. Beside it, every_construct_mode_carries_a_coined_name_and_a_gloss checks the corpus's own three-field entry format on every one of them, including that the coined name begins with "the", which is the template's own house style: the Metronome, the Echo, the Kept Reading, the Clamped Window, the Faithful Relay, the Listening Relay.
+
+THE TEST THAT PROTECTS THE ENGINES. an_unregistered_kind_has_no_register and the_rule_resolver_passes_an_unregistered_kind_through are a pair, and they exist to keep the authority where it belongs. A kind konnectome does not run has no register and the lookup FAILS rather than inventing one; the resolver then hands that kind to the engine untouched, so the engine's own refusal fires exactly as it did before and names exactly what the caller wrote. Run bin/run_pack_tests.sh connection_graph to see the older refusal tests still standing green beside them.
+
+AND THE ONE A CRITIC SHOULD OPEN. the_rule_resolver_refuses_an_unbound_kind is three lines long and it is the only place this slice changes what konnectome does. Before it, a construct whose kind was left unbound was answered by the tick engine running all three of its rules and committing three contradictory entries for one construct; now it is refused at the door. A reader who wants to watch that for themselves can check out main into a worktree and run one tick over one construct with an unbound kind, then run the same thing here.
+
+The capstone story does not change by a word, and this time that is the headline rather than a footnote: it was diffed byte-for-byte against a main worktree, every content-addressed record identifier included, and beside it a hundred-and-fourteen-line engine probe covering forty heartbeat runs, fifty-two graph runs plain and delay-honouring, twenty bus-modulated steps and both refusal terms was run in both trees and found identical to the last digit.
+
+Gates at this slice: mode_register forty of forty Prolog Unit (PLUnit) tests pass at birth, with connection_graph grown from twenty-four to twenty-six and tick_engine from seven to eight (the earlier packs unchanged; SIX HUNDRED TWENTY-SIX in total across THIRTY packs, all green); the naming gate reports zero violations across all thirty packs and passes its own self-test; the layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 40
+
+Slice 40 - The gate archetype re-expressed as its genuine two-mode register - 2026-08-09 - pack archetype (the gate given a register of TWO, per-mode transfer functions that really differ from each other, and an explicit transition table carrying trigger, direction, timescale and agency); no world dict key added, no number changed, and every well-formed gate answer pinned byte-identical against a main worktree.
+
+HOW A READER WATCHES THIS SLICE. One command:
+
+    bin/run_pack_tests.sh archetype
+
+WHAT TO OPEN FIRST. Read the commented block above the gate's register in packs/archetype/prolog/archetype.pl. It states, in the corpus's own vocabulary, what the four blocks are for this construct, and it declares the one place konnectome's gate and the corpus's latch differ before a reader can discover the difference and mistake it for a claim.
+
+THE TEST THAT IS THE SLICE IN FIVE LINES. gate_modes_carry_different_transfer_functions reads the rule that holds while the gate is open and the rule that holds while it is closed and asserts they are not the same rule. That single assertion is what a register of one could not make, and it is the corpus's central claim about components stated as a test: while a mode holds, the construct is a different machine.
+
+THE PAIR THAT SHOWS THE MACHINES RUNNING. open_gate_passes_what_arrives sends four units through an open gate and gets four. closed_gate_passes_nothing sends four units through a closed gate and gets nothing. The two answers come from the same predicate, differing only in which mode the register says the gate is standing in.
+
+THE TEST THAT PINS THREE LISTS TOGETHER. every_declared_gate_mode_has_a_runnable_law walks the register's declared modes, resolves each one's rule THROUGH the register, and applies it. It exists because a two-mode register is the first place the register block, the transfer block, and the laws that actually run can drift apart, and an eye is a poor tool for noticing that.
+
+THE TEST A CRITIC SHOULD OPEN. gate_refuses_an_unbound_current_mode is four lines, and it is one of the only two places this slice changes what konnectome does. Before it, a gate standing in a blank was answered as though it had been standing open, and the blank was filled in with a mode belonging to nobody. A reader who wants to watch that for themselves can check out main into a worktree and ask a gate with an unfilled mode what it does above threshold, then ask the same question here.
+
+AND THE ONE THAT SHOWS THE PANEL IS STILL POSSIBLE. gate_current_mode_is_readable_without_running_the_gate exists for the owner's standing request - a real-time visualization panel showing every mode of every construct at every grain at once. A watcher holding only a gate's mode name builds its automaton and reads back both the mode and the rule that holds right now, without running the gate. The panel is a Demonstration deliverable of this family and is deliberately NOT built here; what these slices owe it is the observability, and this test is where that debt is paid at the gate.
+
+The capstone story does not change by a word, and it was diffed byte for byte against a main worktree to prove it - all one hundred and twelve lines, every content-addressed record identifier included - beside a three-hundred-and-twenty-one-line archetype probe that came out identical in both trees.
+
+VALIDATED AGAINST A CORPUS ENTRY WHOSE REGISTER IS TWO. The Layer 8 modes volume's Entry 36, the mutual-inhibition flip-flop, coined the Either-Or Latch, is the corpus's own nearest relative of konnectome's gate: "a hysteretic toggle whose modes are simply its two self-holding states". Its register holds Mode A - the First Latch and Mode B - the Second Latch. Its per-mode transfer functions describe what holds while each state is realised. Its transition table carries a bias thrown from above on the circadian and homeostatic timescales and a supra-threshold input to the losing pool that flips it near-instantaneously. Its fault block names two regimes - instability and a stuck switch - and a watchdog. konnectome's gate was read block by block against that entry, and the one place the two shapes differ is DECLARED rather than smoothed over.
+
+THE DECLARED DIFFERENCE: KONNECTOME'S GATE IS A SYMMETRIC TOGGLE, NOT A HYSTERETIC LATCH. The corpus's latch turns on at one boundary and off only at a lower one, and the corpus is explicit that the hysteresis is supplied by a STABILISER that is "not part of the switch" and publishes a stability bias of its own. konnectome's gate compares one switching drive against ONE threshold in both directions, so its two transition rows honestly share a single trigger. This slice does NOT invent the second threshold: the design authority already files the stabiliser as its own later slice, and this slice promises to change no number. The transition table records the shared trigger, the transfer functions record what each mode actually does, and the gap is written in the ledger as an observation rather than papered over here.
+
+Gates at this slice: archetype grown from seven Prolog Unit (PLUnit) tests to twenty-nine, all passing (the other twenty-nine packs unchanged; SIX HUNDRED FORTY-EIGHT in total across THIRTY packs, all green); the naming gate reports zero violations across all thirty packs and passes its own self-test; the layer, layer-binding, and reality-discipline gates all report zero violations; the Causalontology conformance suite was re-measured this slice and is green at one hundred thirty-seven vectors (specification 4.0.0) in both cousins. No new wall was hit; nothing in PrologAI or Causalontology was edited.
+
+
+KONNECTOME REALIZATION LOG - SLICE 41
+
+Slice 41 - The bus throws a transition - 2026-08-09 - packs neuromodulator_bus, archetype and mode_register (a broadcast channel that carries a MODE rather than a level, the gate's transition table given its second agency, and a departure lookup keyed on that agency); no world dict key added, no number changed, and every well-formed archetype answer pinned byte-identical against a main worktree.
+
+WHAT THE PHASE REQUIRED. The mode-register design authority - /home/ccaitwo/konnectome/docs/design/05_mode_register_design_authority_v1.txt - names this slice fourth in its Part Nine: THE BUS THROWS A TRANSITION, so that one write produces many coordinated register transitions. Slice 39 gave every construct a register of one; slice 40 gave the gate a genuine register of two and made its transition table the sole authority on direction, and it said in as many words that when a broadcast throws a transition the throw would be a ROW in that same table rather than a second path into the gate. This slice is where that promise is kept. It is also where the design authority's Part Seven item 1 - the COMMAND VERSUS BIAS question - had to be answered, because the whole broadcast semantics of three later families hangs on it.
+
+HOW A READER WATCHES THIS SLICE. Three commands:
+
+    bin/run_pack_tests.sh neuromodulator_bus
+    bin/run_pack_tests.sh archetype
+    bin/run_pack_tests.sh mode_register
+
+WHAT TO OPEN FIRST. Read the commented block at the foot of packs/neuromodulator_bus/prolog/neuromodulator_bus.pl. It is longer than the code beneath it on purpose: it is where konnectome's command-versus-bias decision is recorded, with its three reasons, its conflict rule, and the list of what this channel deliberately does not do. A reader who wants to argue with the slice should argue with that block, because everything else follows from it.
+
+THE TEST THAT IS THE SLICE IN TEN LINES. one_bus_write_moves_every_gate_that_reads_it stands three gates in a MIXTURE of modes - open, closed, open - writes ONE throw addressed to the gate kind and to no gate in particular, has each gate read the same bus for itself and apply the throw through its own register, and asserts that all three now stand in the thrown mode having arrived there by two different routes. That is the corpus's coordination mechanism in miniature: one broadcast, many readers, no controller anywhere, and no derivation function from a parent's mode to a child's.
+
+THE TEST A CRITIC SHOULD OPEN. a_standing_throw_preempts_self_selection is the conflict rule made checkable. It reads what the gate would do BY ITSELF from open - close - and what it does under a standing throw of its held mode on the same tick - stay open - and then asserts that the two answers genuinely DISAGREE. If a later slice ever softens preemption into arbitration, that assertion is the thing that will fail, and it will fail loudly, which is the point of writing a decision as a test rather than as a sentence.
+
+THE PAIR THAT SHOWS THE COMMAND IS SAFE TO LEAVE STANDING. a_throw_of_the_held_mode_is_idempotent reads the same standing throw twice and shows the gate does not oscillate under it; releasing_the_throw_returns_the_gate_to_self_selection withdraws the throw and shows the gate get its own agency back. Together they are the boundary that keeps this slice from being a permanent seizure of self-selection: a command preempts while it stands, and no longer.
+
+AND THE ONE THAT SHOWS THE PANEL IS STILL POSSIBLE. The owner's standing request - a real-time panel showing every mode of every construct at every grain at once - is owed observability by every slice in this family, and this slice pays it twice over. A watcher holding a gate's mode name can still build its register and read back the mode and the rule in force without running the gate; and now a watcher holding only THE BUS can read what is being commanded of a whole construct kind, without running any construct at all. THE PANEL'S ARROW - a bus-thrown transition propagating down the grains as it happens - is for the first time readable from both ends. It is still a Demonstration deliverable and is still deliberately NOT built here.
+
+The capstone story does not change by a word, and it was diffed byte for byte against a main worktree to prove it - all one hundred and twelve lines - beside a three-hundred-and-eighty-seven-line archetype probe of which three hundred and eighty-six lines came out identical, the one divergence being the transition table this slice exists to grow.
+
+THE COMMAND-VERSUS-BIAS DECISION, MADE HERE AND RECORDED AS KONNECTOME'S OWN. The design authority records that the corpus is genuinely silent: keeps it in the Pinpoint Report, set from above reads as COMMAND, and biases it toward flashing reads as BIAS, sometimes in the same volume. The Theme Two read raised the same question independently for the offline broadcast, and the Theme Four read raised it a third time; the only concrete evidence any of the three found is Layer 8 Chapter 16's "neuromodulators move the circuit between regimes by scaling recurrent gain", which is bias in FORM - a gain scalar, not a mode name - and which arrives at a different grain from the one where the decision must be made. It is therefore evidence and not an instruction. THE CORPUS DOES NOT DECIDE THIS, SO KONNECTOME DOES, AND THE DECISION IS: A THROWN MODE IS A COMMAND AT THE DISCRETE GRAIN, AND BIAS IS THE CHANNEL KONNECTOME ALREADY HAS.
+
+Three reasons, none of them the corpus's, all of them konnectome's. FIRST, IT UN-CONFLATES TWO OPERATIONS THE DESIGN AUTHORITY SAYS ARE CURRENTLY CONFLATED: its Part Eight records that continuous modulation and discrete throw are different operations on the same channel and that konnectome's bus-modulated relay runs them together. konnectome already owns bias, built and running - relay_modulated reads a level off this same bus and scales its gain where it stands. Had the throw also been a bias, konnectome would own two bias mechanisms, no command mechanism, and the conflation would be permanent. SECOND, A COMMAND COSTS NO INVENTED NUMBER AND A BIAS COSTS AT LEAST ONE: a bias moves a threshold, and the corpus supplies konnectome no threshold offset at this grain, so one would have to be made up - in a family whose standing rule is that no number in the pack is konnectome's invention. THIRD, COMMAND IS THE REVERSIBLE CHOICE: a bias channel can later be added BESIDE this one as a second agency writing rows into the same table, and nothing built on the command has to move; the reverse is not true.
+
+AND THE CONFLICT RULE THAT FOLLOWS FROM IT, ALSO KONNECTOME'S OWN. The design authority's Part Seven item 2 records that the corpus shows preemption in one place and negotiated arbitration in another and states no general rule. konnectome takes PREEMPTION: where a construct's self-selected transition and a standing throw disagree, the throw wins. The reason is konnectome's own and is not a claim about biology - preemption is the rule that can be READ without running the construct, which the owner's standing visualization request demands of every register slice in this family. NEGOTIATED ARBITRATION IS DEFERRED BY NAME rather than denied: it is the shape a later slice would need if two sources ever threw at one kind in one tick, and this channel deliberately holds exactly ONE standing throw per kind, the newest replacing the older exactly as every other broadcast on this bus does, so that case cannot arise unnoticed.
+
+THREE FAMILIES INHERIT THIS DECISION, which is why it is written at this length rather than as a line: the remainder of the mode-register family, the Theme Two offline-broadcast work, and the Theme Four cognitive cluster. A later session that wants to revisit it should revisit it as a decision, in the open, and not discover it as an assumption.
+
+Gates at this slice: mode_register grown from forty Prolog Unit (PLUnit) tests to forty-five, neuromodulator_bus from twenty-three to thirty-six, and archetype from twenty-nine to forty (the other twenty-seven packs unchanged; SIX HUNDRED SEVENTY-SEVEN in total across THIRTY packs, all green); the naming gate reports zero violations across all thirty packs and passes its own self-test; the layer, layer-binding, and reality-discipline gates all report zero violations; the capstone demonstration runs and its story is byte-identical to main's. No new wall was hit; nothing in PrologAI or Causalontology was edited. HONESTLY STATED: the Causalontology conformance suite was NOT re-measured this slice, because this slice touched neither cousin; the last measured figure is Tungsten Sluicewright's one hundred thirty-seven of one hundred thirty-seven, and a session that needs the number should re-measure rather than quote it.
+
+
+KONNECTOME REALIZATION LOG - SLICE 42
+
+Slice 42 - The supervisor channel: fault regimes watched and published as warnings, never admitted as modes - 2026-08-09 - pack supervisor (new) and pack archetype (the gate's fault block filled from the corpus's own latch entry); no world dict key added, no number invented, and every archetype answer pinned byte-identical against a main worktree.
+
+WHAT THE PHASE REQUIRED. The mode-register design authority's Part Nine slice five, and the closing of an IOU three slices old. The Layer 6 chapter template states the admission rule for a mode register directly: a regime enters the register only if the HEALTHY system uses it, and the ways a component BREAKS are watched by supervisor processes that publish WARNINGS - never listed as regimes the component operates in. konnectome has honoured that since slice 39 by leaving every fault block present and EMPTY, which was correct and was also a debt: the block could not honestly be filled until something existed to do the watching. This slice builds the watcher, and the blocks stop being empty.
+
+HOW A READER WATCHES THIS SLICE. Two commands:
+
+    bin/run_pack_tests.sh supervisor
+    bin/run_pack_tests.sh archetype
+
+WHAT TO OPEN FIRST. The commented block at the head of packs/supervisor/prolog/supervisor.pl, which states in plain terms why a fault and a mode are different KINDS of thing rather than differently-labelled members of one kind, and what goes wrong when the difference is lost.
+
+THE TEST THAT IS THE SLICE IN SIX LINES. a_fault_named_for_a_mode_is_refused builds a register that tries to admit one of its own modes as a fault regime, and the supervisor refuses it aloud. That refusal is the corpus's directive, which konnectome had been honouring as a habit for three slices and now enforces as a rule.
+
+THE TEST THAT NAMES THE THIRD OUTCOME. an_unwatched_regime_is_reported_as_unwatched_not_clean watches a construct with two fault regimes while only one watchdog reports. The warning block comes back EMPTY - which on its own looks exactly like health - and the unwatched block names the second regime and the watchdog that did not report. A reader who wants to understand why this pack has the shape it has should read those two assertions together.
+
+THE TEST THAT CLOSES A THREE-SLICE DEBT. the_gate_is_watched_against_the_corpus_two_regimes takes a real gate, confirms the directive holds on it, hands two watchdog readings to the supervisor, and gets back a warning naming the boundary, the condition, the watchdog and both numbers it judged on. The fault block that has been present and deliberately empty since slice 39 is now present, full, and watched.
+
+THE TEST A CRITIC SHOULD OPEN. a_warning_moves_neither_the_mode_nor_the_rule warns about a gate and then asserts that the gate stands in the same mode and runs the same rule as before, having first asserted that a warning was genuinely raised so the test cannot pass vacuously. A supervisor that could move a construct would be a controller, and konnectome has spent three slices establishing that constructs move only by rows of their own registers.
+
+The capstone story does not change by a word, and a three-hundred-and-eighty-seven-line archetype probe came out identical in both trees, with no divergences at all.
+
+WHY THE DISTINCTION IS WORTH A PACK RATHER THAN A CONVENTION, stated once and at length because the whole slice rests on it. A mode and a fault look alike from a distance - both are named conditions a construct can be in - and the entire difference is in what the system is entitled to DO about them. A MODE HAS A TRANSFER FUNCTION: while it holds, the construct runs a different machine, on purpose, and its behaviour in that mode is part of the design. A FAULT HAS NO TRANSFER FUNCTION AND NEVER WILL: it is a boundary the construct was not designed to cross, and the only correct response is to say so aloud to somebody who can act. If a fault were admitted as a mode, THE SYSTEM WOULD ACQUIRE A DESIGNED BEHAVIOUR FOR BEING BROKEN, and would then run it silently and indefinitely - which is exactly the failure the corpus's directive exists to prevent. Written as a convention that is a sentence people forget; written as supervisor_faults_are_not_modes/1 it is a refusal that fires, and it fires on the way into every watch so a malformed register can never be reported on as though it were well formed.
+
+THREE OUTCOMES, NOT TWO, AND THE THIRD IS THE POINT. A fault regime is WARNED (a reading crossed its allowance), CLEAN (a reading did not), or UNWATCHED (no watchdog reported at all). A two-outcome design loses the third, and losing it is precisely how a system comes to believe that silence means health. An unwatched regime is reported as unwatched, by name, carrying the watchdog that did not report, beside the warnings rather than hidden among them.
+
+KONNECTOME INVENTS NO THRESHOLD, AND THAT IS A SHAPE RATHER THAN AN OMISSION. Each reading arrives carrying its own ALLOWANCE, supplied by the caller that owns the watchdog. The supervisor compares and reports; it does not decide how much oscillation is too much, because the corpus supplies no such number at this grain and this family's standing rule is that no number in the pack is konnectome's invention. The boundary case is pinned rather than left to the next reader: a value exactly AT its allowance has not crossed it.
+
+THE GATE'S TWO FAULT REGIMES ARE THE CORPUS'S OWN. They are taken from the Layer 8 modes volume's Entry 36, the mutual-inhibition flip-flop coined the Either-Or Latch - the same entry slice 40 validated the gate against block by block, which names exactly two fault regimes and a watchdog. konnectome takes both and invents no third. OSCILLATION is the latch failing by never settling; STUCK SWITCH is the same latch failing the opposite way, by settling and never leaving. Neither signature is a mode name, and that is CHECKED rather than intended.
+
+Gates at this slice: the new supervisor pack ships TWENTY-SEVEN Prolog Unit (PLUnit) tests and archetype grows from forty to forty-two (the other twenty-nine packs unchanged; SEVEN HUNDRED AND SIX in total across THIRTY-ONE packs, all green); the naming gate reports zero violations across all thirty-one packs and passes its own self-test; the layer, layer-binding and reality-discipline gates all report zero violations; the capstone story is byte-identical to main's. WATCH-3 WAS EXAMINED AND REMAINS A WATCH: the design authority's Part Ten filed the supervisor channel as a routing candidate IF a published warning must be a shareable record rather than a konnectome-internal signal. It is not. Every warning this slice produces is computed inside one runtime from readings that runtime was handed, and travels to nobody; it fails the consumer-versus-ontology test and routes nowhere. Nothing in this slice releases the held sections of the causalontology change order. No new wall was hit; nothing in PrologAI or Causalontology was edited, and conformance was not re-measured because neither cousin was touched.
+
+
+KONNECTOME REALIZATION LOG - SLICE 43
+
+Slice 43 - The ticks-per-second convention: one hundred ticks to the nominal second, declared and refused rather than rounded - 2026-08-09 - pack tick_engine (three exported predicates, no new pack); no world dict key added, no number invented in any construct, and the capstone story pinned byte-identical against a main worktree.
+
+WHAT THE PHASE REQUIRED. Family Four item 2 of the version 2 vision-set analysis, promoted ahead of the stabiliser on the Iridium hand-off's one scheduling suggestion. KONNECTOME HAS NO SECONDS AND THE CORPUS COUNTS IN THEM. Every quantity in the cognitive cluster the corpus specifies is wall-clock - ignition near three hundred milliseconds, admission in the low hundreds, unrehearsed decay in seconds, a board wiped on task switch in under a second - and a settling time read as confidence is wall-clock too, while konnectome's tick is dimensionless-ordinal by the observer's own written declaration. None of that cluster is buildable to the corpus's numbers until a ticks-per-second convention is declared, and the convention is konnectome's own decision, not the corpus's.
+
+WHY IT JUMPED THE QUEUE, recorded because a promotion is itself a decision. The item arrived from THREE independent directions: beneath Theme Four and Theme Five in the version 2 analysis, and again from a direction nobody predicted when slice 42 found that a watchdog cannot have a window without a unit to measure one in - which is why OBSERVATION-9 was left open rather than closed. The stabiliser, the queue's front, publishes a scalar whose grains must be stated, and a grain argued in seconds cannot be stated in a build with no seconds. THE RULE THIS APPLIES: A CHEAP ITEM THAT ARRIVES FROM A THIRD INDEPENDENT DIRECTION HAS STOPPED BEING A QUEUE ITEM AND HAS BECOME A DEPENDENCY.
+
+WHAT THIS SLICE DELIVERS, AND IT IS DELIBERATELY SMALL. No new pack. tick_engine gains three exported predicates: tick_engine_ticks_per_second/1, the convention stated once and in one place, and the two conversions tick_engine_ticks_from_milliseconds/2 and tick_engine_milliseconds_from_ticks/2. This is a DECISION RECORDED WITH TESTS ASSERTING IT, in the shape of slice 39's naming-collision resolution and slice 41's DECISION-1 - a decision closes a question, where a mechanism answers one.
+
+DECISION-2: ONE HUNDRED TICKS TO THE NOMINAL SECOND, SO ONE TICK IS TEN NOMINAL MILLISECONDS, AND THE SCHEDULER STAYS DIMENSIONLESS. It is konnectome's own decision and must never be presented as the corpus's instruction. The corpus says nothing whatever about how often a synthetic mind should update, because it describes a continuous system and not a scheduler: this is not a silence to be resolved by reading harder, it is a question the source does not contain.
+
+THE THREE REASONS, ALL KONNECTOME'S OWN. FIRST, EVERY CORPUS CONSTANT BECOMES A WHOLE NUMBER OF TICKS - three hundred milliseconds is thirty ticks exactly, one hundred is ten, one second is one hundred, half a second is fifty. A rate leaving a constant between two ticks would force a rounding at every site that used it, AND A ROUNDING IS AN INVENTED NUMBER WEARING A SMALL COAT: the constant leaves the corpus as the corpus's and arrives in the pack as konnectome's, with nobody having decided anything. SECOND, IT IS THE COARSEST RATE THAT ACHIEVES THE FIRST, and coarsest is the honest choice rather than the convenient one, because the corpus states these quantities to a hundred-millisecond grain and a millisecond tick would claim a precision the source does not have. THIRD, IT COSTS THE RUNNING MACHINE NOTHING AND IS THEREFORE REVERSIBLE: no existing behaviour moves by a single count, and every duration konnectome ever expresses in real units passes through ONE conversion predicate, so a session that must restate the rate has one predicate to change and one test to re-read rather than a search across thirty-one packs.
+
+THE REFUSAL IS THE LOAD-BEARING HALF. A DURATION THAT IS NOT A WHOLE NUMBER OF TICKS IS REFUSED ALOUD with domain_error(whole_tick_duration, Milliseconds) and is NEVER ROUNDED. Rounding is exactly how invented numbers enter a careful build - a caller asks for five milliseconds, is handed one tick without being told, and a number that was the corpus's has silently become konnectome's. The refusal forces that decision into the open where it can be recorded. Both conversions also refuse an UNBOUND argument, the unbound-wrong-judgement lens paying for an ELEVENTH SLICE RUNNING (33 through 43).
+
+WHAT DECISION-2 DOES NOT DECIDE. It does not make konnectome real-time: nothing sleeps, nothing measures, nothing consults a wall clock, and a tick is not ten milliseconds long - ten milliseconds is what a tick is CALLED when a duration must be stated, which is pinned by a test asserting the heartbeat still reads five after five ticks. It does not decide that any particular corpus constant is right. It does not decide the observer's stamp, which keeps its own nominal one-second-per-tick carrier and is now numerically at odds with the convention - recorded as OBSERVATION-10 rather than quietly fixed, because restating that stamp would re-mint every content-addressed token occurrence identifier in the repository. It does not decide a window length for any watchdog: it supplies the UNIT a window can be stated in, and OBSERVATION-9's closer must still choose the number and say why. And it does not decide whether a construct may hold a rate of its own.
+
+Gates at this slice: tick_engine grows from eight Prolog Unit (PLUnit) tests to fifteen (the other thirty packs unchanged; SEVEN HUNDRED AND THIRTEEN in total across THIRTY-ONE packs, all green); the naming gate reports zero violations across all thirty-one packs and passes its own self-test; the layer, layer-binding and reality-discipline gates all report zero violations; the capstone story is byte-identical to main's. No new wall was hit, and nothing routes to either change order: a conversion between two of konnectome's own units is computed inside one runtime and travels to nobody, so it fails the consumer-versus-ontology test of the Second Commandment, and it needed no language feature PrologAI lacks. Nothing in this slice releases the held sections of the causalontology change order. Nothing in PrologAI or Causalontology was edited, and conformance was not re-measured because neither cousin was touched - the figure remains four sessions old and must be re-measured before it is quoted.
+
+
+KONNECTOME REALIZATION LOG - SLICE 44
+
+Slice 44 - The stabiliser: hysteresis published as a scalar, and the gate becomes the corpus's latch - 2026-08-09 - pack stabiliser (new) and pack archetype (the gate gains a second boundary); no world dict key added, no number invented, no number changed, and the capstone story pinned byte-identical against a main worktree.
+
+WHAT THE PHASE REQUIRED. The mode-register design authority's Part Nine slice six, and the closer OBSERVATION-8 named when it was opened. THE CORPUS IS EXPLICIT THAT HYSTERESIS IS NOT PART OF THE SWITCH: the Layer 11 reading states in one sentence that "this is a stabiliser, not a switch, so it has no poles of its own", and that it publishes a scalar stability bias onto the configuration bus. konnectome's hysteresis was two constants inside the two-process governor's parameter block and one symmetric threshold inside the gate - the stickiness buried in the switch, which is the arrangement the corpus names and rejects. Slice 40 found the gap and recorded honestly that it could NOT be fixed where it was found, because adding a second constant inside archetype_gate/4 would have modelled the corpus wrongly while appearing to fix it.
+
+WHAT THIS SLICE SPECIFIES. A NEW PACK, stabiliser, AT LAYER ZERO, and one existing rule given a second boundary.
+
+WHAT A STABILITY BIAS IS, WITH ITS UNITS STATED, because a scalar without stated units is an invitation to misuse. IT IS HOW FAR APART THE TWO BOUNDARIES SIT: half the width of the hysteresis band, expressed in the units of whatever quantity the switch it steadies compares. A gate comparing a switching drive reads it as an offset on the gate's threshold; a governor comparing a sleep-pressure balance reads it as the half-width of its band about a midpoint. One meaning, two consumers, no conversion.
+
+DECISION-1 IS APPLIED AND NOT RE-OPENED. A hysteresis scalar is a BIAS, so it travels as a LEVEL under a plain-atom key on the channel konnectome has had since slice 4, and never as a thrown mode. That is DECISION-1 applied rather than a new decision, and it is proved rather than asserted: the published value reads back through the bus's ORDINARY level read, with nothing about it needing the stabiliser to interpret it.
+
+AND THE STABILISER'S AGENCY IS STATED, because after slice 41 a publisher has two shapes available and they are not the same thing. Its agency is broadcast_bias, AND IT IS AN AGENCY IN NO TRANSITION TABLE, which is the sharpest available statement of what a bias is. Since slice 40 a construct is moved ONLY by a row of its own register's table. THE STABILISER MOVES NOTHING. It changes where a boundary sits, after which the construct's own row fires, or does not, by its own rule. A test reads the gate's table, checks it is not empty so the test cannot pass vacuously, and asserts the stabiliser's name is absent.
+
+DECISION-3: THE PUBLISHED SCALAR GOVERNS THE CONSTRUCT GRAIN ONLY. The version 2 analysis named this the sharpest ambiguity of its visit, because THE CORPUS ANSWERS THE HYSTERESIS QUESTION DIFFERENTLY AT TWO GRAINS - the Layer 11 reading puts the stickiness OUTSIDE the switch at the construct grain, while Layer 8 Chapter 16 gives winner-take-all's transfer function as a hysteretic max operation with an explicitly hysteretic Commitment Mode, stickiness INSIDE the motif. Both are literal. konnectome's three reasons are its own: the two readings stop conflicting once the grain is named; a bias reaching inside a transfer function would make a motif's own law depend on a global value, which is the coupling this build has spent slices avoiding; and it is the reversible choice, because a roster can be extended where a scalar already reaching everywhere could not be withdrawn. THE DECISION IS A REFUSAL AND NOT A COMMENT: the motif grain is turned away by name.
+
+OBSERVATION-8 IS CLOSED, AND AT A BIAS OF ZERO NOTHING MOVES. archetype_gate_hysteretic/5 gives the gate two boundaries where it had one, and at a bias of zero the two coincide and the latch is the old symmetric toggle exactly, in every combination of mode and drive. Because the bus answers zero for a bias nobody has published, every switch in the repository can consult the stabiliser without any of them changing behaviour - which is what made this slice safe to build and why the capstone story is byte-identical.
+
+THE MAPPING KONNECTOME CHOSE, AND THE ONE IT REJECTED. The corpus states hysteresis for a LEVEL comparator, and archetype's gate compares a SWITCHING DRIVE, which is a push rather than a level; the two do not map by themselves. konnectome chose: LEAVING A MODE COSTS THE RAISED BOUNDARY, WHICHEVER MODE IT IS, so over the whole range between the threshold and the threshold plus the bias both modes are stable and history decides which is realised - the corpus's own definition of the property, quoted almost word for word. THE REJECTED READING IS RECORDED because it is the one a later session will reach for first: making turn-on cost the threshold plus the bias and turn-off cost the threshold MINUS it reads exactly like the corpus's higher-and-lower boundaries, and with a push-drive it makes CLOSED ABSORBING over the whole middle range. A gate that settles and never leaves is the corpus's own STUCK SWITCH fault signature, listed in this pack's fault block since slice 42, and a hysteresis design that manufactures a fault regime is not a hysteresis design.
+
+THE GOVERNOR'S TWO CONSTANTS ARE NOW DERIVED RATHER THAN DECLARED, AND NOT ONE NUMBER CHANGED. Sixteen and two are restated as what they always were - a band about a midpoint, a midpoint of nine and a half-width of seven - because replacing them with different numbers would be konnectome inventing where it had no need to. The suite proves the derivation reproduces the original block field for field AND that a governor standing on the derived band runs an identical twenty-four-tick day, state for state, because identical parameters are only evidence and identical behaviour is the proof.
+
+AN HONEST INTERACTION, PINNED RATHER THAN LEFT TO BE DISCOVERED. The two consumers have DIFFERENT FLOORS. A gate reads a bias of zero as "no hysteresis" and behaves as it always did; the governor cannot, because its own guard has refused a flat or inverted band since it was built, and a flat band chatters. The same scalar is therefore legal at zero for one consumer and refused at zero by the other, and a test pins the governor's refusal by its own name. That is not a defect: it is what it looks like when two constructs share a scalar and each keeps its own domain.
+
+WHAT THIS SLICE DELIBERATELY DID NOT BUILD. THE CORPUS GATES THE STABILISER BY CIRCADIAN PHASE AND HUNGER, AND NEITHER GATING IS BUILT: hunger has no construct in konnectome at all, and gating by phase would require a function the corpus does not supply at this grain, so the scalar is published by a caller who chooses it and the gating is deferred BY NAME rather than invented. No construct was rewired to consult the stabiliser - the gate and the governor can now be handed a bias, and the join belongs to the caller, as every join in this family has since slice 41. No motif-grain hysteresis, per DECISION-3. And OBSERVATION-9 stands exactly where slice 42 left it: the stabiliser is not a watchdog and counts nothing.
+
+Gates at this slice: the new stabiliser pack ships EIGHTEEN Prolog Unit (PLUnit) tests and archetype grows from forty-two to fifty (the other thirty packs unchanged; SEVEN HUNDRED AND THIRTY-NINE in total across THIRTY-TWO packs, all green); the naming gate reports zero violations across all thirty-two packs and passes its own self-test; the layer, layer-binding and reality-discipline gates all report zero violations; the capstone story is byte-identical to main's. Nothing routes to either change order: a scalar published inside one runtime and read by two constructs in the same runtime travels to nobody and fails the consumer-versus-ontology test of the Second Commandment, and no language feature was missing. Nothing in this slice releases the held sections of the causalontology change order. No new wall was hit; nothing in PrologAI or Causalontology was edited, and conformance was not re-measured because neither cousin was touched.
+
+
+KONNECTOME REALIZATION LOG - SLICE 45
+
+Slice 45 - The first real watchdog: what can now be shown that could not be shown before - 2026-08-09.
+
+THE DEMONSTRATION THIS SLICE SUPPLIES IS A SENTENCE THE REPOSITORY COULD NOT SAY. Until this slice, if you had asked konnectome's supervisor whether any construct in the build was healthy, the only honest answer available to it was: NOTHING IS BEING WATCHED. That answer was correct, and slice 42 built a third outcome specifically so that it could be given rather than dressed up as a clean bill of health. It is no longer the only answer available.
+
+THE SHOWABLE STORY, IN FOUR STEPS, AND EVERY STEP OF IT IS A PASSING TEST RATHER THAN A DESCRIPTION.
+
+STEP ONE. Take a gate that has been open, closed, open, closed, closed, closed over six ticks. Build a history of it - one observation per tick, threaded through the caller as a value the world carries. Ask the watchdog for the gate's two boundaries over a six-tick window, with an allowance of three flips and a hundred ticks of hold. It hands back two readings: three flips, three ticks held.
+
+STEP TWO. Hand those two readings, together with the REAL gate's automaton, to the REAL supervisor. It reports no warnings AND AN EMPTY UNWATCHED BLOCK. That empty block is the demonstration. It is the first time in this build's history that a fault regime has been watched rather than merely declared.
+
+STEP THREE. Now make the gate misbehave in the first of the two ways the corpus says such a switch fails. Alternate it every tick for six ticks - five flips - against an allowance of two. The supervisor publishes one warning, carrying the boundary's name, the corpus's own warning condition, the watchdog's name, and both numbers it judged on: five against two.
+
+STEP FOUR. Now make it fail the OPPOSITE way, which is the failure slice 44's stabiliser exists to prevent and the failure slice 44's rejected hysteresis mapping would have manufactured. Hold it closed for eight ticks against a hold allowance of five. The supervisor publishes one warning under the stuck_switch boundary. THE TWO WARNINGS ARE THE TWO HALVES OF THE SAME CORPUS ENTRY, and a build that can show both has shown that its fault vocabulary is real.
+
+AND THE FIFTH STEP, WHICH IS THE ONE WORTH DEMONSTRATING MOST. Take a history only four ticks long and ask for a twenty-tick window. The watchdog hands back NO reading and names both boundaries as not yet measured, carrying the window asked for and the span held. The supervisor then reports both boundaries UNWATCHED - by name, with their watchdogs named - exactly as it did before this slice existed. A system that only knows how to answer is a system that will answer when it should not. This one knows the difference between a clean boundary and a boundary nobody has watched long enough to judge, and it demonstrates the difference rather than claiming it.
+
+WHAT THE VISUALIZATION PANEL GAINS, AND IT IS THE THIRD OF ITS THREE LAYERS. The owner's standing request is for a live, all-grain view of every construct's mode. The mode-register slices owe it OBSERVABILITY, and the debt is now paid at three depths, all of them readable without running anything: WHAT a construct is doing, from its register since slice 39; WHERE ITS BOUNDARIES SIT while it does it, from the effective threshold since slice 44; and WHAT IS BEING WATCHED about it AND BY WHOM, from this pack. A panel can now draw a construct's mode, the band it must be pushed past to leave it, how long it has stood there, how often it has flipped lately, and whether anyone is watching at all - and it can draw every one of those from values the world carries.
+
+WHAT IS NOT DEMONSTRATED, STATED PLAINLY. The capstone does not use any of this. Its story is byte-identical to main's, deliberately, because this slice edits no existing pack and wires no caller. The demonstration above lives entirely in the test suite, which is where a demonstration lives when the thing demonstrated is a capability rather than a behaviour change. The slice that puts a watchdog into the running machine will have to choose a window and say why, and that is the next honest step rather than this one.
+
+
+KONNECTOME REALIZATION LOG - SLICE 46
+
+Slice 46 - The master register widened: what can now be shown - 2026-08-09.
+
+THE SHOWABLE STORY IS A READ, AND IT IS THE READ THE OWNER'S VISUALIZATION PANEL HAS BEEN WAITING FOR AT ITS TOP ROW.
+
+Take a bus. Ask it what state the mind is in. Before this slice the only available answer was one of two words. Now the same bus answers with a state that has a formal name out of the corpus, a sub-mode, an account of what runs while it holds, and a table of what it sets below - and every one of those is readable WITHOUT RUNNING ANYTHING.
+
+STEP ONE. An empty bus that has heard nothing reads as `global_state(online, alert_task_engaged)` - Alert Task-Engaged Waking, which the corpus calls the default assumption of nearly every cognitive experiment ever run. Silence has a name now, and the name is the corpus's.
+
+STEP TWO. Announce sleep the old way, with the bare atom every caller in this repository has used since slice 35. The old reader answers `offline`, exactly as it always did. The register reads the SAME bus and answers `global_state(offline, slow_wave_sleep)` - The Deep Works - because that is the state whose downward assignment names systems consolidation and synaptic renormalisation, which is precisely and only what konnectome's offline phase has done since slice 38. The machine did not change what it does; it acquired the name for what it was already doing.
+
+STEP THREE. Announce a state the register does not hold - waking, in slow-wave sleep - and it is refused by name before it ever reaches the bus. A register that accepted that would be a list of names. This one is a statement about what the system does.
+
+STEP FOUR, AND IT IS THE ONE WORTH DEMONSTRATING MOST. Ask any of the eight states what it assigns downward, and every one of them assigns NOTHING - and the pack says why in its own text. The corpus assigns to NAMED INDIVIDUALS: the thalamus to faithful relay, the hippocampus to theta-coded encoding, the flip-flop motifs of the state machinery latched to wake. konnectome has ARCHETYPES, which are KINDS. Writing "waking assigns every gate the open mode" is one line away, reads like fidelity, and would assign every gate in the repository the mode of one named flip-flop.
+
+THE MECHANISM IS DEMONSTRATED SEPARATELY AND DELIBERATELY, against a fixture rather than against the empty table, because a demonstration that only showed nothing happening would be a demonstration of nothing. Hand the assignment walk two rows and both arrive on the real mode-throw channel; ask about a kind neither row named and the channel answers with its reserved silence, not with an instruction. That is slice 41's row-not-a-door property doing the work that makes a downward assignment safe to aim at a kind at all.
+
+WHAT THE PANEL NOW HAS, AND WHAT IT STILL LACKS. The owner's standing request is for every grain shown at once, including the Layer 11 global state that IS a coordinated assignment across everything below. THE PANEL'S TOP ROW EXISTS: pole, sub-mode, formal name, what runs while it holds, and what it assigns. THE ARROWS DOWN FROM IT DO NOT, and the reason is written into the pack rather than left as an absence - which is the more useful thing to be able to show, because a panel drawn today would draw a state that assigns nothing and a reader would rightly ask why, and now there is an answer.
+
+WHAT IS NOT DEMONSTRATED. The capstone does not announce a sub-mode. Its story is byte-identical, deliberately, because no existing behaviour was rewired. The demonstration above lives in the test suite, which is where a demonstration lives when the thing demonstrated is a capability rather than a behaviour change.
+
+
+KONNECTOME REALIZATION LOG - SLICE 47
+
+Slice 47 - The first caller wired to a watchdog: what can now be shown - 2026-08-09.
+
+THE DEMONSTRATION IS SHORT AND IT IS THE ONE THIS BUILD HAS BEEN OWED SINCE SLICE 42.
+
+Run konnectome's scheduler for one of its own days - twenty-four ticks of the real two-process governor, Process S rising through the waking and paid down through the night, the flip-flop snapping at the eighteenth tick exactly as it has since slice 37. Record the pole it stands at, every tick, into a watchdog history.
+
+Then ask the supervisor how it did.
+
+NOTHING WARNED. NOTHING UNWATCHED.
+
+That is the whole demonstration, and both halves of it are new. Before slice 45 the second half was impossible: nothing counted anything, so every boundary in the repository came back unwatched. Before this slice the first half was untested on a real construct: the watchdog had been proved against histories written by hand.
+
+AND THE NUMBERS IN IT ARE NOBODY'S. The window is twenty-four ticks because that is the governor's own day, read out of its own parameter block. The chatter allowance is two crossings because that is what one healthy day of this switch contains - one down, one up - by the corpus's own account. The lock allowance is twenty-three because that is the largest hold that is not a whole day. Build a governor with a twelve-tick day instead and every one of those three follows it, in the same tick, with nothing to edit.
+
+THE SECOND THING TO SHOW IS THE MACHINE REFUSING TO ANSWER. Stop the run four ticks in and ask again. The report comes back with no warnings and BOTH boundaries listed as unwatched, by name, with the stabiliser named as the watchdog that has not reported - because four ticks do not span a day and a verdict taken over four ticks would be a verdict about nothing. Nobody arranged that. It falls out of the watchdog handing back no reading, the re-keying handing back no reading, and the supervisor saying what it says when it is told nothing.
+
+THE THIRD AND FOURTH ARE THE TWO WAYS THIS SWITCH BREAKS, AND BOTH HISTORIES HAD TO BE WRITTEN BY HAND, WHICH IS ITSELF THE POINT. konnectome does not have a chattering governor or a locked one. A watchdog exists to notice a fault the machine is not committing, so the only way to demonstrate it is to hand it a day the machine would never produce. Twenty-three crossings in one day warns under state_chatter - Entry 11's state intrusion, which Chapter 13 attributes to the stabiliser's loss. A whole day at one pole warns under state_locked - the other half of the same warning condition. And the watchdog named in both warnings is `stabiliser`, which is not a placeholder: it is the pack konnectome built at slice 44.
+
+WHAT THE VISUALIZATION PANEL GAINS. The panel's three layers - what a construct IS doing, WHERE ITS BOUNDARIES SIT, and WHAT IS WATCHED about it and by whom - now all exist for the same construct at the same time, and that construct is the one at the top of the machine. A panel can draw the sleep-wake flip-flop's pole, its formal name out of Entry 11, the two crossings in its table and who throws them, the window it is judged over, how many times it has crossed inside that window, how long it has held, and whether anybody has watched it long enough to say. All from values the world carries. None of it requires stepping the governor.
+
+WHAT IS STILL NOT DEMONSTRATED, AND THE LINE IS WORTH DRAWING SHARPLY BECAUSE IT IS EASY TO BLUR. THE CAPSTONE DOES NOT CALL ANY OF THIS. Its story is byte-identical, because the told story does not print a supervisor report and this slice did not teach it to. Every construct in the chain above is production code and none of it is a fixture - but the demonstration lives in the test suite, and the slice that makes konnectome's own told story say out loud whether its night was healthy is a demonstration slice, not this one. It is now a small slice, which it was not before today.
+
+
+KONNECTOME REALIZATION LOG - SLICE 48
+
+Slice 48 - The bus's six named broadcast channels: a roster that declares and does not guard - 2026-08-10 - pack neuromodulator_bus (a roster of six channels with their roles, sources and cognitive tags); no new pack, no existing call changed, no number invented, and the capstone story byte-identical.
+
+WHAT CAN NOW BE SHOWN, WITHOUT RUNNING THE MIND. Ask konnectome's broadcast bus what channels it carries and it answers with six names, in the corpus's own order. Ask what any one of them is FOR and it answers with the corpus's own chapter subtitle - the reward-teaching broadcast, the gain-and-reset broadcast, the patience-and-mood broadcast, the attention-and-encoding broadcast, the wakefulness broadcast, the sleep-wake stabiliser. Ask where a channel comes from and it names the nucleus. Ask whether the corpus counts it as cognitive and it answers with the corpus's own tag, four yes and two no. None of that requires stepping anything, which is the observability constraint this family has honoured since slice 39.
+
+AND THE DEMONSTRATION THAT MATTERS MOST IS A NEGATIVE ONE, shown in a single test. Broadcast a real arousal level under the name the machine uses. Resolve the corpus's word for that channel and read: the real level comes back. Read the corpus's word WITHOUT resolving it, and a zero comes back - not an error, not a warning, a plausible number that a caller would have believed. THAT ZERO IS THE WHOLE ARGUMENT FOR THE RESOLUTION, and it is demonstrated rather than asserted.
+
+WHAT IS NOT DEMONSTRATED. The capstone does not mention the roster; the story is byte-identical, as it has been for four slices, and this slice did not teach it a new sentence. Four of the six channels are named and written by nobody, so no story can yet show a blend. And the demonstration debt named at slice 45 and narrowed at slice 47 is UNCHANGED and still the smallest item on the queue: konnectome's own told story still cannot say whether its night was healthy.
+
+
+KONNECTOME REALIZATION LOG - SLICE 49
+
+Slice 49 - The working-memory blackboard, built to the corpus's own constants - 2026-08-10 - NEW PACK working_memory_blackboard; DECISION-8, the activation grain; OBSERVATION-13, a chapter that disagrees with itself about time; nothing wired into the tick, and the capstone story byte-identical.
+
+WHAT CAN NOW BE SHOWN. Hold a phone number in mind while you find a pen, and konnectome can now hold it too. Offer the chapter's own four digits through an open gate and the board holds all four, oldest first. Offer an advertising jingle through a closed gate and the board is EXACTLY what it was - the distractor never reached the surface, which is what a gate is for. Offer a fifth digit onto a full surface and the weakest slot leaves to make room, and if several are equally weak the earliest-admitted is the one that goes, decided rather than discovered. Let the surface sit and every slot fades together. Rehearse one and it comes back to full while its neighbours keep fading, which is the whole of what the corpus means by a self-refreshing attractor. Switch tasks and the board is blank.
+
+THE DEMONSTRATION THAT MATTERS MOST IS AGAIN A NEGATIVE ONE, and it is this pack's answer to the finding slice 48 made one day earlier. ASK THIS BOARD FOR AN ITEM IT DOES NOT HOLD AND IT REFUSES ALOUD. It does not answer zero. The neuromodulator bus answers an unheard channel with zero, and slice 48 showed what that costs - a caller reading by the wrong name is told, in perfect silence, that the level is baseline. Here the same kindness would be worse, because AN ABSENT SLOT AND A COLLAPSED SLOT ARE DIFFERENT FACTS: the first means the thought was never admitted, the second means it was and has faded, and a zero would make them one answer. Two tests demonstrate it - a never-admitted item and a collapsed one, refused identically and neither zeroed.
+
+AND ONE DEMONSTRATION IS OF A NUMBER NOBODY CHOSE. A test takes a full slot down by five hundredths sixteen times in ordinary floating point and asserts that it has fallen below two tenths; the same sixteen steps in this pack's own grain leave it standing EXACTLY ON two tenths, which is not below anything. The test exists so the reason for DECISION-8 is on the record and not merely in a comment: the one-step difference between the corpus's printed code and this pack is decided by bit-level drift, and a repository that has spent four slices refusing invented numbers should not accept one from the hardware.
+
+WHAT THE DEMONSTRATION STILL CANNOT DO. It cannot run the board in the mind's own tick, because this slice refuses to choose the rate. It cannot say whether the board is erased at night, because the mode register that would say so is the next item. And the capstone still does not call the watch, which remains the smallest item in the queue and is still undone.
+
+
+KONNECTOME REALIZATION LOG - SLICE 50
+
+Slice 50 - The working-memory mode register - 2026-08-10 - NEW PACK working_memory_mode_register; DECISION-9; OBSERVATION-14.
+
+WHAT CAN NOW BE SHOWN THAT COULD NOT BE SHOWN BEFORE. That a global state announced on the broadcast bus reaches a named construct and changes what that construct is - end to end, through the mechanism slice 46 built and could only prove against a fixture. Announce slow-wave sleep, apply its downward assignment, read the blackboard's mode back off the bus, and it stands in the mode the corpus says deep sleep puts it in.
+
+AND WHAT CAN BE SHOWN BY ITS ABSENCE. Announce any waking state and read the same channel, and the answer is the reserved word meaning nothing is throwing - never a mode. The global state does not get a vote on which waking posture the board is in, and that refusal is demonstrable rather than merely documented.
+
+AND THE PANEL GAINS ITS FIRST ARROW. The owner's standing visualization request has wanted, since slice 48, the thing the panel most conspicuously lacked: not another cell, but a LINE BETWEEN TWO CELLS. This slice supplies the first one - the global state at the top, the blackboard's mode below it, and a real dependency between them that changes while a reader watches.
+
+
+KONNECTOME REALIZATION LOG - SLICE 51
+
+Slice 51 - The told story that says whether the night was healthy - 2026-08-10 - the demonstration debt closed; no new pack.
+
+WHAT CAN NOW BE SHOWN THAT COULD NOT BE SHOWN BEFORE. Whether this mind's night was healthy - and, first, that the story as told cannot say. The capstone prints both: NOT-YET-MEASURED over the ten ticks it actually lived, with both fault regimes named as unwatched and with the sentence "no readings is not the same fact as no faults" printed where a reader will meet it; and then, over the same governor lived out to a whole day, the verdict the watch can honestly give, with the crossings it counted and the pole the switch ended on printed beside it.
+
+THIS IS THE SMALLEST ITEM ON THE QUEUE AND IT WAS THE MOST OVERDUE. The capability had existed for six slices. Nothing was missing except the call.
+
+
+KONNECTOME REALIZATION LOG - SLICES 52 AND 53
+
+Slices 52 and 53 - 2026-08-10 - DECISION-10, DECISION-11, OBSERVATION-16.
+
+WHAT CAN NOW BE SHOWN THAT COULD NOT BE SHOWN BEFORE.
+
+THAT A MEMORY CAN OUTLIVE EVERYTHING IT IS MADE OF. Start an established loop, run it twenty steps during which three tenths of its contents are destroyed every single step, and the memory is still held although under a hundredth of a per cent of the original material remains. That is the corpus's "the setting outlives every molecule that ever carried it", demonstrable in one query.
+
+AND THAT CUTTING IT DESTROYS IT FOR GOOD. Block the same loop for six steps and it falls below its threshold; run it uninhibited for five hundred steps afterwards and it never returns. NOTHING IN THE PACK FORBIDS THE RECOVERY - the seed is simply too small to climb back, so the permanence is a consequence of the corpus's own arithmetic rather than a rule konnectome imposed. A demonstration in which the interesting behaviour is not enforced anywhere is the strongest kind this build can produce.
+
+AND ONE THING THE DEMONSTRATION SHOWS ABOUT THE SOURCE RATHER THAN ABOUT KONNECTOME. Running the chapter's own printed program at its own two stated gains shows that one of them does not do what the chapter says happens. That is OBSERVATION-16, and it is demonstrable by anyone with the chapter and sixty lines of arithmetic.
+
+NOTHING NEW REACHES THE CAPSTONE. The told story is unchanged by these slices, which was verified rather than assumed: the scaler fix changes no configuration konnectome actually runs, and the durable tier is unwired by design.
+
+
+KONNECTOME REALIZATION LOG - SLICES 54 AND 55
+
+Slices 54 and 55 - 2026-08-10 - DECISION-12; OBSERVATION-15 CLOSED.
+
+WHAT CAN NOW BE SHOWN THAT COULD NOT BE SHOWN BEFORE.
+
+THAT THE BOUND KNOWS WHAT IT IS ALLOWED TO TOUCH. Give a loud construct one excitatory and one inhibitory input, run the bound, and the excitatory drive shrinks while the inhibitory contact stands exactly where it was.
+
+AND THAT THE SAME OPERATION NOW MOVES A BALANCE IT USED TO PRESERVE. In the same demonstration the construct is driven NET NEGATIVE - something uniform scaling could never do, because it multiplied the net by the same factor as the parts. Showing the loss beside the fix is the honest form of this demonstration.
+
+AND THE MOST USEFUL DEMONSTRATION IN THE PAIR IS OF A FAILURE THAT HAS NOT HAPPENED YET. Run a durable mark through twenty night ticks with maintenance and the memory holds; run the identical mark through the identical twenty ticks WITHOUT it and the memory is gone, and five hundred maintained ticks afterwards cannot recover it. Nothing in konnectome does the second thing today. The demonstration exists so that nothing ever does.
+
+
+KONNECTOME REALIZATION LOG - SLICES 56 AND 57
+
+Slices 56 and 57 - 2026-08-11 - DECISION-13, DECISION-14, OBSERVATION-17.
+
+WHAT CAN NOW BE SHOWN THAT COULD NOT BE SHOWN BEFORE.
+
+THAT THE MACHINE CANNOT TICKLE ITSELF. Give it an obstacle, let it steer around one, and hold the world still: every sensed channel matches its own prediction exactly, and the mind receives NOTHING - not a small signal, not an attenuated one, but an empty percept list. The self-generated sensation is gone because the prediction was subtracted from it.
+
+AND THAT WHAT THE WORLD DID SURVIVES THE SUBTRACTION UNTOUCHED. Recharge the battery while a quarter of a charge drains away, and the mind is told exactly one thing: minus a quarter on the battery channel. The recharge it commanded and predicted is invisible to it; the drain it neither commanded nor predicted is all it hears.
+
+AND THE MOST INSTRUCTIVE DEMONSTRATION IN THE PAIR IS OF A THING THE MECHANISM CANNOT DO. Run the successful steer and run the null command side by side and print both cues: they are the same term. The demonstration is the argument for DECISION-13, and it is stronger shown than stated.
+
+THE SECOND SLICE MAKES A FACULTY REPORTABLE FOR THE FIRST TIME. Layer 12's Faculty 13 can now be SCORED rather than described: run the same night twice, once interleaving the old competence and once replaying only the new, and read off 0.945 against 0.9. Two of the faculty's three acceptance criteria are met by that comparison, and the third is declared unmeasured.
+
+NOTHING NEW REACHES THE CAPSTONE. The told story is byte-identical to the one main tells, verified by running both: the comparator is unwired by design, and the measurement moves no weight.
+
+
+KONNECTOME REALIZATION LOG - SLICE 58
+
+Slice 58 - 2026-08-11 - DECISION-15, OBSERVATION-18; NEW PACK conflict_monitor.
+
+WHAT CAN NOW BE SHOWN THAT COULD NOT BE SHOWN BEFORE.
+
+THAT A KONNECTOME MIND GETS BETTER AT A HARD TRIAL BECAUSE THE LAST TRIAL WAS HARD. Set a base threshold of 0.5 and hand the loop a gain of 0.15. Build one incongruent trial: three drives that want three different things, at distresses 0.9, 0.8 and 0.7. Run it after a CONGRUENT trial - one where every drive wanted the same thing, so no control was recruited - and the conflict measures 1.91. Run the IDENTICAL trial after an incongruent one, so that the control the earlier conflict recruited is still standing on the bus, and it measures 0.72. That is the Gratton effect, in konnectome's own medium, and it is a comparison between two runs rather than a number cleared.
+
+AND IT CAN BE SHOWN NOT TO DEPEND ON A NUMBER KONNECTOME CHOSE. Run the same pair of trials at four gains spanning two orders of magnitude and the inequality holds every time. The loop is not tuned; the direction is the result.
+
+THAT CONTROL IS THE THING THAT WAS ALREADY THERE. Watch the bus across the sequence: what rises is the stability bias, the same scalar the stabiliser has published since it was built, and what the raised bias does is move the threshold a drive must exceed to seize control. Nothing new is broadcast, and a reader can follow the loop end to end without meeting a quantity invented for it.
+
+AND THE MOST IMPORTANT DEMONSTRATION IN THIS SLICE IS OF A DISASTER THAT DOES NOT HAPPEN. Raise control high enough to mute an ordinary drive, then put the SAME drive - same distress, same proposed action - at the inviolable rank and raise control by exactly as much. The ordinary drive falls silent. The inviolable one still seizes control, because it faces the base threshold and always will. Shown the other way round, the pair is the argument for the exemption: without it, a mind under sustained conflict quietly stops breathing, and every test in the suite stays green while it does.
+
+AND ONE THING THE DEMONSTRATION SHOWS BY REFUSING. Ask the loop to run with a gain of zero, or with a negative one, and it refuses by name rather than running. An open loop and a closed one look identical from outside, so the only place the difference can be made visible is at the door.
+
+NOTHING NEW REACHES THE CAPSTONE. The told story is unchanged, and that is by design rather than by luck: the loop is unwired, so no run konnectome performs today measures conflict or raises control.
+
+
+KONNECTOME REALIZATION LOG - SLICE 60
+
+Slice 60 - The conflict monitor's mode register, and the supervisor leg closed - 2026-08-11 - DECISION-16; OBSERVATION-18 CLOSED.
+
+WHAT CAN NOW BE SHOWN THAT COULD NOT BE SHOWN BEFORE.
+
+THAT THE CONFLICT MONITOR CAN SAY WHAT IT IS DOING, IN THE CORPUS'S OWN WORDS. Ask the pack for its register and four entries come back with both names apiece: conflict_monitoring, The Watchtower; error_and_pain_alarm, The Struck Bell; effort_allocation, The Taskmaster; task_negative_idle, The Quiet Post. Ask any one of them for its posture and you get two fields - what the construct is doing and what it puts out. The Watchtower is MEASURING and putting out a GRADED CONTROL DEMAND. The Struck Bell is PHASIC FIRING and putting out an ALARM. Slice 58 could show a loop running; it could not show the loop naming the mode it was running in.
+
+AND THAT THE PACK WILL TELL YOU WHOSE REGISTER IT BORROWED. Ask it, and it answers: anterior cingulate cortex. That is DECISION-16's condition made visible - a reader who suspects a borrowed register does not have to go looking for a comment, because the pack answers the question out loud.
+
+THE MOST INSTRUCTIVE DEMONSTRATION IN THIS SLICE IS OF A MODE THAT IS NOT THERE. Ask this construct for the transfer function of proactive control - the first thing anyone reading the cognitive-control literature would ask for, and a phrase konnectome's own corpus uses at Chapter 52.3.3 - and it refuses by name: existence_error, mode_entry, proactive_control. Proactive and reactive control are postures of the region that RECEIVES the conflict signal, not of the one that sends it, and the corpus says of this construct that it "does not exert control at all". Shown as a refusal, the distinction is unmistakable; written as a note, it would have been read past.
+
+THAT THE LOOP SLICE 58 BUILT WAS ALREADY A ROW IN A TABLE NOBODY HAD READ YET. Print the transition table and the first row reads: rising response conflict, Watchtower to Taskmaster, hundreds of milliseconds, self-selected. That is the loop, exactly as built two slices earlier, arriving from the corpus as a row rather than from the builder as a design.
+
+AND THAT NINE ROWS CAN BE HONEST TRANSCRIPTION OF FOUR. Read the corpus's four rows beside konnectome's nine and the arithmetic is visible: three of the corpus's rows name a CLASS of departure rather than one mode, and each is written out as the rows it names. Then look for the tenth row that is not there - the alarm arriving at itself - and its absence is the demonstration that the expansion was reasoning rather than filling in a grid.
+
+AND THE DEMONSTRATION WORTH RUNNING TWICE IS THE WATCH. Hand the supervisor a run where control was raised and the conflict did not fall, and it warns. Hand it a run where the loop worked, and it is quiet. Then read the SAME report's other half in either case: the cingulate-seizure regime comes back UNWATCHED - not clean, not passing, not silent. konnectome has nothing that could detect it, and the report says so. A reader can see one construct being told the truth about itself in two different registers at once, which is the first time this build has shown that.
+
+NOTHING NEW REACHES THE CAPSTONE. The told story is byte-identical to the one main tells, verified by running both rather than assumed. The loop is still unwired into the cognitive cycle, so no run konnectome performs today measures conflict, raises control, or consults this register.
+
+KONNECTOME REALIZATION LOG - SLICES 61 AND 62
+
+Slices 61 and 62 - The judgement-call protocol, and DECISION-15 worked under it - 2026-08-11 - DECISION-17; CONSTITUTION VERSION 26.
+
+WHAT CAN NOW BE SHOWN THAT COULD NOT BE SHOWN BEFORE.
+
+THAT A REFUSAL IN THIS BUILD CAN BE UPGRADED WITHOUT BEING REVERSED, AND THAT THE RECORD SAYS WHICH KIND IT IS. Open docs/evidence/01_conflict_control_coupling_gain_v1.txt and read DECISION-15's warrant as it stands today. Yesterday it was a refusal that had survived a READING of the corpus. Today it is a refusal that has survived a SEARCH of the published literature, and the record names the difference in those words. Nothing about the code changed. A reader can see a build getting MORE CERTAIN OF A REFUSAL, which is not a thing this Fileset could previously show.
+
+AND THE STRONGEST PART OF THAT RECORD IS SOMETHING THAT IS NOT THERE. Follow the record's fourth source to Princeton's PsyNeuLink documentation for the Botvinick 2001 conflict monitoring model and read the parameters it publishes: the colour and word hidden layers, logistic, gain 1.0 and bias 4.0; the task-demand and response layers, gain 1.0 and bias 0.0; every recurrent layer, integration rate 0.01. Then look for the conflict-to-control coupling constant, and for the formula behind the sentence saying conflict is computed on the response layer's output port. NEITHER IS THERE. A reader can see the field's own reference re-implementation stating every number except the one konnectome refused to invent, which is a far better demonstration of the refusal than any sentence konnectome could write about it.
+
+THAT THE PACK WILL TELL YOU WHAT ITS OWN ACCEPTANCE TEST IS FREE OF. Ask conflict_monitor which confounds its ablation excludes and four names come back: feature repetition, contingency learning, temporal learning, stimulus-response binding. Those are the confounds a 2019 review names when it argues that the human Gratton effect is "merely an illusion". A construct answering out loud with the list of ways its own headline result could have been faked is new here, and it is the same move as slice 60's borrowed register - the claim is asked rather than read past.
+
+AND THE FOUR DEMONSTRATIONS WORTH RUNNING ARE THE FOUR ATTEMPTS TO FAKE THE EFFECT.
+
+TRY TO FIND A REPEATED FEATURE. Print the measured trial of the conflicted arm and the measured trial of the calm arm side by side. They are not similar; THEY ARE THE SAME TERM. A human experimenter can only build two trials that resemble each other, and that resemblance is where the confound lives. Here there is one trial used twice.
+
+TRY TO MAKE IT LEARN. Measure one incongruent trial's conflict, then measure it twenty more times. Every answer is the first answer. Nothing in the pack has changed as a result of having been run, so no distractor can quietly become predictive.
+
+TRY TO MAKE THE RHYTHM DO IT. Run the measured trial after one calm trial, then run the identical trial after eleven, each from a fresh bus. The conflicts are EXACTLY equal. An eleven-fold difference in the length of the run-up producing bit-identical output is a clearer demonstration than any argument that there is no clock in here.
+
+AND THEN RUN THE INEQUALITY ON THE CLEARED GROUND. With no feature repeating, nothing learning and nothing timed, the conflicted history still leaves LESS conflict on the measured trial than the calm history does. THAT IS THE ONE TO WATCH, because if removing every confound had removed the effect, the effect WAS the confound. A reader can watch a contested result being stripped of every explanation offered against it and survive - in konnectome, and about konnectome only.
+
+AND THE HONEST CAPTION IS PART OF THE DEMONSTRATION RATHER THAN A DISCLAIMER UNDER IT. None of this shows that conflict monitoring is true of human beings. konnectome's loop passing konnectome's test is evidence about konnectome's loop and nothing else, and DECISION-17 says so in the pack's own comments so that the next person to quote this result finds the limit attached to it.
+
+AND THAT A CORPUS CAN BE SHOWN TO BE OUT OF DATE WITHOUT BEING SHOWN TO BE WRONG. Search docs/neuroscience/ for "contingency learning", "congruency sequence", "feature repetition", "conflict adaptation" or "proportion congruent" and nothing comes back. Then read Chapter 52.2.1 and find the Gratton effect presented as a successful prediction - "it predicts, and finds" - which is accurate. Both of those are true at once, and seeing them together is the clearest available picture of what the corpus update run is for. The gap is RECORDED and NOT PROMOTED, because the run is due at forty hand-offs and the count is thirty-five: run find docs -name '*Context_Hand-Off*.txt' | wc -l and the answer is the trigger.
+
+NOTHING NEW REACHES THE CAPSTONE. The told story is byte-identical to the one main tells, verified by running both rather than assumed. The conflict loop is still unwired into the cognitive cycle, so no run konnectome performs today measures conflict or raises control.
+
+KONNECTOME REALIZATION LOG - SLICES 63 AND 64
+
+Slices 63 and 64 - The evidence back-fill, and MODE represented well - 2026-08-11 - OBSERVATION-19; no code changed.
+
+WHAT CAN NOW BE SHOWN THAT COULD NOT BE SHOWN BEFORE - AND NOTHING KONNECTOME RUNS BEHAVES DIFFERENTLY, because neither slice changed code. What changed is what a reader can be shown by opening files, which for a build whose First Principle is honesty is not a lesser kind of demonstration.
+
+THAT A SEARCH THIS BUILD ALREADY RELIED ON CAN NOW BE CHECKED BY SOMEBODY WHO WAS NOT THERE. Open docs/evidence/02_conflict_monitor_mode_register_sources_v1.txt. It is the search behind slice 60, and until slice 63 its sources existed nowhere a later reader could reach - they had been used, argued from, and left unaddressed, one slice before the directory that exists to stop exactly that. Now the query is there in the words it was run in, the date is there, and every source has an address. A reader can follow the trail instead of taking the finding on trust.
+
+AND THE THING WORTH SHOWING IN THAT RECORD IS THE ANSWER KONNECTOME NEARLY GAVE. Read the search results it quotes: Braver's dual mechanisms of control, proactive against reactive, described as MODES, about cognitive control, in the corpus's own words at Chapter 52.3.3. Then read the clause that disqualifies them - proactive and reactive are postures of the LATERAL PREFRONTAL CORTEX, with the cingulate appearing as an accessory structure feeding it. A register built from them would have cited a real framework, from the right corpus, about the right function, and described a different piece of the brain than the pack implements, AND NOTHING IN THE CODE WOULD HAVE FAILED. That is a demonstration of a near miss, preserved on purpose, and it could not be shown before because the near miss had never been written down.
+
+AND THAT A RECORD FINDING NOTHING IS SHOWN AT FULL LENGTH. Read record 02's own answer to whether there is a corpus gap: NO, and the reason is that the corpus carried the right answer in full, carried the tempting wrong answer too, and carried the clause that separates them. Then read the README's note on what the inventory should contain. A reader can see a directory refusing to become a list of the corpus's failures, which is a shape of honesty that only shows up in what a document chooses to include.
+
+THAT THE DIFFERENCE BETWEEN A STATE AND A MODE CAN BE SHOWN IN ONE SENTENCE. Open the tutorial's construct entry: THE STATE IS HOW MUCH, AND THE MODE IS WHICH WAY. Then follow it into the two new entries - the HYBRID AUTOMATON with its four blocks, and the FAULT REGIME with the rule that A FAULT IS NOT A MODE and the reason a reader can feel, which is that a machine with an official way to be broken never reports being broken. Ask the agency entry which of its three values never appears in a transition table, and the answer is broadcast_bias, because it moves a boundary and changes no mode.
+
+AND THE MORE USEFUL DEMONSTRATION IS WHAT THE SAME DOCUMENT USED TO SAY EIGHT HUNDRED LINES LOWER. Read the tutorial's slice-58 and slice-60 chapters as they stood before this slice, where a mode register is "a short list of the STATES the thing can be in", four times over. THE DOCUMENT WHOSE JOB IS TO TEACH THE DISTINCTION WAS TEACHING AGAINST IT, in green condition, past every gate this build owns. A reader can see exactly what a suite of tests cannot check, and can see that the only instrument that found it was reading the document from end to end.
+
+THAT A DOCUMENT CAN BE SHOWN TO BE HALF STALE. Open docs/design/05 and read its new staleness marker, then read Part Five, which says konnectome has no supervisor channel, no master register, an open stabiliser gap and no register at all - four statements the build overtook at slices 42, 46, 44 and 39. Then notice that NOT ONE WORD OF THE READ WAS CHANGED. A deep read of a frozen corpus does not go stale and is not withdrawn; only its picture of konnectome did, and the marker names which half is which. That is a document being corrected without being overwritten, and it is the same move as the vision-set analysis's grain count being marked superseded IN PLACE - because a dated assessment that gets rewritten quietly becomes a rolling one, and DECISION-16 overturned its stated REASON as well as its count.
+
+AND THE ONE TO SIT WITH IS OBSERVATION-19, WHICH SHOWS A BUILD BEING STRICTER THAN ITS OWN AUTHORITY AND NOT KNOWING IT. Read docs/design/05 Part Four under the heading "TWO QUALIFICATIONS THAT A STRICT VALIDATOR WOULD GET WRONG": the rule is per construct and not per regime, a tagged minority of faults are admitted on a usage argument with the reasoning inline, and the schema therefore needs a per-mode admitted-as-fault flag and a rationale slot, NOT A BLANKET EXCLUSION. Then read supervisor_faults_are_not_modes/1, which is the blanket exclusion.
+
+AND THEN READ THE COMMENT THAT SHOWS NOBODY MISREAD ANYTHING. mode_register.pl has said since slice 39 that the flag "belongs with the supervisor channel that does not exist yet". THE SUPERVISOR CHANNEL WAS BUILT AT SLICE 42, twenty-two slices ago, and in the meantime the blanket rule was copied into three more documents as though the authority had said it. A reader can watch a correct deferral turn into an unrecorded departure with no mistake anywhere along the way, which is the clearest picture this build has produced of why NOTHING WATCHES A DEFERRAL'S CONDITION is a fault worth a name - the session that builds X is looking at X, not at the list of things that were waiting for X.
+
+NOTHING NEW REACHES THE CAPSTONE. The told story is byte-identical to the one main tells. THIRTY-NINE packs and ONE THOUSAND AND SEVEN tests, unmoved. The conflict loop is still unwired into the cognitive cycle, and no run konnectome performs today is any different for these two slices.

@@ -1,6 +1,6 @@
 THE KONNECTOME TUTORIAL
 
-Version 56.
+Version 57.
 
 A complete, top-to-bottom guide to konnectome, written for a beginner, a learner, a layperson, a newcomer, a novice. No prior knowledge is assumed. Every term is explained the first time it is used.
 
@@ -44,7 +44,17 @@ These are the words you will meet. Each is defined in plain language.
 
 • Tick: one step of simulated time. konnectome does not use clock seconds; it counts in ordinal ticks, which just means tick one, tick two, tick three, and so on, like frames of a film.
 
-• Construct: any part of the modeled brain - a region, a connection, or a chemical. Each construct has a name and a state (its current condition, such as how active it is).
+• Construct: any part of the modeled brain - a region, a connection, or a chemical. Each construct has a name and a state (its current condition, such as how active it is), and a mode (which of a few named ways of behaving it is currently in - a gate is either letting things through or holding them back; a sleep switch is either awake or asleep). The difference is worth holding on to, because everything in the next entry depends on it: THE STATE IS HOW MUCH, AND THE MODE IS WHICH WAY. State slides up and down continuously while the mode stays put, and the mode itself changes only in a jump, and only by a rule the construct has written down in advance.
+
+• Hybrid automaton: the four-part pattern konnectome builds EVERY construct to. This is the most-repeated demand in the whole neuroscience corpus - every layer of the body, from single cells up to the whole sleeping-and-waking brain, describes its parts this way - and "hybrid" means it has both halves at once: a discrete mode, and continuous state moving within it. The four parts are: THE MODE REGISTER, the named list of modes (a gate has two; the anterior cingulate's has four); THE PER-MODE TRANSFER FUNCTIONS, saying what the construct actually does differently in each mode, because a mode that changed no behavior would be a label rather than a mode; THE TRANSITION TABLE, an explicit list of the only permitted moves, each row naming what triggers it, where it goes from, where it goes to, how long it takes, and WHO IS ALLOWED TO CAUSE IT; and THE FAULT REGIMES, the ways the construct can go WRONG.
+
+  A NOTE ON THE WORD REGISTER, because konnectome has caught itself being sloppy with it. Strictly, THE MODE REGISTER IS ONLY THE FIRST OF THE FOUR PARTS - the list of names. The whole four-part object is the HYBRID AUTOMATON. Much of this repository, including a pack name, uses "mode register" loosely for the whole thing, and a reader should expect that; but where precision matters, the register is the list and the automaton is the machine.
+
+• Fault regime: a way a construct can go wrong - and konnectome's rule about these is short and load-bearing: A FAULT IS NOT A MODE. Faults are kept OUT of the mode register and watched from outside by a separate supervisor. The reason is not bookkeeping. If being broken were listed as one of the official modes, the system would acquire a designed behavior for being broken, and would then run that behavior quietly and forever, exactly as if nothing were wrong. A machine with an official way to be broken never reports being broken.
+
+  ONE HONEST QUALIFICATION, because konnectome's own design authority says the ban should not be total. The corpus does, in a small tagged minority of cases, admit a fault INTO a register on purpose - and it notes that the same named regime can be a genuine mode in one construct and a fault in another, so the rule is per construct rather than per regime. konnectome currently enforces the ban with no exception, which is stricter than its source. That difference is recorded as an open observation rather than left for a reader to trip over.
+
+• Agency (of a mode change): who caused it. Every row of a transition table names this, because the same construct can be moved by different authorities and a reader needs to know which. konnectome has three so far: self_selected, meaning the construct changed its own mode by its own rule; thrown_from_above, meaning a broadcast state ordered it to; and broadcast_bias, which is the odd one out and the most useful to understand - it means nobody changed any mode at all, and something merely moved a boundary, after which the construct's own rule fired or did not fire on its own. A bias never appears in a transition table. It changes where the line is, not which side of it you are on.
 
 • Archetype: a shape of behavior. konnectome's guiding book claims that the whole brain runs on only six basic behaviors, called archetypes, rather than a hundred special cases. They are named relay, integrator, oscillator, attractor, gate, and comparator (all explained in Part Eight).
 
@@ -1428,11 +1438,11 @@ When the last slice finished, one piece was deliberately left undone.
 
 konnectome has a construct called the supervisor, whose entire job is to notice when something is going wrong and say so. The new conflict-noticing machinery wanted to be watched by it. The supervisor said no.
 
-The reason is a rule this project set for itself long ago. To watch a thing, the supervisor needs that thing's MODE REGISTER - a short list of the states the thing can be in, what it does in each of them, what moves it between them, and the specific ways it can break. No register, no watching.
+The reason is a rule this project set for itself long ago. To watch a thing, the supervisor needs that thing's MODE REGISTER - a short list of the MODES the thing can be in, what it does in each of them, what moves it between them, and the specific ways it can break. (Modes, not states: the glossary in Part One draws the line, and it matters here. A state is how much; a mode is which way.) No register, no watching.
 
-The new construct did not have one. And writing one looked easy: anybody who has just spent a day building a thing can name four states it might be in.
+The new construct did not have one. And writing one looked easy: anybody who has just spent a day building a thing can name four modes it might be in.
 
-The slice refused. Not because it could not guess, but because a list of states invented in order to make a function call work is not a description of anything - it is a shape that fits the socket. So it wrote down, in the project's ledger, precisely what would have to be READ before the job could be done honestly, and stopped.
+The slice refused. Not because it could not guess, but because a list of modes invented in order to make a function call work is not a description of anything - it is a shape that fits the socket. So it wrote down, in the project's ledger, precisely what would have to be READ before the job could be done honestly, and stopped.
 
 This slice did the reading. It took about ten minutes, and everything was already there.
 
@@ -1468,7 +1478,7 @@ The four states that were actually written down are worth knowing, because they 
 
 • THE QUIET POST - disengaged rest, with the monitoring turned down.
 
-Two of those four are states this machine cannot currently reach. Nothing in konnectome is wired to pain or to social rejection yet. They are written down anyway, following a rule set earlier in the build: a register says what the CONSTRUCT HAS, not what today's caller happens to use.
+Two of those four are modes this machine cannot currently reach. Nothing in konnectome is wired to pain or to social rejection yet. They are written down anyway, following a rule set earlier in the build: a register says what the CONSTRUCT HAS, not what today's caller happens to use.
 
 One judgement call was needed, and it is a nice illustration of how careful this gets.
 
@@ -1623,4 +1633,4 @@ Everything konnectome needs is inside its own docs/ folder, so you never have to
 This tutorial itself is versioned. As konnectome grows a new pack or component, this file is updated and its old version moved to the archive, so it always describes the konnectome that actually exists today.
 
 
-End of the konnectome tutorial, version 56.
+End of the konnectome tutorial, version 57.

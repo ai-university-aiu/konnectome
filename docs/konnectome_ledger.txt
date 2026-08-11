@@ -1226,7 +1226,7 @@ self-test; conformance re-measured at 137 of 137 (specification 4.0.0) in both c
 wall; no cousin edited, per the Second, Third, and Fourth Commandments.
 
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 18 (4 CLOSED: 8, 9, 15 and 18).  Decisions: 17.
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 19 (4 CLOSED: 8, 9, 15 and 18).  Decisions: 17.
 Slice-34 note (2026-08-09). The bound turned live in the told story. The slice-33 pending line
 (the bound proven per-territory in the tests but not yet in the capstone's told story) is
 CLOSED: the capstone's boot world arms the slow bound for real - the diffuse mark at one half,
@@ -5359,4 +5359,114 @@ step is not discharged by any of them.
   DERIVATION, which is the Twenty-First Commandment's SECOND protocol and never reaches a search.
 
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 18 (4 CLOSED: 8, 9, 15 and 18).  Decisions: 17.
+OBSERVATION-19 (2026-08-11, from slice 64's mode sweep). KONNECTOME'S FAULT-EXCLUSION RULE IS
+STRICTER THAN ITS OWN DESIGN AUTHORITY SAYS IT SHOULD BE, AND THE FIELD THAT WOULD SOFTEN IT WAS
+DEFERRED ON A CONDITION THAT WAS MET TWENTY-TWO SLICES AGO AND NOBODY NOTICED.
+
+THE RULE AS BUILT. supervisor_faults_are_not_modes/1 refuses any register in which a declared fault
+signature is also a declared mode. It is a blanket ban with no exception, it has been enforced since
+slice 42, and it is quoted approvingly in the README, in the tutorial and in the vision-set analysis
+as one of this build's better refusals. A FAULT IS NOT A MODE.
+
+WHAT THE DESIGN AUTHORITY ACTUALLY SAYS, at docs/design/05 Part Four, and it is not that. Two
+qualifications are written there under the heading "TWO QUALIFICATIONS THAT A STRICT VALIDATOR WOULD
+GET WRONG", which is close to a prediction of this observation. The first: "THE RULE IS PER CONSTRUCT,
+NOT PER REGIME ... depolarization block belongs in the register of a type that uses it functionally
+and in the fault table of a type that only suffers it. The same named regime is a MODE in one
+construct and a FAULT in another. A global fault list is therefore wrong." The second: "A TAGGED
+MINORITY OF FAULTS ARE ADMITTED INTO THE REGISTER ON A USAGE ARGUMENT, always with the reasoning
+written inline ... The schema therefore needs a per-mode admitted-as-fault flag and a rationale slot,
+NOT A BLANKET EXCLUSION."
+
+THE CORPUS SUPPLIES REAL EXAMPLES AND THEY WERE READ AT THE TIME. The authority lists four admission
+rationales verbatim - "admitted only as fault"; "a fault regime, admitted only because it names the
+failure"; "a used but pathological standing state, admitted here because it is reached routinely in
+disease and is largely reversible"; "admitted because rods progressively escape it to contribute in
+daylight, so it is a normal boundary of operation" - and notes they cluster at Layer 8 in the glial,
+vascular and endocrine entries. The motif-and-workspace authority independently confirms one of them,
+citing Entry 6's Runaway Mode as "admitted only as fault".
+
+AND THE CODE ALREADY KNEW. mode_register.pl has carried this comment since slice 39: "Two fields the
+corpus carries and this slice does NOT, declared here so the gap is a decision and not an oversight:
+the per-mode CONFIDENCE tag ... and the per-mode ADMITTED-AS-FAULT flag, WHICH BELONGS WITH THE
+SUPERVISOR CHANNEL THAT DOES NOT EXIST YET. Both enter with the slices that need them."
+
+THE SUPERVISOR CHANNEL WAS BUILT AT SLICE 42. The deferral's own stated unblocking condition has been
+satisfied for twenty-two slices, and in that time the blanket rule was written into three more
+documents as though it were the design authority's own position.
+
+WHY THIS IS THE INTERESTING SHAPE RATHER THAN A TYPO. It is not that anybody misread the authority.
+Slice 39 read it correctly, recorded the omission correctly, and named the exact condition under
+which it should be revisited. WHAT FAILED IS THAT NOTHING WATCHES A DEFERRAL'S CONDITION. A deferral
+written as "when X exists" is invisible on the day X arrives, because the slice that builds X is
+looking at X and not at the list of things that were waiting for it. This is the same family as the
+finding that a document gets abandoned whole when only part of it is superseded, and it is the second
+time this session has met a fault of that family.
+
+WHAT THIS DOES NOT CLAIM. It does not claim the blanket ban has caused a defect. No register built so
+far has wanted an admitted fault, so the strictness has cost nothing yet - which is precisely why it
+survived unexamined. And it does not claim the ban is wrong: the argument for it, that a machine with
+an official way to be broken never reports being broken, is a good argument and is not withdrawn.
+WHAT IS WRONG IS THAT KONNECTOME IS ENFORCING A STRICTER RULE THAN ITS SOURCE STATES WITHOUT ANYWHERE
+RECORDING THE DEPARTURE, which under the First Principle is the thing that must not happen.
+
+ITS CLOSER, NAMED AND SIZED. Add the per-mode admitted-as-fault flag and its rationale slot to the
+mode entry schema, make the supervisor's refusal consult the flag rather than banning outright, and
+require the rationale to be present whenever the flag is set - so an admitted fault must SAY WHY IT
+IS ADMITTED, in the corpus's own manner, and cannot be admitted silently. THE RATIONALE SLOT IS THE
+LOAD-BEARING HALF: it is what keeps the softened rule from becoming a hole. Note that this also
+touches the per-mode CONFIDENCE tag deferred in the same sentence, which slice 60 met again when the
+corpus's four transfer functions each arrived with a confidence grade and mode_entry had nowhere to
+put them. TWO DEFERRED FIELDS, ONE SCHEMA, AND BOTH NOW HAVE A CALLER.
+
+AND A STANDING SUGGESTION FALLS OUT OF IT, RECORDED HERE BECAUSE IT WOULD HAVE CAUGHT THIS: WHEN A
+DEFERRAL NAMES A CONDITION, THE SLICE THAT MEETS THAT CONDITION SHOULD BE THE ONE THAT CHECKS THE
+LIST. The Twenty-Second Commandment now makes a flagged call work rather than rest; nothing yet makes
+a met condition announce itself.
+
+Slice-63 note (2026-08-11). THE EVIDENCE BACK-FILL. docs/evidence/ gains record 02, written up
+retrospectively from the search run at slice 60, before the directory existed - and it says so on its
+own face rather than being dated as though it had always been there. NO CODE CHANGED. THE OWNER ASKED
+FOR THIS AND THE GAP IS WORTH NAMING: a finding that lives only inside the source file that used it is
+a finding the next session meets as an assertion, and the whole argument for an evidence directory is
+that a search should be re-runnable and its sources checkable by somebody who was not there. Record 02
+CONCLUDES THAT THERE IS NO CORPUS GAP, which is filed with the same care as record 01's gap - because
+a directory that only ever accumulated records finding the corpus wanting would give a false picture
+of how often it is wanting, and the README now says so.
+
+Slice-64 note (2026-08-11). MODE, REPRESENTED WELL. A full sweep of konnectome's OWN documents for how
+the mode concept is presented, at the owner's request, plus the tutorial edit the owner specified. NO
+CODE CHANGED AND NO TEST MOVED. The tutorial's construct entry now carries the mode alongside the
+state with the distinction stated in the plainest form this build has managed - THE STATE IS HOW MUCH,
+AND THE MODE IS WHICH WAY - and gains two new glossary entries, the hybrid automaton and the fault
+regime, plus the agency entry the three agency values needed.
+
+FOUR REPAIRS UNDER THE SIXTEENTH COMMANDMENT, all recorded in the build log. (1) THE TUTORIAL
+CONTRADICTED ITS OWN GLOSSARY: its slice-58 and slice-60 chapters called a mode register "a short list
+of the STATES the thing can be in" and repeated the conflation four times, in the one document whose
+job is to teach the distinction. (2) docs/design/README.txt said the mode-register family was "built
+at slices 39 and 40", understating a family that ran 39 through 47, planned seven and built nine, with
+further registers at 50 and 60. (3) docs/design/05, the design authority for the whole concept, had
+never carried a staleness marker and its Part Five describes a konnectome twenty slices out of date -
+it says the supervisor does not exist (slice 42), the master register is absent (slice 46), the
+stabiliser gap is open (slice 44) and the register is not built (slice 39). Its READINGS are untouched
+and do not go stale; only its picture of konnectome did, and it now says which is which. (4) The
+vision-set analysis's grain count is marked as superseded IN PLACE rather than rewritten, because it
+is a dated assessment: DECISION-16 overturned its stated REASON for there being no region-grain
+register, not merely its count.
+
+AND ONE FINDING WORTH MORE THAN THE FOUR REPAIRS, RECORDED AS OBSERVATION-19: konnectome's
+fault-exclusion rule is stricter than its own design authority says it should be, and the schema field
+that would soften it was deferred at slice 39 on the stated condition that the supervisor channel did
+not exist. It was built at slice 42.
+
+TERMINOLOGY DRIFT IS RECORDED AND ONLY PARTLY FIXED, honestly. "Mode register" is used across this
+repository for BOTH the first of the four blocks AND the whole four-block object - which is exactly
+the third sense of REGISTER that docs/design/05 warned against adding, and it also collides with the
+pack name. The tutorial now states the precise usage and warns the reader to expect the loose one; the
+repository is NOT renamed, because a rename touching a pack name, six DSPARCD files and sixty build-log
+chapters is its own slice and not a tail-end tidy. ALSO NOTED AND NOT ACTED ON: this build uses the
+ordinary English idiom "failure mode" freely in its own prose, in a repository whose central rule is
+that a fault is not a mode. Nothing routes to either change order. Neither cousin was edited.
+
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 19 (4 CLOSED: 8, 9, 15 and 18).  Decisions: 17.

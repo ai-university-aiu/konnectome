@@ -11,7 +11,7 @@ PART ONE - READ THESE FIRST
 
 - READ docs/DSPARCD/konnectome_0_definition_v1.txt BEFORE ANYTHING ELSE IN THE FILESET. Unchanged this session and unchanged since slice 41. It states what konnectome IS in one sentence and what it is NOT in eight. READ ITS PART ONE AGAINST THIS SESSION'S LAST FINDING: "a part that cannot be reached from the one running loop is not yet part of konnectome, however well it tests." There are now FIVE such parts. See Part Five.
 
-- Read The DSPARCD Fileset at its current versions: docs/DSPARCD/konnectome_0_definition_v1.txt and docs/DSPARCD/konnectome_1_specification_v56.txt through konnectome_6_demonstration_v57.txt. IT MOVED THREE TIMES THIS SESSION, v54 through v57.
+- Read The DSPARCD Fileset at its current versions: docs/DSPARCD/konnectome_0_definition_v1.txt and docs/DSPARCD/konnectome_1_specification_v58.txt through konnectome_6_demonstration_v58.txt. IT MOVED FOUR TIMES THIS SESSION, v54 through v58.
 
 - READ BOTH ANALYSES, AND READ THE STATEMENT OF HOW THEY RELATE. This is the single most important change this session made to how the repository is navigated, and it is new.
   • docs/design/02_north_star_gap_analysis_v1.txt - unchanged this session. Its Part Nine is the QUEUE and is what the last six sessions have worked from.
@@ -28,7 +28,7 @@ PART ONE - READ THESE FIRST
 
 - Read the Settings, General, Instructions for Claude, and ~/CLAUDE.md at the organization root.
 
-- Read the current tutorial, docs/konnectome_tutorial_v56.txt (FIFTY-SEVEN parts; it gained three this session).
+- Read the current tutorial, docs/konnectome_tutorial_v57.txt (FIFTY-SEVEN parts; it gained three this session, and its GLOSSARY gained the mode, the hybrid automaton, the fault regime and the agency - read those four before any register work).
 
 - Read the prior hand-off, 2026-08-11_1 (Tare Ablewright), now at docs/hand-off/. Its queue is the queue this session worked from and MOST OF IT IS STILL STANDING.
 
@@ -46,13 +46,13 @@ PART TWO - THE IMPORTANT DOCS FILES
 
 - docs/DSPARCD/konnectome_0_definition_v1.txt - THE DEFINITION, phase zero. Read it first.
 
-- docs/DSPARCD/konnectome_1_specification_v57.txt through konnectome_6_demonstration_v57.txt - the DSPARCD Fileset, Realization Log through slice 62.
+- docs/DSPARCD/konnectome_1_specification_v58.txt through konnectome_6_demonstration_v58.txt - the DSPARCD Fileset, Realization Log through slice 64.
 
-- docs/konnectome_tutorial_v56.txt - the beginner tutorial, FIFTY-SEVEN parts. A session that bumps it bumps BOTH the header version line and the closing line. THE INSERTION RULE holds: a new part goes BEFORE the three standing tail parts, which are renumbered. Exercised twice this session and it worked as written. NOTE THE ARCHIVE CONVENTION, which is easy to get wrong and was got wrong once this session before being caught: the superseded tutorial is git-mv'd INTO docs/archive/ and the new version is a NEW FILE. It is not a rename in place.
+- docs/konnectome_tutorial_v57.txt - the beginner tutorial, FIFTY-SEVEN parts. A session that bumps it bumps BOTH the header version line and the closing line. THE INSERTION RULE holds: a new part goes BEFORE the three standing tail parts, which are renumbered. Exercised twice this session and it worked as written. NOTE THE ARCHIVE CONVENTION, which is easy to get wrong and was got wrong once this session before being caught: the superseded tutorial is git-mv'd INTO docs/archive/ and the new version is a NEW FILE. It is not a rename in place.
 
-- docs/building_konnectome.txt - the build log, SIXTY chapters. UNVERSIONED since Constitution version 22; append-only, so it has no versions. It is where the record of every auto-fix goes, and the record is the single condition on the Sixteenth Commandment's grant.
+- docs/building_konnectome.txt - the build log, SIXTY-ONE chapters. UNVERSIONED since Constitution version 22; append-only, so it has no versions. It is where the record of every auto-fix goes, and the record is the single condition on the Sixteenth Commandment's grant.
 
-- docs/konnectome_ledger.txt - the scoreboard, UNVERSIONED since Constitution version 23. Counter line: Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0. Observations: 18 (4 CLOSED: 8, 9, 15 and 18). Decisions: 17. THE COUNTER LINE APPEARS TWICE, at line 1229 and at the end, and BOTH were swept this session. Append new entries before the LAST one, and READ BACK THE LINE NUMBERS AFTERWARDS - Tare's process note, honoured and worth keeping.
+- docs/konnectome_ledger.txt - the scoreboard, UNVERSIONED since Constitution version 23. Counter line: Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0. Observations: 19 (4 CLOSED: 8, 9, 15 and 18). Decisions: 17. THE COUNTER LINE APPEARS TWICE, at line 1229 and at the end, and BOTH were swept this session. Append new entries before the LAST one, and READ BACK THE LINE NUMBERS AFTERWARDS - Tare's process note, honoured and worth keeping.
 
 - docs/design/ - TEN NUMBERED DOCUMENTS, 01 through 10, the number being reading order and fulfilment order at once. 01 IS NEW AT VERSION 4 THIS SESSION.
 
@@ -85,7 +85,9 @@ FIVE SLICES BUILT, THREE NUMBERED DECISIONS, ONE OBSERVATION OPENED AND CLOSED I
 
 - SLICE 62, DECISION-15 WORKED UNDER THE PROTOCOL. First evidence record written; DECISION-17 taken; conflict_monitor gains one declared fact and five tests, 35 to 40. THE SEARCH RETURNED A NEGATIVE RESULT THAT STRENGTHENED THE REFUSAL - Princeton's reference re-implementation of the Botvinick model publishes every other parameter and carries no coupling constant at all - AND A FINDING NOBODY ASKED FOR: Schmidt 2019 argues the evidence for conflict monitoring is confounded and the effect slice 58 used as its acceptance test is one of the two pillars under attack. DECISION-17 keeps the test and reframes the claim, because every confound named is a property of the HUMAN paradigm and none exists in konnectome's ablation. A CORPUS GAP IS RECORDED AND VERIFIED.
 
-- State at hand-off: SIXTY-TWO slices. ONE THOUSAND AND SEVEN tests across THIRTY-NINE packs. Four gates at zero violations plus the naming gate's self-test. DSPARCD fileset v57; tutorial v56 at fifty-seven parts; build log sixty chapters; Constitution VERSION 26 at TWENTY-THREE commandments.
+- SLICES 63 AND 64, THE EVIDENCE BACK-FILL AND THE MODE SWEEP, both at the owner's request and neither changing code. Evidence record 02 back-fills the slice-60 search and records NO CORPUS GAP. The tutorial gains the mode, the hybrid automaton, the fault regime and the agency. FOUR REPAIRS, all in the build log - the tutorial contradicted its own glossary four times; docs/design/README understated the mode-register family by seven slices; docs/design/05 had never carried a staleness marker while its Part Five aged twenty slices; and the vision-set analysis's grain count is marked superseded in place. OBSERVATION-19 OPENED.
+
+- State at hand-off: SIXTY-FOUR slices. ONE THOUSAND AND SEVEN tests across THIRTY-NINE packs. Four gates at zero violations plus the naming gate's self-test. DSPARCD fileset v58; tutorial v57 at fifty-seven parts; build log sixty-one chapters; Constitution VERSION 26 at TWENTY-THREE commandments.
 
 
 PART FOUR - BUILD-AGAINST COUSIN COMMITS (for reproducibility)
@@ -124,6 +126,12 @@ PART FIVE - SHARP EDGES AND HONEST NON-CLOSURES
 - OBSERVATION-12 STANDS AND IS NOW DECLINED SIX TIMES: a sweep of the codebase claims inside all four design authorities. Under the pairing rule it is a legitimate SMALL item - but note that slice 59 shows how a "small" document item can consume most of a session, so size it honestly.
 
 - OBSERVATION-11 STANDS AND ITS CHEAP HALF IS NOW CLOSED. DECISION-9 settled that a downward assignment may address a construct of which there is exactly one, and version 4 records that version 3 PREDICTED this would work and predicted the mechanism. The EXPENSIVE half has gone from four independent arrivals to SIX, and the sixth is the best argument it has ever had: Chapter 80.1 says biology pays for layer-by-layer relay WHEN A MESSAGE NEEDS AN ADDRESS. THE ADDRESS IS WHAT THE EXPENSIVE PATH IS FOR.
+
+- OBSERVATION-19 IS OPEN AND IT IS THE BEST-SIZED ITEM ON THIS LIST. konnectome's fault-exclusion rule - A FAULT IS NOT A MODE - is STRICTER THAN ITS OWN DESIGN AUTHORITY SAYS IT SHOULD BE. docs/design/05 Part Four states, under a heading reading "two qualifications that a strict validator would get wrong", that the rule is PER CONSTRUCT rather than per regime, that a tagged minority of faults ARE admitted into registers on a usage argument, and that the schema needs a per-mode admitted-as-fault flag and a rationale slot, "NOT A BLANKET EXCLUSION". konnectome built the blanket exclusion. NOBODY MISREAD ANYTHING: slice 39 noticed the missing field and deferred it on the stated condition that the supervisor channel did not exist, AND THE SUPERVISOR WAS BUILT AT SLICE 42. Its closer is sized in the ledger and touches the per-mode CONFIDENCE tag deferred in the same sentence, which slice 60 met again. TWO DEFERRED FIELDS, ONE SCHEMA, BOTH NOW WITH A CALLER.
+
+- AND THE GENERAL FAULT BEHIND OBSERVATION-19 IS WORTH MORE THAN THE OBSERVATION: NOTHING WATCHES A DEFERRAL'S CONDITION. A note that says "when X exists, revisit this" is invisible on the day X arrives, because the session building X is looking at X rather than at the list of things that were waiting for it. The Twenty-Second Commandment now makes a flagged call WORK rather than rest; nothing yet makes a MET CONDITION ANNOUNCE ITSELF. That is the second time this session met this family, the first being a document abandoned whole because only part of it was superseded.
+
+- A TERMINOLOGY COLLISION IS RECORDED AND DELIBERATELY NOT FIXED. "Mode register" is used across this repository for BOTH the first of the four blocks AND the whole four-block object, which is exactly the third sense of REGISTER that docs/design/05 warned against adding, and it collides with the pack name too. The tutorial now states the precise usage and warns a reader to expect the loose one. A RENAME IS ITS OWN SLICE - it touches a pack name, six DSPARCD files and sixty-one build-log chapters - and should not be slipped into the tail of another. Same for the ordinary idiom "failure mode", used freely in a build whose central rule is that a fault is not a mode.
 
 - OBSERVATION-17, 14, 10, 7, 6, 5 AND 4 ALL STAND UNTOUCHED. Observation 5 has now been declined five times and the next visit should be deliberate.
 

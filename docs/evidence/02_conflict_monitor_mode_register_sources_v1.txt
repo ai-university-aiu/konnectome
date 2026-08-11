@@ -1,0 +1,100 @@
+EVIDENCE RECORD 02 - THE MODES OF THE CONFLICT MONITOR, AND THE FRAMEWORK THAT NEARLY SUPPLIED THE WRONG ONES
+
+Version 1. Searched 2026-08-11 at slice 60. WRITTEN UP RETROSPECTIVELY at slice 63, and that is stated on its own face rather than dated as though the record had existed all along.
+
+
+WHY THIS RECORD IS BACK-FILLED, AND WHY THAT MATTERS
+
+This search was run at slice 60, BEFORE the Twenty-Second Commandment existed. Its findings shaped DECISION-16 and are argued at length in the conflict_monitor pack's own header and in the ledger - but they were never filed as evidence, because there was nowhere to file them.
+
+THE OWNER CAUGHT THAT AND ASKED FOR IT TO BE FIXED, and the gap is worth naming rather than quietly closing. A finding that lives only inside the source file that used it is a finding the next session meets as an assertion. The whole argument for an evidence directory is that a search should be re-runnable and its sources checkable by somebody who was not there.
+
+So this record is written after the fact. It adds no claim that was not made at slice 60; it makes the sources reachable.
+
+
+THE FLAGGED JUDGEMENT CALL THIS BELONGS TO
+
+OBSERVATION-18 (slice 58, closed at slice 60). Slice 58 refused to call the supervisor on the new conflict_monitor pack, because supervisor_watch/3 judges a MODE REGISTER's fault block and the construct had none. Writing one would have meant inventing the construct's modes, and a register invented to make a function call compile is not a register.
+
+The observation named its own closer: READ THE CORPUS FOR THIS CONSTRUCT'S OWN MODES.
+
+THE QUESTION FOR THIS SEARCH: what are the operating modes of the brain region konnectome's conflict monitor realizes, and does the published literature supply them where the corpus does not?
+
+
+STEP ONE: WHAT THE CORPUS SAYS, AND IT SAYS EVERYTHING
+
+THE CORPUS SETTLED THE QUESTION COMPLETELY AND THE SEARCH WAS THEREFORE NOT NEEDED FOR THE ANSWER. That is recorded here because it is the protocol's own first step working exactly as intended, and because a record that only ever appears when the corpus fails would give a false picture of how often the corpus fails.
+
+docs/neuroscience/LAYER_09_MODES_MANUSCRIPT.txt, at lines 393 to 433, carries all four blocks under the anterior cingulate cortex entry, in the corpus's own words. Its framing sentence: "The anterior cingulate cortex is a comparator that notices when something is going wrong, so its modes are monitoring, alarm, and effort mobilisation, and with the anterior insula it anchors the salience network."
+
+Four modes with formal and coined names, four transfer functions each carrying a confidence grade, a four-row transition table, and a fault block with two boundary signatures, one warning condition and two watchdogs.
+
+The reading took about ten minutes. The refusal that preceded it cost five minutes. Inventing would have cost an afternoon and then a later day of unpicking.
+
+
+STEP TWO: THE SEARCH THAT WAS RUN ANYWAY, AND WHY IT IS THE VALUABLE PART OF THIS RECORD
+
+The query run on 2026-08-11 was:
+
+"Braver dual mechanisms of control proactive reactive control anterior cingulate modes"
+
+IT RETURNED A CONFIDENT, WELL-EVIDENCED, WRONG ANSWER, and that is the finding this record exists to preserve.
+
+The literature converges immediately on Todd Braver's DUAL MECHANISMS OF CONTROL framework, which distinguishes PROACTIVE control - anticipatory and sustained, holding the goal in mind before the critical event, at the cost of continuous effort and of inflexibility if the prepared goal turns out wrong - from REACTIVE control, which is transient and stimulus-driven, retrieved only when a conflict or cue demands it, and is cheap but late.
+
+The search results describe it as a distinction between MODES. konnectome's own corpus describes it as a distinction between modes, at Chapter 52.3.3 of THE_NEUROSCIENCE_OF_COGNITION_MANUSCRIPT.txt, in these words: "Todd Braver's dual mechanisms of control framework ... distinguishes two temporal modes rather than two mechanisms of different kind."
+
+So: two modes, named as modes, in the corpus, about cognitive control, for a construct that does cognitive control.
+
+
+WHY IT IS THE WRONG REGISTER, AND THE CLAUSE THAT SETTLES IT
+
+The search results themselves contain the disqualifying detail, which is worth quoting because it shows the answer was retrievable and still nearly missed: "proactive control arises from sustained/anticipatory lateral prefrontal cortex (PFC) activity, while reactive control is hypothesized to be driven by transient lateral PFC activity, in addition to accessory structures such as the anterior cingulate cortex".
+
+PROACTIVE AND REACTIVE ARE POSTURES OF THE LATERAL PREFRONTAL CORTEX. The cingulate appears in that sentence as an accessory structure feeding it.
+
+And Chapter 52.2.1 is explicit about the division of labour: the anterior cingulate "does not exert control at all - it detects response conflict ... and passes that signal to the lateral prefrontal cortex, WHICH THEN RAISES CONTROL."
+
+So the two modes belong to THIS CONSTRUCT'S CONSUMER and not to this construct. A register built from them would have cited a real framework, from the right corpus, about the right cognitive function, using the corpus's own word for what it was supplying - and would have described a different piece of the brain than the pack implements. Nothing in the code would have failed.
+
+
+WHAT THIS SETTLES
+
+• The conflict monitor's modes are the four in the Layer 9 modes companion, and they required no search. The corpus was sufficient.
+
+• PROACTIVE AND REACTIVE ARE RESERVED. They are not this construct's modes, and if konnectome ever builds the lateral prefrontal side of the loop, THAT is where they belong. This is recorded so the next session does not have to rediscover the disqualification.
+
+• The refusal is pinned in running code rather than only in prose: asking conflict_monitor for the transfer function of proactive_control raises existence_error(mode_entry, proactive_control).
+
+WHAT THIS DOES NOT SETTLE
+
+• It does not settle whether the dual mechanisms framework is correct. The corpus notes that the large multi-site Dual Mechanisms of Cognitive Control project has produced "mixed results that support the temporal distinction more clearly than they support clean individual-difference measurement of it", and nothing here disturbs that.
+
+• It does not decide whether konnectome should ever build a lateral prefrontal construct. It only says where these two modes would go if it did.
+
+• It supplies no coupling gain, which is evidence record 01's subject.
+
+
+IS THERE A CORPUS GAP? NO, AND THAT IS THE RESULT.
+
+Recorded explicitly, because a record that only ever finds gaps would misrepresent the corpus. The corpus carried the right answer in full, carried the tempting wrong answer too, and carried the clause that separates them. NOTHING NEEDS PROMOTING TO docs/neuroscience/ FROM THIS RECORD.
+
+THE LESSON IS ABOUT METHOD RATHER THAN CONTENT, and it is why the Twenty-Second Commandment puts the corpus first and the search third. Had the search been run first, it would have supplied a plausible, citable, well-evidenced register for the wrong region, and the corpus read that would have caught it might never have happened. A SEARCH RUN BEFORE THE CORPUS IS READ IS NOT A SHORTCUT; IT IS A DIFFERENT AND WORSE ANSWER ARRIVING FIRST.
+
+
+SOURCES
+
+• LAYER_09_MODES_MANUSCRIPT.txt lines 393-433, anterior cingulate cortex entry - the actual answer, in the corpus, no search required.
+
+• THE_NEUROSCIENCE_OF_COGNITION_MANUSCRIPT.txt Chapter 52.2.1 (the cingulate detects and does not control) and Chapter 52.3.3 (Braver's two temporal modes).
+
+• Todd Braver, "The variable nature of cognitive control: a dual mechanisms framework", Trends in Cognitive Sciences, 2012. https://pmc.ncbi.nlm.nih.gov/articles/PMC3289517/
+
+• The Dual Mechanisms of Cognitive Control project. https://pmc.ncbi.nlm.nih.gov/articles/PMC10069323/
+
+• "A model of dual control mechanisms through anterior cingulate and prefrontal cortex interactions". https://www.researchgate.net/publication/223299788_A_model_of_dual_control_mechanisms_through_anterior_cingulate_and_prefrontal_cortex_interactions
+
+• Comparing the functional neuroanatomy of proactive and reactive control, Cognitive, Affective and Behavioral Neuroscience. https://pmc.ncbi.nlm.nih.gov/articles/PMC10166198/
+
+
+END OF EVIDENCE RECORD 02, VERSION 1.
