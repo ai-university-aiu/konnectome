@@ -110,32 +110,58 @@ waterfall steps and files
 will be sourced from the Appendices of the file:
 /home/ccaitwo/konnectome/docs/neuroscience/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt
 The versioned files will be created and named:
-/home/ccaitwo/konnectome/docs/DSPARCD/konnectome_0_definition_v1.txt
-/home/ccaitwo/konnectome/docs/konnectome_1_specification_v1.txt
-/home/ccaitwo/konnectome/docs/konnectome_2_pseudocode_v1.txt
-/home/ccaitwo/konnectome/docs/konnectome_3_architecture_v1.txt
-/home/ccaitwo/konnectome/docs/konnectome_4_refinement_v1.txt
-/home/ccaitwo/konnectome/docs/konnectome_5_completion_v1.txt
-/home/ccaitwo/konnectome/docs/konnectome_6_demonstration_v1.txt
+    konnectome_0_definition
+    konnectome_1_specification
+    konnectome_2_pseudocode
+    konnectome_3_architecture
+    konnectome_4_refinement
+    konnectome_5_completion
+    konnectome_6_demonstration
+each carrying a _vN version suffix and a .txt extension, and each living in the fileset's directory,
+which is named on the LIVE POINTER line below.
 Each file will start its contents from one entire, similarly numbered appendix from the file
 /home/ccaitwo/konnectome/docs/neuroscience/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt
 These seven (7) files will be known as "The DSPARCD Fileset".
-(LOCATED in version 15, by the owner's instruction of 2026-08-10. THE DSPARCD FILESET LIVES IN
-/home/ccaitwo/konnectome/docs/DSPARCD/ , together with the DSPARCD_EXPLAINED.txt of the Fifth
-Commandment, which specifies the method these seven files are the phases of. THE LIST OF SEVEN PATHS ABOVE IS NOW MIXED, AND
-DELIBERATELY SO, BECAUSE IT IS TWO DIFFERENT KINDS OF LINE THAT HAPPEN TO SHARE A SHAPE. That list
-says the files "will be created and named", so each entry is a record of the naming convention AT
-CREATION. SIX OF THE SEVEN NAME FILES THAT HAVE SINCE BEEN SUPERSEDED - the specification through the
-demonstration are at _v48 today - and their _v1 files are exactly where they should be, in
-docs/archive/ under the Eleventh Commandment, so those six lines are left pointing there and rewriting
-them would have turned a creation record into a false present-tense claim. THE SEVENTH IS DIFFERENT:
-konnectome_0_definition IS STILL AT _v1, having never been superseded, so that line names a CURRENT
-file and was repointed into docs/DSPARCD/ with it. A line that names a live file is a pointer; a line
-that names a retired one is a record; and here the same list holds both. THIS NOTE IS THE LIVE
-STATEMENT OF WHERE THE FILESET IS. A session writing a new version writes it into docs/DSPARCD/ , with the version
-number incremented per the Twelfth Commandment, and git-moves the superseded one to docs/archive/ per
-the Eleventh - THE SUPERSEDED VERSIONS DO NOT GO INTO docs/DSPARCD/archive/ , because there is no
-such directory and the Eleventh Commandment names exactly one archive.)
+
+THE LIVE POINTER - THE ONE LINE IN THIS COMMANDMENT A READER SHOULD FOLLOW:
+/home/ccaitwo/konnectome/docs/DSPARCD/
+holds the current version of all seven files, and it is the only place they live. Read the directory
+to learn which version is current; do not expect any version number written in this Constitution to
+be the live one.
+(LOCATED in version 15, by the owner's instruction of 2026-08-10; THE LIST REBUILT AS NAMES IN
+VERSION 18, on the pointer audit of 2026-08-10, and the reasoning of both is kept here because the
+second overturns the first and a reader deserves to see why.
+THE DSPARCD FILESET LIVES IN /home/ccaitwo/konnectome/docs/DSPARCD/ , together with the
+DSPARCD_EXPLAINED.txt of the Fifth Commandment, which specifies the method these seven files are the
+phases of. A session writing a new version writes it into docs/DSPARCD/ , with the version number
+incremented per the Twelfth Commandment, and git-moves the superseded one to docs/archive/ per the
+Eleventh - THE SUPERSEDED VERSIONS DO NOT GO INTO docs/DSPARCD/archive/ , because there is no such
+directory and the Eleventh Commandment names exactly one archive.
+WHAT VERSION 15 DID, AND WHY IT WAS NOT ENOUGH. Version 15 found the list above holding seven full
+absolute paths, six of them ending _v1 and pointing into docs/ where those files no longer were. It
+argued - correctly, as far as it went - that the list says the files "will be created and named", so
+each entry is a RECORD of the naming convention at creation rather than a pointer, and that rewriting
+a creation record into a present-tense path would make it a false claim. So it left the six alone and
+repointed only the seventh, konnectome_0_definition, which is still at _v1 and is therefore genuinely
+live. A line that names a live file is a pointer; a line that names a retired one is a record; and
+version 15 concluded that the same list could hold both.
+THAT CONCLUSION WAS WRONG, AND THE FAULT IS NOT IN THE REASONING BUT IN WHAT IT ASKED OF A READER. A
+list of seven identically-shaped absolute paths, six dead and one live, with the explanation fifteen
+lines below it, IS INDISTINGUISHABLE FROM A BROKEN POINTER LIST AT THE MOMENT SOMEBODY READS IT. The
+owner found it exactly that way. A record that cannot be told from a pointer by looking at it is not
+doing its job as a record, however well the accompanying note defends it - and the note itself had
+already rotted, stating that the six were "at _v48 today" when they had reached _v51.
+SO THE LIST IS NOW WRITTEN AS NAMES WITHOUT DIRECTORIES OR VERSIONS, WHICH IS WHAT IT WAS ALWAYS
+ACTUALLY SAYING. The Commandment's subject is the naming convention: seven files, numbered zero
+through six, one per phase. The directory and the version were never part of that claim - they were
+scaffolding that a reader mistook for the claim, and that went stale precisely because it was never
+load-bearing. THIS IS THE RULE VERSION 17 WROTE DOWN, APPLIED WHERE VERSION 15 DID NOT REACH: WHEN A
+RECORD REFERS TO A LIVE LIST, THE FIX IS TO DROP THE PART THAT CAN GO STALE, NOT TO UPDATE IT OR TO
+FREEZE IT. Version 15 froze it. This amendment drops it.
+AND THE _v1 FILES ARE UNMOVED AND UNHARMED. All six are in docs/archive/ under the Eleventh
+Commandment, readable by anyone who wants the creation record in full, and nothing in this amendment
+touches them. What changed is that this Commandment no longer offers six dead absolute paths to a
+reader looking for a live one. NO RULE CHANGED.)
 konnectome_0_definition HAS NO SOURCE APPENDIX and correctly so: the Definition phase is newer than
 the manuscript the other six are sourced from, so its first version is written from THIS CONSTITUTION
 and from the whole of /docs/, and it says so on its own face. IT ARRIVED AT SLICE 41, NOT AT SLICE 1,
@@ -152,8 +178,17 @@ thirty-eight new documents cataloguing the human nervous and endocrine system la
 richest infusion of guiding knowledge konnectome has ever received. (AMENDED in version 10, by the owner's instruction of 2026-08-10. The set's LOCATION is stated
 here, because it moved and a set nobody can find is a set nobody reads. THE WHOLE VISION DOCUMENT
 SET NOW LIVES IN /home/ccaitwo/konnectome/docs/neuroscience/ , together with the guiding book of the
-Seventh Commandment and the two framework documents named at the foot of this list - thirty-nine
-files, every one of them a SOURCE document konnectome reads and never edits. Nothing else moved into
+Seventh Commandment and the two framework documents named at the foot of this list - every one of
+them a SOURCE document konnectome reads and never edits. THE LIVE INVENTORY OF THAT DIRECTORY IS THE
+DIRECTORY'S OWN README, at /home/ccaitwo/konnectome/docs/neuroscience/README.txt , which is
+maintained; this Commandment states the SET and not the count.
+(COUNT DROPPED in version 18, on the pointer audit of 2026-08-10. This sentence read "thirty-nine
+files" and the directory held forty-two, because two north-star documents were added to it after
+version 10 was written - see the TWENTIETH COMMANDMENT, which is what that addition became. A count
+written into a Commandment is a pointer at a directory's contents and rots exactly as a path does.
+The set of thirty-eight documents named above is a CLAIM ABOUT THE SET and is unchanged and correct;
+the count of files in the directory was never that claim. No rule changed.)
+Nothing else moved into
 that directory: konnectome's own working documents - the DSPARCD Fileset, the ledger, the tutorial,
 the build log, the design authorities, the change orders and the hand-offs - all remain in /docs/,
 which is the whole point of the separation. NO RULE CHANGED IN THIS AMENDMENT AND NO DOCUMENT WAS
@@ -290,9 +325,15 @@ is represented by a code module in konnectome,
 and that those code modules serve the same functions and faculties in konnectome as they are described in,
 and with the same inputs/outputs (SUBSCRIBE/PUBLISH) interfaces as described in,
 docs/neuroscience/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt
-The audit is not one-and-done: keep a coverage list in konnectome_ledger_v1.txt that names, for each
-construct in the manuscript, the module that realizes it, so the audit can be re-run at any time and
-a missing construct is visible at a glance.
+The audit is not one-and-done: keep a coverage list in
+/home/ccaitwo/konnectome/docs/konnectome_ledger_v1.txt
+that names, for each construct in the manuscript, the module that realizes it, so the audit can be
+re-run at any time and a missing construct is visible at a glance.
+(REPOINTED in version 18, on the pointer audit of 2026-08-10. This line named the ledger as a bare
+filename, which resolved by convention rather than by path and did not resolve from the repository
+root at all. It is the SAME fault the version 16 note recorded and fixed one Commandment away, in the
+Fourth, and it was missed then because that audit was looking for moved files rather than for bare
+names. A bare filename is a pointer with its directory deleted. No rule changed.)
 
 THE ELEVENTH COMMANDMENT:
 A directory /home/ccaitwo/konnectome/docs/archive/ shall be created.
@@ -376,10 +417,25 @@ Once this file is created,
 write to the file a complete head to toe, top to bottom tutorial on konnectome.
 Describing and explaining every concept relating to konnectome.
 Make the tutorial able to be read and understood by a beginner, learner, layperson, newcomer, novice.
-Maintain versioned updates to /docs/konnectome_tutorial_v1.txt as any new code changes are applied.
+Maintain versioned updates to the tutorial as any new code changes are applied. THE CURRENT TUTORIAL
+IS THE ONLY konnectome_tutorial FILE IN
+/home/ccaitwo/konnectome/docs/
+and every superseded version is in docs/archive/ .
 (The tutorial is versioned under the same archive discipline as the Eleventh Commandment: when a code
 change bumps it, the superseded version moves to docs/archive/ in the same change, so only the latest
 tutorial lives outside the archive, and it always describes the konnectome that exists.)
+(REPOINTED in version 18, on the pointer audit of 2026-08-10, AND THE FIX IS TO DROP A VERSION RATHER
+THAN TO CHASE ONE. The maintenance sentence above formerly read "Maintain versioned updates to
+/docs/konnectome_tutorial_v1.txt", which was a LIVE INSTRUCTION naming a file that has been in
+docs/archive/ for fifty slices. Note the shape of the failure, because it is the one this Commandment
+creates for itself: an instruction to MAINTAIN A VERSIONED FILE that names a specific version is
+guaranteed to go stale the first time it is obeyed. Writing _v50 here would have bought fifty-one
+slices of correctness and the identical fault afterwards. It now names the DIRECTORY and the
+UNIQUENESS RULE instead, which is what actually identifies the file and cannot rot - the same
+technique the version 17 note used on the First Commandment and the Nineteenth Commandment's version
+13 amendment used on the hand-offs. The creation line above it - "Add the following to /docs/:
+konnectome_tutorial_v1.txt" - is a RECORD of the file's creation and is deliberately left alone.
+No rule changed.)
  ...
 THE EIGHTEENTH COMMANDMENT: THE BUILD LOG:
 (NEW in version 3, by the owner's instruction of 2026-07-26. The former Eighteenth Commandment, the
@@ -458,10 +514,11 @@ Step 3: To this file write the following information for the next building or ma
 (docs/DSPARCD/konnectome_0_definition through konnectome_6_demonstration, at their current versions), and to
 read konnectome_0_definition FIRST, because it is the concept the other six answer to.
 - A reminder to read docs/neuroscience/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt, the guiding book for konnectome
+- A reminder that docs/neuroscience/ is THE NORTH-STAR DIRECTORY (the Twentieth Commandment), and that its two north-star documents - THE_NEUROSCIENCE_OF_COGNITION_OUTLINE.txt and THE_NEUROSCIENCE_OF_COGNITION_MANUSCRIPT.txt - are what this build steers by; together with the current state of their gap analysis, and which of its findings are still open.
 - A reminder to read the Settings, General, Instructions for Claude (the owner's standing instructions to the assistant).
 - A reminder to read ~/CLAUDE.md, which is git-untracked (gitignored) and holds the system-wide current-state narrative (it lives at the organization root, not inside one repository, because it belongs to the whole system).
 - A reminder to read the current /docs/konnectome_tutorial (the maintained beginner tutorial), and to read all of the documents in /docs/.
-- A list of the important /docs/ files and what each is: the ledger, the DSPARCD Fileset, the change orders, the tutorial, the thought-combination guide, the guiding-principle documents, the context documents, and the earlier hand-offs (named by the convention of Step 2b, and living in /docs/hand-off/ - see that directory's own README.txt for how to read them and for which of them are session-close markers rather than units of work).
+- A list of the important /docs/ files and what each is: the ledger, the DSPARCD Fileset, the change orders, the tutorial, the thought-combination guide, the guiding-principle documents, the context documents, and the earlier hand-offs (named by the convention of Step 2b, and living in /docs/hand-off/ - see /home/ccaitwo/konnectome/docs/hand-off/README.txt for how to read them and for which of them are session-close markers rather than units of work).
 - A report of what was done in the session that is ending: the slices built, the packs, the tests, the pull requests merged, the current main commit, and the current DSPARCD and tutorial versions.
 - The build-against cousin commits (causalontology, PrologAI, Mentova), for reproducibility.
 - Any other context you, the assistant, judges important for the next process: open observations, honest non-closures, sharp edges, and anything discovered that is not obvious from the code.
@@ -473,7 +530,115 @@ commit because they are one act: the document that was the instruction becomes a
 moment the next one becomes the instruction, and splitting them across two changes would leave a
 commit in which /docs/ holds two hand-offs or none.
 
-VERSION HISTORY NOTE (extended in version 17). This Constitution is at VERSION 17. Version 17, by
+THE TWENTIETH COMMANDMENT: THE NORTH STAR:
+(NEW in version 18, by the owner's instruction of 2026-08-10. NO COMMANDMENT WAS REMOVED AND NO
+COMMANDMENT WAS RENUMBERED - this one is added at the end, so a session citing any commandment by
+number from any earlier hand-off still lands on the right one.)
+
+TWO DOCUMENTS ARE HEREBY DECLARED THE NORTH STAR OF konnectome:
+/home/ccaitwo/konnectome/docs/neuroscience/THE_NEUROSCIENCE_OF_COGNITION_OUTLINE.txt
+/home/ccaitwo/konnectome/docs/neuroscience/THE_NEUROSCIENCE_OF_COGNITION_MANUSCRIPT.txt
+
+They are the NORTH STAR, the NORTH POLE, the LIGHT-HOUSE. They GUIDE. They INFORM the project. Where
+this build does not know which way to go, these are what it steers by.
+
+AND THE DIRECTORY THAT HOLDS THEM IS THE NORTH-STAR DIRECTORY:
+/home/ccaitwo/konnectome/docs/neuroscience/
+Every file in it carries north-star standing - the fifteen-layer corpus, the Vision Document Set of
+the Eighth Commandment, the guiding book of the Seventh and Tenth, the framework documents, and the
+two named above. That directory's own README, at
+/home/ccaitwo/konnectome/docs/neuroscience/README.txt ,
+is its live inventory and the statement of what belongs in it.
+
+HOW THIS SITS BESIDE THE COMMANDMENTS THAT CAME BEFORE IT, because it must not be read as displacing
+them. The NINTH Commandment already calls the biologically-inspired architectures of the Vision
+Document Set "the gold-standard, north-star, north-pole, and light-house for konnectome", and says
+the cognitive-architectures test-bed measures coverage but does not steer the ship. THIS COMMANDMENT
+DOES NOT CHANGE THAT RULE; IT NAMES THE STAR. The Ninth said what kind of thing steers; the Twentieth
+says which files those are, and adds two that arrived after the Eighth Commandment's set was
+enumerated. The order of authority is unchanged: this Constitution outranks everything, then
+konnectome_0_definition, then the First Commandment's three principle documents, then the guiding
+book, then the rest of the north-star directory.
+
+1. THE ANALYSIS RUN. These two documents deserve, and shall receive, AN ANALYSIS RUN OF THEIR OWN,
+   taking THE TWO OF THEM AS THE STARTING POINT rather than as an appendix to an existing analysis.
+   The run reads the OUTLINE first, because it is the map of the field, and then the MANUSCRIPT
+   beneath it. It then extends to EVERY SINGLE FILE in the north-star directory. Its purpose is to
+   make sure konnectome has everything it needs.
+
+2. THE GAP ANALYSIS. The run's deliverable is a GAP ANALYSIS which shall add in any needed FUNCTIONS,
+   any needed PROCESSES, any needed ARCHITECTURES, any needed DESIGN ELEMENTS, any needed STRUCTURES,
+   any needed IDEAS, and any needed INSPIRATION that these documents provide and konnectome lacks.
+   Each finding is classified as one of those seven, so that a reader can tell a missing predicate
+   from a missing idea. THE FIRST SUCH ANALYSIS LIVES AT
+   /home/ccaitwo/konnectome/docs/konnectome_north_star_gap_analysis_v1.txt
+   and is versioned under the Eleventh Commandment.
+
+3. THE TWO KINDS OF GAP, AND THE DISTINCTION IS THE POINT OF THE EXERCISE. An ARCHITECTURAL gap means
+   konnectome COULD NOT EXPRESS the thing without a change to its shape, to causalontology, or to
+   PrologAI. A CONTENT gap means konnectome could express it perfectly well and simply has not built
+   it yet. The first is a wall and routes through the gated change orders of the Second and Third
+   Commandments; the second is a slice and goes on the queue. A gap analysis that does not separate
+   them has not done its work, because it leaves a reader unable to tell a crisis from a to-do list.
+
+4. FINDINGS ROUTE THE WAY EVERY OTHER FINDING ROUTES. Into the ledger of the Fourth Commandment
+   first, and from there to the causalontology change order, the PrologAI change order, or a
+   konnectome construct - exactly one destination each. The Safety Gate of the Fifteenth Commandment
+   stands over this Commandment as over every other: a north-star finding never justifies a red gate.
+
+5. THE ANALYSIS INFORMS; IT DOES NOT BREAK. This is the Eighth Commandment's first sober instruction
+   and it applies here word for word. Nothing in this Commandment invalidates a passing test, a
+   merged slice, or a green gate. A north-star document is a source to build TOWARD, never a reason
+   to tear down what is already standing and green.
+
+6. THE ANALYSIS HOLDS THE SAME TWO KINDS OF CONTENT AS THE EIGHTH COMMANDMENT'S. Its SUMMARIES of the
+   north-star documents are DERIVED and carry no authority over them - where a summary and a
+   north-star document disagree, THE DOCUMENT LEADS and the analysis is corrected. Its FINDINGS are
+   konnectome's own assessment, produced by holding the corpus against a running codebase, and are
+   superseded only by a LATER ASSESSMENT, never by the corpus. NO SLICE SHALL BE DESIGNED FROM A
+   SUMMARY: read the north-star text beneath a finding before building from it.
+
+7. IT IS RE-RUN, NOT DONE ONCE. Like the audit of the Tenth Commandment, this analysis is re-run as
+   the build grows and as the north-star directory receives new documents, under the archive
+   discipline of the Eleventh Commandment. A gap that was real at one slice count may be closed at
+   another, and a document added to the directory has not been read until the analysis says so.
+
+VERSION HISTORY NOTE (extended in version 18). This Constitution is at VERSION 18. Version 18, by the
+owner's instruction of 2026-08-10, does two things: it adds THE TWENTIETH COMMANDMENT, declaring the
+two NEUROSCIENCE OF COGNITION documents the north star and mandating their analysis run and gap
+analysis; and it carries out A FULL POINTER AUDIT of this document, the first one run as an audit
+rather than as a consequence of moving files. NO COMMANDMENT WAS REMOVED, NO COMMANDMENT WAS
+RENUMBERED, AND NO RULE CHANGED.
+WHAT THE POINTER AUDIT DID. Every file path in this Constitution was extracted and resolved against
+the file-system. Six live pointers were wrong and are fixed, each with its own note at the site: the
+SEVENTH Commandment's list of seven DSPARCD paths, six of which were dead absolute paths sitting
+where a reader looks for a live one; the TENTH Commandment's ledger, named as a bare filename that
+resolved from nowhere; the SEVENTEENTH Commandment's tutorial maintenance instruction, naming a
+version archived fifty slices ago; the NINETEENTH Commandment's bare README.txt; the EIGHTH
+Commandment's file count for the north-star directory; and the stale version number inside the
+Seventh's own LOCATED note.
+AND THE AUDIT FOUND ITS OWN LESSON, WHICH IS WORTH MORE THAN THE SIX FIXES. EVERY ONE OF THE SIX WAS
+A PLACE WHERE THIS CONSTITUTION HAD WRITTEN DOWN A FACT THAT WAS NEVER PART OF THE RULE IT WAS
+STATING. A directory in a naming convention. A version number in a maintenance instruction. A file
+count in a location statement. In each case the Commandment's actual claim was durable and the
+decoration around it was not, and the decoration is what rotted and what misled. VERSION 17 HAD
+ALREADY DISCOVERED THIS AND STATED IT EXACTLY - "WHEN A RECORD REFERS TO A LIVE LIST, THE FIX IS TO
+DROP THE PART THAT CAN GO STALE, NOT TO UPDATE IT OR TO FREEZE IT" - and applied it to a single line.
+This audit applies it everywhere it reaches. A COMMANDMENT SHOULD STATE THE RULE AND POINT AT THE
+DIRECTORY; THE DIRECTORY CAN BE READ, AND A SENTENCE CANNOT BE RE-READ BY ANYTHING BUT A HUMAN.
+WHAT WAS DELIBERATELY NOT CHANGED, and each was checked rather than skipped. The version 8, 9, 10,
+11, 12, 13, 14, 15, 16 and 17 notes name paths as they stood on the dates those amendments were made;
+those are DATED RECORDS OF DATED ACTS and rewriting them would put today's paths inside yesterday's
+history. The First Commandment's version 9 note names the predecessor manuscript at its old path in
+the past tense and gives its archive location in the same sentence, which is correct as written. The
+Seventeenth Commandment's creation line, and the Nineteenth's example hand-off filename, are records
+and examples respectively. The Fifteenth Commandment's "one-hundred-nineteen-vector conformance
+suite" is a claim about a COUSIN REPOSITORY and was left alone deliberately: causalontology's own
+README carries both a 119-vector and a 137-check figure, so the number here is ambiguous in its
+SOURCE, and the Fourth Commandment's rule is that findings are DISCOVERED by building rather than
+guessed from the armchair. It is recorded as an open question rather than silently corrected.
+
+Version 17, by
 the owner's instruction of 2026-08-10, records the move of the FIRST COMMANDMENT'S THREE NAMED
 DOCUMENTS into docs/principles/ , and repoints all three. NO COMMANDMENT WAS REMOVED, NO COMMANDMENT
 WAS RENUMBERED, NO RULE CHANGED, AND NO DOCUMENT WAS EDITED. Only the directory moved.
