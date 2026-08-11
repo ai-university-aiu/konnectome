@@ -16,7 +16,13 @@
     offline_consolidation_check_replay_rate/1,
     % offline_consolidation_maintain_durable/2: refresh the durable marks the night is given (slice 55).
     % THE NIGHT'S THIRD JOB, and the bill DECISION-11 deliberately left unpaid. See the block below.
-    offline_consolidation_maintain_durable/2
+    offline_consolidation_maintain_durable/2,
+    % offline_consolidation_competence_score/3: the measured strength of one named competence (slice 57).
+    offline_consolidation_competence_score/3,
+    % offline_consolidation_retention/4: how much of a competence a night left standing (slice 57).
+    offline_consolidation_retention/4,
+    % offline_consolidation_benefit/4: what the offline phase added to a competence (slice 57).
+    offline_consolidation_benefit/4
 ]).
 
 % Reuse the renewal loop: the durable tier is a MAINTAINED PROCESS (DECISION-11), so the night that
@@ -326,3 +332,149 @@ offline_consolidation_maintain_durable([Loop0|Rest0], [Loop|Rest]) :-
     renewal_loop_step(Loop0, running, Loop),
     % Maintain the remaining marks.
     offline_consolidation_maintain_durable(Rest0, Rest).
+
+% ---------------------------------------------------------------------------
+% THE FACULTY 13 MEASUREMENT (slice 57)
+% ---------------------------------------------------------------------------
+%
+% LAYER_12_FACULTY_SPECIFICATION.txt, FACULTY 13, LEARNING ITSELF, states three acceptance criteria:
+% "retention of old competence as new competence is added; measurable consolidation benefit from the
+% offline phase; graceful lifetime accumulation."
+%
+% KONNECTOME HAD THE MECHANISM FOR ALL THREE AND SCORED NONE OF THEM. Interleaved replay against
+% catastrophic forgetting has been in this pack since slice 38, and its tests demonstrate the effect
+% qualitatively - one weight is lower than another, one edge falls under one. THAT IS A
+% DEMONSTRATION AND NOT A MEASUREMENT, and the difference is the whole of why this faculty stood at
+% PARTLY PASSES in the north-star gap analysis's fourteen-item audit. The three predicates below are
+% the measurement, and they add NO MECHANISM WHATEVER: not one weight moves differently because they
+% exist.
+
+% ---------------------------------------------------------------------------
+% DECISION-14 - A COMPETENCE IS A NAMED SET OF EDGES, AND ITS SCORE IS THEIR SUMMED WEIGHT
+% ---------------------------------------------------------------------------
+%
+% NOTHING IN THE CORPUS SAYS WHAT A COMPETENCE IS IN KONNECTOME'S TERMS. Faculty 13 speaks of "old
+% competence" and "new competence" as things a mind has and can lose, and Chapter 7's account of
+% catastrophic forgetting speaks of edges being refreshed or washed away. The gap between those two
+% vocabularies is real and nobody fills it, so this is a DECISION under the Sixteenth Commandment's
+% repair-versus-decision line rather than a repair: no correct value is waiting to be put back.
+%
+% KONNECTOME CHOOSES: A COMPETENCE IS A CALLER-NAMED SET OF EDGES, AND ITS SCORE IS THE SUM OF THEIR
+% WEIGHTS. Three reasons, stated so a later session can overturn them on argument rather than taste.
+%
+% FIRST, IT IS THE GRAIN THE MECHANISM ALREADY WORKS AT. Interleaved replay refreshes edges and the
+% raised bound washes edges; a score at any other grain would be measuring something the night does
+% not act on.
+%
+% SECOND, THE SET IS THE CALLER'S AND NOT THIS PACK'S. konnectome has no naming and addressing
+% facility - OBSERVATION-11's expensive half - so nothing here can look up "the competence called
+% arithmetic". Naming the edges is the caller's act, exactly as the inhibition verdict and the world
+% event are elsewhere in this build. WHEN THE ADDRESSING FACILITY ARRIVES THIS SIGNATURE IS WHAT
+% CHANGES, and it is written so that it can.
+%
+% THIRD, THE SUM AND NOT THE MEAN, because a competence that has LOST an edge should score lower and
+% a mean would hide exactly that by dividing the loss away.
+%
+% WHAT DECISION-14 DOES NOT DECIDE.
+%
+% IT DOES NOT DECIDE A PASSING SCORE, AND DELIBERATELY SO - see the threshold-free rule below.
+%
+% IT DOES NOT DECIDE THE THIRD CRITERION. "Graceful lifetime accumulation" needs a lifetime, and
+% konnectome's longest run is a capstone night. The criterion is named here as unmeasured rather than
+% quietly folded into the other two.
+%
+% AND IT DOES NOT MAKE THE SCORE A CAPABILITY MEASURE. A summed weight is a proxy for competence, not
+% competence itself; nothing here shows the mind can still DO the old thing, only that the edges it
+% did it with are still standing. That is the honest limit of a measurement taken at this grain.
+
+% ---------------------------------------------------------------------------
+% AND THE RULE THAT KEEPS THE MEASUREMENT HONEST - NO THRESHOLD IS INVENTED
+% ---------------------------------------------------------------------------
+%
+% THE OBVIOUS WAY TO MAKE A FACULTY PASS IS TO WRITE DOWN A NUMBER IT MUST BEAT, and that number
+% would be konnectome's own invention wearing Layer 12's citation - which is precisely the failure
+% the Sixteenth Commandment names, AN INVENTED VALUE THAT HAS LEARNED TO CITE. LAYER_12 STATES NO
+% THRESHOLD FOR ANY OF ITS FOURTEEN FACULTIES.
+%
+% SO THE CRITERIA ARE READ AS COMPARATIVE, WHICH IS WHAT THEIR OWN WORDING SAYS. "Retention of old
+% competence AS NEW COMPETENCE IS ADDED" compares a mind that added something against one that did
+% not. "MEASURABLE consolidation BENEFIT FROM the offline phase" compares a competence the offline
+% phase served against one it did not. EACH CRITERION SUPPLIES ITS OWN BASELINE, so the acceptance
+% test is a comparison between two runs of the same machinery rather than a number anybody chose.
+% Under the Twenty-First Commandment this is the SECOND PROTOCOL, DERIVATION, and it never reaches
+% the fourth.
+%
+% THIS GENERALISES TO THE OTHER THIRTEEN FACULTIES and is the most transferable thing in this slice.
+% A faculty suite that needs a threshold has usually not yet found its ablation.
+
+% offline_consolidation_competence_score(+Interfaces, +Competence, -Score): the summed weight of a
+% named set of edges - DECISION-14's measurement.
+offline_consolidation_competence_score(Interfaces, Competence, Score) :-
+    % Refuse a cortex the measurement cannot read, through the same root the night uses.
+    offline_consolidation_check_interfaces(Interfaces),
+    % An unbound competence is a hole, and a hole scored as zero would report a total loss.
+    (   var(Competence)
+    ->  throw(error(instantiation_error, _))
+    ;   true
+    ),
+    % Sum the named edges' weights, refusing any edge the cortex does not carry.
+    offline_consolidation_sum_competence(Competence, Interfaces, 0, Score).
+
+% offline_consolidation_sum_competence(+Competence, +Interfaces, +Score0, -Score): sum the named edges.
+% An exhausted competence contributes nothing further.
+offline_consolidation_sum_competence([], _Interfaces, Score, Score) :-
+    % Commit: an exhausted competence is never the malformed one the last clause refuses.
+    !.
+% Each named edge contributes its own weight, and an edge the cortex does not carry is refused.
+offline_consolidation_sum_competence([From-To|Rest], Interfaces, Score0, Score) :-
+    % Commit to the well-formed edge name before it is looked up, so a refusal below cannot be
+    % reached by backtracking out of a genuine competence.
+    !,
+    % AN ABSENT EDGE IS REFUSED RATHER THAN SCORED AS ZERO, and this is the load-bearing guard of the
+    % whole measurement. A competence whose edges have been deleted from the cortex is not a
+    % competence that decayed to nothing - it is a caller naming something that is not there, and
+    % reading the second as the first would report perfect catastrophic forgetting on a typing slip.
+    (   memberchk(interface(From, To, Weight, _Delay, _Kind), Interfaces)
+    ->  true
+    ;   throw(error(offline_consolidation_no_such_edge(From-To),
+                    context(offline_consolidation_competence_score/3,
+                            "a competence names edges the cortex carries; an absent edge is a hole, not a zero")))
+    ),
+    % Add this edge's weight to the running score.
+    Score1 is Score0 + Weight,
+    % Score the remaining edges.
+    offline_consolidation_sum_competence(Rest, Interfaces, Score1, Score).
+% Anything that is not a list of edge names is refused by name rather than scored as empty.
+offline_consolidation_sum_competence(Competence, _Interfaces, _Score0, _Score) :-
+    % Refuse the malformed competence aloud.
+    throw(error(offline_consolidation_malformed_competence(Competence),
+                context(offline_consolidation_competence_score/3,
+                        "a competence is a list of From-To edge names"))).
+
+% offline_consolidation_retention(+Before, +After, +Competence, -Retention): FACULTY 13's first
+% criterion - the fraction of a competence's score that a night left standing.
+offline_consolidation_retention(Before, After, Competence, Retention) :-
+    % Score the competence in the cortex as it stood before.
+    offline_consolidation_competence_score(Before, Competence, ScoreBefore),
+    % Score the same competence in the cortex the night handed back.
+    offline_consolidation_competence_score(After, Competence, ScoreAfter),
+    % A competence that scored nothing to begin with has no retention to measure, and a division by
+    % zero dressed up as "nothing was retained" would be a fabricated result rather than a refusal.
+    (   ScoreBefore =:= 0
+    ->  throw(error(offline_consolidation_no_competence_to_retain(Competence),
+                    context(offline_consolidation_retention/4,
+                            "retention is measured against a competence that had a score")))
+    ;   true
+    ),
+    % The retained fraction: what stands now over what stood before.
+    Retention is ScoreAfter / ScoreBefore.
+
+% offline_consolidation_benefit(+Without, +With, +Competence, -Benefit): FACULTY 13's second
+% criterion - what the offline phase added to a competence, measured against its own ablation.
+offline_consolidation_benefit(Without, With, Competence, Benefit) :-
+    % Score the competence in the cortex the ablated run handed back.
+    offline_consolidation_competence_score(Without, Competence, ScoreWithout),
+    % Score the competence in the cortex the served run handed back.
+    offline_consolidation_competence_score(With, Competence, ScoreWith),
+    % The benefit is the difference, signed: a negative benefit is a real and reportable result.
+    Benefit is ScoreWith - ScoreWithout.
