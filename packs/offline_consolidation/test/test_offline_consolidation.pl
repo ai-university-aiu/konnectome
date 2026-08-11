@@ -1,5 +1,7 @@
 % Load the offline_consolidation module under test from the library path.
 :- use_module(library(offline_consolidation)).
+% Load the renewal loop, so the durable marks the night maintains can be built and read here.
+:- use_module(library(renewal_loop)).
 % Load the Prolog Unit (PLUnit) testing framework.
 :- use_module(library(plunit)).
 
@@ -263,6 +265,76 @@ test(an_unknown_interface_kind_is_refused_by_name,
     offline_consolidation_replay_round([interface(a, b, 0.5, 1, chemical)], [[a-1, b-1]], 0.1, _Interfaces).
 
 % Close the test block for the offline_consolidation pack.
+
+% ---------------------------------------------------------------------------
+% THE NIGHT'S THIRD JOB - MAINTAINING THE DURABLE MARKS (slice 55)
+% ---------------------------------------------------------------------------
+
+% A helper: run a whole night of N ticks over a store of durable marks, maintaining them.
+offline_consolidation_test_nights(0, Loops, Loops) :- !.
+offline_consolidation_test_nights(Count, Loops0, Loops) :-
+    offline_consolidation_maintain_durable(Loops0, Loops1),
+    Next is Count - 1,
+    offline_consolidation_test_nights(Next, Loops1, Loops).
+
+% A helper: the same night WITHOUT maintenance - the mark simply decays untouched, which is what a
+% night that does not know about durable marks does to them.
+offline_consolidation_test_unmaintained(0, Loops, Loops) :- !.
+offline_consolidation_test_unmaintained(Count, [Loop0], Loops) :-
+    % An unmaintained mark is a loop that is not run: its synthesis is blocked for the night.
+    renewal_loop_step(Loop0, inhibited, Loop1),
+    Next is Count - 1,
+    offline_consolidation_test_unmaintained(Next, [Loop1], Loops).
+
+% A NIGHT THAT MAINTAINS ITS DURABLE MARKS PRESERVES THEM. This is the capability, and it is the
+% cheaper half of the pair below.
+test(a_maintained_mark_survives_the_night) :-
+    renewal_loop_established(Loop0),
+    assertion(renewal_loop_maintained(Loop0)),
+    % Twenty night ticks, each one maintaining the mark.
+    offline_consolidation_test_nights(20, [Loop0], [Loop]),
+    % The memory is still held in the morning.
+    assertion(renewal_loop_maintained(Loop)).
+
+% AND THE TEST THAT IS THE WHOLE POINT: A NIGHT THAT DOES NOT MAINTAIN THEM DESTROYS THEM, AND
+% PERMANENTLY. Without this test the trap would be a paragraph in a comment; with it, a reader meets
+% it as something that passes. This is slice 51's lesson applied before the mistake rather than after:
+% a capability nobody calls is indistinguishable from one that was never built, so the ABSENCE is
+% made visible here rather than trusted to be noticed later.
+test(an_unmaintained_mark_is_destroyed_by_the_night_and_never_returns) :-
+    renewal_loop_established(Loop0),
+    assertion(renewal_loop_maintained(Loop0)),
+    % The same twenty ticks, with the loop not run.
+    offline_consolidation_test_unmaintained(20, [Loop0], [Loop]),
+    % The memory is gone by morning.
+    assertion(\+ renewal_loop_maintained(Loop)),
+    % And a full day of maintenance afterwards cannot bring it back: the loss is permanent, which is
+    % what makes the omission a trap rather than a dip.
+    offline_consolidation_test_nights(500, [Loop], [Recovered]),
+    assertion(\+ renewal_loop_maintained(Recovered)).
+
+% MANY MARKS ARE MAINTAINED TOGETHER, in order, and the store keeps its shape.
+test(every_mark_in_the_store_is_maintained) :-
+    renewal_loop_established(Established),
+    renewal_loop_new(Fresh),
+    offline_consolidation_maintain_durable([Established, Fresh], Loops),
+    Loops = [MaintainedEstablished, MaintainedFresh],
+    % The established mark is still a memory.
+    assertion(renewal_loop_maintained(MaintainedEstablished)),
+    % The fresh one is not, and maintaining it does not make it one - a night does not invent memories.
+    assertion(\+ renewal_loop_maintained(MaintainedFresh)).
+
+% A MIND WITH NO DURABLE MARKS HAS NOTHING TO MAINTAIN, and that is not an error.
+test(an_empty_durable_store_maintains_to_nothing) :-
+    offline_consolidation_maintain_durable([], Loops),
+    assertion(Loops == []).
+
+% A MALFORMED STORE IS REFUSED BY THE RENEWAL LOOP RATHER THAN HALF-MAINTAINED HERE, so there is one
+% judgement of what a durable mark is and this pack does not grow a second copy of it.
+test(a_malformed_durable_store_is_refused,
+     throws(error(domain_error(renewal_loop, not_a_loop), _))) :-
+    offline_consolidation_maintain_durable([not_a_loop], _Loops).
+
 :- end_tests(offline_consolidation).
 
 % offline_consolidation_test_nights(+Count, +Interfaces0, +Memories, +Averages, -Interfaces): run Count night ticks.

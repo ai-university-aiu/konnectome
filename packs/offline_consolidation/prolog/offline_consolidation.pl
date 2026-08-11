@@ -13,8 +13,15 @@
     % offline_consolidation_check_replay_rate/1: refuse a rate the night cannot learn at, by name.
     % (Exported in slice 38's review so the live tick can judge the night's rate on EVERY tick, waking
     % or sleeping, against this one root - rather than letting a rotten rate ride a whole day unseen.)
-    offline_consolidation_check_replay_rate/1
+    offline_consolidation_check_replay_rate/1,
+    % offline_consolidation_maintain_durable/2: refresh the durable marks the night is given (slice 55).
+    % THE NIGHT'S THIRD JOB, and the bill DECISION-11 deliberately left unpaid. See the block below.
+    offline_consolidation_maintain_durable/2
 ]).
+
+% Reuse the renewal loop: the durable tier is a MAINTAINED PROCESS (DECISION-11), so the night that
+% does not run it does not preserve it - it erases it.
+:- use_module(library(renewal_loop), [renewal_loop_step/3]).
 
 % Import length and append for splitting the store into its older and newer halves.
 :- use_module(library(lists), [append/3, memberchk/2]).
@@ -269,3 +276,53 @@ offline_consolidation_night_step(Interfaces0, Memories, ReplayRate, Averages, Sc
     % refreshed weights are what renormalises - the order is the mechanism, and it is pinned.
     plasticity_engine_scaling_step_territory(Replayed, Averages, ScalingTargets, GlobalTarget,
                                              OfflineScalingRate, Interfaces).
+
+% ---------------------------------------------------------------------------
+% THE NIGHT'S THIRD JOB - MAINTAINING THE DURABLE MARKS (slice 55)
+% ---------------------------------------------------------------------------
+%
+% THIS PAYS THE BILL DECISION-11 DELIBERATELY LEFT UNPAID, AND THE BILL IS WORTH RESTATING BECAUSE IT
+% IS THE SHARPEST CONSEQUENCE THIS BUILD HAS MET OF ONE OF ITS OWN DECISIONS.
+%
+% DECISION-11 made the durable weight tier a MAINTAINED PROCESS rather than a stored number, on the
+% corpus's own insistence: renewal_loop "has no separately stored value to read: the value is the
+% running process itself, so interrupting the refresh does not merely risk a bit, IT DESTROYS THE
+% ONLY COPY."
+%
+% NOW READ THAT SENTENCE BESIDE WHAT THIS PACK DOES. The night replays and it renormalises. Those are
+% its two jobs and it has had exactly two since slice 38. A DURABLE MARK PASSING THROUGH A NIGHT THAT
+% DOES NOT REFRESH IT DECAYS FOR EVERY TICK OF THAT NIGHT, and if the night is long enough the mark
+% falls under its threshold and, by the mechanism renewal_loop demonstrates, NEVER RETURNS.
+%
+% SO THE PHASE BUILT TO CONSOLIDATE MEMORY WOULD HAVE BEEN THE PHASE THAT ERASED IT - permanently,
+% nightly, and silently, because nothing anywhere would have reported a loss. That is the fifth
+% consecutive shape this build has found and it would have been the worst of them: not a wrong answer
+% but a disappearing one, in the component whose entire purpose is to not lose things.
+%
+% THE FIX IS ONE PREDICATE AND IT IS DELIBERATELY NOT WIRED INTO night_step/8. Two reasons, both
+% stated so the omission is a decision. FIRST, THE DURABLE TIER IS NOT WIRED TO A WEIGHT YET: there is
+% no store of marks on the world for a night step to reach, so a night_step that took one would be
+% taking an argument nobody can supply. SECOND, AND THE REASON THAT MATTERS: the wiring slice must
+% decide what a night's maintenance costs and whether the night's raised bound and the mark's refresh
+% interact, and folding it in here would settle those by default. THE CAPABILITY IS BUILT, PROVED, AND
+% EXPORTED, AND THE TRAP IS NOW A TEST RATHER THAN A PARAGRAPH.
+%
+% SLICE 51 IS THE REASON THAT LAST SENTENCE IS PHRASED THAT WAY. Slice 51 found a watchman, a watchdog
+% and the wiring between them all built, all tested, and never once called - and recorded that a
+% capability nobody calls is indistinguishable from one that was never built. The guard against
+% repeating that is not to wire this hastily; it is to make the ABSENCE visible. The suite therefore
+% carries a test showing that a night WITHOUT maintenance destroys an established mark, beside the one
+% showing that a night WITH it does not. A reader meets the trap as something that passes.
+
+% offline_consolidation_maintain_durable(+Loops0, -Loops): refresh every durable mark by one step.
+% An exhausted store leaves nothing to maintain, which is what a mind with no durable marks has.
+offline_consolidation_maintain_durable([], []).
+% Each mark is advanced by one uninhibited maintenance step: the night is not a block, it is a shift
+% during which the loop must go on running. Passing 'running' here is the whole claim of this
+% predicate - the alternative, passing 'inhibited', is precisely the erasure it exists to prevent.
+offline_consolidation_maintain_durable([Loop0|Rest0], [Loop|Rest]) :-
+    % Advance this mark. renewal_loop judges the loop and the verdict on the way in, so a malformed
+    % store is refused there rather than being half-maintained here.
+    renewal_loop_step(Loop0, running, Loop),
+    % Maintain the remaining marks.
+    offline_consolidation_maintain_durable(Rest0, Rest).

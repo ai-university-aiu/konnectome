@@ -1000,5 +1000,55 @@ And the design carries a bill, which is written down and not paid. If a memory e
 So nothing is wired. The loop stands on its own, proved against the corpus's numbers, with the bill nailed to it where the next builder will walk into it.
 
 
-From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER FIFTY, and the story goes on being true.
+CHAPTER FIFTY - THE FIELD THAT WAS NEVER MISSING (2026-08-10, SLICE 54)
+
+THE PAPER'S VOICE. Slice 54 closes OBSERVATION-15 completely and takes DECISION-12: the renormaliser's domain is the excitatory contacts, and until an edge carries a declared polarity the sign of its weight is its polarity. The reading is warranted by the propagation rule, which sums weight times source activation, so a negative weight subtracts. No world konnectome runs changes behaviour; the excitation-to-inhibition consequence is pinned by test.
+
+THE BOOK'S VOICE. Two slices ago this was declared blocked, and the declaration was made carefully, which is what makes it worth a chapter.
+
+The reasoning went: the corpus restricts this mechanism to excitatory synapses; konnectome has no field on an edge saying whether it excites or inhibits; therefore there is nothing to test against; therefore the fix waits for the edge type registry, which is where a polarity field belongs. Every step follows from the one before it. It was written down honestly, filed as half of an open observation, and handed forward.
+
+It was also wrong, and it had been wrong for fifty-one slices, because konnectome has known which edges are which since its third.
+
+Not in a field. In the arithmetic. The connection graph adds up what arrives at a construct by summing weight times source activation - and a negative weight subtracts. That is not a convention somebody could have chosen differently and it is not an interpretation. Subtracting from your target's input is what inhibition IS. The sign of the weight had been the polarity of the edge since before there was a plasticity engine to misuse it, and nobody had ever said so out loud, so nobody could find it by looking for it.
+
+The mistakes in the last several chapters have all had one shape: a wrong answer sitting where a right one should be, plausible enough that nothing had to notice. This one is a different shape and worth naming separately. THIS WAS A CAPABILITY HIDING BEHIND AN ASSUMED ABSENCE. A slice went looking for a declared field, did not find one, and concluded the distinction was inexpressible - while the distinction was load-bearing three packs away, in code that had been green the whole time.
+
+The question that would have found it is not "is there a field for this". It is "does anything already behave as though there were".
+
+And the fix cost something, which is the other half of the chapter. Multiplying every weight by one factor has a property nobody had written down either: it multiplies the NET input by that factor too, so the balance between excitation and inhibition survives the operation exactly. Restricting the domain gives that up. Now the excitatory drive shrinks while the inhibition stands, the balance moves, and the bound can push a construct net negative where it never could before.
+
+That is the mechanism rather than a regression - downscaling a too-active cell's excitatory synapses and letting inhibition stand is what the biology does, and the balance moving is the point. But konnectome now holds half of a homeostatic system where it held a mathematically tidy whole, and the other half is unbuilt. So a test pins the asymmetry in place, on purpose, so that some later session meeting the lopsidedness reads a decision rather than a defect and does not tidy it away.
+
+
+CHAPTER FIFTY-ONE - THE NIGHT THAT WOULD HAVE ERASED EVERYTHING (2026-08-10, SLICE 55)
+
+THE PAPER'S VOICE. Slice 55 pays the bill DECISION-11 deliberately left unpaid. offline_consolidation gains offline_consolidation_maintain_durable/2, advancing every durable mark by one uninhibited maintenance step. It is not wired into night_step/8, for two stated reasons, and the absence is guarded by a test showing that an unmaintained mark is destroyed by a night and cannot be recovered.
+
+THE BOOK'S VOICE. Two slices ago the durable memory tier was built as a process rather than a number, because the corpus insists that is what durable memory is. The chapter closed by naming a bill and not paying it: a memory that exists only while something runs it needs something to run it while the mind sleeps.
+
+Here is what that sentence actually meant, spelled out, because writing it down and feeling it are different things.
+
+konnectome's night has two jobs. It replays the day so what was learned is rehearsed, and it renormalises so the mind does not grow louder forever. Both come from the corpus. Both are correct. Neither refreshes anything.
+
+A durable mark passing through that night decays on every tick with nothing topping it up. Long enough night, and it falls under its threshold - and by the mechanism the previous slice spent its whole length demonstrating, IT NEVER RETURNS.
+
+So the phase built to consolidate memory would have been the phase that destroyed it. Permanently. Every night. And in perfect silence, because nothing in the architecture would have reported a loss: the mind would simply wake each morning having quietly given up whatever it spent the previous day learning to keep.
+
+Of all the failure shapes this run has found - a boundary that could never be crossed, a zero that reads as calm, a threshold decided by rounding, a table row that is not a transition, a clip that annihilates, a test that guarded the bug - this would have been the worst. Not a wrong answer. A disappearing one, in the one component whose entire stated purpose is to not lose things.
+
+The fix is nine lines. What took thought was deciding not to wire it in.
+
+There is an obvious argument for wiring it: an unwired capability is exactly what Chapter Forty-Seven diagnosed, where a watchman and a watchdog and their wiring sat built and tested and uncalled for fourteen slices, and the lesson recorded was that from outside, a capability nobody calls is indistinguishable from one that was never built. Having written that down, building another uncalled capability looks like not having learned it.
+
+But the durable tier is not attached to a weight yet, so there is no store of marks for a night step to reach - a night_step demanding one would demand an argument nobody can supply. And the slice that does attach it has real questions to answer about what a night of maintenance costs and whether the raised bound and the refresh interfere. Folding it in now would settle those by default, which is the thing this build refuses to do.
+
+So the answer was not to wire it hastily. It was to make the absence visible. The suite now carries two tests side by side: one where a night maintains a mark and the mark survives, one where the identical mark goes through the identical night unmaintained and is destroyed, with five hundred later nights unable to recover it.
+
+Nothing in konnectome does that second thing today. That test is not guarding behaviour. It is guarding a mistake that has not been made yet, and it means the next builder walks into the trap while everything is green rather than long afterwards when something is quietly gone.
+
+That is the lesson of Chapter Forty-Seven applied one slice before the error instead of fourteen slices after it, and it is the first time this build has managed that.
+
+
+From here the log continues chapter by chapter, dated, append-only, in both voices - the next session's work becomes CHAPTER FIFTY-TWO, and the story goes on being true.
 

@@ -1225,8 +1225,7 @@ thought combination. The four gates report zero violations, the naming gate pass
 self-test; conformance re-measured at 137 of 137 (specification 4.0.0) in both cousins. No new
 wall; no cousin edited, per the Second, Third, and Fourth Commandments.
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 16 (2 CLOSED: 8 and 9; 15 HALF-CLOSED).  Decisions: 11.
-
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 16 (3 CLOSED: 8, 9 and 15).  Decisions: 12.
 Slice-34 note (2026-08-09). The bound turned live in the told story. The slice-33 pending line
 (the bound proven per-territory in the tests but not yet in the capstone's told story) is
 CLOSED: the capstone's boot world arms the slow bound for real - the diffuse mark at one half,
@@ -4654,4 +4653,95 @@ gates at zero violations plus the naming gate's self-test, with the one known no
 collision unchanged. Nothing routes to either change order: no data-structure gap and no language gap
 was hit, and exact rational arithmetic is SWI-Prolog's own. Neither cousin was edited.
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 16 (2 CLOSED: 8 and 9; 15 HALF-CLOSED).  Decisions: 11.
+
+DECISION-12 (2026-08-10, slice 54). THE RENORMALISER'S DOMAIN IS THE EXCITATORY CONTACTS, AND UNTIL
+AN EDGE CARRIES A DECLARED POLARITY THE SIGN OF ITS WEIGHT IS ITS POLARITY. THIS CLOSES
+OBSERVATION-15 COMPLETELY.
+
+THE CORPUS GIVES THE MECHANISM A DOMAIN AND KONNECTOME WAS IGNORING IT. LAYER_04_05_MODES_OUTLINE
+Entry 18: "prolonged under-activity driving every EXCITATORY synapse up by one shared factor." Not
+every edge the scaler can reach. In the biology inhibitory homeostasis is a SEPARATE mechanism with
+its own machinery, not this one applied more widely.
+
+WHY THIS WAS THOUGHT TO BE BLOCKED, AND WHY IT WAS NOT - THIS IS THE FINDING. Slice 52 reasoned:
+konnectome has no polarity field, so there is nothing to test, so the fix waits on the edge type
+registry. THE FIRST STEP WAS TRUE AND THE CONCLUSION DID NOT FOLLOW. konnectome has had an EFFECTIVE
+polarity since slice 3 and it is not a matter of interpretation: connection_graph sums its input as
+Weight times SourceActivation, so A NEGATIVE WEIGHT SUBTRACTS FROM ITS TARGET'S INPUT. That is what
+an inhibitory contact IS. The sign of the weight is the polarity of the edge as a MEASURED PROPERTY
+OF THE RUNNING CODE rather than a convention anybody chose.
+
+NOTE THE SHAPE OF THAT MISTAKE, BECAUSE IT IS NEW. Every earlier finding in this run was a wrong
+answer hiding behind a plausible one. THIS WAS A CAPABILITY HIDING BEHIND AN ASSUMED ABSENCE: a
+slice looked for a DECLARED field, did not find one, and concluded the distinction was
+inexpressible - when the distinction was already load-bearing three packs away. THE QUESTION TO ASK
+NEXT TIME IS NOT "IS THERE A FIELD FOR THIS" BUT "DOES ANYTHING ALREADY BEHAVE AS THOUGH THERE WERE".
+
+WHAT IT CHANGES FOR ANY WORLD KONNECTOME ACTUALLY RUNS: NOTHING, verified rather than assumed. No
+negative weight exists anywhere in the repository - not in the capstone's boot world, not in any
+fixture, not in any test. What changes is the day a world carries an inhibitory contact, which
+nothing prevents and which the three-factor rule can produce unaided, since the update adds a signed
+change to a weight with no floor beneath it.
+
+AND THE CONSEQUENCE IS RECORDED RATHER THAN LEFT TO BE DISCOVERED, BECAUSE IT IS REAL AND IT IS A
+LOSS. Scaling every weight by one factor multiplies the NET input by that factor, sign and all, so
+the excitation-to-inhibition balance is preserved EXACTLY. Restricting the domain gives that up: a
+loud construct's excitatory drive now shrinks while its inhibition stands still, so the balance
+MOVES, and the bound can drive a construct net negative where before it could not. A test asserts
+exactly that, so the asymmetry is a pinned property rather than a surprise a later session
+"corrects".
+
+THAT IS NOT A REGRESSION, IT IS THE MECHANISM - downscaling a too-active cell's excitatory synapses
+and letting the inhibition stand is what the biology does, and the balance moving is the point of
+doing it. BUT KONNECTOME NOW HAS HALF OF A HOMEOSTATIC SYSTEM WHERE IT HAD A MATHEMATICALLY TIDY
+WHOLE, and the other half - INHIBITORY HOMEOSTASIS, which the corpus carries as its own machinery -
+IS UNBUILT AND IS NAMED HERE so nobody reads the asymmetry as an oversight. It is the honest new
+gap this decision opens.
+
+WHAT DECISION-12 DOES NOT DECIDE. It does not declare a polarity FIELD: a first-class polarity
+belongs to the edge type registry exactly as slice 52 said, and this decision reads a fact the
+propagation already establishes rather than adding one. It does not decide what a weight of EXACTLY
+ZERO is - it is left unscaled because zero times any factor is zero and the question is therefore
+empty, which is a better reason than picking a side. And it does not build inhibitory homeostasis,
+which is a system and not a line.
+
+
+Slice-54 note (2026-08-10). THE RENORMALISER'S DOMAIN. DECISION-12; OBSERVATION-15 CLOSED. One guard
+added to plasticity_engine and one condition on the scaling clause. plasticity_engine grows from 86
+tests to 91, five of them pinning the domain, the zero case, the unchanged all-excitatory behaviour,
+and the excitation-inhibition consequence. No behaviour changes for any configuration konnectome
+runs, verified by the capstone story being unaffected.
+
+Slice-55 note (2026-08-10). THE NIGHT'S THIRD JOB, AND THE BILL DECISION-11 LEFT UNPAID IS NOW PAID.
+offline_consolidation gains offline_consolidation_maintain_durable/2, which advances every durable
+mark it is given by one uninhibited maintenance step.
+
+WHY IT HAD TO EXIST, RESTATED SO THE NEXT READER FEELS IT. DECISION-11 made the durable tier a
+MAINTAINED PROCESS: "interrupting the refresh does not merely risk a bit, IT DESTROYS THE ONLY COPY."
+The night replays and renormalises and has had exactly two jobs since slice 38. A DURABLE MARK
+PASSING THROUGH A NIGHT THAT DOES NOT REFRESH IT DECAYS FOR EVERY TICK OF THAT NIGHT and, if the
+night is long enough, falls under its threshold and never returns. THE PHASE BUILT TO CONSOLIDATE
+MEMORY WOULD HAVE BEEN THE PHASE THAT ERASED IT - permanently, nightly, and silently, because nothing
+anywhere would have reported a loss.
+
+IT IS DELIBERATELY NOT WIRED INTO night_step/8, for two stated reasons. The durable tier is not wired
+to a weight, so there is no store of marks on the world for a night step to reach and a night_step
+taking one would take an argument nobody can supply. And the wiring slice must decide what a night's
+maintenance COSTS and how the raised bound and the refresh interact; folding it in here would settle
+both by default.
+
+AND THE ABSENCE IS MADE VISIBLE RATHER THAN TRUSTED, WHICH IS SLICE 51'S LESSON APPLIED BEFORE THE
+MISTAKE INSTEAD OF AFTER IT. Slice 51 found a watchman, a watchdog and their wiring all built, all
+tested, and never called, and recorded that a capability nobody calls is indistinguishable from one
+that was never built. The guard against repeating that is not to wire this hastily - it is to make
+the trap a test. The suite carries one test showing a night WITH maintenance preserves an established
+mark and one showing a night WITHOUT it destroys the mark permanently, so a reader meets the trap as
+something that passes. offline_consolidation grows from 27 tests to 32.
+
+STATE AT THE CLOSE. FIFTY-FIVE slices. NINE HUNDRED AND FORTY-ONE tests across THIRTY-SEVEN packs,
+all green. Four gates at zero violations plus the naming gate's self-test, the one known non-blocking
+prefix collision unchanged. Capstone unaffected, verified rather than assumed. Nothing routes to
+either change order. Neither cousin was edited, and conformance is now FOUR SESSIONS OLD and overdue
+for re-measurement.
+
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 16 (3 CLOSED: 8, 9 and 15).  Decisions: 12.
