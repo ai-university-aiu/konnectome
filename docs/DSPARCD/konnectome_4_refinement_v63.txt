@@ -98,7 +98,7 @@ A4.4bis THE NETWORK, PATHWAY, AND GLIAL TESTS
 
 Because the body names constructs above the single region, the test suite adds checks at that level.
 
-THE NETWORK TEST: engage a task that recruits the dorsal attention and frontoparietal networks; the default mode network's mean activation must fall as theirs rises, reproducing the task-positive-versus-task-negative anticorrelation of Section 2.10. A network that does not deactivate on task has not been coupled correctly.
+THE NETWORK TEST: engage a task that recruits the dorsal attention and frontoparietal networks; the default mode network's mean activation must fall as theirs rises, reproducing the task-positive-versus-task-negative anticorrelation of Section 2.10 (Layer 10, chapters 21 through 30). A network that does not deactivate on task has not been coupled correctly.
 
 THE PATHWAY TEST: drive the direct pathway and observe an action released (go); drive the indirect pathway and observe it suppressed (no-go); drive the hyperdirect pathway and observe a fast global cancellation (stop). Then run the Papez circuit and confirm a memory trace injected at the hippocampus circulates through the mammillary bodies, anterior thalamus, and cingulate and returns, and that cutting any node breaks the loop, reproducing diencephalic amnesia.
 

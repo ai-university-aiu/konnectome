@@ -52,7 +52,7 @@ COMPONENT 9, THE OBSERVER, or INSTRUMENT. Reads and records the full state of ev
 
 COMPONENT 10, THE PERTURBATION INTERFACE. Permits an experimenter to lesion a construct, cut an interface, or shift a neuromodulator level, satisfying FR-14. It is how a simulated disease or drug is administered.
 
-COMPONENT 1 additionally holds the large-scale networks (Section 2.10) as named views over its regions and the cognitive systems and pathways (Section 2.11) as named subgraphs over the connection graph; adding a network or a pathway means adding a named grouping, not a new update rule. The glia are held as modulatory entries read by the plasticity engine (Component 8), not as regions with state.
+COMPONENT 1 additionally holds the large-scale networks (Section 2.10; Layer 10, chapters 21 through 30) as named views over its regions and the cognitive systems and pathways (Section 2.11; Layer 10, Chapter 9) as named subgraphs over the connection graph; adding a network or a pathway means adding a named grouping, not a new update rule. The glia are held as modulatory entries read by the plasticity engine (Component 8), not as regions with state.
 
 A3.2bis THE SYSTEM DIAGRAM
 

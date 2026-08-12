@@ -1226,7 +1226,7 @@ self-test; conformance re-measured at 137 of 137 (specification 4.0.0) in both c
 wall; no cousin edited, per the Second, Third, and Fourth Commandments.
 
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 22 (8 CLOSED: 8, 9, 15, 17, 18, 19, 20 and 22).  Decisions: 21.
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 22 (8 CLOSED: 8, 9, 15, 17, 18, 19, 20 and 22).  Decisions: 22.
 Slice-34 note (2026-08-09). The bound turned live in the told story. The slice-33 pending line
 (the bound proven per-territory in the tests but not yet in the capstone's told story) is
 CLOSED: the capstone's boot world arms the slow bound for real - the diffuse mark at one half,
@@ -6102,4 +6102,65 @@ Nothing routes to either change order. Neither cousin was edited. No PrologAI or
 found.
 
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 22 (8 CLOSED: 8, 9, 15, 17, 18, 19, 20 and 22).  Decisions: 21.
+DECISION-22 (2026-08-11, slice 73). THE FULFILMENT AUDIT'S TWO FINDINGS, DISCHARGED - ONE BY REPAIR,
+ONE BY RECORDED RECONCILIATION.
+
+Slice 73 is one slice discharging both of the prior hand-off's queue items one and two, since both
+route through the same audit (docs/design/11) and neither changes running code.
+
+FINDING ONE, THE NUMBERING CROSS-REFERENCE, REPAIRED. All live occurrences of the guiding book's
+Section 2.10 and Section 2.11 in the DSPARCD Fileset now carry the Layer 10 address beside them, in
+the corpus's own phrasing - "chapters 21 through 30" for Section 2.10, "Chapter 9" for Section 2.11 -
+matching docs/design/03's own measured form of the addresses. THE COUNT ITSELF IS CORRECTED IN THE
+SAME ACT: the audit measured nine sites across four DSPARCD phase files; a direct repository grep at
+slice 73 found TEN across FIVE. konnectome_4_refinement's Section 2.10 reference (its network test,
+introduced at the docs/DSPARCD move, commit e0f91dc) predates the audit and was not counted by it.
+The tenth site is fixed along with the other nine, on this ledger's own standing rule that a
+measurement is trusted over a document that describes it. The deferral register's
+the_guiding_book_numbering_stands_uncrossreferenced entry flips from deferred to taken_up.
+
+FINDING TWO, THE ASTROCYTE ESCALATION AND THE ANALYSIS'S CURRENCY, RECONCILED WITHOUT A VERSION 5.
+docs/design/01 gains an erratum, appended in place beside its existing astrocyte paragraph rather
+than rewritten, per this ledger's own convention for correcting a document without silently editing
+its history (the same convention Finding Three's ledger correction used at slice 70). The erratum
+ACCEPTS the north-star gap analysis's finding A4: the astrocyte is a genuine architectural gap and
+not merely a tension, because its D-serine supply gates whether nearby synapses can potentiate at
+all, which is a PLASTICITY PERMISSION over other edges rather than a modulatory entry. IT IS NOT
+BUILT HERE. The reconciliation names the reason it cannot be built correctly yet: a plasticity
+permission is a property of an edge's governance, and konnectome has no field for anything of that
+shape until Theme Three (the edge type registry, Family Three, still entirely unbuilt) supplies one -
+building the astrocyte node first would mean inventing, in passing, the very field Theme Three is
+responsible for deciding. The astrocyte is therefore re-filed as a named dependent of Family Three
+rather than left as a free-floating tension. The deferral register's the_astrocyte_escalation_is_unreconciled
+entry flips from deferred to taken_up.
+
+THE SECOND HALF OF FINDING TWO, DOCS/DESIGN/01's OWN CURRENCY, IS DEFERRED RATHER THAN DISCHARGED,
+WITH ITS COST NAMED IN THE ERRATUM ITSELF, EXACTLY AS THE AUDIT'S OWN ALTERNATIVE PERMITS. Writing a
+true version 5 requires re-measuring every claim against the codebase, the method version 4 itself
+used, and doing that inside the same slice that repairs a nine-site housekeeping item and reconciles
+one finding is the "edit made in passing that nobody reviews" hazard the corpus-update rules and the
+audit both warn against. The cost is stated on the document's own face: version 4 is current through
+slice 58, the build stands at slice 73, and none of the fifteen intervening slices is known to
+reverse a held verdict, but "known not to reverse" is a weaker claim than a re-measurement makes.
+The deferral register's the_analysis_is_not_current_to_the_build entry is NOT flipped - it stays
+deferred, correctly, because its probe watches for a version 5 to exist and none does; the entry's
+note is expanded to record that the cost it asks for is now named in writing rather than absent.
+
+WHAT THIS DECISION DOES NOT DECIDE. It does not decide Theme Three's own field design, or whether a
+plasticity-permission field is single-valued or itself graded - that remains Family Three's unforced
+decision when it is next picked up, and docs/design/07 is named as the place to read A4 against when
+it is. It does not write version 5 of docs/design/01. It does not change any running code, any pack,
+or any test; no gate's fixture changed shape.
+
+THE DSPARCD FILESET BUMPS TO v63 IN THE SAME CHANGE, per the Twelfth Commandment's own convention for
+any edit to the fileset's phase files (all six phase files renamed and version-stamped together, as
+every prior bump has done) - Finding One's repair touches five of the six phase files directly, and
+the sixth (konnectome_6_demonstration) carries this slice's own Realization Log entry, so the bump
+covers the whole set rather than leaving one file behind.
+
+bin/check_deferrals.sh run before and after: 0 violations both times, ten entries, Deferred 4 |
+Taken up 5 | Unprobeable 1 (was Deferred 6 | Taken up 3 | Unprobeable 1). Nothing routes to either
+change order. Neither cousin was edited. No PrologAI or causalontology gap found.
+
+
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 22 (8 CLOSED: 8, 9, 15, 17, 18, 19, 20 and 22).  Decisions: 22.

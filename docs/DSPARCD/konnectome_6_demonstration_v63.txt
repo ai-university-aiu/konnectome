@@ -1469,3 +1469,20 @@ SLICE 71 DEMONSTRATES NOTHING NEW AT THE CAPSTONE: it is a documentation change 
 SLICE 72 IS DEMONSTRABLE BUT NOT YET DEMONSTRATED AT THE CAPSTONE. capstone_demonstration's own world now carries conflict_gain (0.15), which is required simply to keep the capstone's cognitive_cycle world constructible, but the capstone's narrated story does not yet SAY anything about the conflict loop's own behaviour - no overrides stand in the capstone's own scripted run, so the loop is present, correctly silent, and untold. ADDING A NARRATED DEMONSTRATION OF THE GRATTON SHAPE AT THE CAPSTONE, the way slice 69 added one for the efference copy, is left for a future slice and is not claimed here.
 
 THE PROOF THAT WAS ACTUALLY MADE: bin/run_pack_tests.sh cognitive_cycle, showing the three new tests (the regression pin, the raised-bias effect, and the Gratton shape) passing alongside all thirty-four prior tests, unmoved.
+
+
+KONNECTOME REALIZATION LOG - SLICE 73
+
+Slice 73 - the fulfilment audit's two findings discharged - 2026-08-11.
+
+SLICE 73 DEMONSTRATES NOTHING NEW AT THE CAPSTONE AND CHANGES NO CODE: it is a documentation repair
+(Finding One, nine housekeeping sites corrected to ten once measured directly) and a documentation
+reconciliation (Finding Two, an erratum accepted in place on docs/design/01 rather than a version 5),
+so the capstone's byte-identical guard is unaffected, verified by running it rather than assumed.
+
+THE PROOF THAT WAS ACTUALLY MADE: bin/check_deferrals.sh, showing 0 violations before and after, with
+two entries flipping from deferred to taken_up (the_guiding_book_numbering_stands_uncrossreferenced,
+the_astrocyte_escalation_is_unreconciled) and one entry's note strengthened without flipping
+(the_analysis_is_not_current_to_the_build, whose probe correctly still finds no version 5); and the
+full suite, run once at the close of the slice per the standing minimize-baseline-verification
+instruction, showing the same pass count as slice 72 left it.
