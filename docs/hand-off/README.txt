@@ -7,7 +7,9 @@ WHAT IS IN HERE
 
 Every SUPERSEDED Context Hand-Off document - the session records mandated by the Nineteenth Commandment, from 2026-07-19 onward.
 
-THE CURRENT HAND-OFF IS NOT IN HERE. IT LIVES IN /docs/ , and it is the only Context Hand-Off document there, which is how you know it is the current one without working anything out.
+THE CURRENT HAND-OFF IS NOT IN HERE. IT LIVES IN /docs/start-here/ , and it is the ONLY FILE in that directory, which is how you know it is the current one without working anything out.
+
+(UPDATED 2026-08-12, Constitution version 29. It lived at the top level of /docs/ from Constitution version 13 until then. The rule did not change - exactly one Context Hand-Off document stands outside this directory at any moment and it is always the one to read - but the way you SEE that it is the right one did. "The only dated file in /docs/" rested on a NEGATIVE, on what was not in that directory, which is a fact a reader has to check. "The only file in a directory called start-here" rests on a positive fact and states its own instruction. NOTHING ELSE MAY BE PUT IN docs/start-here/ , for exactly that reason.)
 
 That is the Nineteenth Commandment's two-location rule, added at Constitution version 13 on 2026-08-10, and it is the whole reason this directory exists in the shape it does. Before writing a new hand-off, a session SWEEPS whatever it finds in /docs/ into here, and only then writes the new one. Sweep, then write - in that order, in one commit.
 
@@ -27,7 +29,7 @@ THE RULE THAT FOLLOWS, and it is the rule this whole directory was organised und
 
 HOW TO READ THEM
 
-START IN /docs/ , NOT IN HERE. The single Context Hand-Off document in /docs/ is the current one and it is the entry point. Read it first, in full.
+START IN /docs/start-here/ , NOT IN HERE. The single file in docs/start-here/ is the current hand-off, and it is the entry point. Read it first, in full.
 
 Then read the one it names as its substantive predecessor, which will be in here - AND WHICH IS NOT ALWAYS THE ONE IMMEDIATELY BEFORE IT, because SOME HAND-OFFS ARE SESSION-CLOSE MARKERS RATHER THAN UNITS OF WORK. At least two are markers. Each hand-off says which of its predecessors is the substantive one; trust that rather than the date order.
 
@@ -40,7 +42,7 @@ THE FORWARDING NOTE - READ THIS IF YOU ARRIVED HERE FROM AN OLD DOCUMENT
 
 Before 2026-08-10 every hand-off lived directly in /docs/ . If you are following a path of the form docs/[DATE]_..._Context_Hand-Off_from_... and it does not resolve, the file is here: insert hand-off/ after docs/ and the path is correct. No file was renamed, edited or deleted.
 
-ONE EXCEPTION, AND IT IS THE RULE RATHER THAN AN ACCIDENT: the CURRENT hand-off is in /docs/ and its old-style path is therefore still correct. If a path of that form DOES resolve in /docs/ , you are holding the current one.
+ONE EXCEPTION HELD FROM 2026-08-10 TO 2026-08-12 AND HAS NOW LAPSED, AND THE LAPSE IS SAID PLAINLY BECAUSE IT SIMPLIFIES THE FORWARDING RULE RATHER THAN COMPLICATING IT: the CURRENT hand-off used to sit at the top level of /docs/ , so its old-style path was still correct and a resolving path meant you had found the live one. SINCE CONSTITUTION VERSION 29 THE CURRENT HAND-OFF IS IN /docs/start-here/ , SO NO PATH OF THE FORM docs/[DATE]_..._Context_Hand-Off_from_... RESOLVES ANY MORE - every one of them is now an old path, every one of them leads here or to docs/start-here/ , and there is no longer a case in which following one lands you on the live document by accident. So the forwarding rule above now has no exception at all: an unresolving hand-off path always means this directory, and the live document is always the single file in docs/start-here/ .
 
 TWO CATEGORIES OF POINTER WERE FIXED IN THE SAME CHANGE, and both were live instructions rather than records.
 
