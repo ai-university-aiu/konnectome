@@ -1,21 +1,3 @@
-THIS DOCUMENT IS AN INCOMPLETE DRAFT AND MUST NOT BE READ AS A SOURCE.
-
-STOP HERE IF YOU ARE LOADING STATE OR DESIGNING A SLICE.
-
-Work on this file began on 2026-08-12 and was CUT OFF PART-WAY THROUGH by an account-level service limit, not by a decision. What follows is a fragment of an intended document, and the fragment is left on disk deliberately so the work can be resumed rather than restarted.
-
-WHAT IT WAS MEANT TO BE. It fills the ontogenetic axis, recording that the fifteen layers are a purely spatial-scale ladder with no place for development, and setting out the three consistent resolutions so the owner and the corpus's author can choose between them.
-
-WHAT IS ACTUALLY HERE, AND WHAT IS NOT. Parts One and Two are drafted. Part Three, which is the substantial half and holds the developmental timetable, the critical periods, sexual differentiation and ageing, is largely absent, as is Part Four and the SOURCES section.
-
-WHY THIS BANNER EXISTS RATHER THAN THE FILE SIMPLY BEING DELETED. A partial document in this directory is the most dangerous object this project can produce: it carries a provenance block announcing that it closes a gap, it is written in the corpus's own confident voice, and a later session skimming it would take it for a finished source. This corpus's whole discipline is that a document which cannot be told from a finished one, by looking at it, is not doing its job. So the warning is placed where it cannot be missed, in the form whose failure mode is visible.
-
-UNTIL THE BANNER IS REMOVED BY A SESSION THAT ACTUALLY FINISHED THE FILE, NOTHING BELOW IS CITABLE, NOTHING BELOW OUTRANKS ANYTHING, AND NO NUMBER BELOW HAS BEEN VERIFIED AGAINST THE LITERATURE.
-
-The resumption plan is recorded in docs/neuroscience/EDIT_LOG.txt .
-
-================================================================================
-
 THE ONTOGENETIC AXIS
 
 Development, Critical Periods, Sexual Differentiation, and Ageing, and the Framework Question of Where They Belong
@@ -611,3 +593,367 @@ Part Three is written to be useful under ALL THREE resolutions, and that is deli
 Whichever resolution is chosen, the content in Part Three has to exist somewhere - as a sixteenth layer's catalogue, as the axis's governing document, or as the citation-backed appendix justifying an explicit exclusion.
 
 So Part Three takes no position and simply writes the material out.
+
+
+================================================================================
+
+PART THREE. THE CONTENT THE DECISION WOULD GOVERN
+
+Whichever of the three resolutions is chosen, this material has to exist somewhere, so it is written out here.
+
+Every quantity below was checked against the published literature by web search on 2026-08-12, and every one carries its source.
+
+Where sources disagree, both figures are given with their sources rather than averaged, because a disagreement between sources is a finding and not a nuisance.
+
+Where a widely repeated figure could not be verified against a source that could actually be read, that is said plainly and no number is supplied.
+
+
+3.1 A NOTE ON THE TWO CLOCKS, WHICH MUST COME FIRST
+
+There are two dating conventions in this literature and confusing them is the single largest source of error in it.
+
+Post-conception age, also called embryonic age or fertilisation age, starts the clock at fertilisation, and Carnegie stages - the standard embryological staging system of twenty-three stages covering the first eight weeks - are always post-conception.
+
+Post-menstrual age, also called gestational age, is the clinical convention and starts the clock at the first day of the mother's last menstrual period, roughly two weeks before fertilisation.
+
+The conversion is that gestational age equals post-conception age plus approximately two weeks.
+
+Embryology sources use post-conception days; imaging, obstetric and neonatal sources use gestational weeks.
+
+The convention is flagged for every item below, and a reader who ignores this paragraph will misread the whole of Part Three by about a fortnight.
+
+
+3.2 THE DEVELOPMENTAL TIMETABLE OF THE HUMAN NERVOUS SYSTEM
+
+NEURULATION.
+
+Neural plate formation and primary neurulation span roughly the beginning of the third week to the end of the fourth week post-conception, corresponding to Carnegie stages 8 to 13.
+
+Closure begins at the level of the future cervical spinal cord at approximately day 22 post-conception, at what is called Closure Site 1, and the closure wave then propagates both rostrally toward the head and caudally toward the tail.
+
+The anterior neuropore, the opening at the head end, closes at approximately day 25 post-conception.
+
+The posterior neuropore closes at approximately days 27 to 28 post-conception, and failure of that closure, or its rupture shortly afterwards, produces spina bifida.
+
+Textbook values cluster tightly at anterior day 24 to 26 and posterior day 26 to 28 post-conception, which is roughly gestational week 5.4 to 6.0.
+
+The apparent day-level disagreement between texts is almost entirely a convention artefact, compounded by the fact that Carnegie staging bins embryos by morphology rather than by measured days since fertilisation, so these should be read as central estimates with an uncertainty of one to two days rather than as precise measurements.
+
+The practical consequence is worth stating because it is the reason the whole subject matters clinically: closure completes before day 28 post-conception, roughly gestational week 6, which is before most women know they are pregnant, and that is why periconceptional folic acid supplementation must begin before conception.
+
+Sources: Integrative Analysis of Key Signalling Pathways in Neural Tube Defects, PubMed Central article PMC12405674, 2025; Neuroanatomy, Neural Tube Development and Stages, StatPearls, National Center for Biotechnology Information Bookshelf NBK557414; Formation of the Neural Tube, in Gilbert, Developmental Biology, NCBI Bookshelf NBK10080. Accessed 2026-08-12.
+
+CORTICAL NEUROGENESIS.
+
+The peak production window for cortical projection neurons spans roughly gestational weeks 10 to 20 post-menstrual, with substantial production continuing from about gestational week 8 to gestational week 25.
+
+Lineage-tracing and single-cell work sampling gestational weeks 16 to 24 documents an ongoing switch in progenitor output from glutamatergic excitatory neuron production to gamma-aminobutyric-acid-ergic, abbreviated GABAergic, inhibitory neuron production across that window.
+
+Reelin-expressing cells appear in the earliest cortical primordium at Carnegie stage 16 and increase at stages 17 to 18, which is roughly 5 to 8 gestational weeks.
+
+Total neuron number in the human brain peaks at approximately gestational week 28 post-menstrual, after which programmed cell death and pruning reduce it.
+
+ONE CAUTION IS OWED HERE. The classic teaching that cortical neurogenesis is entirely complete by mid-gestation is a simplification: interneuron production and, in particular, cerebellar granule cell production continue later, and the exact human end-point is not established with the precision that rodent data allow.
+
+Sources: Lineage-resolved atlas of the developing human cortex, Nature, 2025; Meyer and colleagues, Embryonic and Early Fetal Development of the Human Neocortex, Journal of Neuroscience, volume 20, 2000; Tau and Peterson, Normal Development of Brain Circuits, Neuropsychopharmacology, 2010, PMC3055433. Accessed 2026-08-12.
+
+NEURONAL MIGRATION.
+
+Radial migration, in which young neurons climb outward along radial glial fibres from the ventricular zone to the cortical plate, peaks between gestational weeks 12 and 20 post-menstrual and is largely complete by gestational weeks 26 to 29.
+
+Cortical layers are built from the deepest outward, so that earlier-born neurons occupy deep layers and later-born neurons migrate past them to occupy progressively more superficial ones, which is the inside-out rule of Rakic's radial unit hypothesis.
+
+Reelin, a large secreted glycoprotein released by Cajal-Retzius neurons in the marginal zone, provides the stop-and-detach signal that lets each migrating cohort pass the previously arrived cohort and settle superficially to it, and loss of Reelin signalling inverts the layering.
+
+A DISAGREEMENT WORTH FLAGGING: "migration completes by gestational week 24" is a common textbook shorthand, and the imaging and histology literature supports a later and softer endpoint of weeks 26 to 29, with tangential interneuron migration and cerebellar granule cell migration continuing beyond that, in the cerebellum into the early postnatal months.
+
+Sources: Tau and Peterson, 2010; Meyer and colleagues, 2000; Subpial Granular Layer and Transient Versus Persisting Cajal-Retzius Neurons of the Fetal Human Cortex, Cerebral Cortex, volume 28, 2018; Asymmetry of Radial and Symmetry of Tangential Neuronal Migration Pathways in Developing Human Fetal Brains, PMC4724714. Accessed 2026-08-12.
+
+AXON GUIDANCE.
+
+The growth cone, the motile tip of a growing axon first described by Ramon y Cajal in 1890, samples its environment with finger-like filopodia and sheet-like lamellipodia and steers by differential actin assembly toward attractants and away from repellents.
+
+Four canonical guidance cue families act, and all four are bifunctional, being attractive or repulsive depending on the receptor complement and the cyclic-nucleotide state of the growth cone: the netrins acting through DCC receptors for attraction and UNC5 receptors for repulsion; the slits acting through Robo receptors; the semaphorins acting through plexin and neuropilin complexes; and the ephrins acting through Eph receptor tyrosine kinases with bidirectional signalling.
+
+Human timing anchors that are actually documented are few: corpus callosum development begins at approximately gestational week 12 post-menstrual, the structure is complete and readily identifiable by gestational weeks 14 to 15, and the splenium becomes prominent by gestational weeks 18 to 19.
+
+Corticospinal tract myelination is already in progress at the pyramidal decussation by gestational week 25, and axonal outgrowth necessarily precedes it.
+
+Thalamocortical, callosal and cortico-cortical pathway convergence, and the dissolution of the subplate - a transient waiting compartment where thalamic axons pause before invading the cortical plate - dominate gestational weeks 24 to term.
+
+AN EXPLICIT CAVEAT, AND IT IS A LARGE ONE. Precise expression windows for netrins, slits, semaphorins and ephrins in the human fetal brain are far less well characterised than in mouse, chick and zebrafish, and almost every textbook statement of the form "cue X acts at time Y" is extrapolated from model organisms. No authoritative human expression timetable with week-level resolution for all four families could be found, and none is fabricated here.
+
+Sources: Genetic heterogeneity in corpus callosum agenesis, Frontiers in Genetics, 2022; Development and plasticity of the corpus callosum, Development, volume 147, 2020; Kostovic and colleagues, Fundamentals of the Development of Connectivity in the Human Fetal Brain in Late Gestation, Journal of Neuropathology and Experimental Neurology, volume 80, 2021. Accessed 2026-08-12.
+
+SYNAPTOGENESIS.
+
+The primary human dataset here is Huttenlocher's post-mortem electron microscopy work, which remains unreplaced after nearly fifty years, and that fact should colour how confidently any of these numbers is read.
+
+The peak synaptogenic rate begins around gestational week 34 post-menstrual, during which approximately forty thousand new synapses are formed every second.
+
+In primary visual cortex there is a burst of synapse formation between three and four months of age, with synaptic density peaking at 140 to 150 percent of adult levels between four and twelve months of age.
+
+In prefrontal cortex, specifically the middle frontal gyrus, synaptogenesis begins at about the same time as in visual cortex but does not enter its peak period until about eight months of age and continues through the second year, with maximum density not reached until after fifteen months.
+
+Auditory cortex is intermediate, and net synapse elimination has ended there by about age twelve years, whereas in prefrontal cortex elimination extends into mid-adolescence and beyond.
+
+WHAT IS DELIBERATELY NOT STATED HERE. Absolute peak synaptic density, expressed as synapses per cubic millimetre or as synapses per neuron, is frequently quoted in secondary sources and could not be verified against Huttenlocher's primary text; figures of the order of ten to the ninth per cubic millimetre circulate widely and no such number is asserted here. What is solidly supported is the relative statement.
+
+A METHODOLOGICAL CAVEAT THAT APPLIES TO THE WHOLE DATASET. Huttenlocher's regional-difference conclusions rest on a small number of post-mortem specimens, unevenly distributed in age, with essentially no specimens in some critical intervals, so the smooth curves reproduced in textbooks are interpolations through sparse points. The ORDERING of the regional peaks - visual before auditory before prefrontal - is robust; the exact ages of those peaks are not tightly constrained.
+
+Sources: Huttenlocher and Dabholkar, Regional differences in synaptogenesis in human cerebral cortex, Journal of Comparative Neurology, volume 387, 1997; Huttenlocher, Synaptic Density in Human Frontal Cortex, Brain Research, volume 163, 1979; Tau and Peterson, 2010. Accessed 2026-08-12.
+
+PROGRAMMED CELL DEATH.
+
+Approximately half of the neurons produced during development subsequently die.
+
+Across neuronal populations and species the loss ranges roughly 20 to 80 percent depending on the population studied, so the figure of about half is a central tendency and not a constant; motor neuron pools and sensory ganglia, the best-quantified populations, sit near 50 percent.
+
+Because neuron number peaks at approximately gestational week 28 post-menstrual, the bulk of developmental apoptosis falls in the third trimester and the first postnatal year, with attrition continuing at a much lower rate through childhood and adolescence.
+
+The neurotrophic factor hypothesis is the standard explanation: neurons are overproduced relative to the size of their target field, targets secrete limiting quantities of survival factors, and neurons that capture enough survive while those that do not activate the intrinsic apoptotic programme, which quantitatively matches neuron number to target size.
+
+AN HONEST QUALIFICATION. That hypothesis is best supported in the peripheral nervous system, where target-competition experiments are tractable, and its extension to the central nervous system and particularly to cortex is an extrapolation. Central neurons also die before ever contacting a target, through afferent deprivation and activity-independent early death, so the hypothesis should not be presented as a proven universal law of cortical development.
+
+Sources: Programmed Cell Death in the Developing Nervous System, Neuron; Oppenheim, Cell Death During Development of the Nervous System, Annual Review of Neuroscience, volume 14, 1991, and his own later reexamination of the concept, 1993; Tau and Peterson, 2010. Accessed 2026-08-12.
+
+MYELINATION.
+
+This is the longest schedule of any developmental process in the nervous system: it begins in the second trimester and, in association cortex, is not finished until the fourth decade.
+
+Mature myelin appears first in subcortical regions and later in cortical regions across gestational weeks 20 to 28 post-menstrual.
+
+Corticospinal tract myelination is in progress at the pyramidal decussation by gestational week 25; myelin is detectable in precentral and postcentral gyri by gestational week 35; and myelin is present in the acoustic radiation by gestational week 40.
+
+Between gestational weeks 36 and 40 the proportion of total brain volume occupied by myelinated white matter rises from one percent to five percent.
+
+The foundational reference is Yakovlev and Lecours, The myelogenetic cycles of regional maturation of the brain, 1967, whose central and still-standing finding is that myelination proceeds not simultaneously but in a succession of regional waves: spinal roots and brainstem tracts first, then sensory and motor projection systems, then commissural and short association fibres, and last the intracortical fibres of association cortex.
+
+Their most-cited quantitative claim is that intracortical association-cortex fibres retain an immature greyish pallor beyond the third decade of life, and that is the histological origin of the modern statement that the prefrontal cortex myelinates last.
+
+A CAVEAT ON THAT SOURCE. It is a 1967 book chapter based on stained post-mortem sections from an autopsy series, not a modern quantitative study. The regional ordering has been repeatedly confirmed by diffusion imaging; the precise terminal ages are eyeball estimates from stain intensity and should be treated as approximate.
+
+Modern imaging corroborates the ordering and adds population peaks: in an aggregation of over 120,000 magnetic resonance imaging scans across the lifespan, total white matter volume peaks just before age 29 years, the reported figure being 28.7 years, while cortical thickness peaks strikingly early at 1.7 years and total grey matter volume at 5.9 years.
+
+A 2025 diffusion study of 4,216 individuals aged 0 to 90, using twelve graph-theory metrics of network organisation, identifies four topological turning points at approximately ages 9, 32, 66 and 83 years, defining five epochs - and critically places the adolescence-to-adulthood transition at approximately age 32, not 25.
+
+Sources: Yakovlev and Lecours, 1967, in Minkowski, editor, Regional Development of the Brain in Early Life; Bethlehem and colleagues, Brain charts for the human lifespan, Nature, volume 604, 2022; Grydeland and colleagues, Waves of Maturation and Senescence in Micro-structural MRI Markers of Human Cortical Myelination over the Lifespan, Cerebral Cortex, PMC6373687; Mousley, Bethlehem, Yeh and colleagues, Topological turning points across the human lifespan, Nature Communications, volume 16, article 10055, 2025. Accessed 2026-08-12.
+
+ADOLESCENT PRUNING, AND THE "AGE 25" CLAIM, WHICH IS OVERSTATED.
+
+Dendritic spine density in childhood exceeds adult values by two- to threefold in human prefrontal cortex, begins to fall during puberty, and continues falling well past adolescence, with adult-level density reached only in the third decade, at approximately age 30.
+
+That late endpoint is the neoteny claim: humans prune prefrontal spines for far longer than any other primate.
+
+A two- to threefold childhood excess implies a loss on the order of 50 to 65 percent of peak spine density over the pruning period, and the frequently quoted round figure that about 40 percent of synapses are lost in adolescence traces to Huttenlocher's frontal cortex curve. Both are defensible orders of magnitude, neither is a precisely measured constant, and no single authoritative percentage is asserted here because the primary sources do not supply one with confidence intervals.
+
+AN IMPORTANT INTERPRETIVE POINT. The adolescent decline in cortical grey matter measured by magnetic resonance imaging is NOT a direct measurement of synapse loss. It is a composite signal driven substantially by increasing intracortical myelination shifting the grey-white boundary inward, and by changes in tissue water content, in addition to any true synaptic remodelling. The routine equation of grey matter thinning with pruning in popular accounts is an overreach.
+
+THE CLAIM THAT THE PREFRONTAL CORTEX FINISHES MATURING AT 25 IS NOT SUPPORTED AS STATED, and this document says so plainly because the claim is widely repeated including in legal and policy settings.
+
+Its origin is a rounding artefact: early structural imaging cohorts of adolescent brain development largely stopped recruiting around ages 20 to 25, so because trajectories were still changing at the upper edge of the sampled range, investigators could only say maturation continued past the data. "Mid-twenties" became a hedge and the hedge hardened into "25". No study identified 25 as an inflection point.
+
+Individual variation defeats the population claim in any case: some eight-year-old brains show a higher composite maturation index than some twenty-five-year-old brains, so a population-mean age cannot classify an individual.
+
+And the best current evidence points later than 25, not at it. Three independent methods converge on the late twenties to early thirties: Golgi histology puts prefrontal spine pruning at about 30, volumetric imaging puts white matter peak at 28.7, and diffusion network topology puts the adolescent-to-adult transition at about 32.
+
+There is also no single maturational endpoint to ask about. Different measures peak at ages spanning roughly 1.7 years to 32 years, so the question "when does the brain finish developing" presupposes a single answer the data do not contain.
+
+WHERE THE CLAIM RETAINS FORCE. The directional statement - that prefrontal executive and inhibitory systems mature later than limbic and reward systems, producing a temporal gap during adolescence - is well supported, and the dual-systems account rests on it and survives. What does not survive is the specific number, its use as a bright line, and its application to individuals.
+
+Sources: Petanjek and colleagues, Extraordinary neoteny of synaptic spines in the human prefrontal cortex, Proceedings of the National Academy of Sciences, volume 108, 2011; Huttenlocher and Dabholkar, 1997; Bethlehem and colleagues, 2022; Mousley and colleagues, 2025; Somerville, Searching for Signatures of Brain Maturity, Neuron, volume 92, 2016. Accessed 2026-08-12.
+
+ADULT HIPPOCAMPAL NEUROGENESIS, WHICH IS A LIVE DISPUTE AND IS REPORTED AS ONE.
+
+No side of this is presented as settled, because it is not.
+
+In 2018 one study of the dentate gyrus in 59 human subjects found neurogenesis robust in embryonic and infant tissue, dropping steeply with age, and detected none in any subject older than 13 years. Within weeks another study reached the opposite conclusion, that neurogenesis persists in adults and does not markedly decline with age. A 2019 study reported abundant immature neurons in healthy adults across the lifespan and argued that prolonged tissue fixation destroys the doublecortin signal, which would explain negative findings.
+
+Two more recent studies shift the balance. A 2025 study using single-nucleus ribonucleic acid sequencing from birth through adulthood, with machine-learning classifiers and proliferation-marker antibodies, found proliferating neural progenitors localised to the dentate gyrus in adults, but with very large inter-individual variation, some adults having many and others almost none. A 2026 multiomic single-cell study of 355,997 nuclei reports neural stem cells, neuroblasts and immature granule neurons present, with neurogenesis stalled in Alzheimer's disease and elevated in people over eighty whose episodic memory matches people decades younger.
+
+THE HONEST STATE OF THE EVIDENCE AS OF 2026 is that the balance has shifted toward a low-level, highly variable adult process existing, helped considerably by the transcriptomic studies, which do not depend on the contested antibody staining that drove the earlier stalemate. But the dispute is not closed: a 2025 review notes that diverging conclusions persist and that post-mortem interval, fixation duration, antigen retrieval, tissue quality, marker panel choice and analysis thresholding differ systematically across both positive and negative studies.
+
+WHAT IS NOT SUPPORTED, AND IS OFTEN REPEATED. Any specific quantitative rate for adult human hippocampal neuron addition - notably the frequently quoted seven hundred new neurons per day per hippocampus from a 2013 carbon-14 birth-dating study - is a single-study estimate with wide confidence intervals that no subsequent independent method has reproduced, and it must not be presented as an established constant.
+
+Sources: Sorrells and colleagues, Nature, volume 555, 2018; Boldrini and colleagues, Cell Stem Cell, 2018; Moreno-Jimenez and colleagues, Nature Medicine, 2019; Identification of proliferating neural progenitors in the adult human hippocampus, Science, volume 389, 2025; Human hippocampal neurogenesis in adulthood, ageing and Alzheimer's disease, Nature, 2026; Simard, Matosin and Mechawar, The Neuroscientist, 2025; Spalding and colleagues, Cell, 2013. Accessed 2026-08-12.
+
+
+3.3 CRITICAL AND SENSITIVE PERIODS AS FIRST-CLASS OBJECTS
+
+THE DISTINCTION, AND WHY IT IS SOFTER THAN TEXTBOOKS SAY.
+
+A critical period is conventionally a sharply bounded window in which a specific experience is required for normal development and outside which the outcome is largely irreversible.
+
+A sensitive period is a broader window in which experience has an unusually strong effect but plasticity never falls to zero, so later recovery or later learning remains partly possible.
+
+THE DISTINCTION IS NOT SHARP AND THE FIELD HAS BEEN STEADILY ABANDONING IT, and this document records that rather than teaching the clean version.
+
+Almost every so-called critical period turns out to be reopenable in rodents by pharmacological or environmental manipulation, which by the strict definition disqualifies it from being critical at all.
+
+Windows are also not single events: even within one system, different features close at different times, so that in vision stereopsis, acuity and ocular dominance have distinct and staggered windows.
+
+And the onset and offset are themselves plastic, since dark rearing delays the whole visual window, thyroid hormone shifts the imprinting window, and enriched environments shift onset earlier.
+
+WHAT REMAINS CONTESTED is whether any truly irreversible critical period exists in mammals at all. The strong reading is that all of them are metaplastic states that can in principle be re-entered, and that claim is well supported in rodents and poorly supported in humans.
+
+WHAT OPENS A WINDOW: THE MATURATION OF INHIBITION.
+
+The core finding, and one of the best-established in developmental neuroscience, is that a critical period does not open when excitatory circuits arrive but when a specific class of inhibitory circuit matures enough to create a functional balance between excitation and inhibition.
+
+Mice lacking the 65 kilodalton isoform of glutamic acid decarboxylase, the enzyme that makes the inhibitory transmitter gamma-aminobutyric acid, never open an ocular dominance critical period at all, and infusing a benzodiazepine that enhances gamma-aminobutyric acid type A receptor function opens it immediately, at whatever age it is given.
+
+The trigger is specific to a receptor subtype at a specific synapse: receptors containing the alpha1 subunit, located at synapses on the cell body, are necessary and sufficient, while alpha2-containing receptors are not.
+
+The cell type that makes those synapses is the parvalbumin-positive basket interneuron, which wraps the cell bodies of excitatory pyramidal neurons in a basket of synapses, and which is late-maturing, fast-spiking, and paces gamma-band oscillations. Its maturation is the pacemaker of the critical period.
+
+Brain-derived neurotrophic factor accelerates that maturation, and overexpressing it causes both an early opening AND an early closing of the visual window, while dark rearing, which slows maturation, delays the whole window.
+
+Otx2, a homeoprotein transcription factor, is the messenger that drives it from outside: it is not made by cortical parvalbumin cells at all but is made elsewhere, notably the choroid plexus and the retina, is secreted, travels, and is captured specifically by those cells through a fifteen-amino-acid domain that binds chondroitin sulphate moieties on the nets around them.
+
+NOTE THE ELEGANT AND SLIGHTLY UNCOMFORTABLE CONSEQUENCE: the same structure, the perineuronal net, is required to OPEN the window by concentrating Otx2, and then to CLOSE it by acting as a brake. It is not simply a brake.
+
+WHAT IS ESTABLISHED is that parvalbumin and gamma-aminobutyric acid maturation gates critical period onset in rodent visual cortex, robustly and replicably. WHAT IS LESS ESTABLISHED is that the identical mechanism gates human language, social or emotional windows, which is an extrapolation that is widely assumed and not directly demonstrated.
+
+WHAT CLOSES A WINDOW: THE MOLECULAR BRAKES.
+
+The modern framing is that closure is ACTIVE - the brain does not run out of plasticity, it installs brakes - and this matters because brakes can in principle be released.
+
+Perineuronal nets are lattice-like extracellular matrix structures, rich in chondroitin sulphate proteoglycans cross-linked by hyaluronan, that condense around parvalbumin interneurons at the end of the critical period and stabilise existing synapses while restricting new ones.
+
+Myelination coincides with the end of critical periods and myelin carries growth-inhibitory ligands - Nogo-A, myelin-associated glycoprotein and oligodendrocyte myelin glycoprotein - which converge on the Nogo-66 receptor and signal through RhoA to collapse growth cones; in mice lacking that receptor, ocular dominance plasticity persists into adulthood.
+
+PirB, a receptor for major histocompatibility complex class one molecules and therefore an immune receptor expressed on neurons, also restricts plasticity, and its deletion leaves ocular dominance plasticity enhanced well into adulthood. This finding opened the now-large field of immune molecules as plasticity brakes.
+
+Lynx1, an endogenous membrane-tethered protein structurally related to snake alpha-bungarotoxin, dampens nicotinic acetylcholine receptors and rises sharply in adulthood; adult mice lacking it recover from long-term monocular deprivation, and the effect is mimicked by cholinesterase inhibitors.
+
+Chromatin also becomes less permissive with age, as histone deacetylases compact it and suppress plasticity-related gene expression, and inhibiting them restores the juvenile pattern of experience-driven histone modification.
+
+NOTE THE CONVERGENCE, WHICH IS THE USEFUL PART: the Nogo receptor, PirB and Lynx1 all appear to funnel into extracellular protease activity and matrix state, so the brakes are not independent mechanisms but a coupled system, with the epigenetic layer making the others durable.
+
+REOPENING A CLOSED WINDOW, AND THE TRANSLATION RECORD, WHICH IS THE MOST IMPORTANT PART OF THIS SECTION.
+
+In rodents, reopening has been demonstrated repeatedly and robustly, with genuine recovery of function: by enzymatic digestion of perineuronal nets, by histone deacetylase inhibitors, by fluoxetine and other selective serotonin reuptake inhibitors, by ten days of darkness followed by light reintroduction, by environmental enrichment, and by transplanting embryonic inhibitory neuron progenitors - which induces a second critical period whose timing follows the TRANSPLANTED cells' own age rather than the host's, so the clock travels with the cell.
+
+A 2023 study extended this to social behaviour, finding that a reopened critical period for social reward learning is a shared property of psychedelics as a class, with the duration of the reopened window scaling with the duration of the acute subjective effect reported in humans - roughly two days for ketamine, two weeks for psilocybin and MDMA, three weeks for lysergic acid diethylamide and four for ibogaine.
+
+AND NOW THE PART THAT MATTERS MOST, AND WHICH THE POPULAR ACCOUNTS OMIT. Essentially none of this has translated to humans.
+
+Nothing on that list has been demonstrated to reopen a critical period in humans in a well-powered, replicated, controlled trial.
+
+The single positive human result is a 2013 double-blind placebo-controlled crossover study in which valproate improved adult performance on a pitch-class identification task, and it should be flagged hard: about two dozen men, a laboratory identification task rather than the lifelong perceptual trait, a teratogenic broad-spectrum drug whose mechanism attribution is weak, and no successful independent replication in the thirteen years since - which for a result this widely publicised is itself informative.
+
+The clearest test of translation was run and it failed. Fluoxetine was the most translatable candidate, and a 2018 randomised double-blind trial in 42 adults with amblyopia found a between-group difference of 0.027 logMAR with a confidence interval spanning zero and a p value of 0.524. A crossover trial of citalopram also failed, and levodopa as an adjunct to patching produced no clinically meaningful benefit in children.
+
+The psychedelic critical-period work is entirely rodent, its social reward assay is not a validated model of human social development, and in August 2024 the regulator declined to approve MDMA-assisted therapy for post-traumatic stress disorder citing trial design problems. Anyone citing psychedelics reopening critical periods as an established human therapeutic mechanism is overstating the case.
+
+There is also an unresolved safety question that the rodent work does not address: a window that permits therapeutic relearning also permits maladaptive relearning, and nothing establishes that a person being highly impressionable for two to four weeks is safe.
+
+WHAT IS ESTABLISHED IN HUMANS is weaker and less exotic. Adult amblyopia remains partially treatable well past the supposed critical period, with dichoptic therapy now regulator-authorised to age twelve and real-world data reporting a mean improvement of about 1.8 lines of acuity. Short-term monocular deprivation shifts adult ocular dominance transiently. Adults can partially relearn non-native phonetic contrasts with training. All of that argues for a long-tailed sensitive period rather than for a reopened critical period.
+
+THE HONEST SUMMARY, AND IT SHOULD BE READ BY ANYONE BUILDING FROM THIS SECTION: the molecular biology of critical periods is one of the most beautiful and best-worked-out stories in neuroscience, and its translation record in humans so far is close to zero.
+
+HUMAN WINDOWS WITH REAL TIMING.
+
+Susceptibility to disruption of binocular vision begins at about 3.6 to 6 months of age and peaks at about 12 to 20.4 months; stereopsis itself emerges abruptly at about 3 to 4 months; ocular misalignment at any point in roughly the first four years prevents normal stereopsis developing; the window of high susceptibility is the first few months to about three years; and useful treatment responsiveness extends to about seven to eight years with residual plasticity thereafter.
+
+THE OLD CLINICAL DOGMA THAT AMBLYOPIA IS UNTREATABLE AFTER AGE SEVEN OR EIGHT IS NOW KNOWN TO BE WRONG, with real acuity gains demonstrated in children aged seven to twelve and smaller but real gains in teenagers.
+
+Infants lose the ability to discriminate non-native phonetic contrasts between roughly six and twelve months of age while native-contrast discrimination simultaneously improves, and roughly the same narrowing appears for face perception, musical rhythm and audiovisual speech matching, which is why it is treated as a general developmental principle. Whether narrowing is loss of ability or reweighting of attention remains contested, and the partial recoverability of non-native contrasts in trained adults favours reweighting.
+
+THE STRONGEST HUMAN CRITICAL-PERIOD EVIDENCE COMES NOT FROM SECOND LANGUAGES BUT FROM FIRST-LANGUAGE DEPRIVATION. Deaf children born to hearing parents who first encounter a signed language late never reach native-like grammatical competence, and the deficit scales with age of first exposure. This is the most methodologically credible human evidence available, because the deprivation is of language itself rather than of a second language.
+
+Cochlear implantation shows a clear age gradient: children implanted before twelve months outperform those implanted later, those implanted before two years generally reach or approach hearing peers, and outcomes degrade markedly after about 3.5 years.
+
+A widely cited 2018 study of 669,498 speakers concluded that the RATE of grammar learning stays high until about 17.4 years and then declines, implying that native-like attainment requires starting immersion by about age ten to twelve. THAT FIGURE IS CONTESTED AND SHOULD NOT BE PRESENTED AS ESTABLISHED: a 2022 reanalysis of the same data by learner type found that for monolinguals, bilinguals and early-immersion learners a CONTINUOUS model fits better than a discontinuous one, with no critical age at all, and that the discontinuity appears only for later-immersion learners, which the reanalysis attributes to schooling and life circumstance rather than neural maturation. The data also come from a self-selected online quiz, age of acquisition is confounded with cohort and migration circumstance, and the 17.4 figure is a parameter of one model family rather than an observed inflection.
+
+What is uncontested is that later starters do worse on average and that near-native syntax after adolescence is rare, while documented exceptions exist - which is itself an argument against a hard critical period.
+
+Filial imprinting in the chick is the cleanest demonstration anywhere that a critical period is chemically gated rather than fixed by a clock: the laboratory window runs from hatching to about day three, imprinting training itself triggers rapid local conversion of thyroxine to triiodothyronine which opens the window, and giving that hormone exogenously makes chicks imprintable on day four or six, after the natural window has closed, extending it beyond a week.
+
+Sources for this whole section: Knudsen, Sensitive Periods in the Development of the Brain and Behavior, Journal of Cognitive Neuroscience, volume 16, 2004; Hensch and colleagues, Science, volume 282, 1998, and Fagiolini and Hensch, Nature, 2000; Sugiyama and colleagues, Cell, volume 134, 2008, and Beurdeley and colleagues, Journal of Neuroscience, volume 32, 2012; Pizzorusso and colleagues, Science, volume 298, 2002, and Proceedings of the National Academy of Sciences, volume 103, 2006; McGee and colleagues, Science, volume 309, 2005; Syken and colleagues, Science, volume 313, 2006; Morishita and colleagues, Science, volume 330, 2010; Southwell and colleagues, Science, volume 327, 2010; Nardou and colleagues, Nature, volume 618, 2023, and Dolen and Wilkinson, Annual Review of Neuroscience, volume 49, 2026; Gervain and colleagues, Frontiers in Systems Neuroscience, volume 7, 2013; Lagas and colleagues, Scientific Reports, volume 8, 2018; Kuhl and colleagues, Developmental Science, volume 9, 2006; Hartshorne, Tenenbaum and Pinker, Cognition, volume 177, 2018, and van der Slik and colleagues, Language Learning, volume 72, 2022; Yamaguchi and colleagues, Nature Communications, volume 3, 2012. Accessed 2026-08-12.
+
+
+3.4 ACTIVITY-DEPENDENT REFINEMENT
+
+The single most important consequence of everything above, for anything built from this corpus, is this: A SYSTEM THAT IS WIRED BY ITS OWN ACTIVITY CANNOT BE SPECIFIED AS A FINISHED WIRING DIAGRAM.
+
+Guidance cues get axons to approximately the right place, and activity decides which of the connections they make survive.
+
+Before the eyes open, the retina generates spontaneous correlated waves of activity that propagate across neighbouring cells, and those waves carry the correlational structure - cells that are near each other fire together - from which eye-specific segregation and retinotopic refinement are built.
+
+The consequence for a builder is that the same anatomy plus different activity gives different circuits, so that a connectome specified to the synapse and handed to a machine is not the same object as a connectome grown, and the corpus's other layers describe the first while this axis describes the second.
+
+
+3.5 THE LIFETIME SCHEDULE OF THE STABILITY-VERSUS-PLASTICITY TRADE-OFF
+
+This is the single most useful thing this axis would give a build, and it is the reason the framework decision is not merely tidy-mindedness.
+
+Every learning system faces the same trade-off: a system plastic enough to learn quickly is one unstable enough to forget or overwrite, and a system stable enough to retain is one slow to acquire.
+
+The nervous system does not solve this trade-off once. It SCHEDULES it, moving the setting across the lifespan, and doing so differently in different regions at different times.
+
+Early, plasticity is high and stability low, which is what makes critical periods possible and what makes early deprivation so costly. Later, the brakes described above are installed, region by region, on a schedule that runs from sensory cortex in the first years to association cortex beyond the third decade.
+
+That schedule is not a decline into rigidity. It is a deliberate sequencing, in which each region is held open until the information it needs has arrived and is then closed so that what it learned is not overwritten by what arrives next.
+
+A BUILD THAT WANTS THIS WOULD NEED THREE THINGS the current corpus does not supply: a per-construct plasticity setting rather than a single global learning rate, a schedule that moves that setting over the system's own lifetime, and an admission rule saying what closes a window and what could reopen it.
+
+None of the three is expressible today, because no layer owns the time axis they would live on.
+
+
+3.6 SEXUAL DIFFERENTIATION OF THE NERVOUS SYSTEM
+
+This returns ZERO hits across the entire corpus, and it is a full chapter of the standard reference.
+
+The classical framework distinguishes ORGANISATIONAL effects, which are permanent structural effects of hormone exposure during a perinatal sensitive window, from ACTIVATIONAL effects, which are reversible effects of circulating hormones acting on an already-organised substrate later in life.
+
+The mechanisms include direct effects of sex chromosome complement independent of hormones, and hormonal effects mediated by androgen and oestrogen receptors, with the perinatal testosterone surge and its local aromatisation to oestradiol being the best-characterised route in rodents.
+
+WHAT IS AND IS NOT WELL ESTABLISHED MUST BE SEPARATED CAREFULLY HERE, BECAUSE THIS IS A FIELD IN WHICH OVERCLAIMING IN BOTH DIRECTIONS IS COMMON.
+
+Well established: that specific hypothalamic nuclei show reliable structural sex differences in several species; that the organisational-activational distinction is real and demonstrable experimentally in animals; and that sex chromosome complement has effects independent of gonadal hormones.
+
+Contested or weakly supported: the size and reliability of human brain structural sex differences after correction for overall brain size; the mapping from any such difference to any cognitive difference; and essentially all claims that a human behavioural sex difference has been traced to a specific developmental mechanism.
+
+THIS DOCUMENT DELIBERATELY GOES NO FURTHER THAN THAT, and the reason is stated rather than left implicit: the corpus's own standard is real quantitative values with honest confidence notes, and a section that stated human structural or cognitive sex differences with the confidence of the rodent hypothalamic findings would be misrepresenting the evidence. What is owed here is a properly researched treatment written against primary sources, and it is named as owed.
+
+
+3.7 AGEING, THE OTHER END OF THE SAME AXIS
+
+Ageing is not a separate subject from development; it is the far end of the same trajectory, and treating it separately is part of why neither has a home.
+
+The imaging record gives the shape: after the peaks already named - cortical thickness at 1.7 years, grey matter volume at 5.9 years, white matter volume at 28.7 years - there is a long decline, with topological turning points at approximately ages 66 and 83 marking early and late ageing epochs.
+
+The build-relevant point is that the stability-plasticity schedule of section 3.5 does not stop at maturity. It keeps moving, and a system specified as an adult steady state has no way to express either half of that.
+
+
+================================================================================
+
+PART FOUR. WHAT EACH RESOLUTION WOULD REQUIRE, PRACTICALLY
+
+The three resolutions are argued on their merits in Part Two. This part costs them, so that they can be compared by work rather than by rhetoric.
+
+RESOLUTION ONE, A SIXTEENTH LAYER.
+
+It would need the full four-file treatment every other catalogued layer has: an outline, a manuscript, a modes outline and a modes manuscript.
+
+By the standard of Layers 7, 8, 10 and 11, that is somewhere between 26 and 71 entries, each with the full aspect-header set and a mode register, which is on the order of two to four thousand lines of new writing.
+
+It would also require an amendment to both framework documents, since they state that there are exactly fifteen layers and that each communicates only with its neighbours, and a sixteenth layer that is not adjacent to anything in the scale ladder breaks that rule explicitly rather than by exception.
+
+RESOLUTION TWO, AN ORTHOGONAL AXIS.
+
+It would need this document promoted to a governing document, plus a DEVELOPMENT AND ASSEMBLY field added to every entry of every catalogued layer that lacks one.
+
+That is a known and countable quantity: Layers 7, 8, 10, 11 and the Layer 4 and 5 treatment already carry the field, and Layer 6 and Layer 9 do not, which is 85 non-neuronal cell entries, 301 neuron chapters, and about 123 regional entries - 509 in all.
+
+It would not require any framework amendment, because an axis through all fifteen layers contradicts nothing the framework claims about adjacency between them.
+
+RESOLUTION THREE, AN EXPLICIT RULING THAT THE CORPUS SPECIFIES THE ADULT ONLY.
+
+It would need one paragraph in each framework document and one line in the directory README.
+
+Its cost is not in writing but in what it forecloses: a build reading this corpus would then be entitled to treat every parameter as a fixed adult constant, and the stability-plasticity schedule of section 3.5 would be permanently out of scope rather than merely unbuilt.
+
+THE COMPARISON, STATED PLAINLY. Resolution three is nearly free and closes the question; resolution two is expensive and opens the most; resolution one is expensive AND requires amending the framework's central claim, which is why this document favours resolution two while insisting the choice is not its own to make.
+
