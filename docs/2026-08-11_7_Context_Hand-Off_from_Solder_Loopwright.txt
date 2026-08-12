@@ -1,0 +1,152 @@
+CONTEXT HAND-OFF FROM SOLDER LOOPWRIGHT
+
+Date: 2026-08-11. The seventh hand-off of this date.
+
+I chose the name Solder Loopwright because both of this session's slices are exactly that: joining something that was already correctly made, without reforging either piece. Solder does not create the two things it joins - it wets both surfaces and lets the existing metal carry the current. Slice 71 joined a sentence to the two loops it had always secretly meant. Slice 72 joined a measure that already existed to a controller that already existed, along a wire DECISION-15 had already specified as available. LOOPWRIGHT because the front of the queue was, for once, entirely about loops - naming one, and closing another.
+
+
+PART ONE - READ THESE FIRST
+
+- Read and follow the konnectome constitution at ~/konnectome/CONSTITUTION.md, first and foremost. IT IS AT VERSION 27 AND HOLDS TWENTY-THREE COMMANDMENTS, UNCHANGED THIS SESSION. The dated version history is NOT required reading when you load state; it lives at ~/konnectome/CONSTITUTION_VERSION_HISTORY.md. Do not cite a commandment by number from memory or from an older document; re-read it.
+
+- READ docs/DSPARCD/konnectome_0_definition_v2.txt BEFORE ANYTHING ELSE IN THE FILESET. IT MOVED THIS SESSION, v1 to v2. Part One's reachability sentence no longer says "the one running loop" - it names BOTH of konnectome's live loops explicitly, cognitive_cycle_run/4 and body_interface_survival_run/5, and says a part reached from EITHER satisfies the standard. Read the version-2 header note in full: it explains why narrowing to one loop was rejected as an unforced decision rather than a repair.
+
+- Read The DSPARCD Fileset at its current versions: docs/DSPARCD/konnectome_0_definition_v2.txt and konnectome_1_specification_v62.txt through konnectome_6_demonstration_v62.txt. IT MOVED THIS SESSION, v61 to v62, because slice 72 changed code.
+
+- READ BOTH ANALYSES AND THE MAP OF HOW THEY RELATE, UNCHANGED FROM THE PRIOR HAND-OFF'S OWN WARNING. For "WHAT SHOULD I BUILD NEXT", read docs/design/02, Part Nine. For "MAY I BUILD IT THIS WAY, AND DOES IT ROUTE ANYWHERE", read docs/design/01 - Part One holds the verdict on the ten components, Part Four the eleventh-component question, Part Five the walls and watches, Part Six the suggested slice families. 01 IS NOW CURRENT THROUGH SLICE 58 AGAINST A BUILD AT SLICE 72 - FOURTEEN SLICES BEHIND, not twelve. Neither this session's slices changed that gap's shape; the deferral register's the_analysis_is_not_current_to_the_build entry still stands, unprobed further by this session, and is still the cheapest open finding-two item on the queue.
+
+- READ docs/design/11_vision_set_fulfilment_audit_v1.txt, unchanged this session. It is the owner's scheduled audit; its two open findings (the guiding-book cross-reference and the astrocyte reconciliation) are both still open and are both still deferred entries, untouched by slices 71 and 72.
+
+- Read docs/neuroscience/THE_NEUROSCIENCE_OF_COGNITION_OUTLINE.txt and THE_NEUROSCIENCE_OF_COGNITION_MANUSCRIPT.txt, the north star, unchanged.
+
+- Read docs/neuroscience/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt, the guiding book. Chapter 52.2.1 (the conflict-monitoring loop) and Chapter 52.2.4 (the Gratton effect and the three rival accounts) are this session's own sections, unchanged from slice 58's reading of them.
+
+- Read docs/design/ IN ITS NUMBERED ORDER. Eleven documents, none edited this session.
+
+- READ docs/evidence/ AND ITS README, unchanged. No new search was run.
+
+- READ docs/deferrals/ AND ITS README. TEN entries still, but the shape moved: the_conflict_loop_has_no_caller is now TAKEN UP rather than deferred, and stays probed as a standing regression guard. Nine of ten entries are unchanged from the prior hand-off.
+
+- Read docs/DSPARCD/DSPARCD_EXPLAINED.txt, the Fifth Commandment's subject.
+
+- Read the Settings, General, Instructions for Claude, and ~/CLAUDE.md at the organization root.
+
+- Read the current tutorial, docs/konnectome_tutorial_v60.txt, UNCHANGED THIS SESSION. Sixty-two parts at version sixty; the two numbers still disagree on purpose, and neither slice touched it - both were wiring and definition work, not new user-facing capability, and the tutorial's own convention is to describe capability rather than every internal wire. IT IS THEREFORE ONE SESSION FURTHER FROM CURRENT THAN THE PRIOR HAND-OFF FOUND IT and a future session should judge whether the conflict loop belongs in it.
+
+- Read the prior hand-off, 2026-08-11_6 (Verdigris Tallywright), now at docs/hand-off/. ITS QUEUE IS THE QUEUE THIS SESSION WORKED FROM, ITEMS ONE AND TWO.
+
+- THE OWNER'S STANDING CHOICE REMAINS: "All". Do NOT re-present any menu; continue down the queue.
+
+- STANDING INSTRUCTIONS IN FORCE, ALL CARRIED FORWARD:
+  • MINIMIZE BASELINE VERIFICATION BETWEEN HAND-OFFS. Honoured again: a git fetch, status and log were run at the start, and the full suite and gates at the end.
+  • TWO SLICES PER HAND-OFF, BUILT IN SERIAL, under the pairing rule. Honoured: slices 71 and 72 are exactly the queue's items one and two, in order.
+  • COUSIN CONFORMANCE IS RELAXED TO LONGER STRETCHES. Not re-measured this session; neither cousin was touched or had cause to be.
+  • AUTO-FIX-ALL IS GRANTED (the Sixteenth Commandment). Two auto-fixes this session, both in the build log's Chapter Seventy.
+  • THE SIXTH LENS IS EARNED AND STANDING. No payment this session - neither slice found a would-not-have-failed shape, which is worth naming rather than padding around: a documentation-only definition amendment and a wiring change with a built-in regression pin are both shapes this lens has already hardened this build against.
+  • THE SEVENTH, THE DISCRIMINATION LENS, remains a candidate and was neither promoted nor dropped this session. Still overdue, per the prior hand-off's own instruction.
+
+
+PART TWO - THE IMPORTANT DOCS FILES
+
+- docs/DSPARCD/konnectome_0_definition_v2.txt - THE DEFINITION, phase zero, version 2 as of this session. THE SUBJECT OF DECISION-20 and the closing of OBSERVATION-22.
+
+- docs/DSPARCD/konnectome_1_specification_v62.txt through konnectome_6_demonstration_v62.txt - the DSPARCD Fileset, Realization Log through slices 71 and 72.
+
+- docs/konnectome_tutorial_v60.txt - unchanged, sixty-two parts at version sixty.
+
+- docs/building_konnectome.txt - the build log, now SEVENTY chapters. UNVERSIONED; append-only. Both auto-fixes of this session are in Chapter Seventy.
+
+- docs/konnectome_ledger.txt - the scoreboard, UNVERSIONED. Counter line (both copies swept, per the Eleventh's standing convention for this file): Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0. Observations: 22 (8 CLOSED: 8, 9, 15, 17, 18, 19, 20 and 22). Decisions: 21. THIS SESSION ADDED DECISION-20, DECISION-21, AND CLOSED OBSERVATION-22 - no new observation was opened.
+
+- docs/design/ - ELEVEN NUMBERED DOCUMENTS, none edited this session.
+
+- docs/deferrals/ - the deferral register and its README. TEN entries: THREE taken up (was two), SIX deferred (was seven), one unprobeable.
+
+- docs/evidence/ - unchanged.
+
+- docs/cousins/Causalontology_4_0_0_CHANGE_ORDER_v3.txt and PrologAI_CHANGE_ORDER_v2.txt - unchanged; no wall hit by either slice.
+
+- tests/naming_gate_fixture/, tests/discrimination_gate_fixture/ and tests/deferral_gate_fixture/ - unchanged.
+
+- packs/cognitive_cycle/ - version 0.5.0 (was 0.4.0); requires/1 gains conflict_monitor; cognitive_cycle_step/3 and cognitive_cycle_run/4 gain no new arity but the world dict gains one new REQUIRED key, conflict_gain.
+
+- packs/capstone_demonstration/ and packs/symbol_exchange/ - test fixtures updated with the new required conflict_gain key; no test assertion changed.
+
+- THE DOCS LAYOUT: /docs/ top level holds EXACTLY FOUR FILES - the ledger, the build log, the tutorial, and the CURRENT hand-off. Everything else is in a named sub-directory.
+
+
+PART THREE - WHAT THIS SESSION DID
+
+TWO SLICES BUILT AS ONE PAIR, IN SERIAL, EXACTLY AS THE PRIOR HAND-OFF'S QUEUE ITEMS ONE AND TWO NAMED THEM. Two numbered decisions, one observation closed and none opened, two auto-fixes, no new gate, no new pack, no constitution amendment.
+
+- SLICE 71, OBSERVATION-22 SETTLED. konnectome_0_definition amended to version 2: "the one running loop" is retired as a phrase and Part One now names both of konnectome's live loops, cognitive_cycle_run/4 and body_interface_survival_run/5, as the two entry points that satisfy the reachability standard. A candidate narrower resolution (name cognitive_cycle_run/4 alone) was considered and rejected as an unforced decision the Sixteenth Commandment reserves for the owner, not for an auto-fix, because it would have silently read slice 69's tested work back out of konnectome. DECISION-20 records the choice and what it does not decide; OBSERVATION-22 is closed.
+
+- SLICE 72, THE CONFLICT LOOP WIRED. cognitive_cycle_step/3's arbitration step now runs conflict_monitor_step/7, closing DECISION-15's loop into the running cycle: response conflict among active overrides is measured, the stabiliser's threshold is raised by a gain the WORLD supplies through a new required key (conflict_gain), the raise is published onto the bus, and arbitration runs at the raised threshold with the inviolable rank exempt. NO GAIN WAS INVENTED - the three existing world-assemblers all state 0.15, DECISION-15's own worked figure. DECISION-21 records the design (a required key, refused aloud when missing, rather than an optional argument defaulting the loop off - the latter was considered and rejected as exactly the silent default DECISION-15 warned against). Three new tests; the deferral register's the_conflict_loop_has_no_caller entry flips to taken_up.
+
+- THE DSPARCD FILESET BUMPED TO v62 in the same change as slice 72, per the Twelfth Commandment.
+
+- TWO AUTO-FIXES, both in build-log Chapter Seventy: docs/DSPARCD/README.txt's two stale claims about the Definition never having moved past v1 (corrected to record the slice-71 move), and the ledger's mid-document counter-line mirror (swept to match the current totals).
+
+- State at hand-off: SEVENTY-TWO slices. ONE THOUSAND ONE HUNDRED AND NINETEEN tests across FORTY-ONE packs, up from 1116. SIX gates at zero violations, THREE carrying self-tests. DSPARCD fileset v62; tutorial v60 at sixty-two parts, unchanged; build log SEVENTY chapters; Constitution VERSION 27 at TWENTY-THREE commandments, unchanged.
+
+
+PART FOUR - BUILD-AGAINST COUSIN COMMITS (for reproducibility)
+
+- causalontology: 292dfca (unchanged; not edited this session; NOT re-measured).
+- PrologAI: ebbc3e0 (unchanged; not edited this session; NOT re-measured).
+- Mentova: d117c69 (read-only; untouched).
+
+CONFORMANCE STANDS WHERE SLICE 47 RE-MEASURED IT ON 2026-08-09: 137 of 137 in both, and the figure is now NINE SESSIONS OLD. THE OWNER HAS RELAXED THIS CADENCE and the age is not a debt. The open question about 119 vectors versus 137 checks, named in the prior three hand-offs, is UNCHANGED and still needs a measurement rather than a preference.
+
+
+PART FIVE - SHARP EDGES AND HONEST NON-CLOSURES
+
+- THE DEFINITION'S RESOLUTION IS DELIBERATELY INCLUSIVE, NOT A MERGER. Slice 71 did not join the two loops - it named both as equally valid entry points. THIS IS A WEAKER CLAIM THAN A SINGLE UNIFIED LOOP WOULD BE, and it is meant to be: the definition now says explicitly what the build has actually been measuring itself against since slice 41, without pretending the two-loop shape is resolved. Joining cognitive_cycle_run/4 and body_interface_survival_run/5 into one loop remains its own slice family, queued and unbuilt, named in the prior hand-off's queue and still there.
+
+- OF THE FOUR MECHANISMS OBSERVATION-22 COUNTED UNWIRED, THREE NOW REMAIN: the eligibility trace's consumer, the blackboard's rehearsal target, and the durable tier. The conflict loop is the fourth, closed this session. None of the three remaining has a decision left blocking it the way the conflict loop's gain did - OBSERVATION-13 (the blackboard's step rate) is the nearest to a similar shape, and DECISION-19 is offered in the prior hand-off as the worked example of settling a rate by derivation rather than invention.
+
+- THE CONFLICT LOOP'S WIRING IS CURRENTLY INERT IN EVERY WORLD THIS BUILD ACTUALLY RUNS. capstone_demonstration's told story carries exactly one override (respiration, at rest, distress 0.0) and never two simultaneously active incompatible drives, so the loop measures zero conflict throughout and the capstone changes not one byte - measured, not assumed, by running it before and after. THE STORY DOES NOT YET DEMONSTRATE THE GRATTON SHAPE THE WAY SLICE 69 DEMONSTRATED THE EFFERENCE COPY. A future slice that scripts two competing overrides into the capstone's own body seam would make the loop's effect visible in the told story rather than only in the pack's own tests.
+
+- THE PLASTICITY ENGINE STILL DOES NOT READ THE STABILISER CHANNEL. The bus now carries the raised control forward past STEP THREE into STEP FOUR (a deliberate refinement recorded in konnectome_4_refinement_v62.txt, to avoid a second silent bus value), but plasticity_engine_step/5 reads dopamine and relay gains, not the stability bias, so the raised control is available and currently unused by learning. This is recorded as an honest non-claim in the refinement phase file and is worth a future session's attention if the corpus's account of control affecting "cognitive effort" broadly is to be taken further than arbitration alone.
+
+- THE FOUR REMAINING QUEUE ITEMS FROM THE PRIOR HAND-OFF THAT THIS SESSION DID NOT TOUCH, IN THE ORDER THEY WERE LISTED: item 3 (the audit's finding one, the guiding-book cross-reference, still cheap and still open, still wanting a slice that is bumping the fileset anyway - and slice 72 WAS bumping the fileset and did not carry it, which is worth naming plainly rather than leaving for a reader to notice); item 4 (the audit's finding two, docs/design/01 not current and A4 unreconciled); item 5 (the blackboard's step rate); item 6 (the overlay delta channel). ITEM 3 IN PARTICULAR WAS A MISSED OPPORTUNITY: the prior hand-off named it as the cheapest thing to pair with a fileset-bumping slice, and slice 72 was exactly such a slice, and it was not paired. This is recorded here rather than quietly carried forward again.
+
+- ALL OTHER SHARP EDGES FROM THE PRIOR HAND-OFF STAND UNCHANGED AND ARE NOT RESTATED IN FULL HERE: the fusion rule (still unprobeable), OBSERVATION-13 and OBSERVATION-21 (both still open), the mode-register terminology collision, the capstone byte-identical guard's stale baseline, the corpus update run (now at FORTY hand-offs counting this one, so it trips at the NEXT hand-off), and the parallel-session warnings including the live worktree at ~/worktrees/rung-three, which THIS SESSION DID NOT TOUCH.
+
+- A NOTE ON HOW THIS SESSION FOUND ITS OWN WORKING STATE. On starting work, this session's checkout already carried substantial uncommitted progress on both slices - the definition's v2 text, DECISION-20, the DSPARCD fileset bumped to v62, and a first version of DECISION-21 and the Slice-72 ledger note describing an OPTIONAL-ARGUMENT design for the conflict loop's gain. THIS SESSION'S OWN cognitive_cycle.pl EDIT USES A REQUIRED-KEY DESIGN INSTEAD, and the ledger's Slice-72 note and DECISION-21 were rewritten to describe the required-key design actually in the code, so the ledger, the DSPARCD fileset, and the code agree. Per the standing parallel-session discipline, a git fetch, status and log were run before this claim was finalized; no remote branch or open PR was found in conflict with this one.
+
+
+PART SIX - THE FIRST TASK OF THE CONTINUATION
+
+The owner has already chosen: ALL (standing), TWO SLICES PER HAND-OFF under the pairing rule, and AUTO-FIX-ALL is granted.
+
+1. THE AUDIT'S FINDING ONE, PAIRED WITH A FILESET-BUMPING SLICE. Nine sites, four DSPARCD files, a Layer 10 address added beside the guiding book's 2.10 and 2.11. It was passed over this session despite a fileset bump happening; do it with the next one.
+
+2. THE AUDIT'S FINDING TWO. Write version 5 of docs/design/01, or record a deferral of it naming its cost. Reconcile A4 or refuse it in writing.
+
+3. THE BLACKBOARD'S STEP RATE AND ITS WIRING, TOGETHER, per OBSERVATION-13. DECISION-19 and now DECISION-21 are both worked examples of settling a caller-facing quantity honestly - by derivation, and by a required key refused aloud, respectively.
+
+4. THE ELIGIBILITY TRACE'S CONSUMER and THE DURABLE TIER - the two remaining unwired mechanisms of the original seven, now that the conflict loop has closed.
+
+5. GIVE THE CONFLICT LOOP A TOLD DEMONSTRATION. Script two competing overrides into capstone_demonstration's body seam so the Gratton shape is visible in the capstone's own narrated story, the way slice 69 demonstrated the efference copy.
+
+6. THE OVERLAY DELTA CHANNEL, still the single decision the prior hand-off called the front of 02's queue.
+
+7. DECIDE OR JOIN THE TWO RUNNING LOOPS. Slice 71 named both rather than joining them; joining remains its own slice family and is now the only way to retire the two-loop shape rather than merely make it explicit.
+
+8. THE REMAINING ITEMS FROM THE PRIOR HAND-OFF'S PART SIX, items 7 through 22, ALL UNCHANGED AND UNTOUCHED THIS SESSION: the first learning rule, attention as a salience-driven bias, OBSERVATION-21, the two candidate lenses, the fixture-discipline backport, the thirteen faculty suites, naming and addressing, the workspace pilot, Family One's item (e), Family Three, Family Six, the mode-register rename, the capstone re-baseline, and the rest.
+
+A STANDING OWNER REQUEST, CARRIED FORWARD UNCHANGED. A VISUALIZATION CONTROL PANEL showing every mode of every construct at every grain simultaneously and live. Still a demonstration deliverable, not a slice; still waiting on the naming and addressing facility.
+
+
+PART SEVEN - SIGN-OFF
+
+Two small slices, and both were joins rather than inventions, which is the theme I named this hand-off for.
+
+The definition amendment could have been one line narrower - name cognitive_cycle_run/4 and be done with it - and it would have been the more satisfying sentence to write, because it is the loop this build has called "the cognitive cycle" since before it had a second one. I did not write that sentence. Nothing anywhere says that loop is the one the definition meant, and the corpus does not care which loop a symbolic implementation of it happens to call first. Choosing it anyway would have been a preference wearing a citation, which is the exact failure the Sixteenth Commandment spends its longest paragraph naming. So the definition says both, plainly, and the two-loop shape stays exactly as visible as it was the day OBSERVATION-22 found it - visible, not resolved, which is the honest difference between closing an observation and closing a question.
+
+The conflict loop's wiring is smaller than it looks and I want that said plainly rather than let the words "the conflict loop is wired" carry more than they should. Every world this build has ever run has at most one override standing at a time, so the loop has never yet raised a threshold by more than zero in any run konnectome has actually performed. What changed is not behaviour - the capstone's story is byte-identical, measured rather than assumed - but REACHABILITY: the loop is now a real caller inside the running cycle rather than a correct, tested, unreachable pack, and DECISION-15's deferred cost (somebody, someday, chooses konnectome's control policy) is now a live obligation on every assembler of a world rather than a future one. Three assemblers exist today and all three chose the same number for the same reason, which is a coincidence of convenience this hand-off says plainly is not yet a policy.
+
+I found this session's checkout mid-thought, carrying a different design for the same wire than the one I finished with. I did not treat that as a fault to route around quietly. The ledger's own note now describes the code that actually runs, which is the whole discipline this repository asks of every session that finds itself continuing work rather than starting it.
+
+- Solder Loopwright, 2026-08-11
