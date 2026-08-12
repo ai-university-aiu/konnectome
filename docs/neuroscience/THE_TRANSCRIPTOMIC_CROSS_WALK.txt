@@ -1,0 +1,359 @@
+THE TRANSCRIPTOMIC CROSS-WALK
+
+Joining the Morphology-and-Physiology Cell Catalogue to the Public Molecular Cell-Type Censuses
+
+A Companion to the Layer 6 Catalogues in the Certified_Neuroscientist corpus of D. R. Dison, Founder, Artificial Intelligence University (AIU).
+
+Keyed, chapter by chapter, to LAYER_06_OTHER_CELLS_MANUSCRIPT (85 non-neuronal types) and to the five-volume neuron catalogue (301 neuronal types).
+
+Date of compilation: August 12, 2026.
+
+
+PROVENANCE, STATED BEFORE ANYTHING ELSE
+
+This companion was added on 2026-08-12 by the konnectome build, under the owner's explicit authority of that date.
+
+It is THIS BUILD'S WRITING, and it does NOT outrank the corpus's own documents.
+
+Where this companion and a parent manuscript disagree, the parent manuscript is right and this file is wrong, and the correction is owed to this file.
+
+It is ADDITIVE.
+
+It alters nothing that the parent manuscripts say, it edits no existing file, and it removes nothing.
+
+It is keyed by the parent manuscripts' own chapter numbers, so that a future merge is a mechanical splice and not an act of interpretation.
+
+Its content was checked against the published censuses by web search on 2026-08-12, and the corpus outranks anything found that way.
+
+A census label in this file is a pointer to where the build looked, not a warrant that overrides the corpus.
+
+
+WHAT A CROSS-WALK IS, AND WHAT IT IS NOT
+
+The corpus catalogue defines its cell types the classical way, by shape, position, connections, and firing behaviour.
+
+The public censuses define their cell types a different way, by the messenger Ribonucleic Acid (RNA) molecules each cell is transcribing, measured one nucleus at a time and grouped by statistical clustering.
+
+These are two different partitions of the same cells.
+
+Sometimes they coincide almost perfectly, sometimes one is a lumping of the other, and sometimes a corpus type simply has no molecular counterpart because it is defined by where a cell sits or what it does, not by what it transcribes.
+
+This document records the correspondence honestly, including its failures.
+
+Each mapping below carries one of five grades.
+
+• EXACT - the corpus type and a census taxon pick out the same population, one to one.
+
+• COARSER - the census does not distinguish the corpus type; it sits inside a broader census taxon.
+
+• FINER - the census splits the corpus type into several taxa.
+
+• ABSENT - no molecular counterpart exists; the type is morphological, positional, state-defined, or functionally defined only.
+
+• PERIPHERAL - the type lies outside the brain censuses' sampling frame; where a Human Cell Atlas (HCA) organ census or an equivalent peripheral atlas covers it, that census is named.
+
+ABSENT said honestly is a finding, not an apology.
+
+No mapping below is forced.
+
+
+================================================================================
+
+THE CENSUSES
+
+Six public references are cross-walked, verified by web search on 2026-08-12.
+
+• The Allen Brain Cell (ABC) Atlas and the Siletti et al. 2023 whole-human-brain single-nucleus atlas (Science, October 2023): about three million nuclei from roughly one hundred dissection sites in three adult human donors, organised into 31 superclusters, 461 clusters, and 3,313 subclusters.
+
+◦ Species: human. Grain used in this cross-walk: supercluster and cluster.
+
+• The BRAIN Initiative Cell Census Network (BICCN) 2021 census of the primary motor cortex (Nature, October 2021): the multimodal consensus taxonomy of the motor cortex, with a subclass level (for example L2/3 IT, L5 ET, Sst, Pvalb) shown to be conserved across mouse, marmoset, and human.
+
+◦ Species: mouse, marmoset, and human jointly. Grain: class and subclass.
+
+◦ Its successor, the BRAIN Initiative Cell Atlas Network (BICAN), launched in 2022, is extending the census to the whole human brain and to development; its outputs are still accruing and are cited here only where already published.
+
+• The Allen Institute whole-mouse-brain taxonomy of Yao et al. 2023 (Nature, December 2023): about four million quality-passing cells organised into 34 classes, 338 subclasses, 1,201 supertypes, and 5,322 clusters, spatially registered by multiplexed error-robust fluorescence in situ hybridisation (MERFISH).
+
+◦ Species: mouse. Grain used here: class and subclass.
+
+• The Human Cell Atlas (HCA), the international consortium building censuses of every human organ: its organ networks (pancreas, gut, lung, kidney, eye, skin, and others) are the references named for PERIPHERAL grades.
+
+◦ Species: human. Grain: varies by organ network; named per entry.
+
+• The Seattle Alzheimer's Disease Brain Cell Atlas (SEA-AD) middle temporal gyrus reference (published form: Gabitto, Travaglini et al., Nature Neuroscience 2024): about two million nuclei from 84 aged donors, organised into 3 classes, 24 subclasses, and 139 supertypes.
+
+◦ Species: human. Grain used here: subclass.
+
+• Where none of the above reaches a population, a named special-purpose atlas is cited in place (for example the dorsal root ganglion atlases or the Gut Cell Atlas), and the grade is PERIPHERAL.
+
+
+================================================================================
+
+THE CROSS-WALK FOR THE 85 NON-NEURONAL TYPES
+
+One line per chapter of LAYER_06_OTHER_CELLS_MANUSCRIPT, in order.
+
+Where the mapped reference is mouse only, the line says mouse, per the corpus's own rule against silent species conversion.
+
+• Chapter 1, protoplasmic astrocyte - Astrocyte supercluster, Siletti 2023 (grey-matter clusters) - COARSER; the census separates grey-matter from white-matter astrocyte clusters but does not carry the protoplasmic morphology as a taxon of its own.
+
+• Chapter 2, fibrous astrocyte - Astrocyte supercluster, Siletti 2023 (white-matter-enriched clusters) - COARSER.
+
+• Chapter 3, interlaminar astrocyte - Astrocyte supercluster, Siletti 2023 - COARSER; this primate-elaborated morphology has no dedicated cluster in the published human taxonomy.
+
+• Chapter 4, varicose projection astrocyte - Astrocyte supercluster, Siletti 2023 - COARSER; same situation as Chapter 3, a morphology the transcriptome has not yet resolved.
+
+• Chapter 5, velate astrocyte - cerebellar astrocyte clusters, Siletti 2023, and Astro-CB subclass, Yao 2023 mouse - COARSER; the cerebellar astrocyte taxa do not separate velate from other non-Bergmann cerebellar astrocytes.
+
+• Chapter 6, Bergmann glia - Bergmann glia cluster within the Astrocyte supercluster, Siletti 2023, and Bergmann NN subclass, Yao 2023 mouse - EXACT.
+
+• Chapter 7, Müller cell - PERIPHERAL to the brain censuses; EXACT within the HCA eye network's human retinal atlases, where Müller glia are a standing taxon.
+
+• Chapter 8, tanycyte - tanycyte-containing ependymal clusters, Siletti 2023, and Tanycyte NN subclass, Yao 2023 mouse - EXACT.
+
+• Chapter 9, pituicyte - PERIPHERAL; the posterior pituitary is outside the Siletti dissection frame; pituicytes appear as a taxon in the published human and mouse pituitary single-cell atlases (HCA-adjacent pituitary censuses).
+
+• Chapter 10, Gomori-positive astrocyte - ABSENT; this is a histochemically defined, iron-accumulating condition of astrocytes, and no census carries it as a transcriptomic taxon.
+
+• Chapter 11, surface-associated and glia limitans astrocyte - Astrocyte supercluster, Siletti 2023 - COARSER; marker work (for example myocilin enrichment) exists in focused studies, but the brain censuses do not break this population out.
+
+• Chapter 12, reactive astrocyte - ABSENT as a type; it is a state, not a lineage, and the censuses of healthy tissue by design do not carry it; disease atlases (including SEA-AD) capture reactive signatures as within-taxon states.
+
+• Chapter 13, myelinating (interfascicular) oligodendrocyte - Oligodendrocyte supercluster, Siletti 2023, and Oligo class, Yao 2023 mouse - FINER; the census splits what the corpus treats as one type into multiple maturation-stage clusters, including committed precursor and newly formed stages.
+
+• Chapter 14, satellite (perineuronal) oligodendrocyte - ABSENT; defined by position against a neuronal soma, and no census distinguishes it transcriptomically from other oligodendrocytes.
+
+• Chapter 15, oligodendrocyte precursor cell (OPC) - Oligodendrocyte precursor supercluster, Siletti 2023, and OPC NN subclass, Yao 2023 mouse - EXACT.
+
+• Chapter 16, microglia - Microglia supercluster, Siletti 2023, and Microglia NN subclass, Yao 2023 mouse - EXACT at this grain; the census clusters below it are states rather than types.
+
+• Chapter 17, ependymocyte - Ependymal supercluster, Siletti 2023, and Ependymal NN subclass, Yao 2023 mouse - EXACT.
+
+• Chapter 18, choroid plexus epithelial cell - Choroid plexus supercluster, Siletti 2023, and CHOR NN subclass, Yao 2023 mouse - EXACT.
+
+• Chapter 19, myelinating Schwann cell - PERIPHERAL; carried as a taxon in the peripheral nerve single-cell atlases and in the HCA's peripheral tissue censuses.
+
+• Chapter 20, non-myelinating (Remak) Schwann cell - PERIPHERAL; a standing taxon in the same peripheral nerve atlases.
+
+• Chapter 21, repair Schwann cell - PERIPHERAL, and additionally a state rather than a lineage; injury-condition nerve atlases carry it, healthy-tissue censuses rightly do not.
+
+• Chapter 22, terminal (perisynaptic) Schwann cell - PERIPHERAL; profiled in targeted neuromuscular junction studies (mouse) rather than in any organ-wide census taxon.
+
+• Chapter 23, satellite glial cell - PERIPHERAL; a standing taxon in the mouse and human dorsal root ganglion and trigeminal ganglion atlases.
+
+• Chapter 24, enteric glial cell - PERIPHERAL; a standing taxon in the HCA Gut Cell Atlas and the dedicated enteric nervous system atlases (Drokhlyansky et al. 2020).
+
+• Chapter 25, olfactory ensheathing cell - PERIPHERAL; carried in olfactory mucosa single-cell studies rather than in the brain censuses.
+
+• Chapter 26, perineurial glial cell - PERIPHERAL; appears among the perineurial fibroblast-like taxa of the peripheral nerve atlases.
+
+• Chapter 27, boundary cap cell - ABSENT from all adult censuses; it is a transient embryonic population, and only developmental atlases can carry it.
+
+• Chapter 28, cutaneous glia including the nociceptive Schwann cell - PERIPHERAL; described in mouse skin (Abdo et al. 2019) and reachable through the HCA skin network, but not yet a settled human census taxon.
+
+• Chapter 29, lamellar corpuscle cells of Meissner and Pacini - ABSENT; the corpuscle lamellar cell has no established census taxon, and targeted corpuscle profiling is only beginning; a dedicated human corpuscle transcriptome would settle it.
+
+• Chapter 30, cochlear supporting cells (Deiters, pillar, Hensen, border, inner phalangeal) - PERIPHERAL; the inner ear single-cell atlases (mouse, and emerging human) carry these as separate taxa.
+
+• Chapter 31, vestibular supporting cells - PERIPHERAL; same inner ear atlas family.
+
+• Chapter 32, olfactory sustentacular cell - PERIPHERAL; a standing taxon in the human olfactory epithelium single-cell studies within the HCA airway ambit.
+
+• Chapter 33, olfactory horizontal and globose basal cells - PERIPHERAL; both are standing taxa in the same olfactory epithelium studies.
+
+• Chapter 34, taste bud type I cell - PERIPHERAL; carried in mouse taste papilla single-cell studies; a settled human taste bud census does not yet exist.
+
+• Chapter 35, retinal pigment epithelial cell - PERIPHERAL; EXACT within the HCA eye network's retinal pigment epithelium and choroid atlases.
+
+• Chapter 36, radial glial cell (apical) - ABSENT from the adult censuses by definition; the BICAN developing-human-brain atlases carry it as a taxon, since it exists only in development.
+
+• Chapter 37, outer (basal) radial glial cell - ABSENT from the adult censuses; a taxon of the developmental human cortex atlases only.
+
+• Chapter 38, adult neural stem cell of the ventricular-subventricular zone (B1 cell) - astrocyte-lineage taxa, Yao 2023 mouse - COARSER in mouse, where the census folds B1 cells into astroependymal taxa; in the adult human censuses the population's very existence is contested, and this cross-walk does not assert a human taxon for it.
+
+• Chapter 39, adult hippocampal radial glia-like cell (type 1 cell) - ABSENT from the adult human censuses; the corpus itself records this cell as contested in humans, and the molecular censuses have not resolved the dispute; mouse dentate atlases carry a radial glia-like taxon.
+
+• Chapter 40, transit-amplifying progenitors and neuroblasts - immature neuron (IMN) subclasses, Yao 2023 mouse - EXACT in mouse; no adult human counterpart taxon is established, consistent with the contested status of adult human neurogenesis.
+
+• Chapter 41, brain microvascular endothelial cell - endothelial clusters of the Vascular supercluster, Siletti 2023, and Endo NN subclass, Yao 2023 mouse - EXACT.
+
+• Chapter 42, pericyte - pericyte clusters of the Vascular supercluster, Siletti 2023, and Peri NN subclass, Yao 2023 mouse - EXACT.
+
+• Chapter 43, vascular smooth muscle cell of the brain vessels - smooth muscle clusters of the Vascular supercluster, Siletti 2023, and SMC NN subclass, Yao 2023 mouse - EXACT.
+
+• Chapter 44, perivascular fibroblast - Fibroblast supercluster, Siletti 2023, and VLMC (vascular leptomeningeal cell) subclass, Yao 2023 mouse - EXACT at this grain.
+
+• Chapter 45, meningeal fibroblast populations (dural, arachnoid, pial) - Fibroblast supercluster, Siletti 2023 - COARSER; the layer-specific identities are established in dedicated mouse meninges atlases, but the whole-brain censuses lump them.
+
+• Chapter 46, arachnoid cap and granulation cells - ABSENT; no census carries an arachnoid granulation taxon, and a targeted human arachnoid villus transcriptome would be the evidence that settles it.
+
+• Chapter 47, choroid plexus stromal cells - Fibroblast and Vascular superclusters, Siletti 2023 - COARSER; the plexus stroma is not separated from other fibroblast and mural taxa.
+
+• Chapter 48, border-associated macrophages - border-associated macrophage clusters within the immune taxa, Siletti 2023, and the Immune class BAM taxa, Yao 2023 mouse - EXACT.
+
+• Chapter 49, epiplexus (Kolmer) cell - border-associated macrophage taxa - COARSER; the censuses do not separate the ventricular-surface macrophage from other border macrophages.
+
+• Chapter 50, meningeal lymphocytes, dendritic cells, and mast cells - immune clusters, Siletti 2023 - FINER; the corpus treats these as one frontier family, and the census splits them into separate lymphoid and myeloid taxa.
+
+• Chapter 51, somatotrope - PERIPHERAL; EXACT within the human pituitary single-cell atlases, where each anterior pituitary hormone cell is its own taxon.
+
+• Chapter 52, lactotrope - PERIPHERAL; same pituitary atlases, own taxon.
+
+• Chapter 53, thyrotrope - PERIPHERAL; same pituitary atlases, own taxon.
+
+• Chapter 54, gonadotrope - PERIPHERAL; same pituitary atlases, own taxon.
+
+• Chapter 55, corticotrope - PERIPHERAL; same pituitary atlases, own taxon.
+
+• Chapter 56, melanotrope of the intermediate lobe - PERIPHERAL; a taxon of the rodent pituitary atlases; the human intermediate lobe is vestigial and its census standing is correspondingly thin.
+
+• Chapter 57, folliculostellate cell - PERIPHERAL; carried as a taxon in the pituitary single-cell atlases.
+
+• Chapter 58, pinealocyte - ABSENT from the six named censuses' published human frames; dedicated pineal single-cell studies (rodent) carry pinealocyte taxa, and a human pineal census would settle the human side.
+
+• Chapter 59, pineal interstitial (glial) cell - ABSENT from the named censuses; carried only in the same dedicated rodent pineal studies.
+
+• Chapter 60, thyroid follicular cell - PERIPHERAL; a taxon of the HCA thyroid and whole-body (Tabula Sapiens) censuses.
+
+• Chapter 61, parafollicular (C) cell - PERIPHERAL; a rare taxon in the same thyroid censuses.
+
+• Chapter 62, parathyroid chief cell - PERIPHERAL; parathyroid single-cell profiling exists but a settled HCA parathyroid census taxon is not yet standard; the mapping is to those focused studies.
+
+• Chapter 63, parathyroid oxyphil cell - PERIPHERAL; same focused parathyroid studies; whether oxyphil cells are a taxon or an aged state of chief cells is itself unsettled, and this file does not decide it.
+
+• Chapter 64, zona glomerulosa cell - PERIPHERAL; a taxon of the human adrenal single-cell atlases.
+
+• Chapter 65, zona fasciculata cell - PERIPHERAL; same adrenal atlases, own taxon.
+
+• Chapter 66, zona reticularis cell - PERIPHERAL; same adrenal atlases, own taxon.
+
+• Chapter 67, adrenal chromaffin cell - PERIPHERAL; a taxon of the adrenal medulla single-cell atlases; cross-referenced to neuron catalogue Chapter 261.
+
+• Chapter 68, adrenal medullary sustentacular cell - PERIPHERAL; carried in the same adrenal medulla atlases.
+
+• Chapter 69, beta cell - PERIPHERAL; EXACT within the HCA pancreas censuses, where the islet cell types are among the cleanest census taxa in the whole body.
+
+• Chapter 70, alpha cell - PERIPHERAL; same HCA pancreas censuses, own taxon.
+
+• Chapter 71, delta cell - PERIPHERAL; same HCA pancreas censuses, own taxon.
+
+• Chapter 72, gamma (PP) cell - PERIPHERAL; same HCA pancreas censuses, own taxon.
+
+• Chapter 73, epsilon cell - PERIPHERAL; a rare but recognised taxon in the same pancreas censuses.
+
+• Chapter 74, Leydig cell - PERIPHERAL; a taxon of the HCA testis censuses.
+
+• Chapter 75, Sertoli cell - PERIPHERAL; same testis censuses, own taxon.
+
+• Chapter 76, granulosa cell - PERIPHERAL; a taxon of the HCA ovary censuses.
+
+• Chapter 77, theca cell - PERIPHERAL; same ovary censuses, own taxon.
+
+• Chapter 78, the enteroendocrine cell family - PERIPHERAL; the HCA Gut Cell Atlas splits this family into many hormone-defined taxa, so within that census the corpus entry is also FINER-split.
+
+• Chapter 79, neuropod cell - ABSENT as a census taxon; it is defined by a synapse-forming morphology within the enteroendocrine family, and no census separates neuropod from non-neuropod enteroendocrine cells transcriptomically.
+
+• Chapter 80, pulmonary neuroendocrine cell - PERIPHERAL; a standing taxon of the HCA Human Lung Cell Atlas.
+
+• Chapter 81, Merkel cell - PERIPHERAL; a taxon of the HCA skin censuses; cross-referenced to neuron catalogue Chapter 282.
+
+• Chapter 82, glomus (type I) cell of the carotid and aortic bodies - PERIPHERAL; profiled in mouse carotid body single-cell studies; no settled human census taxon yet.
+
+• Chapter 83, glomus type II (sustentacular) cell - PERIPHERAL; same mouse carotid body studies.
+
+• Chapter 84, paraganglion chief cells - PERIPHERAL; reached mainly through tumour-adjacent and adrenal-medulla-adjacent human profiling; a systematic healthy paraganglion census does not exist.
+
+• Chapter 85, juxtaglomerular cell of the kidney - PERIPHERAL; renin-lineage cells appear in the HCA kidney censuses, though their rarity keeps them thinly sampled.
+
+
+================================================================================
+
+THE CROSS-WALK FOR THE 301 NEURON TYPES, BY GROUP
+
+The 301 neuronal chapters are mapped at the grain the censuses themselves use, not one by one, because the censuses' own subclasses are the honest unit of comparison.
+
+Chapter numbers refer to the five-volume neuron catalogue's continuous numbering.
+
+• Chapters 1 to 9, the cortical glutamatergic projection classes (L2/3 IT, L4 IT, L5 IT, L5 ET, L5/6 NP, L6 CT, L6 IT, L6 IT CAR3, L6B) - the BICCN 2021 and SEA-AD glutamatergic subclasses of the same names, and the Siletti 2023 deep-layer and upper-layer intratelencephalic, corticothalamic, and near-projecting superclusters - EXACT; these chapters were written in the censuses' own vocabulary, and the walk is one to one by construction. Note that intra-telencephalic (IT) means projecting within the telencephalon, extra-telencephalic (ET) means projecting beyond it, corticothalamic (CT) means projecting to thalamus, and near-projecting (NP) means short-range.
+
+• Chapters 10 to 16, the classical morphological excitatory cells (pyramidal, spiny stellate, star pyramid, Betz, Meynert, von Economo, fork) - COARSER; the censuses fold each of these into a molecular subclass rather than carrying it by name; Betz and Meynert cells sit inside the L5 ET subclass, and von Economo and fork cells sit inside deep-layer excitatory taxa of the anterior cingulate and frontoinsular dissections, without a dedicated taxon of their own in the published human whole-brain taxonomy.
+
+• Chapter 17, Cajal-Retzius cells - ABSENT from the adult censuses; the population is almost entirely gone by adulthood, and only the developmental atlases (BICAN developing brain) carry it.
+
+• Chapter 18, subplate neurons - COARSER; surviving subplate derivatives are generally assigned to the L6B subclass, which the censuses do carry.
+
+• Chapters 19 to 24, the medial ganglionic eminence (MGE) derived interneurons (basket, chandelier, translaminar, Martinotti, non-Martinotti, SST-CHODL) - the Pvalb, Chandelier, Sst, and Sst Chodl subclasses of BICCN 2021 and SEA-AD, and the MGE interneuron supercluster of Siletti 2023 - EXACT for chandelier and SST-CHODL, COARSER for the basket and Martinotti morphologies, which the molecular subclasses contain but do not individually name.
+
+• Chapters 25 to 36, the caudal ganglionic eminence (CGE) derived and layer 1 interneurons (bipolar, double bouquet, VIP baskets, CCK baskets, neurogliaform, single bouquet, canopy, alpha7, LAMP5-LHX6, rosehip, bitufted, layer 1 horizontal) - the Vip, Sncg, Lamp5, Lamp5 Lhx6, and Pax6 subclasses of BICCN 2021 and SEA-AD, and the CGE interneuron and LAMP5-LHX6 superclusters of Siletti 2023 - EXACT for LAMP5-LHX6 and for rosehip (a named human Lamp5 cluster), COARSER for the remaining morphologies, which map into these subclasses without dedicated taxa; the double bouquet cell in particular still lacks a settled molecular identity, and that gap is a standing open problem the censuses themselves acknowledge.
+
+• Chapters 37 to 45, the hippocampal and entorhinal excitatory types (dentate granule, semilunar granule, mossy, CA3, CA2, CA1, subicular, entorhinal stellate, entorhinal fan) - the hippocampal dentate gyrus, CA1-3, and CA4 (mossy cell) superclusters of Siletti 2023, and the corresponding Yao 2023 mouse subclasses - EXACT for dentate granule, mossy, and the CA fields; COARSER for semilunar granule cells and for the entorhinal stellate and fan morphologies, which sit inside broader excitatory taxa.
+
+• Chapters 46 to 59, the hippocampal interneurons (parvalbumin basket, CCK basket, axo-axonic, bistratified, O-LM, ivy, neurogliaform, HIPP, HICAP, MOPP, trilaminar, back-projection, hippocampo-septal, radiatum-retrohippocampal) - the MGE and CGE interneuron superclusters, Siletti 2023, and the mouse hippocampal GABAergic subclasses, Yao 2023 - COARSER throughout; this is the census's best-known blind spot, because these fourteen anatomy-and-connectivity types collapse into far fewer molecular taxa, and axonal target choice is largely invisible to the transcriptome at current census depth.
+
+• Chapters 60 to 65, amygdala, piriform, and claustrum types - the Amygdala excitatory supercluster, Siletti 2023, for chapters 60 to 62; deep-layer intratelencephalic taxa for the claustrum projection neurons of chapter 64, whose molecular signature runs with L6 IT CAR3 - COARSER; the intercalated cells of chapter 61 map to a recognised FOXP2-marked mouse taxon (Yao 2023 mouse) - EXACT in mouse; chapter 65's harm-converging gatekeeper population is functionally defined - ABSENT.
+
+• Chapters 66 to 82, the basal ganglia types - the medium spiny neuron (MSN) and eccentric MSN superclusters, Siletti 2023, with D1 and D2 direct and indirect pathway identities carried at cluster level - EXACT for chapters 66 to 68 and 80; the striatal interneurons of chapters 69 to 73 map to mouse striatal GABAergic and cholinergic subclasses (Yao 2023 mouse) - EXACT in mouse, COARSER in the human census; the pallidal, subthalamic, and nigral types of chapters 74 to 78 map to Yao 2023 mouse subclasses of the corresponding nuclei - EXACT in mouse, with the human whole-brain census carrying them at coarser splatter-supercluster grain; the dopamine neurons of chapters 78 and 79 map to midbrain dopaminergic taxa in both species - EXACT; chapters 81 and 82 are functionally defined pathway populations - ABSENT.
+
+• Chapters 83 to 89, thalamic and epithalamic types - the Thalamic excitatory supercluster, Siletti 2023, and the mouse thalamic glutamatergic subclasses, Yao 2023 - COARSER for the relay neuron chapters, because the core-versus-matrix distinction of chapters 84 and 85 is a calbindin-and-projection partition that the census does not carry as a taxon; EXACT for the thalamic reticular nucleus (a clean GABAergic taxon in both species) and for the habenula, which has dedicated taxa in Yao 2023 mouse and dedicated clusters in Siletti 2023; thalamic local interneurons and zona incerta map to recognised mouse taxa - EXACT in mouse.
+
+• Chapters 90 to 112, the hypothalamic peptidergic types - the hypothalamic subclasses of Yao 2023 mouse and the hypothalamic clusters of Siletti 2023, supplemented by the dedicated HypoMap mouse hypothalamus atlas - EXACT for the marker-defined types, because a type defined by its peptide (oxytocin, vasopressin, CRH, TRH, GnRH, GHRH, AgRP/NPY, POMC/CART, orexin, MCH, histamine, KNDy) is exactly the kind of type a transcriptomic census resolves best; COARSER for the anatomically defined ensembles (magnocellular versus parvocellular as such, preautonomic neurons, mammillary body, suprachiasmatic nucleus neurons taken as one type, warm-sensitive and cold-sensitive cells); the two purpose-defined chapters 111 and 112 map to subfornical organ and paraventricular taxa only loosely - COARSER.
+
+• Chapters 113 to 126, cerebellar cortex and deep nuclei types - the Cerebellar inhibitory and Upper rhombic lip superclusters, Siletti 2023, and the cerebellar subclasses of Yao 2023 mouse, with the dedicated mouse and human cerebellar cortex atlases behind them - EXACT for Purkinje, granule, Golgi, and unipolar brush cells; EXACT in mouse for the molecular layer interneurons, where the census actually splits the stellate-versus-basket morphology dichotomy into a continuum (MLI1 and MLI2), making the corpus's two chapters COARSER against that finer molecular truth; EXACT in mouse for candelabrum cells, which received a molecular identity in 2023; COARSER for Lugaro and globular cells; the deep nuclei types of chapters 122 to 125 map to mouse cerebellar nuclei taxa - EXACT in mouse; chapter 126 is functionally defined - ABSENT.
+
+• Chapters 127 to 159, brainstem types - the brainstem is where the human census is thinnest and the mouse census strongest, so most walks here are to Yao 2023 mouse subclasses; EXACT in mouse for the neuromodulatory nuclei (locus coeruleus noradrenergic, raphe serotonergic, cholinergic pedunculopontine and laterodorsal tegmental, ventrolateral medullary adrenergic), for the inferior olive, and for the pre-Botzinger and retrotrapezoid respiratory populations; the cochlear nucleus morphological types of chapters 137 to 144 (bushy, T-stellate, D-stellate, octopus, fusiform, giant, cartwheel) have been matched to molecular taxa in dedicated mouse cochlear nucleus atlases - EXACT in mouse, outside the six named censuses' own frames; the composite relay and reticular chapters (130, 150, 154, 155, 156) are region-defined ensembles - COARSER; chapters 157 to 159 are purpose-defined - COARSER against parabrachial, area postrema, and sublaterodorsal taxa that exist in mouse.
+
+• Chapters 160 to 191, spinal cord types - outside the whole-brain censuses' frame but covered by dedicated mouse and human spinal cord atlases and by the developmental cardinal-class literature; EXACT for the developmental classes of chapters 176 to 181 (dI1 to dI6, V0 to V3), which are themselves molecularly defined; EXACT in mouse for alpha versus gamma motor neurons, whose census separation is established; COARSER for the fast-fatigable, fatigue-resistant, and slow alpha subdivisions and for static versus dynamic gamma, where molecular correlates are proposed but not settled; COARSER for the physiologically defined interneurons (Renshaw cells map to a V1 subset, Ia and Ib inhibitory interneurons remain physiology-defined within V1 and V2 taxa); the dorsal horn morphological types of chapters 183 to 187 (islet, vertical, radial, central, antenna) are COARSER against the dorsal horn's molecular clusters, which cut across them; lamina-defined chapters 182, 188, 190, 191 are position-and-physiology entries - COARSER.
+
+• Chapters 192 to 219, retinal types - PERIPHERAL to the six brain censuses, but the HCA eye network's human retinal atlases are the best-matched census in this entire document; EXACT there for rods, S, M, and L cones, rod bipolar cells, the named bipolar taxa, horizontal cell types H1 and H2, AII and starburst amacrine cells, midget, parasol, and small bistratified ganglion cells, and intrinsically photosensitive ganglion cells; the corpus's H3 horizontal cell is not carried by the primate censuses, which find two horizontal taxa - ABSENT; the broad functional groupings (ON versus OFF bipolar taken as two types, direction-selective ganglion cells as one type) are COARSER against a census that carries them as many taxa.
+
+• Chapters 220 to 227, olfactory system types - olfactory sensory neurons are PERIPHERAL, carried by the olfactory mucosa studies; mitral and tufted cells map to mouse olfactory bulb taxa (Yao 2023 mouse and dedicated bulb atlases) - EXACT in mouse, with the human bulb thinly sampled; periglomerular, short-axon, granule, and Blanes cells are COARSER against the bulb's molecular interneuron clusters; migratory GnRH neurons of chapter 227 are a developmental population - ABSENT from adult censuses.
+
+• Chapters 228 to 238, cranial sensory ganglia - PERIPHERAL; the spiral ganglion type I and type II distinction is EXACT within the dedicated mouse spiral ganglion atlases, which additionally split type I into three taxa (FINER); vestibular, geniculate, petrosal, nodose, jugular, and trigeminal ganglion neurons are all carried by dedicated mouse ganglion atlases at finer grain than the corpus's per-ganglion chapters - FINER within those atlases.
+
+• Chapters 239 to 255, somatosensory afferents - PERIPHERAL; the mouse dorsal root ganglion taxonomies and the emerging human dorsal root ganglion atlases carry low-threshold mechanoreceptor, proprioceptor, peptidergic and non-peptidergic nociceptor, C-low-threshold, pruriceptor, and thermoreceptor taxa; the walk is EXACT within those atlases for the corpus's marker-anchored chapters (245, 247, 248, 254) and COARSER for the physiology-defined ones (240 to 243, 249 to 252, 253, 255), with the standing caveat that mouse and human dorsal root ganglion taxonomies do not fully agree with each other.
+
+• Chapters 256 to 265, autonomic ganglia - PERIPHERAL; mouse sympathetic and parasympathetic ganglion atlases carry noradrenergic and cholinergic taxa at a grain that crosses the corpus's function-defined chapters (sudomotor, vasoconstrictor, cardiomotor), so the walk is COARSER for those; small intensely fluorescent cells and intrinsic cardiac and pelvic ganglion neurons appear in dedicated studies - PERIPHERAL throughout.
+
+• Chapters 266 to 280, enteric neurons - PERIPHERAL; the HCA Gut Cell Atlas and the dedicated enteric atlases carry putative sensory, interneuron, excitatory motor, inhibitory motor, and secretomotor taxa, so the functional chapters walk EXACT-to-COARSER within that frame; the Dogiel morphological types of chapters 276 to 280 are a shape classification that the molecular census does not carry - ABSENT as taxa, though Dogiel type II correlates strongly with the sensory taxon.
+
+• Chapters 281 to 284, interoceptive and paraneuronal populations - PERIPHERAL; carotid body afferents, Merkel cells, and pinealocytes are covered above at their non-neuronal cross-references; the paraneuron concept of chapter 284 is a category, not a population - ABSENT.
+
+• Chapters 285 to 301, the functionally defined cognitive types (place, grid, head direction, border, speed, time, object vector, concept, mirror, face, orientation-selective, simple, complex, command, sparse coding, prediction error, nociceptive-specific) - ABSENT, and this is the cross-walk's largest and most instructive finding; these seventeen chapters are defined by what a neuron's firing represents, not by what the cell is, and no transcriptomic census can carry them even in principle, because a place cell is a CA1 pyramidal cell (EXACT at that level, chapter 42) doing something, not being something.
+
+
+================================================================================
+
+HONEST ACCOUNTING
+
+The 85 non-neuronal chapters grade as follows, counted line by line from the cross-walk above.
+
+• EXACT: 12 (chapters 6, 8, 15, 16, 17, 18, 40, 41, 42, 43, 44, 48).
+
+• COARSER: 10 (chapters 1, 2, 3, 4, 5, 11, 38, 45, 47, 49).
+
+• FINER: 2 (chapters 13, 50).
+
+• ABSENT: 12 (chapters 10, 12, 14, 27, 29, 36, 37, 39, 46, 58, 59, 79).
+
+• PERIPHERAL: 49 (all remaining chapters, dominated by the sensory-organ, pituitary, endocrine, and gut populations that the corpus deliberately includes and the brain censuses deliberately exclude).
+
+The 301 neuronal chapters, graded at the group level of the twenty-three bullets above, break approximately as follows, with the word approximately used deliberately because a group bullet can carry more than one grade.
+
+• Predominantly EXACT: the nine census-vocabulary cortical projection chapters, the marker-defined hypothalamic peptidergic types, the principal hippocampal excitatory types, the medium spiny neurons, the dopaminergic and other neuromodulatory nuclei, the core cerebellar types, the developmental spinal classes, and, within their own peripheral atlases, the retinal types.
+
+• Predominantly COARSER: the morphology-defined cortical excitatory cells, most cortical and nearly all hippocampal interneurons, the thalamic core-versus-matrix distinction, the region-defined brainstem ensembles, and the physiology-defined spinal and autonomic types.
+
+• Predominantly PERIPHERAL: the cranial ganglion, dorsal root ganglion, autonomic, and enteric chapters, roughly chapters 228 to 284.
+
+• Predominantly ABSENT: the seventeen functionally defined cognitive types of chapters 285 to 301, the purpose-defined (PUC) chapters, the Dogiel morphologies, and the developmental populations that adulthood erases.
+
+Three standing caveats close this document.
+
+First, a morphology-defined type and a transcriptome-defined taxon are different partitions of the same cells, drawn with different instruments for different purposes, and this cross-walk is a correspondence between partitions, not a claim that either one is the true list.
+
+Second, many EXACT grades above are exact in mouse only, and the corpus's own rule stands: a mouse taxon is evidence about mouse, and the human walk remains open until the human censuses, chiefly through BICAN, reach the same depth.
+
+Third, the censuses are moving and this file is dated; every grade above is a statement about the published taxonomies as they stood on August 12, 2026, and a future census can promote a COARSER to an EXACT, or split an EXACT into a FINER, without this file being wrong for its date.
+
+END OF THE TRANSCRIPTOMIC CROSS-WALK.

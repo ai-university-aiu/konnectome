@@ -1,0 +1,918 @@
+THE LAYER 9 TIME CONSTANTS COMPANION
+
+A companion to LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT, in the Certified_Neuroscientist corpus of D. R. Dison, Founder, Artificial Intelligence University (AIU).
+
+Date of compilation: August 12, 2026.
+
+
+PROVENANCE, STATED BEFORE ANYTHING ELSE
+
+This companion was added on 2026-08-12 by the konnectome build, under the owner's explicit authority of that date.
+
+It is THIS BUILD'S WRITING, living in the corpus's own directory, and it does NOT outrank the corpus's own documents.
+
+Where this companion and a parent manuscript disagree, the parent manuscript is right and this file is wrong, and the correction is owed to this file.
+
+It is ADDITIVE.
+
+It alters nothing that the parent manuscripts say, it edits no existing file, and it removes nothing.
+
+It is keyed by the parent manuscript's own section numbers, in paste-ready form, so that a future merge is a mechanical splice and not an act of interpretation.
+
+Its content was checked against the published literature by web search on 2026-08-12, and the corpus outranks anything found that way.
+
+A citation in this file is a pointer to where the build looked, not a warrant that overrides the corpus.
+
+
+THE GAP THIS FILLS
+
+The guiding manuscript, LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT, carries zero time constants across its 139 numbered regional headings.
+
+The layers on either side of it do carry them. Layer 7 (LAYER_07_SYNAPTICS_MANUSCRIPT, 64 junctions), Layer 8 (LAYER_08_MICROCIRCUITS_MANUSCRIPT, 71 motifs), Layer 10 (LAYER_10_SYSTEMS_MANUSCRIPT, 44 systems, plus its addendum) and Layer 11 (LAYER_11_GLOBAL_STATES_MANUSCRIPT, 26 states) each state a characteristic timescale on every entry.
+
+A region sits between the junctions and motifs it is built from and the systems and states it participates in. Its operating timescale is therefore often derivable from the layers on either side of it, without inventing anything.
+
+
+METHOD: THE FOUR MARKINGS
+
+Every timescale bullet in this companion ends with one of four markings, and the marking is the honesty of the bullet.
+
+• CITED means a corpus layer states the value, and the layer and the entry inside it are named. This is the strongest marking, because the value is already in the corpus.
+
+• DERIVED means the value is computed from corpus values of the layers on either side of the region, with the working shown in the entry. The corpus supplies the inputs; the arithmetic or the bracketing is the build's.
+
+• LITERATURE means the value is established by a web search outside the corpus, with the source named. The corpus outranks any LITERATURE value, and where the literature and the corpus disagree the corpus wins.
+
+• REFUSED means no honest value can be stated, and the bullet says why. A slot filled with a plausible number is this project's named worst failure, and refusing is the correct move when the evidence is not there.
+
+A note on the count, stated on this document's face: a companion that managed to state a timescale for all 139 headings would be a companion that invented some. Some headings are grouping headings, some name structures whose characteristic operating timescale is genuinely unsettled, and some name hubs that have no single timescale of their own. The refusals in this companion are deliberate. They are not gaps to be filled later with guesses.
+
+A second note: where the strongest available value is from rodent recordings, the bullet says so, because rodent timings are not silently the human's.
+
+
+================================================================================
+
+
+2.1 THE CEREBRAL CORTEX
+
+
+ENTRY: 2.1 THE CEREBRAL CORTEX
+
+TIME CONSTANTS:
+• This is a grouping heading for the whole cortical mantle, whose shared building block is the canonical cortical column: loop traversal about 10 milliseconds, AMPA 2 milliseconds, NMDA 100 milliseconds, GABA-A 5 to 10 milliseconds, adaptation 100 to 300 milliseconds, critical periods months to years (CITED, Layer 8, Chapter 37 The Canonical Cortical Column).
+• The cortex has no single operating timescale of its own beyond this shared tile; the per-area constants are stated in the entries below rather than invented for the mantle as a whole (REFUSED for a single cortex-wide value: a grouping heading has no one timescale).
+
+
+ENTRY: 2.1.1 PRIMARY VISUAL CORTEX (V1, STRIATE CORTEX, BRODMANN AREA 17)
+
+TIME CONSTANTS:
+• First spikes arrive in V1 about 40 to 60 milliseconds after the stimulus, and the feedforward sweep to which V1 contributes runs 100 to 150 milliseconds (CITED, Layer 10, Chapter 1 The Visual System, whose time constants give the feedforward sweep as 100 to 150 milliseconds).
+• The canonical cortical column that V1 is built from traverses its loop in about 10 milliseconds, with AMPA at 2 milliseconds, NMDA at 100 milliseconds, GABA-A at 5 to 10 milliseconds, and adaptation over 100 to 300 milliseconds (CITED, Layer 8, Chapter 37 The Canonical Cortical Column).
+• Ocular-dominance and orientation plasticity is confined to a critical period of months to years (CITED, Layer 8, Chapter 37 The Canonical Cortical Column, critical periods months to years).
+
+
+ENTRY: 2.1.2 SECONDARY AND HIGHER VISUAL AREAS (V2, V3, V4, V5/MT)
+
+TIME CONSTANTS:
+• As stages downstream of V1 in the same hierarchy, these areas are reached during the 100 to 150 millisecond feedforward sweep and contribute to a conscious percept at 200 to 300 milliseconds (CITED, Layer 10, Chapter 1 The Visual System).
+• Motion read-out in V5/MT is fast enough to support saccades at about 3 per second (DERIVED: the Layer 10 Visual System entry states saccades about 3 per second, giving a working motion-integration window of a few hundred milliseconds; working shown above).
+• Contrast and surround gain settles over the divisive-normalization window of shunting 5 to 20 milliseconds, synaptic depression 50 to 300 milliseconds, and contrast adaptation seconds to tens of seconds (CITED, Layer 8, Chapter 18 Divisive Normalization).
+
+
+ENTRY: 2.1.3 PRIMARY AUDITORY CORTEX (A1, HESCHL'S GYRUS, BRODMANN AREAS 41 AND 42)
+
+TIME CONSTANTS:
+• Sound reaches cortex at 10 to 15 milliseconds, after a brainstem response of 5 to 8 milliseconds; syllable-scale windows run 20 to 200 milliseconds and echoic memory holds 2 to 4 seconds (CITED, Layer 10, Chapter 2 The Auditory System).
+• A1 runs on the canonical cortical column, loop traversal about 10 milliseconds, adaptation 100 to 300 milliseconds (CITED, Layer 8, Chapter 37 The Canonical Cortical Column).
+
+
+ENTRY: 2.1.4 PRIMARY SOMATOSENSORY CORTEX (S1, POSTCENTRAL GYRUS, BRODMANN AREAS 3, 1, AND 2)
+
+TIME CONSTANTS:
+• Touch reaches cortex at 15 to 25 milliseconds; central sensitisation runs minutes to months (CITED, Layer 10, Chapter 3 The Somatosensory System).
+• Map reorganisation after altered input runs over days to weeks of practice (CITED, Layer 10, Chapter 8 The Corticospinal System, map reorganisation over days to weeks; the same sensorimotor plasticity clock applies to S1).
+
+
+ENTRY: 2.1.5 PRIMARY MOTOR CORTEX (M1, PRECENTRAL GYRUS, BRODMANN AREA 4)
+
+TIME CONSTANTS:
+• Command transit from cortex to the lumbar cord is under 20 milliseconds (CITED, Layer 10, Chapter 8 The Corticospinal System, head-to-lumbar under 20 milliseconds).
+• Motor-map reorganisation with practice runs over days to weeks (CITED, Layer 10, Chapter 8 The Corticospinal System).
+• Corticospinal myelination matures over the first two years of life and beyond (CITED, Layer 10, Chapter 8 The Corticospinal System).
+
+
+ENTRY: 2.1.6 PREMOTOR CORTEX (PMC) AND SUPPLEMENTARY MOTOR AREA (SMA), BRODMANN AREA 6
+
+TIME CONSTANTS:
+• Movement preparation in premotor and supplementary areas precedes movement onset; the corticospinal command it feeds transits in under 20 milliseconds (CITED, Layer 10, Chapter 8 The Corticospinal System).
+• Sequence assembly draws on the synfire chain, whose total sequence runs hundreds of milliseconds to seconds and whose learning consolidates over the days to weeks of practice (CITED, Layer 8, Chapter 28 The Synfire Chain).
+
+
+ENTRY: 2.1.7 DORSOLATERAL PREFRONTAL CORTEX (DLPFC, BRODMANN AREAS 9 AND 46)
+
+TIME CONSTANTS:
+• As the core of the working-memory circuit, the DLPFC admits an item in 100 to 300 milliseconds and holds it against decay over 2 to 20 seconds unrehearsed (CITED, Layer 10, Chapter 16 The Working Memory System).
+• The persistent-activity assembly it sustains rests on an NMDA decay of 50 to 150 milliseconds, holds for 2 to 30 seconds, and switches off in about 100 milliseconds (CITED, Layer 8, Chapter 30 The Point Attractor of Persistent Activity).
+• Rule installation from instruction is under 1 second, set stability seconds to hours, with maturation to the mid-twenties (CITED, Layer 10, Chapter 19 The Executive Control System).
+
+
+ENTRY: 2.1.8 VENTROMEDIAL PREFRONTAL CORTEX (VMPFC) AND ORBITOFRONTAL CORTEX (OFC), BRODMANN AREAS 10, 11, 12, 25, 32
+
+TIME CONSTANTS:
+• Value read-out in this cortex operates on the reward-system clock: a phasic valuation signal of 100 to 500 milliseconds and tonic motivational drift over tens of seconds to minutes (CITED, Layer 10, Chapter 17 The Reward and Motivation System).
+• As a hub of the limbic valuation network, its coarse operating tempo is seconds and slower (CITED, Layer 10, Chapter 30 The Limbic Network, seconds and slower).
+
+
+ENTRY: 2.1.9 ANTERIOR CINGULATE CORTEX (ACC, BRODMANN AREAS 24, 32, 33)
+
+TIME CONSTANTS:
+• As a node of the salience network, the ACC operates on the order of hundreds of milliseconds (CITED, Layer 10, Chapter 22 The Salience / Ventral Attention Network, hundreds of milliseconds).
+• As a maintainer of task set in the cingulo-opercular network, it holds a stable set over minutes-scale sustained activity (CITED, Layer 10, Chapter 25 The Cingulo-Opercular Network, minutes-scale sustained activity).
+
+
+ENTRY: 2.1.10 POSTERIOR CINGULATE CORTEX (PCC) AND PRECUNEUS, BRODMANN AREAS 23, 31, 7m
+
+TIME CONSTANTS:
+• As core hubs of the default mode network, these regions operate on seconds-scale episodes (CITED, Layer 10, Chapter 21 The Default Mode Network, seconds-scale episodes).
+
+
+ENTRY: 2.1.11 THE DEFAULT MODE NETWORK CORE TRIAD (PUC)
+
+TIME CONSTANTS:
+• The default mode network runs on seconds-scale episodes of internally-directed thought (CITED, Layer 10, Chapter 21 The Default Mode Network).
+• This is a grouping heading naming the triad as a unit rather than a single structure, so beyond the network timescale above no finer constant is stated here to avoid inventing one (REFUSED for any tighter value: the triad has no operating timescale distinct from the network it names).
+
+
+ENTRY: 2.1.12 INSULAR CORTEX (THE INSULA)
+
+TIME CONSTANTS:
+• The anterior insula, as the hub of the salience network, detects on the order of hundreds of milliseconds (CITED, Layer 10, Chapter 22 The Salience / Ventral Attention Network).
+• Interoceptive read-out in the insula follows the body's ports: the heartbeat-evoked cortical response at 200 to 400 milliseconds, hormonal signals over minutes, immune afference over hours (CITED, Layer 10, Chapter 7 The Interoceptive System).
+
+
+ENTRY: 2.1.13 BROCA'S AREA (LEFT INFERIOR FRONTAL GYRUS, BRODMANN AREAS 44 AND 45)
+
+TIME CONSTANTS:
+• As a frontal node of the language system, it works within word recognition at 200 to 400 milliseconds and the roughly 200 millisecond turn-taking gap of conversation (CITED, Layer 10, Chapter 18 The Language System).
+• Language-network processing runs at hundreds of milliseconds per word (CITED, Layer 10, Chapter 26 The Language Network, hundreds of milliseconds per word).
+
+
+ENTRY: 2.1.14 WERNICKE'S AREA (LEFT POSTERIOR SUPERIOR TEMPORAL GYRUS, BRODMANN AREA 22)
+
+TIME CONSTANTS:
+• Phoneme categorisation runs at about 100 milliseconds and word recognition at 200 to 400 milliseconds (CITED, Layer 10, Chapter 18 The Language System).
+• The language network it anchors operates at hundreds of milliseconds per word (CITED, Layer 10, Chapter 26 The Language Network).
+
+
+ENTRY: 2.1.15 THE MEDIAL TEMPORAL INTERFACE CORTICES: ENTORHINAL, PERIRHINAL, AND PARAHIPPOCAMPAL
+
+TIME CONSTANTS:
+• As the front door of the episodic-memory circuit, these cortices operate on encoding under 1 second, feeding a synaptic consolidation over hours and a systems consolidation over months to years (CITED, Layer 10, Chapter 13 The Episodic Memory System).
+• The trisynaptic loop they gate traverses in 30 to 40 milliseconds within a theta period of 125 to 250 milliseconds (CITED, Layer 8, Chapter 41 The Hippocampal Trisynaptic Template).
+
+
+ENTRY: 2.1.16 RETROSPLENIAL CORTEX (BRODMANN AREAS 29 AND 30)
+
+TIME CONSTANTS:
+• As a spatial-memory relay coupled to the head-direction system, its compass read-out updates in 10 to 40 milliseconds and drifts in darkness a few degrees per minute (CITED, Layer 8, Chapter 32 The Ring Attractor, update latency 10 to 40 milliseconds, dark drift a few degrees per minute).
+• It participates in episodic recall on the encoding-under-1-second, systems-consolidation-over-months-to-years clock (CITED, Layer 10, Chapter 13 The Episodic Memory System).
+
+
+ENTRY: 2.1.17 POSTERIOR PARIETAL CORTEX (BRODMANN AREAS 5, 7, 39, 40)
+
+TIME CONSTANTS:
+• As a node of the dorsal attention network, it orients on the order of hundreds of milliseconds (CITED, Layer 10, Chapter 23 The Dorsal Attention Network, hundreds of milliseconds).
+• As a parietal partner of working memory, it sustains held items over the 2 to 30 second persistent-activity window (CITED, Layer 8, Chapter 30 The Point Attractor of Persistent Activity).
+
+
+ENTRY: 2.1.18 TEMPORAL ASSOCIATION CORTEX AND THE INFEROTEMPORAL CORTEX
+
+TIME CONSTANTS:
+• Object and face identity is read out in inferotemporal cortex within the conscious percept window of 200 to 300 milliseconds, at the far end of the feedforward sweep (CITED, Layer 10, Chapter 1 The Visual System).
+• As the store of semantic meaning, it grants concept access in 200 to 400 milliseconds, weaves new concepts over weeks, and grows vocabulary over decades (CITED, Layer 10, Chapter 14 The Semantic Memory System).
+
+
+ENTRY: 2.1.19 FRONTAL EYE FIELDS (FEF, BRODMANN AREA 8)
+
+TIME CONSTANTS:
+• As a controller in the oculomotor system, it drives saccades of tens of milliseconds duration between fixations of about 200 milliseconds, with saccadic adaptation over tens to hundreds of trials (CITED, Layer 10, Chapter 11 The Oculomotor System).
+
+
+ENTRY: 2.1.20 SUPRAMARGINAL GYRUS (SMG, BRODMANN AREA 40)
+
+TIME CONSTANTS:
+• As part of the perisylvian language network, it works at hundreds of milliseconds per word (CITED, Layer 10, Chapter 26 The Language Network).
+• As an inferior-parietal attention node, it contributes to orienting on the order of hundreds of milliseconds (CITED, Layer 10, Chapter 22 The Salience / Ventral Attention Network, hundreds of milliseconds).
+
+
+ENTRY: 2.1.21 TEMPOROPARIETAL JUNCTION (TPJ)
+
+TIME CONSTANTS:
+• As a mentalising node, it reads faces and gaze at 170 to 300 milliseconds and updates beliefs within 1 second of new evidence (CITED, Layer 10, Chapter 20 The Social Cognition System).
+• As the reorienting hub of the ventral attention network, it operates on the order of hundreds of milliseconds (CITED, Layer 10, Chapter 22 The Salience / Ventral Attention Network).
+
+
+ENTRY: 2.1.22 SUPERIOR TEMPORAL SULCUS (STS)
+
+TIME CONSTANTS:
+• Face, gaze, and biological-motion reading in the STS runs at 170 to 300 milliseconds, with person models updated over years (CITED, Layer 10, Chapter 20 The Social Cognition System).
+
+
+ENTRY: 2.1.23 MIDDLE TEMPORAL GYRUS (MTG, BRODMANN AREA 21)
+
+TIME CONSTANTS:
+• As a semantic-network region, it grants concept access in 200 to 400 milliseconds and grows its store over decades (CITED, Layer 10, Chapter 14 The Semantic Memory System).
+• As a temporal node of the language network, it works at hundreds of milliseconds per word (CITED, Layer 10, Chapter 26 The Language Network).
+
+
+ENTRY: 2.1.24 FRONTOPOLAR / ANTERIOR PREFRONTAL CORTEX (BRODMANN AREA 10)
+
+TIME CONSTANTS:
+• As the most anterior executive cortex, it holds superordinate goals across the set-stability window of seconds to hours while lower-level tasks run inside it (CITED, Layer 10, Chapter 19 The Executive Control System, set stability seconds to hours).
+• It matures latest of the cortex, to the mid-twenties (CITED, Layer 10, Chapter 19 The Executive Control System, maturation to the mid-twenties).
+
+
+ENTRY: 2.1.25 PRE-SUPPLEMENTARY MOTOR AREA (PRE-SMA, ROSTRAL MEDIAL BRODMANN AREA 6)
+
+TIME CONSTANTS:
+• As the pre-motor node that can cancel an action, it works within the basal-ganglia selection window, whose hyperdirect brake acts in about 10 milliseconds and whose full selection takes tens to hundreds of milliseconds (CITED, Layer 10, Chapter 9 The Cortico-Basal-Ganglia-Thalamo-Cortical Loop System, hyperdirect brake about 10 milliseconds; full selection tens to hundreds of milliseconds).
+
+
+ENTRY: 2.1.26 SUPPLEMENTARY EYE FIELD (SEF, MEDIAL BRODMANN AREA 6/8)
+
+TIME CONSTANTS:
+• As an oculomotor node, it works on saccades of tens of milliseconds, fixations of about 200 milliseconds, and saccadic adaptation over tens to hundreds of trials (CITED, Layer 10, Chapter 11 The Oculomotor System).
+
+
+ENTRY: 2.1.27 SUPERIOR PARIETAL LOBULE (SPL, BRODMANN AREAS 5 AND 7)
+
+TIME CONSTANTS:
+• As a core of the dorsal attention network, it directs the spotlight on the order of hundreds of milliseconds (CITED, Layer 10, Chapter 23 The Dorsal Attention Network).
+
+
+ENTRY: 2.1.28 PARAHIPPOCAMPAL PLACE AREA (PPA)
+
+TIME CONSTANTS:
+• Scene-selective responses in the PPA fall within the conscious-percept window of 200 to 300 milliseconds at the end of the ventral feedforward sweep (CITED, Layer 10, Chapter 1 The Visual System).
+• It feeds episodic encoding, which operates under 1 second and consolidates over months to years (CITED, Layer 10, Chapter 13 The Episodic Memory System).
+
+
+ENTRY: 2.1.29 VISUAL WORD FORM AREA (VWFA, LEFT OCCIPITOTEMPORAL FUSIFORM)
+
+TIME CONSTANTS:
+• The word-selective response in this left occipitotemporal patch begins about 150 to 200 milliseconds after a printed word appears, the timing of the visual-word N170 (LITERATURE, Nature Scientific Reports 2021 on visual word form SSVEP and N170, and the UCSD vwfa-review by Cohen and Dehaene; the N170 word response peaks near 150 to 200 milliseconds).
+• It hands its output to the language network, which then runs at hundreds of milliseconds per word (CITED, Layer 10, Chapter 26 The Language Network).
+
+
+ENTRY: 2.1.30 THE LATERAL OCCIPITAL COMPLEX AND EXTRASTRIATE BODY AREA (LOC, EBA)
+
+TIME CONSTANTS:
+• Object-shape and body-part responses here fall within the ventral feedforward sweep of 100 to 150 milliseconds and the conscious percept at 200 to 300 milliseconds (CITED, Layer 10, Chapter 1 The Visual System).
+
+
+ENTRY: 2.1.31 SECONDARY SOMATOSENSORY CORTEX (S2, PARIETAL OPERCULUM)
+
+TIME CONSTANTS:
+• As a stage downstream of S1, it is reached after the 15 to 25 millisecond touch-to-cortex latency, and it participates in central sensitisation over minutes to months (CITED, Layer 10, Chapter 3 The Somatosensory System).
+
+
+ENTRY: 2.1.32 THE AUDITORY BELT AND PARABELT (BRODMANN AREA 42 AND BEYOND)
+
+TIME CONSTANTS:
+• As stages beyond A1, these areas are reached after the 10 to 15 millisecond cortical latency and work on the syllable windows of 20 to 200 milliseconds (CITED, Layer 10, Chapter 2 The Auditory System).
+
+
+ENTRY: 2.1.33 THE INSULA, ANTERIOR AND POSTERIOR DIVISIONS
+
+TIME CONSTANTS:
+• The anterior division, as the salience-network hub, detects on the order of hundreds of milliseconds (CITED, Layer 10, Chapter 22 The Salience / Ventral Attention Network).
+• The posterior division reads the interoceptive stream at the heartbeat-evoked response of 200 to 400 milliseconds and slower hormonal and immune ports over minutes to hours (CITED, Layer 10, Chapter 7 The Interoceptive System).
+
+
+================================================================================
+
+
+2.2 THE SUBCORTICAL TELENCEPHALON
+
+
+ENTRY: 2.2 THE SUBCORTICAL TELENCEPHALON
+
+TIME CONSTANTS:
+• This is a grouping heading spanning the hippocampus, amygdala, basal ganglia, and olfactory structures, whose timescales range from the 5 to 8 millisecond hyperdirect brake of the basal ganglia (CITED, Layer 8, Chapter 40 The Basal Ganglia Selection Motif) to the decades-long lifetime of hippocampal and olfactory memory traces (CITED, Layer 8, Chapter 29 The Autoassociative Attractor Network, synaptic weight lifetime days to decades).
+• No single operating timescale describes the group; the members are stated individually below rather than averaged into an invented figure (REFUSED for a single group-wide value: a grouping heading has no one timescale).
+
+
+ENTRY: 2.2.1 THE HIPPOCAMPAL FORMATION (DENTATE GYRUS, CA3, CA2, CA1, SUBICULUM)
+
+TIME CONSTANTS:
+• The trisynaptic loop traverses in 30 to 40 milliseconds inside a theta period of 125 to 250 milliseconds; ripple events last 50 to 100 milliseconds; the behavioural-timescale plasticity window is 1 to 2 seconds; systems consolidation runs weeks to years (CITED, Layer 8, Chapter 41 The Hippocampal Trisynaptic Template).
+• Encoding is under 1 second and ripple replay runs 80 to 250 milliseconds, feeding synaptic consolidation over hours and systems consolidation over months to years (CITED, Layer 10, Chapter 13 The Episodic Memory System).
+
+
+ENTRY: 2.2.1.1 PRESUBICULUM
+
+TIME CONSTANTS:
+• The presubiculum carries head-direction signals, whose ring-attractor read-out updates in 10 to 40 milliseconds, resets to a landmark in a few hundred milliseconds, and drifts a few degrees per minute in darkness (CITED, Layer 8, Chapter 32 The Ring Attractor).
+
+
+ENTRY: 2.2.1.2 PARASUBICULUM
+
+TIME CONSTANTS:
+• As a spatial-coding interface feeding entorhinal grid cells, it operates within the trisynaptic-loop theta frame of 125 to 250 milliseconds (CITED, Layer 8, Chapter 41 The Hippocampal Trisynaptic Template).
+• A parasubiculum-specific operating constant distinct from the spatial system it serves is not established, so no tighter value is invented (REFUSED for any finer value: the parasubiculum has no separately measured operating timescale).
+
+
+ENTRY: 2.2.2 THE AMYGDALA (LATERAL, BASAL, ACCESSORY BASAL, CENTRAL, MEDIAL, AND CORTICAL NUCLEI)
+
+TIME CONSTANTS:
+• Fear learning bridges a conditioned cue and an outcome over the recurrent-loop plasticity window, with NMDA decay near 100 milliseconds, persistence over seconds, and Hebbian weight change over minutes to hours (CITED, Layer 8, Chapter 4 The Recurrent Loop).
+• The taste-aversion pathway it supports can bridge delays of hours and last years (CITED, Layer 10, Chapter 5 The Gustatory System, aversion learning bridging delays of hours, lasting years).
+
+
+ENTRY: 2.2.3 THE BED NUCLEUS OF THE STRIA TERMINALIS (BNST)
+
+TIME CONSTANTS:
+• The BNST drives sustained, longer-lasting anxiety-like states rather than the phasic amygdalar fear response; it operates on the sustained-stress clock of genomic hormone actions over hours to days (CITED, Layer 11, Chapter 19 The Sustained Stress State, genomic hormone actions hours to days).
+• A BNST-specific fast operating constant separate from the extended-amygdala circuitry it belongs to is not cleanly established, so none is invented (REFUSED for a fast value: the BNST's characteristic slow, state-like timescale is what the evidence supports).
+
+
+ENTRY: 2.2.4 THE BASAL GANGLIA
+
+TIME CONSTANTS:
+• The selection machine's hyperdirect brake acts in 5 to 8 milliseconds, direct-path release in 15 to 20 milliseconds, indirect sculpting in 25 to 30 milliseconds, the dopamine teaching burst in 100 to 200 milliseconds, the eligibility trace about 1 second, and habit consolidation over weeks (CITED, Layer 8, Chapter 40 The Basal Ganglia Selection Motif).
+• At the system level, full selection takes tens to hundreds of milliseconds and habit formation runs over many repetitions across days to months (CITED, Layer 10, Chapter 9 The Cortico-Basal-Ganglia-Thalamo-Cortical Loop System).
+
+
+ENTRY: 2.2.4.1 THE STRIATUM (CAUDATE NUCLEUS, PUTAMEN, AND NUCLEUS ACCUMBENS)
+
+TIME CONSTANTS:
+• As the input stage of the selection machine, it receives the dopamine teaching burst of 100 to 200 milliseconds and holds the eligibility trace of about 1 second (CITED, Layer 8, Chapter 40 The Basal Ganglia Selection Motif).
+• Procedural-skill learning through the striatum runs over a dopamine eligibility window of about 1 second, within-session learning over minutes, and retention over decades (CITED, Layer 10, Chapter 15 The Procedural Memory System).
+
+
+ENTRY: 2.2.4.2 THE GLOBUS PALLIDUS, EXTERNAL SEGMENT (GPe)
+
+TIME CONSTANTS:
+• As the relay of the indirect path, it contributes to indirect sculpting at 25 to 30 milliseconds within the selection motif (CITED, Layer 8, Chapter 40 The Basal Ganglia Selection Motif, indirect sculpting 25 to 30 milliseconds).
+
+
+ENTRY: 2.2.4.3 THE SUBTHALAMIC NUCLEUS (STN)
+
+TIME CONSTANTS:
+• As the relay of the hyperdirect path, it delivers the fast global brake at 5 to 8 milliseconds (CITED, Layer 8, Chapter 40 The Basal Ganglia Selection Motif, hyperdirect latency 5 to 8 milliseconds).
+
+
+ENTRY: 2.2.4.4 THE GLOBUS PALLIDUS, INTERNAL SEGMENT (GPi), AND THE SUBSTANTIA NIGRA PARS RETICULATA (SNr)
+
+TIME CONSTANTS:
+• As the output gate whose tonic inhibition is released to permit a movement, it acts on the direct-path release of 15 to 20 milliseconds and receives indirect sculpting at 25 to 30 milliseconds (CITED, Layer 8, Chapter 40 The Basal Ganglia Selection Motif).
+
+
+ENTRY: 2.2.4.5 THE SUBSTANTIA NIGRA PARS COMPACTA (SNc)
+
+TIME CONSTANTS:
+• The dopamine teaching signal fires a phasic burst of 100 to 500 milliseconds, with a prediction-error peak near 100 milliseconds and tonic motivational drift over tens of seconds to minutes (CITED, Layer 10, Chapter 31 The Dopamine System).
+• The dopaminergic varicosity clears its transmitter and carries an eligibility window of about 1 second for teaching (CITED, Layer 8, Chapter 40 The Basal Ganglia Selection Motif, eligibility trace about 1 second).
+
+
+ENTRY: 2.2.5 THE NUCLEUS ACCUMBENS (SHELL AND CORE) AND THE VENTRAL PALLIDUM
+
+TIME CONSTANTS:
+• The reward and motivation circuit signals phasically at 100 to 500 milliseconds and drifts tonically over tens of seconds to minutes, with value learning over trials to years and addiction sensitisation over months to permanent (CITED, Layer 10, Chapter 17 The Reward and Motivation System, and Chapter 31 The Dopamine System).
+
+
+ENTRY: 2.2.6 THE CLAUSTRUM
+
+TIME CONSTANTS:
+• The claustrum's proposed role in coordinating cortical activity has no single agreed operating timescale, and its function itself is still debated (REFUSED: no timescale for the claustrum can be stated honestly; what would settle it is causal recording and perturbation during a defined task showing the window over which it acts).
+
+
+ENTRY: 2.2.7 THE BASAL FOREBRAIN CHOLINERGIC COMPLEX (NUCLEUS BASALIS OF MEYNERT, MEDIAL SEPTAL NUCLEUS, DIAGONAL BAND OF BROCA)
+
+TIME CONSTANTS:
+• The acetylcholine broadcast fires a phasic transient of tens to hundreds of milliseconds, is cleared by acetylcholinesterase in milliseconds, and drifts in state over seconds to minutes (CITED, Layer 10, Chapter 34 The Acetylcholine System).
+• The medial septal pacing of hippocampal theta sets the 125 to 250 millisecond frame of the trisynaptic loop (CITED, Layer 8, Chapter 41 The Hippocampal Trisynaptic Template, theta period 125 to 250 milliseconds).
+
+
+ENTRY: 2.2.8 THE OLFACTORY BULB
+
+TIME CONSTANTS:
+• The glomerular module works within a sniff cycle of a few hundred milliseconds, with synaptic responses of milliseconds to tens of milliseconds (CITED, Layer 8, Chapter 55 The Olfactory Glomerular Module).
+• Single-sniff discrimination takes about 200 milliseconds, adaptation runs over minutes, and receptor turnover over weeks (CITED, Layer 10, Chapter 4 The Olfactory System).
+
+
+ENTRY: 2.2.9 THE PIRIFORM CORTEX (PRIMARY OLFACTORY CORTEX)
+
+TIME CONSTANTS:
+• As the pattern-completing store of odour identity, it runs on the autoassociative attractor clock: settling in 10 to 30 milliseconds within a theta cycle of 125 to 250 milliseconds, with synaptic weight lifetime of days to decades (CITED, Layer 8, Chapter 29 The Autoassociative Attractor Network).
+• Odour memories it anchors can last decades (CITED, Layer 10, Chapter 4 The Olfactory System, odour memories decades).
+
+
+ENTRY: 2.2.10 THE OLFACTORY TUBERCLE (OT)
+
+TIME CONSTANTS:
+• As a ventral-striatal olfactory-reward structure, it operates on the reward-system clock of phasic 100 to 500 milliseconds and tonic tens of seconds to minutes (CITED, Layer 10, Chapter 17 The Reward and Motivation System), driven within a sniff cycle of a few hundred milliseconds (CITED, Layer 8, Chapter 55 The Olfactory Glomerular Module).
+
+
+ENTRY: 2.2.11 THE ANTERIOR OLFACTORY NUCLEUS (AON)
+
+TIME CONSTANTS:
+• As an early relay in the olfactory chain, it works within the sniff cycle of a few hundred milliseconds and synaptic responses of milliseconds to tens of milliseconds (CITED, Layer 8, Chapter 55 The Olfactory Glomerular Module).
+
+
+ENTRY: 2.2.12 THE ENDOPIRIFORM NUCLEUS
+
+TIME CONSTANTS:
+• The endopiriform nucleus is a claustrum-associated structure with sparse functional recording, and no characteristic operating timescale is established for it (REFUSED: no timescale can be stated honestly; what would settle it is task-linked recording of its role in olfactory or seizure-related activity).
+
+
+ENTRY: 2.2.13 THE TAENIA TECTA
+
+TIME CONSTANTS:
+• The taenia tecta is a small allocortical structure whose function and characteristic timescale are not established in the literature (REFUSED: no honest timescale can be stated; targeted recording during olfactory or hippocampal-linked behaviour would be needed).
+
+
+ENTRY: 2.2.14 THE ISLANDS OF CALLEJA
+
+TIME CONSTANTS:
+• The islands of Calleja are dense granule-cell clusters in the ventral striatum whose dedicated operating timescale is not established, though they sit within reward-related circuitry (REFUSED: no honest value can be stated; cell-type-specific recording during motivated behaviour would be needed).
+
+
+ENTRY: 2.2.15 THE LATERAL SEPTAL NUCLEUS (LS)
+
+TIME CONSTANTS:
+• As a relay between the hippocampus and the hypothalamus, it works within the hippocampal theta frame of 125 to 250 milliseconds on its input side (CITED, Layer 8, Chapter 41 The Hippocampal Trisynaptic Template) and passes onto slower hypothalamic state signals over seconds to minutes (CITED, Layer 10, Chapter 37 The Hypothalamic-Pituitary-Adrenal Axis, fast pituitary feedback seconds to minutes).
+
+
+================================================================================
+
+
+2.3 THE DIENCEPHALON
+
+
+ENTRY: 2.3 THE DIENCEPHALON
+
+TIME CONSTANTS:
+• This is a grouping heading covering the thalamus, hypothalamus, habenula, and pineal, whose timescales run from the 1 to 2 millisecond thalamic relay latency (CITED, Layer 8, Chapter 39 The Thalamic Relay Triad with Reticular Gate) to the 24-hour circadian envelope of the hypothalamic and pineal axes (CITED, Layer 10, Chapter 41 The Melatonin Axis).
+• No single operating timescale describes the group; its members are stated individually below (REFUSED for a single group-wide value: a grouping heading has no one timescale).
+
+
+ENTRY: 2.3.1 THE THALAMUS
+
+TIME CONSTANTS:
+• The relay triad with its reticular gate relays at 1 to 2 milliseconds, applies triadic inhibition at about 1 millisecond, runs GABA-B inhibition over 100 to 200 milliseconds, waxes a spindle over 0.5 to 3 seconds, and follows the sleep cycle of about 90 minutes (CITED, Layer 8, Chapter 39 The Thalamic Relay Triad with Reticular Gate).
+
+
+ENTRY: 2.3.1.1 LATERAL GENICULATE NUCLEUS (LGN)
+
+TIME CONSTANTS:
+• As the visual relay, it passes signals at the relay latency of 1 to 2 milliseconds under a triadic gate of about 1 millisecond and a GABA-B hold of 100 to 200 milliseconds (CITED, Layer 8, Chapter 36 The Thalamic Triad Glomerulus and Chapter 39 The Thalamic Relay Triad with Reticular Gate).
+• Its output enters the visual feedforward sweep of 100 to 150 milliseconds (CITED, Layer 10, Chapter 1 The Visual System).
+
+
+ENTRY: 2.3.1.2 MEDIAL GENICULATE NUCLEUS (MGN)
+
+TIME CONSTANTS:
+• As the auditory relay, it passes the ascending signal so that cortex is reached at 10 to 15 milliseconds after a brainstem response of 5 to 8 milliseconds (CITED, Layer 10, Chapter 2 The Auditory System), at a thalamic relay latency of 1 to 2 milliseconds (CITED, Layer 8, Chapter 39 The Thalamic Relay Triad with Reticular Gate).
+
+
+ENTRY: 2.3.1.3 VENTRAL POSTEROLATERAL (VPL) AND VENTRAL POSTEROMEDIAL (VPM) NUCLEI
+
+TIME CONSTANTS:
+• As the somatosensory relay, they pass touch on toward cortex within the 15 to 25 millisecond touch-to-cortex latency (CITED, Layer 10, Chapter 3 The Somatosensory System), at a relay latency of 1 to 2 milliseconds (CITED, Layer 8, Chapter 39 The Thalamic Relay Triad with Reticular Gate).
+
+
+ENTRY: 2.3.1.4 VENTRAL ANTERIOR (VA) AND VENTRAL LATERAL (VL) NUCLEI
+
+TIME CONSTANTS:
+• As the motor thalamus closing the basal-ganglia and cerebellar loops onto cortex, they operate within a full selection of tens to hundreds of milliseconds (CITED, Layer 10, Chapter 9 The Cortico-Basal-Ganglia-Thalamo-Cortical Loop System) at a thalamic relay latency of 1 to 2 milliseconds (CITED, Layer 8, Chapter 39 The Thalamic Relay Triad with Reticular Gate).
+
+
+ENTRY: 2.3.1.5 MEDIODORSAL NUCLEUS (MD)
+
+TIME CONSTANTS:
+• As the prefrontal thalamus, it supports working-memory maintenance over the 2 to 30 second persistent-activity window (CITED, Layer 8, Chapter 30 The Point Attractor of Persistent Activity) and rule maintenance of seconds to hours (CITED, Layer 10, Chapter 19 The Executive Control System).
+
+
+ENTRY: 2.3.1.6 ANTERIOR THALAMIC NUCLEI
+
+TIME CONSTANTS:
+• As nodes of the Papez memory circuit, they carry head-direction signals that update in 10 to 40 milliseconds and drift a few degrees per minute in darkness (CITED, Layer 8, Chapter 32 The Ring Attractor), feeding episodic encoding under 1 second (CITED, Layer 10, Chapter 13 The Episodic Memory System).
+
+
+ENTRY: 2.3.1.7 PULVINAR AND LATERAL POSTERIOR NUCLEUS
+
+TIME CONSTANTS:
+• As a higher-order thalamic hub coordinating attention across cortex, the pulvinar operates on the dorsal-attention orienting clock of hundreds of milliseconds (CITED, Layer 10, Chapter 23 The Dorsal Attention Network), gating cortico-cortical traffic at a thalamic relay latency of 1 to 2 milliseconds (CITED, Layer 8, Chapter 39 The Thalamic Relay Triad with Reticular Gate).
+
+
+ENTRY: 2.3.1.8 INTRALAMINAR NUCLEI (CENTROMEDIAN AND PARAFASCICULAR)
+
+TIME CONSTANTS:
+• As arousal-linked thalamic nuclei feeding the striatum, they operate on the ascending-arousal tone clock of seconds to minutes (CITED, Layer 11, Chapter 16 The Ascending Broadcast System, seconds to minutes for tone changes) and relay at a thalamic latency of 1 to 2 milliseconds (CITED, Layer 8, Chapter 39 The Thalamic Relay Triad with Reticular Gate).
+
+
+ENTRY: 2.3.1.9 THE THALAMIC RETICULAR NUCLEUS (TRN)
+
+TIME CONSTANTS:
+• The reticular gate applies GABA-B inhibition over 100 to 200 milliseconds and waxes sleep spindles over 0.5 to 3 seconds, following the sleep cycle of about 90 minutes (CITED, Layer 8, Chapter 39 The Thalamic Relay Triad with Reticular Gate).
+• The spindles it generates last 0.5 to 3 seconds with an inter-spindle interval of seconds (CITED, Layer 11, Chapter 6 Stage N2, spindle 0.5 to 3 seconds).
+
+
+ENTRY: 2.3.1.10 THE NUCLEUS REUNIENS (RE) AND THE MIDLINE THALAMUS
+
+TIME CONSTANTS:
+• As the coordinator of hippocampal-prefrontal traffic, the reuniens works within the hippocampal theta frame of 125 to 250 milliseconds (CITED, Layer 8, Chapter 41 The Hippocampal Trisynaptic Template) and supports prefrontal maintenance over seconds (CITED, Layer 8, Chapter 30 The Point Attractor of Persistent Activity, holding 2 to 30 seconds).
+
+
+ENTRY: 2.3.1.11 THE PARAVENTRICULAR THALAMUS (PVT)
+
+TIME CONSTANTS:
+• As a midline thalamic hub for arousal, stress, and motivation, the PVT operates on the ascending-arousal tone clock of seconds to minutes (CITED, Layer 11, Chapter 16 The Ascending Broadcast System) and passes onto reward drift over tens of seconds to minutes (CITED, Layer 10, Chapter 17 The Reward and Motivation System).
+
+
+ENTRY: 2.3.1.12 THE LATERAL DORSAL NUCLEUS (LD)
+
+TIME CONSTANTS:
+• As a spatial-memory-linked thalamic nucleus carrying head-direction signals, it updates in 10 to 40 milliseconds and drifts a few degrees per minute in darkness (CITED, Layer 8, Chapter 32 The Ring Attractor).
+
+
+ENTRY: 2.3.1.13 THE POSTERIOR VENTRAL MEDIAL NUCLEUS (VMpo)
+
+TIME CONSTANTS:
+• As the thalamic relay for interoceptive and pain signals to the insula, it passes the stream that yields the heartbeat-evoked cortical response of 200 to 400 milliseconds and distinguishes first from second pain at about 0.3 versus more than 1 second (CITED, Layer 10, Chapter 7 The Interoceptive System, and Chapter 3 The Somatosensory System, first versus second pain about 0.3 versus more than 1 second).
+
+
+ENTRY: 2.3.2 THE HYPOTHALAMUS
+
+TIME CONSTANTS:
+• As the master homeostatic controller, it runs fast pituitary feedback over seconds to minutes, slower hypothalamic feedback over minutes to hours, a circadian envelope of 24 hours, and set-point remodelling over days to years (CITED, Layer 10, Chapter 37 The Hypothalamic-Pituitary-Adrenal Axis).
+
+
+ENTRY: 2.3.2.1 PARAVENTRICULAR NUCLEUS (PVN)
+
+TIME CONSTANTS:
+• As the apex of the stress axis, it releases so that cortisol rises over 3 to 5 minutes, peaks at 15 to 30 minutes, and recovers over 60 to 90 minutes (CITED, Layer 11, Chapter 18 The Acute Stress State).
+• Its magnocellular oxytocin cells fire milk-ejection bursts with a rise time of about one second and an inter-burst interval of about five minutes (CITED, Layer 8, Chapter 62 The Magnocellular Burst Synchronizer).
+
+
+ENTRY: 2.3.2.2 SUPRAOPTIC NUCLEUS (SON)
+
+TIME CONSTANTS:
+• Its magnocellular neurons fire oxytocin bursts with a rise time of about one second, an inter-burst interval of about five minutes, and a bolus-to-milk transit of ten to twelve seconds (CITED, Layer 8, Chapter 62 The Magnocellular Burst Synchronizer).
+
+
+ENTRY: 2.3.2.3 ARCUATE NUCLEUS (ARC)
+
+TIME CONSTANTS:
+• Its KNDy pulse generator recruits neurokinin B over seconds to minutes and sets an inter-pulse interval of tens of minutes for gonadotropin release (CITED, Layer 8, Chapter 61 The KNDy Pulse Generator).
+• Its appetite read-out follows hormonal signals over minutes (CITED, Layer 10, Chapter 43 The Gut-Brain Axis, hormonal appetite signals minutes).
+
+
+ENTRY: 2.3.2.4 LATERAL HYPOTHALAMIC AREA (LHA)
+
+TIME CONSTANTS:
+• As the source of the orexin stabiliser, its firing changes over seconds while its daily drive envelope runs over hours (CITED, Layer 11, Chapter 13 The Orexin Stabiliser).
+• The orexin system it hosts stabilises state over minutes to hours with a circadian drift over the day, and co-releases glutamate in milliseconds (CITED, Layer 10, Chapter 36 The Orexin System).
+
+
+ENTRY: 2.3.2.5 TUBEROMAMMILLARY NUCLEUS (TMN)
+
+TIME CONSTANTS:
+• The histamine wakefulness broadcast changes state over minutes and tracks the sleep-wake schedule rather than fast events (CITED, Layer 10, Chapter 35 The Histamine System, state transitions over minutes).
+
+
+ENTRY: 2.3.3 THE HABENULA (LATERAL AND MEDIAL)
+
+TIME CONSTANTS:
+• The lateral habenula fires a phasic response to a reward-omission cue on the order of a few hundred milliseconds after the cue, an inverted reward-prediction-error signal (LITERATURE, Matsumoto and Hikosaka, Nature Neuroscience 2011, lateral habenula neurons signal errors in the prediction of reward; phasic cue-locked responses on the hundreds-of-milliseconds scale).
+• It relays this negative signal onward to suppress dopamine, whose phasic burst is 100 to 500 milliseconds (CITED, Layer 10, Chapter 31 The Dopamine System).
+
+
+ENTRY: 2.3.3.1 THE HABENULA-MONOAMINE FEEDBACK HUB (PUC)
+
+TIME CONSTANTS:
+• This grouping heading names the loop by which the habenula gates the monoamine broadcasts; those broadcasts change tone over seconds to minutes (CITED, Layer 11, Chapter 16 The Ascending Broadcast System, seconds to minutes for tone changes).
+• A single operating constant for the hub as a whole, distinct from the habenular phasic response and the monoamine tone it modulates, is not stated to avoid inventing one (REFUSED for any composite value: the hub has no timescale separate from its named parts).
+
+
+ENTRY: 2.3.4 THE PINEAL GLAND
+
+TIME CONSTANTS:
+• The melatonin axis runs a nightly rhythm of 24 hours, re-entrains over days, and declines in amplitude over the lifespan (CITED, Layer 10, Chapter 41 The Melatonin Axis).
+
+
+ENTRY: 2.3.5 THE SUBTHALAMUS AND THE ZONA INCERTA THE ZONA INCERTA (ZI)
+
+TIME CONSTANTS:
+• As a diffuse inhibitory hub touching arousal, attention, and movement, the zona incerta operates on the ascending-arousal tone clock of seconds to minutes (CITED, Layer 11, Chapter 16 The Ascending Broadcast System).
+• A zona-incerta-specific fast operating constant separate from the many circuits it touches is not established, so none is invented (REFUSED for a fast value: the ZI has no single measured operating timescale of its own).
+
+ENTRY: 2.4 THE BRAINSTEM
+
+TIME CONSTANTS:
+• No single timescale characterises the whole brainstem; its nuclei span from the microsecond coincidence window of the superior olivary complex to the seconds-to-minutes tone changes of the ascending arousal broadcast, so any single figure would be false (DERIVED, spanning the members below: superior olivary complex membrane 0.1 to 0.3 milliseconds per Layer 8 The Jeffress Interaural-Time Comparator, up to arousal drift seconds to minutes per Layer 11 The Ascending Broadcast System).
+
+ENTRY: 2.4.1 THE MIDBRAIN
+
+TIME CONSTANTS:
+• As an umbrella region the midbrain has no one time constant; its members run from the roughly 100 millisecond express saccade of the superior colliculus to the tonic dopamine drift of tens of seconds to minutes in the ventral tegmental area (DERIVED, spanning Layer 10 The Dopamine System phasic burst 100 to 500 milliseconds and tonic drift tens of seconds to minutes, and the express-saccade latency below).
+
+ENTRY: 2.4.1.1 SUPERIOR COLLICULUS
+
+TIME CONSTANTS:
+• Express (reflex-like) saccade latency peaks near 100 milliseconds, approaching the minimum sensory-to-motor conduction delay (LITERATURE, Fischer and Weber; Dorris, Pare and Munoz, J Neurophysiol / PubMed 10960650).
+• Saccade duration tens of milliseconds and fixation about 200 milliseconds, the intercalated collicular signal riding inside this cycle (CITED, Layer 10, The Oculomotor System).
+
+ENTRY: 2.4.1.2 INFERIOR COLLICULUS
+
+TIME CONSTANTS:
+• As the obligatory auditory midbrain relay it sits inside the brainstem auditory chain whose response is 5 to 8 milliseconds, with cortical arrival by 10 to 15 milliseconds (CITED, Layer 10, The Auditory System).
+• The interaural timing cues it inherits from the olivary comparator are resolved on a sub-millisecond scale upstream (CITED, Layer 8, The Jeffress Interaural-Time Comparator, membrane roughly 0.1 to 0.3 milliseconds).
+
+ENTRY: 2.4.1.3 PERIAQUEDUCTAL GRAY (PAG)
+
+TIME CONSTANTS:
+• Stress-induced analgesia, gated here, has an onset of seconds and inverts to hyperalgesia over days to weeks of sustained stress (CITED, Layer 10 Addendum, The Nociceptive System).
+• Placebo analgesia installed through this descending route builds over minutes and reverses with naloxone over minutes (CITED, Layer 10 Addendum, The Nociceptive System).
+
+ENTRY: 2.4.1.3.1 THE PERIAQUEDUCTAL GRAY PAIN MODULATION HUB (PUC)
+
+TIME CONSTANTS:
+• The descending pain-modulation loop it anchors switches gain over seconds (stress analgesia onset) while its learned, opioid-mediated setpoint shifts over minutes (placebo) to days and weeks (stress-to-hyperalgesia inversion) (CITED, Layer 10 Addendum, The Nociceptive System).
+
+ENTRY: 2.4.1.4 VENTRAL TEGMENTAL AREA (VTA)
+
+TIME CONSTANTS:
+• Phasic dopamine burst 100 to 500 milliseconds, with the prediction-error peak near 100 milliseconds (CITED, Layer 10, The Dopamine System).
+• Tonic motivational drift over tens of seconds to minutes; value learning over trials to years; addiction sensitisation months to permanent (CITED, Layer 10, The Dopamine System and The Reward And Motivation System).
+
+ENTRY: 2.4.1.5 RED NUCLEUS
+
+TIME CONSTANTS:
+• As a descending motor relay parallel to the corticospinal cable, its command transit to the cord falls within the same sub-20 millisecond window (DERIVED, from Layer 10 The Corticospinal System, command transit head-to-lumbar under 20 milliseconds; the rubrospinal path is shorter, so its transit is a fraction of this).
+• Movement-related adjustment and map reorganisation proceed over the days to weeks of practice shared by the motor systems (CITED, Layer 10, The Corticospinal System, map reorganisation over days to weeks).
+
+ENTRY: 2.4.1.6 THE ROSTROMEDIAL TEGMENTAL NUCLEUS (RMTg)
+
+TIME CONSTANTS:
+• As the GABAergic brake on dopamine neurons it must act within the dopamine phasic window it shapes, on the order of 100 to 500 milliseconds, its inhibition timed to the negative prediction-error dip (DERIVED, from Layer 10 The Dopamine System, phasic burst 100 to 500 milliseconds; the RMTg pause is the sign-inverted counterpart of that same burst).
+
+ENTRY: 2.4.1.7 THE INTERPEDUNCULAR NUCLEUS (IPN)
+
+TIME CONSTANTS:
+• The medial-habenula-to-interpeduncular projection transmits partly by slow cholinergic and co-released signalling, so effective timescales are tens to hundreds of milliseconds rather than fast millisecond relay (LITERATURE, general slow-transmission literature for the medial habenula-IPN pathway; a precise, agreed value is not established, and paired recordings across the pathway would settle it).
+
+ENTRY: 2.4.1.8 THE CUNEIFORM NUCLEUS AND THE MESENCEPHALIC LOCOMOTOR REGION
+
+TIME CONSTANTS:
+• A tonic go-and-speed command from this region sets the locomotor central pattern generator, whose cycle is 0.3 to 2 seconds (CITED, Layer 8, The Central Pattern Generator).
+• Because the region supplies drive level rather than the rhythm itself, its own signal is a slowly graded scalar over seconds, not a fast transient (DERIVED, from Layer 8 The Central Pattern Generator, which locates the clock downstream in the spinal network).
+
+ENTRY: 2.4.1.9 THE EDINGER-WESTPHAL NUCLEUS
+
+TIME CONSTANTS:
+• As the parasympathetic preganglionic source of the pupillary light reflex, its efferent limb contributes to a reflex latency of about 200 milliseconds, latency rising roughly 1 millisecond per year with age (LITERATURE, Pupillary Light Reflex, StatPearls NBK537180; IOVS latency study).
+
+ENTRY: 2.4.1.10 THE CENTRAL MESENCEPHALIC RETICULAR FORMATION (cMRF)
+
+TIME CONSTANTS:
+• As a node in the saccadic feedback loop it operates within the saccade-generation window of tens of milliseconds, inside a fixation cycle of about 200 milliseconds (DERIVED, from Layer 10 The Oculomotor System, saccade duration tens of milliseconds, fixation about 200 milliseconds).
+
+ENTRY: 2.4.2 THE PONS
+
+TIME CONSTANTS:
+• No one figure fits the pons; it houses the sub-100 millisecond phasic burst of the locus coeruleus, the seconds-to-hours mood signalling of the raphe, and the roughly 90 minute pontine REM oscillator (DERIVED, spanning Layer 11 Phasic Arousal neural burst under 100 milliseconds, Layer 10 The Serotonin System mood effects hours to weeks, and Layer 11 The REM Switch inter-episode roughly 90 minutes).
+
+ENTRY: 2.4.2.1 LOCUS COERULEUS (LC)
+
+TIME CONSTANTS:
+• Phasic burst under 100 milliseconds, with electroencephalographic reset about 40 milliseconds, pupil peak 1 to 1.5 seconds, and full envelope 1 to 5 seconds (CITED, Layer 11, Phasic Arousal / The Startle Spike).
+• Gain change over seconds; arousal and exploration drift over minutes (CITED, Layer 10, The Noradrenaline System).
+
+ENTRY: 2.4.2.2 RAPHE NUCLEI
+
+TIME CONSTANTS:
+• Serotonergic firing rhythm 0.5 to 3 hertz; patience signal over seconds; mood and plasticity effects over hours to weeks (CITED, Layer 10, The Serotonin System).
+
+ENTRY: 2.4.2.3 PONTINE NUCLEI
+
+TIME CONSTANTS:
+• As the cortico-ponto-cerebellar relay stage, transmission is under 1 millisecond per synapse (CITED, Layer 8, The Feedforward Chain, under 1 millisecond per stage).
+• The prediction-and-correction loop this relay feeds settles over tens to hundreds of milliseconds (CITED, Layer 10, The Cerebellar System).
+
+ENTRY: 2.4.2.4 PEDUNCULOPONTINE AND LATERODORSAL TEGMENTAL NUCLEI (PPN, LDT)
+
+TIME CONSTANTS:
+• Cholinergic phasic transient tens to hundreds of milliseconds; clearance by acetylcholinesterase in milliseconds; state drift seconds to minutes (CITED, Layer 10, The Acetylcholine System).
+• As arousal and REM-promoting nuclei they also participate in state transitions over seconds to minutes (CITED, Layer 11, The Ascending Broadcast System).
+
+ENTRY: 2.4.2.5 PARABRACHIAL NUCLEUS
+
+TIME CONSTANTS:
+• As the interoceptive alarm broadcaster it relays signals whose cortical read-out (for example the heartbeat-evoked response) is 200 to 400 milliseconds, with hormonal ports resolving over minutes (CITED, Layer 10, The Interoceptive System).
+• The baroreflex traffic passing this level resolves under 1 second (CITED, Layer 10, The Interoceptive System).
+
+ENTRY: 2.4.2.6 TRIGEMINAL NUCLEI
+
+TIME CONSTANTS:
+• For facial discriminative touch, arrival at cortex is on the order of 15 to 25 milliseconds, the same window as the body somatosensory line (CITED, Layer 10, The Somatosensory System, touch to cortex 15 to 25 milliseconds).
+• The trigeminal first-versus-second-pain split follows the general nociceptive figures of about 0.3 second versus more than 1 second (CITED, Layer 10, The Somatosensory System).
+
+ENTRY: 2.4.2.6 THE SUPERIOR OLIVARY COMPLEX (SOC)
+
+TIME CONSTANTS:
+• Membrane roughly 0.1 to 0.3 milliseconds and glycine decay a few milliseconds, giving microsecond interaural-time resolution (CITED, Layer 8, The Jeffress Interaural-Time Comparator).
+• Interaural level comparison with an excitation-inhibition timing difference of a fraction of a millisecond, essentially instantaneous (CITED, Layer 8, The Interaural Level Subtraction Motif).
+
+ENTRY: 2.4.2.7 THE VESTIBULAR NUCLEI
+
+TIME CONSTANTS:
+• Vestibulo-ocular reflex loop 7 to 15 milliseconds; semicircular-canal signal decays over seconds; velocity storage lasts several to tens of seconds (CITED, Layer 10 The Vestibular System and Layer 8 The Vestibulo-Ocular Three-Neuron Arc).
+• Gain adaptation over minutes to days; central compensation over weeks (CITED, Layer 10, The Vestibular System).
+
+ENTRY: 2.4.2.8 THE NUCLEUS INCERTUS
+
+TIME CONSTANTS:
+• It paces and sustains hippocampal theta rhythm at roughly 4 to 10 hertz, a cycle of about 125 to 250 milliseconds (rodent) (LITERATURE, Ma and colleagues, Learn Mem 2009 / PubMed 19880588; theta cycle length CITED, Layer 8, Theta-Gamma Nesting, 125 to 250 milliseconds).
+
+ENTRY: 2.4.2.9 THE NUCLEUS PREPOSITUS HYPOGLOSSI
+
+TIME CONSTANTS:
+• As the horizontal oculomotor neural integrator it holds eye position with a network persistence of about 25 seconds intact, falling to about 2 seconds after lesion and about 0.2 seconds from orbital mechanics alone (CITED, Layer 8, The Line Attractor / The Neural Integrator).
+• Recalibration of this integrator proceeds over minutes to days (CITED, Layer 8, The Line Attractor).
+
+ENTRY: 2.4.3 THE MEDULLA
+
+TIME CONSTANTS:
+• No single figure fits the medulla; it carries the within-one-heartbeat vagal brake of the nucleus ambiguus, the roughly 3 to 5 second respiratory cycle of the pre-Botzinger complex, and the once-per-second climbing-fibre rhythm of the inferior olive (DERIVED, spanning Layer 8 The Baroreflex Arc cardiac vagal response within one cardiac cycle, Layer 8 The Central Pattern Generator respiratory cycle 3 to 5 seconds, and Layer 8 The Cerebellar Cortical Template olivary rhythm 1 to 10 hertz).
+
+ENTRY: 2.4.3.1 THE VAGAL COMPLEX: THE NUCLEUS TRACTUS SOLITARIUS (NTS) AND THE DORSAL MOTOR NUCLEUS OF THE VAGUS
+
+TIME CONSTANTS:
+• Cardiac vagal response within one cardiac cycle; central baroreflex resetting over minutes to weeks (CITED, Layer 8, The Baroreflex Arc).
+• Gut-directed receptive relaxation over seconds, with motility and secretory adjustments over minutes and hormonal state changes over minutes to hours (CITED, Layer 8, The Vago-Vagal Loop).
+
+ENTRY: 2.4.3.2 AREA POSTREMA
+
+TIME CONSTANTS:
+• As a circumventricular chemosensor lacking a normal blood-brain barrier it samples blood-borne emetic and hormonal signals over seconds to minutes rather than at synaptic speed; the humoral immune signalling it also reads rises over 1 to 3 hours (CITED for the humoral limb, Layer 11, The Sickness Behaviour State, cytokine induction 1 to 3 hours; the fast chemosensory latency itself is LITERATURE and not precisely fixed, and dose-response emetic-latency studies would settle it).
+
+ENTRY: 2.4.3.3 INFERIOR OLIVARY NUCLEUS
+
+TIME CONSTANTS:
+• Climbing-fibre complex spikes at about 1 hertz, with an olivary rhythm spanning 1 to 10 hertz, this once-per-second teaching event driving cerebellar learning (CITED, Layer 8, The Cerebellar Cortical Template and The Supervised Error-Correction Module).
+
+ENTRY: 2.4.3.4 VENTRAL RESPIRATORY GROUP AND THE PRE-BOTZINGER COMPLEX
+
+TIME CONSTANTS:
+• Respiratory cycle roughly 3 to 5 seconds at rest, with synaptic decays of a few to tens of milliseconds and respiratory long-term facilitation over minutes to hours (CITED, Layer 8, The Central Pattern Generator).
+
+ENTRY: 2.4.3.5 RETICULAR FORMATION
+
+TIME CONSTANTS:
+• As an arousal substrate its tone changes over seconds to minutes, with slower drift across circadian phase (CITED, Layer 11, The Ascending Broadcast System).
+• Its phasic startle contribution is a neural burst under 100 milliseconds (CITED, Layer 11, Phasic Arousal / The Startle Spike).
+
+ENTRY: 2.4.3.6 THE ROSTRAL VENTROLATERAL MEDULLA (RVLM)
+
+TIME CONSTANTS:
+• As the sympathetic premotor source for blood pressure it drives a vascular response over seconds, with central resetting over minutes to weeks (CITED, Layer 8, The Baroreflex Arc, sympathetic vascular response over seconds; Layer 10, The Autonomic Motor System, sympathetic build-up over seconds).
+
+ENTRY: 2.4.3.7 THE NUCLEUS AMBIGUUS
+
+TIME CONSTANTS:
+• Its cardiac vagal output acts within one cardiac cycle, a fraction of a second, the fastest limb of the baroreflex (CITED, Layer 8 The Baroreflex Arc and Layer 10 The Autonomic Motor System, vagal heart effect a fraction of a second).
+
+ENTRY: 2.4.3.8 THE PRE-BOTZINGER COMPLEX
+
+TIME CONSTANTS:
+• Respiratory rhythm roughly 3 to 5 seconds at rest, generated by this pacemaker network, with synaptic decays of a few to tens of milliseconds (CITED, Layer 8, The Central Pattern Generator; its failure is named there as the pre-Botzinger stop-breathing mode).
+
+ENTRY: 2.4.4 THE ASCENDING AROUSAL SYSTEM NUCLEI (PUC)
+
+TIME CONSTANTS:
+• Tone changes over seconds to minutes, with slower drift across circadian phase; this is the state-announcement channel rather than a fast-event carrier (CITED, Layer 11, The Ascending Broadcast System).
+
+ENTRY: 2.5 THE CEREBELLUM
+
+TIME CONSTANTS:
+• Prediction and correction over tens to hundreds of milliseconds; climbing-fibre teaching events about once per second; skill learning over trials, hours, and days (CITED, Layer 10, The Cerebellar System).
+• Loop latency 5 to 10 milliseconds with a depression eligibility window near 100 milliseconds, nuclear consolidation over weeks (CITED, Layer 8, The Cerebellar Cortical Template).
+
+ENTRY: 2.6 THE SPINAL CORD
+
+TIME CONSTANTS:
+• Monosynaptic stretch reflex: motoneuron membrane about 5 to 10 milliseconds, synaptic decay about 2 milliseconds, twitch tens to about 100 milliseconds (CITED, Layer 8, The Monosynaptic Stretch Reflex Arc).
+• Polysynaptic withdrawal with nociceptive wind-up building over seconds of repeated input, and central sensitisation over minutes to months (CITED, Layer 8, The Polysynaptic Withdrawal Arc, and Layer 10 Addendum, The Nociceptive System).
+
+ENTRY: 2.7 THE PERIPHERAL GANGLIA
+
+TIME CONSTANTS:
+• Fast nicotinic transmission in milliseconds; slow muscarinic potential over seconds; peptidergic late-slow potential over tens of seconds to minutes (CITED, Layer 8, The Sympathetic Ganglion Divergence Motif).
+
+ENTRY: 2.7.1 THE PREVERTEBRAL GANGLION INTEGRATIVE CLUSTER (PUC)
+
+TIME CONSTANTS:
+• Fast nicotinic relay in milliseconds through to peptidergic sustain over tens of seconds to minutes, the slow tail letting these ganglia integrate rather than merely relay (CITED, Layer 8, The Sympathetic Ganglion Divergence Motif).
+• The enteric reflex traffic they coordinate with resolves over seconds (CITED, Layer 8, The Enteric Peristaltic Circuit, smooth-muscle contractions over seconds).
+
+ENTRY: 2.8 THE ENTERIC NERVOUS SYSTEM
+
+TIME CONSTANTS:
+• Smooth-muscle contractions over seconds; intrinsic afferent after-depolarisation over seconds; program switching over minutes (CITED, Layer 8, The Enteric Peristaltic Circuit).
+• On the gut-brain channel, reflex motility is seconds, hormonal appetite signals minutes, and microbiome change days to weeks (CITED, Layer 10, The Gut-Brain Axis).
+
+ENTRY: 2.9 THE ENDOCRINE GLANDS AS LAYER 9 STRUCTURES
+
+TIME CONSTANTS:
+• As a class the glands have no one constant; hormonal responses run minutes to hours, the circadian envelope is 24 hours, and set-point remodelling takes days to years (DERIVED, spanning Layer 10 The HPA Axis fast pituitary feedback seconds to minutes and set-point remodelling days to years, and Layer 10 The HPT Axis loop response over days).
+• The releasing-hormone pulses that drive them are seconds to minutes, trophic responses minutes, peripheral hormone responses minutes to hours (CITED, Layer 8, The Hypophysiotropic Cascade Amplifier).
+
+ENTRY: 2.10 THE LARGE-SCALE COGNITIVE NETWORKS (LAYER 10)
+
+TIME CONSTANTS:
+• Across the ten networks the characteristic dwell runs from tens of milliseconds (sensorimotor and visual) through hundreds of milliseconds (attention and salience) to seconds and minutes (default mode, control, cingulo-opercular) (DERIVED, spanning the network entries below, all CITED to Layer 10 chapters 27, 28, 22, 23, 21, 24 and 25).
+
+ENTRY: 2.10.1 THE DEFAULT MODE NETWORK (DMN)
+
+TIME CONSTANTS:
+• Seconds-scale episodes of internally generated content (CITED, Layer 10, The Default Mode Network).
+
+ENTRY: 2.10.2 THE SALIENCE NETWORK / VENTRAL ATTENTION NETWORK (SN / VAN)
+
+TIME CONSTANTS:
+• Hundreds of milliseconds to detect and switch (CITED, Layer 10, The Salience / Ventral Attention Network).
+
+ENTRY: 2.10.3 THE DORSAL ATTENTION NETWORK (DAN)
+
+TIME CONSTANTS:
+• Hundreds of milliseconds to orient the spotlight (CITED, Layer 10, The Dorsal Attention Network).
+
+ENTRY: 2.10.4 THE FRONTOPARIETAL CONTROL NETWORK / CENTRAL EXECUTIVE NETWORK (FPN / CEN)
+
+TIME CONSTANTS:
+• Seconds-scale control operations (CITED, Layer 10, The Frontoparietal Control Network).
+
+ENTRY: 2.10.5 THE CINGULO-OPERCULAR NETWORK (CON)
+
+TIME CONSTANTS:
+• Minutes-scale sustained task-set maintenance (CITED, Layer 10, The Cingulo-Opercular Network).
+
+ENTRY: 2.10.6 THE LANGUAGE NETWORK
+
+TIME CONSTANTS:
+• Hundreds of milliseconds per word (CITED, Layer 10, The Language Network).
+
+ENTRY: 2.10.7 THE SENSORIMOTOR NETWORK (SMN)
+
+TIME CONSTANTS:
+• Tens of milliseconds in its perception-action loop (CITED, Layer 10, The Sensorimotor Network).
+
+ENTRY: 2.10.8 THE VISUAL NETWORK
+
+TIME CONSTANTS:
+• Tens of milliseconds per stage of the occipital hierarchy (CITED, Layer 10, The Visual Network).
+
+ENTRY: 2.10.9 THE AUDITORY NETWORK
+
+TIME CONSTANTS:
+• Milliseconds to tens of milliseconds (CITED, Layer 10, The Auditory Network).
+
+ENTRY: 2.10.10 THE LIMBIC NETWORK
+
+TIME CONSTANTS:
+• Seconds and slower valuation (CITED, Layer 10, The Limbic Network).
+
+ENTRY: 2.11 THE COGNITIVE SYSTEMS AND PATHWAYS (LAYER 10)
+
+TIME CONSTANTS:
+• As a group these span the 5 to 8 millisecond hyperdirect brake through the tens-to-hundreds of milliseconds of action selection to the days-to-months of habit consolidation (DERIVED, spanning Layer 8 The Basal Ganglia Selection Motif hyperdirect latency 5 to 8 milliseconds, and Layer 10 The Cortico-Basal-Ganglia-Thalamo-Cortical Loop System habit formation over days to months).
+
+ENTRY: 2.11.1 THE CORTICO-BASAL-GANGLIA-THALAMO-CORTICAL LOOPS (CBGTC)
+
+TIME CONSTANTS:
+• Hyperdirect brake about 10 milliseconds; full selection tens to hundreds of milliseconds; dopamine teaching bursts under a second; habit formation over many repetitions across days to months (CITED, Layer 10, The Cortico-Basal-Ganglia-Thalamo-Cortical Loop System).
+
+ENTRY: 2.11.2 THE DIRECT, INDIRECT, AND HYPERDIRECT PATHWAYS
+
+TIME CONSTANTS:
+• Hyperdirect latency 5 to 8 milliseconds; direct-path release 15 to 20 milliseconds; indirect sculpting 25 to 30 milliseconds; dopamine burst 100 to 200 milliseconds; eligibility trace about 1 second; habit consolidation weeks (CITED, Layer 8, The Basal Ganglia Selection Motif).
+
+ENTRY: 2.11.3 THE PAPEZ CIRCUIT
+
+TIME CONSTANTS:
+• As the hippocampal-diencephalic memory loop it encodes in under 1 second, replays in ripples of 80 to 250 milliseconds, and consolidates over months to years (CITED, Layer 10, The Episodic Memory System).
+• Its head-direction limb resets to a landmark within a few hundred milliseconds and drifts a few degrees per minute in darkness (CITED, Layer 8, The Ring Attractor).
+
+ENTRY: 2.11.4 THE TRIPARTITE SYNAPSE
+
+TIME CONSTANTS:
+• Local astrocytic calcium over hundreds of milliseconds; a global calcium surge over seconds; gliotransmitter effect seconds to tens of seconds; the plasticity consequence minutes to hours (CITED, Layer 8, The Tripartite Synaptic Island).
+
+ENTRY: 2.11.5 THE GLIA AS COGNITIVE PARTICIPANTS (ASTROCYTES, MICROGLIA, OLIGODENDROCYTES)
+
+TIME CONSTANTS:
+• Astrocytes: potassium uptake tens of milliseconds, redistribution hundreds of milliseconds to seconds, calcium waves travelling 10 to 20 micrometres per second (CITED, Layer 8, The Astrocyte Syncytium).
+• Microglia: contact with a single synapse minutes, full parenchymal survey hours, complement-tagged pruning episodes days to weeks, and human cortical pruning across years (CITED, Layer 8, The Microglial Pruning Loop).
+• Oligodendrocytes: the corticospinal myelination they build matures over the first two years and beyond, and activity-driven myelin change tracks days to weeks of practice (CITED, Layer 10, The Corticospinal System, myelination maturation over the first two years and beyond; map reorganisation over days to weeks).

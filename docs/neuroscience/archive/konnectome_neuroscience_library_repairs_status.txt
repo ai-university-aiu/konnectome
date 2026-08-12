@@ -1,0 +1,116 @@
+NEUROSCIENCE LIBRARY REPAIRS - STATUS AND HONEST ACCOUNT
+
+Date: 2026-08-12. Branch: feature/neuroscience-library-gap-repairs. Commits ce90847 and f25cce3, pushed.
+
+
+THE HEADLINE, WHICH IS NOT GOOD NEWS
+
+I asked for eight documents to be written in parallel. One finished, four were cut off part-way, and three never started.
+
+The cause was not a decision about the content. It was an account-level service limit - "you have hit your weekly limit, resets 9am America/Los_Angeles" - which terminated roughly twenty processes within a few minutes of each other.
+
+I have not restarted them, and the reason is in the next section.
+
+
+WHAT IS FINISHED AND COMMITTED
+
+ONE. LAYER 12, THE ACCEPTANCE-TEST CATALOGUE. Complete.
+
+Three faculties added: spatial navigation and the cognitive map, metacognition and confidence, and imagination, prospection and mental simulation.
+
+The count was repaired from fourteen to seventeen everywhere the document stated it, which was necessary the moment the faculties were added, since a specification that miscounts its own suites is one a build can pass falsely.
+
+Faculty 16 was written first and most carefully. Its suite tests CALIBRATION rather than the production of a confidence number, because a system that reports high confidence uniformly would pass a badly designed metacognition test. Its own text states that this is the faculty by which a system declines to act, and that its absence is a safety property rather than a capability gap.
+
+Not one word of the original fourteen faculties was reworded or reordered. The file went from 147 lines to 256.
+
+TWO. THE EVIDENCE FOLD-IN. Complete.
+
+This is the first corpus update run this build has ever performed.
+
+Evidence record 01 had recorded a corpus gap when it was written: the corpus presents the Gratton effect as a successful prediction of conflict monitoring theory, and nowhere tells the reader that the theory's principal empirical evidence is disputed at the level of the paradigm itself.
+
+A new section 52.2.5 was added immediately beneath 52.2.4 of the cognition manuscript, carrying Schmidt 2019 with its three confounds - feature repetition, contingency learning and temporal learning - its verdict, and an explicit statement of what the critique does NOT settle.
+
+A matching line was added to the outline, so the outline and manuscript still agree. That agreement is a verified structural property of the pair and an addition must not break it.
+
+NOTHING WAS PROMOTED FROM EVIDENCE RECORD 02, and that is the more interesting half. It records, in as many words, that it found no corpus gap. A run that promoted from it anyway would be manufacturing a gap in order to have something to do.
+
+The evidence record was ANNOTATED rather than retired. It remains the evidence the added block rests on, and a reader of 52.2.5 who wants to know how that block was arrived at is sent back to it.
+
+Note the order, because it is the rule the evidence directory exists to enforce: the search came first, it was written into docs/evidence/ before anything entered the corpus, and only then was it promoted. A search result written straight into the corpus would have worn the north star's authority for every session afterwards.
+
+THREE. THE EDIT LOG. Opened at docs/neuroscience/EDIT_LOG.txt .
+
+It records every edit made under the grant, with its date, its reason, and what was deliberately not changed. It is append-only.
+
+It also states the three rules I kept despite the grant: additive only unless the edit is a correctness repair, provenance on the face of every added block, and no invented values.
+
+The reason a log is the right price for the authority is that what the read-only rule was protecting against was never editing as such. It was the corpus being quietly changed with no way for a later reader to tell the corpus's claims from the build's. A log does not prevent that. It makes it visible, which is the only protection this project has ever really trusted.
+
+
+WHAT IS PART-WRITTEN, AND WHAT I DID WITH IT
+
+Four files exist on disk as fragments:
+
+• THE_INTERFACE_EXCEPTION_CATALOGUE.txt - front matter and opening chapters, about 127 lines of an intended 700 to 1,100.
+
+• LAYER_01_02_03_SUBSTRATE_OUTLINE.txt - outline drafted, about 160 lines. Its companion manuscript does not exist.
+
+• LAYER_06_09_DEVELOPMENT_AND_DISEASE_COMPANION.txt - front matter only, about 147 lines. Essentially none of the entries written.
+
+• THE_ONTOGENETIC_AXIS.txt - parts one and two, about 595 lines. Part three, the substantial half, largely absent.
+
+EACH NOW CARRIES A HARD BANNER at the very top: that it is an incomplete draft, that it must not be read as a source, what it was meant to be, what is actually present, and that nothing in it is citable or verified until a session that finished it removes the banner.
+
+They are bannered rather than deleted because the work is real and re-doing it from nothing is waste, and because deleting them would hide the interruption.
+
+They are bannered rather than left alone because a partial file in that directory is the most dangerous object this project can produce. It carries a provenance block announcing that it closes a gap, it is written in the corpus's own confident voice, and a later session skimming it would take it for a finished source and design from it.
+
+
+WHY I DID NOT RESTART THE AGENTS
+
+The failure is an account-level weekly limit, not a transient error and not anything specific to those processes. Roughly twenty of them returned the identical message within minutes.
+
+Restarting eight document-writing agents now would produce eight identical failures and would consume whatever budget remains, including the budget needed to finish the work properly afterwards.
+
+So I stopped, made the partial state safe, committed what was genuinely finished, and wrote the resumption plan down instead.
+
+That is a judgement call and it is stated here rather than made silently. If the intent was to have me retry regardless, say so and I will.
+
+
+THE RESUMPTION PLAN, ALREADY IN THE EDIT LOG
+
+Four to finish, in value order:
+
+1. The Interface Exception Catalogue. Highest value of the four, because the seven Layer-Skipping Channels are the only first-class construct class in the corpus with no publish-and-subscribe interface, and because four of the seven terminate in a layer that has no catalogue - a fact the document must state honestly rather than paper over by inventing an endpoint.
+
+2. The Layers 1 to 3 substrate outline and its missing manuscript.
+
+3. The ontogenetic axis. It must remain a PROPOSAL: the framework question belongs to the corpus's author and to you.
+
+4. The Layer 6 and 9 development and disease companion. The largest by far, and the one that most needs its scope stated honestly on its own face, since 509 entries written thinly would be worse than 100 written properly plus a declared remainder.
+
+Four never started and still owed:
+
+• A Layer 9 time constants companion, every value marked CITED, DERIVED with its working shown, LITERATURE, or REFUSED ALOUD.
+
+• A Layer 9 peripheral and efferent expansion with a roster of the twelve cranial nerves, which the corpus has nowhere.
+
+• A Layer 10 addendum supplying systems 45 to 48: cerebrovascular, clearance, neuroimmune and nociceptive. The nociceptive one discharges a promise the corpus made and did not keep.
+
+• A cross-walk from the cell catalogue to the public transcriptomic censuses.
+
+
+ONE THING WORTH SALVAGING FROM THE WRECKAGE
+
+Two research agents did complete before the limit hit, and their output is good: a fully sourced developmental timetable of the human nervous system, and a fully sourced briefing on critical and sensitive periods.
+
+Both are exactly the material part three of the ontogenetic axis needs, and both flag their own weak points honestly - that the "brain matures at 25" claim is an artefact of cohort age limits rather than a finding, that the Hartshorne 17.4-year figure is contested by a 2022 reanalysis, that the fluoxetine critical-period reopening result failed to translate to humans in two controlled trials, and that the psychedelic critical-period work is entirely rodent.
+
+That research is not lost. It is in the session record and can be written straight into the document when the limit resets.
+
+
+VERIFICATION
+
+All six gates at zero violations. Outline and manuscript agree on the new section. No em-dashes and no markdown characters in any file I touched.
