@@ -7,7 +7,7 @@ WHY THIS FILE IS NOT CALLED A CONTEXT HAND-OFF, WHICH MATTERS MORE THAN IT SOUND
 
 It is deliberately NOT named with the string Context_Hand-Off, and the reason is mechanical rather than stylistic.
 
-The Twenty-Second Commandment's corpus update run fires every tenth hand-off, and the cadence is evaluated by counting files: find docs -name '*Context_Hand-Off*.txt' | wc -l .
+The Twenty-Second Commandment's corpus update run fires every tenth hand-off, and the cadence is evaluated by counting, under docs, every file whose name contains the string Context_Hand-Off and ends in .txt . The Commandment states the exact find command; it is paraphrased here rather than quoted because the glob character it uses is a markdown character this corpus's house style forbids, which is itself a small illustration of the point below.
 
 A file in this directory carrying that string in its name would be counted by that command and would silently shift the trigger by one, forever. The count is currently forty-two, and the next run is due at fifty.
 
