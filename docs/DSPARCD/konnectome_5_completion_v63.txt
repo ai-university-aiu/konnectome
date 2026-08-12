@@ -26,7 +26,7 @@ For that claim to be checkable rather than merely asserted, the mapping from eac
 
 AC-1 (every named construct present with its specification block) is covered by a registry-completeness unit test that iterates the constructs of Chapters 2, 3, and 7 (regions, interfaces, and molecules) and asserts each is loaded.
 
-AC-10 and AC-11 (the large-scale networks of Section 2.10 and the cognitive systems, pathways, and glia of Section 2.11) are covered by an extension of the same registry-completeness test, which additionally iterates every named network as a grouping over its members, every named system and pathway as a subgraph, and every glial participant, and asserts each is present with its couplings, its mode flags (directed or broadcast), and its modulatory function.
+AC-10 and AC-11 (the large-scale networks of Section 2.10, Layer 10 chapters 21 through 30, and the cognitive systems, pathways, and glia of Section 2.11, Layer 10 Chapter 9) are covered by an extension of the same registry-completeness test, which additionally iterates every named network as a grouping over its members, every named system and pathway as a subgraph, and every glial participant, and asserts each is present with its couplings, its mode flags (directed or broadcast), and its modulatory function.
 
 AC-2 (one tick updates every construct exactly once) is covered by a scheduler unit test that counts updates per tick.
 
@@ -52,7 +52,7 @@ A5.2 THE DEFINITION OF DONE
 
 The System is DONE, for version one, when all of the following are true.
 
-Every named construct of Chapters 2, 3, and 7 is present and running, and every large-scale network, cognitive system and pathway, and glial participant of Sections 2.10 and 2.11 is present as a named grouping, subgraph, or modulator.
+Every named construct of Chapters 2, 3, and 7 is present and running, and every large-scale network, cognitive system and pathway, and glial participant of Sections 2.10 and 2.11 (Layer 10, chapters 21 through 30 and Chapter 9) is present as a named grouping, subgraph, or modulator.
 
 Every acceptance criterion of Appendix 1 passes as an automated test.
 

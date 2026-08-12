@@ -66,9 +66,9 @@ FR-13, INSPECTABILITY. At any tick, the System must be able to report the full s
 
 FR-14, PERTURBATION AND LESION. The System must permit any construct to be disabled, any interface to be cut, and any neuromodulator to be raised or lowered, so that the System can reproduce the lesion and pharmacological experiments that are the evidential basis of the science. The System that cannot be given a simulated Parkinson's disease by depleting dopamine has not faithfully implemented this book.
 
-FR-15, THE LARGE-SCALE NETWORKS. The System must represent the large-scale cognitive networks of Chapter 2, Section 2.10 (the default mode, salience, dorsal attention, frontoparietal control, cingulo-opercular, language, sensorimotor, visual, auditory, and limbic networks) as named groupings over the regions of the registry, each carrying its member nodes, its subscribe-and-publish couplings, and its functional signature, including the characteristic anticorrelations (for example, the default mode network deactivating as the dorsal attention and frontoparietal networks engage).
+FR-15, THE LARGE-SCALE NETWORKS. The System must represent the large-scale cognitive networks of Chapter 2, Section 2.10 (re-addressed by the corpus as Layer 10, chapters 21 through 30) (the default mode, salience, dorsal attention, frontoparietal control, cingulo-opercular, language, sensorimotor, visual, auditory, and limbic networks) as named groupings over the regions of the registry, each carrying its member nodes, its subscribe-and-publish couplings, and its functional signature, including the characteristic anticorrelations (for example, the default mode network deactivating as the dorsal attention and frontoparietal networks engage).
 
-FR-16, THE COGNITIVE SYSTEMS AND PATHWAYS. The System must represent the cognitive systems and pathways of Chapter 2, Section 2.11, as named subgraphs and loops over the connection graph: the cortico-basal-ganglia-thalamo-cortical loops, the direct, indirect, and hyperdirect pathways, and the Papez circuit; and it must represent the glia of Section 2.11.5 (astrocytes, microglia, and oligodendrocytes) and the tripartite synapse as modulatory participants that gate plasticity and connectivity rather than as signal-carrying regions.
+FR-16, THE COGNITIVE SYSTEMS AND PATHWAYS. The System must represent the cognitive systems and pathways of Chapter 2, Section 2.11 (re-addressed by the corpus as Layer 10, Chapter 9), as named subgraphs and loops over the connection graph: the cortico-basal-ganglia-thalamo-cortical loops, the direct, indirect, and hyperdirect pathways, and the Papez circuit; and it must represent the glia of Section 2.11.5 (astrocytes, microglia, and oligodendrocytes) and the tripartite synapse as modulatory participants that gate plasticity and connectivity rather than as signal-carrying regions.
 
 FR-17, THE TWO COMMUNICATION PRIMITIVES. The System must distinguish the two messaging primitives established in Chapters 3 and 7: a DIRECTED channel (send and receive) for a point-to-point interface, whose publisher is wired to a single subscriber; and a BROADCAST topic (publish and subscribe) for a volume-transmission interface and for every neuromodulatory and hormonal field, whose publisher addresses no one and whose subscribers are defined by the receptor they carry. A construct's inputs are what it subscribes to; its outputs are what it publishes.
 
@@ -172,9 +172,9 @@ AC-8: a full run is exactly reproducible from its seed.
 
 AC-9: the System runs at the regional grain on a personal computer within a stated time budget per thousand ticks.
 
-AC-10: every large-scale network of Chapter 2, Section 2.10, is present in the registry as a named grouping over its member regions, with its couplings and its functional signature.
+AC-10: every large-scale network of Chapter 2, Section 2.10 (Layer 10, chapters 21 through 30), is present in the registry as a named grouping over its member regions, with its couplings and its functional signature.
 
-AC-11: every cognitive system and pathway of Chapter 2, Section 2.11, is present as a named subgraph or loop, the glia are present as modulatory participants, and each interface and field is marked as a directed (send-and-receive) channel or a broadcast (publish-and-subscribe) topic.
+AC-11: every cognitive system and pathway of Chapter 2, Section 2.11 (Layer 10, Chapter 9), is present as a named subgraph or loop, the glia are present as modulatory participants, and each interface and field is marked as a directed (send-and-receive) channel or a broadcast (publish-and-subscribe) topic.
 
 A1.8 REFLECTION
 
