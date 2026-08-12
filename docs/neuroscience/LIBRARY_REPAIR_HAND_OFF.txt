@@ -18,7 +18,7 @@ THE GENERAL RULE THIS ILLUSTRATES, AND IT IS WORTH CARRYING: in a repository whe
 
 WHAT HAPPENED IN THIS SESSION, IN ONE PARAGRAPH
 
-The owner granted full edit authority over this directory, which had been read-only source for the whole life of the project, and asked for a gap analysis to be implemented. Twelve gaps had been identified and verified by grep. Work began on eight documents at once, was cut off part-way by an account-level service limit, and resumed after the limit reset. Four documents are finished. Two are part-written and carry banners. Four were never started. Every edit is recorded in EDIT_LOG.txt in this directory, which is the authoritative record and should be read before this file.
+The owner granted full edit authority over this directory, which had been read-only source for the whole life of the project, and asked for a gap analysis to be implemented. Twelve gaps had been identified and verified by grep. Work began on eight documents at once, was cut off part-way by an account-level service limit, and resumed after the limit reset. Six documents are finished. One is part-written and carries a banner. Three were never started. Every edit is recorded in EDIT_LOG.txt in this directory, which is the authoritative record and should be read before this file.
 
 
 THE STATE OF EVERY FILE THIS SESSION TOUCHED
@@ -33,12 +33,11 @@ FINISHED, NO BANNER, SAFE TO READ AND CITE:
 
 • LAYER_10_SYSTEMS_ADDENDUM_45_TO_48.txt - 1,730 lines. New. Supplies systems 45 to 48: cerebrovascular, clearance, neuroimmune and nociceptive. Entry 48 discharges a promise the corpus made and did not keep - its own Chapter 3 states that pain's affective branch is "given its own address", and no such address existed among the forty-four. Its CHAIN AUDIT names five honest gaps in the corpus's own parts roster rather than inventing entries to fill them, the real one being that no Layer 6 entry exists for the meningeal lymphatic endothelial cell. It reports the glymphatic dispute rather than settling it, and its code sample prints the majority and contested figures side by side and refuses to average them.
 
+• LAYER_01_02_03_SUBSTRATE_MANUSCRIPT.txt and LAYER_01_02_03_SUBSTRATE_OUTLINE.txt - 4,949 lines, 22 chapters. New. Fills the Layers 1, 2 and 3 catalogue gap, which had no document of any kind while Layers 6 through 11 each had four. Scoped in the Layer 4 and 5 manner and says so on its face: deliberately NOT a full catalogue of three layers of physics and chemistry, but the dossier of the entries that are cognitively load-bearing.
+
 • THE_NEUROSCIENCE_OF_COGNITION_MANUSCRIPT.txt and its OUTLINE - edited. A new section 52.2.5 promoted from evidence record 01, carrying the confound critique of the congruency sequence effect. The outline gained a matching line, because the outline and manuscript agreeing is a verified structural property of that pair and must not be broken by an addition.
 
 PART-WRITTEN, BANNERED, NOT SAFE TO CITE:
-
-• LAYER_01_02_03_SUBSTRATE_MANUSCRIPT.txt - 3,786 lines, 17 chapters written of about 22 in its own outline. Layers 1 and 2 are complete; the Layer 3 chapters are partly written. Its companion LAYER_01_02_03_SUBSTRATE_OUTLINE.txt also still carries a banner.
-  REMOVAL TEST: the outline and the manuscript agree chapter for chapter.
 
 • LAYER_06_09_DEVELOPMENT_AND_DISEASE_COMPANION.txt - front matter only. Essentially nothing written.
 
@@ -58,15 +57,13 @@ WHY A PARTIAL FILE HERE IS MORE DANGEROUS THAN A MISSING ONE. It carries a prove
 
 WHAT IS STILL OWED, IN THE ORDER I WOULD DO IT
 
-1. THE REMAINING LAYER 3 CHAPTERS of the substrate manuscript, then remove both banners on that pair.
+1. A LAYER 9 TIME CONSTANTS COMPANION. The guiding book carries ZERO time constants across 123 regional entries, while Layers 7, 8, 10 and 11 carry one on every entry. Method: every value marked CITED, DERIVED with its working shown, LITERATURE, or REFUSED ALOUD. A document that manages to state a timescale for all 123 entries is a document that invented some, and refusing thirty honestly is a better document than inventing five.
 
-2. A LAYER 9 TIME CONSTANTS COMPANION. The guiding book carries ZERO time constants across 123 regional entries, while Layers 7, 8, 10 and 11 carry one on every entry. Method: every value marked CITED, DERIVED with its working shown, LITERATURE, or REFUSED ALOUD. A document that manages to state a timescale for all 123 entries is a document that invented some, and refusing thirty honestly is a better document than inventing five.
+2. A LAYER 9 PERIPHERAL AND EFFERENT EXPANSION, with a roster of the twelve cranial nerves, which this corpus has nowhere. Measured disproportion: cortex 1,204 lines, spinal cord 32, enteric nervous system 16.
 
-3. A LAYER 9 PERIPHERAL AND EFFERENT EXPANSION, with a roster of the twelve cranial nerves, which this corpus has nowhere. Measured disproportion: cortex 1,204 lines, spinal cord 32, enteric nervous system 16.
+3. THE LAYER 6 AND 9 DEVELOPMENT AND DISEASE COMPANION. The largest item at 509 entries, and the one that most needs its scope stated honestly on its own face. Cover the 85 non-neuronal cells and the 123 regions individually; cover the 301 neurons BY LINEAGE CLASS with a keyed index, which is a complete treatment at a coarser grain rather than 301 thin ones.
 
-4. THE LAYER 6 AND 9 DEVELOPMENT AND DISEASE COMPANION. The largest item at 509 entries, and the one that most needs its scope stated honestly on its own face. Cover the 85 non-neuronal cells and the 123 regions individually; cover the 301 neurons BY LINEAGE CLASS with a keyed index, which is a complete treatment at a coarser grain rather than 301 thin ones.
-
-5. A CROSS-WALK from the cell catalogue to the public transcriptomic censuses.
+4. A CROSS-WALK from the cell catalogue to the public transcriptomic censuses.
 
 
 THE RESEARCH THAT EXISTS AND IS NOT ON DISK - READ THIS BEFORE RE-RUNNING ANYTHING

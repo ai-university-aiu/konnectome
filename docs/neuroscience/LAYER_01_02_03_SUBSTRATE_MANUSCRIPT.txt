@@ -1,19 +1,3 @@
-THIS DOCUMENT IS AN INCOMPLETE DRAFT AND MUST NOT BE READ AS A SOURCE.
-
-STOP HERE IF YOU ARE LOADING STATE OR DESIGNING A SLICE.
-
-Writing was in progress when this checkpoint was committed. The chapters that ARE here are finished, researched and literature-checked; the ones that are not here are simply not written yet.
-
-WHAT IS PRESENT: the Layer 1 and Layer 2 chapters, numbered 1 through 11, from the photon to iodine. Each carries its full aspect-header set, a SYSTEMS INTERFACE block and a TIME CONSTANTS block.
-
-WHAT IS ABSENT: the Layer 3 chapters, numbered 12 onward in the companion outline - water and the hydrophobic effect, the individual ions, the proton, adenosine triphosphate, the small-molecule neurotransmitters and the gasotransmitters. The research for several of them is complete and is recorded in the session record; the prose is not written.
-
-WHY THIS BANNER EXISTS RATHER THAN THE FILE BEING WITHHELD. A partial document in this directory is the most dangerous object this project can produce: it carries a provenance block announcing that it closes a gap, it is written in the corpus's own confident voice, and a later session skimming it would take it for a finished source. The eleven chapters below are good and are worth keeping; the file as a whole is not yet a catalogue of three layers, and a reader must be told which of those two things they are holding.
-
-THE BANNER COMES OFF WHEN, AND ONLY WHEN, THE OUTLINE AND THIS MANUSCRIPT AGREE CHAPTER FOR CHAPTER. That is the completion test for this pair, and it is checkable in one command rather than by judgement.
-
-================================================================================
-
 LAYERS 1, 2 AND 3, THE SUBATOMIC, ATOMIC, AND IONIC AND SIMPLE MOLECULAR LAYERS: THE COGNITIVELY LOAD-BEARING SUBSTRATE
 
 The Physical and Chemical Entities That Cognition Cannot Be Built Without
@@ -3784,3 +3768,1166 @@ for label, ph in [("arterial blood", 7.40), ("neuronal cytosol", 7.10),
 WHAT MAKES IT UNMISTAKABLE:
 
 The only ion in this dossier that is never actually free, moves by hopping rather than travelling, is present at nanomolar concentration, and nonetheless loads every neurotransmitter vesicle in the brain and decides when you take your next breath.
+
+
+CHAPTER 18. ADENOSINE TRIPHOSPHATE, THE ENERGY CURRENCY (The Denominated Bill) (COG)
+
+Every energetic transaction in the nervous system is priced in one molecule, and the price is not the one printed in the textbook.
+
+The standard free energy of hydrolysis quoted in every biochemistry course is a laboratory condition that no living cell is ever in, and the real number inside a neuron is roughly twice as large, which matters whenever anyone tries to compute how much a thought costs.
+
+WHAT IT IS AND WHAT IT DOES:
+
+Adenosine triphosphate, abbreviated ATP, is a nucleotide carrying three phosphate groups in series, and the energy is released by hydrolysing the terminal one to give adenosine diphosphate and inorganic phosphate.
+
+What it does is pay: for the sodium-potassium pump of Chapter 13, for the calcium pumps of Chapter 15, for the vesicular proton pump of Chapter 17, for every kinase of Chapter 5, and for the synthesis of everything.
+
+It also does something the textbooks mention late: it is released into the extracellular space and acts as a transmitter in its own right on the P2X and P2Y receptor families, and its breakdown product adenosine is the accumulating signal of sleep pressure.
+
+WHERE IT LIVES:
+
+Intracellular ATP is roughly 1 to 10 millimolar, with neurons commonly cited around 2 to 4 millimolar, while adenosine diphosphate is much lower at roughly 10 to 50 micromolar and inorganic phosphate is roughly 1 to 5 millimolar.
+
+It is made almost entirely in mitochondria under normal conditions and is not stored in any meaningful quantity, so the brain runs on continuous production with a buffer measured in seconds.
+
+PHYSICAL AND CHEMICAL PROPERTIES:
+
+The standard free energy of hydrolysis at pH 7 and one molar concentrations is about minus 30.5 kilojoules per mole, and this is the number in the textbooks.
+
+The actual free energy available inside a living cell is about minus 50 to minus 60 kilojoules per mole, because the ratio of ATP to the product of adenosine diphosphate and phosphate is held enormously far from equilibrium, and it is this in-cell value that must be used in any energy calculation.
+
+The corpus states this explicitly because using the standard value understates the cost of every process in the brain by a factor of about two, and that error propagates into every estimate of how many operations a brain performs per joule.
+
+The synthase that makes it is driven by the proton gradient of Chapter 2, and the stoichiometry is set by the size of its rotating ring: the human enzyme has an eight-membered ring and makes three molecules per revolution, so it costs about 2.7 protons per molecule at the synthase, rising to roughly 3.7 to 4 protons per molecule delivered to the cytosol once the transport of the product out of the mitochondrion is included.
+
+The brain is about 2 percent of body mass and consumes about 20 percent of the body's resting oxygen and energy, which is the most quoted number in the whole of neuroenergetics and is well established.
+
+Attwell and Laughlin, 2001, apportioned grey matter signalling energy as roughly 47 percent to action potentials, 34 percent to postsynaptic glutamate receptor currents, 13 percent to the resting potential and 3 percent to glutamate recycling; Howarth, Gleeson and Attwell, 2012, revised this using measured sodium influx during action potentials, which is lower than the original theoretical estimate, so the action potential share falls and the synaptic share rises, and their treatment puts non-signalling housekeeping at around a quarter of total cortical energy use.
+
+The corpus records both allocations and states that the direction of the revision is the useful part: the dominant cost of cognition is synaptic, not axonal.
+
+MODES AND MODE TRANSITIONS:
+
+• THE MODE REGISTER.
+
+◦ replete - The Paid Account - ATP near 2 to 4 millimolar, adenosine diphosphate low, the phosphorylation potential high, all pumps running.
+
+◦ demand_matched - The Working Account - production raised to match activity by increases in blood flow and mitochondrial activity, with ATP concentration itself barely changing.
+
+◦ glycolytic_bridging - The Overdraft - anaerobic glycolysis supplying ATP transiently at low yield with lactate as the product.
+
+◦ depleted - The Called Account - ATP falling, pumps failing, gradients collapsing, which is the state of Chapter 13's collapsed mode.
+
+◦ extracellular_signalling - The Spent Coin as Message - ATP released into the extracellular space acting on purinergic receptors.
+
+◦ adenosine_accumulated - The Debt Signal - adenosine building through waking and acting on A1 and A2A receptors to promote sleep.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ replete: in-cell free energy about minus 50 to minus 60 kilojoules per mole (well established, and distinct from the standard minus 30.5).
+
+◦ demand_matched: ATP concentration is a poor indicator of demand because it is buffered; oxygen consumption and blood flow are the observable variables (well established).
+
+◦ glycolytic_bridging: 2 molecules of ATP per glucose against about 30 to 32 by full oxidation, so the overdraft is expensive in substrate (well established, with the exact aerobic yield depending on the disputed proton stoichiometries of Chapter 2).
+
+◦ depleted: pump failure within seconds to a minute of complete supply failure; anoxic depolarisation at 1 to 3 minutes (well established).
+
+◦ extracellular_signalling: P2X receptors are fast ionotropic channels and P2Y receptors are slower G-protein-coupled receptors; P2X7 requires high concentrations and is principally a damage signal on microglia (well established).
+
+◦ adenosine_accumulated: basal forebrain extracellular adenosine rises through prolonged waking and falls in sleep, reported by Porkka-Heiskanen and colleagues, 1997, in Science; the corpus grades adenosine as a genuine contributor to sleep pressure but not as the sole homeostat, since sleep pressure persists in the face of manipulations that should abolish it if adenosine were the whole story (moderate confidence).
+
+• THE TRANSITION TABLE.
+
+◦ replete to demand_matched: neural activity raising demand, met by neurovascular coupling; 1 to 6 seconds, which is the haemodynamic response of Chapter 22.
+
+◦ demand_matched to glycolytic_bridging: demand exceeding oxygen delivery; seconds.
+
+◦ Any mode to depleted: circulatory arrest or severe hypoglycaemia; seconds to minutes.
+
+◦ replete to extracellular_signalling: vesicular co-release, or release through channels, or leakage from damaged cells; milliseconds to seconds.
+
+◦ extracellular_signalling to adenosine_accumulated: sequential hydrolysis by the ectonucleotidases CD39 and CD73; seconds to minutes, and over a waking day this becomes the sleep pressure signal.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: a rising adenosine monophosphate to ATP ratio, which is what the cellular energy sensor AMP-activated protein kinase reads.
+
+◦ Warning condition: lactate rising in tissue or in the cerebrospinal fluid.
+
+◦ Watchdog: AMP-activated protein kinase, creatine phosphate as a small fast buffer, neurovascular coupling, and adenosine itself, which both dilates vessels and suppresses activity, making it an elegant negative feedback on demand.
+
+DEVELOPMENT AND ASSEMBLY:
+
+The developing brain's energy use per unit mass peaks in mid-childhood, with positron emission tomography studies showing glucose metabolism substantially above adult levels between roughly age four and ten, a finding usually attributed to the cost of synaptic overproduction before pruning.
+
+Mitochondrial biogenesis and positioning at synapses is an activity-dependent developmental process, catalogued in the Layer 4 and 5 dossier as the mitochondrial provisioning system.
+
+HOW IT COLOURS THE LAYERS ABOVE:
+
+This chapter supplies the corpus's single most important design constraint: everything the brain does, it does within a fixed power budget of roughly 20 watts for the whole organ, and every construct in the upper volumes is competing for that.
+
+It also supplies the corpus's cleanest example of a substrate molecule becoming a signal, since ATP and adenosine are the same chemical lineage acting as currency, transmitter and homeostatic signal, which is an economy that no engineered system would design but that biology arrives at repeatedly.
+
+And through adenosine it reaches Layer 11 directly, since sleep pressure, one of the corpus's principal global state variables, is in part the accumulated residue of having spent energy.
+
+SYSTEMS INTERFACE:
+
+• SUBSCRIBES (INPUTS).
+
+◦ Layer 3 oxygen and glucose, delivered continuously as set out in Chapter 22.
+
+◦ Layer 2 iron and copper, as the electron carriers of the chain that makes it.
+
+◦ Layer 6 neural activity, as the demand signal.
+
+• PUBLISHES (OUTPUTS).
+
+◦ Layer 3 free energy, at about minus 50 to minus 60 kilojoules per mole in cellular conditions.
+
+◦ Layer 7 purinergic transmission, through P2X and P2Y receptors.
+
+◦ Layer 11 sleep pressure, through adenosine acting on A1 and A2A receptors.
+
+◦ Layer 10 vasodilation, through adenosine acting on vascular receptors.
+
+• STATE.
+
+◦ Intracellular ATP, about 2 to 4 millimolar in neurons, observable with genetically encoded ATP sensors.
+
+◦ Phosphocreatine to ATP ratio, observable non-invasively by phosphorus magnetic resonance spectroscopy.
+
+◦ Extracellular adenosine, observable by microdialysis and by biosensor, rising through prolonged waking.
+
+• PARAMETERS.
+
+◦ Standard free energy of hydrolysis about minus 30.5 kilojoules per mole; in-cell value about minus 50 to minus 60 kilojoules per mole.
+
+◦ Intracellular ATP 1 to 10 millimolar, neurons about 2 to 4 millimolar; adenosine diphosphate 10 to 50 micromolar; inorganic phosphate 1 to 5 millimolar.
+
+◦ Protons per ATP at the synthase, about 2.7; per ATP delivered to the cytosol, about 3.7 to 4.
+
+◦ Brain share of resting body energy use, about 20 percent, on about 2 percent of body mass; whole-brain power roughly 20 watts.
+
+◦ Energy budget allocation, per Attwell and Laughlin 2001 and revised by Howarth and colleagues 2012, with the revision moving the largest share from action potentials to synaptic processes.
+
+• TIME CONSTANTS.
+
+◦ ATP turnover in an active neuron, of the order of seconds for the whole pool.
+
+◦ Phosphocreatine buffer, sufficient for seconds.
+
+◦ Neurovascular response to raised demand, 1 to 6 seconds.
+
+◦ Adenosine accumulation through waking, hours; caffeine's plasma half-life, about 5 hours, which is why an afternoon coffee affects night-time sleep.
+
+• FAILURE MODE.
+
+◦ Supply failure produces pump failure within a minute and irreversible injury within minutes, and because there is no meaningful store, the failure is immediate rather than gradual, which is the defining feature of the brain among organs.
+
+DISEASES AND DISORDERS:
+
+The mitochondrial encephalomyopathies of Chapter 2 are the inherited failures of production, and they present neurologically first because the brain has the least tolerance.
+
+Hypoglycaemia below roughly 2.8 millimoles per litre produces confusion and below about 1.5 millimoles per litre produces seizures and coma, and it is the most common preventable metabolic cause of neurological emergency.
+
+Caffeine, the most widely consumed psychoactive substance in the world, works by antagonising adenosine A1 and A2A receptors, which makes this chapter the pharmacological basis of most of humanity's daily arousal management.
+
+Adenosine is used clinically to terminate supraventricular tachycardia, and the profound transient sense of doom patients report is a striking demonstration of a metabolic intermediate acting as a signal.
+
+Purinergic P2X7 receptor signalling on microglia is a well-supported component of neuroinflammation and a target of continuing drug development.
+
+TIME CONSTANTS:
+
+The chapter's decisive number is that the brain's energy buffer is measured in seconds, which is why every other timescale in this chapter, from the 1 to 6 second haemodynamic response to the minutes-long ischaemic window, is organised around resupply rather than storage.
+
+The slowest number is the hours-long accumulation of adenosine through waking, and the contrast between a currency with a seconds-long buffer and a debt signal with an hours-long accumulation is the whole architecture of this chapter.
+
+ENGLISH READABLE CODE:
+
+The purpose of this procedure is to compute the real free energy available from the energy currency inside a cell, rather than the textbook standard value.
+Create a number variable called standard free energy with initial value minus 30.5 kilojoules per mole.
+Create a number variable called gas constant with initial value 8.314 joules per mole per kelvin.
+Create a number variable called temperature with initial value 310.15 kelvin.
+Create a number variable called adenosine triphosphate concentration with initial value 3 millimolar.
+Create a number variable called adenosine diphosphate concentration with initial value 30 micromolar.
+Create a number variable called phosphate concentration with initial value 3 millimolar.
+Compute the mass action ratio as adenosine diphosphate concentration times phosphate concentration divided by adenosine triphosphate concentration, all expressed in molar units.
+Compute the actual free energy as standard free energy plus gas constant times temperature times the natural logarithm of the mass action ratio.
+Report the standard value, the actual value, and the ratio between them.
+Repeat the calculation for a depleted cell with adenosine diphosphate raised tenfold, and report how much the available energy falls.
+The procedure is complete.
+
+CODE SAMPLE:
+
+Python is chosen because the gap between the textbook value and the real one is the most consequential single correction in this chapter, and it is four lines of arithmetic.
+
+'''Real versus standard free energy of ATP hydrolysis. Standard value
+-30.5 kJ/mol at 1 M; in-cell values -50 to -60 kJ/mol because the
+mass action ratio is held far from equilibrium.'''
+import math
+from operator import mul
+
+DG0, R, T = -30500.0, 8.314, 310.15
+def dg(atp, adp, pi):
+    q = mul(adp, pi) / atp
+    return (DG0 + mul(mul(R, T), math.log(q))) / 1000.0
+
+print("standard (1 M all species):", DG0 / 1000.0, "kJ/mol")
+print("resting neuron            :", round(dg(3e-3, 30e-6, 3e-3), 1), "kJ/mol")
+print("energy-stressed neuron    :", round(dg(2e-3, 300e-6, 5e-3), 1), "kJ/mol")
+
+WHAT MAKES IT UNMISTAKABLE:
+
+The only molecule in this dossier that is simultaneously the unit of account for every process above it, a fast transmitter in its own right, and, through its breakdown product, the accumulating record of how long you have been awake.
+
+
+CHAPTER 19. THE SMALL-MOLECULE NEUROTRANSMITTERS, AS MOLECULES (The Messages Considered as Chemistry) (COG)
+
+The corpus's upper volumes treat glutamate, gamma-aminobutyric acid, acetylcholine and the monoamines as signals with meanings.
+
+This chapter treats them as what they physically are: small organic molecules with masses, synthetic routes, dietary precursors, packaging arrangements and disposal enzymes, none of which the meaning depends on but all of which constrain it.
+
+WHAT IT IS AND WHAT IT DOES:
+
+These are the classical small-molecule transmitters, and the corpus groups them here strictly by chemistry rather than by function.
+
+Glutamate and aspartate are amino acids used directly; gamma-aminobutyric acid and glycine are amino acids or their derivatives used as inhibitory transmitters; acetylcholine is an ester of choline; and dopamine, noradrenaline, adrenaline, serotonin and histamine are the monoamines, made by decarboxylating an amino acid.
+
+What they do, considered as chemistry, is be concentrated into a vesicle against a gradient, released into a gap, bound briefly, and then either destroyed or recaptured, all within a few tens of milliseconds.
+
+WHERE IT LIVES:
+
+Glutamate is the most abundant amino acid in the brain, at roughly 10 to 12 micromoles per gram of tissue, and it is present in every cell because it is a metabolic intermediate as well as a transmitter, which is the single most important complication in this chapter.
+
+The monoamines are made in small, anatomically discrete nuclei catalogued in the corpus's Layer 9 volume, and are distributed by extremely widely branching axons, so a few tens of thousands of cells modulate the whole forebrain.
+
+PHYSICAL AND CHEMICAL PROPERTIES:
+
+The molecular masses are small and worth stating, because they set diffusion rates: glutamate 147.13, gamma-aminobutyric acid 103.12, glycine 75.07, acetylcholine 146.21, dopamine 153.18, noradrenaline 169.18, serotonin 176.21 and histamine 111.15 grams per mole.
+
+Vesicular concentrations are high and imprecisely known: glutamate in a small clear vesicle is commonly quoted at roughly 60 to 250 millimolar and acetylcholine at roughly 100 to 300 millimolar, giving on the order of 4000 to 10,000 molecules per vesicle, and the corpus notes that these figures derive from indirect estimates and that the range reflects real uncertainty rather than sloppiness.
+
+On release, cleft glutamate reaches roughly 1 to 3 millimolar for well under a millisecond before diffusion and transport clear it, which is why fast receptors must be low-affinity and physically close.
+
+The ambient extracellular glutamate concentration is a place where the corpus must record a large and unresolved disagreement: microdialysis measurements give values of roughly 2 to 25 micromolar, while electrophysiological estimates based on receptor occupancy give values around 25 to 100 nanomolar, a discrepancy of two to three orders of magnitude.
+
+The corpus does not average these and states the reason for the disagreement: microdialysis samples a volume that includes damaged tissue and does not distinguish the synaptic from the non-synaptic pool, while receptor-based estimates are model-dependent; what would settle it is a genuinely non-invasive, fast, spatially resolved glutamate sensor, and the recent generation of genetically encoded glutamate sensors is the most promising route.
+
+Synthesis is where the elements of Part Two reappear: glutamate decarboxylase, which makes gamma-aminobutyric acid, requires pyridoxal phosphate derived from vitamin B6; tyrosine hydroxylase requires iron and tetrahydrobiopterin; tryptophan hydroxylase requires the same cofactor; dopamine beta-hydroxylase requires copper and ascorbate; and choline acetyltransferase requires acetyl coenzyme A from metabolism.
+
+Disposal is fast and enzymatic or transport-based: acetylcholinesterase is among the fastest enzymes known, with a turnover number of the order of 10 to the power 4 per second, so acetylcholine is destroyed in the cleft, while glutamate, gamma-aminobutyric acid and the monoamines are recaptured by sodium-coupled transporters and only then metabolised by monoamine oxidase or catechol-O-methyltransferase.
+
+The glutamate-glutamine cycle deserves separate statement: astrocytes take up released glutamate, convert it to the inert glutamine using glutamine synthetase, and return glutamine to neurons, which is how the brain uses its principal metabolic intermediate as a signal without the two roles interfering.
+
+MODES AND MODE TRANSITIONS:
+
+• THE MODE REGISTER.
+
+◦ cytosolic_precursor - The Raw Material - transmitter present in the cytosol as a metabolic species, not yet a signal.
+
+◦ vesicle_loaded - The Packaged Message - concentrated into a vesicle by a proton-driven transporter, at 60 to 300 millimolar.
+
+◦ cleft_released - The Delivered Message - 1 to 3 millimolar for well under a millisecond.
+
+◦ spillover_ambient - The Overheard Message - transmitter escaping the cleft to reach extrasynaptic and neighbouring receptors.
+
+◦ recaptured - The Recycled Message - taken back by a sodium-coupled transporter for reloading.
+
+◦ degraded - The Destroyed Message - hydrolysed or oxidised, requiring resynthesis.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ cytosolic_precursor: glutamate at roughly 5 to 10 millimolar in the neuronal cytosol, which is why cytosolic leak would be catastrophic and why loading must be against a gradient (well established).
+
+◦ vesicle_loaded: vesicular glutamate transporter uses mainly the electrical component of the proton motive force, vesicular monoamine transporter exchanges two protons per monoamine (well established); the absolute vesicular concentration is quoted as a range because estimates differ.
+
+◦ cleft_released: peak 1 to 3 millimolar, cleared within about 1 millisecond by diffusion and astrocytic transport (well established).
+
+◦ spillover_ambient: reaches high-affinity extrasynaptic N-methyl-D-aspartate and metabotropic receptors; the ambient concentration is contested across two to three orders of magnitude (low confidence on the value, high confidence on the phenomenon).
+
+◦ recaptured: transporter turnover is slow, of the order of 10 to 100 per second, so clearance is achieved by having very many transporters rather than fast ones (well established).
+
+◦ degraded: acetylcholinesterase turnover of the order of 10 to the power 4 per second; monoamine oxidase far slower (well established).
+
+• THE TRANSITION TABLE.
+
+◦ cytosolic_precursor to vesicle_loaded: proton-driven vesicular transport; seconds to tens of seconds to fill a vesicle.
+
+◦ vesicle_loaded to cleft_released: calcium-triggered fusion; under a millisecond after calcium arrival.
+
+◦ cleft_released to recaptured: transporter binding; under a millisecond for the initial buffering, milliseconds for full clearance.
+
+◦ cleft_released to spillover_ambient: saturation or failure of clearance, or high-frequency activity; milliseconds.
+
+◦ recaptured to cytosolic_precursor: released from the transporter; immediately, in the glial case followed by conversion to glutamine over seconds.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: sustained extracellular glutamate sufficient to activate extrasynaptic N-methyl-D-aspartate receptors, which is the excitotoxic condition.
+
+◦ Warning condition: failure or reversal of astrocytic glutamate transport, which happens when the sodium gradient of Chapter 13 collapses.
+
+◦ Watchdog: astrocytic EAAT1 and EAAT2, which together account for the great majority of brain glutamate uptake, the glutamine cycle, and the enzymatic destruction of acetylcholine.
+
+DEVELOPMENT AND ASSEMBLY:
+
+Transmitter phenotype is specified developmentally and is generally stable, but the corpus notes the documented phenomenon of activity-dependent transmitter respecification in some populations, which is a genuine exception to the assumption that a cell's transmitter is fixed.
+
+The monoamine systems develop early and innervate the cortex before most cortical connectivity is mature, which is why prenatal exposure to agents acting on them, including selective serotonin reuptake inhibitors and nicotine, is studied so intensively; the corpus records that the human evidence on developmental outcomes remains confounded and inconclusive.
+
+Dietary precursor availability is a genuine but limited lever: tryptophan depletion reliably lowers brain serotonin synthesis and transiently lowers mood in vulnerable individuals, which is well replicated, whereas the claim that ordinary dietary supplementation with tyrosine or choline meaningfully raises transmitter levels or improves cognition in healthy adults is weakly supported and the corpus does not endorse it.
+
+HOW IT COLOURS THE LAYERS ABOVE:
+
+The whole of the corpus's Layer 7 volume is organised by messenger system, so this chapter is the chemical index to that volume.
+
+Its most important upward contribution is a warning: the same molecule means different things at different receptors, so nothing about a transmitter's chemistry determines its meaning, and the corpus's insistence that the receptor decides the message is a statement that Layer 3 underdetermines Layer 7.
+
+Its second contribution is the reason the brain's principal excitatory signal is a metabolic intermediate: glutamate was available in quantity, and biology used what was to hand, at the cost of needing an elaborate glial cycle to keep the two roles apart.
+
+SYSTEMS INTERFACE:
+
+• SUBSCRIBES (INPUTS).
+
+◦ Layer 12 dietary precursors, tyrosine, tryptophan, choline and vitamin B6.
+
+◦ Layer 2 iron and copper, as hydroxylase cofactors.
+
+◦ Layer 3 vesicular proton gradient, as the loading energy.
+
+◦ Layer 6 action potential, as the release trigger.
+
+• PUBLISHES (OUTPUTS).
+
+◦ Layer 7 cleft transmitter concentration, 1 to 3 millimolar peak for glutamate.
+
+◦ Layer 7 ambient extrasynaptic concentration, contested between nanomolar and micromolar.
+
+◦ Layer 6 astrocytic glutamine supply, as the return leg of the cycle.
+
+• STATE.
+
+◦ Vesicular filling state, observable with pH-sensitive fluorescent proteins and with false transmitter analogues.
+
+◦ Extracellular transmitter concentration, observable by microdialysis, by fast-scan cyclic voltammetry for the catecholamines, and increasingly by genetically encoded fluorescent sensors.
+
+◦ Tissue transmitter content, observable by magnetic resonance spectroscopy for glutamate and gamma-aminobutyric acid.
+
+• PARAMETERS.
+
+◦ Molecular masses: glutamate 147.13, gamma-aminobutyric acid 103.12, glycine 75.07, acetylcholine 146.21, dopamine 153.18, noradrenaline 169.18, serotonin 176.21, histamine 111.15 grams per mole.
+
+◦ Vesicular concentration roughly 60 to 250 millimolar for glutamate, giving roughly 4000 to 10,000 molecules per vesicle.
+
+◦ Cleft peak glutamate 1 to 3 millimolar, cleared within about 1 millisecond.
+
+◦ Ambient extracellular glutamate: about 2 to 25 micromolar by microdialysis against about 25 to 100 nanomolar by receptor-occupancy methods; the corpus records both and averages neither.
+
+◦ Brain glutamate content about 10 to 12 micromoles per gram.
+
+◦ Acetylcholinesterase turnover of the order of 10 to the power 4 per second.
+
+• TIME CONSTANTS.
+
+◦ Vesicle fusion to peak cleft concentration, under 0.1 milliseconds.
+
+◦ Cleft clearance, about 1 millisecond for glutamate.
+
+◦ Acetylcholine hydrolysis in the cleft, under 1 millisecond.
+
+◦ Monoamine reuptake and clearance, tens to hundreds of milliseconds, and much longer in the extrasynaptic volume.
+
+◦ Vesicle refilling, seconds to tens of seconds.
+
+• FAILURE MODE.
+
+◦ Clearance failure produces spillover, receptor desensitisation and, for glutamate, excitotoxicity; synthesis failure produces the transmitter-specific deficiency syndromes; and irreversible inhibition of acetylcholinesterase, as by organophosphates, produces a cholinergic crisis that is rapidly fatal.
+
+DISEASES AND DISORDERS:
+
+Pyridoxine-dependent epilepsy, from ALDH7A1 mutations impairing the availability of the cofactor of glutamate decarboxylase, is a neonatal epilepsy that stops within minutes of intravenous vitamin B6, and is the most dramatic transmitter-synthesis diagnosis in medicine.
+
+Dopa-responsive dystonia, from GTP cyclohydrolase deficiency impairing tetrahydrobiopterin supply, produces a dystonia that is fully corrected by small doses of levodopa and is otherwise mistaken for cerebral palsy.
+
+Parkinson disease is the loss of one small nucleus's supply of one of these molecules, and its treatment by precursor loading with levodopa is the corpus's clearest demonstration that a Layer 3 shortage can be corrected chemically even when the Layer 6 cells are gone.
+
+Organophosphate and nerve agent poisoning is acetylcholinesterase inhibition, treated with atropine and with oxime reactivators, and it demonstrates the necessity of the fast disposal step.
+
+Monoamine oxidase inhibitors, the first effective antidepressants, act on the disposal enzyme, and their interaction with dietary tyramine, the so-called cheese effect, is a direct consequence of the chemistry in this chapter.
+
+TIME CONSTANTS:
+
+The chapter's controlling asymmetry is that release is sub-millisecond and refilling takes seconds, a factor of about ten thousand, which is the ultimate physical basis of synaptic depression at high firing rates.
+
+Its second controlling number is the roughly 1 millisecond clearance of glutamate, which is what makes fast synaptic transmission private rather than broadcast.
+
+ENGLISH READABLE CODE:
+
+The purpose of this procedure is to show that a synapse's sustainable firing rate is set by vesicle refilling rather than by anything about the receptor.
+Create a number variable called readily releasable pool with initial value 10 vesicles.
+Create a number variable called refill time constant with initial value 5 seconds.
+Create a number variable called release probability with initial value 0.3.
+Create a number variable called firing rate, to be varied.
+For each firing rate in a range, perform the following actions.
+    Set the available pool to the readily releasable pool.
+    For each second of simulated time, perform the following actions.
+        For each spike in that second, release the available pool times release probability and subtract it.
+        Refill the pool toward its maximum with the refill time constant.
+    End the inner loop.
+    Record the steady-state release per spike as a fraction of the first spike's release.
+End the loop.
+Report the firing rate at which steady-state release has fallen to half of the initial release.
+The procedure is complete.
+
+CODE SAMPLE:
+
+Python is chosen because synaptic depression is usually presented as a property of the synapse and is better understood as an inevitable consequence of a slow refill step.
+
+'''Sustainable synaptic throughput is set by vesicle refilling.
+Readily releasable pool of order 10 vesicles; refilling seconds; release
+probability 0.1 to 0.9 depending on synapse type.'''
+from operator import mul
+
+MAXPOOL, TAU, P, DT = 10.0, 5.0, 0.3, 0.001
+for rate in [1, 5, 10, 20, 50, 100]:
+    pool, first, last = MAXPOOL, None, 0.0
+    interval = int(1.0 / mul(rate, DT))
+    for step in range(5000):
+        if step % interval == 0:
+            released = mul(pool, P)
+            pool -= released
+            if first is None:
+                first = released
+            last = released
+        pool += mul(DT / TAU, MAXPOOL - pool)
+    print("%4d Hz   steady-state release %.2f of first spike" % (rate, last / first))
+
+WHAT MAKES IT UNMISTAKABLE:
+
+The only chapter in this dossier whose subject the corpus's own upper volumes treat as meanings, and which insists that considered as chemistry they are nothing of the kind - the message is in the receptor, and the molecule is only a token.
+
+
+CHAPTER 20. THE GASOTRANSMITTERS (The Signals With No Address) (COG)
+
+Three signalling molecules in the human nervous system have no vesicle, no receptor on the outer face of the membrane, and no reuptake mechanism.
+
+They are gases, they pass straight through membranes, and they act on whatever is close enough, which means their addressing is purely geometric: the recipient is whoever is nearby when the signal is made.
+
+WHAT IT IS AND WHAT IT DOES:
+
+Nitric oxide, carbon monoxide and hydrogen sulphide are small gaseous molecules made on demand by enzymes and destroyed by chemistry rather than by transport.
+
+What nitric oxide does is bind the haem group of soluble guanylyl cyclase and switch it on, raising cyclic guanosine monophosphate, and it is also the corpus's canonical retrograde transmitter, made postsynaptically and acting presynaptically, which is to say it travels backwards across a synapse.
+
+The corpus grades the three very differently, and says so at the outset: nitric oxide is well established as a signalling molecule, carbon monoxide is plausible and much less well supported, and hydrogen sulphide has undergone a major and instructive downward revision of its measured concentrations.
+
+WHERE IT LIVES:
+
+Nitric oxide is made by neuronal nitric oxide synthase in a subset of interneurons and in the postsynaptic density of many excitatory synapses, by endothelial nitric oxide synthase in blood vessels, and by inducible nitric oxide synthase in activated glia.
+
+Carbon monoxide is made by haem oxygenase, of which the constitutive form HO-2 is expressed in neurons, and hydrogen sulphide is made by cystathionine beta-synthase in astrocytes, cystathionine gamma-lyase and the enzyme 3-mercaptopyruvate sulphurtransferase.
+
+PHYSICAL AND CHEMICAL PROPERTIES:
+
+Nitric oxide's diffusion coefficient is about 3.3 times 10 to the power minus 9 square metres per second, similar to water's, and because it crosses membranes freely its diffusion is not slowed by cell boundaries.
+
+Its half-life in tissue is genuinely contested: values from a few milliseconds to several seconds appear in the literature depending on the assumed rate of scavenging by haemoglobin and by other reactants, and the consequent estimates of its effective diffusion radius range from a few micrometres to the frequently quoted 100 to 300 micrometres.
+
+The corpus records this disagreement explicitly, notes that the larger figures come from earlier work with lower assumed scavenging rates, and states that the modern tendency is toward shorter half-lives and smaller radii, but that this is not settled; what would settle it is a direct, calibrated, spatially resolved measurement of nitric oxide concentration in intact tissue, which remains technically out of reach.
+
+Soluble guanylyl cyclase is exquisitely sensitive, with half-maximal activation at roughly 1 to 10 nanomolar nitric oxide, which is one of the highest-affinity signalling interactions in the nervous system and is why very small amounts matter.
+
+Physiological nitric oxide concentrations are correspondingly low and hard to measure, with estimates for basal levels in the low nanomolar range rising perhaps to tens of nanomolar on stimulation, and the corpus flags that these values carry substantial measurement uncertainty.
+
+Carbon monoxide binds haemoglobin roughly 200 to 250 times more avidly than oxygen, which is why it is a poison, and it also activates soluble guanylyl cyclase but with a potency two to three orders of magnitude below nitric oxide, which is the principal reason the corpus grades its transmitter role as weakly supported.
+
+Hydrogen sulphide is the corpus's chosen example of a quantitative correction that a reader should know about: early studies reported brain concentrations of roughly 50 to 160 micromolar, and modern methods that avoid liberating sulphide from bound pools during the measurement give values in the nanomolar range, with one careful mouse study reporting about 14 nanomolar.
+
+That is a downward revision of roughly four orders of magnitude, it invalidates the concentrations used in a large fraction of the earlier experimental literature, and the corpus states it plainly because a reader relying on older reviews would be badly misled; the modern view is that hydrogen sulphide acts largely by persulfidation, meaning the covalent modification of protein cysteine residues, rather than as a freely diffusing gas at micromolar concentration.
+
+MODES AND MODE TRANSITIONS:
+
+• THE MODE REGISTER.
+
+◦ synthesised_on_demand - The Made Signal - produced by an activated enzyme, since none of the three is stored.
+
+◦ volume_diffusing - The Broadcast - spreading isotropically through tissue, ignoring membranes and cell boundaries.
+
+◦ retrograde_acting - The Backwards Message - nitric oxide made postsynaptically and acting on the presynaptic terminal.
+
+◦ scavenged - The Ended Signal - reacted with haemoglobin, with superoxide, or with a thiol.
+
+◦ persulfidating - The Covalent Signal - hydrogen sulphide modifying protein cysteines, which is now considered its principal mode.
+
+◦ pathological_nitrosative - The Damaging Signal - nitric oxide reacting with superoxide to form peroxynitrite, which is directly toxic.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ synthesised_on_demand: neuronal nitric oxide synthase is calcium-calmodulin dependent and physically tethered to the N-methyl-D-aspartate receptor by PSD-95, so its activation is coincident with the plasticity signal of Chapter 15 (well established).
+
+◦ volume_diffusing: effective radius contested between a few micrometres and 100 to 300 micrometres (low confidence, and the corpus records both).
+
+◦ retrograde_acting: implicated in some forms of long-term potentiation, with the evidence stronger in some preparations than others (moderate confidence; the corpus notes that retrograde nitric oxide signalling is widely cited and less firmly established than its citation frequency implies).
+
+◦ scavenged: half-life contested from milliseconds to seconds (low confidence).
+
+◦ persulfidating: now regarded as the principal mechanism of hydrogen sulphide action (moderate to good confidence, and a recent consensus rather than an old one).
+
+◦ pathological_nitrosative: peroxynitrite formation is diffusion-limited and irreversible (well established).
+
+• THE TRANSITION TABLE.
+
+◦ Resting to synthesised_on_demand: calcium entry activating nitric oxide synthase; milliseconds after the calcium signal.
+
+◦ synthesised_on_demand to volume_diffusing: immediately, since there is no packaging step.
+
+◦ volume_diffusing to scavenged: reaction with haemoglobin or superoxide; milliseconds to seconds, and this is the contested number.
+
+◦ volume_diffusing to pathological_nitrosative: coincidence with superoxide, which rises in inflammation and ischaemia; immediate once both are present.
+
+◦ synthesised_on_demand to persulfidating: for hydrogen sulphide, essentially immediate and local.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: nitric oxide and superoxide present together, which converts a signal into a toxin.
+
+◦ Warning condition: inducible nitric oxide synthase expression in activated glia, which produces far higher and sustained concentrations than the neuronal enzyme.
+
+◦ Watchdog: haemoglobin as the principal sink, superoxide dismutase as the competitor for superoxide, and the tight physical tethering of neuronal nitric oxide synthase, which limits where it is made.
+
+DEVELOPMENT AND ASSEMBLY:
+
+Nitric oxide signalling is involved in activity-dependent refinement of developing connections, and neuronal nitric oxide synthase expressing interneurons are among the earliest-generated cortical cells, appearing in the subplate.
+
+Carbon monoxide's constitutive source, haem oxygenase two, is expressed throughout development, but the corpus records no established developmental role for it that would satisfy this dossier's selection rule, and the entry is retained principally because the corpus judges it more useful to explain why a fashionable claim is weakly supported than to omit it.
+
+HOW IT COLOURS THE LAYERS ABOVE:
+
+The gasotransmitters are the corpus's cleanest example of the framework's economic logic about addressing: a message that needs an address is relayed layer by layer through synapses, and a message that is a broadcast refuses to pay for the relay.
+
+Nitric oxide is also the principal mediator of neurovascular coupling's fast component, which means it is the link between the neural activity of Chapter 22 and the blood flow that functional imaging measures, and any claim about what an imaging signal means passes through this chapter.
+
+And the hydrogen sulphide correction supplies a methodological lesson the corpus wishes recorded: a large experimental literature can be built on a concentration that turns out to be wrong by four orders of magnitude, and the discipline that catches this is measurement, not consensus.
+
+SYSTEMS INTERFACE:
+
+• SUBSCRIBES (INPUTS).
+
+◦ Layer 3 calcium, activating neuronal nitric oxide synthase through calmodulin.
+
+◦ Layer 3 arginine and oxygen, as the substrates of nitric oxide synthesis.
+
+◦ Layer 3 cysteine and homocysteine, as the substrates of hydrogen sulphide synthesis.
+
+• PUBLISHES (OUTPUTS).
+
+◦ Layer 4 soluble guanylyl cyclase activation and the resulting cyclic guanosine monophosphate rise.
+
+◦ Layer 7 presynaptic modulation, as the retrograde signal.
+
+◦ Layer 10 vasodilation, as the fast component of neurovascular coupling.
+
+◦ Layer 4 protein persulfidation, for hydrogen sulphide.
+
+• STATE.
+
+◦ Nitric oxide concentration, observable with electrochemical microsensors, low nanomolar basally with substantial measurement uncertainty.
+
+◦ Cyclic guanosine monophosphate level, observable with genetically encoded sensors, as the downstream read-out.
+
+◦ Protein persulfidation level, observable by modified biotin-switch assays.
+
+• PARAMETERS.
+
+◦ Nitric oxide diffusion coefficient about 3.3 times 10 to the power minus 9 square metres per second.
+
+◦ Soluble guanylyl cyclase half-maximal activation, about 1 to 10 nanomolar nitric oxide.
+
+◦ Carbon monoxide affinity for haemoglobin, roughly 200 to 250 times that of oxygen.
+
+◦ Brain hydrogen sulphide, about 14 nanomolar by modern measurement, against 50 to 160 micromolar in older reports; the corpus treats the modern value as correct and records the older figures as a superseded measurement rather than a disagreement.
+
+◦ Nitric oxide half-life and effective radius: contested, milliseconds to seconds and a few micrometres to 100 to 300 micrometres respectively.
+
+• TIME CONSTANTS.
+
+◦ Nitric oxide synthesis after calcium entry, milliseconds.
+
+◦ Nitric oxide half-life in tissue, contested between milliseconds and seconds.
+
+◦ Cyclic guanosine monophosphate rise and fall, hundreds of milliseconds to seconds.
+
+◦ Neurovascular dilation onset, about 1 second.
+
+◦ Persulfidation persistence, minutes to hours, which makes hydrogen sulphide a much slower signal than its gaseous character suggests.
+
+• FAILURE MODE.
+
+◦ Excess nitric oxide in the presence of superoxide forms peroxynitrite and causes nitrosative damage; deficient endothelial nitric oxide impairs cerebral blood flow regulation; and carbon monoxide at toxic doses blocks both oxygen carriage and complex four simultaneously.
+
+DISEASES AND DISORDERS:
+
+Carbon monoxide poisoning produces a characteristic delayed leukoencephalopathy days to weeks after apparent recovery, which is one of the few neurological injuries with a well-documented latent interval.
+
+Nitric oxide's role in migraine is well established pharmacologically, since nitroglycerin reliably provokes migraine in susceptible people and is used as an experimental model of it.
+
+Endothelial nitric oxide deficiency contributes to cerebral small vessel disease and to the impaired vasodilator reserve seen in vascular cognitive impairment.
+
+Nitrosative stress through peroxynitrite is implicated in the injury of stroke, of multiple sclerosis lesions and of several neurodegenerative diseases, though the corpus notes that antioxidant trials targeting it have consistently failed in humans.
+
+Hydrogen sulphide is a mitochondrial complex four inhibitor at toxic concentrations, which is why it is a lethal industrial gas, and the contrast between its toxicity at high concentration and its nanomolar physiological level is the sharpest illustration of the correction described above.
+
+TIME CONSTANTS:
+
+The whole chapter turns on an uncertain number: if nitric oxide's half-life is milliseconds, it is a synapse-scale signal, and if it is seconds, it is a volume signal reaching hundreds of cells, and these are qualitatively different architectures.
+
+The corpus therefore refuses to state a single value and instead records that the architectural question depends on a measurement nobody has yet made cleanly in intact tissue.
+
+ENGLISH READABLE CODE:
+
+The purpose of this procedure is to show how completely the architecture of a diffusible signal depends on its half-life, which is the contested quantity.
+Create a number variable called diffusion coefficient with initial value 3.3 times 10 to the power minus 9 square metres per second.
+Create a number variable called half-life, to be varied from one millisecond to one second.
+Create a number variable called cell diameter with initial value 20 micrometres.
+For each half-life value, perform the following actions.
+    Compute the characteristic diffusion distance as the square root of six times the diffusion coefficient times the half-life.
+    Convert that distance to micrometres.
+    Compute the number of cells reached as the volume of a sphere of that radius divided by the volume occupied by one cell.
+    Record the half-life, the distance, and the number of cells.
+End the loop.
+Report the number of cells reached at the shortest and longest half-lives, and comment that the two answers describe different architectures.
+The procedure is complete.
+
+CODE SAMPLE:
+
+Python is chosen because the disagreement about nitric oxide's half-life is usually presented as a technical detail and is in fact a disagreement about whether the signal is private or public.
+
+'''Nitric oxide: the architecture depends entirely on the contested
+half-life. Diffusion coefficient about 3.3e-9 m2/s; half-life reported
+from milliseconds to seconds; effective radius correspondingly from a
+few micrometres to the often-quoted 100 to 300 micrometres.'''
+import math
+from operator import mul
+from functools import reduce
+
+D, CELL_UM = 3.3e-9, 20.0
+cell_vol = reduce(mul, [4.0 / 3.0, math.pi, CELL_UM / 2, CELL_UM / 2, CELL_UM / 2])
+for half_life in [0.001, 0.01, 0.1, 1.0]:
+    r_m = math.sqrt(reduce(mul, [6.0, D, half_life]))
+    r_um = mul(r_m, 1e6)
+    sphere = reduce(mul, [4.0 / 3.0, math.pi, r_um, r_um, r_um])
+    print("half-life %6.3f s   radius %7.1f um   cells reached ~ %d"
+          % (half_life, r_um, int(sphere / cell_vol)))
+
+WHAT MAKES IT UNMISTAKABLE:
+
+The only signals in this dossier with no vesicle, no surface receptor and no reuptake, whose recipient list is decided by geometry alone, and the only entry whose headline concentration the field had to revise downward by four orders of magnitude.
+
+
+CHAPTER 21. CYCLIC ADENOSINE MONOPHOSPHATE AND THE SECOND-MESSENGER CASCADE (The Amplifier That Is Not Free) (COG)
+
+Cyclic adenosine monophosphate was the first second messenger discovered and is still the template for the whole idea: a receptor on the outside of the cell produces a small diffusible molecule on the inside, and that molecule does the work.
+
+The classical picture, in which one bound receptor produces an enormous cloud of freely diffusing messenger, has been substantially revised in the last decade, and this chapter records the revision because the corpus's slow-modulation chapters depend on getting it right.
+
+WHAT IT IS AND WHAT IT DOES:
+
+Cyclic adenosine monophosphate, abbreviated cyclic AMP, is a small nucleotide made from adenosine triphosphate by the enzyme adenylyl cyclase and destroyed by enzymes called phosphodiesterases.
+
+What it does is activate protein kinase A, which phosphorylates a long list of targets, and also act directly on cyclic-nucleotide-gated channels and on exchange proteins, so it is both a kinase trigger and a direct channel ligand.
+
+In the corpus's terms it is the canonical slow, gain-setting signalling path: the route by which dopamine, noradrenaline, serotonin and a great many peptides change how a neuron responds to everything else, over seconds to minutes rather than milliseconds.
+
+WHERE IT LIVES:
+
+Cyclic AMP is made at the plasma membrane, where the cyclases are, and it acts throughout the cytoplasm and into the nucleus, where protein kinase A phosphorylates the transcription factor catalogued in the Layer 4 and 5 dossier as the CREB gate.
+
+Its most consequential addresses in the corpus are the striatal medium spiny neurons, where dopamine's opposite actions through the D1 and D2 receptors are exactly opposite actions on this molecule, and the presynaptic terminals where a lasting rise in release probability is maintained by this pathway.
+
+PHYSICAL AND CHEMICAL PROPERTIES:
+
+Basal cytosolic cyclic AMP is roughly 0.1 to 1 micromolar and rises perhaps tenfold on strong stimulation, which is a modest dynamic range compared with calcium's hundredfold.
+
+Protein kinase A is activated with a dissociation constant for cyclic AMP of roughly 100 to 300 nanomolar and with positive cooperativity, so the enzyme's response is steeper than the messenger's concentration change, which is where much of the effective gain lies.
+
+The classical amplification arithmetic runs as follows: one bound receptor activates on the order of tens of G proteins, each activated cyclase makes on the order of a thousand molecules of cyclic AMP per second, and each protein kinase A molecule phosphorylates many substrates, and multiplying these gives the very large amplification factors sometimes quoted.
+
+The corpus records that figures such as a hundred-million-fold amplification are the product of multiplying best-case values at each step and are not defensible as a measured quantity; the honest statement is that the cascade provides substantial amplification of the order of thousands to millions, that each step's true gain varies with cell type and stimulus, and that no single number is warranted.
+
+The larger revision concerns diffusion: the classical picture assumed cyclic AMP diffuses freely with a coefficient of several hundred square micrometres per second, but recent work, including Bock and colleagues, 2020, in Cell, and Anton and colleagues, 2022, in Cell, indicates that cyclic AMP is largely buffered by binding to protein kinase A regulatory subunits and to other binding proteins, so that free cyclic AMP is much lower and far less mobile than assumed and signalling is organised into nanodomains.
+
+The corpus states that this revision is important and should be treated as the current best understanding, and notes that it makes the cyclic AMP system architecturally similar to the calcium system of Chapter 15: a diffusible messenger made specific by binding the receiver close to the source.
+
+Phosphodiesterases are what make the domains possible, since they destroy the messenger locally and thereby set the domain's size, and the brain-enriched isoforms PDE4 and PDE10A are the principal ones, PDE10A being highly concentrated in the striatum and a target of considerable drug development effort that has so far not produced an approved antipsychotic.
+
+MODES AND MODE TRANSITIONS:
+
+• THE MODE REGISTER.
+
+◦ basal - The Idle Cascade - cyclic AMP 0.1 to 1 micromolar, protein kinase A mostly inactive.
+
+◦ gs_stimulated - The Raised Gain - a Gs-coupled receptor such as the dopamine D1 or the beta-adrenergic receptor activating cyclase.
+
+◦ gi_suppressed - The Lowered Gain - a Gi-coupled receptor such as the dopamine D2 or the adenosine A1 receptor inhibiting cyclase.
+
+◦ nanodomain_local - The Private Cascade - cyclic AMP confined near its source by buffering and by local phosphodiesterase, acting only on anchored targets.
+
+◦ nuclear_translocated - The Genomic Cascade - the catalytic subunit of protein kinase A entering the nucleus and phosphorylating the transcription factor, converting a signalling event into gene expression.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ basal: protein kinase A occupancy low; dissociation constant 100 to 300 nanomolar with a Hill coefficient of roughly 1.6 to 2 (well established).
+
+◦ gs_stimulated: cyclic AMP rising several-fold to about tenfold within seconds (well established).
+
+◦ gi_suppressed: cyclic AMP falling toward or below basal, and in the striatum this is the physical form of the D1 and D2 opposition the corpus's Layer 9 volume describes (well established).
+
+◦ nanodomain_local: free cyclic AMP much lower and less mobile than classically assumed; this is a recent revision and the corpus grades it as good and improving evidence rather than as long-settled (moderate to good confidence).
+
+◦ nuclear_translocated: minutes; couples to the transcriptional machinery of the Layer 4 and 5 dossier (well established).
+
+• THE TRANSITION TABLE.
+
+◦ basal to gs_stimulated: agonist binding a Gs-coupled receptor; cyclic AMP rises within about 1 to 10 seconds.
+
+◦ gs_stimulated to basal: phosphodiesterase activity and receptor desensitisation; seconds to tens of seconds.
+
+◦ basal to gi_suppressed: agonist binding a Gi-coupled receptor; seconds.
+
+◦ gs_stimulated to nuclear_translocated: sustained elevation sufficient to release and translocate the catalytic subunit; minutes.
+
+◦ Any mode to nanodomain_local: this is the default rather than an exception under the revised picture, and the corpus flags that older models treating cyclic AMP as well-mixed should be regarded as superseded.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: sustained maximal cyclic AMP, which desensitises receptors and downregulates the pathway.
+
+◦ Warning condition: chronic drug exposure producing pathway upregulation, which is the classical cellular model of opioid tolerance and withdrawal.
+
+◦ Watchdog: the phosphodiesterases, receptor phosphorylation and arrestin recruitment, and the anchoring proteins that keep the kinase where it belongs.
+
+DEVELOPMENT AND ASSEMBLY:
+
+Cyclic AMP signalling guides axon growth cones, and the ratio of cyclic AMP to cyclic guanosine monophosphate determines whether a growth cone is attracted to or repelled by the same guidance cue, which is one of the most elegant results in developmental neuroscience.
+
+Declining cyclic AMP levels in maturing neurons are part of why regeneration fails in the adult central nervous system, and raising them experimentally partially restores growth, which is a genuine and reproducible finding that has nonetheless not translated into a therapy.
+
+HOW IT COLOURS THE LAYERS ABOVE:
+
+This is the corpus's canonical slow modulatory path, and every statement in the upper volumes about a neuromodulator changing a neuron's gain, its adaptation, or its willingness to learn is, at this layer, a statement about this cascade or its close relatives.
+
+The nanodomain revision colours the corpus's whole treatment of modulation, because it means a neuromodulator does not bathe a cell in a uniform signal but produces a patterned, local pattern of phosphorylation determined by which anchoring proteins are present where.
+
+That is a considerably more powerful computational primitive than the classical picture allowed, and the corpus records it as an upgrade rather than a correction.
+
+SYSTEMS INTERFACE:
+
+• SUBSCRIBES (INPUTS).
+
+◦ Layer 7 G-protein-coupled receptor activation, from dopamine, noradrenaline, serotonin, adenosine, opioids and many peptides.
+
+◦ Layer 3 adenosine triphosphate, as the substrate.
+
+◦ Layer 3 calcium, which stimulates some cyclase isoforms and inhibits others.
+
+• PUBLISHES (OUTPUTS).
+
+◦ Layer 4 protein kinase A activity and the resulting phosphorylation pattern.
+
+◦ Layer 6 excitability changes, through phosphorylation of channels.
+
+◦ Layer 7 presynaptic release probability, through the presynaptic arm of the pathway.
+
+◦ Layer 4 transcriptional programme, through the CREB gate of the Layer 4 and 5 dossier.
+
+• STATE.
+
+◦ Cyclic AMP concentration, observable with genetically encoded fluorescence resonance energy transfer sensors, basally 0.1 to 1 micromolar.
+
+◦ Protein kinase A activity, observable with kinase activity reporters.
+
+◦ Phosphorylation state of DARPP-32 in striatal neurons, the classical integrator read-out of this pathway.
+
+• PARAMETERS.
+
+◦ Basal cyclic AMP 0.1 to 1 micromolar, rising up to about tenfold on stimulation.
+
+◦ Protein kinase A dissociation constant for cyclic AMP, about 100 to 300 nanomolar, Hill coefficient about 1.6 to 2.
+
+◦ Adenylyl cyclase isoforms, ten in humans, with AC1 and AC8 calcium-stimulated and AC5 and AC6 calcium-inhibited.
+
+◦ Cascade amplification: substantial, of the order of thousands to millions, with the corpus recording that the frequently quoted hundred-million-fold figure is a multiplication of best cases and is not a measured value.
+
+◦ Cyclic AMP diffusion: classically several hundred square micrometres per second, but effective mobility is now understood to be far lower because of buffering.
+
+• TIME CONSTANTS.
+
+◦ Cyclic AMP rise after receptor activation, about 1 to 10 seconds.
+
+◦ Cyclic AMP decay by phosphodiesterase, seconds to tens of seconds.
+
+◦ Protein kinase A substrate phosphorylation, seconds.
+
+◦ Nuclear translocation and transcriptional response, minutes to tens of minutes.
+
+◦ Pathway upregulation in chronic drug exposure, days to weeks.
+
+• FAILURE MODE.
+
+◦ Sustained maximal activation desensitises and downregulates the pathway, which is the cellular basis of tolerance; and loss of local phosphodiesterase control collapses the nanodomain organisation, which turns a specific signal into an indiscriminate one.
+
+DISEASES AND DISORDERS:
+
+Pseudohypoparathyroidism type 1A, from mutations in GNAS encoding the stimulatory G protein, produces hormone resistance together with characteristic developmental features and is the archetype of a disease of this cascade.
+
+McCune-Albright syndrome arises from activating mosaic mutations in the same gene, showing that both directions of failure are pathogenic.
+
+Opioid tolerance, dependence and withdrawal are classically modelled as upregulation of this pathway in locus coeruleus neurons, and the resulting rebound overactivity on withdrawal is the mechanistic account of the withdrawal syndrome.
+
+PDE10A mutations cause childhood-onset chorea, and PDE10A inhibitors were extensively developed as candidate antipsychotics on the strength of the striatal biology described above, without success to date, which the corpus records as an honest negative.
+
+Rubinstein-Taybi syndrome, from mutations in CREB-binding protein, is the developmental disorder at the far downstream end of this pathway and is catalogued in the Layer 4 and 5 dossier's chromatin chapters.
+
+TIME CONSTANTS:
+
+The chapter's characteristic timescale is seconds to minutes, which is precisely the gap between the millisecond transmission of Chapter 19 and the hours-long persistence machinery of the Layer 4 and 5 dossier.
+
+That intermediate timescale is the reason this cascade is where neuromodulation lives, since a modulator must outlast the events it modulates without outlasting the situation that called for it.
+
+ENGLISH READABLE CODE:
+
+The purpose of this procedure is to compute the cascade's amplification honestly, by multiplying step gains and then reporting how uncertain the product is.
+Create a number variable called receptors bound with initial value one.
+Create a number variable called G proteins per receptor, with a plausible range from ten to one hundred.
+Create a number variable called cyclic AMP molecules per cyclase per second, with a plausible range from one hundred to one thousand.
+Create a number variable called seconds of activity with initial value ten.
+Create a number variable called substrates per kinase, with a plausible range from ten to one hundred.
+For the low end of every range, compute the product and record it as the minimum amplification.
+For the high end of every range, compute the product and record it as the maximum amplification.
+Report both, and report the ratio between them as the honest uncertainty of the estimate.
+State explicitly that quoting only the maximum would be indefensible.
+The procedure is complete.
+
+CODE SAMPLE:
+
+Python is chosen because the honest way to present a multiplied estimate is to propagate the ranges rather than to quote the product of best cases.
+
+'''Cascade amplification, propagated honestly. Each step gain is a range,
+not a value, so the product is a range spanning orders of magnitude.
+Quoting only the top of that range is where the frequently cited
+hundred-million-fold figure comes from.'''
+from operator import mul
+from functools import reduce
+
+steps = {
+    "G proteins per receptor":        (10, 100),
+    "cAMP per cyclase per second":    (100, 1000),
+    "seconds of activity":            (5, 20),
+    "substrates per kinase":          (10, 100),
+}
+low = reduce(mul, [v[0] for v in steps.values()])
+high = reduce(mul, [v[1] for v in steps.values()])
+for name, rng in steps.items():
+    print("%-32s %6d to %6d" % (name, rng[0], rng[1]))
+print("amplification: %.1e to %.1e, a spread of %.0f-fold"
+      % (low, high, high / low))
+
+WHAT MAKES IT UNMISTAKABLE:
+
+The first second messenger ever discovered, still the template for every one since, and the entry in this dossier whose textbook description has changed most in the last decade - from a freely diffusing cloud to a buffered, local, nanodomain-organised signal.
+
+
+CHAPTER 22. OXYGEN AND GLUCOSE, THE DELIVERED SUBSTRATES (The Two Commodities With No Warehouse) (COG)
+
+The brain stores essentially nothing of what it needs most.
+
+It holds no meaningful oxygen reserve and only a trivial glycogen store, so both commodities must be delivered continuously by blood, and the consequence is that the brain is the only organ in which a few minutes of interrupted supply produces permanent loss.
+
+WHAT IT IS AND WHAT IT DOES:
+
+Oxygen is the terminal electron acceptor of the respiratory chain of Chapter 2, and glucose is the substrate whose oxidation supplies the electrons.
+
+What they do together is make the energy currency of Chapter 18, and what makes them a chapter in their own right is not the chemistry but the logistics: they must arrive, continuously, at every cubic millimetre, and the machinery for arranging that is itself a major part of the brain's design.
+
+WHERE IT LIVES:
+
+Both live in the blood and in the interstitial space, never in storage.
+
+Brain glycogen exists but only in astrocytes and only at roughly 3 to 12 micromoles per gram, which is a supply measured in minutes at most, and its principal role is thought to be local buffering rather than reserve.
+
+The delivery apparatus is the cerebral vasculature, with capillary density high enough that no neuron is more than about 15 to 20 micrometres from a capillary.
+
+PHYSICAL AND CHEMICAL PROPERTIES:
+
+Global cerebral blood flow in a healthy adult is about 50 to 57 millilitres per 100 grams per minute, made up of roughly 80 in grey matter and roughly 20 in white matter.
+
+The cerebral metabolic rate for oxygen is about 3.0 to 3.5 millilitres of oxygen per 100 grams per minute, equivalently about 150 to 160 micromoles per 100 grams per minute, and for glucose about 25 to 31 micromoles per 100 grams per minute.
+
+The oxygen extraction fraction, the proportion of delivered oxygen actually consumed, is about 0.3 to 0.4 at rest, and the fact that it is well below one is what gives the brain a reserve against modest flow reduction, and the fact that it can rise toward 0.8 in severe stenosis is what allows compensation before infarction.
+
+The brain consumes roughly 110 to 120 grams of glucose per day, about 20 to 25 percent of the body's total, on about 2 percent of body mass.
+
+The ischaemic thresholds are among the most clinically important numbers in medicine: electrical activity fails at a cerebral blood flow of roughly 20 to 22 millilitres per 100 grams per minute, and membrane integrity fails at roughly 8 to 10, and the tissue between those two values is the ischaemic penumbra defined by Astrup, Siesjö and Symon in 1981, which is functionally silent but still alive and is the target of every acute stroke treatment.
+
+Consciousness is lost within roughly 5 to 10 seconds of complete circulatory arrest and irreversible injury begins within roughly 4 to 8 minutes, which is the arithmetic behind every resuscitation protocol.
+
+Ketone bodies are the one genuine alternative fuel, and in prolonged starvation they can supply a substantial fraction of the brain's energy, with figures around 60 percent commonly quoted, but they cannot replace glucose entirely because some brain metabolism requires it.
+
+The astrocyte-neuron lactate shuttle hypothesis, proposed by Pellerin and Magistretti in 1994, holds that astrocytes take up glucose, glycolyse it, and supply lactate to neurons as their preferred fuel during activity, and it has been vigorously disputed by Dienel and others who argue that neurons take up glucose directly and that the lactate flux runs the other way under many conditions.
+
+The corpus records this as genuinely unresolved, notes that both camps agree lactate moves between compartments and disagree about the direction and magnitude under physiological conditions, and states that what would settle it is a compartment-specific, real-time measurement of metabolic flux in the intact behaving brain, which current methods approach but do not yet achieve.
+
+Neurovascular coupling is the mechanism by which local activity raises local blood flow, and the resulting change in the ratio of oxygenated to deoxygenated haemoglobin is what functional magnetic resonance imaging detects: the haemodynamic response begins about 1 to 2 seconds after activity, peaks at about 4 to 6 seconds, and returns with an undershoot lasting 10 to 30 seconds.
+
+The corpus states the honest limit of that measurement plainly: the blood-oxygen-level-dependent signal is a measure of blood oxygenation, not of neural firing, and the work of Logothetis and colleagues, notably in Nature in 2001 and in the 2008 review, showed it correlates better with local field potentials, meaning synaptic and dendritic activity, than with the spiking output of the region.
+
+That distinction matters throughout the corpus's Layer 9 and Layer 10 volumes, because a region that lights up may be receiving rather than sending.
+
+MODES AND MODE TRANSITIONS:
+
+• THE MODE REGISTER.
+
+◦ resting_supplied - The Idling Engine - flow about 50 millilitres per 100 grams per minute, extraction fraction 0.3 to 0.4, everything comfortable.
+
+◦ activated_hyperaemic - The Boosted Supply - local flow rising by 20 to 60 percent within seconds of activity, with oxygen consumption rising less, which is why the blood becomes more oxygenated and the imaging signal is positive.
+
+◦ autoregulating - The Defended Supply - flow held roughly constant across a mean arterial pressure range of about 60 to 150 millimetres of mercury.
+
+◦ oligaemic_penumbra - The Silenced Tissue - flow 10 to 22 millilitres per 100 grams per minute, electrically silent but structurally alive and salvageable.
+
+◦ infarcting - The Lost Tissue - flow below about 8 to 10, membrane failure, death within minutes to hours.
+
+◦ ketotic - The Alternative Fuel - prolonged fasting or ketogenic diet supplying a substantial fraction of energy as ketone bodies.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ resting_supplied: cerebral metabolic rate for oxygen about 3.0 to 3.5 millilitres per 100 grams per minute (well established).
+
+◦ activated_hyperaemic: flow rises proportionally more than oxygen consumption, which is the physiological basis of the imaging signal; the reason for this mismatch is still debated (well established as a phenomenon, mechanism partly open).
+
+◦ autoregulating: flow constant across roughly 60 to 150 millimetres of mercury mean arterial pressure, with the range shifted upward in chronic hypertension (well established).
+
+◦ oligaemic_penumbra: electrical failure at 20 to 22, membrane failure at 8 to 10 millilitres per 100 grams per minute (well established, from Astrup, Siesjö and Symon 1981).
+
+◦ infarcting: irreversible within minutes at the lowest flows and over hours in the penumbra, which is why the treatment window exists at all (well established).
+
+◦ ketotic: ketone bodies supplying a substantial fraction, with about 60 percent commonly quoted in prolonged starvation (well established, with the exact ceiling varying between studies).
+
+• THE TRANSITION TABLE.
+
+◦ resting_supplied to activated_hyperaemic: local neural activity, mediated by nitric oxide, by astrocytic signalling and by potassium; onset 1 to 2 seconds, peak 4 to 6 seconds.
+
+◦ activated_hyperaemic to resting_supplied: return with a post-stimulus undershoot; 10 to 30 seconds.
+
+◦ resting_supplied to autoregulating: a change in perfusion pressure; seconds.
+
+◦ autoregulating to oligaemic_penumbra: perfusion pressure or vessel patency falling beyond the autoregulatory range; seconds to minutes.
+
+◦ oligaemic_penumbra to infarcting: continued hypoperfusion; minutes to hours, and this transition is the entire target of acute stroke medicine.
+
+◦ resting_supplied to ketotic: fasting beyond roughly two to three days, or a sustained ketogenic diet; days.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: cerebral blood flow below about 20 millilitres per 100 grams per minute.
+
+◦ Warning condition: a rising oxygen extraction fraction, which indicates that autoregulation has exhausted its reserve.
+
+◦ Watchdog: cerebral autoregulation, collateral circulation through the circle of Willis and leptomeningeal vessels, and the extraction reserve itself.
+
+DEVELOPMENT AND ASSEMBLY:
+
+Cerebral blood flow and glucose metabolism per unit mass rise steeply through infancy, exceed adult values through childhood, and settle to adult values in adolescence, which parallels the synaptic overproduction and pruning sequence of the corpus's developmental chapters.
+
+The neonatal brain has a substantially greater tolerance of hypoxia than the adult brain, partly through greater use of ketones and lactate, which is why therapeutic hypothermia for neonatal encephalopathy has a longer effective window than any adult equivalent.
+
+The blood-brain barrier and the neurovascular unit assemble during fetal life and continue maturing postnatally, and their integrity is a precondition for every number in this chapter.
+
+HOW IT COLOURS THE LAYERS ABOVE:
+
+This chapter supplies the corpus's hardest external constraint: a fixed, continuously delivered power budget with no buffer, which is why the brain's architecture is dominated by sparse coding, by energy-efficient signalling, and by the aggressive management of spike rates that the upper volumes describe.
+
+It also supplies the corpus's principal observational instrument and its principal caveat, since almost everything known about the living human brain's regional function comes from measuring blood flow or blood oxygenation, and those measure supply rather than computation.
+
+And it supplies the clinical urgency that runs through the corpus's disease chapters, because the whole of acute neurology is organised around the few minutes this chapter allows.
+
+SYSTEMS INTERFACE:
+
+• SUBSCRIBES (INPUTS).
+
+◦ Layer 11 cardiac output and mean arterial pressure, normally 60 to 150 millimetres of mercury within the autoregulatory range.
+
+◦ Layer 11 arterial oxygen saturation and blood glucose, normally above 95 percent and 4 to 7 millimoles per litre respectively.
+
+◦ Layer 6 local neural activity, as the demand signal for neurovascular coupling.
+
+• PUBLISHES (OUTPUTS).
+
+◦ Layer 3 oxygen and glucose delivery to tissue.
+
+◦ Layer 5 substrate for the respiratory chain and therefore for the energy currency of Chapter 18.
+
+◦ Layer 9 imaging signal, as the blood-oxygen-level-dependent contrast that functional imaging measures.
+
+• STATE.
+
+◦ Cerebral blood flow, observable by arterial spin labelling, by positron emission tomography and by perfusion computed tomography, about 50 to 57 millilitres per 100 grams per minute globally.
+
+◦ Oxygen extraction fraction, observable by oxygen-15 positron emission tomography, 0.3 to 0.4 at rest.
+
+◦ Cerebral metabolic rate for glucose, observable by fluorodeoxyglucose positron emission tomography, 25 to 31 micromoles per 100 grams per minute.
+
+• PARAMETERS.
+
+◦ Cerebral blood flow about 50 to 57 millilitres per 100 grams per minute globally, about 80 in grey matter and 20 in white.
+
+◦ Cerebral metabolic rate for oxygen about 3.0 to 3.5 millilitres per 100 grams per minute; for glucose 25 to 31 micromoles per 100 grams per minute.
+
+◦ Oxygen extraction fraction 0.3 to 0.4 at rest, rising toward 0.8 in compensated stenosis.
+
+◦ Ischaemic thresholds: electrical failure at 20 to 22, membrane failure at 8 to 10 millilitres per 100 grams per minute.
+
+◦ Brain glycogen about 3 to 12 micromoles per gram, astrocytic, a supply measured in minutes.
+
+◦ Brain glucose consumption 110 to 120 grams per day, about 20 to 25 percent of the body's total.
+
+• TIME CONSTANTS.
+
+◦ Loss of consciousness after complete circulatory arrest, about 5 to 10 seconds.
+
+◦ Anoxic depolarisation, 1 to 3 minutes.
+
+◦ Onset of irreversible injury, about 4 to 8 minutes at complete arrest, extending to hours in the penumbra.
+
+◦ Haemodynamic response function: onset 1 to 2 seconds, peak 4 to 6 seconds, undershoot 10 to 30 seconds.
+
+◦ Autoregulatory adjustment to a pressure change, seconds.
+
+• FAILURE MODE.
+
+◦ Delivery failure, whether from vessel occlusion, from systemic hypotension, from hypoxaemia or from hypoglycaemia, produces functional failure within seconds and structural failure within minutes, and because there is no store the failure has no gradual phase.
+
+DISEASES AND DISORDERS:
+
+Ischaemic stroke is the archetype and the whole of its acute treatment, whether by thrombolysis or by thrombectomy, is an attempt to restore flow to the penumbra before it converts to infarct.
+
+Cardiac arrest produces global hypoxic-ischaemic encephalopathy whose severity is set almost entirely by the time to restoration of circulation, and targeted temperature management is the one intervention with evidence of benefit.
+
+Hypoglycaemia is functionally indistinguishable from ischaemia at the bedside and is corrected in seconds by intravenous glucose, which makes it the most rewarding diagnosis in emergency neurology.
+
+Carbon monoxide poisoning, described in Chapter 20, is a delivery failure at the level of the carrier rather than of the vessel.
+
+The ketogenic diet is an established treatment for drug-resistant epilepsy, particularly in children and in glucose transporter type one deficiency syndrome, where it directly substitutes the missing fuel and is the definitive treatment.
+
+TIME CONSTANTS:
+
+Every number in this chapter that matters clinically lies between 5 seconds and 8 minutes, and that narrow band is the reason neurology is the most time-pressured of the medical specialties.
+
+Every number that matters to a researcher lies between 1 and 30 seconds, because that is the haemodynamic response, and the mismatch between the millisecond timescale of neural events and the seconds timescale of the measurement is the fundamental limitation of functional imaging.
+
+ENGLISH READABLE CODE:
+
+The purpose of this procedure is to compute how long a brain region survives at a given blood flow, so that the ischaemic penumbra becomes a calculation rather than a picture.
+Create a number variable called cerebral blood flow in millilitres per 100 grams per minute.
+Create a number variable called electrical failure threshold with initial value 21.
+Create a number variable called membrane failure threshold with initial value 9.
+Create a number variable called baseline flow with initial value 50.
+For each candidate blood flow, perform the following actions.
+    If the flow is above the electrical failure threshold, report the tissue as functioning.
+    Otherwise, if the flow is above the membrane failure threshold, report the tissue as penumbral, and estimate the survival time as inversely related to how far below the electrical threshold it has fallen.
+    Otherwise, report the tissue as core infarct with a survival time of minutes.
+    Record the flow, the state, and the estimated survival time.
+End the loop.
+Report the range of flows over which the tissue is salvageable and the time available at each.
+The procedure is complete.
+
+CODE SAMPLE:
+
+Python is chosen because the ischaemic penumbra is usually shown as a coloured picture and is far more useful as a table of flows against times.
+
+'''The ischaemic penumbra as arithmetic. Thresholds from Astrup, Siesjo
+and Symon 1981: electrical failure at 20 to 22 and membrane failure at
+8 to 10 mL per 100 g per minute. Survival times are illustrative of the
+published inverse relationship, not measured constants.'''
+from operator import mul
+
+ELECTRICAL, MEMBRANE = 21.0, 9.0
+for cbf in [50, 35, 22, 18, 14, 10, 8, 5]:
+    if cbf > ELECTRICAL:
+        state, minutes = "functioning", None
+    elif cbf > MEMBRANE:
+        state = "penumbra (salvageable)"
+        minutes = mul(60.0, (cbf - MEMBRANE) / (ELECTRICAL - MEMBRANE)) + 20.0
+    else:
+        state, minutes = "core infarct", 5.0
+    t = "indefinite" if minutes is None else "%.0f min" % minutes
+    print("CBF %4.0f mL/100g/min   %-24s survival %s" % (cbf, state, t))
+
+WHAT MAKES IT UNMISTAKABLE:
+
+The only entry in this dossier that the brain cannot store at all, whose interruption is measured in seconds, and whose delivery apparatus is also, by accident, the only instrument through which the living human brain has ever been widely observed.
+
+
+SOURCES FOR PART THREE
+
+All sources listed were consulted by web search on 12 August 2026.
+
+• Iliff, Wang, Liao, Plogg, Peng, Gundersen, Benveniste, Vates, Deane, Goldman, Nagelhus and Nedergaard, 2012, A paravascular pathway facilitates cerebrospinal fluid flow through the brain parenchyma and the clearance of interstitial solutes, Science Translational Medicine, for the glymphatic proposal; together with the critiques of Smith and Verkman and subsequent negative reports, recorded by the corpus as an active and unresolved dispute rather than as established physiology.
+
+• Attwell and Laughlin, 2001, An energy budget for signaling in the grey matter of the brain, Journal of Cerebral Blood Flow and Metabolism, volume 21, giving roughly 47 percent to action potentials, 34 percent to postsynaptic glutamate receptors, 13 percent to resting potentials and 3 percent to glutamate recycling.
+
+• Howarth, Gleeson and Attwell, 2012, Updated energy budgets for neural computation in the neocortex and cerebellum, Journal of Cerebral Blood Flow and Metabolism, volume 32; and Howarth, Peppiatt-Wildman and Attwell, 2012, Synaptic energy use and supply, Neuron, volume 75, revising the action potential share downward on measured sodium influx and putting housekeeping at roughly a quarter of cortical energy use.
+
+• Heinemann and Lux, 1977, Ceiling of stimulus induced rises in extracellular potassium concentration in the cerebral cortex of cat, Brain Research, for the potassium ceiling.
+
+• Orkand, Nicholls and Kuffler, 1966, Effect of nerve impulses on the membrane potential of glial cells in the central nervous system of amphibia, Journal of Neurophysiology, for glial spatial buffering.
+
+• Neher and Augustine, 1992, Calcium gradients and buffers in bovine chromaffin cells, Journal of Physiology, for calcium buffering ratios and microdomain reasoning.
+
+• Rivera and colleagues, 1999, Nature, and Kirmse and colleagues, 2015, Nature Communications, as the two sides of the chloride developmental switch dispute, together with the negative NEMO trial of bumetanide in neonatal seizures and the 2021 discontinuation of the bumetanide autism programme.
+
+• Wemmie and colleagues on acid-sensing ion channel 1a in fear and in carbon dioxide-evoked behaviour, recorded by the corpus as suggestive rather than definitive in humans.
+
+• Porkka-Heiskanen, Strecker, Thakkar, Bjørkum, Greene and McCarley, 1997, Adenosine: a mediator of the sleep-inducing effects of prolonged wakefulness, Science, volume 276, for basal forebrain adenosine accumulation, recorded with the corpus's caveat that adenosine is a contributor to and not the whole of sleep homeostasis.
+
+• Pellerin and Magistretti, 1994, Glutamate uptake into astrocytes stimulates aerobic glycolysis, Proceedings of the National Academy of Sciences, for the astrocyte-neuron lactate shuttle; and the sustained critique of it by Dienel, recorded as unresolved.
+
+• Astrup, Siesjö and Symon, 1981, Thresholds in cerebral ischemia: the ischemic penumbra, Stroke, volume 12, for the flow thresholds of electrical and membrane failure.
+
+• Logothetis, Pauls, Augath, Trinath and Oeltermann, 2001, Neurophysiological investigation of the basis of the fMRI signal, Nature, volume 412; and Logothetis, 2008, What we can do and what we cannot do with fMRI, Nature, volume 453, for the finding that the blood-oxygen-level-dependent signal tracks local field potentials better than spiking output, and for the honest statement of the method's limits.
+
+• Bock and colleagues, 2020, Optical mapping of cAMP signaling at the nanometer scale, Cell; and Anton and colleagues, 2022, Receptor-associated independent cAMP nanodomains mediate spatiotemporal specificity of GPCR signaling, Cell, for the revision of cyclic adenosine monophosphate from a freely diffusing messenger to a buffered, nanodomain-organised one.
+
+• Modern measurements of tissue hydrogen sulphide in the nanomolar range, superseding the older reports of 50 to 160 micromolar; the corpus records this as a correction rather than a controversy and notes that it invalidates the concentrations used in much of the earlier experimental literature.
+
+• Standard clinical reference values for cerebral blood flow, cerebral metabolic rate for oxygen and glucose, oxygen extraction fraction, plasma and cerebrospinal fluid electrolytes, and arterial blood gases, taken from current physiology and neurocritical care references.
+
+
+THE COGNITIVE SCOREBOARD
+
+Twenty-one of the twenty-two entries carry the (COG) tag, and the single (NON-COG) entry is the organic six, which builds everything and signals nothing.
+
+That ratio is not a boast about physics; it is a consequence of the selection rule, since entries were admitted precisely because something above them depends on them.
+
+A full catalogue of Layers 1, 2 and 3 would invert that ratio completely, and would be a textbook of physics and chemistry with a footnote about brains, which is exactly the document this dossier refused to write.
+
+The dossier's lesson for a cognitive architect is narrow and useful: the substrate layers contribute exactly four things to the design, and they are a noise floor that cannot be lowered, a set of gradients that must be paid for continuously, a messenger whose dynamic range is four orders of magnitude, and a delivery constraint measured in seconds.
+
+Everything else about physics and chemistry, for the purposes of this corpus, is genuinely abstracted away, which is the whole point of having layers.
+
+A second lesson, addressed to the reader rather than to the architect, is about honesty at this depth.
+
+This dossier records more open disputes and more explicit refusals than any other document in the corpus, and it does so deliberately: the ambient extracellular glutamate concentration is contested across three orders of magnitude, the nitric oxide diffusion radius across two, the vesicular zinc concentration across two, the node of Ranvier channel density across one, and the developmental chloride switch is disputed in its very existence in the intact animal.
+
+Three claims that circulate widely are graded here as not supported by the evidence offered for them, namely microtubule quantum computation as a substrate of consciousness, inelastic electron tunnelling as the mechanism of olfaction, and any single quoted figure for the amplification of the cyclic adenosine monophosphate cascade.
+
+One published measurement, the brain concentration of hydrogen sulphide, is recorded as having been corrected downward by roughly four orders of magnitude, which should be read as a caution about every number in this document that has not yet been re-measured by a better method.
+
+The corpus's position, stated once and applied throughout, is that a dossier at this depth earns its authority by naming what it does not know, and that a plausible number in an empty slot is worse than an admitted gap, because a gap invites measurement and a plausible number ends the enquiry.
+
+
+END OF MANUSCRIPT
+
+This manuscript is the companion to LAYER_01_02_03_SUBSTRATE_OUTLINE.txt in this directory, and the two agree chapter for chapter in number and in title.
+
+It was written by the konnectome build on 12 August 2026 under the owner's explicit authority of that date, its quantitative content was checked against the published literature by web search on that date, and it does not outrank the corpus's own original documents.
