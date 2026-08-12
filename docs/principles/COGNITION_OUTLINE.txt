@@ -1,0 +1,1974 @@
+HUMAN COGNITION, HUMAN COGNITIVE PROCESSES, AND HUMAN COGNITIVE ARCHITECTURES
+
+A Complete, Comprehensive, and Thorough Outline
+
+Compiled for the konnectome repository of D. R. Dison, Founder, Artificial Intelligence University (AIU).
+
+Date of compilation: August 12, 2026.
+
+
+HOW TO READ THIS OUTLINE
+
+This document has four levels.
+
+Level 1 is the PART, of which there are fifteen, numbered in words from ONE to FIFTEEN.
+
+Level 2 is the CHAPTER, of which there are seventy, numbered continuously from 1 to 70 across the whole work.
+
+Level 3 is the SECTION, numbered as chapter-point-section, for example 12.3.
+
+Level 4 is the SUB-SECTION, numbered as chapter-point-section-point-subsection, for example 12.3.4.
+
+The outline is organised on a single principle: human cognition is what a mind does when it acquires, represents, transforms, stores, retrieves, and acts upon information in the service of adaptive behaviour, and a cognitive architecture is a proposal for the fixed machinery that makes the whole of that possible at once.
+
+Everything from Part Two through Part Twelve is the catalogue of the capacities themselves, the cognitive processes. Part One is the apparatus by which those capacities are defined and made testable. Parts Thirteen and Fourteen are the theories that try to explain the capacities as one integrated system, the cognitive architectures. Part Fifteen is the frontier where that programme meets modern machine intelligence, which is the point of contact with konnectome.
+
+Cognition, for the purposes of this outline, means the set of processes by which a mind acquires, represents, transforms, stores, retrieves, and acts upon information.
+
+A cognitive process, for the purposes of this outline, means one such capacity treated as an object of study in its own right, for example attention or episodic memory.
+
+A cognitive architecture, for the purposes of this outline, means a unified computational theory that specifies the fixed structures and mechanisms an entire mind requires, within which particular knowledge and skills are the variable content.
+
+The three terms name three grains of the same subject: the whole faculty of knowing, its separable processes, and the integrated machine that runs them.
+
+
+WHY THIS DOCUMENT EXISTS, AND WHOM IT SERVES
+
+konnectome is built to the principles of Artificial General Intelligence and Artificial Super Intelligence. A machine that is to think in a humanlike way must be measured against the best available account of how human thinking actually works, process by process, and against the best available proposals for how those processes compose into a single mind.
+
+This outline is that account, in map form. It is deliberately catholic: it does not commit konnectome to one architecture or one framework, because the honest state of the science is that several frameworks each explain part of the mind and none explains all of it. The outline instead lays every serious contender side by side, at a common grain, so that a later reader can see what each buys and what each still owes.
+
+Where the companion document THE NEUROSCIENCE OF COGNITION treats cognition from the side of the nervous system, this document treats it from the side of the cognitive and computational sciences, and the two are meant to be read together.
+
+
+A NOTE ON TAGS
+
+Each chapter carries one of four tags.
+
+(PROCESS) marks a chapter that states a cognitive capacity or the mechanism of one, the material a model of the mind must reproduce.
+
+(FRAMEWORK) marks a chapter that supplies a theory, a mathematics, or a method by which the PROCESS chapters are made precise and checkable.
+
+(ARCHITECTURE) marks a chapter that specifies an integrated proposal for the whole mind, or a mechanism that spans one.
+
+(CONTEXT) marks a chapter that situates the science historically, philosophically, or at its unfinished frontier.
+
+
+A NOTE ON SOURCES
+
+The structure was checked against the field's canonical teaching and reference works and against the primary and review literature to 2026. The principal anchors are named here once and referred to by short form in the chapter notes at the end.
+
+Textbook and handbook anchors: Goldstein, Cognitive Psychology: Connecting Mind, Research and Everyday Experience; Eysenck and Keane, Cognitive Psychology: A Student's Handbook, eighth edition, 2020; Anderson, Cognitive Psychology and Its Implications, ninth edition; Reisberg, Cognition: Exploring the Science of the Mind, and the Oxford Handbook of Cognitive Psychology he edited in 2013; Sternberg, Cognitive Psychology; Wixted, editor, Stevens' Handbook of Experimental Psychology and Cognitive Neuroscience, fourth edition, five volumes, 2018; Wilson and Keil, editors, The MIT Encyclopedia of the Cognitive Sciences, 1999; Bermudez, Cognitive Science; Friedenberg and Silverman, Cognitive Science; Thagard, Mind.
+
+Architecture anchors: Newell, Unified Theories of Cognition, 1990; Anderson, How Can the Human Mind Occur in the Physical Universe, 2007; Laird, The Soar Cognitive Architecture, 2012; Sun, Anatomy of the Mind, 2016; Kotseruba and Tsotsos, 40 Years of Cognitive Architectures, Artificial Intelligence Review, 2020; Laird, Lebiere and Rosenbloom, A Standard Model of the Mind, AI Magazine, 2017.
+
+A fuller per-chapter list of seminal works stands in THE CHAPTER NOTES at the end of this outline.
+
+
+PART ONE. FOUNDATIONS: WHAT COGNITION IS AND HOW IT IS STUDIED
+
+
+CHAPTER 1. THE OBJECT OF STUDY: DEFINING COGNITION (PROCESS)
+
+1.1 The working definition and its boundaries
+
+1.1.1 Cognition as the acquisition, representation, transformation, storage, retrieval, and use of information
+
+1.1.2 The contested borders with sensation, with reflex, with emotion, and with motivation
+
+1.1.3 The contested border with consciousness: cognition without awareness
+
+1.1.4 Why every boundary drawn here is a research decision rather than a fact of nature
+
+1.2 The classical faculty list and its fate
+
+1.2.1 Perception, attention, memory, language, thought, action, emotion, and self
+
+1.2.2 Faculties as convenient labels rather than natural kinds
+
+1.2.3 The reverse-inference problem: reading a faculty off an observation
+
+1.2.4 The three ways to carve the field: by faculty, by processing stage, by architecture
+
+1.3 Cognition as model-building
+
+1.3.1 The internal model as the field's central theoretical object
+
+1.3.2 Generative, forward, and inverse models
+
+1.3.3 Prediction as a proposed common currency of cognition
+
+1.3.4 Why model-building aims to unify perception, memory, and planning under one description
+
+1.4 The mind and its realisation
+
+1.4.1 The mind-body problem in the form the science inherits it
+
+1.4.2 Functionalism and multiple realizability
+
+1.4.3 Cognitive psychology, cognitive science, cognitive neuroscience, and artificial intelligence as four viewpoints on one object
+
+1.4.4 What a completed science of cognition would have to deliver
+
+
+CHAPTER 2. A HISTORY OF THE SCIENCE OF MIND (CONTEXT)
+
+2.1 Philosophical roots
+
+2.1.1 Empiricism and rationalism: Locke, Hume, Kant
+
+2.1.2 Associationism and faculty psychology
+
+2.1.3 The introspective method and its limits
+
+2.2 The founding of experimental psychology
+
+2.2.1 Wundt, the Leipzig laboratory, and structuralism
+
+2.2.2 Ebbinghaus, nonsense syllables, and the forgetting curve
+
+2.2.3 William James and the stream of consciousness
+
+2.2.4 Gestalt psychology and Bartlett's schemas
+
+2.3 The behaviourist interregnum
+
+2.3.1 Watson, Skinner, and the rejection of mentalism
+
+2.3.2 Tolman, cognitive maps, and latent learning as proto-cognitive dissent
+
+2.4 The cognitive revolution
+
+2.4.1 The enabling disciplines: information theory, cybernetics, the digital computer, generative linguistics
+
+2.4.2 The year 1956 and its landmarks: Miller, Chomsky, Bruner, Newell and Simon, the Dartmouth workshop
+
+2.4.3 Broadbent's filter model and the flow diagram as a theory
+
+2.4.4 Neisser's 1967 codification and the naming of the field
+
+2.5 From revolution to synthesis
+
+2.5.1 The rise of connectionism in the 1980s
+
+2.5.2 The turn to the brain and the birth of cognitive neuroscience
+
+2.5.3 The Bayesian and probabilistic synthesis of the 2000s
+
+2.5.4 The deep-learning and foundation-model era and its challenge to the field
+
+
+CHAPTER 3. THE THEORETICAL PARADIGMS (FRAMEWORK)
+
+3.1 Symbolic computationalism
+
+3.1.1 The physical symbol system hypothesis
+
+3.1.2 Production systems and the language of thought
+
+3.1.3 Strengths in compositionality and systematicity, weaknesses in learning and grounding
+
+3.2 Connectionism and parallel distributed processing
+
+3.2.1 Distributed representation and learning from data
+
+3.2.2 Graceful degradation and content-addressable memory
+
+3.2.3 Strengths in learning and pattern, weaknesses in structure and binding
+
+3.3 Dynamical, embodied, and enactive approaches
+
+3.3.1 Cognition as continuous dynamics rather than discrete computation
+
+3.3.2 The body and the environment as parts of the cognitive system
+
+3.4 Bayesian and probabilistic approaches
+
+3.4.1 The mind as an engine of inductive inference under uncertainty
+
+3.4.2 Structured probabilistic knowledge and learning-to-learn
+
+3.5 How the paradigms relate
+
+3.5.1 Rivalry, division of labour, and attempts at reconciliation
+
+3.5.2 Why konnectome treats them as complementary constraints rather than competitors
+
+
+CHAPTER 4. LEVELS OF ANALYSIS AND EXPLANATION (FRAMEWORK)
+
+4.1 Marr's three levels
+
+4.1.1 The computational level: the problem and why it must be solved
+
+4.1.2 The algorithmic and representational level: the representations and processes
+
+4.1.3 The implementational level: the physical realisation
+
+4.1.4 The independence and the interaction of the levels
+
+4.2 Companion tri-level schemes
+
+4.2.1 Chomsky's competence and performance
+
+4.2.2 Newell's bands and time scales, from the biological to the social
+
+4.2.3 Pylyshyn's functional architecture and cognitive penetrability
+
+4.2.4 Dennett's physical, design, and intentional stances
+
+4.3 The debate over levels
+
+4.3.1 The claim that algorithm constrains computation
+
+4.3.2 The warning that neuroscience needs behaviour
+
+4.3.3 Reverse engineering versus mechanistic explanation
+
+4.4 Cognitive computational neuroscience as the level-bridging programme
+
+4.4.1 Model classes that span the levels
+
+4.4.2 Representational comparison between models and brains
+
+
+CHAPTER 5. THE METHODS OF COGNITIVE SCIENCE (FRAMEWORK)
+
+5.1 The logic of the behavioural experiment
+
+5.1.1 Independent, dependent, and control variables; within and between designs
+
+5.1.2 Confounds, counterbalancing, and the validities
+
+5.1.3 The experimental and the individual-differences traditions
+
+5.2 Mental chronometry
+
+5.2.1 Reaction time as the founding measure
+
+5.2.2 Donders' subtraction method and the pure-insertion assumption
+
+5.2.3 Sternberg's additive-factors method and the logic of stages
+
+5.2.4 The speed-accuracy trade-off and distributional analysis of response time
+
+5.3 Psychophysics and signal detection
+
+5.3.1 Thresholds and the classical psychophysical laws of Weber, Fechner, and Stevens
+
+5.3.2 Adaptive and staircase methods
+
+5.3.3 Sensitivity and bias: the separation of d-prime from criterion
+
+5.4 Indirect and process-tracing methods
+
+5.4.1 Priming, interference, and dual-task paradigms
+
+5.4.2 Eye-tracking and the eye-mind assumption
+
+5.4.3 Implicit measures and the process-dissociation procedure
+
+5.5 Computational modelling and model evaluation
+
+5.5.1 The model families: symbolic, connectionist, Bayesian, reinforcement-learning, sequential-sampling
+
+5.5.2 Fitting, and comparison by information criteria, cross-validation, and Bayes factors
+
+5.5.3 Parameter recovery, identifiability, and generalisation as the real tests
+
+5.6 A glance at the neuroscience methods
+
+5.6.1 The temporal methods: electroencephalography and magnetoencephalography
+
+5.6.2 The spatial methods: functional imaging, decoding, and representational similarity
+
+5.6.3 The causal methods: stimulation, lesion, and single-unit recording
+
+5.7 The credibility of the field
+
+5.7.1 The replication crisis and its diagnosis
+
+5.7.2 The theory crisis and weak verbal models
+
+5.7.3 The reforms: preregistration, registered reports, open data, and multi-laboratory replication
+
+
+CHAPTER 6. ONTOLOGIES AND THE TAXONOMY OF COGNITION (FRAMEWORK)
+
+6.1 Why a machine-readable taxonomy matters
+
+6.1.1 The mapping from tasks to processes and back
+
+6.1.2 The reverse-inference problem restated as an ontology problem
+
+6.2 The standard ontologies
+
+6.2.1 The Cognitive Atlas and its bipartite graph of processes and tasks
+
+6.2.2 The Cognitive Paradigm Ontology and the classification of experiments
+
+6.2.3 The Research Domain Criteria and its cognitive systems domain
+
+6.3 The organising axes that recur as tags rather than chapters
+
+6.3.1 The levels-of-analysis axis
+
+6.3.2 The symbolic to connectionist to Bayesian paradigm axis
+
+6.3.3 The automatic and controlled, System One and System Two axis
+
+6.4 The trade-offs of the three organisations
+
+6.4.1 Faculty organisation for coverage and teaching
+
+6.4.2 Process organisation for mechanism
+
+6.4.3 Architecture organisation for integration and theory
+
+
+PART TWO. PERCEPTION: BUILDING THE WORLD FROM SIGNALS
+
+
+CHAPTER 7. PSYCHOPHYSICS AND SENSORY CODING (PROCESS)
+
+7.1 The measurement of sensation
+
+7.1.1 Absolute and difference thresholds
+
+7.1.2 Weber's law, Fechner's law, and Stevens' power law
+
+7.1.3 Signal detection theory as the modern replacement for the threshold
+
+7.2 Sensory coding
+
+7.2.1 Feature detectors and receptive fields
+
+7.2.2 Population codes and efficient coding
+
+7.2.3 Adaptation and gain control
+
+7.3 The senses beyond vision
+
+7.3.1 Audition and the coding of frequency and time
+
+7.3.2 The chemical and somatic senses
+
+7.3.3 Interoception as perception of the internal milieu
+
+
+CHAPTER 8. PERCEPTUAL ORGANISATION AND CONSTANCY (PROCESS)
+
+8.1 The Gestalt principles of grouping
+
+8.1.1 Proximity, similarity, good continuation, closure, and common fate
+
+8.1.2 Figure and ground, and the law of pragnanz
+
+8.2 Perceptual constancy
+
+8.2.1 Size, shape, lightness, and colour constancy
+
+8.2.2 Constancy as the discounting of the illuminant and the viewpoint
+
+8.3 Illusion and multistability
+
+8.3.1 Illusions as the visible cost of useful assumptions
+
+8.3.2 Bistable percepts and the dynamics of switching
+
+8.4 The two grand approaches to seeing
+
+8.4.1 Direct perception and the ecological optics of Gibson
+
+8.4.2 Constructivism and the unconscious inference of Helmholtz
+
+
+CHAPTER 9. OBJECT AND PATTERN RECOGNITION (PROCESS)
+
+9.1 Theories of recognition
+
+9.1.1 Template, prototype, and feature theories
+
+9.1.2 Recognition by components and structural description
+
+9.1.3 View-based against object-based recognition
+
+9.2 The computational theory of vision
+
+9.2.1 Marr's primal sketch, two-and-a-half-dimensional sketch, and three-dimensional model
+
+9.2.2 The two visual streams: the what and the where or how
+
+9.3 Special cases and models
+
+9.3.1 Face recognition and its functional model
+
+9.3.2 Reading and visual word recognition as an acquired expertise
+
+9.3.3 Deep neural networks as models of the ventral stream
+
+9.4 Perceptual learning
+
+9.4.1 The improvement of perception with practice
+
+9.4.2 Specificity and transfer of perceptual learning
+
+
+CHAPTER 10. BAYESIAN PERCEPTION AND PREDICTIVE CODING (FRAMEWORK)
+
+10.1 Perception as probabilistic inference
+
+10.1.1 Priors, likelihoods, and the ideal observer
+
+10.1.2 Perception as the inversion of a generative model
+
+10.2 Cue combination
+
+10.2.1 The optimal integration of cues within and across the senses
+
+10.2.2 Reliability weighting and its behavioural signatures
+
+10.3 Predictive coding
+
+10.3.1 Hierarchical prediction and the propagation of prediction error
+
+10.3.2 Precision weighting as the mechanism of attention
+
+10.3.3 The empirical evidence and its disputes
+
+
+CHAPTER 11. MULTISENSORY INTEGRATION AND PERCEPTION FOR ACTION (PROCESS)
+
+11.1 Multisensory integration
+
+11.1.1 The principles of multisensory combination
+
+11.1.2 Crossmodal illusions as evidence of integration
+
+11.2 Perception for action
+
+11.2.1 The sensorimotor loop and the closing of perception onto movement
+
+11.2.2 Optimal feedback control and the coupling of estimate and command
+
+11.3 Active perception
+
+11.3.1 The active sampling of the world by eye, hand, and body
+
+11.3.2 Action as a means of resolving perceptual uncertainty
+
+
+PART THREE. ATTENTION: THE ALLOCATION OF LIMITED RESOURCES
+
+
+CHAPTER 12. VARIETIES AND THEORIES OF ATTENTION (PROCESS)
+
+12.1 The varieties of attention
+
+12.1.1 Selective, divided, and sustained attention
+
+12.1.2 Spatial, feature-based, and object-based attention
+
+12.1.3 Overt and covert, exogenous and endogenous orienting
+
+12.2 The founding question
+
+12.2.1 Attention as selection under a capacity limit
+
+12.2.2 Why a mind with unlimited capacity would need no attention
+
+
+CHAPTER 13. SELECTION: BOTTLENECK, LOAD, AND CAPACITY (PROCESS)
+
+13.1 The bottleneck theories
+
+13.1.1 Early selection and the filter model
+
+13.1.2 Attenuation
+
+13.1.3 Late selection
+
+13.2 Load and capacity
+
+13.2.1 Perceptual load theory and the movable locus of selection
+
+13.2.2 Limited-capacity and multiple-resource models
+
+13.2.3 Automaticity and controlled processing
+
+13.3 The central bottleneck in performance
+
+13.3.1 The psychological refractory period
+
+13.3.2 Dual-task cost and its interpretation
+
+
+CHAPTER 14. SPATIAL ATTENTION AND CONTROL NETWORKS (PROCESS)
+
+14.1 The mechanics of spatial attention
+
+14.1.1 The spotlight and zoom-lens metaphors
+
+14.1.2 Cueing, orienting, and inhibition of return
+
+14.2 The attention networks
+
+14.2.1 Alerting, orienting, and executive control
+
+14.2.2 The frontoparietal control of attention
+
+14.3 The neural theory of selection
+
+14.3.1 Biased competition
+
+14.3.2 Attentional modulation of neural gain
+
+
+CHAPTER 15. ATTENTION, BINDING, AND ITS FAILURES (PROCESS)
+
+15.1 Attention and the binding of features
+
+15.1.1 Feature integration theory and the preattentive to attentive transition
+
+15.1.2 Illusory conjunctions as evidence of a binding step
+
+15.1.3 Guided search as a refinement
+
+15.2 The failures of attention
+
+15.2.1 Inattentional and change blindness
+
+15.2.2 The attentional blink
+
+15.3 The binding problem in general
+
+15.3.1 Feature binding and the unity of the percept
+
+15.3.2 The variable-binding problem for symbolic and connectionist systems
+
+
+PART FOUR. MEMORY: RETAINING AND RECONSTRUCTING
+
+
+CHAPTER 16. SENSORY AND SHORT-TERM STORES (PROCESS)
+
+16.1 The modal model
+
+16.1.1 The sensory, short-term, and long-term stores
+
+16.1.2 The transfer between stores and its controversies
+
+16.2 Sensory memory
+
+16.2.1 Iconic memory and the partial-report advantage
+
+16.2.2 Echoic memory
+
+16.3 Short-term memory
+
+16.3.1 Capacity, the magical number, and chunking
+
+16.3.2 Serial position, primacy, and recency
+
+16.3.3 Decay against interference as the cause of loss
+
+
+CHAPTER 17. WORKING MEMORY (PROCESS)
+
+17.1 The multicomponent model
+
+17.1.1 The central executive
+
+17.1.2 The phonological loop and its behavioural signatures
+
+17.1.3 The visuospatial sketchpad
+
+17.1.4 The episodic buffer
+
+17.2 The alternative frameworks
+
+17.2.1 Working memory as activated long-term memory and the focus of attention
+
+17.2.2 Working memory as executive attention and its link to fluid intelligence
+
+17.2.3 Time-based resource sharing and interference accounts
+
+17.3 The nature of the capacity limit
+
+17.3.1 The slots against continuous-resource debate
+
+17.3.2 Compression, chunking, and expertise
+
+17.4 The neural basis
+
+17.4.1 Persistent activity in prefrontal cortex
+
+17.4.2 Activity-silent and synaptic accounts
+
+
+CHAPTER 18. LONG-TERM MEMORY SYSTEMS (PROCESS)
+
+18.1 The taxonomy of long-term memory
+
+18.1.1 Declarative against non-declarative memory
+
+18.1.2 Episodic against semantic memory
+
+18.1.3 Procedural memory, priming, and conditioning
+
+18.2 Autobiographical and prospective memory
+
+18.2.1 The self across time in autobiographical memory
+
+18.2.2 Remembering to act in prospective memory
+
+18.3 The convergence with imagination
+
+18.3.1 The shared machinery of remembering the past and simulating the future
+
+18.3.2 Memory as a tool for prospection rather than a record
+
+
+CHAPTER 19. ENCODING, CONSOLIDATION, AND RETRIEVAL (PROCESS)
+
+19.1 Encoding
+
+19.1.1 Levels of processing and elaboration
+
+19.1.2 Encoding specificity and transfer-appropriate processing
+
+19.1.3 The generation, spacing, and testing effects
+
+19.2 Consolidation
+
+19.2.1 Synaptic consolidation and reconsolidation
+
+19.2.2 Systems consolidation and the hippocampal-neocortical dialogue
+
+19.2.3 Sleep and the reorganisation of memory
+
+19.3 Retrieval
+
+19.3.1 Recall and recognition
+
+19.3.2 Context-dependent and state-dependent retrieval
+
+19.3.3 The dual-process account of recognition: recollection and familiarity
+
+19.3.4 Retrieval as a cause of both strengthening and forgetting
+
+
+CHAPTER 20. FORGETTING, RECONSTRUCTION, AND MEMORY ERROR (PROCESS)
+
+20.1 Forgetting
+
+20.1.1 Decay, interference, and cue-dependent forgetting
+
+20.1.2 The forgetting curve and the relearning saving
+
+20.1.3 Motivated and directed forgetting
+
+20.2 Memory as reconstruction
+
+20.2.1 Schemas and scripts as the scaffolding of recall
+
+20.2.2 The reconstructive nature of remembering
+
+20.3 The errors of memory
+
+20.3.1 The seven sins of memory as a taxonomy of failure
+
+20.3.2 False memory and the laboratory paradigms that produce it
+
+20.3.3 The misinformation effect and the fallibility of eyewitness memory
+
+
+PART FIVE. KNOWLEDGE AND CONCEPTS
+
+
+CHAPTER 21. CONCEPTS AND CATEGORISATION (PROCESS)
+
+21.1 The theories of conceptual structure
+
+21.1.1 The classical definitional view and its failure
+
+21.1.2 Prototype theory and graded typicality
+
+21.1.3 Exemplar theory and instance-based categorisation
+
+21.1.4 The theory-theory and psychological essentialism
+
+21.2 The structure of categories
+
+21.2.1 The basic level of categorisation
+
+21.2.2 Ad hoc and goal-derived categories
+
+21.3 Category learning
+
+21.3.1 The computational models of category learning
+
+21.3.2 Rule-based against similarity-based learning
+
+
+CHAPTER 22. SEMANTIC MEMORY AND ITS ORGANISATION (PROCESS)
+
+22.1 The network models
+
+22.1.1 Hierarchical semantic networks
+
+22.1.2 Spreading activation
+
+22.2 The feature and space models
+
+22.2.1 Semantic feature comparison
+
+22.2.2 Distributional semantics and vector-space meaning
+
+22.3 The neural organisation of meaning
+
+22.3.1 The hub-and-spoke model and the semantic hub
+
+22.3.2 Category-specific semantic deficits as evidence of structure
+
+
+CHAPTER 23. GROUNDED, EMBODIED, AND DISTRIBUTED MEANING (FRAMEWORK)
+
+23.1 The symbol grounding problem
+
+23.1.1 Harnad's formulation and the Chinese Room
+
+23.1.2 Grounding by sensorimotor experience and by multimodal learning
+
+23.2 Grounded and perceptual symbol systems
+
+23.2.1 Concepts as simulations rather than amodal symbols
+
+23.2.2 The evidence for and against grounding
+
+23.3 Schemas, frames, and mental models
+
+23.3.1 Frames and scripts as structured knowledge
+
+23.3.2 Mental models as manipulable internal representations
+
+
+CHAPTER 24. MENTAL IMAGERY AND ANALOG REPRESENTATION (PROCESS)
+
+24.1 The phenomena of imagery
+
+24.1.1 Mental rotation and its linear signature
+
+24.1.2 Image scanning and the preservation of metric structure
+
+24.2 The imagery debate
+
+24.2.1 The depictive account
+
+24.2.2 The propositional account
+
+24.2.3 What the debate settled and what it did not
+
+
+PART SIX. LANGUAGE
+
+
+CHAPTER 25. THE STRUCTURE AND FACULTY OF LANGUAGE (PROCESS)
+
+25.1 The levels of linguistic structure
+
+25.1.1 Phonology and morphology
+
+25.1.2 Syntax
+
+25.1.3 Semantics, pragmatics, and discourse
+
+25.2 The defining properties
+
+25.2.1 Generativity, productivity, and recursion
+
+25.2.2 Competence against performance
+
+25.3 The modularity question
+
+25.3.1 Language as a distinct faculty
+
+25.3.2 The evidence from dissociation and development
+
+
+CHAPTER 26. SPEECH PERCEPTION AND WORD RECOGNITION (PROCESS)
+
+26.1 Speech perception
+
+26.1.1 Categorical perception and the lack of invariance
+
+26.1.2 The multimodal nature of speech and the McGurk effect
+
+26.2 Spoken-word recognition
+
+26.2.1 The cohort model
+
+26.2.2 Interactive-activation and competition models
+
+26.3 Visual word recognition and reading
+
+26.3.1 The dual-route and connectionist accounts
+
+26.3.2 Eye movements as a window on reading
+
+
+CHAPTER 27. SENTENCE AND DISCOURSE COMPREHENSION (PROCESS)
+
+27.1 Parsing
+
+27.1.1 The garden-path model and structural principles
+
+27.1.2 Constraint-satisfaction and good-enough processing
+
+27.2 Ambiguity and prediction
+
+27.2.1 Lexical and syntactic ambiguity resolution
+
+27.2.2 Prediction in comprehension and its electrophysiological signatures
+
+27.3 Discourse and pragmatics
+
+27.3.1 Inference, coherence, and the situation model
+
+27.3.2 Grice's maxims and the computation of common ground
+
+
+CHAPTER 28. LANGUAGE PRODUCTION (PROCESS)
+
+28.1 The architecture of production
+
+28.1.1 From message to articulation
+
+28.1.2 The lemma and the lexeme
+
+28.2 The evidence from error
+
+28.2.1 Speech errors as a window on the plan
+
+28.2.2 The tip-of-the-tongue state
+
+
+CHAPTER 29. LANGUAGE ACQUISITION AND THE LANGUAGE-THOUGHT RELATION (PROCESS)
+
+29.1 The acquisition of language
+
+29.1.1 Nativism, universal grammar, and the poverty of the stimulus
+
+29.1.2 Usage-based and statistical learning
+
+29.1.3 The critical period and bilingualism
+
+29.2 Language and thought
+
+29.2.1 Linguistic relativity and its modern evidence
+
+29.2.2 The language of thought hypothesis
+
+29.2.3 The evolution of language
+
+
+PART SEVEN. LEARNING
+
+
+CHAPTER 30. NON-ASSOCIATIVE AND ASSOCIATIVE LEARNING (PROCESS)
+
+30.1 Non-associative learning
+
+30.1.1 Habituation and sensitisation
+
+30.2 Classical conditioning
+
+30.2.1 The Pavlovian paradigm and its phenomena
+
+30.2.2 The Rescorla-Wagner model and prediction error
+
+30.2.3 Blocking, overshadowing, and the primacy of contingency over contiguity
+
+30.3 Instrumental conditioning
+
+30.3.1 The law of effect and schedules of reinforcement
+
+30.3.2 Goal-directed against habitual control
+
+
+CHAPTER 31. REINFORCEMENT LEARNING AS A THEORY OF COGNITION (FRAMEWORK)
+
+31.1 The formal framework
+
+31.1.1 Markov decision processes and value functions
+
+31.1.2 Temporal-difference learning and its variants
+
+31.1.3 The exploration and exploitation trade-off
+
+31.2 Model-free and model-based control
+
+31.2.1 The two systems and their behavioural dissociation
+
+31.2.2 The successor representation as a middle ground
+
+31.3 The neuroscience of reward
+
+31.3.1 The dopamine reward-prediction-error hypothesis
+
+31.3.2 The basal ganglia as an actor-critic
+
+31.3.3 Distributional codes for value
+
+31.4 Extensions
+
+31.4.1 Hierarchical reinforcement learning and subgoals
+
+31.4.2 Meta-reinforcement learning and learning to learn
+
+31.4.3 Vigour, opportunity cost, and tonic dopamine
+
+
+CHAPTER 32. STATISTICAL AND IMPLICIT LEARNING (PROCESS)
+
+32.1 Statistical learning
+
+32.1.1 The extraction of transitional probabilities
+
+32.1.2 Statistical learning across domains and ages
+
+32.2 Implicit learning
+
+32.2.1 Sequence learning and artificial grammar learning
+
+32.2.2 The relation between implicit and explicit knowledge
+
+
+CHAPTER 33. SKILL ACQUISITION, EXPERTISE, AND TRANSFER (PROCESS)
+
+33.1 The stages of skill
+
+33.1.1 The cognitive, associative, and autonomous stages
+
+33.1.2 Proceduralisation and the power law of practice
+
+33.2 Expertise
+
+33.2.1 Chunking and pattern recognition in experts
+
+33.2.2 Deliberate practice and its limits
+
+33.3 Transfer
+
+33.3.1 Near and far transfer and the theory of identical elements
+
+33.3.2 Analogical and metacognitive transfer
+
+
+PART EIGHT. THINKING: REASONING, JUDGMENT, AND DECISION
+
+
+CHAPTER 34. DEDUCTIVE AND INDUCTIVE REASONING (PROCESS)
+
+34.1 Deductive reasoning
+
+34.1.1 Conditional reasoning and the selection task
+
+34.1.2 Content effects and pragmatic reasoning schemas
+
+34.1.3 Syllogisms and belief bias
+
+34.2 The theories of deduction
+
+34.2.1 Mental logic against mental models
+
+34.2.2 The probabilistic reinterpretation of reasoning
+
+34.3 Inductive reasoning
+
+34.3.1 Category-based induction
+
+34.3.2 Hypothesis testing and confirmation bias
+
+34.3.3 Bayesian models of induction
+
+
+CHAPTER 35. ANALOGICAL AND CAUSAL REASONING (PROCESS)
+
+35.1 Analogical reasoning
+
+35.1.1 Structure-mapping theory
+
+35.1.2 Analogical retrieval, transfer, and schema induction
+
+35.2 Causal reasoning and learning
+
+35.2.1 Causal graphical models
+
+35.2.2 Covariation, mechanism, and intervention
+
+35.2.3 Causal power and the estimation of strength
+
+
+CHAPTER 36. JUDGMENT UNDER UNCERTAINTY: HEURISTICS AND BIASES (PROCESS)
+
+36.1 The heuristics
+
+36.1.1 Representativeness and its fallacies
+
+36.1.2 Availability
+
+36.1.3 Anchoring and adjustment
+
+36.2 The biases of confidence and hindsight
+
+36.2.1 Overconfidence and its calibration
+
+36.2.2 Hindsight and confirmation bias
+
+36.3 The interpretation of the biases
+
+36.3.1 The heuristics-and-biases reading
+
+36.3.2 The rational and ecological reinterpretation
+
+
+CHAPTER 37. DECISION MAKING AND CHOICE (PROCESS)
+
+37.1 The normative theories
+
+37.1.1 Expected value and expected utility
+
+37.1.2 Subjective expected utility and Bayesian decision theory
+
+37.2 The descriptive theories
+
+37.2.1 Prospect theory: reference dependence, loss aversion, and probability weighting
+
+37.2.2 Framing and mental accounting
+
+37.3 Value and preference
+
+37.3.1 Constructed preference and preference reversal
+
+37.3.2 Intertemporal choice and delay discounting
+
+37.3.3 The role of affect in decision
+
+37.4 Dynamic and sequential decision
+
+37.4.1 Evidence accumulation and the drift-diffusion model
+
+37.4.2 Exploration and exploitation in sequential choice
+
+37.4.3 The debiasing of judgment and choice architecture
+
+
+CHAPTER 38. DUAL-PROCESS THEORY AND THE RATIONALITY DEBATE (FRAMEWORK)
+
+38.1 Dual-process theory
+
+38.1.1 System One and System Two
+
+38.1.2 Default-interventionist and parallel-competitive architectures
+
+38.2 The rationality debate
+
+38.2.1 Bounded rationality and satisficing
+
+38.2.2 The distinction between intelligence and rationality
+
+38.2.3 Whether the biases are defects or adaptations
+
+
+PART NINE. PROBLEM SOLVING, PLANNING, AND COGNITIVE CONTROL
+
+
+CHAPTER 39. PROBLEM SOLVING AND INSIGHT (PROCESS)
+
+39.1 The problem-space theory
+
+39.1.1 States, operators, and goals
+
+39.1.2 Well-defined and ill-defined problems
+
+39.1.3 Search heuristics: means-ends analysis, hill climbing, working backward
+
+39.2 The Gestalt tradition
+
+39.2.1 Insight and restructuring
+
+39.2.2 Functional fixedness and mental set
+
+39.2.3 Incubation
+
+39.3 Expertise in problem solving
+
+39.3.1 The novice-expert difference
+
+39.3.2 Analogical problem solving
+
+
+CHAPTER 40. PLANNING AND SEARCH (PROCESS)
+
+40.1 Planning
+
+40.1.1 Hierarchical planning and subgoaling
+
+40.1.2 The classic planning tasks
+
+40.2 Search and simulation
+
+40.2.1 Model-based planning as internal search
+
+40.2.2 Planning as inference
+
+
+CHAPTER 41. EXECUTIVE FUNCTION AND COGNITIVE CONTROL (PROCESS)
+
+41.1 The structure of executive function
+
+41.1.1 The unity and diversity of executive functions
+
+41.1.2 Inhibition, updating, and shifting
+
+41.2 The control architecture
+
+41.2.1 The supervisory attentional system
+
+41.2.2 Guided activation and the role of prefrontal cortex
+
+41.3 The monitoring of conflict
+
+41.3.1 Conflict monitoring and the adjustment of control
+
+41.3.2 The critique of the congruency-sequence evidence
+
+41.4 The cost of control
+
+41.4.1 Switch costs and the effort of control
+
+41.4.2 The expected value of control
+
+
+PART TEN. METACOGNITION, CONSCIOUSNESS, AND AWARENESS
+
+
+CHAPTER 42. METACOGNITION, CONFIDENCE, AND MONITORING (PROCESS)
+
+42.1 The structure of metacognition
+
+42.1.1 Metacognitive knowledge and metacognitive regulation
+
+42.1.2 The meta-level and object-level framework
+
+42.2 Metamemory
+
+42.2.1 Judgments of learning and feeling of knowing
+
+42.2.2 The cue-utilisation account of monitoring
+
+42.3 Confidence and metacognitive sensitivity
+
+42.3.1 Type-one and type-two performance
+
+42.3.2 Calibration, resolution, and the measurement of insight
+
+42.4 The control side of metacognition
+
+42.4.1 The allocation of study and effort
+
+42.4.2 Metacognition as the mechanism by which a system declines to act
+
+
+CHAPTER 43. AUTOMATICITY AND UNCONSCIOUS PROCESSING (PROCESS)
+
+43.1 Automatic and controlled processing
+
+43.1.1 The criteria of automaticity
+
+43.1.2 The development of automaticity with practice
+
+43.2 The unconscious
+
+43.2.1 Subliminal perception and priming
+
+43.2.2 Implicit cognition and the dissociations that reveal it
+
+43.3 The measurement of awareness
+
+43.3.1 Objective and subjective thresholds
+
+43.3.2 The process-dissociation procedure and the no-report paradigms
+
+
+CHAPTER 44. CONSCIOUSNESS: CONCEPTS, MEASURES, AND THEORIES (CONTEXT)
+
+44.1 The concepts
+
+44.1.1 Access and phenomenal consciousness
+
+44.1.2 The hard problem
+
+44.1.3 Level against content of consciousness
+
+44.2 The theories
+
+44.2.1 Global workspace and global neuronal workspace
+
+44.2.2 Higher-order theories
+
+44.2.3 Integrated information theory
+
+44.2.4 Recurrent processing and predictive-self accounts
+
+44.3 The empirical programme
+
+44.3.1 The search for the neural correlates of consciousness
+
+44.3.2 Adversarial collaboration as a method for a contested field
+
+44.4 The functions of consciousness
+
+44.4.1 Access, flexible control, and integration
+
+44.4.2 Volition and the sense of agency
+
+
+PART ELEVEN. HOT COGNITION: EMOTION, MOTIVATION, AND THE SOCIAL MIND
+
+
+CHAPTER 45. EMOTION AND AFFECTIVE SCIENCE (PROCESS)
+
+45.1 The theories of emotion
+
+45.1.1 Appraisal theories
+
+45.1.2 The two-factor theory
+
+45.1.3 Basic-emotion against dimensional and constructionist accounts
+
+45.2 The components of an emotion
+
+45.2.1 Physiology, expression, feeling, and action tendency
+
+45.2.2 Interoception and the construction of feeling
+
+
+CHAPTER 46. EMOTION-COGNITION INTERACTION AND MOTIVATION (PROCESS)
+
+46.1 The influence of emotion on cognition
+
+46.1.1 Emotional capture of attention
+
+46.1.2 Mood-congruent and arousal-enhanced memory
+
+46.1.3 Affect as information in judgment
+
+46.2 Motivation and cognition
+
+46.2.1 Incentive value and motivated cognition
+
+46.2.2 Curiosity and information-seeking
+
+46.3 Emotion regulation
+
+46.3.1 The strategies of regulation
+
+46.3.2 Cognitive reappraisal
+
+
+CHAPTER 47. SOCIAL COGNITION AND THEORY OF MIND (PROCESS)
+
+47.1 Theory of mind
+
+47.1.1 The false-belief task and its development
+
+47.1.2 Theory-theory against simulation accounts
+
+47.1.3 Mentalising as inverse planning
+
+47.2 Person perception
+
+47.2.1 Impression formation and attribution
+
+47.2.2 Implicit social cognition and stereotyping
+
+47.3 Shared cognition
+
+47.3.1 Shared intentionality and joint action
+
+47.3.2 Communication as a cognitive act
+
+
+CHAPTER 48. MORAL COGNITION AND SELF (PROCESS)
+
+48.1 Moral cognition
+
+48.1.1 The dual-process account of moral judgment
+
+48.1.2 Moral emotions and moral intuition
+
+48.2 The self
+
+48.2.1 Self-knowledge and self-representation
+
+48.2.2 The self across time and the narrative self
+
+
+PART TWELVE. THE VARIETIES AND ORIGINS OF COGNITION
+
+
+CHAPTER 49. COGNITIVE DEVELOPMENT (PROCESS)
+
+49.1 The stage and constructivist theories
+
+49.1.1 Piaget's stages and the mechanisms of assimilation and accommodation
+
+49.1.2 The neo-Piagetian and information-processing accounts
+
+49.2 Core knowledge and nativism
+
+49.2.1 The core systems of object, agent, number, and space
+
+49.2.2 Conceptual change and bootstrapping
+
+49.3 The child as scientist
+
+49.3.1 Children's causal learning
+
+49.3.2 Rational constructivism and development as inference
+
+49.4 The development of the particular faculties
+
+49.4.1 The development of attention and executive control
+
+49.4.2 The development of theory of mind
+
+
+CHAPTER 50. INDIVIDUAL DIFFERENCES, INTELLIGENCE, AND AGING (CONTEXT)
+
+50.1 The structure of intelligence
+
+50.1.1 General intelligence and the positive manifold
+
+50.1.2 Fluid and crystallised intelligence and the Cattell-Horn-Carroll synthesis
+
+50.1.3 The three-stratum model and its rivals
+
+50.2 The mechanisms behind the differences
+
+50.2.1 Working memory, attention control, and their link to fluid intelligence
+
+50.2.2 The process-overlap and mutualism accounts of the positive manifold
+
+50.3 Biology and change
+
+50.3.1 Heritability, the gene-environment interplay, and the Flynn effect
+
+50.3.2 Cognitive aging: processing speed, inhibition, and reserve
+
+
+CHAPTER 51. COMPARATIVE AND EVOLUTIONARY COGNITION (CONTEXT)
+
+51.1 Comparative cognition
+
+51.1.1 Learning, number, and space across species
+
+51.1.2 Animal theory of mind and metacognition
+
+51.1.3 Morgan's canon and the control of anthropomorphism
+
+51.2 Evolutionary cognition
+
+51.2.1 The adapted mind and domain-specific mechanisms
+
+51.2.2 The social-brain hypothesis
+
+51.2.3 The cognitive niche
+
+
+CHAPTER 52. CULTURAL, SITUATED, AND DISTRIBUTED COGNITION (CONTEXT)
+
+52.1 Cultural cognition
+
+52.1.1 Cumulative culture and the ratchet effect
+
+52.1.2 Social learning, imitation, and natural pedagogy
+
+52.1.3 Gene-culture coevolution
+
+52.2 Sociocultural theory
+
+52.2.1 The zone of proximal development and mediation
+
+52.2.2 Internalisation and private speech
+
+52.3 Situated and distributed cognition
+
+52.3.1 Situated action and situated learning
+
+52.3.2 Cognition in the wild and the distribution of thought across people and tools
+
+52.3.3 Collective intelligence
+
+
+PART THIRTEEN. THE COMPUTATIONAL FRAMEWORKS OF MIND
+
+
+CHAPTER 53. RATIONAL ANALYSIS AND THE BAYESIAN BRAIN (FRAMEWORK)
+
+53.1 Rational analysis
+
+53.1.1 The rational-analysis method and the role of the environment
+
+53.1.2 Rational models of memory, categorisation, and inference
+
+53.2 The Bayesian programme
+
+53.2.1 Bayes as a computational-level theory of induction
+
+53.2.2 Hierarchical Bayesian models and learning to learn
+
+53.2.3 Structured probabilistic knowledge: grammars, graphs, and programs
+
+53.3 The domains of Bayesian cognition
+
+53.3.1 Concept learning and the size principle
+
+53.3.2 Intuitive physics as probabilistic simulation
+
+53.3.3 Intuitive psychology as inverse planning
+
+53.4 Bayes at the neural level
+
+53.4.1 Probabilistic population codes
+
+53.4.2 Sampling against parametric representations of uncertainty
+
+53.5 The process-model question
+
+53.5.1 Rational process models and sampling algorithms in the mind
+
+53.5.2 The probabilistic language of thought
+
+
+CHAPTER 54. BOUNDED, RESOURCE-RATIONAL, AND ECOLOGICAL RATIONALITY (FRAMEWORK)
+
+54.1 Bounded rationality
+
+54.1.1 Satisficing and aspiration levels
+
+54.1.2 The scissors of mind and environment
+
+54.2 Resource-rational analysis
+
+54.2.1 The optimal use of limited computation
+
+54.2.2 Rational metareasoning and the value of computation
+
+54.2.3 Heuristics as resource-rational strategies
+
+54.3 Ecological rationality
+
+54.3.1 Fast-and-frugal heuristics and the adaptive toolbox
+
+54.3.2 Less-is-more effects and the bias-variance trade-off
+
+54.4 Rational inattention and the cost of control
+
+54.4.1 Information-theoretic limits on attention
+
+54.4.2 Control allocation as an economic problem
+
+
+CHAPTER 55. CONNECTIONISM AND PARALLEL DISTRIBUTED PROCESSING (FRAMEWORK)
+
+55.1 The foundations
+
+55.1.1 The perceptron and its limits
+
+55.1.2 Distributed representation and backpropagation
+
+55.2 The classic models of cognition
+
+55.2.1 The past-tense debate and rules against networks
+
+55.2.2 Reading and the triangle model
+
+55.2.3 Recurrent networks and the discovery of structure in time
+
+55.2.4 Semantic cognition as an emergent
+
+55.3 The theory of network dynamics
+
+55.3.1 Attractor networks and content-addressable memory
+
+55.3.2 Energy landscapes and constraint satisfaction
+
+55.4 Deep learning as a cognitive model
+
+55.4.1 Deep networks as models of perception and language
+
+55.4.2 The nativism and emergentism debate reopened
+
+
+CHAPTER 56. DYNAMICAL SYSTEMS AND FOUR-E COGNITION (FRAMEWORK)
+
+56.1 The dynamical systems approach
+
+56.1.1 State space, attractors, and coupling
+
+56.1.2 The dynamical hypothesis and its evidence
+
+56.2 Embodied cognition
+
+56.2.1 Conceptual metaphor and sensorimotor grounding
+
+56.2.2 Simulation semantics
+
+56.3 Embedded and extended cognition
+
+56.3.1 The extended-mind thesis and the parity principle
+
+56.3.2 Scaffolding and cognitive niche construction
+
+56.4 Enactivism and ecological psychology
+
+56.4.1 Autopoiesis and the enactive approach
+
+56.4.2 Sensorimotor contingency
+
+56.4.3 Affordances and direct perception
+
+
+CHAPTER 57. PREDICTIVE PROCESSING, ACTIVE INFERENCE, AND THE FREE ENERGY PRINCIPLE (FRAMEWORK)
+
+57.1 Predictive coding
+
+57.1.1 Hierarchical prediction and error minimisation
+
+57.1.2 The Helmholtzian analysis-by-synthesis lineage
+
+57.2 The free energy principle
+
+57.2.1 Variational free energy as a bound on surprise
+
+57.2.2 Markov blankets and self-organisation
+
+57.2.3 The unification claim across brain theories
+
+57.3 Active inference
+
+57.3.1 Action as the fulfilment of prediction
+
+57.3.2 Expected free energy as the sum of epistemic and pragmatic value
+
+57.3.3 Interoceptive inference and the emotional self
+
+57.4 The philosophy and the disputes
+
+57.4.1 The prediction-machine reading of mind
+
+57.4.2 The dark-room problem and its answers
+
+57.4.3 The tension and reconciliation with four-E cognition
+
+
+CHAPTER 58. REPRESENTATION, SYMBOLS, AND THE ARCHITECTURE OF THOUGHT (FRAMEWORK)
+
+58.1 The language of thought
+
+58.1.1 Mentalese and the representational theory of mind
+
+58.1.2 Productivity, systematicity, and compositionality
+
+58.2 The classical and connectionist debate
+
+58.2.1 The systematicity challenge
+
+58.2.2 The connectionist replies and tensor-product binding
+
+58.2.3 The modern reprise: systematic generalisation in neural networks
+
+58.3 The hard problems of representation
+
+58.3.1 The symbol grounding problem restated
+
+58.3.2 The frame problem and the problem of relevance
+
+58.4 Modularity
+
+58.4.1 Fodorian and massive modularity
+
+58.4.2 The problem of central, isotropic cognition
+
+
+PART FOURTEEN. COGNITIVE ARCHITECTURES: UNIFIED THEORIES OF MIND
+
+
+CHAPTER 59. WHAT A COGNITIVE ARCHITECTURE IS (ARCHITECTURE)
+
+59.1 The concept
+
+59.1.1 The fixed architecture against the variable knowledge that runs on it
+
+59.1.2 The distinction from a single-task model
+
+59.1.3 Where an architecture sits among Marr's levels
+
+59.2 Unified theories of cognition
+
+59.2.1 Newell's argument that cognition needs one theory, not many
+
+59.2.2 The functional criteria a mind must satisfy
+
+59.2.3 The Newell test as a multi-criterion evaluation
+
+59.3 The functional requirements of any mind
+
+59.3.1 Memory, learning, perception, and action
+
+59.3.2 Decision, goal management, and attention under bounded resources
+
+59.3.3 Metacognition, motivation, and emotion
+
+59.4 The taxonomy of architectures
+
+59.4.1 The symbolic, the emergent, and the hybrid
+
+59.4.2 The forty-year survey and the landscape of the field
+
+
+CHAPTER 60. SYMBOLIC AND PRODUCTION-SYSTEM ARCHITECTURES (ARCHITECTURE)
+
+60.1 Soar
+
+60.1.1 Problem spaces and the decision cycle
+
+60.1.2 Impasses and automatic subgoaling
+
+60.1.3 Chunking, reinforcement learning, and the memory systems
+
+60.2 ACT-R
+
+60.2.1 The modules, the buffers, and their mapping to the brain
+
+60.2.2 Declarative chunks and procedural rules
+
+60.2.3 The subsymbolic layer: activation, utility, and the learning equations
+
+60.3 The other production-system architectures
+
+60.3.1 EPIC and the parallel peripheral processors
+
+60.3.2 PRODIGY and the integration of planning with learning
+
+60.3.3 ICARUS and the architecture for physical agents
+
+
+CHAPTER 61. CONNECTIONIST AND EMERGENT ARCHITECTURES (ARCHITECTURE)
+
+61.1 The parallel-distributed-processing tradition
+
+61.1.1 The founding principles
+
+61.1.2 Emergence as an explanatory strategy
+
+61.2 Leabra
+
+61.2.1 The combination of error-driven and Hebbian learning
+
+61.2.2 The prefrontal and basal-ganglia model of working memory and control
+
+61.3 The neural engineering framework and Spaun
+
+61.3.1 The three principles of representation, transformation, and dynamics
+
+61.3.2 The semantic pointer architecture
+
+61.3.3 Spaun as a large-scale functioning brain model
+
+61.4 Vector-symbolic architectures and hyperdimensional computing
+
+61.4.1 High-dimensional vectors and the algebra of binding and bundling
+
+61.4.2 The family of models and their binding operators
+
+61.4.3 The solution to variable binding and its robustness
+
+
+CHAPTER 62. HYBRID ARCHITECTURES (ARCHITECTURE)
+
+62.1 CLARION
+
+62.1.1 The explicit and implicit levels
+
+62.1.2 The action-centred, non-action-centred, motivational, and metacognitive subsystems
+
+62.1.3 Bottom-up learning and rule extraction
+
+62.2 Sigma
+
+62.2.1 The graphical-model substrate and message passing
+
+62.2.2 The grand-unification and functional-elegance goals
+
+62.3 LIDA
+
+62.3.1 The global-workspace implementation
+
+62.3.2 The cognitive cycle as the atom of cognition
+
+62.4 The reasoning and knowledge-store architectures
+
+62.4.1 NARS and reasoning under insufficient knowledge and resources
+
+62.4.2 OpenCog, the AtomSpace, and cognitive synergy
+
+62.4.3 OpenCog Hyperon and the MeTTa language
+
+62.5 The motivational architectures
+
+62.5.1 MicroPsi and the Psi theory of motivation and emotion
+
+62.5.2 DUAL and AMBR and emergent macro-behaviour from micro-agents
+
+
+CHAPTER 63. THE COMMON MODEL OF COGNITION AND GLOBAL THEORIES (ARCHITECTURE)
+
+63.1 The Common Model of Cognition
+
+63.1.1 The origin and the naming as the standard model of the mind
+
+63.1.2 The consensus modules: perception, motor, working memory, declarative and procedural memory
+
+63.1.3 The consensus commitments: symbolic-plus-subsymbolic, pervasive learning, bounded rationality
+
+63.1.4 The extensions under discussion: metacognition, emotion, and the two systems
+
+63.2 The global theories that inform architectures
+
+63.2.1 Global workspace theory and the theatre metaphor
+
+63.2.2 The global neuronal workspace and ignition
+
+63.2.3 The society of mind
+
+63.3 The convergence narrative
+
+63.3.1 How independent architectures converged on a shared structure
+
+63.3.2 What the convergence does and does not establish
+
+
+CHAPTER 64. CROSS-CUTTING MECHANISMS, EVALUATION, AND APPLICATIONS (ARCHITECTURE)
+
+64.1 The shared mechanisms
+
+64.1.1 The memory systems across architectures
+
+64.1.2 The learning mechanisms: chunking, reinforcement, instance-based, and evolutionary
+
+64.1.3 Perception, action, and the grounding of symbols
+
+64.1.4 Attention, the central bottleneck, and resource allocation
+
+64.1.5 Metacognition, emotion, and motivation as modules
+
+64.2 Evaluation
+
+64.2.1 The fitting of human data across tasks
+
+64.2.2 The problem of a unified benchmark across architectures
+
+64.3 Applications
+
+64.3.1 Human-behaviour and performance modelling
+
+64.3.2 Intelligent tutoring systems
+
+64.3.3 Human-robot interaction and cognitive robotics
+
+64.3.4 Autonomous agents and synthetic characters
+
+
+PART FIFTEEN. THE FRONTIER AND THE BRIDGE TO ARTIFICIAL GENERAL INTELLIGENCE
+
+
+CHAPTER 65. PROGRAM INDUCTION AND THE PROBABILISTIC LANGUAGE OF THOUGHT (FRONTIER)
+
+65.1 Concepts as programs
+
+65.1.1 Bayesian program learning
+
+65.1.2 Library learning and wake-sleep program synthesis
+
+65.2 The probabilistic language of thought
+
+65.2.1 The probabilistic-programming substrates
+
+65.2.2 Rational meaning construction and the translation from language
+
+65.3 The integrative agenda
+
+65.3.1 The core ingredients of humanlike learning and thought
+
+65.3.2 Building machines that learn and think like people, and with people
+
+
+CHAPTER 66. LARGE LANGUAGE MODELS AND FOUNDATION MODELS AS COGNITION (FRONTIER)
+
+66.1 The capacities of large language models
+
+66.1.1 Emergent abilities and in-context learning
+
+66.1.2 Chain-of-thought as a reasoning proxy
+
+66.2 Large language models as objects of psychology
+
+66.2.1 Machine psychology and the probing of reasoning, theory of mind, and bias
+
+66.2.2 In-context learning as approximate Bayesian inference
+
+66.3 The debates
+
+66.3.1 Distributional meaning against grounding
+
+66.3.2 The stochastic-parrot critique and the systematicity gap
+
+66.3.3 Competence against performance in models
+
+
+CHAPTER 67. WORLD MODELS, MODEL-BASED AGENTS, AND NEUROAI (FRONTIER)
+
+67.1 World models
+
+67.1.1 Learned world models and latent imagination
+
+67.1.2 Model-based planning in artificial agents
+
+67.2 NeuroAI
+
+67.2.1 Goal-driven deep networks as models of sensory cortex
+
+67.2.2 The representational alignment of artificial and biological systems
+
+67.2.3 The NeuroAI programme and the embodied Turing test
+
+67.3 The paths to general intelligence
+
+67.3.1 The scaling hypothesis against the missing ingredients
+
+67.3.2 Open-endedness, curiosity, and intrinsic motivation
+
+
+CHAPTER 68. NEURO-SYMBOLIC INTEGRATION AND LANGUAGE AGENTS AS ARCHITECTURES (FRONTIER)
+
+68.1 Neuro-symbolic integration
+
+68.1.1 The combination of pattern learning with symbolic reasoning
+
+68.1.2 The two systems realised as a fast network and a deliberate symbolic layer
+
+68.2 Language agents as de facto architectures
+
+68.2.1 The cognitive-architecture reading of language agents
+
+68.2.2 Modular memory, internal and external actions, and the decision cycle
+
+68.2.3 The re-invention of architecture ideas in memory-augmented and tool-using agents
+
+68.3 The convergence of the classical and the modern
+
+68.3.1 Classical architectures augmented with language models
+
+68.3.2 What each tradition still owes the other
+
+
+CHAPTER 69. COMPUTATIONAL PSYCHIATRY AND THE BREAKDOWN OF COGNITION (CONTEXT)
+
+69.1 The programme
+
+69.1.1 Theory-driven against data-driven computational psychiatry
+
+69.1.2 Computational phenotyping and the dimensional framing
+
+69.2 The modelling frameworks applied to disorder
+
+69.2.1 Reinforcement-learning models of anhedonia and addiction
+
+69.2.2 Predictive-coding models of psychosis and of autistic perception
+
+69.2.3 Evidence-accumulation models of decision abnormality
+
+69.3 What breakdown teaches about the intact mind
+
+69.3.1 Failure as a probe of mechanism
+
+69.3.2 The translation to biomarker and treatment
+
+
+CHAPTER 70. THE INTEGRATION PROBLEM: TOWARD A WHOLE-MIND ACCOUNT FOR KONNECTOME (CONTEXT)
+
+70.1 The composition of the faculties
+
+70.1.1 How attention gates encoding, how working memory buffers thought, how control coordinates goals
+
+70.1.2 Prediction and recurrence as candidate unifiers
+
+70.2 The unsolved integrative problems
+
+70.2.1 The binding problem across perception and symbol
+
+70.2.2 The frame and relevance problem
+
+70.2.3 Central against distributed control and the homunculus regress
+
+70.2.4 Access, report, and the place of consciousness in a control architecture
+
+70.3 The reading of the field for konnectome
+
+70.3.1 What each framework contributes as a constraint rather than a creed
+
+70.3.2 Where the frameworks agree, and why the agreement is the safest ground to build on
+
+70.3.3 The open questions this outline hands forward, and the decisions that belong to the architect rather than to the survey
+
+
+THE CHAPTER NOTES: SEMINAL WORKS BY PART
+
+These notes record the principal works checked in compiling each part. They are pointers to where the build looked, not a warrant that overrides any corpus document, and where a newer source and an older one disagree the newer leads and the note is the thing annotated.
+
+Part One. Neisser, Cognitive Psychology, 1967. Miller, The magical number seven, Psychological Review, 1956. Broadbent, Perception and Communication, 1958. Marr, Vision, 1982. Newell and Simon, Human Problem Solving, 1972, and Computer science as empirical inquiry, 1976. Pylyshyn, Computation and Cognition, 1984. Krakauer and colleagues, Neuroscience needs behavior, Neuron, 2017. Kriegeskorte and Douglas, Cognitive computational neuroscience, Nature Neuroscience, 2018. Poldrack and colleagues, The Cognitive Atlas, 2011, and Poldrack and Yarkoni, From brain maps to cognitive ontologies, Annual Review of Psychology, 2016. Turner and Laird, The Cognitive Paradigm Ontology, 2012. Insel and colleagues, Research Domain Criteria, 2010. The Open Science Collaboration, Estimating the reproducibility of psychological science, Science, 2015.
+
+Part Two. Green and Swets, Signal Detection Theory and Psychophysics, 1966. Gibson, The Ecological Approach to Visual Perception, 1979. Marr, Vision, 1982. Biederman, Recognition-by-components, Psychological Review, 1987. Milner and Goodale, The Visual Brain in Action. Rao and Ballard, Predictive coding in the visual cortex, Nature Neuroscience, 1999. Knill and Richards, Perception as Bayesian Inference, 1996. Kording and Wolpert, Bayesian integration in sensorimotor learning, Nature, 2004. Clark, Whatever next, Behavioral and Brain Sciences, 2013.
+
+Part Three. Broadbent, 1958. Treisman and Gelade, A feature-integration theory of attention, Cognitive Psychology, 1980. Deutsch and Deutsch, Attention: some theoretical considerations, Psychological Review, 1963. Kahneman, Attention and Effort, 1973. Posner, Orienting of attention, 1980, and Posner and Petersen, The attention system of the human brain, Annual Review of Neuroscience, 1990. Desimone and Duncan, Neural mechanisms of selective visual attention, Annual Review of Neuroscience, 1995. Lavie, perceptual load, 1995. Wolfe, Guided Search.
+
+Part Four. Atkinson and Shiffrin, 1968. Baddeley and Hitch, Working memory, 1974, and Baddeley, The episodic buffer, 2000, and Working memory: theories, models, and controversies, Annual Review of Psychology, 2012. Cowan, The magical number four, Behavioral and Brain Sciences, 2001. Engle, Working memory capacity as executive attention, 2002. Craik and Lockhart, Levels of processing, 1972. Tulving, Episodic and semantic memory, 1972, and Elements of Episodic Memory, 1983. Squire, Memory and the hippocampus, Psychological Review, 1992. Schacter, The seven sins of memory, 1999 and 2001. Loftus and Palmer, 1974. Roediger and McDermott, 1995. Scoville and Milner, 1957.
+
+Part Five. Rosch, and Rosch and Mervis, on prototypes, 1975. Medin and Schaffer, exemplar theory, 1978, and Nosofsky, the generalized context model, 1986. Murphy and Medin, The role of theories in conceptual coherence, 1985, and Murphy, The Big Book of Concepts, 2002. Collins and Quillian, 1969, and Collins and Loftus, spreading activation, 1975. Barsalou, Perceptual symbol systems, Behavioral and Brain Sciences, 1999. Patterson, Nestor and Rogers, the hub-and-spoke model, Nature Reviews Neuroscience, 2007. Shepard and Metzler, mental rotation, 1971. The Kosslyn and Pylyshyn imagery debate.
+
+Part Six. Chomsky, Aspects of the Theory of Syntax, 1965, and the review of Skinner, 1959. Levelt, Speaking, 1989. Marslen-Wilson, the cohort model. McClelland and Elman, the TRACE model, 1986. Frazier and Rayner, the garden-path model, 1982. Tomasello, Constructing a Language, 2003. Fodor, The Language of Thought, 1975. Pinker, The Language Instinct, 1994.
+
+Part Seven. Rescorla and Wagner, 1972. Sutton and Barto, Reinforcement Learning: An Introduction, 1998 and 2018. Schultz, Dayan and Montague, A neural substrate of prediction and reward, Science, 1997. Daw and colleagues on model-based and model-free control, 2005 and 2011. Dabney and colleagues, a distributional code for value, Nature, 2020. Saffran, Aslin and Newport, statistical learning by infants, Science, 1996. Ericsson and colleagues, deliberate practice, 1993. Chase and Simon, perception in chess, 1973. Fitts and Posner, Human Performance, 1967. Anderson, the acquisition of cognitive skill, 1982.
+
+Part Eight. Wason, the selection task, 1968. Johnson-Laird, Mental Models, 1983. Oaksford and Chater, Bayesian Rationality, 2007. Gentner, structure-mapping, 1983, and Gick and Holyoak, analogical transfer, 1983. Pearl, Causality, 2000, and Gopnik and colleagues, a theory of causal learning, Psychological Review, 2004. Tversky and Kahneman, Judgment under uncertainty, Science, 1974, and Kahneman and Tversky, Prospect theory, Econometrica, 1979. Ratcliff, the diffusion model, 1978, and Ratcliff and McKoon, 2008. Simon, bounded rationality, 1955. Gigerenzer and Goldstein, fast and frugal heuristics, 1996. Evans and Stanovich, dual-process theories, 2013. Kahneman, Thinking, Fast and Slow, 2011.
+
+Part Nine. Newell and Simon, Human Problem Solving, 1972. Duncker, On problem-solving, 1945. Chase and Simon, 1973. Miyake and colleagues, the unity and diversity of executive functions, Cognitive Psychology, 2000. Norman and Shallice, the supervisory attentional system, 1986. Miller and Cohen, an integrative theory of prefrontal function, Annual Review of Neuroscience, 2001. Botvinick and colleagues, conflict monitoring, Psychological Review, 2001. Shenhav, Botvinick and Cohen, the expected value of control, Neuron, 2013.
+
+Part Ten. Flavell, metacognition, 1979. Nelson and Narens, the metamemory framework, 1990. Koriat, monitoring, 1997. Metcalfe and Shimamura, Metacognition, 1994. Fleming and Lau, the measurement of metacognition, 2014. Schneider and Shiffrin, controlled and automatic processing, 1977. Jacoby, the process-dissociation procedure. Baars, A Cognitive Theory of Consciousness, 1988. Dehaene and Changeux, the global neuronal workspace, Neuron, 2011, and Dehaene, Consciousness and the Brain, 2014. Block, access and phenomenal consciousness, 1995. Tononi, integrated information theory, 2004. Lau and Rosenthal, higher-order theories, 2011. Lamme, recurrent processing, 2006. The Cogitate Consortium adversarial test, Nature, 2025.
+
+Part Eleven. Schachter and Singer, the two-factor theory, 1962. Lazarus, Emotion and Adaptation, 1991. Barrett, How Emotions Are Made, 2017. Bower, mood and memory, 1981. Phelps, emotion and cognition, Annual Review of Psychology, 2006. Gross, emotion regulation, 2002. Baker, Saxe and Tenenbaum, action understanding as inverse planning, 2009 and 2017. Tomasello, shared intentionality. Greene and colleagues, the dual-process theory of moral judgment.
+
+Part Twelve. Piaget, The Origins of Intelligence in Children, 1952. Spelke and Kinzler, core knowledge, 2007. Carey, The Origin of Concepts, 2009. Gopnik and Meltzoff, Words, Thoughts, and Theories, 1997. Saffran, Aslin and Newport, 1996. Spearman, general intelligence, 1904. Carroll, Human Cognitive Abilities, 1993. McGrew, the Cattell-Horn-Carroll theory, 2009. Salthouse, the processing-speed theory, 1996. Jung and Haier, the parieto-frontal integration theory, 2007. van der Maas and colleagues, the mutualism model, 2006. Vygotsky, Mind in Society, 1978. Hutchins, Cognition in the Wild, 1995. Tomasello, The Cultural Origins of Human Cognition, 1999. Henrich, The Secret of Our Success, 2016. Csibra and Gergely, natural pedagogy, 2009.
+
+Part Thirteen. Anderson, The Adaptive Character of Thought, 1990. Tenenbaum, Kemp, Griffiths and Goodman, How to grow a mind, Science, 2011. Griffiths and Tenenbaum, causal induction. Ma, Beck, Latham and Pouget, probabilistic population codes, 2006. Goodman and Tenenbaum, Probabilistic Models of Cognition. Simon, 1955 and 1956. Lieder and Griffiths, resource-rational analysis, Behavioral and Brain Sciences, 2020. Gigerenzer, Todd and the ABC Group, Simple Heuristics That Make Us Smart, 1999. Russell and Wefald, principles of metareasoning, 1991. Rumelhart and McClelland, Parallel Distributed Processing, 1986, and Rumelhart, Hinton and Williams, learning by back-propagating errors, Nature, 1986. Elman, Finding structure in time, 1990. Hopfield, 1982. Rogers and McClelland, Semantic Cognition, 2004. LeCun, Bengio and Hinton, Deep learning, Nature, 2015. Gibson, 1979. Varela, Thompson and Rosch, The Embodied Mind, 1991. Thelen and Smith, A Dynamic Systems Approach, 1994. van Gelder, the dynamical hypothesis, 1998. Clark and Chalmers, the extended mind, 1998. O'Regan and Noe, a sensorimotor account of vision, 2001. Friston, the free-energy principle, Nature Reviews Neuroscience, 2010, and Friston and colleagues, active inference, 2017. Clark, Surfing Uncertainty, 2016. Hohwy, The Predictive Mind, 2013. Parr, Pezzulo and Friston, Active Inference, 2022. Fodor and Pylyshyn, connectionism and cognitive architecture, 1988. Harnad, the symbol grounding problem, 1990. Searle, minds, brains, and programs, 1980. Smolensky, tensor product variable binding, 1990. McCarthy and Hayes, the frame problem, 1969. Fodor, The Modularity of Mind, 1983. Lake and Baroni, systematic generalisation through meta-learning, Nature, 2023.
+
+Part Fourteen. Newell, Unified Theories of Cognition, 1990. Anderson and Lebiere, the Newell test, Behavioral and Brain Sciences, 2003. Anderson, How Can the Human Mind Occur in the Physical Universe, 2007, and Anderson and colleagues, an integrated theory of the mind, Psychological Review, 2004. Kotseruba and Tsotsos, 40 years of cognitive architectures, Artificial Intelligence Review, 2020. Laird, The Soar Cognitive Architecture, 2012, and Laird, Newell and Rosenbloom, Soar: an architecture for general intelligence, 1987. Kieras and Meyer, the EPIC architecture, 1997. Langley and Choi, ICARUS, 2006. Rumelhart and McClelland, 1986. O'Reilly, Hazy and Herd, the Leabra cognitive architecture, 2016. Eliasmith and colleagues, a large-scale model of the functioning brain, Science, 2012, and Eliasmith, How to Build a Brain, 2013. Kanerva, hyperdimensional computing, 2009, and Kleyko and colleagues, the survey of vector-symbolic architectures, 2022. Sun, Anatomy of the Mind, 2016. Rosenbloom, Demski and Ustun, the Sigma cognitive architecture, 2016. Franklin and colleagues, the LIDA model, 2009 and 2014. Wang, Non-Axiomatic Logic, 2013. Goertzel, Pennachin and Geisweiller, Engineering General Intelligence, 2014, and Goertzel and colleagues, OpenCog Hyperon, 2023. Bach, Principles of Synthetic Intelligence, 2009. Laird, Lebiere and Rosenbloom, A Standard Model of the Mind, AI Magazine, 2017. Baars, 1988. Dehaene and Changeux, 2011. Minsky, The Society of Mind, 1986.
+
+Part Fifteen. Lake, Salakhutdinov and Tenenbaum, human-level concept learning through probabilistic program induction, Science, 2015. Ellis and colleagues, DreamCoder, 2021. Wong and colleagues, from word models to world models, 2023. Goodman and colleagues, Church, 2008. Lake, Ullman, Tenenbaum and Gershman, building machines that learn and think like people, Behavioral and Brain Sciences, 2017, and the sequel building machines that learn and think with people, 2024. Ha and Schmidhuber, World Models, 2018, and the Dreamer line of model-based agents. Yamins and DiCarlo, goal-driven deep learning models of sensory cortex, Nature Neuroscience, 2016. Zador and colleagues, catalyzing next-generation artificial intelligence through NeuroAI, Nature Communications, 2023. Bender and colleagues, on the dangers of stochastic parrots, 2021. Binz and Schulz, using large language models to study cognition, 2023. Sumers, Yao, Narasimhan and Griffiths, cognitive architectures for language agents, 2023. Montague and colleagues, computational psychiatry, 2012, and Huys, Maia and Frank, computational psychiatry as a bridge, Nature Neuroscience, 2016. Adams and colleagues, the computational anatomy of psychosis, 2013. Pellicano and Burr, Bayesian autistic perception, 2012.
+
+
+END OF THE COGNITION OUTLINE.
