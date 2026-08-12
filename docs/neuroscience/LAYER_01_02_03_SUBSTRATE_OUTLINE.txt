@@ -1,0 +1,178 @@
+THIS DOCUMENT IS AN INCOMPLETE DRAFT AND MUST NOT BE READ AS A SOURCE.
+
+STOP HERE IF YOU ARE LOADING STATE OR DESIGNING A SLICE.
+
+Work on this file began on 2026-08-12 and was CUT OFF PART-WAY THROUGH by an account-level service limit, not by a decision. What follows is a fragment of an intended document, and the fragment is left on disk deliberately so the work can be resumed rather than restarted.
+
+WHAT IT WAS MEANT TO BE. It fills the Layers 1, 2 and 3 catalogue (the subatomic, atomic, and ionic and simple molecular layers), which this corpus has never had.
+
+WHAT IS ACTUALLY HERE, AND WHAT IS NOT. The companion MANUSCRIPT file does not exist yet. This OUTLINE is drafted and its chapter list may still change. Nothing here should be cited, and no slice should be designed from it.
+
+WHY THIS BANNER EXISTS RATHER THAN THE FILE SIMPLY BEING DELETED. A partial document in this directory is the most dangerous object this project can produce: it carries a provenance block announcing that it closes a gap, it is written in the corpus's own confident voice, and a later session skimming it would take it for a finished source. This corpus's whole discipline is that a document which cannot be told from a finished one, by looking at it, is not doing its job. So the warning is placed where it cannot be missed, in the form whose failure mode is visible.
+
+UNTIL THE BANNER IS REMOVED BY A SESSION THAT ACTUALLY FINISHED THE FILE, NOTHING BELOW IS CITABLE, NOTHING BELOW OUTRANKS ANYTHING, AND NO NUMBER BELOW HAS BEEN VERIFIED AGAINST THE LITERATURE.
+
+The resumption plan is recorded in docs/neuroscience/EDIT_LOG.txt .
+
+================================================================================
+
+LAYERS 1, 2 AND 3, THE SUBATOMIC, ATOMIC, AND IONIC AND SIMPLE MOLECULAR LAYERS: THE COGNITIVELY LOAD-BEARING SUBSTRATE
+
+A Targeted List and Outline of the Physical and Chemical Entities That Cognition Cannot Be Built Without
+
+Companion outline to the Layer 4 and 5 dossier and to the Layer 6 through Layer 11 catalogues in the Certified_Neuroscientist corpus of D. R. Dison, Founder, Artificial Intelligence University (AIU).
+
+Date of compilation: August 12, 2026.
+
+
+PROVENANCE OF THIS DOCUMENT
+
+This document was added to the corpus on 12 August 2026.
+
+It was added by the konnectome build, acting under the owner's explicit authority granted on that same date, and it is therefore this build's writing living in the corpus's directory rather than an original document of the corpus.
+
+The distinction matters and the corpus asks that it be respected: where this document and any original corpus document disagree, the original document governs, because this one does not outrank it and was never meant to.
+
+It exists to fill a specific hole, namely the Layers 1 to 3 catalogue gap recorded in the konnectome gap analysis of 12 August 2026, which observed that every other catalogued layer of the framework had a dossier of its own while the three physical and chemical layers beneath them had none at all.
+
+A reader who wants the corpus's own settled voice should read the Layer 6 through Layer 11 volumes; a reader who wants to know what those volumes are standing on should read this one.
+
+The quantitative content of this outline and of its companion manuscript was checked against the published literature by web search on 12 August 2026, with the sources named in the manuscript's per-part SOURCES sections, and the corpus's own documents outrank anything found that way, which is the same rule this project applies to its own evidence directory.
+
+
+HOW TO READ THIS OUTLINE
+
+This is deliberately NOT a full catalogue of Layers 1, 2 and 3.
+
+A full catalogue of those layers would be a textbook of particle physics, a textbook of inorganic chemistry, and a textbook of physical chemistry bound together, and it would tell a cognitive architect almost nothing, because the overwhelming majority of physics and chemistry is true of a rock as much as of a mind.
+
+What follows instead is the dossier of the COGNITIVELY LOAD-BEARING entries: the small set of particles, elements, ions and simple molecules that a cognitive architecture must be able to name, because some construct at Layer 4 or above depends on that entry specifically and would have to be redesigned if the entry were different.
+
+The selection rule is stated once and applied throughout: an entry is admitted if, and only if, removing or altering it would change the behaviour of a named construct in the corpus's upper volumes.
+
+That rule admits the photon, because vision's input quantum is a photon and not anything else; it admits the potassium ion, because the resting potential is a potassium equilibrium; and it excludes, without apology, the strong nuclear force, the noble gases, and the entire lanthanide series.
+
+Twenty-two entries in three parts, one part per layer, each entry given a full chapter in the companion manuscript under the corpus's standard aspect template.
+
+Tags as always: (COG) for substrate that participates directly in cognition, and (NON-COG) for substrate that supports it without carrying information.
+
+A warning the corpus wishes stated on the face of the document: this is the layer at which speculation is cheapest and most seductive, and several fashionable claims about quantum effects in the brain are examined here and graded honestly, including the ones this dossier judges to be overclaimed.
+
+
+PART ONE. LAYER 1, THE SUBATOMIC SUBSTRATE
+
+Four entries, because only four subatomic facts are load-bearing for cognition.
+
+1. The Photon (COG).
+
+Vision's actual input quantum: the particle that a rod cell counts one at a time; wavelength as the physical basis of colour; the retinal isomerisation that converts a photon into a conformational change; the honest arithmetic of single-photon detection and of how many photons a human observer needs to say yes.
+
+2. The Electron and the Carriage of Charge (COG).
+
+The elementary charge as the unit in which every membrane potential is denominated; the electron as the particle actually moved by the respiratory chain; the conversion between picoamperes and electrons per second that lets an engineer read a patch-clamp trace as a count.
+
+3. Quantum Tunnelling in Enzyme Catalysis, and Where It Is Overclaimed (COG).
+
+The two places where quantum tunnelling is real and measured, namely long-range electron transfer in the respiratory chain and hydrogen tunnelling in certain enzymes; the kinetic isotope evidence; and a graded, named, unsparing account of the quantum-consciousness claims that the corpus does not accept, with the decoherence arithmetic that motivates the refusal.
+
+4. Thermal Noise, the Floor Under Every Signal (COG).
+
+The quantity kT at body temperature as the energy scale against which every molecular event is judged; the thermal voltage that appears inside the Nernst equation; stochastic channel gating as the direct consequence; and the design principle that a nervous system is an apparatus for computing above a noise floor it cannot lower.
+
+
+PART TWO. LAYER 2, THE ATOMIC SUBSTRATE
+
+Seven entries, grouping the elements by the job they do rather than by column of the periodic table.
+
+5. The Organic Six: Carbon, Hydrogen, Oxygen, Nitrogen, Phosphorus and Sulphur (NON-COG).
+
+The six elements from which essentially all of the machinery of Layers 4 and 5 is built; carbon's tetravalence and catenation as the reason macromolecules exist; phosphorus as the element of both the energy currency and the regulatory mark; sulphur as the element of the disulphide bond and of the iron-sulphur cluster.
+
+6. Sodium and Potassium as Elements: The Alkali Pair (COG).
+
+Two elements that a chemist would call nearly interchangeable and that a neuron distinguishes a thousandfold; ionic radius and hydration energy as the entire physical basis of that discrimination; why the brain's signalling gradient had to be built from two chemically similar species.
+
+7. Calcium and Magnesium as Elements: The Alkaline Earth Pair (COG).
+
+Calcium's coordination promiscuity as the reason it became the universal messenger, and magnesium's rigid six-fold coordination as the reason it became the counter-ion of the energy currency and the plug in the coincidence-detecting channel.
+
+8. Zinc, the Structural and Synaptic Transition Metal (COG).
+
+The element that folds a large fraction of the genome's transcription factors and is also loaded into a subset of glutamate vesicles; the strongest case in the corpus for an element appearing on both the structural and the signalling side of the ledger.
+
+9. Chlorine and the Anion Question (COG).
+
+The body's principal anion, present because charge must balance, and load-bearing because inhibition in the mature brain is largely a chloride current whose direction is set by a transporter rather than by chemistry.
+
+10. Iron and Copper, the Redox Metals (COG).
+
+The two transition metals that move the electrons of Chapter 2; their appearance in the enzymes that synthesise the monoamine transmitters; their genetic disorders as the corpus's clearest demonstration that an element can be a psychiatric variable.
+
+11. Iodine, the Element of Thyroid Hormone (COG).
+
+The one trace element whose deficiency is the leading preventable cause of intellectual disability worldwide; the only halogen the body builds a dedicated organ to concentrate; the atom whose count distinguishes the prohormone from the active hormone.
+
+
+PART THREE. LAYER 3, THE IONIC AND SIMPLE MOLECULAR SUBSTRATE
+
+Eleven entries: the solvent, the working ions, the currencies, and the small molecules that the upper layers treat as signals but that this dossier treats as chemistry.
+
+12. Water and the Hydrophobic Effect (COG).
+
+The solvent that is also an active participant; the hydrogen-bond network and its picosecond lifetime; the hydrophobic effect as the entropic force that assembles every membrane and folds every protein; aquaporin-mediated water movement and the clearance of the brain's interstitium.
+
+13. The Sodium Ion (COG).
+
+The inward driving force; the concentration gradient and its equilibrium potential; the pump that maintains it and the metabolic bill that pump presents; sodium as the carrier of the action potential's rising phase and as the co-transport currency of the transmitter transporters.
+
+14. The Potassium Ion (COG).
+
+The resting potential's owner; the outward driving force; extracellular potassium as a genuine broadcast signal with a ceiling and a failure mode; glial spatial buffering as the layer-skipping housekeeping that keeps that broadcast honest.
+
+15. The Calcium Ion as the Universal Second Messenger (COG).
+
+The ten-thousandfold gradient; the microdomain as the reason calcium can be both a global and a local signal; cooperativity at the release sensor; buffering, extrusion, and the internal store; calcium as the single quantity that most of the corpus's plasticity chapters ultimately read.
+
+16. The Chloride Ion and the Shifting Reversal Potential (COG).
+
+The ion whose equilibrium potential is a developmental variable and a pathological variable; the transporter switch that turns inhibition from depolarising to hyperpolarising; the honest state of the evidence in human tissue.
+
+17. The Proton and pH (COG).
+
+The smallest ion, the steepest gradient, and the most under-rated signal in the corpus; the vesicular proton gradient that loads every transmitter; acid-sensing channels; carbon dioxide chemoreception as the brain's oldest closed loop.
+
+18. Adenosine Triphosphate, the Energy Currency (COG).
+
+The molecule in which every energetic transaction in the nervous system is denominated; the true free energy of hydrolysis inside a living cell rather than the textbook standard value; the brain's disproportionate share of the body's budget; adenosine triphosphate as an extracellular transmitter in its own right, and adenosine as the accumulating debt signal of sleep pressure.
+
+19. The Small-Molecule Neurotransmitters, as Molecules (COG).
+
+Glutamate, gamma-aminobutyric acid, acetylcholine and the monoamines considered strictly as chemistry: their masses, their synthesis from dietary precursors, their vesicular loading by proton-driven transporters, their degradation enzymes, and the reason the brain's principal excitatory signal is a molecule the cell also needs for metabolism.
+
+20. The Gasotransmitters (COG).
+
+Nitric oxide, carbon monoxide and hydrogen sulphide: signals with no vesicle, no receptor on the membrane's outer face, and no reuptake; the volume transmitter that travels backwards across a synapse; the corpus's clearest example of a signal whose addressing is purely geometric.
+
+21. Cyclic Adenosine Monophosphate and the Second-Messenger Cascade (COG).
+
+The first second messenger discovered and still the template; the amplification arithmetic from one bound receptor to a changed synapse; nanodomain organisation as the reason a diffusible messenger can still be specific; the cascade as the corpus's canonical slow, gain-setting signalling path.
+
+22. Oxygen and Glucose, the Delivered Substrates (COG).
+
+The two commodities the brain cannot store and therefore must have delivered continuously; cerebral blood flow and metabolic rate in real units; the seconds-to-minutes tolerance that sets the clinical urgency of stroke; the neurovascular coupling that makes functional brain imaging possible and the honest limits of what that coupling measures.
+
+
+THE COGNITIVE SCOREBOARD
+
+Twenty-one of the twenty-two entries carry the (COG) tag, and the single (NON-COG) entry is the organic six, which builds everything and signals nothing.
+
+That ratio is not a boast about physics; it is a consequence of the selection rule, since entries were admitted precisely because something above them depends on them.
+
+The dossier's lesson for a cognitive architect is narrow and useful: the substrate layers contribute exactly four things to the design, and they are a noise floor that cannot be lowered, a set of gradients that must be paid for continuously, a messenger whose dynamic range is four orders of magnitude, and a delivery constraint measured in seconds.
+
+Everything else about physics and chemistry, for the purposes of this corpus, is genuinely abstracted away, which is the whole point of having layers.
+
+
+END OF OUTLINE
+
+Source basis: the corpus's own Layer 4 through Layer 11 volumes, which point downward to these entities repeatedly; and the standard primary and reference literature for each entry, including the single-photon vision literature, the Marcus theory and biological electron-transfer literature, the enzymatic hydrogen-tunnelling literature with its kinetic isotope measurements, the decoherence-time exchange in the physics literature concerning quantum consciousness, the ion-selectivity and channel-structure literature, the cation-chloride cotransporter developmental-switch literature with its human-tissue controversies, the cerebral energy-budget literature, and the standard clinical values for cerebral blood flow and metabolism.

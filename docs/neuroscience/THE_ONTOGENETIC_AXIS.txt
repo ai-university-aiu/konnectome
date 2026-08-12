@@ -1,0 +1,613 @@
+THIS DOCUMENT IS AN INCOMPLETE DRAFT AND MUST NOT BE READ AS A SOURCE.
+
+STOP HERE IF YOU ARE LOADING STATE OR DESIGNING A SLICE.
+
+Work on this file began on 2026-08-12 and was CUT OFF PART-WAY THROUGH by an account-level service limit, not by a decision. What follows is a fragment of an intended document, and the fragment is left on disk deliberately so the work can be resumed rather than restarted.
+
+WHAT IT WAS MEANT TO BE. It fills the ontogenetic axis, recording that the fifteen layers are a purely spatial-scale ladder with no place for development, and setting out the three consistent resolutions so the owner and the corpus's author can choose between them.
+
+WHAT IS ACTUALLY HERE, AND WHAT IS NOT. Parts One and Two are drafted. Part Three, which is the substantial half and holds the developmental timetable, the critical periods, sexual differentiation and ageing, is largely absent, as is Part Four and the SOURCES section.
+
+WHY THIS BANNER EXISTS RATHER THAN THE FILE SIMPLY BEING DELETED. A partial document in this directory is the most dangerous object this project can produce: it carries a provenance block announcing that it closes a gap, it is written in the corpus's own confident voice, and a later session skimming it would take it for a finished source. This corpus's whole discipline is that a document which cannot be told from a finished one, by looking at it, is not doing its job. So the warning is placed where it cannot be missed, in the form whose failure mode is visible.
+
+UNTIL THE BANNER IS REMOVED BY A SESSION THAT ACTUALLY FINISHED THE FILE, NOTHING BELOW IS CITABLE, NOTHING BELOW OUTRANKS ANYTHING, AND NO NUMBER BELOW HAS BEEN VERIFIED AGAINST THE LITERATURE.
+
+The resumption plan is recorded in docs/neuroscience/EDIT_LOG.txt .
+
+================================================================================
+
+THE ONTOGENETIC AXIS
+
+Development, Critical Periods, Sexual Differentiation, and Ageing, and the Framework Question of Where They Belong
+
+A PROPOSAL to the Certified_Neuroscientist corpus of D. R. Dison, Founder, Artificial Intelligence University (AIU), concerning a gap in the fifteen-layer framework.
+
+Date of writing: 2026-08-12.
+
+
+PROVENANCE, AND THE STATUS OF THIS DOCUMENT
+
+This block is mandatory reading before any other part of this document, because this document's standing in the corpus is unusual and easy to mistake.
+
+This document was added to the corpus directory on 2026-08-12 by the konnectome build, under the owner's explicit authority granted on that date to add new files to this directory.
+
+It is THIS BUILD'S WRITING, living in the corpus's directory as a guest.
+
+It does NOT outrank the corpus's own documents.
+
+Where anything written here conflicts with THE_FIFTEEN_LAYERS_IN_BRIEF.TXT, with TFELOAOTHNAES.txt, with any LAYER catalogue, or with THE_NEUROSCIENCE_OF_COGNITION_MANUSCRIPT.txt, the corpus is right and this document is wrong.
+
+IT IS A PROPOSAL AND NOT A RULING.
+
+The framework question it raises - whether the developmental trajectory of the human nervous system should become a sixteenth layer, or an axis orthogonal to the fifteen, or be explicitly ruled outside the corpus's scope - is a FRAMEWORK DECISION.
+
+That decision belongs to the corpus's author and to the owner.
+
+It is not settled here, and nothing in this document should be read as settling it.
+
+This document's whole job is to make that decision easy to take well, not to take it.
+
+The scientific content in Part Three was checked by web search on 2026-08-12 against current authoritative sources, and every source consulted is listed with its access date in the SOURCES section at the end.
+
+The corpus outranks anything found by web search, without exception.
+
+Where the web sources themselves disagree, this document reports the disagreement rather than resolving it, and where a widely repeated figure turns out to be weakly supported, this document says so.
+
+No number in this document was invented, and any quantity that could not be sourced is marked as not established rather than estimated.
+
+
+WHY THIS DOCUMENT EXISTS: THE GAP FOUND ON 2026-08-12
+
+This document records a gap found in the konnectome gap analysis of 2026-08-12.
+
+The gap analysis ran a set of greps across the whole of the corpus directory, and three of them returned zero.
+
+• A case-insensitive grep for "ontogen" across all forty-three corpus files returned ZERO hits.
+
+• A case-insensitive grep for "sexual differentiation" across all forty-three corpus files returned ZERO hits.
+
+• A case-insensitive grep for "sexual dimorphism" across all forty-three corpus files returned ZERO hits.
+
+Those three counts are quoted here, on this document's own face, so that the reason for its existence is visible without reference to any other file.
+
+Ontogeny, defined here at first use, is the developmental history of an individual organism from fertilised egg to death, as distinct from phylogeny, which is the evolutionary history of a species.
+
+The corpus has a great deal to say about phylogeny.
+
+It has, by the framework's own addressing scheme, nowhere to put ontogeny.
+
+
+PART ONE. THE GAP, STATED WITH ITS EVIDENCE
+
+An acronym note for this part: AGI means Artificial General Intelligence, machine intelligence with human-breadth generality, and AI means Artificial Intelligence.
+
+
+1.1 THE FIFTEEN LAYERS ARE A SPATIAL-SCALE LADDER
+
+The framework's central claim is that the human nervous and endocrine system spans more than fifteen orders of magnitude and that this span decomposes into exactly fifteen encapsulated layers of abstraction.
+
+Read the list of fifteen and notice what the ordering variable is.
+
+Layer 1 is the subatomic, Layer 2 the atomic, Layer 3 the ionic and simple molecular, Layer 4 the macromolecular, Layer 5 the subcellular and organellar, Layer 6 the cellular, Layer 7 the synaptic and junctional, Layer 8 the microcircuit, Layer 9 the region, Layer 10 the system, Layer 11 the whole organ, Layer 12 the organism, Layer 13 the dyad, Layer 14 the society, and Layer 15 the species.
+
+Each step up that list is a step up in physical or organisational SIZE.
+
+The framework says so itself, in its own opening sentence, when it defines the span as one of orders of magnitude, and an order of magnitude is a factor of ten in extent.
+
+The ladder is therefore a scale ladder, from the quark to the culture, and the encapsulation rule that gives the framework its power - that each layer speaks ordinarily only to the layer directly above and the layer directly below - is an adjacency rule IN SCALE.
+
+This is not a criticism of the framework.
+
+It is a description of what kind of framework it is, and the framework is extremely good at being that kind of framework.
+
+But it has a consequence.
+
+
+1.2 NO LAYER'S SUBJECT IS THE TRAJECTORY OF THE SYSTEM THROUGH TIME
+
+Not one of the fifteen layers takes time as its ordering variable.
+
+The nearest candidate is Layer 15, the Evolutionary and Species Layer, and it is worth being precise about why it is not the answer.
+
+Layer 15 is about phylogeny: the genome as a record of selection, the evolved species-typical architecture, evolutionary mismatch, and comparative neuroanatomy.
+
+Its time axis is measured in millions of years and its unit of change is the population, not the individual.
+
+The developmental trajectory of one human nervous system, measured in gestational weeks and postnatal years, with its unit of change being a single individual, is a different subject with different governing laws and a different vocabulary.
+
+Putting ontogeny at Layer 15 because both involve time would be like putting the Layer 3 sodium ion and the Layer 14 economy on the same layer because both involve flow.
+
+So the framework has fifteen addresses and the developmental trajectory has none of them.
+
+
+1.3 THE CORPUS'S OWN ADMISSION
+
+The most important piece of evidence in this part is not the gap analysis's greps.
+
+It is a sentence the corpus already wrote about itself.
+
+TFELOAOTHNAES.txt, in Part Six, where the framework states its own limits honestly, includes this among them:
+
+"The framework is biased toward the adult human; development and aging cut across every layer rather than sitting at any one of them."
+
+That sentence does three things at once, and all three matter.
+
+It concedes the bias toward the adult.
+
+It states, in one clause, the exact structural claim that Part Two of this document will argue is the strongest resolution: that development cuts ACROSS layers rather than sitting at one.
+
+And it leaves the matter there, as a stated limit, without following it with a mechanism.
+
+So the gap this document records is not a gap the corpus failed to notice.
+
+It is a gap the corpus noticed, named accurately in a single sentence, and did not then build anything to fill.
+
+That is a much better position to start from than ignorance, and it substantially constrains what a good resolution looks like, because any resolution must be consistent with a sentence the corpus has already published.
+
+
+1.4 THE TOPIC IS PRESENT IN THE PROSE AND ABSENT FROM THE ADDRESSING
+
+It would be false to say the corpus does not discuss development.
+
+THE_NEUROSCIENCE_OF_COGNITION_MANUSCRIPT.txt, which runs to twenty-three thousand eight hundred and sixty-two lines and eighty chapters, contains a full Chapter 65, THE DEVELOPING BRAIN, and a full Chapter 66, THE AGEING BRAIN, and a Chapter 67 on individual differences and intelligence.
+
+Chapter 65 is good.
+
+It covers neural induction, the ventricular zone and radial glia, the four stages of radial migration, inside-out cortical layering, tangential interneuron migration from the ganglionic eminence, the four canonical axon guidance families, synaptogenesis, programmed cell death and the neurotrophic hypothesis, critical periods, and adolescence - and it explicitly flags where popular claims are shakier than their textbook confidence suggests.
+
+So the material exists in the corpus as PROSE.
+
+The gap is not in the prose.
+
+The gap is in the ADDRESSING.
+
+A grep across lines 19144 to 20080 of that manuscript, covering Chapters 65 through 67 in full, finds ZERO occurrences of the pattern "Layer" followed by a digit.
+
+Chapters 65, 66, and 67 carry no layer address.
+
+They are marked (CORE), which is the cognition manuscript's own tagging, but they are not hung anywhere on the fifteen-layer ladder.
+
+The consequence is mechanical and it is the whole point of this document.
+
+A build that reads the corpus BY LAYER - which is precisely how the corpus invites itself to be read, and precisely how its engineering-facing documents at Layers 12 through 15 are organised - traverses fifteen addresses and never arrives at Chapter 65.
+
+The developmental material is in the building but not on any floor plan.
+
+
+1.5 WHAT THE CATALOGUES DO AND DO NOT CARRY, COUNTED
+
+The gap analysis also counted the aspect headers across the catalogues, and the result is more interesting than a flat absence, so it is reported here in full rather than simplified.
+
+Three catalogues DO carry a development field.
+
+• LAYER_07_SYNAPTICS_MANUSCRIPT.txt carries the header "DEVELOPMENT AND ASSEMBLY:" in all 64 of its chapters.
+
+• LAYER_08_MICROCIRCUITS_MANUSCRIPT.txt carries it in all 71 of its chapters.
+
+• LAYER_10_SYSTEMS_MANUSCRIPT.txt carries it in all 44 of its chapters.
+
+That is 179 catalogue entries that already have somewhere to say how the construct is built.
+
+This is real credit to the corpus and it should be stated plainly before the criticism, because it shows the corpus's authors already judged development to be a per-entry property worth a standing field at three separate layers.
+
+But the field is absent everywhere else.
+
+• Layer 6, the cellular layer, has 386 typed entries - 301 neuron types across the five neuronal manuscript volumes plus 85 other cell types - and its twenty-two-aspect chapter template, version 3, has no development aspect.
+
+The template's aspect list runs: what it is and what it does, structure and morphology, size, structural subtypes, where it lives, number, electrical properties, modes and mode transitions, synaptic connections, axon characteristics, neurotransmitters, myelination, metabolic demands, plasticity, support system, how it colours its region, beyond integrate and fire, systems interface, English readable code, code sample, and what makes it unmistakable.
+
+Two of those aspects touch development obliquely - MYELINATION and PLASTICITY - and neither is a developmental schedule.
+
+MYELINATION as an aspect records whether a cell type is myelinated, not WHEN in the lifespan it becomes so.
+
+PLASTICITY as an aspect records what plasticity rules the cell supports, not how those rules' parameters change from birth to death.
+
+• Layer 9 has 122 region entries, specified on four fields - inputs, outputs, function and faculty, and system membership - and none of the four is developmental.
+
+• Layer 11 has 26 global-state entries with no development field.
+
+• The Layer 4 and Layer 5 slow-variables catalogue has 18 entries with no development field.
+
+• The Layer 12 faculty specification has 17 faculties, each with capability, implementation, and acceptance criteria, and no faculty carries an onset age.
+
+Adding those up: of roughly 748 catalogue entries in the corpus, 179 carry a development field and about 569 do not.
+
+And one field is absent everywhere, without a single exception.
+
+A grep for a header beginning "INDIVIDUAL VARIATION" across all forty-three files returns ZERO.
+
+No catalogue in this corpus has an individual-variation field.
+
+Every parameter in every catalogue is therefore stated as a species-typical point estimate or a species-typical range, and there is nowhere to record how much two healthy humans differ, or why.
+
+Part Three, section 3.7, returns to why that particular absence is more serious than it looks.
+
+
+1.6 THE COST TO A BUILD, STATED SPECIFICALLY
+
+The corpus is not a neuroscience textbook that happens to be readable by engineers.
+
+Its Part Seven is explicit that the deepest payoff of the framework is as "an engineering-readable specification" for those building synthetic minds, AGI, and continual-learning systems, and its Layer 12 document is explicitly "the acceptance-test catalogue for a synthetic mind."
+
+So the right way to price this gap is to ask what a build that reads only the layers is thereby unable to specify.
+
+Here is that cost, stated as specifically as possible rather than as a general worry.
+
+• THE BUILD IS SPECIFIED AS AN ADULT STEADY STATE.
+
+Every parameter the catalogues supply - firing rates, synaptic time constants, receptor densities, myelination status, mode registers and their transition thresholds - is an adult value.
+
+A system built to those numbers is born adult, and a system born adult has no answer to the question of what it was before.
+
+• STAGED CAPABILITY ONSET HAS NOWHERE TO LIVE.
+
+The Layer 12 faculty specification lists seventeen faculties with acceptance criteria, and a test harness could run every one of them.
+
+But human faculties do not switch on together: object permanence, language production, inhibitory control, and abstract reasoning arrive years apart and in a reliable order.
+
+There is no field in which to write that order, so the acceptance suite implicitly demands that all seventeen faculties pass at once, which no human has ever done at any single moment of life.
+
+• CRITICAL PERIODS CANNOT BE EXPRESSED.
+
+A critical period is a bounded window during which a particular input shapes a circuit permanently, after which the same input has little or no such effect.
+
+It is not a property of a region, a circuit, or a cell type in the sense the catalogues record properties.
+
+It is a property of a TIME, indexed to a circuit.
+
+The catalogues have no time index, so a critical period cannot be written down in them even in principle, and the corpus's 9 mentions of the phrase in the cognition manuscript and 12 in the Layer 8 microcircuits manuscript are prose observations rather than catalogued objects with parameters.
+
+• ACTIVITY-DEPENDENT REFINEMENT IS UNREPRESENTABLE, WHICH IS THE DEEPEST PROBLEM.
+
+The Layer 7, 8, and 9 catalogues specify connections.
+
+But a very large part of the mature human wiring diagram is not specified by the genome at all - it is produced by the developing system's own activity, first spontaneous and later driven by experience, operating on an initially coarse and massively overproduced scaffold.
+
+A catalogue that lists the finished connections is a photograph of the OUTPUT of a process the catalogue does not contain.
+
+Handing a build the photograph and asking it to reproduce the system is asking it to arrive at the answer without running the computation that produces the answer, and section 3.3 argues this is not a shortcut but a category mistake.
+
+• THE STABILITY-VERSUS-PLASTICITY SCHEDULE IS MISSING, AND IT IS THE THING THE CORPUS MOST WANTS.
+
+TFELOAOTHNAES.txt Part Seven names continual learning - "learning new things without erasing old ones" - as one of the explicit motivations of the whole corpus.
+
+Biology's solution to continual learning is not a fixed setting.
+
+It is a SCHEDULE: very high plasticity early, progressive and circuit-by-circuit consolidation across childhood and adolescence, and a long adult regime of constrained, targeted plasticity, with the closing of each window being an achievement rather than a decay.
+
+That schedule is a function of developmental time.
+
+With no time axis, the corpus can tell a build what plasticity mechanisms exist but not when to have how much of each, which is the entire engineering content of the problem.
+
+• SEXUAL DIFFERENTIATION IS ABSENT ENTIRELY.
+
+It returns zero hits corpus-wide, in either of its two standard phrasings, and it is a full chapter of the standard graduate reference.
+
+Section 3.5 treats it at length.
+
+• INDIVIDUAL VARIATION CANNOT BE STATED.
+
+Covered above and in section 3.7.
+
+• AGEING IS ABSENT FROM THE ADDRESSING FOR THE SAME REASON AS DEVELOPMENT.
+
+A system with no ageing model cannot represent the fact that the machine that must keep working is also continuously degrading, and that much of adult cognition is compensation rather than raw capacity.
+
+The single-sentence summary of the whole cost is this.
+
+A specification with no time axis can describe a mind but cannot describe a mind BECOMING one, and the corpus's stated purpose is closer to the second than the first.
+
+
+PART TWO. THE THREE CONSISTENT RESOLUTIONS, ARGUED FAIRLY
+
+An acronym note for this part: AGI again means Artificial General Intelligence.
+
+There are exactly three resolutions consistent with the framework as written, and this part gives each of them its strongest case and its real cost.
+
+The reader should be warned that this part is written adversarially on purpose.
+
+Each option is argued by someone who wants it to win, and then attacked by someone who wants it to lose, because a proposal that argues only for its preferred answer is not helping anyone decide.
+
+
+2.1 RESOLUTION ONE: A SIXTEENTH LAYER
+
+THE CASE FOR.
+
+The framework does not admit layers by intuition.
+
+It admits them by a published test, stated in TFELOAOTHNAES.txt as four independence criteria: distinct governing laws, distinct emergent properties, distinct principal units, and distinct transfer functions.
+
+Apply that test honestly to development and it passes on every criterion.
+
+• DISTINCT COMPONENTS AND PRINCIPAL UNIT.
+
+Development's components are not the components of any existing layer: the neural plate, the neural tube, the ventricular zone, the radial glial scaffold, the growth cone, the ganglionic eminence, the critical period, the perineuronal net as a closing brake, the pruning wave.
+
+Its principal unit is the DEVELOPMENTAL EVENT indexed to a window, which is a unit no other layer uses.
+
+• DISTINCT GOVERNING LAWS.
+
+Developmental neurobiology is a genuinely separate body of law with its own textbooks, its own journals, and its own Nobel Prizes - morphogen gradients and positional information, the neurotrophic hypothesis, inside-out lamination, chemoaffinity, activity-dependent competition.
+
+None of these laws is derivable from adult neuronal physiology, adult synaptic physiology, or adult circuit neuroscience, which is exactly the test the framework applies at every other boundary.
+
+• DISTINCT VOCABULARY.
+
+The vocabulary is so distinct that its absence is what the gap analysis detected: the words are simply not in the corpus.
+
+• DISTINCT TRANSFER FUNCTION.
+
+Development's transfer function is unlike any other layer's: genome plus environment plus the system's own activity, in, and a wired system, out, over years.
+
+By the framework's own admission test, applied without special pleading, development is a layer.
+
+And there is a precedent argument that strengthens this considerably.
+
+Layer 7, the synaptic layer, is admitted to the framework even though it is an odd layer - the corpus calls it "the framework's one relation-layer" and spends a long passage justifying why a thing that is not a component of any single cell nevertheless earns layer status.
+
+The framework has therefore already shown that it will admit a layer of a DIFFERENT KIND from its neighbours when that layer has its own units, its own laws, and its own transfer function.
+
+Development would be the second such special case, admitted by the same reasoning that admitted the first.
+
+THE CASE AGAINST.
+
+The case against is short and, in this build's view, close to decisive.
+
+The fifteen layers are a SCALE LADDER, and time is not a scale in the relevant sense.
+
+The framework's entire load-bearing structure is the adjacency rule: each layer speaks ordinarily only to the layer directly above and the layer directly below, and this rule is what makes the framework a true layered hierarchy rather than, in the corpus's own words, "a flat list of levels."
+
+Now ask the question that a sixteenth layer must answer: what is Layer 16 adjacent TO?
+
+If development is placed above Layer 15, then its downward interface receives phylogeny and it has no upward interface, which is absurd, because embryonic neurulation does not consume the output of speciation in any sense the framework's other interfaces would recognise.
+
+If it is placed anywhere in the middle of the ladder, it severs an adjacency that is currently one of the best-evidenced boundaries in science - inserting development between, say, Layer 6 and Layer 7 would require the claim that cells produce development which produces synapses, which is false.
+
+If it is placed at the bottom, below Layer 1, it would be claiming that development is smaller than a quark.
+
+There is no position on a scale ladder for a thing that is not a scale.
+
+And the deeper objection is that a sixteenth layer would misdescribe development even if a position could be found for it.
+
+Development does not happen at ONE scale.
+
+Neurulation is a Layer 5 through Layer 9 event, synaptic pruning is a Layer 7 event, myelination is a Layer 6 and Layer 7 event, hormonal sexual differentiation is a Layer 10 event acting through Layers 4 and 5, the adolescent reorganisation of social cognition is a Layer 12 and Layer 13 event, and the critical period for language is all of them at once.
+
+A layer whose subject matter is spread across all fifteen other layers is not a layer.
+
+It is, on the framework's own definitions, a category error - and the corpus's Part Six sentence quoted in section 1.3 already says as much, in the words "cut across every layer rather than sitting at any one of them."
+
+THE REAL COST.
+
+Beyond the conceptual problem, the practical cost is that admitting a sixteenth layer of a different kind weakens the framework's single most attractive property, which is that it is falsifiable and disciplined about its own boundaries.
+
+The framework earns credibility by saying that fifteen is "the maximum number of levels defensible under strict application of the four independence criteria."
+
+A sixteenth layer admitted on a different criterion invites a seventeenth, and the discipline is gone.
+
+
+2.2 RESOLUTION TWO: AN ORTHOGONAL AXIS
+
+THE CASE FOR.
+
+Observe that every one of the fifteen layers has a developmental trajectory, and that the trajectory is specific to that layer.
+
+• Layer 4, the macromolecular layer, has developmental gene expression programmes and the famous developmental subunit switches - the shift in N-methyl-D-aspartate receptor subunit composition, and the chloride transporter switch that turns the neurotransmitter GABA from excitatory to inhibitory.
+
+• Layer 5 has the epigenetic marks laid down during development and the chromatin state changes that close critical periods.
+
+• Layer 6 has neurogenesis, migration, differentiation, myelination, and programmed cell death.
+
+• Layer 7 has synaptogenesis, activity-dependent elimination, and the developmental change in plasticity rules themselves.
+
+• Layer 8 has the refinement of circuit motifs from coarse to precise.
+
+• Layer 9 has regional volume trajectories and areal specification.
+
+• Layer 10 has staged system maturation, with sensory systems maturing years before association systems.
+
+• Layer 11 has the maturation of sleep architecture and of autonomic and hormonal set points.
+
+• Layer 12 has the entire developmental psychology of faculty onset.
+
+• Layer 13 has attachment formation.
+
+• Layer 14 has enculturation and language acquisition.
+
+• Layer 15 has the evolution of the developmental programme itself, which is the field of evolutionary developmental biology.
+
+Fifteen for fifteen.
+
+A property that every layer has, and that no layer has more than any other, is not a member of the set.
+
+It is a DIMENSION THROUGH the set - the same relation that a coordinate axis bears to the points plotted against it.
+
+On this reading, ontogeny is not a sixteenth item on the list of layers.
+
+It is a second axis, and the corpus's catalogue is currently a one-dimensional projection of a two-dimensional object, taken at the single slice labelled "adult."
+
+The two decisive supports for this reading are both internal to the corpus.
+
+First, the corpus has already said it, in the Part Six sentence: development "cuts across every layer rather than sitting at any one of them."
+
+That is a statement of orthogonality in ordinary English, published by the framework's own author.
+
+Second - and this is the argument that answers the strongest objection - the framework ALREADY ADMITS a class of exception to strict adjacency, and does so formally rather than apologetically.
+
+The Layer-Skipping Channels are exactly that: a published Interface Exception Catalogue of seven mechanisms in which a signal crosses non-adjacent layers intact, admitted by a stated test, the Re-encoding Test, and explained by a stated economic law, the Broadcast Principle.
+
+The framework's posture toward things that do not fit the ladder is therefore already established, and it is not denial.
+
+It is: name the exception class, define the admission test, catalogue the members, and explain why they exist.
+
+An ontogenetic axis would be handled by precisely the same move, and would be the framework's second formal cross-cutting structure rather than its first.
+
+Note also how well the existing Layer-Skipping Channels themselves fit a developmental treatment.
+
+Channel 1, the Steroid Hormone Channel, is presented with the maternal-care literature as its definitive demonstration - and that literature is DEVELOPMENTAL, concerning early-life care recalibrating the stress axis for life.
+
+Channel 7, the Transgenerational Epigenetic Channel, is explicitly a channel across a generation, which is a developmental statement.
+
+The framework's exception catalogue is already half about ontogeny without having said the word.
+
+THE CASE AGAINST.
+
+The objection is not conceptual - it is arithmetical, and it is severe.
+
+An orthogonal axis multiplies rather than adds.
+
+If every catalogue entry acquires a developmental trajectory, then a corpus of roughly 748 entries acquires roughly 748 new specifications, and if the axis is taken seriously enough to be sampled at more than one point - say prenatal, infant, child, adolescent, adult, and aged - the multiplication is by six rather than by two.
+
+That is not a document.
+
+That is a second corpus of comparable size to the first, and the first took a very large amount of work.
+
+There is a second objection, subtler and perhaps worse.
+
+Much of the developmental detail is simply NOT KNOWN at the granularity the catalogues use.
+
+The corpus specifies 301 neuron types.
+
+The number of those 301 types for which a well-established human developmental timetable exists - birth date, migration route, maturation schedule, myelination onset - is a small fraction of 301, and the honest developmental field for most types would read "not established in humans."
+
+A field that is empty in most of its instances is a field that damages a catalogue's credibility, because it converts a confident document into a mostly blank form.
+
+Filling it with rodent data silently would be worse, since the rodent-to-human transfer is exactly where developmental neuroscience is least safe, as section 3.5 shows in detail for sexual differentiation.
+
+THE REAL COST.
+
+Roughly 569 new fields at minimum, most of them honestly empty, or roughly 748 new trajectory specifications if done properly, plus the axis's own governing document.
+
+Part Four prices this precisely.
+
+
+2.3 RESOLUTION THREE: AN EXPLICIT RULING THAT THE CORPUS SPECIFIES THE ADULT ONLY
+
+THE CASE FOR.
+
+This resolution deserves considerably more respect than it usually gets, and this document wants to make its case properly rather than list it for completeness.
+
+Start with the observation that this is probably what the corpus has been doing all along.
+
+The catalogues are adult catalogues.
+
+The parameters are adult parameters.
+
+The Part Six sentence already says the framework "is biased toward the adult human."
+
+So Resolution Three is not a change of direction at all - it is the formalisation of an existing and consistently applied practice, which makes it the only one of the three resolutions that requires the corpus to become MORE honest rather than merely larger.
+
+Next, the principle behind it is sound and is a principle the corpus already lives by.
+
+A LIMIT THAT IS DECLARED IS NOT A GAP.
+
+A specification that says "this document specifies the mature human nervous system as it stands between roughly age twenty-five and age sixty, and does not specify its construction or its decline" is a COMPLETE specification of a well-defined object.
+
+It is not incomplete; it is bounded.
+
+Every good engineering specification is bounded, and specifications that try to cover everything cover nothing well.
+
+The framework already does this repeatedly and to its credit: it flags Channel 7 as "contested," it flags the upper-layer transfer functions as awaiting formalisation, and it flags the quantum-consciousness inference as explicitly out of bounds.
+
+Adding one more honest boundary marker is entirely in character, and it costs almost nothing - a paragraph in TFELOAOTHNAES.txt and a line in the README.
+
+There is also a real scientific argument, not merely a practical one.
+
+The adult nervous system is the only phase of the trajectory for which the corpus's chosen granularity is actually achievable.
+
+We have adult cell-type taxonomies at the resolution of 301 types; we do not have developmental timetables at that resolution.
+
+Specifying only what can be specified well is a virtue, and a corpus that stretched to cover ontogeny at a granularity the science cannot support would be trading its accuracy for its scope.
+
+Finally, the division of labour is legitimate.
+
+Developmental neuroscience is a large field with its own reference works, and a corpus is allowed to point at them rather than absorb them.
+
+THE CASE AGAINST.
+
+The case against is not that the ruling would be dishonest.
+
+It would be perfectly honest, and that is what makes it tempting.
+
+The case against is that it would be honest about abandoning the corpus's own stated purpose.
+
+TFELOAOTHNAES.txt Part Seven is unambiguous that the framework exists, in large part, to serve "those pursuing Artificial Intelligence, AI Engineering, new architectures for Synthetic Minds, Artificial General Intelligence, Artificial Super Intelligence, Continual Learning, Recursive Self Improvement, and Synthetic Cognitive Architectures."
+
+Now consider what an adult-only specification hands such a builder.
+
+A SYNTHETIC MIND THAT CANNOT DEVELOP MUST BE BORN KNOWING EVERYTHING.
+
+That is the whole objection, and it is worth unfolding slowly, because it is not rhetoric.
+
+If the specification describes only the finished state, then the only way to instantiate it is to write the finished state directly - every connection, every weight, every parameter, supplied from outside by the builder.
+
+But the finished state of a human nervous system is not something anyone can write down: the connections number in the hundreds of trillions against a genome of a few billion base pairs, and section 3.3 gives the actual figures for that mismatch.
+
+Biology does not write the finished state.
+
+Biology writes a construction PROCESS and lets the process, running against a world and against the system's own activity, produce a finished state that nobody specified.
+
+That is not an implementation detail of how humans happen to get built.
+
+It is, on the strongest reading of the developmental literature, the ONLY known way to get a system of this complexity built at all.
+
+An adult-only corpus therefore hands the AGI builder the one part of the problem that is not the hard part, and withholds the part that is.
+
+And there is a sharper version of the objection aimed at continual learning specifically.
+
+The corpus names continual learning as a motivation.
+
+Continual learning is the stability-versus-plasticity problem.
+
+Biology's solution to the stability-versus-plasticity problem is a DEVELOPMENTAL SCHEDULE, as section 3.4 sets out.
+
+So ruling out development rules out the corpus's answer to a question the corpus itself poses, which is a strange place for a specification to end up.
+
+THE REAL COST.
+
+The cost is not work, since there is almost none.
+
+The cost is that the corpus's Layer 12 acceptance-test catalogue becomes a test suite for a mind that must be delivered fully formed, and the corpus's most distinctive engineering ambition quietly leaves the building.
+
+
+2.4 WHICH THIS BUILD FAVOURS, AND WHY
+
+This section is marked clearly because it is the only place in this document where this build states a preference, and because the preference must not be confused with a decision.
+
+THIS BUILD FAVOURS RESOLUTION TWO, THE ORTHOGONAL AXIS, IN A DELIBERATELY MINIMAL FORM.
+
+The reasoning is as follows.
+
+Resolution One is ruled out by the framework's own internal logic rather than by taste: a scale ladder has no vacancy for a non-scale, and a sixteenth layer would break the adjacency rule that every other part of the framework depends on, while also misdescribing a phenomenon that demonstrably occurs at all fifteen scales at once.
+
+Resolution Three is coherent and cheap and would leave a good corpus intact, but it purchases that tidiness by discarding the corpus's own stated reason for existing, and a specification that declares itself out of scope of its own purpose has solved a documentation problem by creating an engineering one.
+
+Resolution Two is the only option that is consistent with all three of the corpus's own commitments at once: with the scale-ladder structure of the fifteen layers, which it leaves entirely untouched; with the Part Six sentence about development cutting across every layer, which it implements rather than merely repeats; and with the Part Seven engineering purpose, which it serves.
+
+It is also the option with the strongest internal precedent, because the framework has already faced a phenomenon that would not sit on the ladder - the layer-skipping channels - and its answer was not to add a layer and not to declare the phenomenon out of scope, but to define a cross-cutting exception class with a published admission test and a catalogue of members.
+
+The orthogonal axis is that same move made a second time, and a framework that solves the same shape of problem the same way twice is more coherent, not less.
+
+The word "minimal" in the recommendation is load-bearing and is the answer to Resolution Two's one serious objection.
+
+The arithmetical objection is fatal only to a MAXIMAL version of the axis, in which every one of roughly 748 entries acquires a full trajectory.
+
+It is not fatal to a version in which the axis is specified once as a governing document, sampled at a small number of named stages, and attached per-entry only where the developmental fact is both known and load-bearing, with silence everywhere else being the honest default rather than a blank form.
+
+Part Four prices a minimal version alongside the maximal one precisely so that this distinction can be examined rather than taken on trust.
+
+AND NOW THE PART THAT MATTERS MORE THAN THE PREFERENCE.
+
+THE CHOICE IS NOT THIS BUILD'S TO MAKE.
+
+This build is a guest in this directory with permission to add a file, and nothing more.
+
+The fifteen-layer framework is the author's work, the four independence criteria are the author's test, the decision about what the corpus is for is the owner's, and a preference stated by a build that has read the corpus for one day does not outweigh either.
+
+If the author's answer is Resolution Three, then Resolution Three is the answer, and this document's Part Three should be read as material for a footnote explaining what was deliberately excluded and why.
+
+Part Three is written to be useful under ALL THREE resolutions, and that is deliberate.
+
+Whichever resolution is chosen, the content in Part Three has to exist somewhere - as a sixteenth layer's catalogue, as the axis's governing document, or as the citation-backed appendix justifying an explicit exclusion.
+
+So Part Three takes no position and simply writes the material out.

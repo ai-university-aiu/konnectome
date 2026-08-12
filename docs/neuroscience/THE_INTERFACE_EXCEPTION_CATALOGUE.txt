@@ -1,0 +1,145 @@
+THIS DOCUMENT IS AN INCOMPLETE DRAFT AND MUST NOT BE READ AS A SOURCE.
+
+STOP HERE IF YOU ARE LOADING STATE OR DESIGNING A SLICE.
+
+Work on this file began on 2026-08-12 and was CUT OFF PART-WAY THROUGH by an account-level service limit, not by a decision. What follows is a fragment of an intended document, and the fragment is left on disk deliberately so the work can be resumed rather than restarted.
+
+WHAT IT WAS MEANT TO BE. It fills the Interface Exception Catalogue, which TFELOAOTHNAES.txt names by that title and which has never existed as a document, giving the seven Layer-Skipping Channels the publish-and-subscribe interface every other construct class in this corpus already has.
+
+WHAT IS ACTUALLY HERE, AND WHAT IS NOT. Of the seven channels, only the front matter and the opening chapters are drafted. The remaining channels, the two minor within-layer shortcuts, and the SOURCES section are absent. The interface blocks that do appear have NOT been checked against the literature.
+
+WHY THIS BANNER EXISTS RATHER THAN THE FILE SIMPLY BEING DELETED. A partial document in this directory is the most dangerous object this project can produce: it carries a provenance block announcing that it closes a gap, it is written in the corpus's own confident voice, and a later session skimming it would take it for a finished source. This corpus's whole discipline is that a document which cannot be told from a finished one, by looking at it, is not doing its job. So the warning is placed where it cannot be missed, in the form whose failure mode is visible.
+
+UNTIL THE BANNER IS REMOVED BY A SESSION THAT ACTUALLY FINISHED THE FILE, NOTHING BELOW IS CITABLE, NOTHING BELOW OUTRANKS ANYTHING, AND NO NUMBER BELOW HAS BEEN VERIFIED AGAINST THE LITERATURE.
+
+The resumption plan is recorded in docs/neuroscience/EDIT_LOG.txt .
+
+================================================================================
+
+THE INTERFACE EXCEPTION CATALOGUE
+
+The Seven Layer-Skipping Channels of the Human Multi-Layer Framework, Specified as Publish-and-Subscribe Interfaces
+
+A Companion Volume to TFELOAOTHNAES, Part Four
+
+
+PROVENANCE AND STANDING
+
+This document was added to the neuroscience corpus on 12 August 2026 by the konnectome build, under the owner's explicit authority granted on that date.
+
+It is therefore this build's writing living in the corpus's directory, and it does not outrank the corpus's own original documents.
+
+Where this document and an original corpus manuscript disagree, the original manuscript is correct and this document is wrong.
+
+The seven channels, their names, their layer endpoints, the Re-encoding Test that admits them, and the Broadcast Principle that explains them are all taken directly from TFELOAOTHNAES.txt, Part Four, and are the corpus's own.
+
+The interface specifications that follow - the SUBSCRIBES and PUBLISHES blocks, the state variables, the parameters, the time constants and the failure modes - are this build's reading of the corpus's channels, and must never be cited as the corpus's own specification.
+
+Quantitative values given in the interface blocks are drawn from the general physiological literature and are marked with honest confidence notes; where a number is not well established, this document says so rather than inventing one.
+
+This document fills the gap recorded in the konnectome gap analysis of 12 August 2026, which found that the Layer-Skipping Channels were the only first-class construct class in the whole corpus without a publish-and-subscribe interface specification.
+
+That analysis counted sixty-four of sixty-four junctions, seventy-one of seventy-one motifs, forty-four of forty-four systems and twenty-six of twenty-six states carrying full interface blocks, against zero of seven channels.
+
+The phrase "the Interface Exception Catalogue" appears in TFELOAOTHNAES.txt as the name of a document that did not exist; this file is an attempt to deserve that name.
+
+One further honesty note governs the whole document, and it is the point of writing it.
+
+Four of the seven channels originate in a layer that has no catalogue anywhere in this corpus.
+
+Channels 1 and 7 originate in Layers 13 and 14, and those layers are represented in the corpus only by the short LAYER_13_TUTOR_PROTOCOL.txt and LAYER_14_KNOWLEDGE_ENVIRONMENT.txt specifications, which are design documents rather than construct catalogues.
+
+For those two channels the SUBSCRIBES side cannot be specified against a catalogued construct, and this document says so in the block itself rather than fabricating one.
+
+Channels 4 and 6 originate in Layers 3 and 1, which are being catalogued in parallel in LAYER_01_02_03_SUBSTRATE_MANUSCRIPT.txt, and those two chapters cross-reference that companion document by name.
+
+A half-specification that admits which half is missing is worth more to a reader than a whole one that was invented.
+
+
+PART ONE. WHAT A LAYER-SKIPPING CHANNEL IS
+
+
+THE ADJACENCY RULE AND WHY IT NEEDS AN EXCEPTION CATALOGUE
+
+The multi-layer framework of TFELOAOTHNAES describes the human being as fifteen nested layers, from the photon and the ion at the bottom to the evolutionary and cultural at the top.
+
+Its central working assumption is the adjacency rule: causal traffic normally moves between neighbouring layers, each layer re-expressing the message in its own units before passing it on.
+
+An adjacency rule that admitted no exceptions would be a dogma rather than a scientific framework, because a framework that cannot be embarrassed by a counterexample cannot be tested by one either.
+
+The framework therefore publishes its exceptions formally, in the collection it calls the Interface Exception Catalogue.
+
+A Layer-Skipping Channel is defined strictly, in the corpus's own words: a mechanism by which a physical entity originating at layer N produces a direct effect at layer M, where the difference between N and M is greater than one, and where the entity is not re-encoded into the characteristic units of the intervening layers.
+
+Encapsulation, a term borrowed from software engineering, means that a layer hides its internal workings and communicates only through a defined interface with its neighbours.
+
+A Layer-Skipping Channel is a documented breach of encapsulation, and the framework's honesty consists in listing the breaches rather than denying them.
+
+
+THE RE-ENCODING TEST, RESTATED
+
+The admission test for the catalogue is the Re-encoding Test, and it asks exactly one question.
+
+Does the message get translated into the characteristic units of each layer along the way - into an action potential, a synaptic weight, a circuit state?
+
+If the answer is yes, there is no skip, and what looks like a shortcut is ordinary layered relay running quickly.
+
+If the answer is no - if the very same physical entity that departed the origin layer arrives intact at a distant layer and acts there directly - then encapsulation has been bypassed, and the channel belongs in the catalogue.
+
+The test is about identity of the carrier, not about speed.
+
+A fast pathway that still converts its message into spikes at every station fails the test, however fast it runs.
+
+A slow pathway whose molecule crosses ten layers unchanged passes it, however slowly it runs.
+
+This is why cortisol, which takes an hour to act, is in the catalogue, and why an extremely fast reflex arc is not.
+
+Each chapter below applies the test explicitly, under the header THE RE-ENCODING TEST APPLIED, and names the physical entity whose identity is preserved end to end.
+
+
+THE ECONOMIC LOGIC: ADDRESSES COST MONEY, BROADCASTS DO NOT
+
+The framework does not treat the seven channels as a miscellaneous bag of anomalies.
+
+It claims they obey a single falsifiable rule, which the source manuscripts call the Broadcast Principle.
+
+A layer-skipping channel exists wherever three conditions are jointly satisfied.
+
+• First, the message is global rather than addressed, so that the intended recipient is every cell or the whole organism rather than one particular circuit.
+
+• Second, the message sits at a temporal extreme, being either very slow and persistent, as hormones and epigenetic marks are, or so urgent that relay latency is unaffordable, as the vagal toxin alarm and the hyperdirect stop command are.
+
+• Third, delivering the message by conventional layered wiring would be prohibitively expensive, because innervating every cell in the body to deliver cortisol's message would not fit inside a skull and could not be paid for metabolically.
+
+The underlying insight is worth stating plainly, because it is the economic core of the whole catalogue.
+
+Layer-by-layer relay is an addressing scheme, and an addressing scheme is pure overhead when the message is going to everyone.
+
+Biology pays the cost of layered relay when a message needs an address, and refuses to pay it when the message is a broadcast.
+
+Every chapter below therefore carries a header called WHY THE RELAY IS NOT PAID FOR, which states, for that specific channel, what the address would have had to be and what it would have cost.
+
+The principle yields a real prediction, which is what makes the framework falsifiable rather than merely plausible.
+
+There should exist no hormone whose function is to tell one specific synapse in one specific cortical column to strengthen by fifteen percent.
+
+Such a molecule would be precisely addressed, temporally intermediate, and cheap to wire conventionally, and its discovery would seriously damage the framework.
+
+The framework accepts that risk in public, and this document inherits the risk unchanged.
+
+
+HOW TO READ A CHAPTER
+
+Each of the seven chapters carries the same ten aspect headers in the same order, so that channels can be compared line against line.
+
+The SYSTEMS INTERFACE block uses the corpus's machine-parsable publish-and-subscribe form, identical in shape to the blocks that close every systems chapter of LAYER_10_SYSTEMS_MANUSCRIPT.txt and every state chapter of LAYER_11_GLOBAL_STATES_MANUSCRIPT.txt.
+
+SUBSCRIBES names the source layer number and the construct the channel reads; PUBLISHES names the destination layer number and the construct the channel writes.
+
+STATE names what an observer could measure without running the channel; PARAMETERS gives real quantitative values with ranges; TIME CONSTANTS gives real timescales with units and is mandatory on every chapter.
+
+FAILURE MODE names how the channel breaks, because a channel that cannot fail is not a mechanism.
+
+Two minor shortcuts that operate within rather than across layers are catalogued in Part Three, and they are given the same interface treatment so that the file parses uniformly, even though the corpus ranks them as minor.
+
+Confidence gradings follow the corpus's own vocabulary of very high, high, moderate, low and contested, and where this document's confidence differs from the corpus's, the corpus's grading is quoted first.
