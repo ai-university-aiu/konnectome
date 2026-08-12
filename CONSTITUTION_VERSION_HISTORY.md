@@ -53,6 +53,61 @@ that transfers.
 -----------------------------------------------------------------------------
 
 
+Version 28, by the owner's instruction of 2026-08-12, CREATES docs/admin/ AND RELOCATES THE THREE
+ADMINISTRATIVE DOCUMENTS INTO IT - the ledger of the Fourth Commandment, the tutorial of the
+Eighteenth, and the build log of the Nineteenth. NO COMMANDMENT WAS ADDED, REMOVED, OR RENUMBERED;
+the count stands at twenty-three. NO RULE CHANGED IN ANY OF THE THREE COMMANDMENTS: the ledger is
+still append-only and still the one scoreboard, the tutorial is still identified by there being
+exactly one of it and still archives its superseded versions under the Eleventh Commandment, and the
+build log is still unversioned, append-only, and dual-voiced. ONLY DIRECTORIES MOVED.
+
+FIVE POINTERS IN THIS CONSTITUTION MOVED IN THE SAME CHANGE, which is the whole reason this
+amendment exists rather than the move being a silent act of housekeeping. The Fourth Commandment's
+ledger path, the Tenth's second copy of that same path, the Eighteenth's tutorial-uniqueness
+directory, the Nineteenth's build-log path, and the Twenty-Third's hand-off reading list. The rule
+being obeyed is the one the version 9 entry wrote down and the version 10 move first tested at
+scale: A POINTER IS NOT A STATEMENT, SO A FILE THAT MOVES MUST HAVE EVERY POINTER TO IT MOVED IN THE
+SAME CHANGE.
+
+AND THREE LINES WERE DELIBERATELY LEFT ALONE, WHICH IS THE HALF OF THIS AMENDMENT MOST WORTH READING
+LATER. The Fourth Commandment's "(A new file; create it at build start.)", the Eighteenth's "Add the
+following to /docs/: konnectome_tutorial_v1.txt", and the Nineteenth's parenthetical history of the
+build log's renames are all RECORDS OF DATED ACTS and not pointers. A record says where a file WAS
+written and what it WAS called; rewriting one to match a later directory would turn a true historical
+claim into a false one. This is the version 15 and version 18 argument about the Seventh
+Commandment's file list, applied in the direction version 18 did not have to consider: version 18
+found a list of six dead paths pretending to be pointers and DROPPED the part that could go stale;
+this amendment finds three genuine records sitting beside three genuine pointers and moves only the
+pointers. THE TEST THAT SEPARATES THEM IS THE SAME ONE THE ELEVENTH COMMANDMENT USES FOR HAND-OFFS:
+WOULD A SESSION EVER FOLLOW THIS LINE TO OPEN A FILE? If yes it is a pointer and it moves; if it only
+says what once happened, it is a record and it stands.
+
+WHY A DIRECTORY AT ALL, since the Constitution does not require one and the owner did not have to
+give a reason. These three are konnectome's ADMINISTRATIVE RECORD - the scoreboard, the story, and
+the guide. Every other kind of document in this repository already had a home: the method documents
+in docs/DSPARCD/, konnectome's own assessments in docs/design/, the sources it reads and never edits
+in docs/neuroscience/ and docs/principles/, the gated change orders in docs/cousins/, the session
+series in docs/hand-off/, the dead versions in docs/archive/. The three that moved here were the
+residue - the files that lived at the top level because nothing had ever named what they had in
+common. THE EVIDENCE THAT THIS WAS A REAL GAP AND NOT A TIDYING PREFERENCE IS IN THE TENTH
+COMMANDMENT'S OWN LINE, which has now had to be chased twice: version 18 repaired it from a bare
+filename that did not resolve from the repository root, and version 28 repaints it here. A document
+with no directory gets cited three different ways, and each way rots differently.
+
+AND ONE STANDING RULE IS SHARPENED RATHER THAN CHANGED, WHICH IS A SIDE EFFECT WORTH NAMING. The
+Twenty-Third Commandment's hand-off discipline says that AT ANY MOMENT EXACTLY ONE CONTEXT HAND-OFF
+DOCUMENT SITS IN /docs/ AND IT IS ALWAYS THE ONE TO READ. Before this move /docs/ held four files and
+that claim needed a reader to know which three to ignore. AFTER IT, /docs/ HOLDS EXACTLY ONE FILE,
+AND IT IS THE HAND-OFF. The rule is unchanged and is now self-evident from the directory listing,
+which is the shape this Constitution keeps preferring: the form whose failure mode is VISIBLE over
+the form whose failure mode is a plausible answer.
+
+AND docs/admin/archive/ DOES NOT EXIST AND MUST NOT BE CREATED. The Eleventh Commandment names
+exactly one archive, at docs/archive/ , and the superseded tutorials stay in it. A relocation of a
+live document is not a licence to give it a private archive, and this is written down because the
+next session to bump the tutorial will be standing in a new directory with an obvious wrong thing to
+do one keystroke away.
+
 Version 27, by the owner's instruction of 2026-08-11, MOVES THIS VERSION HISTORY OUT OF THE
 CONSTITUTION AND INTO THIS FILE, and declares it not required reading on a hand-off. NO COMMANDMENT
 WAS ADDED, REMOVED, OR RENUMBERED; the count stands at twenty-three. NO COMMANDMENT'S TEXT WAS

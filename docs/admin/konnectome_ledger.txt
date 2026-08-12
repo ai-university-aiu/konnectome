@@ -6337,4 +6337,59 @@ either change order: a four-slot decaying surface inside one runtime travels to 
 consumer-versus-ontology test of the Second Commandment, and no language feature was missing.
 
 
+
+DOCS REORGANISATION NOTE (2026-08-12). THE THREE ADMINISTRATIVE DOCUMENTS MOVED TO docs/admin/ .
+This is not a slice: no pack was touched, no test was written, no behaviour moved, and no document's
+content was edited except where a pointer inside it had to follow the move. It is recorded here for
+the same reason the 2026-08-10 note above it is - because it changed paths that FOUR Commandments and
+several working documents pointed at - and it is deliberately written in that note's own shape so the
+two can be read against each other.
+
+WHAT MOVED. Three files, by the owner's instruction: konnectome_ledger.txt (this file, the Fourth
+Commandment's), building_konnectome.txt (the Nineteenth's), and konnectome_tutorial_v61.txt (the
+Eighteenth's). All three were at the top level of /docs/ and are now in docs/admin/ .
+
+WHAT DID NOT MOVE, AND EACH ABSENCE IS DELIBERATE. The CURRENT HAND-OFF stays at the top level of
+/docs/ , because the Twenty-Third Commandment's whole discipline is that exactly one hand-off sits
+there and is always the one to read - and that rule is now SHARPER rather than merely intact, since
+/docs/ holds exactly one file and it is that hand-off. The superseded tutorials stay in docs/archive/
+under the Eleventh Commandment, which names exactly one archive; docs/admin/archive/ does not exist
+and must not be created. And nothing else joined them: docs/DSPARCD/, docs/design/, docs/neuroscience/,
+docs/principles/, docs/cousins/, docs/deferrals/, docs/evidence/, docs/hand-off/, docs/provenance/,
+docs/images/ and docs/archive/ are all untouched.
+
+WHY THESE THREE AND NOT SOME OTHER THREE, which is the boundary this move had to DECIDE rather than
+assume. They are konnectome's ADMINISTRATIVE RECORD - the scoreboard, the story, and the guide. Every
+other kind of document in this repository already had a directory naming what it was; these three
+lived at the top level because nothing had ever named what they had in common. The test that
+separates them from the hand-off, which is the near case: a hand-off is a SESSION'S report and
+instruction and is read once by one successor; these three are the BUILD'S standing record and are
+read by every session forever.
+
+WHAT WAS REPOINTED, AND THE RULE IT OBEYS. Five pointers in CONSTITUTION.md (the Fourth's ledger
+path, the Tenth's second copy of that path, the Eighteenth's tutorial-uniqueness directory, the
+Nineteenth's build-log path, and the Twenty-Third's hand-off reading list); three links in README.md;
+one citation each in docs/DSPARCD/konnectome_0_definition_v2.txt, docs/design/06, docs/design/08 and
+docs/design/11; and four lines of the current hand-off, including its DOCS LAYOUT entry, which was a
+reading list rather than a report and would otherwise have sent the next session to three files that
+are not there. THE RULE IS THE ONE THE FIRST COMMANDMENT'S VERSION 9 NOTE STATES: a pointer is not a
+statement, so a file that moves must have every pointer to it moved in the same change.
+
+AND WHAT WAS DELIBERATELY NOT REPOINTED, WHICH IS THE HALF THAT NEEDED JUDGEMENT. Nothing in
+docs/archive/ , because an archived file is a dead version and this Constitution's every reference to
+that directory is preservation language rather than a reading list. NOTHING IN docs/hand-off/ -
+forty-one superseded hand-offs carry the old paths, and they are DATED REPORTS OF PAST SESSIONS, so
+editing them would rewrite history to make it agree with the present; the Hand-Off Protocol's own
+sweep instruction already says of them "edit none of them". And nothing in the append-only bodies of
+this ledger or the build log, whose earlier entries cite the old paths as part of what was true when
+they were written. THE COST OF THAT DECISION IS NAMED RATHER THAN HIDDEN: a session following a PATH
+out of any document written before 2026-08-12 will miss, and this note is where it should land - the
+same cost the 2026-08-10 note named for the same reason, and the same remedy.
+
+THE CONSTITUTION MOVED TO VERSION 28 IN THE SAME CHANGE, with its entry written into
+CONSTITUTION_VERSION_HISTORY.md as that file's own head requires. NO COMMANDMENT WAS ADDED, REMOVED,
+OR RENUMBERED - the count stands at twenty-three - AND NO RULE CHANGED IN ANY OF THE THREE
+COMMANDMENTS WHOSE DOCUMENTS MOVED. Only directories moved.
+
+
  Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 23 (9 CLOSED: 8, 9, 13, 15, 17, 18, 19, 20 and 22).  Decisions: 23.

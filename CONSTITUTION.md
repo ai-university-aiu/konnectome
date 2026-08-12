@@ -74,7 +74,16 @@ THE FOURTH COMMANDMENT:
 Change orders and considerations for change orders to
 1. causalontology, or 2. PrologAI, or 3. konnectome itself
 will be written to the new file:
-/home/ccaitwo/konnectome/docs/konnectome_ledger.txt (A new file; create it at build start.)
+/home/ccaitwo/konnectome/docs/admin/konnectome_ledger.txt (A new file; create it at build start.)
+(RELOCATED in version 28, by the owner's instruction of 2026-08-12, and NO RULE CHANGED. The file
+moved from the top level of /docs/ into the new docs/admin/ directory, together with the build log of
+the Nineteenth Commandment and the tutorial of the Eighteenth, and this line follows it. The three of
+them are konnectome's ADMINISTRATIVE RECORD - the scoreboard, the story, and the guide - as opposed to
+the method documents in docs/DSPARCD/, the assessments in docs/design/, and the sources in
+docs/neuroscience/, each of which already had a directory of its own. THE CREATION PARENTHETICAL
+ABOVE IS LEFT WORD FOR WORD because it is a RECORD of an act at build start and not a pointer; what
+moved is the path in front of it, which is a live pointer and was chased in the same change, per the
+rule the First Commandment's version 9 note states.)
 (RENAMED FROM konnectome_ledger_v1.txt in version 23, by the owner's instruction of 2026-08-11, and
 NO RULE CHANGED - which is the whole difference between this entry and the version 22 one beside it.
 The build log had to have a rule amended because the Nineteenth Commandment declared it "a versioned
@@ -377,9 +386,13 @@ and that those code modules serve the same functions and faculties in konnectome
 and with the same inputs/outputs (SUBSCRIBE/PUBLISH) interfaces as described in,
 docs/neuroscience/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt
 The audit is not one-and-done: keep a coverage list in
-/home/ccaitwo/konnectome/docs/konnectome_ledger.txt
+/home/ccaitwo/konnectome/docs/admin/konnectome_ledger.txt
 that names, for each construct in the manuscript, the module that realizes it, so the audit can be
 re-run at any time and a missing construct is visible at a glance.
+(RELOCATED in version 28, on the same move and for the same reason as the Fourth Commandment's copy
+of this path. No rule changed. NOTE THAT THIS IS THE SECOND TIME THIS ONE LINE HAS HAD TO BE CHASED -
+version 18 repaired it from a bare filename to a full path - which is the argument for the directory
+rather than against it: a document nobody could name a home for gets cited three different ways.)
 (REPOINTED in version 18, on the pointer audit of 2026-08-10. This line named the ledger as a bare
 filename, which resolved by convention rather than by path and did not resolve from the repository
 root at all. It is the SAME fault the version 16 note recorded and fixed one Commandment away, in the
@@ -556,8 +569,17 @@ Describing and explaining every concept relating to konnectome.
 Make the tutorial able to be read and understood by a beginner, learner, layperson, newcomer, novice.
 Maintain versioned updates to the tutorial as any new code changes are applied. THE CURRENT TUTORIAL
 IS THE ONLY konnectome_tutorial FILE IN
-/home/ccaitwo/konnectome/docs/
+/home/ccaitwo/konnectome/docs/admin/
 and every superseded version is in docs/archive/ .
+(RELOCATED in version 28, by the owner's instruction of 2026-08-12, and NO RULE CHANGED. The tutorial
+joins the ledger and the build log in docs/admin/ . THE UNIQUENESS RULE IS UNTOUCHED AND IS WHAT THIS
+LINE IS ACTUALLY FOR - it identifies the current tutorial by there being exactly one of it, which is
+the technique the version 18 note adopted precisely so that no version number would ever have to be
+chased here. Only the directory the rule ranges over has changed. THE SUPERSEDED VERSIONS DO NOT
+MOVE: they are in docs/archive/ under the Eleventh Commandment, which names exactly one archive, and
+docs/admin/archive/ does not exist and must not be created. The creation line above - "Add the
+following to /docs/: konnectome_tutorial_v1.txt" - is deliberately left alone, as a record of where
+the file was first written.)
 (The tutorial is versioned under the same archive discipline as the Eleventh Commandment: when a code
 change bumps it, the superseded version moves to docs/archive/ in the same change, so only the latest
 tutorial lives outside the archive, and it always describes the konnectome that exists.)
@@ -578,7 +600,13 @@ THE NINETEENTH COMMANDMENT: THE BUILD LOG:
 (NEW in version 3, by the owner's instruction of 2026-07-26. The former Eighteenth Commandment, the
 Hand-Off Protocol, becomes the Nineteenth.)
 Log all activities as part of the konnectome build to the document:
-/home/ccaitwo/konnectome/docs/building_konnectome.txt
+/home/ccaitwo/konnectome/docs/admin/building_konnectome.txt
+(RELOCATED in version 28, by the owner's instruction of 2026-08-12, and NO RULE CHANGED. The log
+joins the ledger and the tutorial in docs/admin/ . Nothing about its being APPEND-ONLY, unversioned,
+or dual-voiced is touched; only its directory moved, and every live pointer to it moved in the same
+change. The parenthetical below is left word for word: it is the history of this file's NAME, which
+is a record, and a record of a rename is not repointed by a later relocation - exactly as it says of
+the archived files it names.)
 (UNVERSIONED, AND RENAMED FROM BUILDING_KONNECTOME_v2.txt, in version 22, by the owner's instruction
 of 2026-08-11. A RULE CHANGED HERE, and it is named plainly rather than buried: this parenthetical
 formerly declared the build log "a versioned document under the Eleventh Commandment", and it is no
@@ -906,7 +934,7 @@ read konnectome_0_definition FIRST, because it is the concept the other six answ
 - A reminder that docs/neuroscience/ is THE NORTH-STAR DIRECTORY (the Twentieth Commandment), and that its two north-star documents - THE_NEUROSCIENCE_OF_COGNITION_OUTLINE.txt and THE_NEUROSCIENCE_OF_COGNITION_MANUSCRIPT.txt - are what this build steers by; together with the current state of their gap analysis, and which of its findings are still open.
 - A reminder to read the Settings, General, Instructions for Claude (the owner's standing instructions to the assistant).
 - A reminder to read ~/CLAUDE.md, which is git-untracked (gitignored) and holds the system-wide current-state narrative (it lives at the organization root, not inside one repository, because it belongs to the whole system).
-- A reminder to read the current /docs/konnectome_tutorial (the maintained beginner tutorial), and to read all of the documents in /docs/.
+- A reminder to read the current /docs/admin/konnectome_tutorial (the maintained beginner tutorial), and to read all of the documents in /docs/ and its sub-directories.
 - A list of the important /docs/ files and what each is: the ledger, the DSPARCD Fileset, the change orders, the tutorial, the thought-combination guide, the guiding-principle documents, the context documents, and the earlier hand-offs (named by the convention of Step 2b, and living in /docs/hand-off/ - see /home/ccaitwo/konnectome/docs/hand-off/README.txt for how to read them and for which of them are session-close markers rather than units of work).
 - A report of what was done in the session that is ending: the slices built, the packs, the tests, the pull requests merged, the current main commit, and the current DSPARCD and tutorial versions.
 - The build-against cousin commits (causalontology, PrologAI, Mentova), for reproducibility.
@@ -921,7 +949,7 @@ commit in which /docs/ holds two hand-offs or none.
 
 THE VERSION AND THE COUNT, AND WHERE THE HISTORY WENT:
 
-THIS CONSTITUTION IS AT VERSION 27, AND HOLDS TWENTY-THREE COMMANDMENTS.
+THIS CONSTITUTION IS AT VERSION 28, AND HOLDS TWENTY-THREE COMMANDMENTS.
 
 THE DATED VERSION HISTORY NOW LIVES IN ITS OWN FILE:
 /home/ccaitwo/konnectome/CONSTITUTION_VERSION_HISTORY.md
