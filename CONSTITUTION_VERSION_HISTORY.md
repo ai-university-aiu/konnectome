@@ -53,6 +53,57 @@ that transfers.
 -----------------------------------------------------------------------------
 
 
+Version 29, by the owner's instruction of 2026-08-12, CREATES docs/start-here/ AND MOVES THE CURRENT
+CONTEXT HAND-OFF INTO IT. NO COMMANDMENT WAS ADDED, REMOVED, OR RENUMBERED; the count stands at
+twenty-three. A RULE CHANGED, AND THIS ENTRY SAYS SO RATHER THAN CLAIMING OTHERWISE - unlike the
+version 28 entry immediately below, which moved only pointers. WHAT CHANGED IS THE LOCATION named in
+Steps 2a and 2b of the Twenty-Third Commandment's Hand-Off Protocol. Nothing else in that protocol
+did: exactly one Context Hand-Off document stands outside docs/hand-off/ at any moment, it is always
+the one to read, the sweep is still a PRECONDITION rather than a postcondition, the naming convention
+is untouched, and superseded hand-offs still live in docs/hand-off/ and are still not archived.
+
+BOTH STEPS MOVED IN ONE ACT, AND THAT IS THE MECHANICAL POINT OF THIS AMENDMENT. Step 2a sweeps FROM a
+directory and Step 2b writes INTO it, and they are one mechanism. Repointing either alone would leave
+a protocol that still runs, still commits, still passes every gate, and quietly stops sweeping - which
+is exactly the silent failure the version 13 amendment reordered these two steps to prevent. They were
+therefore edited in the same change and the amendment note is attached to both.
+
+WHY THIS IS AN IMPROVEMENT ON WHAT VERSION 13 BUILT RATHER THAN A REVERSAL OF IT, which matters
+because version 12 DID reverse this and version 13 reversed it back. Version 12 briefly put every
+hand-off, current one included, in docs/hand-off/ ; version 13 brought the current one back up and
+gave three reasons. THIS AMENDMENT KEEPS ALL THREE AND STRENGTHENS THE THIRD. The first reason - that
+a hand-off is both a dated REPORT and a live INSTRUCTION, and only the newest is ever read as
+instruction, so the two should be separated on disk - is untouched and is now expressed by a directory
+whose NAME states which of the two you are looking at. The second - that hand-offs should follow the
+house rule that only the current member of a series lives outside its own directory - is untouched.
+
+THE THIRD REASON IS THE ONE THAT IMPROVES, AND THE REASONING IS WORTH KEEPING BECAUSE IT IS SUBTLE.
+Version 13 wanted "the latest hand-off" to be something a session FINDS rather than DERIVES, because
+deriving it meant sorting filenames on date and serial number, and same-day hand-offs, serial
+numbering and session-close markers all make that fallible. Its answer was: it is simply the only
+dated file in /docs/ . THAT ANSWER WAS CORRECT AND IT RESTED ON A NEGATIVE - it worked because of what
+was NOT in that directory, which is a fact a reader must CHECK rather than SEE. Between version 13 and
+version 28 the directory held four files and the rule needed a reader to know which three to ignore;
+version 28's move to docs/admin/ narrowed it to one; version 29 finishes the job by giving that one
+file a directory whose name is an instruction. A SESSION THAT HAS READ NOTHING AT ALL CAN NOW FIND ITS
+ENTRY POINT FROM A DIRECTORY LISTING. The rule now rests on a positive fact rather than an absence,
+which is the same preference this Constitution has stated three times in other places: prefer the form
+whose failure mode is VISIBLE over the form whose failure mode is a plausible answer.
+
+AND ONE PROHIBITION IS WRITTEN INTO THE COMMANDMENT, FOR THE SAME REASON VERSION 28 FORBADE
+docs/admin/archive/ . NOTHING ELSE MAY BE PUT IN docs/start-here/ . A directory meaning "read this
+first" stops meaning anything the moment it holds a second file, and a README or a quick-start guide
+placed there would be an entirely reasonable-looking act that destroys the property the directory
+exists for. The reading LIST belongs inside the hand-off, where it already is.
+
+THE SWEEP OUTSIDE THE CONSTITUTION was small, because the hand-off's location was named in fewer
+places than the ledger's: docs/hand-off/README.txt, whose whole subject is this arrangement and which
+carries the migration note for anyone following an old path; README.md's directory tree; and the
+current hand-off's own DOCS LAYOUT entry, which is a reading list rather than a report and which was
+corrected in place for the second time in one day. Superseded hand-offs were again left untouched, and
+docs/hand-off/README.txt is where a reader following an old path should land - which is what that file
+was already for, and is now for twice over.
+
 Version 28, by the owner's instruction of 2026-08-12, CREATES docs/admin/ AND RELOCATES THE THREE
 ADMINISTRATIVE DOCUMENTS INTO IT - the ledger of the Fourth Commandment, the tutorial of the
 Eighteenth, and the build log of the Nineteenth. NO COMMANDMENT WAS ADDED, REMOVED, OR RENUMBERED;

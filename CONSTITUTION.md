@@ -879,8 +879,8 @@ hundred thousand tokens, or above roughly sixty percent of the window - the owne
 On either trigger, the assistant carries out the Hand-Off Protocol below, commits the result on a
 feature/ branch through a pull request (the Seventeenth Commandment), and then PAUSES. A fresh session then
 re-loads state from docs/ - the ledger, the DSPARCD Fileset, the tutorial, and the latest hand-off,
-which since version 13 is the ONLY Context Hand-Off document in docs/ and therefore needs no working
-out - and
+which since version 13 needs no working out and which since version 29 is THE ONLY FILE IN
+docs/start-here/ - and
 continues from the known-good baseline, because all durable state lives on disk and never only in the
 conversation.
 
@@ -888,11 +888,43 @@ THE HAND-OFF PROTOCOL. The assistant performs these steps:
 
 Step 1: Give yourself a fun, creative, original name.
 Step 2a: SWEEP BEFORE YOU WRITE. Move any Context Hand-Off document currently sitting in
-~/konnectome/docs/ into ~/konnectome/docs/hand-off/ , using git mv, in the change you are about to
-make. Move whatever you find, however many there are, and edit none of them.
+~/konnectome/docs/start-here/ into ~/konnectome/docs/hand-off/ , using git mv, in the change you are
+about to make. Move whatever you find, however many there are, and edit none of them.
 Step 2b: Write the new hand-off to file:
-~/konnectome/docs/[DATE]_[SERIAL NUMBER]_Context_Hand-Off_from_[NAME].txt
-(AMENDED in version 13, by the owner's instruction of 2026-08-10. THE CURRENT HAND-OFF LIVES IN
+~/konnectome/docs/start-here/[DATE]_[SERIAL NUMBER]_Context_Hand-Off_from_[NAME].txt
+(AMENDED in version 29, by the owner's instruction of 2026-08-12. THE CURRENT HAND-OFF NOW LIVES IN
+~/konnectome/docs/start-here/ RATHER THAN AT THE TOP LEVEL OF /docs/ , and BOTH STEPS ABOVE MOVED
+TOGETHER - the sweep's source and the write's destination are one mechanism and would fail silently if
+only one were repointed, which is precisely the failure the version 13 amendment below was written to
+prevent. A RULE CHANGED HERE and it is named plainly: the location. NOTHING ELSE DID. Exactly one
+Context Hand-Off document stands outside docs/hand-off/ at any moment, it is always the one to read,
+the sweep is still a PRECONDITION rather than a postcondition, the naming convention is untouched, and
+the superseded ones still live in docs/hand-off/ and are still not archived.
+WHY THIS IS AN IMPROVEMENT ON WHAT VERSION 13 BUILT AND NOT A REVERSAL OF IT. Version 13's third
+reason was that "the latest hand-off" must not be something a session DERIVES - not by sorting
+filenames on date and serial, which same-day hand-offs and session-close markers make fallible - but
+something it simply FINDS. Its answer was "it is the only dated file in /docs/". THAT ANSWER WAS
+CORRECT AND IT WAS LOAD-BEARING ON A NEGATIVE: it worked because of what was NOT in /docs/ , which is
+a fact a reader has to check rather than see. Between version 13 and version 28 that directory held
+four files, and the rule needed a reader to know which three to ignore. IT IS NOW THE ONLY FILE IN A
+DIRECTORY WHOSE NAME IS AN INSTRUCTION. A session that has read nothing at all can find its entry
+point by reading a directory listing, which is the strongest form this rule has taken yet, and it
+rests on a positive fact rather than an absence.
+AND THE SWEEP IS STILL SELF-HEALING, WHICH IS THE PROPERTY MOST WORTH NOT BREAKING. It moves whatever
+it finds, however many it finds, out of docs/start-here/ before anything is written - so a session
+that skips it costs one session of clutter in a directory named for beginners, rather than a wrong
+read. Version 13's argument for ordering the steps this way is unchanged and is not restated here.
+ONE THING IS FORBIDDEN AND IS WRITTEN DOWN BECAUSE IT IS THE OBVIOUS WRONG MOVE. NOTHING ELSE MAY BE
+PUT IN docs/start-here/ . A directory that means "read this first" stops meaning anything the moment
+it holds a second file, and the next session to think a README or a quick-start guide would be
+helpful there is the session this sentence is addressed to. The reading LIST belongs inside the
+hand-off, where it already is; the directory holds the one document that carries it.)
+(AMENDED in version 13, by the owner's instruction of 2026-08-10. ITS LOCATION CLAUSE IS SUPERSEDED BY
+THE VERSION 29 NOTE ABOVE AND ITS REASONING IS NOT - read "/docs/" throughout this note as
+"/docs/start-here/", and note that the version 29 note argues FROM the three reasons below rather than
+against them. The text is kept unedited because it is a record of a dated act, and because the two
+notes disagreeing about a directory while agreeing about everything else is exactly what a reader
+needs to see. THE CURRENT HAND-OFF LIVES IN
 /docs/ AND EVERY SUPERSEDED ONE LIVES IN /docs/hand-off/ , so that AT ANY MOMENT EXACTLY ONE
 CONTEXT HAND-OFF DOCUMENT SITS IN /docs/ AND IT IS ALWAYS THE ONE TO READ. Three reasons, and they
 are the Constitution's own rather than a preference. FIRST, IT MAKES A DISTINCTION THIS DOCUMENT
@@ -949,7 +981,7 @@ commit in which /docs/ holds two hand-offs or none.
 
 THE VERSION AND THE COUNT, AND WHERE THE HISTORY WENT:
 
-THIS CONSTITUTION IS AT VERSION 28, AND HOLDS TWENTY-THREE COMMANDMENTS.
+THIS CONSTITUTION IS AT VERSION 29, AND HOLDS TWENTY-THREE COMMANDMENTS.
 
 THE DATED VERSION HISTORY NOW LIVES IN ITS OWN FILE:
 /home/ccaitwo/konnectome/CONSTITUTION_VERSION_HISTORY.md

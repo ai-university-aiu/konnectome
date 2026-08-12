@@ -192,8 +192,9 @@ konnectome/
     quantity_model/            Slice 22: the represented model of quantity - the conservation verdict read by re-measuring.
     simulated_body/            Slice 24: the honestly-named stand-in machine - a camera, a draining battery, three actuators.
     body_interface/            Slice 24: Rung Five groundwork - the book's three body connections; the rung itself not claimed.
-  docs/                        Exactly ONE file at the top level - the current hand-off. Everything else is in a named sub-directory.
-    [DATE]_N_Context_Hand-Off_from_[NAME].txt   The CURRENT hand-off, and the ONLY file here (Twenty-Third Commandment).
+  docs/                        NO files at the top level. Every document is in a named sub-directory.
+    start-here/                THE ENTRY POINT. Holds exactly ONE file and nothing else may be put here.
+      [DATE]_N_Context_Hand-Off_from_[NAME].txt   The CURRENT hand-off (Twenty-Third Commandment) - what a fresh session reads first, in full.
     admin/                     konnectome's administrative record - the scoreboard, the story, and the guide.
       konnectome_ledger.txt      The running scoreboard of findings (Fourth Commandment). Append-only, and unversioned for the same reason as the build log.
       building_konnectome.txt    The build log (Nineteenth Commandment): the whole story from the true beginning, paper and book at once. Append-only, and the one live document with no version suffix.
@@ -204,7 +205,7 @@ konnectome/
     neuroscience/              The thirty-eight-document Vision Document Set and the guiding book (Eighth). Source: read, and edited ONLY by the corpus update run (Twenty-Second).
     evidence/                  Published literature searched from OUTSIDE the corpus (Twenty-Second Commandment). OUTRANKED BY THE NORTH STAR, and says so on its own face.
     principles/                What konnectome is built BY and did not write: the First Commandment's three AGI/ASI documents, and the English Readable Code specification (Sixth).
-    hand-off/                  Every SUPERSEDED session record. The current one lives one level up.
+    hand-off/                  Every SUPERSEDED session record, plus the README that explains how to read them. The current one is in start-here/ .
     provenance/                What konnectome inherited: the record of the ten-wave programme that preceded it.
     archive/                   Superseded VERSIONS live here (Eleventh Commandment) - and only versions.
     images/                    The README banner, and the palette the cousin READMEs are coloured from.

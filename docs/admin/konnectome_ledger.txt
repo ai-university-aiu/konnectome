@@ -6392,4 +6392,61 @@ OR RENUMBERED - the count stands at twenty-three - AND NO RULE CHANGED IN ANY OF
 COMMANDMENTS WHOSE DOCUMENTS MOVED. Only directories moved.
 
 
+
+DOCS REORGANISATION NOTE, THE SECOND OF THE DAY (2026-08-12). THE CURRENT HAND-OFF MOVED TO
+docs/start-here/ . Recorded separately from the docs/admin/ note above it, and deliberately so: that
+one moved only pointers and changed no rule, and THIS ONE CHANGES A RULE. They are the same kind of
+act and not the same kind of event, and collapsing them into one note would have hidden the
+difference.
+
+WHAT MOVED, AND WHAT RULE CHANGED WITH IT. One file, by the owner's instruction: the current Context
+Hand-Off. The Twenty-Third Commandment's Hand-Off Protocol named the top level of /docs/ in TWO
+places - Step 2a's sweep source and Step 2b's write destination - and both now name
+docs/start-here/ . The Constitution is at VERSION 29 and its history entry is written.
+
+BOTH STEPS MOVED IN ONE ACT AND THAT IS THE MECHANICAL POINT. Step 2a sweeps FROM a directory and
+Step 2b writes INTO it; they are one mechanism. Repointing either alone leaves a protocol that still
+runs, still commits, still passes every gate, AND QUIETLY STOPS SWEEPING - which is precisely the
+silent failure the version 13 amendment reordered those two steps to prevent. A partial repoint here
+would have been that amendment's own nightmare re-created by the amendment that succeeded it.
+
+WHAT DID NOT CHANGE, ENUMERATED SO NOBODY HAS TO INFER IT. Exactly one Context Hand-Off document
+stands outside docs/hand-off/ at any moment. It is always the one to read. The sweep is still a
+PRECONDITION and not a postcondition. The naming convention is untouched. Superseded hand-offs still
+live in docs/hand-off/ , are still not archived under the Eleventh Commandment, and are still required
+reading. Nothing about what a hand-off must CONTAIN moved at all.
+
+WHY THIS IS AN IMPROVEMENT ON VERSION 13 RATHER THAN A REVERSAL OF IT, WHICH MATTERS BECAUSE VERSION
+12 DID REVERSE THIS AND VERSION 13 REVERSED IT BACK. Version 13's third and load-bearing reason was
+that "the latest hand-off" must be something a session FINDS rather than DERIVES, since deriving it
+meant sorting filenames on date and serial and same-day hand-offs make that fallible. Its answer -
+"it is the only dated file in /docs/" - was correct AND RESTED ON A NEGATIVE: it worked because of
+what was NOT in that directory, which a reader must check rather than see. Between version 13 and
+version 28 that directory held four files and the rule needed a reader to know which three to ignore.
+It is now the only file in a directory whose NAME IS AN INSTRUCTION, so the rule rests on a positive
+fact. A session that has read nothing at all can find its entry point from a directory listing.
+
+AND ONE PROHIBITION IS NOW IN THE COMMANDMENT, for the same reason version 28 forbade
+docs/admin/archive/ : NOTHING ELSE MAY BE PUT IN docs/start-here/ . A directory meaning "read this
+first" stops meaning anything the moment it holds a second file, and a README or a quick-start guide
+placed there would be an entirely reasonable-looking act that destroys the property it exists for.
+
+WHAT WAS REPOINTED. Three sites in CONSTITUTION.md (the state-reload sentence and both halves of the
+sweep-and-write pair); three passages in docs/hand-off/README.txt, whose whole subject is this
+arrangement and whose FORWARDING NOTE now has NO EXCEPTION at all, since no path of the old form
+resolves any more; README.md's directory tree and its hand-off/ line; and the current hand-off's own
+DOCS LAYOUT entry, corrected in place for the second time in one day because it is a reading list
+rather than a report.
+
+WHAT WAS DELIBERATELY NOT REPOINTED, on the same test the note above it used: the forty-one
+superseded hand-offs, which are dated reports; docs/archive/ ; and the append-only bodies of this
+ledger and the build log. THE COST IS THE SAME AND SO IS THE REMEDY - docs/hand-off/README.txt's
+forwarding note is where a reader following an old path should land, and it is now simpler than it
+was, because the one case in which an old-style path used to resolve correctly has lapsed.
+
+AND /docs/ NOW HOLDS NO FILES AT ALL, only named sub-directories. Two moves in one day took it from
+four files at the top level to none, and every document in this repository is now in a directory that
+says what kind of thing it is.
+
+
  Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 23 (9 CLOSED: 8, 9, 13, 15, 17, 18, 19, 20 and 22).  Decisions: 23.
