@@ -1,0 +1,1963 @@
+THE INTERFACE EXCEPTION CATALOGUE
+
+The Seven Layer-Skipping Channels of the Human Multi-Layer Framework, Specified as Publish-and-Subscribe Interfaces
+
+A Companion Volume to TFELOAOTHNAES, Part Four
+
+
+PROVENANCE AND STANDING
+
+This document was added to the neuroscience corpus on 12 August 2026 by the konnectome build, under the owner's explicit authority granted on that date.
+
+It is therefore this build's writing living in the corpus's directory, and it does not outrank the corpus's own original documents.
+
+Where this document and an original corpus manuscript disagree, the original manuscript is correct and this document is wrong.
+
+The seven channels, their names, their layer endpoints, the Re-encoding Test that admits them, and the Broadcast Principle that explains them are all taken directly from TFELOAOTHNAES.txt, Part Four, and are the corpus's own.
+
+The interface specifications that follow - the SUBSCRIBES and PUBLISHES blocks, the state variables, the parameters, the time constants and the failure modes - are this build's reading of the corpus's channels, and must never be cited as the corpus's own specification.
+
+Quantitative values given in the interface blocks are drawn from the general physiological literature and are marked with honest confidence notes; where a number is not well established, this document says so rather than inventing one.
+
+This document fills the gap recorded in the konnectome gap analysis of 12 August 2026, which found that the Layer-Skipping Channels were the only first-class construct class in the whole corpus without a publish-and-subscribe interface specification.
+
+That analysis counted sixty-four of sixty-four junctions, seventy-one of seventy-one motifs, forty-four of forty-four systems and twenty-six of twenty-six states carrying full interface blocks, against zero of seven channels.
+
+The phrase "the Interface Exception Catalogue" appears in TFELOAOTHNAES.txt as the name of a document that did not exist; this file is an attempt to deserve that name.
+
+One further honesty note governs the whole document, and it is the point of writing it.
+
+Four of the seven channels originate in a layer that has no catalogue anywhere in this corpus.
+
+Channels 1 and 7 originate in Layers 13 and 14, and those layers are represented in the corpus only by the short LAYER_13_TUTOR_PROTOCOL.txt and LAYER_14_KNOWLEDGE_ENVIRONMENT.txt specifications, which are design documents rather than construct catalogues.
+
+For those two channels the SUBSCRIBES side cannot be specified against a catalogued construct, and this document says so in the block itself rather than fabricating one.
+
+Channels 4 and 6 originate in Layers 3 and 1, which are being catalogued in parallel in LAYER_01_02_03_SUBSTRATE_MANUSCRIPT.txt, and those two chapters cross-reference that companion document by name.
+
+A half-specification that admits which half is missing is worth more to a reader than a whole one that was invented.
+
+The quantitative content of this document - every concentration, distance, latency, half-life and affinity - was checked against the published literature by web search on 12 August 2026, and where that search found a figure that conflicts with the corpus, the corpus outranks the search.
+
+
+PART ONE. WHAT A LAYER-SKIPPING CHANNEL IS
+
+
+THE ADJACENCY RULE AND WHY IT NEEDS AN EXCEPTION CATALOGUE
+
+The multi-layer framework of TFELOAOTHNAES describes the human being as fifteen nested layers, from the photon and the ion at the bottom to the evolutionary and cultural at the top.
+
+Its central working assumption is the adjacency rule: causal traffic normally moves between neighbouring layers, each layer re-expressing the message in its own units before passing it on.
+
+An adjacency rule that admitted no exceptions would be a dogma rather than a scientific framework, because a framework that cannot be embarrassed by a counterexample cannot be tested by one either.
+
+The framework therefore publishes its exceptions formally, in the collection it calls the Interface Exception Catalogue.
+
+A Layer-Skipping Channel is defined strictly, in the corpus's own words: a mechanism by which a physical entity originating at layer N produces a direct effect at layer M, where the difference between N and M is greater than one, and where the entity is not re-encoded into the characteristic units of the intervening layers.
+
+Encapsulation, a term borrowed from software engineering, means that a layer hides its internal workings and communicates only through a defined interface with its neighbours.
+
+A Layer-Skipping Channel is a documented breach of encapsulation, and the framework's honesty consists in listing the breaches rather than denying them.
+
+
+THE RE-ENCODING TEST, RESTATED
+
+The admission test for the catalogue is the Re-encoding Test, and it asks exactly one question.
+
+Does the message get translated into the characteristic units of each layer along the way - into an action potential, a synaptic weight, a circuit state?
+
+If the answer is yes, there is no skip, and what looks like a shortcut is ordinary layered relay running quickly.
+
+If the answer is no - if the very same physical entity that departed the origin layer arrives intact at a distant layer and acts there directly - then encapsulation has been bypassed, and the channel belongs in the catalogue.
+
+The test is about identity of the carrier, not about speed.
+
+A fast pathway that still converts its message into spikes at every station fails the test, however fast it runs.
+
+A slow pathway whose molecule crosses ten layers unchanged passes it, however slowly it runs.
+
+This is why cortisol, which takes an hour to act, is in the catalogue, and why an extremely fast reflex arc is not.
+
+Each chapter below applies the test explicitly, under the header THE RE-ENCODING TEST APPLIED, and names the physical entity whose identity is preserved end to end.
+
+
+THE ECONOMIC LOGIC: ADDRESSES COST MONEY, BROADCASTS DO NOT
+
+The framework does not treat the seven channels as a miscellaneous bag of anomalies.
+
+It claims they obey a single falsifiable rule, which the source manuscripts call the Broadcast Principle.
+
+A layer-skipping channel exists wherever three conditions are jointly satisfied.
+
+• First, the message is global rather than addressed, so that the intended recipient is every cell or the whole organism rather than one particular circuit.
+
+• Second, the message sits at a temporal extreme, being either very slow and persistent, as hormones and epigenetic marks are, or so urgent that relay latency is unaffordable, as the vagal toxin alarm and the hyperdirect stop command are.
+
+• Third, delivering the message by conventional layered wiring would be prohibitively expensive, because innervating every cell in the body to deliver cortisol's message would not fit inside a skull and could not be paid for metabolically.
+
+The underlying insight is worth stating plainly, because it is the economic core of the whole catalogue.
+
+Layer-by-layer relay is an addressing scheme, and an addressing scheme is pure overhead when the message is going to everyone.
+
+Biology pays the cost of layered relay when a message needs an address, and refuses to pay it when the message is a broadcast.
+
+Every chapter below therefore carries a header called WHY THE RELAY IS NOT PAID FOR, which states, for that specific channel, what the address would have had to be and what it would have cost.
+
+The principle yields a real prediction, which is what makes the framework falsifiable rather than merely plausible.
+
+There should exist no hormone whose function is to tell one specific synapse in one specific cortical column to strengthen by fifteen percent.
+
+Such a molecule would be precisely addressed, temporally intermediate, and cheap to wire conventionally, and its discovery would seriously damage the framework.
+
+The framework accepts that risk in public, and this document inherits the risk unchanged.
+
+
+HOW TO READ A CHAPTER
+
+Each of the seven chapters carries the same ten aspect headers in the same order, so that channels can be compared line against line.
+
+The SYSTEMS INTERFACE block uses the corpus's machine-parsable publish-and-subscribe form, identical in shape to the blocks that close every systems chapter of LAYER_10_SYSTEMS_MANUSCRIPT.txt and every state chapter of LAYER_11_GLOBAL_STATES_MANUSCRIPT.txt.
+
+SUBSCRIBES names the source layer number and the construct the channel reads; PUBLISHES names the destination layer number and the construct the channel writes.
+
+STATE names what an observer could measure without running the channel; PARAMETERS gives real quantitative values with ranges; TIME CONSTANTS gives real timescales with units and is mandatory on every chapter.
+
+FAILURE MODE names how the channel breaks, because a channel that cannot fail is not a mechanism.
+
+Two minor shortcuts that operate within rather than across layers are catalogued in Part Three, and they are given the same interface treatment so that the file parses uniformly, even though the corpus ranks them as minor.
+
+Confidence gradings follow the corpus's own vocabulary of very high, high, moderate, low and contested, and where this document's confidence differs from the corpus's, the corpus's grading is quoted first.
+
+
+PART TWO. THE SEVEN LAYER-SKIPPING CHANNELS
+
+
+CHANNEL 1. THE STEROID HORMONE CHANNEL (Layers 13 and 14 down to Layers 4 and 5)
+
+A mother licks her pup, or does not, and forty years later a molecule sits on a stretch of that animal's DNA in a different place than it otherwise would have.
+
+Nothing in that sentence is metaphor, and the whole of this catalogue exists because of it.
+
+WHAT IT IS AND WHAT IT CARRIES:
+
+The Steroid Hormone Channel is the pathway by which a steroid hormone, released into the blood in response to a social or environmental circumstance, arrives unchanged at the nucleus of a distant cell and alters which genes that cell transcribes.
+
+A steroid is a hormone built on a four-ring carbon skeleton, small and fat-soluble, and the exemplar for this channel is cortisol, the principal human glucocorticoid, meaning the adrenal steroid that raises blood glucose and reorganises the body for a sustained demand.
+
+What the channel carries is not information about a specific circuit but a scalar instruction addressed to every nucleated cell in the body at once, and the instruction is roughly: the world has become expensive, spend accordingly.
+
+The corpus's own Layer 4 and 5 volume names the receiving end without hedging, calling the DNA Methylation Store "the framework's steroid-channel terminus", so the destination construct is the corpus's and not this document's invention.
+
+THE LAYERS IT CONNECTS, AND HOW MANY IT SKIPS:
+
+The origin is Layer 13, the Dyadic and Small Group Layer, and Layer 14, the Community and Society Layer: a relationship, a household, a neighbourhood, an institution.
+
+The destination is Layer 4, the Macromolecular Layer, where the receptor protein and the DNA itself live, and Layer 5, the Subcellular and Organellar Layer, where the nucleus is.
+
+The gap is therefore roughly nine to ten layers, and it is the largest single skip in the catalogue apart from Channel 7, which is this same channel with a generation added.
+
+Every layer between is jumped: no action potential is required, no synaptic weight changes, no circuit enters a new state, and the cell that is reprogrammed may be a liver cell, a lymphocyte or a hippocampal neuron with equal indifference.
+
+WHY THE RELAY IS NOT PAID FOR:
+
+Consider what the address would have had to be.
+
+To deliver cortisol's message by conventional layered relay, the nervous system would need a private wire from the stress axis to the nucleus of every one of the body's nucleated cells, on the order of tens of trillions of destinations.
+
+There is no volume in the skull for that wiring, no metabolic budget for maintaining its resting potentials, and no developmental programme that could specify its targets.
+
+The message, moreover, is genuinely undirected: the instruction to mobilise fuel and defer repair is meant for the whole organism, so an addressing scheme would be pure overhead carrying no information the recipient needs.
+
+Biology's answer is to dissolve the message in the blood and let physics do the routing, and the routing is free because the circulatory system was already there.
+
+THE RE-ENCODING TEST APPLIED:
+
+The physical entity whose identity is preserved end to end is the cortisol molecule itself, molecular formula C21H30O5, relative molecular mass 362.46 daltons.
+
+The same molecule that left the adrenal cortex is the molecule that binds the receptor and is carried into the nucleus, and at no point between is its message converted into a spike, a synaptic weight or a circuit state.
+
+Its lipophilicity, meaning its preference for fat over water, is measured as an octanol-water partition coefficient of roughly 1.4 to 1.7, with sources disagreeing modestly according to assay method, and that value together with its mass under 500 daltons satisfies the standard criteria for passive diffusion across a lipid membrane.
+
+It therefore crosses the capillary wall, the blood-brain barrier, the plasma membrane and the nuclear envelope without a transporter and without a translation, which is the definition of an unencoded crossing.
+
+The channel passes the Re-encoding Test unambiguously, and it does so slowly, which is exactly the point the test is designed to make: the test is about identity of the carrier, not speed.
+
+THE PHYSICAL CARRIER:
+
+The carrier is a small lipophilic steroid dissolved in plasma, mostly bound to a chaperone protein and partly free.
+
+About 90 to 95 percent of circulating cortisol is protein-bound, the majority to corticosteroid-binding globulin, also called transcortin, and the remainder to albumin, leaving a free and biologically active fraction of roughly 5 to 10 percent (Journal of Clinical Endocrinology and Metabolism, 2019).
+
+That binding globulin saturates at a capacity of roughly 500 to 700 nanomolar, which produces a genuinely non-linear channel: at stress-level total cortisol the free fraction rises disproportionately, so the channel's gain increases exactly when it is used hardest.
+
+At the receiving end the carrier is handed to one of two nuclear receptor proteins of the Layer 4 catalogue, the mineralocorticoid receptor and the glucocorticoid receptor, which are ligand-activated transcription factors, meaning proteins that bind a hormone and then bind DNA.
+
+Published dissociation constants disagree, and the disagreement is real rather than a rounding difference: reviews give the mineralocorticoid receptor a dissociation constant for cortisol of roughly 0.1 to 1 nanomolar, while others give 1 to 2 nanomolar, and give the glucocorticoid receptor roughly 10 to 20 nanomolar, with a minority source giving 2 to 5 nanomolar.
+
+What every source agrees on, and what is load-bearing here, is the ratio: the mineralocorticoid receptor binds cortisol on the order of tenfold more tightly than the glucocorticoid receptor.
+
+The consequence is a two-receptor design that reads the channel twice, because the high-affinity receptor is largely occupied even at the nightly trough while the low-affinity receptor becomes substantially occupied only at the morning peak and under stress.
+
+MODES AND MODE TRANSITIONS:
+
+The channel has four operating postures, and the corpus's mode vocabulary applies to it as it applies to a system.
+
+• THE MODE REGISTER.
+
+◦ Trough Occupancy - The Night Setting - the nocturnal configuration in which only the high-affinity mineralocorticoid receptor is meaningfully occupied and the channel is reporting the absence of demand.
+
+◦ Circadian Peak - The Morning Instruction - the waking-hours configuration in which glucocorticoid receptor occupancy rises and the channel issues its daily readiness order.
+
+◦ Acute Surge - The Emergency Broadcast - the stress configuration in which total cortisol rises past the binding globulin's saturation point and free hormone rises faster than total, delivering a high-gain instruction within tens of minutes.
+
+◦ Sustained Plateau - The Long Siege - the chronic configuration catalogued at Layer 11 as the Sustained Stress State, in which the rhythm flattens, the evening trough rises, and the channel loses its ability to say that the emergency is over.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Trough Occupancy: total serum cortisol below roughly 140 nanomolar, which is under about 5 micrograms per decilitre, with mineralocorticoid receptor occupancy high and glucocorticoid receptor occupancy low (high confidence).
+
+◦ Circadian Peak: total serum cortisol commonly 166 to 497 nanomolar, which is about 6 to 18 micrograms per decilitre, at 07:00 to 09:00, giving a peak-to-trough ratio of roughly five- to tenfold (high confidence; note that some laboratories quote 170 to 550 nanomolar, and the two ranges disagree at the upper bound because reference intervals are assay-specific rather than because the biology differs).
+
+◦ Acute Surge: binding globulin saturation converts a linear rise in total hormone into a supralinear rise in free hormone, so the transfer function is convex rather than proportional (moderate confidence on the exact curvature).
+
+◦ Sustained Plateau: the transfer function itself degrades, with blunted dexamethasone suppression indicating that the axis's own brake has lost sensitivity (moderate confidence, and the corpus grades the exact magnitudes low-to-moderate because patterns vary by stressor and person).
+
+• THE TRANSITION TABLE.
+
+◦ Trough Occupancy to Circadian Peak: thrown from above by the Layer 11 Circadian Day Programme, beginning before waking and completing over roughly one to two hours.
+
+◦ Circadian Peak to Acute Surge: thrown by a Layer 12 or Layer 13 appraisal of threat, with cortisol rising within about 15 to 30 minutes of the stimulus, well behind the sympathetic surge that precedes it.
+
+◦ Acute Surge to Circadian Peak: recovery by negative feedback over one to two hours, set by the plasma half-life.
+
+◦ Acute Surge to Sustained Plateau: when the threat does not discharge, over days to weeks, and this is the transition that converts an adaptive channel into a pathological one.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: the watchdogs are the axis's own fast pituitary and slow hypothalamic feedback loops and the enzyme 11-beta-hydroxysteroid dehydrogenase type 2, which inactivates cortisol in tissues that need their mineralocorticoid receptors kept free for aldosterone; the hippocampus largely lacks that enzyme, which is precisely why hippocampal mineralocorticoid receptors are cortisol-occupied and why the hippocampus is this channel's most sensitive listener.
+
+SYSTEMS INTERFACE:
+
+• SUBSCRIBES (INPUTS).
+
+◦ Layer 13, the Dyadic and Small Group Layer, and Layer 14, the Community and Society Layer: THIS SOURCE LAYER HAS NO CATALOGUE IN THIS CORPUS. Layers 12 through 15 are represented only by LAYER_12_FACULTY_SPECIFICATION.txt, LAYER_13_TUTOR_PROTOCOL.txt, LAYER_14_KNOWLEDGE_ENVIRONMENT.txt and LAYER_15_DESIGN_METHOD.txt, which are konnectome-facing design documents rather than catalogues of the biology, so there is no catalogued construct to name on this side of the interface.
+
+◦ In plain language, the source is a social circumstance: the quality and reliability of caregiving, the presence or absence of a supportive relationship, the security of a household's income, the safety of a neighbourhood, the demands of an institution.
+
+◦ THIS INTERFACE IS THEREFORE SPECIFIED AT ONE END ONLY, and this document declines to invent a Layer 13 construct to fill the slot; the honest half-specification is recorded as a half-specification.
+
+◦ The one input that can be named against a catalogued construct is the intermediate one: Layer 10, the HPA axis of LAYER_10_SYSTEMS_MANUSCRIPT chapter 37, and Layer 11, the Sustained Stress State of chapter 19 and the Circadian Day Programme of chapter 22, which together set the concentration the channel carries.
+
+• PUBLISHES (OUTPUTS).
+
+◦ Layer 4, the Macromolecular Layer: the DNA Methylation Store of LAYER_04_05_SLOW_VARIABLES_MANUSCRIPT chapter 16, which that chapter itself designates the steroid-channel terminus, and the Histone Code of chapter 15.
+
+◦ Layer 4: the Immediate-Early Gene Response of chapter 14 and the CREB Gate of chapter 4, both of which are transcriptional machinery the channel writes to directly.
+
+◦ Layer 5, the Subcellular and Organellar Layer: the nuclear compartment as a whole, since the activated receptor is itself the courier that crosses the nuclear envelope.
+
+• STATE.
+
+◦ Observable without running the channel: current total and free plasma cortisol, the fractional occupancy of the two receptor species, the position within the ultradian pulse, the phase of the circadian envelope, the saturation status of corticosteroid-binding globulin, and the standing methylation state of the glucocorticoid receptor gene promoter.
+
+• PARAMETERS.
+
+◦ Molecular mass 362.46 daltons; octanol-water partition coefficient about 1.4 to 1.7 (sources disagree by method).
+
+◦ Morning peak total serum cortisol 166 to 497 nanomolar, about 6 to 18 micrograms per decilitre; late-evening trough below about 140 nanomolar, under about 5 micrograms per decilitre; the corpus's own Layer 11 figures of a 10 to 20 micrograms per decilitre morning peak and a below-5 evening trough are consistent and govern where they differ.
+
+◦ Protein-bound fraction 90 to 95 percent; free fraction 5 to 10 percent; corticosteroid-binding globulin capacity roughly 500 to 700 nanomolar.
+
+◦ Mineralocorticoid receptor dissociation constant roughly 0.1 to 2 nanomolar and glucocorticoid receptor roughly 10 to 20 nanomolar, sources disagreeing on absolute values but agreeing on the roughly tenfold ratio.
+
+◦ Daily cortisol output on the order of 10 to 20 milligrams (LAYER_10_SYSTEMS_MANUSCRIPT chapter 37).
+
+◦ Breadth of transcriptional effect: the frequently repeated figure is that up to 20 percent of the expressed genome is induced or repressed by glucocorticoids, but this is a ceiling estimate derived from a small number of microarray studies in particular cell types and should not be read as 20 percent of genes in every cell; a defensible statement is hundreds to a few thousand genes per cell type, with the union across tissues approaching the quoted figure (Nature Communications, 2021).
+
+◦ Cerebrospinal fluid cortisol runs at roughly one third of plasma FREE cortisol, measured as about 4.94 plus or minus 2.00 nanograms per millilitre against plasma free cortisol of about 14.3 plus or minus 8.8 nanograms per millilitre, with 88 percent of the cerebrospinal fluid fraction unbound (Journal of Clinical Endocrinology and Metabolism, 1984); this is indicative only, because cerebrospinal fluid is not brain interstitial fluid and the plasma correlation is loose at about r equals 0.55.
+
+• TIME CONSTANTS.
+
+◦ Plasma elimination half-life mean 76.5 plus or minus 5.2 minutes, individual range 40 to 225 minutes (Steroids, 2005), consistent with the textbook 60 to 90 minutes.
+
+◦ Ultradian secretory pulses every 60 to 90 minutes, roughly 15 to 18 pulses per 24 hours.
+
+◦ Cortisol awakening response: a rise over the first 30 to 45 minutes after waking, peaking 30 to 60 minutes post-awakening, with the awakening pulse lasting about 108 minutes on average; reported magnitudes disagree, with commonly quoted rises of 50 to 75 percent over the awakening baseline and other sources reporting up to about 150 percent, the disagreement driven by sampling compliance and by whether the metric is area under the curve with respect to increase or simple peak minus baseline (Psychoneuroendocrinology, 2019; Endocrine Reviews, 2025).
+
+◦ Non-genomic membrane action: seconds to about 5 minutes.
+
+◦ Genomic action: measurable messenger RNA change in about 15 to 60 minutes, protein and physiological consequence over hours, so the two arms sit roughly two orders of magnitude apart.
+
+◦ Methylation writes: hours to establish, and potentially the lifetime of the cell to persist (LAYER_04_05_SLOW_VARIABLES_MANUSCRIPT chapter 16).
+
+◦ Circadian envelope 24 hours; set-point remodelling days to years.
+
+• FAILURE MODE.
+
+◦ Excess: Cushing syndrome, with the cognitive signature of hippocampal atrophy and memory impairment.
+
+◦ Deficiency: Addison disease, and the abrupt collapse of the channel in adrenal crisis.
+
+◦ Flattening: the loss of amplitude in the Sustained Stress State, in which the channel is always transmitting and therefore transmitting nothing, since a broadcast with no contrast carries no information.
+
+◦ Barrier failure: the channel is modulated at the blood-brain barrier by the ABCB1-type P-glycoprotein efflux pump, though the strength of that gating for cortisol specifically is contested, a 2008 Endocrinology paper having revised downward the previously claimed role; dexamethasone by contrast is a strong substrate and is largely excluded from the brain, which is why the dexamethasone suppression test probes mainly pituitary feedback.
+
+DISEASES AND DISORDERS:
+
+Cushing syndrome and Addison disease are the channel's two direct failures, one of excess and one of absence, and both produce psychiatric as well as metabolic signatures because the channel's subscribers include neurons.
+
+The channel's most consequential clinical claim, however, is developmental: that early-life adversity writes a lasting configuration onto the stress-axis genes and thereby recalibrates the organism's stress response for decades.
+
+The animal evidence for that claim is strong and causal, and it is worth stating precisely what makes it strong.
+
+Weaver and colleagues, in Nature Neuroscience in 2004, showed that rat pups of dams that licked and groomed them little carried hypermethylation of the glucocorticoid receptor promoter in the hippocampus, focused on the cytosine within the binding site for the transcription factor NGFI-A, with reduced receptor expression and blunted feedback as consequences.
+
+That study is not merely correlational: the difference emerges over the first week of life, is reversed by cross-fostering the pups to a different dam, persists into adulthood, and is reversed again in the adult animal by central infusion of methionine or of the histone deacetylase inhibitor trichostatin A (Weaver and colleagues, Journal of Neuroscience, 2005).
+
+Cross-fostering plus adult pharmacological reversal is as close to a causal demonstration as this kind of biology permits, and the corpus's own DNA Methylation Store chapter records the finding.
+
+The human extension of the claim is considerably weaker, and this document says so.
+
+McGowan and colleagues, in Nature Neuroscience in 2009, reported higher methylation of the glucocorticoid receptor gene's exon 1F promoter and lower receptor messenger RNA in post-mortem hippocampus from suicide decedents with a history of childhood abuse.
+
+The honest weak point is that the overall group difference was driven mainly by two of the thirty-eight assayed cytosine-guanine sites, with roughly a dozen subjects per group, which is a small-sample and multiple-comparison-vulnerable result.
+
+A 2021 systematic review in Child Abuse and Neglect found that eight of eleven human studies reported increased exon 1F methylation with maltreatment while three found no association, and the reviewers declined to perform a meta-analysis at all because the studies were too heterogeneous to pool.
+
+That refusal is the most informative single datum available on this question, and the continued absence of an adequately powered pooled effect size, more than a decade on, is itself evidence of a fragile literature.
+
+Reported human methylation differences are typically one to five percentage points, which sits at or near the technical noise floor of the assays used, and most early studies did not correct for blood cell composition, a correction now known to be essential.
+
+The rat finding and the human finding should therefore be graded differently, and this document grades them differently.
+
+WHAT MAKES IT UNMISTAKABLE:
+
+The only channel in the catalogue in which a fact about a relationship becomes, in one physical step and without a single action potential, a covalent chemical modification of a stretch of DNA - the social reaching the molecular with nothing in between but the bloodstream and a membrane it does not notice.
+
+CONFIDENCE:
+
+• Existence of the channel: very high, and the corpus grades it very high, which this document does not contest.
+
+• Layer endpoints: high at the destination end and unspecifiable at the origin end, because Layers 13 and 14 have no construct catalogue in this corpus; the interface is genuinely half-specified and is recorded as such.
+
+• Quantitative parameters: well supported for the physical chemistry, the plasma concentrations, the half-life and the pulse frequency; contested for the receptor dissociation constants, where sources disagree on absolutes while agreeing on the ratio; contested for the cortisol awakening response magnitude; and overstated in common citation for the breadth of transcriptional effect, where the frequently quoted 20 percent of the genome is a ceiling estimate rather than a per-cell figure.
+
+• The developmental claim specifically: very high in rodents on the strength of cross-fostering and adult reversal, and unestablished at stated effect sizes in humans, where the literature is unmeta-analysable and the differences sit near the assay noise floor.
+
+
+CHANNEL 2. THE VOLUME TRANSMISSION CHANNEL (Layer 6 up to Layers 9, 10 and 11)
+
+A nucleus the size of a grain of rice changes the operating character of the entire forebrain by releasing a chemical into the spaces between cells and letting it drift.
+
+This is the channel that most of the corpus's other volumes quietly depend upon, because mode-setting throughout the framework is, in the corpus's own phrase, a service purchased from Layers 10 and 11 through the volume transmission channel.
+
+WHAT IT IS AND WHAT IT CARRIES:
+
+The Volume Transmission Channel is the pathway by which a neuromodulator released by a single cell into the extracellular space - the fluid-filled gaps between cells - diffuses to receptors on cells it never touched, and thereby sets the operating regime of whole regions, systems and the organism at once.
+
+Volume transmission is the accepted technical term for chemical signalling that travels by diffusion through tissue rather than across a single synaptic cleft, and it is contrasted with wired transmission, which is the point-to-point synaptic kind.
+
+The carriers are the great neuromodulators - dopamine, noradrenaline (called norepinephrine in American sources, the same molecule), serotonin, acetylcholine and histamine - together with neuropeptides and the gas nitric oxide.
+
+What the channel carries is not content but gain: it does not tell a circuit what to compute, it tells the circuit how strongly to respond to whatever it is already computing.
+
+THE LAYERS IT CONNECTS, AND HOW MANY IT SKIPS:
+
+The origin is Layer 6, the Cellular Layer, and specifically a single neuromodulatory cell, because the release event is a cellular event.
+
+The destinations are Layer 9, the Brain Regions, Nuclei and Pathways Layer, Layer 10, the Neural and Neuroendocrine Systems Layer, and Layer 11, the Whole Nervous and Endocrine System Layer.
+
+The layers skipped are 7, the Synaptic and Junctional Layer, and 8, the Microcircuit Layer, and the skip of Layer 7 is the conceptually important one.
+
+Layer 7 is the framework's relation-layer, where a synaptic weight is the unit of account, and this channel is precisely the case where a chemical signal has an effect at region scale without a synaptic weight having carried it, so the layer whose currency is the weight is bypassed.
+
+WHY THE RELAY IS NOT PAID FOR:
+
+The address, if it were paid for, would be a private synapse from the modulatory nucleus onto every cell whose gain it needs to set.
+
+The arithmetic defeats it immediately: the corpus records the human locus coeruleus as holding on the order of 45,000 to 50,000 noradrenaline neurons per side, and the territory those cells must retune is the entire neocortex, on the order of sixteen billion neurons and something like a hundred trillion synapses.
+
+A dedicated wire per target is not merely expensive; it is a ratio of roughly one source cell to hundreds of thousands of targets, and the wiring would occupy more volume than the tissue it modulates.
+
+The message, moreover, is a single number - how alert, how rewarded, how patient - and a scalar broadcast needs no address at all, because every recipient wants the same value.
+
+So the system releases the molecule into the interstitium and lets diffusion perform the routing, which is free.
+
+THE RE-ENCODING TEST APPLIED:
+
+The physical entity whose identity is preserved is the transmitter molecule itself: the same dopamine molecule that left the varicosity is the molecule that binds a receptor micrometres away on a cell with which the releasing axon makes no junction.
+
+Nothing along the way converts the message into a spike, a synaptic weight or a circuit state, because there is no station along the way; there is only extracellular fluid.
+
+The strongest anatomical evidence that the test is genuinely passed, rather than merely appearing to be, is the transmitter-receptor mismatch: monoamine varicosities frequently form no classical synaptic specialisation at all.
+
+Nearly all noradrenergic varicosities in the cerebral cortex are non-synaptic, and more than sixty percent of those in the hippocampus are (following Descarries and colleagues, 1977, and later reviews); serotonin varicosities show only a very small proportion of synaptic specialisations (Descarries and colleagues, 2010).
+
+Dopamine is the partial exception, since dopaminergic varicosities in frontal cortex do establish conventional symmetric synapses more often than the other two, and recent cryo-correlative tomography has documented non-synaptic dopaminergic modulation of corticostriatal synapses directly (Nature Communications, 2025).
+
+Nitric oxide is the extreme case and the cleanest pass of the test in the whole channel: it is synthesised on demand, is not stored in vesicles, is not released by exocytosis, has no polarity and therefore crosses membranes freely, and has no reuptake transporter whatever.
+
+THE PHYSICAL CARRIER:
+
+The carrier is a small molecule diffusing through the brain's extracellular space, and that space has measured geometric properties which set the channel's reach.
+
+In adult mammals including humans, the extracellular space volume fraction, conventionally written alpha and defined as extracellular volume divided by total tissue volume, is typically 0.20 to 0.25, so the interstitium occupies about a fifth of brain tissue.
+
+The tortuosity, written lambda and defined so that lambda squared is the ratio of the free diffusion coefficient to the apparent one, is typically 1.5 to 1.6, meaning that a molecule's effective diffusion is slowed roughly two- to two-and-a-half-fold by having to go around cells (Physiological Reviews, 2008, Diffusion in Brain Extracellular Space).
+
+At the receiving end the carrier binds a G-protein-coupled receptor, meaning a receptor that acts through an intracellular signalling cascade rather than by opening its own pore, and these receptors have nanomolar to micromolar affinities, in contrast to the micromolar to millimolar affinities of the fast ionotropic receptors of the synapse.
+
+That affinity difference is the design's key: the volume channel's receptors are high-affinity precisely because the concentrations reaching them are low, which is what allows a diffuse signal to be read at all.
+
+MODES AND MODE TRANSITIONS:
+
+This channel is the corpus's canonical two-mode broadcast, and its modes are the tonic and phasic voices named in LAYER_10_MODES_MANUSCRIPT.
+
+• THE MODE REGISTER.
+
+◦ Tonic Broadcast - The Standing Level - a slow, sustained baseline release setting a background gain across the territory, drifting over seconds to minutes.
+
+◦ Phasic Burst - The Event Marker - a brief synchronised volley following a salient event, raising local concentration sharply for a few hundred milliseconds.
+
+◦ Silence - The Withdrawn Voice - the near-cessation characteristic of particular Layer 11 states, most notably the complete withdrawal of noradrenaline, serotonin and histamine in rapid-eye-movement sleep.
+
+◦ Saturated Flood - The Pharmacological Regime - the state produced by transporter blockade or by exogenous agonists, in which the spatial structure of the signal is abolished and the whole territory sees one concentration.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Tonic Broadcast: locus coeruleus tonic firing at roughly 1 to 3 hertz sets a global arousal level, with an inverted-U relation to performance so that more is not better (high confidence, corpus figure).
+
+◦ Phasic Burst: bursts of 8 to 20 hertz lasting a few hundred milliseconds follow salient events by about 100 to 200 milliseconds, and the gain change outlasts the burst by seconds (high confidence, corpus figure).
+
+◦ Silence: in rapid-eye-movement sleep the aminergic broadcasts fall silent while acetylcholine remains high, which is the chemical signature that defines the state.
+
+◦ Saturated Flood: transporter blockade does not merely raise concentration uniformly; modelling shows that cocaine has minimal effect within about 0.5 micrometres of the release centre but markedly intensifies dopamine accumulation between about 0.5 and 3 micrometres, so the drug reshapes the spatial profile rather than scaling it (PLOS Computational Biology, 2020).
+
+• THE TRANSITION TABLE.
+
+◦ Tonic Broadcast to Phasic Burst: a salient, surprising or rewarded event, within 100 to 200 milliseconds.
+
+◦ Phasic Burst back to Tonic Broadcast: clearance by reuptake and enzymatic degradation, over seconds.
+
+◦ Any waking mode to Silence: thrown from above by the Layer 11 rapid-eye-movement switch, over the roughly ninety-minute sleep cycle.
+
+◦ Tonic Broadcast to Saturated Flood: pharmacological, within the absorption time of the agent, minutes for most routes.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: the watchdogs are the reuptake transporters, the degrading enzymes monoamine oxidase and catechol-O-methyltransferase, the inhibitory autoreceptors such as the alpha-2 adrenoceptor, and the glial transporters and peptidases that set how far a signal spreads; when the watchdogs fail the channel loses its spatial structure, which is a failure of addressing in a channel that had almost none to begin with.
+
+SYSTEMS INTERFACE:
+
+• SUBSCRIBES (INPUTS).
+
+◦ Layer 6, the Cellular Layer: the neuromodulatory projection neurons themselves, catalogued in the corpus's neuronal volumes - the locus coeruleus noradrenaline cell, the ventral tegmental and nigral dopamine cells, the raphe serotonin cells, the basal forebrain and brainstem cholinergic cells, and the tuberomammillary histamine cells.
+
+◦ Layer 6: the nitric-oxide-synthesising interneuron, whose product is the purest volume transmitter in the corpus.
+
+◦ Layer 3, the Ionic and Simple Molecular Layer: the transmitter molecules considered strictly as chemistry, which LAYER_01_02_03_SUBSTRATE_OUTLINE.txt schedules as entry 19, the small-molecule neurotransmitters, and entry 20, the gasotransmitters; that outline is not yet a completed catalogue, so this reference is forward-looking rather than resolved.
+
+• PUBLISHES (OUTPUTS).
+
+◦ Layer 9, the Brain Regions, Nuclei and Pathways Layer: regional gain settings, notably the thalamic relay-versus-burst setting and the cortical signal-to-noise ratio.
+
+◦ Layer 10, the Neural and Neuroendocrine Systems Layer: the per-system mode registers of every entry in LAYER_10_MODES_MANUSCRIPT, since the modes of the systems are set by this channel rather than by the systems themselves.
+
+◦ Layer 11, the Whole Nervous and Endocrine System Layer: the global states of LAYER_11_GLOBAL_STATES_MANUSCRIPT, the Ascending Broadcast System of chapter 16 being this channel considered as one organ.
+
+• STATE.
+
+◦ Observable without running the channel: current tonic firing rate of each modulatory nucleus, standing extracellular concentration of each transmitter, receptor occupancy and desensitisation state, transporter density, and the local extracellular space geometry, which is itself a state variable because alpha and lambda change with cell swelling, sleep and injury.
+
+• PARAMETERS.
+
+◦ Extracellular space volume fraction alpha 0.20 to 0.25; tortuosity lambda 1.5 to 1.6 (Physiological Reviews, 2008).
+
+◦ Dopamine's effective radius of receptor activation after quantal release: estimated at under about 2 micrometres for low-affinity receptors and at least 7 micrometres for high-affinity receptors, with modelling predicting that low-concentration transients diffuse many micrometres before activating distant extrasynaptic receptors (Nature Reviews Neuroscience, 2021, Spatial and temporal scales of dopamine transmission; PLOS Computational Biology, 2020).
+
+◦ Nitric oxide: sources disagree on reach, one classic modelling study giving a sphere of influence about 200 micrometres in diameter for a point source emitting for 1 to 10 seconds, while other treatments give diffusion distances of 40 to 300 micrometres; the disagreement is genuine and turns on the assumed inactivation rate, and this document does not average the figures.
+
+◦ Locus coeruleus: on the order of 45,000 to 50,000 noradrenaline neurons per side in the human, which is the corpus's own figure and governs; note that some of the wider literature quotes substantially lower counts, and where it does, the corpus's figure is the one this document uses.
+
+◦ Receptor affinities: nanomolar to micromolar for the G-protein-coupled receptors of this channel, against micromolar to millimolar for the ionotropic receptors of the wired synapse.
+
+◦ Anatomical mismatch: nearly all cortical noradrenergic varicosities and the great majority of serotonergic varicosities form no classical synaptic specialisation, while dopaminergic varicosities in frontal cortex more often do.
+
+• TIME CONSTANTS.
+
+◦ Diffusion over the channel's working distances: milliseconds to hundreds of milliseconds for the first few micrometres, seconds over tens of micrometres.
+
+◦ Nitric oxide half-life in tissue: sources give 0.5 to 5 seconds, and other treatments say simply less than a few seconds.
+
+◦ Tonic drift: seconds to minutes; phasic burst duration a few hundred milliseconds, with the gain change outlasting it by seconds.
+
+◦ Receptor cascade: G-protein-coupled signalling acts over hundreds of milliseconds to seconds, against the roughly one millisecond of an ionotropic synaptic current, a difference of about three orders of magnitude.
+
+◦ State-scale withdrawal and return: minutes at sleep onset, and the roughly ninety-minute sleep cycle for the aminergic silence of rapid-eye-movement sleep.
+
+• FAILURE MODE.
+
+◦ Source loss: the degeneration of a modulatory nucleus, which is the pathology of Parkinson disease for the dopamine source and a documented early feature of Alzheimer disease for the locus coeruleus.
+
+◦ Clearance failure: transporter blockade or enzyme inhibition, which abolishes the channel's residual spatial structure and is the mechanism of both therapeutic antidepressants and stimulant drugs of abuse.
+
+◦ Geometry failure: cell swelling in ischaemia and oedema collapses the extracellular space volume fraction, which changes the channel's transfer function without changing anything about the transmitter or its receptors, and is the clearest demonstration that the interstitium is part of the mechanism rather than merely its container.
+
+DISEASES AND DISORDERS:
+
+The channel's diseases are the diseases of its sources and of its clearance machinery.
+
+Parkinson disease is nigral dopamine source failure; the depressive and anxiety disorders are treated almost entirely by manipulating this channel's clearance, which is a striking fact about psychiatry given how little addressing the channel has; and the attentional disorders are treated by manipulating its noradrenaline and dopamine arms.
+
+Because the channel is a broadcast, its drugs are notoriously unselective in exactly the way the Broadcast Principle predicts: a molecule that alters the concentration alters it everywhere the transmitter goes, which is why side-effect profiles in this area of medicine are so wide.
+
+WHAT MAKES IT UNMISTAKABLE:
+
+The only channel in the catalogue whose anatomy is a negative finding - the varicosity that releases onto nothing in particular, the transmitter with no synapse and, in the case of nitric oxide, no vesicle, no membrane receptor on the outer face and no reuptake at all, addressed purely by geometry.
+
+CONFIDENCE:
+
+• Existence of the channel: very high, and the corpus grades it very high; the anatomical mismatch evidence is old, replicated and now confirmed by direct tomography.
+
+• Layer endpoints: high; both ends are fully catalogued in this corpus, which makes this the best-specified interface in the whole document and a useful contrast with Channels 1 and 7.
+
+• Quantitative parameters: well supported for the extracellular space geometry, which has been measured by several independent methods; well supported for the firing-rate figures; contested for nitric oxide's diffusion radius, where sources differ by nearly an order of magnitude according to the assumed inactivation rate; and contested for dopamine's effective radius, which is model-dependent and receptor-affinity-dependent rather than a single number.
+
+
+CHANNEL 3. THE CIRCUMVENTRICULAR AND NEUROHYPOPHYSIAL CHANNEL (Layer 11 to Layer 6, bidirectional)
+
+The blood-brain barrier is famous for what it keeps out, and the interesting thing about it is the small number of places where it is deliberately absent.
+
+A leak is an accident; a port is a design, and this channel is the catalogue's clearest instance of a port.
+
+WHAT IT IS AND WHAT IT CARRIES:
+
+The Circumventricular and Neurohypophysial Channel is the two-way pathway at a small set of midline sites where the blood-brain barrier is deliberately incomplete, so that blood-borne molecules touch neurons directly and neurons secrete directly into blood.
+
+The blood-brain barrier is the seal formed by tight junctions between the endothelial cells lining brain capillaries, which excludes most water-soluble molecules from brain tissue.
+
+The circumventricular organs are the midline structures where that seal is absent and the capillaries are instead fenestrated, meaning windowed with small pores.
+
+What the channel carries inbound is the chemical composition of the blood as a sensed quantity - its saltiness, its toxin content, its hormone levels - and outbound the hypothalamus's hormonal commands.
+
+THE LAYERS IT CONNECTS, AND HOW MANY IT SKIPS:
+
+The origin and destination are Layer 11, the Whole Nervous and Endocrine System Layer, taken here as the bloodstream considered as an organism-wide compartment, and Layer 6, the Cellular Layer, taken as a named neuron.
+
+The channel is bidirectional, which is unusual in this catalogue and worth noting explicitly, because most skipping channels run one way only.
+
+Inbound it skips Layers 10, 9, 8 and 7 entirely, since a molecule in the blood reaches a neuron with no system, no region, no microcircuit and no synapse in between.
+
+Outbound it skips the same layers in reverse, since a hypothalamic neuron's secretory terminal writes a hormone into the circulation with no intervening station at all.
+
+WHY THE RELAY IS NOT PAID FOR:
+
+Here the argument inverts in an instructive way, because the question is not why an address is unaffordable but why a barrier is worth breaching.
+
+The body must be able to tell the brain about its own chemistry, and its chemistry is a global property of a well-mixed compartment, so it has no address to give.
+
+Building a sensory innervation that sampled blood composition everywhere and reported it upward would require a distributed chemosensory organ and a dedicated afferent system, and the organism instead solves the problem by putting a few small sensors directly in contact with the fluid.
+
+Outbound, the same logic runs in reverse: a hormone destined for every cell of the body has no address either, so writing it straight into the circulating medium is the cheapest possible delivery.
+
+The cost of the design is precisely the cost of any port: it is also an entrance, and this channel is a recognised route of entry for parasites and for circulating toxins.
+
+THE RE-ENCODING TEST APPLIED:
+
+Inbound, the entity preserved is the blood-borne molecule itself - the sodium ion, the angiotensin peptide, the emetic toxin, the leptin or ghrelin molecule - which arrives at the neuronal membrane chemically unchanged and binds a receptor there.
+
+Outbound, the entity preserved is the neuropeptide - vasopressin or oxytocin, or a hypothalamic releasing hormone - which leaves the terminal and is the same molecule that acts on a distant kidney, uterus or pituitary cell.
+
+In neither direction is the message translated into the units of an intervening layer, because there are no intervening stations.
+
+What follows the crossing is emphatically NOT part of the skip, and the corpus is careful about this: the vomiting, the thirst, the hunger that follow are transmitted onward by ordinary layered relay through the nucleus tractus solitarius and the hypothalamic circuits, and only the crossing itself is the channel.
+
+THE PHYSICAL CARRIER:
+
+The carrier is the fenestrated capillary and the absent tight junction.
+
+Capillaries in these organs carry fenestrations of about 60 nanometres, bridged by a thin diaphragm of radial fibrils around a slit, and the reduced tight junctions render them permeable to molecules of up to roughly 10,000 daltons.
+
+The corpus's own Layer 6 volume names the cell that polices the port: the tanycyte, which it calls the Blood-Brain Customs-Officer Cell and describes as the operational floor of the circumventricular channel, stitching itself to its neighbours by tight junctions in order to seal the leaky median eminence off from the rest of the brain while ferrying selected hormones across.
+
+At the secretory end the corpus names a second gatekeeper, the pituicyte, the astrocyte of the posterior pituitary, which physically wraps the hormone-releasing nerve terminals in quiet times and retracts to let hormone pour out on demand: a valve made of glia.
+
+The organs themselves divide into two functional classes.
+
+• The SENSORY circumventricular organs, which read the blood: the area postrema in the wall of the fourth ventricle, the subfornical organ beneath the descending fornix, and the organum vasculosum of the lamina terminalis at the rostral projection of the third ventricle above the optic chiasm.
+
+• The SECRETORY circumventricular organs, which write to the blood: the median eminence, the neurohypophysis or posterior pituitary, and the pineal gland.
+
+MODES AND MODE TRANSITIONS:
+
+• THE MODE REGISTER.
+
+◦ Quiet Surveillance - The Open Window - the resting inbound configuration, in which the sensory organs sample blood composition continuously and report nothing unusual.
+
+◦ Toxin Alarm - The Emetic Trip - the area postrema's configuration on detecting a circulating poison, which commits the organism to vomiting.
+
+◦ Deficit Signalling - The Thirst Call - the subfornical and lamina terminalis configuration in which raised osmolality or angiotensin drives a motivational state.
+
+◦ Secretory Surge - The Open Tap - the outbound configuration in which pituicytes retract and magnocellular terminals discharge vasopressin or oxytocin into the circulation.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Quiet Surveillance: tonic sampling with plasma osmolality held in a narrow band, the population range under normal hydration being 280 to 295 milliosmoles per kilogram (high confidence).
+
+◦ Toxin Alarm: the area postrema carries receptors for serotonin type 3, dopamine type 2, substance P, glucagon-like peptide 1 and growth differentiation factor 15, which is why it is the target of the major antiemetic drug classes (high confidence on the receptor complement).
+
+◦ Deficit Signalling: osmoreceptors elicit increased vasopressin secretion for an osmolality rise as small as 1 to 2 percent, with the threshold for secretion near 280 milliosmoles per kilogram; sources give the sensitivity as 1 to 2 percent and one treatment gives approximately 2 percent, equivalent to about 5 to 6 milliosmoles per kilogram, and the modest disagreement reflects different definitions of threshold rather than different biology.
+
+◦ Secretory Surge: pituicyte retraction converts a stored pool into circulating hormone within the time of the neural volley, so the transfer function is gated mechanically as well as electrically (moderate confidence on the quantitative gating).
+
+• THE TRANSITION TABLE.
+
+◦ Quiet Surveillance to Toxin Alarm: detection of a circulating emetic, with vomiting following within minutes for most agents.
+
+◦ Quiet Surveillance to Deficit Signalling: an osmolality rise of 1 to 2 percent, or a rise in circulating angiotensin, over minutes.
+
+◦ Deficit Signalling to Quiet Surveillance: this is the transition with the surprise in it, because drinking terminates thirst long before blood osmolality has changed; the subfornical organ integrates oropharyngeal and gut signals to ANTICIPATE the homeostatic consequence, so the channel's own slow chemical read is pre-empted by faster neural inputs (Zimmerman and colleagues, Nature, 2016; Nature, 2018, on the hierarchical architecture of thirst).
+
+◦ Any mode to Secretory Surge: dehydration, parturition or suckling, within seconds of the neural command.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: the watchdogs are the tanycyte's tight-junction seal, which prevents the leaky median eminence from leaking into the rest of the brain, and the pituicyte's mechanical valve; failure of the first would convert a port into a breach, and this is the mechanism by which the channel becomes a route of pathogen entry.
+
+SYSTEMS INTERFACE:
+
+• SUBSCRIBES (INPUTS).
+
+◦ Layer 11, the Whole Nervous and Endocrine System Layer: the bloodstream as a composition vector - osmolality, sodium concentration, angiotensin, leptin, ghrelin, insulin, glucose, and circulating toxins.
+
+◦ Layer 6, the Cellular Layer, on the outbound side: the magnocellular neurosecretory neurons of the supraoptic and paraventricular nuclei, whose action potentials are the input to the secretory arm.
+
+◦ Layer 10, the Neural and Neuroendocrine Systems Layer: the hypothalamic axes of LAYER_10_SYSTEMS_MANUSCRIPT chapters 37 to 42, which set what the secretory organs are commanded to release.
+
+• PUBLISHES (OUTPUTS).
+
+◦ Layer 6, the Cellular Layer, on the inbound side: the area postrema chemoreceptor neuron, the subfornical organ osmosensitive and angiotensin-sensitive neuron, and the arcuate nucleus AgRP/NPY and POMC populations, which the corpus's Layer 9 volume records as reading the bloodstream directly by way of the adjacent median eminence.
+
+◦ Layer 9, the Brain Regions, Nuclei and Pathways Layer: the nucleus tractus solitarius, to which the area postrema publishes, and thence the vomiting centre of the reticular formation.
+
+◦ Layer 11, the Whole Nervous and Endocrine System Layer, on the outbound side: circulating vasopressin and oxytocin written directly into the blood by the neurohypophysis, and the hypothalamic releasing hormones written into the hypophysial portal circulation at the median eminence.
+
+• STATE.
+
+◦ Observable without running the channel: plasma osmolality, plasma sodium, circulating angiotensin, leptin and ghrelin levels, the fenestration status of each organ's capillary bed, the tanycyte barrier's integrity, and the retraction state of the pituicytes, which is a genuinely mechanical state variable and unusual in this document for that reason.
+
+• PARAMETERS.
+
+◦ Capillary fenestrations about 60 nanometres, diaphragm-bridged; permeability to molecules under roughly 10,000 daltons.
+
+◦ Plasma osmolality normal range 280 to 295 milliosmoles per kilogram; vasopressin secretion threshold near 280; osmoreceptor sensitivity to a 1 to 2 percent rise, some sources giving approximately 2 percent or about 5 to 6 milliosmoles per kilogram, and these figures disagree modestly by definition of threshold.
+
+◦ Plasma vasopressin roughly 3 to 4 picomolar in the resting state; plasma oxytocin outside pregnancy roughly 1 to 10 picograms per millilitre.
+
+◦ The concentration advantage of the hypophysial portal system over peripheral blood, which is the whole point of having a portal circulation, is not a figure this document could establish authoritatively from the accessible literature; it is reported qualitatively as a large enrichment and no number is given here, because inventing one would be exactly the failure this document exists to avoid. What would settle it is direct portal-blood sampling with paired peripheral sampling in the same subject, a measurement made in animals and only rarely and invasively in humans.
+
+• TIME CONSTANTS.
+
+◦ Blood-to-neuron crossing at a fenestrated capillary: effectively immediate, sub-second, since the diffusion distance is micrometres and there is no barrier to cross.
+
+◦ Osmotic sensing to vasopressin secretion: seconds to a few minutes.
+
+◦ Vasopressin and oxytocin circulating half-life: 5 to 15 minutes, with intravenous vasopressin quoted at roughly 10 to 35 minutes and oxytocin elimination at about 20 minutes; these ranges disagree because route and assay differ, and both are reported here rather than averaged.
+
+◦ Toxin detection to emesis: minutes.
+
+◦ Optogenetically driven thirst neuron activation to drinking onset: a few seconds, with cessation equally fast on stimulus offset (Nature, 2016 and 2018).
+
+◦ Anticipatory thirst satiation: seconds to a few minutes after drinking, far ahead of any measurable change in blood osmolality, which is the channel's most instructive timing fact.
+
+• FAILURE MODE.
+
+◦ Inappropriate activation: chemotherapy-induced nausea and vomiting, which is the area postrema doing exactly its job on a molecule the organism has no evolutionary experience of.
+
+◦ Loss of osmotic sensing: adipsic diabetes insipidus, in which lamina terminalis damage abolishes thirst and the patient dehydrates without complaint.
+
+◦ Secretory failure: central diabetes insipidus from neurohypophysial damage.
+
+◦ Port as entrance: the circumventricular organs are a recognised route of neurotropic parasite and pathogen entry, and their fenestrated vasculature is modulated by neurotoxin exposure and is impaired in ageing (2025 work on median eminence and area postrema vasculature).
+
+DISEASES AND DISORDERS:
+
+The clinical face of this channel is mostly the clinical face of the area postrema and the lamina terminalis.
+
+Chemotherapy-induced and postoperative nausea are area postrema events, and the entire antiemetic pharmacopoeia - the serotonin type 3 antagonists, the dopamine type 2 antagonists, the substance P antagonists - is a pharmacology of a single circumventricular organ.
+
+The newer weight-loss agents acting at the glucagon-like peptide 1 receptor produce nausea by the same route, which is a useful reminder that this channel's ports are the site of both the therapeutic and the unwanted effect.
+
+Disorders of water balance - the syndrome of inappropriate antidiuresis, central diabetes insipidus, adipsic hypernatraemia - are all failures of one or another arm of this channel.
+
+WHAT MAKES IT UNMISTAKABLE:
+
+The only channel in the catalogue that is bidirectional, and the only one whose mechanism is an absence - a handful of midline places where the brain's most famous barrier is deliberately not built, so that blood and neuron touch.
+
+CONFIDENCE:
+
+• Existence of the channel: very high, and the corpus grades it very high; the anatomy is classical, uncontested and visible in histology.
+
+• Layer endpoints: very high; both ends are catalogued in this corpus, with the area postrema, the subfornical organ, the arcuate nucleus and the nucleus tractus solitarius all named in the Layer 9 volume and the tanycyte and pituicyte named in the Layer 6 volume.
+
+• Quantitative parameters: well supported for the osmolality set point and sensitivity, the fenestration size and the peptide half-lives, with the half-life figures disagreeing modestly across routes and reported here as ranges; UNESTABLISHED in this document for the portal-to-peripheral concentration ratio, which is stated as not established rather than filled with a plausible number.
+
+
+CHANNEL 4. THE VAGAL AND INTEROCEPTIVE CHANNEL (Layer 3 to Layer 9)
+
+Every other channel in this catalogue is slow, and this one is in the catalogue for the opposite reason.
+
+The gut lumen is the body's most dangerous frontier, and a message from it cannot afford the latency of a layered relay.
+
+WHAT IT IS AND WHAT IT CARRIES:
+
+The Vagal and Interoceptive Channel is the pathway by which a chemical present in the gut lumen is reported to a named brainstem nucleus within milliseconds, through a genuine synapse made by a gut lining cell onto a vagal nerve fibre.
+
+The cell that makes that synapse is the neuropod cell, a sensory subtype of enteroendocrine cell - an epithelial cell of the gut lining that also secretes hormones - which extends a basal process, the neuropod, to reach a nerve.
+
+What the channel carries is the chemical identity of the luminal contents: sugars, fatty acids, amino acids, and the signatures of things that should not be there.
+
+The corpus is emphatic about the channel's boundary, and this document repeats the emphasis: the nausea or satiety that follows is NOT part of the skip, being transmitted upward by ordinary layered relay.
+
+THE LAYERS IT CONNECTS, AND HOW MANY IT SKIPS:
+
+The origin is Layer 3, the Ionic and Simple Molecular Layer, in the form of a small molecule dissolved in the gut lumen.
+
+The destination is Layer 9, the Brain Regions, Nuclei and Pathways Layer, specifically the nucleus tractus solitarius of the medulla.
+
+The gap is six layers, and Layers 4, 5, 6, 7 and 8 are all skipped as encoding stages, since a glucose molecule in the lumen produces a report at a named nucleus without that message having been re-expressed as a macromolecular state, a subcellular state, a cellular firing pattern that stands for anything else, a synaptic weight, or a microcircuit computation.
+
+A necessary honesty here: the neuropod cell is a Layer 6 cell and the neuropod-vagal contact is a Layer 7 synapse, both of which are catalogued in this corpus, so the physical structures at those layers are certainly present.
+
+What is skipped is the RE-ENCODING, not the anatomy: the message is not translated into the characteristic currency of Layers 4 through 8 and then retranslated, it is transduced once and carried.
+
+That distinction is precisely what the Re-encoding Test is for, and stating it plainly is more useful than pretending the intervening tissue is absent.
+
+WHY THE RELAY IS NOT PAID FOR:
+
+This channel satisfies the Broadcast Principle by its SECOND condition rather than its first, and it is the catalogue's clearest case of the urgent extreme rather than the slow one.
+
+The message is not global; it is quite specifically addressed, from one patch of intestine to one topographic sector of one brainstem nucleus.
+
+But the message is a toxin alarm, and relay latency is unaffordable when the correct response is to stop eating and empty the stomach.
+
+The organism's alternative is the hormonal route, which the same cells also use, and that route takes seconds to minutes; the neuropod route takes milliseconds, which is a difference of three to five orders of magnitude in the time available to act.
+
+So the organism pays for a dedicated high-speed cable here precisely because it will not pay the relay's latency, and the address it does buy is cheap because there is only one destination.
+
+THE RE-ENCODING TEST APPLIED:
+
+The physical entity that departs Layer 3 is a nutrient or toxin molecule in the lumen, and it does not itself reach the brainstem.
+
+This makes Channel 4 the subtlest entry in the catalogue, and it deserves an honest statement rather than a confident one.
+
+What is preserved end to end is not one molecule but one uninterrupted transduction: the luminal chemical is sensed by an apical receptor and, within milliseconds, glutamate is released onto a vagal afferent that runs without further synapse to the nucleus tractus solitarius.
+
+The corpus admits the channel on the ground that the chemical event at the gut surface reaches a named Layer 9 nucleus in one synapse, with no intervening station re-expressing the message, and this document adopts the corpus's judgement rather than second-guessing it.
+
+The comparison that makes the admission defensible is with the hormonal route the same cell also runs: cholecystokinin released into the blood is re-expressed as a circulating concentration, integrated over seconds to minutes, and read by a receptor as a level rather than an event; the glutamate route is not integrated at all, and preserves the timing of the luminal event itself.
+
+Timing preserved, and content unintegrated, is what identity of the carrier means here.
+
+THE PHYSICAL CARRIER:
+
+The carrier is the neuropod-vagal synapse, which the corpus catalogues in full at Layer 7.
+
+The presynaptic element is the basal neuropod of the epithelial cell, carrying both small clear glutamate vesicles and large dense-core peptide vesicles; the cleft is of ordinary synaptic width; the postsynaptic element is the vagal afferent terminal.
+
+Kaelberer and colleagues, in Science in 2018, demonstrated the mechanism directly: optogenetic activation of enteroendocrine cells elicited excitatory postsynaptic potentials in connected nodose ganglion neurons within milliseconds, the cells were shown to synthesise glutamate, and pharmacological block of glutamate receptors, as distinct from cholecystokinin receptors, abolished the fast component.
+
+The paper's own summary of what it found is the cleanest statement of the channel: a neuroepithelial circuit connecting the intestinal lumen to the brainstem in one synapse.
+
+Buchanan and colleagues, in Nature in 2022, extended the finding functionally, showing that the preference for sugar over non-caloric sweetener depends on a gut sensor cell, which is the behavioural pay-off of a channel that reports what was actually swallowed rather than what it tasted like.
+
+The corpus's own cognition manuscript records the same point: value is not settled in the mouth alone.
+
+MODES AND MODE TRANSITIONS:
+
+• THE MODE REGISTER.
+
+◦ Fast Nutrient Report - The Millisecond Telegraph - the glutamatergic mode, reporting the arrival and identity of a luminal nutrient with the temporal precision of a synapse.
+
+◦ Slow Hormonal Report - The Blood Letter - the same cells' peptide mode, releasing cholecystokinin, glucagon-like peptide 1 or peptide YY into the circulation over seconds to minutes; this mode is NOT a layer-skipping channel and is included here only to mark the boundary.
+
+◦ Toxin Alarm - The Emergency Wire - the fast mode used for a threat signal rather than a nutrient signal, driving protective reflexes.
+
+◦ Silent Lumen - The Empty Line - the fasting configuration, in which the channel reports absence.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Fast Nutrient Report: excitatory postsynaptic potentials in nodose neurons within milliseconds of stimulus, glutamate-dependent (high confidence, Kaelberer and colleagues, 2018).
+
+◦ Slow Hormonal Report: seconds to minutes, integrating concentration rather than preserving timing (high confidence).
+
+◦ Toxin Alarm: fast, and converging on the same brainstem machinery as the area postrema's blood-borne alarm of Channel 3, so the organism has two independent toxin detectors reading two different compartments.
+
+◦ Silent Lumen: tonic low rate; the corpus notes that sustained luminal stimulation drives repeated release, with the fast vesicular pathway following stimulus onset closely while the peptide pathway lags.
+
+• THE TRANSITION TABLE.
+
+◦ Silent Lumen to Fast Nutrient Report: arrival of a nutrient at the apical membrane, within milliseconds.
+
+◦ Fast Nutrient Report to Slow Hormonal Report: not a transition but a superposition, since both run from the same cell at once on different timescales, which is the channel's defining design feature.
+
+◦ Any mode to Toxin Alarm: detection of a noxious luminal chemical, within milliseconds, with the behavioural consequence following over seconds.
+
+◦ Fast Nutrient Report to Silent Lumen: clearance of the lumen, over the minutes to hours of transit.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: the corpus records that disordered neuropod signalling is implicated in altered appetite, food preference and mood-gut interactions, and is an emerging target in obesity and functional gut disorders; the watchdogs are enteric glia and the surrounding epithelium, which maintain the local environment of the synapse.
+
+SYSTEMS INTERFACE:
+
+• SUBSCRIBES (INPUTS).
+
+◦ Layer 3, the Ionic and Simple Molecular Layer: small molecules in the gut lumen - glucose and other sugars, fatty acids, amino acids, and the short-chain fatty acids produced by the microbiome.
+
+◦ A NOTE ON THE SOURCE CATALOGUE: Layers 1, 2 and 3 are being catalogued in parallel in LAYER_01_02_03_SUBSTRATE_OUTLINE.txt, which schedules the small-molecule entries as its Part Three, but that document is an OUTLINE ONLY, carries its own incomplete-draft banner, and has no companion manuscript yet; the cross-reference here is therefore FORWARD-LOOKING RATHER THAN RESOLVED, and the plain-language naming above is what this document actually relies on.
+
+◦ Layer 6, the Cellular Layer: the neuropod cell of the corpus's other-cells catalogue, which is the transducer.
+
+• PUBLISHES (OUTPUTS).
+
+◦ Layer 9, the Brain Regions, Nuclei and Pathways Layer: the nucleus tractus solitarius, section 2.4.3.1 of LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT, which that volume names as the entry port of the vagal Layer-Skipping Channel in its own words.
+
+◦ Layer 7, the Synaptic and Junctional Layer: the neuropod-vagal synapse of LAYER_07_SYNAPTICS_MANUSCRIPT, which is the physical junction the channel runs on.
+
+◦ Downstream and expressly NOT part of the skip: the parabrachial nucleus, hypothalamus, amygdala and insula, reached by ordinary layered relay, and the felt sensations of nausea and satiety that arise there.
+
+• STATE.
+
+◦ Observable without running the channel: luminal nutrient concentrations, neuropod cell density along the gut axis, vagal afferent firing rate, and the standing tone of the nucleus tractus solitarius; vagal tone as conventionally measured by heart rate variability is a state variable of the whole vagal system rather than of this channel specifically, and is named here with that caveat.
+
+• PARAMETERS.
+
+◦ Vagal composition: roughly eighty percent of vagal fibres are afferent, which is the corpus's own figure and is corroborated by the general literature; the vagus is overwhelmingly a sensory nerve.
+
+◦ Unmyelinated C fibre conduction velocity: roughly 0.5 to 5 metres per second, with measured average peak velocities around 0.7 to 1.0 metres per second in some vagal preparations; sources give ranges rather than a single value and the range is reported here as a range.
+
+◦ A note on the arithmetic: at roughly 1 metre per second over a gut-to-brainstem distance on the order of half a metre, pure C fibre conduction would take hundreds of milliseconds, so the millisecond figure of Kaelberer and colleagues refers to the SYNAPTIC transduction step measured at the nodose ganglion, not to the whole gut-to-brainstem transit; this document states that distinction rather than eliding it, because eliding it would overstate the channel by two orders of magnitude.
+
+◦ The total human vagal fibre count is not a figure this document could establish authoritatively; published counts vary with level of the nerve and with fixation method, and no single defensible number is given here.
+
+• TIME CONSTANTS.
+
+◦ Neuropod-to-vagal synaptic transduction: milliseconds (Kaelberer and colleagues, Science, 2018).
+
+◦ Hormonal gut-brain signalling by the same cells: seconds to minutes, so the two arms differ by three to five orders of magnitude, which is the single most important timing fact about this channel.
+
+◦ Vagal C fibre conduction: roughly 0.5 to 5 metres per second, giving transit times of order hundreds of milliseconds over gut-to-brainstem distances.
+
+◦ Behavioural consequence, nausea or satiety: seconds to minutes, and expressly outside the skip.
+
+◦ Learned preference formation from gut sugar signalling: minutes to sessions (Buchanan and colleagues, Nature, 2022).
+
+• FAILURE MODE.
+
+◦ Loss of the line: gastroparesis and the vagal neuropathies, in which the report ceases.
+
+◦ Inappropriate activation: cyclic vomiting syndrome and functional dyspepsia, in which the report is made without a stimulus worth reporting.
+
+◦ Rewiring: the altered gut signalling implicated in obesity, where the fast channel's report of what was actually swallowed no longer matches the reward the organism assigns.
+
+DISEASES AND DISORDERS:
+
+The channel's clinical face is the functional gastrointestinal disorders, in which the gut reports pain and nausea in the absence of detectable pathology, and gastroparesis, in which it fails to report at all.
+
+Its therapeutic face is vagus nerve stimulation, an approved treatment for refractory epilepsy and for treatment-resistant depression, which works by driving the afferent side of the same nerve; note that this is stimulation of the vagal trunk rather than of the neuropod synapse, so it exercises the cable and not the transducer.
+
+The channel is also the mechanistic core of the current interest in gut-derived control of appetite, and it is the reason the glucagon-like peptide 1 agonists have both their intended and their unintended effects.
+
+WHAT MAKES IT UNMISTAKABLE:
+
+The only channel in the catalogue admitted for being too FAST rather than too slow, and the only one whose presynaptic element is not a neuron at all but a lining cell of the gut, wearing a synapse on its base.
+
+CONFIDENCE:
+
+• Existence of the channel: high, and the corpus grades it high; the neuropod synapse is directly demonstrated by optogenetics and by receptor pharmacology, and the corpus catalogues it as a junction in its own right.
+
+• Layer endpoints: high at the destination end, which is a named and catalogued Layer 9 nucleus; PARTIALLY SPECIFIED at the origin end, because the Layers 1 to 3 catalogue is an outline only and carries its own incomplete-draft banner, so the source is named in plain language and the cross-reference is forward-looking.
+
+• Quantitative parameters: well supported for the millisecond synaptic transduction and for the roughly eighty percent afferent composition; contested and range-valued for C fibre conduction velocity; UNESTABLISHED in this document for the total human vagal fibre count, which is stated as not established rather than guessed; and frequently overstated in secondary sources, which quote the millisecond figure as if it described gut-to-brainstem transit when it describes the synaptic step.
+
+
+CHANNEL 5. THE NEUROIMMUNE CHANNEL (Layer 11 to Layer 6)
+
+The reason a bad influenza feels like a bad depression is that the immune system is talking directly to your neurons, and using the vocabulary of a mood.
+
+WHAT IT IS AND WHAT IT CARRIES:
+
+The Neuroimmune Channel is the pathway by which blood-borne cytokines - the immune system's signalling proteins - act directly on individual brain cells without being re-expressed by any intervening layer.
+
+A cytokine is a small secreted protein by which immune cells signal to one another, and the ones that matter here are the pro-inflammatory group: interleukin 1 beta, interleukin 6, and tumour necrosis factor alpha.
+
+What the channel carries is a single global fact - there is an infection, or an injury, somewhere - and the response it commands is the whole-organism reorganisation that the corpus catalogues at Layer 11 as the Sickness Behaviour State.
+
+The corpus's Layer 6 volume names the receiving cell without hedging, calling microglia the receiving station of the neuroimmune channel between body and brain.
+
+THE LAYERS IT CONNECTS, AND HOW MANY IT SKIPS:
+
+The origin is Layer 11, the Whole Nervous and Endocrine System Layer, taken as the circulating compartment in which cytokines are dissolved.
+
+The destination is Layer 6, the Cellular Layer, specifically microglia and the neurons of the circumventricular organs.
+
+Layers 10, 9, 8 and 7 are skipped, which the corpus states explicitly, and the skip of Layer 7 is again the conceptually significant one, because a mood-altering signal arrives without any synaptic weight having carried it.
+
+WHY THE RELAY IS NOT PAID FOR:
+
+The address, again, does not exist, because the message is not about a place.
+
+An infection is a fact about the organism, and the correct recipient is every cell whose behaviour ought to change: the thermoregulatory neurons that must raise the set point, the feeding circuits that must stand down, the arousal systems that must reduce activity, and the microglia that must switch from surveillance to defence.
+
+Innervating the immune system so that it could report by wire would require the nervous system to sample every tissue continuously, which is roughly the cost of building a second immune system out of neurons.
+
+The immune system instead uses the medium it already occupies, which is the blood, and the nervous system pays for a small number of receiving stations rather than a large number of sensors.
+
+THE RE-ENCODING TEST APPLIED:
+
+The physical entity preserved is the cytokine molecule itself, and the honest position is that it reaches the brain by several routes, only some of which pass the test cleanly.
+
+• At the circumventricular organs, where the barrier is absent, the cytokine touches the neuron directly, and this passes the test without qualification.
+
+• By saturable carrier-mediated transport across the blood-brain barrier, documented for interleukin 1 alpha, interleukin 1 beta, the interleukin 1 receptor antagonist, interleukin 6 and tumour necrosis factor alpha (Banks and colleagues, and subsequent reviews), the intact molecule crosses and acts on the far side, so it also passes.
+
+• By the endothelial prostaglandin route, in which circulating cytokines act on receptors on the brain's capillary endothelium, which then synthesises prostaglandin E2 through the enzyme cyclooxygenase 2 and releases it into the brain, the message IS re-encoded into a different molecule, so this route FAILS the Re-encoding Test and is a layered relay with a very short chain.
+
+• By the vagal afferent route, in which peripheral cytokines excite vagal fibres, the message is converted into action potentials and therefore also fails the test.
+
+This document reports that mixture rather than suppressing it, because a channel with four routes of which two pass and two fail is a more accurate description than a channel with one route that always passes.
+
+The corpus's admission of the channel rests on the direct routes, and those are the ones that satisfy the definition.
+
+THE PHYSICAL CARRIER:
+
+The carrier is a protein of moderate size dissolved in plasma, which is why it needs help crossing a barrier that cortisol crosses unaided, and the contrast with Channel 1 is instructive: a lipophilic steroid needs no permission, a hydrophilic protein needs a transporter or a hole.
+
+At the receiving end the carrier binds cytokine receptors on microglia, which the corpus records as roughly 5 to 10 percent of all brain cells, with a soma about 7 to 10 micrometres across and a ramified process field spanning roughly 30 to 60 micrometres, tiling the tissue with little overlap.
+
+The territory-tiling matters for this channel, because it means the receiving station is distributed across the whole parenchyma with no gaps, which is exactly what a broadcast receiver should look like.
+
+The 2018 to 2026 literature has added a fifth route which was not known when the framework's channel list was drawn up, and which this document records as an open extension rather than a settled part of the channel.
+
+Direct vascular channels connect skull bone marrow to the brain surface, allowing myeloid cell migration (Herisson and colleagues, Nature Neuroscience, 2018), and skull and vertebral bone marrow act as myeloid cell reservoirs for the meninges and the central nervous system parenchyma, with cells entering the meninges through direct channels in the bone rather than through the blood (Cugurra and colleagues, Science, 2021).
+
+That is a CELLULAR route rather than a molecular one, so it is a different kind of object from the rest of this channel, and whether it belongs in the Interface Exception Catalogue at all is a question for the corpus rather than for this document.
+
+MODES AND MODE TRANSITIONS:
+
+• THE MODE REGISTER.
+
+◦ Surveillance - The Standing Patrol - the resting configuration, in which microglia touch synapses continuously and circulating cytokines are at baseline.
+
+◦ Acute Inflammatory Broadcast - The Fever Order - the infection configuration, in which cytokines rise by one to three orders of magnitude and the Sickness Behaviour State is thrown.
+
+◦ Low-Grade Chronic - The Smouldering Line - the configuration of persistent mild elevation without infection, which is the one implicated in depression and in ageing.
+
+◦ Primed Microglia - The Hair-Trigger Receiver - the configuration in which prior insult leaves the receiving station over-responsive to a subsequent signal.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Surveillance: circulating interleukin 6 under about 5 picograms per millilitre, microglia in the ramified morphology (high confidence; the corpus gives the same figure).
+
+◦ Acute Inflammatory Broadcast: interleukin 6 rising to tens or hundreds of picograms per millilitre, core temperature regulated upward by 1 to 3 degrees Celsius, food intake and social interaction falling sharply, non-rapid-eye-movement sleep increased and rapid-eye-movement sleep suppressed (high confidence, corpus figures).
+
+◦ Low-Grade Chronic: C-reactive protein in the 3 to 10 milligrams per litre band, with the transfer function to mood weak, variable and much disputed (contested).
+
+◦ Primed Microglia: an amplified response to a standard stimulus; the corpus records that chronic microglial activation is central to neurodegeneration and to the inflammatory hypothesis of depression (moderate confidence on mechanism).
+
+• THE TRANSITION TABLE.
+
+◦ Surveillance to Acute Inflammatory Broadcast: innate immune detection of a pathogen; in experimental human endotoxin challenge, tumour necrosis factor rises markedly at 30 to 45 minutes and peaks at 60 to 90 minutes, with interleukin 6 rising about 15 minutes behind it and peaking at 120 to 150 minutes; the corpus records the full behavioural signature appearing within 1 to 3 hours and resolving within a day.
+
+◦ Acute Inflammatory Broadcast to Surveillance: resolution over hours to a day for the experimental challenge, with C-reactive protein following the cytokines by 24 to 48 hours.
+
+◦ Surveillance to Low-Grade Chronic: over weeks, and the corpus notes that this drift occurs in the Sustained Stress State even without infection.
+
+◦ Any mode to Primed Microglia: prior infection, injury or ageing, over days to years.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: the watchdogs are the anti-inflammatory cytokines, glucocorticoid suppression of the inflammatory programme, and the vagal anti-inflammatory reflex; when they fail, the channel's characteristic pathology is a broadcast that never stops, which is chronic neuroinflammation.
+
+SYSTEMS INTERFACE:
+
+• SUBSCRIBES (INPUTS).
+
+◦ Layer 11, the Whole Nervous and Endocrine System Layer: circulating pro-inflammatory cytokines - interleukin 1 beta, interleukin 6, tumour necrosis factor alpha - as a concentration vector in the blood.
+
+◦ Layer 11: the Sustained Stress State of LAYER_11_GLOBAL_STATES_MANUSCRIPT chapter 19, which the corpus records as drifting the inflammatory markers upward over weeks and is therefore an input as well as a neighbour.
+
+• PUBLISHES (OUTPUTS).
+
+◦ Layer 6, the Cellular Layer: microglia, chapter 16 of LAYER_06_OTHER_CELLS_MANUSCRIPT, which the corpus itself names the receiving station of this channel.
+
+◦ Layer 6: the neurons of the sensory circumventricular organs, which read the cytokine directly through the ports of Channel 3, making this channel a customer of that one.
+
+◦ Layer 11: the Sickness Behaviour State of LAYER_11_GLOBAL_STATES_MANUSCRIPT chapter 20, which is the channel's whole-organism output and which the corpus grades, following Dantzer and colleagues, as a genuine central motivational state rather than a breakdown.
+
+• STATE.
+
+◦ Observable without running the channel: plasma concentrations of each cytokine and of C-reactive protein, microglial morphology and priming status, blood-brain barrier transporter capacity, and cyclooxygenase 2 expression in the cerebral endothelium.
+
+• PARAMETERS.
+
+◦ Healthy baseline interleukin 6: under about 5 picograms per millilitre (corpus figure, and consistent with the general literature).
+
+◦ Sepsis: in one clinical series 80 percent of patients had detectable interleukin 6 at a median of 415 picograms per millilitre with a range up to 2,380, and 54 percent had detectable tumour necrosis factor alpha at a median of 26 picograms per millilitre with a range up to 1,000; note that these are medians of detectable values in a selected population and should not be read as population means.
+
+◦ Experimental human endotoxin challenge: typical protocols use an intravenous bolus on the order of 1 nanogram per kilogram, sometimes followed by a continuous infusion of about 0.5 nanograms per kilogram per hour; the cytokine peak follows at roughly 1.5 to 4.5 hours.
+
+◦ Microglia: roughly 5 to 10 percent of all brain cells; soma 7 to 10 micrometres; process field 30 to 60 micrometres, tiling with little overlap (corpus figures).
+
+◦ Depression and inflammation: a systematic review and meta-analysis found the prevalence of low-grade inflammation, defined as C-reactive protein above 3 milligrams per litre, to be 27 percent in depression with a 95 percent confidence interval of 21 to 34 percent (Osimo and colleagues, Psychological Medicine, 2019); other treatments give figures near 30 percent for the 3 to 10 milligrams per litre band and about 60 percent for C-reactive protein above 1 milligram per litre, and these are not in conflict because the thresholds differ.
+
+◦ Fever: core temperature regulated upward by 1 to 3 degrees Celsius as an actively defended raised set point, not a control failure (corpus figure).
+
+• TIME CONSTANTS.
+
+◦ Tumour necrosis factor rise after endotoxin: marked by 30 to 45 minutes, peak at 60 to 90 minutes.
+
+◦ Interleukin 6 rise: beginning about 15 minutes after the tumour necrosis factor rise, peak at 120 to 150 minutes, with bolus protocols giving peaks at 1.5 to 4.5 hours; the two figures describe different protocols and are both reported.
+
+◦ Full sickness behaviour signature in experimental humans: appears within 1 to 3 hours and resolves within a day (corpus figure, graded high confidence there).
+
+◦ C-reactive protein: follows the cytokines over 24 to 48 hours (corpus figure).
+
+◦ Microglial process motility: minutes, the timescale on which a process extends onto a synapse or a wound (corpus figure).
+
+◦ Chronic low-grade drift: weeks.
+
+• FAILURE MODE.
+
+◦ Over-transmission: the cytokine storm, and delirium in acute severe illness, which is this channel driving the brain harder than the brain can tolerate.
+
+◦ Persistence: chronic neuroinflammation, implicated in neurodegeneration and in the inflammatory hypothesis of depression.
+
+◦ Receiver failure: microglial senescence and dystrophy in ageing, in which the receiving station stops responding appropriately to a correctly transmitted signal.
+
+DISEASES AND DISORDERS:
+
+The channel's undisputed clinical territory is sickness behaviour itself, delirium in severe infection, and the neurological complications of systemic inflammation.
+
+Its disputed territory is depression, and the dispute should be stated accurately rather than in either of its two convenient summaries.
+
+What is established: cross-sectional meta-analyses find mean C-reactive protein and interleukin 6 higher in acute depression than in controls, and roughly 27 percent of depressed patients meet the low-grade inflammation threshold of C-reactive protein above 3 milligrams per litre (Osimo and colleagues, 2019).
+
+What is NOT established: that inflammation causes depression in most patients, or that anti-inflammatory treatment works in unselected depression.
+
+The obvious reading of the 27 percent figure cuts both ways, and both readings deserve stating: it means a substantial minority of depressed patients have measurable inflammation, and it means that most do not.
+
+Anti-inflammatory treatment trials have been mixed, and the field's current direction is stratification - treating the inflamed subgroup rather than the diagnosis - which is itself an admission that the unstratified hypothesis did not hold.
+
+The corpus's own position is the defensible one: the resemblance of sickness behaviour to depression founded the inflammatory hypothesis, and founding a hypothesis is not the same as confirming it.
+
+WHAT MAKES IT UNMISTAKABLE:
+
+The only channel whose message is a single bit - there is an infection - and whose output is nonetheless a complete, ordered, reversible reorganisation of temperature, appetite, sleep, movement, mood and social behaviour, commanded by proteins that were never meant for the brain at all.
+
+CONFIDENCE:
+
+• Existence of the channel: high, and the corpus grades it high; the direct routes at the circumventricular organs and the saturable transporters are both well documented.
+
+• Layer endpoints: high; both ends are catalogued in this corpus, with microglia named at Layer 6 and the Sickness Behaviour State named at Layer 11.
+
+• Purity of the skip: PARTIAL, and this document says so where the corpus does not go into the detail - of the four molecular and neural routes by which peripheral inflammation reaches the brain, the circumventricular and saturable-transport routes pass the Re-encoding Test while the endothelial prostaglandin route and the vagal afferent route do not, being short layered relays rather than skips.
+
+• Quantitative parameters: well supported for the endotoxin challenge time course, the cytokine concentrations and the microglial figures; well supported for the 27 percent low-grade inflammation prevalence, which comes from a proper meta-analysis with a confidence interval; CONTESTED for the causal role of inflammation in depression, where the association is robust and the causation is not established.
+
+• An open extension: the skull bone marrow and meningeal routes described from 2018 onward (Herisson and colleagues, 2018; Cugurra and colleagues, 2021) are cellular rather than molecular and postdate the corpus's channel list, so they are recorded here as a live question rather than folded into the channel.
+
+
+CHANNEL 6. THE ELECTROMAGNETIC AND PHOTIC CHANNEL (Layer 1 to Layers 6 and 11)
+
+A single particle of light, an object of Layer 1, twists a single molecule and thereby changes the state of a cell.
+
+It is the shortest and cleanest skip in the catalogue, and it is also the place where the framework is most at risk of being misread, so the chapter carries a warning as well as a specification.
+
+WHAT IT IS AND WHAT IT CARRIES:
+
+The Electromagnetic and Photic Channel is the pathway by which a photon, arriving from outside the organism entirely, produces a direct effect on a named cell and, through that cell, on the state of the whole organism.
+
+A photon is the quantum of the electromagnetic field, the indivisible packet in which light arrives, and it belongs to Layer 1, the Subatomic Layer.
+
+What the channel carries in its image-forming arm is the spatial and spectral structure of the world, and what it carries in its non-image-forming arm is a single number: how much blue-rich light is falling on the eye, which is the honest signal of day versus night.
+
+It is the second arm that makes this a layer-skipping channel of organism-wide consequence, because that number sets the phase of every clock in the body.
+
+THE LAYERS IT CONNECTS, AND HOW MANY IT SKIPS:
+
+The origin is Layer 1, the Subatomic Layer.
+
+The destinations are Layer 6, the Cellular Layer, in the form of the photoreceptor and the intrinsically photosensitive retinal ganglion cell, and Layer 11, the Whole Nervous and Endocrine System Layer, in the form of the circadian programme.
+
+The skip to Layer 6 crosses Layers 2, 3, 4 and 5, and it is unusual in the catalogue in being a skip UPWARD from the smallest layer rather than downward from a large one.
+
+WHY THE RELAY IS NOT PAID FOR:
+
+The relay could not be paid for because there is nothing to pay it with: the sender is outside the organism and has no interest in being routed.
+
+The organism's only options are to absorb the photon directly or to ignore it, and there is no intermediate layer that could receive the message on the retina's behalf.
+
+For the circadian arm the Broadcast Principle applies in its ordinary form as well, since the message is the time of day, that message is addressed to every cell in the body, and no addressing scheme could improve on the answer of building one small population of detectors and letting them command a hormone.
+
+THE RE-ENCODING TEST APPLIED:
+
+The physical entity is the photon, and its identity is preserved right up to the moment of absorption, which is the moment the message is delivered.
+
+The photon is absorbed by the retinal chromophore bound inside an opsin protein, and the absorption drives the isomerisation of 11-cis retinal to all-trans retinal.
+
+That isomerisation is essentially complete in about 200 femtoseconds, which is 200 times ten to the minus fifteen seconds, measured by Schoenlein, Peteanu, Mathies and Shank in Science in 1991, with later work resolving the passage through the conical intersection at roughly 80 to 100 femtoseconds and photoproduct appearance near 200 femtoseconds (Polli and colleagues, Nature, 2010); those figures describe different events in the same process and do not conflict.
+
+The test is passed because the photon acts on the Layer 4 protein directly, with no Layer 2 or Layer 3 station having re-expressed it, and because the arrival of one photon is a discriminable event rather than a contribution to an average.
+
+Everything after the isomerisation - the transducin cascade, the change in cyclic guanosine monophosphate, the closure of channels, the change in membrane potential - is ordinary layered amplification, and is expressly not part of the skip.
+
+THE PHYSICAL CARRIER:
+
+The carrier is the photon, and its energy at the melanopsin-relevant wavelength of 480 nanometres is 2.5830 electronvolts, equivalently 4.138 times ten to the minus nineteen joules, or 249.2 kilojoules per mole.
+
+The image-forming detector is the rod or cone photoreceptor, and the non-image-forming detector is the intrinsically photosensitive retinal ganglion cell, which the corpus catalogues in full as chapter 217 of its neuronal manuscript and which carries its own pigment, melanopsin, distributed along its dendrites so that the whole net is the light-catching surface.
+
+A precision that is routinely lost in secondary sources deserves stating here: the quantum efficiency of the isomerisation reaction itself is 0.65 plus or minus 0.01 at 500 nanometres, meaning that about two thirds of absorbed photons produce an isomerisation, whereas the whole-eye quantum efficiency, which includes losses in the ocular media and in the retina before absorption, is about 0.25 for rods and 0.05 for cones.
+
+These are different quantities and confusing them overstates the eye's performance by roughly threefold.
+
+The cascade gain is a genuinely unresolved number and this document reports the disagreement rather than picking a figure.
+
+Classic textbook accounts give one activated rhodopsin activating roughly 500 to 800 transducin molecules with of order ten to the fifth cyclic guanosine monophosphate molecules hydrolysed per photoisomerisation; direct measurement by Leskov and colleagues in Neuron in 2000 gave transducin and phosphodiesterase activation at 120 to 150 per second per activated rhodopsin, explicitly much lower than indirect estimates, while also measuring the phosphodiesterase Michaelis constant at least tenfold lower than published, which partly compensates; and modern mouse work, in which activated rhodopsin's lifetime is only about 80 milliseconds, implies only about 12 to 20 transducins activated per photon.
+
+The spread across the literature is therefore roughly forty-fold, it turns chiefly on the assumed lifetime of activated rhodopsin, which is species- and temperature-dependent, and what would settle it is direct single-molecule counting of activated transducins in intact mammalian rods with the activated-rhodopsin lifetime measured simultaneously.
+
+MODES AND MODE TRANSITIONS:
+
+• THE MODE REGISTER.
+
+◦ Single-Photon Counting - The Quantum Ledger - the fully dark-adapted rod configuration, in which individual photons produce discriminable responses.
+
+◦ Photopic Imaging - The Daylight Picture - the cone-driven configuration supplying the image-forming stream.
+
+◦ Irradiance Integration - The Slow Meter - the melanopsin configuration, reporting total light averaged over minutes rather than shape, with a tonic sustained response.
+
+◦ Circadian Resetting - The Clock Adjustment - the whole-organism configuration in which an irradiance signal delivered at the right phase shifts the body's timing.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Single-Photon Counting: the elementary response amplitude is about 0.6 picoamperes in toad rod against a dark current of tens of picoamperes, and the response is anomalously reproducible, its mean being about four to five times its standard deviation where a memoryless single-step shutoff would predict a ratio of one; the physical basis of that reproducibility is NOT ESTABLISHED, and single-molecule measurement of activated-rhodopsin phosphorylation-state lifetimes would settle it.
+
+◦ Photopic Imaging: the corpus's own visual system chapter governs, giving a feedforward sweep of 100 to 150 milliseconds and conscious percept at 200 to 300 milliseconds.
+
+◦ Irradiance Integration: a slow rise to peak followed by a sustained plateau at roughly half of peak for the duration of illumination, a tonic irradiance code rather than a transient contrast code, and melanopsin adapts to steady light rather than saturating.
+
+◦ Circadian Resetting: strongly saturating rather than proportional, since a one-hour pulse yields about forty percent of the amplitude of a 6.7-hour pulse despite being fifteen percent of the duration.
+
+• THE TRANSITION TABLE.
+
+◦ Single-Photon Counting to Photopic Imaging: light adaptation, over seconds to minutes; the reverse, dark adaptation, takes up to 30 minutes (corpus figure).
+
+◦ Any mode to Irradiance Integration: the melanopsin response begins a few seconds after light onset at saturating intensity, lengthening to tens of seconds at dim intensities, and persists many seconds after the light stops.
+
+◦ Irradiance Integration to Circadian Resetting: the phase shift accrues over the hours of exposure and is expressed over the following day; the delay-to-advance crossover falls near the core body temperature minimum, roughly two hours before habitual waking.
+
+◦ Circadian Resetting to a re-entrained steady state: days, since the clock moves by at most a few hours per day.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: the watchdogs are pupillary constriction, photoreceptor adaptation and the melanopsin system's own adaptation to steady light; when the input is absent altogether, as in total blindness with no light perception, the channel fails open and the clock free-runs.
+
+SYSTEMS INTERFACE:
+
+• SUBSCRIBES (INPUTS).
+
+◦ Layer 1, the Subatomic Layer: the photon, over the visible band and, for the non-image-forming arm, concentrated near 480 nanometres.
+
+◦ A NOTE ON THE SOURCE CATALOGUE: Layers 1, 2 and 3 are being catalogued in parallel in LAYER_01_02_03_SUBSTRATE_OUTLINE.txt, whose Part One schedules the photon as its first entry and describes it as vision's actual input quantum; that document is an OUTLINE ONLY, carries its own incomplete-draft banner, and has no companion manuscript yet, so this cross-reference is FORWARD-LOOKING RATHER THAN RESOLVED, and the plain-language naming of the source as the photon is what this document relies on.
+
+• PUBLISHES (OUTPUTS).
+
+◦ Layer 6, the Cellular Layer: the rod and cone photoreceptors, and the intrinsically photosensitive retinal ganglion cell of the corpus's neuronal manuscript chapter 217.
+
+◦ Layer 10, the Neural and Neuroendocrine Systems Layer: the visual system of LAYER_10_SYSTEMS_MANUSCRIPT chapter 1 for the image-forming arm, and the melatonin axis of chapter 41 for the non-image-forming arm.
+
+◦ Layer 11, the Whole Nervous and Endocrine System Layer: the Circadian Day Programme and Night Programme of LAYER_11_GLOBAL_STATES_MANUSCRIPT chapter 22, whose pacemaker the corpus records as being reset daily by light captured by melanopsin-containing retinal ganglion cells.
+
+• STATE.
+
+◦ Observable without running the channel: adaptation state of the retina, current pupil diameter, melanopsin response plateau level, circadian phase as marked by dim light melatonin onset or the core temperature minimum, and prior light history over days, which is a genuine state variable because retinal sensitivity adapts over that timescale.
+
+• PARAMETERS.
+
+◦ Photon energy at 480 nanometres: 2.5830 electronvolts, 4.138 times ten to the minus nineteen joules, 249.2 kilojoules per mole.
+
+◦ Isomerisation quantum yield 0.65 plus or minus 0.01 at 500 nanometres; whole-eye quantum efficiency about 0.25 for rods and 0.05 for cones.
+
+◦ Melanopsin spectral peak: about 479 nanometres for the human pigment measured in vitro, while the CIE S 026 standardised melanopic action spectrum peaks at 490 nanometres, the offset being prereceptoral filtering by cornea, lens and macular pigment; the melatonin-suppression action spectra of Brainard and of Thapan, both 2001, peak near 459 to 464 nanometres because they are corneally measured behavioural spectra; these three figures are not in conflict but they are routinely conflated, and the reference plane must always be stated.
+
+◦ Intrinsically photosensitive ganglion cells: the corpus's own figures govern, giving about 3,000 to 8,000 per eye, which is 0.4 to 1.5 percent of ganglion cells, with the corpus grading confidence fair for the order of magnitude and poor for the exact figure; the wider literature is consistent with that spread, macaque work giving about 0.2 percent and human whole-retina counts giving 7,283 plus or minus 237 cells, and the spread is caused by antibody sensitivity undercounting the weakly expressing subtypes, by whether displaced cells are counted, and by the assumed ganglion cell denominator.
+
+◦ Cascade gain: NOT ESTABLISHED, with literature values spanning roughly 12 to 800 transducins activated per photon; this document gives the range and its cause rather than a single number.
+
+◦ Rod thermal dark events: one spontaneous isomerisation per rod every 90 seconds in the primate rod at 37 degrees Celsius, which is one spontaneous event per rhodopsin molecule per about 300 years.
+
+◦ Melatonin suppression half-maximal dose: SOURCES DISAGREE BY ABOUT FOURFOLD. Zeitzer and colleagues, Journal of Physiology, 2000, using 6.5-hour exposures, found half-maximal suppression at 50 to 130 lux, commonly quoted as about 100 lux, with 90 percent of maximal suppression by about 200 lux. Phillips and colleagues, Proceedings of the National Academy of Sciences, 2019, using one-hour evening exposures within subjects, found a group median effective dose of 24.6 lux, with individual values spanning about 6 to about 350 lux. The disagreement is real and its causes are identifiable: between-subject versus within-subject design, prior light history, exposure duration, uncontrolled pupil size, and the fact that lux is a photopic unit and therefore not a fair common currency across light sources of different melanopic content. There is NO agreed population half-maximal dose in melanopic units under everyday light history, and what would settle it is a large representative within-subject dose-response study with pupillometry, controlled multi-day prior light history, and doses expressed in melanopic equivalent daylight illuminance.
+
+◦ Consensus light recommendations, which are expert consensus rather than trial outputs: a minimum of 250 lux melanopic equivalent daylight illuminance at the eye during the day, a maximum of 10 lux melanopic in the three hours before bed, and a maximum of 1 lux melanopic in the sleep environment, all measured in the vertical plane at the eye at about 1.2 metres height (Brown and colleagues, PLOS Biology, 2022).
+
+◦ Light therapy dose: 10,000 lux for 30 minutes in the first hour after waking is the standard prescription, dosed clinically as about 5,000 lux-hours; note honestly that the lux-hour reciprocity is a clinical heuristic rather than an established law, and that it directly contradicts the non-linear duration effects measured in the phase-response and flash literature.
+
+• TIME CONSTANTS.
+
+◦ Retinal isomerisation: about 200 femtoseconds, with conical-intersection passage at roughly 80 to 100 femtoseconds; this is the fastest time constant anywhere in this corpus.
+
+◦ Phototransduction cascade to a change in membrane current: tens of milliseconds.
+
+◦ Melanopsin response latency: a few seconds at saturating intensity, tens of seconds at dim intensities, with a sustained plateau for the duration of illumination and persistence for many seconds after offset.
+
+◦ Circadian phase shift from a single 6.7-hour bright pulse: maximum observed delay minus 3.60 hours and maximum observed advance plus 2.01 hours, fitted peak-to-trough amplitude 5.02 hours (Khalsa and colleagues, Journal of Physiology, 2003).
+
+◦ Circadian phase shift from a single 1-hour pulse: maximum delay minus 2.02 hours and maximum advance plus 1.20 hours, amplitude 2.20 hours (St Hilaire and colleagues, Journal of Physiology, 2012), so fifteen percent of the duration buys about forty percent of the effect.
+
+◦ Millisecond flashes: 2-millisecond flashes delivered over an hour during sleep produce measurable phase delay, with peak responsivity at an interflash interval of 7.6 plus or minus 0.53 seconds giving about minus 1.85 hours of delay, against minus 0.60 plus or minus 0.34 hours for continuous light at matched illuminance delivered for 3,800 times the total photon duration (Najjar and Zeitzer, Journal of Clinical Investigation, 2016); total photon energy is therefore a poor predictor and the system responds to flash onsets.
+
+◦ Re-entrainment to a shifted schedule: days.
+
+• FAILURE MODE.
+
+◦ Input loss: in total blindness with no conscious light perception the clock free-runs, producing non-24-hour sleep-wake rhythm disorder; figures disagree, one classic series finding about half of totally blind subjects frankly free-running and commonly quoted summaries giving 55 to 70 percent, the spread driven by how total blindness is defined and by how many cycles were observed, since short studies undercount because detecting a free run needs weeks of serial phase markers.
+
+◦ Mistimed input: light at the wrong circadian phase, which is the mechanism of jet lag, of shift-work disorder, and of the delayed sleep-wake phase disorder whose prevalence is quoted anywhere from 0.13 to 3 percent in adults and 7 to 16 percent in adolescents, ranges that disagree by more than an order of magnitude according to whether the criterion is a questionnaire chronotype or full diagnostic criteria including impairment.
+
+◦ Detector loss: the retinal degenerations, and the specific observation that patients with outer-retinal blindness can retain pupil reflexes and circadian entrainment because the melanopsin arm survives.
+
+DISEASES AND DISORDERS:
+
+The channel's disorders are the circadian disorders: seasonal affective disorder, whose prevalence estimates span about 0.4 to about 10 percent depending entirely on whether ascertainment is by structured clinical interview or by self-report questionnaire, with questionnaire figures widely regarded as overestimates and the latitude effect itself disputed; non-24-hour sleep-wake rhythm disorder in the blind; delayed sleep-wake phase disorder; and shift-work disorder.
+
+Its therapy is light, and bright-light therapy has a meta-analytic effect size around 0.84 in the American Psychiatric Association-commissioned meta-analysis of Golden and colleagues in 2005, with the honest caveat that bright-light trials are very hard to blind and that effect sizes shrink in the better-controlled trials.
+
+THE HONEST CAVEAT THE CORPUS DEMANDS:
+
+The corpus attaches a warning to this channel, and this document reproduces and extends it rather than softening it.
+
+The demonstration that a single photon can produce a discriminable cellular response is NOT a licence for quantum theories of consciousness, which remain unsupported speculation.
+
+The distinction is precise and worth spelling out: single-photon detection involves the absorption of one quantum by one molecule followed by entirely classical amplification, and requires no coherence, no superposition of anything macroscopic, and no novel physics whatever.
+
+Orchestrated objective reduction, the leading quantum-consciousness proposal, requires something categorically different: coherence sustained for tens of milliseconds across a macroscopic number of proteins in a warm, wet, ionic environment, terminated by a gravitational self-collapse.
+
+The standard objection is Tegmark's decoherence calculation of 2000, giving decoherence times of about ten to the minus thirteen seconds for microtubule superpositions against the ten to the minus three to ten to the minus one seconds neural dynamics require, a shortfall of ten to seventeen orders of magnitude.
+
+The published rebuttal recalculates to roughly ten to the minus five to ten to the minus four seconds, and this document notes the arithmetic that follows: even taking the rebuttal entirely at face value, ten to the minus four seconds is still one hundred to one thousand times shorter than the twenty-five milliseconds the theory requires, so the rebuttal narrows the gap without closing it.
+
+The gravitational collapse leg has since come under direct experimental pressure, an underground germanium-detector search for the spontaneous radiation such collapse would produce having excluded the natural parameter-free version of the model (Donadi and colleagues, Nature Physics, 2021).
+
+Recent papers cited as support - tryptophan energy migration in tubulin measured in vitro, predicted superradiance in microtubule geometries, and a modest anaesthetic-latency shift in rats - measure energy transfer, radiative collectivity and drug pharmacology respectively, and none measures coherence on a behaviourally relevant timescale; the anaesthetic result is additionally inconsistent in direction across drugs and species.
+
+What the theory needs and has never had, in thirty years of trying, is a measurement of long-lived coherence in the brain, and its continued absence is the decisive datum.
+
+This document therefore grades the photic channel and the quantum-consciousness claim separately and very differently, which is exactly what the corpus does.
+
+WHAT MAKES IT UNMISTAKABLE:
+
+The only channel whose sender is outside the organism, whose carrier is a single quantum of the electromagnetic field, and whose transduction step takes two hundred femtoseconds - the fastest event and the smallest carrier in the whole catalogue, setting a clock that runs for twenty-four hours.
+
+CONFIDENCE:
+
+• Existence of the channel: high, and the corpus grades it high for photoreception and low for any broader quantum claim; this document keeps those two gradings strictly apart and endorses both.
+
+• Layer endpoints: high at the destination end, which is fully catalogued at Layers 6, 10 and 11; PARTIALLY SPECIFIED at the origin end, because the Layers 1 to 3 catalogue is an outline only and carries its own incomplete-draft banner, so the photon is named in plain language and the cross-reference is forward-looking.
+
+• Quantitative parameters: well supported for the photon energy, the isomerisation timescale, the quantum yield and the thermal event rate; well supported but range-valued for the intrinsically photosensitive ganglion cell count, where the corpus itself grades confidence fair for order of magnitude and poor for the exact figure; CONTESTED by about fourfold for the melatonin-suppression half-maximal dose, with over fiftyfold individual variation; and UNESTABLISHED for the phototransduction cascade gain, where the literature spans roughly forty-fold and this document declines to pick a value.
+
+• The quantum-consciousness claim: UNESTABLISHED, with two of its three legs unsupported or partly falsified and the third fully explicable classically; it is legitimate science rather than pseudoscience, since it is peer-reviewed and contacts experiment, but it is not part of standard neuroscience and no leading account of the neural correlates of consciousness treats it as a contender.
+
+
+CHANNEL 7. THE TRANSGENERATIONAL EPIGENETIC CHANNEL (Layers 13 and 14 to Layers 4 and 5 of the NEXT generation)
+
+This is the weakest entry in the catalogue, the corpus says so in its own voice, and this chapter's job is to explain precisely why it is weak without either quietly dropping it or quietly promoting it.
+
+WHAT IT IS AND WHAT IT CARRIES:
+
+The Transgenerational Epigenetic Channel is the claimed pathway by which a social or environmental circumstance experienced by one generation writes a heritable chemical mark that alters gene regulation in a later generation which never experienced that circumstance.
+
+It is Channel 1 with a generation added, and everything that makes Channel 1 strong is exactly what this channel lacks: there is no cross-fostering experiment in humans, no adult pharmacological reversal, and no way to hold culture constant.
+
+What it would carry, if it carries anything, is not a message about a circuit but a standing configuration: an inherited prior about how expensive the world is likely to be.
+
+THE LAYERS IT CONNECTS, AND HOW MANY IT SKIPS:
+
+The origin is Layer 13, the Dyadic and Small Group Layer, and Layer 14, the Community and Society Layer, in one generation.
+
+The destination is Layer 4, the Macromolecular Layer, and Layer 5, the Subcellular and Organellar Layer, in the NEXT generation.
+
+So the channel skips roughly ten layers and, uniquely in this catalogue, a generation as well, which means it must additionally cross the germline, and the germline is where the case falls apart.
+
+WHY THE RELAY IS NOT PAID FOR:
+
+The argument, if the channel is real, is the same broadcast argument as Channel 1 with one addition.
+
+The message is global, addressed to every cell of an organism that does not yet exist.
+
+It sits at the slowest possible temporal extreme, since its whole point is persistence beyond a lifetime.
+
+And there is no conceivable wiring solution at all, because the recipient cannot be innervated by a nervous system that will not exist until after the sender is dead.
+
+If the channel exists, then, it exists for the strongest possible version of the Broadcast Principle's third condition: not that the address would be expensive, but that no address is physically constructible.
+
+THE RE-ENCODING TEST APPLIED:
+
+The candidate entities whose identity would have to be preserved are a methyl group on a cytosine base, a histone modification, or a small RNA molecule in sperm.
+
+If any of these crosses from parental soma to offspring genome intact, the test is passed and the channel belongs in the catalogue.
+
+The difficulty is not with the test but with the crossing, and it is worth stating the obstacle in physical terms rather than rhetorical ones.
+
+Between a parental mark and a grandchild's genome stand TWO waves of near-total epigenetic erasure.
+
+In the first wave, in the primordial germ cells, global cytosine-guanine methylation in the human germline falls to a MINIMUM OF ABOUT 5 PERCENT at weeks seven to nine of gestation, down from a somatic baseline of roughly 70 to 80 percent (Cell, 2015, on demethylation dynamics in the human prenatal germline).
+
+In the second wave, the zygote and the cleavage-stage embryo erase and re-establish the genome's methylation again.
+
+That residual roughly 5 percent is the honest escapee fraction, and the escapees are enriched in low-density regions and in repeat families - intracisternal A particle elements in the mouse, SVA and L1PA elements in the human - together with the imprinted loci.
+
+Almost all cytosine-guanine island methylation is lost, which is to say almost all of the promoter methylation that would carry a regulatory instruction.
+
+A caution about imprinting is needed here because it is the most common category error in this literature.
+
+The roughly 100 to 150 known imprinted human genes, controlled by about 25 to 30 germline imprinting control regions, do prove that a methylation mark CAN survive to the next generation.
+
+But imprints are erased and re-established sex-specifically in every generation, so they transmit parent-of-origin information rather than acquired environmental information, and citing them as evidence for this channel confuses a demonstration of the machinery with a demonstration of the message.
+
+There is, further, evidence that the organism actively OPPOSES the crossing rather than merely failing to support it, the protein DPPA2 having been described as a safeguard against intergenerational transmission (Bird, Frontiers in Epigenetics and Epigenomics, 2024).
+
+THE PHYSICAL CARRIER:
+
+Three carriers are proposed and none is established in humans.
+
+• Cytosine methylation, which faces the two erasure waves described above.
+
+• Retained sperm histones, on which the sources genuinely disagree: approximately 1 percent retention is the figure most securely attached to MOUSE sperm, while approximately 10 to 15 percent is the commonly quoted figure for HUMAN sperm, equivalently that 85 to 95 percent of chromatin is protamine-bound.
+
+• Sperm small RNAs, chiefly transfer-RNA-derived fragments of 30 to 34 nucleotides, which bypass the demethylation problem entirely because they are not written on DNA at all.
+
+The histone disagreement deserves its own sentence, because it is not merely a species difference.
+
+Three causes are in play: the mouse-versus-human species difference; the choice of method, since acid extraction, mass spectrometry and micrococcal-nuclease mapping give different answers; and, most importantly, SAMPLE PURITY, because swim-up sperm preparations used in many studies contain about 10 percent of cells that have not completed histone-to-protamine replacement (Nature Communications, 2018).
+
+If the true programmed retention in mature human sperm is nearer 1 percent than 15 percent, the histone-carrier hypothesis loses most of its capacity, and that is not settled.
+
+What would settle it is purity-verified mass-spectrometric quantification of histone content in strictly protamination-completed human spermatozoa, with an independent maturity marker.
+
+The small-RNA carrier is the most mechanistically interesting and also disputed.
+
+Chen and colleagues, in Science in 2016, showed that transfer-RNA-derived small RNAs taken from the sperm of high-fat-diet male mice and injected into normal oocytes produced metabolic disorder in the offspring, and that SYNTHETIC UNMODIFIED versions of the same sequences did NOT reproduce the effect, implicating the RNA modifications rather than the sequence.
+
+Work from the Rando laboratory and others has since shown that these sperm small RNAs are largely acquired not in the testis but in the epididymis, delivered by epididymosomes, which are extracellular vesicles shed by the epididymal epithelium (Developmental Cell, 2018), with follow-up work through 2023 and a 2025 Cell Reports paper on the loading of a sperm-enriched valine transfer-RNA fragment.
+
+Against this, Bird in 2024 dismisses the sperm-RNA hypothesis outright as lacking robust experimental validation, and that is a live and sharp disagreement between active laboratories which this document reports rather than resolves.
+
+Note also that every one of these experiments is INTERGENERATIONAL, from parental sperm to the immediately following generation, and that transmission to a second unexposed generation would require the offspring's own germline to reconstitute the RNA signature, which has not been established.
+
+MODES AND MODE TRANSITIONS:
+
+The channel's mode register is unusual because its modes are definitional rather than physiological, and getting the definitions right does more work here than any measurement.
+
+• THE MODE REGISTER.
+
+◦ Direct Exposure - The Fetal Programme - the mother is exposed while pregnant, so the fetus is directly exposed; this is fetal programming and is NOT this channel at all.
+
+◦ Germline Co-exposure - The Two-For-One - the mother is exposed while pregnant, and the fetus's own primordial germ cells, which will become the grandchild, are ALSO directly exposed; so in the maternal line the first and second following generations are both directly exposed.
+
+◦ Paternal Direct - The Exposed Gamete - the father is exposed, so his sperm are directly exposed and the following generation is directly exposed.
+
+◦ True Transgenerational - The Unexposed Heir - an effect in the first generation that was never directly exposed at any stage including as a germ cell, which means the third generation in the maternal line and the second in the paternal line; ONLY this mode demonstrates germline-transmitted epigenetic inheritance.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Direct Exposure: well established, replicated, and uncontroversial in humans; the Dutch Hunger Winter first-generation findings sit here (high confidence).
+
+◦ Germline Co-exposure: plausible and partially documented, but not evidence of inheritance, because the germ cells were themselves present at the exposure (moderate confidence).
+
+◦ Paternal Direct: demonstrated in mice by gamete microinjection; not demonstrated in humans (moderate confidence in rodents, unestablished in humans).
+
+◦ True Transgenerational: NOT DEMONSTRATED IN HUMANS BY ANY PUBLISHED STUDY, and this document states that plainly rather than softening it.
+
+• THE TRANSITION TABLE.
+
+◦ There is no physiological transition table for this channel, because the modes are not states an organism moves between but categories a study design either satisfies or fails to satisfy.
+
+◦ The only transition that matters is the one from a study that measures the second generation to a study that measures the third, and no human study has made it.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: the watchdogs are the two germline demethylation waves and the active safeguards such as DPPA2; the channel's fault regime, if the channel is real, would be the escape of a mark past those watchdogs, which is precisely what the sceptical literature doubts occurs.
+
+SYSTEMS INTERFACE:
+
+• SUBSCRIBES (INPUTS).
+
+◦ Layer 13, the Dyadic and Small Group Layer, and Layer 14, the Community and Society Layer, of the PARENTAL generation: THIS SOURCE LAYER HAS NO CATALOGUE IN THIS CORPUS, for the same reason given under Channel 1, namely that LAYER_12 through LAYER_15 are konnectome-facing design documents rather than catalogues of the biology.
+
+◦ In plain language, the source is a famine, a war, a persecution, a chronic deprivation, or a trauma experienced by a parent or grandparent.
+
+◦ THIS INTERFACE IS THEREFORE SPECIFIED AT ONE END ONLY, and the document declines to invent a Layer 13 construct to fill the slot.
+
+◦ The half-specification is worse here than in Channel 1, because in Channel 1 the destination end is solidly catalogued and the mechanism is undisputed, whereas here the destination end is catalogued but the crossing to it is not established.
+
+• PUBLISHES (OUTPUTS).
+
+◦ Layer 4, the Macromolecular Layer, of the NEXT generation: the DNA Methylation Store of LAYER_04_05_SLOW_VARIABLES_MANUSCRIPT chapter 16, and the Histone Code of chapter 15.
+
+◦ Layer 5, the Subcellular and Organellar Layer, of the next generation: the germ cell as a whole considered as the vehicle, and specifically the sperm's small-RNA payload, which has no Layer 4 or 5 catalogue entry in this corpus and is named here in plain language only.
+
+◦ This publication is CLAIMED rather than demonstrated in humans, and the block should be read as a specification of what would be published if the channel were real, not as a record of observed traffic.
+
+• STATE.
+
+◦ Observable without running the channel: the parental exposure record; the methylation state of candidate loci in the offspring's accessible tissue; the small-RNA content of paternal sperm; the generation number relative to exposure, which is the single most important state variable and the one most often mis-stated.
+
+• PARAMETERS.
+
+◦ Dutch Hunger Winter, the field's canonical natural experiment: individuals exposed periconceptionally showed, six decades later, methylation at the IGF2 differentially methylated region 5.2 PERCENTAGE POINTS LOWER than their own unexposed same-sex siblings (Heijmans and colleagues, Proceedings of the National Academy of Sciences, 2008); the effect was specific to periconceptional exposure and absent for late-gestation exposure, which is the study's strongest feature.
+
+◦ That study's caveats are real: roughly sixty exposed-unexposed sibling pairs, whole blood rather than a germline-relevant tissue, and no demonstration that a 5.2 percentage-point difference changes IGF2 expression; and Tobi and colleagues themselves raised SELECTIVE SURVIVAL of embryos as an alternative explanation, which would produce the same signature with no induced change at all.
+
+◦ Germline demethylation nadir: about 5 percent global cytosine-guanine methylation at gestational weeks seven to nine, from a somatic baseline of 70 to 80 percent (Cell, 2015).
+
+◦ Imprinted loci: roughly 100 to 150 genes, about 25 to 30 germline imprinting control regions.
+
+◦ Sperm histone retention: approximately 1 percent (mouse) against approximately 10 to 15 percent (human); SOURCES DISAGREE, the disagreement is not resolved, and this document does not average them.
+
+◦ Sperm transfer-RNA fragments: 30 to 34 nucleotides, with m5C and m2G modifications upregulated in high-fat-diet sperm and required for the effect (Chen and colleagues, Science, 2016).
+
+◦ Holocaust survivor offspring: 32 survivors, 22 adult offspring, 8 parent controls and 9 offspring controls, with FKBP5 intron 7 methylation HIGHER in survivors and LOWER in their offspring than in the respective controls (Yehuda and colleagues, Biological Psychiatry, 2016).
+
+◦ Överkalix: about 317 probands in the original analyses, using parish harvest records as a proxy for individual food exposure, with no molecular epigenetic measurement in the cohort at all.
+
+• TIME CONSTANTS.
+
+◦ The channel's characteristic timescale is one human generation, roughly 25 to 30 years, and its claimed persistence is at least two generations, so 50 to 90 years.
+
+◦ Germline demethylation wave one: gestational weeks 7 to 9 in the human.
+
+◦ Germline demethylation wave two: the first cell divisions after fertilisation, hours to days.
+
+◦ Latency to measurement in the canonical human study: six decades between exposure and assay (Heijmans and colleagues, 2008).
+
+◦ Epididymal acquisition of sperm small RNAs: the days to weeks of epididymal transit, which is the window in which a paternal environmental exposure could plausibly write to the gamete.
+
+• FAILURE MODE.
+
+◦ The channel's characteristic failure is not a disease but an INFERENTIAL failure, and it is the reason the entry is graded contested: genetic, ecological and cultural inheritance run down exactly the same family lines as the claimed epigenetic one, and no human study has separated them.
+
+◦ A traumatised parent raises a child, and that behavioural pathway alone produces an offspring stress phenotype with no epigenetic inheritance required.
+
+◦ In animals, residual genetic variation between supposedly isogenic lines has been shown to generate apparent transgenerational effects with no epigenetic mechanism whatever (Genetic confounds of transgenerational epigenetic inheritance in mice, 2024).
+
+DISEASES AND DISORDERS:
+
+The clinical claims attached to this channel are metabolic and psychiatric: raised cardiovascular and metabolic risk in the children of the famine-exposed, and altered stress reactivity in the children of the traumatised.
+
+The first-generation Dutch Hunger Winter findings are real and well replicated, including accelerated epigenetic-clock ageing six decades after exposure (Lumey and colleagues, Proceedings of the National Academy of Sciences, 2024), but by the definitions above they are FETAL PROGRAMMING and not this channel, a reclassification Horsthemke makes explicitly in Nature Communications in 2018.
+
+The Överkalix work reported a striking sex-specific and line-specific pattern of grandparental food supply predicting grandchild mortality, but a much larger follow-up cohort in Nature Communications in 2018 reproduced the paternal grandfather to grandson mortality association while FAILING to reproduce the earlier diabetes and cardiovascular results.
+
+The criticisms of Överkalix should be stated plainly: a single historical dataset carrying an enormous inferential load; harvest records standing in for individual exposure; four grandparent categories crossed with two grandchild sexes giving eight comparisons, so that a "specific" pattern can be a multiple-comparisons artefact; socioeconomic status and land tenure transmitting down exactly the same lines; and no molecular epigenetic measurement in the cohort at all, so the epigenetic interpretation is entirely inferred.
+
+The Holocaust offspring finding is the most publicly cited human result in this area and among the weakest evidentially: small samples, a direction inversion between generations for which no mechanism has been articulated, no correction for blood cell composition to modern standards, no independent replication outside the originating laboratory, and a completely uncontrolled behavioural transmission pathway.
+
+Neither this document nor the corpus concludes that the channel is false.
+
+Both conclude that it is unproven in humans, which is a different and more useful statement.
+
+WHAT MAKES IT UNMISTAKABLE:
+
+The only entry in the catalogue whose defining feature is a controversy rather than a mechanism - the one channel that the framework lists in order to be embarrassed by it, and which therefore does more to demonstrate that the framework is falsifiable than any of the six well-established channels above it.
+
+CONFIDENCE:
+
+• Existence of the channel: CONTESTED, and the corpus grades it contested, calling it explicitly the weakest entry in the catalogue; this document agrees and sharpens the grading, because as of this writing NO published human study has demonstrated an effect in a generation that was never directly exposed - the third generation in the maternal line or the second in the paternal - which is the only design that could establish the channel.
+
+• Layer endpoints: unspecifiable at the origin end for the same reason as Channel 1; claimed but not demonstrated at the destination end, so the endpoints are the least secure of any entry.
+
+• Quantitative parameters: the germline demethylation figures are well supported; the Dutch Hunger Winter 5.2 percentage-point difference is well supported as a measurement but its interpretation is contested and selective survival remains a live alternative; the sperm histone retention fraction is UNESTABLISHED with sources disagreeing tenfold; the sperm small-RNA carrier is demonstrated in mice for one generation and disputed as a general mechanism.
+
+• What would settle it: in animals, inbred strains, controlled environments, in vitro fertilisation or embryo transfer to break the maternal-behaviour and microbiome pathways, whole genome sequencing of every generation to exclude de novo mutation and residual genetic variation, measurement in PURIFIED GERM CELLS rather than somatic tissue, study of the third maternal or second paternal generation at minimum, and a causal manipulation of the candidate carrier in both directions; in humans, a very large prospective multigenerational cohort around a sudden, severe, brief and administratively dated exposure, with samples banked every generation, sibling and cousin controls, whole genome sequencing throughout, adoption or assisted-reproduction subgroups to break cultural transmission, pre-registration, and correction for cell composition.
+
+• One final honesty note, because it cuts against the sceptics too: the negative literature in this field is ALSO underpowered, and the charge of asymmetric standards of proof has been made in print; both the positive and the negative sides of this argument are working with samples too small to settle it, which is why the honest grading is contested rather than refuted.
+
+
+PART THREE. THE TWO MINOR WITHIN-LAYER SHORTCUTS
+
+The corpus lists two further shortcuts and ranks them explicitly as minor, on the ground that they operate WITHIN a layer rather than across layers.
+
+Neither is a Layer-Skipping Channel by the strict definition, because neither carries a physical entity across a gap of more than one layer without re-encoding; both are instead cases of a stage being omitted from a chain that is otherwise ordinary layered relay.
+
+They are given the same interface treatment here so that the file parses uniformly and so that a reader comparing them with the seven can see precisely why they do not qualify.
+
+
+SHORTCUT 1. THE OLFACTORY BYPASS (within Layer 9)
+
+WHAT IT IS AND WHAT IT CARRIES:
+
+The olfactory bypass is the arrangement by which the olfactory bulb projects to primary olfactory cortex and to the amygdala without an obligatory thalamic relay, whereas every other exteroceptive sense inserts a thalamic station before its first cortical synapse.
+
+It carries odour identity, and it carries it to the emotional and mnemonic machinery unusually early, which is the folk observation that scent triggers involuntary emotional memory.
+
+THE LAYERS IT CONNECTS, AND HOW MANY IT SKIPS:
+
+Origin and destination are both Layer 9, the Brain Regions, Nuclei and Pathways Layer: the olfactory bulb to the piriform cortex, the cortical amygdala and the lateral entorhinal cortex.
+
+It skips NO layers at all, which is why the corpus ranks it minor; what it skips is a STATION within a layer, namely the thalamus.
+
+WHY THE RELAY IS NOT PAID FOR:
+
+The thalamic relay in other senses buys attentional gating and a common cortical entry format, and olfaction appears to have evolved without needing either at the first synapse, because it is the phylogenetically oldest sense and its cortex is three-layered paleocortex rather than six-layered neocortex.
+
+The saving is one synapse and its latency, which is small, and this is the honest reason the shortcut is minor: the economic argument that powers the seven channels does not really apply here.
+
+THE RE-ENCODING TEST APPLIED:
+
+The shortcut FAILS the Re-encoding Test, and it fails it cleanly.
+
+The odorant molecule is transduced at the receptor neuron, re-expressed as action potentials, re-expressed again at the glomerular synapse, and carried onward as spikes.
+
+Nothing crosses intact, so this is layered relay with one station removed, and the corpus's ranking of it as minor is correct.
+
+THE PHYSICAL CARRIER:
+
+The carrier is the lateral olfactory tract, the axon bundle of the bulb's mitral and tufted cells, running caudally along the ventrolateral frontal lobe and terminating monosynaptically in the anterior olfactory nucleus, the olfactory tubercle, the anterior and posterior piriform cortex, the cortical nuclei of the amygdala, and the lateral entorhinal cortex.
+
+That is two synapses from the nose to cortex: receptor neuron to mitral cell, mitral cell to cortex.
+
+A PRECISION THE POPULAR VERSION GETS WRONG, and which this document insists on: the thalamus is bypassed for the FIRST cortical synapse only, and it is not absent from olfaction.
+
+The mediodorsal thalamic nucleus receives input from piriform cortex, olfactory tubercle and amygdala and projects densely to orbitofrontal cortex, so odour reaches the thalamus at second order rather than first, and the canonical circuit runs from piriform to orbitofrontal cortex by two parallel routes, one direct and one transthalamic.
+
+Lesions of the mediodorsal nucleus impair odour discrimination and identification while relatively sparing detection, and human imaging shows that attending to an odour selectively strengthens coupling in the INDIRECT transthalamic route while leaving the direct route unmodulated (Plailly and colleagues, Journal of Neuroscience, 2008), which is the main basis for the suggestion that the thalamic route contributes to conscious odour perception.
+
+There is a further argument, which is an argument rather than a settled fact, that the bulb IS functionally the olfactory thalamus: like a first-order thalamic nucleus it is the last stage before cortex, shows large divergence in neuron and synapse number, receives massive cortical feedback and is gated by state (Kay and Sherman, Trends in Neurosciences, 2007).
+
+MODES AND MODE TRANSITIONS:
+
+• THE MODE REGISTER.
+
+◦ Direct Limbic Access - The Short Road - bulb to cortical amygdala and lateral entorhinal cortex, the mode responsible for the emotional immediacy of odour.
+
+◦ Direct Cortical Analysis - The Piriform Read - bulb to piriform, supporting identity and configural synthesis.
+
+◦ Transthalamic Attentive Analysis - The Long Road - piriform to mediodorsal nucleus to orbitofrontal cortex, engaged when odour is attended.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Direct Limbic Access: two synapses from receptor to amygdala, with no thalamic gate (high confidence anatomically; the causal link to emotional memory is a plausibility argument, not a demonstration).
+
+◦ Direct Cortical Analysis: anterior piriform more feature and identity driven, posterior piriform more configural (moderate to high confidence).
+
+◦ Transthalamic Attentive Analysis: attentionally modulated, and preferentially engaged by discrimination and identification rather than detection (moderate confidence, small samples).
+
+• THE TRANSITION TABLE.
+
+◦ Direct Cortical Analysis to Transthalamic Attentive Analysis: attending to the odour, within the timescale of a sniff.
+
+◦ Any mode to Direct Limbic Access: this is not really a transition, since the limbic branch runs in parallel and always.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: the watchdogs are the bulb's granule cell inhibition and the heavy centrifugal feedback the bulb receives from piriform, the anterior olfactory nucleus, the horizontal limb of the diagonal band, the locus coeruleus and the raphe, so the bulb is not a passive relay in either direction.
+
+SYSTEMS INTERFACE:
+
+• SUBSCRIBES (INPUTS).
+
+◦ Layer 9, the Brain Regions, Nuclei and Pathways Layer: the olfactory bulb, whose glomeruli receive the convergent axons of receptor neurons expressing a common receptor gene.
+
+◦ Layer 6, the Cellular Layer: the olfactory sensory neuron and the mitral cell, both catalogued in the corpus's neuronal manuscript as chapters 220 and 221.
+
+• PUBLISHES (OUTPUTS).
+
+◦ Layer 9: the piriform cortex, the anterior olfactory nucleus, the olfactory tubercle, the cortical nuclei of the amygdala and the lateral entorhinal cortex, all reached directly by the lateral olfactory tract with no thalamic relay, as recorded in LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.
+
+◦ Layer 9, at second order and expressly NOT bypassed: the mediodorsal thalamic nucleus and the orbitofrontal cortex.
+
+• STATE.
+
+◦ Observable without running the shortcut: the individual's functional receptor repertoire, bulbar granule cell inhibitory tone, centrifugal feedback state, and current adaptation to a background odour.
+
+• PARAMETERS.
+
+◦ Human olfactory receptor genes: approximately 800 to 860 loci, of which roughly 390 to 400 are intact and potentially functional and the remainder pseudogenes, so about 50 to 55 percent of the repertoire is pseudogenised; the commonly cited exact figure is 396 intact genes, and different curations give 388 or 339 depending on genome assembly version and pseudogene-calling criteria, which is a methodological rather than a biological disagreement.
+
+◦ Inter-individual variation is very high, roughly thirty percent of human receptor alleles being segregating pseudogenes, so no two people share the same functional repertoire.
+
+◦ Detection thresholds: the canonical compilation is Devos and colleagues, 1990, and the single most important caveat is that laboratory values scatter by two to four orders of magnitude for the same compound; anchors include hydrogen sulphide at about 470 parts per trillion in air and ethyl mercaptan, the natural gas odorant, at about 1 part per billion, with the pyrazines and some thiols reaching single-digit parts per trillion.
+
+◦ The number of discriminable human odours is NOT ESTABLISHED. The widely repeated trillion-odour figure was shown to be extremely fragile, the same data yielding answers spanning tens of orders of magnitude under small parameter changes, and to be an upper rather than a lower bound; the identical method applied to colour vision predicts an infinite number of discriminable colours against an accepted few million, which invalidates the method regardless of the olfactory data (Gerkin and Castro, and Meister, both eLife, 2015). The older textbook figure of about 10,000 is also unsupported, tracing to a 1927 scaling assumption rather than a measurement. What would settle it is a valid estimation method, which does not currently exist.
+
+• TIME CONSTANTS.
+
+◦ Olfactory event-related potential N1 latency approximately 320 to 450 milliseconds, P2 approximately 450 to 700 milliseconds, with P2 latency increasing at about 2.5 milliseconds per year of age.
+
+◦ Behavioural sniff-to-response detection reaction times: roughly 500 to 1,500 milliseconds, mixing perceptual latency with motor response and sniff dynamics.
+
+◦ Temporal resolution WITHIN a sniff: two odorants presented in one order versus the reverse become reliably discriminable at a stimulus onset asynchrony of only 60 milliseconds (Wu, Zhang, Zhou and colleagues, Nature Human Behaviour, 2024).
+
+◦ These three figures are often quoted against one another as though they disagreed, and they do not: they measure time to a cortical response, time to a behavioural report, and smallest resolvable temporal difference respectively, and there is no single agreed latency of smell.
+
+• FAILURE MODE.
+
+◦ Anosmia from head injury shearing the olfactory fila at the cribriform plate, from viral infection, and as an early sign of Parkinson and Alzheimer disease.
+
+◦ Parosmia and phantosmia, in which the shortcut delivers a distorted or absent-cause percept straight to the limbic machinery, which is why these symptoms are so distressing out of proportion to their sensory content.
+
+DISEASES AND DISORDERS:
+
+Post-viral and post-traumatic anosmia, and the early olfactory loss of the neurodegenerative diseases, which is clinically useful precisely because the bulb sits at the front of the brain and is damaged early.
+
+WHAT MAKES IT UNMISTAKABLE:
+
+Two synapses from the outside world to the amygdala, and the only sensory pathway whose first cortical target is three-layered paleocortex rather than neocortex.
+
+CONFIDENCE:
+
+• Existence of the shortcut: very high; the anatomy is classical and uncontested.
+
+• Layer endpoints: high, and both ends are within Layer 9, which is why the corpus ranks this minor rather than listing it among the seven.
+
+• Quantitative parameters: well supported for the receptor gene counts within stated curation differences; contested and method-dependent for detection latency; UNESTABLISHED for the number of discriminable odours, where no valid method exists.
+
+• The Proust phenomenon specifically: odour-cued autobiographical memories are reliably rated MORE EMOTIONAL and more evocative than memories cued by pictures or words, and are dated to an earlier decade of life, but they are NOT more accurate and generally not more detailed; sample sizes are small, the key imaging comparison had five subjects, cue-matching confounds are unresolved, and the anatomical explanation is a plausibility argument rather than a demonstrated mechanism.
+
+
+SHORTCUT 2. THE HYPERDIRECT PATHWAY (within Layers 8 and 9)
+
+WHAT IT IS AND WHAT IT CARRIES:
+
+The hyperdirect pathway is a monosynaptic glutamatergic projection from frontal cortex directly onto the subthalamic nucleus, bypassing the striatum entirely and therefore bypassing the deliberative machinery of the basal ganglia.
+
+What it carries is a stop command: a fast, global raising of the threshold for acting, which can abort a movement already in flight.
+
+THE LAYERS IT CONNECTS, AND HOW MANY IT SKIPS:
+
+Origin and destination are Layer 9, the Brain Regions, Nuclei and Pathways Layer, and the function it alters belongs to Layer 8, the Microcircuit Layer, where the basal ganglia's competing pathways are the motif.
+
+It skips no layers; it skips a STATION, the striatum, and one synapse.
+
+WHY THE RELAY IS NOT PAID FOR:
+
+Here the Broadcast Principle's second condition applies in its urgent form, and applies genuinely.
+
+The stop command must arrive before the movement completes, and the deliberative route through the striatum and external pallidum costs roughly two extra synapses and, in the monkey, roughly twenty milliseconds.
+
+Twenty milliseconds is a large fraction of the window in which a reaching movement can still be cancelled, so the organism pays for a dedicated fast line.
+
+Note that this is the same logic as Channel 4's, which is a useful cross-reference: both the vagal alarm and the hyperdirect stop are admitted for urgency rather than for breadth.
+
+THE RE-ENCODING TEST APPLIED:
+
+The shortcut FAILS the Re-encoding Test, and it fails it for the reason Part One anticipates.
+
+The message is carried as action potentials throughout, and it is re-expressed at the subthalamic synapse and again at the pallidal synapse, so it is layered relay running quickly.
+
+This is exactly the case Part One names as failing: a fast pathway that still converts its message into spikes at every station fails the test, however fast it runs.
+
+The corpus's ranking of it as minor is therefore not a judgement about its importance, which is considerable, but a judgement about its type.
+
+THE PHYSICAL CARRIER:
+
+The carrier is a monosynaptic glutamatergic corticofugal projection, and the corpus records the receiving structure in detail: the subthalamic nucleus, the only excitatory nucleus inside the basal ganglia, about 9 by 4 by 3 millimetres and roughly 150 cubic millimetres in the corpus's figure, whose cells are autonomous pacemakers firing at 10 to 30 spikes per second in the living brain with no input at all.
+
+An anatomical honesty note: in the monkey, cortico-subthalamic fibres are mostly axon collaterals of corticofugal fibres that also innervate the zona incerta and red nucleus, so this is not a dedicated projection system but a branch of one.
+
+A human evidence caveat that matters: there is no human tracer anatomy, because injectable tracers cannot be used in living people, so human claims rest on diffusion tractography, which cannot distinguish synapses from passing fibres and is highly dependent on algorithm parameters, plus intracranial electrophysiology in surgical patients.
+
+MODES AND MODE TRANSITIONS:
+
+• THE MODE REGISTER.
+
+◦ Standing Brake - The Idle Threshold - the tonic pacemaker output of the subthalamic nucleus, holding a baseline threshold for action.
+
+◦ Global Stop - The Hard Halt - the phasic hyperdirect volley that raises the threshold everywhere at once, aborting an action in flight.
+
+◦ Conflict Hold - The Pause For Thought - the temporary threshold elevation under decision conflict, which buys deliberation time.
+
+◦ Stimulated Override - The Electrode Regime - the deep brain stimulation configuration, in which the nucleus is driven at high frequency by an implanted electrode.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ Standing Brake: autonomous pacemaking at 10 to 30 hertz in vivo, which cutting off all synaptic input does not silence, and which the corpus flags as the single most important fact about this nucleus for anyone building a simulation.
+
+◦ Global Stop: broad, non-selective suppression of thalamic output; the pathway's proposed role in the dynamic centre-surround model is to suppress competing motor programmes first, after which the direct pathway disinhibits the selected one and the indirect pathway stops it (Nambu, Tokuno and Takada, Neuroscience Research, 2002).
+
+◦ Conflict Hold: trial-by-trial medial prefrontal theta power predicts a raised decision threshold under high conflict when stimulation is off, and that relationship REVERSES when subthalamic stimulation is on (Cavanagh, Frank and colleagues, Nature Neuroscience, 2011).
+
+◦ Stimulated Override: high-frequency stimulation relieves the cardinal motor signs of Parkinson disease while abolishing the conflict-related threshold elevation.
+
+• THE TRANSITION TABLE.
+
+◦ Standing Brake to Global Stop: a stop cue, with the covert stopping process completing at a stop-signal reaction time of about 200 milliseconds in healthy adults.
+
+◦ Standing Brake to Conflict Hold: high decision conflict, within the trial.
+
+◦ Any mode to Stimulated Override: switching the stimulator on, effectively immediately for the motor effect.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: destruction of the nucleus produces hemiballismus, violent uncontrollable flinging of the contralateral limbs, which the corpus notes is precisely what one expects when the brake is destroyed; the watchdogs are the pallidal inhibition that shapes the nucleus's rebound bursting and the pacemaker currents themselves.
+
+SYSTEMS INTERFACE:
+
+• SUBSCRIBES (INPUTS).
+
+◦ Layer 9, the Brain Regions, Nuclei and Pathways Layer: the primary motor, premotor and supplementary motor cortex, and for the stopping function the inferior frontal gyrus and pre-supplementary motor area, projecting monosynaptically and glutamatergically.
+
+◦ Layer 9: the external globus pallidus, by the indirect pathway, which is the nucleus's other main input and is expressly not part of the shortcut.
+
+• PUBLISHES (OUTPUTS).
+
+◦ Layer 9: the internal globus pallidus and substantia nigra pars reticulata, glutamatergically, increasing inhibitory output and suppressing movement globally.
+
+◦ Layer 8, the Microcircuit Layer: the basal ganglia action-selection motif, to which this pathway contributes the fast global brake that the direct and indirect pathways cannot supply in time.
+
+• STATE.
+
+◦ Observable without running the shortcut: subthalamic tonic firing rate, beta-band local field potential power in the 13 to 30 hertz range, medial prefrontal theta power, current decision threshold as estimated by drift-diffusion modelling, and stimulator settings where a device is implanted.
+
+• PARAMETERS.
+
+◦ Subthalamic neuron count: the corpus budgets roughly 500,000 neurons across both sides and notes published stereological counts of 240,000 to 300,000 per side, and the corpus's figure governs here; the wider literature is wider still, spanning roughly 272,000 to 561,000 in total with volumes from 70 to 250 cubic millimetres, and the disagreement is driven mainly by tissue processing, since paraffin embedding shrinks tissue far more than cryostat sectioning and total count is density times volume. What would settle it is shrinkage-corrected stereology on a common adequately powered cohort with a pre-registered border definition, cross-validated against in-vivo high-field magnetic resonance volumetry.
+
+◦ Nucleus dimensions: about 9 by 4 by 3 millimetres, roughly 150 cubic millimetres, the size of a lentil (corpus figure), which is why deep brain stimulation demands sub-millimetre surgical accuracy.
+
+◦ Deep brain stimulation settings: frequency 130 hertz as the conventional start, therapeutic band 130 to 185 hertz, with benefit for cardinal motor signs falling off below about 100 hertz; pulse width 60 microseconds as the standard start, usual range 60 to 90 microseconds; amplitude 1 to 3.5 volts in constant-voltage devices or roughly 1 to 4 milliamperes in constant-current devices.
+
+◦ Stop-signal reaction time: about 200 milliseconds in healthy adults, with published means commonly in the 150 to 250 millisecond band; do not transfer this to patient populations, since one surgical series recorded a mean of 384 plus or minus 76 milliseconds in Parkinson patients.
+
+• TIME CONSTANTS.
+
+◦ Monkey internal pallidal response to cortical stimulation is triphasic: early excitation at about 8 milliseconds by the hyperdirect route, inhibition at about 21 milliseconds by the direct route, and late excitation at about 30 milliseconds by the indirect route, so the hyperdirect line arrives roughly 13 to 22 milliseconds ahead of the others.
+
+◦ SOURCES DISAGREE on the two slower components: other monkey work, stimulating supplementary motor area rather than primary motor cortex, gives inhibition at 28.4 plus or minus 2.2 milliseconds and late excitation at 43.2 plus or minus 3.1 milliseconds. Both sets are in the literature, the stimulated cortical site is the main explanation, and this document reports both rather than averaging them. Crucially, in that same study selective ablation of the hyperdirect pathway reduced ONLY the early excitation and left the other two unchanged, which is a direct causal test of the pathway assignment.
+
+◦ Human intracranial evidence: stimulating the subthalamic nucleus and recording inferior frontal gyrus gives an earliest evoked potential at 2.2 plus or minus 0.2 milliseconds, too fast to be polysynaptic, with a second component at 6.0 plus or minus 0.35 milliseconds (Chen and colleagues, Neuron, 2020). Note the directionality carefully: this demonstrates a direct connection but is not a measured cortex-to-subthalamic conduction time in the stopping direction.
+
+◦ Task-related cortico-subthalamic lag during stopping: minus 90 plus or minus 131 milliseconds with cortex leading, and stop-cue evoked responses at about 200 to 300 milliseconds.
+
+◦ Covert stopping process: about 200 milliseconds in healthy adults.
+
+• FAILURE MODE.
+
+◦ Destruction: hemiballismus.
+
+◦ Over-braking: the akinesia of Parkinson disease, in which subthalamic output is pathologically high and beta-band synchrony is excessive.
+
+◦ Under-braking: impulsivity, and here the literature is genuinely split and the split is instructive. Laboratory studies with medication held constant show that stimulation makes patients respond FASTER under high decision conflict and abolishes the normal conflict-related threshold elevation (Frank and colleagues, Science, 2007; Cavanagh and colleagues, 2011). Clinical outcome studies of impulse control disorders after surgery report improvement, worsening and no change in roughly equal measure, and the confound runs toward masking rather than creating the effect, because successful stimulation typically permits a levodopa-equivalent dose reduction of fifty percent or more and dopaminergic reduction independently improves those disorders. Both literatures can be true at once: stimulation acutely lowers the decision threshold under conflict, while chronically the net impulse-control burden often falls because of the drug taper. What would settle it is randomised, medication-matched, blinded stimulation-on versus stimulation-off crossover trials with prospective impulse-control scales.
+
+DISEASES AND DISORDERS:
+
+Parkinson disease, for which the subthalamic nucleus is the standard deep brain stimulation target and which the corpus notes makes these the most electrically interrogated cells in the human brain; hemiballismus after subthalamic infarct; and the response-inhibition deficits of attention-deficit disorder and of obsessive-compulsive disorder, in which this pathway is a candidate substrate.
+
+WHAT MAKES IT UNMISTAKABLE:
+
+The only line in the motor system that reaches the basal ganglia's output before the basal ganglia have finished deciding - a stop command that arrives roughly thirteen to twenty-two milliseconds ahead of the deliberation it overrules.
+
+CONFIDENCE:
+
+• Existence of the shortcut: very high in the monkey, where tracer anatomy and selective ablation both support it; high in the human, where the evidence is intracranial electrophysiology and tractography rather than tracer anatomy, and that limitation should be stated whenever human figures are quoted.
+
+• Layer endpoints: high, and both ends are within Layer 9 with the functional consequence at Layer 8, which is why the corpus ranks this minor.
+
+• Quantitative parameters: well supported for the stimulation settings and the stop-signal reaction time in healthy adults; CONTESTED for the two slower pallidal latencies, where the figures differ by seven to thirteen milliseconds according to the cortical site stimulated; CONTESTED for the human subthalamic neuron count, which spans roughly twofold on both count and volume because of tissue shrinkage methodology; and CONTESTED for the impulsivity outcome, where the laboratory and clinical literatures point in opposite directions for identifiable design reasons.
+
+
+SOURCES
+
+This section names the literature this document consulted, with dates of access, and it repeats the standing rule: where any of these disagrees with an original corpus manuscript, the corpus manuscript governs and this document is wrong.
+
+All web sources listed below were accessed on 12 August 2026.
+
+
+CORPUS SOURCES, WHICH OUTRANK EVERYTHING ELSE IN THIS LIST
+
+• TFELOAOTHNAES.txt, Part Four, from which the seven channels, their names, their layer endpoints, the Re-encoding Test and the Broadcast Principle are taken verbatim, and Part Five for the account of downward causation.
+
+• LAYER_04_05_SLOW_VARIABLES_MANUSCRIPT.txt, chapters 4, 14, 15 and 16, for the CREB Gate, the Immediate-Early Gene Response, the Histone Code and the DNA Methylation Store, the last of which the corpus itself names the framework's steroid-channel terminus.
+
+• LAYER_06_OTHER_CELLS_MANUSCRIPT.txt, chapters 8, 9 and 16, for the tanycyte, the pituicyte and microglia, the last of which the corpus names the receiving station of the neuroimmune channel.
+
+• LAYER_07_SYNAPTICS_MANUSCRIPT.txt, for the neuropod-vagal synapse.
+
+• LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt, sections 2.4.3.1 and 2.4.3.2 for the nucleus tractus solitarius and the area postrema, section 2.2.4.3 for the subthalamic nucleus, and the hypothalamic roster for the supraoptic, paraventricular and arcuate nuclei.
+
+• LAYER_10_SYSTEMS_MANUSCRIPT.txt, chapters 1, 31 through 37, 41 and 43, for the visual system, the neuromodulatory broadcasts, the HPA axis, the melatonin axis and the gut-brain axis.
+
+• LAYER_10_MODES_MANUSCRIPT.txt, for the mode-register form used in every chapter above.
+
+• LAYER_11_GLOBAL_STATES_MANUSCRIPT.txt, chapters 16, 19, 20 and 22, for the Ascending Broadcast System, the Sustained Stress State, the Sickness Behaviour State and the Circadian Day and Night Programme.
+
+• neuronal_manuscript_vol2of5_v2.txt chapter 76 and vol4of5_v2.txt chapters 217, 220 and 221, for the subthalamic neuron, the intrinsically photosensitive retinal ganglion cell, the olfactory sensory neuron and the mitral cell.
+
+• LAYER_01_02_03_SUBSTRATE_OUTLINE.txt, cited by name in Channels 4 and 6 as a FORWARD-LOOKING reference only, because it is an outline carrying its own incomplete-draft banner and has no companion manuscript.
+
+• LAYER_12_FACULTY_SPECIFICATION.txt, LAYER_13_TUTOR_PROTOCOL.txt, LAYER_14_KNOWLEDGE_ENVIRONMENT.txt and LAYER_15_DESIGN_METHOD.txt, cited in Channels 1 and 7 precisely to record that they are design documents and NOT construct catalogues, which is why those two interfaces are specified at one end only.
+
+
+CHANNEL 1, THE STEROID HORMONE CHANNEL
+
+• Weaver and colleagues, Epigenetic programming by maternal behavior, Nature Neuroscience, 2004, and Weaver and colleagues, Journal of Neuroscience, 2005, for the adult methionine reversal.
+
+• McGowan and colleagues, Epigenetic regulation of the glucocorticoid receptor in human brain associates with childhood abuse, Nature Neuroscience, 2009.
+
+• Systematic review of NR3C1 exon 1F methylation and child maltreatment, Child Abuse and Neglect, 2021, which found eight of eleven studies positive and DECLINED to meta-analyse for heterogeneity.
+
+• Plasma free cortisol in states of normal and altered binding globulins, Journal of Clinical Endocrinology and Metabolism, 2019.
+
+• Cerebrospinal fluid and plasma cortisol comparison, Journal of Clinical Endocrinology and Metabolism, 1984.
+
+• Cortisol plasma half-life measurement, Steroids, 2005.
+
+• Cortisol awakening response, Psychoneuroendocrinology, 2019, and Endocrine Reviews, 2025.
+
+• Genomic and nongenomic effects of glucocorticoids, Nature Reviews Rheumatology; non-genomic latency, Scientific Reports, 2017.
+
+• Cell-type specificity of glucocorticoid receptor binding, Nature Communications, 2021.
+
+• P-glycoprotein and corticosteroid brain access, Endocrinology, 2008, which revised the earlier claim downward, and Neuropsychopharmacology, 2003.
+
+• Basic Neurochemistry, Glucocorticoid and mineralocorticoid receptors as transcription factors, NCBI Bookshelf.
+
+
+CHANNEL 2, THE VOLUME TRANSMISSION CHANNEL
+
+• Diffusion in Brain Extracellular Space, Physiological Reviews, 2008, for the volume fraction and tortuosity figures.
+
+• Spatial and temporal scales of dopamine transmission, Nature Reviews Neuroscience, 2021.
+
+• Dopamine release, diffusion and uptake: a computational model for synaptic and volume transmission, PLOS Computational Biology, 2020.
+
+• Descarries and colleagues, 1977 and 2010, on non-synaptic monoamine varicosities, as summarised in Frontiers in Neural Circuits, 2018, and Molecular Psychiatry, 2024.
+
+• Cryo-correlative light and electron tomography of dopaminergic axonal varicosities, Nature Communications, 2025.
+
+• Models of the diffusional spread of nitric oxide, 1995, and Diffusion coefficients and half-lives of nitric oxide in rat cortex, 1994, which disagree on the diffusion radius and are both reported.
+
+
+CHANNEL 3, THE CIRCUMVENTRICULAR AND NEUROHYPOPHYSIAL CHANNEL
+
+• The origins of the circumventricular organs, and Glial functions in blood-brain communication at the circumventricular organs, Frontiers in Neuroscience, 2022, for the fenestration size and permeability cut-off.
+
+• Modulation of fenestrated vasculature in the median eminence and area postrema, 2025.
+
+• Zimmerman and colleagues, Thirst neurons anticipate the homeostatic consequences of eating and drinking, Nature, 2016, and Hierarchical neural architecture underlying thirst regulation, Nature, 2018.
+
+• Physiology, Osmoreceptors, StatPearls, and The osmoregulation of vasopressin, Kidney International, for the set point and sensitivity.
+
+• The Neurohypophysis: Endocrinology of Vasopressin and Oxytocin, Endotext, for plasma concentrations and half-lives.
+
+
+CHANNEL 4, THE VAGAL AND INTEROCEPTIVE CHANNEL
+
+• Kaelberer and colleagues, A gut-brain neural circuit for nutrient sensory transduction, Science, 2018.
+
+• Bohorquez and colleagues, Journal of Clinical Investigation, 2015, for the neuropod-vagal contact.
+
+• Buchanan and colleagues, The preference for sugar over sweetener depends on a gut sensor cell, Nature, 2022.
+
+• Conduction velocity along afferent vagal fibres, and the general vagal fibre-type literature, for the C fibre velocity range.
+
+
+CHANNEL 5, THE NEUROIMMUNE CHANNEL
+
+• Banks and colleagues, Passage of cytokines across the blood-brain barrier, and Blood-brain barrier transport of cytokines, for the saturable transport systems.
+
+• Dantzer and colleagues, Nature Reviews Neuroscience, 2008, for sickness behaviour, followed by the corpus's own Layer 11 chapter 20.
+
+• Experimental endotoxemia in humans: analysis of cytokine release, 1990, for the tumour necrosis factor and interleukin 6 time course.
+
+• Plasma cytokine and endotoxin levels in the sepsis syndrome, 1993, for the sepsis concentration ranges.
+
+• Osimo and colleagues, Prevalence of low-grade inflammation in depression: a systematic review and meta-analysis of CRP levels, Psychological Medicine, 2019, for the 27 percent figure and its confidence interval.
+
+• Herisson and colleagues, Nature Neuroscience, 2018, and Cugurra and colleagues, Skull and vertebral bone marrow are myeloid cell reservoirs for the meninges and CNS parenchyma, Science, 2021, both recorded as an open extension postdating the corpus's channel list.
+
+
+CHANNEL 6, THE ELECTROMAGNETIC AND PHOTIC CHANNEL
+
+• Rieke and Baylor, Single-photon detection by rod cells of the retina, Reviews of Modern Physics, 1998; Baylor, Nunn and Schnapf, 1984, for the primate thermal event rate.
+
+• Tinsley and colleagues, Direct detection of a single photon by humans, Nature Communications, 2016, whose overall result is marginally above conventional significance and whose robust finding is confined to the high-confidence subset.
+
+• Schoenlein, Peteanu, Mathies and Shank, The first step in vision: femtosecond isomerization of rhodopsin, Science, 1991; Polli and colleagues, Nature, 2010.
+
+• Kim, Tauber and Mathies, Biochemistry, 2001, for the quantum yield.
+
+• Leskov and colleagues, Neuron, 2000, for the directly measured transducin activation rate, against the classic textbook figures, the two disagreeing by roughly fortyfold.
+
+• Berson, Dunn and Takao, Science, 2002; Dacey and colleagues, Nature, 2005; Hannibal and colleagues, Journal of Comparative Neurology, 2017; Schmidt, Chen and Hattar, Journal of Neuroscience, 2011.
+
+• Bailes and Lucas, Proceedings of the Royal Society B, 2013, for human melanopsin spectral peak; CIE S 026:2018 for the standardised melanopic action spectrum.
+
+• Zeitzer and colleagues, Journal of Physiology, 2000, and Phillips and colleagues, Proceedings of the National Academy of Sciences, 2019, which disagree by about fourfold on melatonin suppression sensitivity and are both reported.
+
+• Khalsa and colleagues, Journal of Physiology, 2003, and St Hilaire and colleagues, Journal of Physiology, 2012, for the phase response curves.
+
+• Najjar and Zeitzer, Journal of Clinical Investigation, 2016, for millisecond flash phase shifting.
+
+• Brown and colleagues, PLOS Biology, 2022, for the melanopic equivalent daylight illuminance recommendations.
+
+• Golden and colleagues, American Journal of Psychiatry, 2005, for the light therapy meta-analysis.
+
+• On the quantum-consciousness caveat: Penrose and Hameroff, 1996, and Hameroff and Penrose, Physics of Life Reviews, 2014, for the claim; Tegmark, Physical Review E, 2000, for the decoherence objection; Hagan, Hameroff and Tuszynski, Physical Review E, 2002, for the rebuttal; Donadi and colleagues, Nature Physics, 2021, for the experimental exclusion of the parameter-free collapse model; Kalra and colleagues, ACS Central Science, 2023, Babcock and colleagues, Journal of Physical Chemistry B, 2024, and Khan and colleagues, eNeuro, 2024, for the recent work cited as support, together with the 2025 BMC Anesthesiology study that found the opposite direction.
+
+
+CHANNEL 7, THE TRANSGENERATIONAL EPIGENETIC CHANNEL
+
+• Heijmans and colleagues, Proceedings of the National Academy of Sciences, 2008, for the 5.2 percentage-point IGF2 difference; Tobi and colleagues, Human Molecular Genetics, 2009, Nature Communications, 2014, and Science Advances, 2018; Lumey and colleagues, Proceedings of the National Academy of Sciences, 2024.
+
+• Bygren, Kaati and Pembrey on Overkalix, with the larger follow-up cohort in Nature Communications, 2018, which failed to reproduce the diabetes and cardiovascular findings.
+
+• Yehuda and colleagues, Holocaust exposure induced intergenerational effects on FKBP5 methylation, Biological Psychiatry, 2016, and the 2020 American Journal of Psychiatry follow-up from the same laboratory, which is therefore not independent replication.
+
+• DNA demethylation dynamics in the human prenatal germline, Cell, 2015, for the roughly 5 percent methylation nadir.
+
+• Mapping of histone-binding sites in histone replacement-completed spermatozoa, Nature Communications, 2018, for the sample-purity explanation of the histone retention disagreement.
+
+• Chen and colleagues, Sperm tsRNAs contribute to intergenerational inheritance of an acquired metabolic disorder, Science, 2016; Developmental Cell, 2018, on epididymosomes; Cell Reports, 2025, on transfer-RNA fragment loading.
+
+• Heard and Martienssen, Transgenerational epigenetic inheritance: myths and mechanisms, Cell, 2014; Horsthemke, A critical view on transgenerational epigenetic inheritance in humans, Nature Communications, 2018; Nature Reviews Genetics, 2021; Bird, Transgenerational epigenetic inheritance: a critical perspective, Frontiers in Epigenetics and Epigenomics, 2024; Genetic confounds of transgenerational epigenetic inheritance in mice, 2024; and, for balance, the published argument that the negative literature is itself underpowered and that standards of proof have been applied asymmetrically.
+
+
+THE TWO MINOR SHORTCUTS
+
+• Purves and colleagues, Neuroscience, and StatPearls, for the lateral olfactory tract anatomy.
+
+• Tham, Stevenson and Miller, Brain Research Reviews, 2009, and Neurocase, 2011; Courtiol and Wilson, Frontiers in Neural Circuits, 2015; Plailly and colleagues, Journal of Neuroscience, 2008; Kay and Sherman, Trends in Neurosciences, 2007; Shepherd, Perception without a thalamus, Neuron, 2005.
+
+• Herz and Schooler, American Journal of Psychology, 2002; Herz, Chemical Senses, 2004, and Brain Sciences, 2016; Willander and Larsson, Psychonomic Bulletin and Review, 2006; Hacklander, Janssen and Bermeitinger, Psychonomic Bulletin and Review, 2019, for the methodological critique.
+
+• Niimura and Nei, Proceedings of the National Academy of Sciences, 2003; Malnic, Godfrey and Buck, Proceedings of the National Academy of Sciences, 2004; the Human Olfactory Receptor Data Exploratorium.
+
+• Bushdid and colleagues, Science, 2014, with the refutations by Gerkin and Castro, eLife, 2015, and Meister, eLife, 2015.
+
+• Wu, Zhang, Zhou and colleagues, Nature Human Behaviour, 2024, for within-sniff temporal resolution; Murphy and colleagues, 1994 and 1995, for olfactory event-related potential latencies.
+
+• Nambu, Tokuno and Takada, Functional significance of the cortico-subthalamo-pallidal hyperdirect pathway, Neuroscience Research, 2002, and Nambu and colleagues, Journal of Neurophysiology, 2000, the latter's latency figures quoted here through Schroll and Hamker, Frontiers in Systems Neuroscience, 2013.
+
+• Chen and colleagues, Prefrontal-subthalamic hyperdirect pathway modulates movement inhibition in humans, Neuron, 2020, noting that this study recorded inferior frontal gyrus only and not pre-supplementary motor area.
+
+• Frank, Samanta, Moustafa and Sherman, Hold your horses, Science, 2007; Cavanagh and colleagues, Nature Neuroscience, 2011; Verbruggen and colleagues, eLife, 2019, for stop-signal reaction time estimation.
+
+• Hardman and colleagues, Journal of Comparative Neurology, 2002; Salvesen and colleagues, 2015; Zwirner and colleagues, 2017; Bokulic and colleagues, 2021, which together span roughly twofold on subthalamic neuron count and volume.
+
+• Emmi and colleagues, Frontiers in Neuroanatomy, 2020, for the human tracer-anatomy caveat; Gatto and Aldinio, Frontiers in Neurology, 2019, for the split impulse-control literature.
+
+
+A CLOSING NOTE ON WHAT THIS DOCUMENT IS AND IS NOT
+
+Nine interface blocks appear above: seven for the channels the corpus admits to the catalogue, and two for the shortcuts it ranks as minor.
+
+Of the seven, three have both ends specified against catalogued constructs of this corpus, two have their origin layer named only in plain language because that layer has no catalogue anywhere in the corpus, and two have their origin layer named against a companion outline that is itself unfinished.
+
+That accounting is the most valuable thing in this file, and it is stated here at the end so that it cannot be missed by a reader who skips to the interface blocks.
+
+A specification that admits which half of itself is missing can be repaired by a later session; one that filled the gap with an invented construct could not, because nobody would know there was anything to repair.

@@ -1,0 +1,193 @@
+DOCS / NEUROSCIENCE - THE EDIT LOG
+
+Created 2026-08-12.
+
+
+WHY THIS FILE EXISTS
+
+This directory is governed as SOURCE. For its whole life the rule has been that konnectome reads it and does not edit it, with two narrow exceptions: a correctness repair that makes a file agree with what the corpus already delivers, and the additive corpus update run of the Twenty-Second Commandment.
+
+On 2026-08-12 the owner granted the assistant FULL EDIT AUTHORITY over every file in this directory, and asked that an edit log be kept.
+
+This is that log, and it is append-only.
+
+EVERY EDIT MADE UNDER THAT AUTHORITY IS RECORDED HERE, with its date, what was changed, why, and what was deliberately not changed.
+
+The reason a log is the right price for the authority is the reason the read-only rule existed in the first place. What that rule was protecting against was never editing as such; it was the corpus being quietly changed by whichever session found it inconvenient, with no way for a later reader to tell the corpus's own claims from the build's. A log does not prevent that. What it does is make it VISIBLE, which is the only protection this project has ever really trusted.
+
+
+THE THREE STANDING RULES THAT SURVIVE THE GRANT
+
+These are not the owner's conditions. They are the assistant's own, adopted because the grant removes the pause in which they would otherwise have been enforced by somebody else.
+
+ONE. ADDITIVE ONLY, UNLESS THE EDIT IS A CORRECTNESS REPAIR. Nothing the corpus already says is altered, reworded or deleted. What konnectome adds, it adds beside what was there.
+
+TWO. PROVENANCE ON THE FACE OF EVERY ADDED BLOCK. A reader must be able to tell, at a glance and without leaving the page, which sentences are the corpus's and which are this build's. Every addition states that it is konnectome's writing, states the date, and states that the corpus outranks it where the two disagree.
+
+THREE. NO INVENTED VALUES. Where a quantity is not well established, the text says so and says what would settle it. A slot filled with a plausible number is this build's own name for its worst failure: an invented value that has learned to cite.
+
+
+================================================================================
+
+ENTRY 1. 2026-08-12. LAYER_12_FACULTY_SPECIFICATION.txt - THREE FACULTIES ADDED, AND A COUNT REPAIRED.
+
+STATUS: COMPLETE AND COMMITTED.
+
+WHAT WAS FOUND. The Layer 12 specification is the corpus's acceptance-test catalogue for a synthetic mind, and it says of itself that "the specification is complete when a single running instance passes all fourteen suites in one continuous session". Grepping it for "naviga", "metacogni", "imagin" and "prospect" returned zero hits for all four.
+
+So a build could pass every suite in the corpus's own acceptance catalogue while being unable to navigate a space, unable to report what it does and does not know, and unable to simulate a future it had not experienced.
+
+WHAT WAS ADDED. Faculty 15, spatial navigation and the cognitive map. Faculty 16, metacognition and confidence. Faculty 17, imagination, prospection and mental simulation.
+
+Faculty 16 was written first and most carefully, and its suite tests CALIBRATION rather than the production of a confidence number, because a system that reports high confidence uniformly passes a badly designed metacognition test. Its own text states that this is the faculty by which a system declines to act, and that its absence is a safety property rather than a capability gap.
+
+Faculty 17's suite separates simulating a future from recalling a past, since the same hippocampal machinery serves both.
+
+WHAT WAS ALTERED, AND IT IS THE ONLY ALTERATION. The count, from fourteen to seventeen, in every place the document stated it. That is a correctness repair in the strict sense: the document's own content and its own count disagreed the moment the faculties were added, and a specification that miscounts its own suites is a specification a build can pass falsely.
+
+WHAT WAS NOT TOUCHED. Not one word of the original fourteen faculties was reworded, reordered or improved. The file went from 147 lines to 256.
+
+PROVENANCE. A block immediately before faculty 15 records the authority, the date, the standing of the new material relative to the corpus's own, and the finding that motivated it. A sources section at the end records the corpus chapters used and the literature checked.
+
+
+================================================================================
+
+ENTRY 2. 2026-08-12. THE_NEUROSCIENCE_OF_COGNITION_MANUSCRIPT.txt AND ITS OUTLINE - EVIDENCE RECORD 01 PROMOTED INTO THE CORPUS.
+
+STATUS: COMPLETE.
+
+WHAT THIS IS. The first corpus update run this build has ever performed, carried out at the owner's explicit instruction of 2026-08-12 rather than on the standing every-tenth-hand-off cadence.
+
+WHAT WAS FOLDED IN. docs/evidence/01_conflict_control_coupling_gain_v1.txt had recorded a corpus gap when it was written, in the field the update run reads: section 52.2 presents the Gratton effect as a successful prediction of conflict monitoring theory, and nowhere tells the reader that the theory's principal empirical evidence is disputed at the level of the paradigm.
+
+A new section 52.2.5 was added immediately beneath 52.2.4, carrying Schmidt 2019 with its three confounds - feature repetition, contingency learning and temporal learning - and its verdict, together with an explicit statement of what the critique does NOT settle.
+
+A matching line was added to THE_NEUROSCIENCE_OF_COGNITION_OUTLINE.txt so the outline and the manuscript still agree, which is a structural property of this pair that has been verified before and must not be broken by an addition.
+
+WHAT WAS NOT FOLDED IN, AND WHY THAT IS THE MORE INTERESTING HALF. docs/evidence/02_conflict_monitor_mode_register_sources_v1.txt was examined and NOTHING was promoted from it, because it records, in as many words, "IS THERE A CORPUS GAP? NO, AND THAT IS THE RESULT." A run that promoted from it anyway would be manufacturing a gap in order to have something to do.
+
+THE ORDER WAS RESPECTED AND IS WORTH RECORDING. The search came first, it was written into docs/evidence/ before anything entered the corpus, and only then was it promoted. A search result written straight into the corpus would have worn the north star's authority for every session afterwards, which is precisely what the evidence directory exists to prevent.
+
+THE EVIDENCE RECORD WAS ANNOTATED, NOT RETIRED. A promotion note was appended to record that its gap is now closed and where it went. It remains the evidence the added block rests on, and a reader of 52.2.5 who wants to know how that block was arrived at is sent back to it.
+
+NOTE THAT THE CORPUS WAS NOT WRONG. Everything it said about the Gratton effect is accurate. What was missing was a live dispute about what finding it means, which is the ordinary way a corpus with a date on it goes out of date.
+
+
+================================================================================
+
+ENTRY 3. 2026-08-12. FOUR DOCUMENTS BEGUN, CUT OFF PART-WAY, AND BANNERED RATHER THAN DELETED OR COMMITTED AS FINISHED.
+
+STATUS: INCOMPLETE. RESUMPTION REQUIRED.
+
+WHAT HAPPENED. Work began on eight documents at once. Four were never started, one finished (entry 1 above), and four were cut off part-way through by an account-level service limit rather than by any decision about their content.
+
+THE FOUR PARTIAL FILES, WITH WHAT IS ACTUALLY IN THEM:
+
+• LAYER_01_02_03_SUBSTRATE_OUTLINE.txt - outline drafted, roughly 160 lines. Its companion manuscript does not exist.
+
+• THE_INTERFACE_EXCEPTION_CATALOGUE.txt - front matter and opening chapters only, roughly 127 lines. Most of the seven channels are absent.
+
+• LAYER_06_09_DEVELOPMENT_AND_DISEASE_COMPANION.txt - front matter only, roughly 147 lines. Essentially none of the entries are written.
+
+• THE_ONTOGENETIC_AXIS.txt - parts one and two drafted, roughly 595 lines. Part three, the substantial half, is largely absent.
+
+WHAT WAS DONE ABOUT THEM. Each received a prominent banner at the very top stating that it is an incomplete draft, that it must not be read as a source, what it was meant to be, what is actually present, and that nothing in it is citable or verified until a session that actually finished it removes the banner.
+
+WHY THEY WERE BANNERED RATHER THAN DELETED. The work is real and re-doing it from nothing is waste. Deleting them would also have hidden the interruption, and an interruption that leaves no trace is indistinguishable, one session later, from a decision not to write the document at all.
+
+WHY THEY WERE BANNERED RATHER THAN LEFT ALONE, WHICH IS THE MORE IMPORTANT HALF. A partial file in this directory is the most dangerous object this project can produce. It carries a provenance block announcing that it closes a gap, it is written in the corpus's own confident voice, and a later session skimming it would take it for a finished source and design from it. This corpus's discipline is that a document which cannot be told from a finished one by looking at it is not doing its job as a document.
+
+THE RESUMPTION PLAN, IN THE ORDER IT SHOULD BE TAKEN. Each is independent of the others, so they may be resumed in any order or in parallel; this order is by value, not by dependency.
+
+1. THE_INTERFACE_EXCEPTION_CATALOGUE.txt. The highest value of the four, because the seven Layer-Skipping Channels are the only first-class construct class in this corpus with no publish-and-subscribe interface, and because four of the seven terminate in a layer that has no catalogue - which is a fact the document must state honestly rather than paper over by inventing an endpoint.
+
+2. LAYER_01_02_03_SUBSTRATE_OUTLINE.txt and its missing manuscript. Scope it in the Layer 4 and 5 manner, as the cognitively load-bearing dossier rather than a catalogue of three layers of physics.
+
+3. THE_ONTOGENETIC_AXIS.txt. Part three is written and part four is not. It must remain a PROPOSAL: the framework question belongs to the corpus's author and to the owner, and this document's job is to make that decision easy to take well, not to take it.
+
+4. LAYER_06_09_DEVELOPMENT_AND_DISEASE_COMPANION.txt. The largest by far, and the one that most needs its scope stated honestly on its own face - 509 entries written thinly would be worse than 100 written properly plus a declared remainder.
+
+THE FOUR NEVER STARTED, WHICH ARE ALSO STILL OWED:
+
+• A Layer 9 time constants companion. The guiding book carries zero time constants across 123 regional entries, while Layers 7, 8, 10 and 11 carry one on every entry. Every value must be marked CITED, DERIVED with its working shown, LITERATURE, or REFUSED ALOUD - a document that manages to state a timescale for all 123 is a document that invented some.
+
+• A Layer 9 peripheral and efferent expansion, with a roster of the twelve cranial nerves, which this corpus has nowhere.
+
+• A Layer 10 addendum supplying systems 45 to 48: cerebrovascular, clearance, neuroimmune and nociceptive. Every part exists already at Layers 6 and 8; only the assembly is missing. The nociceptive one discharges a promise the corpus made and did not keep, since its somatosensory entry states that pain's affective branch is "given its own address" and no such address exists.
+
+• A cross-walk from the cell catalogue to the public transcriptomic cell-type censuses.
+
+
+================================================================================
+
+ENTRY 4. 2026-08-12, AFTER THE SERVICE LIMIT RESET. THE_ONTOGENETIC_AXIS.txt - FINISHED, AND ITS BANNER REMOVED.
+
+STATUS: COMPLETE. 960 lines.
+
+WHAT WAS ADDED. Part Three, which is the substantial half, and Part Four.
+
+Part Three writes out the material the framework decision would govern, whichever of the three resolutions is chosen: the developmental timetable from neurulation to adolescent pruning, critical and sensitive periods as first-class objects, activity-dependent refinement, the lifetime schedule of the stability-versus-plasticity trade-off, sexual differentiation, and ageing.
+
+Part Four costs each of the three resolutions in concrete work - a sixteenth layer needs the full four-file treatment plus a framework amendment; an orthogonal axis needs a development field on 509 entries and no framework amendment; an explicit adult-only ruling needs one paragraph and forecloses the stability-plasticity schedule permanently.
+
+WHERE THE CONTENT CAME FROM. Two research passes that had completed before the service limit hit, both fully sourced, on the developmental timetable and on critical periods. Writing them to disk immediately was deliberate: this project's own principle is that durable state lives on disk and never only in a conversation, and research held only in a session's context is exactly the state that principle exists to prevent.
+
+WHAT THE SECTION REFUSES TO SAY, WHICH IS THE PART WORTH KEEPING. Several widely repeated figures are recorded as NOT supported, with the reason:
+
+• That the prefrontal cortex finishes maturing at 25. It is a rounding artefact of cohort upper age limits, no study identified 25 as an inflection point, and three independent methods converge on the late twenties to early thirties instead.
+
+• The 17.4-year second-language figure, which a 2022 reanalysis of the same data found to be no discontinuity at all for most learner types.
+
+• Any specific rate for adult human hippocampal neurogenesis, the carbon-14 figure being a single-study estimate no independent method has reproduced.
+
+• Absolute peak synaptic density per cubic millimetre, which could not be verified against the primary text and is therefore not stated at all.
+
+AND THE SECTION'S MOST IMPORTANT SINGLE FINDING, recorded because the popular accounts omit it: the molecular biology of critical-period reopening is robust and replicated in rodents, and its human translation record is close to zero. Fluoxetine was the most translatable candidate, it was properly tested in adults with amblyopia, and it failed. The one positive human result, valproate for absolute pitch, is a single small unreplicated study. The psychedelic work is entirely rodent.
+
+WHAT IT DELIBERATELY DOES NOT DO. It does not decide the framework question. It states which resolution it favours in one clearly marked paragraph and then says plainly that the choice belongs to the corpus's author and to the owner. The document is a proposal and says so on every relevant page.
+
+THE BANNER WAS REMOVED, which is how a file in this directory declares itself finished. That is now the convention: the banner goes on when work is cut off, and comes off only when a session has actually finished the file.
+
+
+ENTRY 5. 2026-08-12, AFTER THE SERVICE LIMIT RESET. THE INTERFACE EXCEPTION CATALOGUE - FINISHED.
+
+STATUS: COMPLETE. 1,963 lines. Banner removed.
+
+WHAT IT CLOSES. TFELOAOTHNAES.txt names a collection called the Interface Exception Catalogue and no such document existed - the phrase appeared nowhere else in the corpus. The seven Layer-Skipping Channels had one prose bullet each and were the ONLY first-class construct class here with no publish-and-subscribe interface, against 64 of 64 junctions, 71 of 71 motifs, 44 of 44 systems and 26 of 26 states elsewhere.
+
+WHAT IS NOW THERE. Nine full chapters - the seven channels plus the two minor within-layer shortcuts - each with ten aspect headers, a mode register, and a machine-parsable SYSTEMS INTERFACE block. Verified: nine SYSTEMS INTERFACE, nine SUBSCRIBES, nine PUBLISHES, ten TIME CONSTANTS, nine CONFIDENCE gradings, zero em-dashes, zero markdown characters.
+
+THE PART THAT MATTERS MOST IS WHAT IT REFUSED TO SPECIFY. Channels 1 and 7 originate in Layers 13 and 14, which have no catalogue in this corpus. Their SUBSCRIBES blocks say so IN THE BLOCK, name the source in plain language, and record that the interface is SPECIFIED AT ONE END ONLY. No construct was invented to fill the gap. Channels 4 and 6 forward-reference the Layers 1 to 3 outline by name while noting it still carries its own draft banner, so the reference is forward-looking rather than resolved. A closing note tallies the accounting: three fully specified, two half-specified, two forward-referenced. THAT HONEST HALF-SPECIFICATION IS WORTH MORE THAN A FABRICATED WHOLE ONE, and it is the reason this document was written at all.
+
+The two minor shortcuts are shown to FAIL the Re-encoding Test, so the corpus's ranking of them as minor is a judgement about TYPE rather than about importance - which the chapter says explicitly.
+
+Disagreements are reported rather than averaged throughout, and four slots are left explicitly unfilled rather than guessed. Channel 7 is graded CONTESTED, with the note that the negative literature is itself underpowered, so the grading is contested rather than refuted.
+
+
+================================================================================
+
+ENTRY 6. 2026-08-12. LAYERS 1 TO 3 - CHECKPOINTED AT ELEVEN CHAPTERS, AND BANNERED IN A SEPARATE COMMIT AFTER A MISTAKE.
+
+STATUS: INCOMPLETE. 11 of about 22 chapters.
+
+WHAT IS THERE. The Layer 1 and Layer 2 chapters, 1 through 11, from the photon to iodine, each with the full aspect-header set, a SYSTEMS INTERFACE block and a TIME CONSTANTS block. The quantitative content was checked against the published literature by web search and the checks are visible in the text.
+
+WHAT IS NOT. The Layer 3 chapters, 12 onward - water and the hydrophobic effect, the individual ions, the proton, adenosine triphosphate, the small-molecule neurotransmitters, the gasotransmitters. Research for several is complete in the session record; the prose is not written.
+
+A MISTAKE IS RECORDED HERE RATHER THAN QUIETLY CORRECTED. The manuscript was first committed WITHOUT a banner. The commit message said it was a checkpoint at eleven chapters, but the file itself carried no warning - so a reader opening the file would have met a provenance block announcing that it closes the Layers 1 to 3 gap, in the corpus's confident voice, with no indication that half of it was unwritten. That is precisely the failure this log's own rules exist to prevent, and it was made by the session that wrote those rules. A second commit added the banner. Both commits stand; the mistake is not squashed away, because a log that only records the tidy version is not doing its job.
+
+THE BANNER STATES ITS OWN REMOVAL TEST: the outline and the manuscript agreeing chapter for chapter. That is checkable in one command rather than by judgement, which is the form this project prefers.
+
+
+================================================================================
+
+WHAT REMAINS TRUE OF THIS DIRECTORY DESPITE THE GRANT
+
+The files here are still SOURCE, and where a summary written elsewhere in this repository disagrees with a file in here, THE FILE IN HERE WINS and the summary is the thing corrected.
+
+What the grant changed is who may add to them, not what they are for.
+
+And every block this build has added says so on its own face, so that the rule survives its own relaxation.
+
+
+END OF EDIT LOG.

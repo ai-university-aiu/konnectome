@@ -15433,6 +15433,37 @@ William Alexander and Joshua Brown's predicted response outcome (PRO) model trea
 The honest summary is that the dorsal ACC responds to conflict, errors, effort, surprise, volatility and foraging value, and the field has not yet agreed which of these is the primitive and which are consequences.
 
 
+52.2.5 An addition by the konnectome build: the confound critique of the congruency sequence effect
+
+THE FOLLOWING BLOCK IS NOT THE CORPUS'S OWN WRITING.
+
+It was added on 2026-08-12 by the konnectome build, under the owner's explicit authority of that date, by promotion from evidence record docs/evidence/01_conflict_control_coupling_gain_v1.txt , which recorded this gap when it was written at slice 58.
+
+It is additive: nothing above it has been altered, reworded or deleted, and where this block and the corpus's own text disagree, THE CORPUS LEADS and this block is the thing annotated.
+
+It is here because the corpus has a date on it and the science moved, which is the ordinary way a corpus goes out of date and is exactly what a promotion of this kind exists for.
+
+THE GAP THIS CLOSES, STATED PLAINLY. Section 52.2 presents the Gratton effect as a successful prediction of conflict monitoring theory, and section 52.2.4 tells the reader the theory has rivals. Neither tells the reader that the theory's principal empirical evidence is disputed at the level of the paradigm itself.
+
+NOTE FIRST THAT THE CORPUS IS NOT WRONG. Everything it says about the Gratton effect is accurate: the theory does predict the effect, and the effect is found. What was missing is a live dispute about what finding it means.
+
+THE CRITIQUE. James Schmidt, in "Evidence against conflict monitoring and adaptation: An updated review", Psychonomic Bulletin and Review, volume 26, issue 3, pages 753 to 771, 2019, argues that the two effects most often cited as evidence for conflict adaptation - the congruency sequence effect, also called the Gratton effect, and the proportion congruent effect - are confounded in their standard designs.
+
+The confounds he lists are feature repetition, contingency learning, and temporal learning: in a conventional design, trials that repeat a conflict condition also tend to repeat stimulus features, to carry a learnable stimulus-response contingency, and to occupy predictable positions in time.
+
+Each of those can produce the observed sequential pattern without any conflict-driven adjustment of control, which means the effect can be present and the theory's explanation of it absent.
+
+Schmidt's verdict is that when the confounds are removed the effects shrink substantially or disappear, and that the paradigm therefore cannot carry the evidential weight placed on it.
+
+WHAT THIS DOES NOT SETTLE, AND THE LIMIT IS AS IMPORTANT AS THE CLAIM. It does not show that cognitive control does not adapt, and it does not adjudicate between conflict monitoring and the three rivals named in 52.2.4 above. It shows that one widely used measurement of adaptation is a weaker measurement than it has been treated as. A reader should come away less confident in the paradigm and not more confident in any particular alternative.
+
+WHY IT MATTERS TO A SYSTEM BUILT FROM THIS CHAPTER. A builder reading 52.2 alone would take the Gratton effect as a settled acceptance test for a conflict loop, and would then have a passing test whose meaning is contested. Knowing that the test is confounded is what lets the builder state an acceptance criterion honestly rather than confidently.
+
+THE SOURCE, GIVEN IN FULL SO IT CAN BE CHECKED. James R. Schmidt, "Evidence against conflict monitoring and adaptation: An updated review", Psychonomic Bulletin and Review, volume 26, issue 3, pages 753 to 771, 2019, digital object identifier 10.3758/s13423-018-1520-z, read directly at pages 753 and 754 on 2026-08-11.
+
+END OF THE KONNECTOME ADDITION.
+
+
 52.3 Inhibition and interference control
 
 Stopping is the most intuitive form of control and the most studied.

@@ -1,0 +1,165 @@
+THIS DOCUMENT IS AN INCOMPLETE DRAFT AND MUST NOT BE READ AS A SOURCE.
+
+STOP HERE IF YOU ARE LOADING STATE OR DESIGNING A SLICE.
+
+Work on this file began on 2026-08-12 and was CUT OFF PART-WAY THROUGH by an account-level service limit, not by a decision. What follows is a fragment of an intended document, and the fragment is left on disk deliberately so the work can be resumed rather than restarted.
+
+WHAT IT WAS MEANT TO BE. It fills the DEVELOPMENT AND ASSEMBLY and DISEASES AND DISORDERS fields for Layer 6 and Layer 9, which Layers 7, 8, 10 and 11 all carry on every entry and which those two layers carry on none.
+
+WHAT IS ACTUALLY HERE, AND WHAT IS NOT. Only the front matter is drafted. Essentially none of the 85 non-neuronal cell entries, none of the roughly 123 Layer 9 regional entries, and none of the neuron-class treatments are written.
+
+WHY THIS BANNER EXISTS RATHER THAN THE FILE SIMPLY BEING DELETED. A partial document in this directory is the most dangerous object this project can produce: it carries a provenance block announcing that it closes a gap, it is written in the corpus's own confident voice, and a later session skimming it would take it for a finished source. This corpus's whole discipline is that a document which cannot be told from a finished one, by looking at it, is not doing its job. So the warning is placed where it cannot be missed, in the form whose failure mode is visible.
+
+UNTIL THE BANNER IS REMOVED BY A SESSION THAT ACTUALLY FINISHED THE FILE, NOTHING BELOW IS CITABLE, NOTHING BELOW OUTRANKS ANYTHING, AND NO NUMBER BELOW HAS BEEN VERIFIED AGAINST THE LITERATURE.
+
+The resumption plan is recorded in docs/neuroscience/EDIT_LOG.txt .
+
+================================================================================
+
+LAYERS 6 AND 9: DEVELOPMENT AND ASSEMBLY, AND DISEASES AND DISORDERS
+
+The Per-Type and Per-Region Developmental and Pathological Catalogues for the Cell and Region Layers
+
+A Companion Volume to the Layer 6 Catalogues and to the Layer 9 Regional Atlas
+
+Keyed, chapter by chapter and section by section, to LAYER_06_OTHER_CELLS_MANUSCRIPT (85 non-neuronal types), to the five-volume neuron catalogue (301 neuronal types), and to LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT (139 numbered regional headings in sections 2.1 through 2.11), in the Certified_Neuroscientist corpus of D. R. Dison, Founder, Artificial Intelligence University (AIU).
+
+Date of compilation: August 12, 2026.
+
+
+PROVENANCE, STATED BEFORE ANYTHING ELSE
+
+This companion was added on 2026-08-12 by the konnectome build, under the owner's explicit authority of that date.
+
+It is THIS BUILD'S WRITING, living in the corpus's own directory, and it does NOT outrank the corpus's own documents.
+
+Where this companion and a parent manuscript disagree, the parent manuscript is right and this file is wrong, and the correction is owed to this file.
+
+It is ADDITIVE.
+
+It alters nothing that the parent manuscripts say, it edits no existing file, and it removes nothing.
+
+It is keyed by the parent manuscripts' own chapter numbers and section numbers, in paste-ready form, so that a future merge is a mechanical splice and not an act of interpretation - exactly as the MODES companions were written and for exactly the same reason.
+
+Its content was checked against the published literature by web search on 2026-08-12, and the corpus outranks anything found that way.
+
+A citation in this file is a pointer to where the build looked, not a warrant that overrides the corpus.
+
+
+THE GAP THIS FILLS, WITH THE COUNTS ON THE DOCUMENT'S OWN FACE
+
+This companion fills the gap recorded in the konnectome gap analysis of 2026-08-12.
+
+The gap was established by counting headers, not by impression, and the counts are reproduced here so that the reason for this file is visible without leaving it.
+
+• The header DEVELOPMENT AND ASSEMBLY: appears 64 times in LAYER_07_SYNAPTICS_MANUSCRIPT, 71 times in LAYER_08_MICROCIRCUITS_MANUSCRIPT, and 44 times in LAYER_10_SYSTEMS_MANUSCRIPT.
+
+• The cognate header DEVELOPMENT AND LIFESPAN: appears 26 times in LAYER_11_GLOBAL_STATES_MANUSCRIPT and 18 times in LAYER_04_05_SLOW_VARIABLES_MANUSCRIPT.
+
+• The header DISEASES AND DISORDERS: appears 64, 71, 44 and 26 times in Layers 7, 8, 10 and 11 respectively.
+
+• BOTH HEADERS RETURN ZERO in LAYER_06_OTHER_CELLS_MANUSCRIPT.
+
+• BOTH HEADERS RETURN ZERO in every one of the five volumes of the neuronal manuscript.
+
+• BOTH HEADERS RETURN ZERO in LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.
+
+So the corpus's two largest catalogues, and its guiding book, are the three documents that cannot say where anything comes from or how it fails.
+
+That is 386 cell types and 139 regional headings carrying no statement of developmental origin, no birth date, no maturation trajectory, and no disease attribution.
+
+The absence is not an oversight of the writing but a consequence of the template.
+
+THE LAYER 6 CHAPTER TEMPLATE, VERSION 3, LISTS TWENTY-ONE ASPECT HEADERS, AND NOT ONE OF THEM IS DEVELOPMENTAL ORIGIN, LINEAGE, MATURATION, OR DISEASE.
+
+The twenty-one are WHAT IT IS AND WHAT IT DOES, STRUCTURE AND MORPHOLOGY, SIZE, STRUCTURAL SUBTYPES, WHERE IT LIVES, NUMBER, ELECTRICAL PROPERTIES, MODES AND MODE TRANSITIONS, SYNAPTIC CONNECTIONS, AXON CHARACTERISTICS, NEUROTRANSMITTERS, MYELINATION, METABOLIC DEMANDS, PLASTICITY, SUPPORT SYSTEM, HOW IT COLOURS ITS REGION, BEYOND INTEGRATE AND FIRE, SYSTEMS INTERFACE, ENGLISH READABLE CODE, CODE SAMPLE, and WHAT MAKES IT UNMISTAKABLE.
+
+A cell chapter written to that template therefore cannot express its own origin even if the author knows it, because there is no slot to put it in.
+
+A TEMPLATE REVISION IS THEREFORE OWED, AND IS NAMED HERE.
+
+A version 4 of the Layer 6 chapter template should add two aspects, DEVELOPMENT AND ASSEMBLY: and DISEASES AND DISORDERS:, positioned after PLASTICITY: and before SUPPORT SYSTEM:, matching the ordering already used in Layers 7, 8 and 10.
+
+Until that revision is made, the material in this companion has nowhere native to live, and this file is its holding place.
+
+
+THE SCOPE DECISION, STATED EXPLICITLY, WITH THE COUNTS
+
+This is the most important section in this document, and it is placed early so that no reader mistakes what has been done for what remains.
+
+Five hundred and twenty-five entries written well is beyond one document written in one pass.
+
+A companion that stubbed four hundred of them would be worse than the gap it filled, because a stub looks like coverage on a header count while carrying no information, and it would defeat the very audit that produced this file.
+
+So the scope was cut deliberately, and along a line chosen to keep every part of it honest.
+
+• COVERED IN FULL, ENTRY BY ENTRY: all 85 non-neuronal cell types of LAYER_06_OTHER_CELLS_MANUSCRIPT, Chapters 1 through 85.
+
+• COVERED IN FULL, ENTRY BY ENTRY: all 139 numbered regional headings of LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT sections 2.1 through 2.11.
+
+• COVERED BY CLASS, NOT INDIVIDUALLY: the 301 neuron chapters of the five volumes of the neuronal manuscript.
+
+The 301 neuron chapters are grouped into 27 developmental lineage classes, each class receiving one full treatment of both fields, followed by a keyed index that maps every one of the 301 chapters to its class.
+
+That is a complete and honest treatment at a coarser grain.
+
+It is defensible on the biology and not merely on the budget, because developmental origin is genuinely a property of the lineage rather than of the terminal type: the parvalbumin basket cell of the cortex and the parvalbumin basket cell of the hippocampus have the same origin story, the same specifying transcription factors, and very nearly the same disease profile, and writing that story twice would add length without adding knowledge.
+
+Where a neuron chapter departs from its class in a way that matters, the departure is noted against that chapter in the index rather than being silently absorbed.
+
+WHAT A FUTURE PASS STILL OWES, NAMED SO THAT IT CANNOT BE FORGOTTEN.
+
+• Per-chapter DEVELOPMENT AND ASSEMBLY and DISEASES AND DISORDERS blocks for each of the 301 neuron chapters individually, at the grain used here for the 85 non-neuronal types.
+
+The class treatment gives the lineage, the transcription factor cascade, the birth window and the class-level disease profile; what it cannot give is the per-type birth order within a class, the per-type maturation rate, and the per-type selective vulnerability, and those three are real and are missing.
+
+• The version 4 template revision described above, and the mechanical splice of this companion's blocks into the parent chapters once that revision exists.
+
+• A parallel companion for the Layer 6 MODES manuscript's own coverage, which was not examined in this pass.
+
+• Human-specific timings for the many entries below where only rodent data exist, which are marked in place and are not silently converted.
+
+
+HOW TO READ AN ENTRY
+
+Each entry carries exactly two blocks and nothing else, so that it is paste-ready.
+
+ENTRY: the chapter number and title, or the section number and title, exactly as the parent manuscript names it.
+
+DEVELOPMENT AND ASSEMBLY: the lineage and germ layer or progenitor domain, the transcription factors that specify it where known, when it is born and when it matures with real timings, whether it is generated after birth, whether it can be replaced, and the critical or sensitive period it participates in if any.
+
+DISEASES AND DISORDERS: the disorders in which the entry is primarily implicated, the mechanism of failure where known, whether the entry is a CAUSE, a CASUALTY, or a MARKER, and its selective vulnerability profile.
+
+
+THE CAUSE, CASUALTY, MARKER DISTINCTION, STATED ONCE
+
+This companion introduces a three-way distinction that the corpus should be able to make and currently has no vocabulary for, and it is defined here once rather than in each of the entries that use it.
+
+• A CAUSE is an entry whose own malfunction initiates the disorder.
+
+The astrocyte in Alexander disease is a cause: the mutation is in the astrocyte's own glial fibrillary acidic protein gene, and everything else in that disease is downstream.
+
+• A CASUALTY is an entry that is destroyed or disabled by a process originating elsewhere, and whose loss then produces the symptoms.
+
+The pancreatic beta cell in type 1 diabetes is a casualty: the mutation is not in the beta cell, the attack is immunological, and the beta cell's contribution is to be uniquely irreplaceable.
+
+• A MARKER is an entry whose change reliably indicates a disorder without either causing it or being the seat of its symptoms.
+
+The olfactory bulb in Parkinson's disease is close to a pure marker: olfactory loss precedes motor onset by years and is among the most reliable early signs, but anosmia is not what makes Parkinson's disease a movement disorder.
+
+The three are not exclusive and the interesting entries are the ones that are two of them at once, and where that is so it is said.
+
+An entry can also be a cause in one disorder and a casualty in another, and the classification below is therefore always made per disorder and never per entry.
+
+
+A NOTE ON WHAT IS NOT KNOWN
+
+Many of the non-neuronal cell types below have genuinely unsettled lineages, and many of the regions below have no clean disease attribution at all.
+
+Where that is so it is said by name, in the form the lineage of this cell is not settled, or there is no disorder for which this region is the primary seat, followed by a statement of what evidence would settle the question.
+
+No block in this file is filled with a plausible generic sentence in place of a fact.
+
+That rule was adopted because a companion whose five hundred entries all sound the same is one that was generated rather than researched, and it would be worse than the gap it fills, since it would close the audit that found the gap while leaving the corpus no better informed.
+
+The reader should expect the honest entries to be visibly shorter than the well-studied ones, and should read that unevenness as a feature.

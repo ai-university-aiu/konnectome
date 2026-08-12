@@ -13,12 +13,12 @@ Layer 12 is where cognition is EXPERIENCED: the layer of the behaving, experienc
 
 The layers-needed-for-cognition sanity check assigned Layer 12 a distinct role in the engineering programme: not a parts catalogue but the SPECIFICATION - the list of faculties the assembled machine must exhibit, against which every build is verified.
 
-This document is that specification: fourteen faculties, each stated as a capability, mapped to the Layer 10 system or coalition that implements it, and given acceptance criteria a test harness could run.
+This document is that specification: seventeen faculties, each stated as a capability, mapped to the Layer 10 system or coalition that implements it, and given acceptance criteria a test harness could run.
 
 The mapping principle, established in the Layer 10 volume: the faculties named at this layer each map to exactly one system or a small coalition, and to nothing smaller.
 
 
-THE FOURTEEN FACULTIES
+THE SEVENTEEN FACULTIES
 
 1. PERCEPTION.
 
@@ -135,13 +135,122 @@ Acceptance criteria: capacity-limited serial report; the subliminal-versus-repor
 An honest note, in the corpus tradition: this criterion specifies ACCESS consciousness - global availability - and takes no position on phenomenal experience, which remains beyond any acceptance test this document knows how to write.
 
 
+A NOTE ON THE PROVENANCE OF FACULTIES 15 THROUGH 17
+
+Faculties 15 through 17 were added on August 12, 2026, by the konnectome build, under the owner's explicit authority of that date.
+
+They are THIS BUILD'S WRITING, living in the corpus's directory, and they do NOT outrank the corpus's own original faculties 1 through 14, which were compiled on August 9, 2026, and which remain untouched in wording and in order.
+
+The count was repaired in the same change, which is why this document now reads seventeen where it formerly gave the smaller count of 14, and the count repair is the only alteration made to existing text.
+
+The material the three additions are built from is the corpus's own, cited by chapter: the cognitive map from the north-star manuscript's chapter 50.4 and its six sub-sections, metacognition from chapter 63.3 and its four sub-sections, and mental simulation from chapter 64.3 and its four sub-sections, resting on the cell chapters of the neuron catalogue (place cells 285, grid cells 286, head direction cells 287, border and boundary vector cells 288, speed cells 289, time cells 290, object vector cells 291) and on the Layer 10 system chapters named in each entry.
+
+The acceptance criteria were checked against the published literature by web search on August 12, 2026, and where the two disagree the corpus outranks anything found that way, the outside sources serving only to make the criteria testable and to keep the measures current.
+
+The reason they were added is a gap found by inspection of this document, which named 14 faculties and no more, so that a build could pass every one of those 14 suites while unable to navigate a space, unable to report what it does and does not know, and unable to simulate a future it has not experienced.
+
+The middle of those three omissions is the gravest, because calibrated confidence is the mechanism by which a system declines to act, so its absence from an acceptance catalogue is a safety property left untested rather than a capability merely left out.
+
+
+15. SPATIAL NAVIGATION AND THE COGNITIVE MAP.
+
+Capability: build, hold, and use an allocentric map of an environment - a map anchored to the world rather than to the body - such that position, heading, distance, and boundary are represented continuously, and such that novel routes can be computed rather than merely replayed.
+
+Implemented by: the hippocampal-entorhinal coalition inside the episodic memory system (Layer 10, Chapter 13), which the corpus describes as an elaboration of that navigation machinery, running on the map cell types of the neuron catalogue - place cells, grid cells, head direction cells, border and boundary vector cells, speed cells, time cells, and object vector cells, Chapters 285 through 291.
+
+Acceptance criteria: a place code that tiles the environment and survives darkness, showing that the map is not a re-derivation from current sensory input; path integration, so that after an outbound wander with landmarks withheld the system can produce a homing vector to the start; a metric, tested by the demand for a novel shortcut across ground never traversed and for a detour when a familiar route is blocked, since a system holding only a route chain can do neither; remapping, so that a second environment receives a statistically independent assignment of units to locations rather than a distortion of the first; landmark anchoring, so that rotating the cues rotates the map coherently and as a whole; and generalisation of the same machinery to a non-spatial ordered space, the corpus's strongest claim at chapter 50.4 being that the map is a general engine for relational and predictive structure and that navigation is therefore the template for thought rather than a special case of it.
+
+16. METACOGNITION AND CONFIDENCE.
+
+Capability: monitor its own cognition and report, on a scale that means the same thing from one occasion to the next, how likely each of its own outputs is to be correct, and let that report control what it does next - gather more evidence, ask, defer, or decline.
+
+Implemented by: the monitoring and control links between object level and meta level described at chapter 63.3, seated in the anterior prefrontal cortex, roughly Brodmann area 10, which the corpus reaches through the executive control system (Layer 10, Chapter 19) and the frontoparietal control network (Layer 10, Chapter 24), with the reportable content supplied by the global workspace dynamics (Layer 10, Chapter 44).
+
+Acceptance criteria: the suite must test CALIBRATION and not the mere production of a confidence number, because a system that reports high confidence uniformly will pass any test that only asks whether a number was produced.
+
+Specifically: reliability, measured by binning outputs by stated confidence and requiring that the empirical accuracy within each bin track the stated value across the whole range, so that the things called ninety percent likely are right about nine times in ten and the things called sixty percent likely are right about six times in ten.
+
+Scored by a proper scoring rule, the Brier score, and reported through its decomposition into reliability, resolution, and uncertainty, rather than by expected calibration error alone, since expected calibration error is not a proper scoring rule and has trivial minima at which a system with no accuracy at all scores as perfectly calibrated.
+
+Discrimination, measured as metacognitive sensitivity by the meta d prime statistic of signal detection theory - the first-order sensitivity d prime that an ideal observer would need in order to produce the confidence pattern actually observed - and normalised for first-order performance as the M ratio, meta d prime divided by d prime, where a value of one means the confidence signal is as informative as the evidence allows and a value below one means information available in the evidence was discarded on the way to the report.
+
+The uniform-confidence attack must be run as an explicit negative control: a stub that returns a constant high confidence must FAIL the suite, and it will, because a constant report has no resolution, so its Brier resolution term is zero and its M ratio is zero, whereas a merely accurate system passes only if its confidence separates its own hits from its own errors.
+
+Difficulty tracking, so that confidence falls when the items are made objectively harder without the system being told they are harder.
+
+Selective response, tested on a risk and coverage curve: when items are sorted by the system's own stated confidence and only the most confident fraction is answered, the error rate on the answered fraction must fall monotonically as coverage is reduced, and the system must abstain rather than answer when no option clears its threshold.
+
+And a stability check across domains, since the corpus reports at chapter 63.3 that metacognition has a domain-general component and a substantial domain-specific one, so a system calibrated on perception must be measured again on memory rather than assumed to transfer.
+
+An honest note, in the corpus tradition: this is the faculty by which a system DECLINES TO ACT, and its absence from a build is therefore a SAFETY property rather than a capability gap, because a system with every other faculty in this catalogue and no calibrated confidence will act at full commitment on its worst outputs and will have no internal signal by which anything could stop it.
+
+17. IMAGINATION, PROSPECTION, AND MENTAL SIMULATION.
+
+Capability: construct experiences it has not had - a future event, an imagined scene, a counterfactual version of something that did happen - by recombining stored fragments into a coherent novel whole, and use the construction to guide present choice.
+
+Implemented by: the default mode network (Layer 10, Chapter 21), which the corpus describes as publishing internally generated content whose output is constructive simulation, in a core network with the hippocampal machinery of the episodic memory system (Layer 10, Chapter 13), the corpus's position at chapter 64.3 being that simulation is not a separate faculty but memory operated in a different direction and that the brain does not have a separate organ for the future.
+
+Acceptance criteria: the suite must DISTINGUISH SIMULATING A FUTURE FROM RECALLING A PAST, since the same hippocampal machinery serves both, and a system that answers a prospection probe by retrieving a stored episode and relabelling it must fail.
+
+Specifically: novel recombination, tested by an experimental recombination protocol in which a person, a place, and an object drawn from three different stored episodes must be composed into one event that never occurred, with the composed event scored for coherence and for the presence of details from all three sources.
+
+Content scoring on the internal and external distinction of the autobiographical interview, where internal details are the episodic content of the event itself - what happened, who was there, where and when - and external details are semantic commentary, related facts, and drift to other events, with the requirement that a simulated future carry a comparable count of internal details to a remembered past, since the corpus's evidence is that damage to the constructive machinery shows up as fragmented and spatially incoherent description rather than as silence.
+
+A leakage test, in which the elements offered for simulation are drawn from episodes the system holds, and any output that reproduces one whole stored episode rather than a recombination is scored as a failure of prospection even though it is a success of retrieval.
+
+Counterfactual construction with a consequence, requiring not only the alternative outcome but the comparison that separates regret from disappointment - the alternative must be one the system's own earlier choice could have produced - and requiring that the comparison feed learning, so that one outcome yields more than one lesson.
+
+Simulation used for choice, tested by a case in which the correct action depends on an outcome the system has never observed, so that only a run-forward model can supply the answer.
+
+And cross-modal construction, since the corpus at chapter 64.3 treats imagery as spanning vision, hearing, smell, touch, and movement rather than sight alone.
+
+An honest note, in the corpus tradition: the corpus records at chapter 64.3 that people with aphantasia, who report no conscious depictive imagery at all, nonetheless perform normally on many imagery tasks, so what these criteria test is the constructive computation and its products and not the vividness of any accompanying experience, which lies beyond this document as phenomenal experience does at faculty 14.
+
+
 HOW TO USE THIS SPECIFICATION
 
 Each faculty is an acceptance suite: implement the Layer 10 coalition from the catalogues, schedule it under Layer 11, then test the capability against the criteria.
 
 The build order suggested by the dependency structure: perception and motor first, then attention and working memory, then the memory pair, then valuation and executive control, then language and social cognition, with learning and the workspace criterion tested throughout.
 
-The specification is complete when a single running instance passes all fourteen suites in one continuous session including at least one full offline consolidation cycle.
+The specification is complete when a single running instance passes all seventeen suites in one continuous session including at least one full offline consolidation cycle.
+
+
+SOURCES CONSULTED FOR FACULTIES 15 THROUGH 17
+
+The corpus's own material, read in full before writing, and outranking everything below.
+
+• THE_NEUROSCIENCE_OF_COGNITION_MANUSCRIPT.txt, chapter 50.4, the cognitive map, sub-sections 50.4.1 place cells, 50.4.2 grid cells and their metric, 50.4.3 head-direction, border, boundary vector, object vector and speed cells, 50.4.4 time cells, 50.4.5 generalisation to non-spatial and conceptual spaces, 50.4.6 successor representations and predictive maps. Read August 12, 2026.
+
+• THE_NEUROSCIENCE_OF_COGNITION_MANUSCRIPT.txt, chapter 63.3, metacognition, sub-sections 63.3.1 confidence, calibration and metacognitive efficiency, 63.3.2 anterior prefrontal cortex and metacognitive ability, 63.3.3 domain-general and domain-specific metacognition, 63.3.4 metacognition in learning, control allocation and social communication. Read August 12, 2026.
+
+• THE_NEUROSCIENCE_OF_COGNITION_MANUSCRIPT.txt, chapter 64.3, mental simulation, sub-sections 64.3.1 episodic future thinking and the constructive simulation hypothesis, 64.3.2 mental imagery across modalities and aphantasia, 64.3.3 counterfactual thinking and regret, 64.3.4 simulation shared with memory. Read August 12, 2026.
+
+• neuronal_manuscript_vol5of5_v2.txt, Chapters 285 through 291, the map cell types: place cells, grid cells, head direction cells, border and boundary vector cells, speed cells, time cells, object vector cells. Read August 12, 2026.
+
+• LAYER_10_SYSTEMS_MANUSCRIPT.txt and LAYER_10_SYSTEMS_OUTLINE.txt, Chapter 13 the episodic memory system, Chapter 19 the executive control system, Chapter 21 the default mode network, Chapter 24 the frontoparietal control network, Chapter 44 the global workspace dynamics. Read August 12, 2026.
+
+The published literature, checked by web search on August 12, 2026, and used only to make the acceptance criteria testable.
+
+• Maniscalco and Lau, A signal detection theoretic approach for estimating metacognitive sensitivity from confidence ratings, Consciousness and Cognition, 2012, consulted at brianmaniscalco.org and columbia.edu, accessed August 12, 2026. Checked: the definition of meta d prime as the first-order sensitivity an ideal observer would need to produce the observed confidence pattern, and the M ratio as meta d prime divided by d prime with a value of one meaning confidence is as informative as the evidence allows.
+
+• Fleming, HMeta-d, hierarchical Bayesian estimation of metacognitive efficiency from confidence ratings, Neuroscience of Consciousness, 2017, academic.oup.com, accessed August 12, 2026. Checked: that the M ratio is the standard normalisation for first-order performance.
+
+• Fleming, Weil, Nagy, Dolan and Rees, Science, 2010, and Fleming and colleagues, Brain, 2014, as cited by the corpus at 63.3.2, accessed August 12, 2026. Checked: the anterior prefrontal, roughly Brodmann area 10, localisation used in the Implemented by line of faculty 16.
+
+• The proper-scoring-rule literature on the Brier score and its decomposition into reliability, resolution and uncertainty, and on expected calibration error, consulted through emergentmind.com and the arXiv preprint literature, accessed August 12, 2026. Checked: that reliability measures the distance between stated confidence and true frequency, that resolution measures how far predictions depart from the base rate, and critically that expected calibration error is NOT a proper scoring rule and has trivial minima at which a system with zero accuracy scores as perfectly calibrated, which is the reason faculty 16 requires a proper score.
+
+• The selective prediction and abstention literature on risk and coverage curves, consulted through emergentmind.com and the arXiv preprint literature, accessed August 12, 2026. Checked: that risk and coverage curves plot error rate against the answered fraction when items are sorted by self-reported confidence, which is the form of the selective-response criterion in faculty 16.
+
+• Addis, Wong and Schacter on age-related changes in the episodic simulation of future events, Psychological Science, 2008, and the experimental recombination task of Addis, Musicaro, Pan and Schacter, Psychology and Aging, 2010, consulted through journals.sagepub.com and springer.com, accessed August 12, 2026. Checked: the experimental recombination protocol and the internal-versus-external detail scoring of the autobiographical interview, where internal details are episodic and external details are semantic commentary.
+
+• Schacter and Madore on identifying and characterising the constructive episodic simulation account, consulted at harvard.edu, accessed August 12, 2026. Checked: that memory and imagination share a core network, which is why faculty 17 requires a test that separates them.
+
+• Zeman and colleagues on aphantasia and hyperphantasia, and the later prevalence work reported in Cortex and in Consciousness and Cognition, consulted through sciencedirect.com and cell.com, accessed August 12, 2026. Checked: the biobank figures near 0.7 percent for extreme aphantasia and near 2.5 percent for extreme hyperphantasia at the floor and ceiling of the Vividness of Visual Imagery Questionnaire (VVIQ), which agree with the corpus at 64.3.2, and the finding that people with aphantasia perform normally on many imagery tasks, which is the basis of the honest note at faculty 17.
+
+• The Morris water maze literature on probe trials, path length, homing vectors, detours and shortcuts, consulted through conductscience.com, jove.com and biorxiv.org, accessed August 12, 2026. Checked: that the probe trial removes the goal and scores time in the target region, and that trajectory, hesitation and detour carry the evidence for a map rather than a route chain, which is the basis of the shortcut and detour criterion in faculty 15.
+
+Where any source above disagrees with the corpus, the corpus governs.
 
 
 END OF SPECIFICATION

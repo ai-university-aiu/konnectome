@@ -1,0 +1,128 @@
+DOCS / NEUROSCIENCE - THE LIBRARY REPAIR HAND-OFF
+
+Written 2026-08-12, at the end of the session that carried out the first repairs to this directory.
+
+
+WHY THIS FILE IS NOT CALLED A CONTEXT HAND-OFF, WHICH MATTERS MORE THAN IT SOUNDS
+
+It is deliberately NOT named with the string Context_Hand-Off, and the reason is mechanical rather than stylistic.
+
+The Twenty-Second Commandment's corpus update run fires every tenth hand-off, and the cadence is evaluated by counting, under docs, every file whose name contains the string Context_Hand-Off and ends in .txt . The Commandment states the exact find command; it is paraphrased here rather than quoted because the glob character it uses is a markdown character this corpus's house style forbids, which is itself a small illustration of the point below.
+
+A file in this directory carrying that string in its name would be counted by that command and would silently shift the trigger by one, forever. The count is currently forty-two, and the next run is due at fifty.
+
+So this is a WORK hand-off for one directory, not a session hand-off under the Twenty-Third Commandment. The session hand-off lives, as it always does, as the single file in docs/start-here/ .
+
+THE GENERAL RULE THIS ILLUSTRATES, AND IT IS WORTH CARRYING: in a repository where a filename glob drives a scheduled act, a filename is not a label. It is a piece of executable state, and naming a new file carelessly is a way of editing a schedule without noticing.
+
+
+WHAT HAPPENED IN THIS SESSION, IN ONE PARAGRAPH
+
+The owner granted full edit authority over this directory, which had been read-only source for the whole life of the project, and asked for a gap analysis to be implemented. Twelve gaps had been identified and verified by grep. Work began on eight documents at once, was cut off part-way by an account-level service limit, and resumed after the limit reset. Four documents are finished. Two are part-written and carry banners. Four were never started. Every edit is recorded in EDIT_LOG.txt in this directory, which is the authoritative record and should be read before this file.
+
+
+THE STATE OF EVERY FILE THIS SESSION TOUCHED
+
+FINISHED, NO BANNER, SAFE TO READ AND CITE:
+
+• THE_INTERFACE_EXCEPTION_CATALOGUE.txt - 1,963 lines. New. Gives the seven Layer-Skipping Channels the publish-and-subscribe interface they never had, plus the two minor within-layer shortcuts. Nine interface blocks, nine confidence gradings.
+
+• THE_ONTOGENETIC_AXIS.txt - 960 lines. New. A PROPOSAL, not a ruling: the framework question of where development belongs is the corpus author's and the owner's to settle, and the document says so on its face.
+
+• LAYER_12_FACULTY_SPECIFICATION.txt - edited. Three faculties added (navigation, metacognition, imagination and prospection) and the count repaired from fourteen to seventeen. Nothing in the original fourteen was reworded.
+
+• LAYER_10_SYSTEMS_ADDENDUM_45_TO_48.txt - 1,730 lines. New. Supplies systems 45 to 48: cerebrovascular, clearance, neuroimmune and nociceptive. Entry 48 discharges a promise the corpus made and did not keep - its own Chapter 3 states that pain's affective branch is "given its own address", and no such address existed among the forty-four. Its CHAIN AUDIT names five honest gaps in the corpus's own parts roster rather than inventing entries to fill them, the real one being that no Layer 6 entry exists for the meningeal lymphatic endothelial cell. It reports the glymphatic dispute rather than settling it, and its code sample prints the majority and contested figures side by side and refuses to average them.
+
+• THE_NEUROSCIENCE_OF_COGNITION_MANUSCRIPT.txt and its OUTLINE - edited. A new section 52.2.5 promoted from evidence record 01, carrying the confound critique of the congruency sequence effect. The outline gained a matching line, because the outline and manuscript agreeing is a verified structural property of that pair and must not be broken by an addition.
+
+PART-WRITTEN, BANNERED, NOT SAFE TO CITE:
+
+• LAYER_01_02_03_SUBSTRATE_MANUSCRIPT.txt - 3,786 lines, 17 chapters written of about 22 in its own outline. Layers 1 and 2 are complete; the Layer 3 chapters are partly written. Its companion LAYER_01_02_03_SUBSTRATE_OUTLINE.txt also still carries a banner.
+  REMOVAL TEST: the outline and the manuscript agree chapter for chapter.
+
+• LAYER_06_09_DEVELOPMENT_AND_DISEASE_COMPANION.txt - front matter only. Essentially nothing written.
+
+
+THE BANNER CONVENTION, WHICH IS THIS SESSION'S MAIN PROCEDURAL LEGACY
+
+A part-written file in this directory carries a banner at the very top stating that it is an incomplete draft, that it must not be read as a source, what is present, what is absent, and its own removal test.
+
+THE BANNER GOES ON AT THE MOMENT OF CHECKPOINT, NOT AT THE MOMENT OF NOTICING. That rule exists because this session broke it once: the Layers 1 to 3 manuscript was committed without a banner, with only the commit message noting it was partial, and a reader opening the file would have met a provenance block announcing that it closes a gap, in the corpus's confident voice, with no warning. A second commit fixed it. Both commits stand and the edit log records the error rather than squashing it.
+
+THE CONVENTION HAS ALREADY PROVED ITSELF ONCE, AND THAT IS WORTH RECORDING. The Layer 10 addendum was bannered by one session with the removal condition "chapter 48 and the chain audit are written". A second, concurrent session wrote both, checked the condition, and removed the banner on its own authority without needing to ask anyone what the file's status was. That is exactly what a machine-checkable removal test is for, and it is the argument for never writing a banner whose condition is a matter of opinion.
+
+THE REMOVAL TEST IS ALWAYS SOMETHING CHECKABLE BY GREP OR BY A COUNT, never a judgement. "Agrees chapter for chapter" and "the chain audit exists" are tests a tired session can run in one command. "Looks finished" is not a test.
+
+WHY A PARTIAL FILE HERE IS MORE DANGEROUS THAN A MISSING ONE. It carries a provenance block announcing that it closes a gap. It is written in the corpus's own voice, which is confident by design. And this directory is SOURCE, so a later session is entitled to build on anything in it without re-deriving it. A document that cannot be told from a finished one by looking at it is not doing its job as a document.
+
+
+WHAT IS STILL OWED, IN THE ORDER I WOULD DO IT
+
+1. THE REMAINING LAYER 3 CHAPTERS of the substrate manuscript, then remove both banners on that pair.
+
+2. A LAYER 9 TIME CONSTANTS COMPANION. The guiding book carries ZERO time constants across 123 regional entries, while Layers 7, 8, 10 and 11 carry one on every entry. Method: every value marked CITED, DERIVED with its working shown, LITERATURE, or REFUSED ALOUD. A document that manages to state a timescale for all 123 entries is a document that invented some, and refusing thirty honestly is a better document than inventing five.
+
+3. A LAYER 9 PERIPHERAL AND EFFERENT EXPANSION, with a roster of the twelve cranial nerves, which this corpus has nowhere. Measured disproportion: cortex 1,204 lines, spinal cord 32, enteric nervous system 16.
+
+4. THE LAYER 6 AND 9 DEVELOPMENT AND DISEASE COMPANION. The largest item at 509 entries, and the one that most needs its scope stated honestly on its own face. Cover the 85 non-neuronal cells and the 123 regions individually; cover the 301 neurons BY LINEAGE CLASS with a keyed index, which is a complete treatment at a coarser grain rather than 301 thin ones.
+
+5. A CROSS-WALK from the cell catalogue to the public transcriptomic censuses.
+
+
+THE RESEARCH THAT EXISTS AND IS NOT ON DISK - READ THIS BEFORE RE-RUNNING ANYTHING
+
+A large amount of literature research was completed in this session for chapters that were never written. It is in the session transcript and NOT in this repository.
+
+DO NOT TRUST A HALF-REMEMBERED SUMMARY OF IT. Re-run the searches. A partially transcribed research dump would be exactly the same hazard as a partially written chapter, one level down.
+
+What it covered, so a future session knows the ground has been walked: water and the hydrophobic effect; sodium, potassium, calcium, magnesium, chloride, zinc, iron and copper; the proton and pH; adenosine triphosphate; the small-molecule neurotransmitters; the gasotransmitters; volume transmission and the circumventricular organs; the neuroimmune and vagal routes; critical periods; the developmental timetable.
+
+
+THE TRAPS THIS RESEARCH FOUND, WHICH ARE THE MOST VALUABLE THING IN THIS FILE
+
+These are specific, checked corrections to claims that are widely repeated and wrong. Several would have entered this corpus if the searches had not been run.
+
+• "The brain matures at 25." Not supported by any study. It is an artefact of early imaging cohorts stopping recruitment at 20 to 25, so trajectories were still changing at the edge of the data. Three independent methods converge on the late twenties to early thirties instead.
+
+• "Acetylcholinesterase is the fastest known enzyme." Contradicted. Catalase and carbonic anhydrase both have far higher turnover numbers.
+
+• "The tyrosine of the potassium channel GYG signature is required for selectivity." Contradicted by mutagenesis in 1994. Non-conservative substitution leaves selectivity intact.
+
+• "One receptor produces a hundred-million-fold amplification." Misattributed provenance - it is a whole-pathway hepatic glycogenolysis figure - and incompatible with modern nanodomain measurements showing single-molecule copy numbers within 60 nanometres of a receptor.
+
+• "Nitric oxide signals over 200 micrometres and reaches two million synapses." Publicly revised downward by its own original author, after the source strength it assumed was found to be about five orders of magnitude too large.
+
+• "Brain hydrogen sulphide is 50 to 160 micromolar." Overestimated by roughly three orders of magnitude; the true free concentration is about 15 nanomolar. The old figure came from an assay whose strong-acid step liberates sulphur from iron-sulphur clusters and counts it as free.
+
+• "The human dorsal raphe has 235,000 serotonergic neurons." A misreading. 235,000 is the TOTAL neuron count; the serotonergic count is 165,000.
+
+• "Descarries showed 95 percent of cortical serotonin varicosities are asynaptic." Superseded by the same laboratory, which revised the figure to about 38 percent using serial sections. Both numbers are in circulation and the old one is still quoted.
+
+THE PATTERN UNDERNEATH ALL OF THESE, AND IT IS THE REASON TO KEEP DOING THE SEARCHES. In case after case a famous constant was wrong by orders of magnitude for one to two decades, the correction came from the original author or from a better assay, and by then a generation of downstream work had been designed around the wrong number. A corpus that does not re-check its constants inherits every one of those errors, with a citation attached that makes them look checked.
+
+WHAT THE SEARCHES ALSO DO IS TELL YOU WHERE NOT TO SPEND EFFORT. Several apparent disagreements dissolved on inspection - the brain capillary surface area figures of 12, 15, 20, 21 and 25 square metres are all the same per-gram density multiplied by a different assumed brain mass, and the whole spread is bracketed by 14 to 28 square metres. Finding that out is as valuable as finding an error.
+
+
+GOVERNANCE, RESTATED BECAUSE THE GRANT RELAXED IT
+
+The owner granted full edit authority over this directory on 2026-08-12 and asked for an edit log. That grant is real and this session used it.
+
+THREE RULES WERE KEPT ANYWAY, and they are the assistant's own rather than the owner's conditions, adopted because the grant removes the pause in which somebody else would have enforced them.
+
+ONE. ADDITIVE ONLY, unless the edit is a correctness repair - a case where a source already says what the answer should be and the file says something else. Nothing the corpus already said has been altered, reworded or deleted.
+
+TWO. PROVENANCE ON THE FACE OF EVERY ADDED BLOCK. A reader must be able to tell, at a glance and without leaving the page, which sentences are the corpus's and which are this build's. Every addition states that it is konnectome's writing, states the date, and states that the corpus outranks it where the two disagree.
+
+THREE. NO INVENTED VALUES. Where a quantity is not well established the text says so and says what would settle it. Several slots are deliberately left empty in the finished documents for exactly this reason.
+
+AND THE THING THE GRANT DID NOT CHANGE: these files are still SOURCE. Where a summary written elsewhere in this repository disagrees with a file in here, the file in here wins and the summary is corrected. What changed is who may ADD to them, not what they are for.
+
+
+THE ONE PIECE OF ADVICE I WOULD GIVE A SESSION PICKING THIS UP
+
+The temptation in this work is to finish documents. Resist it in one specific place: when a document reaches the point where the next paragraph would require a number nobody has measured, the correct output is a refusal with its reason, not a plausible figure.
+
+The Interface Exception Catalogue is the worked example. Two of its seven channels originate in layers this corpus does not catalogue, so their interfaces are specified AT ONE END ONLY and say so in the block. That half-specification is the most valuable thing in the document, because it is the part a later session can trust.
+
+
+END OF LIBRARY REPAIR HAND-OFF.
