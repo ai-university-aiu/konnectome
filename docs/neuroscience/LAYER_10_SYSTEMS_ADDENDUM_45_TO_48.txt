@@ -6,9 +6,11 @@ Writing was still in progress when this checkpoint was committed. Three of the f
 
 WHAT IS PRESENT: system 45, the cerebrovascular system; system 46, the clearance system; and system 47, the neuroimmune system. Each carries the parent manuscript's own aspect-header set, a mode register, and a machine-parsable SYSTEMS INTERFACE block with real searched time constants.
 
-WHAT IS ABSENT, AND IT IS THE ONE THAT CARRIES THE MOST WEIGHT: system 48, the nociceptive system. That entry exists to discharge a promise the corpus made and did not keep - the Layer 10 somatosensory entry states that pain's affective branch is "given its own address", and no such address exists among the forty-four. Until 48 is written, that promise is still outstanding and this document has not done the thing it was created to do.
+UPDATED AT A LATER CHECKPOINT: ALL FOUR SYSTEMS ARE NOW WRITTEN. System 45, the cerebrovascular system; 46, the clearance system; 47, the neuroimmune system; and 48, the nociceptive system, which discharges the promise the corpus made and did not keep - the Layer 10 somatosensory entry states that pain's affective branch is "given its own address", and until now no such address existed among the forty-four.
 
-THE CHAIN AUDIT, which lists for each system the Layer 6 cells, Layer 7 junctions and Layer 8 motifs it is assembled from, is also not yet written. That part is the document's own proof that it ASSEMBLED existing corpus parts rather than inventing new ones, so its absence matters more than its length suggests.
+WHAT IS STILL ABSENT IS THE CHAIN AUDIT. This document's own front matter promises a closing part listing, for each of the four systems, exactly which Layer 6 cells, Layer 7 junctions and Layer 8 motifs it is assembled from, cited by their existing chapter numbers. That part is not written.
+
+THAT ABSENCE MATTERS MORE THAN ITS LENGTH SUGGESTS, which is why the banner stays for it alone. The chain audit is the document's own proof that it ASSEMBLED parts the corpus already contains rather than inventing four new systems. Without it, a reader has the assembler's word and no way to check it, and this corpus's whole discipline is that a claim a reader cannot check is a claim that has not been made properly. A document that promises that proof in its front matter and does not deliver it is in worse standing than one that never promised it.
 
 WHY THIS BANNER EXISTS RATHER THAN THE FILE BEING WITHHELD. A partial document in this directory is the most dangerous object this project can produce: it carries a provenance block announcing that it closes a gap, it is written in the corpus's own confident voice, and a later session skimming it would take it for a finished source. The three systems below are good and are worth keeping; the file as a whole does not yet do what its own front matter says it does.
 
@@ -1069,3 +1071,388 @@ for peripheral, cortisol, hours in [(0.1, 0.3, 4), (0.9, 0.3, 4), (0.9, 0.05, 48
 WHAT MAKES IT UNMISTAKABLE:
 
 The only system in the catalogue that can rewrite the wiring of every other system, that holds a memory in cells that are not neurons, and whose most familiar output is not a perception or a movement but a change in what the organism wants.
+
+
+CHAPTER 48. THE NOCICEPTIVE SYSTEM (The nocicepto-spino-limbic alarm chain) (The Two-Channel Alarm) (COG)
+
+This chapter discharges a promise the corpus made and did not keep.
+
+The outline entry for the somatosensory system says that touch, proprioception, temperature, and pain run in parallel labelled lines "with pain's affective branch given its own address", and the manuscript's Chapter 3 says that "pain's emotional sting has an address of its own", and no such address exists among the forty-four systems.
+
+That address is Chapter 48, and this entry exists so that the corpus's statement and the corpus's delivery agree.
+
+Nothing in Chapter 3 is altered by this: Chapter 3 remains the authority on the somatosensory chains as a whole, this chapter is the promised branch treated at length, and where the two documents differ Chapter 3 leads.
+
+Put your hand on something hot and your arm is already moving before you know why, and the knowing, when it arrives, arrives twice, first as a sharp bright fact with an exact address and then, a second later, as a dull spreading insistence that will not be ignored.
+
+Two-Channel names the architecture, the single most important fact about this system: one input, two separable products, where it is and how much it matters.
+
+Alarm names the trade, an interrupt service with the authority to seize the whole cognitive economy, and with a gain that is itself learned.
+
+WHAT IT IS AND WHAT IT ACCOMPLISHES:
+
+The nociceptive system is the chain from the nociceptor terminal in skin, muscle, joint, and viscus, through the dorsal root ganglion into the dorsal horn of the spinal cord, up two anatomically and functionally separable ascending channels, and into a descending control loop that reaches back down to the first synapse.
+
+The lateral channel runs spinothalamic to the ventroposterior lateral thalamus and thence to the primary and secondary somatosensory cortices, and it computes the sensory-discriminative product: where, how much, what kind.
+
+The medial channel runs spinoparabrachial and spinoreticular to the parabrachial nucleus, amygdala, hypothalamus, and medial thalamus, and thence to the insula and anterior cingulate cortex, and it computes the affective-motivational product: how bad this is and what must now be done about it.
+
+What it accomplishes is not the production of pain but the production of nociception, the neural encoding of noxious events, which the brain then may or may not turn into pain, and holding that distinction is the whole intellectual content of this chapter.
+
+It carries the (COG) tag without argument: the International Association for the Study of Pain's revised 2020 definition makes pain an unpleasant sensory and emotional experience, notes explicitly that pain cannot be inferred solely from activity in sensory neurons, and states that individuals learn the concept of pain through their life experiences, which places the output of this system squarely inside cognition.
+
+THE DISTINCTION THIS CHAPTER TURNS ON:
+
+Nociception is the neural process of encoding noxious stimuli, and it is measurable in a nerve, in a spinal cord, and in an anaesthetised animal.
+
+Pain is an unpleasant sensory and emotional experience associated with, or resembling that associated with, actual or potential tissue damage, and it is a psychological state that no electrode reads directly.
+
+Nociception can occur without pain, which is what surgical anaesthesia is, and pain can occur without nociception, which is what phantom limb pain and much chronic pain are.
+
+The corpus therefore names this system the nociceptive system and not the pain system, deliberately, and the reader should treat any sentence in this chapter that appears to equate the two as an error to be read against this section.
+
+THE CHAIN OF STATIONS (THE LAYER 9 ROSTER):
+
+• The nociceptor terminal, a free nerve ending in skin, muscle, joint, or viscus, expressing transducing ion channels of which the capsaicin and heat receptor is the best known.
+
+• The nociceptive Schwann cell mesh in the skin, the corpus's Layer 6 chapter 28, a glial partner that is itself mechanosensitive and participates in transduction, which is a recent and genuinely surprising finding.
+
+• The dorsal root ganglion, the cell body village that owns every one of these fibres, and the site where sensitisation is written into gene expression.
+
+• The dorsal horn of the spinal cord, laminae one, two, and five, the gate, and the single most important processing station in the chain.
+
+• The two ascending channels, crossing within one or two segments and climbing the contralateral anterolateral cord as one anatomical bundle that separates by target.
+
+• The lateral targets, ventroposterior lateral thalamus, primary and secondary somatosensory cortices, and posterior insula.
+
+• The medial targets, parabrachial nucleus, amygdala, hypothalamus, medial thalamus, anterior insula, and anterior cingulate cortex.
+
+• The descending control stations, the periaqueductal grey and the rostral ventromedial medulla, plus the noradrenergic pontine cell groups, projecting back to the dorsal horn.
+
+• The prefrontal and rostral anterior cingulate stations, which set expectation and are where the placebo effect is generated.
+
+THE PATHWAYS AND INTERFACES:
+
+The transduction interface is a family of ion channels rather than a specialised organ, and this is why nociceptors are called free endings: they are bare, and the specialisation is molecular rather than structural.
+
+The first synapse in the dorsal horn is the corpus's Layer 7 entry 13, the peptidergic dense-core vesicle synapse, using substance P and calcitonin-gene-related peptide alongside glutamate, and it is this peptidergic character that gives the pain synapse its long time course and its capacity for wind-up.
+
+The two ascending channels share one white matter bundle and separate only at their destinations, which is why a single spinal lesion damages both together and why they can nonetheless be dissociated pharmacologically and by lesion higher up.
+
+The descending interface reaches back to the same first synapse it began at, closing a loop that spans the entire nervous system, and its terminal effectors are opioid, serotonergic, and noradrenergic, which is why three quite different drug classes all produce analgesia.
+
+The affective channel's interface with the amygdala and hypothalamus is also an autonomic and endocrine one, which is why pain raises heart rate, blood pressure, and cortisol before it is reported.
+
+THE TRANSFORMATION ALONG THE CHAIN:
+
+At the nociceptor terminal the representation is a transduction event, a channel opened by heat, by acid, by mechanical distortion, or by an inflammatory mediator, with no interpretation whatever, and the terminal's threshold is already modulable by the local chemical soup.
+
+At the axon the representation is a firing rate on one of two fibre classes with radically different conduction velocities, thinly myelinated A-delta fibres at roughly 5 to 30 metres per second and unmyelinated C fibres at roughly 0.5 to 2 metres per second, and this single anatomical fact produces the familiar double wave of a stubbed toe.
+
+At the dorsal horn the representation is gated and can be amplified: Melzack and Wall's gate control account of 1965 describes inhibition of the thin-fibre line by thick-fibre touch input, which is the mechanism of rubbing an injury, and wind-up describes the opposite, a progressive increase in output to a constant input rate, which is the first step toward central sensitisation.
+
+At the split into two channels the representation forks, and this is the transformation that names the system: the same afferent barrage is now being redescribed twice, once into a somatotopic intensity map and once into an aversive value, and these two products can be independently amplified, independently blocked, and independently lost.
+
+At the lateral targets the representation is a body-mapped intensity with a quality label, and a patient with a lesion here loses the ability to say where and how much while continuing to find the stimulus horrible.
+
+At the medial targets the representation is an aversive value with an autonomic and motivational consequence, and the classical cingulotomy and morphine observations describe the mirror-image dissociation: the patient reports the pain is still there but that it no longer troubles them, which is the cleanest evidence in all of neuroscience that these are two products and not one.
+
+At the prefrontal and rostral cingulate stations the representation acquires expectation, and the output of the whole system becomes a function of what the person believes is about to happen, which is where a nociceptive system finishes and a pain system begins.
+
+THE MOTIFS IT RUNS (THE LAYER 8 INVENTORY):
+
+The dorsal horn gate runs motif 12, presynaptic inhibition, the input tap, with thick-fibre touch input as the tapping signal, and motif 7, feedforward inhibition, through the inhibitory interneurons of lamina two.
+
+The withdrawal reflex runs motif 44, the polysynaptic withdrawal arc with crossed extension, which is why the arm moves before the knowing arrives.
+
+The descending control runs motif 19, gain modulation, with endogenous opioid interneurons as the multiplier, and the corpus's Chapter 3 already names this as the catalogue's gain-control loop with opioid interneurons as effector.
+
+Wind-up and central sensitisation run motif 6, recurrent mutual excitation within a population, operating on a synapse whose peptidergic character gives it the necessary time constant.
+
+The expectation arm runs motif 38, the predictive coding motif, with the descending opioid system as the mechanism by which a prediction changes the input it is a prediction about.
+
+TEMPORAL SIGNATURE:
+
+First pain on A-delta fibres arrives at cortex within a few hundred milliseconds and second pain on C fibres more than a second later, and the corpus's Chapter 3 gives these as about 0.3 seconds versus more than 1 second, which this chapter adopts unchanged.
+
+The withdrawal reflex closes at the spinal cord in tens of milliseconds and is complete before either wave arrives.
+
+Wind-up develops over seconds of repeated stimulation at frequencies above about 0.3 hertz, and central sensitisation develops over minutes and can persist for months, which Chapter 3 gives as minutes to months and this chapter adopts unchanged.
+
+Placebo analgesia develops over the minutes required to install an expectation and can be abolished within minutes by naloxone, which is a remarkably fast on and off switch for a psychological manipulation.
+
+CAPACITY AND LIMITS:
+
+The gain of this channel can swing more than tenfold in either direction, which Chapter 3 notes no other sense permits, and that swing is this system's defining capacity and its defining vulnerability.
+
+Its spatial resolution is poor and deliberately so on the affective side: visceral pain is famously badly localised and refers to distant dermatomes, because the medial channel does not need an address to do its job.
+
+Its worst limit is that it has no mechanism for reporting the absence of damage, so it cannot correct a false alarm, and a chronically sensitised system therefore has no route home by its own devices.
+
+MODULATION AND GATING:
+
+The dorsal horn gate is the primary control point, set segmentally by touch and descendingly by the periaqueductal grey and rostral ventromedial medulla using endogenous opioids, serotonin, and noradrenaline.
+
+The rostral ventromedial medulla contains both cells that facilitate and cells that inhibit nociceptive transmission, which is why descending control is bidirectional and why the same structure that produces stress analgesia can produce stress hyperalgesia.
+
+Expectation is a modulator of the first rank: Eippert and colleagues, Neuron 2009, showed that naloxone modulates placebo-induced responses in the hypothalamus, periaqueductal grey, and rostral ventromedial medulla, and abolishes the placebo-induced coupling between rostral anterior cingulate cortex and periaqueductal grey that predicts both the neural and the behavioural placebo effect, which establishes that expectation acts through the same descending opioid machinery as morphine.
+
+A meta-analysis of 45 effect sizes across 12 studies and 1183 participants found placebo administration associated with reduced self-reported pain and hidden naloxone injection reversing it, so the opioid mediation of expectation-based placebo analgesia is among the better-supported claims in this chapter.
+
+Inflammation modulates the periphery rather than the centre, lowering nociceptor thresholds so that a normally innocuous stimulus becomes noxious, which is primary hyperalgesia and is a peripheral phenomenon distinct from central sensitisation.
+
+PLASTICITY AND LEARNING:
+
+Central sensitisation is a long-term potentiation of the dorsal horn synapse, and the corpus should read it as exactly the same mechanism described in the Layer 7 volume, applied to an alarm line, which is the mechanism by which acute pain learns to become chronic.
+
+Allodynia, pain from light touch, is that learning expressed as a category error: the thick-fibre touch line that once closed the gate now drives the pain line.
+
+At the other end of the chain, expectation and conditioning are learned over minutes and revised over sessions, and nocebo, the negative counterpart, is learned faster and extinguishes slower than placebo.
+
+Descending control is itself trainable, and this is the honest mechanistic basis of the psychological therapies for chronic pain, which act on a real circuit rather than on the patient's willingness to complain.
+
+DEVELOPMENT AND ASSEMBLY:
+
+Nociceptive afferents and dorsal horn circuits are functional well before birth, but descending inhibitory control matures late, which is why infant nociceptive responses are poorly damped, a point the corpus's Chapter 3 already makes.
+
+Early painful experience in the neonatal period measurably alters later pain thresholds, which is one of the more consequential findings in developmental neuroscience and one that changed clinical practice.
+
+The two channels are distinguishable from early development, so the fork is built in rather than learned.
+
+EVOLUTIONARY PROVENANCE:
+
+Nociception is among the oldest senses, present in essentially all bilaterian animals, and the corpus's Chapter 3 states this already.
+
+The affective fork is the newer part and its evolutionary depth is genuinely uncertain: the machinery for aversive valuation is widespread, but at what point in the lineage the affective product acquires the character the 2020 definition describes is not established and probably cannot be established by the methods currently available, which the corpus should say plainly rather than assert either way.
+
+Congenital insensitivity to pain proves the alarm's value by the mutilation its absence brings, and that observation is the strongest available argument that this system is under strong selection.
+
+THE ENDOCRINE COUPLING:
+
+Endogenous opioids are this system's own analgesic hormones, and they are also the effector of expectation, which is an unusually direct route from belief to chemistry.
+
+Pain input activates the axis of Chapter 37 and cortisol modulates inflammation and pain sensitivity in return, a bidirectional loop that Chapter 3 already names as central to chronic pain.
+
+Oxytocin damps pain and links affective touch to bonding, and oestrogen cycling measurably shifts pain thresholds, which Chapter 3 rates at moderate confidence and this chapter does not upgrade.
+
+Sex differences in pain sensitivity and in chronic pain prevalence are robust at the population level and their mechanistic decomposition into hormonal, immune, and social components is not well established; a longitudinal within-person design across the menstrual cycle with immune profiling would settle more of it than another cross-sectional comparison.
+
+STATES AND THE LAYER 11 SCHEDULE:
+
+Awake, both channels run and attention sets the gains, with the affective channel able to capture attention involuntarily, which is the property that makes pain different from every other input.
+
+In slow-wave sleep, state 7, the thalamic gate damps touch strongly yet pain retains privileged entry, and sleep loss lowers pain thresholds the next day, which Chapter 3 records as a robust human finding and this chapter adopts unchanged.
+
+In rapid-eye-movement sleep, state 8, external nociceptive input is largely excluded along with everything else.
+
+Under acute stress, state 18, the descending gate closes hard, giving the battlefield analgesia in which wounds go unfelt until safety, and under sustained stress, state 19, and in sickness behaviour, state 20, the picture inverts toward hyperalgesia, which is the same sign reversal the neuroimmune chapter records and is almost certainly the same mechanism seen from the other side.
+
+DISEASES AND DISORDERS:
+
+Chronic pain is this system's plasticity turned against the organism and is the largest single burden of disease in this addendum by any measure.
+
+Neuropathic pain arises from damage to the system itself rather than to the tissue it reports on, which is why it feels wrong to patients and why it responds to anticonvulsants rather than to anti-inflammatories.
+
+Nociplastic pain is the newer category for pain arising from altered nociceptive processing without evident tissue damage or nerve lesion, and fibromyalgia is its type case; the corpus should note that the classification is still being revised, with 2025 proposals to integrate nociplastic pain into the neuropathic framework, so this is a live taxonomy rather than a settled one.
+
+Congenital insensitivity to pain, thalamic pain syndrome, phantom limb pain, and allodynia are the system's other characteristic failures, and the corpus's Chapter 3 lists these already.
+
+Opioid-induced hyperalgesia is the iatrogenic failure, in which the treatment recruits the facilitating cells of the rostral ventromedial medulla and the system ends up louder than it began.
+
+HOW IT COLOURS THE ORGANISM:
+
+This is the great motivator, the one signal that can seize the whole cognitive economy at any moment and repurpose it, which is Chapter 3's formulation and cannot be improved.
+
+It is also the system that most clearly demonstrates that the brain does not report the world but constructs it, because the same tissue damage produces different pain in different people, on different days, under different expectations, and the difference is not imaginary but is the measured output of a circuit this chapter has just described.
+
+SYSTEMS INTERFACE:
+
+• SUBSCRIBES (INPUTS).
+
+◦ Noxious thermal, mechanical, and chemical events at the nociceptor terminal, plus inflammatory mediators that lower its threshold.
+
+◦ Thick-fibre touch input to the dorsal horn, the segmental gate signal.
+
+◦ Descending opioid, serotonergic, and noradrenergic control from the periaqueductal grey and rostral ventromedial medulla.
+
+◦ Expectation and context from prefrontal and rostral anterior cingulate cortex, which is this system's most surprising input and its most powerful modulator.
+
+◦ Cytokine signalling from Chapter 47, which sets the hyperalgesia of the sickness state.
+
+• PUBLISHES (OUTPUTS).
+
+◦ Withdrawal reflex commands to spinal motoneurons within tens of milliseconds, before any percept exists.
+
+◦ A sensory-discriminative product to the somatosensory cortices and posterior insula: location, intensity, quality.
+
+◦ An affective-motivational product to anterior insula, anterior cingulate, amygdala, and hypothalamus: aversive value and behavioural priority, and this is the address the corpus promised.
+
+◦ Autonomic and endocrine recruitment, including activation of the axis of Chapter 37.
+
+◦ An interrupt to the global workspace of Chapter 44, with a priority no other input can match.
+
+• STATE.
+
+◦ Current nociceptor threshold map, current dorsal horn gate setting, current sensitisation level of injured territory, current descending balance between facilitation and inhibition, current expectation.
+
+• PARAMETERS.
+
+◦ Conduction: A-delta fibres roughly 5 to 30 metres per second, C fibres roughly 0.5 to 2 metres per second; the corpus's Chapter 3 gives the whole somatosensory range as 0.5 to 70 metres per second by fibre class and governs.
+
+◦ Channel gain swing greater than tenfold in either direction.
+
+◦ Wind-up requires repeated stimulation above about 0.3 hertz.
+
+• TIME CONSTANTS.
+
+◦ Withdrawal reflex, tens of milliseconds.
+
+◦ First versus second pain, about 0.3 seconds versus more than 1 second.
+
+◦ Wind-up, seconds; central sensitisation, minutes to months.
+
+◦ Placebo analgesia installation, minutes; naloxone reversal, minutes.
+
+◦ Stress analgesia onset, seconds; its inversion to hyperalgesia under sustained stress, days to weeks.
+
+• FAILURE MODE.
+
+◦ Peripheral: neuropathy silencing the line, or inflammation lowering its threshold to uselessness.
+
+◦ Spinal: central sensitisation and allodynia, the alarm learning the wrong lesson.
+
+◦ Ascending: syringomyelia cutting the crossing fibres, thalamic pain syndrome generating the signal centrally.
+
+◦ Descending: loss of inhibition or recruitment of facilitation, including opioid-induced hyperalgesia.
+
+◦ Cognitive: nocebo and catastrophising raising the gain from the top, and the absence of any mechanism for signalling the absence of damage, which is why this system cannot correct its own false alarm.
+
+MODES AND MODE TRANSITIONS:
+
+The nociceptive system is a two-product alarm whose modes are set by the balance between descending inhibition and descending facilitation, and by whether the dorsal horn is operating linearly or has been sensitised.
+
+Its mode machinery is the most cognitively penetrable in the whole catalogue, because expectation is a first-class input to it and acts through the same effector as morphine.
+
+• THE MODE REGISTER.
+
+◦ silent_surveillance - The Quiet Watch - nociceptors at rest, thresholds high, no ascending traffic, the state of most of the body most of the time.
+
+◦ acute_nociception - The Clean Alarm - a proportionate two-channel report of a real event, gate at baseline, both products delivered, resolving with the injury.
+
+◦ stress_analgesia - The Battlefield Shutter - descending inhibition maximal, ascending transmission suppressed, wounds unfelt until safety.
+
+◦ sensitised_amplification - The Stuck Amplifier - dorsal horn potentiated, thick-fibre touch now driving the pain line, allodynia and hyperalgesia present.
+
+◦ expectation_modulated - The Belief Channel - descending opioid tone set by what the person expects, capable of producing analgesia or hyperalgesia from identical input.
+
+◦ sickness_hyperalgesia - The Inflamed Watch - the pain gain raised by cytokine signalling as part of Chapter 47's state 20 protocol.
+
+• THE ADMISSION RULE.
+
+◦ acute_nociception is admitted when peripheral input exceeds the nociceptor threshold and the descending gate is at or near baseline; stress_analgesia and expectation_modulated are admitted only from above and can override the peripheral input entirely; sensitised_amplification is admitted by prior injury and, once admitted, does not require peripheral input at all, which is what makes it pathological.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ silent_surveillance: nociceptor thresholds high, spontaneous firing near zero, no ascending traffic (high confidence).
+
+◦ acute_nociception: A-delta arrival within about 0.3 seconds and C-fibre arrival beyond 1 second, both products delivered in proportion to input, withdrawal reflex already complete at tens of milliseconds (high confidence).
+
+◦ stress_analgesia: descending opioid, serotonergic, and noradrenergic inhibition of the first synapse, onset within seconds of the stressor, and reversible by naloxone (high confidence on the mechanism, moderate confidence on the magnitude in humans, which varies enormously between individuals).
+
+◦ sensitised_amplification: dorsal horn output raised for a constant input, thick-fibre touch now driving pain, established over minutes and persisting for months (high confidence on the mechanism in animals, high confidence on the clinical phenomenon in humans).
+
+◦ expectation_modulated: placebo analgesia reduces self-reported pain and is reversed by hidden naloxone across 45 effect sizes in 12 studies and 1183 participants, acting through hypothalamic, periaqueductal grey, and rostral ventromedial medulla responses and through rostral-anterior-cingulate-to-periaqueductal-grey coupling (Eippert and colleagues, Neuron 2009); the mediation is well supported, the effect size varies widely by paradigm and this addendum declines to state one number, and a registered multi-paradigm replication with a common outcome scale would settle it.
+
+◦ sickness_hyperalgesia: pain thresholds lowered by circulating and central cytokines over hours, resolving with the sickness state over 12 to 48 hours (moderate confidence in humans).
+
+• THE TRANSITION TABLE.
+
+◦ silent_surveillance to acute_nociception: peripheral input crossing the nociceptor threshold, within milliseconds at the terminal and within about 0.3 seconds at cortex.
+
+◦ acute_nociception to stress_analgesia: an acute threat engaging the periaqueductal grey, within seconds, and this is the fastest downward gain change in the catalogue.
+
+◦ stress_analgesia to acute_nociception: arrival at safety, over seconds to minutes, and the abruptness of this return is a familiar clinical observation.
+
+◦ acute_nociception to sensitised_amplification: sustained or repeated input, wind-up over seconds and central sensitisation over minutes, persisting for months; this is the transition that turns an injury into a disease.
+
+◦ Any mode to expectation_modulated: installation of a belief about what is coming, over minutes, revisable over sessions, and abolished by naloxone within minutes.
+
+◦ acute_nociception to sickness_hyperalgesia: cytokine signalling from Chapter 47, over hours.
+
+◦ sensitised_amplification toward acute_nociception: resolution of the injury plus restored descending inhibition, over weeks to months, and this transition is slow, unreliable, and the central problem of pain medicine.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: the healthy boundary lies between insensitivity, whose signature is unnoticed injury and joint destruction, and runaway amplification, whose signature is pain without a proportionate stimulus; it is patrolled by the segmental gate as the fast watchdog and by descending inhibition as the slow one, and this system's specific and dangerous architectural weakness is that it has no channel for reporting the absence of damage, so a false alarm cannot be cancelled from below and must be corrected from above.
+
+THE ENGINEERING NOTE:
+
+As an engineering pack this system is the nociceptive_alarm_system, a single afferent module nociceptor_array feeding a gating module dorsal_horn_gate, which publishes on two topics, discriminative_channel and affective_channel, under a descending controller descending_modulation whose set point is written by an expectation module.
+
+The engineering analogue is an interrupt controller with a priority line and a maskable gain, and the biological differences are three and all of them are consequential: the gain is set partly by the system's own history, partly by a belief held elsewhere in the machine, and there is no acknowledgement signal, so an interrupt that has been serviced has no way of clearing itself.
+
+ENGLISH READABLE CODE:
+
+The purpose of this procedure is to take one nociceptive input and deliver two separable products, under a gate that is set by touch, by descending control, and by expectation.
+
+Create a number variable called noxious input containing the current nociceptor activation.
+
+Create a number variable called touch input containing the current thick-fibre activation at the same segment.
+
+Create a number variable called descending inhibition, set by the periaqueductal grey and by expectation.
+
+Create a number variable called descending facilitation, set by stress duration and by opioid exposure.
+
+Create a number variable called sensitisation containing the accumulated potentiation of this segment, initially zero.
+
+Set the gate to one, minus the touch input scaled by the segmental gating factor, minus the descending inhibition, plus the descending facilitation.
+
+Set the dorsal horn output to the noxious input plus the sensitisation, scaled by the gate.
+
+If the dorsal horn output has been above the wind-up threshold for longer than the wind-up window, add to the sensitisation.
+
+Set the discriminative product to the dorsal horn output with its body address and its quality label.
+
+Set the affective product to the dorsal horn output scaled by the threat weight, which is set by context, by expectation, and by the neuroimmune state.
+
+Publish the discriminative product to the somatosensory maps and the affective product to the insula, cingulate, and amygdala, and publish an interrupt to the global workspace with a priority equal to the affective product.
+
+Record that the two products are separable and that either may be lost without the other.
+
+The procedure is complete.
+
+CODE SAMPLE:
+
+Python is chosen because the entire architecture is one input, one gate, and two outputs, and because showing the identical input producing four different pairs of products under four gate settings makes the chapter's argument better than another paragraph would.
+
+import math
+
+SEGMENTAL_GATE_FACTOR = 0.5   # thick-fibre touch closes the gate; Melzack and Wall 1965
+WINDUP_THRESHOLD = 0.6        # dorsal horn output above which sensitisation accrues
+
+def dorsal_horn(noxious, touch, inhibition, facilitation, sensitisation, threat):
+    """One input, one gate, two separable products."""
+    gate = 1.0 - math.prod([touch, SEGMENTAL_GATE_FACTOR]) - inhibition + facilitation
+    gate = max(0.0, gate)
+    output = math.prod([noxious + sensitisation, gate])
+    discriminative = round(output, 2)
+    affective = round(math.prod([output, threat]), 2)
+    accrued = 0.05 if output > WINDUP_THRESHOLD else 0.0
+    return discriminative, affective, round(sensitisation + accrued, 2)
+
+cases = [
+    ("clean alarm        ", 0.8, 0.0, 0.00, 0.0, 0.00, 0.6),
+    ("rubbing the injury ", 0.8, 0.9, 0.00, 0.0, 0.00, 0.6),
+    ("battlefield        ", 0.8, 0.0, 0.75, 0.0, 0.00, 0.6),
+    ("placebo expectation", 0.8, 0.0, 0.40, 0.0, 0.00, 0.3),
+    ("sensitised, light  ", 0.1, 0.0, 0.00, 0.2, 0.60, 0.9),
+]
+for label, nox, touch, inhib, facil, sens, threat in cases:
+    d, a, s = dorsal_horn(nox, touch, inhib, facil, sens, threat)
+    print(f"{label}: where-and-how-much {d:<5}  how-bad {a:<5}  sensitisation now {s}")
+
+print("Identical tissue damage, five different pains. Neither product is the other.")
+
+WHAT MAKES IT UNMISTAKABLE:
+
+The only system in the catalogue that delivers two products from one input which can be lost independently, so that a patient may know exactly where it hurts and not care, or care desperately and not know where, and the only system whose output can be halved by a belief acting through the same molecule as morphine.
