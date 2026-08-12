@@ -1071,3 +1071,16 @@ SLICE 72 SPECIFIES THE CONFLICT LOOP AS REACHED. cognitive_cycle_step/3 is now s
 THE GAIN IS SPECIFIED AS A REQUIRED WORLD KEY, NOT A DEFAULT. Every caller that assembles a cognitive_cycle world must now state conflict_gain by name - the deferral register's own warning, honoured rather than routed around: "the day the cycle calls it, somebody has chosen konnectome's control policy and it must be recorded as such rather than passed in silently." A missing key is specified to refuse aloud, on the same cognitive_cycle_world_value/3 path every other required world quantity already uses, rather than silently defaulting the loop off.
 
 OF THE FOUR MECHANISMS NAMED UNWIRED AT SLICE 70, THREE NOW REMAIN: the eligibility trace's consumer, the blackboard's rehearsal target, and the durable tier. The conflict loop is specified as reached from cognitive_cycle_run/4, which under slice 71's amendment is one of the two loops that satisfy the Definition's standard on its own.
+KONNECTOME REALIZATION LOG - SLICE 74
+
+Slice 74 - The working-memory blackboard wired, and its maintenance period declared - 2026-08-12 - DECISION-23; OBSERVATION-13 CLOSED; OBSERVATION-23 opened.
+
+WHAT THIS SLICE SPECIFIES, AND IT IS TWO THINGS THAT HAD TO ARRIVE TOGETHER. FIRST, A MAINTENANCE PERIOD: working_memory_blackboard_step_ticks/1 specifies ONE MAINTENANCE STEP PER NOMINAL SECOND - one hundred ticks under DECISION-2, computed through the scheduler's single conversion and written nowhere as a tick literal - and working_memory_blackboard_unrehearsed_life_ticks/1 specifies the lifetime that period and the corpus's own constants imply. SECOND, THE WIRING: cognitive_cycle_step/3 is specified to maintain the board on that period and to ERASE it outright on every offline tick.
+
+TWO NEW REQUIRED WORLD KEYS ARE SPECIFIED, EACH REFUSED ALOUD BY NAME WHEN MISSING, in DECISION-19's shape of a required key rather than a helpful default: blackboard, the four-slot surface itself, and rehearsal_target, the standing attentional pointer whose explicit absence is the atom none. Every caller that assembles a cognitive_cycle world must state both.
+
+THE PERIOD IS SPECIFIED AS KONNECTOME'S OWN CHOICE AND NEVER AS THE CORPUS'S. The corpus states a LIFETIME three times over - a two-to-twenty-second range in TIME CONSTANTS, seventeen unitless steps implied by the CODE SAMPLE, and an "about ten seconds" gloss in WHAT MAKES IT UNMISTAKABLE - and states no step rate anywhere. The warrant for the value chosen is a uniqueness argument over konnectome's own tick and is specified as such in DECISION-23: one hundred ticks is the ONLY DECADE of the tick whose implied lifetime lands inside the chapter's measured window.
+
+WHAT IS SPECIFIED AS STILL ABSENT. Nothing admits to the board from inside the loop and nothing rehearses on its own authority, because neither the striatal gate nor attention has a publisher in konnectome. The loop maintains and erases what a caller put there; admission and rehearsal remain caller-supplied, per B6 items 5 and 7.
+
+OF THE THREE MECHANISMS NAMED UNWIRED AT SLICE 72, THE BLACKBOARD IS NOW REACHED FROM cognitive_cycle_run/4 AND ITS REHEARSAL TARGET IS NOT PUBLISHED - which is a narrower claim than "wired" and is specified in the narrower form on purpose. TWO REMAIN UNTOUCHED: the eligibility trace's consumer and the durable tier.

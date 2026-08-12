@@ -367,6 +367,13 @@ capstone_demonstration_world(World) :-
         replay_rate: 0.1,
         % The night's raised scaling bound, at or above the day's rate as the tick demands.
         offline_scaling_rate: 0.1,
+        % SLICE 74: the working-memory blackboard, booted empty, and the standing attentional
+        % pointer at its explicit absence. This story runs far fewer ticks than the board's
+        % hundred-tick maintenance period, so the surface neither fades nor is wiped inside it and
+        % the told capstone changes not one byte - the wiring is real and this world is simply too
+        % short to show it, which is said here rather than left for a reader to wonder about.
+        blackboard: [],
+        rehearsal_target: none,
         governor: Governor,
         simulation_start: Start
     }.

@@ -1398,3 +1398,23 @@ SLICE 72's PSEUDOCODE, WRITTEN AGAINST THE STANDING STEP-THREE COMMENT:
         CONTINUE the tick with BusOut in place of Bus1 for every step that follows
 
 WHAT IS PSEUDOCODED AS UNCHANGED: every step before and after STEP THREE reads and writes exactly the values it always did; only the source of FinalOutcome and the bus that STEP FOUR onward reads are touched, and only because the conflict loop's own publish supplies both.
+KONNECTOME REALIZATION LOG - SLICE 74
+
+Slice 74 - The working-memory blackboard wired, and its maintenance period declared - 2026-08-12.
+
+SLICE 74's PSEUDOCODE, WRITTEN AT THE TICK'S CLOSE, AFTER THE TICK COUNTER ADVANCES AND BEFORE THE OBSERVER RECORDS:
+
+    LET Period BE working_memory_blackboard_step_ticks()      // one nominal second, DECISION-23
+    JUDGE RehearsalTarget: refuse a hole or a partial term aloud, before any board is searched
+    IF OperatingState IS offline THEN
+        LET Board BE working_memory_blackboard_wipe(Board0)   // slow-wave sleep erases the surface
+    ELSE IF NextTick modulo Period IS zero THEN
+        LET Held BE RehearsalTarget IF the board still holds it, ELSE none
+        LET Board BE working_memory_blackboard_step(Board0, Held)
+    ELSE
+        LET Board BE Board0                                   // between periods the surface stands
+    COMMIT Board into the world under the key blackboard
+
+WHAT IS PSEUDOCODED AS DELIBERATELY ABSENT: there is no admission step in this loop and no rehearsal publisher. A gate verdict would have to come from a striatum konnectome has not built, and a rehearsal target from an attention that has no publisher; both are the caller's, and inventing either here would have been the cheapest and worst way to make the wiring look finished.
+
+AND NOTE THE ORDER OF THE THREE BRANCHES, WHICH IS NOT ARBITRARY. The night's erasure is tested FIRST and does not wait for a period, because the corpus's sentence is that slow-wave sleep erases the board rather than that it stops maintaining it. A period-first ordering would have left a sleeping mind holding its last waking thought for up to ninety-nine ticks.

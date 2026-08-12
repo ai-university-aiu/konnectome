@@ -1226,7 +1226,7 @@ self-test; conformance re-measured at 137 of 137 (specification 4.0.0) in both c
 wall; no cousin edited, per the Second, Third, and Fourth Commandments.
 
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 22 (8 CLOSED: 8, 9, 15, 17, 18, 19, 20 and 22).  Decisions: 22.
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 23 (9 CLOSED: 8, 9, 13, 15, 17, 18, 19, 20 and 22).  Decisions: 23.
 Slice-34 note (2026-08-09). The bound turned live in the told story. The slice-33 pending line
 (the bound proven per-territory in the tests but not yet in the capstone's told story) is
 CLOSED: the capstone's boot world arms the slow bound for real - the diffuse mark at one half,
@@ -6163,4 +6163,178 @@ Taken up 5 | Unprobeable 1 (was Deferred 6 | Taken up 3 | Unprobeable 1). Nothin
 change order. Neither cousin was edited. No PrologAI or causalontology gap found.
 
 
- Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 22 (8 CLOSED: 8, 9, 15, 17, 18, 19, 20 and 22).  Decisions: 22.
+
+DECISION-23 (2026-08-12, slice 74). THE WORKING-MEMORY BLACKBOARD'S MAINTENANCE PERIOD IS ONE STEP
+PER NOMINAL SECOND, AND THE BOARD IS WIRED INTO THE TICK IN THE SAME ACT. OBSERVATION-13'S NAMED
+CLOSER, DISCHARGED TWENTY-FIVE SLICES AFTER IT WAS WRITTEN.
+
+WHAT IS DECIDED. ONE MAINTENANCE STEP EVERY ONE HUNDRED TICKS - one nominal second under DECISION-2 -
+read through the scheduler's single conversion in working_memory_blackboard_step_ticks/1 and never
+written anywhere as a tick literal. THIS IS KONNECTOME'S OWN CHOICE AND IT IS DECLARED AS SUCH ON THE
+FACE OF THE CODE. The corpus states a LIFETIME and nowhere states a step rate; the period is what
+konnectome chose in order to honour that lifetime, and it must never be presented as the chapter's.
+
+THE ORDER OF RESORT WAS FOLLOWED IN ITS ORDER, per the Twenty-First Commandment, and each step is
+recorded because a last resort that cannot show the steps before it is a shortcut wearing a
+commandment's name.
+
+FIRST, THE CORPUS WAS READ BENEATH THE FINDING, per the Twenty-Second Commandment's first step, and
+IT RETURNED SOMETHING NEW. Chapter 16 states the unrehearsed lifetime THREE times, not the two
+OBSERVATION-13 recorded: "unrehearsed decay 2 to 20 seconds" in its TIME CONSTANTS field; seventeen
+unitless steps implied by its CODE SAMPLE's constants; and "holding about four things for about TEN
+SECONDS at a continuous metabolic price" in its WHAT MAKES IT UNMISTAKABLE field. THE THIRD STATEMENT
+IS NEW TO THIS BUILD'S RECORD and was found by reading the chapter through rather than by re-reading
+the observation. It does not change the observation's finding; it sharpens it, because it is a POINT
+value where the TIME CONSTANTS field gave a range, and the two do not sit in the same kind of field.
+
+SECOND, DERIVATION WAS TRIED BEFORE ANY VALUE WAS CHOSEN, and this decision would have preferred to
+stop there. A period follows from a lifetime by division: the corpus's stated lifetime, over the
+seventeen steps the pack already DERIVES from the corpus's own constants, IS the period. IT DOES NOT
+LAND ON A WHOLE TICK. Two seconds over seventeen steps is 11.76 ticks; twenty seconds is 117.6; the
+chapter's own "about ten seconds" is 58.8. Not one of the three is a whole number of ticks, and this
+pack refuses a rounded quantity by name at every other door, so it will not accept one at this one.
+WHAT DERIVATION DID GIVE IS A RANGE, AND THE RANGE IS RECORDED RATHER THAN DISCARDED: any whole
+period from 12 to 117 ticks lands the derived lifetime inside the chapter's measured window.
+
+THIRD, REFUSAL WAS RECONSIDERED AND DECLINED, WHICH IS THE STEP MOST WORTH ARGUING WITH. Refusal was
+the right answer at slice 49 and it is not the right answer here, because the two slices are asking
+different questions. Slice 49 asked "may I write a rate down", with nothing depending on the answer,
+and the honest answer was no. Slice 74 asks "may this board be part of konnectome", and by the
+definition's own first clause a part that cannot be reached from a live running loop is not yet part
+of konnectome however well it tests. A BOARD MAINTAINED AT NO RATE IS A BOARD NOT IN THE LOOP. The
+refusal, held a second time, would have preserved the appearance of rigour by keeping a finished pack
+outside the mind for another twenty-five slices.
+
+SO A VALUE IS CHOSEN, AND THE WARRANT IS A UNIQUENESS ARGUMENT OVER A SCALE KONNECTOME ALREADY OWNS.
+One step per nominal second is THE ONLY DECADE OF KONNECTOME'S OWN TICK WHOSE IMPLIED LIFETIME LANDS
+INSIDE THE CHAPTER'S MEASURED WINDOW. At one tick per step the lifetime is 0.17 seconds and the
+window's floor is missed by a factor of twelve. At ten ticks it is 1.7 seconds and the floor is still
+missed, by eighteen hundredths - close enough to be tempting and still outside, which is exactly the
+kind of near miss a builder talks himself into. At one hundred ticks it is SEVENTEEN SECONDS and it
+lands. At a thousand ticks it is 170 seconds and the ceiling is missed by a factor of eight and a
+half. EXACTLY ONE DECADE QUALIFIES, and that is the reason this period and not one of the hundred and
+five other whole periods that also land inside the window. A test asserts the uniqueness itself
+rather than the number, so a session that ever restates the tick, the decay, the threshold or the
+window meets the argument rather than a magic constant.
+
+AND IT INTRODUCES NO NEW CONSTANT ANYWHERE IN THE REPOSITORY. One hundred ticks to the nominal second
+is DECISION-2, declared twenty-five slices before this question was asked, and the period is read
+through the same single conversion that already restates this chapter's four wall-clock constants.
+
+WHAT THIS DECISION KNOWINGLY DOES NOT MATCH, SAID ALOUD RATHER THAN LEFT FOR A READER TO COMPUTE.
+SEVENTEEN SECONDS IS NOT "ABOUT TEN SECONDS"; IT IS ONE AND SEVEN TENTHS OF IT. konnectome takes the
+chapter's RANGE over the chapter's GLOSS, and the reason is OBSERVATION-13'S OWN TRANSFERABLE RULE
+APPLIED TO OBSERVATION-13'S OWN SUBJECT: a chapter's fields are different kinds of claim wearing one
+chapter's authority, and the range sits in TIME CONSTANTS, the measurement field, while the gloss
+sits in WHAT MAKES IT UNMISTAKABLE, the prose summary. A period fitted to the gloss instead would be
+fifty-nine ticks, whose entire warrant is that it makes an arithmetic come out - a number with no
+home in any convention, chosen to hit a summary. That is the exact shape of AN INVENTED VALUE THAT
+HAS LEARNED TO CITE, and it would have looked better than the one chosen.
+
+THE WIRING ITSELF, WHICH IS THE OTHER HALF AND IS WHAT MAKES THE RATE MEAN ANYTHING. The world dict
+gains TWO required keys, each refused aloud by name when missing, in DECISION-19's shape of a
+required key rather than a helpful default: blackboard (the four-slot surface itself) and
+rehearsal_target (the standing attentional pointer, the atom none being the explicit absence). The
+tick maintains the board on its period and ERASES IT OUTRIGHT ON EVERY OFFLINE TICK, which is
+Chapter 16's own sentence - "in slow-wave sleep it is erased, delay activity being incompatible with
+the slow oscillation's silent states" - and which is the FIRST THING THE WORKING-MEMORY MODE
+REGISTER'S ERASED IDLE, thrown from above by the sleep-stage broadcast since slice 60, has ever had
+underneath it to wipe.
+
+ONE READING IS DECLARED RATHER THAN MADE SILENTLY, AND IT SOFTENS A REFUSAL. The pack REFUSES ALOUD a
+rehearsal aimed at a slot the board does not hold, and that refusal is right for a caller taking one
+step, where silence would hide a mistake. It is wrong for a STANDING pointer inside a loop, because
+the board is erased every night and a pointer at an erased board is the ordinary morning rather than
+anybody's error. The tick therefore passes the pointer through ONLY while the board still holds it,
+and passes the explicit absence otherwise. The pack's refusal is untouched and still fires for its
+own callers; what changed is that this loop never hands it a target it has already been told is gone.
+A test pins exactly this - a pointer surviving a night, meeting a maintenance step, and rehearsing
+nothing without throwing.
+
+WHAT THIS DECISION DOES NOT DECIDE, so a later session inherits no more than was chosen. IT DOES NOT
+DECIDE THAT THE CODE SAMPLE'S SEVENTEEN STEPS ARE RIGHT; they remain the illustration's, DERIVED in
+the pack and never declared, and a corpus that restated its constants would move this lifetime with
+them. IT DOES NOT DECIDE A RATE FOR ANYTHING ELSE IN KONNECTOME - the traces, the averages, the bus,
+the drives and the body all still move once per tick, none of them was touched, and whether any of
+them should share a slower grain is a question for the slice that finds a reason. IT DOES NOT DECIDE
+WHO REHEARSES, or who opens the gate: both are still the caller's, because attention still has no
+publisher, which is B6 item 5 and is queued rather than guessed at. IT DOES NOT ADMIT ANYTHING TO THE
+BOARD FROM INSIDE THE TICK, for the same reason - the striatal gate has no publisher either, so the
+loop maintains and erases what a caller put there and never admits on its own authority. AND IT DOES
+NOT CLOSE OBSERVATION-13'S FINDING ABOUT THE CORPUS, which stands unchanged and is now three
+statements rather than two; what closes is konnectome's side of it, which is the only side
+konnectome was ever able to close.
+
+OBSERVATION-13 IS THEREFORE CLOSED, on the closer it named for itself: "the slice that wires this
+board into cognitive_cycle_step/3 must declare the step rate as a decision of konnectome's own, in
+DECISION-2's shape, with its reasons and with the list of what it does not decide." All four
+conditions are met above. The deferral register's the_blackboard_has_no_declared_step_rate entry
+flips from deferred to taken_up on its own probe, which watched the wiring rather than the rate.
+
+
+OBSERVATION-23 (2026-08-12, from slice 74). KONNECTOME HAS TWO LIVE, DECLARED, INCOMPATIBLE
+CALIBRATIONS OF ITS OWN TICK, AND THEY HAD NEVER MET INSIDE ONE LOOP UNTIL THIS SLICE PUT THEM THERE.
+
+THE MEASUREMENT, AND IT WAS FOUND BY A TEST FAILING RATHER THAN BY READING. DECISION-2 fixes ONE
+HUNDRED TICKS TO THE NOMINAL SECOND, and every wall-clock quantity this build has taken from the
+corpus - the board's admission window, its unrehearsed fade, its wipe bound, the body loop's feedback
+interval - is restated through that one conversion. THE TWO-PROCESS GOVERNOR'S DEFAULT PARAMETER
+BLOCK IS DOCUMENTED, IN ITS OWN COMMENT, AS "ONE TICK PER HOUR". Those two readings of the same tick
+differ by a factor of THREE HUNDRED AND SIXTY THOUSAND. Under the default block konnectome's entire
+waking day is EIGHTEEN TICKS - eighteen hundredths of a nominal second - and that was measured
+directly rather than inferred: a probe run over the fixed test world found the first offline state
+announced after tick eighteen.
+
+WHY IT SURFACED HERE AND NOWHERE EARLIER, WHICH IS THE PART WORTH TRANSFERRING. Every construct in
+the loop before this slice moved ONCE PER TICK, so no construct ever had to ask what a tick was worth.
+The tick was a pure ordinal, and both calibrations could sit in one repository indefinitely without
+contradicting each other, because neither was ever multiplied by anything. THE FIRST CONSTRUCT WITH A
+PERIOD IS THE FIRST CONSTRUCT THAT CAN DISAGREE WITH THE SCHEDULER. DECISION-23 gives the board a
+hundred-tick period; the governor's default day gives the mind eighteen ticks of waking; so under the
+defaults the board's maintenance step NEVER RUNS AT ALL, and the surface is only ever erased by a
+night that arrives before the first fade. The wiring is correct, the decision is correct, the
+governor is correct, and the composition is nonsense.
+
+WHAT WAS DONE ABOUT IT, AND WHAT DELIBERATELY WAS NOT. The governor's defaults were NOT changed. That
+would be choosing which calibration konnectome keeps, in passing, inside a slice that was about a
+blackboard - and the Sixteenth Commandment's line between a REPAIR and a DECISION says exactly that
+kind of unforced choice is a numbered decision of its own and never an auto-fix. Instead slice 74's
+own test fixtures RESTATE the governor's six parameters in DECISION-2's units - a day of twenty-four
+hours in ticks, a debt rising and discharging per hour rather than per tick - so the tests exercise a
+composition that is coherent, and the incoherence is recorded here rather than papered over there. A
+comment on the fixture says so in as many words, so a reader meets the finding at the fixture too.
+
+THE GENERAL FORM, WHICH IS THE TRANSFERABLE PART. A DIMENSIONLESS UNIT IS NOT A SHARED UNIT. Two
+modules can each declare what a tick means, disagree by five orders of magnitude, pass every test
+either one owns, and reveal nothing - right up to the moment one of them multiplies. konnectome's
+definition already lists MULTI-RATE TIME among the things deliberately not built; this observation is
+what that omission costs now that something in the loop has a rate.
+
+THE CLOSER IS NAMED AND NOT DONE, in the shape OBSERVATION-13's was. The slice that decides which
+calibration konnectome keeps must do it as a numbered decision, must restate every parameter block
+that carries the losing one in the same change, and must say what it does NOT decide - in particular
+whether konnectome's tick is a single rate at all, or whether the honest answer is the multi-rate
+time the definition has been declining to build since it was written. IT IS NOT CLOSED HERE BECAUSE
+THIS SLICE PROMISED TO WIRE A BOARD, and rescheduling the whole mind is not that.
+
+
+Slice-74 note (2026-08-12). THE WORKING-MEMORY BLACKBOARD, WIRED, AND ITS PERIOD DECLARED. The board
+has been a complete forty-five-test pack since slice 49 and reachable from no running loop for
+twenty-five slices, because wiring it meant choosing a maintenance rate and OBSERVATION-13 refused to
+choose one. cognitive_cycle_step/3 now maintains it once every hundred ticks under DECISION-23 and
+erases it on every offline tick under Chapter 16's own slow-wave sentence; the world dict carries two
+new required keys, blackboard and rehearsal_target, each refused aloud by name. Nothing admits to the
+board from inside the loop and nothing rehearses on its own authority, because neither the striatal
+gate nor attention has a publisher in konnectome yet - both stay the caller's, per B6 items 5 and 7.
+The capstone story is UNCHANGED AND BYTE-IDENTICAL: its world boots an empty board and runs far fewer
+ticks than the period, which is stated in the capstone's own comment rather than left for a reader to
+wonder at. Four new tests in working_memory_blackboard assert DECISION-23's WARRANT rather than its
+number - that the implied lifetime lands inside the corpus's measured window, that exactly one decade
+of the tick does, and that the chapter's separate ten-second prose gloss is knowingly not matched -
+and nine new tests in cognitive_cycle pin the wiring, including the erasure by night and the standing
+pointer that survives it. OBSERVATION-23 was opened by one of those tests failing. Nothing routes to
+either change order: a four-slot decaying surface inside one runtime travels to nobody and fails the
+consumer-versus-ontology test of the Second Commandment, and no language feature was missing.
+
+
+ Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 23 (9 CLOSED: 8, 9, 13, 15, 17, 18, 19, 20 and 22).  Decisions: 23.
