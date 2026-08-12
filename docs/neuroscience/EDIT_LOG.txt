@@ -149,6 +149,38 @@ WHAT IT DELIBERATELY DOES NOT DO. It does not decide the framework question. It 
 THE BANNER WAS REMOVED, which is how a file in this directory declares itself finished. That is now the convention: the banner goes on when work is cut off, and comes off only when a session has actually finished the file.
 
 
+ENTRY 5. 2026-08-12, AFTER THE SERVICE LIMIT RESET. THE INTERFACE EXCEPTION CATALOGUE - FINISHED.
+
+STATUS: COMPLETE. 1,963 lines. Banner removed.
+
+WHAT IT CLOSES. TFELOAOTHNAES.txt names a collection called the Interface Exception Catalogue and no such document existed - the phrase appeared nowhere else in the corpus. The seven Layer-Skipping Channels had one prose bullet each and were the ONLY first-class construct class here with no publish-and-subscribe interface, against 64 of 64 junctions, 71 of 71 motifs, 44 of 44 systems and 26 of 26 states elsewhere.
+
+WHAT IS NOW THERE. Nine full chapters - the seven channels plus the two minor within-layer shortcuts - each with ten aspect headers, a mode register, and a machine-parsable SYSTEMS INTERFACE block. Verified: nine SYSTEMS INTERFACE, nine SUBSCRIBES, nine PUBLISHES, ten TIME CONSTANTS, nine CONFIDENCE gradings, zero em-dashes, zero markdown characters.
+
+THE PART THAT MATTERS MOST IS WHAT IT REFUSED TO SPECIFY. Channels 1 and 7 originate in Layers 13 and 14, which have no catalogue in this corpus. Their SUBSCRIBES blocks say so IN THE BLOCK, name the source in plain language, and record that the interface is SPECIFIED AT ONE END ONLY. No construct was invented to fill the gap. Channels 4 and 6 forward-reference the Layers 1 to 3 outline by name while noting it still carries its own draft banner, so the reference is forward-looking rather than resolved. A closing note tallies the accounting: three fully specified, two half-specified, two forward-referenced. THAT HONEST HALF-SPECIFICATION IS WORTH MORE THAN A FABRICATED WHOLE ONE, and it is the reason this document was written at all.
+
+The two minor shortcuts are shown to FAIL the Re-encoding Test, so the corpus's ranking of them as minor is a judgement about TYPE rather than about importance - which the chapter says explicitly.
+
+Disagreements are reported rather than averaged throughout, and four slots are left explicitly unfilled rather than guessed. Channel 7 is graded CONTESTED, with the note that the negative literature is itself underpowered, so the grading is contested rather than refuted.
+
+
+================================================================================
+
+ENTRY 6. 2026-08-12. LAYERS 1 TO 3 - CHECKPOINTED AT ELEVEN CHAPTERS, AND BANNERED IN A SEPARATE COMMIT AFTER A MISTAKE.
+
+STATUS: INCOMPLETE. 11 of about 22 chapters.
+
+WHAT IS THERE. The Layer 1 and Layer 2 chapters, 1 through 11, from the photon to iodine, each with the full aspect-header set, a SYSTEMS INTERFACE block and a TIME CONSTANTS block. The quantitative content was checked against the published literature by web search and the checks are visible in the text.
+
+WHAT IS NOT. The Layer 3 chapters, 12 onward - water and the hydrophobic effect, the individual ions, the proton, adenosine triphosphate, the small-molecule neurotransmitters, the gasotransmitters. Research for several is complete in the session record; the prose is not written.
+
+A MISTAKE IS RECORDED HERE RATHER THAN QUIETLY CORRECTED. The manuscript was first committed WITHOUT a banner. The commit message said it was a checkpoint at eleven chapters, but the file itself carried no warning - so a reader opening the file would have met a provenance block announcing that it closes the Layers 1 to 3 gap, in the corpus's confident voice, with no indication that half of it was unwritten. That is precisely the failure this log's own rules exist to prevent, and it was made by the session that wrote those rules. A second commit added the banner. Both commits stand; the mistake is not squashed away, because a log that only records the tidy version is not doing its job.
+
+THE BANNER STATES ITS OWN REMOVAL TEST: the outline and the manuscript agreeing chapter for chapter. That is checkable in one command rather than by judgement, which is the form this project prefers.
+
+
+================================================================================
+
 WHAT REMAINS TRUE OF THIS DIRECTORY DESPITE THE GRANT
 
 The files here are still SOURCE, and where a summary written elsewhere in this repository disagrees with a file in here, THE FILE IN HERE WINS and the summary is the thing corrected.
