@@ -1,0 +1,236 @@
+WHAT THE KONNECTOME NEUROSCIENCE LIBRARY IS MISSING
+
+An assessment of ~/konnectome/docs/neuroscience/ , made 2026-08-12.
+
+Forty-one source documents, roughly 192,000 lines and 1.8 million words.
+
+Every claim below was verified by a grep or a line count against the corpus itself, and the check is stated beside the claim. An unverified claim is not a finding.
+
+
+THE HEADLINE, BEFORE THE COMPLAINTS
+
+Most of what one would expect to be missing is not missing.
+
+The peripheral, autonomic and enteric nervous systems are covered. So are the cerebellum, the basal ganglia, every sensory modality end to end, the motor hierarchy, the hippocampal-entorhinal system with grid and place and time cells, language, consciousness theories beyond global workspace, predictive coding, the blood-brain barrier, glymphatic clearance, microglia and the gut-brain axis.
+
+The endocrine half of the title is honoured better than most textbooks honour it.
+
+The corpus is also unusually current. Its cognition manuscript carries the 2025 Cogitate adversarial collaboration on consciousness, distributional reinforcement learning in dopamine neurons, and 2025 systems-consolidation engram work. That is ahead of every printed reference checked.
+
+Every count the corpus claims for itself was verified and every one is correct: 85 non-neuronal cell types, 64 junction types, 71 microcircuit motifs, 44 systems, 26 global states, 301 neuron chapters across five volumes, and forty-one source documents.
+
+So the real gaps are narrower and more structural than a first look suggests. They fall into two kinds.
+
+
+KIND ONE: THE FILING GAPS - WHAT HAS NO PLACE TO LIVE
+
+GAP 1. SEVEN OF THE FIFTEEN LAYERS HAVE NO CATALOGUE OF THEIR BIOLOGY.
+
+The framework declares fifteen encapsulated layers. Only six of them - Layers 6 through 11 - are fully catalogued in the four-file pattern of outline, manuscript, modes outline and modes manuscript.
+
+• Layers 1, 2 and 3, the subatomic, atomic and ionic layers, have no document of any kind. Verified: no file in the directory carries a LAYER_01, LAYER_02 or LAYER_03 prefix. The corpus is silent on the absence as an absence.
+
+• Layers 12, 13, 14 and 15 have one document each, and none of them is a catalogue of that layer's biology. Each self-identifies as a design-facing document in its own opening line. Layer 12 says of itself that it is "not a parts catalogue but the SPECIFICATION". So the biology of the behaving organism, the dyad, the society and the species is not catalogued in the form the build reads.
+
+• Layers 4 and 5 are merged into one treatment, and that IS explained on the corpus's own face: the outline says it is "deliberately NOT a full catalogue" because those layers are substrate the framework abstracts away.
+
+An important qualification, because the bare finding overstates it. The SUBJECT MATTER of Layers 12 through 15 is not absent from the corpus. The cognition manuscript covers it well - Chapter 58 is social cognition, Chapter 59 is moral cognition, norms and culture, Chapter 68 is evolution and comparative cognition. What is missing is the layer-and-interface treatment, and the layer-and-interface treatment is what the build actually consumes.
+
+Severity: architectural for anything reaching above Layer 11.
+
+GAP 2. THE SEVEN LAYER-SKIPPING CHANNELS ARE THE ONLY CONSTRUCT CLASS WITH NO INTERFACE SPECIFICATION.
+
+The framework says the layer-adjacency rule has exactly seven documented exceptions, and names them: the steroid hormone channel, volume transmission, the circumventricular channel, the vagal and interoceptive channel, the neuroimmune channel, the electromagnetic and photic channel, and the transgenerational epigenetic channel.
+
+They are enumerated in exactly one place, TFELOAOTHNAES.txt, as one prose bullet each with a confidence tag.
+
+Verified: that file contains zero SUBSCRIBE and zero PUBLISH blocks. Every other first-class construct in the corpus - all 64 junctions, all 71 motifs, all 44 systems, all 26 states - carries a full publish-and-subscribe interface. The channels carry none.
+
+The document even names a collection called "the Interface Exception Catalogue". No such catalogue exists as a document, and the phrase appears nowhere else in the corpus.
+
+AND THE TWO GAPS COMPOUND. Four of the seven channels terminate in a layer that has no catalogue: Channel 1 and Channel 7 run from Layers 13 and 14, Channel 4 runs from Layer 3, and Channel 6 runs from Layer 1.
+
+That matters more than either gap alone. These are not exotic channels. They are the steroid stress response, neuromodulator volume transmission, interoception, and light. They are exactly the routes a whole-organism cognitive architecture needs, and they are the ones specified least.
+
+GAP 3. THE GUIDING BOOK CARRIES NO TIME CONSTANTS.
+
+LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt is the document the build's governing rules name as the source of its entire method fileset and as the target of its standing audit.
+
+Verified: 123 regional entries, each with INPUTS (SUBSCRIBE) and OUTPUTS (PUBLISH) blocks. Zero occurrences of "time constant", in any case. Five uses of the word "milliseconds" in the whole 10,935-line manuscript.
+
+For contrast, in the same corpus: Layer 7 carries 64 TIME CONSTANTS fields, Layer 8 carries 71, Layer 10 carries 44 or 45, Layer 11 carries 26, and the cell catalogues carry one per chapter.
+
+So the one layer from which the build's ten architecture components are sourced is the one layer that supplies no timescales at all.
+
+This is not academic. This build opened an observation on 2026-08-12 recording that it is running two incompatible calibrations of its own clock, and the reason that went unnoticed for dozens of slices is that nothing in the loop had a period. Layer 9 is where those periods would have come from, and Layer 9 does not state any.
+
+GAP 4. THE GUIDING BOOK AND THE NORTH STAR ARE THE TWO LEAST MACHINE-READABLE DOCUMENTS IN THE LIBRARY.
+
+The corpus has a declared schema - the Layer 6 chapter template - by which tooling is supposed to parse every chapter's interface blocks and mode registers.
+
+Verified by counting the template's own aspect headers:
+
+• Fully conformant: the Layer 6 cell catalogues. 85 of 85 and 301 of 301 chapters carry SYSTEMS INTERFACE, ENGLISH READABLE CODE, CODE SAMPLE and WHAT MAKES IT UNMISTAKABLE.
+
+• A looser variant: Layers 4/5, 7, 8, 10 and 11. They carry the interface and code blocks but drop several template headers, and add machine-parsable SUBSCRIBES and PUBLISHES bullets the template does not specify.
+
+• Own schema, non-conformant: Layer 9, the guiding book. Zero SYSTEMS INTERFACE headers, zero CODE SAMPLE, zero WHAT MAKES IT UNMISTAKABLE.
+
+• No schema at all: THE_NEUROSCIENCE_OF_COGNITION_MANUSCRIPT, the north star. Zero interface blocks, zero code samples, zero time constants, and no modes companion. It is 344,000 words of prose.
+
+The pattern is upside down. The two documents the governing rules rank HIGHEST - the north star and the guiding book - are the two that supply the LEAST machine-checkable structure, while the documents they outrank supply the most.
+
+GAP 5. THERE IS NO AXIS FOR ONTOGENY.
+
+The fifteen layers are a spatial-scale ladder, from the quark to the species. Layer 15 is phylogeny. No layer's subject is the developmental trajectory of the system.
+
+Verified: the string "ontogen" returns ZERO hits across the entire corpus. "Sexual differentiation" returns zero. "Sexual dimorphism" returns zero.
+
+The topic is not absent from the map - the cognition manuscript has a full chapter on the developing brain and another on the ageing brain. But neither has a layer address, and the build reads layers.
+
+The consequence is that an architecture specified from this corpus is specified as an adult steady state. Critical periods, staged capability onset, activity-dependent refinement and the lifetime schedule of the stability-versus-plasticity trade-off have nowhere to live.
+
+This is the one gap that should be settled as a deliberate framework decision rather than written around: either a sixteenth layer, or a time axis orthogonal to the fifteen, or an explicit ruling that the corpus specifies the adult only.
+
+
+KIND TWO: THE CONTENT GAPS - WHAT IS SIMPLY NOT WRITTEN
+
+GAP 6. THE TWO LARGEST CATALOGUES HAVE NO DEVELOPMENT FIELD AND NO DISEASE FIELD.
+
+This is the cheapest high-value repair available, because the field already exists and is already used elsewhere.
+
+Verified by counting the header DISEASES AND DISORDERS per file:
+
+• Layer 7: 64. Layer 8: 71. Layer 10: 44. Layer 11: 26.
+
+• Layer 6 other cells: ZERO. Each neuron catalogue volume: ZERO. Layer 9: ZERO.
+
+The same holds for DEVELOPMENT AND ASSEMBLY.
+
+So a build reading the cell catalogue receives 386 cell types with no statement of where each comes from, when it appears, or how it fails. And Layer 9 supplies the regions that Layer 10 systems are chains of, with no failure semantics on any of them.
+
+GAP 7. LAYER 9'S PERIPHERAL HALF IS A STUB, AND THE DISPROPORTION IS EXTREME.
+
+Measured directly from section start lines in the guiding book:
+
+• The cerebral cortex, section 2.1, occupies 1,204 lines.
+
+• The cerebellum, section 2.5, occupies 80 lines.
+
+• The spinal cord, section 2.6, occupies 32 lines.
+
+• The enteric nervous system, section 2.8 - five hundred million neurons by the corpus's own count - occupies 16 lines.
+
+• The endocrine glands as Layer 9 structures, section 2.9, occupy 50 lines.
+
+The modes companion shows the same shape: 33 mode-register entries for the cortex, and exactly one each for the cerebellum, the spinal cord, the peripheral ganglia, the enteric system and the endocrine glands.
+
+There is also no roster of the twelve cranial nerves, and no Layer 9 entry for any cranial nerve or cranial nerve nucleus. Every mention is a passing reference inside another entry.
+
+This matters because of the corpus's own rule that a Layer 10 system is an ordered sequence of Layer 9 places. The corticospinal, autonomic, gustatory, vestibular and gut-brain systems each have links in their chains with no Layer 9 address to chain to.
+
+GAP 8. FOUR SYSTEMS THE CORPUS HAS ALL THE PARTS FOR ARE NEVER ASSEMBLED.
+
+Verified: the 44 Layer 10 systems contain no entry matching glymphatic, immune, nociceptive or vascular.
+
+The missing systems are the cerebrovascular system, the clearance system (glymphatic plus cerebrospinal fluid plus meningeal lymphatics), the neuroimmune system, and the nociceptive system.
+
+Every component already exists further down. Layer 6 catalogues all the vascular, barrier, meningeal and border-immune cells. Layer 8 has the neurovascular coupling unit and the microglial pruning loop. Layer 11 has the sickness behaviour state and names glymphatic clearance running at full flow in slow-wave sleep.
+
+Only the assembly is missing - and energy budget, waste clearance and inflammatory gain are precisely the constraints that explain why an architecture needs an offline phase at all.
+
+Pain is the sharpest instance. The Layer 10 somatosensory entry states that pain's affective branch is "given its own address", and no such entry exists among the forty-four. Pain is the field's canonical example of a signal that is simultaneously information and imperative, which is exactly the template a synthetic architecture needs.
+
+GAP 9. THE ACCEPTANCE SPECIFICATION OMITS THREE FACULTIES THE CORPUS ITSELF DOCUMENTS IN DEPTH.
+
+LAYER_12_FACULTY_SPECIFICATION.txt names fourteen faculties and says the specification is complete when one running instance passes all fourteen suites in one continuous session.
+
+Verified: the words "naviga", "metacogni", "imagin" and "prospect" return ZERO hits in that document.
+
+• Spatial navigation and the cognitive map. Absent, despite grid cells, place cells, head-direction cells, border cells and time cells each having their own cell chapter with a full mode register.
+
+• Metacognition and confidence. Absent from Layer 12, and covered in four sub-sections of the north star.
+
+• Imagination, prospection and mental simulation. Absent from Layer 12, and covered in the north star.
+
+This one is worse than a survey gap, because the document is the acceptance criterion. As written, a build could pass every suite while being unable to navigate a space, unable to report what it does and does not know, and unable to simulate a future it has not experienced.
+
+The metacognition omission carries a safety consequence, since calibrated confidence is the mechanism by which a system declines to act.
+
+GAP 10. PARAMETERS ARE POINT ESTIMATES, WITH NO NOTION OF A DISTRIBUTION.
+
+Every quantity in the corpus is species-typical. No catalogue has an individual-variation field.
+
+Verified: no header matching INDIVIDUAL, VARIATION or VARIABILITY exists anywhere. "Heritab" returns eight hits, all inside the Layer 11 manuscript and all about sleep, alpha frequency, startle and cardiovascular reactivity.
+
+The corpus treats the hormones that differ between people at length, and never the brains that differ.
+
+GAP 11. THE BUILD CAN IMPLEMENT MECHANISMS AND CANNOT IMPLEMENT OBJECTIVES.
+
+The mechanistic vocabulary is dense: "attractor" 243 hits, "prediction error" 193.
+
+The normative vocabulary is thin and concentrated in the one document that has no interface blocks: free energy 16, active inference 11, successor representation 8, normative model 9. Most of those hits are inside the north-star manuscript.
+
+Predictive coding is the exception that proves the point - it has a Layer 8 motif with a transfer function and is therefore buildable. Free energy, active inference and successor representations have no motif, no system and no layer address.
+
+GAP 12. THE CELL CATALOGUE IS NOT CROSS-WALKED TO THE MOLECULAR CENSUS.
+
+The 386 cell types are organised by morphology, physiology and location. The field's current organising principle is molecular.
+
+Verified: "spatial transcriptomic" returns zero hits. The north-star outline names the transcriptomic censuses at section 6.2.3, so the map knows about them; the catalogue is not indexed to them.
+
+The consequence is practical: the corpus cannot currently be joined to public cell-atlas data, which is how any external dataset would be brought in.
+
+
+WHAT THE LIBRARY DOES UNUSUALLY WELL
+
+These are not courtesies. Each is something no standard reference does.
+
+• THE MODE REGISTER DISCIPLINE. Every entry in Layers 6 through 11 carries a hybrid-automaton specification: a named mode register with an explicit admission rule, per-mode transfer functions with rates and thresholds and honest confidence notes, a transition table naming trigger and timescale, and a separate fault table with boundary signatures. Nothing in the neuroscience literature does this. It is the corpus's genuine original contribution and it is what makes the catalogue runnable rather than merely readable.
+
+• INTERFACE-FIRST ANATOMY. Layer 9 treats named white matter tracts as first-class objects with origin, destination, cargo and format, and includes a census of previously unnamed constructs with proposed names and explicit proofs of namelessness. Textbooks describe tracts; this describes contracts.
+
+• GENUINE NERVOUS-AND-ENDOCRINE INTEGRATION. Seven hypothalamic axes at Layer 10, thirty-five endocrine cell types at Layer 6, and nine endocrine microcircuit motifs at Layer 8 including the KNDy pulse generator and the islet syncytium. Most references handle the entire endocrine system inside one hypothalamus chapter.
+
+• THE NON-NEURONAL CELL CENSUS. Eighty-five types at the same template depth as the neurons, including eleven astrocyte subtypes and nine peripheral glia. Most references give glia one chapter.
+
+• LAYER 11 GLOBAL STATES. Twenty-six whole-organism states with transition machinery, several of which no textbook treats as states at all: sickness behaviour as an adaptive reversible protocol, sleep inertia as a cold-start penalty, the menstrual cycle as a programme.
+
+
+A NOTE ON THE EXISTING ASSESSMENT
+
+There is already a corpus gap analysis at docs/design/04_neuroscience_corpus_qa_gap_analysis_v1.txt , dated 2026-08-10.
+
+It covers the FILING gaps well and reaches the same conclusion on two of them: that Layers 1 through 3 are defensibly absent, and that Layer 9's missing outline file is not a gap because the guiding book's own Chapter 2 performs that role.
+
+It is now partly stale in one respect. It raises a governance question about whether the two cognition documents belong in the corpus, and offers three resolutions without choosing. The README has since chosen the first of them and counts forty-one source documents accordingly, which is correct.
+
+It did not attempt the CONTENT gaps against the field, which is what most of this assessment is.
+
+
+THE ORDER I WOULD REPAIR THEM IN
+
+Ranked by build impact per unit of writing effort, not by severity.
+
+1. Extend the DEVELOPMENT AND ASSEMBLY and DISEASES AND DISORDERS fields to Layer 6 and Layer 9. The field is already specified and already used by four other layers, so this is mechanical rather than inventive, and it closes the largest hole.
+
+2. Add the three missing faculties to Layer 12. It is a short change to a short document and it repairs the acceptance criterion itself.
+
+3. Give the seven layer-skipping channels the same interface treatment every other construct gets, and write the Interface Exception Catalogue the framework already names.
+
+4. Bring Layer 9 sections 2.5 through 2.9 up to something nearer the depth of 2.1, and add a cranial nerve roster.
+
+5. Add the four missing Layer 10 systems: cerebrovascular, clearance, neuroimmune, nociceptive. Every part exists already; only the assembly is missing.
+
+6. Add time constants to Layer 9, or record explicitly that it supplies none and name where the build should get them instead.
+
+7. Add an individual-variation field so parameters can be stated as distributions.
+
+8. Decide where ontogeny lives. This is a framework decision, not a writing task, and it is the one that should be taken deliberately rather than drifted into.
+
+
+A CAUTION ABOUT ACTING ON ANY OF THIS
+
+The corpus is governed as SOURCE. It is read and not edited, except by the deliberate additive update run that this build's rules permit every tenth session, and only from evidence that was already recorded before the run began.
+
+So nothing above should be written into these files as a side effect of a slice. Each item is a candidate for that update run, or a question for the corpus's author, and the distinction between the two is whether the corpus is being CORRECTED to match what it already delivers, or EXTENDED with new claims about the biology. Only the first is admissible without the author.

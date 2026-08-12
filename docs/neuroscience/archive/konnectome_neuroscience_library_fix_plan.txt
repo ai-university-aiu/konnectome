@@ -1,0 +1,182 @@
+FIX IMPLEMENTATION PLAN - THE NEUROSCIENCE LIBRARY GAPS
+
+Written 2026-08-12, against the twelve gaps recorded in konnectome_neuroscience_library_gap_analysis.txt .
+
+
+THE CONSTRAINT THAT SHAPES THE WHOLE PLAN, STATED FIRST
+
+Most of these gaps cannot be fixed by editing the corpus, and that is by design rather than by accident.
+
+The corpus is governed as SOURCE. konnectome reads it and does not edit it. There are exactly two admissible routes in, and they are narrow.
+
+• THE CORRECTNESS REPAIR. Making a source file agree with what the corpus itself already delivers. This is admissible under the owner's explicit authorisation, and it was exercised once before, on 2026-08-10, when eight files described the neuron catalogue as holding 302 types and it holds 301.
+
+• THE CORPUS UPDATE RUN. Additive only, never inside a slice, every added block carrying its provenance on its face, and - this is the binding clause - it may only fold in EVIDENCE THAT WAS ALREADY STANDING in docs/evidence/ before the run began, and only where a corpus gap was recorded at the time that evidence was written.
+
+The run's cadence is every tenth hand-off. The count is currently FORTY-TWO. The next run is therefore at hand-off FIFTY, eight sessions away.
+
+THE CONSEQUENCE FOR SCHEDULING, AND IT IS THE ONE THING THIS PLAN EXISTS TO GET RIGHT: anything intended to enter the corpus at hand-off fifty must be written as an evidence record BEFORE THEN. Evidence written after the run begins is inadmissible to it and waits for hand-off sixty. So the evidence records are the long-lead item, and they are cheap. They go first even though they land last.
+
+And a third route does not exist and must not be invented. Revising what the corpus CLAIMS ABOUT THE BIOLOGY is authorship, not maintenance, and it belongs to the corpus's author. Several of the twelve gaps are of exactly that kind, and the plan routes them there rather than around them.
+
+
+THE FOUR TRACKS
+
+Every gap sorts into exactly one of these, and the sort is the plan.
+
+TRACK ONE - KONNECTOME-SIDE. Needs no corpus edit at all. konnectome's own assessment, its own design authorities, its own packs. This is where most of the value is, and all of it can start today.
+
+TRACK TWO - CORRECTNESS REPAIRS. The corpus contradicting itself, or a konnectome document carrying a wrong count about the corpus. Free, and covered by the standing auto-fix grant or by the narrow repair licence.
+
+TRACK THREE - EVIDENCE NOW, PROMOTION AT HAND-OFF FIFTY. Written as evidence records in the next few sessions, promoted additively in the update run.
+
+TRACK FOUR - AUTHOR AND OWNER DECISIONS. New claims about the biology, or changes to the fifteen-layer framework. Not konnectome's to take. The deliverable here is a well-argued question, not an edit.
+
+
+TRACK TWO FIRST, BECAUSE IT IS FREE AND IT IS TODAY
+
+T2.1. THE FACULTY COUNT IS WRONG IN KONNECTOME'S OWN QUEUE.
+
+Three consecutive hand-offs, including the current one, carry the queue item "the thirteen faculty suites". LAYER_12_FACULTY_SPECIFICATION.txt states fourteen faculties, says so three times, and lists fourteen.
+
+This is a wrong count about the corpus sitting in the build's own live instruction, which is the Sixteenth Commandment's own definition of a repair: a source says what the answer should be and the build's document says something else.
+
+Cost: one line. Do it in the next change that touches the hand-off.
+
+T2.2. RE-EXAMINE THE REST OF THE COUNTS KONNECTOME QUOTES.
+
+Having found one, look for the others rather than assuming it is unique. This build's own rule is that a measurement is trusted over a document describing it, and the last time that rule was applied to an audit's own figure it found a tenth site the audit had missed.
+
+Concretely: grep every konnectome-side document for counts asserted about the corpus - 85, 64, 71, 44, 26, 301, 386, forty-one - and verify each against the corpus. I have already verified those eight and all eight are correct in the corpus itself; what is unverified is every place konnectome RESTATES them.
+
+Cost: under half a slice. Deliverable: repairs, plus a build-log record of what was checked and found correct, so nobody re-runs it.
+
+T2.3. THE STALE GAP ANALYSIS.
+
+docs/design/04_neuroscience_corpus_qa_gap_analysis_v1.txt raises a governance question about the two cognition documents and offers three resolutions without choosing. The README has since chosen the first and counts forty-one source documents accordingly.
+
+Do not rewrite version 1. Append an erratum in place, in the shape slice 73 used for docs/design/01: record that the question was settled, by whom, and which way. A dated assessment is a record; its discharge is a separate later act.
+
+Cost: a few lines.
+
+
+TRACK ONE - THE REAL WORK, AND IT NEEDS NOBODY'S PERMISSION
+
+T1.1. THE TIMESCALE DERIVATION TABLE. HIGHEST PRIORITY, AND IT IS ALREADY ON THE QUEUE UNDER ANOTHER NAME.
+
+The problem: Layer 9, the layer konnectome's ten architecture components are sourced from, states no time constants at all. Zero occurrences in 10,935 lines.
+
+The insight that makes this cheap: THE TIMESCALES EXIST, THEY ARE JUST FILED ONE LAYER AWAY. Layer 7 carries a TIME CONSTANTS field on all 64 junctions, Layer 8 on all 71 motifs, Layer 10 on all 44 systems, Layer 11 on all 26 states. Layer 9's regions are made of Layer 8's motifs and are chained into Layer 10's systems. So a region's timescale is DERIVABLE from the layers either side of it.
+
+Derivation is the Twenty-First Commandment's SECOND protocol, which means this needs no invented number and no corpus edit. It is exactly the move DECISION-23 made for the blackboard, generalised.
+
+Deliverable: a new design authority, docs/design/12, holding a per-construct timescale table for every konnectome construct, each cell either CITED to a layer that states it, DERIVED with the derivation shown, or REFUSED ALOUD with the refusal named.
+
+WHY THIS GOES FIRST: it is queue item one under a different name. OBSERVATION-23 asks which calibration of the tick konnectome keeps, and that question cannot be settled honestly without knowing what the corpus actually states about timescales anywhere. This table is the measurement that decision needs. Doing it the other way round would be choosing a calibration and then looking for support.
+
+Cost: one to two slices. It is the single highest-value item in this plan.
+
+T1.2. THE SEVEN LAYER-SKIPPING CHANNELS, GIVEN INTERFACES BY KONNECTOME.
+
+The corpus enumerates all seven with their source and target layers and a confidence tag, and gives them no publish-and-subscribe blocks - the only first-class construct class without them.
+
+konnectome does not need the corpus to supply those blocks in order to model the channels. It needs to write down its own reading of them, LABELLED AS ITS OWN, in a design authority. That is precisely what docs/design/ is for and what the Eighth Commandment says konnectome's findings are.
+
+The four that matter to a build are volume transmission (which konnectome already implements as the neuromodulator bus and should say so), the vagal and interoceptive channel (which the body interface already partly is), the neuroimmune channel, and the steroid hormone channel.
+
+TWO CAUTIONS, both learned this week. First, do not present a derived interface as the corpus's - that is an invented value that has learned to cite, at the scale of a document. Second, four of the seven terminate in a layer with no catalogue, so those four can be given an interface at only one end, and the document must say so rather than quietly specifying both.
+
+Cost: one slice. Deliverable: a section of docs/design/12, or its own authority.
+
+T1.3. THE THREE MISSING FACULTY SUITES, ADDED TO KONNECTOME'S OWN PLAN.
+
+Layer 12 is the corpus's acceptance-test catalogue and omits navigation, metacognition and imagination-and-prospection. Getting them into Layer 12 is Track Four.
+
+But konnectome's own faculty-suite plan is a build document, and konnectome may add three suites to it today. The corpus already supplies everything needed: grid, place, head-direction, border and time cells each have a chapter with a full mode register, and the north star covers metacognition and prospection in dedicated sub-sections.
+
+DO THE METACOGNITION SUITE FIRST, AND NOT BECAUSE IT IS EASIEST. Calibrated confidence is the mechanism by which a system declines to act. A build that cannot report what it does not know is one that answers confidently and wrongly, which is one of the two defects this project's own definition says it fears most. This is the only gap in the twelve with a safety consequence.
+
+Cost: the plan is half a slice; the suites themselves are a family.
+
+T1.4. OBJECTIVES, NOT ONLY MECHANISMS.
+
+The normative vocabulary - free energy, active inference, successor representations - lives almost entirely in the north star, which has no interface blocks, and has no motif or system address anywhere.
+
+But north-star chapter 28 is fully written and covers the Bayesian brain, reinforcement learning, attractor models and vector symbolic architectures. konnectome can build from it directly. Predictive coding already proves the route works, because Layer 8 gives it a motif with a transfer function and konnectome can therefore implement it.
+
+Deliverable: a deep read beneath that chapter, cited back into docs/design/02, in the discipline the Eighth Commandment requires - no slice designed from a summary.
+
+Cost: one slice for the read; the builds that follow are their own family.
+
+T1.5. THE LAYER 12-TO-15 BRIDGE.
+
+The biology of the organism, the dyad, the society and the species is not catalogued in layer form, but its subject matter IS covered by the cognition pair - social cognition, moral cognition and norms, evolution and comparative cognition.
+
+konnectome does not need the missing catalogues to proceed. It needs a mapping document saying which cognition-pair chapters stand in for which missing layer address, and stating plainly that this is a substitution rather than a catalogue.
+
+Cost: half a slice. Low urgency, high clarity value.
+
+
+TRACK THREE - EVIDENCE NOW, PROMOTION AT HAND-OFF FIFTY
+
+The rule again, because it is the whole timing constraint: only evidence already standing before the run begins is admissible, and only where a corpus gap was recorded when the evidence was written.
+
+So write these records in the next few sessions, one per session, at roughly a third of a slice each. Each carries the question, the query in the words it was run, the date, the sources with addresses, what it settles, what it does not, and - the field the run actually reads - WHETHER A CORPUS GAP WAS FOUND AND WHAT IT IS.
+
+T3.1. THE FOUR MISSING LAYER 10 SYSTEMS. Cerebrovascular, clearance (glymphatic plus cerebrospinal fluid plus meningeal lymphatics), neuroimmune, and nociceptive. Every part exists at Layers 6, 8 and 11; only the assembly is missing. The 2025 and 2026 literature treats clearance as a single efferent axis to the peripheral immune system, which is a genuine post-corpus development and therefore exactly what an evidence record is for.
+
+T3.2. THE TRANSCRIPTOMIC CROSS-WALK. The cell catalogue is organised morphologically and the field's current index is molecular. An evidence record naming the public censuses and the absence of any cross-walk is cheap and is the precondition for ever joining external data to this corpus.
+
+T3.3. PAIN AS A SEPARABLE TWO-CHANNEL SIGNAL. Worth its own record rather than being folded into T3.1, because the corpus's Layer 10 somatosensory entry PROMISES an address for pain's affective branch and no such entry exists. That is a corpus statement contradicted by corpus delivery, which is the strongest kind of finding this project recognises, and it may even qualify as a correctness matter rather than an extension.
+
+WHAT IS DELIBERATELY NOT ON THIS TRACK: the development and disease fields for Layers 6 and 9. That is 509 entries. Promotion is for findings that have sat and been read, not for commissioning half a catalogue. It is Track Four.
+
+
+TRACK FOUR - THE QUESTIONS THAT ARE NOT KONNECTOME'S TO ANSWER
+
+These are written up as one document for the owner and, where appropriate, the corpus's author. The deliverable is a well-argued question with its cost named, which is this build's standing form for a decision it may not take.
+
+T4.1. WHERE ONTOGENY LIVES. The fifteen layers are a spatial-scale ladder and Layer 15 is phylogeny. "Ontogen" returns zero hits corpus-wide. Three consistent answers exist - a sixteenth layer, a time axis orthogonal to the fifteen, or an explicit ruling that the corpus specifies the adult steady state only - and the third is a perfectly respectable answer that costs nothing but must be SAID. This is a framework decision and it should be taken deliberately rather than drifted into.
+
+T4.2. THE DEVELOPMENT AND DISEASE FIELDS FOR LAYERS 6 AND 9. The field is already specified and already carried by four other layers, so the question is not whether it is writable but whether the author will write 509 of them. Ask with the count attached.
+
+T4.3. LAYER 9'S PERIPHERAL HALF. Cortex 1,204 lines against 32 for the spinal cord and 16 for the enteric nervous system, and no cranial nerve roster. Ask for proportionality where Layer 10 systems need Layer 9 addresses to chain to, rather than for parity everywhere - the disproportion is defensible for a cognition-focused corpus and the missing chain links are not.
+
+T4.4. WHETHER THE NORTH STAR AND THE GUIDING BOOK SHOULD CARRY THE SCHEMA. The two documents the rules rank highest are the two least machine-readable. There is a real argument for leaving them as prose - a north star is meant to be read by people - and it should be made explicitly rather than left as an apparent oversight.
+
+T4.5. PARAMETERS AS DISTRIBUTIONS. No catalogue has an individual-variation field, and "sexual dimorphism" returns zero hits. This is the largest single addition on the list and the least urgent for the current build, and it is named here so it is not forgotten rather than proposed for soon.
+
+
+THE SEQUENCE, AS SLICES
+
+Session A. T2.1 and T2.2, the count repairs, inside whatever slice is running. Then T1.1 begun.
+
+Session B. T1.1 finished - the timescale derivation table, docs/design/12 - and OBSERVATION-23 settled on top of it, which discharges queue item one. Write T3.1 as an evidence record in the same session, since the long-lead clock is running.
+
+Session C. T1.2, the layer-skipping channels. Write T3.3.
+
+Session D. T1.3, the metacognition suite plan and the three faculties. Write T3.2. T2.3 in passing.
+
+Session E. T1.4, the deep read beneath north-star chapter 28. T4 document written and handed to the owner.
+
+Sessions F through H. Ordinary queue work. Evidence records stand and are read.
+
+Hand-off fifty. The corpus update run, folding in whichever of T3.1 through T3.3 have stood and been read, additively, each block carrying its provenance.
+
+That sequence puts the highest-value item second, gets the long-lead evidence started early enough to be admissible, and leaves the framework questions with the people whose questions they are.
+
+
+THE THREE THINGS MOST LIKELY TO GO WRONG
+
+FIRST, WRITING ANY OF THIS INTO THE CORPUS AS A SIDE EFFECT. Every gap above is a live temptation to open a corpus file and fix it, and the corpus's own rules exist because the edit made in passing is the edit nobody reviews. If a session finds itself editing docs/neuroscience/ during a slice, it has already gone wrong.
+
+SECOND, PRESENTING A DERIVED INTERFACE OR A DERIVED TIMESCALE AS THE CORPUS'S. T1.1 and T1.2 both produce values that look exactly like corpus values and are not. Every cell of that table must be marked CITED, DERIVED or REFUSED, and the derivation shown where it is derived. A derived number standing next to a real citation is this build's own named worst failure.
+
+THIRD, LETTING THE EVIDENCE CLOCK RUN OUT. The update run at hand-off fifty can only promote what was already standing. Eight sessions sounds like plenty and is three evidence records; if they slip, the corpus waits another ten hand-offs, and nothing about that failure is visible at the time it happens.
+
+
+WHAT I WOULD START WITH, IF ASKED FOR ONE THING
+
+T1.1, the timescale derivation table.
+
+It needs no permission, it is queue item one wearing a different name, it converts the guiding book's silence from a gap into a derivation, and it is the measurement that OBSERVATION-23 needs before anybody chooses which clock konnectome keeps.

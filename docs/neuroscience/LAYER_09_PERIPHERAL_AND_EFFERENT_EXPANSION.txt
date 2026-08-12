@@ -1,0 +1,866 @@
+THE LAYER 9 PERIPHERAL AND EFFERENT EXPANSION
+
+The Cranial Nerve Roster and the Expansion Entries for the Cerebellum, the Spinal Cord, the Peripheral Ganglia, the Enteric Nervous System, and the Endocrine Glands
+
+A companion to LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT sections 2.5 through 2.9, in the Certified_Neuroscientist corpus of D. R. Dison, Founder, Artificial Intelligence University (AIU).
+
+Date of compilation: August 12, 2026.
+
+
+PROVENANCE, STATED BEFORE ANYTHING ELSE
+
+This companion was added on 2026-08-12 by the konnectome build, under the owner's explicit authority of that date.
+
+It is THIS BUILD'S WRITING, living in the corpus's own directory, and it does NOT outrank the corpus's own documents.
+
+Where this companion and the parent manuscript disagree, the parent manuscript is right and this file is wrong, and the correction is owed to this file.
+
+It is ADDITIVE.
+
+It alters nothing that the parent manuscript says, it edits no existing file, and it removes nothing.
+
+It is keyed by the parent manuscript's own section numbers, in paste-ready form, so that a future merge is a mechanical splice and not an act of interpretation - exactly as the MODES companions were written and for exactly the same reason.
+
+Its content was checked against the published literature by web search on 2026-08-12, and the corpus outranks anything found that way.
+
+A citation in this file is a pointer to where the build looked, not a warrant that overrides the corpus.
+
+
+SCOPE: THE MEASURED DISPROPORTION THIS FILE ANSWERS
+
+The disproportion was established by counting lines, not by impression, and the counts are reproduced here so that the reason for this file is visible without leaving it.
+
+In LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT, section 2.1 (the cerebral cortex) occupies 1,204 lines.
+
+Section 2.5 (the cerebellum) has 80 lines.
+
+Section 2.6 (the spinal cord) has 32 lines.
+
+Section 2.7 (the peripheral ganglia) has about 70 lines.
+
+Section 2.8 (the enteric nervous system) has 16 lines.
+
+Section 2.9 (the endocrine glands) has 50 lines.
+
+There is also no roster of the twelve cranial nerves anywhere in the corpus, even though the corpus's own rule is that a Layer 10 system is an ordered sequence of Layer 9 places, and the corticospinal, autonomic, gustatory, vestibular, and gut-brain systems all have chain links that currently point at no Layer 9 address.
+
+The aim of this file is proportionality, not parity.
+
+The cortex earned its 1,204 lines because the cognitive faculties the framework catalogues mostly lodge there.
+
+The peripheral and efferent structures do not need 1,204 lines; they need enough lines that every Layer 10 chain link has a Layer 9 address to point at.
+
+That is the whole scope: give the chains their addresses, and stop.
+
+
+================================================================================
+
+
+PART ONE. THE CRANIAL NERVE ROSTER
+
+Twelve nerves, listed in the parent manuscript's own style.
+
+A cranial nerve is not itself a Layer 9 region; it is a bundle of axons.
+
+But each one begins or ends in named nuclei, and those nuclei are Layer 9 places.
+
+This roster therefore states, for each nerve, the nuclei of origin and termination and their brainstem locations, so that a Layer 10 chain naming the nerve can be resolved down to places.
+
+A convention used throughout: INPUTS (SUBSCRIBE) lists what the nerve carries toward the central nervous system, and OUTPUTS (PUBLISH) lists what it carries away from it.
+
+
+ENTRY: CRANIAL NERVE I, THE OLFACTORY NERVE
+
+Plain language: the smell wire, and the corpus's famous exception.
+
+NUCLEI: There is no brainstem nucleus at all.
+
+The olfactory receptor neurons in the nasal epithelium project directly to the olfactory bulb, a telencephalic structure treated at parent section 2.2.8.
+
+This is the thalamus-skipping exception the corpus flags in its olfactory system entry: smell reaches cortex without a thalamic gate on the first pass.
+
+INPUTS (SUBSCRIBE): From the olfactory receptor neurons of the nasal epithelium.
+
+Cargo: odorant identity, one receptor type per neuron, sorted into glomeruli in the bulb.
+
+OUTPUTS (PUBLISH): None.
+
+This nerve is purely afferent.
+
+MODALITY MIX: Sensory only.
+
+LAYER 10 MEMBERSHIP: The olfactory system (Layer 10 outline, Part One, entry 4).
+
+CLINICAL FAILURE SIGNATURE: Anosmia, the loss of smell.
+
+It is a classic early sign after head trauma that shears the fila as they pass the cribriform plate, and its early appearance in Parkinson's disease and Alzheimer's disease has made it a marker of interest, though not a specific one.
+
+
+ENTRY: CRANIAL NERVE II, THE OPTIC NERVE
+
+Plain language: not truly a peripheral nerve at all.
+
+It is a tract of the central nervous system that happens to leave the skull: its axons are myelinated by oligodendrocytes, not Schwann cells, which is why it does not regenerate and why multiple sclerosis can inflame it.
+
+NUCLEI: No nucleus of origin in the brainstem; the axons are those of the retinal ganglion cells.
+
+Termination: the lateral geniculate nucleus of the thalamus (parent section 2.3.1.1), the superior colliculus (2.4.1.1), the pretectum, and the suprachiasmatic nucleus.
+
+INPUTS (SUBSCRIBE): From the retinal ganglion cells.
+
+Cargo: the entire visual scene, already preprocessed by the retina into parallel channels of contrast, motion, and colour, plus the dedicated melanopsin channel carrying ambient light level to the circadian clock.
+
+OUTPUTS (PUBLISH): None.
+
+Purely afferent.
+
+MODALITY MIX: Sensory only.
+
+LAYER 10 MEMBERSHIP: The visual system, and the circadian entrainment pathway to the suprachiasmatic nucleus.
+
+CLINICAL FAILURE SIGNATURE: Monocular visual loss, and the relative afferent pupillary defect, in which a light swung to the affected eye dilates both pupils because the afferent limb of the pupillary reflex is weakened on that side.
+
+
+ENTRY: CRANIAL NERVE III, THE OCULOMOTOR NERVE
+
+Plain language: the main mover of the eye, and the carrier of the pupil's constrictor command.
+
+NUCLEI OF ORIGIN: The oculomotor nucleus, in the midbrain at the level of the superior colliculus, and the Edinger-Westphal nucleus (parent section 2.4.1.9), the parasympathetic preganglionic nucleus lying beside it.
+
+INPUTS (SUBSCRIBE): None carried by the nerve itself in any behaviourally significant volume; it is an efferent nerve.
+
+The proprioceptive status of extraocular afferents in humans is genuinely unsettled, and no confident statement about cargo can be made there.
+
+OUTPUTS (PUBLISH):
+
+• Somatic motor fibres to the superior, inferior, and medial rectus muscles, the inferior oblique, and the levator palpebrae superioris.
+
+Cargo: gaze commands and eyelid elevation.
+
+• Parasympathetic preganglionic fibres from the Edinger-Westphal nucleus to the ciliary ganglion, whose postganglionic fibres drive the sphincter pupillae and the ciliary muscle.
+
+Cargo: pupil constriction and lens accommodation.
+
+MODALITY MIX: Motor and parasympathetic.
+
+LAYER 10 MEMBERSHIP: The oculomotor system (Layer 10 outline, Part Two, entry 11), and the autonomic motor system through its pupillary branch.
+
+CLINICAL FAILURE SIGNATURE: The eye rests down and out, the lid droops, and the pupil is fixed and dilated.
+
+The pupillary fibres run on the surface of the nerve, so a compressive lesion such as an aneurysm of the posterior communicating artery hits the pupil first - a fact that makes the dilated pupil a surgical alarm bell.
+
+
+ENTRY: CRANIAL NERVE IV, THE TROCHLEAR NERVE
+
+Plain language: the smallest cranial nerve, with the strangest exit.
+
+NUCLEUS OF ORIGIN: The trochlear nucleus, in the midbrain at the level of the inferior colliculus.
+
+It is the only cranial nerve to exit the brainstem dorsally, and the only one whose fibres decussate completely before exit, so each nucleus drives the opposite eye.
+
+INPUTS (SUBSCRIBE): None of behavioural significance; efferent.
+
+OUTPUTS (PUBLISH):
+
+• Somatic motor fibres to a single muscle, the superior oblique.
+
+Cargo: depression of the adducted eye and intorsion.
+
+MODALITY MIX: Motor only.
+
+LAYER 10 MEMBERSHIP: The oculomotor system.
+
+CLINICAL FAILURE SIGNATURE: Vertical diplopia that is worst when looking down and in, as when reading or descending stairs, with a compensatory head tilt away from the affected side.
+
+
+ENTRY: CRANIAL NERVE V, THE TRIGEMINAL NERVE
+
+Plain language: the face's dorsal root ganglion system, plus the chewing motor.
+
+NUCLEI: The trigeminal system has four nuclei, and their span is the longest of any cranial nerve system.
+
+• The principal (chief) sensory nucleus, in the pons.
+
+Cargo received: fine touch from the face.
+
+• The spinal trigeminal nucleus, descending from the pons through the medulla into the upper cervical cord.
+
+Cargo received: pain and temperature from the face, plus somatic sensation delivered by nerves VII, IX, and X from the ear and pharynx.
+
+• The mesencephalic trigeminal nucleus, in the midbrain, which is an anatomical curiosity: primary sensory cell bodies sitting inside the central nervous system, carrying jaw proprioception.
+
+• The trigeminal motor nucleus, in the pons.
+
+The peripheral cell bodies of the touch and pain afferents sit in the trigeminal ganglion, the face's equivalent of a dorsal root ganglion (parent section 2.7).
+
+INPUTS (SUBSCRIBE): From the skin of the face, the cornea, the teeth, the oral and nasal mucosa, the dura mater, and the muscles of mastication, in three divisions: ophthalmic, maxillary, mandibular.
+
+Cargo: all somatic sensation of the face and head front, including the afferent limbs of the corneal reflex and the jaw jerk, and the dural afference whose activation is felt as headache.
+
+OUTPUTS (PUBLISH):
+
+• Motor fibres from the trigeminal motor nucleus, in the mandibular division, to the muscles of mastication, plus tensor tympani and a few small others.
+
+Cargo: chewing, and reflex damping of the middle ear.
+
+MODALITY MIX: Sensory and motor.
+
+No parasympathetic fibres of its own, though parasympathetic fibres from other nerves hitchhike on its branches.
+
+LAYER 10 MEMBERSHIP: The somatosensory system (its facial division), and the corticobulbar limb of the corticospinal command chain for its motor nucleus.
+
+CLINICAL FAILURE SIGNATURE: Trigeminal neuralgia, lancinating electric pain in one division, usually from vascular compression at the root entry zone - by common description among the most severe pains in medicine.
+
+Loss of the corneal reflex afferent limb is the bedside sign of a V1 lesion.
+
+
+ENTRY: CRANIAL NERVE VI, THE ABDUCENS NERVE
+
+Plain language: the outward-looker.
+
+NUCLEUS OF ORIGIN: The abducens nucleus, in the caudal pons, beneath the facial colliculus, where the facial nerve loops around it.
+
+The nucleus also contains internuclear neurons that project through the medial longitudinal fasciculus to the opposite oculomotor nucleus, yoking the two eyes for conjugate horizontal gaze.
+
+INPUTS (SUBSCRIBE): None of behavioural significance; efferent.
+
+OUTPUTS (PUBLISH):
+
+• Somatic motor fibres to the lateral rectus.
+
+Cargo: abduction of the eye.
+
+MODALITY MIX: Motor only.
+
+LAYER 10 MEMBERSHIP: The oculomotor system; its nucleus is the final common integrator for horizontal gaze.
+
+CLINICAL FAILURE SIGNATURE: Horizontal diplopia with failure of abduction.
+
+Because the nerve runs a long intracranial course over the petrous ridge, a sixth nerve palsy can be a false localising sign of raised intracranial pressure generally, rather than of a lesion at the nerve itself.
+
+
+ENTRY: CRANIAL NERVE VII, THE FACIAL NERVE
+
+Plain language: the nerve of expression, and a quiet carrier of taste.
+
+NUCLEI:
+
+• The facial motor nucleus, in the caudal pons.
+
+• The superior salivatory nucleus, pons: parasympathetic preganglionic.
+
+• The nucleus tractus solitarius, medulla (parent section 2.4.3.1): terminus of its taste afferents.
+
+• The spinal trigeminal nucleus: terminus of its small somatic sensory contingent from the ear.
+
+Its sensory cell bodies sit in the geniculate ganglion.
+
+INPUTS (SUBSCRIBE):
+
+• Taste from the anterior two thirds of the tongue, by way of the chorda tympani, to the nucleus tractus solitarius.
+
+Cargo: the front half of the gustatory map.
+
+• A small patch of somatic sensation from the external ear.
+
+OUTPUTS (PUBLISH):
+
+• Motor fibres to all the muscles of facial expression, plus stapedius, which damps loud sound at the middle ear.
+
+Cargo: every smile, frown, and blink; the efferent limb of the corneal reflex.
+
+• Parasympathetic preganglionic fibres to the pterygopalatine ganglion (lacrimal gland, nasal mucosa) and the submandibular ganglion (submandibular and sublingual salivary glands).
+
+Cargo: tears and saliva.
+
+MODALITY MIX: Motor, sensory, and parasympathetic - all three.
+
+LAYER 10 MEMBERSHIP: The gustatory system (its first-order afferent limb), the autonomic motor system (lacrimation, salivation), and the corticobulbar command chain for its motor nucleus.
+
+CLINICAL FAILURE SIGNATURE: Bell's palsy, an acute peripheral facial weakness involving the forehead.
+
+The forehead matters: the upper face receives corticobulbar input from both hemispheres, so a central lesion spares the forehead and a peripheral one does not.
+
+This single sign separates a facial nerve palsy from a stroke at the bedside.
+
+
+ENTRY: CRANIAL NERVE VIII, THE VESTIBULOCOCHLEAR NERVE
+
+Plain language: two senses in one sheath - hearing and balance.
+
+NUCLEI AND GANGLIA:
+
+• The cochlear division: cell bodies in the spiral ganglion of the cochlea, terminating in the dorsal and ventral cochlear nuclei at the pontomedullary junction.
+
+• The vestibular division: cell bodies in the vestibular (Scarpa's) ganglion, terminating in the four vestibular nuclei of the pons and medulla (parent section 2.4.2.7), with a direct branch to the vestibulocerebellum.
+
+INPUTS (SUBSCRIBE):
+
+• From the cochlear hair cells.
+
+Cargo: sound, already frequency-sorted by the basilar membrane, timed to microseconds.
+
+• From the semicircular canals and otolith organs.
+
+Cargo: head rotation and linear acceleration, including gravity.
+
+OUTPUTS (PUBLISH): The efferent traffic is small but real: the olivocochlear bundle from the superior olivary complex (parent section 2.4.2.6) runs outward within this nerve to the hair cells, adjusting cochlear gain.
+
+MODALITY MIX: Sensory, with a minor central efferent component.
+
+LAYER 10 MEMBERSHIP: The auditory system and the vestibular system (Layer 10 outline, Part One, entries 2 and 6).
+
+This nerve is the missing Layer 9 address at the base of both chains.
+
+CLINICAL FAILURE SIGNATURE: Sensorineural hearing loss and tinnitus on the cochlear side; vertigo and nystagmus on the vestibular side.
+
+A vestibular schwannoma at the cerebellopontine angle classically produces both, plus facial numbness as it reaches nerve V.
+
+
+ENTRY: CRANIAL NERVE IX, THE GLOSSOPHARYNGEAL NERVE
+
+Plain language: the throat's reporter, and the blood pressure sensor's wire.
+
+NUCLEI:
+
+• The nucleus tractus solitarius, medulla: taste and visceral afference.
+
+• The spinal trigeminal nucleus: somatic sensation from the pharynx, tonsil, middle ear, and posterior tongue.
+
+• The nucleus ambiguus, medulla (parent section 2.4.3.7): motor to a single muscle, stylopharyngeus.
+
+• The inferior salivatory nucleus, medulla: parasympathetic preganglionic.
+
+Sensory cell bodies sit in the superior and inferior (petrosal) glossopharyngeal ganglia.
+
+INPUTS (SUBSCRIBE):
+
+• Taste and general sensation from the posterior third of the tongue.
+
+Cargo: the back of the gustatory map, and the afferent limb of the gag reflex.
+
+• From the carotid sinus baroreceptors and the carotid body chemoreceptors, to the nucleus tractus solitarius.
+
+Cargo: arterial blood pressure and blood gases, beat by beat and breath by breath.
+
+This is the afferent limb of the baroreflex.
+
+OUTPUTS (PUBLISH):
+
+• Motor fibres to stylopharyngeus.
+
+Cargo: elevation of the pharynx in swallowing.
+
+• Parasympathetic preganglionic fibres to the otic ganglion, whose postganglionic fibres drive the parotid gland.
+
+Cargo: saliva.
+
+MODALITY MIX: Sensory, motor, and parasympathetic.
+
+LAYER 10 MEMBERSHIP: The gustatory system, the interoceptive system, and the autonomic motor system - its carotid afference is a load-bearing link in the baroreflex arc that runs to the nucleus tractus solitarius and the rostral ventrolateral medulla (parent section 2.4.3.6).
+
+CLINICAL FAILURE SIGNATURE: Loss of the gag reflex afferent limb and of posterior-third taste; glossopharyngeal neuralgia, a lancinating throat and ear pain that can, through the carotid afference, trigger bradycardia and syncope.
+
+
+ENTRY: CRANIAL NERVE X, THE VAGUS NERVE
+
+Plain language: the wanderer - the longest cranial nerve, and the body's principal interoceptive trunk.
+
+The parent manuscript's own figure holds: roughly eighty percent of vagal fibres are afferent.
+
+The vagus is overwhelmingly a sensory nerve wearing a motor nerve's reputation.
+
+NUCLEI:
+
+• The nucleus tractus solitarius, medulla: terminus of the visceral afference and of taste from the epiglottic region.
+
+• The spinal trigeminal nucleus: somatic sensation from the external ear and dura.
+
+• The nucleus ambiguus, medulla: branchial motor to pharynx and larynx, and the myelinated cardioinhibitory outflow.
+
+• The dorsal motor nucleus of the vagus, medulla (parent section 2.4.3.1): the main parasympathetic preganglionic pool for the viscera.
+
+Sensory cell bodies sit in the superior (jugular) and inferior (nodose) vagal ganglia; the nodose ganglion is the one the parent's section 2.7 names as the peripheral origin of the gut-brain Layer-Skipping Channel.
+
+INPUTS (SUBSCRIBE):
+
+• From the heart, lungs, airways, aortic arch baroreceptors and chemoreceptors, oesophagus, stomach, intestines, liver, and pancreas.
+
+Cargo: the visceral state of nearly the whole thoracic and abdominal body - stretch, pressure, nutrients, inflammation.
+
+• From the gut's neuropod cells, synapsing on nodose afferents.
+
+Cargo: luminal nutrient information on a timescale of milliseconds to seconds, the fast lane of the gut-brain axis.
+
+OUTPUTS (PUBLISH):
+
+• Parasympathetic preganglionic fibres from the dorsal motor nucleus to intramural ganglia of the viscera, and onto the enteric nervous system, down to the level of the transverse colon.
+
+Cargo: rest-and-digest command - motility, secretion, and the vagal side of the inflammatory reflex.
+
+• Branchial motor fibres from the nucleus ambiguus to the pharynx and larynx.
+
+Cargo: swallowing and voice.
+
+• Cardioinhibitory fibres from the nucleus ambiguus to the cardiac ganglia.
+
+Cargo: the beat-to-beat brake on heart rate; this is the efferent limb of the baroreflex and the source of respiratory sinus arrhythmia.
+
+MODALITY MIX: Sensory, motor, and parasympathetic.
+
+LAYER 10 MEMBERSHIP: The interoceptive system, the autonomic motor system, the gustatory system (a minor limb), and the gut-brain channel: this single nerve is the missing Layer 9 address in more Layer 10 chains than any other structure in this roster.
+
+CLINICAL FAILURE SIGNATURE: Hoarseness from recurrent laryngeal palsy, dysphagia, and deviation of the uvula away from the lesioned side.
+
+Bilateral vagal failure is not survivable without intervention, because the larynx loses its protection and the airway its guard.
+
+
+ENTRY: CRANIAL NERVE XI, THE ACCESSORY NERVE
+
+Plain language: the head-turner and shoulder-shrugger, and the roster's oddity: its motor neurons live in the spinal cord.
+
+NUCLEUS OF ORIGIN: The spinal accessory nucleus, in the ventral horn of spinal segments C1 to roughly C5.
+
+Its rootlets ascend through the foramen magnum before exiting the skull - a spinal nerve that borrowed a cranial exit.
+
+The older doctrine of a cranial root belonging to XI has largely been reassigned to the vagus in modern accounts, and this roster follows that reassignment without treating the question as fully closed.
+
+INPUTS (SUBSCRIBE): None of behavioural significance; efferent.
+
+OUTPUTS (PUBLISH):
+
+• Motor fibres to the sternocleidomastoid and trapezius.
+
+Cargo: head rotation and shoulder elevation.
+
+MODALITY MIX: Motor only.
+
+LAYER 10 MEMBERSHIP: The corticospinal command chain, by way of corticobulbar-pattern input to its spinal nucleus.
+
+CLINICAL FAILURE SIGNATURE: A drooped shoulder, weak shrug, and weak head turn toward the opposite side; a classic iatrogenic injury of lymph node surgery in the posterior triangle of the neck.
+
+
+ENTRY: CRANIAL NERVE XII, THE HYPOGLOSSAL NERVE
+
+Plain language: the tongue's motor wire.
+
+NUCLEUS OF ORIGIN: The hypoglossal nucleus, in the medulla, bulging into the floor of the fourth ventricle as the hypoglossal trigone.
+
+INPUTS (SUBSCRIBE): None of behavioural significance; efferent.
+
+OUTPUTS (PUBLISH):
+
+• Motor fibres to all intrinsic and most extrinsic muscles of the tongue.
+
+Cargo: the articulation of every spoken word and the oral phase of every swallow.
+
+MODALITY MIX: Motor only.
+
+LAYER 10 MEMBERSHIP: The corticobulbar limb of the corticospinal command chain, and the executive tail of the language system: Broca's area's plans (parent section 2.1.13) are cashed out here.
+
+CLINICAL FAILURE SIGNATURE: The protruded tongue deviates toward the side of a lower motor neuron lesion, with atrophy and fasciculations on that side.
+
+Tongue fasciculations are one of the bedside signatures of motor neuron disease.
+
+
+================================================================================
+
+
+PART TWO. THE EXPANSION ENTRIES, KEYED FOR PASTING
+
+Each entry below is headed with the parent section it extends.
+
+Nothing here contradicts the parent text; each entry adds structure beneath it.
+
+
+ENTRY: ADDITION TO 2.5 THE CEREBELLUM - THE FUNCTIONAL SUBDIVISIONS AND THEIR TARGETS
+
+The parent entry states the uniform circuit and the single algorithm.
+
+This addition states what is plugged into that algorithm, region by region, because the Layer 10 chains attach at the subdivision level, not at the organ level.
+
+The scale first, since it justifies the expansion: the cerebellum contains on the order of eighty percent of all the neurons in the human brain - roughly sixty-nine billion of about eighty-six billion, nearly all of them granule cells - in about ten percent of its mass.
+
+THE VESTIBULOCEREBELLUM (FLOCCULONODULAR LOBE)
+
+The oldest part.
+
+INPUTS (SUBSCRIBE): From the vestibular ganglion directly (the only primary afferents to reach any cerebellar cortex) and from the vestibular nuclei; visual slip signals arrive by way of the inferior olive's climbing fibres.
+
+Cargo: head motion and retinal slip - the raw material of gaze stabilisation.
+
+OUTPUTS (PUBLISH): Its Purkinje cells project directly to the vestibular nuclei, bypassing the deep nuclei - the one exception to the rule that the deep nuclei are the sole output.
+
+Cargo: calibration of the vestibulo-ocular reflex and of balance.
+
+FAILURE SIGNATURE: Truncal ataxia and nystagmus; the patient sways while standing still.
+
+THE SPINOCEREBELLUM (VERMIS AND PARAVERMIS)
+
+INPUTS (SUBSCRIBE): From the spinal cord by the spinocerebellar tracts.
+
+Cargo: proprioception - the ongoing state of the limbs and trunk.
+
+OUTPUTS (PUBLISH): The vermis publishes through the fastigial nucleus to the vestibular nuclei and reticular formation, controlling posture and gait.
+
+The paravermis publishes through the interposed nuclei (globose and emboliform) to the red nucleus (parent section 2.4.1.5) and the ventral lateral thalamus.
+
+Cargo: online correction of limb movement in flight.
+
+FAILURE SIGNATURE: Gait and limb ataxia; in the anterior lobe this is the classic pattern of alcoholic cerebellar degeneration.
+
+THE CEREBROCEREBELLUM (LATERAL HEMISPHERES)
+
+The newest and, in humans, by far the largest part.
+
+INPUTS (SUBSCRIBE): From the entire cerebral cortex by way of the pontine nuclei (parent section 2.4.2.3) - the corticopontocerebellar projection, one of the largest fibre systems in the brain.
+
+Cargo: intentions and plans, motor and cognitive alike.
+
+OUTPUTS (PUBLISH): Through the dentate nucleus, by the superior cerebellar peduncle, to the ventral lateral thalamus and thence to motor, premotor, and prefrontal cortex.
+
+Cargo: refined plans and, from the most lateral and posterior parts, the cognitive timing the parent entry credits.
+
+FAILURE SIGNATURE: Dysmetria and intention tremor of the limbs; posteriorly, the cerebellar cognitive affective syndrome the parent already names.
+
+LAYER 10 RESOLUTION: When the Layer 10 outline's cerebellar system (Part Two, entry 10) says calibration engine wrapped around every stream, the addresses are now stated: vestibular stream at the flocculonodular lobe, spinal stream at the vermis and paravermis, cortical stream at the lateral hemispheres, error channel at the inferior olive, exits at the fastigial, interposed, and dentate nuclei.
+
+
+ENTRY: ADDITION TO 2.6 THE SPINAL CORD - HORN ORGANISATION, PATTERN GENERATORS, AND THE TRACT ROSTER
+
+The parent entry calls the cord a computer that knows how to walk.
+
+This addition supplies the computer's floor plan.
+
+A count, stated honestly: modern quantitative work (isotropic fractionator and stereology, Bahney and von Bartheld, 2018) puts the human spinal cord at roughly 197 to 222 million neurons, far below the loose one-billion figure of older secondary sources.
+
+The corpus should prefer the measured range.
+
+THE DORSAL HORN
+
+Sensation enters here, and it is layered.
+
+The grey matter is conventionally divided into the ten laminae of Rexed; the dorsal horn spans laminae I through VI.
+
+• Lamina I (the marginal zone) and lamina II (the substantia gelatinosa) receive the thin pain and temperature afferents; lamina II is the principal site of the gate control the parent names.
+
+• Laminae III and IV receive tactile afference.
+
+• Lamina V receives convergent input from skin and viscera on wide-dynamic-range neurons - the anatomical substrate of referred pain, which is why a heart attack is felt in the arm.
+
+INPUTS (SUBSCRIBE): Dorsal root afferents, sorted by fibre type onto the laminae above; descending monoaminergic control from the raphe nuclei and locus coeruleus onto laminae I, II, and V.
+
+OUTPUTS (PUBLISH): The spinothalamic and spinoreticular projections arise chiefly from laminae I and V, decussate at the segment, and ascend contralaterally.
+
+THE INTERMEDIATE ZONE AND THE VENTRAL HORN
+
+• Lamina VII holds the intermediolateral cell column (sympathetic preganglionic, T1 to about L2, as the parent states) and, at C8 to L3, Clarke's column, origin of the dorsal spinocerebellar tract.
+
+• Lamina VIII holds commissural interneurons coordinating the two sides.
+
+• Lamina IX holds the motor neuron pools, arranged somatotopically: medial pools for axial muscles, lateral pools for distal ones; flexor pools dorsal to extensor pools.
+
+• Lamina X surrounds the central canal.
+
+Alongside the alpha motor neurons sit the gamma motor neurons, which keep the muscle spindles taut, and the Renshaw cells, which recurrently inhibit the motor neurons that excite them - the cord's own gain control.
+
+THE CENTRAL PATTERN GENERATORS
+
+The parent's claim that the cord will keep walking without the brain rests on the central pattern generators (CPGs): interneuronal networks in the cervical and lumbar enlargements that produce rhythmic, alternating flexor-extensor output without rhythmic input.
+
+The direct demonstrations - fictive locomotion in the isolated cord - are from cat, rodent, and lamprey, and should be read as such.
+
+In humans the evidence is necessarily indirect but is substantial: involuntary step-like movements in spinal cord injury, and the ability of epidural stimulation below a clinically complete injury to restore organised stepping, are hard to explain without a human lumbar CPG.
+
+This file states the species provenance rather than silently generalising.
+
+THE ASCENDING TRACT ROSTER
+
+• Dorsal columns (fasciculus gracilis, legs; fasciculus cuneatus, arms): fine touch, vibration, proprioception; first synapse at the dorsal column nuclei of the medulla; decussation there, as the parent states.
+
+• Spinothalamic (anterolateral) system: pain, temperature, crude touch; decussation at the segment of entry.
+
+• Dorsal and ventral spinocerebellar tracts: unconscious proprioception to the cerebellum, from Clarke's column and the spinal border cells respectively.
+
+• Spinoreticular and spinoparabrachial projections: the affective and arousal limbs of pain, feeding the parabrachial nucleus (parent section 2.4.2.5) and thence amygdala and hypothalamus.
+
+THE DESCENDING TRACT ROSTER
+
+• Lateral corticospinal tract: about ninety percent of the pyramidal fibres, decussated at the pyramids, controlling distal limb musculature; the direct cortico-motoneuronal connections onto lamina IX pools are strongest for the hand, and are the anatomical basis of dexterity.
+
+• Anterior corticospinal tract: the undecussated remainder, serving axial muscles bilaterally.
+
+• Rubrospinal tract: from the red nucleus; present in humans but reduced compared with other mammals.
+
+• Reticulospinal tracts: posture, locomotion initiation, and gross bilateral synergies; the principal route by which the mesencephalic locomotor region (parent section 2.4.1.8) reaches the CPGs.
+
+• Vestibulospinal tracts: antigravity extensor drive from the vestibular nuclei.
+
+• Tectospinal tract: orienting head turns from the superior colliculus, to cervical segments.
+
+• Descending monoaminergic projections: raphe-spinal serotonin and coeruleo-spinal noradrenaline, gating pain and setting motor neuron excitability.
+
+LAYER 10 RESOLUTION: The corticospinal system (Layer 10 outline, Part Two, entry 8) now has its terminal addresses: lamina IX motor pools, reached directly for the hand and via lamina VII interneurons for the rest.
+
+The somatosensory system's two chains have their laminar origins.
+
+The autonomic motor system's spinal address is the intermediolateral cell column of lamina VII.
+
+
+ENTRY: ADDITION TO 2.7 THE PERIPHERAL GANGLIA - THE THREE FAMILIES IN FULL
+
+The parent entry lists the ganglia.
+
+This addition gives each family its INPUTS and OUTPUTS at the same grain as the brainstem entries, because the autonomic and somatosensory Layer 10 chains each pass through exactly one of these ganglia and currently have no address for the stop.
+
+THE DORSAL ROOT GANGLIA (DRG)
+
+Plain language: the body's sensory switchboard cabinets, one pair per segment, thirty-one pairs in all.
+
+STRUCTURE: Pseudounipolar neurons, as the parent states: one stem axon splitting into a peripheral branch and a central branch, with no dendrites and no synapses onto the soma.
+
+The soma sits beside the signal path, not on it.
+
+Each neuron is wrapped by satellite glial cells, which participate in the sensitisation that follows nerve injury.
+
+INPUTS (SUBSCRIBE): From skin, muscle spindles, tendon organs, joints, and viscera, over the full spectrum of fibre classes: large myelinated proprioceptive and tactile afferents, thin myelinated sharp-pain and cold afferents, and unmyelinated slow-pain, warmth, and itch afferents.
+
+OUTPUTS (PUBLISH): The central branches, into the dorsal horn laminae listed in the 2.6 addition and, for the large fibres, straight up the dorsal columns without a spinal synapse.
+
+A COUNT REFUSED: No settled figure for the total number of human DRG neurons, or for neurons per ganglion, can be stated honestly; published per-ganglion estimates vary widely with level, age, and counting method.
+
+Systematic stereology across levels would settle it, and this file leaves the slot empty rather than filling it.
+
+THE SYMPATHETIC CHAIN (PARAVERTEBRAL) GANGLIA
+
+STRUCTURE: A ladder of roughly 21 to 25 ganglia per side, flanking the vertebral column from the superior cervical ganglion down to the ganglion impar, linked by the sympathetic trunk.
+
+INPUTS (SUBSCRIBE): Cholinergic preganglionic fibres from the intermediolateral cell column, arriving by the white rami of T1 to about L2.
+
+A single preganglionic axon diverges onto many ganglion cells, and a chain fibre may ascend or descend several segments before synapsing: the divergence is the anatomy of the sympathetic response's breadth.
+
+OUTPUTS (PUBLISH): Noradrenergic postganglionic fibres, by the grey rami, to blood vessels, sweat glands (a cholinergic exception), piloerector muscles, heart, lungs, and the dilator pupillae.
+
+The superior cervical ganglion, as the parent notes, additionally supplies the pineal gland, making it a literal link in the circadian chain from the suprachiasmatic nucleus to melatonin.
+
+FAILURE SIGNATURE: Horner's syndrome - ptosis, miosis, and anhidrosis - the bedside readout of a broken cervical sympathetic chain.
+
+THE PREVERTEBRAL GANGLIA
+
+Treated by the parent at 2.7.1 as the Prevertebral Ganglion Integrative Cluster; nothing is added here beyond the cross-reference, since the parent's treatment is already at full grain.
+
+THE PARASYMPATHETIC GANGLIA
+
+The organising rule, stated plainly: sympathetic ganglia sit near the cord, parasympathetic ganglia sit near or inside the target organ.
+
+Long preganglionic, short postganglionic.
+
+• The ciliary ganglion: input from the Edinger-Westphal nucleus by nerve III; output to sphincter pupillae and ciliary muscle.
+
+• The pterygopalatine ganglion: input from the superior salivatory nucleus by nerve VII; output to the lacrimal gland and nasal mucosa.
+
+• The submandibular ganglion: input from the superior salivatory nucleus by nerve VII; output to the submandibular and sublingual glands.
+
+• The otic ganglion: input from the inferior salivatory nucleus by nerve IX; output to the parotid gland.
+
+• The intramural ganglia of the thoracic and abdominal viscera: input from the dorsal motor nucleus of the vagus and the nucleus ambiguus by nerve X; in the gut these ganglia are not mere relays but are woven into the enteric nervous system of section 2.8.
+
+• The pelvic ganglia: input from the sacral preganglionic neurons of S2 to S4; output to bladder, rectum, and erectile tissue - the sacral outflow that completes the craniosacral parasympathetic picture.
+
+LAYER 10 RESOLUTION: The autonomic motor system (Layer 10 outline, Part Two, entry 12) now has all its one-synapse stops named: chain and prevertebral ganglia on the sympathetic side, the four head ganglia plus intramural and pelvic ganglia on the parasympathetic side.
+
+
+ENTRY: ADDITION TO 2.8 THE ENTERIC NERVOUS SYSTEM - PLEXUSES, REFLEX ARCS, THE VAGAL INTERFACE, AND THE HONEST COUNT
+
+The parent entry is sixteen lines for a nervous system that runs an organ nine metres long.
+
+This addition gives it the standard grain.
+
+THE TWO PLEXUSES, AT FULL GRAIN
+
+• The myenteric (Auerbach's) plexus lies between the longitudinal and circular muscle layers and runs the whole length of the tract, oesophagus to rectum.
+
+It is the motor brain of the gut: motility, sphincter control, and the migrating motor complex that sweeps the fasting intestine.
+
+• The submucosal (Meissner's) plexus lies in the submucosa, is prominent chiefly in the small and large intestine, and governs secretion, water and electrolyte transport, and local blood flow.
+
+The two plexuses are interconnected, and both are embedded in a lattice of enteric glia, which outnumber the neurons and participate in signalling rather than merely supporting it.
+
+THE INTRINSIC REFLEX ARC
+
+The enteric nervous system contains complete reflex arcs with no central limb at all, and this is the anatomical meaning of the parent's claim that peristalsis survives vagotomy.
+
+• Intrinsic primary afferent neurons (IPANs) sense stretch and luminal chemistry, partly by way of serotonin released from the mucosa's enterochromaffin cells.
+
+• Ascending and descending interneurons carry the signal orally and anally along the plexus.
+
+• Excitatory motor neurons (acetylcholine, tachykinins) contract the muscle on the oral side of a bolus; inhibitory motor neurons (nitric oxide, vasoactive intestinal peptide) relax it on the anal side.
+
+Contraction behind, relaxation ahead: that is peristalsis, computed locally.
+
+This is the law of the intestine, described by Bayliss and Starling in 1899, and it is the oldest demonstration in physiology of a complete neural computation outside the skull.
+
+THE VAGAL INTERFACE
+
+The vagus does not command the enteric nervous system line by line; the fibre counts forbid it.
+
+The vagal efferents synapse onto enteric neurons, which do the local work: the relationship is supervisory, a setting of gain and context over a system that runs itself.
+
+In the other direction, vagal afferents with cell bodies in the nodose ganglion innervate the gut wall and mucosa, and the neuropod cells of the epithelium synapse directly onto them - the fast gut-brain channel the parent describes at 2.4.3.1 and 2.7, reaching the nucleus tractus solitarius in milliseconds to seconds.
+
+The gut-brain Layer 10 chain therefore reads, in full Layer 9 addresses: enteroendocrine neuropod cell, nodose ganglion, nucleus tractus solitarius, parabrachial nucleus, and onward to hypothalamus, amygdala, and insula.
+
+THE HONEST NEURON COUNT
+
+The parent entry states roughly five hundred million neurons, more than the spinal cord.
+
+The literature as checked on 2026-08-12 does not permit that sentence to stand unannotated, and this file reports the disagreement rather than averaging it.
+
+• The classical and most widely quoted figures, descending from Furness and colleagues, put the human enteric nervous system at roughly 400 to 600 million neurons, with 500 million the common citation.
+
+These figures are extrapolations, not direct whole-gut counts.
+
+• The first comprehensive stereological count in human gut with validated panneuronal markers (Michel and colleagues, Neurogastroenterology and Motility, 2022) arrived at approximately 168 million enteric neurons.
+
+• The modern spinal cord count, per the 2.6 addition, is roughly 197 to 222 million neurons.
+
+Three consequences, stated plainly.
+
+First, the true human enteric count is currently unsettled between roughly 170 million and 600 million, and the disagreement is methodological: extrapolation versus stereology.
+
+Second, if the stereological figure holds, the enteric nervous system has fewer neurons than the spinal cord, not more, and the parent's comparative clause would need revision by a future authorised edit - this file, being additive, only flags it.
+
+Third, nothing functional changes either way: a hundred and seventy million neurons running a nine-metre organ autonomously is a second brain by any honest standard.
+
+The evidence that would settle it: replicated whole-gut stereology, across ages, with the same marker panel.
+
+LAYER 10 RESOLUTION: The interoceptive system and the gut-brain channel now have every stop named; the autonomic motor system's most distal tier - the enteric neurons themselves - has its two plexus addresses.
+
+
+ENTRY: ADDITION TO 2.9 THE ENDOCRINE GLANDS - EACH GLAND AT LAYER 9 GRAIN
+
+The parent entry lists the glands and their hormones.
+
+This addition gives each gland the standard INPUTS (SUBSCRIBE) and OUTPUTS (PUBLISH) treatment, because the hormonal axes of the Layer 10 outline (Part Six) are chains, and a chain needs both ends of every link.
+
+The publication medium differs from every other entry in this volume: these outputs travel by blood, not axon, and their unit of address is the receptor, not the synapse.
+
+THE ANTERIOR PITUITARY
+
+INPUTS (SUBSCRIBE): Hypothalamic releasing and inhibiting hormones - corticotropin-releasing hormone (CRH), thyrotropin-releasing hormone (TRH), gonadotropin-releasing hormone (GnRH), growth-hormone-releasing hormone (GHRH), somatostatin, and dopamine (which tonically inhibits prolactin) - delivered by the hypophyseal portal system from the median eminence.
+
+Also: negative feedback from every downstream gland's hormone, sensed by its own receptor populations.
+
+OUTPUTS (PUBLISH): Adrenocorticotropic hormone (ACTH), thyroid-stimulating hormone (TSH), growth hormone (GH), luteinising hormone (LH), follicle-stimulating hormone (FSH), and prolactin, into the systemic circulation.
+
+Cargo: the middle command tier of five hormonal axes.
+
+FAILURE SIGNATURE: Hypopituitarism from tumour or apoplexy; a prolactinoma is the commonest secreting tumour.
+
+THE POSTERIOR PITUITARY
+
+INPUTS (SUBSCRIBE): It has no inputs of its own, because, as the parent says, it is not a gland: it is the axon terminals of the paraventricular and supraoptic magnocellular neurons (parent sections 2.3.2.1 and 2.3.2.2).
+
+OUTPUTS (PUBLISH): Oxytocin and vasopressin, into the blood.
+
+Cargo: milk ejection, uterine contraction, and social bonding modulation on the oxytocin side; water retention and vasoconstriction on the vasopressin side.
+
+FAILURE SIGNATURE: Central diabetes insipidus - litres of dilute urine daily when vasopressin fails.
+
+THE PINEAL GLAND
+
+Treated by the parent at its own diencephalic address; noted here only as the terminus of the polysynaptic chain from the suprachiasmatic nucleus through the intermediolateral cell column and superior cervical ganglion, publishing melatonin nightly.
+
+THE THYROID GLAND
+
+INPUTS (SUBSCRIBE): TSH from the anterior pituitary; iodine availability from the diet.
+
+OUTPUTS (PUBLISH): Thyroxine (T4) and triiodothyronine (T3), with T4 converted to the more active T3 in target tissues.
+
+Cargo: the metabolic set-point of essentially every cell, and, in development, the permissive signal for brain maturation the parent flags: untreated congenital hypothyroidism produces severe, preventable intellectual disability, which is why newborn screening exists.
+
+Also calcitonin, from the parafollicular cells, a minor calcium-lowering signal in humans.
+
+FAILURE SIGNATURE: Hypothyroidism presents as slowed cognition and depression and is a mandatory rule-out in psychiatric workup - an endocrine gland masquerading as a mood disorder.
+
+THE PARATHYROID GLANDS
+
+INPUTS (SUBSCRIBE): Blood ionised calcium, read continuously by the calcium-sensing receptor - no pituitary tier at all; this axis is a direct chemostat.
+
+OUTPUTS (PUBLISH): Parathyroid hormone.
+
+Cargo: the defence of blood calcium, by bone, kidney, and (via vitamin D activation) gut.
+
+FAILURE SIGNATURE: Hypocalcaemic tetany when the glands fail; neuromuscular excitability rises as calcium falls, which is the most direct demonstration in medicine that an endocrine gland sets a neural operating parameter.
+
+THE ADRENAL CORTEX
+
+INPUTS (SUBSCRIBE): ACTH from the anterior pituitary, for the cortisol zone; angiotensin II and blood potassium, for the aldosterone zone - two command lines into one gland.
+
+OUTPUTS (PUBLISH): Cortisol, aldosterone, and adrenal androgens.
+
+Cargo: cortisol is the effector hormone of the hypothalamic-pituitary-adrenal (HPA) axis and the feedback signal that closes it, acting on receptors in the hippocampus, hypothalamus, and pituitary; the corpus's stress and memory material hangs on this loop.
+
+FAILURE SIGNATURE: Addisonian crisis when it fails; Cushing's syndrome, with hippocampal and mood consequences, when it runs unchecked.
+
+THE ADRENAL MEDULLA
+
+INPUTS (SUBSCRIBE): Direct cholinergic preganglionic sympathetic input from the intermediolateral cell column - no intervening ganglion, because, as the parent argues, the chromaffin cells are the ganglion, modified into secretory form.
+
+OUTPUTS (PUBLISH): Adrenaline, with some noradrenaline, into the blood in a single broadcast.
+
+Cargo: the humoral copy of the sympathetic message - the whole body told at once.
+
+The parent's argument is repeated deliberately: these are neural-crest neurons that traded axons for the bloodstream, and they are the strongest single argument for treating glands as Layer 9 structures.
+
+FAILURE SIGNATURE: Phaeochromocytoma - paroxysmal hypertension, palpitations, and dread, which is to say a tumour whose symptom is inappropriate fight-or-flight.
+
+THE PANCREATIC ISLETS
+
+INPUTS (SUBSCRIBE): Blood glucose directly, sensed by the beta cells' own glucokinase machinery; incretin hormones (glucagon-like peptide 1 and glucose-dependent insulinotropic polypeptide) from the enteroendocrine system; and autonomic innervation, parasympathetic favouring and sympathetic suppressing insulin release.
+
+OUTPUTS (PUBLISH): Insulin from the beta cells, glucagon from the alpha cells, somatostatin from the delta cells.
+
+Cargo: the minute-to-minute setting of blood glucose - which is to say the brain's fuel line, since the brain burns glucose almost exclusively under ordinary conditions.
+
+FAILURE SIGNATURE: Diabetes mellitus; on the acute side, hypoglycaemia is a neurological emergency that mimics stroke, because the organ that fails first when the fuel line drops is the brain.
+
+THE GONADS
+
+INPUTS (SUBSCRIBE): LH and FSH from the anterior pituitary, under the pulsatile GnRH clock of the hypothalamus; feedback runs both negative and, uniquely at mid-cycle, positive, when rising oestrogen flips to triggering the LH surge.
+
+OUTPUTS (PUBLISH): Testosterone, oestrogens, progesterone, plus inhibin as a dedicated FSH feedback line.
+
+Cargo: as the parent states, organisational effects on the developing brain, laid down early and permanent, and activational effects on the adult one, waxing and waning with hormone level.
+
+FAILURE SIGNATURE: Hypogonadism, and the mood and cognitive accompaniments of menopause - a Layer 9 gland whose decline is felt at Layer 12.
+
+THE DIFFUSE ENTEROENDOCRINE SYSTEM
+
+INPUTS (SUBSCRIBE): The luminal contents of the gut, directly - nutrients, acidity, and microbial products, sampled by receptor-bearing cells scattered singly through the epithelium.
+
+OUTPUTS (PUBLISH): Ghrelin from the stomach; cholecystokinin, secretin, glucose-dependent insulinotropic polypeptide from the upper intestine; glucagon-like peptide 1 and peptide YY from the lower; serotonin from the enterochromaffin cells, in quantities that make the gut the body's principal serotonin reservoir.
+
+Cargo: the nutritional state of the organism, published on two channels at once - hormonally to the arcuate nucleus and area postrema, and synaptically, through the neuropod cells of the 2.8 addition, up the vagus.
+
+FAILURE SIGNATURE: No single failure syndrome; its clinical face is the incretin pharmacology now reshaping obesity medicine, which works by imitating this system's satiety publications.
+
+LAYER 10 RESOLUTION: The hormonal axes of the Layer 10 outline now have both ends of every link: hypothalamic nucleus, portal system, pituitary cell population, gland, hormone, receptor field, feedback path.
+
+The chain rule is satisfied at the same grain as for the neural systems, which was the parent section's argument all along.
+
+
+================================================================================
+
+
+CLOSING NOTE ON WHAT THIS FILE DID NOT DO
+
+It did not restate the cortex; the disproportion is answered, not inverted.
+
+It did not overwrite the parent's five hundred million; it flagged the disagreement and left the correction to an authorised edit.
+
+It refused counts where the literature has none to give: total dorsal root ganglion neurons, per-ganglion counts, and any single settled enteric figure.
+
+Every Layer 10 chain named in the scope - corticospinal, autonomic, gustatory, vestibular, and gut-brain - now resolves to Layer 9 addresses end to end.
+
+END OF THE LAYER 9 PERIPHERAL AND EFFERENT EXPANSION.
