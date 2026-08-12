@@ -1,0 +1,1819 @@
+THE NEUROSCIENCE OF DEVELOPMENTAL PSYCHOLOGY
+
+A Complete, Comprehensive, and Thorough Outline
+
+Compiled for the Certified_Neuroscientist corpus of D. R. Dison, Founder, Artificial Intelligence University (AIU).
+
+Date of compilation: August 12, 2026.
+
+
+PROVENANCE, STATED BEFORE ANYTHING ELSE
+
+This outline was added on 2026-08-12 by the konnectome build, under the owner's explicit edit authority over this directory.
+
+It is this build's writing, living in the corpus's own directory, and it does not outrank the corpus's own documents.
+
+Where this outline and a corpus document disagree, the corpus document is right and the correction is owed to this file.
+
+Its structure and its claims were checked against the published literature by web search on 2026-08-12, and the sources consulted are named below.
+
+It is the sibling, for the developing mind, of THE_NEUROSCIENCE_OF_COGNITION_OUTLINE, which treats the adult steady state, and it is written to mesh with two documents this corpus already holds: THE_ONTOGENETIC_AXIS, which frames where development belongs in the fifteen-layer framework, and the LAYER_06_09_DEVELOPMENT_AND_DISEASE_COMPANION, which carries the per-cell and per-region developmental entries.
+
+
+HOW TO READ THIS OUTLINE
+
+This document has four levels.
+
+Level 1 is the PART, of which there are fifteen.
+
+Level 2 is the CHAPTER, of which there are sixty-eight, numbered continuously from 1 to 68 across the whole work.
+
+Level 3 is the SECTION, numbered as chapter-point-section, for example 12.3.
+
+Level 4 is the SUB-SECTION, numbered as chapter-point-section-point-subsection, for example 12.3.4.
+
+The outline is organised on a single principle: the mind is not installed but grown, and the growing is lawful.
+
+Development, for the purposes of this outline, means the ordered sequence of changes by which a fertilised cell becomes a behaving, knowing, feeling person, and by which that person continues to change across the whole of a life.
+
+Developmental psychology, for the purposes of this outline, means the study of how perception, cognition, emotion, language, and social capacities emerge and change with age.
+
+The neuroscience of developmental psychology, therefore, names the research programme that seeks mechanistic explanations of those emergences in terms of the developing brain: its construction, its wiring, its plasticity, its timetables, and its failures.
+
+The field calls itself developmental cognitive neuroscience, and the two names are used interchangeably here.
+
+Everything before Part Seven is the machinery of development: what builds the brain, how it is studied, what makes it plastic, and what shapes it from outside. Everything from Part Seven onward is the catalogue of what develops: the faculties, the social and emotional mind, adolescence, the ways development goes differently, the theories that bind it together, and the uses the knowledge is put to.
+
+
+SOURCES CONSULTED IN COMPILING THIS OUTLINE
+
+The structure was checked against the tables of contents of the field's canonical teaching and reference works, retrieved from publisher sources.
+
+• Johnson and de Haan, Developmental Cognitive Neuroscience: An Introduction, fourth edition, Wiley-Blackwell, 2015, the book that named the field.
+
+• Nelson and Luciana, editors, Handbook of Developmental Cognitive Neuroscience, second edition, MIT Press, 2008.
+
+• Stiles, The Fundamentals of Brain Development: Integrating Nature and Nurture, Harvard University Press, 2008, and Stiles and Jernigan, The basics of brain development, Neuropsychology Review, 2010.
+
+• Cohen Kadosh, editor, The Oxford Handbook of Developmental Cognitive Neuroscience, Oxford University Press, 2024.
+
+• Goswami, Cognitive Development and Cognitive Neuroscience: The Learning Brain, second edition, Routledge, 2019.
+
+• Sanes, Reh, Harris and Wallace, Development of the Nervous System, fourth edition, Academic Press, 2019, for the cellular and molecular substrate.
+
+• Nelson, Fox and Zeanah, Romania's Abandoned Children, Harvard University Press, 2014.
+
+• The developmental psychology anchors: Siegler, Saffran, Eisenberg and Gershoff, How Children Develop, sixth edition, Worth, 2020; Berk; Kail.
+
+• Elman, Bates, Johnson, Karmiloff-Smith, Parisi and Plunkett, Rethinking Innateness, MIT Press, 1996; Karmiloff-Smith, Beyond Modularity, MIT Press, 1992; Thelen and Smith, A Dynamic Systems Approach to the Development of Cognition and Action, MIT Press, 1994.
+
+The frontier and quantitative material was checked against the primary literature to 2026, including the lifespan brain charts of Bethlehem and Seidlitz and colleagues, Nature, 2022; the reproducibility findings of Marek and colleagues, Nature, 2022; the awake-infant hippocampal encoding work of Yates and Turk-Browne, Science, 2025; the 2026 reanalysis by Albaugh and colleagues of the delayed-cortical-maturation account of attention-deficit hyperactivity disorder; and the cohort protocols of the ABCD, dHCP, Baby Connectome, HBCD and Generation R studies.
+
+A fuller list of seminal works stands in THE CHAPTER NOTES at the end of this outline.
+
+
+A NOTE ON TAGS
+
+Each chapter carries one of three tags.
+
+• (CORE) marks chapters that state a developmental capacity, timetable, or mechanism that a reader could not skip without leaving a hole in the account.
+
+• (APPARATUS) marks chapters that supply method, framework, or substrate, and that exist to make the CORE chapters checkable.
+
+• (CONTEXT) marks chapters that situate the science historically, clinically, ethically, or in its applications.
+
+
+A NOTE ON TIMINGS
+
+This outline names real timings wherever the literature supports them, because a developmental science without a calendar is not doing its job: neurulation at gestational weeks three to four, thalamocortical innervation near weeks twenty-four to twenty-eight, synaptic density peaking in visual cortex at four to twelve months and in prefrontal cortex in the second and third years, perceptual narrowing between six and twelve months, explicit false belief near age four, and myelination running into the third decade.
+
+Two corrections this corpus has already recorded are honoured throughout: the claim that the brain matures at twenty-five is an artefact of cohort age limits, not a finding; and a stated timing is either supported by a source or refused, never invented.
+
+
+PART ONE. FOUNDATIONS: THE FIELD, ITS HISTORY, AND ITS FRAMEWORKS
+
+
+CHAPTER 1. THE OBJECT OF STUDY: WHAT DEVELOPS, AND WHAT WOULD COUNT AS AN EXPLANATION (CORE)
+
+1.1 The explanatory target
+
+1.1.1 Relating change in neural substrate to change in mind and behaviour, from the embryo through adolescence and beyond
+
+1.1.2 Development as construction, not unfolding: why the blueprint metaphor fails
+
+1.1.3 Typical and atypical development as mutually informative, and the warning that atypical is not merely delayed
+
+1.1.4 The levels the field must cross: gene, cell, circuit, system, behaviour, environment
+
+1.2 The three classic questions
+
+1.2.1 Nature and nurture, restated as the interaction question
+
+1.2.2 Continuity and discontinuity: stages against gradual change
+
+1.2.3 Universality and variability across children and cultures
+
+1.3 What a completed developmental neuroscience would deliver
+
+1.3.1 The timetable criterion: every capacity assigned an onset, a trajectory, and a mechanism
+
+1.3.2 The perturbation criterion: outcomes predicted from early measures and altered by timed intervention
+
+1.3.3 The individual criterion: development explained for a child, not only for the average
+
+
+CHAPTER 2. A HISTORY OF THE SCIENCE OF THE DEVELOPING MIND (CONTEXT)
+
+2.1 The precursors
+
+2.1.1 Embryology and developmental psychobiology: Preyer, Coghill, Kuo, Schneirla, Gottlieb
+
+2.1.2 The maturationists: Gesell and McGraw and the motor milestone tables
+
+2.1.3 Piaget's genetic epistemology as a behavioural science awaiting a brain
+
+2.2 The founding of the field
+
+2.2.1 Diamond and Goldman-Rakic linking the infant A-not-B error to prefrontal cortex
+
+2.2.2 Johnson and Morton on newborn face preferences and the two-process account
+
+2.2.3 Johnson's textbook of 1997 naming developmental cognitive neuroscience, and the Birkbeck Centre for Brain and Cognitive Development
+
+2.3 Institutionalisation and expansion
+
+2.3.1 The journals and the society: Developmental Science, Developmental Cognitive Neuroscience, the Flux Society
+
+2.3.2 The adolescent turn: Casey, Giedd, Steinberg and Blakemore
+
+2.3.3 The big-cohort era and the reproducibility reckoning
+
+
+CHAPTER 3. THE THEORETICAL FRAMEWORKS (APPARATUS)
+
+3.1 Johnson's three viewpoints on functional brain development
+
+3.1.1 The maturational viewpoint: abilities come on line as circuits ripen
+
+3.1.2 Interactive specialization: regions become specialised through activity-dependent competition, and localisation is an outcome rather than a starting point
+
+3.1.3 The skill-learning viewpoint: the infant brain recruited as the adult expert's brain is
+
+3.2 Probabilistic epigenesis
+
+3.2.1 Bidirectional traffic among genes, neural activity, behaviour, and environment
+
+3.2.2 Experience-expectant against experience-dependent plasticity
+
+3.2.3 Canalisation and the epigenetic landscape
+
+3.3 Neuroconstructivism
+
+3.3.1 Modules as products of development rather than its starting equipment
+
+3.3.2 The critique of residual normality and of adult-lesion thinking about children
+
+3.3.3 Williams syndrome as the worked example
+
+3.4 Nativism at the neural level
+
+3.4.1 Core knowledge and what innate can mean neurally: architectural, chronotopic, and representational constraints
+
+3.4.2 The two-process reconciliation in face processing
+
+3.5 The organising gradients
+
+3.5.1 The sensorimotor-to-association axis of cortical maturation
+
+3.5.2 Protomap against protocortex in cortical arealisation
+
+3.5.3 The dual-systems framing of adolescence, held for Part Twelve
+
+
+PART TWO. THE BIOLOGICAL TIMETABLE: BUILDING THE BRAIN
+
+
+CHAPTER 4. THE EMBRYONIC BRAIN: INDUCTION, NEURULATION, AND PATTERNING (CORE)
+
+4.1 From three layers to a nervous system
+
+4.1.1 Gastrulation and neural induction in gestational week three
+
+4.1.2 Primary neurulation: fusion beginning near day twenty-two, anterior closure near day twenty-five, posterior near day twenty-seven
+
+4.1.3 Neural tube defects and the folate story
+
+4.1.4 The neural crest and its migratory derivatives
+
+4.2 Patterning the axes
+
+4.2.1 The three primary vesicles of week four and the five secondary vesicles of week five
+
+4.2.2 The anterior-posterior and dorsal-ventral signals: sonic hedgehog, the Wnt and fibroblast growth factor families, the Hox genes
+
+4.3 The cellular ground plan
+
+4.3.1 Ventricular and subventricular zones and radial glia as the stem cells
+
+4.3.2 The radial unit hypothesis and the expansion of the primate subventricular zone
+
+
+CHAPTER 5. NEUROGENESIS AND MIGRATION (CORE)
+
+5.1 Making the neurons
+
+5.1.1 Peak cortical neurogenesis across roughly gestational weeks five to twenty-five
+
+5.1.2 Symmetric and asymmetric division and the outer radial glia
+
+5.1.3 The near-complete neuronal complement by mid-gestation, and the narrow adult exception still in dispute
+
+5.2 Radial migration and the inside-out cortex
+
+5.2.1 Migration along radial glia and the deep-layers-first rule
+
+5.2.2 Reelin, the preplate, and the Cajal-Retzius cells
+
+5.3 Tangential migration
+
+5.3.1 The interneurons' journey from the ganglionic eminences
+
+5.3.2 Protracted postnatal interneuron migration into the frontal lobe
+
+5.4 When migration fails
+
+5.4.1 Lissencephaly, heterotopia, and polymicrogyria
+
+5.4.2 The migration genes and what each taught
+
+
+CHAPTER 6. LAMINATION, THE SUBPLATE, AND THE FETAL CORTEX (CORE)
+
+6.1 The transient compartments
+
+6.1.1 The preplate and its split
+
+6.1.2 The subplate as the waiting room for thalamocortical axons, largest in humans, and its vulnerability in preterm injury
+
+6.2 Wiring the cortex
+
+6.2.1 Axon guidance: netrins, semaphorins, ephrins
+
+6.2.2 Thalamocortical innervation near weeks twenty-four to twenty-eight and the onset of cortical sensory response
+
+6.3 Folding and area-making
+
+6.3.1 Gyrification in the third trimester and the mechanical accounts
+
+6.3.2 Arealisation: the protomap-protocortex synthesis
+
+6.4 Sculpting by death
+
+6.4.1 Programmed cell death of roughly half the neurons produced
+
+6.4.2 The neurotrophic hypothesis
+
+
+CHAPTER 7. THE POSTNATAL BLOOM AND PRUNE: SYNAPSES, GLIA, AND MYELIN (CORE)
+
+7.1 Synaptic overproduction
+
+7.1.1 Huttenlocher's counts: visual cortex peaking at four to twelve months, prefrontal cortex in the second and third years
+
+7.1.2 The concurrent-against-heterochronous debate
+
+7.1.3 Overproduction as the substrate of experience-expectant plasticity
+
+7.2 Pruning
+
+7.2.1 Regional asynchrony: sensory cortices finish in childhood, prefrontal spines are eliminated into the third decade
+
+7.2.2 The mechanisms held for Chapter 17: microglia, complement, astrocytes
+
+7.3 Gliogenesis
+
+7.3.1 Astrocytes then oligodendrocytes, and the transformation of the radial glia
+
+7.4 Myelination
+
+7.4.1 The Flechsig and Yakovlev-Lecours ordering rules: sensory before motor before association
+
+7.4.2 Rapid in the first two years, protracted into the third and fourth decades for association tracts
+
+7.4.3 Activity-dependent adaptive myelination
+
+
+CHAPTER 8. THE MEASURED TRAJECTORIES: FROM GROWTH CURVES TO BRAIN CHARTS (CORE)
+
+8.1 The macrostructural course
+
+8.1.1 Total volume near ninety to ninety-five percent of adult by age six
+
+8.1.2 The inverted-U of cortical grey matter and the steady climb of white matter
+
+8.1.3 The thinning wave: sensorimotor first, dorsolateral prefrontal and superior temporal last
+
+8.2 The finer grain
+
+8.2.1 Thickness and surface area as distinct developmental quantities
+
+8.2.2 Subcortical and cerebellar trajectories
+
+8.2.3 Functional network reorganisation and the motion-artefact corrections to its first story
+
+8.3 The lifespan reference
+
+8.3.1 The brain charts of 2022: normative growth curves from the fetus to age one hundred
+
+8.3.2 What a normative model buys the clinic and the science
+
+8.4 The maturity question
+
+8.4.1 Why there is no biological endpoint at twenty-five
+
+8.4.2 Different measures mature at different times, and regional asynchrony is the finding
+
+
+PART THREE. THE METHODS: HOW A DEVELOPING BRAIN IS STUDIED
+
+
+CHAPTER 9. THE BEHAVIOURAL TOOLKIT (APPARATUS)
+
+9.1 Looking as the infant's testimony
+
+9.1.1 Habituation and preferential looking
+
+9.1.2 Violation of expectation and its replication debates
+
+9.1.3 Anticipatory looking and eye-tracking
+
+9.2 Acting as the infant's testimony
+
+9.2.1 High-amplitude sucking and conditioned procedures
+
+9.2.2 Deferred imitation and elicited imitation
+
+9.3 The marker-task logic
+
+9.3.1 Linking an infant behaviour to a known circuit: the A-not-B example
+
+9.3.2 The strengths and the traps of marker tasks
+
+
+CHAPTER 10. ELECTROPHYSIOLOGY AND OPTICAL IMAGING IN THE YOUNG (APPARATUS)
+
+10.1 Electroencephalography and event-related potentials
+
+10.1.1 Why the method suits infants, and the high-density net
+
+10.1.2 The canonical infant components: the Nc, the N290 and P400, the mismatch response
+
+10.1.3 Resting power as a risk marker, and the artefact and attrition problems
+
+10.2 Functional near-infrared spectroscopy
+
+10.2.1 The optical principle and the awake, seated infant
+
+10.2.2 Newborn speech lateralisation and social perception as the showcase findings
+
+10.2.3 Portability, global-health field use, and the limits of depth
+
+
+CHAPTER 11. MAGNETIC RESONANCE IMAGING ACROSS DEVELOPMENT (APPARATUS)
+
+11.1 Structural imaging
+
+11.1.1 Volume, thickness, surface area, gyrification, and the segmentation problem of the first year
+
+11.1.2 Diffusion imaging and the maturation of the tracts
+
+11.2 Functional imaging
+
+11.2.1 Natural-sleep scanning and the newer awake-infant methods
+
+11.2.2 Movie paradigms and mock scanners for children
+
+11.2.3 Head motion as the field's central confound and the scrubbing literature
+
+11.3 The frontier acquisitions
+
+11.3.1 Fetal imaging
+
+11.3.2 Wearable magnetoencephalography for children
+
+
+CHAPTER 12. DESIGNS, COHORTS, AND THE ETHICS OF STUDYING CHILDREN (APPARATUS)
+
+12.1 The logic of developmental designs
+
+12.1.1 Cross-sectional, longitudinal, and accelerated longitudinal designs
+
+12.1.2 Modelling change: growth curves and normative models
+
+12.1.3 The reproducibility reckoning: why brain-wide association needs thousands
+
+12.2 The great cohorts
+
+12.2.1 The ABCD study of nearly twelve thousand adolescents
+
+12.2.2 The developing Human Connectome Project and the Baby Connectome Project
+
+12.2.3 The HBCD study from pregnancy onward, Generation R, and the allied cohorts
+
+12.3 Genetics in the cohort era
+
+12.3.1 Twin designs and heritability across age
+
+12.3.2 Polygenic scores in development and their limits
+
+12.4 The ethics
+
+12.4.1 Permission, assent, and minimal risk
+
+12.4.2 Incidental findings, data sharing, and the neuroethics of predicting a child's future
+
+
+PART FOUR. THE MECHANISMS OF PLASTICITY: HOW EXPERIENCE BUILDS CIRCUITS
+
+
+CHAPTER 13. CRITICAL AND SENSITIVE PERIODS: THE CONCEPT (CORE)
+
+13.1 Definitions and distinctions
+
+13.1.1 Critical against sensitive: window against bias
+
+13.1.2 Imprinting as the founding case
+
+13.1.3 Nested and staggered windows across the cortical hierarchy
+
+13.2 The human windows
+
+13.2.1 Language: the second-language evidence and the window to the late teens
+
+13.2.2 Perceptual narrowing for phonemes and faces between six and twelve months
+
+13.2.3 The deprivation cases: cataract reversal, cochlear implantation timing, late sign language
+
+13.3 The corpus cross-reference
+
+13.3.1 Where THE_ONTOGENETIC_AXIS carries this material, and what this outline adds
+
+
+CHAPTER 14. THE CANONICAL MODEL: OCULAR DOMINANCE PLASTICITY (CORE)
+
+14.1 The founding experiments
+
+14.1.1 Monocular deprivation in the kitten and the ocular dominance shift
+
+14.1.2 Amblyopia as the human parallel
+
+14.2 The modern mechanics
+
+14.2.1 The mouse model and the two-phase account: Hebbian depression then homeostatic recovery
+
+14.2.2 The distinct windows for acuity and binocularity
+
+14.3 Treatment and its windows
+
+14.3.1 Patching and its timing
+
+14.3.2 Adult perceptual learning and dichoptic approaches
+
+
+CHAPTER 15. THE MOLECULAR MACHINERY OF THE WINDOWS (CORE)
+
+15.1 The trigger
+
+15.1.1 The excitation-inhibition balance and the parvalbumin basket cell as the timer
+
+15.1.2 The experiments that moved the window: GAD65, benzodiazepines, BDNF, Otx2
+
+15.2 The brakes
+
+15.2.1 Perineuronal nets and their enzymatic removal
+
+15.2.2 The myelin-associated inhibitors and the Lynx1 cholinergic brake
+
+15.3 Reopening, and the honest record
+
+15.3.1 The animal proofs: dark exposure, enrichment, fluoxetine, interneuron transplantation
+
+15.3.2 The thin human translation record: the valproate absolute-pitch study, the failed fluoxetine amblyopia trials, the preclinical psychedelic work
+
+15.3.3 Why this corpus reports that record as thin rather than promising
+
+
+CHAPTER 16. SPONTANEOUS ACTIVITY AND ACTIVITY-DEPENDENT REFINEMENT (CORE)
+
+16.1 Activity before experience
+
+16.1.1 Retinal waves and their stages
+
+16.1.2 The causal tests: wave-deficient mice and degraded maps
+
+16.1.3 Cochlear spontaneous activity and the preterm delta brushes
+
+16.2 The two-step wiring rule
+
+16.2.1 Molecular gradients rough in the map
+
+16.2.2 Correlated activity sharpens it
+
+16.3 Hebbian and homeostatic plasticity in development
+
+16.3.1 The coincidence detector and the developmental receptor subunit switch
+
+16.3.2 Spike timing in developing circuits
+
+16.3.3 Synaptic scaling and the stability problem
+
+16.4 Cross-modal plasticity
+
+16.4.1 Blindness, Braille, and the recruitment of visual cortex
+
+16.4.2 Deafness and the reorganisation of auditory cortex
+
+
+CHAPTER 17. THE PRUNING MACHINERY (CORE)
+
+17.1 The cellular gardeners
+
+17.1.1 Microglial engulfment and the fractalkine signal
+
+17.1.2 Complement tagging: C1q and C3 as eat-me labels
+
+17.1.3 Astrocytic phagocytosis and the don't-eat-me signals
+
+17.2 The selection rule
+
+17.2.1 Activity dependence: the weaker input is eaten
+
+17.3 The clinical shadows
+
+17.3.1 Over-pruning and the complement story in schizophrenia, held for Chapter 57
+
+17.3.2 Under-pruning claims in autism, held for Chapter 53
+
+
+PART FIVE. GENES, ENVIRONMENT, AND EPIGENETICS
+
+
+CHAPTER 18. THE BEHAVIOURAL GENETICS OF DEVELOPMENT (APPARATUS)
+
+18.1 The designs and the laws
+
+18.1.1 Twin and adoption logic and the equal-environments debate
+
+18.1.2 The replicated findings: everything is heritable, nothing is fully heritable
+
+18.2 Heritability across age
+
+18.2.1 The Wilson effect: heritability of intelligence rising from childhood to adulthood
+
+18.2.2 Niche-picking as the proposed mechanism
+
+18.2.3 Socioeconomic moderation of heritability and its geography
+
+18.3 Gene-environment interplay
+
+18.3.1 Passive, evocative, and active correlation
+
+18.3.2 The candidate-gene interaction era and its collapse
+
+18.3.3 Differential susceptibility: the orchid and the dandelion
+
+
+CHAPTER 19. POLYGENIC SCORES AND THE NATURE OF NURTURE (APPARATUS)
+
+19.1 The genome-wide era
+
+19.1.1 The educational-attainment and cognitive-ability studies at millions of genomes
+
+19.1.2 What a polygenic score can and cannot say about a child
+
+19.2 The complications
+
+19.2.1 Genetic nurture: parental genotypes acting through the environment
+
+19.2.2 Within-family attenuation and the sibling designs
+
+19.2.3 The portability failure across ancestries
+
+19.3 The ethics, held also for Chapter 68
+
+19.3.1 Embryo screening and the prediction of children
+
+
+CHAPTER 20. EPIGENETICS AND EARLY EXPERIENCE (CORE)
+
+20.1 The machinery
+
+20.1.1 Methylation, histone modification, and the developmental reprogramming waves
+
+20.1.2 Imprinting and its disorders
+
+20.2 The founding experiments
+
+20.2.1 Maternal care and the glucocorticoid receptor in the rat
+
+20.2.2 The human echo in post-mortem hippocampus after childhood abuse
+
+20.2.3 The Dutch Hunger Winter methylation signature six decades on
+
+20.3 The honest appraisal
+
+20.3.1 Cross-tissue inference, small effects, and the hype problem
+
+20.3.2 Epigenetic clocks and the pace of development
+
+
+CHAPTER 21. THE SINGLE-GENE TEACHERS (CORE)
+
+21.1 Fragile X syndrome
+
+21.1.1 The repeat expansion, the translational repressor, and the spine phenotype
+
+21.1.2 The mGluR theory and the trial failures: why mouse rescue is not human treatment
+
+21.2 Rett syndrome
+
+21.2.1 MECP2 and the adult-mouse reversal: neurodevelopmental need not mean irreversible
+
+21.2.2 The first approved therapy and the gene-therapy trials
+
+21.3 Williams syndrome and Down syndrome
+
+21.3.1 The deletion, the phenotype, and the neuroconstructivist lesson
+
+21.3.2 Trisomy twenty-one and the early-Alzheimer window
+
+21.4 The convergence lesson
+
+21.4.1 The synaptopathies: chromatin and synapse as the common ground of risk genes
+
+
+PART SIX. THE PRENATAL ENVIRONMENT AND ITS INSULTS
+
+
+CHAPTER 22. TERATOLOGY AND ALCOHOL (CORE)
+
+22.1 The principles of teratology
+
+22.1.1 Timing, dose, and susceptibility, keyed to the timetable of Part Two
+
+22.2 Fetal alcohol spectrum disorders
+
+22.2.1 The 1973 recognition and the modern prevalence estimates
+
+22.2.2 The mechanisms: apoptotic neurodegeneration and midline patterning
+
+22.2.3 Why no safe dose is established
+
+22.3 The other exposures in brief
+
+22.3.1 Valproate, isotretinoin, and the thalidomide founding disaster
+
+22.3.2 The crack-baby correction: moral panic against measured effect
+
+22.3.3 Lead, mercury, organophosphates, and the silent-pandemic argument
+
+
+CHAPTER 23. INFECTION AND MATERNAL IMMUNE ACTIVATION (CORE)
+
+23.1 The congenital infections
+
+23.1.1 Rubella, cytomegalovirus, toxoplasmosis, and the Zika microcephaly mechanism
+
+23.2 The epidemiology
+
+23.2.1 Prenatal infection and schizophrenia risk
+
+23.2.2 Maternal fever and autism risk cohorts
+
+23.3 The animal mechanism
+
+23.3.1 The interleukin-6 and interleukin-17a pathway
+
+23.3.2 Two-hit models: immune priming plus adolescent stress
+
+
+CHAPTER 24. NUTRITION AND THE FETAL PROGRAMME (CORE)
+
+24.1 The proven nutrients
+
+24.1.1 Folate and the neural tube trial
+
+24.1.2 Iodine as the leading preventable cause of intellectual disability
+
+24.1.3 Iron, myelin, and dopamine
+
+24.2 Famine and programming
+
+24.2.1 The Dutch Hunger Winter and its psychiatric sequelae
+
+24.2.2 The developmental origins framework: the Barker hypothesis and predictive adaptation
+
+
+CHAPTER 25. PREMATURITY AND THE FIRST ENVIRONMENT OF CARE (CORE)
+
+25.1 The outcomes by gestational age
+
+25.1.1 The extreme-prematurity cohorts and their gradients
+
+25.1.2 The encephalopathy of prematurity and the vulnerable pre-oligodendrocyte
+
+25.2 The neonatal intensive care unit as an environment
+
+25.2.1 Sound, light, and pain, and their developmental costs
+
+25.2.2 Kangaroo mother care and the mortality trial of 2021
+
+25.3 The imaging window
+
+25.3.1 What the developing connectome project sees in the preterm brain
+
+
+PART SEVEN. THE DEVELOPMENT OF PERCEPTION AND ACTION
+
+
+CHAPTER 26. THE COMPETENT NEWBORN (CORE)
+
+26.1 Learning before birth
+
+26.1.1 Fetal hearing from mid-gestation and the low-pass filtered womb
+
+26.1.2 The newborn's preference for the mother's voice and the prenatally heard story
+
+26.1.3 The prenatal exposure experiments and the newborn cry melody
+
+26.2 The newborn's biases
+
+26.2.1 The face preference and the two-process account
+
+26.2.2 Eye contact detection from birth
+
+26.3 The neonatal imitation dispute
+
+26.3.1 The classic claims, the large failed replication, and the rebuttal
+
+26.3.2 What survives: the tongue protrusion case and the lesson in measurement
+
+
+CHAPTER 27. VISION: FROM BLUR TO EXPERTISE (CORE)
+
+27.1 The basic capacities
+
+27.1.1 Acuity from roughly twenty-four-hundredths of adult at birth to adult levels by three to five years
+
+27.1.2 Stereopsis switching on at three to five months
+
+27.2 The face pathway
+
+27.2.1 Perceptual narrowing: losing the monkey faces between six and nine months
+
+27.2.2 The other-race effect on the same calendar
+
+27.2.3 The fusiform face area's long childhood
+
+27.3 The streams and their vulnerability
+
+27.3.1 Dorsal-stream vulnerability across disorders
+
+27.4 The reading window into cortex
+
+27.4.1 The visual word form area emerging within months of schooling
+
+27.4.2 Neuronal recycling as the general principle
+
+
+CHAPTER 28. HEARING AND SPEECH: THE NARROWING EAR (CORE)
+
+28.1 Universal then native
+
+28.1.1 Categorical perception in the first months
+
+28.1.2 The loss of non-native contrasts by ten to twelve months, vowels before consonants
+
+28.1.3 The native language magnet and the social gating experiment: the live tutor against the video
+
+28.2 The statistical infant
+
+28.2.1 Word segmentation from transitional probabilities in two minutes of exposure
+
+28.2.2 Newborn neural statistical learning
+
+28.3 The neural indices
+
+28.3.1 Mismatch responses as the tracker of narrowing
+
+28.3.2 Native discrimination at seven months predicting later language
+
+
+CHAPTER 29. MOTOR DEVELOPMENT: FROM REFLEX TO SKILL (CORE)
+
+29.1 The reflex calendar and its reinterpretation
+
+29.1.1 The primitive reflexes and their disappearance
+
+29.1.2 The stepping reflex and the biomechanical lesson
+
+29.2 Reaching, grasping, walking
+
+29.2.1 The milestone windows and their cultural variation
+
+29.2.2 The corticospinal system's protracted maturation and the withdrawal of ipsilateral projections
+
+29.3 The dynamic systems reading
+
+29.3.1 Soft assembly and massive variable practice
+
+29.3.2 Locomotion reorganising cognition: travel broadening the infant mind
+
+29.4 The cerebellum's long build
+
+29.4.1 Late growth, internal models, and coordination into adolescence
+
+
+PART EIGHT. LANGUAGE AND LITERACY
+
+
+CHAPTER 30. WORD LEARNING AND THE GROWING LEXICON (CORE)
+
+30.1 The first words
+
+30.1.1 Comprehension before production: known nouns by six to nine months
+
+30.1.2 The vocabulary spurt and the debate over whether it is a spurt
+
+30.2 The learning machinery
+
+30.2.1 The constraints: mutual exclusivity and the whole-object bias
+
+30.2.2 Fast mapping and cross-situational learning
+
+30.2.3 The social-pragmatic route
+
+30.3 The input matters
+
+30.3.1 The thirty-million-word claim and its replication critique
+
+30.3.2 Conversational turns and the child's Broca activation
+
+
+CHAPTER 31. SYNTAX, THE LANGUAGE NETWORK, AND THE WINDOWS (CORE)
+
+31.1 The grammar calendar
+
+31.1.1 Two-word speech near twenty-four months and the morpheme sequence
+
+31.1.2 Overregularisation as a window on rules
+
+31.2 The network's construction
+
+31.2.1 Left-lateralised speech response at three months
+
+31.2.2 The dorsal pathway's late myelination tracking syntax
+
+31.3 The windows
+
+31.3.1 The deprivation cases and late first language
+
+31.3.2 The age-of-arrival evidence and the seventeen-year window finding, with this corpus's recorded caution about it
+
+31.3.3 The bilingual infant: two systems without confusion, and the disputed executive advantage
+
+
+CHAPTER 32. READING, DYSLEXIA, AND THE EDUCATED BRAIN (CORE)
+
+32.1 The reading circuit
+
+32.1.1 Phonological awareness as the precursor
+
+32.1.2 The three-region circuit and the print tuning of the N170
+
+32.2 Literacy remakes cortex
+
+32.2.1 The illiterate-to-literate comparisons
+
+32.2.2 The trade-offs in the fusiform
+
+32.3 Dyslexia
+
+32.3.1 The phonological core and the multiple-deficit model
+
+32.3.2 The hypoactivation signature, present before reading begins
+
+32.3.3 The intervention findings: remediation normalising the left-hemisphere response
+
+32.3.4 The genetics and the at-risk longitudinal studies
+
+
+PART NINE. THE DEVELOPMENT OF COGNITION
+
+
+CHAPTER 33. ATTENTION: THE THREE NETWORKS COME ONLINE (CORE)
+
+33.1 The sequence
+
+33.1.1 Alerting early, orienting from three to four months, executive attention from the first birthday
+
+33.1.2 Sticky fixation and the birth of disengagement
+
+33.2 The executive network's childhood
+
+33.2.1 The child attention-network task and the growth years from two to seven
+
+33.2.2 Training effects and the temperament link to effortful control
+
+33.3 The social attention system
+
+33.3.1 Gaze following and joint attention at nine to twelve months
+
+33.3.2 The declining eye fixation finding in infants later diagnosed with autism
+
+
+CHAPTER 34. MEMORY: FROM RECOGNITION TO REMEMBERING (CORE)
+
+34.1 What infants retain
+
+34.1.1 Recognition from birth and the conditioned-mobile time windows
+
+34.1.2 Deferred imitation and long-term recall by the first birthday
+
+34.2 Infantile amnesia
+
+34.2.1 The offset near ages three to four and its cultural variation
+
+34.2.2 The neurogenic hypothesis: new dentate neurons overwriting old traces
+
+34.2.3 The latent-trace alternative and the awake-infant hippocampal encoding finding of 2025
+
+34.3 The long climb of episodic memory
+
+34.3.1 Binding what, where, and when across ages four to ten
+
+34.3.2 Source memory and strategy late, with prefrontal cortex
+
+34.3.3 Suggestibility and the eyewitness child
+
+34.4 Working memory
+
+34.4.1 The linear growth of span from four to fifteen
+
+34.4.2 The fronto-parietal correlates
+
+
+CHAPTER 35. EXECUTIVE FUNCTION: THE PREFRONTAL DECADES (CORE)
+
+35.1 Infancy
+
+35.1.1 A-not-B, delayed response, and the dorsolateral prefrontal link
+
+35.1.2 The dopamine dependence and the phenylketonuria lesson
+
+35.2 The preschool leap
+
+35.2.1 Inhibition, the card sort, and graded representations
+
+35.2.2 Delay of gratification and what its follow-ups did and did not show
+
+35.2.3 Hot against cool executive function
+
+35.3 The long adolescence of control
+
+35.3.1 The antisaccade curve and the network segregation story
+
+35.3.2 Unity and diversity emerging with age
+
+35.3.3 Training and its transfer limits
+
+
+CHAPTER 36. NUMBER AND MATHEMATICAL COGNITION (CORE)
+
+36.1 The approximate number system
+
+36.1.1 Ratio-dependent discrimination in the first year and at birth
+
+36.1.2 The two-systems view: tracking small sets against estimating large ones
+
+36.2 The parietal construction
+
+36.2.1 Intraparietal number responses by age three to four
+
+36.2.2 The frontal-to-parietal shift with schooling
+
+36.3 Symbols and bootstrapping
+
+36.3.1 The counting principles and the knower levels
+
+36.3.2 The hippocampal moment in arithmetic learning
+
+36.4 Dyscalculia
+
+36.4.1 The intraparietal signature and the core-deficit against access-deficit debate
+
+
+CHAPTER 37. CORE KNOWLEDGE AND THE SPATIAL BRAIN (CORE)
+
+37.1 The core systems
+
+37.1.1 Objects, agents, number, and geometry
+
+37.1.2 The drawbridge findings and what infants expect of matter
+
+37.1.3 Violations driving exploration and learning
+
+37.2 Agents
+
+37.2.1 Goal attribution and rational action
+
+37.2.2 The helper-hinderer evaluations and their mixed replications
+
+37.3 The spatial circuit's calendar, from the rodent
+
+37.3.1 Head direction cells first, place cells next, grid cells last
+
+37.3.2 The human counterpart: allocentric navigation across childhood
+
+37.4 The replication lesson
+
+37.4.1 The ManyBabies consortium and measurement humility
+
+
+PART TEN. THE SOCIAL AND EMOTIONAL MIND
+
+
+CHAPTER 38. ATTACHMENT AND THE NEUROBIOLOGY OF CAREGIVING (CORE)
+
+38.1 The theory and its instruments
+
+38.1.1 Bowlby's internal working models and the Strange Situation classifications
+
+38.1.2 Contact comfort and the hidden regulators
+
+38.2 The caregiving brain
+
+38.2.1 Oxytocin, the maternal circuit, and the pregnancy grey-matter changes
+
+38.2.2 The paternal brain and biobehavioural synchrony
+
+38.3 The infant's side
+
+38.3.1 Attachment learning and the amygdala switch under maternal presence
+
+38.3.2 Maternal buffering of the stress response
+
+
+CHAPTER 39. DEPRIVATION: THE NATURAL EXPERIMENTS (CORE)
+
+39.1 The Bucharest Early Intervention Project
+
+39.1.1 The randomised design and the foster-care effect
+
+39.1.2 The sensitive-period finding: placement before roughly twenty-four months
+
+39.1.3 The electroencephalographic normalisation and the long follow-ups
+
+39.2 The English and Romanian Adoptees study
+
+39.2.1 Deprivation-specific patterns and quasi-autism
+
+39.2.2 The adult outcomes
+
+39.3 The neural sequelae and the interventions
+
+39.3.1 Amygdala, prefrontal connectivity, and reward blunting after institutional care
+
+39.3.2 The attachment-based interventions with neural endpoints
+
+
+CHAPTER 40. STRESS, ADVERSITY, AND THE DEVELOPING BRAIN (CORE)
+
+40.1 The stress axis grows up
+
+40.1.1 The hypothalamic-pituitary-adrenal cascade and its childhood calibration
+
+40.1.2 Social buffering and the hyporesponsive period
+
+40.1.3 Allostatic load
+
+40.2 The maltreatment findings
+
+40.2.1 The regional and pathway-specific effects and their sensitive exposure periods
+
+40.2.2 Adaptation against damage: the ecophenotype reading
+
+40.3 The models of adversity
+
+40.3.1 Threat against deprivation as distinct dimensions
+
+40.3.2 The stress-acceleration hypothesis and accelerated biological aging
+
+40.4 Poverty and the brain
+
+40.4.1 The income and surface-area association
+
+40.4.2 The pathways: language exposure, stress, nutrition, toxins
+
+40.4.3 The cash-transfer trial and its contested electroencephalographic finding
+
+
+CHAPTER 41. EMOTION, TEMPERAMENT, AND FEAR (CORE)
+
+41.1 Expression and recognition
+
+41.1.1 The still-face paradigm and mutual regulation
+
+41.1.2 Social referencing on the visual cliff
+
+41.2 The amygdala-prefrontal circuit's development
+
+41.2.1 The connectivity switch from childhood to adolescence
+
+41.2.2 Caregiver buffering of the circuit and adversity's acceleration of it
+
+41.3 Temperament
+
+41.3.1 Behavioural inhibition from infancy to the adult amygdala
+
+41.3.2 The reactivity and regulation dimensions and effortful control
+
+41.4 Fear learning across development
+
+41.4.1 The infant attachment suppression of fear learning
+
+41.4.2 Adolescent extinction resistance and its therapy implications
+
+41.4.3 Early extinction as erasure: the developmental difference in mechanism
+
+
+CHAPTER 42. THE SOCIAL BRAIN AND THEORY OF MIND (CORE)
+
+42.1 The infant social brain
+
+42.1.1 Faces, gaze, and the superior temporal specialisation
+
+42.1.2 Joint attention as the nine-month revolution
+
+42.2 Theory of mind
+
+42.2.1 The explicit false-belief transition near age four
+
+42.2.2 The implicit infant findings and their replication crisis
+
+42.2.3 The two-systems account as the candidate reconciliation
+
+42.3 The network
+
+42.3.1 Temporoparietal junction selectivity and its childhood specialisation
+
+42.3.2 The theory-of-mind network distinct from the pain network by age three
+
+42.4 The mirror-system dispute
+
+42.4.1 The claims, the critiques, and the associative-learning alternative
+
+
+CHAPTER 43. EMPATHY, MORALITY, AND THE SELF (CORE)
+
+43.1 Empathy and prosociality
+
+43.1.1 From contagion to concern
+
+43.1.2 Infant helping and the development of sharing and fairness
+
+43.1.3 The callous-unemotional contrast case
+
+43.2 Moral development
+
+43.2.1 From stages to intuitions in the theory
+
+43.2.2 Intent overtaking outcome, with the temporoparietal junction
+
+43.3 The self
+
+43.3.1 Mirror self-recognition at eighteen to twenty-four months
+
+43.3.2 The medial prefrontal self and its adolescent intensity
+
+43.3.3 Narrative identity emerging in adolescence
+
+
+PART ELEVEN. ADOLESCENCE: THE SECOND RECONSTRUCTION
+
+
+CHAPTER 44. PUBERTY AND THE REORGANISED BRAIN (CORE)
+
+44.1 The hormonal reawakening
+
+44.1.1 Adrenarche and gonadarche and their separable effects
+
+44.1.2 Hormones against age in the imaging trajectories
+
+44.1.3 The secular trend and adversity-accelerated timing
+
+44.2 The structural second act
+
+44.2.1 The grey-matter thinning and white-matter growth of the second decade
+
+44.2.2 The prefrontal spine elimination into the third decade
+
+44.3 Sex differences and their disputes
+
+44.3.1 The measured differences and their small size after volume correction
+
+44.3.2 The mosaic-brain argument and its counters
+
+44.3.3 Puberty as a second organisational window
+
+
+CHAPTER 45. THE DUAL-SYSTEMS DEBATE (CORE)
+
+45.1 The models
+
+45.1.1 The dual-systems, imbalance, and driven accounts
+
+45.1.2 What each predicts about risk, reward, and control
+
+45.2 The critiques
+
+45.2.1 The weak links to real-world risk taking
+
+45.2.2 The lifespan-wisdom and exploration reframings
+
+45.3 The present verdict
+
+45.3.1 Reaffirmation with nuance, and what would settle it
+
+
+CHAPTER 46. REWARD, PEERS, AND THE SOCIAL REORIENTATION (CORE)
+
+46.1 The striatal adolescence
+
+46.1.1 Reward hyperreactivity, its contrary findings, and the reconciliations
+
+46.2 The peer effect
+
+46.2.1 Peer presence doubling risk taking in the simulator
+
+46.2.2 Social exclusion sensitivity
+
+46.3 The social reorientation
+
+46.3.1 The mentalising network's continued construction
+
+46.3.2 Adolescence as a proposed sensitive period for sociocultural processing
+
+
+CHAPTER 47. SLEEP, PSYCHOPATHOLOGY ONSET, AND THE ADOLESCENT WINDOW (CORE)
+
+47.1 The circadian shift
+
+47.1.1 The pubertal phase delay and the school-start-time evidence
+
+47.2 The epidemiology of onset
+
+47.2.1 Most mental disorders beginning before the mid-twenties, peaking near fourteen
+
+47.2.2 The sex divergence at puberty
+
+47.3 The window framing
+
+47.3.1 Risk and opportunity in the same plasticity
+
+47.3.2 Substance use and the developing brain
+
+
+PART TWELVE. WHEN DEVELOPMENT GOES DIFFERENTLY
+
+
+CHAPTER 48. THE DEVELOPMENTAL PSYCHOPATHOLOGY FRAMEWORK (APPARATUS)
+
+48.1 The founding concepts
+
+48.1.1 Equifinality and multifinality
+
+48.1.2 Developmental cascades and heterotypic continuity
+
+48.1.3 Resilience as ordinary magic
+
+48.2 The dimensional turn
+
+48.2.1 The research domain criteria and their underdeveloped developmental axis
+
+48.2.2 The p-factor and the continuum view of neurodevelopmental conditions
+
+
+CHAPTER 49. AUTISM SPECTRUM (CORE)
+
+49.1 The construct and its history
+
+49.1.1 From Kanner and Asperger to the spectrum, and the vaccine fraud refuted
+
+49.2 The brain findings and their revisions
+
+49.2.1 Early overgrowth: the finding, the confounds, and the surviving subgroup version
+
+49.2.2 The infant-sibling surface-area expansion and the prediction studies
+
+49.2.3 The connectivity accounts after motion correction
+
+49.2.4 The excitation-inhibition hypothesis and its trial disappointments
+
+49.3 The cognitive accounts against the neural data
+
+49.3.1 Theory of mind, central coherence, enhanced perception, predictive coding, social motivation
+
+49.4 The genetics
+
+49.4.1 High heritability, the de novo variants, and the chromatin-synapse convergence
+
+49.5 The intervention evidence
+
+49.5.1 The naturalistic developmental behavioural interventions and their moderate effects
+
+49.5.2 The parent-mediated prodromal trial
+
+49.5.3 The oxytocin failure and the neurodiversity reframing of goals
+
+
+CHAPTER 50. ATTENTION-DEFICIT HYPERACTIVITY DISORDER (CORE)
+
+50.1 The construct
+
+50.1.1 Prevalence, persistence, and the dual-pathway model
+
+50.2 The maturation-delay account, now contested
+
+50.2.1 The 2007 delayed-cortical-peak finding
+
+50.2.2 The 2026 reanalysis: the delay largely dissolving once sex differences are modelled
+
+50.2.3 The lesson about norms and about teaching contested findings as contested
+
+50.3 The dopamine account and the medications
+
+50.3.1 The reward-pathway findings
+
+50.3.2 The multimodal treatment study and the attenuation of its early advantage
+
+50.4 The genetics and the environmental correlates
+
+
+CHAPTER 51. THE LEARNING AND LANGUAGE DISORDERS (CORE)
+
+51.1 Dyslexia, cross-referenced to Chapter 32
+
+51.1.1 The signature, the prediction, and the remediation neurobiology
+
+51.2 Dyscalculia, cross-referenced to Chapter 36
+
+51.3 Developmental language disorder
+
+51.3.1 The consensus renaming and the seven-percent prevalence
+
+51.3.2 The procedural and phonological-memory accounts
+
+51.3.3 The FOXP2 correction: not the language gene
+
+51.4 Intellectual disability
+
+51.4.1 The sequencing-era diagnostic yield
+
+51.4.2 The preventable causes and the newborn-screening triumphs
+
+
+CHAPTER 52. SCHIZOPHRENIA AS A NEURODEVELOPMENTAL DISORDER (CORE)
+
+52.1 The hypothesis and its premorbid evidence
+
+52.1.1 The 1987 formulations and the childhood antecedents
+
+52.2 The pruning account
+
+52.2.1 The Feinberg conjecture and the spine-density findings
+
+52.2.2 The complement C4 vindication and the patient-derived microglia
+
+52.2.3 The critical perspectives this corpus records alongside it
+
+52.3 The adolescent onset
+
+52.3.1 The clinical high-risk paradigm and the accelerated grey-matter loss in converters
+
+52.3.2 The interneuron and perineuronal net pathology, closing the loop to Chapter 15
+
+52.3.3 The two-hit and cannabis component-cause evidence
+
+
+CHAPTER 53. DEPRESSION, ANXIETY, AND THE ADOLESCENT EMERGENCE (CORE)
+
+53.1 The developmental epidemiology
+
+53.1.1 The post-pubertal rise and the sex ratio
+
+53.2 The mechanisms on offer
+
+53.2.1 The circuit accounts: amygdala-prefrontal timing and reward blunting
+
+53.2.2 The temperament pathway from behavioural inhibition to social anxiety
+
+53.2.3 The adversity pathways from Part Ten
+
+53.3 The unsettled contexts
+
+53.3.1 The social-media debate, reported as unresolved
+
+
+PART THIRTEEN. THE CLASSIC THEORIES AGAINST THE NEURAL EVIDENCE
+
+
+CHAPTER 54. PIAGET RE-EXAMINED (CORE)
+
+54.1 The system
+
+54.1.1 Schemas, assimilation, accommodation, and the four stages
+
+54.2 The re-examinations
+
+54.2.1 Object permanence earlier than the reach: the looking evidence
+
+54.2.2 A-not-B as prefrontal immaturity rather than missing concept
+
+54.2.3 Conservation errors as inhibition failures
+
+54.2.4 Formal operations against the long prefrontal build
+
+54.3 The verdict pattern
+
+54.3.1 Competence early, performance limited by control systems
+
+54.3.2 Stages replaced by overlapping waves
+
+
+CHAPTER 55. VYGOTSKY AND THE SOCIAL ROUTE (CORE)
+
+55.1 The claims
+
+55.1.1 The zone of proximal development, tools, and internalised speech
+
+55.2 The neural friendliness
+
+55.2.1 Natural pedagogy and ostensive cues
+
+55.2.2 The social gating of language learning
+
+55.2.3 Parent-child neural synchrony and learning
+
+55.3 The honest gap
+
+55.3.1 Mechanisms still coarse where the theory is rich
+
+
+CHAPTER 56. NATIVISM, NEUROCONSTRUCTIVISM, AND THE LEARNING ACCOUNTS (CORE)
+
+56.1 Core knowledge and its neural claims
+
+56.1.1 The infant findings and the early cortical organisation evidence
+
+56.2 The neuroconstructivist answer
+
+56.2.1 Development itself as the key, and the syndrome evidence
+
+56.3 The learning accounts
+
+56.3.1 Statistical learning as the general engine
+
+56.3.2 The connectionist ancestor and the modern deep-learning analogies
+
+56.3.3 Dynamic systems and the embodied route
+
+56.3.4 Bayesian rational constructivism and the child as scientist
+
+56.3.5 The explore-exploit reading of childhood itself
+
+
+PART FOURTEEN. THE LIFESPAN VIEW
+
+
+CHAPTER 57. FROM EMERGING ADULTHOOD TO AGING AS DEVELOPMENT (CORE)
+
+57.1 The lifespan framework
+
+57.1.1 Development as gain and loss at every age
+
+57.2 Emerging adulthood
+
+57.2.1 The construct, and the twenty-five myth refused again
+
+57.2.2 The juvenile-justice use of the maturity-gap evidence
+
+57.3 The aging half of the arc
+
+57.3.1 Reserve, maintenance, and compensation, with their consensus definitions
+
+57.3.2 Last in, first out: the retrogenesis pattern
+
+57.3.3 The life-course origins of dementia risk
+
+57.4 The whole-arc trajectories
+
+57.4.1 Different abilities peaking at different ages
+
+57.4.2 The lifespan brain charts as the reference frame
+
+
+PART FIFTEEN. TRANSLATION: FROM THE LABORATORY TO THE CHILD
+
+
+CHAPTER 58. SCREENING AND EARLY INTERVENTION (CONTEXT)
+
+58.1 The screening successes and debates
+
+58.1.1 The newborn panels and early hearing detection
+
+58.1.2 Autism screening and the digital phenotyping devices
+
+58.2 The intervention evidence with its real effect sizes
+
+58.2.1 The preschool trials and their economics
+
+58.2.2 The Jamaica home-visiting earnings finding
+
+58.2.3 The fade-out debates and the skills-beget-skills logic
+
+58.3 The language-environment interventions
+
+58.3.1 From word gap to conversational turns
+
+
+CHAPTER 59. NEUROEDUCATION AND ITS MYTHS (CONTEXT)
+
+59.1 The bridge debate
+
+59.1.1 A bridge too far, and the mind-brain-education response
+
+59.2 The neuromyths, named
+
+59.2.1 Learning styles at ninety-plus percent teacher endorsement
+
+59.2.2 Left-brain right-brain, ten percent, the Mozart effect, the first-three-years overreach
+
+59.2.3 Brain training and the working-memory transfer meta-analytics
+
+59.3 What does translate
+
+59.3.1 Spacing, retrieval, sleep, phonics, and the school-start-time win
+
+
+CHAPTER 60. POLICY AND THE ETHICS OF KNOWING A CHILD'S BRAIN (CONTEXT)
+
+60.1 The policy translations
+
+60.1.1 Toxic stress in the paediatric clinic, and the over-claiming critique
+
+60.1.2 Lead abatement as the proven win, and the income-supplement trials
+
+60.1.3 The Supreme Court cases and the adolescent-culpability evidence
+
+60.1.4 The global early-childhood agenda
+
+60.2 The ethics
+
+60.2.1 Predicting disorders in infancy: consent, benefit, and harm
+
+60.2.2 Polygenic prediction and reproduction
+
+60.2.3 Neurodiversity against cure as a goals question
+
+
+CHAPTER 61. WHAT THIS OUTLINE HANDS THE CORPUS (CONTEXT)
+
+61.1 The meshing points
+
+61.1.1 Where THE_ONTOGENETIC_AXIS carries the framework decision this outline does not take
+
+61.1.2 Where the LAYER_06_09 companion carries the per-cell and per-region entries this outline indexes
+
+61.1.3 Where the sibling cognition outline carries the adult steady state each trajectory here ends in
+
+61.2 The manuscript this outline is for
+
+61.2.1 The four-level structure as the contract for a future manuscript
+
+61.2.2 The timings named here as its CITED starting set, and the disputes named here as its REFUSED starting set
+
+
+CHAPTER 62. THE OPEN QUESTIONS (CONTEXT)
+
+62.1 The mechanistic opens
+
+62.1.1 What closes each human sensitive period, and whether any can be safely reopened
+
+62.1.2 What infantile amnesia actually is, after the 2025 encoding finding
+
+62.1.3 What the pruning selects for, and how its failure maps to disorder
+
+62.2 The measurement opens
+
+62.2.1 The reproducibility bill: thousands of children per claim
+
+62.2.2 The infant replication turbulence and the consortium answer
+
+62.3 The translational opens
+
+62.3.1 Why the rodent plasticity pharmacology has not crossed to humans
+
+62.3.2 Whether early prediction can be made ethical as it becomes possible
+
+
+CHAPTER 63. THE DEVELOPMENTAL CALENDAR, GATHERED IN ONE PLACE (CORE)
+
+63.1 The prenatal calendar
+
+63.1.1 Weeks three to four: induction and neurulation
+
+63.1.2 Weeks five to twenty-five: neurogenesis, with migration riding on it
+
+63.1.3 Weeks twenty-four to twenty-eight: thalamocortical arrival and cortical response
+
+63.1.4 The third trimester: gyrification, subplate peak, delta brushes
+
+63.2 The infancy calendar
+
+63.2.1 Months zero to three: recognition memory, categorical speech perception, face bias
+
+63.2.2 Months three to five: stereopsis, disengagement, reaching
+
+63.2.3 Months six to twelve: narrowing for faces and phonemes, A-not-B success, joint attention, walking's approach
+
+63.3 The childhood calendar
+
+63.3.1 Eighteen to twenty-four months: self-recognition, the two-word leap
+
+63.3.2 Ages three to five: the false-belief transition, the executive leap, the amnesia offset
+
+63.3.3 Middle childhood: reading's window, episodic binding, the ten-year prefrontal grey peak
+
+63.4 The adolescent calendar
+
+63.4.1 Puberty's staggered hormones and the thinning wave
+
+63.4.2 The extinction resistance, the onset epidemiology, the third-decade spine elimination
+
+63.5 The refusals
+
+63.5.1 The timings this outline declines to state, and why each is a finding about the field
+
+
+CHAPTER 64. THE SENSORY SYSTEMS IN DETAIL (CORE)
+
+64.1 Audition beyond speech
+
+64.1.1 Tonotopy and its refinement by early activity
+
+64.1.2 Music: rhythm narrowing and the training studies
+
+64.1.3 The cochlear implantation windows and the cortical latency marker
+
+64.2 Touch and pain
+
+64.2.1 Somatosensory maturation and the body map
+
+64.2.2 The preterm pain lesson: early exposure and altered later processing
+
+64.3 The chemical senses
+
+64.3.1 Prenatal and lactational flavour learning
+
+64.3.2 The early plasticity of olfactory preference
+
+64.4 Multisensory integration
+
+64.4.1 The temporal binding window's slow narrowing
+
+64.4.2 The superior colliculus rules and their experience dependence
+
+
+CHAPTER 65. SLEEP ACROSS DEVELOPMENT (CORE)
+
+65.1 The architecture across ages
+
+65.1.1 Fetal and neonatal active sleep and its proposed wiring function
+
+65.1.2 The declining sleep need and the changing stage composition
+
+65.2 Sleep's developmental work
+
+65.2.1 Consolidation in the child's night
+
+65.2.2 The synaptic homeostasis reading of childhood slow waves
+
+65.3 When sleep fails the child
+
+65.3.1 The pediatric sleep disorders and their cognitive costs
+
+65.3.2 The adolescent phase delay, cross-referenced to Chapter 47
+
+
+CHAPTER 66. THE MICROBIOME, IMMUNE, AND METABOLIC AXES (CORE)
+
+66.1 The gut-brain axis in development
+
+66.1.1 The colonisation timetable and the germ-free findings
+
+66.1.2 The human evidence as it stands: promising and preliminary
+
+66.2 The neuroimmune calendar
+
+66.2.1 Microglia beyond pruning: surveillance and its maturation
+
+66.2.2 Infection, fever, and the developing brain after birth
+
+66.3 The metabolic constraint
+
+66.3.1 The childhood energy peak: the brain consuming near half the body's budget
+
+66.3.2 The proposed trade-off between brain growth and body growth
+
+
+CHAPTER 67. CULTURE AND CONTEXT IN DEPTH (CONTEXT)
+
+67.1 The sampling problem
+
+67.1.1 The narrow populations behind the field's claims
+
+67.1.2 The cross-cultural findings that already exist: milestones, memory, self
+
+67.2 Media and screens
+
+67.2.1 The video-deficit effect in infancy
+
+67.2.2 The cohort findings on screen time and their confounds
+
+67.2.3 The social-media debate, reported as unresolved
+
+67.3 School as the standardised environment
+
+67.3.1 The schooling cutoff designs and what school itself does to the brain
+
+67.3.2 Literacy and numeracy as cortical interventions, cross-referenced to Chapters 32 and 36
+
+
+CHAPTER 68. THE COMPARATIVE VIEW: WHAT CHILDHOOD IS FOR (CONTEXT)
+
+68.1 The human bet
+
+68.1.1 Altriciality and the long human childhood
+
+68.1.2 Neoteny and the prefrontal spine finding as its cellular face
+
+68.2 The model species
+
+68.2.1 The rodent, primate, and songbird contributions
+
+68.2.2 The translation limits each carries
+
+68.3 The functional reading
+
+68.3.1 Childhood as the explore phase of an explore-exploit schedule
+
+68.3.2 What the species differences suggest a long childhood buys, and what a build like konnectome should take from that
+
+
+THE CHAPTER NOTES: SEMINAL WORKS BY PART
+
+These notes record the principal works checked in compiling each part. They are pointers to where the build looked, not warrants that override any corpus document.
+
+Part One. Johnson and de Haan, Developmental Cognitive Neuroscience, fourth edition, 2015. Johnson, Functional brain development in humans, Nature Reviews Neuroscience, 2001, and Interactive specialization, Developmental Cognitive Neuroscience, 2011. Johnson and Morton, Biology and Cognitive Development, 1991. Gottlieb, Probabilistic epigenesis, Developmental Science, 2007. Greenough, Black and Wallace, Experience and brain development, Child Development, 1987. Karmiloff-Smith, Beyond Modularity, 1992, and Development itself is the key, Trends in Cognitive Sciences, 1998. Mareschal and colleagues, Neuroconstructivism, 2007. Elman and colleagues, Rethinking Innateness, 1996. Sydnor and colleagues, the sensorimotor-association axis, Neuron, 2021.
+
+Part Two. Stiles, The Fundamentals of Brain Development, 2008, and Stiles and Jernigan, 2010. Rakic, the radial unit hypothesis, Science, 1988. Kostovic and Judas on the subplate. Paredes and colleagues, migration into the infant frontal lobe, Science, 2016. Huttenlocher, 1979, and Huttenlocher and Dabholkar, 1997. Petanjek and colleagues, the neoteny of prefrontal spines, PNAS, 2011. Yakovlev and Lecours, 1967. Lebel and Beaulieu, 2011. Giedd and colleagues, 1999. Gogtay and colleagues, 2004. Bethlehem, Seidlitz and colleagues, Brain charts for the human lifespan, Nature, 2022. Somerville, Searching for signatures of brain maturity, Neuron, 2016.
+
+Part Three. Fantz preferential looking. Rovee-Collier's mobiles. Diamond and Goldman-Rakic, 1989. Pena and colleagues, newborn optical topography, PNAS, 2003. Lloyd-Fox, Blasi and Elwell on functional near-infrared spectroscopy, 2010. Deen and colleagues, awake infant imaging, Nature Communications, 2017. Marek and colleagues, Nature, 2022. Casey and colleagues, the ABCD protocol, 2018. Edwards and colleagues, the developing Human Connectome Project, 2022. Howell and colleagues, the Baby Connectome Project, 2019. The HBCD consortium papers of 2024. White and colleagues on Generation R.
+
+Part Four. Wiesel and Hubel, 1963, and Hubel and Wiesel, 1970. Hensch, Critical period plasticity in local cortical circuits, Nature Reviews Neuroscience, 2005. Fagiolini and Hensch, 2000. Huang and colleagues on BDNF, Cell, 1999. Sugiyama and colleagues on Otx2, Cell, 2008. Pizzorusso and colleagues on perineuronal nets, Science, 2002. McGee and colleagues on the Nogo receptor, Science, 2005. Morishita and colleagues on Lynx1, Science, 2010. Maya Vetencourt and colleagues on fluoxetine, Science, 2008. Gervain and colleagues on valproate and absolute pitch, 2013. Werker and Hensch, critical periods in speech perception, Annual Review of Psychology, 2015. Meister, Wong, Baylor and Shatz on retinal waves, Science, 1991. McLaughlin, Torborg, Feller and O'Leary, Neuron, 2003. Turrigiano and colleagues on synaptic scaling, Nature, 1998. Stevens and colleagues on complement, Cell, 2007. Paolicelli and colleagues, Science, 2011. Schafer and colleagues, Neuron, 2012. Chung and colleagues on astrocytic phagocytosis, Nature, 2013.
+
+Part Five. Turkheimer, the three laws, 2000. Polderman and colleagues, the fifty-year twin meta-analysis, Nature Genetics, 2015. Bouchard, the Wilson effect, 2013. Scarr and McCartney, 1983. Turkheimer and colleagues on socioeconomic moderation, 2003. Caspi and colleagues, 2002 and 2003, with Border and colleagues, 2019, as the corrective. Kong and colleagues, The nature of nurture, Science, 2018. Lee and colleagues, 2018, and Okbay and colleagues, 2022, on educational attainment. Martin and colleagues on portability, 2019. Harden, The Genetic Lottery, 2021. Weaver and colleagues, 2004. McGowan and colleagues, 2009. Heijmans and colleagues, 2008. Verkerk and colleagues, 1991. Bear, Huber and Warren, the mGluR theory, 2004. Amir and colleagues, 1999. Guy and colleagues, the Rett reversal, Science, 2007. Sanders and colleagues, Neuron, 2015. Bourgeron, 2015.
+
+Part Six. Jones and Smith, fetal alcohol, Lancet, 1973. May and colleagues, JAMA, 2018. Ikonomidou and colleagues, Science, 2000. Christensen and colleagues on valproate, JAMA, 2013. Frank and colleagues, the cocaine systematic review, JAMA, 2001. Needleman, 1979. Grandjean and Landrigan, Lancet Neurology, 2014. Gregg, 1941. Smith and colleagues on interleukin-6, 2007. Choi and colleagues on interleukin-17a, Science, 2016. Estes and McAllister, Science, 2016. The MRC folate trial, Lancet, 1991. Bath and colleagues on iodine, Lancet, 2013. Lozoff and Georgieff on iron. Susser and colleagues, 1996, and St Clair and colleagues, 2005, on famine. Barker, 1990. Volpe, the encephalopathy of prematurity, Lancet Neurology, 2009. Charpak's kangaroo follow-up, 2017. The WHO immediate kangaroo care trial, New England Journal of Medicine, 2021.
+
+Part Seven. DeCasper and Fifer, Science, 1980. DeCasper and Spence, 1986. Partanen and colleagues, PNAS, 2013. Moon, Lagercrantz and Kuhl, 2013. Goren, Sarty and Wu, 1975. Farroni and colleagues, PNAS, 2002. Meltzoff and Moore, 1977, with Oostenbroek and colleagues, 2016, and the 2018 rebuttal. Teller's acuity cards. Held and Birch on stereopsis. Maurer and Lewis on cataract reversal. Pascalis, de Haan and Nelson, Science, 2002. Kelly and colleagues, 2007. Golarai and colleagues, 2007. Dehaene-Lambertz, Monzalvo and Dehaene, the visual word form area's emergence, PLOS Biology, 2018. Dehaene and Cohen, neuronal recycling, Neuron, 2007. Eimas and colleagues, Science, 1971. Werker and Tees, 1984. Kuhl and colleagues, 1992, and Kuhl, Tsao and Liu, PNAS, 2003. Saffran, Aslin and Newport, Science, 1996. Thelen and Fisher, the stepping reflex, 1982. Adolph on learning to walk. Eyre on the corticospinal system. Campos and colleagues, travel broadens the mind, 2000.
+
+Part Eight. Bergelson and Swingley, PNAS, 2012. Markman's constraints. Carey and Bartlett, fast mapping. Hart and Risley, 1995, with Sperry and colleagues, 2019, and Romeo and colleagues, 2018. Dehaene-Lambertz, Dehaene and Hertz-Pannier, Science, 2002. Skeide and Friederici, Nature Reviews Neuroscience, 2016. Lenneberg, 1967. Johnson and Newport, 1989. Hartshorne, Tenenbaum and Pinker, 2018, with this corpus's recorded caution from the 2022 reanalysis. Kim and colleagues, Nature, 1997. Pierce and colleagues, PNAS, 2014. Byers-Heinlein, Burns and Werker, 2010. Bialystok against Paap on the bilingual advantage. Dehaene and colleagues, Science, 2010, and Nature Reviews Neuroscience, 2015. Shaywitz and colleagues, 2002 and 2004. Temple and colleagues, PNAS, 2003. Raschle and Gaab on pre-reading signatures. Lyytinen's at-risk cohort.
+
+Part Nine. Posner and Petersen, 1990, and Petersen and Posner, 2012. Rueda and colleagues, 2004 and 2005. Colombo, 2001. Jones and Klin, Nature, 2013. Rovee-Collier, 1999. Bauer, 2007. Akers and colleagues, Science, 2014. Josselyn and Frankland, 2012. Alberini and Travaglia, 2017. Yates and colleagues, awake infant hippocampal encoding, Science, 2025. Ofen and colleagues, 2007. Ghetti and Bunge, 2012. Gathercole and colleagues, 2004. Ceci and Bruck, 1993. Diamond, 1985, 2002, and 2013. Zelazo's card sort, 2006. Miyake and colleagues, 2000. Casey and colleagues, the gratification follow-up, PNAS, 2011, with the 2018 replication caveats. Luna and colleagues, 2004. Diamond and Lee, Science, 2011. Xu and Spelke, 2000. Izard and colleagues, 2008 and 2009. Feigenson, Dehaene and Spelke, 2004. Cantlon and colleagues, 2006. Rivera and colleagues, 2005. Gelman and Gallistel, 1978. Carey, The Origin of Concepts, 2009. Halberda, Mazzocco and Feigenson, Nature, 2008. Qin and colleagues, 2014. Piazza and colleagues, 2010. Butterworth, Varma and Laurillard, Science, 2011. Spelke and Kinzler, 2007. Baillargeon, Spelke and Wasserman, 1985. Stahl and Feigenson, Science, 2015. Woodward, 1998. Gergely and Csibra, 2003. Hamlin, Wynn and Bloom, Nature, 2007, with the consortium replications. Onishi and Baillargeon, Science, 2005, with the non-replications. Richardson and colleagues, Nature Communications, 2018. Hermer and Spelke, Nature, 1994. Wills and colleagues, and Langston and colleagues, Science, 2010. Bjerknes and colleagues, Neuron, 2014.
+
+Part Ten. Bowlby, 1969. Ainsworth and colleagues, 1978. Harlow, 1958. Hofer, 1994. Feldman, Trends in Cognitive Sciences, 2017. Insel and Young, 2001. Hoekzema and colleagues, Nature Neuroscience, 2017. Moriceau and Sullivan, 2006. Gee and colleagues, 2013 and 2014. Nelson, Fox and Zeanah, 2014, and Nelson and colleagues, Science, 2007. Vanderwert and colleagues, 2016. Sonuga-Barke and colleagues, Lancet, 2017. Gunnar and Quevedo, 2007. Lupien, McEwen, Gunnar and Heim, 2009. Shonkoff and colleagues, Pediatrics, 2012. Felitti and colleagues, 1998. Teicher and colleagues, Nature Reviews Neuroscience, 2016. McLaughlin, Sheridan and Lambert, 2014. Callaghan and Tottenham, 2016. Colich and colleagues, 2020. Noble and colleagues, Nature Neuroscience, 2015. Farah, Neuron, 2017. Troller-Renfree and colleagues, PNAS, 2022. Tronick's still face, 1978. Sorce and Campos, 1985. Kagan, Reznick and Snidman, Science, 1988, and Schwartz and colleagues, Science, 2003. Fox and colleagues, 2005. Boyce and Ellis, 2005. Pattwell and colleagues, PNAS, 2012, and Nature Communications, 2016. Kim and Richardson, 2010. Morton and Johnson, 1991. Tomasello, 1999. Carpenter, Nagell and Tomasello, 1998. Mundy and Newell, 2007. Wimmer and Perner, 1983. Baron-Cohen, Leslie and Frith, 1985. Southgate, Senju and Csibra, 2007. Saxe and Kanwisher, 2003. Gweon and colleagues, 2012. Apperly and Butterfill, 2009. Kulke and colleagues, 2018. Rizzolatti and Craighero, 2004. Hickok, 2014. Heyes, 2010. Warneken and Tomasello, Science, 2006. Decety and Michalska, 2010. Zahn-Waxler and colleagues, 1992. Blair, 2007. Young and colleagues, PNAS, 2007. Amsterdam, 1972. Gallup, 1970. Rochat, 2003. Pfeifer and colleagues, 2007 and 2012. Habermas and Bluck, 2000.
+
+Part Eleven. Goddings and colleagues, 2014. Mills and colleagues, 2016. Sisk and Zehr, 2005. McCarthy and Arnold, 2011. Joel and colleagues, PNAS, 2015, with the counter-analyses. Eliot and colleagues, 2021. Ritchie and colleagues, 2018. Steinberg, 2008. Casey, Getz and Galvan, 2008. Shulman and colleagues, 2016. Pfeifer and Allen, 2012. Romer, Reyna and Satterthwaite, 2017. Galvan and colleagues, 2006. Chein and colleagues, 2011. Gardner and Steinberg, 2005. Nelson, Leibenluft, McClure and Pine, 2005. Blakemore, Nature Reviews Neuroscience, 2008, and Blakemore and Mills, 2014. Dumontheil, Apperly and Blakemore, 2010. Carskadon, 2011. Kessler and colleagues, 2005. Solmi and colleagues, 2022. Paus, Keshavan and Giedd, 2008. Sawyer and colleagues, the ten-to-twenty-four redefinition, 2018.
+
+Part Twelve. Cicchetti, 1984. Cicchetti and Rogosch, 1996. Masten, 2001. Insel and colleagues, 2010, with Casey, Oliveri and Insel, 2014. Caspi and colleagues, the p-factor, 2014. Kanner, 1943. Courchesne and colleagues, 2001 and 2003, with the Raznahan critique and the null cohorts. Hazlett and colleagues, Nature, 2017. Shen and Piven, Lancet Neurology, 2023. Just and colleagues, 2004. Rubenstein and Merzenich, 2003. Pellicano and Burr, 2012. Chevallier and colleagues, 2012. Bai and colleagues, 2019. Satterstrom and colleagues, Cell, 2020. Grove and colleagues, 2019. Dawson and colleagues, 2010 and 2012, with the 2022 meta-analysis. Whitehouse and colleagues, JAMA Pediatrics, 2021. Sandbank and colleagues, 2020. Sikich and colleagues, New England Journal of Medicine, 2021. Shaw and colleagues, PNAS, 2007, with Albaugh and colleagues, PNAS, 2026, as the counterpoint. Hoogman and colleagues, Lancet Psychiatry, 2017. Volkow and colleagues, JAMA, 2009. The MTA Cooperative Group, 1999, and Molina and colleagues, 2009. Demontis and colleagues, 2019. Faraone and Larsson, 2019. Bishop and colleagues, the CATALISE consensus, 2016 and 2017. Norbury and colleagues, 2016. Ullman and Pierpont, 2005. Lai and colleagues, Nature, 2001. Vissers, Veltman and Gilissen, 2016. Weinberger, 1987. Murray and Lewis, 1987. Feinberg, 1982. Glantz and Lewis, 2000. Sekar and colleagues, Nature, 2016. Sellgren and colleagues, 2019. Cannon and colleagues, 2015. Thompson and colleagues, 2001. Di Forti and Zammit on cannabis. Forbes and Luking on reward blunting. Orben and Przybylski, 2019, against Twenge and Haidt, with Odgers and Jensen, 2020.
+
+Part Thirteen. Piaget, 1952, and Piaget and Inhelder, 1969. Baillargeon, 1985 and after. Diamond and Goldman-Rakic, 1989. Baird and colleagues, 2002. Munakata, 1997. Houde and Poirel on inhibition and conservation. Wynn, Nature, 1992. Dumontheil and Blakemore on relational reasoning. Siegler, Emerging Minds, 1996. Vygotsky, 1978. Wood, Bruner and Ross, 1976. Csibra and Gergely, 2009. Rogoff on guided participation. Leong and Wass on synchrony. Spelke, 1992 and 2007. Carey, 2009. Karmiloff-Smith, 1992 and 1998. Mareschal and colleagues, 2007. Johnson, 2001 and 2011. Saffran, Aslin and Newport, 1996. Marcus and colleagues, 1999. Elman and colleagues, 1996. Thelen and Smith, 1994, and Thelen, Schoner, Scheier and Smith, 2001. Adolph and Franchak, 2017. Gopnik and Wellman. Gopnik, Meltzoff and Kuhl, 1999. Gopnik and colleagues, 2004. Xu and Garcia, 2008. Tenenbaum and colleagues, 2011. Gopnik, 2017 and 2020. The ManyBabies consortium, 2020.
+
+Part Fourteen. Baltes, 1987. Arnett, 2000. Steinberg, Nature Reviews Neuroscience, 2013, on the Supreme Court cases. Stern and colleagues, the reserve whitepaper, 2020. Nyberg and colleagues, 2012. Cabeza and colleagues, 2018. Snowdon's nun study. Deary's Lothian cohorts. Livingston and colleagues, the Lancet Commission, 2020 and 2024. Raz, and Douaud and colleagues, 2014. Bartzokis on myelin retrogenesis. Carstensen on socioemotional selectivity. Cabeza, 2002, on bilateral recruitment. Salthouse, 1996. Park and Reuter-Lorenz, 2009. Hartshorne and Germine, 2015. Chan and colleagues, 2014. Yeatman and colleagues, 2014. Backman on dopamine decline. Bethlehem and Seidlitz, 2022.
+
+Part Fifteen. Yoshinaga-Itano on early hearing. Robins on autism screening. Heckman and colleagues, 2010. Campbell and Ramey's Abecedarian, with the 2014 health follow-up. Olds' Nurse-Family Partnership. Gertler and colleagues, Science, 2014. Cunha and Heckman on dynamic complementarity. Durkin and colleagues, the Tennessee pre-kindergarten finding, 2022. Bruer, 1997 and 1999. The OECD Brain and Learning project. Dekker, Lee, Howard-Jones and Jolles, 2012. Howard-Jones, Nature Reviews Neuroscience, 2014. Pashler and colleagues, 2008. Pietschnig's Mozart meta-analysis. Melby-Lervag and Hulme on working-memory training. Shonkoff and Phillips, From Neurons to Neighborhoods, 2000. Shonkoff and Garner, 2012. Grantham-McGregor and colleagues, Lancet, 2007. The Nurturing Care Framework, 2018. Roper against Simmons, 2005, and the successor cases.
+
+
+END OF THE NEUROSCIENCE OF DEVELOPMENTAL PSYCHOLOGY OUTLINE.
