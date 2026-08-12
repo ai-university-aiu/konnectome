@@ -35,7 +35,7 @@ PART ONE - READ THESE FIRST
 
 - Read the Settings, General, Instructions for Claude, and ~/CLAUDE.md at the organization root.
 
-- Read the current tutorial, docs/konnectome_tutorial_v61.txt. IT MOVED THIS SESSION, v60 to v61, and it is now SIXTY-THREE PARTS. A new PART SIXTY - "SLICES 71 TO 74: THE MEMORY THAT NEEDED A CLOCK" - covers the three documentation slices briefly and slice 74 at length, and the three parts after it were renumbered in the same change. The superseded v60 is in docs/archive/. THE TUTORIAL IS THEREFORE CURRENT AGAIN, for the first time in four sessions.
+- Read the current tutorial, docs/admin/konnectome_tutorial_v61.txt. IT MOVED THIS SESSION, v60 to v61, and it is now SIXTY-THREE PARTS. A new PART SIXTY - "SLICES 71 TO 74: THE MEMORY THAT NEEDED A CLOCK" - covers the three documentation slices briefly and slice 74 at length, and the three parts after it were renumbered in the same change. The superseded v60 is in docs/archive/. THE TUTORIAL IS THEREFORE CURRENT AGAIN, for the first time in four sessions.
 
 - Read the prior hand-off, 2026-08-11_8 (Caliper Filewright), now at docs/hand-off/. ITS QUEUE ITEM ONE IS WHAT THIS SESSION WORKED FROM, AND IT IS DISCHARGED.
 
@@ -56,11 +56,11 @@ PART TWO - THE IMPORTANT DOCS FILES
 
 - docs/DSPARCD/konnectome_1_specification_v64.txt through konnectome_6_demonstration_v64.txt - the DSPARCD Fileset, Realization Log through slice 74. All six carry a SLICE 74 section.
 
-- docs/konnectome_tutorial_v61.txt - MOVED THIS SESSION. Sixty-three parts at version sixty-one.
+- docs/admin/konnectome_tutorial_v61.txt - MOVED THIS SESSION. Sixty-three parts at version sixty-one.
 
-- docs/building_konnectome.txt - the build log, now SEVENTY-THREE chapters. UNVERSIONED; append-only. Chapter Seventy-Three is slice 74.
+- docs/admin/building_konnectome.txt - the build log, now SEVENTY-THREE chapters. UNVERSIONED; append-only. Chapter Seventy-Three is slice 74.
 
-- docs/konnectome_ledger.txt - the scoreboard, UNVERSIONED. Counter line (both copies swept): Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0. Observations: 23 (9 CLOSED: 8, 9, 13, 15, 17, 18, 19, 20 and 22). Decisions: 23. THIS SESSION ADDED DECISION-23, CLOSED OBSERVATION-13, AND OPENED OBSERVATION-23.
+- docs/admin/konnectome_ledger.txt - the scoreboard, UNVERSIONED. Counter line (both copies swept): Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0. Observations: 23 (9 CLOSED: 8, 9, 13, 15, 17, 18, 19, 20 and 22). Decisions: 23. THIS SESSION ADDED DECISION-23, CLOSED OBSERVATION-13, AND OPENED OBSERVATION-23.
 
 - docs/design/ - ELEVEN NUMBERED DOCUMENTS, none changed this session.
 
@@ -76,7 +76,9 @@ PART TWO - THE IMPORTANT DOCS FILES
 
 - README.md - MOVED THIS SESSION, as an auto-fix and then as an ordinary slice entry. It claimed SEVENTY SLICES AND 1,116 TESTS while the build stood at seventy-three and 1,119; the Thirteenth Commandment requires it be kept current, so both figures now read the measured ones, and slices 71 through 74 have entries.
 
-- THE DOCS LAYOUT: /docs/ top level holds EXACTLY FOUR FILES - the ledger, the build log, the tutorial, and the CURRENT hand-off. Everything else is in a named sub-directory. Caliper Filewright's hand-off moved to docs/hand-off/ in this session's own first act.
+- THE DOCS LAYOUT CHANGED AFTER THIS HAND-OFF WAS FIRST WRITTEN, BY THE OWNER'S INSTRUCTION OF 2026-08-12, AND THIS ENTRY IS CORRECTED IN PLACE RATHER THAN LEFT STANDING AS A FALSE READING LIST. It read: "/docs/ top level holds EXACTLY FOUR FILES - the ledger, the build log, the tutorial, and the CURRENT hand-off." IT NOW HOLDS EXACTLY ONE FILE, AND IT IS THE CURRENT HAND-OFF. The other three moved into a new docs/admin/ directory - konnectome's administrative record, the scoreboard and the story and the guide - and the Constitution moved to VERSION 28 in the same change to chase five pointers into it. Caliper Filewright's hand-off moved to docs/hand-off/ in this session's own first act, and is unaffected.
+
+- WHY THIS ONE LINE WAS EDITED WHEN A HAND-OFF IS OTHERWISE A DATED REPORT NOBODY REWRITES. Because a hand-off is two things at once, and this line is the second of them: it is not a claim about what happened in this session, it is a READING LIST for the next one, and a reading list that names a directory layout which no longer exists sends its reader to three files that are not there. The rest of this document is left exactly as it was written.
 
 
 PART THREE - WHAT THIS SESSION DID
