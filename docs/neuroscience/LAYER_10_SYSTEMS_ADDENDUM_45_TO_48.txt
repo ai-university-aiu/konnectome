@@ -1,3 +1,21 @@
+THIS DOCUMENT IS AN INCOMPLETE DRAFT AND MUST NOT BE READ AS A SOURCE.
+
+STOP HERE IF YOU ARE LOADING STATE OR DESIGNING A SLICE.
+
+Writing was still in progress when this checkpoint was committed. Three of the four intended systems are written and are finished, researched and literature-checked. The fourth is not.
+
+WHAT IS PRESENT: system 45, the cerebrovascular system; system 46, the clearance system; and system 47, the neuroimmune system. Each carries the parent manuscript's own aspect-header set, a mode register, and a machine-parsable SYSTEMS INTERFACE block with real searched time constants.
+
+WHAT IS ABSENT, AND IT IS THE ONE THAT CARRIES THE MOST WEIGHT: system 48, the nociceptive system. That entry exists to discharge a promise the corpus made and did not keep - the Layer 10 somatosensory entry states that pain's affective branch is "given its own address", and no such address exists among the forty-four. Until 48 is written, that promise is still outstanding and this document has not done the thing it was created to do.
+
+THE CHAIN AUDIT, which lists for each system the Layer 6 cells, Layer 7 junctions and Layer 8 motifs it is assembled from, is also not yet written. That part is the document's own proof that it ASSEMBLED existing corpus parts rather than inventing new ones, so its absence matters more than its length suggests.
+
+WHY THIS BANNER EXISTS RATHER THAN THE FILE BEING WITHHELD. A partial document in this directory is the most dangerous object this project can produce: it carries a provenance block announcing that it closes a gap, it is written in the corpus's own confident voice, and a later session skimming it would take it for a finished source. The three systems below are good and are worth keeping; the file as a whole does not yet do what its own front matter says it does.
+
+THE BANNER COMES OFF WHEN CHAPTER 48 AND THE CHAIN AUDIT ARE WRITTEN, and not before. That is checkable by grep rather than by judgement.
+
+================================================================================
+
 LAYER 10, THE NEURAL AND NEUROENDOCRINE SYSTEMS LAYER: ADDENDUM, SYSTEMS 45 TO 48
 
 The Four Housekeeping Systems the Catalogue Assembled But Never Named
@@ -707,3 +725,347 @@ print("The corpus records both. It does not average them.")
 WHAT MAKES IT UNMISTAKABLE:
 
 The only system in the catalogue with no pump of its own, no error signal of its own, and no ability to detect its own failure, which borrows its motive force from the vasculature and its schedule from sleep, and whose waste stream doubles as the brain's only report to the immune system.
+
+
+CHAPTER 47. THE NEUROIMMUNE SYSTEM (The microglial-border-vagal dialogue) (The Standing Garrison) (COG)
+
+Take an infection to bed and notice what happens to your mind: you cannot be bothered, you do not want company, food is uninteresting, and you sleep.
+
+That is not the infection damaging you, and it is not weakness, and it is not, in the first instance, a symptom at all.
+
+It is a coordinated, reversible, centrally organised protocol, run by the brain on information supplied by the immune system, that reallocates the whole organism away from foraging and social competition and toward fever and repair.
+
+Standing Garrison names the architecture, a permanent immune presence at the borders of a tissue that admits no army into its interior.
+
+Dialogue names the trade, because the traffic is bidirectional in a way the corpus's other body-brain axes are not: the immune system tells the brain what is happening, and the brain tells the immune system how much of it to do.
+
+WHAT IT IS AND WHAT IT ACCOMPLISHES:
+
+The neuroimmune system is the distributed network comprising the parenchymal microglia, the border-associated macrophages of the meninges, perivascular spaces, and choroid plexus, the meningeal lymphocyte and mast cell populations, the humoral and neural channels by which peripheral inflammation is signalled inward, and the vagal and sympathetic channels by which the brain signals back out.
+
+What it accomplishes is four things at once: surveillance and defence of a tissue that cannot regenerate, developmental and ongoing sculpting of circuits by synaptic pruning, the reading of peripheral immune state into a central motivational state, and the reflex regulation of that peripheral immune state from the brainstem.
+
+It carries the (COG) tag on two independent grounds, either of which would suffice: microglia set which synapses survive, and therefore participate in learning and in the construction of every circuit in this corpus; and the sickness state they help install is a motivational reconfiguration, which is a cognitive object and not a lesion.
+
+The corpus's Layer 6 volume already flags the frontier claim that meningeal T cells modulate mood and social behaviour from outside the parenchyma, and this chapter takes that flag seriously without treating it as settled.
+
+THE CHAIN OF STATIONS (THE LAYER 9 ROSTER):
+
+• The peripheral immune compartment, the source: macrophages, dendritic cells, and lymphocytes producing interleukin-1 beta, interleukin-6, and tumour necrosis factor at a site of infection or injury.
+
+• The vagal afferent, the fast inward channel, whose paraganglia and terminals carry cytokine receptors and report inflammation to the brainstem within minutes, without any molecule crossing into the brain.
+
+• The circumventricular organs, the humoral inward channel, brain regions where the barrier is deliberately absent so that circulating signals can be read directly.
+
+• The cerebral endothelium and the choroid plexus, the transducing stations, which convert a blood-borne cytokine signal into a brain-side prostaglandin signal without admitting the cytokine itself.
+
+• The nucleus of the solitary tract and the parabrachial nucleus in the brainstem, the integrating stations shared with the interoceptive system of Chapter 7.
+
+• The hypothalamus, the effector station for fever, appetite suppression, and the recruitment of the axis of Chapter 37.
+
+• The parenchymal microglia, the resident station, everywhere in the brain at once and never more than a few tens of micrometres from any synapse.
+
+• The border compartments, the meninges, perivascular spaces, and choroid plexus stroma, holding the border-associated macrophages and the meningeal lymphocyte populations.
+
+• The deep cervical lymph nodes, the outward antigen station, received from Chapter 46 and returning primed lymphocytes to the meninges.
+
+• The efferent vagus and the coeliac ganglion and splenic nerve, the outward control channel of the inflammatory reflex.
+
+THE PATHWAYS AND INTERFACES:
+
+The neural afferent pathway is the vagus, and its interface is a receptor on a sensory terminal rather than a barrier crossing, which is why it is fast: inflammation in the abdomen is reported to the brainstem in minutes.
+
+The humoral afferent pathway is the bloodstream, and its interface is either a leaky circumventricular organ or a transducing endothelial cell, which is why it is slower and more global.
+
+The border interface is the corpus's own Layer 7 entry 52, the neuro-immune junction, and it is here that the trade happens: border-associated macrophages sit in the perivascular spaces of Chapter 46 and the vascular ensembles of Chapter 45, so all three of this addendum's utility systems physically overlap at one address.
+
+The efferent interface is the inflammatory reflex, a genuine reflex arc in the corpus's sense, with the vagal afferent as its sensory limb, the brainstem as its integrator, and the efferent vagus to the coeliac ganglion to the splenic nerve to acetylcholine-producing T cells to the alpha-7 nicotinic receptor on the macrophage as its motor limb.
+
+THE TRANSFORMATION ALONG THE CHAIN:
+
+At the periphery the representation is a molecular one, cytokine concentrations at a site, carrying no address and no priority.
+
+At the vagal afferent it becomes a firing rate on a labelled line, which gives it speed and a rough visceral address but discards the identity of the pathogen.
+
+At the endothelium and circumventricular organs it becomes a prostaglandin gradient inside the brain, which is the crucial redescription: an immune fact has become a neurochemical one without any immune molecule crossing the barrier.
+
+At the hypothalamus and brainstem it becomes a set of set-point changes, a raised thermal set point, a lowered appetite set point, a raised sleep pressure, and a recruitment signal to the stress axis.
+
+At the level of behaviour it becomes a motivational state, and this is the transformation that earns the tag: what began as a cytokine concentration is now a reordering of what the organism wants, which Dantzer's formulation names a highly organised central motivational state rather than a debility.
+
+At the microglia the transformation runs on a different axis entirely, from a molecular tag on a synapse, complement deposition, to the physical removal of that synapse, which is the conversion of an immune mechanism into a structural memory operation.
+
+THE MOTIFS IT RUNS (THE LAYER 8 INVENTORY):
+
+The synaptic sculpting arm runs motif 70, the microglial pruning loop, the Layer 8 catalogue's own entry for this system's signature operation.
+
+The inflammatory reflex runs motif 48, the vago-vagal loop, with an immune rather than a visceral-mechanical variable as its controlled quantity, and it is the corpus's clearest example of one motif serving two systems with different cargo.
+
+The fever and sickness installation runs motif 60, the closed-loop negative feedback motif, around a deliberately displaced set point, and the recruitment of cortisol adds motif 67, the ultradian feedback oscillator of the stress axis, as a brake.
+
+The border stations run motif 71's neighbourhood rather than a motif of their own, and this chapter records honestly that the Layer 8 catalogue has no entry for a border surveillance module, which is a real and nameable gap for a future build.
+
+TEMPORAL SIGNATURE:
+
+The vagal channel is the fast one and reports peripheral inflammation to the brainstem within minutes.
+
+The humoral channel is slower, and sickness behaviour after a peripheral endotoxin challenge peaks at about two to six hours and then gradually wanes, a figure that comes from Dantzer's rodent literature and is reproduced in human endotoxin studies.
+
+The inflammatory reflex acts fast and holds long: Tracey's laboratory reports that vagus nerve stimulation lasting between 0.1 and 60 seconds significantly reduces systemic tumour necrosis factor release in experimental endotoxaemia, and that the suppression is sustained for more than 24 hours, which is a remarkable ratio of stimulus to effect duration.
+
+Microglial process motility is on a wholly different scale, with fine processes surveying their territory continuously and contacting a given synapse for minutes at a time, so that the whole parenchymal volume is sampled over a period of hours.
+
+CAPACITY AND LIMITS:
+
+Microglia constitute roughly 5 to 10 per cent of brain cells depending on region and counting method, and the corpus's Layer 6 volume should be treated as the authority on that figure over anything quoted here.
+
+Each microglial cell owns a non-overlapping territory, so the population tiles the brain exactly once, which is an unusual architectural constraint and means surveillance capacity is fixed by cell number.
+
+The system's real limit is directional: it can install the sickness state quickly and it resolves it slowly, and a state that fails to resolve is the proposed substrate of inflammation-associated depression and of the fatigue that outlasts infections.
+
+MODULATION AND GATING:
+
+Cortisol from the axis of Chapter 37 is the system's principal brake, and the loop is closed: inflammation recruits cortisol, cortisol suppresses inflammation, and the failure of that suppression by glucocorticoid resistance is a recognised pathological mode.
+
+The vagal efferent is the fast brake and is the target of the clinical bioelectronic medicine programme, which is the most direct engineering exploitation of any system in this catalogue.
+
+Noradrenaline and the sympathetic innervation of lymphoid organs act in the opposite direction on some measures and the same direction on others, and the honest statement is that sympathetic modulation of immunity is well established in existence and poorly established in sign.
+
+Sleep loss raises inflammatory markers and inflammation raises sleep pressure, so this system and the Layer 11 state machine modulate each other rather than one governing the other.
+
+PLASTICITY AND LEARNING:
+
+Microglia carry an experience record: a prior inflammatory challenge leaves them primed, so that a second challenge produces an exaggerated response, a phenomenon of trained immunity that is a genuine memory held in a non-neuronal cell.
+
+The adaptive arm learns in the conventional immunological sense, with meningeal lymphocyte populations shaped by the antigen forwarded from Chapter 46.
+
+The synaptic pruning function is itself the substrate of a great deal of the plasticity described elsewhere in this corpus, so this system is both a learner and a mechanism of learning, which no other entry in the catalogue can claim.
+
+DEVELOPMENT AND ASSEMBLY:
+
+Microglia and the border-associated macrophages are yolk-sac derived and colonise the brain very early, before most neurons are born, and they are maintained thereafter by local self-renewal rather than by replacement from blood, which is why they are long-lived enough to hold a record.
+
+Complement-dependent microglial pruning is a required step in the refinement of sensory maps, and its failure in animal models leaves excess synapses and disordered connectivity.
+
+Meningeal lymphatics arrive postnatally, as Chapter 46 records, so the efferent limb of this system matures later than the resident one.
+
+Maternal immune activation during gestation measurably alters offspring brain development and behaviour in animal models and is epidemiologically associated with neurodevelopmental conditions in humans, and this is the developmental claim of this chapter with the greatest consequence and the greatest need for care.
+
+EVOLUTIONARY PROVENANCE:
+
+Sickness behaviour is found across vertebrates and in invertebrates, and its conservation is the strongest argument that it is an adaptive protocol and not a failure, because a purely damaging consequence of infection would not be conserved with this fidelity.
+
+Microglia are ancient, present in essentially all vertebrates, and the immune-privilege architecture of a barrier plus a border garrison is a general vertebrate solution.
+
+The elaboration in mammals is on the sculpting side rather than the defensive one, and the corpus should read microglial pruning as a repurposing of a phagocytic mechanism for a developmental job.
+
+THE ENDOCRINE COUPLING:
+
+The coupling to the axis of Chapter 37 is the tightest in this addendum and runs both ways, with interleukin-1 beta and interleukin-6 among the most potent known activators of the axis, and cortisol among the most potent suppressors of them.
+
+Leptin, insulin, and the metabolic signals of Chapters 42 and 43 modulate immune function directly, which is the mechanistic core of the association between obesity and low-grade inflammation.
+
+Oestrogen and testosterone shift immune set points in opposite directions, and the marked female preponderance of autoimmune disease is the population-level expression of that coupling.
+
+Vagal tone and the gut-brain axis of Chapter 43 share the same nerve, so this system and that one are not merely coupled but partly identical in their hardware.
+
+STATES AND THE LAYER 11 SCHEDULE:
+
+The corpus already carries this system's most important state as Layer 11 state 20, the sickness behaviour state, described there as the infection protocol, and this chapter's contribution is to name the system that installs it.
+
+In slow-wave sleep, state 7, microglial surveillance continues and inflammatory signalling is suppressed relative to waking, and the interaction with Chapter 46's clearance schedule is a live research question rather than a settled fact.
+
+Under acute stress, state 18, there is a rapid mobilisation of immune cells and a transient pro-inflammatory shift, and under sustained stress, state 19, the picture inverts toward glucocorticoid resistance and low-grade chronic inflammation, which is one of the corpus's better examples of a state whose short and long forms have opposite signs.
+
+DISEASES AND DISORDERS:
+
+Multiple sclerosis is the autoimmune failure of this system's tolerance, and its treatment is the most successful immunological intervention in neurology.
+
+Neuroinflammation is now argued to be a driver rather than a bystander in Alzheimer's disease and Parkinson's disease, with microglial genetic risk variants among the strongest identified in Alzheimer's disease, which is a strong argument for causal involvement and not proof of it.
+
+Inflammation-associated depression is the pathological persistence of the sickness state, and the observation that interferon therapy induces depression at high rates is among the cleanest human evidence for a cytokine cause of a mood disorder.
+
+Autoimmune encephalitis, sepsis-associated encephalopathy, and post-infectious fatigue states are the acute forms, and this chapter records that the mechanistic account of persistent post-infectious fatigue is not well established, and that a longitudinal study pairing cerebrospinal fluid and blood immune profiling with objective function across recovery and non-recovery would settle a great deal of it.
+
+HOW IT COLOURS THE ORGANISM:
+
+This is the system that makes being unwell feel like a change of personality rather than a change of body, and understanding that it is a protocol rather than a failure changes what a person owes themselves when ill.
+
+It is also the system that quietly decides which of the synapses this corpus spends five volumes describing are permitted to remain.
+
+SYSTEMS INTERFACE:
+
+• SUBSCRIBES (INPUTS).
+
+◦ Peripheral cytokines, interleukin-1 beta, interleukin-6, and tumour necrosis factor, read humorally at the circumventricular organs and the endothelium.
+
+◦ Vagal afferent traffic reporting peripheral inflammation within minutes, shared hardware with Chapters 7 and 43.
+
+◦ Brain-derived antigen arriving at the deep cervical lymph nodes from Chapter 46.
+
+◦ Neuronal activity and complement tagging at individual synapses, the local input to the pruning arm.
+
+◦ Cortisol from Chapter 37 and noradrenaline from Chapter 32 as descending modulators.
+
+• PUBLISHES (OUTPUTS).
+
+◦ The sickness behaviour state to the Layer 11 state machine, as state 20.
+
+◦ Set-point changes to the hypothalamus: thermal, appetitive, and sleep pressure.
+
+◦ Efferent vagal and splenic nerve commands suppressing peripheral cytokine production.
+
+◦ Synaptic removal decisions to every circuit in the corpus, which is this system's only structural output and its most consequential one.
+
+◦ Barrier permeability modulation to Chapter 45.
+
+• STATE.
+
+◦ Current microglial functional state across the parenchyma, current border garrison composition, current central prostaglandin tone, current peripheral cytokine load, current priming history.
+
+• PARAMETERS.
+
+◦ Microglia roughly 5 to 10 per cent of brain cells, tiling the parenchyma in non-overlapping territories; the corpus's Layer 6 figure governs.
+
+◦ Alpha-7 nicotinic receptor on the macrophage as the terminal effector of the inflammatory reflex, established by the failure of vagal stimulation to suppress tumour necrosis factor in alpha-7-deficient animals.
+
+• TIME CONSTANTS.
+
+◦ Vagal afferent report of peripheral inflammation, minutes.
+
+◦ Sickness behaviour after peripheral endotoxin, peak at about 2 to 6 hours, waning over the following day (Dantzer and colleagues).
+
+◦ Inflammatory reflex: vagal stimulation of 0.1 to 60 seconds duration, with tumour necrosis factor suppression sustained for more than 24 hours (Tracey laboratory).
+
+◦ Microglial contact with an individual synapse, minutes; full parenchymal survey, hours.
+
+◦ Microglial priming, persisting for weeks to months after a challenge.
+
+• FAILURE MODE.
+
+◦ Loss of tolerance, giving autoimmune demyelination and encephalitis; failure of resolution, giving chronic low-grade neuroinflammation and inflammation-associated depression; excessive pruning, proposed in schizophrenia; insufficient pruning, proposed in some neurodevelopmental conditions; glucocorticoid resistance, breaking the brake; and priming, in which a proportionate first response guarantees a disproportionate second.
+
+MODES AND MODE TRANSITIONS:
+
+The neuroimmune system is the mode-richest entry in this addendum, which the corpus's design lesson predicts of a system carrying a cognitive tag, and its modes are genuine functional postures rather than degrees of one variable.
+
+Its mode machinery is set from three directions at once: local synaptic signals set the pruning arm, peripheral cytokine load sets the defensive arm, and descending cortisol and vagal tone set the brake.
+
+• THE MODE REGISTER.
+
+◦ surveillant_homeostatic - The Patrol - ramified microglia sampling their territories continuously, border macrophages sampling the fluid, no inflammatory output.
+
+◦ synaptic_sculpting - The Editor - complement-guided identification and physical removal of tagged synapses, running heavily in development and at a lower rate lifelong.
+
+◦ sickness_protocol - The Bed Rest Order - the installed central motivational state, fever, anorexia, social withdrawal, raised sleep pressure, and analgesia-then-hyperalgesia, and the corpus's Layer 11 state 20.
+
+◦ reflex_suppressed - The Brake On - efferent vagal and splenic cholinergic signalling actively holding peripheral cytokine production down.
+
+◦ primed_reactive - The Hair Trigger - a microglial posture carrying the record of a previous challenge, responding disproportionately to the next one.
+
+◦ chronic_unresolved - The Stuck Alarm - the pathological mode, low-grade inflammatory output that neither escalates nor resolves.
+
+• THE ADMISSION RULE.
+
+◦ sickness_protocol is admitted only when the central prostaglandin signal exceeds threshold and the cortisol brake has not yet engaged, which is why the state has a characteristic delay after infection and a characteristic self-limitation; chronic_unresolved is admitted precisely when that brake has failed.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ surveillant_homeostatic: processes extend and retract continuously, a given synapse contacted for minutes, whole territory sampled over hours, no cytokine output above baseline (high confidence).
+
+◦ synaptic_sculpting: complement-tagged synapses are engulfed, with the rate set by the ratio of tagging to protective signalling, heavily active in the developmental critical periods of the corpus's Layer 6 and Layer 9 volumes (high confidence on the mechanism in rodents, moderate confidence on the human rate, which is not directly measurable and would be settled only by a marker visible in living human tissue).
+
+◦ sickness_protocol: thermal set point raised, food intake and social approach suppressed, sleep pressure raised, onset over 1 to 2 hours, peak at 2 to 6 hours after a peripheral endotoxin challenge, resolution over 12 to 48 hours (high confidence in rodents and in human endotoxin studies).
+
+◦ reflex_suppressed: efferent vagal stimulation for as little as 0.1 seconds and as much as 60 seconds reduces systemic tumour necrosis factor, with suppression sustained beyond 24 hours, acting through the alpha-7 nicotinic receptor on the macrophage (high confidence on the pathway, moderate confidence on the dose-response in humans).
+
+◦ primed_reactive: a second challenge produces an exaggerated cytokine and behavioural response, persisting for weeks to months after the first (moderate confidence, largely rodent).
+
+◦ chronic_unresolved: sustained low-grade cytokine output with blunted cortisol suppression, persisting indefinitely, and its human mechanistic account is not well established (low confidence, and the corpus should not pretend otherwise).
+
+• THE TRANSITION TABLE.
+
+◦ surveillant_homeostatic to sickness_protocol: peripheral cytokine load crossing threshold, reported by the vagal channel within minutes and by the humoral channel over 1 to 2 hours, with the behavioural state installed over hours.
+
+◦ sickness_protocol to reflex_suppressed: brainstem integration of the afferent signal engaging the efferent vagus, within seconds to minutes of the afferent report, and this transition runs concurrently with the state it limits rather than after it.
+
+◦ sickness_protocol to surveillant_homeostatic: cortisol brake plus resolution of the peripheral challenge, over 12 to 48 hours.
+
+◦ sickness_protocol to chronic_unresolved: failure of the cortisol brake, glucocorticoid resistance, or a persisting stimulus, over weeks; this is the pathological transition and it is slow, which is why it is missed.
+
+◦ Any mode to primed_reactive: completion of a first inflammatory episode, leaving a record that persists for weeks to months.
+
+◦ surveillant_homeostatic to synaptic_sculpting: local complement tagging of a weak synapse, over minutes to hours, and this transition is local rather than global, so the two modes coexist across the brain at any instant.
+
+◦ Sustained stress, Layer 11 state 19, biases the whole register toward chronic_unresolved over weeks, and sleep loss does the same over days.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: the healthy boundary lies between under-response, which appears as uncontrolled infection and, on the sculpting arm, as excess synapses, and over-response, which appears as autoimmunity and, on the sculpting arm, as synapse loss; it is patrolled by the cortisol brake and the vagal reflex as the fast watchdogs and by regulatory lymphocyte populations as the slow one, and the diagnostic signature of failure is not the amplitude of the response but its refusal to resolve.
+
+THE ENGINEERING NOTE:
+
+As an engineering pack this system is the neuroimmune_system, an unusual pack in that it exposes two entirely different services from one set of modules: a defence_and_state service with an afferent_transducer, a state_installer, and an efferent_reflex_suppressor, and a structural_editor service with a tagging input and a synapse_removal output.
+
+The engineering analogue is a security subsystem that also holds the authority to delete code from the running application, and the biological differences are that both services are implemented by the same long-lived agents, that those agents keep a private history that changes their future gain, and that the deletion authority has no separate audit trail.
+
+ENGLISH READABLE CODE:
+
+The purpose of this procedure is to read a peripheral inflammatory load, install or resolve the sickness state, and apply the efferent brake.
+
+Create a number variable called peripheral cytokines containing the current inflammatory load.
+
+Create a number variable called central prostaglandin containing the brain-side signal, initially zero.
+
+Create a number variable called cortisol containing the current output of the stress axis.
+
+Create a number variable called vagal brake with initial value zero.
+
+If peripheral cytokines are above the vagal detection threshold, set vagal brake to the reflex gain and record that the afferent report arrived within minutes.
+
+Set central prostaglandin to the peripheral cytokines transduced across the endothelium, reduced by the vagal brake and by cortisol.
+
+If central prostaglandin is above the sickness threshold, install the sickness protocol: raise the thermal set point, lower the appetite set point, raise the sleep pressure, and lower the social approach weight.
+
+If the sickness protocol has been installed for longer than the resolution window and cortisol has failed to suppress the peripheral cytokines, set the mode to chronic unresolved and raise an alarm.
+
+Set the priming level to the greater of the current priming level and the peak central prostaglandin reached.
+
+Publish the mode, the set-point changes, and the efferent brake command to the periphery.
+
+The procedure is complete.
+
+CODE SAMPLE:
+
+Python is chosen because the whole system is one afferent transduction, one thresholded state install, and one efferent brake, and because the priming variable, which is the part that makes this a learner, is a single line that persists across calls.
+
+import math
+
+VAGAL_THRESHOLD = 0.2        # peripheral load at which the fast afferent reports
+SICKNESS_THRESHOLD = 0.35    # central prostaglandin at which the state installs
+REFLEX_GAIN = 0.45           # efferent vagal suppression of peripheral cytokines
+TRANSDUCTION = 0.8           # endothelial and circumventricular conversion efficiency
+RESOLUTION_HOURS = 36.0      # beyond which non-resolution is pathological
+
+priming = 0.0                # persists across episodes: this is the memory
+
+def episode(peripheral, cortisol, hours_elapsed):
+    global priming
+    load = peripheral + math.prod([peripheral, priming])
+    brake = REFLEX_GAIN if load > VAGAL_THRESHOLD else 0.0
+    central = math.prod([load, TRANSDUCTION, 1.0 - brake, 1.0 - cortisol])
+    priming = max(priming, math.prod([central, 0.5]))
+    if central < SICKNESS_THRESHOLD:
+        return "surveillant_homeostatic", round(central, 3)
+    if hours_elapsed > RESOLUTION_HOURS and cortisol < 0.2:
+        return "chronic_unresolved", round(central, 3)
+    return "sickness_protocol", round(central, 3)
+
+for peripheral, cortisol, hours in [(0.1, 0.3, 4), (0.9, 0.3, 4), (0.9, 0.05, 48), (0.9, 0.3, 4)]:
+    mode, central = episode(peripheral, cortisol, hours)
+    print(f"load {peripheral} cortisol {cortisol} at {hours:>2} h: "
+          f"{mode:<24} central {central}  priming now {round(priming, 3)}")
+
+WHAT MAKES IT UNMISTAKABLE:
+
+The only system in the catalogue that can rewrite the wiring of every other system, that holds a memory in cells that are not neurons, and whose most familiar output is not a perception or a movement but a change in what the organism wants.

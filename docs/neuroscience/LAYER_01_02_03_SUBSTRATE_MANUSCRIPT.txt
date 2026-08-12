@@ -2536,3 +2536,1251 @@ All sources listed were consulted by web search on 12 August 2026.
 • World Health Organization guidance on iodine requirements and on urinary iodine as a population indicator, and the Iodine Global Network's country status assessments.
 
 • Bleichrodt and Born, 1994, A meta-analysis of research on iodine and its relationship to cognitive development, recorded together with the corpus's caveat that the 12 to 13.5 intelligence quotient point figure derives from severely deficient populations and that trials in mildly deficient pregnant women have generally not shown a cognitive benefit of supplementation.
+
+
+PART THREE. LAYER 3, THE IONIC AND SIMPLE MOLECULAR SUBSTRATE
+
+Eleven entries: the solvent, the working ions, the currencies, and the small molecules that the upper layers treat as signals but that this dossier treats as chemistry.
+
+Layer 3 is the layer of ions, water and small molecules, governed by electrochemistry, and it is the layer at which the substrate finally begins to look like something a neuroscientist would recognise.
+
+The organising idea of this part is that everything here is either a gradient, a currency, or a messenger, and that the three categories differ in who pays for them.
+
+A gradient is paid for continuously by a pump and is a store of energy; a currency is paid for by metabolism and is spent; and a messenger is paid for by synthesis and is thrown away after one use.
+
+The entries are ordered accordingly: the solvent first, because nothing else makes sense without it, then the four working ions, then the proton, then the energy currency, then the messengers.
+
+
+CHAPTER 12. WATER AND THE HYDROPHOBIC EFFECT (The Active Solvent) (COG)
+
+Water is usually described as the medium in which biology happens, as though it were a stage rather than an actor.
+
+That description is wrong in a way that matters: the force that assembles every membrane in the nervous system and folds every protein is not an attraction between the molecules being assembled but a property of the water they are pushed out of.
+
+Active names the correction; Solvent names what everyone already assumed it merely was.
+
+WHAT IT IS AND WHAT IT DOES:
+
+Water is a small, bent, strongly polar molecule that forms up to four hydrogen bonds with its neighbours, producing a transient three-dimensional network that continuously breaks and re-forms.
+
+What it does, beyond dissolving things, is exclude: because a non-polar surface disrupts the hydrogen bond network and constrains the water around it, the system's entropy rises when non-polar surfaces are buried against one another, and that entropic gain is the hydrophobic effect.
+
+Every lipid bilayer in the nervous system, and the folded core of every membrane protein in the Layer 4 catalogue, is held together by that effect and not by any bond between the parts.
+
+WHERE IT LIVES:
+
+Everywhere: water is roughly 55.5 moles per litre in its pure state, which makes it about 3000 times more concentrated than the most abundant solute in the body.
+
+Human grey matter is roughly 80 to 84 percent water by mass and white matter roughly 68 to 72 percent, the difference being almost entirely the lipid of myelin, and this difference is what magnetic resonance imaging principally sees.
+
+Water crosses membranes through aquaporin channels, of which aquaporin-4 is the dominant brain form, concentrated in astrocytic end-feet against blood vessels.
+
+PHYSICAL AND CHEMICAL PROPERTIES:
+
+A single hydrogen bond in liquid water is worth roughly 20 kilojoules per mole, about eight times the thermal energy unit, so bonds form and break constantly rather than holding permanently.
+
+The reorientation and hydrogen-bond exchange time of liquid water is of the order of 1 to 3 picoseconds at body temperature, measured by femtosecond infrared spectroscopy, which means the network the reader is imagining has already rearranged many times.
+
+The self-diffusion coefficient of pure water at 37 degrees Celsius is about 3.0 times 10 to the power minus 9 square metres per second, while the apparent diffusion coefficient measured in brain tissue is roughly 0.7 to 0.9 times 10 to the power minus 3 square millimetres per second, a threefold to fourfold reduction caused by cell membranes and tortuosity, and it is that reduction which diffusion imaging measures.
+
+The hydrophobic effect is conventionally quantified as roughly 25 calories per mole per square angstrom of buried non-polar surface, a figure derived from transfer experiments and still the standard working number, though it is an empirical fit rather than a physical constant.
+
+The lipid bilayer that this effect assembles has a hydrophobic core about 3 to 4 nanometres thick and a total thickness of about 4 to 5 nanometres, which sets the length of every transmembrane helix in the Layer 4 catalogue.
+
+Aquaporin-4 conducts water at an extremely high rate, with single-channel permeabilities commonly quoted in the range of 10 to the power 9 water molecules per second, and it conducts water only, excluding protons, which is a remarkable selectivity achievement given that a proton normally travels through water faster than anything else.
+
+MODES AND MODE TRANSITIONS:
+
+• THE MODE REGISTER.
+
+◦ bulk_network - The Ordinary Liquid - water in its freely exchanging hydrogen-bonded network, reorienting on a picosecond timescale.
+
+◦ hydration_shell - The Held Water - water ordered around an ion or a polar surface, exchanging more slowly than bulk.
+
+◦ hydrophobic_cage - The Frustrated Water - water forced into a more ordered arrangement around a non-polar surface, which is entropically costly and therefore the driving force of assembly.
+
+◦ channel_single_file - The Queued Water - water passing through an aquaporin pore in single file, unable to form a hydrogen-bonded chain that would conduct protons.
+
+◦ osmotically_displaced - The Moved Water - bulk water flow across a membrane in response to an osmotic gradient.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ bulk_network: reorientation time 1 to 3 picoseconds; self-diffusion about 3.0 times 10 to the power minus 9 square metres per second at 37 degrees Celsius (well established).
+
+◦ hydration_shell: exchange rates set by the ion, spanning about 10 to the power 5 per second for magnesium to 10 to the power 9 per second for potassium and caesium (well established, and this is the basis of Chapter 6 and Chapter 7).
+
+◦ hydrophobic_cage: about 25 calories per mole per square angstrom of buried non-polar surface, entropy-dominated at room and body temperature (well established as an empirical relation).
+
+◦ channel_single_file: about 10 to the power 9 water molecules per second per aquaporin-4 channel, with essentially complete proton exclusion (well established; the exact single-channel figure varies between reports by a factor of a few).
+
+◦ osmotically_displaced: bulk flow proportional to the osmotic gradient and the membrane's water permeability (well established).
+
+• THE TRANSITION TABLE.
+
+◦ bulk_network to hydration_shell: an ion or polar group enters; picoseconds.
+
+◦ hydration_shell to bulk_network: exchange, at the ion-specific rate above; nanoseconds to microseconds.
+
+◦ bulk_network to hydrophobic_cage: exposure of a non-polar surface, as when a membrane protein unfolds; nanoseconds.
+
+◦ hydrophobic_cage to bulk_network: burial of that surface, which is the folding or assembly event itself; microseconds to seconds depending on the object.
+
+◦ bulk_network to osmotically_displaced: an osmotic gradient appears, as in hyponatraemia or ischaemia; seconds to minutes, and this is cerebral oedema.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: net water movement into brain cells, which is cytotoxic oedema, or into the interstitium, which is vasogenic oedema.
+
+◦ Warning condition: a fall in serum sodium of more than about 10 millimoles per litre in 24 hours, in either direction.
+
+◦ Watchdog: the blood-brain barrier, aquaporin-4 as the principal route of regulated water movement, and the idiogenic osmoles that brain cells generate to defend their volume over hours to days.
+
+DEVELOPMENT AND ASSEMBLY:
+
+Brain water content falls through development as myelination proceeds, which is why the neonatal brain appears so different on magnetic resonance imaging and why the same imaging sequence must be interpreted differently at different ages.
+
+Aquaporin-4 polarisation to astrocytic end-feet develops postnatally and is lost in several disease states, and that loss of polarisation rather than loss of the protein is what most modern work on brain fluid clearance actually measures.
+
+HOW IT COLOURS THE LAYERS ABOVE:
+
+Water supplies the assembly force for the whole of Layers 4 and 5, so every construct in the corpus's macromolecular and organellar dossier exists because of an entropic effect in a solvent.
+
+It also supplies the corpus's principal observational window, since magnetic resonance imaging in all its forms is a measurement of water and not of neurons, and every claim in the corpus's Layer 9 and Layer 10 volumes that rests on imaging inherits that indirection.
+
+And it supplies a constraint that is easy to forget: because water moves freely and osmolality must be defended, the brain cannot use large concentration changes as signals, which is why signalling is done with small numbers of ions against large gradients rather than with bulk chemistry.
+
+SYSTEMS INTERFACE:
+
+• SUBSCRIBES (INPUTS).
+
+◦ Layer 11 systemic osmolality, normally 275 to 295 milliosmoles per kilogram, defended by vasopressin and thirst.
+
+◦ Layer 10 cerebral blood flow, delivering and removing water.
+
+◦ Layer 4 aquaporin expression and polarisation.
+
+• PUBLISHES (OUTPUTS).
+
+◦ Layer 4 folding and assembly free energy, as the hydrophobic effect.
+
+◦ Layer 5 membrane existence, as the bilayer.
+
+◦ Layer 9 imaging contrast, as the signal that every magnetic resonance method actually detects.
+
+• STATE.
+
+◦ Brain water content, observable by magnetic resonance and post-mortem, about 80 to 84 percent in grey matter.
+
+◦ Apparent diffusion coefficient, about 0.7 to 0.9 times 10 to the power minus 3 square millimetres per second in normal brain, falling sharply within minutes in acute ischaemia.
+
+◦ Serum osmolality and sodium, as the systemic drivers.
+
+• PARAMETERS.
+
+◦ Water concentration in pure water, 55.5 moles per litre.
+
+◦ Hydrogen bond energy, about 20 kilojoules per mole; hydrogen bond lifetime, about 1 to 3 picoseconds.
+
+◦ Hydrophobic burial, about 25 calories per mole per square angstrom.
+
+◦ Bilayer hydrophobic core, about 3 to 4 nanometres; total bilayer about 4 to 5 nanometres.
+
+◦ Cerebrospinal fluid volume about 150 millilitres, produced at about 0.3 to 0.4 millilitres per minute, roughly 500 millilitres per day, so the whole volume turns over about three to four times daily.
+
+• TIME CONSTANTS.
+
+◦ Hydrogen bond exchange, 1 to 3 picoseconds.
+
+◦ Water transit through an aquaporin, of the order of nanoseconds per molecule.
+
+◦ Osmotic equilibration of brain tissue, minutes.
+
+◦ Adaptive osmolyte defence of cell volume, hours to days, which is why chronic hyponatraemia must be corrected slowly.
+
+◦ Cerebrospinal fluid turnover, about 6 to 8 hours per complete exchange.
+
+• FAILURE MODE.
+
+◦ Osmotic failure in either direction: cerebral oedema when water enters faster than the skull can accommodate, and osmotic demyelination when chronic hyponatraemia is corrected faster than cells can readjust their osmolytes.
+
+DISEASES AND DISORDERS:
+
+Cerebral oedema, whether cytotoxic after ischaemia or vasogenic around a tumour, is the commonest life-threatening problem in acute neurology, and it is a disorder of this chapter and no other.
+
+Neuromyelitis optica spectrum disorder is caused by autoantibodies against aquaporin-4, which makes it the one demyelinating disease with an identified molecular target and a clear treatment rationale.
+
+Syndrome of inappropriate antidiuretic hormone secretion and diabetes insipidus are the two systemic disorders of water handling that present neurologically, and central pontine myelinolysis is the iatrogenic consequence of correcting the first too quickly.
+
+The glymphatic hypothesis, that cerebrospinal fluid flows along perivascular spaces and clears solutes including amyloid-beta preferentially during sleep, was proposed by Iliff, Nedergaard and colleagues in 2012 in Science Translational Medicine and has been vigorously disputed, notably by Smith and Verkman, who argue that the measurements are consistent with diffusion rather than convective flow, and by a 2024 Nature Neuroscience study reporting no evidence of the proposed clearance enhancement.
+
+The corpus records that this is an active and unresolved dispute, does not treat glymphatic clearance as established, and states that what would settle it is a direct, minimally perturbing measurement of perivascular fluid velocity in an unanaesthetised animal, since anaesthesia itself changes the answer.
+
+TIME CONSTANTS:
+
+The controlling contrast of this chapter is between the picosecond life of a hydrogen bond and the hours over which a brain cell adjusts its osmolytes, a span of about 16 orders of magnitude in the same substance.
+
+The clinically decisive number is the hours-to-days timescale of osmolyte adaptation, because it is the reason that both the disease and its correction are dangerous.
+
+ENGLISH READABLE CODE:
+
+The purpose of this procedure is to show that assembling a membrane is driven by the water and not by any attraction between the lipids.
+Create a number variable called buried non-polar area in square angstroms.
+Create a number variable called hydrophobic coefficient with initial value 25 calories per mole per square angstrom.
+Create a number variable called direct lipid attraction with initial value a small negative number.
+Create a number variable called temperature in kelvin with initial value 310.15.
+For each candidate assembly, perform the following actions.
+    Compute the hydrophobic free energy as minus hydrophobic coefficient times buried non-polar area.
+    Compute the total free energy as the hydrophobic free energy plus direct lipid attraction.
+    Compute the fraction of the total that is contributed by the water term.
+    Record the total and the fraction.
+End the loop.
+Report the fraction of the assembly's stability that is attributable to the solvent rather than to the parts being assembled.
+The procedure is complete.
+
+CODE SAMPLE:
+
+Python is chosen because the claim that the solvent supplies most of the stability is surprising, and putting the two terms side by side settles it in three lines.
+
+'''Hydrophobic assembly: the solvent term dominates. Coefficient about 25
+calories per mole per square angstrom of buried non-polar surface, a
+standard empirical fit rather than a physical constant.'''
+from operator import mul
+
+COEFF, DIRECT = 25.0, -400.0        # cal/mol per A2, and cal/mol of van der Waals
+for area in [200, 600, 1200, 2400]:
+    hydrophobic = mul(-COEFF, area)
+    total = hydrophobic + DIRECT
+    print("buried area", "%5d" % area, "A2   total", "%8.0f" % total,
+          "cal/mol   solvent share", "%.2f" % (hydrophobic / total))
+
+WHAT MAKES IT UNMISTAKABLE:
+
+The only entry in this dossier whose most important action is not something it does to other molecules but something other molecules do to it, and the only substance that both builds the membrane and is the thing every brain scan actually measures.
+
+
+CHAPTER 13. THE SODIUM ION (The Inward Debt) (COG)
+
+Sodium sits outside the cell at ten times its internal concentration and is pulled inward by both concentration and voltage, which makes it the most thermodynamically impatient ion in the nervous system.
+
+Every action potential is a controlled release of that impatience, and every one of them has to be paid back afterwards by a pump, which is why the brain's energy bill is what it is.
+
+Inward names the direction of every force acting on it; Debt names the fact that using it always creates an obligation.
+
+WHAT IT IS AND WHAT IT DOES:
+
+The sodium ion is a singly positively charged ion held at high concentration outside cells and low concentration inside by continuous pumping.
+
+What it does is three things: it carries the rising phase of the action potential, it powers the transporters that clear neurotransmitters from the synaptic cleft, and it is the currency in which the brain's largest single energy expenditure is denominated.
+
+WHERE IT LIVES:
+
+Extracellular sodium is about 140 to 145 millimoles per litre in plasma and interstitial fluid, and intracellular sodium in mammalian neurons is about 10 to 15 millimolar, though values from 4 to 20 millimolar appear in the literature depending on method and cell type.
+
+The corpus notes that many classical figures derive from the squid giant axon, where internal sodium is around 50 millimolar and external around 440 millimolar, and warns that mixing squid and mammalian numbers is a common and consequential error.
+
+The pump that maintains the gradient, the sodium-potassium adenosine triphosphatase, is in every plasma membrane in the body and is especially dense in axons and in the choroid plexus.
+
+PHYSICAL AND CHEMICAL PROPERTIES:
+
+With external sodium at 145 millimolar and internal at 12 millimolar, the Nernst equation at 37 degrees Celsius gives an equilibrium potential of about plus 67 millivolts, and published values commonly range from about plus 55 to plus 72 millivolts depending on the concentrations assumed.
+
+Because the resting potential is around minus 70 millivolts, the electrochemical driving force on sodium at rest is about 135 to 140 millivolts, which is the largest driving force on any ion in the nervous system and the reason sodium entry is so explosive once channels open.
+
+The sodium-potassium pump exports three sodium ions and imports two potassium ions for each molecule of adenosine triphosphate hydrolysed, so it is electrogenic, moving one net positive charge outward per cycle and contributing a few millivolts of hyperpolarisation directly.
+
+Its turnover is slow by channel standards, of the order of 100 cycles per second, which is roughly a hundred thousand times slower than an open channel, and that asymmetry is the whole reason a nervous system can signal fast and pay slowly.
+
+The diffusion coefficient of sodium in free water is about 1.33 times 10 to the power minus 9 square metres per second, slower than potassium's because sodium drags a larger hydration shell, which is the same fact that Chapter 6 used to explain selectivity.
+
+Sodium's third job is co-transport: the glutamate transporters move three sodium ions and one proton in and one potassium ion out per glutamate molecule, and the monoamine and gamma-aminobutyric acid transporters have their own sodium-coupled stoichiometries, so the sodium gradient is what makes synaptic clearance possible.
+
+MODES AND MODE TRANSITIONS:
+
+• THE MODE REGISTER.
+
+◦ gradient_maintained - The Paid Debt - internal sodium near 10 to 15 millimolar, driving force near maximal, pump keeping pace.
+
+◦ loading - The Accruing Debt - sustained firing raising internal sodium faster than the pump exports it.
+
+◦ pump_saturated - The Called Debt - the pump at maximum turnover, so any further influx accumulates without limit.
+
+◦ gradient_collapsed - The Defaulted Debt - energy failure, pump stopped, sodium and water entering, which is cytotoxic oedema and anoxic depolarisation.
+
+◦ reversed_transport - The Debt Run Backwards - the sodium-calcium exchanger and the glutamate transporters running in reverse when the gradient collapses, expelling calcium inward and releasing glutamate outward, which is a principal mechanism of ischaemic injury.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ gradient_maintained: equilibrium potential about plus 55 to plus 72 millivolts; driving force at rest about 135 millivolts (well established, with the spread reflecting assumed concentrations).
+
+◦ loading: internal sodium can rise by several millimolar in an active axon or spine within seconds of high-frequency firing (well established).
+
+◦ pump_saturated: pump turnover about 100 per second per pump, with a half-maximal internal sodium of roughly 10 millimolar, so the pump is operating near its half-saturation point at rest, which makes it responsive rather than maximal (well established).
+
+◦ gradient_collapsed: complete equilibration within minutes of energy failure, followed by anoxic depolarisation (well established).
+
+◦ reversed_transport: glutamate transporter reversal releases glutamate and is a documented contributor to excitotoxicity (well established in vitro; its quantitative contribution in human stroke is not firmly established).
+
+• THE TRANSITION TABLE.
+
+◦ gradient_maintained to loading: high-frequency firing; seconds.
+
+◦ loading to gradient_maintained: pump catch-up after activity ceases; seconds to tens of seconds.
+
+◦ loading to pump_saturated: sustained activity or reduced adenosine triphosphate supply; tens of seconds.
+
+◦ pump_saturated to gradient_collapsed: energy failure; the anoxic depolarisation of grey matter occurs about 1 to 3 minutes after complete flow arrest.
+
+◦ gradient_collapsed to reversed_transport: as soon as the electrochemical driving forces reverse; immediately.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: internal sodium rising above about 20 millimolar with no recovery between bursts.
+
+◦ Warning condition: falling adenosine triphosphate with maintained neural activity, which is exactly the condition in the ischaemic penumbra.
+
+◦ Watchdog: the pump's own responsiveness to internal sodium, activity-dependent increases in blood flow, and the sodium-dependent potassium current that terminates bursts.
+
+DEVELOPMENT AND ASSEMBLY:
+
+Pump density rises through development in parallel with myelination and with the acquisition of high firing rates, and the alpha-three subunit of the pump is the neuron-specific form whose mutations cause disease.
+
+The gradient is established before birth and is never allowed to relax, which is unusual: unlike most physiological variables, internal sodium has no diurnal or state-dependent variation the corpus is aware of.
+
+HOW IT COLOURS THE LAYERS ABOVE:
+
+This chapter is the origin of the corpus's energy narrative: because every spike moves sodium and every sodium ion must be pumped back, the brain's energy budget is essentially a sodium bill, and Attwell and Laughlin, 2001, in the Journal of Cerebral Blood Flow and Metabolism, computed it that way.
+
+Their original allocation gave about 47 percent of grey matter signalling energy to action potentials, 34 percent to postsynaptic glutamate receptor currents, 13 percent to maintaining the resting potential and 3 percent to glutamate recycling, and Howarth, Gleeson and Attwell, 2012, in the same journal, revised the action potential share downward on the basis of measured lower sodium influx, with synaptic processes taking a correspondingly larger share.
+
+The corpus records both allocations and notes that the revision moved the largest single cost from the axon to the synapse, which is a substantive change in where a cognitive architect should look for savings.
+
+It also colours the corpus's clinical chapters, because the ischaemic cascade is a sodium story before it is a calcium story.
+
+SYSTEMS INTERFACE:
+
+• SUBSCRIBES (INPUTS).
+
+◦ Layer 3 adenosine triphosphate, one molecule per pump cycle.
+
+◦ Layer 11 systemic sodium and water balance, holding plasma sodium at 135 to 145 millimoles per litre.
+
+◦ Layer 6 action potential firing rate, which sets the influx.
+
+• PUBLISHES (OUTPUTS).
+
+◦ Layer 6 action potential rising phase and the associated inward current.
+
+◦ Layer 7 transmitter clearance, as the power source of the excitatory amino acid transporters and the monoamine transporters.
+
+◦ Layer 5 metabolic demand, published as the largest single line in the brain's energy budget.
+
+• STATE.
+
+◦ Intracellular sodium, about 10 to 15 millimolar in mammalian neurons, observable with sodium-sensitive indicators.
+
+◦ Sodium equilibrium potential, about plus 55 to plus 72 millivolts, inferred from the concentrations.
+
+◦ Pump activity, observable as the ouabain-sensitive component of oxygen consumption.
+
+• PARAMETERS.
+
+◦ Extracellular sodium 140 to 145 millimolar; intracellular 10 to 15 millimolar in mammalian neurons, about 50 millimolar in squid axon.
+
+◦ Pump stoichiometry, three sodium out and two potassium in per adenosine triphosphate.
+
+◦ Pump turnover, of the order of 100 cycles per second; half-maximal internal sodium about 10 millimolar.
+
+◦ Glutamate transporter stoichiometry, three sodium and one proton in, one potassium out, per glutamate.
+
+◦ Sodium diffusion coefficient in water, about 1.33 times 10 to the power minus 9 square metres per second.
+
+• TIME CONSTANTS.
+
+◦ Sodium influx during a single action potential, under 1 millisecond.
+
+◦ Pump cycle, about 10 milliseconds.
+
+◦ Recovery of internal sodium after a burst, seconds to tens of seconds.
+
+◦ Gradient collapse after complete blood flow arrest, about 1 to 3 minutes to anoxic depolarisation.
+
+• FAILURE MODE.
+
+◦ Energy failure stops the pump, the gradient runs down, water follows sodium into the cell, transporters reverse, and the cell swells and dies; this sequence is the whole of the early ischaemic cascade.
+
+DISEASES AND DISORDERS:
+
+Alternating hemiplegia of childhood and rapid-onset dystonia parkinsonism are both caused by mutations in ATP1A3, the neuronal sodium-potassium pump subunit, and they demonstrate that the pump is not merely housekeeping but a determinant of neurological phenotype.
+
+Familial hemiplegic migraine type two arises from mutations in ATP1A2, the astrocytic pump subunit, linking the same machinery to cortical spreading depolarisation.
+
+Hyponatraemia and hypernatraemia both produce encephalopathy, and the rate of correction matters more than the value, as set out in Chapter 12.
+
+Cardiac glycosides such as digoxin inhibit the pump therapeutically in the heart and produce visual disturbance and confusion as their characteristic neurological toxicity.
+
+TIME CONSTANTS:
+
+The defining ratio of this chapter is between the sub-millisecond influx and the seconds-long recovery, a factor of about ten thousand, and it is the reason a neuron can fire fast in bursts but not indefinitely at maximum rate.
+
+The clinically defining number is the 1 to 3 minutes to anoxic depolarisation, which is the physical basis of the phrase time is brain.
+
+ENGLISH READABLE CODE:
+
+The purpose of this procedure is to compute the energy bill for a given firing rate, so that the brain's metabolic rate becomes a consequence rather than a fact.
+Create a number variable called firing rate in spikes per second.
+Create a number variable called sodium ions per spike, estimated from the membrane area and the charge needed.
+Create a number variable called pump stoichiometry with initial value three sodium ions per adenosine triphosphate.
+Create a number variable called free energy per adenosine triphosphate with initial value 50 kilojoules per mole in cellular conditions.
+For each firing rate in a range, perform the following actions.
+    Compute sodium ions entering per second as firing rate times sodium ions per spike.
+    Compute adenosine triphosphate molecules per second as sodium ions per second divided by pump stoichiometry.
+    Compute power in watts as adenosine triphosphate molecules per second divided by Avogadro's number times free energy per adenosine triphosphate.
+    Record the firing rate and the power.
+End the loop.
+Report the power at one spike per second and at fifty spikes per second, and the ratio between them.
+The procedure is complete.
+
+CODE SAMPLE:
+
+Python is chosen because the linearity of the energy bill in firing rate is the single most useful fact a cognitive architect can take from this chapter.
+
+'''The sodium bill. Charge per spike from the membrane capacitance
+arithmetic of Chapter 2; pump stoichiometry three sodium per ATP; in-cell
+free energy of ATP hydrolysis about 50 kJ/mol (see Chapter 18). Budget
+shares from Attwell and Laughlin 2001 and Howarth and colleagues 2012.'''
+from operator import mul
+
+NA_PER_SPIKE, STOICH, DG, NA_AVO = 1.5e8, 3.0, 50000.0, 6.02214076e23
+for rate in [1, 5, 10, 20, 50]:
+    ions = mul(rate, NA_PER_SPIKE)
+    atp = ions / STOICH
+    watts = mul(atp / NA_AVO, DG)
+    print("%3d Hz  ATP/s %.2e  power %.2e W per neuron" % (rate, atp, watts))
+
+WHAT MAKES IT UNMISTAKABLE:
+
+The only ion on which both the concentration gradient and the voltage pull in the same direction, so that it is the only one whose every use is a withdrawal that must be repaid at a fixed price.
+
+
+CHAPTER 14. THE POTASSIUM ION (The Resting Owner) (COG)
+
+If you want to know why a neuron sits at minus 70 millivolts rather than at zero, the answer is potassium and almost nothing else.
+
+The resting potential is not a set-point that some regulator defends; it is simply what happens when a membrane is much more permeable to potassium than to anything else, and potassium is much more concentrated inside than outside.
+
+Resting names what it owns; Owner names the fact that this is the one ion whose equilibrium the cell actually sits near.
+
+WHAT IT IS AND WHAT IT DOES:
+
+The potassium ion is a singly positively charged ion held at high concentration inside cells and low concentration outside.
+
+What it does is set the resting potential, repolarise every action potential, terminate bursts, and, uniquely among the ions in this dossier, act as a genuine extracellular broadcast signal, because raising extracellular potassium depolarises every cell in the neighbourhood at once.
+
+WHERE IT LIVES:
+
+Intracellular potassium is about 130 to 155 millimolar and is the most abundant cation in the body's cells.
+
+Extracellular potassium in the brain's interstitium is about 2.7 to 3.5 millimolar, which is notably lower than plasma potassium at 3.5 to 5.0 millimoles per litre, a difference actively maintained by the choroid plexus and the blood-brain barrier and one that is often overlooked.
+
+PHYSICAL AND CHEMICAL PROPERTIES:
+
+With internal potassium at 140 millimolar and external at 3 millimolar, the Nernst equation at 37 degrees Celsius gives an equilibrium potential of about minus 102 millivolts, and typical published values run from about minus 90 to minus 105 millivolts.
+
+Because most neurons rest at minus 60 to minus 75 millivolts rather than at the potassium equilibrium potential, there is always a standing outward driving force on potassium of 15 to 40 millivolts, which means a resting cell is continuously leaking potassium and continuously pumping it back.
+
+Potassium's diffusion coefficient in water is about 1.96 times 10 to the power minus 9 square metres per second, faster than sodium's because it carries a smaller hydration shell.
+
+The extracellular space is small, roughly 15 to 20 percent of brain volume, and this is what makes extracellular potassium a usable signal: because the reservoir is small, modest efflux produces a large concentration change.
+
+Activity raises extracellular potassium from about 3 millimolar toward a ceiling of roughly 10 to 12 millimolar, first characterised by Heinemann and Lux, 1977, and this ceiling is defended by glial uptake and spatial buffering; in spreading depolarisation the ceiling is breached and extracellular potassium reaches roughly 30 to 60 millimolar.
+
+Glial spatial buffering, first proposed by Orkand, Nicholls and Kuffler in 1966, works because astrocytes are electrically coupled into a syncytium and express the inwardly rectifying channel Kir4.1, so potassium taken up at an active site can be released at a distant one, which is a layer-skipping housekeeping function that the corpus's Layer 6 volume catalogues in its own right.
+
+MODES AND MODE TRANSITIONS:
+
+• THE MODE REGISTER.
+
+◦ resting_dominant - The Held Baseline - potassium conductance dominant, membrane near minus 70 millivolts, extracellular potassium about 3 millimolar.
+
+◦ repolarising - The Falling Phase - delayed rectifier and other voltage-gated potassium channels open, driving the membrane back down within a millisecond or two.
+
+◦ afterhyperpolarised - The Enforced Pause - calcium-activated and sodium-activated potassium currents holding the membrane below rest for tens to hundreds of milliseconds, setting spike frequency adaptation.
+
+◦ extracellular_accumulated - The Broadcast Signal - extracellular potassium raised to 5 to 12 millimolar by local activity, depolarising every cell nearby.
+
+◦ ceiling_breached - The Runaway - extracellular potassium above about 12 millimolar with positive feedback, which is spreading depolarisation.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ resting_dominant: equilibrium potential about minus 90 to minus 105 millivolts; resting potential 10 to 40 millivolts positive to it because of a small sodium leak (well established).
+
+◦ repolarising: delayed rectifier activation over about 1 to 5 milliseconds; single-channel conductances 2 to 250 picosiemens across the family (well established).
+
+◦ afterhyperpolarised: medium afterhyperpolarisation decaying over about 50 to 200 milliseconds, slow afterhyperpolarisation over 1 to 5 seconds, the latter being a principal target of noradrenaline and acetylcholine (well established).
+
+◦ extracellular_accumulated: each millimolar rise shifts the potassium equilibrium potential by roughly 7 to 9 millivolts at these low external concentrations, which is why small absolute changes matter so much (well established).
+
+◦ ceiling_breached: extracellular potassium 30 to 60 millimolar, sustained depolarisation, complete loss of ionic gradients for minutes (well established).
+
+• THE TRANSITION TABLE.
+
+◦ resting_dominant to repolarising: depolarisation opening voltage-gated potassium channels; under a millisecond.
+
+◦ repolarising to afterhyperpolarised: calcium entry during the spike activating calcium-dependent potassium channels; milliseconds, decaying over hundreds of milliseconds to seconds.
+
+◦ resting_dominant to extracellular_accumulated: sustained local firing; hundreds of milliseconds to seconds, recovering over seconds.
+
+◦ extracellular_accumulated to ceiling_breached: failure of glial buffering or of the pump, typically under metabolic stress; seconds.
+
+◦ afterhyperpolarised to resting_dominant: neuromodulator action closing the slow afterhyperpolarisation current, thrown from above by Layer 10 arousal systems; seconds.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: extracellular potassium above about 12 millimolar.
+
+◦ Warning condition: loss of Kir4.1 function or of astrocytic coupling, which lowers the ceiling's defence.
+
+◦ Watchdog: astrocytic Kir4.1, the glial syncytium, the sodium-potassium pump, and the potassium-chloride cotransporter, which exports potassium and chloride together.
+
+DEVELOPMENT AND ASSEMBLY:
+
+Potassium channel diversity is one of the largest gene families in the genome, with more than 70 human genes, and the developmental sequence of their expression is what converts a slow, broad immature spike into a fast, narrow mature one.
+
+Astrocytic Kir4.1 expression and gap junction coupling mature postnatally, so the young brain's defence of the potassium ceiling is weaker, which is part of why the immature brain is more seizure-prone.
+
+Reduced Kir4.1 function has been proposed as a mechanism in depression, on the basis of work in the lateral habenula in rodents, and the corpus records this as an interesting rodent finding with no established human validation rather than as a mechanism.
+
+HOW IT COLOURS THE LAYERS ABOVE:
+
+The resting potential, which every construct in the corpus's Layer 6 volume takes as a starting condition, is this chapter's output.
+
+The afterhyperpolarisation, which is the physical basis of spike-frequency adaptation and therefore of every claim in the corpus's upper volumes about neurons reporting change rather than level, is also this chapter's output.
+
+And extracellular potassium is one of the corpus's cleanest examples of a broadcast rather than an addressed signal, which is exactly the economic logic the framework uses to explain its layer-skipping channels: potassium does not need an address because it has no particular recipient.
+
+SYSTEMS INTERFACE:
+
+• SUBSCRIBES (INPUTS).
+
+◦ Layer 3 adenosine triphosphate, through the pump that maintains the gradient.
+
+◦ Layer 6 firing activity of the local population, which loads the extracellular space.
+
+◦ Layer 6 astrocytic buffering capacity, which unloads it.
+
+• PUBLISHES (OUTPUTS).
+
+◦ Layer 6 resting membrane potential, about minus 60 to minus 75 millivolts.
+
+◦ Layer 6 repolarisation and afterhyperpolarisation, setting maximum firing rate and adaptation.
+
+◦ Layer 8 local excitability, as an unaddressed broadcast through extracellular accumulation.
+
+• STATE.
+
+◦ Extracellular potassium, observable with potassium-selective microelectrodes, about 3 millimolar at rest.
+
+◦ Intracellular potassium, about 130 to 155 millimolar.
+
+◦ Membrane potential, the direct read-out.
+
+• PARAMETERS.
+
+◦ Intracellular potassium 130 to 155 millimolar; brain interstitial potassium 2.7 to 3.5 millimolar; plasma potassium 3.5 to 5.0 millimoles per litre.
+
+◦ Potassium equilibrium potential about minus 90 to minus 105 millivolts.
+
+◦ Activity ceiling for extracellular potassium about 10 to 12 millimolar; spreading depolarisation values 30 to 60 millimolar.
+
+◦ Extracellular space fraction, about 15 to 20 percent of brain volume.
+
+◦ Potassium diffusion coefficient in water, about 1.96 times 10 to the power minus 9 square metres per second.
+
+• TIME CONSTANTS.
+
+◦ Delayed rectifier activation, about 1 to 5 milliseconds.
+
+◦ Medium afterhyperpolarisation, about 50 to 200 milliseconds; slow afterhyperpolarisation, 1 to 5 seconds.
+
+◦ Extracellular potassium clearance after a burst, seconds.
+
+◦ Spreading depolarisation recovery, 1 to 5 minutes if perfusion is adequate.
+
+• FAILURE MODE.
+
+◦ Failure of the potassium ceiling produces spreading depolarisation, which propagates at about 2 to 5 millimetres per minute and is now directly recorded in human brain injury as a marker of secondary damage.
+
+DISEASES AND DISORDERS:
+
+Episodic ataxia type one arises from mutations in KCNA1, a voltage-gated potassium channel gene, and produces myokymia and attacks of ataxia.
+
+Long QT syndrome types one and two arise from potassium channel mutations and are cardiac, but the associated deafness in Jervell and Lange-Nielsen syndrome shows the same channels serving sensory function.
+
+KCNQ2 and KCNQ3 mutations cause benign familial neonatal epilepsy and, in severe form, epileptic encephalopathy, and the drug retigabine was developed as an opener of exactly these channels.
+
+Hyperkalaemia above about 6.5 millimoles per litre is a medical emergency principally because of cardiac arrest, and its neurological manifestations are comparatively mild, which is a reminder that the same ion has very different safety margins in different organs.
+
+Spreading depolarisation, the breach of the potassium ceiling, is now recognised as a mechanism of injury expansion in traumatic brain injury, subarachnoid haemorrhage and stroke, and is also the accepted substrate of the migraine aura.
+
+TIME CONSTANTS:
+
+The two numbers a modeller most needs are the millisecond repolarisation and the seconds-long slow afterhyperpolarisation, because together they set both the maximum instantaneous firing rate and the sustainable average one.
+
+The clinically important number is the 2 to 5 millimetres per minute propagation of spreading depolarisation, which is slow enough to watch and fast enough to matter.
+
+ENGLISH READABLE CODE:
+
+The purpose of this procedure is to show why small absolute changes in extracellular potassium have such large effects, which is the least intuitive fact in this chapter.
+Create a number variable called internal potassium with initial value 140 millimolar.
+Create a number variable called external potassium, to be varied from 2 to 12 millimolar.
+Create a number variable called Nernst slope with initial value 61.54 millivolts per decade at 37 degrees Celsius.
+For each external potassium value, perform the following actions.
+    Compute the potassium equilibrium potential as the Nernst slope times the base-ten logarithm of external potassium divided by internal potassium.
+    Compute the change from the value at 3 millimolar.
+    Record the external concentration, the equilibrium potential, and the shift.
+End the loop.
+Report the shift in equilibrium potential per millimolar rise at the low end and at the high end, showing that the effect is strongly non-linear.
+The procedure is complete.
+
+CODE SAMPLE:
+
+Python is chosen because the non-linearity of the potassium equilibrium potential in external concentration explains, in one table, why the interstitial ceiling exists.
+
+'''Why one millimolar of extracellular potassium matters so much.
+Interstitial potassium about 2.7 to 3.5 mM at rest; activity ceiling
+10 to 12 mM (Heinemann and Lux 1977); spreading depolarisation 30 to 60 mM.'''
+import math
+from operator import mul
+
+K_IN, SLOPE = 140.0, 61.54
+base = mul(SLOPE, math.log10(3.0 / K_IN))
+prev = None
+for k_out in [2, 3, 4, 6, 8, 10, 12, 30, 60]:
+    ek = mul(SLOPE, math.log10(k_out / K_IN))
+    step = "" if prev is None else " (+%.1f mV per mM step)" % ((ek - prev[1]) / (k_out - prev[0]))
+    print("%5.1f mM   E_K %7.1f mV   shift %+6.1f mV%s" % (k_out, ek, ek - base, step))
+    prev = (k_out, ek)
+
+WHAT MAKES IT UNMISTAKABLE:
+
+The only ion whose equilibrium the cell actually sits near, and the only one that doubles as an unaddressed broadcast to every cell within diffusion distance.
+
+
+CHAPTER 15. THE CALCIUM ION AS THE UNIVERSAL SECOND MESSENGER (The Ten-Thousandfold Gradient) (COG)
+
+Calcium is kept ten thousand times more concentrated outside a cell than inside, which is by a wide margin the steepest gradient the nervous system maintains for any substance.
+
+That steepness is what makes calcium the universal messenger: because the resting level is so low, a small absolute influx is an enormous relative change, and a signal that changes a hundredfold is trivially easy to detect against noise.
+
+WHAT IT IS AND WHAT IT DOES:
+
+The calcium ion is a doubly positively charged ion held at about 50 to 100 nanomolar free in the resting cytosol against about 1.2 to 1.8 millimolar free outside.
+
+What it does is trigger: transmitter release, muscle contraction, plasticity induction, gene transcription, and programmed cell death are all calcium-triggered, and this is why almost every plasticity rule in the corpus's upper volumes ultimately reads a calcium concentration.
+
+WHERE IT LIVES:
+
+Free calcium lives, briefly, in the cytosol; the great majority of cellular calcium is either bound to buffer proteins or stored in the endoplasmic reticulum, where free concentration is in the hundreds of micromolar.
+
+The most important addresses in the nervous system are the presynaptic active zone, where calcium entering through channels triggers vesicle fusion within a few hundred microseconds, and the dendritic spine, where calcium entering through N-methyl-D-aspartate receptors is the plasticity signal.
+
+PHYSICAL AND CHEMICAL PROPERTIES:
+
+With external free calcium at 1.5 millimolar and internal at 100 nanomolar, the equilibrium potential computed with the divalent Nernst slope of about 30.8 millivolts per decade is roughly plus 128 millivolts, and published values commonly run from about plus 120 to plus 140 millivolts.
+
+Calcium's crucial and often-missed property is that it does not behave as a well-mixed solute: because buffering is strong and diffusion is slow, calcium near an open channel exists as a steep local gradient called a nanodomain or microdomain, in which concentration falls from tens or hundreds of micromolar at the pore mouth to the resting level within tens to hundreds of nanometres.
+
+The apparent diffusion coefficient of calcium in cytosol is therefore very low, commonly quoted at about 13 to 65 square micrometres per second against about 780 square micrometres per second in free water, and the reduction is caused almost entirely by binding to buffers rather than by physical obstruction.
+
+The buffering ratio, meaning the number of calcium ions bound for each one left free, is typically about 20 to 200 depending on cell type, on the measurements of Neher and Augustine, 1992, in the Journal of Physiology, with calbindin, calretinin and parvalbumin as the principal named buffers.
+
+The fast release sensor synaptotagmin-1 responds to local calcium with a Hill coefficient of about 4 to 5 and half-maximal release at roughly 10 to 25 micromolar, which means release probability varies as roughly the fourth power of local calcium and is therefore extremely sensitive to anything that changes channel opening.
+
+Extrusion and uptake are handled by four mechanisms with different speeds and capacities: the plasma membrane calcium adenosine triphosphatase, which is high-affinity and low-capacity; the sodium-calcium exchanger, which moves three sodium in for one calcium out and is low-affinity and high-capacity; the sarcoplasmic and endoplasmic reticulum calcium adenosine triphosphatase, which refills the store; and the mitochondrial uniporter, which takes up calcium only when concentrations are high.
+
+MODES AND MODE TRANSITIONS:
+
+• THE MODE REGISTER.
+
+◦ resting_low - The Quiet Floor - 50 to 100 nanomolar free cytosolic calcium, maintained at continuous metabolic cost.
+
+◦ nanodomain - The Local Spike - tens to hundreds of micromolar within tens of nanometres of an open channel, lasting under a millisecond.
+
+◦ microdomain - The Local Pool - a few to tens of micromolar over a few hundred nanometres, lasting a few milliseconds.
+
+◦ global_transient - The Cell-Wide Signal - a few hundred nanometres to a few micromolar across the whole cytosol, lasting hundreds of milliseconds to seconds.
+
+◦ store_released - The Amplified Signal - calcium-induced calcium release from the endoplasmic reticulum through ryanodine or inositol trisphosphate receptors, converting a small trigger into a wave.
+
+◦ pathological_sustained - The Death Signal - sustained elevation above about 1 micromolar, activating calpains, mitochondrial permeability transition and cell death.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ resting_low: 50 to 100 nanomolar; no downstream effector engaged (well established).
+
+◦ nanodomain: 10 to 100 micromolar or more; engages only the fast, low-affinity sensors physically tethered nearby, which is how specificity is achieved without a private wire (well established).
+
+◦ microdomain: 1 to 10 micromolar; engages calmodulin-dependent enzymes (well established).
+
+◦ global_transient: 0.3 to 2 micromolar; engages transcriptional signalling and the slower kinases (well established).
+
+◦ store_released: amplifies by a factor of a few to ten; the physiological significance in central neurons is real but its magnitude varies greatly between cell types (moderate confidence).
+
+◦ pathological_sustained: above about 1 micromolar for minutes to hours; irreversible past a threshold that is not sharply defined (well established qualitatively, not well quantified).
+
+• THE TRANSITION TABLE.
+
+◦ resting_low to nanodomain: a single voltage-gated calcium channel opens; the domain is established within microseconds and collapses within microseconds of closure.
+
+◦ nanodomain to microdomain to global_transient: increasing channel recruitment and time; hundreds of microseconds to tens of milliseconds.
+
+◦ global_transient to resting_low: buffering, extrusion and uptake; hundreds of milliseconds to a few seconds.
+
+◦ Any mode to store_released: calcium or inositol trisphosphate reaching the store receptors; tens to hundreds of milliseconds.
+
+◦ global_transient to pathological_sustained: extrusion failure from energy shortage or excessive influx; seconds to minutes.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: cytosolic calcium above 1 micromolar without recovery.
+
+◦ Warning condition: mitochondrial calcium overload, which opens the permeability transition pore and commits the cell.
+
+◦ Watchdog: the buffer proteins, the four extrusion and uptake systems, and the geometric fact that nanodomains collapse the instant the channel shuts.
+
+DEVELOPMENT AND ASSEMBLY:
+
+Calcium signalling precedes the nervous system entirely, and spontaneous calcium transients pattern neural tube regionalisation, neuronal migration and neurite outgrowth before any synapse exists.
+
+The buffer complement changes with development and is one of the defining markers of interneuron classes in the corpus's Layer 6 catalogue, where parvalbumin, calbindin and calretinin are used as identity labels precisely because they are expressed in a cell-type-specific way.
+
+The tightness of coupling between calcium channels and release sensors also matures, moving from a loose microdomain arrangement to a tight nanodomain arrangement at many synapses, which sharpens transmission timing during development.
+
+HOW IT COLOURS THE LAYERS ABOVE:
+
+This chapter is, with Chapter 7, the physical substrate of learning, because every plasticity rule the corpus states in its Layer 7 volume is ultimately a function of the amplitude and duration of a calcium signal.
+
+The corpus's repeated claim that the same synapse can be potentiated or depressed depending on the pattern of activity reduces, at this layer, to the claim that a large brief calcium signal and a small sustained one engage different effectors, and the corpus notes honestly that while this calcium-amplitude hypothesis is widely used, the precise thresholds are model-dependent and have not been measured directly at a single synapse in vivo.
+
+The nanodomain concept also colours the corpus's whole approach to signalling specificity: calcium shows that a diffusible messenger can be private, provided the receiver is bolted close enough to the source, and that principle recurs in Chapter 21.
+
+SYSTEMS INTERFACE:
+
+• SUBSCRIBES (INPUTS).
+
+◦ Layer 11 systemic calcium homeostasis, holding ionised plasma calcium at 1.1 to 1.3 millimoles per litre through the parathyroid and vitamin D axis.
+
+◦ Layer 6 membrane potential, opening voltage-gated calcium channels.
+
+◦ Layer 7 N-methyl-D-aspartate receptor activation, admitting the coincidence-gated calcium of Chapter 7.
+
+• PUBLISHES (OUTPUTS).
+
+◦ Layer 7 vesicle fusion, as a fourth-to-fifth-power function of local calcium.
+
+◦ Layer 4 kinase and phosphatase activation, principally through calmodulin.
+
+◦ Layer 4 transcriptional programme, through calcium-dependent transcription factors.
+
+◦ Layer 6 cell death signal, when sustained.
+
+• STATE.
+
+◦ Free cytosolic calcium, observable with fluorescent indicators, 50 to 100 nanomolar at rest.
+
+◦ Endoplasmic reticulum calcium load, observable with targeted low-affinity indicators, hundreds of micromolar.
+
+◦ Buffering capacity, observable as the ratio of bound to free calcium during a controlled load.
+
+• PARAMETERS.
+
+◦ Extracellular free calcium 1.2 to 1.8 millimolar; resting cytosolic 50 to 100 nanomolar; gradient about 10,000 to 20,000 fold.
+
+◦ Calcium equilibrium potential about plus 120 to plus 140 millivolts.
+
+◦ Buffering ratio about 20 to 200 depending on cell type.
+
+◦ Apparent cytosolic diffusion coefficient about 13 to 65 square micrometres per second, against about 780 in free water.
+
+◦ Release sensor Hill coefficient 4 to 5; half-maximal local calcium 10 to 25 micromolar.
+
+• TIME CONSTANTS.
+
+◦ Nanodomain establishment and collapse, microseconds.
+
+◦ Vesicle fusion after calcium entry, about 60 to 200 microseconds at a fast synapse.
+
+◦ Spine calcium transient decay, about 10 to 100 milliseconds.
+
+◦ Global somatic calcium transient decay, hundreds of milliseconds to a few seconds.
+
+◦ Store refilling, seconds to tens of seconds.
+
+• FAILURE MODE.
+
+◦ Sustained elevation above about 1 micromolar activates calpains and the mitochondrial permeability transition and commits the cell to death, which is the final common pathway of excitotoxicity, and the corpus notes that the exact threshold and duration are not sharply established.
+
+DISEASES AND DISORDERS:
+
+Excitotoxicity in stroke, traumatic brain injury and status epilepticus is calcium overload, and the failure of every N-methyl-D-aspartate receptor antagonist trial in acute stroke is one of the most instructive negative results in neurology, since the mechanism is not in doubt but the therapeutic window proved too narrow.
+
+Malignant hyperthermia and central core disease arise from ryanodine receptor mutations, making them disorders of the internal store.
+
+Lambert-Eaton myasthenic syndrome is an autoimmune attack on presynaptic calcium channels, and the resulting weakness that improves with sustained effort is a direct behavioural read-out of presynaptic calcium accumulation.
+
+CACNA1A, CACNA1C and CACNA1S mutations produce the migraine, ataxia, psychiatric and periodic paralysis phenotypes already noted in Chapter 7.
+
+TIME CONSTANTS:
+
+The controlling span here is from microseconds at the nanodomain to seconds at the global transient, and the corpus's most useful observation is that these different timescales engage genuinely different effectors, so calcium is not one signal but a family of signals distinguished by duration and distance.
+
+That is why a modeller cannot represent calcium as a single scalar and expect the plasticity rules to work.
+
+ENGLISH READABLE CODE:
+
+The purpose of this procedure is to show that transmitter release depends on the fourth power of local calcium, and therefore that small changes in channel opening produce large changes in synaptic strength.
+Create a number variable called resting calcium with initial value 0.1 micromolar.
+Create a number variable called local calcium, computed from the number of open channels.
+Create a number variable called half maximal calcium with initial value 15 micromolar.
+Create a number variable called cooperativity with initial value 4.5.
+For each number of open channels in a range, perform the following actions.
+    Compute local calcium as resting calcium plus a per-channel contribution times the number of open channels.
+    Compute release probability as local calcium raised to the cooperativity power, divided by that quantity plus half maximal calcium raised to the same power.
+    Record the number of open channels, the local calcium, and the release probability.
+End the loop.
+Report the factor by which release probability changes when the number of open channels doubles, and compare it with two.
+The procedure is complete.
+
+CODE SAMPLE:
+
+Python is chosen because the fourth-power law is the reason presynaptic modulation is powerful, and seeing a doubling of calcium produce a far larger change in release makes the point immediately.
+
+'''Fourth-power calcium dependence of release. Hill coefficient about 4
+to 5 and half-maximal local calcium about 10 to 25 micromolar for
+synaptotagmin-1; buffering ratio 20 to 200 (Neher and Augustine 1992).'''
+import math
+from operator import mul
+
+REST, KHALF, N, PER_CHANNEL = 0.1, 15.0, 4.5, 3.0
+prev = None
+for channels in [1, 2, 4, 8, 16, 32]:
+    ca = REST + mul(PER_CHANNEL, channels)
+    num = math.pow(ca, N)
+    p = num / (num + math.pow(KHALF, N))
+    ratio = "" if prev is None else "   x%.2f for a doubling" % (p / prev)
+    print("%3d channels  local Ca %6.1f uM  p_release %.4f%s" % (channels, ca, p, ratio))
+    prev = p
+
+WHAT MAKES IT UNMISTAKABLE:
+
+The only substance in this dossier that is simultaneously the trigger for transmitter release, the signal for memory, and the executioner of the cell, distinguished only by how much of it arrives and for how long.
+
+
+CHAPTER 16. THE CHLORIDE ION AND THE SHIFTING REVERSAL POTENTIAL (The Movable Sign) (COG)
+
+Chapter 9 introduced chlorine as an element; this chapter treats the ion as a working variable of the mature and developing brain, because its most important property is that its reversal potential is not fixed.
+
+Every other ion in this dossier has an equilibrium potential set by concentrations the cell defends within narrow limits; chloride's is set by a transporter whose expression the cell changes over development, over hours of activity, and over the course of disease.
+
+Movable names the property that makes it interesting; Sign names what actually moves, since the direction of an inhibitory current is what is at stake.
+
+WHAT IT IS AND WHAT IT DOES:
+
+The chloride ion is the current carrier of the gamma-aminobutyric acid type A receptor and the glycine receptor, which together mediate essentially all fast inhibition in the human nervous system.
+
+What it does that no other ion does is change its own sign of effect: the same receptor, opened at the same membrane potential, produces hyperpolarisation in one cell and depolarisation in another, purely because the two cells run different transporters.
+
+WHERE IT LIVES:
+
+Chloride lives at about 115 to 130 millimolar in cerebrospinal fluid and interstitium and at about 5 to 10 millimolar inside mature central neurons, rising to 20 to 40 millimolar in immature neurons and in some mature cell types.
+
+Critically, it also lives in local pools rather than as a single cell-wide value, because small dendritic compartments load and unload chloride on their own timescale, so a single neuron can be running different chloride reversal potentials in different dendrites at the same moment.
+
+PHYSICAL AND CHEMICAL PROPERTIES:
+
+With 120 millimolar outside and 7 millimolar inside, the Nernst equation at 37 degrees Celsius gives a chloride reversal potential of about minus 76 millivolts, and mature values across the literature run from about minus 70 to minus 85 millivolts.
+
+The gamma-aminobutyric acid type A receptor is also permeable to bicarbonate, whose reversal potential is about minus 10 millivolts, and bicarbonate carries roughly a fifth of the current, which pulls the effective reversal potential of the receptor several millivolts positive to the pure chloride value and matters greatly during intense activation.
+
+That bicarbonate contribution is the reason that intense gamma-aminobutyric acid receptor activation can become frankly depolarising even in a mature neuron with normal chloride handling, which is an under-appreciated point and one the corpus considers well established.
+
+KCC2 extrudes chloride using the potassium gradient and has essentially no thermodynamic margin, since the potassium and chloride gradients are close to balanced, which means that any rise in extracellular potassium immediately weakens chloride extrusion.
+
+That coupling links this chapter directly to Chapter 14: during intense activity, extracellular potassium rises, chloride extrusion weakens, chloride accumulates, and inhibition fails, all as a single connected cascade rather than as three separate problems.
+
+MODES AND MODE TRANSITIONS:
+
+• THE MODE REGISTER.
+
+◦ hyperpolarising_mature - The Working Brake - reversal potential about minus 76 millivolts, below rest, current inward-negative and stabilising.
+
+◦ shunting_isopotential - The Silent Veto - reversal potential within a few millivolts of the momentary membrane potential, so conductance dominates and current is negligible.
+
+◦ depolarising_immature - The Developmental Accelerator - reversal potential about minus 45 millivolts, above rest.
+
+◦ activity_loaded - The Fatigued Brake - reversal potential drifting positive within seconds of intense inhibitory input.
+
+◦ pathologically_shifted - The Reversed Brake - a lasting positive shift from KCC2 downregulation, seen after nerve injury, in epileptic tissue and around tumours.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ hyperpolarising_mature: inhibitory postsynaptic potentials of about 1 to 5 millivolts at rest, with the conductance change mattering more than the voltage change (well established).
+
+◦ shunting_isopotential: current near zero, input resistance falling by a factor of two or more, dividing concurrent excitation proportionally (well established).
+
+◦ depolarising_immature: depolarising responses of 5 to 20 millivolts; whether these are net excitatory in the intact animal is disputed, as set out in Chapter 9 (contested).
+
+◦ activity_loaded: reversal potential shifting positive by 5 to 15 millivolts during a second of high-frequency inhibitory input to a small compartment (well established).
+
+◦ pathologically_shifted: lasting shifts of 10 to 20 millivolts positive, converting inhibition to shunting or excitation (well established in animal models and in resected human epileptic tissue).
+
+• THE TRANSITION TABLE.
+
+◦ hyperpolarising_mature to activity_loaded: high-frequency inhibitory input into a small volume; hundreds of milliseconds to seconds.
+
+◦ activity_loaded to hyperpolarising_mature: KCC2 extrusion after activity ceases; seconds.
+
+◦ hyperpolarising_mature to pathologically_shifted: brain-derived neurotrophic factor signalling through TrkB downregulating KCC2, typically driven by microglial activation; hours to days.
+
+◦ depolarising_immature to hyperpolarising_mature: developmental KCC2 upregulation; about two postnatal weeks in rodents, with human timing inferred rather than measured.
+
+◦ Any mode to shunting_isopotential: the membrane potential coinciding with the reversal potential; continuously.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: a chloride reversal potential above the action potential threshold.
+
+◦ Warning condition: rising extracellular potassium, which weakens KCC2 and therefore couples excitatory overload directly to inhibitory failure.
+
+◦ Watchdog: KCC2 expression and surface stability, the small size of inhibitory conductances relative to the compartment, and the bicarbonate buffering system.
+
+DEVELOPMENT AND ASSEMBLY:
+
+The developmental account and its dispute were set out in full in Chapter 9 and are not repeated here; this chapter records only the operational consequence, which is that any model of a developing circuit must treat the chloride reversal potential as a state variable rather than a parameter.
+
+The corpus also records that the human developmental timing of the KCC2 switch is the single most important unmeasured quantity in this pair of chapters, and that resolving it would immediately clarify whether the negative bumetanide trials failed because the mechanism is wrong or because the window had already closed.
+
+HOW IT COLOURS THE LAYERS ABOVE:
+
+Inhibition is the corpus's principal mechanism of selection, competition and timing at Layers 8 and 9, and this chapter says that inhibition's sign and strength are adjustable in ways excitation's are not.
+
+It also gives the corpus a mechanism for a phenomenon its clinical chapters describe repeatedly, namely that networks fail into seizure without any cell dying, since a transporter's expression level can convert a stable network into an unstable one and back.
+
+For a cognitive architect the lesson is uncomfortable and useful: a design that assumes inhibition is a reliable negative weight is assuming something biology does not guarantee.
+
+SYSTEMS INTERFACE:
+
+• SUBSCRIBES (INPUTS).
+
+◦ Layer 3 potassium gradient, which powers KCC2 and therefore sets extrusion capacity.
+
+◦ Layer 4 KCC2 and NKCC1 expression, surface stability and phosphorylation.
+
+◦ Layer 7 gamma-aminobutyric acid and glycine receptor activation.
+
+• PUBLISHES (OUTPUTS).
+
+◦ Layer 6 inhibitory current and its sign.
+
+◦ Layer 6 membrane conductance, as the shunt.
+
+◦ Layer 8 stability margin, published as the effective strength of every inhibitory motif.
+
+• STATE.
+
+◦ Chloride reversal potential, observable by gramicidin perforated-patch recording, about minus 70 to minus 85 millivolts in mature neurons.
+
+◦ Local intracellular chloride, observable with genetically encoded ratiometric chloride sensors.
+
+◦ KCC2 surface expression, observable by immunostaining and by biotinylation.
+
+• PARAMETERS.
+
+◦ Interstitial chloride about 115 to 130 millimolar; mature intracellular 5 to 10 millimolar; immature 20 to 40 millimolar.
+
+◦ Mature reversal potential about minus 70 to minus 85 millivolts; immature about minus 40 to minus 50 millivolts.
+
+◦ Bicarbonate reversal potential about minus 10 millivolts, carrying roughly 20 percent of gamma-aminobutyric acid type A receptor current.
+
+◦ Activity-induced positive shift, 5 to 15 millivolts within a second in a small compartment.
+
+• TIME CONSTANTS.
+
+◦ Chloride loading in a spine or thin dendrite, hundreds of milliseconds.
+
+◦ KCC2 extrusion recovery, seconds.
+
+◦ Activity-dependent KCC2 downregulation, hours to days.
+
+◦ Developmental switch, about two postnatal weeks in rodents; human timing not directly measured.
+
+• FAILURE MODE.
+
+◦ The reversal potential drifting positive faster than extrusion can restore it, which converts inhibition first to shunting and then to excitation, and which is the accepted mechanism of benzodiazepine failure in prolonged status epilepticus.
+
+DISEASES AND DISORDERS:
+
+Status epilepticus becomes refractory to benzodiazepines within roughly 30 minutes in animal models and in clinical experience, through the combination of chloride loading described here and receptor internalisation, which is why current guidelines emphasise early treatment and early escalation to agents acting on other targets.
+
+Neuropathic pain following nerve injury involves microglial release of brain-derived neurotrophic factor, TrkB signalling and KCC2 downregulation in the dorsal horn, converting inhibitory input into excitatory input, which is the mechanistic account of allodynia.
+
+Peritumoral epilepsy in glioma is associated with altered chloride transporter expression in surrounding neurons, which is a striking instance of a tumour changing the sign of inhibition in tissue it has not invaded.
+
+SLC12A5 mutations cause epilepsy of infancy with migrating focal seizures, which is the single-gene demonstration of the whole chapter.
+
+TIME CONSTANTS:
+
+The operationally important number is the seconds-long chloride extrusion time constant, because it means inhibition has a memory of its own recent use, which excitation does not.
+
+The therapeutically important number is the roughly 30 minutes to benzodiazepine refractoriness in status epilepticus, which turns a physiological time constant into a treatment protocol.
+
+ENGLISH READABLE CODE:
+
+The purpose of this procedure is to show how the sign of inhibition follows the transporter rather than the receptor.
+Create a number variable called external chloride with initial value 120 millimolar.
+Create a text variable called dominant transporter, either KCC2 or NKCC1.
+Create a number variable called internal chloride, set to 7 millimolar if the dominant transporter is KCC2 and to 30 millimolar if it is NKCC1.
+Create a number variable called membrane potential with initial value minus 65 millivolts.
+For each of the two transporter settings, perform the following actions.
+    Compute the chloride reversal potential using the Nernst slope with a sign reversal for a negative ion.
+    Compute the effective reversal potential by mixing four parts chloride with one part bicarbonate at minus 10 millivolts.
+    Compute the driving force as the membrane potential minus the effective reversal potential.
+    Report whether opening the receptor hyperpolarises, shunts, or depolarises the cell.
+End the loop.
+Report both results side by side to show that the receptor did not change.
+The procedure is complete.
+
+CODE SAMPLE:
+
+Python is chosen because the point that the receptor is identical in both cases is easiest to make by writing the receptor once and changing only the transporter.
+
+'''The sign of inhibition follows the transporter, not the receptor.
+Bicarbonate carries roughly 20 percent of GABA-A current with a reversal
+potential near -10 mV, which pulls the effective reversal positive.'''
+import math
+from operator import mul
+
+CL_OUT, VM, HCO3_REV, SLOPE = 120.0, -65.0, -10.0, 61.54
+for name, cl_in in [("KCC2 dominant (mature)", 7.0), ("NKCC1 dominant (immature)", 30.0)]:
+    e_cl = mul(-SLOPE, math.log10(CL_OUT / cl_in))
+    e_eff = mul(0.8, e_cl) + mul(0.2, HCO3_REV)
+    drive = VM - e_eff
+    verdict = "hyperpolarises" if drive < -2 else ("depolarises" if drive > 2 else "shunts only")
+    print("%-28s E_Cl %6.1f  E_eff %6.1f  drive %+6.1f  -> %s"
+          % (name, e_cl, e_eff, drive, verdict))
+
+WHAT MAKES IT UNMISTAKABLE:
+
+The only ion in this dossier whose sign of physiological effect is a setting rather than a fact, so that the same receptor is a brake, a divider, or an accelerator depending on a transporter the cell can change.
+
+
+CHAPTER 17. THE PROTON AND pH (The Steepest Gradient) (COG)
+
+The proton is the smallest ion, it is present at the lowest concentration of anything in this dossier, and it is maintained across the steepest gradients in the cell.
+
+It is also the most under-rated signal in the corpus, because it loads every synaptic vesicle, gates a family of receptors, and forms the oldest closed loop in the nervous system, which is the control of breathing by carbon dioxide.
+
+WHAT IT IS AND WHAT IT DOES:
+
+A proton is a hydrogen atom stripped of its electron, which in water is never actually free but travels as a charge defect through the hydrogen-bond network, hopping from molecule to molecule far faster than any other ion moves.
+
+What it does in the nervous system is four things: it powers the loading of every neurotransmitter into every vesicle, it is the signal read by acid-sensing ion channels, it is the intermediate through which carbon dioxide is sensed, and it is the currency of the mitochondrial gradient described in Chapter 2.
+
+WHERE IT LIVES:
+
+Arterial blood is held at pH 7.35 to 7.45, cerebrospinal fluid at about 7.31 to 7.33, and the neuronal cytosol at about 7.0 to 7.2.
+
+The most extreme address is the synaptic vesicle interior, held at roughly pH 5.2 to 5.7 by a proton-pumping adenosine triphosphatase, which is a proton concentration roughly one to two hundred times that of the cytosol.
+
+PHYSICAL AND CHEMICAL PROPERTIES:
+
+At pH 7.2 the free proton concentration is about 63 nanomolar, which is roughly a millionth of the sodium concentration and about the same as resting free calcium, and this is worth stating plainly because pH's logarithmic notation disguises how few protons there actually are.
+
+The proton's mobility in water is anomalously high because it moves by the Grotthuss mechanism, hopping along hydrogen bonds rather than physically diffusing, which is why its diffusion coefficient is about 9.3 times 10 to the power minus 9 square metres per second, about five times that of sodium.
+
+The vesicular proton gradient has two components, a chemical gradient of roughly 1.5 to 2 pH units and an electrical gradient, together constituting a proton motive force whose total is commonly quoted around 150 to 180 millivolts, and different transmitters draw on the two components in different proportions: the vesicular glutamate transporter uses mainly the electrical component, while the vesicular monoamine transporter exchanges two protons for each monoamine and uses mainly the chemical component.
+
+That difference is not a detail: it means that anything altering vesicular pH changes monoamine loading much more than glutamate loading, which is the mechanistic basis of how amphetamine and reserpine act.
+
+On release, the acidic vesicle contents transiently acidify the synaptic cleft by roughly 0.1 to 0.6 pH units for tens of milliseconds, and this transient is itself a signal at some synapses, notably in the retina where it mediates lateral feedback from horizontal cells to cones.
+
+Acid-sensing ion channels open at half-maximal pH values of roughly 6.2 to 6.8 depending on subunit, and ASIC1a in the amygdala has been implicated in fear behaviour by Wemmie and colleagues, with carbon dioxide inhalation provoking panic in a manner consistent with acid sensing, though the corpus notes that the human evidence is suggestive rather than definitive.
+
+Carbonic anhydrase, the enzyme that interconverts carbon dioxide and bicarbonate, has a turnover number of the order of 10 to the power 6 per second, making it one of the fastest enzymes known and effectively instantaneous on any physiological timescale.
+
+MODES AND MODE TRANSITIONS:
+
+• THE MODE REGISTER.
+
+◦ cytosolic_regulated - The Defended Interior - neuronal pH 7.0 to 7.2, held by sodium-proton exchangers and bicarbonate transporters.
+
+◦ vesicular_acidic - The Loading Gradient - vesicle interior pH 5.2 to 5.7, maintained by the vacuolar proton adenosine triphosphatase.
+
+◦ cleft_transient - The Released Acid - a 0.1 to 0.6 pH unit acidification of the cleft for tens of milliseconds after fusion.
+
+◦ activity_acidified - The Working Tissue - extracellular pH falling by 0.1 to 0.3 units during intense activity as metabolic acid is produced.
+
+◦ chemoreceptive - The Breathing Loop - central chemoreceptors reading cerebrospinal fluid pH as a proxy for arterial carbon dioxide.
+
+◦ ischaemic_acidosis - The Failed Buffer - tissue pH falling to 6.0 to 6.5 in ischaemia, activating acid-sensing channels and contributing to injury.
+
+• PER-MODE TRANSFER FUNCTIONS.
+
+◦ cytosolic_regulated: pH held within about 0.1 units by transporters with a steep dependence on internal pH (well established).
+
+◦ vesicular_acidic: 1.5 to 2 pH units of chemical gradient; vesicular monoamine transporter exchanges two protons per monoamine, vesicular glutamate transporter uses mainly the membrane potential component (well established).
+
+◦ cleft_transient: 0.1 to 0.6 pH units for tens of milliseconds; established at the ribbon synapses of the retina, less firmly established as a general signalling mechanism elsewhere (moderate confidence).
+
+◦ activity_acidified: 0.1 to 0.3 units, recovering over seconds to tens of seconds (well established).
+
+◦ chemoreceptive: the ventilatory response to carbon dioxide is roughly 2 to 3 litres per minute per millimetre of mercury of arterial carbon dioxide partial pressure in healthy adults, with substantial individual variation (well established, with wide normal range).
+
+◦ ischaemic_acidosis: pH 6.0 to 6.5; acid-sensing channel activation contributes to injury and is a candidate therapeutic target (well established in animal models, not yet translated).
+
+• THE TRANSITION TABLE.
+
+◦ cytosolic_regulated to activity_acidified: sustained firing and metabolic acid production; seconds.
+
+◦ activity_acidified to cytosolic_regulated: washout by blood flow and buffering; tens of seconds.
+
+◦ vesicular_acidic to cleft_transient: vesicle fusion; sub-millisecond release, tens of milliseconds of transient.
+
+◦ Any mode to chemoreceptive activation: a rise in arterial carbon dioxide partial pressure crossing the blood-brain barrier as dissolved gas and acidifying cerebrospinal fluid; seconds to a minute, which is why the ventilatory response to carbon dioxide is fast but not instantaneous.
+
+◦ activity_acidified to ischaemic_acidosis: blood flow failure; minutes.
+
+• FAULT REGIMES AND WATCHDOGS.
+
+◦ Boundary signature: arterial pH outside 7.2 to 7.55, at which consciousness is measurably affected.
+
+◦ Warning condition: a rising arterial carbon dioxide partial pressure with a falling respiratory rate, which is impending respiratory failure.
+
+◦ Watchdog: the bicarbonate buffer system, carbonic anhydrase, the renal compensation that adjusts bicarbonate over days, and the central chemoreceptors of the retrotrapezoid nucleus.
+
+DEVELOPMENT AND ASSEMBLY:
+
+The central chemoreceptors of the retrotrapezoid nucleus depend on the transcription factor PHOX2B, and heterozygous PHOX2B mutations cause congenital central hypoventilation syndrome, in which affected individuals fail to increase ventilation in response to carbon dioxide and stop breathing adequately during sleep.
+
+That disorder is the corpus's cleanest single-gene demonstration that a chemical set-point is built by a developmental programme, and it is also the clearest evidence that the carbon dioxide loop is genuinely a proton loop, since the receptor neurons respond to acidification.
+
+HOW IT COLOURS THE LAYERS ABOVE:
+
+Every transmitter in Chapter 19 is loaded into its vesicle by this gradient, so the whole of the corpus's Layer 7 volume rests on a proton pump.
+
+The carbon dioxide loop is, in the corpus's terms, the oldest closed control loop in the nervous system, older than vision and older than movement, and it is the template for every homeostatic loop the Layer 11 volume catalogues.
+
+And the proton supplies an important negative lesson: because pH must be defended within a tenth of a unit, the brain cannot use pH as a large-dynamic-range signal, which is why proton signalling is confined to small, fast, local transients and to a single slow global loop.
+
+SYSTEMS INTERFACE:
+
+• SUBSCRIBES (INPUTS).
+
+◦ Layer 11 arterial carbon dioxide partial pressure, normally about 35 to 45 millimetres of mercury.
+
+◦ Layer 3 metabolic acid production, which scales with activity.
+
+◦ Layer 5 vacuolar proton adenosine triphosphatase activity, powered by adenosine triphosphate.
+
+• PUBLISHES (OUTPUTS).
+
+◦ Layer 5 vesicular transmitter loading, as the driving force for every vesicular transporter.
+
+◦ Layer 7 cleft acidification transient, as a feedback signal at some synapses.
+
+◦ Layer 10 ventilatory drive, through the central chemoreceptors.
+
+◦ Layer 6 acid-sensing channel current, as a fast excitatory signal in acidic conditions.
+
+• STATE.
+
+◦ Arterial pH and carbon dioxide partial pressure, routinely measurable by blood gas analysis.
+
+◦ Intracellular pH, observable with pH-sensitive fluorescent indicators, 7.0 to 7.2.
+
+◦ Vesicular pH, observable with the pH-sensitive fluorescent protein pHluorin targeted to the vesicle lumen, which is the standard modern method for watching release directly.
+
+• PARAMETERS.
+
+◦ Arterial pH 7.35 to 7.45; cerebrospinal fluid pH about 7.31 to 7.33; neuronal cytosol 7.0 to 7.2; vesicle lumen 5.2 to 5.7.
+
+◦ Free proton concentration at pH 7.2, about 63 nanomolar.
+
+◦ Total vesicular proton motive force, commonly quoted around 150 to 180 millivolts.
+
+◦ Acid-sensing ion channel half-maximal activation pH, about 6.2 to 6.8 depending on subunit.
+
+◦ Carbonic anhydrase turnover, of the order of 10 to the power 6 per second.
+
+• TIME CONSTANTS.
+
+◦ Proton hopping in water, sub-picosecond per hop.
+
+◦ Cleft acidification transient, tens of milliseconds.
+
+◦ Vesicle reacidification after endocytosis, about 3 to 5 seconds.
+
+◦ Ventilatory response to a step change in carbon dioxide, seconds to about a minute.
+
+◦ Renal compensation for a chronic acid-base disturbance, days.
+
+• FAILURE MODE.
+
+◦ Acid-base failure in either direction produces encephalopathy, and the specific failure of the chemoreceptive loop, as in congenital central hypoventilation syndrome or opioid overdose, produces apnoea, which is the most rapidly fatal failure mode in this entire dossier.
+
+DISEASES AND DISORDERS:
+
+Congenital central hypoventilation syndrome, from PHOX2B mutations, is failure of the carbon dioxide loop and requires lifelong assisted ventilation during sleep.
+
+Opioid overdose kills by suppressing exactly this loop, and naloxone works by restoring it, which makes it the most directly life-saving intervention derived from any chapter in this dossier.
+
+Carbonic anhydrase inhibitors including acetazolamide are used in idiopathic intracranial hypertension, in altitude sickness and as anticonvulsants, and topiramate and zonisamide have carbonic anhydrase inhibition among their actions.
+
+Hepatic encephalopathy, diabetic ketoacidosis and respiratory failure all produce altered consciousness through acid-base and ammonia disturbance, and the corpus notes that pH is one of the few laboratory values that predicts conscious level directly.
+
+Panic disorder's provocation by carbon dioxide inhalation is well replicated, and the acid-sensing channel account of it is plausible and incompletely proven; what would settle it is a selective human ASIC1a antagonist, which does not yet exist.
+
+TIME CONSTANTS:
+
+The chapter spans sub-picosecond proton hops to days of renal compensation, and the operationally important middle is the seconds-to-a-minute ventilatory response, which is the fastest whole-body homeostatic loop the corpus catalogues.
+
+The other decisive number is the 3 to 5 seconds of vesicle reacidification, because it places a floor under how fast a synapse can recycle a vesicle and therefore contributes to synaptic depression at high rates.
+
+ENGLISH READABLE CODE:
+
+The purpose of this procedure is to make plain how few protons there actually are, which the logarithmic pH scale hides.
+Create a number variable called pH value.
+Create a number variable called Avogadro's number with initial value 6.02214076 times 10 to the power 23.
+Create a number variable called vesicle volume with initial value the volume of a sphere of radius 20 nanometres.
+For each pH value in a list covering blood, cytosol and vesicle interior, perform the following actions.
+    Compute the proton concentration as ten raised to the power of minus pH value, in moles per litre.
+    Convert that concentration to nanomolar.
+    Compute the number of free protons in one synaptic vesicle at that concentration.
+    Record the pH, the concentration, and the count.
+End the loop.
+Report the number of free protons inside a single synaptic vesicle, and comment that the gradient is maintained on a handful of particles.
+The procedure is complete.
+
+CODE SAMPLE:
+
+Python is chosen because the number of free protons inside a synaptic vesicle is genuinely startling and is the fastest way to understand why proton signalling must be local.
+
+'''How few protons there are. Vesicle interior pH 5.2 to 5.7; cytosol
+7.0 to 7.2; arterial blood 7.35 to 7.45. Vesicle radius about 20 nm.'''
+import math
+from operator import mul
+from functools import reduce
+
+NA = 6.02214076e23
+r_m = 20e-9
+volume_L = reduce(mul, [4.0 / 3.0, math.pi, r_m, r_m, r_m, 1000.0])
+for label, ph in [("arterial blood", 7.40), ("neuronal cytosol", 7.10),
+                  ("vesicle interior", 5.50)]:
+    conc = math.pow(10.0, -ph)
+    count = reduce(mul, [conc, volume_L, NA])
+    print("%-18s pH %.2f   %8.1f nM   %6.3f free protons per vesicle volume"
+          % (label, ph, mul(conc, 1e9), count))
+
+WHAT MAKES IT UNMISTAKABLE:
+
+The only ion in this dossier that is never actually free, moves by hopping rather than travelling, is present at nanomolar concentration, and nonetheless loads every neurotransmitter vesicle in the brain and decides when you take your next breath.
