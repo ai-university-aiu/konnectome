@@ -7,7 +7,7 @@
 ]).
 
 % Import reverse for returning the tick summaries in order.
-:- use_module(library(lists), [reverse/2]).
+:- use_module(library(lists), [reverse/2, memberchk/2]).
 % Reuse the drive system: it computes the reward, proposes actions, and moves the body in response.
 :- use_module(library(drive_system), [drive_system_step/6, drive_system_proposals/3, drive_system_apply_action/4]).
 % Reuse the connection graph's bus-modulated update, so relay gains are set by the neuromodulators.
@@ -43,6 +43,14 @@
                                             neuromodulator_bus_check_operating_state/1]).
 % Reuse the observer: it records the tick as a Causalontology token_occurrence.
 :- use_module(library(observer), [observer_record_tick/3]).
+% Reuse the working-memory blackboard: SLICE 74, THE BOARD WIRED AND ITS PERIOD DECLARED. The board
+% has been a complete pack since slice 49 and reachable from no running loop since slice 49, because
+% wiring it meant choosing a maintenance rate and OBSERVATION-13 refused to choose one. DECISION-23
+% chooses it - one step per nominal second - and this is where it beats.
+:- use_module(library(working_memory_blackboard), [working_memory_blackboard_step/3,
+                                                   working_memory_blackboard_step_ticks/1,
+                                                   working_memory_blackboard_wipe/2,
+                                                   working_memory_blackboard_slots/2]).
 
 % The cognitive cycle wires all ten architecture components into one running tick, in the exact order
 % of Section A3.3, and now closes the sensorimotor loop: the drives compute the reward and the bus
@@ -93,6 +101,14 @@
 % is refused by name - a lowered night would be no renormalisation at all, the inverted-hysteresis
 % refusal's sibling. The operating state read off the bus is judged against the bus's OWN domain
 % before the dispatch, so exactly one program can ever run and no hole can run both.
+% Since slice 74 the tick also carries the WORKING-MEMORY BLACKBOARD (Layer 10 Chapter 16), and with
+% it the first quantity in this loop that does NOT move once per tick. The world dict gained two more
+% required keys, each refused aloud by name when missing: blackboard (the four-slot surface itself)
+% and rehearsal_target (the standing attentional pointer, the atom none being the explicit absence,
+% caller-supplied because attention still has no publisher in konnectome). The board is maintained
+% once every hundred ticks under DECISION-23 and erased outright on every offline tick, which is
+% Chapter 16's own sentence about slow-wave sleep and the first thing the working-memory mode
+% register's ERASED IDLE has ever had underneath it to wipe.
 
 % cognitive_cycle_world_value(+World, +Key, -Value): read one world key, refusing a missing key aloud.
 cognitive_cycle_world_value(World, Key, Value) :-
@@ -152,6 +168,10 @@ cognitive_cycle_step(World0, World, Summary) :-
     cognitive_cycle_world_value(World0, replay_rate, ReplayRate),
     % Read the night's raised scaling rate, the renormalisation shift's steeper bound.
     cognitive_cycle_world_value(World0, offline_scaling_rate, OfflineScalingRate),
+    % Read the working-memory blackboard the tick maintains (slice 74).
+    cognitive_cycle_world_value(World0, blackboard, Board0),
+    % Read the standing attentional pointer - the caller's, because attention has no publisher yet.
+    cognitive_cycle_world_value(World0, rehearsal_target, RehearsalTarget),
     % Read the fixed simulation start, for the observer's timestamps.
     cognitive_cycle_world_value(World0, simulation_start, SimulationStart),
     % Refuse a night bound set below the day's, at every tick, waking or sleeping alike.
@@ -187,16 +207,87 @@ cognitive_cycle_step(World0, World, Summary) :-
     neuromodulator_bus_broadcast_operating_state(Bus1, OperatingState1, Bus2),
     % STEP SIX: advance the tick counter.
     NextTick is Tick0 + 1,
+    % SLICE 74: the working-memory blackboard is maintained on its own declared period, and erased
+    % outright when the night closes over it. The tick number is the clock, so the period is read from
+    % the board's own pack and never restated here.
+    cognitive_cycle_blackboard_step(OperatingState0, NextTick, Board0, RehearsalTarget, Board),
     % The observer records this tick as a Causalontology token_occurrence.
     observer_record_tick(SimulationStart, NextTick, Record),
     % Assemble the new world with the updated pieces committed together, including the moved body,
     % the learning body's advanced trace and average stores, and the day's remembered patterns.
     put_dict(_{tick: NextTick, body: Body1, drives: Drives1, bus: Bus2, activations: Activations1,
                interfaces: Interfaces2, traces: Traces1, averages: Averages1, governor: Governor1,
-               memories: Memories1},
+               memories: Memories1, blackboard: Board},
              World0, World),
     % The tick summary reports the tick number, the reward, the released action, and the recorded thought.
     Summary = tick_summary(NextTick, Reward, FinalOutcome, Record).
+
+% =============================================================================
+% THE WORKING-MEMORY BLACKBOARD IN THE TICK - SLICE 74
+% =============================================================================
+%
+% THE BOARD IS NOT MAINTAINED EVERY TICK, AND THAT IS THE WHOLE POINT OF DECISION-23. It is maintained
+% once every hundred ticks - one nominal second - because the corpus's unrehearsed lifetime is stated
+% in seconds and the illustration's step is unitless, and one step per tick would have made the mind
+% forget in a sixth of a second while citing a chapter that says two to twenty seconds. The period is
+% read from the board's own pack, where the decision and its reasons live; nothing here restates it.
+%
+% THE NIGHT ERASES THE BOARD, AND THAT IS THE CORPUS'S OWN SENTENCE RATHER THAN A CONVENIENCE.
+% Chapter 16's STATES AND THE LAYER 11 SCHEDULE: "Awake, the blackboard runs continuously; in
+% slow-wave sleep it is erased, delay activity being incompatible with the slow oscillation's silent
+% states." konnectome already broadcasts the operating state and already runs a whole separate night
+% program, so the erasure costs one line and is the FIRST TIME THE WORKING-MEMORY MODE REGISTER'S
+% ERASED IDLE - the Wiped Board, thrown from above by the sleep-stage broadcast since slice 60 - has
+% anything beneath it that actually gets wiped.
+%
+% AND THE STANDING POINTER OUTLIVES WHAT IT POINTS AT, WHICH IS A READING DECLARED HERE RATHER THAN
+% MADE SILENTLY. The pack REFUSES ALOUD a rehearsal aimed at a slot the board does not hold, and that
+% refusal is right for a caller taking one step, where silence would hide a mistake. It is wrong for a
+% standing attentional pointer inside a loop: the board is erased every night, and a pointer at an
+% erased board is the ordinary morning rather than anybody's error. So the tick passes the pointer
+% through ONLY while the board still holds it, and passes the explicit absence otherwise. The pack's
+% refusal is untouched and still fires for its own callers; what changes is that this loop never hands
+% it a target it has already been told is gone.
+
+% cognitive_cycle_blackboard_step(+State, +Tick, +Board0, +Target, -Board): maintain or erase the board.
+cognitive_cycle_blackboard_step(State, Tick, Board0, Target, Board) :-
+    % Judge the standing pointer before the board is searched for it, so a hole cannot bind to a slot.
+    cognitive_cycle_check_rehearsal_target(Target),
+    % Read the maintenance period from the board's own pack, where DECISION-23 lives.
+    working_memory_blackboard_step_ticks(Period),
+    % The night erases the board; the day maintains it, but only on its own period.
+    (   State == offline
+    ->  % Slow-wave sleep is incompatible with delay activity, so the surface is wiped.
+        working_memory_blackboard_wipe(Board0, Board)
+    ;   Tick mod Period =:= 0
+    ->  % This tick lands on the period, so one whole maintenance step runs.
+        cognitive_cycle_held_target(Board0, Target, Held),
+        working_memory_blackboard_step(Board0, Held, Board)
+    ;   % Between periods the board simply stands, holding what it holds.
+        Board = Board0
+    ).
+
+% cognitive_cycle_check_rehearsal_target(+Target): refuse a pointer that cannot be judged, by name.
+cognitive_cycle_check_rehearsal_target(Target) :-
+    % An unbound pointer would be bound by the board search to whichever slot is listed first.
+    (   var(Target)
+    ->  throw(error(instantiation_error, _))
+    % A partially bound pointer would key a rehearsal on a hole, so only a ground term may name one.
+    ;   \+ ground(Target)
+    ->  throw(error(instantiation_error, _))
+    % Anything ground is a legitimate pointer, the atom none being the explicit absence.
+    ;   true
+    ).
+
+% cognitive_cycle_held_target(+Board, +Target, -Held): the pointer if the board still holds it, else none.
+cognitive_cycle_held_target(Board, Target, Held) :-
+    % Read the items the board is carrying, in admission order, through the pack's own reader.
+    working_memory_blackboard_slots(Board, Items),
+    % A pointer at a slot that has been erased or has collapsed rehearses nothing this step.
+    (   Target \== none, memberchk(Target, Items)
+    ->  Held = Target
+    ;   Held = none
+    ).
 
 % cognitive_cycle_check_offline_scaling_rate(+OfflineRate, +WakingRate): refuse a lowered night bound.
 cognitive_cycle_check_offline_scaling_rate(OfflineRate, WakingRate) :-

@@ -1,0 +1,162 @@
+CONTEXT HAND-OFF FROM ESCAPEMENT BEATWRIGHT
+
+Date: 2026-08-12. The first hand-off of this date.
+
+I chose the name Escapement Beatwright because an escapement is the part of a clock that turns a continuous push into counted, discrete beats - and this session's whole content was giving konnectome's working memory a beat it did not have, then discovering that konnectome was already running on two clocks that disagree by a factor of three hundred and sixty thousand. BEATWRIGHT because the deliverable was a PERIOD: a number the corpus does not state, chosen in the open, on an argument rather than a preference, and signed as konnectome's own. An escapement also fails in exactly the way this session's finding describes - it is invisible while nothing is being counted, and it decides everything the moment something is.
+
+
+PART ONE - READ THESE FIRST
+
+- Read and follow the konnectome constitution at ~/konnectome/CONSTITUTION.md, first and foremost. IT IS AT VERSION 27 AND HOLDS TWENTY-THREE COMMANDMENTS, UNCHANGED THIS SESSION. The dated version history is NOT required reading when you load state; it lives at ~/konnectome/CONSTITUTION_VERSION_HISTORY.md. Do not cite a commandment by number from memory or from an older document; re-read it.
+
+- READ docs/DSPARCD/konnectome_0_definition_v2.txt BEFORE ANYTHING ELSE IN THE FILESET. UNCHANGED THIS SESSION, still at version 2, still naming both of konnectome's live loops - cognitive_cycle_run/4 and body_interface_survival_run/5 - as the two entry points that satisfy the reachability standard. NOTE THAT THIS SESSION USED THAT CLAUSE AS AN ARGUMENT rather than only as a rule: it is the reason a second refusal was declined, and Part Five below says how.
+
+- Read The DSPARCD Fileset at its current versions: docs/DSPARCD/konnectome_0_definition_v2.txt and konnectome_1_specification_v64.txt through konnectome_6_demonstration_v64.txt. IT MOVED THIS SESSION, v63 to v64, all six phase files together, each carrying its own SLICE 74 Realization Log section.
+
+- READ BOTH ANALYSES AND THE MAP OF HOW THEY RELATE. For "WHAT SHOULD I BUILD NEXT", read docs/design/02, Part Nine. For "MAY I BUILD IT THIS WAY, AND DOES IT ROUTE ANYWHERE", read docs/design/01 - Part One holds the verdict on the ten components, Part Four the eleventh-component question and the astrocyte erratum, Part Five the walls and watches, Part Six the suggested slice families. 01 IS UNCHANGED THIS SESSION AND IS STILL AT VERSION 4, STILL CURRENT THROUGH SLICE 58 ON ITS OWN FACE AGAINST A BUILD AT SLICE 74 - SIXTEEN SLICES BEHIND, not fifteen. The gap widened by one again, and again on purpose, and again with the cost named on the document's own face by slice 73's erratum rather than left implicit. The deferral register's the_analysis_is_not_current_to_the_build entry carries this, unflipped.
+
+- READ docs/design/08_motif_and_workspace_design_authority_v1.txt, PART B6, BEFORE ANY WORKING-MEMORY OR ATTENTION WORK. UNCHANGED AS A DOCUMENT but it is now the live queue for this family: items 1 through 4 are built, ITEM 3's OWN CLOSING CONDITION WAS DISCHARGED THIS SESSION (the pack is wired), and ITEM 5 - attention as a salience-driven bias - is the next item in that family and is what unblocks both of the two things slice 74 deliberately left the caller holding.
+
+- READ docs/design/11_vision_set_fulfilment_audit_v1.txt, UNCHANGED THIS SESSION AND BOTH ITS FINDINGS STILL DISCHARGED ELSEWHERE, per slice 73.
+
+- Read docs/neuroscience/THE_NEUROSCIENCE_OF_COGNITION_OUTLINE.txt and THE_NEUROSCIENCE_OF_COGNITION_MANUSCRIPT.txt, the north star, unchanged.
+
+- Read docs/neuroscience/LAYER_09_NATURES_COGNITIVE_ARCHITECTURE_MANUSCRIPT.txt, the guiding book, unchanged this session.
+
+- AND READ LAYER_10_SYSTEMS_MANUSCRIPT.txt CHAPTER 16 IN FULL IF YOU TOUCH WORKING MEMORY. This session found a THIRD statement of the unrehearsed lifetime in that chapter that twenty-five slices of reading had not counted - "holding about four things for about TEN SECONDS", in the WHAT MAKES IT UNMISTAKABLE field. It did not change the finding; it sharpened it, and it is the direct product of the Twenty-Second Commandment's first step being obeyed rather than skipped.
+
+- Read docs/design/ IN ITS NUMBERED ORDER. Eleven documents; NONE was touched this session.
+
+- READ docs/evidence/ AND ITS README, unchanged. No new search was run - the corpus settled what it needed to settle, and where it did not, DERIVATION and then a DECLARED CHOICE were the honest next steps rather than a search.
+
+- READ docs/deferrals/ AND ITS README. TEN entries still, and the shape moved again: the_blackboard_has_no_declared_step_rate flips from deferred to taken_up. SIX of ten entries are now taken_up (was five), THREE are deferred (was four), one remains unprobeable.
+
+- Read docs/DSPARCD/DSPARCD_EXPLAINED.txt, the Fifth Commandment's subject.
+
+- Read the Settings, General, Instructions for Claude, and ~/CLAUDE.md at the organization root.
+
+- Read the current tutorial, docs/konnectome_tutorial_v61.txt. IT MOVED THIS SESSION, v60 to v61, and it is now SIXTY-THREE PARTS. A new PART SIXTY - "SLICES 71 TO 74: THE MEMORY THAT NEEDED A CLOCK" - covers the three documentation slices briefly and slice 74 at length, and the three parts after it were renumbered in the same change. The superseded v60 is in docs/archive/. THE TUTORIAL IS THEREFORE CURRENT AGAIN, for the first time in four sessions.
+
+- Read the prior hand-off, 2026-08-11_8 (Caliper Filewright), now at docs/hand-off/. ITS QUEUE ITEM ONE IS WHAT THIS SESSION WORKED FROM, AND IT IS DISCHARGED.
+
+- THE OWNER'S STANDING CHOICE REMAINS: "All". Do NOT re-present any menu; continue down the queue.
+
+- STANDING INSTRUCTIONS IN FORCE, ALL CARRIED FORWARD:
+  • MINIMIZE BASELINE VERIFICATION BETWEEN HAND-OFFS. Honoured: a git fetch, status and log at the start, and the full suite, all six gates and the capstone identity check only once, at the end.
+  • TWO SLICES PER HAND-OFF, BUILT IN SERIAL, under the pairing rule. THIS SESSION IS ONE SLICE, NOT TWO, AND THAT IS NOW TWO SESSIONS RUNNING. Part Five names it as something the owner should judge rather than something a third session should quietly inherit.
+  • COUSIN CONFORMANCE IS RELAXED TO LONGER STRETCHES. Not re-measured this session; neither cousin was touched or had cause to be.
+  • AUTO-FIX-ALL IS GRANTED (the Sixteenth Commandment). TWO AUTO-FIXES RODE ALONG THIS SESSION and one candidate was deliberately declined; all three are recorded in the build log, and Part Three names them.
+  • THE SIXTH LENS IS EARNED AND STANDING. It paid this session, on the rehearsal-target refinement described in Part Three - the naive wiring would have thrown on the first maintenance step after the first night, in every world with a pointer set.
+  • THE SEVENTH, THE DISCRIMINATION LENS, remains a candidate and was neither promoted nor dropped this session. Still overdue, now carried FOUR sessions running.
+
+
+PART TWO - THE IMPORTANT DOCS FILES
+
+- docs/DSPARCD/konnectome_0_definition_v2.txt - THE DEFINITION, unchanged this session.
+
+- docs/DSPARCD/konnectome_1_specification_v64.txt through konnectome_6_demonstration_v64.txt - the DSPARCD Fileset, Realization Log through slice 74. All six carry a SLICE 74 section.
+
+- docs/konnectome_tutorial_v61.txt - MOVED THIS SESSION. Sixty-three parts at version sixty-one.
+
+- docs/building_konnectome.txt - the build log, now SEVENTY-THREE chapters. UNVERSIONED; append-only. Chapter Seventy-Three is slice 74.
+
+- docs/konnectome_ledger.txt - the scoreboard, UNVERSIONED. Counter line (both copies swept): Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0. Observations: 23 (9 CLOSED: 8, 9, 13, 15, 17, 18, 19, 20 and 22). Decisions: 23. THIS SESSION ADDED DECISION-23, CLOSED OBSERVATION-13, AND OPENED OBSERVATION-23.
+
+- docs/design/ - ELEVEN NUMBERED DOCUMENTS, none changed this session.
+
+- docs/deferrals/ - the deferral register and its README. TEN entries: SIX taken up, THREE deferred, one unprobeable.
+
+- docs/evidence/ - unchanged.
+
+- docs/cousins/Causalontology_4_0_0_CHANGE_ORDER_v3.txt and PrologAI_CHANGE_ORDER_v2.txt - unchanged; no wall hit this session.
+
+- tests/naming_gate_fixture/, tests/discrimination_gate_fixture/ and tests/deferral_gate_fixture/ - unchanged.
+
+- packs/ - TWO PACKS MOVED. working_memory_blackboard (0.1.0 to 0.2.0) and cognitive_cycle (0.5.0 to 0.6.0). Three more packs' test fixtures changed to carry the two new world keys.
+
+- README.md - MOVED THIS SESSION, as an auto-fix and then as an ordinary slice entry. It claimed SEVENTY SLICES AND 1,116 TESTS while the build stood at seventy-three and 1,119; the Thirteenth Commandment requires it be kept current, so both figures now read the measured ones, and slices 71 through 74 have entries.
+
+- THE DOCS LAYOUT: /docs/ top level holds EXACTLY FOUR FILES - the ledger, the build log, the tutorial, and the CURRENT hand-off. Everything else is in a named sub-directory. Caliper Filewright's hand-off moved to docs/hand-off/ in this session's own first act.
+
+
+PART THREE - WHAT THIS SESSION DID
+
+ONE SLICE, DISCHARGING THE ITEM AT THE FRONT OF THE PRIOR HAND-OFF'S QUEUE. One numbered decision, one observation closed, one observation opened, two auto-fixes, no new gate, no new pack, no constitution amendment.
+
+- SLICE 74, THE WORKING-MEMORY BLACKBOARD WIRED AND ITS MAINTENANCE PERIOD DECLARED. The board has been a complete, forty-five-test pack since slice 49 and reachable from no running loop for twenty-five slices, because wiring it meant choosing a maintenance rate and OBSERVATION-13 refused to choose one. cognitive_cycle_step/3 now maintains it once every hundred ticks and ERASES it outright on every offline tick - Chapter 16's own slow-wave sentence, and the first thing the working-memory mode register's ERASED IDLE has ever had beneath it to wipe. The world dict gains TWO required keys, each refused aloud by name: blackboard and rehearsal_target.
+
+- DECISION-23, AND ITS WARRANT IS THE PART WORTH READING RATHER THAN ITS NUMBER. ONE MAINTENANCE STEP PER NOMINAL SECOND - a hundred ticks under DECISION-2, read through the scheduler's single conversion and written nowhere as a literal. The Twenty-First Commandment's order of resort was followed in its order and each step is recorded: the corpus was read beneath the finding and RETURNED SOMETHING NEW (a third statement of the lifetime); DERIVATION was tried first and NARROWED WITHOUT SETTLING (none of the three stated lifetimes divides into a whole number of ticks - 11.76, 117.6 and 58.8 - and this pack refuses a rounded quantity by name at every other door); REFUSAL was reconsidered and DECLINED, because a board maintained at no rate is a board outside the mind by the Definition's own first clause. The value chosen rests on a UNIQUENESS ARGUMENT over a scale konnectome already owns: one hundred ticks is the ONLY DECADE of konnectome's own tick whose implied lifetime lands inside the chapter's measured two-to-twenty-second window. A test asserts the uniqueness itself, not the number.
+
+- AND DECISION-23 SAYS ALOUD WHAT IT DOES NOT MATCH. Seventeen seconds is not the chapter's "about ten seconds"; konnectome takes the chapter's MEASURED range over its PROSE gloss, on OBSERVATION-13's own transferable rule applied to OBSERVATION-13's own subject. A period fitted to the gloss would be fifty-nine ticks, whose only warrant is that it makes an arithmetic come out - the exact shape of an invented value that has learned to cite, and it would have looked better than the number chosen.
+
+- OBSERVATION-13 IS CLOSED, on the closer it named for itself twenty-five slices ago, all four of its conditions met. The deferral register's the_blackboard_has_no_declared_step_rate entry flips to taken_up on its own probe, which watched THE WIRING rather than the rate.
+
+- OBSERVATION-23 IS OPENED, AND IT IS THE LARGER FINDING OF THE TWO. See Part Five; it is the sharpest edge this hand-off leaves.
+
+- TWO AUTO-FIXES, RECORDED: working_memory_blackboard's pack.pl declared requires([]) while its own comment said "one konnectome sibling" - a contradiction inside one sentence since slice 49, and the tick_engine dependency was always real; and README.md's stale slice and test counts, which the Thirteenth Commandment requires be kept current. Both are repairs by the Sixteenth Commandment's own test: a source already said what the answer should be and the file said something else.
+
+- ONE AUTO-FIX CANDIDATE DELIBERATELY DECLINED, AND THE LINE IS WORTH KEEPING: the two-process governor's default parameter block, which OBSERVATION-23 shows disagrees with DECISION-2 by five orders of magnitude. NOTHING says which reading is right, so no correct value is waiting to be put back, and choosing one is a numbered decision rather than a repair.
+
+- State at hand-off: SEVENTY-FOUR slices. ONE THOUSAND ONE HUNDRED AND THIRTY-TWO tests across FORTY-ONE packs, up thirteen from 1,119 (four in working_memory_blackboard, nine in cognitive_cycle). SIX gates at zero violations, THREE carrying self-tests. THE CAPSTONE STORY IS BYTE-IDENTICAL against a worktree of main, verified by running both. DSPARCD fileset v64; tutorial v61 at sixty-three parts; build log SEVENTY-THREE chapters; Constitution VERSION 27 at TWENTY-THREE commandments, unchanged.
+
+
+PART FOUR - BUILD-AGAINST COUSIN COMMITS (for reproducibility)
+
+- causalontology: 292dfca (unchanged; not edited this session; NOT re-measured).
+- PrologAI: ebbc3e0 (unchanged; not edited this session; NOT re-measured).
+- Mentova: d117c69 (read-only; untouched).
+
+CONFORMANCE STANDS WHERE SLICE 47 RE-MEASURED IT ON 2026-08-09: 137 of 137 in both, and the figure is now ELEVEN SESSIONS OLD. THE OWNER HAS RELAXED THIS CADENCE and the age is not a debt. The open question about 119 vectors versus 137 checks, named in the prior five hand-offs, is UNCHANGED and still needs a measurement rather than a preference.
+
+
+PART FIVE - SHARP EDGES AND HONEST NON-CLOSURES
+
+- OBSERVATION-23 IS THE ONE TO READ FIRST, AND IT IS BIGGER THAN THE SLICE THAT FOUND IT. KONNECTOME HAS TWO LIVE, DECLARED, INCOMPATIBLE CALIBRATIONS OF ITS OWN TICK. DECISION-2 fixes ONE HUNDRED TICKS TO THE NOMINAL SECOND and every wall-clock quantity taken from the corpus is restated through it. The two-process governor's default parameter block is documented, in its own comment, as ONE TICK PER HOUR. That is a factor of THREE HUNDRED AND SIXTY THOUSAND, and under the defaults konnectome's entire waking day is EIGHTEEN TICKS - measured directly by a probe over the fixed test world, not inferred. It surfaced now and not earlier for a reason worth carrying: EVERY CONSTRUCT IN THE LOOP BEFORE THIS SLICE MOVED ONCE PER TICK, so the tick was a pure ordinal and nothing ever multiplied. THE FIRST CONSTRUCT WITH A PERIOD IS THE FIRST CONSTRUCT THAT CAN DISAGREE WITH THE SCHEDULER. The general form: A DIMENSIONLESS UNIT IS NOT A SHARED UNIT.
+
+- AND NOTE WHAT WAS NOT DONE ABOUT IT, BECAUSE IT WOULD HAVE BEEN ONE LINE. The governor's defaults were NOT changed. Deciding which calibration konnectome keeps is a numbered decision, and taking it in passing inside a slice about a blackboard is precisely what the Sixteenth Commandment's repair-versus-decision line forbids. The test fixtures restate the governor's six parameters in DECISION-2's units instead, with a comment on the fixture saying why, so a reader meets the finding at the fixture as well as in the ledger. THE CLOSER IS NAMED AND NOT DONE, and it is queue item 1 below.
+
+- THE BOARD IS REACHED AND IT IS NOT FED, AND THE DIFFERENCE IS CLAIMED AT ITS SMALLEST. Nothing admits to the board from inside the loop and nothing rehearses on its own authority, because neither the striatal gate nor attention has a publisher in konnectome. Both stay the caller's, per B6 items 5 and 7. konnectome's working memory is now IN THE LOOP and is not yet IN THE STORY: the capstone's world boots an empty board and runs far fewer ticks than the maintenance period, which is why the told story is byte-identical, and which is stated in the capstone's own comment rather than left for a reader to wonder at.
+
+- ONE REFUSAL WAS DELIBERATELY SOFTENED, AND IT IS DECLARED RATHER THAN SILENT. The pack refuses aloud a rehearsal aimed at a slot the board does not hold. The tick passes the standing pointer through ONLY while the board still holds it, and the explicit absence otherwise - because the night erases the board and a pointer at an erased board is the ordinary morning, not anybody's error. The pack's refusal is untouched and still fires for its own callers. A test walks the whole sequence. IF A FUTURE SESSION THINKS THIS SOFTENING WAS WRONG, the place to argue with it is DECISION-23's own paragraph on it, and the naive alternative throws on the first maintenance step after the first night in every world with a pointer set.
+
+- THIS SESSION IS ONE SLICE, NOT TWO, WHICH IS NOW TWO SESSIONS RUNNING, AND THE OWNER SHOULD JUDGE THAT RATHER THAN A THIRD SESSION INHERITING IT. Caliper Filewright's hand-off flagged its own single-slice session as a judgement call and asked that a repetition be surfaced rather than silently repeated. This is that surfacing. THE REASON HERE IS DIFFERENT FROM THAT ONE, which matters: slice 73 was one slice because two queue items shared one audit and one decision; slice 74 is one slice because it carries a numbered decision whose warrant needed the corpus re-read, derivation attempted and rejected, and a refusal reconsidered and declined - plus a full six-file fileset bump, a tutorial version, and an observation opened by a test failing. A second slice bolted on would have been the shorter, less careful half of this one. THAT IS THIS HAND-OFF'S VIEW AND IT IS NOT A RULING; the owner's is.
+
+- ALL OTHER SHARP EDGES FROM CALIPER FILEWRIGHT'S HAND-OFF STAND UNCHANGED AND ARE NOT RESTATED IN FULL: the definition's inclusive two-loop resolution; the astrocyte as a named dependent of Family Three, still entirely unbuilt; the two REMAINING unwired mechanisms (the eligibility trace's consumer and the durable tier - the blackboard's rehearsal target is now the narrower claim described above rather than a wholly unwired mechanism); the plasticity engine still not reading the stabiliser channel; the fusion rule (still unprobeable); OBSERVATION-21 (still open); the mode-register terminology collision; the capstone byte-identical guard's stale baseline; docs/design/01's currency gap, now SIXTEEN slices; the corpus update run (now at FORTY-TWO hand-offs counting this one, so the next multiple of ten is fifty); and the parallel-session warnings including the live worktree at ~/worktrees/rung-three, which THIS SESSION DID NOT TOUCH.
+
+- NO CONCURRENT SESSION WAS DETECTED THIS TIME. Per the standing parallel-session discipline, git state was checked at the start and the working tree was clean and level with origin/main throughout.
+
+
+PART SIX - THE FIRST TASK OF THE CONTINUATION
+
+The owner has already chosen: ALL (standing), TWO SLICES PER HAND-OFF under the pairing rule, and AUTO-FIX-ALL is granted.
+
+1. DECIDE WHICH CALIBRATION OF THE TICK KONNECTOME KEEPS, per OBSERVATION-23. This is new and it goes first because it is now the only place in the repository where two declared conventions contradict each other outright, and because every future construct with a period inherits the answer. It must be a numbered decision, must restate every parameter block carrying the losing convention in the same change, and must say what it does NOT decide - in particular whether konnectome's tick is a single rate at all, or whether the honest answer is the MULTI-RATE TIME the definition has been declining to build since it was written. DECISION-2 and DECISION-23 are the two worked examples to read before it.
+
+2. ATTENTION AS A SALIENCE-DRIVEN BIAS, docs/design/08's B6 item 5. It was already queued and slice 74 has now made it the item that unblocks the most: it supplies the rehearsal publisher AND is the first consumer of working-memory admission, which are the two things slice 74 deliberately left in the caller's hands. B5.7's three corpus answers must not be prematurely collapsed, and B6 says to build it as a bias rather than as a network for exactly that reason.
+
+3. GIVE THE BLACKBOARD AND THE CONFLICT LOOP A TOLD DEMONSTRATION, TOGETHER. Two mechanisms are now live in the tick and invisible in the capstone's own story: script two competing overrides into the body seam so the Gratton shape shows, and give the board a few admitted thoughts, one rehearsed, the rest forgotten on the corpus's clock, with the night wiping the slate. NOTE THE DEPENDENCY: showing the board's fade needs a capstone run longer than the maintenance period, which needs item 1 settled first or the mind falls asleep at tick eighteen.
+
+4. THE ELIGIBILITY TRACE'S CONSUMER and THE DURABLE TIER - the two remaining unwired mechanisms of the original seven.
+
+5. THE OVERLAY DELTA CHANNEL, still the single decision docs/design/02 calls the front of its own queue.
+
+6. DECIDE OR JOIN THE TWO RUNNING LOOPS. Slice 71 named both rather than joining them; joining remains its own slice family and is now the only way to retire the two-loop shape rather than merely make it explicit.
+
+7. A TRUE VERSION 5 OF DOCS/DESIGN/01, when a session can afford the whole re-measurement rather than an erratum. Sixteen slices behind now. Not urgent - the cost is named on the document's own face - but it is the largest single piece of currency debt this build carries in writing.
+
+8. THE REMAINING ITEMS FROM CALIPER FILEWRIGHT'S PART SIX, its items 7 and the whole tail it carried forward: the first learning rule, OBSERVATION-21, the two candidate lenses (the discrimination lens now four sessions overdue), the fixture-discipline backport, the thirteen faculty suites, naming and addressing, the workspace pilot, Family One's item (e), Family Three (carrying the astrocyte as a named dependent), Family Six, the mode-register rename, the capstone re-baseline, and the rest - ALL UNCHANGED AND UNTOUCHED THIS SESSION.
+
+A STANDING OWNER REQUEST, CARRIED FORWARD UNCHANGED. A VISUALIZATION CONTROL PANEL showing every mode of every construct at every grain simultaneously and live. Still a demonstration deliverable, not a slice; still waiting on the naming and addressing facility. NOTE THAT SLICE 74 PAID INTO IT WITHOUT BEING ASKED TO: the board's four slots and their activations are an ordinary value the world carries, readable from outside the tick without running the construct, which is the glass-box principle being paid one slice at a time exactly as it is supposed to be.
+
+
+PART SEVEN - SIGN-OFF
+
+One slice this session, and I have said why above rather than padding the number.
+
+The thing I want the next session to take from this one is not the period. It is the order in which the period was arrived at, because every step of that order nearly ended somewhere else. Reading the corpus again found a third statement of the lifetime that twenty-five slices had not counted - which is the Judgement-Call Protocol's first step earning its place for the second time in fifteen slices. Trying derivation before choosing found that the corpus's own numbers very nearly settle this and then do not, by a margin of hundredths, which is worth knowing and would have been invisible to anyone who chose first and justified afterwards. And reconsidering the refusal was the step I expected to end the other way: refusing again would have looked more rigorous and would have kept a finished, tested working memory outside the mind for another twenty-five slices. The Definition's own first clause is what decided it, which is the first time in this build's record that a document written as a reading-back has settled a live question rather than described a settled one.
+
+The finding I am proudest to have caught is the one I did not go looking for. Four tests failed with the board empty at every tick, and the natural reading of that failure was that my wiring was wrong. It was not. konnectome has been carrying two flatly contradictory definitions of its own heartbeat for dozens of slices, in two files, both declared, both commented, both correct in isolation - and nothing detected it because nothing had ever multiplied. I have written it up as OBSERVATION-23 and I have deliberately NOT fixed it, because fixing it means choosing, and choosing here is a numbered decision that belongs to a slice whose subject it actually is. It is one line of code and it is not mine to write.
+
+What I leave largest and most visible on purpose is that konnectome's working memory is now in the loop and not yet in the story. It beats, it fades on the corpus's own timescale, and the night erases it - and the capstone tells none of that, because nothing admits a thought to the board from inside the mind. I could have invented a gate to make the demonstration look finished. That is the cheapest and worst way this build could ever fail, and the whole point of a slice that spent itself refusing to invent a rate would have been lost in the last ten lines.
+
+- Escapement Beatwright, 2026-08-12

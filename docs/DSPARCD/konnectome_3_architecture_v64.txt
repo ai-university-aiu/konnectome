@@ -993,3 +993,14 @@ SLICE 71: THE DEFINITION'S RUNNING-LOOP BOUNDARY IS NOW ARCHITECTURALLY EXPLICIT
 SLICE 72: THE CONFLICT LOOP JOINS THE ARBITRATION STEP'S ARCHITECTURE. conflict_monitor sits between action_selector and override_controller in cognitive_cycle's STEP THREE, reusing override_controller's own arbitration rule rather than duplicating it, and reading and writing the neuromodulator_bus's stabiliser channel that already existed for exactly this purpose (DECISION-15's join). NO NEW BUS CHANNEL, NO NEW STORE, AND NO NEW COMPONENT LAYER: the architecture absorbs the wire along an edge DECISION-15 already specified as available.
 
 cognitive_cycle's requires/1 list gains conflict_monitor, same-layer (layer 0) as its other orchestrated components, and no cyclic dependency is introduced: conflict_monitor already depended on override_controller and stabiliser, and cognitive_cycle already depended on both.
+KONNECTOME REALIZATION LOG - SLICE 74
+
+Slice 74 - The working-memory blackboard wired, and its maintenance period declared - 2026-08-12.
+
+THE BLACKBOARD JOINS THE TICK'S ARCHITECTURE AT ITS CLOSE, NOT AT ITS OPENING. cognitive_cycle's requires/1 list gains working_memory_blackboard, same-layer (layer 0) as its other orchestrated components, and no cyclic dependency is introduced: working_memory_blackboard depends only on tick_engine, which cognitive_cycle already stands above.
+
+THE FIRST CONSTRUCT IN THIS ARCHITECTURE WITH A PERIOD OF ITS OWN, AND THAT IS AN ARCHITECTURAL FACT RATHER THAN A DETAIL OF ONE PACK. Every component the tick has orchestrated until now moved ONCE PER TICK; the board moves once per hundred. The tick number is therefore load-bearing for the first time - it is no longer only a counter and an observer timestamp, it is a clock something reads. OBSERVATION-23 records what that exposed.
+
+THE ERASURE IS AN EXISTING EDGE, NOT A NEW ONE. The offline branch of cognitive_cycle_program/N has existed since slice 38 and the working-memory mode register's ERASED IDLE has been thrown from above by the sleep-stage broadcast since slice 60; slice 74 is the first time anything stands beneath that assignment to actually be wiped. NO NEW BUS CHANNEL, NO NEW STORE, AND NO NEW COMPONENT LAYER.
+
+THE BOARD IS A VALUE THE WORLD CARRIES, in the eligibility-trace store's discipline, so the glass-box principle costs nothing here: the four slots and their activations are readable from outside the tick without running the construct, which is what the owner's standing all-grain visualization request has been paid for one slice at a time.

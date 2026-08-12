@@ -48,6 +48,9 @@ symbol_exchange_test_world(World) :-
         replay_rate: 0.1,
         % The night's raised scaling bound, at or above the day's rate as the tick demands.
         offline_scaling_rate: 0.0,
+        % SLICE 74: the blackboard and its standing pointer, both at rest for this fixture.
+        blackboard: [],
+        rehearsal_target: none,
         governor: Governor,
         simulation_start: Start
     }.

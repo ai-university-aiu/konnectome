@@ -35,7 +35,11 @@
     % working_memory_blackboard_wipe_ticks/1: the corpus's task-switch wipe bound, restated in ticks by DECISION-2.
     working_memory_blackboard_wipe_ticks/1,
     % working_memory_blackboard_steps_to_collapse/1: how many unrehearsed steps a full slot survives, DERIVED and not declared.
-    working_memory_blackboard_steps_to_collapse/1
+    working_memory_blackboard_steps_to_collapse/1,
+    % working_memory_blackboard_step_ticks/1: THE MAINTENANCE PERIOD, konnectome's own choice under DECISION-23.
+    working_memory_blackboard_step_ticks/1,
+    % working_memory_blackboard_unrehearsed_life_ticks/1: the lifetime that period and the corpus's constants imply.
+    working_memory_blackboard_unrehearsed_life_ticks/1
 ]).
 
 % Import list reading and building for slot lookup, ordering and eviction.
@@ -73,11 +77,19 @@
 % slice takes the gate verdict as an argument from its caller and learns nothing, so the durable half
 % is not begun by accident. The rehearsal target is caller-supplied for the same reason.
 %
-% WHAT THIS SLICE DELIBERATELY DOES NOT DO. It does not wire the board into cognitive_cycle_step/3;
-% the pack is exercised by its own tests before it is wired, exactly as B6 item 3 says. It does not
-% decide which gate is which - dopamine gates admission here, attention gates ignition at the
-% workspace, and B1's second refinement warns that collapsing them is easy and expensive. And it does
-% NOT bind a maintenance step to a tick; see the RATE REFUSAL below, which is this slice's finding.
+% WHAT SLICE 49 DELIBERATELY DID NOT DO, AND WHAT SLICE 74 HAS SINCE DONE. Slice 49 did not wire the
+% board into cognitive_cycle_step/3 and did not bind a maintenance step to a tick, and it recorded the
+% second omission as OBSERVATION-13, the RATE REFUSAL. SLICE 74 CLOSES BOTH, TOGETHER, because
+% OBSERVATION-13's own closer says they must close together: the slice that wires the board into the
+% tick is the slice that must declare the rate in the open. The period is DECISION-23 and it is
+% written below, in the place the refusal used to stand, with the refusal's reasoning kept rather than
+% deleted - a settled question should still show what it was.
+%
+% WHAT IS STILL NOT DONE HERE, and neither is an oversight. This pack does not decide which gate is
+% which - dopamine gates admission here, attention gates ignition at the workspace, and B1's second
+% refinement warns that collapsing them is easy and expensive. And the GATING POLICY is still held
+% constant and the REHEARSAL TARGET is still caller-supplied, because attention still has no publisher
+% in konnectome; that is B6 item 5, and it is queued rather than guessed at here.
 
 % =============================================================================
 % THE ACTIVATION GRAIN - DECISION-8
@@ -201,7 +213,7 @@ working_memory_blackboard_full_parts(Parts) :-
     working_memory_blackboard_parts_from_decimal(Decimal, Parts).
 
 % =============================================================================
-% THE CORPUS'S TIME CONSTANTS, RESTATED IN TICKS - AND THE RATE REFUSAL
+% THE CORPUS'S TIME CONSTANTS, RESTATED IN TICKS - AND THE MAINTENANCE PERIOD
 % =============================================================================
 %
 % Chapter 16's TIME CONSTANTS field gives item admission at 100 to 300 milliseconds, unrehearsed decay
@@ -209,20 +221,96 @@ working_memory_blackboard_full_parts(Parts) :-
 % a whole number of ticks, and each is computed here through the scheduler's one conversion rather
 % than written down as a tick literal, so a session that restates the rate restates these with it.
 %
-% THE RATE REFUSAL, WHICH IS THIS SLICE'S FINDING AND ITS THIRD REFUSAL. THERE IS DELIBERATELY NO
-% PREDICATE IN THIS PACK BINDING A MAINTENANCE STEP TO A TICK, and the omission is the deliberate part.
-% The obvious wiring - one step per tick - is wrong against the chapter's own numbers and would be
-% wrong SILENTLY. A full slot leaking five parts a step survives seventeen steps before it falls below
-% twenty parts; at one step per tick that is one hundred and seventy nominal milliseconds, while the
-% same chapter's TIME CONSTANTS field says unrehearsed content fades in two to twenty SECONDS. That is
-% a factor of between twelve and one hundred and eighteen, and it is a disagreement INSIDE ONE CHAPTER
-% rather than between the corpus and konnectome: the CODE SAMPLE is an illustration whose step is
-% unitless, and the TIME CONSTANTS field is a measurement in seconds, and the chapter never claims the
-% two describe the same rate. konnectome REPORTS THAT UPWARD rather than absorbing it. A rate chosen
-% here to reconcile them would be konnectome's invention wearing the corpus's warrant, which is the
-% fourth time in five slices a default with a borrowed warrant has arrived and been refused. The
-% closer is named and not done: the slice that wires this board into the tick must decide the step
-% rate in the open, and record it as a decision of konnectome's own.
+% THE RATE REFUSAL THAT STOOD HERE FROM SLICE 49 TO SLICE 74, KEPT BECAUSE A SETTLED QUESTION SHOULD
+% STILL SHOW WHAT IT WAS. There was deliberately no predicate in this pack binding a maintenance step
+% to a tick. The obvious wiring - one step per tick - is wrong against the chapter's own numbers and
+% would be wrong SILENTLY. A full slot leaking five parts a step survives seventeen steps before it
+% falls below twenty parts; at one step per tick that is one hundred and seventy nominal milliseconds,
+% while the same chapter's TIME CONSTANTS field says unrehearsed content fades in two to twenty
+% SECONDS. That is a factor of between twelve and one hundred and eighteen, and it is a disagreement
+% INSIDE ONE CHAPTER rather than between the corpus and konnectome: the CODE SAMPLE is an illustration
+% whose step is unitless, and the TIME CONSTANTS field is a measurement in seconds, and the chapter
+% never claims the two describe the same rate. konnectome REPORTED THAT UPWARD as OBSERVATION-13
+% rather than absorbing it, and named the closer: the slice that wires this board into the tick must
+% decide the step rate in the open, as a decision of konnectome's own.
+%
+% =============================================================================
+% DECISION-23 - THE MAINTENANCE PERIOD IS ONE STEP PER NOMINAL SECOND
+% =============================================================================
+%
+% SLICE 74 IS THAT SLICE, AND THIS IS THAT DECISION. ONE MAINTENANCE STEP EVERY ONE NOMINAL SECOND -
+% one hundred ticks under DECISION-2, read through the scheduler's one conversion below and never
+% written here as a tick literal. THIS IS KONNECTOME'S OWN CHOICE AND MUST NEVER BE PRESENTED AS THE
+% CORPUS'S. The corpus states a LIFETIME and never a step rate; the rate below is what konnectome
+% chose in order to honour that lifetime, and the paragraphs that follow are the whole of its warrant.
+%
+% THE ORDER OF RESORT WAS FOLLOWED AND IS RECORDED, per the Twenty-First Commandment. FIRST, THE
+% CORPUS WAS READ BENEATH THE FINDING rather than around it: Chapter 16 states the unrehearsed
+% lifetime THREE times, not twice as OBSERVATION-13 recorded - "unrehearsed decay 2 to 20 seconds" in
+% TIME CONSTANTS, seventeen unitless steps implied by the CODE SAMPLE's constants, and "holding about
+% four things for about TEN SECONDS" in WHAT MAKES IT UNMISTAKABLE. The third statement was found by
+% this slice and is new to the record. Nowhere does the chapter state a maintenance step rate, and
+% probes of Layers 9 and 11 for an update or refresh rate returned nothing when slice 62 ran them.
+% SECOND, DERIVATION WAS TRIED BEFORE ANY VALUE WAS CHOSEN, which is the Second Protocol and is the
+% step this decision would have preferred to stop at. A period follows from a lifetime by division:
+% the corpus's own lifetime, divided by the seventeen steps this pack already DERIVES, is the period.
+% IT DOES NOT LAND. Two seconds over seventeen steps is 11.76 ticks, twenty seconds is 117.6, and the
+% chapter's own "about ten seconds" is 58.8 - not one of the three is a whole number of ticks, and
+% this pack refuses a rounded quantity by name everywhere else, so it will not accept one here.
+% DERIVATION THEREFORE NARROWS THE ANSWER WITHOUT SETTLING IT, and what it narrows to is stated as a
+% range rather than hidden: any whole period from 12 to 117 ticks lands the derived lifetime inside
+% the chapter's own measured window. THIRD, REFUSAL WAS RECONSIDERED AND DECLINED, because it had
+% already been taken once and the build cannot honour a lifetime it will not time. A board maintained
+% at no rate is a board not in the loop, which is the state slice 49 left and the state this slice
+% exists to leave behind.
+%
+% SO A VALUE IS CHOSEN, AND HERE IS WHY THIS ONE. ONE STEP PER NOMINAL SECOND IS THE ONLY DECADE OF
+% KONNECTOME'S OWN TICK THAT LANDS INSIDE THE CORPUS'S MEASURED WINDOW. At one tick per step the
+% lifetime is 0.17 seconds and the window's floor is missed by a factor of twelve; at ten ticks it is
+% 1.7 seconds and the floor is still missed, by eighteen hundredths; at one hundred ticks it is
+% SEVENTEEN SECONDS and lands; at a thousand ticks it is 170 seconds and the ceiling is missed by a
+% factor of eight and a half. Exactly one decade qualifies. That is a uniqueness argument over a scale
+% konnectome already owns rather than a preference among equals, and it is the reason this number and
+% not one of the hundred and five other whole periods that also land.
+%
+% AND IT INTRODUCES NO NEW CONSTANT ANYWHERE. One hundred ticks to the nominal second is DECISION-2,
+% declared twenty-five slices before this question was asked, and it is read below through the same
+% single conversion that already restates this chapter's four wall-clock constants. A session that
+% ever restates the tick restates this period with it, automatically, because nothing here is written
+% down twice.
+%
+% WHAT THIS DECISION KNOWINGLY DOES NOT MATCH, SAID ALOUD RATHER THAN LEFT FOR A READER TO COMPUTE.
+% Seventeen seconds is not "about ten seconds"; it is one and seven tenths of it. konnectome takes the
+% chapter's RANGE over the chapter's GLOSS, and the reason is OBSERVATION-13'S OWN TRANSFERABLE RULE
+% APPLIED TO OBSERVATION-13'S OWN SUBJECT: a chapter's fields are different kinds of claim, and the
+% range sits in TIME CONSTANTS, which is the chapter's measurement field, while the gloss sits in WHAT
+% MAKES IT UNMISTAKABLE, which is its prose summary. A period fitted to the gloss instead would be
+% fifty-nine ticks, whose entire warrant is that it makes an arithmetic come out - a number with no
+% home in any convention, chosen to hit a summary, which is the exact shape of an invented value that
+% has learned to cite.
+%
+% WHAT IT DOES NOT DECIDE, so that a later session inherits no more than was chosen. It does not
+% decide that the CODE SAMPLE's seventeen steps are right; they remain the illustration's, DERIVED
+% here and not declared, and a chapter that restated its constants would move this lifetime with them.
+% It does not decide a rate for anything else in konnectome - the traces, the averages, the bus and
+% the body all still move once per tick and none of them was touched. It does not decide who
+% REHEARSES: the target is still the caller's, because attention still has no publisher. And it does
+% not close OBSERVATION-13's finding ABOUT THE CORPUS, which stands unchanged and is now three
+% statements rather than two: what closes is konnectome's side of it.
+
+% working_memory_blackboard_step_ticks(-Ticks): THE MAINTENANCE PERIOD, one nominal second (DECISION-23).
+working_memory_blackboard_step_ticks(Ticks) :-
+    % One nominal second is a thousand milliseconds, converted through the scheduler's one conversion.
+    tick_engine_ticks_from_milliseconds(1000, Ticks).
+
+% working_memory_blackboard_unrehearsed_life_ticks(-Ticks): the lifetime the period and the constants imply.
+working_memory_blackboard_unrehearsed_life_ticks(Ticks) :-
+    % Read how many unrehearsed steps a full slot survives, DERIVED from the corpus's own constants.
+    working_memory_blackboard_steps_to_collapse(Steps),
+    % Read the period one of those steps takes, which is konnectome's own choice above.
+    working_memory_blackboard_step_ticks(Period),
+    % The lifetime is simply the survived steps at that period, computed rather than written down.
+    Ticks is Steps * Period.
 
 % working_memory_blackboard_admission_ticks(-Low, -High): the admission window, 100 to 300 milliseconds.
 working_memory_blackboard_admission_ticks(Low, High) :-

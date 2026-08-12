@@ -6,6 +6,8 @@
 :- use_module(library(plunit)).
 % Load fold and lambda support, used to take many maintenance steps in one line.
 :- use_module(library(apply), [foldl/4]).
+% Load list membership, used to walk the decades of the tick in DECISION-23's uniqueness test.
+:- use_module(library(lists), [member/2]).
 :- use_module(library(yall)).
 
 % Open the test block for the working_memory_blackboard pack.
@@ -511,6 +513,57 @@ test(impossible_activation_is_refused,
      throws(error(domain_error(working_memory_blackboard_activation_parts, 250), _))) :-
     % No slot stands above full activation.
     working_memory_blackboard_slots([seven-250], _).
+
+% =============================================================================
+% DECISION-23 - THE MAINTENANCE PERIOD, AND WHAT IT HAS TO LAND INSIDE
+% =============================================================================
+
+% The maintenance period is one nominal second, which is a hundred ticks under DECISION-2.
+test(the_maintenance_period_is_one_nominal_second) :-
+    % Read the period konnectome chose, computed through the scheduler's one conversion.
+    working_memory_blackboard_step_ticks(Period),
+    % A nominal second is a hundred ticks, so one step per second is a step per hundred ticks.
+    assertion(Period =:= 100).
+
+% THE WHOLE WARRANT OF DECISION-23, ASSERTED RATHER THAN ARGUED IN PROSE ALONE. The period is chosen
+% so the lifetime it implies lands inside the corpus's own measured window, and this test is what a
+% later session meets if anybody ever restates the tick, the decay, the threshold or the period.
+test(the_implied_lifetime_lands_inside_the_corpus_measured_window) :-
+    % Read the lifetime the period and the corpus's constants imply, computed and never written down.
+    working_memory_blackboard_unrehearsed_life_ticks(Life),
+    % Read the corpus's own measured window, restated in ticks through the one conversion.
+    working_memory_blackboard_unrehearsed_decay_ticks(Low, High),
+    % The implied lifetime is at or above the window's floor, which one step per tick badly missed.
+    assertion(Life >= Low),
+    % And at or below its ceiling, which is the half a slower period would have missed.
+    assertion(Life =< High).
+
+% THE UNIQUENESS ARGUMENT ITSELF: exactly one decade of the tick lands inside that window, which is
+% the reason this period and not one of the hundred and five other whole periods that also land.
+test(exactly_one_decade_of_the_tick_lands_inside_the_window) :-
+    % Read how many unrehearsed steps a full slot survives, DERIVED from the corpus's constants.
+    working_memory_blackboard_steps_to_collapse(Steps),
+    % Read the corpus's measured window in ticks.
+    working_memory_blackboard_unrehearsed_decay_ticks(Low, High),
+    % Collect every decade of the tick whose implied lifetime falls inside that window.
+    findall(Decade,
+            ( member(Decade, [1, 10, 100, 1000]),
+              Life is Steps * Decade,
+              Life >= Low,
+              Life =< High
+            ),
+            Landing),
+    % Exactly one decade qualifies, and it is the period DECISION-23 chose.
+    assertion(Landing == [100]).
+
+% The corpus's gloss is NOT matched, and konnectome says so in a test rather than only in a comment.
+test(the_chapters_ten_second_gloss_is_knowingly_not_matched) :-
+    % Read the lifetime konnectome's own period implies.
+    working_memory_blackboard_unrehearsed_life_ticks(Life),
+    % Ten nominal seconds is a thousand ticks, which is the chapter's prose summary of the same fade.
+    assertion(Life =\= 1000),
+    % konnectome takes the chapter's MEASUREMENT field over its prose summary, and lands above it.
+    assertion(Life > 1000).
 
 % Close the test block for the working_memory_blackboard pack.
 :- end_tests(working_memory_blackboard).

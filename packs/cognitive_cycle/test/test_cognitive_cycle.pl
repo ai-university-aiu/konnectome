@@ -4,11 +4,18 @@
 :- use_module(library(neuromodulator_bus)).
 % Load the two_process_governor module, used to boot the world's night watchman.
 :- use_module(library(two_process_governor)).
+% Load the scheduler, so slice 74's fixtures can restate an hour in ticks rather than write one down.
+:- use_module(library(tick_engine), [tick_engine_ticks_from_milliseconds/2]).
 % Load the list utilities used to gather recorded thought identifiers.
 :- use_module(library(lists), [member/2]).
 % Load the stabiliser, SLICE 72's own read-back: the conflict loop's control travels as its bias, and
 % these tests confirm the wiring actually reaches it rather than merely leaving the arbitration alone.
 :- use_module(library(stabiliser), [stabiliser_bias/2]).
+% Load the working-memory blackboard, SLICE 74's own read-back: the board's period and the lifetime
+% it implies are read from the pack that declares them, so no test here restates a tick count.
+:- use_module(library(working_memory_blackboard), [working_memory_blackboard_step_ticks/1,
+                                                   working_memory_blackboard_unrehearsed_life_ticks/1,
+                                                   working_memory_blackboard_slots/2]).
 % Load the Prolog Unit (PLUnit) testing framework.
 :- use_module(library(plunit)).
 
@@ -47,6 +54,10 @@ cognitive_cycle_test_world(World) :-
                    % The night's raised scaling bound: the renormalisation shift, well above the
                    % day's resting rate, as every tick demands of the pair.
                    offline_scaling_rate: 0.2,
+                   % SLICE 74: the blackboard and its standing pointer, empty and absent by default;
+                   % the tests that exercise the board put their own slots on this world.
+                   blackboard: [],
+                   rehearsal_target: none,
                    governor: Governor,
                    simulation_start: "2026-07-20T00:00:00Z" }.
 
@@ -621,6 +632,155 @@ test(a_well_formed_tick_has_exactly_one_solution) :-
     findall(Outcome, cognitive_cycle_step(World0, _World, tick_summary(_, _, Outcome, _)), Outcomes),
     % Exactly one program ran, and it was the day's.
     assertion(Outcomes = [released(_)]).
+
+% =============================================================================
+% SLICE 74 - THE WORKING-MEMORY BLACKBOARD IN THE TICK
+% =============================================================================
+
+% cognitive_cycle_test_board_world(-World): the fixed world with a full four-slot board on it,
+% AND A GOVERNOR RESTATED IN DECISION-2'S OWN UNITS - which is OBSERVATION-23 standing in a fixture.
+%
+% THE DEFAULT GOVERNOR CANNOT CARRY THESE TESTS AND THAT IS THE FINDING, NOT AN INCONVENIENCE. Its
+% parameter block is documented as ONE TICK PER HOUR, and DECISION-2 fixes ONE HUNDRED TICKS TO THE
+% NOMINAL SECOND, so the two constructs this slice wires into one loop read the same tick as three
+% hundred and sixty thousand times different. Under the default block the whole waking day is
+% EIGHTEEN TICKS - eighteen hundredths of a nominal second - and the board's hundred-tick maintenance
+% period never arrives before the night erases the surface. So these fixtures restate the governor's
+% six parameters in DECISION-2's units rather than working around the collision quietly: the day is
+% twenty-four hours in ticks, and the debt rises and discharges per hour rather than per tick.
+% Nothing here changes the governor's defaults; OBSERVATION-23 records the collision for the slice
+% that decides which calibration konnectome actually keeps.
+cognitive_cycle_test_board_world(World) :-
+    % One hour in ticks, through the scheduler's one conversion; a million milliseconds is not needed twice.
+    tick_engine_ticks_from_milliseconds(3600000, Hour),
+    % A day is twenty-four of those hours, computed rather than written down.
+    DayLength is 24 * Hour,
+    % The debt rises one unit per HOUR, which is what the default block's 1 meant when a tick was an hour.
+    Rise is 1 / Hour,
+    % And discharges two units per hour, on the same restatement.
+    Discharge is 2 / Hour,
+    % A governor on the corpus's own shape, read in konnectome's own tick.
+    two_process_governor_new(two_process_parameters(Rise, Discharge, DayLength, 4, 16, 2), Governor),
+    % Start from the fixed world every other test in this file runs.
+    cognitive_cycle_test_world(World0),
+    % Put four items on the surface at full activation, in admission order, under the restated day.
+    put_dict(_{blackboard: [seven-100, four-100, one-100, nine-100], governor: Governor}, World0, World).
+
+% BETWEEN PERIODS THE BOARD SIMPLY STANDS. This is the whole visible consequence of DECISION-23 and
+% the thing one-step-per-tick would have got wrong: ninety-nine ticks of thought change nothing here.
+test(the_board_stands_unmoved_between_maintenance_periods) :-
+    % Start from a world holding four full slots.
+    cognitive_cycle_test_board_world(World0),
+    % Run ninety-nine ticks - one short of the board's hundred-tick period.
+    cognitive_cycle_run(World0, 99, WorldFinal, _Summaries),
+    % Not one slot has faded, because not one maintenance step has run.
+    assertion(WorldFinal.blackboard == [seven-100, four-100, one-100, nine-100]).
+
+% ON THE PERIOD, ONE WHOLE MAINTENANCE STEP RUNS, AND EXACTLY ONE.
+test(the_hundredth_tick_runs_exactly_one_maintenance_step) :-
+    % Start from a world holding four full slots.
+    cognitive_cycle_test_board_world(World0),
+    % Run one hundred ticks, so the period is reached exactly once.
+    cognitive_cycle_run(World0, 100, WorldFinal, _Summaries),
+    % Every slot has leaked the corpus's five parts once, and no slot has leaked twice.
+    assertion(WorldFinal.blackboard == [seven-95, four-95, one-95, nine-95]).
+
+% AN UNREHEARSED SLOT SURVIVES THE LIFETIME THE DECISION IMPLIES AND NOT ONE TICK LONGER, which is the
+% acceptance test of the whole slice: konnectome now forgets on the corpus's own timescale.
+test(an_unrehearsed_slot_survives_exactly_the_implied_lifetime) :-
+    % Start from a world holding four full slots.
+    cognitive_cycle_test_board_world(World0),
+    % Read the lifetime the period and the corpus's constants imply, from the board's own pack.
+    working_memory_blackboard_unrehearsed_life_ticks(Life),
+    % Read the period, so the tick just before the fatal step can be named without arithmetic here.
+    working_memory_blackboard_step_ticks(Period),
+    % One period short of the lifetime, the board is still holding everything it was given.
+    JustBefore is Life - Period,
+    cognitive_cycle_run(World0, JustBefore, WorldBefore, _BeforeSummaries),
+    working_memory_blackboard_slots(WorldBefore.blackboard, HeldBefore),
+    assertion(HeldBefore == [seven, four, one, nine]),
+    % At the lifetime itself every slot has fallen below the collapse threshold and the surface is bare.
+    cognitive_cycle_run(World0, Life, WorldAfter, _AfterSummaries),
+    assertion(WorldAfter.blackboard == []).
+
+% THE STANDING POINTER KEEPS ITS SLOT ALIVE WHILE EVERY OTHER SLOT FADES AWAY BENEATH IT.
+test(the_standing_pointer_holds_one_slot_past_the_lifetime_of_the_rest) :-
+    % Start from a world holding four full slots.
+    cognitive_cycle_test_board_world(World0),
+    % Point the standing attentional pointer at one of them.
+    put_dict(_{rehearsal_target: seven}, World0, World1),
+    % Read the lifetime an unrehearsed slot has, from the board's own pack.
+    working_memory_blackboard_unrehearsed_life_ticks(Life),
+    % Run the whole of it.
+    cognitive_cycle_run(World1, Life, WorldFinal, _Summaries),
+    % The rehearsed slot alone survives, and it is standing at full activation.
+    assertion(WorldFinal.blackboard == [seven-100]).
+
+% THE NIGHT ERASES THE BOARD, which is Chapter 16's own sentence about slow-wave sleep, and the first
+% thing the working-memory mode register's ERASED IDLE has ever had underneath it to wipe.
+test(the_night_erases_the_whole_board) :-
+    % Start from a world holding four full slots.
+    cognitive_cycle_test_board_world(World0),
+    % Throw the operating state to offline, so this tick runs the night program.
+    neuromodulator_bus_broadcast_operating_state([], offline, Bus),
+    put_dict(_{bus: Bus}, World0, World1),
+    % One night tick is enough; the erasure is not waiting for any period.
+    cognitive_cycle_step(World1, WorldFinal, _Summary),
+    % Delay activity is incompatible with the slow oscillation's silent states, so the surface is bare.
+    assertion(WorldFinal.blackboard == []).
+
+% A POINTER AT A SLOT THE NIGHT ERASED IS THE ORDINARY MORNING, NOT AN ERROR - the declared reading of
+% slice 74, tested rather than only commented, because the pack's own refusal would have thrown here.
+test(a_pointer_at_an_erased_slot_rehearses_nothing_and_does_not_throw) :-
+    % Start from a world holding four full slots with the pointer aimed at one of them.
+    cognitive_cycle_test_board_world(World0),
+    put_dict(_{rehearsal_target: seven}, World0, World1),
+    % Throw the operating state to offline and let the night wipe the surface out from under it.
+    neuromodulator_bus_broadcast_operating_state([], offline, Bus),
+    put_dict(_{bus: Bus}, World1, World2),
+    cognitive_cycle_step(World2, World3, _NightSummary),
+    assertion(World3.blackboard == []),
+    % Bring the day back and run a full period, so a maintenance step meets the dangling pointer.
+    neuromodulator_bus_broadcast_operating_state([], online, DayBus),
+    put_dict(_{bus: DayBus}, World3, World4),
+    working_memory_blackboard_step_ticks(Period),
+    cognitive_cycle_run(World4, Period, WorldFinal, _Summaries),
+    % The morning runs, the board is still empty, and nothing was refused.
+    assertion(WorldFinal.blackboard == []).
+
+% An unbound pointer is refused aloud rather than bound to whichever slot the board lists first.
+test(an_unbound_rehearsal_target_is_refused_aloud) :-
+    % Start from a world holding four full slots.
+    cognitive_cycle_test_board_world(World0),
+    % Leave the standing pointer as a hole, which the board search would otherwise fill in.
+    put_dict(_{rehearsal_target: _Hole}, World0, World1),
+    % The tick refuses the hole by name rather than rehearsing a slot nobody named.
+    catch(cognitive_cycle_step(World1, _World, _Summary), error(Error, _), true),
+    % Confirm the refusal is the instantiation error and not a quiet rehearsal.
+    assertion(Error == instantiation_error).
+
+% A world missing its blackboard is refused aloud, never silently run without a working memory.
+test(a_world_missing_its_blackboard_is_refused_aloud) :-
+    % Start from the fixed world.
+    cognitive_cycle_test_world(World0),
+    % Remove the board.
+    del_dict(blackboard, World0, _Value, WorldMissing),
+    % The tick refuses the gutted world by the missing key's name.
+    catch(cognitive_cycle_step(WorldMissing, _World, _Summary), error(Error, _), true),
+    % Confirm the refusal names the key.
+    assertion(Error == existence_error(cognitive_cycle_world_key, blackboard)).
+
+% A world missing its rehearsal target is refused aloud - an absent pointer is not the same fact as
+% an explicitly absent one, and DECISION-19's shape is a REQUIRED key rather than a helpful default.
+test(a_world_missing_its_rehearsal_target_is_refused_aloud) :-
+    % Start from the fixed world.
+    cognitive_cycle_test_world(World0),
+    % Remove the standing pointer.
+    del_dict(rehearsal_target, World0, _Value, WorldMissing),
+    % The tick refuses the gutted world by the missing key's name.
+    catch(cognitive_cycle_step(WorldMissing, _World, _Summary), error(Error, _), true),
+    % Confirm the refusal names the key.
+    assertion(Error == existence_error(cognitive_cycle_world_key, rehearsal_target)).
 
 % Close the test block for the cognitive_cycle pack.
 :- end_tests(cognitive_cycle).
