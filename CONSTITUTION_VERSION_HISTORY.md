@@ -53,6 +53,27 @@ that transfers.
 -----------------------------------------------------------------------------
 
 
+Version 30, by the owner's instruction of 2026-08-13, WIDENS THE FIRST COMMANDMENT FROM THREE NAMED
+DOCUMENTS TO THE ENTIRE PRINCIPLES LIBRARY AT docs/principles/ . NO COMMANDMENT WAS ADDED, REMOVED,
+OR RENUMBERED; the count stands at twenty-three. A RULE CHANGED, AND THIS ENTRY NAMES IT PLAINLY: the
+First Commandment's specification is now THE DIRECTORY, with the directory's own README as its live
+inventory, rather than the three (3) documents it named at version 1 and re-pointed at version 9.
+THE THREE FOUNDING DOCUMENTS ARE UNMOVED, UNHARMED, AND STILL NAMED inside the amendment note, and
+within the library they keep their founding standing - the widening adds beside them and takes
+nothing from them, in exactly the shape the version 24 entry describes for the directory itself: the
+charter was never the count, it was the category. THE OWNER'S REASON, RECORDED IN THE OWNER'S OWN
+FRAMING: when the project first started it was pointing to a few files for guidance, and now it has
+entire libraries - docs/principles/ as the top-level, north-star, light-house, north-pole store of
+guiding principles, and docs/neuroscience/ as the store of mechanics to imitate and reverse-engineer
+into computer code. The amendment writes that two-library pairing into the First Commandment's face,
+where before it lived only in the Twenty-First Commandment's Order of Resort. ONE DESCRIPTION WAS
+CHASED IN THE SAME CHANGE: the Twenty-First Commandment's third protocol line described the library
+as "the three ... documents of the First Commandment", which this amendment made stale, and it now
+reads "the whole library". The Twentieth Commandment needed no edit: docs/neuroscience/ was already
+announced as the north-star directory, and this amendment cites it rather than restating it. The
+principles directory's README was brought current in the same change, per its role as the live
+inventory this Commandment now leans on.
+
 Version 29, by the owner's instruction of 2026-08-12, CREATES docs/start-here/ AND MOVES THE CURRENT
 CONTEXT HAND-OFF INTO IT. NO COMMANDMENT WAS ADDED, REMOVED, OR RENUMBERED; the count stands at
 twenty-three. A RULE CHANGED, AND THIS ENTRY SAYS SO RATHER THAN CLAIMING OTHERWISE - unlike the

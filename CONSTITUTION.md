@@ -2,10 +2,32 @@ THE FIRST COMMANDMENT:
 The konnectome GitHub repository, hereinafter known as "konnectome",
 will be built and maintained with the principles of Artificial General Intelligence (AGI)
 and Artificial Super Intelligence (ASI) in mind,
-as specified in the following three (3) documents:
+as specified in THE PRINCIPLES LIBRARY - the entire directory:
+/home/ccaitwo/konnectome/docs/principles/
+whose live inventory is that directory's own README, at
+/home/ccaitwo/konnectome/docs/principles/README.txt .
+(AMENDED in version 30, by the owner's instruction of 2026-08-13. WHEN THIS PROJECT FIRST STARTED, IT
+WAS POINTING TO A FEW FILES FOR GUIDANCE. NOW IT HAS ENTIRE LIBRARIES. This Commandment formerly named
+three (3) documents as its specification, and those three remain, unmoved and founding:
 /home/ccaitwo/konnectome/docs/principles/THE_ROADMAP_TO_AGI_AND_ASI_MANUSCRIPT.txt
 /home/ccaitwo/konnectome/docs/principles/AGI_FOR_EVERYONE_OUTLINE.txt
 /home/ccaitwo/konnectome/docs/principles/AGI_FOR_EVERYONE_MANUSCRIPT_v2.txt
+But the directory around them has grown into a library - the roadmap's own outline, the cognition
+manuscripts, the systems-approach treatment, and the English Readable Code specification of the Sixth
+Commandment - and a Commandment that names three files while the store holds more is a pointer at a
+directory's contents, which rots exactly as a count does. So the Commandment now names THE DIRECTORY,
+and the directory's README is its live inventory, which is the same technique the Eighth and Twentieth
+Commandments already use on docs/neuroscience/ . THE STANDING OF THE STORE, STATED SO IT CANNOT BE
+MISTAKEN: docs/principles/ is the TOP-LEVEL, NORTH-STAR, LIGHT-HOUSE, NORTH-POLE store of GUIDING
+PRINCIPLES - the WHY and the WHERE-TO of this build - and docs/neuroscience/ , the north-star
+directory of the Twentieth Commandment, is the store of MECHANICS TO IMITATE AND REVERSE-ENGINEER
+INTO COMPUTER CODE - the HOW. Two libraries, one project: the principles library sets the destination,
+the neuroscience library supplies the working machinery of the only known general intelligence, and
+the Twenty-First Commandment's Order of Resort already reads them in exactly that pairing. THE ORDER
+OF AUTHORITY IS UNCHANGED: within the principles library, the three founding documents named above
+remain the documents this Commandment's rule was written from, and nothing in the wider library
+outranks them for that purpose; a new file added to the directory joins the library, not the founding
+three. NO COMMANDMENT WAS ADDED, REMOVED, OR RENUMBERED.)
 (AMENDED in version 9, by the owner's instruction of 2026-08-09. The third document was
 docs/AGI_FOR_EVERYONE_MANUSCRIPT.txt and is now its successor, _v2. The successor was CHECKED rather
 than assumed before the pointer moved: it carries the same five parts and the same chapter openings,
@@ -717,8 +739,14 @@ THE FIRST PROTOCOL, AND IT IS TWO LIBRARIES AND A HABIT OF MIND:
 1. LOGIC AND REASON.
 2. The NEUROSCIENCE LIBRARY at /home/ccaitwo/konnectome/docs/neuroscience/ - the north-star directory
    of the Twentieth Commandment.
-3. The PRINCIPLES LIBRARY at /home/ccaitwo/konnectome/docs/principles/ - the three Artificial General
-   Intelligence and Artificial Super Intelligence documents of the First Commandment.
+3. The PRINCIPLES LIBRARY at /home/ccaitwo/konnectome/docs/principles/ - the whole library of the
+   First Commandment.
+   (REPOINTED in version 30, in the same change that widened the First Commandment from its three
+   founding documents to the entire directory. This line formerly read "the three Artificial General
+   Intelligence and Artificial Super Intelligence documents of the First Commandment", which was
+   correct when written and became a stale description the moment the First Commandment grew. The
+   protocol itself is untouched: the same library, read at its new width, in the same position in the
+   order. No rule changed here.)
 These come first, every time, and they are exhausted before anything below them is reached. Most of
 this build's numbers came from here and needed nothing else; Family Four's standing rule that NO
 NUMBER IN A PACK NEED BE KONNECTOME'S INVENTION is this protocol succeeding.
@@ -981,7 +1009,7 @@ commit in which /docs/ holds two hand-offs or none.
 
 THE VERSION AND THE COUNT, AND WHERE THE HISTORY WENT:
 
-THIS CONSTITUTION IS AT VERSION 29, AND HOLDS TWENTY-THREE COMMANDMENTS.
+THIS CONSTITUTION IS AT VERSION 30, AND HOLDS TWENTY-THREE COMMANDMENTS.
 
 THE DATED VERSION HISTORY NOW LIVES IN ITS OWN FILE:
 /home/ccaitwo/konnectome/CONSTITUTION_VERSION_HISTORY.md

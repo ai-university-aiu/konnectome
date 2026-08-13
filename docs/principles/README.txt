@@ -1,6 +1,31 @@
 DOCS / PRINCIPLES - THE DOCUMENTS konnectome IS BUILT BY AND DID NOT WRITE
 
-Created 2026-08-10 at Constitution version 17. Widened 2026-08-11 at Constitution version 24.
+Created 2026-08-10 at Constitution version 17. Widened 2026-08-11 at Constitution version 24. Declared THE PRINCIPLES LIBRARY, whole-directory, 2026-08-13 at Constitution version 30.
+
+
+THE LIBRARY DECLARATION, 2026-08-13, CONSTITUTION VERSION 30
+
+By the owner's instruction, the FIRST COMMANDMENT now names THIS ENTIRE DIRECTORY as its specification, and names this README as the directory's LIVE INVENTORY. When the project first started, it was pointing to a few files for guidance; now it has entire libraries. This directory is the TOP-LEVEL, NORTH-STAR, LIGHT-HOUSE, NORTH-POLE store of GUIDING PRINCIPLES - the WHY and the WHERE-TO - and docs/neuroscience/ , its nearest sibling, is the store of MECHANICS TO IMITATE AND REVERSE-ENGINEER INTO COMPUTER CODE - the HOW.
+
+THE LIVE INVENTORY, in reading order:
+
+• THE_ROADMAP_TO_AGI_AND_ASI_OUTLINE.txt - the heading-for-heading outline of the roadmap manuscript, reverse-engineered from it on 2026-08-13.
+
+• THE_ROADMAP_TO_AGI_AND_ASI_MANUSCRIPT.txt - founding document of the First Commandment.
+
+• AGI_FOR_EVERYONE_OUTLINE.txt - founding document of the First Commandment.
+
+• AGI_FOR_EVERYONE_MANUSCRIPT_v2.txt - founding document of the First Commandment.
+
+• COGNITION_OUTLINE.txt - the outline of human cognition, cognitive processes, and cognitive architectures.
+
+• COGNITION_MANUSCRIPT.txt - the manuscript that follows that outline.
+
+• COGNITION_A_SYSTEMS_APPROACH_MANUSCRIPT.txt - the systems-first treatment of cognition.
+
+• ENGLISH_READABLE_CODE_MANUSCRIPT.txt - the English Readable Code specification of the Sixth Commandment.
+
+The three founding documents keep their founding standing within the library; a new file added to this directory joins the library, not the founding three. The sections below this one are the directory's earlier record and are kept word for word; where one of them says "three documents", it is a record of the directory at the version that wrote it.
 
 
 WHAT IS IN HERE
