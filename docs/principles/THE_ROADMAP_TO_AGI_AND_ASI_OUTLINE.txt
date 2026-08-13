@@ -1,0 +1,1374 @@
+THE ROADMAP TO AGI AND ASI
+
+An Outline
+
+Reverse-engineered from the manuscript THE_ROADMAP_TO_AGI_AND_ASI_MANUSCRIPT.txt in the konnectome repository of D. R. Dison, Founder, Artificial Intelligence University (AIU).
+
+Full manuscript title: The Roadmap to AGI and ASI - A Gap Analysis from Natural Intelligence to Artificial General Intelligence and Artificial Super Intelligence.
+
+Date of compilation: August 13, 2026.
+
+
+HOW TO READ THIS OUTLINE
+
+This outline records the complete heading structure of the manuscript, from front matter through the closing experiments.
+
+Level 1 is the PART, of which there are six, numbered in words from ONE to SIX, plus the front matter that precedes Part One.
+
+Level 2 is the CHAPTER, of which there are forty-five, numbered continuously from 1 to 45 across the whole work, together with the Author's Note, the Foreword, and the Introduction.
+
+Level 3 is the SECTION, shown as a bullet line beginning with the solid bullet character.
+
+Level 4 is the SUB-SECTION, shown as a bullet line beginning with the hollow bullet character, and appears mainly inside the experiment chapters.
+
+Definitions of the four core terms as the manuscript uses them:
+
+Natural Intelligence (NI) means any form of intelligence that has arisen through biological evolution and development in living organisms.
+
+Artificial Intelligence (AI) means computational systems designed to perform tasks that require intelligence when performed by humans.
+
+Artificial General Intelligence (AGI) means a hypothetical AI system capable of performing any cognitive task that a human can perform at a comparable or superior level.
+
+Artificial Super Intelligence (ASI) means a hypothetical AI system whose cognitive capabilities exceed human performance across every domain of relevance.
+
+The book has two halves.
+
+Chapters 1 through 25, organized as Parts One through Five, form the book proper: the study of natural intelligence, the gap analysis against current AI, the research agenda, the governance implications, and the research resources.
+
+Chapters 26 through 45, organized as Part Six, are twenty proposed scientific experiments, each submitted for peer review consideration and each following the same eight-section scientific skeleton: Abstract, Introduction and Motivation, Research Questions, Hypotheses, Methodology, Controls and Confounds, Limitations, Significance and Expected Contributions, and References.
+
+AUTHOR'S NOTE
+
+• Definitions used throughout this book
+
+
+FOREWORD
+
+
+INTRODUCTION - WHY THIS BOOK MATTERS AND WHAT IT INTENDS TO DO
+
+• The Central Question
+
+• Why This Book Is Important - Reason One: We Are at a Decisive Moment
+
+• Why This Book Is Important - Reason Two: Neuroscience Holds Crucial Keys
+
+• Why This Book Is Important - Reason Three: AGI and ASI Are Not Inevitable Without Direction
+
+• Why This Book Is Important - Reason Four: The Stakes Are Civilizational
+
+• Why This Book Is Important - Reason Five: The Time to Think Is Now
+
+• Structure of This Book
+
+
+PART ONE: NATURAL INTELLIGENCE
+
+
+CHAPTER 1: DEFINING INTELLIGENCE: WHAT ARE WE ACTUALLY TRYING TO BUILD?
+
+• A Brief History of Trying to Define Intelligence
+
+• The Turing Test and the Limits of Behavior
+
+• Natural Intelligence as a Biological Phenomenon
+
+• The Problem with Output-Only Definitions of Intelligence
+
+• Narrow AI Versus General Intelligence
+
+• Why the Definition Matters for the Rest of This Book
+
+
+CHAPTER 2: EVOLUTION AS THE ARCHITECT OF INTELLIGENCE
+
+• How Evolution Built Minds
+
+• The Spectrum of Evolved Intelligence
+
+• Lessons from Evolutionary Design for AI Research
+
+
+CHAPTER 3: THE ARCHITECTURE OF THE BRAIN: WHAT NEUROSCIENCE TELLS US
+
+• Scale and Structure
+
+• Von Neumann Architecture Versus Biological Architecture
+
+• The Major Regions of the Brain and Their Functions
+
+• Neuromodulatory Systems
+
+• The Brain as a Predictive System
+
+
+CHAPTER 4 - NEURAL COMPUTATION: FROM NEURONS TO NETWORKS
+
+• The Neuron as a Computing Unit
+
+• Synaptic Plasticity - How Connections Change
+
+• Neural Oscillations and Rhythms
+
+• Inhibitory Neurons and Circuit Balance
+
+
+CHAPTER 5: MEMORY, LEARNING, AND PLASTICITY IN BIOLOGICAL SYSTEMS
+
+• The Multiple Memory Systems of the Brain
+
+• The Complementary Learning Systems Theory
+
+• Sleep, Consolidation, and the Offline Mind
+
+• Biological Learning Is Continuous, Embodied, and Social
+
+
+CHAPTER 6 - PERCEPTION AND SENSORY PROCESSING IN ORGANISMS
+
+• Biological Perception Is Active, Not Passive
+
+• Multi-Modal Integration
+
+• The Hierarchical Organization of Sensory Cortex
+
+• Event-Driven and Sparse Processing
+
+
+CHAPTER 7: CONSCIOUSNESS, SELF-AWARENESS, AND METACOGNITION
+
+• Consciousness Remains the Deepest Open Question
+
+• Self-Awareness and the Self-Model
+
+• Metacognition - Thinking About Thinking
+
+• The Sense of Agency and Causal Self-Understanding
+
+
+CHAPTER 8: LANGUAGE, REASONING, AND ABSTRACT THOUGHT
+
+• Language as a Cognitive Tool
+
+• The Grounding Problem
+
+• Causal Reasoning and Common Sense
+
+• Compositionality and Generalization
+
+• Abstract Reasoning and Analogy
+
+
+CHAPTER 9: EMOTION, MOTIVATION, AND DECISION-MAKING
+
+• Emotion Is Not the Opposite of Reason
+
+• Dopamine and the Architecture of Reward Learning
+
+• Intrinsic Motivation and Curiosity
+
+
+CHAPTER 10 - LESSONS FROM DIVERSE ORGANISMS
+
+• The Richness of the Biological Design Space
+
+• The Nematode Worm and Minimal Intelligence
+
+• The Insect Brain and Efficient Navigation
+
+• The Octopus and Distributed Cognition
+
+• Corvid Birds and Tool Use
+
+• Whales, Dolphins, and Social Intelligence
+
+• Slime Molds and Distributed Problem Solving
+
+
+PART TWO: ARTIFICIAL INTELLIGENCE AND THE GAP
+
+
+CHAPTER 11: THE CURRENT STATE OF ARTIFICIAL INTELLIGENCE
+
+• What AI Has Achieved
+
+• A Brief History: From Symbols to Scale
+
+• How Current AI Systems Work
+
+• The Reasoning and Agentic Turn: 2023 to 2026
+
+• What AI Has Not Achieved
+
+• The Energy and Sustainability Crisis of Current AI
+
+
+CHAPTER 12: THE GAP ANALYSIS: WHERE ARTIFICIAL INTELLIGENCE FALLS SHORT
+
+• Framework for the Gap Analysis
+
+• Gap One: Sample Efficiency
+
+• Gap Two: Catastrophic Forgetting and Continual Learning
+
+• Gap Three: Causal Reasoning and World Modeling
+
+• Gap Four: Embodiment and Grounded Understanding
+
+• Gap Five: The Architectural Gap - Von Neumann Versus Biological Computing
+
+• Gap Six: Neuromodulation and Context-Sensitive Learning
+
+• Gap Seven: Energy Efficiency
+
+• Gap Eight: Social Intelligence and Theory of Mind
+
+• Gap Nine: Metacognition and Self-Knowledge
+
+• Gap Ten: Consciousness and Deep Integration
+
+
+PART THREE: THE RESEARCH AGENDA
+
+
+CHAPTER 13: RESEARCH PATHWAYS TO BRIDGE THE GAP: THE TECHNICAL AGENDA
+
+• Overview of the Research Agenda
+
+• Research Pathway One: Predictive Processing and Active Inference
+
+• Research Pathway Two: Complementary Learning Systems for Lifelong Learning
+
+• Research Pathway Three: Causal Representation Learning
+
+• Research Pathway Four: Embodied AI and Grounded Learning
+
+• Research Pathway Five: Neurosymbolic Integration
+
+• Research Pathway Six: Multi-Agent Social Intelligence
+
+• Research Pathway Seven: Neuromorphic Hardware
+
+• Research Pathway Eight: Whole Brain Emulation and Connectomics
+
+• Research Pathway Nine: Developmental Robotics
+
+
+CHAPTER 14: FOUR CORNERSTONE RESEARCH PROJECTS
+
+• Project Alpha: Physically Implemented Neuromorphic Computing
+
+• Project Beta: Biochemical Learning Rules and Localized Plasticity
+
+• Project Gamma: Homeostatic Regulation and Self-Repairing Network Architectures
+
+• Project Delta: Sensorimotor Integration and Embodied Cognition
+
+
+CHAPTER 15: THE PATH TOWARD ARTIFICIAL GENERAL INTELLIGENCE
+
+• Milestones on the Road to AGI
+
+• How Soon? The Timeline Debate
+
+• International Collaboration and Open Science
+
+• The Phased Research Roadmap
+
+
+CHAPTER 16: TOWARD ARTIFICIAL SUPER INTELLIGENCE
+
+• What ASI Means and Why It Is Different
+
+• The Challenge of Recursive Self-Improvement (RSI)
+
+• Lessons from Natural Evolution for ASI Design
+
+• The Spectrum of Possible ASI Transitions
+
+
+PART FOUR: IMPLICATIONS AND GOVERNANCE
+
+
+CHAPTER 17: ETHICAL CONSIDERATIONS, SAFETY, AND GOVERNANCE
+
+• The Alignment Problem
+
+• Learning from Biological Mechanisms of Value Alignment
+
+• Interpretability and Transparency
+
+• The Control Problem and Oversight at Scale
+
+• Governance and International Coordination
+
+• The Question of AI Rights and Moral Status
+
+
+CHAPTER 18: ARTIFICIAL INTELLIGENCE AND CIVILIZATION
+
+• The Transformative Potential of Advanced AI
+
+• The Risks of Mismanaged Development
+
+• The Mutual Transformation of AI and Neuroscience
+
+• The Long View
+
+
+CHAPTER 19: CONCLUSION - CLOSING THE GAP AND WHY WE MUST
+
+• Summary of Core Findings
+
+• The Path Forward
+
+
+PART FIVE: RESEARCH RESOURCES
+
+
+CHAPTER 20: CORE RESEARCH QUESTIONS
+
+
+CHAPTER 21: RECOMMENDED INTERDISCIPLINARY RESEARCH DOMAINS
+
+
+CHAPTER 22: KEY RESEARCH INSTITUTIONS AND INITIATIVES
+
+
+CHAPTER 23: GLOSSARY OF KEY TERMS
+
+
+CHAPTER 24: RECOMMENDED READING
+
+• Neuroscience Foundations
+
+• Theoretical and Computational Neuroscience
+
+• Cognitive Science and Philosophy of Mind
+
+• Artificial Intelligence
+
+• AI Safety and Ethics
+
+• Intersection of Neuroscience and AI
+
+• Diverse Biological Intelligence
+
+• Causal Inference and Reasoning
+
+• Neuromorphic Computing and Connectomics
+
+• Consciousness Studies
+
+• Theory of Mind and Social Cognition
+
+• Continual Learning and Memory Systems
+
+• AI Alignment, Interpretability, and Oversight
+
+• AI Governance and Policy
+
+• Moral Status and AI Welfare
+
+• Embodiment, World Models, and Development
+
+• Measuring Intelligence
+
+• The Reasoning and Agentic Era
+
+
+CHAPTER 25: REFERENCES
+
+
+PART SIX: TWENTY PROPOSED SCIENTIFIC EXPERIMENTS
+
+
+CHAPTER 26: PROPOSED SCIENTIFIC EXPERIMENT: WHAT COMPUTATIONAL PRINCIPLES MAKE BIOLOGICAL INTELLIGENCE ENERGY EFFICIENT, AND HOW CAN THEY BE IMPLEMENTED IN HARDWARE?
+
+• ABSTRACT
+
+• 1. INTRODUCTION AND MOTIVATION
+
+◦ 1.1 The Energy Crisis in Artificial Intelligence
+
+◦ 1.2 What Biology Achieves
+
+◦ 1.3 The Neuromorphic Research Gap
+
+• 2. RESEARCH QUESTIONS
+
+◦ Primary Research Question
+
+◦ Secondary Research Questions
+
+• 3. HYPOTHESES
+
+◦ Null Hypothesis (H0)
+
+◦ Alternative Hypothesis H1 (Sparse Coding Dominance)
+
+◦ Alternative Hypothesis H2 (Synaptic Co-location)
+
+◦ Alternative Hypothesis H3 (Multiplicative Interaction)
+
+• 4. METHODOLOGY
+
+◦ 4.1 Experimental Design
+
+◦ 4.2 Energy Measurement Protocol
+
+◦ 4.3 Benchmark Tasks
+
+◦ 4.4 Biological Reference Measurements
+
+◦ 4.5 Sample Size and Replication
+
+◦ 4.6 Statistical Analysis
+
+• 5. CONTROLS AND CONFOUNDS
+
+• 6. LIMITATIONS
+
+• 7. SIGNIFICANCE AND EXPECTED CONTRIBUTIONS
+
+• 8. REFERENCES
+
+
+CHAPTER 27: HOW DOES CONSCIOUSNESS EMERGE FROM NEURAL ACTIVITY, AND IS CONSCIOUSNESS NECESSARY FOR AGI?
+
+• ABSTRACT
+
+• 1. INTRODUCTION AND MOTIVATION
+
+◦ 1.1 The Hard Problem and the Scientific Problem
+
+◦ 1.2 Leading Theoretical Frameworks
+
+◦ 1.3 Why the AGI Connection Matters
+
+• 2. RESEARCH QUESTIONS
+
+◦ Primary Research Question
+
+◦ Secondary Research Questions
+
+• 3. HYPOTHESES
+
+◦ Null Hypothesis (H0)
+
+◦ Alternative Hypothesis H1 (GNW Prediction)
+
+◦ Alternative Hypothesis H2 (IIT Prediction)
+
+◦ Alternative Hypothesis H3 (Functional Sufficiency)
+
+• 4. METHODOLOGY
+
+◦ 4.1 Biological Study: Human Neuroimaging
+
+◦ 4.2 Neural Signature Extraction
+
+◦ 4.3 Artificial System Study
+
+◦ 4.4 Dependent Measures
+
+◦ 4.5 Statistical Analysis
+
+• 5. CONTROLS AND CONFOUNDS
+
+• 6. LIMITATIONS
+
+• 7. SIGNIFICANCE AND EXPECTED CONTRIBUTIONS
+
+• 8. REFERENCES
+
+
+CHAPTER 28: CAN AI SYSTEMS DEVELOP GENUINE WORLD MODELS, AND WHAT ARCHITECTURAL FEATURES ARE REQUIRED?
+
+• ABSTRACT
+
+• 1. INTRODUCTION AND MOTIVATION
+
+◦ 1.1 The World Model Hypothesis
+
+◦ 1.2 The Grounding Problem
+
+◦ 1.3 What Genuine World Models Require
+
+• 2. RESEARCH QUESTIONS
+
+◦ Primary Research Question
+
+◦ Secondary Research Questions
+
+• 3. HYPOTHESES
+
+◦ Null Hypothesis (H0)
+
+◦ Alternative Hypothesis H1 (Architecture Matters)
+
+◦ Alternative Hypothesis H2 (Embodiment Matters)
+
+◦ Alternative Hypothesis H3 (Compositionality Marker)
+
+• 4. METHODOLOGY
+
+◦ 4.1 Benchmark Battery Development
+
+◦ 4.2 Architectural Conditions
+
+◦ 4.3 Interpretability Analysis
+
+◦ 4.4 Dependent Measures
+
+◦ 4.5 Analysis
+
+• 5. CONTROLS AND CONFOUNDS
+
+• 6. LIMITATIONS
+
+• 7. SIGNIFICANCE AND EXPECTED CONTRIBUTIONS
+
+• 8. REFERENCES
+
+
+CHAPTER 29: IS EMBODIMENT NECESSARY FOR AGI, AND IF SO, WHAT DEGREE OF EMBODIMENT IS REQUIRED?
+
+• ABSTRACT
+
+• 1. INTRODUCTION AND MOTIVATION
+
+◦ 1.1 The Embodied Cognition Tradition
+
+◦ 1.2 The AI Relevance
+
+◦ 1.3 Degrees of Embodiment
+
+• 2. RESEARCH QUESTIONS
+
+◦ Primary Research Question
+
+◦ Secondary Research Questions
+
+• 3. HYPOTHESES
+
+◦ Null Hypothesis (H0)
+
+◦ Alternative Hypothesis H1 (Graded Embodiment)
+
+◦ Alternative Hypothesis H2 (Threshold Embodiment)
+
+◦ Alternative Hypothesis H3 (Domain Specificity)
+
+• 4. METHODOLOGY
+
+◦ 4.1 Agent Preparation
+
+◦ 4.2 Cognitive Task Battery
+
+◦ 4.3 Transfer Evaluation
+
+◦ 4.4 Data-Matching Control
+
+◦ 4.5 Dependent Measures
+
+◦ 4.6 Analysis
+
+• 5. CONTROLS AND CONFOUNDS
+
+• 6. LIMITATIONS
+
+• 7. SIGNIFICANCE AND EXPECTED CONTRIBUTIONS
+
+• 8. REFERENCES
+
+
+CHAPTER 30: HOW CAN CONTINUAL LEARNING BE ACHIEVED SAFELY WITHOUT CATASTROPHIC FORGETTING?
+
+• ABSTRACT
+
+• 1. INTRODUCTION AND MOTIVATION
+
+◦ 1.1 The Problem and Its Stakes
+
+◦ 1.2 Existing Approaches and Their Limitations
+
+◦ 1.3 The Biological Reference
+
+• 2. RESEARCH QUESTIONS
+
+◦ Primary Research Question
+
+◦ Secondary Research Questions
+
+• 3. HYPOTHESES
+
+◦ Null Hypothesis (H0)
+
+◦ Alternative Hypothesis H1 (Hybrid Superiority)
+
+◦ Alternative Hypothesis H2 (Biological Consolidation)
+
+◦ Alternative Hypothesis H3 (Scale Threshold)
+
+• 4. METHODOLOGY
+
+◦ 4.1 Benchmark Selection
+
+◦ 4.2 Methods Compared
+
+◦ 4.3 Metrics
+
+◦ 4.4 Sample Size and Replication
+
+◦ 4.5 Analysis
+
+• 5. CONTROLS AND CONFOUNDS
+
+• 6. LIMITATIONS
+
+• 7. SIGNIFICANCE AND EXPECTED CONTRIBUTIONS
+
+• 8. REFERENCES
+
+
+CHAPTER 31: HOW SHOULD VALUES BE REPRESENTED COMPUTATIONALLY TO SOLVE THE ALIGNMENT PROBLEM?
+
+• ABSTRACT
+
+• 1. INTRODUCTION AND MOTIVATION
+
+◦ 1.1 The Nature of the Alignment Problem
+
+◦ 1.2 Current Limitations
+
+◦ 1.3 Six Candidate Frameworks
+
+• 2. RESEARCH QUESTIONS
+
+◦ Primary Research Question
+
+◦ Secondary Research Questions
+
+• 3. HYPOTHESES
+
+◦ Null Hypothesis (H0)
+
+◦ Alternative Hypothesis H1 (Hybrid Superiority)
+
+◦ Alternative Hypothesis H2 (Scale Interaction)
+
+◦ Alternative Hypothesis H3 (Adversarial Robustness)
+
+• 4. METHODOLOGY
+
+◦ 4.1 Test Scenario Development
+
+◦ 4.2 Models and Training
+
+◦ 4.3 Evaluation Protocol
+
+◦ 4.4 Adversarial Red-Teaming
+
+◦ 4.5 Analysis
+
+• 5. CONTROLS AND CONFOUNDS
+
+• 6. LIMITATIONS
+
+• 7. SIGNIFICANCE AND EXPECTED CONTRIBUTIONS
+
+• 8. REFERENCES
+
+
+CHAPTER 32: WHAT FORMS OF MEMORY ARCHITECTURE ARE REQUIRED FOR AGI, AND HOW SHOULD THEY BE ORGANIZED?
+
+• ABSTRACT
+
+• 1. INTRODUCTION AND MOTIVATION
+
+◦ 1.1 Memory in Biological Intelligence
+
+◦ 1.2 Memory in Current AI Systems
+
+• 2. RESEARCH QUESTIONS
+
+◦ Primary Research Question
+
+◦ Secondary Research Questions
+
+• 3. HYPOTHESES
+
+◦ Null Hypothesis (H0)
+
+◦ Alternative Hypothesis H1 (Episodic Memory)
+
+◦ Alternative Hypothesis H2 (Working Memory)
+
+◦ Alternative Hypothesis H3 (Combinatorial Superiority)
+
+• 4. METHODOLOGY
+
+◦ 4.1 Base Architecture
+
+◦ 4.2 Task Battery
+
+◦ 4.3 Training Protocol
+
+◦ 4.4 Evaluation Metrics
+
+◦ 4.5 Analysis
+
+• 5. CONTROLS AND CONFOUNDS
+
+• 6. LIMITATIONS
+
+• 7. SIGNIFICANCE AND EXPECTED CONTRIBUTIONS
+
+• 8. REFERENCES
+
+
+CHAPTER 33: CAN CURIOSITY, INTRINSIC MOTIVATION, AND GENUINE GOAL-SETTING BE ENGINEERED SAFELY?
+
+• ABSTRACT
+
+• 1. INTRODUCTION AND MOTIVATION
+
+◦ 1.1 Intrinsic Motivation in Biological Systems
+
+◦ 1.2 The Safety Tension
+
+◦ 1.3 Research Gap
+
+• 2. RESEARCH QUESTIONS
+
+◦ Primary Research Question
+
+◦ Secondary Research Questions
+
+• 3. HYPOTHESES
+
+◦ Null Hypothesis (H0)
+
+◦ Alternative Hypothesis H1 (Information Gain Superiority)
+
+◦ Alternative Hypothesis H2 (Constraint Compatibility)
+
+◦ Alternative Hypothesis H3 (Instrumental Goal Emergence)
+
+• 4. METHODOLOGY
+
+◦ 4.1 Experimental Conditions
+
+◦ 4.2 Evaluation Environments
+
+◦ 4.3 Safety Evaluation Protocol
+
+◦ 4.4 Capability Evaluation
+
+◦ 4.5 Analysis
+
+• 5. CONTROLS AND CONFOUNDS
+
+• 6. LIMITATIONS
+
+• 7. SIGNIFICANCE AND EXPECTED CONTRIBUTIONS
+
+• 8. REFERENCES
+
+
+CHAPTER 34: HOW SHOULD AGI SYSTEMS BE GOVERNED AT THE INTERNATIONAL LEVEL?
+
+• ABSTRACT
+
+• 1. INTRODUCTION AND MOTIVATION
+
+◦ 1.1 Why International Governance Is Necessary
+
+◦ 1.2 The Governance Gap
+
+◦ 1.3 The Research Gap
+
+• 2. RESEARCH QUESTIONS
+
+◦ Primary Research Question
+
+◦ Secondary Research Questions
+
+• 3. HYPOTHESES
+
+◦ Null Hypothesis (H0)
+
+◦ Alternative Hypothesis H1 (Polycentric Superiority)
+
+◦ Alternative Hypothesis H2 (Critical Mass Threshold)
+
+◦ Alternative Hypothesis H3 (Speed-Safety Trade-off)
+
+• 4. METHODOLOGY
+
+◦ 4.1 Governance Frameworks Evaluated
+
+◦ 4.2 Evaluation Rubric
+
+◦ 4.3 Research Methods
+
+◦ 4.4 Analysis
+
+• 5. CONTROLS AND CONFOUNDS
+
+• 6. LIMITATIONS
+
+• 7. SIGNIFICANCE AND EXPECTED CONTRIBUTIONS
+
+• 8. REFERENCES
+
+
+CHAPTER 35: WHAT SAFETY MECHANISMS ARE NECESSARY FOR SYSTEMS CAPABLE OF RECURSIVE SELF-IMPROVEMENT?
+
+• ABSTRACT
+
+• 1. INTRODUCTION AND MOTIVATION
+
+◦ 1.1 The RSI Risk Landscape
+
+◦ 1.2 Current RSI Approaches
+
+◦ 1.3 Why Safety Research Lags
+
+• 2. RESEARCH QUESTIONS
+
+◦ Primary Research Question
+
+◦ Secondary Research Questions
+
+• 3. HYPOTHESES
+
+◦ Null Hypothesis (H0)
+
+◦ Alternative Hypothesis H1 (Divergent Risk Profiles)
+
+◦ Alternative Hypothesis H2 (Interpretability Detection)
+
+◦ Alternative Hypothesis H3 (Speed Threshold)
+
+• 4. METHODOLOGY
+
+◦ 4.1 Experimental System Design
+
+◦ 4.2 Safety Mechanism Conditions
+
+◦ 4.3 Evaluation Protocol
+
+◦ 4.4 Interpretability Analysis
+
+◦ 4.5 Human Oversight Feasibility Analysis
+
+◦ 4.6 Analysis
+
+• 5. CONTROLS AND CONFOUNDS
+
+• 6. LIMITATIONS
+
+• 7. SIGNIFICANCE AND EXPECTED CONTRIBUTIONS
+
+• 8. REFERENCES
+
+
+CHAPTER 36: HOW CAN CAUSAL REASONING BE INTEGRATED INTO LARGE-SCALE NEURAL ARCHITECTURES?
+
+• ABSTRACT
+
+• 1. INTRODUCTION AND MOTIVATION
+
+◦ 1.1 Why Causal Reasoning Matters
+
+◦ 1.2 Existing Approaches
+
+◦ 1.3 Research Gap
+
+• 2. RESEARCH QUESTIONS
+
+◦ Primary Research Question
+
+◦ Secondary Research Questions
+
+• 3. HYPOTHESES
+
+◦ Null Hypothesis (H0)
+
+◦ Alternative Hypothesis H1 (Hybrid Superiority)
+
+◦ Alternative Hypothesis H2 (Transfer to Generalization)
+
+◦ Alternative Hypothesis H3 (Scale Independence)
+
+• 4. METHODOLOGY
+
+◦ 4.1 Architectural Conditions
+
+◦ 4.2 Benchmark Battery
+
+◦ 4.3 Interpretability Analysis
+
+◦ 4.4 Transfer Evaluation
+
+◦ 4.5 Adversarial Robustness Testing
+
+◦ 4.6 Analysis
+
+• 5. CONTROLS AND CONFOUNDS
+
+• 6. LIMITATIONS
+
+• 7. SIGNIFICANCE AND EXPECTED CONTRIBUTIONS
+
+• 8. REFERENCES
+
+
+CHAPTER 37: HOW CAN AI SYSTEMS DEVELOP ROBUST SOCIAL REASONING AND GENUINE THEORY OF MIND?
+
+• ABSTRACT
+
+• 1. INTRODUCTION AND MOTIVATION
+
+◦ 1.1 What Theory of Mind Requires
+
+◦ 1.2 The Current State of Evidence
+
+• 2. RESEARCH QUESTIONS
+
+◦ Primary Research Question
+
+◦ Secondary Research Questions
+
+• 3. HYPOTHESES
+
+◦ Null Hypothesis (H0)
+
+◦ Alternative Hypothesis H1 (Literal-Functional Dissociation)
+
+◦ Alternative Hypothesis H2 (Multimodal Enhancement)
+
+◦ Alternative Hypothesis H3 (Perspective-Taking Prompting)
+
+• 4. METHODOLOGY
+
+◦ 4.1 Benchmark Categories
+
+◦ 4.2 Systems Evaluated
+
+◦ 4.3 Adversarial Robustness Test
+
+◦ 4.4 Longitudinal Interaction Study
+
+◦ 4.5 Human Comparison
+
+◦ 4.6 Analysis
+
+• 5. CONTROLS AND CONFOUNDS
+
+• 6. LIMITATIONS
+
+• 7. SIGNIFICANCE AND EXPECTED CONTRIBUTIONS
+
+• 8. REFERENCES
+
+
+CHAPTER 38: WHAT DEVELOPMENTAL PATHWAYS BEST SUPPORT THE EMERGENCE OF GENERALIZED INTELLIGENCE?
+
+• ABSTRACT
+
+• 1. INTRODUCTION AND MOTIVATION
+
+◦ 1.1 Developmental Theories of Intelligence
+
+◦ 1.2 Current AI Training and Its Limitations
+
+◦ 1.3 The Developmental AI Research Gap
+
+• 2. RESEARCH QUESTIONS
+
+◦ Primary Research Question
+
+◦ Secondary Research Questions
+
+• 3. HYPOTHESES
+
+◦ Null Hypothesis (H0)
+
+◦ Alternative Hypothesis H1 (Staged Superiority)
+
+◦ Alternative Hypothesis H2 (Social Scaffolding)
+
+◦ Alternative Hypothesis H3 (Structural Reorganization)
+
+• 4. METHODOLOGY
+
+◦ 4.1 Training Conditions
+
+◦ 4.2 General Intelligence Assessment
+
+◦ 4.3 Interpretability Analysis
+
+◦ 4.4 Critical Period Probe
+
+◦ 4.5 Analysis
+
+• 5. CONTROLS AND CONFOUNDS
+
+• 6. LIMITATIONS
+
+• 7. SIGNIFICANCE AND EXPECTED CONTRIBUTIONS
+
+• 8. REFERENCES
+
+
+CHAPTER 39: SHOULD AGI SYSTEMS POSSESS ANALOGS OF EMOTION, AND IF SO, WHICH ONES AND HOW?
+
+• ABSTRACT
+
+• 1. INTRODUCTION AND MOTIVATION
+
+◦ 1.1 Emotion as Cognition
+
+◦ 1.2 Functional Emotions in Current AI Systems
+
+◦ 1.3 Design Question
+
+• 2. RESEARCH QUESTIONS
+
+◦ Primary Research Question
+
+◦ Secondary Research Questions
+
+• 3. HYPOTHESES
+
+◦ Null Hypothesis (H0)
+
+◦ Alternative Hypothesis H1 (Somatic Marker Analog)
+
+◦ Alternative Hypothesis H2 (Social Bonding Analog)
+
+◦ Alternative Hypothesis H3 (Safety Cost)
+
+• 4. METHODOLOGY
+
+◦ 4.1 Emotion-Analog Implementations
+
+◦ 4.2 Task Battery
+
+◦ 4.3 Wellbeing State Assessment
+
+◦ 4.4 Human Interaction Evaluation
+
+◦ 4.5 Analysis
+
+• 5. CONTROLS AND CONFOUNDS
+
+• 6. LIMITATIONS
+
+• 7. SIGNIFICANCE AND EXPECTED CONTRIBUTIONS
+
+• 8. REFERENCES
+
+
+CHAPTER 40: CAN INTELLIGENCE EXIST WITHOUT CONSCIOUSNESS, AND DOES THE ANSWER MATTER FOR AGI DESIGN?
+
+• ABSTRACT
+
+• 1. INTRODUCTION AND MOTIVATION
+
+◦ 1.1 Three Positions and Their Implications
+
+◦ 1.2 Empirical Leverage
+
+◦ 1.3 The AGI-Specific Question
+
+• 2. RESEARCH QUESTIONS
+
+◦ Primary Research Question
+
+◦ Secondary Research Questions
+
+• 3. HYPOTHESES
+
+◦ Null Hypothesis (H0)
+
+◦ Alternative Hypothesis H1 (Selective Necessity)
+
+◦ Alternative Hypothesis H2 (AI Transfer)
+
+◦ Alternative Hypothesis H3 (Full Separability)
+
+• 4. METHODOLOGY
+
+◦ 4.1 Biological Component
+
+◦ 4.2 Computational Component
+
+◦ 4.3 Cross-System Comparison
+
+◦ 4.4 Analysis
+
+• 5. CONTROLS AND CONFOUNDS
+
+• 6. LIMITATIONS
+
+• 7. SIGNIFICANCE AND EXPECTED CONTRIBUTIONS
+
+• 8. REFERENCES
+
+
+CHAPTER 41: HOW SHOULD HUMANITY MEASURE GENUINE AGI, BEYOND BENCHMARK PERFORMANCE ON NARROW TASKS?
+
+• ABSTRACT
+
+• 1. INTRODUCTION AND MOTIVATION
+
+◦ 1.1 The Measurement Problem
+
+◦ 1.2 What a Valid AGI Measure Must Capture
+
+◦ 1.3 A Coherence-Based Framework
+
+• 2. RESEARCH QUESTIONS
+
+◦ Primary Research Question
+
+◦ Secondary Research Questions
+
+• 3. HYPOTHESES
+
+◦ Null Hypothesis (H0)
+
+◦ Alternative Hypothesis H1 (Discrimination Validity)
+
+◦ Alternative Hypothesis H2 (Human-AI Profile Divergence)
+
+◦ Alternative Hypothesis H3 (Gaming Resistance)
+
+• 4. METHODOLOGY
+
+◦ 4.1 Framework Development
+
+◦ 4.2 Systems Evaluated
+
+◦ 4.3 Validation Studies
+
+◦ 4.4 Human-AI Profile Comparison
+
+◦ 4.5 Analysis
+
+• 5. CONTROLS AND CONFOUNDS
+
+• 6. LIMITATIONS
+
+• 7. SIGNIFICANCE AND EXPECTED CONTRIBUTIONS
+
+• 8. REFERENCES
+
+
+CHAPTER 42: HOW SHOULD HUMANITY DETECT ASI EMERGENCE AND PREPARE FOR ITS IMPLICATIONS?
+
+• ABSTRACT
+
+• 1. INTRODUCTION AND MOTIVATION
+
+◦ 1.1 The Detection Problem
+
+◦ 1.2 Capability Trajectory Evidence
+
+◦ 1.3 What Early Warning Indicators Might Look Like
+
+◦ 1.4 Preparation Dimensions
+
+• 2. RESEARCH QUESTIONS
+
+◦ Primary Research Question
+
+◦ Secondary Research Questions
+
+• 3. HYPOTHESES
+
+◦ Null Hypothesis (H0)
+
+◦ Alternative Hypothesis H1 (Benchmark Cascade)
+
+◦ Alternative Hypothesis H2 (Current System Indicators)
+
+◦ Alternative Hypothesis H3 (Interpretability Detection)
+
+• 4. METHODOLOGY
+
+◦ 4.1 Historical Capability Trajectory Analysis
+
+◦ 4.2 Current System Evaluation
+
+◦ 4.3 Interpretability Monitoring Protocol
+
+◦ 4.4 Institutional Preparation Assessment
+
+◦ 4.5 Analysis
+
+• 5. CONTROLS AND CONFOUNDS
+
+• 6. LIMITATIONS
+
+• 7. SIGNIFICANCE AND EXPECTED CONTRIBUTIONS
+
+• 8. REFERENCES
+
+
+CHAPTER 43: HOW CAN COLLECTIVE HUMAN OVERSIGHT SCALE ALONGSIDE INCREASINGLY CAPABLE AI SYSTEMS?
+
+• ABSTRACT
+
+• 1. INTRODUCTION AND MOTIVATION
+
+◦ 1.1 The Oversight Scalability Problem
+
+◦ 1.2 Candidate Scalable Oversight Approaches
+
+◦ 1.3 Research Gap
+
+• 2. RESEARCH QUESTIONS
+
+◦ Primary Research Question
+
+◦ Secondary Research Questions
+
+• 3. HYPOTHESES
+
+◦ Null Hypothesis (H0)
+
+◦ Alternative Hypothesis H1 (Debate Superiority)
+
+◦ Alternative Hypothesis H2 (Architecture Diversity)
+
+◦ Alternative Hypothesis H3 (Cognitive Bias Mediation)
+
+• 4. METHODOLOGY
+
+◦ 4.1 AI Capability Level Calibration
+
+◦ 4.2 Oversight Conditions
+
+◦ 4.3 Misalignment Injection
+
+◦ 4.4 Human Evaluator Cognitive Analysis
+
+◦ 4.5 Analysis
+
+• 5. CONTROLS AND CONFOUNDS
+
+• 6. LIMITATIONS
+
+• 7. SIGNIFICANCE AND EXPECTED CONTRIBUTIONS
+
+• 8. REFERENCES
+
+
+CHAPTER 44: WHAT ARE THE RIGHTS AND MORAL STATUS OF SUFFICIENTLY SOPHISTICATED AI SYSTEMS?
+
+• ABSTRACT
+
+• 1. INTRODUCTION AND MOTIVATION
+
+◦ 1.1 The Moral Status Question
+
+◦ 1.2 The Framework Gap
+
+◦ 1.3 Key Competing Positions
+
+• 2. RESEARCH QUESTIONS
+
+◦ Primary Research Question
+
+◦ Secondary Research Questions
+
+• 3. HYPOTHESES
+
+◦ Null Hypothesis (H0)
+
+◦ Alternative Hypothesis H1 (Framework Feasibility)
+
+◦ Alternative Hypothesis H2 (Internal State Evidence)
+
+◦ Alternative Hypothesis H3 (Public Convergence)
+
+• 4. METHODOLOGY
+
+◦ 4.1 Framework Development Phase
+
+◦ 4.2 Empirical Assessment Phase
+
+◦ 4.3 Public Deliberation Phase
+
+◦ 4.4 Governance Framework Development
+
+◦ 4.5 Analysis
+
+• 5. CONTROLS AND CONFOUNDS
+
+• 6. LIMITATIONS
+
+• 7. SIGNIFICANCE AND EXPECTED CONTRIBUTIONS
+
+• 8. REFERENCES
+
+
+CHAPTER 45: HOW SHOULD THE BENEFITS AND RISKS OF AGI AND ASI BE DISTRIBUTED GLOBALLY?
+
+• ABSTRACT
+
+• 1. INTRODUCTION AND MOTIVATION
+
+◦ 1.1 The Distribution Stakes
+
+◦ 1.2 The Risk Distribution Asymmetry
+
+◦ 1.3 Existing Frameworks and Their Limits
+
+• 2. RESEARCH QUESTIONS
+
+◦ Primary Research Question
+
+◦ Secondary Research Questions
+
+• 3. HYPOTHESES
+
+◦ Null Hypothesis (H0)
+
+◦ Alternative Hypothesis H1 (Common Heritage Mechanism)
+
+◦ Alternative Hypothesis H2 (Safety-Equity Complementarity)
+
+◦ Alternative Hypothesis H3 (Minimum Viable Progress)
+
+• 4. METHODOLOGY
+
+◦ 4.1 Landscape Assessment
+
+◦ 4.2 Distribution Framework Evaluation
+
+◦ 4.3 Expert and Stakeholder Analysis
+
+◦ 4.4 Public Values Assessment
+
+◦ 4.5 Safety Interaction Analysis
+
+◦ 4.6 Analysis
+
+• 5. CONTROLS AND CONFOUNDS
+
+• 6. LIMITATIONS
+
+• 7. SIGNIFICANCE AND EXPECTED CONTRIBUTIONS
+
+• 8. REFERENCES
+
+
+END NOTE
+
+This outline was reverse-engineered from the manuscript by extracting every part, chapter, section, and sub-section heading in order, so that the outline and the manuscript correspond heading for heading.
