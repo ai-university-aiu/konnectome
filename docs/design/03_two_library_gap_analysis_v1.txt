@@ -1,0 +1,212 @@
+KONNECTOME - THE TWO-LIBRARY GAP ANALYSIS, VERSION 1
+
+The first gap analysis run against BOTH libraries the Constitution now names: the PRINCIPLES LIBRARY
+at docs/principles/ (the First Commandment, widened to the whole directory at Constitution version
+30), and the NEUROSCIENCE LIBRARY at docs/neuroscience/ (the north-star directory of the Twentieth
+Commandment).
+
+Date: 2026-08-13. Version 1. Measured against main at 42a9e11, at seventy-four slices: 41 packs,
+1,132 tests, six gates at zero violations, capstone standing.
+
+Ordered by the owner's instruction of 2026-08-13, following three events this document exists to
+absorb: the 2026 research refresh of the principles library (merged as pull request 182), the
+LAYER_06_ renaming of the five-volume neuron catalogue (pull request 183), and the First
+Commandment's widening from three named documents to the entire principles library (Constitution
+version 30, pull request 184).
+
+
+WHAT THIS DOCUMENT IS, AND WHAT IT IS NOT - READ THIS BEFORE BUILDING FROM ANYTHING BELOW
+
+It holds the same TWO KINDS OF CONTENT as its siblings, under the rule the Eighth and Twentieth
+Commandments both state.
+
+FIRST KIND - THE SUMMARIES. Where this document summarises a library file, it is DERIVED and carries
+no authority over it. Where a summary here and the source disagree, THE SOURCE WINS and this document
+is the thing corrected. NO SLICE SHALL BE DESIGNED FROM A SUMMARY IN THIS DOCUMENT: read the cited
+document first.
+
+SECOND KIND - THE FINDINGS. Where this document says konnectome LACKS something, that is konnectome's
+own assessment, produced by holding the two libraries against the running codebase named above. The
+libraries cannot contain these findings, because the libraries know nothing about konnectome. They
+are superseded by a LATER assessment, never by the corpus.
+
+AND ONE STANDING CAUTION SPECIFIC TO THIS DOCUMENT. The principles library was refreshed with 2026
+research the day this analysis was written. A refreshed source is still a SOURCE, not a verified one:
+being named by the First Commandment does not make a claim inside it true, and the benchmark figures
+it now carries are stated there as ranges precisely because the trackers disagree. Nothing below
+treats a number from the refresh as a fact about the world; it treats it as a fact about what the
+library now says.
+
+
+PART ONE - THE TWO LIBRARIES AS THEY STAND TODAY, AND WHAT CHANGED
+
+THE PRINCIPLES LIBRARY holds eight documents (live inventory: docs/principles/README.txt). Since the
+last design-directory assessment it gained: THE_ROADMAP_TO_AGI_AND_ASI_OUTLINE.txt (new,
+2026-08-13); a dated mid-2026 frontier snapshot in the roadmap's Chapter 11; the 2023-2026 empirical
+recursive self-improvement program in its Chapter 16; 2025-2026 governance data in its Chapter 17; a
+new reading subsection on recursive self-improvement; and, in AGI FOR EVERYONE, updated benchmark
+status (ARC-AGI-2 majority-solved with a mandatory efficiency measure; ARC-AGI-3 interactive, under
+one percent for machines at launch; Humanity's Last Exam aging), two new measures (GDPval, the METR
+time horizon), and the corresponding thinker and source entries.
+
+THE NEUROSCIENCE LIBRARY is unchanged in CONTENT since the fulfilment audit (now document 05 of this
+directory). What changed is five NAMES: the neuron catalogue volumes now carry the LAYER_06_ prefix
+(LAYER_06_neuronal_manuscript_vol1of5_v2.txt through vol5of5_v2.txt), and every live pointer moved
+with them in the same change. A reader following an old name will find the mapping in the ledger.
+
+THE CONSEQUENCE FOR THIS DIRECTORY: earlier analyses read the principles documents as three files of
+background authority; this is the first analysis written since the Constitution made the WHOLE
+principles library the First Commandment's specification. The pairing the Constitution now states -
+principles as the WHY and WHERE-TO, neuroscience as the HOW - is the method of this document.
+
+
+PART TWO - METHOD
+
+The refreshed principles documents were read in full at the outline level and at the changed
+sections. The neuroscience library was not re-read in full - document 05's fulfilment audit stands
+as the last full read, and its findings are incorporated by reference rather than repeated. The
+codebase was surveyed fresh for this analysis: pack inventory, test counts, gate status, the queue
+of record in the current hand-off, and the ledger's open observations.
+
+Each finding below is classified two ways, as the Twentieth Commandment requires. FIRST by KIND:
+an ARCHITECTURAL gap means konnectome could not express the thing without a change to its shape, to
+causalontology, or to PrologAI; a CONTENT gap means konnectome could express it and has not built it.
+SECOND by CLASS, one of the Commandment's seven: function, process, architecture, design element,
+structure, idea, or inspiration.
+
+
+PART THREE - THE FINDINGS
+
+FINDING TL-1. THE INTERACTIVE EVALUATION GAP. Class: IDEA. Kind: CONTENT.
+The principles library now describes ARC-AGI-3: an evaluation in which a system is dropped into a
+small unfamiliar world with no instructions and must explore, infer the goal, and plan - and on
+which every frontier model scored under one percent at launch while humans scored one hundred.
+konnectome's capstone demonstration is scripted: it shows the machine doing what the script exercises
+and never asks it to discover a goal. The library's own argument (Chollet: intelligence is
+skill-acquisition efficiency) is the argument the Layer 12 faculty specification already gestures at.
+WHAT THIS FINDING IS NOT: it is not a proposal to wire konnectome to the public ARC-AGI-3 service,
+and the Safety Gate's ARC-AGI-1 and ARC-AGI-2 regressions are untouched. It is a finding that
+konnectome LACKS ANY INTERACTIVE, GOAL-DISCOVERY DEMONSTRATION of its own, and that the corpus-side
+machinery for one exists (perturbation_interface, simulated_body, drive_system, prediction_loop).
+ROUTING: ledger first, then a slice-family candidate - a small novel-world demonstration in which
+the running loops must discover the goal rather than be told it.
+
+FINDING TL-2. THE EFFICIENCY MEASURE. Class: DESIGN ELEMENT. Kind: CONTENT.
+The refreshed library reports that ARC-AGI-2 scores now carry a MANDATORY COST MEASURE, because an
+expensive brute-force success must not masquerade as intelligence, and the roadmap's Gap Seven
+(energy efficiency) makes the same point biologically. konnectome's demonstrations report
+correctness and never cost: no demonstration records ticks consumed, calls made, or work done per
+result. ROUTING: ledger; a cheap slice - the capstone and any future interactive demonstration
+report a cost line beside every result line.
+
+FINDING TL-3. THE TIME-HORIZON MEASURE. Class: IDEA. Kind: CONTENT.
+The library now carries the METR time horizon: the length of autonomous work a system completes at
+fifty percent reliability, tracked over time. konnectome has no analogous longitudinal measure of
+its own autonomy - how long the cognitive_cycle runs unattended before something (watchdog,
+supervisor, conflict_monitor) must intervene. The instrumentation exists; the measure does not.
+NOTE THE COLLISION WITH OBSERVATION-23: the tick calibration conflict (two calibrations three
+hundred and sixty thousand fold apart) makes any time measure ambiguous until it is decided. This
+finding therefore SUPPORTS the queue of record's item one rather than competing with it: decide the
+tick, then the horizon measure becomes definable.
+ROUTING: ledger, annotated to OBSERVATION-23.
+
+FINDING TL-4. CONTINUAL LEARNING IS NOW THE LIBRARIES' LOUDEST SHARED DEMAND. Class: PROCESS.
+Kind: CONTENT.
+The refreshed principles library says it three ways at once: the roadmap's Gap Two (catastrophic
+forgetting), the psychometric definition of AGI reporting long-term memory and continual learning as
+the severest deficits of the systems it scored, and the new reading subsection's continual-learning
+entries. The neuroscience library has said it all along (complementary learning systems; the slow
+variables of Layers 4 and 5; consolidation). konnectome's state: plasticity_engine exists,
+offline_consolidation exists, and yet the FIRST LEARNING RULE is still queued, the eligibility trace
+has no consumer, and no durable tier exists. THIS FINDING RANKS RATHER THAN DISCOVERS: the queue of
+record already holds these items; the two-library read says they are not one family among many but
+the point where both libraries converge, and a queue reordering in their favour is defensible the
+next time the queue is judged.
+ROUTING: no new ledger entry; this is corroboration of open queue items, recorded here.
+
+FINDING TL-5. SELF-IMPROVEMENT IS DELIBERATELY ABSENT, AND THE ABSENCE SHOULD BE A DECLARED
+DECISION RATHER THAN A SILENCE. Class: ARCHITECTURE. Kind: ARCHITECTURAL, in the honest sense that
+expressing it safely would change konnectome's shape.
+The principles library now documents an empirical recursive self-improvement program (Self-Taught
+Optimizer, Godel Agent, Darwin Godel Machine, SEAL, and the rest) and its consistent bottleneck, THE
+EVALUATOR - a system improves only as far as something can reliably judge that a change is an
+improvement. konnectome has no self-modification anywhere (self_provenance is provenance;
+plasticity_engine is synaptic), and nothing in either library obliges it to acquire any. But the
+evaluator bottleneck is konnectome's own oldest discipline wearing a new name: the Safety Gate is an
+evaluator, the declared-invention protocol is an evaluator's paper trail, and the fulfilment audit
+is an evaluator run by hand. THE FINDING: konnectome's position on self-modification is currently
+implicit. It should be a NUMBERED DECISION in the ledger - stating that self-modification of packs
+by packs is out of scope, under which Commandments, and what would have to be true before that
+changed - so that a later session meets a decision rather than a silence.
+ROUTING: ledger, as a decision candidate for the owner.
+
+FINDING TL-6. THE CURIOSITY GAP. Class: FUNCTION. Kind: CONTENT.
+Both libraries name intrinsic motivation: the roadmap's Chapter 9 (dopamine, curiosity), AGI FOR
+EVERYONE's motivation topics, and the neuroscience library's drive and neuromodulator material.
+konnectome has drive_system and arousal_regulation - pressure and gain - but nothing that seeks
+novelty or prefers the unexplored, and the interactive demonstration of TL-1 would need exactly
+that. ROUTING: ledger; slice-family candidate, downstream of TL-1.
+
+FINDING TL-7. THE TEN-DOMAIN ACCEPTANCE LENS. Class: INSPIRATION. Kind: CONTENT.
+The library's new psychometric definition of AGI scores a system across ten cognitive domains and
+reports the JAGGED PROFILE - strength in knowledge, deficit in memory - as its headline result. The
+Layer 12 faculty specification is konnectome's acceptance-test document, and the thirteen faculty
+suites are queued. The inspiration, and it is only that: when the faculty suites are built, publish
+the RESULTS AS A PROFILE rather than a pass count, so konnectome's jaggedness is visible at a glance
+and the deficit domains rank the next work. ROUTING: recorded here; no ledger entry needed until
+the faculty suites are taken up.
+
+FINDING TL-8. LANGUAGE REMAINS THE FARTHEST GAP, AND NOTHING NEW CHANGES ITS RANK. Class:
+FUNCTION. Kind: CONTENT.
+The principles library's grounding-problem chapters are unchanged in substance by the refresh, and
+konnectome's nearest pack is symbol_exchange. No new finding; the gap is restated so this analysis
+is complete rather than selective, and it stays behind memory, attention, and evaluation in every
+ordering this document supports.
+
+FINDING TL-9. THE GOVERNANCE MATERIAL IS OUT OF SCOPE FOR THE BUILD, ON PURPOSE. Class: CONTEXT,
+recorded as an idea. Kind: neither - not a gap.
+The refreshed library carries substantial 2025-2026 governance content (safety institutes, the
+international report, state laws). konnectome is a single-owner research build; none of that content
+names a konnectome obligation, and this analysis records that it was READ AND NOT ROUTED, so the
+next session does not re-derive the same conclusion.
+
+
+PART FOUR - WHAT THIS ANALYSIS DOES NOT CHANGE
+
+THE QUEUE OF RECORD STANDS. The current hand-off's Part Six ordering is not displaced by this
+document; TL-4 argues for a reordering at the next judgment point and does not perform one. THE
+ANALYSIS INFORMS; IT DOES NOT BREAK: nothing here invalidates a passing test, a merged slice, or a
+green gate, per the Eighth Commandment's first sober instruction. THE SAFETY GATE STANDS over every
+finding above, and TL-1 in particular is written so that no reading of it touches ARC-AGI-1 or
+ARC-AGI-2 regression. And no finding here edits either library: the corpus update run of the
+Twenty-Second Commandment remains the only door.
+
+
+PART FIVE - THIS DOCUMENT'S PLACE IN THE DIRECTORY, AND THE RENUMBERING IT CAUSED
+
+This document takes the number 03 because it is the third GENERAL ANALYSIS of the directory, after
+the vision-set top-down analysis (01) and the north-star gap analysis (02), whose numbers are pinned
+by the Constitution's own citations and do not move. The renumbering also DISCHARGES THE DIRECTORY
+README'S OWN STANDING RULE: the fulfilment audit's entry recorded that its number (11) disagreed
+with its reading position, that the renumbering was declined rather than overlooked at the time, and
+that "a session that renumbers this directory for any other reason should move it to 04 in the same
+change" - meaning beside the fidelity audit it is the companion of. This renumbering is that
+session, and the two audits now sit adjacent at 04 and 05. The full map:
+
+03_vision_set_analysis_fidelity_audit_v1.txt   is now 04_vision_set_analysis_fidelity_audit_v1.txt
+11_vision_set_fulfilment_audit_v1.txt          is now 05_vision_set_fulfilment_audit_v1.txt
+04_neuroscience_corpus_qa_gap_analysis_v1.txt  is now 06_neuroscience_corpus_qa_gap_analysis_v1.txt
+05_mode_register_design_authority_v1.txt       is now 07_mode_register_design_authority_v1.txt
+06_two_shift_design_authority_v1.txt           is now 08_two_shift_design_authority_v1.txt
+07_edge_type_design_authority_v1.txt           is now 09_edge_type_design_authority_v1.txt
+08_motif_and_workspace_design_authority_v1.txt is now 10_motif_and_workspace_design_authority_v1.txt
+09_cognitive_architectures_coverage_v1.txt     is now 11_cognitive_architectures_coverage_v1.txt
+10_rung_five_real_machine_design_v2.txt        is now 12_rung_five_real_machine_design_v2.txt
+
+Live pointers were chased in the same change. Append-only records (the ledger, the build log) were
+NOT rewritten - each received an appended renumbering note carrying this same map - and archived
+documents and hand-offs were not touched at all, because a record of a dated act keeps the names
+things had when the act was done. A reader following an old number from any of them resolves it
+here or in the ledger's note.
+
+END OF THE TWO-LIBRARY GAP ANALYSIS, VERSION 1.

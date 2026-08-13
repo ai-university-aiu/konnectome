@@ -169,7 +169,7 @@ AND THE TWO PLACES ARE ONE FAULT SEEN TWICE. Both are a document that is require
 
 FINDING THREE - A FALSE RECORD IN THE LEDGER SAID THIS AUDIT HAD ALREADY SHIPPED.
 
-The ledger's pointer-audit entry, discussing the suggested filename for this document, states: "The audit shipped as 03_vision_set_analysis_fidelity_audit_v1.txt, so the record is a true account of what was PROPOSED and a false account of what EXISTS."
+The ledger's pointer-audit entry, discussing the suggested filename for this document, states: "The audit shipped as 04_vision_set_analysis_fidelity_audit_v1.txt, so the record is a true account of what was PROPOSED and a false account of what EXISTS."
 
 THAT IS WRONG, AND IT IS WRONG IN THE DIRECTION THAT WOULD HAVE RETIRED AN OBLIGATION. Document 03 is a FIDELITY audit, dated 2026-08-09, whose stated method is that "every countable claim in the analysis was re-measured by direct grep or wc". It checks whether the analysis's NUMBERS ARE TRUE. This audit checks whether the analysis's FINDINGS WERE ACTED ON. They share a subject and are different instruments, and the commissioning note's grading standard - which is about records and silence - has no counterpart anywhere in document 03.
 
