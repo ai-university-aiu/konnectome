@@ -1606,6 +1606,34 @@ Untrained humans solve well over half of the ARC-AGI-2 tasks, whereas frontier m
 
 The lesson of the reasoning-and-agent era is therefore double-edged, that giving models time to think and tools to act unlocks striking new capability, and yet a wide gap in flexible, efficient, and general reasoning remains exactly where the next chapter locates it.
 
+The Frontier in Mid-2026: A Dated Snapshot:
+
+Because this chapter describes a moving target, it closes with a dated snapshot of where the frontier stood in the middle of 2026, so that later readers can judge what has changed since.
+
+The major laboratories all shipped new flagship systems between 2025 and mid-2026, including OpenAI's GPT-5 family, Anthropic's Claude Opus 5, Google DeepMind's Gemini 3 Deep Think line, and open-weight models from Chinese laboratories such as DeepSeek's V4 series and Moonshot's Kimi K3, the last of these released with open weights at a reported 2.8 trillion parameters.
+
+Open weights means that the numerical parameters of a trained model are published for anyone to download and run, in contrast to closed systems that can only be used through a company's service.
+
+On the benchmarks, the picture inverted twice within a single year.
+
+ARC-AGI-2, which frontier models could barely touch at its 2025 release, was by 2026 reported at scores in the range of 69 to 85 percent for the strongest reasoning systems, meaning machines had for the first time solved a majority of its tasks, although the ARC Prize now attaches a mandatory efficiency measure to every score because cost per task matters as much as accuracy.
+
+In March 2026 the ARC Prize team launched ARC-AGI-3, the first fully interactive version of the benchmark, in which a system is dropped into a small, unfamiliar game world with no instructions and must explore, infer the goal, and plan, and at launch every frontier model scored below one percent while ordinary people scored one hundred percent.
+
+That single result is the cleanest current statement of the gap this book analyzes, that machines which pass graduate-level exams still cannot match a child at open-ended exploration of a novel little world.
+
+On the widest academic test, Humanity's Last Exam, frontier systems were scoring roughly in the range of 50 to 65 percent depending on the leaderboard and method of counting, against roughly 90 percent for expert humans.
+
+Measurement itself matured in two directions worth naming.
+
+OpenAI's GDPval benchmark measures model performance on real deliverables from forty-four occupations across nine economic sectors, and by 2026 the best models won or tied against experienced human professionals on roughly three quarters of tasks while working about one hundred times faster and cheaper, a measure of economic capability rather than intelligence.
+
+The research organization METR measures the time horizon of agents, meaning the length of human-equivalent work a system can complete autonomously with fifty percent reliability, and found that this horizon has been doubling roughly every four to seven months, reaching about fourteen hours of software work by early 2026, with month-long tasks projected within a year or two if the trend holds.
+
+Finally, the definitional debate this book opened with became a formal research topic, when a 2025 paper by Dan Hendrycks, Yoshua Bengio, Max Tegmark, Gary Marcus, and colleagues proposed defining AGI as matching the cognitive versatility and proficiency of a well-educated adult across ten psychometric domains, and under that definition scored GPT-4 at 27 percent and GPT-5 at 57 percent, with severe deficits concentrated exactly where this book locates them, in long-term memory and continual learning.
+
+The snapshot, in one sentence, is that capability climbed faster than almost anyone predicted, and the specific gaps catalogued in the next chapter narrowed unevenly but did not close.
+
 What AI Has Not Achieved:
 
 Despite impressive achievements, AI still falls dramatically short of the adaptive, flexible, energy-efficient, embodied, emotionally aware, self-directed, and deeply integrated intelligence observed in biological organisms.
@@ -2378,6 +2406,16 @@ A related disagreement is definitional, because people who confidently predict i
 
 When a chief executive and a skeptic disagree about the date, they are frequently disagreeing about the destination.
 
+By 2026 the numerical forecasts had settled into a striking split that illustrates the same point.
+
+Forecasting platforms such as Metaculus, where many forecasters aggregate their predictions, gave roughly a one-in-four chance of AGI by 2029 and a median around 2033, down from a median of roughly fifty years as recently as 2020.
+
+An expert-panel study run by the Forecasting Research Institute found that the median expert gave a fifty percent chance by 2030 that AI could complete eight-hour expert software tasks at high reliability, while a large early-2026 survey of AI researchers still put the median arrival of high-level machine intelligence at 2047.
+
+Laboratory leaders remained at the near end of the spectrum, with Demis Hassabis of Google DeepMind giving roughly even odds of AGI by the end of the decade, Dario Amodei pointing to 2026 or 2027 for human-level performance in many fields, and Sam Altman declaring in mid-2026 that the field was already inside a gradual singularity with no single tipping point.
+
+A fifteen-year gap between the median AI researcher and the median forecaster or executive is not a detail, and the definitional disagreement described above explains most of it.
+
 This book takes no position on a specific year, for the honest reason that the history of the field is a graveyard of confident dates, and each of the two AI Winters followed a wave of predictions much like today's.
 
 What it does claim is narrower and, it argues, more useful, that the specific capability gaps catalogued in Chapter 12 are real, are measurable, and will have to be closed by whatever path leads to genuine general intelligence, whether that path is short or long.
@@ -2499,6 +2537,30 @@ Research into the dynamics of recursive self-improvement, the conditions that wo
 A particularly important question is whether there are natural limits to recursive self-improvement that would prevent an intelligence explosion, or whether such limits are architectural and could be designed in by careful engineering.
 
 Researchers disagree sharply on the likely speed of this transition, with some expecting a sudden hard takeoff over days or weeks and others expecting a gradual soft takeoff over years, and that disagreement matters enormously for how much warning society would have.
+
+Between 2023 and 2026 recursive self-improvement moved from theoretical concept to early empirical research program, and the change deserves careful description.
+
+The first modern demonstration was the Self-Taught Optimizer of 2023, a scaffold in which a language model improves the very program that improves programs.
+
+The Gödel Agent of 2024 extended this to an agent that rewrites its own operating logic while running, guided only by high-level objectives.
+
+The most cited result is the Darwin Gödel Machine of 2025, from Sakana AI and the University of British Columbia, a population of coding agents that empirically rewrite their own code, validated by testing rather than by proof, which raised its own success rate on a standard software-engineering benchmark from 20 percent to 50 percent, inside a sandbox with modification limits and full traceability.
+
+In the same year the Massachusetts Institute of Technology's SEAL project showed language models generating their own fine-tuning data and update directives, DeepMind's AlphaEvolve combined language models with evolutionary search to discover new algorithms, and the Absolute Zero Reasoner demonstrated self-play training with zero external data, in which the model proposes and solves its own tasks with a code executor as the referee.
+
+The scale of the shift is documented in a 2026 survey that reviewed roughly 1,250 papers on self-improvement published between 2024 and 2026, three quarters of them in 2026 alone, and the International Conference on Learning Representations hosted its first dedicated workshop on recursive self-improvement in 2026.
+
+The same survey identifies the consistent bottleneck across all of this work, the evaluator, meaning the source of the improvement signal, because a system can only improve as far as something can reliably judge that a change is an improvement, and that observation connects recursive self-improvement directly to the oversight problem discussed below.
+
+None of these systems improves its own underlying model weights in an open-ended way, so the intelligence explosion remains unrealized, but the direction of travel was clear enough that laboratories added it to their formal risk policies.
+
+OpenAI's 2025 Preparedness Framework tracks AI self-improvement as a named risk category, with its critical threshold defined as a superhuman research-scientist agent or a generational model improvement achieved in one fifth of the usual time, and Anthropic's Responsible Scaling Policy tracks autonomous AI research capability in the same spirit.
+
+The economics of a possible intelligence explosion also became a quantitative field, with the research group Epoch AI building formal growth models of AI research automation, the Forethought institute publishing analyses of whether a software-only intelligence explosion is possible within fixed computing hardware, and the widely discussed AI 2027 scenario mapping month by month how automated AI research could compound, a scenario treated by critics as far too fast but valued for making its assumptions explicit.
+
+The debate also acquired institutions of an unusual kind, including Safe Superintelligence Incorporated, a laboratory founded in 2024 by the OpenAI cofounder Ilya Sutskever with billions in funding and the stated plan of building safe superintelligence with no intermediate products, and Meta Superintelligence Labs, formed in 2025 around a fourteen-billion-dollar investment.
+
+On the other side of the ledger, a 2025 public statement coordinated by the Future of Life Institute called for a conditional prohibition on developing superintelligence until there is broad scientific consensus that it can be done safely and controllably, and its signatories included Geoffrey Hinton, Yoshua Bengio, and several Nobel laureates.
 
 Lessons from Natural Evolution for ASI Design:
 
@@ -2761,6 +2823,20 @@ The European Union's AI Act moved from text to teeth on a staggered schedule, wi
 Enforcement also revealed the political friction such rules create, and in late 2025 the European Commission proposed a simplification package to adjust some timelines and obligations in response to industry concern that compliance was outpacing the technology's actual risks.
 
 The pattern across jurisdictions is consistent, that binding regulation is arriving unevenly and region by region, while the systems being regulated diffuse globally and improve monthly, which keeps the governance gap described later in this book wide open.
+
+The two years to mid-2026 added several concrete data points to that pattern.
+
+The United Kingdom renamed its AI Safety Institute the AI Security Institute in February 2025, narrowing its focus toward national security, and by 2026 it had tested more than thirty frontier models and published its first public report on frontier AI trends.
+
+The United States renamed its own institute the Center for AI Standards and Innovation in June 2025, likewise reorienting toward national-security evaluations and voluntary standards.
+
+The International AI Safety Report, an assessment chaired by Yoshua Bengio and written by more than one hundred authors on behalf of a panel of some thirty countries, published its first full edition in January 2025 and its second in February 2026, with the second edition placing increasingly autonomous agents at the center of its risk analysis, giving the world for the first time something like the recurring international scientific assessments used in climate policy.
+
+The summit series continued but changed character, with the February 2025 Paris summit rebranded as an AI Action Summit emphasizing economic opportunity over safety, and the February 2026 New Delhi summit becoming the first global AI summit hosted in the Global South.
+
+At the 2024 Seoul summit sixteen frontier companies signed voluntary commitments to publish safety frameworks that name intolerable risk thresholds and to halt development if risks cannot be mitigated, which made responsible scaling policies an international norm rather than a single company's practice.
+
+In the United States, in the absence of comprehensive federal law, individual states moved first, with California enacting the first American frontier-AI transparency law in September 2025, defining frontier models by a training-compute threshold and requiring published safety frameworks, incident reporting, and whistleblower protections, and New York following with a similar act taking effect in 2027.
 
 Analogies must be chosen with care, however, because nuclear material is scarce and detectable, recombinant DNA research could be paused at a single conference, and ozone-depleting chemicals had ready substitutes, whereas advanced AI is software, broadly useful, and rapidly diffusing.
 
@@ -3932,6 +4008,18 @@ Legg, S., and Hutter, M. Universal intelligence: a definition of machine intelli
 
 A formal attempt to define intelligence across all possible environments.
 
+Hendrycks, D., Song, D., Gal, Y., Bengio, Y., Tegmark, M., Marcus, G., and colleagues. A Definition of AGI. arXiv:2510.18212, 2025.
+
+Proposes a psychometric definition of AGI as the cognitive versatility and proficiency of a well-educated adult across ten domains, and scores contemporary systems against it.
+
+Morris, M.R., and colleagues. Levels of AGI: Operationalizing Progress on the Path to AGI. arXiv:2311.02462, 2023, revised 2024.
+
+Google DeepMind's six-level taxonomy of capability and generality, from emerging to superhuman AGI.
+
+METR. Measuring AI Ability to Complete Long Tasks. arXiv:2503.14499, 2025.
+
+Introduces the time-horizon measure of agent capability and documents its doubling roughly every four to seven months.
+
 The Reasoning and Agentic Era:
 
 Chollet, F., and collaborators. ARC-AGI-2: A New Challenge for Frontier AI Reasoning Systems. arXiv:2505.11831, 2025.
@@ -3949,6 +4037,40 @@ Describes the o1 approach of training models to reason through a long internal c
 Anthropic. Introducing the Model Context Protocol. Technical announcement, 2024.
 
 Sets out the open standard that let models connect to external tools and helped catalyze the shift from chatbots to agents.
+
+ARC Prize Foundation. ARC-AGI-3: The First Interactive Reasoning Benchmark. Technical announcement, 2026.
+
+Introduces the interactive game-world version of the benchmark, on which frontier models scored below one percent at launch while humans scored one hundred percent.
+
+Recursive Self-Improvement and the Superintelligence Debate:
+
+Zelikman, E., Lorch, E., Mackey, L., and Kalai, A.T. Self-Taught Optimizer (STOP): Recursively Self-Improving Code Generation. arXiv:2310.02304, 2023.
+
+The first modern empirical demonstration of a language-model scaffold improving the program that improves programs.
+
+Zhang, J., and colleagues. Darwin Gödel Machine: Open-Ended Evolution of Self-Improving Agents. arXiv:2505.22954, 2025.
+
+A population of coding agents that empirically rewrite their own code under sandboxed safety constraints, doubling their benchmark success rate.
+
+Massachusetts Institute of Technology Improbable AI Lab. Self-Adapting Language Models (SEAL). arXiv:2506.10943, 2025.
+
+Language models that generate their own fine-tuning data and update directives, an early step toward weight-level self-improvement.
+
+Hendrycks, D., Schmidt, E., and Wang, A. Superintelligence Strategy. arXiv:2503.05628, 2025.
+
+Frames superintelligence as a national-security problem and proposes a deterrence regime among rival states.
+
+Kokotajlo, D., Alexander, S., Larsen, T., Lifland, E., and Dean, R. AI 2027. AI Futures Project, 2025.
+
+A detailed, contested scenario of an intelligence explosion driven by automated AI research, valuable for making its assumptions explicit.
+
+Yudkowsky, E., and Soares, N. If Anyone Builds It, Everyone Dies. Little, Brown, 2025.
+
+The strongest published statement of the case that building superintelligence under the current paradigm would be fatal, and a bestseller that moved the debate into public view.
+
+Bengio, Y. (chair), and colleagues. International AI Safety Report. First edition 2025, second edition 2026.
+
+The recurring multi-government scientific assessment of advanced AI risk, with the 2026 edition centered on increasingly autonomous agents.
 
 CHAPTER 25: REFERENCES:
 

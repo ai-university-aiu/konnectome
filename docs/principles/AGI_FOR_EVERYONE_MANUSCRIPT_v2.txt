@@ -1463,6 +1463,8 @@ ARC-AGI-1 is the original 2019 version, whose puzzles take a person about thirty
 
 ARC-AGI-2 is the harder 2025 version, engineered to defeat brute-force guessing, with puzzles that take a person several minutes.
 
+At its release the best machines scored only single digits to the middle teens of percent on ARC-AGI-2, but by mid-2026 the strongest reasoning systems were reported to solve a majority of its tasks, with the leaders in the range of roughly seventy to eighty-five percent, which is why the ARC Prize now attaches a mandatory cost-efficiency measure to every reported score, so that an expensive brute-force success cannot masquerade as intelligence.
+
 ARC-AGI-3 is an interactive version launched in 2026 in which the machine is dropped into a brand-new little game world with no instructions and must explore it, figure out the goal, and plan, and at its launch leading models scored under one percent while ordinary humans scored one hundred percent.
 
 The ARC Prize is a public competition, with large cash rewards, run to push progress on these puzzles.
@@ -1477,6 +1479,8 @@ The Graduate-Level Google-Proof Question and Answer benchmark (GPQA) is a set of
 
 Humanity's Last Exam is a 2025 collection of thousands of extremely hard, expert-written questions across many subjects, meant to be a final academic test that current machines cannot yet pass.
 
+By mid-2026 frontier systems were scoring roughly fifty to sixty-five percent on Humanity's Last Exam, depending on which leaderboard and counting method one trusts, against roughly ninety percent for expert humans, so the exam is aging quickly but is not yet passed.
+
 BIG-bench, short for Beyond the Imitation Game Benchmark, is a large collaborative set of more than two hundred diverse tasks contributed by hundreds of researchers to probe abilities believed to lie beyond current models.
 
 SWE-bench is a benchmark of real software-engineering problems taken from public code repositories, where an AI must produce a working code fix that is graded by actually running the project's tests.
@@ -1486,6 +1490,12 @@ AgentBench evaluates AI systems acting as autonomous agents across interactive e
 The Winograd Schema Challenge is an alternative to the Turing Test, using sentences with an ambiguous pronoun that can only be resolved by common sense, such as working out what the word "it" refers to.
 
 FrontierMath is a benchmark of original, exceptionally hard mathematics problems crafted and checked by professional mathematicians, far beyond ordinary math tests.
+
+Two newer measures deserve their own names because they measure something different from exam skill.
+
+GDPval, introduced by OpenAI in 2025, measures whether a machine can produce real work deliverables from forty-four occupations across nine sectors of the economy, graded against experienced human professionals, and by 2026 the best systems won or tied on roughly three quarters of these tasks while working about one hundred times faster and cheaper, a measure of economic usefulness rather than intelligence.
+
+The time horizon, introduced by the evaluation organization METR, measures the length of human-equivalent work an AI agent can complete on its own with fifty percent reliability, and this horizon has been doubling roughly every four to seven months, reaching about fourteen hours of software work by early 2026, which is the single clearest number behind the claim that agents are improving quickly.
 
 Several of these interactive benchmarks describe their worlds as a Partially Observable Markov Decision Process (POMDP), a formal name for a situation in which an agent cannot see the whole state of its world at once and must act, observe, and infer as it goes.
 
@@ -1621,7 +1631,27 @@ Whole brain emulation, sometimes called mind uploading, is a proposed path to su
 
 A decisive strategic advantage is the prize a fast, powerful AI might seize, meaning a lead in capability so large that its holder could, if it chose, shape or dominate the world and suppress all rivals.
 
-None of this has happened, and reasonable experts disagree sharply about whether and when it might, but these named ideas are the vocabulary in which the debate is conducted.
+None of the full superintelligence scenarios has happened, and reasonable experts disagree sharply about whether and when they might, but these named ideas are the vocabulary in which the debate is conducted.
+
+What has changed is that recursive self-improvement stopped being purely a thought experiment and became a small but rapidly growing experimental field.
+
+In 2023 a system called the Self-Taught Optimizer showed a language model improving the very program that improves programs, and in 2024 the Gödel Agent extended the idea to an agent that rewrites its own operating logic while it runs.
+
+The most discussed result is the Darwin Gödel Machine of 2025, built by the laboratory Sakana AI with university partners, a population of coding agents that rewrite their own code and keep the versions that test better, which raised its success rate on a standard software-engineering benchmark from twenty percent to fifty percent, all inside a sandbox, meaning an isolated and restricted computing environment, with limits on what it may modify and a full record of every change.
+
+In the same period, a project at the Massachusetts Institute of Technology called SEAL showed models generating their own training data and update instructions, Google DeepMind's AlphaEvolve used language models plus evolutionary search to discover new algorithms, and a system called the Absolute Zero Reasoner trained itself by inventing and solving its own problems with a code-running referee, using no outside data at all.
+
+A 2026 survey counted roughly one thousand two hundred and fifty research papers on machine self-improvement published in just over two years, and the field's major machine-learning conference now runs a dedicated workshop on recursive self-improvement.
+
+The same survey found the consistent bottleneck, which is the judge, because a system can only improve as far as something can reliably tell whether a change is an improvement, and none of these systems yet improves its own core model weights in an open-ended way.
+
+The idea has also acquired institutions and formal risk policies.
+
+Safe Superintelligence Incorporated, founded in 2024 by the OpenAI cofounder Ilya Sutskever, has raised billions of dollars on the stated plan of building safe superintelligence with no products along the way, and Meta created its own Meta Superintelligence Labs in 2025 around a fourteen-billion-dollar investment.
+
+OpenAI's preparedness framework now formally tracks self-improvement as a risk category, with the alarm threshold set at an AI that can do the work of a superhuman research scientist, and Anthropic's responsible scaling policy tracks autonomous AI research capability in the same spirit.
+
+And in 2025 a public statement coordinated by the Future of Life Institute, signed by Geoffrey Hinton, Yoshua Bengio, several Nobel laureates, and thousands of others, called for a conditional prohibition on developing superintelligence until there is broad scientific agreement that it can be done safely and with public consent.
 
 
 MAKING IT SAFE: THE ALIGNMENT PROBLEM IN DETAIL
@@ -1729,6 +1759,18 @@ Model cards are short standardized documents released with a model, like a nutri
 
 The precautionary principle is the stance that when an action could cause severe or irreversible harm, you should take preventive measures even without full certainty, applying "better safe than sorry" to frontier AI.
 
+By 2026 this vocabulary had visible institutions attached to it, and a few of them are worth knowing by name.
+
+The International AI Safety Report is a recurring scientific assessment of advanced AI risk, chaired by the researcher Yoshua Bengio and written by more than one hundred authors on behalf of a panel of some thirty countries, with full editions in 2025 and 2026, the latter centered on increasingly autonomous agents, giving AI something like the international assessment reports used in climate science.
+
+The United Kingdom and the United States both refocused their national testing bodies, with the United Kingdom renaming its AI Safety Institute the AI Security Institute in 2025 and the United States renaming its own the Center for AI Standards and Innovation, both leaning toward national-security evaluation of frontier models.
+
+The European Union's AI Act reached its enforcement phase on a staggered schedule, with obligations for general-purpose AI models arriving in August 2025 and the main penalty powers in August 2026.
+
+At the 2024 Seoul summit sixteen frontier companies committed to publish safety frameworks naming intolerable risk thresholds and to pause development if risks cannot be mitigated, and the international summit series continued through Paris in 2025 and New Delhi in 2026, the first such summit hosted in the Global South.
+
+In the United States, individual states moved before the federal government, with California enacting the first American frontier-AI transparency law in 2025, requiring published safety frameworks, incident reporting, and whistleblower protections, and New York following with a similar law.
+
 
 THE THINKERS AND THEIR IDEAS
 
@@ -1751,6 +1793,18 @@ The Comprehensive AI Services model, from the researcher Eric Drexler, reframes 
 The "sharp left turn" is a threat model from the Machine Intelligence Research Institute, the worry that an AI's raw capabilities might suddenly generalize and leap ahead while its alignment fails to keep up, so that a manageable system abruptly becomes superhuman and slips past our safety tools.
 
 Gradual disempowerment is a contrasting risk model, the worry that even without any sudden jump, ever-more-capable AI could slowly outcompete humans across the economy, government, and culture until humanity quietly loses meaningful control, a slow slide rather than a sharp break.
+
+Several newer contributions rounded out this canon in the mid-2020s.
+
+Dan Hendrycks and colleagues including Yoshua Bengio, Max Tegmark, and Gary Marcus published "A Definition of AGI" in 2025, grounding the term in the psychology of human intelligence testing across ten cognitive domains, and their scoring found the systems of the day strong in knowledge but severely deficient in long-term memory and continual learning, a jagged rather than uniform mind.
+
+Hendrycks also joined the former Google chief executive Eric Schmidt and the Scale AI founder Alexandr Wang to write "Superintelligence Strategy," which treats superintelligence as a national-security problem between rival states and proposes a deterrence regime by analogy with nuclear strategy.
+
+Daniel Kokotajlo, a former OpenAI researcher, led the "AI 2027" scenario project, a detailed month-by-month story of how automated AI research could compound into an intelligence explosion, criticized as far too fast by many but widely valued for making every assumption explicit and checkable.
+
+Eliezer Yudkowsky, together with Nate Soares, restated the pessimistic case at book length in 2025 in "If Anyone Builds It, Everyone Dies," which became a bestseller and carried the argument from research forums into general public debate.
+
+And Ray Kurzweil, the field's most famous optimist, reaffirmed in his 2024 book "The Singularity Is Nearer" his decades-old predictions of human-level AI by 2029 and a merging of human and machine intelligence by 2045.
 
 
 CONCLUSION: STANDING AT THE THRESHOLD
@@ -2033,6 +2087,40 @@ Google DeepMind, Gold-medalist Performance in Solving Olympiad Geometry with Alp
 Mem0, State of AI Agent Memory 2026, https://mem0.ai/blog/state-of-ai-agent-memory-2026
 
 VERSES AI, Active Inference Research, https://www.verses.ai/active-inference-research
+
+Hendrycks et al., A Definition of AGI, https://arxiv.org/abs/2510.18212
+
+Morris et al. (Google DeepMind), Levels of AGI: Operationalizing Progress on the Path to AGI, https://arxiv.org/abs/2311.02462
+
+Hendrycks, Schmidt, and Wang, Superintelligence Strategy, https://arxiv.org/abs/2503.05628
+
+METR, Measuring AI Ability to Complete Long Tasks, https://arxiv.org/abs/2503.14499
+
+ARC Prize Foundation, ARC-AGI-3 launch announcement, https://arcprize.org/blog/arc-agi-3-launch
+
+OpenAI, GDPval, https://arxiv.org/abs/2510.04374
+
+Zhang et al. (Sakana AI), Darwin Gödel Machine: Open-Ended Evolution of Self-Improving Agents, https://arxiv.org/abs/2505.22954
+
+Zelikman et al., Self-Taught Optimizer (STOP): Recursively Self-Improving Code Generation, https://arxiv.org/abs/2310.02304
+
+MIT Improbable AI Lab, Self-Adapting Language Models (SEAL), https://arxiv.org/abs/2506.10943
+
+Kokotajlo et al., AI 2027, https://ai-2027.com/
+
+Future of Life Institute, Statement on Superintelligence, https://superintelligence-statement.org/
+
+Yudkowsky and Soares, If Anyone Builds It, Everyone Dies, Little, Brown, 2025
+
+Kurzweil, The Singularity Is Nearer, Viking, 2024
+
+Togelius, Artificial General Intelligence (MIT Press Essential Knowledge series), MIT Press, 2024
+
+Hutter, Quarel, and Catt, An Introduction to Universal Artificial Intelligence, Chapman and Hall/CRC, 2024
+
+Hao, Empire of AI, Penguin Press, 2025
+
+Bender and Hanna, The AI Con, Harper, 2025
 
 APPENDIX: AGI FOR EVERYONE: A DEEPER DIVE INTO AGI IN 2026:
 
