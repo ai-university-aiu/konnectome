@@ -41,7 +41,7 @@ THE FORTY-ONE FILES
 
 • LAYER 6, THE CELLS - the 85 non-neuronal cell types, the modes companion, and the standing chapter template that is the SCHEMA by which tooling can parse every chapter's interface blocks and mode registers. Five files, LAYER_06_ prefixed.
 
-• THE FIVE-VOLUME NEURON CATALOGUE - neuronal_manuscript_vol1of5_v2.txt through vol5of5_v2.txt.
+• THE FIVE-VOLUME NEURON CATALOGUE - LAYER_06_neuronal_manuscript_vol1of5_v2.txt through vol5of5_v2.txt.
 
 • LAYER 7, THE SYNAPTICS - the 64 junction types, the edge type system. Four files, LAYER_07_ prefixed.
 
