@@ -1226,6 +1226,39 @@ self-test; conformance re-measured at 137 of 137 (specification 4.0.0) in both c
 wall; no cousin edited, per the Second, Third, and Fourth Commandments.
 
 
+DESIGN DIRECTORY RENUMBERING NOTE, 2026-08-13, by the owner's instruction.
+
+A NEW GENERAL ANALYSIS ENTERED docs/design/ AT NUMBER 03 - the two-library gap analysis, the first
+written since the First Commandment widened to the whole principles library at Constitution version
+30 - and the directory was renumbered around it. THE MAP, OLD TO NEW:
+
+03_vision_set_analysis_fidelity_audit_v1.txt   -> 04_vision_set_analysis_fidelity_audit_v1.txt
+11_vision_set_fulfilment_audit_v1.txt          -> 05_vision_set_fulfilment_audit_v1.txt
+04_neuroscience_corpus_qa_gap_analysis_v1.txt  -> 06_neuroscience_corpus_qa_gap_analysis_v1.txt
+05_mode_register_design_authority_v1.txt       -> 07_mode_register_design_authority_v1.txt
+06_two_shift_design_authority_v1.txt           -> 08_two_shift_design_authority_v1.txt
+07_edge_type_design_authority_v1.txt           -> 09_edge_type_design_authority_v1.txt
+08_motif_and_workspace_design_authority_v1.txt -> 10_motif_and_workspace_design_authority_v1.txt
+09_cognitive_architectures_coverage_v1.txt     -> 11_cognitive_architectures_coverage_v1.txt
+10_rung_five_real_machine_design_v2.txt        -> 12_rung_five_real_machine_design_v2.txt
+
+01 AND 02 DID NOT MOVE, because the Constitution cites them by number and by path. THE FULFILMENT
+AUDIT'S JUMP FROM 11 TO 05 DISCHARGES THE STANDING RULE its README entry carried since slice 70 -
+that a session renumbering the directory for any other reason should seat it beside the fidelity
+audit in the same change. WHAT WAS REPOINTED: the design documents themselves, the design README,
+README.md, and the current DSPARCD fileset at v64. WHAT WAS DELIBERATELY NOT REPOINTED, on the
+standing test: the superseded hand-offs and the current hand-off (dated reports; the next hand-off
+will carry the new numbers), docs/archive/ , and the append-only bodies of this ledger and the build
+log - a reader following an old number from any of them resolves it against the map above, which is
+also Part Five of docs/design/03_two_library_gap_analysis_v1.txt.
+
+THE ANALYSIS ITSELF ROUTED SIX FINDINGS HERE (TL-1 interactive evaluation, TL-2 efficiency measure,
+TL-3 time-horizon measure annotated to OBSERVATION-23, TL-5 self-modification as a decision
+candidate for the owner, TL-6 curiosity gap; TL-4 corroborates open queue items and adds nothing
+new; TL-7 through TL-9 are recorded in the document and need no entry until their subjects are taken
+up). None is a wall; all are content gaps or ideas except TL-5, which awaits an owner decision.
+
+
  Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 23 (9 CLOSED: 8, 9, 13, 15, 17, 18, 19, 20 and 22).  Decisions: 23.
 Slice-34 note (2026-08-09). The bound turned live in the told story. The slice-33 pending line
 (the bound proven per-territory in the tests but not yet in the capstone's told story) is
@@ -6447,6 +6480,39 @@ was, because the one case in which an old-style path used to resolve correctly h
 AND /docs/ NOW HOLDS NO FILES AT ALL, only named sub-directories. Two moves in one day took it from
 four files at the top level to none, and every document in this repository is now in a directory that
 says what kind of thing it is.
+
+
+DESIGN DIRECTORY RENUMBERING NOTE, 2026-08-13, by the owner's instruction.
+
+A NEW GENERAL ANALYSIS ENTERED docs/design/ AT NUMBER 03 - the two-library gap analysis, the first
+written since the First Commandment widened to the whole principles library at Constitution version
+30 - and the directory was renumbered around it. THE MAP, OLD TO NEW:
+
+03_vision_set_analysis_fidelity_audit_v1.txt   -> 04_vision_set_analysis_fidelity_audit_v1.txt
+11_vision_set_fulfilment_audit_v1.txt          -> 05_vision_set_fulfilment_audit_v1.txt
+04_neuroscience_corpus_qa_gap_analysis_v1.txt  -> 06_neuroscience_corpus_qa_gap_analysis_v1.txt
+05_mode_register_design_authority_v1.txt       -> 07_mode_register_design_authority_v1.txt
+06_two_shift_design_authority_v1.txt           -> 08_two_shift_design_authority_v1.txt
+07_edge_type_design_authority_v1.txt           -> 09_edge_type_design_authority_v1.txt
+08_motif_and_workspace_design_authority_v1.txt -> 10_motif_and_workspace_design_authority_v1.txt
+09_cognitive_architectures_coverage_v1.txt     -> 11_cognitive_architectures_coverage_v1.txt
+10_rung_five_real_machine_design_v2.txt        -> 12_rung_five_real_machine_design_v2.txt
+
+01 AND 02 DID NOT MOVE, because the Constitution cites them by number and by path. THE FULFILMENT
+AUDIT'S JUMP FROM 11 TO 05 DISCHARGES THE STANDING RULE its README entry carried since slice 70 -
+that a session renumbering the directory for any other reason should seat it beside the fidelity
+audit in the same change. WHAT WAS REPOINTED: the design documents themselves, the design README,
+README.md, and the current DSPARCD fileset at v64. WHAT WAS DELIBERATELY NOT REPOINTED, on the
+standing test: the superseded hand-offs and the current hand-off (dated reports; the next hand-off
+will carry the new numbers), docs/archive/ , and the append-only bodies of this ledger and the build
+log - a reader following an old number from any of them resolves it against the map above, which is
+also Part Five of docs/design/03_two_library_gap_analysis_v1.txt.
+
+THE ANALYSIS ITSELF ROUTED SIX FINDINGS HERE (TL-1 interactive evaluation, TL-2 efficiency measure,
+TL-3 time-horizon measure annotated to OBSERVATION-23, TL-5 self-modification as a decision
+candidate for the owner, TL-6 curiosity gap; TL-4 corroborates open queue items and adds nothing
+new; TL-7 through TL-9 are recorded in the document and need no entry until their subjects are taken
+up). None is a wall; all are content gaps or ideas except TL-5, which awaits an owner decision.
 
 
  Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0.   Observations: 23 (9 CLOSED: 8, 9, 13, 15, 17, 18, 19, 20 and 22).  Decisions: 23.
