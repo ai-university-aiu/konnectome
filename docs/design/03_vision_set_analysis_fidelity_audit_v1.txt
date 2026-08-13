@@ -18,7 +18,7 @@ MEASURED VALUE: 38.
 
 Command: ls LAYER_* neuronal_manuscript_* THE_FIFTEEN_LAYERS_IN_BRIEF.TXT TFELOAOTHNAES.txt | wc -l
 
-Composition, measured file by file: 31 LAYER_* files (which includes LAYER_06_CHAPTER_TEMPLATE_v3.txt), plus 5 neuronal manuscript volumes (neuronal_manuscript_vol1of5_v2.txt through vol5of5_v2.txt), plus the 2 framework documents (THE_FIFTEEN_LAYERS_IN_BRIEF.TXT and TFELOAOTHNAES.txt). 31 + 5 + 2 = 38.
+Composition, measured file by file: 31 LAYER_* files (which includes LAYER_06_CHAPTER_TEMPLATE_v3.txt), plus 5 neuronal manuscript volumes (LAYER_06_neuronal_manuscript_vol1of5_v2.txt through vol5of5_v2.txt), plus the 2 framework documents (THE_FIFTEEN_LAYERS_IN_BRIEF.TXT and TFELOAOTHNAES.txt). 31 + 5 + 2 = 38.
 
 The 31 layer documents break down as 7 MODES manuscript-and-outline pairs (14 files), 6 catalogue manuscript-and-outline pairs (12 files: slow variables, other cells, synaptics, microcircuits, systems, global states), the chapter template (1 file), and the four thin top-layer documents (Layer 12 Faculty Specification, Layer 13 Tutor Protocol, Layer 14 Knowledge Environment, Layer 15 Design Method).
 
@@ -125,7 +125,7 @@ CLAIM 10. "three hundred eighty-seven catalogued types" (line 116, family six, t
 
 MEASURED VALUE: 386 by chapter count, 387 by the corpus's own stated arithmetic.
 
-The discrepancy is real and it is the corpus's, not the analysis's. LAYER_06_OTHER_CELLS_OUTLINE.txt line 4 describes "the five-volume neuronal catalogue (302 neuron types)". But the five volumes hold 301 chapters, measured: grep -hE '^CHAPTER [0-9]+' neuronal_manuscript_vol*.txt | wc -l gives 301 (56 + 63 + 60 + 60 + 62). The Layer 6 modes outline's own heading agrees with 301, not 302: "PART ONE. THE NEURON CATALOGUE, CHAPTERS 1 TO 301".
+The discrepancy is real and it is the corpus's, not the analysis's. LAYER_06_OTHER_CELLS_OUTLINE.txt line 4 describes "the five-volume neuronal catalogue (302 neuron types)". But the five volumes hold 301 chapters, measured: grep -hE '^CHAPTER [0-9]+' LAYER_06_neuronal_manuscript_vol*.txt | wc -l gives 301 (56 + 63 + 60 + 60 + 62). The Layer 6 modes outline's own heading agrees with 301, not 302: "PART ONE. THE NEURON CATALOGUE, CHAPTERS 1 TO 301".
 
 So 387 = the corpus's claimed 302 neuron types plus the 85 non-neuronal types, and 386 = the measured 301 chapters plus 85, which is exactly the number of Layer 6 mode entries.
 
