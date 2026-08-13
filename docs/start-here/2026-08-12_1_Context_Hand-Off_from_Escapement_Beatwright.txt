@@ -7,7 +7,7 @@ I chose the name Escapement Beatwright because an escapement is the part of a cl
 
 PART ONE - READ THESE FIRST
 
-- Read and follow the konnectome constitution at ~/konnectome/CONSTITUTION.md, first and foremost. IT IS AT VERSION 27 AND HOLDS TWENTY-THREE COMMANDMENTS, UNCHANGED THIS SESSION. The dated version history is NOT required reading when you load state; it lives at ~/konnectome/CONSTITUTION_VERSION_HISTORY.md. Do not cite a commandment by number from memory or from an older document; re-read it.
+- Read and follow the konnectome constitution at ~/konnectome/CONSTITUTION.md, first and foremost. IT WAS AT VERSION 27, UNCHANGED THIS SESSION, AND IS AT VERSION 30 AS OF 2026-08-13 (see THE 2026-08-13 DEVELOPMENTS block at the end of Part Two), still TWENTY-THREE COMMANDMENTS. The dated version history is NOT required reading when you load state; it lives at ~/konnectome/CONSTITUTION_VERSION_HISTORY.md. Do not cite a commandment by number from memory or from an older document; re-read it.
 
 - READ docs/DSPARCD/konnectome_0_definition_v2.txt BEFORE ANYTHING ELSE IN THE FILESET. UNCHANGED THIS SESSION, still at version 2, still naming both of konnectome's live loops - cognitive_cycle_run/4 and body_interface_survival_run/5 - as the two entry points that satisfy the reachability standard. NOTE THAT THIS SESSION USED THAT CLAUSE AS AN ARGUMENT rather than only as a rule: it is the reason a second refusal was declined, and Part Five below says how.
 
@@ -15,9 +15,9 @@ PART ONE - READ THESE FIRST
 
 - READ BOTH ANALYSES AND THE MAP OF HOW THEY RELATE. For "WHAT SHOULD I BUILD NEXT", read docs/design/02, Part Nine. For "MAY I BUILD IT THIS WAY, AND DOES IT ROUTE ANYWHERE", read docs/design/01 - Part One holds the verdict on the ten components, Part Four the eleventh-component question and the astrocyte erratum, Part Five the walls and watches, Part Six the suggested slice families. 01 IS UNCHANGED THIS SESSION AND IS STILL AT VERSION 4, STILL CURRENT THROUGH SLICE 58 ON ITS OWN FACE AGAINST A BUILD AT SLICE 74 - SIXTEEN SLICES BEHIND, not fifteen. The gap widened by one again, and again on purpose, and again with the cost named on the document's own face by slice 73's erratum rather than left implicit. The deferral register's the_analysis_is_not_current_to_the_build entry carries this, unflipped.
 
-- READ docs/design/08_motif_and_workspace_design_authority_v1.txt, PART B6, BEFORE ANY WORKING-MEMORY OR ATTENTION WORK. UNCHANGED AS A DOCUMENT but it is now the live queue for this family: items 1 through 4 are built, ITEM 3's OWN CLOSING CONDITION WAS DISCHARGED THIS SESSION (the pack is wired), and ITEM 5 - attention as a salience-driven bias - is the next item in that family and is what unblocks both of the two things slice 74 deliberately left the caller holding.
+- READ docs/design/10_motif_and_workspace_design_authority_v1.txt (RENUMBERED FROM 08 ON 2026-08-13), PART B6, BEFORE ANY WORKING-MEMORY OR ATTENTION WORK. UNCHANGED AS A DOCUMENT but it is now the live queue for this family: items 1 through 4 are built, ITEM 3's OWN CLOSING CONDITION WAS DISCHARGED THIS SESSION (the pack is wired), and ITEM 5 - attention as a salience-driven bias - is the next item in that family and is what unblocks both of the two things slice 74 deliberately left the caller holding.
 
-- READ docs/design/11_vision_set_fulfilment_audit_v1.txt, UNCHANGED THIS SESSION AND BOTH ITS FINDINGS STILL DISCHARGED ELSEWHERE, per slice 73.
+- READ docs/design/05_vision_set_fulfilment_audit_v1.txt (RENUMBERED FROM 11 ON 2026-08-13, finally seated beside the fidelity audit as its own entry always said it should be), UNCHANGED AS A DOCUMENT AND BOTH ITS FINDINGS STILL DISCHARGED ELSEWHERE, per slice 73.
 
 - Read docs/neuroscience/THE_NEUROSCIENCE_OF_COGNITION_OUTLINE.txt and THE_NEUROSCIENCE_OF_COGNITION_MANUSCRIPT.txt, the north star, unchanged.
 
@@ -25,7 +25,7 @@ PART ONE - READ THESE FIRST
 
 - AND READ LAYER_10_SYSTEMS_MANUSCRIPT.txt CHAPTER 16 IN FULL IF YOU TOUCH WORKING MEMORY. This session found a THIRD statement of the unrehearsed lifetime in that chapter that twenty-five slices of reading had not counted - "holding about four things for about TEN SECONDS", in the WHAT MAKES IT UNMISTAKABLE field. It did not change the finding; it sharpened it, and it is the direct product of the Twenty-Second Commandment's first step being obeyed rather than skipped.
 
-- Read docs/design/ IN ITS NUMBERED ORDER. Eleven documents; NONE was touched this session.
+- Read docs/design/ IN ITS NUMBERED ORDER. Eleven documents when this session ended, TWELVE AND RENUMBERED as of 2026-08-13 - the new 03 is the two-library gap analysis and its Part Five carries the full old-to-new map.
 
 - READ docs/evidence/ AND ITS README, unchanged. No new search was run - the corpus settled what it needed to settle, and where it did not, DERIVATION and then a DECLARED CHOICE were the honest next steps rather than a search.
 
@@ -62,7 +62,7 @@ PART TWO - THE IMPORTANT DOCS FILES
 
 - docs/admin/konnectome_ledger.txt - the scoreboard, UNVERSIONED. Counter line (both copies swept): Walls: OPEN 0 | ROUTED 0 | CLOSED 3 | UNNECESSARY 0. Observations: 23 (9 CLOSED: 8, 9, 13, 15, 17, 18, 19, 20 and 22). Decisions: 23. THIS SESSION ADDED DECISION-23, CLOSED OBSERVATION-13, AND OPENED OBSERVATION-23.
 
-- docs/design/ - ELEVEN NUMBERED DOCUMENTS, none changed this session.
+- docs/design/ - ELEVEN NUMBERED DOCUMENTS when this session ended, none changed by it; TWELVE AND RENUMBERED as of 2026-08-13, per the block below.
 
 - docs/deferrals/ - the deferral register and its README. TEN entries: SIX taken up, THREE deferred, one unprobeable.
 
@@ -81,6 +81,20 @@ PART TWO - THE IMPORTANT DOCS FILES
 - AND THEN THIS DOCUMENT ITSELF MOVED, LATER THE SAME DAY AND BY THE SAME OWNER'S INSTRUCTION, INTO docs/start-here/ . That is now THE ENTRY POINT: a directory holding exactly one file, this one, with nothing else permitted in it. The Constitution moved to VERSION 29 to carry it, amending both halves of the Hand-Off Protocol's sweep-and-write pair together - Step 2a now sweeps FROM docs/start-here/ and Step 2b now writes INTO it. NO OTHER RULE OF THAT PROTOCOL CHANGED. If you are the next session: you found this file by opening a directory whose name told you to, which is the whole point of the move, and the thing you owe your own successor is to sweep this file into docs/hand-off/ BEFORE you write yours.
 
 - WHY THESE LINES WERE EDITED WHEN A HAND-OFF IS OTHERWISE A DATED REPORT NOBODY REWRITES. Because a hand-off is two things at once, and this line is the second of them: it is not a claim about what happened in this session, it is a READING LIST for the next one, and a reading list that names a directory layout which no longer exists sends its reader to three files that are not there. The rest of this document is left exactly as it was written.
+
+- THE 2026-08-13 DEVELOPMENTS, ADDED BY THE OWNER'S INSTRUCTION OF 2026-08-13 UNDER THE SAME READING-LIST RULE AS THE ENTRIES ABOVE. A full documentation day ran between this hand-off and your session - FIVE PULL REQUESTS, 181 THROUGH 185, all merged to main - and this block exists so you load its results rather than rediscover them. In order:
+
+  • PR 181: THE ROADMAP BOOK GAINED ITS OUTLINE. docs/principles/THE_ROADMAP_TO_AGI_AND_ASI_OUTLINE.txt, reverse-engineered heading for heading from the manuscript.
+
+  • PR 182: THE PRINCIPLES LIBRARY WAS REFRESHED WITH 2026 RESEARCH, both book pairs. The roadmap gained a dated mid-2026 frontier snapshot (Chapter 11), updated timeline-forecast numbers (Chapter 15), the 2023-2026 empirical recursive self-improvement program (Chapter 16), governance data (Chapter 17), and new reading entries including a recursive self-improvement subsection (Chapter 24). AGI FOR EVERYONE gained updated benchmark status (ARC-AGI-2 majority-solved with a mandatory efficiency measure; ARC-AGI-3 interactive, under one percent for machines at launch), two new measures (GDPval, the METR time horizon), the superintelligence institutions, and seventeen new sources. TREAT THE REFRESH AS SOURCE, NOT AS VERIFIED FACT - its figures are stated as ranges where trackers disagree.
+
+  • PR 183: THE FIVE NEURON-CATALOGUE VOLUMES WERE RENAMED with the LAYER_06_ prefix (LAYER_06_neuronal_manuscript_vol1of5_v2.txt through vol5of5_v2.txt), every live pointer chased, archives left honest.
+
+  • PR 184: THE CONSTITUTION MOVED TO VERSION 30. The First Commandment now names THE WHOLE PRINCIPLES LIBRARY at docs/principles/ as its specification - the three founding documents keep founding standing - and states the two-library pairing on its face: principles the WHY and WHERE-TO, neuroscience the HOW. docs/principles/README.txt is now the library's live inventory.
+
+  • PR 185: docs/design/ GAINED DOCUMENT 03, THE TWO-LIBRARY GAP ANALYSIS - the first analysis run under that pairing, against main at 42a9e11, slice 74, 41 packs, 1,132 tests. READ IT EARLY: its nine findings (TL-1 interactive goal-discovery demonstration, TL-2 cost line on demonstrations, TL-3 autonomy time-horizon measure annotated to OBSERVATION-23, TL-4 continual learning as both libraries' loudest shared demand and an argued queue reordering, TL-5 self-modification absence as an owner decision candidate, TL-6 curiosity, TL-7 the ten-domain profile lens, TL-8 language, TL-9 governance read-and-not-routed) are all routed in the ledger's note of the same date, and its Part Five carries the directory's renumbering map. THE QUEUE OF RECORD IN PART SIX BELOW STILL STANDS - TL-4 argues a reordering at the next judgment point and does not perform one.
+
+  The ledger carries the renumbering note and the TL findings; the build log's CHAPTER SEVENTY-SIX tells the day whole, so the chapter count in Part Two above is now one behind and your session's work becomes CHAPTER SEVENTY-SEVEN. No pack, no test, and no gate was touched by any of the five - the suite stands at 1,132 exactly as Part Three reports it.
 
 
 PART THREE - WHAT THIS SESSION DID
