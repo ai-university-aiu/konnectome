@@ -1,0 +1,1173 @@
+THE NEUROSCIENCE OF BRAIN WAVES
+
+A Complete, Comprehensive, and Thorough Outline
+
+Compiled for the Certified_Neuroscientist corpus of D. R. Dison, Founder, Artificial Intelligence University (AIU).
+
+Date of compilation: August 12, 2026.
+
+
+PROVENANCE, STATED BEFORE ANYTHING ELSE
+
+This outline was added on 2026-08-12 by the konnectome build, under the owner's explicit edit authority over this directory.
+
+It is this build's writing, living in the corpus's own directory, and it does not outrank the corpus's own documents.
+
+Where this outline and a corpus document disagree, the corpus document is right and the correction is owed to this file.
+
+Its structure and its claims were checked against the published literature by web search on 2026-08-12, and the sources consulted are named in the chapter notes at the end.
+
+It was commissioned to answer a specific question the owner put to the build: konnectome will not send and receive literal brain waves, but it may send and receive brain-wave-like messages if they carry useful information in a synthetic mind, and the question is whether such an endeavour is additive or a distraction, and whether the waves support cognition or are merely a substrate a synthetic mind can do without.
+
+This outline is built to answer that question rhythm by rhythm rather than to assume the answer.
+
+
+HOW TO READ THIS OUTLINE
+
+This document has four levels.
+
+Level 1 is the PART, of which there are fifteen.
+
+Level 2 is the CHAPTER, of which there are sixty-six, numbered continuously from 1 to 66 across the whole work.
+
+Level 3 is the SECTION, numbered as chapter-point-section, for example 12.3.
+
+Level 4 is the SUB-SECTION, numbered as chapter-point-section-point-subsection, for example 12.3.4.
+
+The outline is organised on a single principle, which is also the question above: a brain wave is a rhythm in the electrical activity of many neurons at once, and the whole science turns on whether that rhythm does work or merely shows that work is being done.
+
+A brain wave, for the purposes of this outline, means a neural oscillation: a repeating rise and fall in the summed electrical activity of a population of neurons, described by its frequency (how many cycles per second), its phase (where in the cycle it is at a given moment), and its amplitude or power (how large the swing is).
+
+The neuroscience of brain waves, therefore, names the research programme that measures these rhythms, explains how they are generated, asks what if anything they compute, and, for this corpus, asks what a synthetic mind should borrow from them.
+
+Everything before Part Twelve is the science: what the waves are, how they are measured, how they arise, what functions are claimed for them, how they behave across states and sleep and development and disease, and how they can be modulated. Part Twelve is the honest reckoning, the engine-versus-exhaust debate given its own weight. Parts Thirteen through Fifteen are the translation to computation and to konnectome, and the closing judgement.
+
+
+THE ORGANISING DISTINCTION THIS OUTLINE IMPOSES: COMPUTATION, SUBSTRATE, OR CONTESTED
+
+The corpus already mentions oscillations hundreds of times, scattered across the layer catalogues as a property of some cell, motif, or state, but nowhere does it own the functional theory of what the waves are for.
+
+This outline supplies that missing theory, and it supplies it under a discipline the corpus already uses for contested material: every load-bearing claim that a rhythm performs a computation is graded, on the document's face, on a causal-evidence ladder.
+
+The ladder has three rungs, and every rhythm-function pairing in Parts Seven through Eleven carries one of three gradings.
+
+• COMPUTATION marks a function for which perturbing the rhythm specifically, most convincingly by driving or silencing it with light-activated proteins in animals, changes the cognitive outcome in the predicted way. The hippocampal sharp-wave ripple and the parvalbumin-interneuron generation of gamma are the clearest examples.
+
+• SUBSTRATE marks a rhythm that is best read as a by-product of the underlying excitation-inhibition dynamics, real as a signal but not itself doing the work, the electrical equivalent of engine noise rather than the engine.
+
+• CONTESTED marks a function that is supported by correlation and by some perturbation evidence but undermined by a specific technical objection, and where honest practice is to report the dispute rather than pick a side.
+
+Three technical objections recur across the CONTESTED gradings and are named once here as a spine: gamma frequency drifts with the stimulus, so it cannot easily serve as a fixed shared reference; phase is hard to align across regions given the time it takes signals to travel; and non-sinusoidal wave shapes create spurious cross-frequency coupling that inflates the apparent evidence.
+
+
+A NOTE ON TAGS
+
+Each chapter carries one of four tags.
+
+• (CORE) marks a chapter that states a phenomenon, a mechanism, or a function that a reader could not skip without leaving a hole in the account.
+
+• (APPARATUS) marks a chapter that supplies the physics, the mathematics, or the method by which the CORE chapters are made checkable.
+
+• (COMPUTATION) marks a chapter whose subject is the translation of a wave function into computational or engineering terms, the material this corpus exists to extract.
+
+• (CONTEXT) marks a chapter that situates the science historically, clinically, or at its unfinished frontier.
+
+
+HOW THIS OUTLINE MESHES WITH THE CORPUS
+
+This is a sibling to the corpus's other synthesis outlines, and it is written to connect to what the library already holds.
+
+It draws on the mode registers and time constants that Layers 6 through 11 already carry, since a rhythm is a time constant made visible, and it points back to them rather than restating them.
+
+It connects to THE_NEUROSCIENCE_OF_COGNITION for the cognitive faculties the waves are claimed to serve, and to THE_NEUROSCIENCE_OF_DEVELOPMENTAL_PSYCHOLOGY for the maturation of the rhythms across the lifespan.
+
+And its final part hands konnectome a per-function translation table and a single design test, so the document ends as a decision aid rather than a survey.
+
+
+PART ONE. WHAT A BRAIN WAVE IS, AND THE HISTORY
+
+
+CHAPTER 1. DEFINING THE PHENOMENON (CORE)
+
+1.1 What a neural oscillation is
+
+1.1.1 Rhythm, frequency, phase, amplitude, and power in plain terms
+
+1.1.2 The three scales: single-neuron subthreshold oscillation, population network oscillation, macroscopic field rhythm
+
+1.1.3 Oscillation against transient, burst, and sustained rhythm
+
+1.1.4 The hardest distinction: a true rhythm against the one-over-frequency background noise
+
+1.2 Why a rhythm might matter
+
+1.2.1 Temporal coordination: binding scattered neurons into a working assembly
+
+1.2.2 Input selection and excitability control: opening and closing windows
+
+1.2.3 Support of plasticity and memory
+
+1.2.4 Preservation across evolution as a hint of function
+
+
+CHAPTER 2. A HISTORY: FROM CURIOSITY TO COMPUTATION (CONTEXT)
+
+2.1 The precursors
+
+2.1.1 Caton's animal recordings and the nineteenth-century pioneers
+
+2.2 Hans Berger and the human electroencephalogram
+
+2.2.1 The first human recording and the 1929 publication
+
+2.2.2 The alpha rhythm, alpha blocking, and beta
+
+2.2.3 Berger's motives and his long isolation
+
+2.3 Validation and the clinical era
+
+2.3.1 Adrian and Matthews replicate and name the Berger rhythm
+
+2.3.2 The spike-and-wave of epilepsy and the birth of clinical electroencephalography
+
+2.3.3 Grey Walter, delta and theta, and the sleep pioneers
+
+2.4 The long road to computation
+
+2.4.1 The reticular activating system and state
+
+2.4.2 The animal local-field tradition and hippocampal theta
+
+2.4.3 The gamma renaissance and the modern synthesis
+
+
+PART TWO. THE FREQUENCY BANDS
+
+
+CHAPTER 3. THE CANONICAL BANDS (CORE)
+
+3.1 The slow end
+
+3.1.1 Infraslow activity below half a hertz
+
+3.1.2 The slow oscillation near one hertz and its up and down states
+
+3.1.3 Delta and the depth of sleep
+
+3.2 The middle
+
+3.2.1 Theta and the navigating, remembering brain
+
+3.2.2 Alpha, the resting occipital rhythm, and the sensorimotor mu rhythm
+
+3.2.3 Beta and the maintenance of the motor and cognitive status quo
+
+3.3 The fast end
+
+3.3.1 Gamma and local active processing
+
+3.3.2 Ripples and high-frequency oscillations
+
+3.3.3 Fast ripples and the pathological edge
+
+
+CHAPTER 4. THE TAXONOMY PROBLEM (APPARATUS)
+
+4.1 The natural-kinds question
+
+4.1.1 Band boundaries as historical accident
+
+4.1.2 The same-band-different-mechanism trap, with cortical against hippocampal theta
+
+4.2 The organising principles
+
+4.2.1 The logarithmic spacing of the brain's oscillator families
+
+4.2.2 The nesting hierarchy: slow phase modulating fast amplitude
+
+4.3 Individual and continuous variation
+
+4.3.1 The individual alpha frequency
+
+4.3.2 Bands against a continuum, and non-sinusoidal wave shape as a feature not noise
+
+
+PART THREE. THE BIOPHYSICS OF THE MEASURED SIGNAL
+
+
+CHAPTER 5. WHAT GENERATES THE FIELD (APPARATUS)
+
+5.1 The currents
+
+5.1.1 Synaptic currents as the dominant source, and why slow events summate
+
+5.1.2 The minor contributors: spikes, calcium events, intrinsic oscillations
+
+5.1.3 Why action potentials contribute little at a distance
+
+5.2 Geometry and summation
+
+5.2.1 Pyramidal cells as open-field dipoles
+
+5.2.2 Open against closed fields, and the invisible interneuron
+
+5.2.3 How many synchronous neurons a scalp wave requires
+
+
+CHAPTER 6. FROM SOURCE TO SENSOR (APPARATUS)
+
+6.1 The recording modalities
+
+6.1.1 The local field potential and the intracranial scale
+
+6.1.2 The electrocorticogram and the depth electrode
+
+6.1.3 The scalp electroencephalogram and its blurring
+
+6.1.4 Magnetoencephalography and its sensitivity to tangential sources
+
+6.2 Volume conduction and the inverse problem
+
+6.2.1 Passive spread and the dipole approximation
+
+6.2.2 What a scalp wave is and is not
+
+6.2.3 The forward problem, the ill-posed inverse problem, and current source density
+
+
+PART FOUR. HOW OSCILLATIONS ARISE
+
+
+CHAPTER 7. INTRINSIC AND PACEMAKER MECHANISMS (CORE)
+
+7.1 Single-cell rhythm
+
+7.1.1 Membrane resonance and preferred frequencies
+
+7.1.2 Thalamic pacemaking and the burst-and-tonic switch
+
+7.1.3 Subthreshold oscillations in entorhinal and olivary cells
+
+7.2 The thalamocortical loops
+
+7.2.1 Spindle generation in the reticular nucleus
+
+7.2.2 The cortical slow oscillation and its up and down states
+
+
+CHAPTER 8. INHIBITION AS THE CLOCK (CORE)
+
+8.1 The two gamma mechanisms
+
+8.1.1 Interneuron network gamma from mutual inhibition
+
+8.1.2 Pyramidal-interneuron network gamma from the excitation-inhibition loop
+
+8.1.3 The experimental adjudication by driving parvalbumin cells
+
+8.2 Inhibition-based timing as a principle
+
+8.2.1 The inhibitory decay constant sets the gamma period
+
+8.2.2 Interneuron diversity and the mapping of cell type to rhythm
+
+
+CHAPTER 9. THE MATHEMATICS OF SYNCHRONY (APPARATUS)
+
+9.1 Coupled-oscillator theory
+
+9.1.1 Limit cycles and the phase-response curve
+
+9.1.2 Weakly coupled oscillator theory and the effect of conduction delay
+
+9.1.3 The Kuramoto model and the synchronisation transition
+
+9.2 Population and field models
+
+9.2.1 The Wilson-Cowan excitation-inhibition oscillator
+
+9.2.2 The Jansen-Rit column and the alpha rhythm
+
+9.2.3 Next-generation neural mass models and neural field theory
+
+9.3 The dynamical vocabulary
+
+9.3.1 Entrainment, Arnold tongues, and oscillations as band-pass filters
+
+9.3.2 Standing synchrony against traveling waves
+
+
+PART FIVE. THE METHODS OF ANALYSIS
+
+
+CHAPTER 10. DECOMPOSING THE SIGNAL (APPARATUS)
+
+10.1 Spectral analysis
+
+10.1.1 Fourier analysis and its stationarity assumption
+
+10.1.2 Time-frequency analysis and the uncertainty trade-off
+
+10.1.3 Multitaper estimation
+
+10.2 The aperiodic component
+
+10.2.1 The one-over-frequency background and its possible meaning
+
+10.2.2 Separating periodic from aperiodic, and the traps of raw band power
+
+10.2.3 What counts as an oscillation above the background
+
+
+CHAPTER 11. COUPLING, CONNECTIVITY, AND THEIR PITFALLS (APPARATUS)
+
+11.1 Phase and coupling measures
+
+11.1.1 Phase locking and inter-trial coherence
+
+11.1.2 Coherence and the volume-conduction-robust measures
+
+11.1.3 Directed measures and their filtering traps
+
+11.2 Cross-frequency coupling
+
+11.2.1 Phase-amplitude coupling and the modulation index
+
+11.2.2 The spurious-coupling problem from wave shape and common drive
+
+11.3 Artefacts and statistics
+
+11.3.1 Muscle, microsaccade, and filtering artefacts
+
+11.3.2 Source localisation and beamforming
+
+11.3.3 Cluster-based permutation, surrogates, and circular statistics
+
+
+PART SIX. RHYTHMS AS THE BRAIN CHANGES STATE
+
+
+CHAPTER 12. AROUSAL AND THE WAKING SPECTRUM (CORE)
+
+12.1 The ascending systems
+
+12.1.1 From the reticular activating system to the distributed modern view
+
+12.1.2 The neuromodulatory cell groups and the orexin stabiliser
+
+12.1.3 Thalamic gating and the flip-flop switch
+
+12.2 The state continuum
+
+12.2.1 The oscillatory signatures from wake through drowsy to deep sleep
+
+12.2.2 The mapping to the corpus's own global-state catalogue at Layer 11
+
+
+CHAPTER 13. THE SLEEPING BRAIN'S RHYTHMS (CORE)
+
+13.1 The non-dreaming rhythms
+
+13.1.1 The slow oscillation as the conductor of the sleeping cortex
+
+13.1.2 Delta and the homeostatic marker
+
+13.1.3 Sleep spindles and their two types
+
+13.1.4 The K-complex as an isolated down-state
+
+13.2 The hippocampal ripple
+
+13.2.1 The mechanism and the replay of waking sequences
+
+13.2.2 The causal evidence: silencing ripples impairs memory. Grade: COMPUTATION
+
+13.3 The triple coupling
+
+13.3.1 Slow oscillation, spindle, and ripple nested in one hierarchy
+
+13.3.2 Coupling precision declining with age and predicting memory
+
+
+CHAPTER 14. WHAT SLEEP RHYTHMS ARE FOR (CORE)
+
+14.1 The competing theories
+
+14.1.1 Active systems consolidation: the hippocampal-neocortical dialogue
+
+14.1.2 The synaptic homeostasis hypothesis: sleep as downscaling, and its critics
+
+14.1.3 The glymphatic clearance timing claim and its replication dispute
+
+14.2 The rapid-eye-movement rhythms
+
+14.2.1 Theta in dreaming sleep and the causal fear-memory evidence
+
+
+CHAPTER 15. ANAESTHESIA AND CONSCIOUSNESS (CONTEXT)
+
+15.1 How anaesthetics reshape the rhythms
+
+15.1.1 The frontal alpha and slow-delta signature of propofol
+
+15.1.2 Burst suppression and the vulnerable brain
+
+15.1.3 The agent-specific signatures
+
+15.2 Rhythms and the theories of consciousness
+
+15.2.1 The thalamocortical breakdown of long-range integration
+
+15.2.2 The perturbational complexity index as a clinical measure
+
+15.2.3 The gamma-and-consciousness debate, held for Part Twelve
+
+
+PART SEVEN. THE RHYTHMS OF PERCEPTION AND ATTENTION
+
+
+CHAPTER 16. BINDING BY SYNCHRONY: THE FOUNDING HYPOTHESIS (CORE)
+
+16.1 The proposal
+
+16.1.1 Synchrony as the tag that groups features into an object
+
+16.1.2 The founding cat-visual-cortex evidence
+
+16.2 The critiques
+
+16.2.1 Synchrony unbound: the precision and regress objections
+
+16.2.2 The frequency-drifts-with-stimulus objection
+
+16.2.3 Activation not cognition: gamma as an excitation-inhibition marker
+
+16.3 The grading
+
+16.3.1 Binding by fixed-frequency synchrony. Grade: CONTESTED, leaning SUBSTRATE
+
+
+CHAPTER 17. COMMUNICATION THROUGH COHERENCE (COMPUTATION)
+
+17.1 The proposal
+
+17.1.1 Effective connection gated by the phase relation between groups
+
+17.1.2 Attention as the flexible adjustment of coherence
+
+17.2 The refinements
+
+17.2.1 From zero-phase synchrony to directed communication with delays
+
+17.2.2 Rhythms structured to minimise interference
+
+17.3 The grading and the translation preview
+
+17.3.1 Communication through coherence as timing-gated routing. Grade: CONTESTED, with the strongest engineering payoff, carried to Part Fourteen
+
+
+CHAPTER 18. ALPHA GATING AND RHYTHMIC SAMPLING (CORE)
+
+18.1 Alpha as active inhibition
+
+18.1.1 Gating by inhibition rather than idling
+
+18.1.2 Pulsed inhibition and the duty cycle
+
+18.1.3 The spatial-attention read-out
+
+18.2 Rhythmic sampling
+
+18.2.1 Attention as a periodic spotlight at theta rhythm
+
+18.2.2 Two rhythms: alpha excitability windows against theta selection
+
+18.3 The grading
+
+18.3.1 Alpha as scheduled inhibition. Grade: CONTESTED, leaning COMPUTATION
+
+
+CHAPTER 19. FREQUENCY BY DIRECTION: THE PREDICTIVE-CODING MAPPING (CORE)
+
+19.1 The proposal
+
+19.1.1 Gamma carrying feedforward, alpha and beta carrying feedback
+
+19.1.2 The laminar signature by cortical layer
+
+19.1.3 Predictions in the slow feedback rhythms, errors in the fast feedforward rhythm
+
+19.2 Beta and the status quo
+
+19.2.1 Beta as the signal to maintain the current state
+
+19.2.2 Beta bursts for the reactivation of held content
+
+19.3 The grading
+
+19.3.1 The frequency-to-hierarchy mapping. Grade: CONTESTED
+
+
+CHAPTER 20. SPEECH AND LANGUAGE TRACKING (CORE)
+
+20.1 The proposal
+
+20.1.1 Cortex tracking the speech envelope at syllable and phoneme timescales
+
+20.1.2 Theta phase resetting to syllable onsets, then gamma encoding the detail
+
+20.2 The debate
+
+20.2.1 Genuine entrainment against a train of evoked responses
+
+20.2.2 Tracking of abstract structure beyond the acoustics
+
+20.3 The grading
+
+20.3.1 Oscillatory speech parsing. Grade: CONTESTED, leaning COMPUTATION
+
+
+PART EIGHT. THE RHYTHMS OF MEMORY
+
+
+CHAPTER 21. THETA AND THE CODING OF SEQUENCE (CORE)
+
+21.1 Phase coding and phase precession
+
+21.1.1 Place-cell spikes advancing in theta phase across a field
+
+21.1.2 The compression of behavioural sequences into a plasticity window
+
+21.1.3 The grading: phase precession as the strongest single case for a phase code. Grade: COMPUTATION for the phenomenon, CONTESTED for its downstream use
+
+21.2 Theta and encoding against retrieval
+
+21.2.1 The separate-phases model and the acetylcholine gate
+
+21.2.2 The human evidence for competing memories at distinct phases
+
+
+CHAPTER 22. THE THETA-GAMMA NEURAL CODE AND WORKING MEMORY (CORE)
+
+22.1 The nested code
+
+22.1.1 One item per gamma cycle within a theta cycle
+
+22.1.2 The capacity limit as the gamma-per-theta ratio, a mechanism for the magic number
+
+22.2 The maintenance debate
+
+22.2.1 Persistent activity against activity-silent against bursty working memory
+
+22.2.2 The trial-averaging illusion of sustained firing
+
+22.3 The grading
+
+22.3.1 The theta-gamma slot code. Grade: CONTESTED, with a strong engineering analogue carried to Part Fourteen
+
+
+CHAPTER 23. CROSS-FREQUENCY COUPLING AND MULTIPLEXING (CORE)
+
+23.1 Coupling as a computation
+
+23.1.1 The slow rhythm parsing, the fast rhythm encoding
+
+23.1.2 Gamma frequency routing information by the low-frequency phase
+
+23.2 The Achilles heel
+
+23.2.1 The statistical pitfalls that inflate the evidence
+
+23.2.2 The grading: cross-frequency coupling as a mechanism. Grade: CONTESTED
+
+
+PART NINE. TRAVELING WAVES AND SPATIAL ORGANISATION
+
+
+CHAPTER 24. TRAVELING WAVES (CORE)
+
+24.1 The phenomenology
+
+24.1.1 Phase gradients revealing propagation rather than standing synchrony
+
+24.1.2 The scales and speeds, and theta and alpha as traveling waves
+
+24.2 The proposed computations
+
+24.2.1 Organising spike timing across space
+
+24.2.2 Scanning, buffering the recent past, and resetting phase
+
+24.3 The grading
+
+24.3.1 Traveling waves as a spatial organiser. Grade: CONTESTED, ascendant and improving
+
+
+PART TEN. DEVELOPMENT AND EVOLUTION OF THE RHYTHMS
+
+
+CHAPTER 25. THE DEVELOPMENT OF BRAIN RHYTHMS (CORE)
+
+25.1 The fetal and preterm brain
+
+25.1.1 The discontinuous early record and the spontaneous activity transients
+
+25.1.2 Delta brushes and their wiring role
+
+25.2 Maturation across childhood and adolescence
+
+25.2.1 The speeding posterior rhythm and the emergence of spindles
+
+25.2.2 The slow-wave decline of adolescence as a pruning marker
+
+25.3 The lifespan trajectory
+
+25.3.1 The individual alpha frequency across life
+
+25.3.2 The aging spectrum and the uncoupling of slow oscillation and spindle
+
+25.4 The corpus link
+
+25.4.1 The mesh with THE_NEUROSCIENCE_OF_DEVELOPMENTAL_PSYCHOLOGY
+
+
+CHAPTER 26. RHYTHMS ACROSS SPECIES (CONTEXT)
+
+26.1 The preserved architecture
+
+26.1.1 The puzzle of conserved frequencies across a thousandfold range of brain size
+
+26.1.2 Large axons preserving timing as brains scale
+
+26.2 The comparative sweep
+
+26.2.1 Theta and gamma across mammals
+
+26.2.2 Sleep rhythms in birds and olfactory oscillations in insects
+
+26.2.3 Why the frequencies are the evolutionary invariant, which matters for a synthetic mind
+
+
+PART ELEVEN. WHEN RHYTHMS GO WRONG: THE OSCILLOPATHIES
+
+
+CHAPTER 27. EPILEPSY: PATHOLOGICAL SYNCHRONY (CORE)
+
+27.1 The pathological rhythms
+
+27.1.1 The spike-and-wave of absence seizures
+
+27.1.2 High-frequency oscillations as a seizure-zone biomarker, and the honest caveat that they do not always beat spikes
+
+27.2 The lesson
+
+27.2.1 Too much synchrony as a failure mode, which a synthetic mind must also fear
+
+
+CHAPTER 28. PARKINSON'S DISEASE AND PATHOLOGICAL BETA (CORE)
+
+28.1 The exaggerated beta
+
+28.1.1 Synchronised anti-kinetic beta in the basal-ganglia loop
+
+28.1.2 Dopamine and deep brain stimulation suppressing it
+
+28.2 The closed-loop lesson
+
+28.2.1 Beta as a control signal for adaptive stimulation. Grade: COMPUTATION for the biomarker
+
+
+CHAPTER 29. SCHIZOPHRENIA AND THE GAMMA STORY (CORE)
+
+29.1 The parvalbumin account
+
+29.1.1 Reduced gamma synchrony and the interneuron deficit
+
+29.1.2 The receptor-hypofunction and disinhibition model
+
+29.2 The translational assay
+
+29.2.1 The forty-hertz steady-state response and the spindle deficit
+
+
+CHAPTER 30. THE CONTESTED BIOMARKERS (CONTEXT)
+
+30.1 The rhythms that did not translate
+
+30.1.1 The theta-beta ratio in attention-deficit hyperactivity disorder and its failure as a standalone test
+
+30.1.2 Frontal alpha asymmetry in depression and its reliability problem
+
+30.2 The contested therapy
+
+30.2.1 Forty-hertz sensory stimulation in Alzheimer's disease: the mouse promise and the mixed human replications
+
+30.3 The unifying proposal
+
+30.3.1 Thalamocortical dysrhythmia across pain, tinnitus, and tremor
+
+
+PART TWELVE. THE RECKONING: ENGINE OR EXHAUST
+
+
+CHAPTER 31. THE EPIPHENOMENON DEBATE (CONTEXT)
+
+31.1 The framing
+
+31.1.1 By-product against mechanism, the exhaust and the engine
+
+31.1.2 The measurement-against-process distinction
+
+31.2 The test
+
+31.2.1 The logic: perturb the rhythm specifically and show a specific consequence
+
+31.2.2 The tools ranked: light-activated proteins strongest, transcranial current weakest
+
+31.3 The verdict, rhythm by rhythm
+
+31.3.1 What has passed a causal test: the ripple, the parvalbumin gamma, the sleep coupling in part
+
+31.3.2 What has not: fixed-frequency binding, much long-range coherence, much transcranial entrainment
+
+31.3.3 The intermediate cases: alpha gating and phase precession
+
+
+CHAPTER 32. WHY THE CAUSAL CLAIMS ARE FRAGILE (CONTEXT)
+
+32.1 The transcranial-stimulation confounds
+
+32.1.1 The field too weak to entrain
+
+32.1.2 The peripheral-nerve and retinal confounds
+
+32.1.3 The reproducibility problem
+
+32.2 The recurring technical spine
+
+32.2.1 Frequency drift, phase-alignment across delays, and spurious coupling, gathered in one place
+
+
+PART THIRTEEN. THE COMPUTATIONAL TRANSLATION
+
+
+CHAPTER 33. OSCILLATIONS AS COMPUTATION IN THEORY (COMPUTATION)
+
+33.1 The coding arguments
+
+33.1.1 Phase-of-firing codes carrying information beyond rate
+
+33.1.2 The discrete-sampling view of perception and attention
+
+33.2 The routing and binding arguments
+
+33.2.1 Communication through coherence as timing-gated routing
+
+33.2.2 Multiplexing several codes on one channel by frequency and phase
+
+33.3 The gain and reference arguments
+
+33.3.1 Phase setting momentary gain
+
+33.3.2 Phase resetting as a coordination signal
+
+
+CHAPTER 34. OSCILLATIONS IN ARTIFICIAL NEURAL NETWORKS (COMPUTATION)
+
+34.1 The classic synchrony networks
+
+34.1.1 Locally excitatory globally inhibitory oscillator networks for segmentation
+
+34.1.2 Phase labels for binding in early models
+
+34.2 The modern oscillatory networks
+
+34.2.1 Oscillatory recurrent networks and the bounded-gradient result
+
+34.2.2 Kuramoto-based neurons and synchronisation-based deep learning
+
+34.2.3 Rotating features and complex-valued binding for object discovery
+
+34.3 The neuromorphic and spiking line
+
+34.3.1 Spike-timing codes, polychronisation, and oscillatory reservoirs
+
+
+CHAPTER 35. THE ENGINEERING VOCABULARY OF A SHARED RHYTHM (COMPUTATION)
+
+35.1 The clock analogy
+
+35.1.1 The clock signal and synchronous against asynchronous logic
+
+35.1.2 Clock domains, their crossing, and metastability
+
+35.2 The timing toolkit
+
+35.2.1 Phase-locked loops and clock recovery
+
+35.2.2 Time-division multiplexing
+
+35.3 The distributed-systems view
+
+35.3.1 The global-clock problem
+
+35.3.2 Logical and vector clocks and causal ordering, the digital alternative to phase
+
+
+PART FOURTEEN. THE TRANSLATION MAP FOR KONNECTOME
+
+
+CHAPTER 36. EACH WAVE FUNCTION AS AN ENGINEERING ANALOGUE (COMPUTATION)
+
+36.1 Routing and gating
+
+36.1.1 Communication through coherence as timing-gated channel routing and slot arbitration
+
+36.1.2 Alpha gating as scheduled inhibition, clock gating, and backpressure
+
+36.2 Buffering and sequence
+
+36.2.1 The theta-gamma code as a serialised, slot-indexed working-memory buffer
+
+36.2.2 Phase precession as a within-frame encoding of order and fine position
+
+36.3 Consolidation and state
+
+36.3.1 The slow-oscillation, spindle, and ripple coupling as a scheduled batch write-back between a fast and a slow store
+
+36.3.2 The global oscillatory state as a mode register carried in the medium
+
+36.3.3 Traveling waves as a propagating reset and context signal across a spatial array
+
+
+CHAPTER 37. WHERE A SYNTHETIC MIND NEEDS NO WAVE (COMPUTATION)
+
+37.1 The digital alternatives
+
+37.1.1 Explicit timestamps and sequence identifiers replacing phase
+
+37.1.2 A scheduler or arbiter gating channels without a shared carrier
+
+37.1.3 Content-addressed attention replacing coherence gating
+
+37.1.4 An explicit batch job replacing a state-triggered consolidation window
+
+37.1.5 Explicit pointers replacing phase tags for binding
+
+37.2 Where the biology does not map
+
+37.2.1 Rhythms as by-products of delay loops rather than designed clocks
+
+37.2.2 The local, ambiguous phase reference against a defined logical clock
+
+37.2.3 The metabolic and wiring constraints that motivate biological rhythms and may not bind a synthetic substrate
+
+
+CHAPTER 38. THE CASE FOR ADOPTING RHYTHM-LIKE MECHANISMS ANYWAY (COMPUTATION)
+
+38.1 The savings
+
+38.1.1 A shared frame as cheaper coordination metadata than a full address
+
+38.1.2 Coherence gating as rewiring-free routing: one graph, many effective circuits
+
+38.1.3 Nested rhythms as a free multi-timescale schedule
+
+38.2 The empirical encouragement
+
+38.2.1 The machine-learning results where oscillatory dynamics already help
+
+38.3 The design test
+
+38.3.1 Adopt a rhythm-like mechanism only where phase or timing carries information more cheaply than an explicit tag would, and prefer explicit timestamps, schedulers, and pointers otherwise
+
+
+PART FIFTEEN. THE JUDGEMENT AND WHAT IS HANDED FORWARD
+
+
+CHAPTER 39. THE ANSWER TO THE OWNER'S QUESTION (CONTEXT)
+
+39.1 Additive or a distraction
+
+39.1.1 Why the endeavour is additive: it consolidates scattered corpus material and adds the missing functional theory
+
+39.1.2 Why it is not a mere substrate document: the load-bearing functions are cognition-adjacent, not physics
+
+39.2 Support cognition or merely substrate
+
+39.2.1 The per-rhythm verdict gathered: which functions are worth borrowing and which are engine noise
+
+39.2.2 The one-sentence recommendation for the build
+
+
+CHAPTER 40. THE OPEN QUESTIONS (CONTEXT)
+
+40.1 The neuroscience opens
+
+40.1.1 Which rhythms will pass a clean causal test as tools improve
+
+40.1.2 Whether traveling waves are the organiser they now appear to be
+
+40.2 The translation opens
+
+40.2.1 Whether any oscillatory mechanism beats its explicit-digital alternative in a real konnectome build
+
+40.2.2 The experiment konnectome could run to decide it
+
+
+CHAPTER 41. WHAT THIS OUTLINE HANDS THE CORPUS (CONTEXT)
+
+41.1 The consolidation
+
+41.1.1 The scattered oscillation mentions now given one home and one grading scheme
+
+41.2 The manuscript this outline is for
+
+41.2.1 The four-level structure as the contract for a future manuscript
+
+41.2.2 The per-rhythm gradings as its CITED-and-CONTESTED starting set
+
+
+CHAPTER 42. RESERVED FOR THE MODES-AND-TIME-CONSTANTS CROSS-WALK (CORE)
+
+42.1 The rhythms against the corpus's own time constants
+
+42.1.1 Each band matched to the Layer 7 through Layer 11 time-constant fields that already imply it
+
+42.2 The rhythms against the corpus's own mode registers
+
+42.2.1 Each global-state rhythm matched to the Layer 11 state it signs
+
+
+CHAPTER 43. RESERVED FOR THE NEUROMODULATION OF RHYTHMS IN DEPTH (CORE)
+
+43.1 Acetylcholine, noradrenaline, and the gating of band power
+
+43.2 Dopamine and the basal-ganglia beta
+
+43.3 The state-setting chemistry as a control layer above the rhythms
+
+
+CHAPTER 44. RESERVED FOR THE MODULATION TOOLKIT IN DEPTH (CONTEXT)
+
+44.1 Neurofeedback and the placebo question
+
+44.2 Transcranial alternating current stimulation and its reproducibility problem
+
+44.3 Closed-loop and phase-locked stimulation
+
+44.4 Brain-computer interfaces reading oscillatory features
+
+
+CHAPTER 45. RESERVED FOR THE HISTORY OF THE IDEA OF WAVES-AS-CODE (CONTEXT)
+
+45.1 From Berger's mystery to the correlation theory
+
+45.2 The gamma decade and its overreach
+
+45.3 The skeptical correction and the mature synthesis
+
+
+CHAPTER 46. RESERVED FOR THE SHARP-WAVE RIPPLE IN DEPTH (CORE)
+
+46.1 The anatomy and the mechanism
+
+46.2 Replay: forward for planning, reverse for learning
+
+46.3 The awake ripple and the tagging of experience
+
+46.4 Why the ripple is the corpus's cleanest COMPUTATION grade
+
+
+CHAPTER 47. RESERVED FOR THE SLOW OSCILLATION IN DEPTH (CORE)
+
+47.1 The up and down states and the traveling wave
+
+47.2 The conductor role over spindles and ripples
+
+47.3 The homeostatic reading
+
+
+CHAPTER 48. RESERVED FOR GAMMA IN DEPTH (CORE)
+
+48.1 The generation by parvalbumin interneurons
+
+48.2 The feedforward and local-processing roles
+
+48.3 The binding overreach and its correction
+
+
+CHAPTER 49. RESERVED FOR THETA IN DEPTH (CORE)
+
+49.1 The septo-hippocampal generation
+
+49.2 The navigation and memory roles
+
+49.3 The type-one and type-two distinction
+
+
+CHAPTER 50. RESERVED FOR ALPHA IN DEPTH (CORE)
+
+50.1 The occipital and mu rhythms
+
+50.2 The inhibition-timing account
+
+50.3 The individual alpha frequency as a personal constant
+
+
+CHAPTER 51. RESERVED FOR BETA IN DEPTH (CORE)
+
+51.1 The motor maintenance role
+
+51.2 The status-quo and top-down accounts
+
+51.3 The burst reframing
+
+
+CHAPTER 52. RESERVED FOR THE SPINDLE IN DEPTH (CORE)
+
+52.1 The reticular-nucleus origin
+
+52.2 The two types and their sources
+
+52.3 The plasticity and intelligence links
+
+
+CHAPTER 53. RESERVED FOR THE DELTA AND SLOW-WAVE FAMILY IN DEPTH (CORE)
+
+53.1 The two delta generators
+
+53.2 The depth-of-sleep and homeostasis marker
+
+53.3 The developmental and clinical changes
+
+
+CHAPTER 54. RESERVED FOR HIGH-FREQUENCY OSCILLATIONS IN DEPTH (CORE)
+
+54.1 The physiological ripples
+
+54.2 The pathological fast ripples
+
+54.3 The biomarker promise and its limits
+
+
+CHAPTER 55. RESERVED FOR THE ONE-OVER-FREQUENCY BACKGROUND IN DEPTH (APPARATUS)
+
+55.1 The aperiodic component as more than noise
+
+55.2 The excitation-inhibition-balance reading
+
+55.3 Why separating periodic from aperiodic changed the field
+
+
+CHAPTER 56. RESERVED FOR THE MEASUREMENT-AGAINST-PROCESS PROBLEM IN DEPTH (CONTEXT)
+
+56.1 When the wave is the process and when it is the shadow
+
+56.2 The decoupling of measurement from mechanism
+
+56.3 The implication for a synthetic mind that has no field to measure
+
+
+CHAPTER 57. RESERVED FOR THE CROSS-SPECIES INVARIANTS IN DEPTH (CONTEXT)
+
+57.1 The conserved frequency ladder
+
+57.2 The timing-preservation account
+
+57.3 What an invariant across brains says about what a mind needs
+
+
+CHAPTER 58. RESERVED FOR THE SLEEP-CONSOLIDATION PROTOCOL IN DEPTH (COMPUTATION)
+
+58.1 The two-stage model as a memory-systems protocol
+
+58.2 The closed-loop enhancement evidence
+
+58.3 The batch-write-back analogue spelled out for konnectome
+
+
+CHAPTER 59. RESERVED FOR THE ATTENTION-SAMPLING MECHANISM IN DEPTH (COMPUTATION)
+
+59.1 The periodic spotlight evidence
+
+59.2 The alpha-and-theta division of labour
+
+59.3 The polling-loop analogue for konnectome
+
+
+CHAPTER 60. RESERVED FOR THE ROUTING MECHANISM IN DEPTH (COMPUTATION)
+
+60.1 Communication through coherence as the biological router
+
+60.2 The interference-minimising refinement
+
+60.3 The timing-gated-bus analogue for konnectome
+
+
+CHAPTER 61. RESERVED FOR THE BINDING MECHANISM IN DEPTH (COMPUTATION)
+
+61.1 The synchrony proposal and its failure as a fixed code
+
+61.2 The modern rotating-features and phase-tag revival
+
+61.3 The pointer-against-phase decision for konnectome
+
+
+CHAPTER 62. RESERVED FOR THE WORKING-MEMORY BUFFER IN DEPTH (COMPUTATION)
+
+62.1 The theta-gamma slot code
+
+62.2 The capacity limit as a ratio
+
+62.3 The serialised-buffer analogue for konnectome
+
+
+CHAPTER 63. RESERVED FOR THE TRAVELING-WAVE ORGANISER IN DEPTH (COMPUTATION)
+
+63.1 The propagation phenomenology
+
+63.2 The spatial-organisation proposals
+
+63.3 The wavefront-reset analogue for konnectome
+
+
+CHAPTER 64. RESERVED FOR THE STATE-REGISTER MECHANISM IN DEPTH (COMPUTATION)
+
+64.1 The global oscillatory state as a broadcast mode
+
+64.2 The neuromodulatory setting of the mode
+
+64.3 The mode-register analogue for konnectome
+
+
+CHAPTER 65. RESERVED FOR THE DESIGN-TEST CASE STUDIES (COMPUTATION)
+
+65.1 A worked case where a rhythm-like mechanism pays for itself
+
+65.2 A worked case where an explicit timestamp wins
+
+65.3 The decision procedure generalised
+
+
+CHAPTER 66. RESERVED FOR THE CLOSING SYNTHESIS (CONTEXT)
+
+66.1 The rhythm-by-rhythm verdict in one table
+
+66.2 What konnectome should build, what it should simulate, and what it should ignore
+
+66.3 The single sentence the whole document exists to earn
+
+
+THE CHAPTER NOTES: SEMINAL WORKS BY PART
+
+These notes record the principal works checked in compiling each part. They are pointers to where the build looked, not warrants that override any corpus document, and where a newer source and an older one disagree the newer leads and the note is the thing annotated.
+
+Parts One through Five, the foundations. Berger, the first human electroencephalogram, 1929. Adrian and Matthews, the Berger rhythm, Brain, 1934. Buzsaki, Rhythms of the Brain, 2006, and The Brain from Inside Out, 2019. Buzsaki and Draguhn, Neuronal oscillations in cortical networks, Science, 2004. Buzsaki, Anastassiou and Koch, the origin of extracellular fields, Nature Reviews Neuroscience, 2012. Wang, the computational principles of cortical rhythms in cognition, Physiological Reviews, 2010. Nunez and Srinivasan, Electric Fields of the Brain, 2006. Cohen, Analyzing Neural Time Series Data, 2014. Donoghue and colleagues, parameterising neural power spectra, Nature Neuroscience, 2020. Hutcheon and Yarom on resonance, 2000. Whittington, Traub and colleagues on inhibition-based rhythms, 2000. Wang and Buzsaki on the interneuron gamma model, 1996. Cardin and colleagues, and Sohal and colleagues, on driving parvalbumin cells, Nature, 2009. Buzsaki and Wang, the mechanisms of gamma oscillations, Annual Review of Neuroscience, 2012. Wilson and Cowan, 1972. Jansen and Rit, 1995. Kuramoto, 1984. Ermentrout and Kopell on weakly coupled oscillators. Montbrio, Pazo and Roxin, the exact mean-field reduction, Physical Review X, 2015. Tort and colleagues on the modulation index, 2010. Aru and colleagues, untangling cross-frequency coupling, Current Opinion in Neurobiology, 2015. Cole and Voytek on waveform shape, 2017. Maris and Oostenveld on permutation testing, 2007.
+
+Parts Six through Eleven, the states and the functions and the clinic. Steriade, McCormick and Sejnowski, thalamocortical oscillations, Science, 1993, and Steriade on the slow oscillation, Journal of Neuroscience, 1993. Saper and colleagues on sleep-state switching, Neuron, 2010. Diekelmann and Born, the memory function of sleep, Nature Reviews Neuroscience, 2010. Staresina and colleagues, the hierarchical nesting of slow oscillations, spindles and ripples, Nature Neuroscience, 2015. Helfrich and colleagues on the uncoupling of the aging sleeping brain, Neuron, 2018. Buzsaki, the sharp-wave ripple as a cognitive biomarker, Hippocampus, 2015. Girardeau and colleagues, silencing ripples impairs memory, Nature Neuroscience, 2009. Boyce and colleagues, causal evidence for rapid-eye-movement theta, Science, 2016. Tononi and Cirelli, the synaptic homeostasis hypothesis, and Frank's critique. Xie and colleagues on sleep and clearance, Science, 2013, with the replication dispute. Purdon and colleagues on propofol signatures, PNAS, 2013. Casali and colleagues, the perturbational complexity index, Science Translational Medicine, 2013. Gray, Konig, Engel and Singer, the founding gamma-synchrony paper, Nature, 1989. Shadlen and Movshon, synchrony unbound, Neuron, 1999. Ray and Maunsell, the frequency-drift objection, Neuron, 2010, and do gamma oscillations play a role, Trends in Cognitive Sciences, 2015. Merker, gamma as activation not cognition. Singer, assemblies without oscillation, Neuron, 2023. Fries, communication through coherence, Trends in Cognitive Sciences, 2005, and Neuron, 2015. Akam and Kullmann on interference and on multiplexing, 2012 and 2014. Jensen and Mazaheri, gating by inhibition, 2010. Klimesch and colleagues, the inhibition-timing hypothesis, 2007. VanRullen, perceptual cycles, 2016. Landau and Fries, rhythmic sampling, 2012. Fiebelkorn and Kastner, a rhythmic theory of attention, 2019. Bastos and colleagues on feedforward and feedback frequency channels, Neuron, 2015, and on predictive routing, PNAS, 2020. Engel and Fries, beta and the status quo, 2010. Lisman and Idiart, 1995, and Lisman and Jensen, the theta-gamma neural code, Neuron, 2013. Lundqvist and colleagues, gamma and beta bursts in working memory, Neuron, 2016. O'Keefe and Recce, phase precession, 1993, and Skaggs and colleagues, 1996. Canolty and colleagues, theta-gamma coupling in human neocortex, Science, 2006. Colgin and colleagues, gamma frequency routing, Nature, 2009. Giraud and Poeppel, cortical oscillations and speech, Nature Neuroscience, 2012. Ding and colleagues, tracking hierarchical linguistic structure, Nature Neuroscience, 2016. Muller and colleagues, cortical traveling waves, Nature Reviews Neuroscience, 2018, and Zhang and colleagues, traveling waves in the human neocortex, Neuron, 2018. Feinberg and Campbell on the adolescent sleep electroencephalogram, 2009 and 2010. Klimesch, the alpha and theta review, 1999. Buzsaki, Logothetis and Singer, scaling brain size keeping timing, Neuron, 2013. Stopfer and colleagues, olfactory desynchronisation impairs discrimination, Nature, 1997. Bragin and colleagues on high-frequency oscillations, 1999, and Jacobs and colleagues, 2012. Brown on basal-ganglia beta, and Little and colleagues, adaptive deep brain stimulation, Annals of Neurology, 2013. Gonzalez-Burgos and Lewis, and Uhlhaas and Singer, on schizophrenia gamma, 2010 and 2012. Arns and colleagues, the theta-beta ratio meta-analysis, 2013. Iaccarino and colleagues, and Martorell and colleagues, the forty-hertz stimulation work, Nature and Cell, 2016 and 2019, with the mixed human replications. Llinas and colleagues, thalamocortical dysrhythmia, PNAS, 1999.
+
+Parts Twelve through Fifteen, the reckoning and the translation. Ray and Maunsell, 2015, as the central skeptical statement. Cardin and colleagues, and Sohal and colleagues, 2009, as the central causal-generation evidence. Asamoah and colleagues, the peripheral-nerve confound of transcranial current, Nature Communications, 2019. The 2024 statement on decoupling measurement from process in the field-potential epiphenomenon debate. Panzeri and colleagues on multiplexed temporal codes, 2010, and Kayser and colleagues on phase-of-firing coding, Neuron, 2009. Terman and Wang on oscillatory segmentation, 1995. Rusch and Mishra, the coupled oscillatory recurrent network, 2021. Miyato, Lowe, Locatello and colleagues, artificial Kuramoto oscillatory neurons, 2025. Lowe, Locatello and colleagues, rotating features for object discovery, 2023, and binding dynamics in rotating features, 2024. Greff, van Steenkiste and Schmidhuber, the binding problem in artificial neural networks, 2020. Izhikevich, polychronisation, 2006. Maass and colleagues, the liquid state machine, 2002. Lamport, time, clocks, and the ordering of events, Communications of the Association for Computing Machinery, 1978. Buzsaki, the two-stage model of memory, 1989. Klinzing, Niethard and Born, the mechanisms of systems consolidation during sleep, Nature Neuroscience, 2019. Davis and colleagues, traveling waves gate perception, Nature, 2020. Winfree, The Geometry of Biological Time, 1980. Ermentrout and Terman, Mathematical Foundations of Neuroscience, 2010.
+
+
+END OF THE NEUROSCIENCE OF BRAIN WAVES OUTLINE.
